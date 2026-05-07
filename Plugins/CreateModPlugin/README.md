@@ -54,7 +54,11 @@
 
 ### `ModInfo.json` 与 `UModInfoData`（仅 Editor 模块）
 
-`UModInfoData` 定义于 `ModInfoEditorData.h`，用于 **Mod Info Editor / Create Mod** 窗体，序列化为 Mod 根目录下的 **`ModInfo.json`**。主要字段包括：
+`UModInfoData` 定义于 `ModInfoEditorData.h`，用于 **Mod Info Editor / Create Mod** 窗体，序列化为 Mod 根目录下的 **`ModInfo.json`**。
+
+**字段逐项说明（JSON 键名、依赖数组、`ModToolVersion` 等）**见工程根目录文档：[ModInfo字段说明.md](../../ModInfo字段说明.md)。**`MainLuaFile` / `Main.lua`、UnLua 蓝图绑定与附加 Lua（`AdditionalAssets`）**见：[ModLua脚本说明.md](../../ModLua脚本说明.md)。
+
+以下为概要字段表：
 
 | 字段 | 含义 |
 |------|------|
@@ -63,10 +67,10 @@
 | `Icon` | 图标路径 |
 | `MainLuaFile` | 主脚本（如 `Main.lua`） |
 | `ModInformationAssetPath` | 指向本 Mod 的 **`UModInformationAsset`** |
-| `Dependencies` | `FModDependencyData` 数组：`ModId`、`MinVersion`、`bRequired` |
-| `bNewGameLoad` | 是否在新游戏时加载 |
+| `Dependencies` | 对象数组，键为 `ModId`、`MinVersion`（可选）、`Required`（对应 `FModDependencyData::bRequired`） |
+| `NewGameLoad` | 是否在新游戏时加载（`UModInfoData::bNewGameLoad`） |
 | `MinGameVersion` | 依赖的最低游戏版本 |
-| `bIncludeGameplayTags` / `GameplayTagsIniFile` | 是否附带 GameplayTag ini；默认文件名规则见 `UModInfoData::MakeGameplayTagsIniFileName`（`{ModId}GameplayTags.ini`） |
+| `IncludeGameplayTags` / `GameplayTagsIniFile` | 是否附带 GameplayTag ini；默认文件名见 `UModInfoData::MakeGameplayTagsIniFileName`（`{ModId}GameplayTags.ini`） |
 | `AdditionalAssets` | 额外打入 Pak 的、**相对 `Content` 目录** 的资产路径 |
 | `PublishedFileId` | 由 **Steam/上传流程** 写入，编辑器内通常隐藏、不手改 |
 
@@ -119,6 +123,8 @@ DataTable 在编辑器中创建时，**行结构** 选上表对应 struct，**�
 本仓库根目录另有 **Mod 工程、模型骨骼、数据表字段、打包与测试** 等说明，建议搭配阅读（相对本文件路径为 `../../`）：
 
 - [Mod文档索引.md](../../Mod文档索引.md)  
+- [ModInfo字段说明.md](../../ModInfo字段说明.md)  
+- [ModLua脚本说明.md](../../ModLua脚本说明.md)  
 - [Mod编辑器与打包说明.md](../../Mod编辑器与打包说明.md)  
 - [Mod测试说明.md](../../Mod测试说明.md)  
 

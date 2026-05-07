@@ -57,11 +57,11 @@
 
 该结构含捏人、立绘、武器防具、各类蒙太奇引用等；**未必每一项都是网格路径**。
 
-**与主角身体网格相关的硬性约定**（与数据表字段并存）：凡在游戏中作为 **主角可用的人类身体** 替换或扩展的 **`USkeletalMesh`**，必须使用与参考网格相同的骨架：
+**与主角身体网格相关的硬性约定**（与数据表字段并存）：凡在游戏中作为 **主角可用的人类身体** 替换或扩展的 **`USkeletalMesh`**，其 **Skeleton** 必须与 Mannequin **参考骨骼**为同一 **`USkeleton`** 资产：
 
-- 参考：`Content/Art/Animations/Characters/Mannequins/Meshes/SK_Mannequin.uasset` 所绑定的 **`USkeleton`**。
+- 参考骨骼路径：`Content/Art/Animations/Characters/Mannequins/Meshes/SK_Mannequin.uasset`（工程约定此处为 **`USkeleton`**，不是骨骼网格体）。
 
-具体导入流程见 [模型导入与骨骼匹配说明.md](./模型导入与骨骼匹配说明.md)。填表时若引用自定义人类网格资产，在内容浏览器中打开该网格，**核对 Skeleton 与 Mannequin 一致**。
+具体导入流程见 [模型导入与骨骼匹配说明.md](./模型导入与骨骼匹配说明.md)。填表时若引用自定义人类 **骨骼网格体**，在内容浏览器中打开该网格，在细节面板 **核对 Skeleton** 是否为上述 Mannequin **`USkeleton`**。
 
 ---
 

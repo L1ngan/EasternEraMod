@@ -66,6 +66,8 @@ Cook 成功后，产物会落在 `Saved/Cooked/<平台>/...` 下（具体子路�
 仓库 **README** 中提供与本索引一致的文档表格链接。
 
 - [Mod文档索引.md](./Mod文档索引.md)  
+- [ModInfo字段说明.md](./ModInfo字段说明.md)（`ModInfo.json` 各字段）  
+- [ModLua脚本说明.md](./ModLua脚本说明.md)（`Main.lua`、UnLua 蓝图绑定、`AdditionalAssets`）  
 - [模型导入与骨骼匹配说明.md](./模型导入与骨骼匹配说明.md)  
 - [Mod数据表与骨骼网格字段说明.md](./Mod数据表与骨骼网格字段说明.md)  
 - [Mod编辑器与打包说明.md](./Mod编辑器与打包说明.md)  

@@ -8,7 +8,7 @@
 
 ## 1. 打包输出位置（本工程）
 
-插件将每个 Mod 导出到 **项目根目录**下的 **`Mods`** 文件夹中，并以 **`ModId`** 作为子目录名（与 `PackageModWindow.cpp` 中 `ProjectDir/Mods/{ModId}` 一致；Windows 下目录名大小写不敏感，亦可能显示为 `mods`）。
+插件将每个 Mod 导出到 **项目根目录**下的 **`Mods`** 文件夹中，并以 **`ModId`** 作为子目录名（与 `PackageModWindow.cpp` 中 `ProjectDir/Mods/{ModId}` 一致）。
 
 - **根路径**：`<EasternEraMod 项目根目录>/Mods/`
 - **单个 Mod 目录**：`<项目根目录>/Mods/<ModId>/`
