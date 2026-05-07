@@ -1,0 +1,13 @@
+---Declaration of external HLSL code. Such code expressions can be emitted as part of a material translation.
+---@class FMaterialExternalCodeDeclaration
+---@field public bIsInlined boolean
+---@field public ReturnType EMaterialValueTypeBridge
+---@field public Name string
+---@field public Definition string @Primary external code definition provided as HLSL shader code expression.
+---@field public DefinitionDDX string @Secondary external code definition for custom DDX derivatives.
+---@field public DefinitionDDY string @Secondary external code definition for custom DDY derivatives.
+---@field public Derivative EDerivativeStatus @Specifies the kind of derivative this code declaration provides. If this is EDerivativeStatus::Valid, DefinitionDDX and DefinitionDDY provides the code definitions for the DDX and DDY derivatives respectively.
+---@field public ShaderFrequency EMaterialShaderFrequency
+---@field public Domains TArray<integer> @List of material domains this external code can be used with. If this is empty, all material domains are accepted.
+---@field public EnvironmentDefines TArray<FMaterialExternalCodeEnvironmentDefine> @List of shader environment defines to enable for this external code declaration.
+local FMaterialExternalCodeDeclaration = {}

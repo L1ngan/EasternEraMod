@@ -1,0 +1,12 @@
+---Get attribute data from a Collection
+---@class FGetCollectionAttributeDataTypedDataflowNode_v2 : FDataflowNode
+---@field private Collection FManagedArrayCollection @Collection for the custom attribute
+---@field private AttributeKey FCollectionAttributeKey @Input to drive the Attribute and Group name
+---@field private GroupName EStandardGroupNameEnum @Standard group names
+---@field private CustomGroupName string @User specified group name
+---@field private AttrName string @Attribute name
+---@field private BoolAttributeData TArray<boolean> @Bool type attribute data
+---@field private NumericArray FDataflowNumericArrayTypes @Numeric Array types
+---@field private VectorArray FDataflowVectorArrayTypes @Vector Array types
+---@field private StringArray FDataflowStringArrayTypes @String Array types
+local FGetCollectionAttributeDataTypedDataflowNode_v2 = {}

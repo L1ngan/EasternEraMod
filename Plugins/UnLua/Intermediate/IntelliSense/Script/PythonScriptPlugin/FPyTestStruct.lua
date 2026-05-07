@@ -1,0 +1,18 @@
+---Struct to allow testing of the various UStruct features that are exposed to Python wrapped types.
+---@class FPyTestStruct
+---@field public Bool boolean
+---@field public Int integer
+---@field public Float number
+---@field public Enum EPyTestEnum
+---@field public String string
+---@field public Name string
+---@field public Text string
+---@field public FieldPath Unknown
+---@field public StructFieldPath Unknown
+---@field public StringArray TArray<string>
+---@field public StringSet TSet<string>
+---@field public StringIntMap TMap<string, integer>
+---@field public BoolInstanceOnly boolean
+---@field public BoolDefaultsOnly boolean
+---@field public BoolMutable boolean
+local FPyTestStruct = {}

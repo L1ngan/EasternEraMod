@@ -1,0 +1,54 @@
+---@class UNiagaraRibbonRendererProperties : UNiagaraRendererProperties
+---@field public Material UMaterialInterface @UNiagaraRendererProperties Interface END
+---@field public MICMaterial UMaterialInstanceConstant
+---@field public MaterialUserParamBinding FNiagaraUserParameterBinding @Use the UMaterialInterface bound to this user variable if it is set to a valid value. If this is bound to a valid value and Material is also set, UserParamBinding wins.
+---@field public UV0Settings FNiagaraRibbonUVSettings
+---@field public UV1Settings FNiagaraRibbonUVSettings
+---@field public FacingMode ENiagaraRibbonFacingMode
+---@field public MaxNumRibbons integer
+---@field public DrawDirection ENiagaraRibbonDrawDirection @Controls the order the ribbon segments will be rendered.
+---@field public Shape ENiagaraRibbonShapeMode @Shape of the ribbon, from flat plane, multiplane, 3d tube, and custom shapes.
+---@field public bEnableAccurateGeometry boolean @Disables two-sided forced rendering (Will still respect material settings) MultiPlane will double geometry count to have triangles facing both sides. With this off MultiPlane will switch normal direction to face view. 3D Ribbons will render like normal meshes with backface culling enabled.
+---@field public bUseMaterialBackfaceCulling boolean @When enabled the ribbons renderer will not override how backface culling works depending on shape type, but instad use the material culling mode
+---@field public bUseGeometryNormals boolean @When enabled the ribbons normals will follow the shape of the geometry rather than being aligned to screen / custom facing.
+---@field public bUseGPUInit boolean @Whether we use the CPU or GPU to generate ribbon geometry for CPU systems. GPU systems will always use a fully GPU initialization pipeline, Will fall back to CPU init when GPU init isn't available.
+---@field public bUseConstantFactor boolean @If checked, use the above constant factor. Otherwise, adaptively select the tessellation factor based on the below parameters.
+---@field public bScreenSpaceTessellation boolean @If checked, use the ribbon's screen space percentage to adaptively adjust the tessellation factor.
+---@field public bLinkOrderUseUniqueID boolean
+---@field public bCastShadows boolean @When disabled the renderer will not cast shadows. The component controls if shadows are enabled, this flag allows you to disable the renderer casting shadows.
+---@field public bIncludeInHitProxy boolean @When disabled the mesh batches do not contribute to the hit proxy, i.e. they are not part of editor selection.
+---@field public WidthSegmentationCount integer @Tessellation factor to apply to the width of the ribbon. Ranges from 1 to 16. Greater values increase amount of tessellation.
+---@field public MultiPlaneCount integer @Number of planes in multiplane shape. Evenly distributed from 0-90 or 0-180 degrees off camera facing depending on setting
+---@field public TubeSubdivisions integer @Number of vertices/faces in a tube.
+---@field public CustomVertices TArray<FNiagaraRibbonShapeCustomVertex> @Vertices for a cross section of the ribbon in custom shape mode.
+---@field public TessellationMode ENiagaraRibbonTessellationMode @Defines the tessellation mode allowing custom tessellation parameters or disabling tessellation entirely.
+---@field public CurveTension number @Defines the curve tension, or how long the curve's tangents are. Ranges from 0 to 1. The higher the value, the sharper the curve becomes.
+---@field public TessellationFactor integer @Custom tessellation factor. Ranges from 1 to 16. Greater values increase amount of tessellation.
+---@field public TessellationAngle number @Defines the angle in degrees at which tessellation occurs. Ranges from 1 to 180. Smaller values increase amount of tessellation. If set to 0, use the maximum tessellation set above.
+---@field public PositionBinding FNiagaraVariableAttributeBinding @Which attribute should we use for position when generating ribbons?
+---@field public ColorBinding FNiagaraVariableAttributeBinding @Which attribute should we use for color when generating ribbons?
+---@field public VelocityBinding FNiagaraVariableAttributeBinding @Which attribute should we use for velocity when generating ribbons?
+---@field public NormalizedAgeBinding FNiagaraVariableAttributeBinding @Which attribute should we use for normalized age when generating ribbons?
+---@field public RibbonTwistBinding FNiagaraVariableAttributeBinding @Which attribute should we use for ribbon twist when generating ribbons?
+---@field public RibbonWidthBinding FNiagaraVariableAttributeBinding @Which attribute should we use for ribbon width when generating ribbons?
+---@field public RibbonFacingBinding FNiagaraVariableAttributeBinding @Which attribute should we use for ribbon facing when generating ribbons?
+---@field public RibbonIdBinding FNiagaraVariableAttributeBinding @Which attribute should we use for ribbon id when generating ribbons?
+---@field public RibbonLinkOrderBinding FNiagaraVariableAttributeBinding @Which attribute should we use for RibbonLinkOrder when generating ribbons?
+---@field public MaterialRandomBinding FNiagaraVariableAttributeBinding @Which attribute should we use for MaterialRandom when generating ribbons?
+---@field public DynamicMaterialBinding FNiagaraVariableAttributeBinding @Which attribute should we use for dynamic material parameters when generating ribbons?
+---@field public DynamicMaterial1Binding FNiagaraVariableAttributeBinding @Which attribute should we use for dynamic material parameters when generating ribbons?
+---@field public DynamicMaterial2Binding FNiagaraVariableAttributeBinding @Which attribute should we use for dynamic material parameters when generating ribbons?
+---@field public DynamicMaterial3Binding FNiagaraVariableAttributeBinding @Which attribute should we use for dynamic material parameters when generating ribbons?
+---@field public RibbonUVDistance FNiagaraVariableAttributeBinding @Which attribute should we use for ribbon distance traveled for use in UV operations when generating ribbons?
+---@field public U0OverrideBinding FNiagaraVariableAttributeBinding @Which attribute should we use for UV0 U when generating ribbons?
+---@field public V0RangeOverrideBinding FNiagaraVariableAttributeBinding @Which attribute should we use for UV0 V when generating ribbons?
+---@field public U1OverrideBinding FNiagaraVariableAttributeBinding @Which attribute should we use for UV1 U when generating ribbons?
+---@field public V1RangeOverrideBinding FNiagaraVariableAttributeBinding @Which attribute should we use for UV1 V when generating ribbons?
+---@field public MaterialParameters FNiagaraRendererMaterialParameters @If this array has entries, we will create a MaterialInstanceDynamic per Emitter instance from Material and set the Material parameters using the Niagara simulation variables listed.
+---@field public PrevPositionBinding FNiagaraVariableAttributeBinding @Implicit binding for previous position
+---@field public PrevRibbonWidthBinding FNiagaraVariableAttributeBinding @Implicit binding for previous ribbon width
+---@field public PrevRibbonFacingBinding FNiagaraVariableAttributeBinding @Implicit binding for previous ribbon facing
+---@field public PrevRibbonTwistBinding FNiagaraVariableAttributeBinding @Implicit binding for previous ribbon twist
+---@field public MaterialParamValidMask integer
+local UNiagaraRibbonRendererProperties = {}
+

@@ -1,0 +1,17 @@
+---@class FMaterialCachedExpressionEditorOnlyData
+---@field public EditorOnlyEntries FMaterialCachedParameterEntry
+---@field public EditorEntries FMaterialCachedParameterEditorEntry
+---@field public StaticComponentMaskValues TArray<FStaticComponentMaskValue>
+---@field public ScalarMinMaxValues TArray<FVector2D>
+---@field public ScalarCurveValues TArray<TSoftObjectPtr<UCurveLinearColor>>
+---@field public ScalarCurveAtlasValues TArray<TSoftObjectPtr<UCurveLinearColorAtlas>>
+---@field public VectorChannelNameValues TArray<FParameterChannelNames>
+---@field public VectorUsedAsChannelMaskValues TArray<boolean>
+---@field public TextureChannelNameValues TArray<FParameterChannelNames>
+---@field public MaterialLayers FMaterialLayersFunctionsEditorOnlyData
+---@field public AssetPaths TArray<string>
+---@field public LandscapeLayerNames TArray<string>
+---@field public ExpressionIncludeFilePaths TSet<string>
+---@field public UserSceneTextureInputs TSet<string>
+---@field public ShaderTags TArray<string>
+local FMaterialCachedExpressionEditorOnlyData = {}

@@ -1,0 +1,12 @@
+---Create a geometry collection from a UStaticMesh
+---Deprecated (5.6) - use the second version of StaticMeshToCollection node with only one materials ouput
+---@class FStaticMeshToCollectionDataflowNode : FDataflowNode
+---@field public StaticMesh UStaticMesh @Asset input
+---@field public MeshTransform FTransform @Transform to apply to the mesh before converting it to a collection
+---@field public bSetInternalFromMaterialIndex boolean @Set the internal faces from material index
+---@field public bSplitComponents boolean @Split components
+---@field public Collection FManagedArrayCollection @Geometry collection newly created
+---@field public Materials TArray<UMaterial> @Materials array to use for this asset
+---@field public MaterialInstances TArray<UMaterialInterface> @Material instances array from the static mesh
+---@field public InstancedMeshes TArray<FGeometryCollectionAutoInstanceMesh> @Array of instanced meshes
+local FStaticMeshToCollectionDataflowNode = {}

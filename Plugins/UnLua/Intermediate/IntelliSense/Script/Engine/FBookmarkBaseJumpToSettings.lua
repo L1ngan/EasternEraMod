@@ -1,0 +1,2 @@
+---@class FBookmarkBaseJumpToSettings
+local FBookmarkBaseJumpToSettings = {}

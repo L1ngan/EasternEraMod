@@ -1,0 +1,22 @@
+---* Bake a texture from a geometry collection
+---* Output to a 4 channels Image object  ( RGBA )
+---@class FBakeTextureFromCollectionDataflowNode : FDataflowNode
+---@field private Collection FManagedArrayCollection @Target Collection
+---@field private Image FDataflowImage @Output image with the bake attributes
+---@field private FaceSelection FDataflowFaceSelection @selection of faces to bake : if not connected, all faces will be used
+---@field private Resolution EDataflowImageResolution @resolution of the image to bake
+---@field private GutterSize integer @Approximate space to leave between UV islands, measured in texels
+---@field private UVChannel integer @Index of the added UV channel
+---@field private RedChannel ECollectionBakeTextureAttribute @Attribute to bake in the red channel
+---@field private GreenChannel ECollectionBakeTextureAttribute @Attribute to bake in the green channel
+---@field private BlueChannel ECollectionBakeTextureAttribute @Attribute to bake in the blue channel
+---@field private AlphaChannel ECollectionBakeTextureAttribute @Attribute to bake in the alpha channel
+---@field private MaxDistance number @Max distance to search for the outer mesh surface
+---@field private OcclusionRays integer @Number of occlusion rays
+---@field private OcclusionBlurRadius number @Pixel Radius of Gaussian Blur Kernel applied to AO map (0 will apply no blur)
+---@field private CurvatureBlurRadius number @Pixel Radius of Gaussian Blur Kernel applied to Curvature map (0 will apply no blur)
+---@field private VoxelResolution integer @Voxel resolution of smoothed shape representation
+---@field private SmoothingIterations integer @Amount of smoothing iterations to apply before computing curvature
+---@field private ThicknessFactor number @Distance to search for correspondence between fractured shape and smoothed shape, as factor of voxel size
+---@field private MaxCurvature number @Curvatures in the range [-MaxCurvature, MaxCurvature] will be mapped from [0,1]. Values outside that range will be clamped
+local FBakeTextureFromCollectionDataflowNode = {}

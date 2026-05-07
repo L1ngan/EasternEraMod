@@ -1,0 +1,11 @@
+---@class EGeometryFlow_EdgeRefineFlags
+---@field public NoConstraint integer
+---@field public NoFlip integer
+---@field public NoSplit integer
+---@field public NoCollapse integer
+---@field public FullyConstrained integer
+---@field public SplitsOnly integer
+---@field public FlipOnly integer
+---@field public CollapseOnly integer
+---@field public EGeometryFlow_MAX integer
+local EGeometryFlow_EdgeRefineFlags = {}

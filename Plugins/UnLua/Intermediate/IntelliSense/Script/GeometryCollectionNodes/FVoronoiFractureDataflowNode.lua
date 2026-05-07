@@ -1,0 +1,19 @@
+---Voronoi fracture
+---Fracture using a Voronoi diagram with a uniform random pattern, creating fracture pieces of similar volume across the shape.
+---@class FVoronoiFractureDataflowNode : FDataflowNode
+---@field public Collection FManagedArrayCollection
+---@field public Points TArray<FVector>
+---@field public TransformSelection FDataflowTransformSelection
+---@field public RandomSeed number
+---@field public ChanceToFracture number
+---@field public GroupFracture boolean
+---@field public Grout number
+---@field public Amplitude number
+---@field public Frequency number
+---@field public Persistence number
+---@field public Lacunarity number
+---@field public OctaveNumber integer
+---@field public PointSpacing number
+---@field public AddSamplesForCollision boolean
+---@field public CollisionSampleSpacing number
+local FVoronoiFractureDataflowNode = {}

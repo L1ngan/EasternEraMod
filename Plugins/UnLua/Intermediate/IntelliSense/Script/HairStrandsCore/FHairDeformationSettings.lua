@@ -1,0 +1,2 @@
+---@class FHairDeformationSettings
+local FHairDeformationSettings = {}

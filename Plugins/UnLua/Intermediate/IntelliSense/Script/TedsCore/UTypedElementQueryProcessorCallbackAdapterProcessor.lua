@@ -1,0 +1,3 @@
+---@class UTypedElementQueryProcessorCallbackAdapterProcessor : UTypedElementQueryProcessorCallbackAdapterProcessorBase
+local UTypedElementQueryProcessorCallbackAdapterProcessor = {}
+

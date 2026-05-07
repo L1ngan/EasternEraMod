@@ -1,0 +1,14 @@
+---This represents a baked transition
+---@class FAnimNode_TwoWayBlend : FAnimNode_Base
+---@field public A FPoseLink
+---@field public B FPoseLink
+---@field public AlphaInputType EAnimAlphaInputType @The data type used to control the alpha blending between the A and B poses.               Note: Changing this value will disconnect alpha input pins.
+---@field public bAlphaBoolEnabled boolean @The boolean value that controls the alpha blending when the alpha input type is set to 'Bool'
+---@field protected bResetChildOnActivation boolean @This reinitializes child pose when re-activated. For example, when active child changes
+---@field protected bAlwaysUpdateChildren boolean @Always update children, regardless of whether or not that child has weight.
+---@field public Alpha number @The float value that controls the alpha blending when the alpha input type is set to 'Float'
+---@field public AlphaScaleBias FInputScaleBias
+---@field public AlphaBoolBlend FInputAlphaBoolBlend
+---@field public AlphaCurveName string @The animation curve that controls the alpha blending when the alpha input type is set to 'Curve'
+---@field public AlphaScaleBiasClamp FInputScaleBiasClamp
+local FAnimNode_TwoWayBlend = {}

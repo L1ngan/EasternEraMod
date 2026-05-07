@@ -1,0 +1,11 @@
+---ESRB rating categories.
+---@class ESRB
+---@field public Everyone integer
+---@field public Everyone10Plus integer
+---@field public Teen integer
+---@field public Mature integer
+---@field public AdultsOnly integer
+---@field public RatingPending integer
+---@field public RatingPending17Plus integer
+---@field public ESRB_MAX integer
+local ESRB = {}

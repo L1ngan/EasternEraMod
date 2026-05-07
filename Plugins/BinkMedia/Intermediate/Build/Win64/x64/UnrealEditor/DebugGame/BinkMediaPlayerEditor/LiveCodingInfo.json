@@ -1,0 +1,19 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.BinkMediaPlayerEditor.cpp.obj": [
+			"BinkMediaPlayerEditor.init.gen.cpp.obj",
+			"BinkMediaPlayerFactory.gen.cpp.obj",
+			"BinkMediaPlayerFactoryNew.gen.cpp.obj",
+			"BinkMediaTextureFactoryNew.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"BinkMediaPlayerCustomization.cpp.obj",
+			"BinkMediaPlayerEditorModule.cpp.obj",
+			"BinkMediaPlayerEditorToolkit.cpp.obj",
+			"BinkMediaPlayerFactory.cpp.obj",
+			"BinkMediaPlayerFactoryNew.cpp.obj",
+			"BinkMediaTextureFactoryNew.cpp.obj",
+			"SBinkWidgets.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,41 @@
+---@class ANavigationTestingActor : AActor
+---@field private CapsuleComponent UCapsuleComponent
+---@field private EdRenderComp UNavTestRenderingComponent @Editor Preview
+---@field private InvokerComponent UNavigationInvokerComponent
+---@field private bActAsNavigationInvoker boolean
+---@field public NavAgentProps FNavAgentProperties @
+---@field public QueryingExtent FVector
+---@field public MyNavData ANavigationData
+---@field public ProjectedLocation FVector
+---@field public bProjectedLocationValid boolean
+---@field public bSearchStart boolean @if set, start the search from this actor, else start the search from the other actor
+---@field public CostLimitFactor number @this multiplier is used to compute a max node cost allowed to the open list     (cost limit = CostLimitFactor*InitialHeuristicEstimate)
+---@field public MinimumCostLimit number @minimum cost limit clamping value (in cost units)     used to allow large deviation in short paths
+---@field public bBacktracking boolean @Instead of regular pathfinding from source to target location do     a 'backwards' search that searches from the source, but as if the allowed     movement direction was coming from the target. Meaningful only for paths     containing one-direction nav links.
+---@field public bUseHierarchicalPathfinding boolean
+---@field public bGatherDetailedInfo boolean @if set, all steps of A* algorithm will be accessible for debugging
+---@field public bRequireNavigableEndLocation boolean @if set, require the end location to be close to the navigation data. The tolerance is controlled by QueryingExtent
+---@field public bDrawDistanceToWall boolean
+---@field public bDrawIfNavDataIsReadyInRadius boolean @If set, a cylinder is drawn to indicate if the navigation data is ready (has been generated) for the given radius (green when ready, red otherwise).
+---@field public bDrawIfNavDataIsReadyToQueryTargetActor boolean @If set, a capsule is drawn to indicate if the navigation data is ready (has been generated) for the given radius from the current actor to the query target (green when ready, red otherwise).
+---@field public bDrawRaycastToQueryTargetActor boolean @If set, a line is drawn to indicate to result of a ray cast on the navigation data between the current actor and the QueryTargetActor location (red when there is a hit, green when there is no hit and the ray end is on the explored corridor, orange otherwise).
+---@field public QueryTargetActor AActor @Actor to use as a target for navigation data queries
+---@field public bShowNodePool boolean @show polys from open (orange) and closed (yellow) sets
+---@field public bShowBestPath boolean @show current best path
+---@field public bShowDiffWithPreviousStep boolean @show which nodes were modified in current A* step
+---@field public bShouldBeVisibleInGame boolean
+---@field public RadiusUsedToValidateNavData number @NavData must be ready for all tiles within radius. When using 0, NavData must be ready at the actor location.
+---@field public CostDisplayMode integer @determines which cost will be shown
+---@field public TextCanvasOffset FVector2D @text canvas offset to apply
+---@field public bPathExist boolean
+---@field public bPathIsPartial boolean
+---@field public bPathSearchOutOfNodes boolean
+---@field public PathfindingTime number @Time in micro seconds
+---@field public PathCost number
+---@field public PathfindingSteps integer
+---@field public OtherActor ANavigationTestingActor
+---@field public FilterClass TSubclassOf<UNavigationQueryFilter> @"None" will result in default filter being used. This filter is used by the PathFind and Raycast queries.
+---@field public ShowStepIndex integer @Show debug steps up to this index. Use -1 to disable.
+---@field public OffsetFromCornersDistance number
+local ANavigationTestingActor = {}
+

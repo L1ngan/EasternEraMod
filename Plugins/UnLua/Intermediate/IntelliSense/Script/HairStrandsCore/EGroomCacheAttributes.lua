@@ -1,0 +1,12 @@
+---Attributes in groom that can be animated
+---@class EGroomCacheAttributes
+---@field public None integer
+---@field public Position integer
+---@field public Width integer
+---@field public Color integer
+---@field public PositionWidth integer
+---@field public PositionColor integer
+---@field public WidthColor integer
+---@field public PositionWidthColor integer
+---@field public EGroomCacheAttributes_MAX integer
+local EGroomCacheAttributes = {}

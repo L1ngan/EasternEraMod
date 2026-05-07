@@ -1,0 +1,19 @@
+---Lens distortion parameters for the 3DE4 Anamorphic - Standard Degree 4 model
+---All parameters are unitless and represent the coefficients used to undistort a distorted image
+---For complete model description, see "tde4_ldm_standard.pdf" from https://www.3dequalizer.com/ in the Lens Distortion Plugin Kit v2.8
+---@class FAnamorphicDistortionParameters
+---@field public PixelAspect number @Anamorphic Squeeze (the ratio of the filmback size to the size of the rasterized image)
+---@field public CX02 number @X coefficient of the r^2 term
+---@field public CX04 number @X coefficient of the r^4 term
+---@field public CX22 number @X coefficient of the r^2*cos(2*phi) term
+---@field public CX24 number @X coefficient of the r^4*cos(2*phi) term
+---@field public CX44 number @X coefficient of the r^4*cos(4*phi) term
+---@field public CY02 number @Y coefficient of the r^2 term
+---@field public CY04 number @Y coefficient of the r^4 term
+---@field public CY22 number @Y coefficient of the r^2*cos(2*phi) term
+---@field public CY24 number @Y coefficient of the r^4*cos(2*phi) term
+---@field public CY44 number @Y coefficient of the r^4*cos(4*phi) term
+---@field public SqueezeX number @Squeeze Factor (should be small, relatively close to 1.0)
+---@field public SqueezeY number @Squeeze Factor (should be small, relatively close to 1.0)
+---@field public LensRotation number @Lens Rotation in degrees. Represents mounting inaccuracies (should be small, between -2 and +2 degrees)
+local FAnamorphicDistortionParameters = {}

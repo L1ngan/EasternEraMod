@@ -1,0 +1,13 @@
+---Information about a parameter exposed on a camera asset.
+---@class FCameraObjectInterfaceParameterDefinition
+---@field public ParameterName string @The name of the parameter.
+---@field public ParameterGuid FGuid @The GUID of the parameter. This matches the GUID on the corresponding UCameraObjectInterfaceBlendableParameter or UCameraObjectInterfaceDataParameter object.
+---@field public ParameterType ECameraObjectInterfaceParameterType @The type of this parameter.
+---@field public VariableID FCameraVariableID @The ID of the variable that drives this blendable parameter.
+---@field public VariableType ECameraVariableType @The type of the variable that drives this blendable parameter.
+---@field public BlendableStructType UScriptStruct @The type of the structure if VariableType is BlendableStruct.
+---@field public DataID FCameraContextDataID @The ID of the data that drives this blendable parameter.
+---@field public DataType ECameraContextDataType @The type of the data that drives this blendable parameter.
+---@field public DataContainerType ECameraContextDataContainerType @The type of container that drives this blendable parameter.
+---@field public DataTypeObject UObject @The type object of the data that drives this blendable parameter.
+local FCameraObjectInterfaceParameterDefinition = {}

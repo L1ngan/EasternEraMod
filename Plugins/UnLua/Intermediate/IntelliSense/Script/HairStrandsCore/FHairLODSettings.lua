@@ -1,0 +1,12 @@
+---@class FHairLODSettings
+---@field public CurveDecimation number @Reduce the number of hair strands in a uniform manner
+---@field public VertexDecimation number @Reduce the number of points for each hair strands
+---@field public AngularThreshold number @Max angular difference between adjacents vertices to remove vertices during simplification, in degrees
+---@field public ScreenSize number @Screen size at which this LOD should be enabled
+---@field public ThicknessScale number @Scales the hair Strands radius. This can be used for manually compensating the reduction of curves.
+---@field public bVisible boolean @If disable, the hair strands won't be rendered
+---@field public GeometryType EGroomGeometryType @Defines the type of geometry used by this LOD (Strands, Cards, or Meshes)
+---@field public BindingType EGroomBindingType @Defines the type of attachment
+---@field public Simulation EGroomOverrideType @Groom simulation
+---@field public GlobalInterpolation EGroomOverrideType @Global interpolation
+local FHairLODSettings = {}

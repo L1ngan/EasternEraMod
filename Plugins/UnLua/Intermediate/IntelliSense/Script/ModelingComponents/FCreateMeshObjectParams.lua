@@ -1,0 +1,26 @@
+---FCreateMeshObjectParams is a collection of input data intended to be passed to
+---UModelingObjectsCreationAPI::CreateMeshObject(). Not all data necessarily needs
+---to be specified, this will depend on the particular implementation. The comments
+---below are representative of how this data structure is used in the Tools and
+---API implementation(s) provided with Unreal Engine, but end-user implementors
+---could abuse these fields as necessary.
+---The definition of a "mesh object" is implementation-specific.
+---@class FCreateMeshObjectParams
+---@field public SourceComponent UPrimitiveComponent @A Source Component the new mesh is based on, if such a Component exists
+---@field public TypeHint ECreateObjectTypeHint @A suggested type for the newly-created Mesh (possibly ignored)
+---@field public TypeHintClass TSubclassOf<UObject> @A suggested UClass type for the newly-created Object (possibly ignored)
+---@field public TypeHintExtended integer @An arbitrary integer that can be used to pass data to an API implementation
+---@field public TargetWorld UWorld @The World/Level the new mesh object should be created in (if known)
+---@field public Transform FTransform @The 3D local-to-world transform for the new mesh object
+---@field public BaseName string @The base name of the new mesh object
+---@field public Materials TArray<UMaterialInterface> @Materials for the new mesh object
+---@field public AssetMaterials TArray<UMaterialInterface> @Optional Materials for a newly-created Mesh Asset, if this is applicable for the created mesh object
+---@field public bEnableCollision boolean @Specify whether the new mesh object should have collision support/data
+---@field public CollisionMode integer @Which Collision mode to enable on the new mesh object, if supported
+---@field public bEnableRaytracingSupport boolean @Specify whether normals should be automatically recomputed for this new mesh object
+---@field public bGenerateLightmapUVs boolean @Specify whether to auto-generate Lightmap UVs (if applicable for the output mesh type)
+---@field public bEnableRecomputeNormals boolean @Specify whether normals should be automatically recomputed for this new mesh object
+---@field public bEnableRecomputeTangents boolean @Specify whether tangents should be automatically recomputed for this new mesh object
+---@field public bEnableNanite boolean @Specify whether Nanite should be enabled on this new mesh object
+---@field public NaniteSettings FMeshNaniteSettings @Specify the Nanite Settings for this new mesh object, only used if bEnableNanite=true
+local FCreateMeshObjectParams = {}

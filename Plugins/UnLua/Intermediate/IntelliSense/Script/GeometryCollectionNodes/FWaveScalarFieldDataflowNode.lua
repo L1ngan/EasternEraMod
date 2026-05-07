@@ -1,0 +1,15 @@
+---WaveScalar Field Dataflow node v2
+---@class FWaveScalarFieldDataflowNode : FDataflowNode
+---@field public SamplePositions TArray<FVector3f>
+---@field public SampleIndices FDataflowVertexSelection
+---@field public Magnitude number
+---@field public Position FVector
+---@field public Translation FVector
+---@field public Wavelength number
+---@field public Period number
+---@field public FunctionType EDataflowWaveFunctionType
+---@field public FalloffType EDataflowFieldFalloffType
+---@field public FieldFloatResult TArray<number>
+---@field public FieldRemap TArray<integer>
+---@field public NumSamplePositions integer
+local FWaveScalarFieldDataflowNode = {}

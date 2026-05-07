@@ -1,0 +1,2 @@
+---@class FBodyInstanceAsyncPhysicsTickHandle
+local FBodyInstanceAsyncPhysicsTickHandle = {}

@@ -1,0 +1,3 @@
+---@class UApplicationLifecycleComponent_ApplicationStartupArgumentsDelegate__PythonCallable : UPythonCallableForDelegate
+local UApplicationLifecycleComponent_ApplicationStartupArgumentsDelegate__PythonCallable = {}
+

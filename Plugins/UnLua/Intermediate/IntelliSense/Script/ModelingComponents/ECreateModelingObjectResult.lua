@@ -1,0 +1,15 @@
+---Result code returned by UModelingObjectsCreationAPI functions
+---@class ECreateModelingObjectResult
+---@field public Ok integer
+---@field public Cancelled integer
+---@field public Failed_Unknown integer
+---@field public Failed_NoAPIFound integer
+---@field public Failed_InvalidWorld integer
+---@field public Failed_InvalidMesh integer
+---@field public Failed_InvalidTexture integer
+---@field public Failed_AssetCreationFailed integer
+---@field public Failed_ActorCreationFailed integer
+---@field public Failed_InvalidMaterial integer
+---@field public Failed_InvalidActor integer
+---@field public ECreateModelingObjectResult_MAX integer
+local ECreateModelingObjectResult = {}

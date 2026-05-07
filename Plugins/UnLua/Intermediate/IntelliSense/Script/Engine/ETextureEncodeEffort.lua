@@ -1,0 +1,11 @@
+---For encoders that support it (i.e. Oodle), this controls how much time to
+---spend on finding better encoding.
+---(These need to match the Oodle OodleTex_EncodeEffortLevel values if you are
+---using Oodle.)
+---@class ETextureEncodeEffort
+---@field public Default integer
+---@field public Low integer
+---@field public Normal integer
+---@field public High integer
+---@field public ETextureEncodeEffort_MAX integer
+local ETextureEncodeEffort = {}

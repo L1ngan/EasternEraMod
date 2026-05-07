@@ -1,0 +1,14 @@
+---Simulates a single position over time using Verlet integration. It is recommended to use SpringInterp instead as it
+---is more accurate and stable, and has more meaningful parameters.
+---@class FRigVMFunction_VerletIntegrateVector : FRigVMFunction_SimBase
+---@field public Target FVector
+---@field public Strength number @The strength of the verlet spring
+---@field public Damp number @The amount of damping to apply ( 0.0 to 1.0, but usually really low like 0.005 )
+---@field public Blend number @The amount of blending to apply per second
+---@field public Force FVector @The force feeding into the solver. Can be used for gravity.
+---@field public Position FVector
+---@field public Velocity FVector
+---@field public Acceleration FVector
+---@field public Point FRigVMSimPoint
+---@field public bInitialized boolean
+local FRigVMFunction_VerletIntegrateVector = {}

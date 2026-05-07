@@ -1,0 +1,2 @@
+---@class FRigEventContext
+local FRigEventContext = {}

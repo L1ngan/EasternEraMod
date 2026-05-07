@@ -1,0 +1,14 @@
+---@class FFootDefinition
+---@field public FootBoneName string
+---@field public ReferenceBoneName string
+---@field public bShouldGenerateSyncMarkers boolean
+---@field public SyncMarkerTrackName string
+---@field public SyncMarkerName string
+---@field public SyncMarkerDetectionTechnique EDetectionTechnique
+---@field public bShouldSkipSyncMarkerIfFootBoneSpeedStartsBelowThreshold boolean
+---@field public bShouldGenerateNotifies boolean
+---@field public FootstepNotifyTrackName string
+---@field public FootstepNotify TSubclassOf<UAnimNotify>
+---@field public FootstepNotifyDetectionTechnique EDetectionTechnique
+---@field public bShouldSkipNotifyIfFootBoneSpeedStartsBelowThreshold boolean
+local FFootDefinition = {}

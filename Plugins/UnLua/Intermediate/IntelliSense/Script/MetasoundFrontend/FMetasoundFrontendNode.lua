@@ -1,0 +1,11 @@
+---An FMetasoundFrontendNode represents a single instance of a FMetasoundFrontendClass
+---@class FMetasoundFrontendNode
+---@field private ID FGuid @Unique ID of this node.
+---@field public ClassID FGuid @ID of FMetasoundFrontendClass corresponding to this node.
+---@field public Name string @Name of node instance.
+---@field public Interface FMetasoundFrontendNodeInterface @Interface of node instance.
+---@field public InputLiterals TArray<FMetasoundFrontendVertexLiteral> @Default values for node inputs.
+---@field public Configuration FInstancedStruct @Instance of a configuration for this node. This property is EditAnywhere with a false EditCondition so child properties (ex. node configuration) have exposed property handles for details customization code, but they should not be editable elsewhere in the editor (ex. property matrix)
+---@field public ClassInterfaceOverride FInstancedStruct @An optional override to the default class interface.
+---@field public Style FMetasoundFrontendNodeStyle @Style info related to a node.
+local FMetasoundFrontendNode = {}

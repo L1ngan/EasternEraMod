@@ -1,0 +1,16 @@
+---@class FChaosVDCollisionQueryParams : FChaosVDWrapperDataBase
+---@field public TraceTag string @Tag used to provide extra information or filtering for debugging of the trace (e.g. Collision Analyzer)
+---@field public OwnerTag string @Tag used to indicate an owner for this trace
+---@field public bTraceComplex boolean @Whether we should trace against complex collision
+---@field public bFindInitialOverlaps boolean @Whether we want to find out initial overlap or not. If true, it will return if this was initial overlap.
+---@field public bReturnFaceIndex boolean @Whether we want to return the triangle face index for complex static mesh traces
+---@field public bReturnPhysicalMaterial boolean @Whether we want to include the physical material in the results.
+---@field public bIgnoreBlocks boolean @Whether to ignore blocking results.
+---@field public bIgnoreTouches boolean @Whether to ignore touch/overlap results.
+---@field public bSkipNarrowPhase boolean @Whether to skip narrow phase checks (only for overlaps).
+---@field public bTraceIntoSubComponents boolean @Whether to ignore traces to the cluster union and trace against its children instead.
+---@field public bReplaceHitWithSubComponents boolean @If bTraceIntoSubComponents is true, whether to replace the hit of the cluster union with its children instead.
+---@field public IgnoreMask integer @Extra filtering done on the query. See declaration for filtering logic
+---@field public IgnoredActorsNames TArray<string>
+---@field public IgnoredComponentsNames TArray<string>
+local FChaosVDCollisionQueryParams = {}

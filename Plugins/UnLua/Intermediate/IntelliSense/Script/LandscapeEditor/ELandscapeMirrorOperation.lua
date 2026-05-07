@@ -1,0 +1,11 @@
+---@class ELandscapeMirrorOperation
+---@field public MinusXToPlusX integer
+---@field public PlusXToMinusX integer
+---@field public MinusYToPlusY integer
+---@field public PlusYToMinusY integer
+---@field public RotateMinusXToPlusX integer
+---@field public RotatePlusXToMinusX integer
+---@field public RotateMinusYToPlusY integer
+---@field public RotatePlusYToMinusY integer
+---@field public ELandscapeMirrorOperation_MAX integer
+local ELandscapeMirrorOperation = {}

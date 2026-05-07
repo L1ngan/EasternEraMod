@@ -1,0 +1,11 @@
+---Flag structure that can be applied to any sub-section allowing control over various
+---behaviors for the nested sub-sequence.
+---@class EMovieSceneSubSectionFlags
+---@field public None integer
+---@field public OverrideKeepState integer
+---@field public OverrideRestoreState integer
+---@field public IgnoreHierarchicalBias integer
+---@field public BlendHierarchicalBias integer
+---@field public AnyRestoreStateOverride integer
+---@field public EMovieSceneSubSectionFlags_MAX integer
+local EMovieSceneSubSectionFlags = {}

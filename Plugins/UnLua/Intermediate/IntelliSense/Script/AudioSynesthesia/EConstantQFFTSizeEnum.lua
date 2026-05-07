@@ -1,0 +1,14 @@
+---EContantQFFTSizeEnum
+---Enumeration of available FFT sizes in audio frames.
+---@class EConstantQFFTSizeEnum
+---@field public Min integer
+---@field public XXSmall integer
+---@field public XSmall integer
+---@field public Small integer
+---@field public Medium integer
+---@field public Large integer
+---@field public XLarge integer
+---@field public XXLarge integer
+---@field public Max integer
+---@field public EConstantQFFTSizeEnum_MAX integer
+local EConstantQFFTSizeEnum = {}

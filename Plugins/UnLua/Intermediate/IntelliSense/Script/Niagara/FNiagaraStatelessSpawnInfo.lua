@@ -1,0 +1,12 @@
+---@class FNiagaraStatelessSpawnInfo
+---@field public SourceId FGuid
+---@field public Type ENiagaraStatelessSpawnInfoType
+---@field public SpawnTime number @Time to spawn particles at
+---@field public Amount FNiagaraDistributionRangeInt @Number of particles to spawn at the provided time
+---@field public Rate FNiagaraDistributionRangeFloat @Number of particles to spawn per second Note: In the case of a random range or binding the value is only evaluated at the start of each loop.  This varies from regular emitters.
+---@field public bEnabled boolean
+---@field public bSpawnProbabilityEnabled boolean
+---@field public bLoopCountLimitEnabled boolean
+---@field public SpawnProbability FNiagaraDistributionRangeFloat @0 - 1 value that can be viewed as a percentage chance that the spawn will generated particles or not. A value of 0.5 can be viewed as a 50% chance that the spawn will trigger. Note: Rate spawning will only evaluate the probability at the start of each loop.  This varies from regular emitters which evaluate each time particles are spawned.
+---@field public LoopCountLimit FNiagaraDistributionRangeInt @For Emitters that loop multiple times (or infinitely), this can constrain the bursting to only happen within this loop count limit. For example, an emitter might loop 5 times, but bursting should only happen on the first two loops.  Setting Loop Count Limit to 2 will allow the burst to fire twice, once after each of the first two loops, and then stop. -TODO:EditConditionHides, EditCondition = "Type == ENiagaraStatelessSpawnInfoType::Burst",
+local FNiagaraStatelessSpawnInfo = {}

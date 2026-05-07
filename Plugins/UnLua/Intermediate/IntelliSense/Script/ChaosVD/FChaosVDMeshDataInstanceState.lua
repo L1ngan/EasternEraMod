@@ -1,0 +1,15 @@
+---Struct holding the state of a mesh instance - Is separated from the Mesh instance class so we can show the data in the Details panel
+---@class FChaosVDMeshDataInstanceState
+---@field public CollisionData FChaosVDShapeCollisionData @Recorded Shape instance Data
+---@field public ImplicitObjectInfo FChaosVDImplicitObjectBasicView @Minimum set of data about the recorded implicit object
+---@field public CurrentWorldTransform FTransform @CVD Debug - Current world transform used to render this Mesh
+---@field public MeshComponentType EChaosVDMeshComponent @CVD Debug - Current mesh component type to render this Mesh
+---@field public MeshComponent UMeshComponent @CVD Debug - Pointer to the mesh component used to render this Mesh
+---@field public MeshInstanceIndex integer @CVD Debug - Instance index of mesh component used to render this Mesh
+---@field public CurrentGeometryColor FLinearColor @CVD Debug - Color used to render this mesh
+---@field public OwningParticleID integer @CVD Debug - Id of the particle this geometry belongs
+---@field public OwningSolverID integer @CVD Debug - Id of the solver this geometry belongs
+---@field public bIsVisible boolean
+---@field public bIsSelected boolean
+---@field public bShowCVDDebugData boolean
+local FChaosVDMeshDataInstanceState = {}

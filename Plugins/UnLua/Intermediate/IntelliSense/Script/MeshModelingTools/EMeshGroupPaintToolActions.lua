@@ -1,0 +1,12 @@
+---@class EMeshGroupPaintToolActions
+---@field public NoAction integer
+---@field public ClearFrozen integer
+---@field public FreezeCurrent integer
+---@field public FreezeOthers integer
+---@field public GrowCurrent integer
+---@field public ShrinkCurrent integer
+---@field public ClearCurrent integer
+---@field public FloodFillCurrent integer
+---@field public ClearAll integer
+---@field public EMeshGroupPaintToolActions_MAX integer
+local EMeshGroupPaintToolActions = {}

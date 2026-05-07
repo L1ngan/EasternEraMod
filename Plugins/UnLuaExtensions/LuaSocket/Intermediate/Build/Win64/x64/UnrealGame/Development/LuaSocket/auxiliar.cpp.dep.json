@@ -1,0 +1,20 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\projectmod\\plugins\\unluaextensions\\luasocket\\source\\src\\auxiliar.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\projectmod\\intermediate\\build\\win64\\x64\\easternera\\development\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\projectmod\\plugins\\unluaextensions\\luasocket\\intermediate\\build\\win64\\x64\\unrealgame\\development\\luasocket\\definitions.luasocket.h",
+            "g:\\projectmod\\plugins\\unluaextensions\\luasocket\\source\\src\\luasocket.h",
+            "g:\\projectmod\\plugins\\unlua\\source\\unlua\\public\\lua.hpp",
+            "g:\\projectmod\\plugins\\unlua\\source\\thirdparty\\lua\\lua-5.4.3\\src\\lua.h",
+            "g:\\projectmod\\plugins\\unlua\\source\\thirdparty\\lua\\lua-5.4.3\\src\\luaconf.h",
+            "g:\\projectmod\\plugins\\unlua\\source\\thirdparty\\lua\\lua-5.4.3\\src\\lualib.h",
+            "g:\\projectmod\\plugins\\unlua\\source\\thirdparty\\lua\\lua-5.4.3\\src\\lauxlib.h",
+            "g:\\projectmod\\plugins\\unluaextensions\\luasocket\\source\\src\\auxiliar.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

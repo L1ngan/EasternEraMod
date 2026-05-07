@@ -1,0 +1,12 @@
+---@class FMeshMakeCleanGeometrySettings
+---@field public FillHolesEdgeCountThresh integer
+---@field public FillHolesEstimatedAreaFraction number
+---@field public bDiscardAllAttributes boolean
+---@field public bClearUVs boolean
+---@field public bClearNormals boolean
+---@field public bClearTangents boolean
+---@field public bClearVertexColors boolean
+---@field public bClearMaterialIDs boolean
+---@field public bOutputMeshVertexNormals boolean
+---@field public bOutputOverlayVertexNormals boolean
+local FMeshMakeCleanGeometrySettings = {}

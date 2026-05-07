@@ -1,0 +1,14 @@
+---@class FOptionalPinFromProperty
+---@field public PropertyName string
+---@field public PropertyFriendlyName string
+---@field public PropertyTooltip string
+---@field public CategoryName string
+---@field public bShowPin boolean
+---@field public bCanToggleVisibility boolean
+---@field public bPropertyIsCustomized boolean
+---@field public bHasOverridePin boolean
+---@field public bIsMarkedForAdvancedDisplay boolean
+---@field public bIsOverrideEnabled boolean @TRUE if the override value is enabled for use
+---@field public bIsSetValuePinVisible boolean @TRUE if the override value should be set through this pin
+---@field public bIsOverridePinVisible boolean @TRUE if the override pin is visible
+local FOptionalPinFromProperty = {}

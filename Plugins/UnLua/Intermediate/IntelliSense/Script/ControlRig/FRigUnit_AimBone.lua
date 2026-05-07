@@ -1,0 +1,14 @@
+---Aligns the rotation of a primary and secondary axis of a bone to a global target.
+---Note: This node operates in global space!
+---@class FRigUnit_AimBone : FRigUnit_HighlevelBaseMutable
+---@field public Bone string @The name of the bone to align
+---@field public Primary FRigUnit_AimBone_Target @The primary target for the aim
+---@field public Secondary FRigUnit_AimBone_Target @The secondary target for the aim - also referred to as PoleVector / UpVector
+---@field public Weight number @The weight of the change - how much the change should be applied
+---@field public bPropagateToChildren boolean @If set to true all of the global transforms of the children of this bone will be recalculated based on their local transforms. Note: This is computationally more expensive than turning it off.
+---@field public DebugSettings FRigUnit_AimBone_DebugSettings @The debug setting for the node
+---@field public CachedBoneIndex FCachedRigElement
+---@field public PrimaryCachedSpace FCachedRigElement
+---@field public SecondaryCachedSpace FCachedRigElement
+---@field public bIsInitialized boolean
+local FRigUnit_AimBone = {}

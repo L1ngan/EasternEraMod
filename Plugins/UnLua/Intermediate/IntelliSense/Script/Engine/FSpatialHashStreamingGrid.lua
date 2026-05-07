@@ -1,0 +1,15 @@
+---Represents a PIE/Game streaming grid
+---@class FSpatialHashStreamingGrid
+---@field public GridName string
+---@field public Origin FVector
+---@field public CellSize integer
+---@field public LoadingRange number
+---@field public bBlockOnSlowStreaming boolean
+---@field public DebugColor FLinearColor
+---@field public GridLevels TArray<FSpatialHashStreamingGridLevel>
+---@field public WorldBounds FBox
+---@field public bClientOnlyVisible boolean
+---@field public GridIndex integer
+---@field public Settings FSpatialHashSettings
+---@field private InjectedGridLevels TArray<FSpatialHashStreamingGridLevel> @Contains cells injected at runtime from content bundles
+local FSpatialHashStreamingGrid = {}

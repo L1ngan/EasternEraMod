@@ -1,0 +1,13 @@
+---@class ESynthLFOPatchType
+---@field public PatchToNone integer
+---@field public PatchToGain integer
+---@field public PatchToOscFreq integer
+---@field public PatchToFilterFreq integer
+---@field public PatchToFilterQ integer
+---@field public PatchToOscPulseWidth integer
+---@field public PatchToOscPan integer
+---@field public PatchLFO1ToLFO2Frequency integer
+---@field public PatchLFO1ToLFO2Gain integer
+---@field public Count integer
+---@field public ESynthLFOPatchType_MAX integer
+local ESynthLFOPatchType = {}

@@ -1,0 +1,26 @@
+---Details about the assets contained in a MetaHuman Package
+---@class FMetaHumanAggregateDetails
+---@field public bResizesWithBlendableBodies boolean @Clothing will resize to blendable bodies in UEMHC
+---@field public bHasClothingMask boolean @Clothing has a mask for hidden face removal in UEMHC
+---@field public IncludedLods integer @Which LODs are included for this item
+---@field public Lod0VertCount integer @Vert Count for LOD0 (if single item in listing)
+---@field public NumUniqueClothingItems integer @Number of clothing items
+---@field public bContainsGrooms boolean @Does this character contain one or more grooms
+---@field public bContainsClothing boolean @Does this character come with clothing
+---@field public bIsEditableCharacter boolean @Is this a character a user can open up in UEMHC and edit?
+---@field public PlatformsIncluded TArray<EMetaHumanQualityLevel> @Cinematic and/or Optimized
+---@field public NumUniqueCharacters integer @How many Characters are included in this listing
+---@field public NumUniqueGrooms integer @Number of grooms
+---@field public bPhysics boolean @Simulation enabled
+---@field public StrandsCount integer @Number of curves
+---@field public StrandsPointCount integer @Number of CVs
+---@field public bHasLods boolean @LODs available
+---@field public CardMeshCount integer @Number of card assets
+---@field public CardMeshVertices integer @Number of verts
+---@field public CardMeshTextureResolution FIntVector2 @Texture Atlas resolution
+---@field public VolumeMeshCount integer @Number of meshes
+---@field public VolumeMeshVertices integer @Number of verts
+---@field public VolumeMeshTextureResolution FIntVector2 @Textures resolution
+---@field public NumMaterials integer @Number of material or material instances
+---@field public EngineVersion string @UE Version asset was packaged with
+local FMetaHumanAggregateDetails = {}

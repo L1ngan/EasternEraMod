@@ -1,0 +1,2 @@
+---@class FDebuggingInfoForSingleFunction
+local FDebuggingInfoForSingleFunction = {}

@@ -1,0 +1,11 @@
+---@class FGroomHairGroupPreview
+---@field public GroupIndex integer
+---@field public GroupName string
+---@field public GroupID integer
+---@field public CurveCount integer
+---@field public GuideCount integer
+---@field public Attributes integer
+---@field public AttributeFlags integer
+---@field public Flags integer
+---@field public InterpolationSettings FHairGroupsInterpolation
+local FGroomHairGroupPreview = {}

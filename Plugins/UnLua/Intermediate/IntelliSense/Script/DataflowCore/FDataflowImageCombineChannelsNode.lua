@@ -1,0 +1,11 @@
+---Combine channels into a single RGBA image
+---Outputs are single channel images
+---@class FDataflowImageCombineChannelsNode : FDataflowNode
+---@field private Red FDataflowImage @Red channel - if not connected, use black color
+---@field private Green FDataflowImage @Green channel - if not connected, use black color
+---@field private Blue FDataflowImage @Blue channel - if not connected, use black color
+---@field private Alpha FDataflowImage @Alpha channel - if not connected, use black color
+---@field private Image FDataflowImage @Output image recombined from input channels
+---@field private ResolutionOptions EDataflowImageCombineResolutionOption @resolution option
+---@field private Resolution EDataflowImageResolution @resolution of the output image if the resolution option is set to user defined
+local FDataflowImageCombineChannelsNode = {}

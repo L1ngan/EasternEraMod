@@ -1,0 +1,19 @@
+---Texture source data management.
+---@class FTextureSource
+---@field private Id FGuid @GUID used to track changes to the source data.       Typically with UseHashAsGuid , this "Id" is the hash of the BulkData.       Note that GetId() is not == Id.
+---@field private BaseBlockX integer @Position of texture block0, only relevant if source has multiple blocks
+---@field private BaseBlockY integer
+---@field private SizeX integer @Width of the texture.
+---@field private SizeY integer @Height of the texture.
+---@field private NumSlices integer @Depth (volume textures) or faces (cube maps).
+---@field private NumMips integer @Number of mips provided as source data for the texture.
+---@field private NumLayers integer @Number of layers (for multi-layered virtual textures) provided as source data for the texture.
+---@field private bLongLatCubemap boolean @Source represents a cubemap in long/lat format, will have only 1 slice per cube, rather than 6 slices. Not needed for non-array cubemaps, since we can just look at NumSlices == 1 or 6 But for cube arrays, no way of determining whether NumSlices=6 means 1 cubemap, or 6 long/lat cubemaps
+---@field private CompressionFormat integer @Compression format that source data is stored as.
+---@field private bGuidIsHash boolean @Uses hash instead of guid to identify content to improve DDC cache hit.
+---@field private LayerColorInfo_LockProtected TArray<FTextureSourceLayerColorInfo> @Per layer color info. If this is empty we don't have the data, otherwise count is == NumLayers.       Protected by BulkDataLock for thread safety.  Use Get/Set accessors which do the locking for you.
+---@field private Format integer @Format in which the source data is stored.
+---@field private LayerFormat TArray<integer> @For multi-layered sources, each layer may have a different format (in this case LayerFormat[0] == Format) .
+---@field private Blocks TArray<FTextureSourceBlock> @All sources have 1 implicit block defined by BaseBlockXY/SizeXY members.  Textures imported as UDIM may have additional blocks defined here. These are stored sequentially in the source's bulk data.
+---@field private BlockDataOffsets TArray<integer> @Offsets of each block (including Block0) in the bulk data. Blocks are not necessarily stored in order, since block indices are sorted by X/Y location. For non-UDIM textures, this will always have a single entry equal to 0
+local FTextureSource = {}

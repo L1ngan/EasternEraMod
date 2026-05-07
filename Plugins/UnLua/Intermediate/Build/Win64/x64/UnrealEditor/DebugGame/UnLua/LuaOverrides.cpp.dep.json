@@ -1,0 +1,18 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\unlua\\source\\unlua\\private\\luaoverrides.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\unlua\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\unlua\\definitions.unlua.h",
+            "g:\\modproject\\plugins\\unlua\\source\\unlua\\private\\luaoverrides.h",
+            "g:\\modproject\\plugins\\unlua\\source\\unlua\\public\\luaoverridesclass.h",
+            "g:\\modproject\\plugins\\unlua\\intermediate\\build\\win64\\unrealeditor\\inc\\unlua\\uht\\luaoverridesclass.generated.h",
+            "g:\\modproject\\plugins\\unlua\\source\\unlua\\public\\luafunction.h",
+            "g:\\modproject\\plugins\\unlua\\intermediate\\build\\win64\\unrealeditor\\inc\\unlua\\uht\\luafunction.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

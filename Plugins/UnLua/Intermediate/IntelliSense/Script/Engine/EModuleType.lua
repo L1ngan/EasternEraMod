@@ -1,0 +1,16 @@
+---ModuleType
+---   Indicates the kind of emitter the module can be applied to.
+---   ie, EPMT_Beam - only applies to beam emitters.
+---   The TypeData field is present to speed up finding the TypeData module.
+---@class EModuleType
+---@field public EPMT_General integer
+---@field public EPMT_TypeData integer
+---@field public EPMT_Beam integer
+---@field public EPMT_Trail integer
+---@field public EPMT_Spawn integer
+---@field public EPMT_Required integer
+---@field public EPMT_Event integer
+---@field public EPMT_Light integer
+---@field public EPMT_SubUV integer
+---@field public EPMT_MAX integer
+local EModuleType = {}

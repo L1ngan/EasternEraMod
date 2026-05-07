@@ -1,0 +1,15 @@
+---* Retrieves various pieces of info about an interpolated transform hierarchy from an rig element item list
+---@class FRigUnit_ChainInfo : FRigUnit_HighlevelBase
+---@field public Items TArray<FRigElementKey> @* The items to use to interpret the chain
+---@field public Param number @* The parameter value down the chain of items from 0 to 1
+---@field public bCalculateStretch boolean @* If True calculate stretch factors of chain and current segment
+---@field public bInitial boolean @* If True use initial transform values for chain
+---@field public bDebug boolean @* Enable debug draw for node
+---@field public DebugScale number @* Debug draw scale
+---@field public InterpolatedTransform FTransform @* The interpolated transform at the chain's input parameter
+---@field public ChainLength number @* The length of the interpolated chain
+---@field public ParamLength number @* The length of the interpolated chain
+---@field public ChainStretchFactor number @* Stretch factor of chain
+---@field public SegmentInfo FRigUnit_ChainInfo_SegmentInfo @* Segment Info
+---@field public CachedElements TArray<FCachedRigElement> @Used to cache the internally used index
+local FRigUnit_ChainInfo = {}

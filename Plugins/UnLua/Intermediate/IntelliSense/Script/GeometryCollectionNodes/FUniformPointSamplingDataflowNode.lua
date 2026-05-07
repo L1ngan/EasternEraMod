@@ -1,0 +1,12 @@
+---Uniform Sampling on a DynamicMesh
+---@class FUniformPointSamplingDataflowNode : FDataflowNode
+---@field public TargetMesh UDynamicMesh @Mesh to sample points on
+---@field public SamplingRadius number @Desired "radius" of sample points. Spacing between samples is at least 2x this value.
+---@field public MaxNumSamples integer @Maximum number of samples requested. If 0 or default value, mesh will be maximally sampled
+---@field public SubSampleDensity number @Density of subsampling used in Poisson strategy. Larger numbers mean "more accurate" (but slower) results.
+---@field public RandomSeed integer @Random Seed used to initialize sampling strategies
+---@field public SamplePoints TArray<FVector> @Sampled positions on the mesh
+---@field public SampleTriangleIDs TArray<integer> @Sampled triangleID
+---@field public SampleBarycentricCoords TArray<FVector> @Barycentric Coordinates of each Sample Point in it's respective Triangle.
+---@field public NumSamplePoints integer @Number of Sampled positions on the mesh
+local FUniformPointSamplingDataflowNode = {}

@@ -1,0 +1,16 @@
+---@class FAnimNode_IKRig : FAnimNode_CustomProperty
+---@field public Source FPoseLink @The input pose to start the IK solve relative to.
+---@field public RigDefinitionAsset UIKRigDefinition @The IK rig to use to modify the incoming source pose.
+---@field public Goals TArray<FIKRigGoal> @The input goal transforms used by the IK Rig solvers.
+---@field public bStartFromRefPose boolean @optionally ignore the input pose and start from the reference pose each solve
+---@field public bEnableDebugDraw boolean @Toggle debug drawing of goals when node is selected.
+---@field public DebugScale number @Adjust size of debug drawing.
+---@field public AlphaInputType EAnimAlphaInputType @alpha value handler *
+---@field public bAlphaBoolEnabled boolean
+---@field public Alpha number @Current strength of the skeletal control
+---@field public AlphaScaleBias FInputScaleBias
+---@field public AlphaBoolBlend FInputAlphaBoolBlend
+---@field public AlphaCurveName string
+---@field public AlphaScaleBiasClamp FInputScaleBiasClamp
+---@field private GoalCreators TArray<UActorComponent> @a cached list of components on the owning actor that implement the goal creator interface
+local FAnimNode_IKRig = {}

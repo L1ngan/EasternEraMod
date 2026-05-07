@@ -1,0 +1,11 @@
+---Used internally.
+---Describes property copy, the property from source is copied into the property at the target.
+---Copy target struct is described in the property copy batch.
+---@class FPropertyBindingCopyInfo
+---@field public SourceIndirection FPropertyBindingPropertyIndirection @Source property access.
+---@field public TargetIndirection FPropertyBindingPropertyIndirection @Target property access.
+---@field public SourceStructType UStruct @Type of the source data, used for validation.
+---@field public CopySize integer @Cached property element size * dim.
+---@field public SourceDataHandle FInstancedStruct @Describes how to get the source data pointer for the copy.
+---@field public Type EPropertyCopyType @Type of the copy
+local FPropertyBindingCopyInfo = {}

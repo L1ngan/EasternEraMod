@@ -1,0 +1,15 @@
+---Micro-transaction purchase information
+---@class FInAppPurchaseProductInfo2
+---@field public Identifier string @The unique product identifier
+---@field public TransactionIdentifier string @the unique transaction identifier
+---@field public DisplayName string @The localized display name
+---@field public DisplayDescription string @The localized display description name
+---@field public DisplayPrice string @The localized display price name
+---@field public RawPrice number @Raw price without currency code and symbol
+---@field public CurrencyCode string @The localized currency code of the price
+---@field public CurrencySymbol string @The localized currency symbol of the price
+---@field public DecimalSeparator string @The localized decimal separator used in the price
+---@field public GroupingSeparator string @The localized grouping separator of the price
+---@field public ReceiptData string @Opaque receipt data for the transaction
+---@field public DynamicFields TMap<string, string> @Dynamic fields from raw Json data.
+local FInAppPurchaseProductInfo2 = {}

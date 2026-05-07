@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\unluaextensions\\luasocket\\source\\src\\unixdgram.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\unluaextensions\\luasocket\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\luasocket\\definitions.luasocket.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,12 @@
+---@class FRigUnit_FitChainToCurve_WorkData
+---@field public ChainLength number
+---@field public ItemPositions TArray<FVector>
+---@field public ItemSegments TArray<number>
+---@field public CurvePositions TArray<FVector>
+---@field public CurveSegments TArray<number>
+---@field public CachedItems TArray<FCachedRigElement>
+---@field public ItemRotationA TArray<integer>
+---@field public ItemRotationB TArray<integer>
+---@field public ItemRotationT TArray<number>
+---@field public ItemLocalTransforms TArray<FTransform>
+local FRigUnit_FitChainToCurve_WorkData = {}

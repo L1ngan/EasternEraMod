@@ -1,0 +1,17 @@
+---Correct skin weights vertex properties.
+---@class FDataflowCorrectSkinWeightsNode : FDataflowNode
+---@field public Collection FManagedArrayCollection
+---@field public BoneIndicesName string @The name to be set for the bone indices.
+---@field public BoneWeightsName string @The name to be set for the bone weights.
+---@field public SelectionMapName string @Map name to be used to select vertices to correct
+---@field public VertexGroup FScalarVertexPropertyGroup @Target group in which the attributes are stored
+---@field public BoneIndicesKey FCollectionAttributeKey @Bone indices key to be used in other nodes if necessary
+---@field public BoneWeightsKey FCollectionAttributeKey @Bone weights key to be used in other nodes if necessary
+---@field public SelectionMapKey FCollectionAttributeKey @Selection map key to be used in other nodes if necessary
+---@field public CorrectionType ESkinWeightsCorrectionType @Selection map key to be used in other nodes if necessary
+---@field public SmoothingIterations integer @Number of iteration required for the smoothing
+---@field public SmoothingFactor number @Lerp value in between the current and the average weight values
+---@field public PruningThreshold number @All weights below this threshold will be pruned
+---@field public ClampingNumber integer @Max number of bones to consider for the skin weights
+---@field public SelectionThreshold number @Selection threshold to consider a neighbor skin weight
+local FDataflowCorrectSkinWeightsNode = {}

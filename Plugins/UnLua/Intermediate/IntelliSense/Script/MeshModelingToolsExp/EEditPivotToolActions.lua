@@ -1,0 +1,12 @@
+---@class EEditPivotToolActions
+---@field public NoAction integer
+---@field public Center integer
+---@field public Bottom integer
+---@field public Top integer
+---@field public Left integer
+---@field public Right integer
+---@field public Front integer
+---@field public Back integer
+---@field public WorldOrigin integer
+---@field public EEditPivotToolActions_MAX integer
+local EEditPivotToolActions = {}

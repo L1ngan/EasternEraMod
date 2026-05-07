@@ -1,0 +1,2 @@
+---@class FMovieSceneSubSequenceTree
+local FMovieSceneSubSequenceTree = {}

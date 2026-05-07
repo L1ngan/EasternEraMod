@@ -1,0 +1,16 @@
+---The number of entries in ETouchIndex must match the number of touch keys defined in EKeys and NUM_TOUCH_KEYS above
+---@class ETouchIndex
+---@field public Touch1 integer
+---@field public Touch2 integer
+---@field public Touch3 integer
+---@field public Touch4 integer
+---@field public Touch5 integer
+---@field public Touch6 integer
+---@field public Touch7 integer
+---@field public Touch8 integer
+---@field public Touch9 integer
+---@field public Touch10 integer
+---@field public CursorPointerIndex integer
+---@field public MAX_TOUCHES integer
+---@field public ETouchIndex_MAX integer
+local ETouchIndex = {}

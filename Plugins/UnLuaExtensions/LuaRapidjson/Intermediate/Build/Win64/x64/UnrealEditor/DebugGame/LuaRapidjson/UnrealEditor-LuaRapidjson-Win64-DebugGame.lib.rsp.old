@@ -1,0 +1,17 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-LuaRapidjson-Win64-DebugGame.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"G:/ProjectMod/Intermediate/Build/Win64/x64/EastRimWorldEditor/DebugGame/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.h.obj"
+"G:/ProjectMod/Plugins/UnLuaExtensions/LuaRapidjson/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaRapidjson/LuaRapidjsonModule.cpp.obj"
+"G:/ProjectMod/Plugins/UnLuaExtensions/LuaRapidjson/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaRapidjson/Document.cpp.obj"
+"G:/ProjectMod/Plugins/UnLuaExtensions/LuaRapidjson/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaRapidjson/rapidjson.cpp.obj"
+"G:/ProjectMod/Plugins/UnLuaExtensions/LuaRapidjson/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaRapidjson/Schema.cpp.obj"
+"G:/ProjectMod/Plugins/UnLuaExtensions/LuaRapidjson/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaRapidjson/values.cpp.obj"
+"G:/ProjectMod/Plugins/UnLuaExtensions/LuaRapidjson/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaRapidjson/PerModuleInline.gen.cpp.obj"
+"G:/ProjectMod/Plugins/UnLuaExtensions/LuaRapidjson/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaRapidjson/Default.rc2.res"
+/OUT:"G:/ProjectMod/Plugins/UnLuaExtensions/LuaRapidjson/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaRapidjson/UnrealEditor-LuaRapidjson-Win64-DebugGame.lib"

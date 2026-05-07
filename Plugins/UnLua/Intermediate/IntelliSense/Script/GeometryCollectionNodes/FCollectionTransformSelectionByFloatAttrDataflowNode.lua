@@ -1,0 +1,11 @@
+---Selects bones by a float attribute
+---@class FCollectionTransformSelectionByFloatAttrDataflowNode : FDataflowNode
+---@field public Collection FManagedArrayCollection @GeometryCollection for the selection
+---@field public GroupName string @Group name for the attr
+---@field public AttrName string @Attribute name
+---@field public Min number @Minimum value for the selection
+---@field public Max number @Maximum value for the selection
+---@field public RangeSetting ERangeSettingEnum @Values for the selection has to be inside or outside [Min, Max] range
+---@field public bInclusive boolean @If true then range includes Min and Max values
+---@field public TransformSelection FDataflowTransformSelection @Array of the selected bone indices
+local FCollectionTransformSelectionByFloatAttrDataflowNode = {}

@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\unlua\\source\\unlua\\private\\luamodulelocator.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\development\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\unlua\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\unlua\\definitions.unlua.h",
+            "g:\\modproject\\plugins\\unlua\\source\\unlua\\public\\luamodulelocator.h",
+            "g:\\modproject\\plugins\\unlua\\intermediate\\build\\win64\\unrealeditor\\inc\\unlua\\uht\\luamodulelocator.generated.h",
+            "g:\\modproject\\plugins\\unlua\\source\\unlua\\public\\unluainterface.h",
+            "g:\\modproject\\plugins\\unlua\\intermediate\\build\\win64\\unrealeditor\\inc\\unlua\\uht\\unluainterface.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

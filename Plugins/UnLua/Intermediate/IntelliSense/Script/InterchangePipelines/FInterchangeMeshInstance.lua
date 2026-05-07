@@ -1,0 +1,13 @@
+---* A mesh instance is a description of a translated scene node that points to a translated mesh asset.
+---* A mesh instance that points to an LOD group can have many LODs and many scene mesh nodes per LOD index.
+---* A mesh instance that points to a mesh node will have only LOD 0 and will point to one scene mesh node.
+---@class FInterchangeMeshInstance
+---@field public MeshInstanceUid string @This ID represents either a LOD group scene node UID or a mesh scene node UID.
+---@field public LodGroupNode UInterchangeSceneNode @This member is null unless the mesh instance represents a LOD group.
+---@field public bReferenceSkinnedMesh boolean
+---@field public bReferenceMorphTarget boolean
+---@field public bHasMorphTargets boolean
+---@field public bIsAnimated boolean
+---@field public SceneNodePerLodIndex TMap<integer, FInterchangeLodSceneNodeContainer> @Each scene node here represents a mesh scene node. If it represents a LOD group, there may be more then one mesh scene node for a specific LOD index.
+---@field public ReferencingMeshGeometryUids TArray<string> @All mesh geometry referenced by this MeshInstance.
+local FInterchangeMeshInstance = {}

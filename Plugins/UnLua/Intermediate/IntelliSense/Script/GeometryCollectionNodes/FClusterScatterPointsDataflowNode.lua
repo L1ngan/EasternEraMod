@@ -1,0 +1,12 @@
+---@class FClusterScatterPointsDataflowNode : FDataflowNode
+---@field private NumberClustersMin integer @Minimum number of clusters of points to create. The amount of clusters created will be chosen at random between Min and Max
+---@field private NumberClustersMax integer @Maximum number of clusters of points to create. The amount of clusters created will be chosen at random between Min and Max
+---@field private PointsPerClusterMin integer @Minimum number of points per cluster. The amount of points in each cluster will be chosen at random between Min and Max
+---@field private PointsPerClusterMax integer @Maximum number of points per cluster. The amount of points in each cluster will be chosen at random between Min and Max
+---@field private ClusterRadiusFractionMin number @Minimum cluster radius (as fraction of the overall bounding box size). Cluster Radius Offset will be added to this. Each point will be placed at least this far (plus the Cluster Radius Offset) from its cluster center.
+---@field private ClusterRadiusFractionMax number @Maximum cluster radius (as fraction of the overall bounding box size). Cluster Radius Offset will be added to this. Each point will be placed at most this far (plus the Cluster Radius Offset) from its cluster center.
+---@field private ClusterRadiusOffset number @Cluster radius offset (in cm). This offset will be added to the 'Min/Max Dist from Center' distance
+---@field private RandomSeed integer @Seed for random
+---@field private BoundingBox FBox @BoundingBox to generate points inside of
+---@field private Points TArray<FVector> @Generated points
+local FClusterScatterPointsDataflowNode = {}

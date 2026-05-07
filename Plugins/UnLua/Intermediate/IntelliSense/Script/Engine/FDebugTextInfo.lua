@@ -1,0 +1,19 @@
+---* Single entry of a debug text item to render.
+---*
+---* @@see AHud
+---* @@see AddDebugText(), RemoveDebugText() and DrawDebugTextList()
+---@class FDebugTextInfo
+---@field public SrcActor AActor @AActor related to text item
+---@field public SrcActorOffset FVector @Offset from SrcActor.Location to apply
+---@field public SrcActorDesiredOffset FVector @Desired offset to interpolate to
+---@field public DebugText string @Text to display
+---@field public TimeRemaining number @Time remaining for the debug text, -1.f == infinite
+---@field public Duration number @Duration used to lerp desired offset
+---@field public TextColor FColor @Text color
+---@field public bAbsoluteLocation boolean @whether the offset should be treated as absolute world location of the string
+---@field public bKeepAttachedToActor boolean @If the actor moves does the text also move with it?
+---@field public bDrawShadow boolean @Whether to draw a shadow for the text
+---@field public OrigActorLocation FVector @When we first spawn store off the original actor location for use with bKeepAttachedToActor
+---@field public Font UFont @The Font which to display this as.  Will Default to GetSmallFont()*
+---@field public FontScale number @Scale to apply to font when rendering
+local FDebugTextInfo = {}

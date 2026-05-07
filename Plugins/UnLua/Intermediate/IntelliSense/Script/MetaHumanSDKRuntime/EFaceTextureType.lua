@@ -1,0 +1,16 @@
+---This enum defines the Texture objects stored in a MetaHumanCharacter by indexing the SynthesizedFaceTextures array.
+---The values match the names of the material slots for the MetaHumanCharacter Editable preview material, and
+---correspond to the expected outputs of the TS model in the TitanLib module.
+---@class EFaceTextureType
+---@field public Basecolor integer
+---@field public Basecolor_Animated_CM1 integer
+---@field public Basecolor_Animated_CM2 integer
+---@field public Basecolor_Animated_CM3 integer
+---@field public Normal integer
+---@field public Normal_Animated_WM1 integer
+---@field public Normal_Animated_WM2 integer
+---@field public Normal_Animated_WM3 integer
+---@field public Cavity integer
+---@field public Count integer
+---@field public EFaceTextureType_MAX integer
+local EFaceTextureType = {}

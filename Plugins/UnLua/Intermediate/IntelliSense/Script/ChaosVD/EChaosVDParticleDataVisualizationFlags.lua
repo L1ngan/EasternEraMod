@@ -1,0 +1,16 @@
+---@class EChaosVDParticleDataVisualizationFlags
+---@field public None integer
+---@field public Velocity integer
+---@field public AngularVelocity integer
+---@field public Acceleration integer
+---@field public AngularAcceleration integer
+---@field public LinearImpulse integer
+---@field public AngularImpulse integer
+---@field public ClusterConnectivityEdge integer
+---@field public CenterOfMass integer
+---@field public DrawDataOnlyForSelectedParticle integer
+---@field public Bounds integer
+---@field public InflatedBounds integer
+---@field public EnableDraw integer
+---@field public EChaosVDParticleDataVisualizationFlags_MAX integer
+local EChaosVDParticleDataVisualizationFlags = {}

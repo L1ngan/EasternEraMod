@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\private\\rhs_animnotifybase.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\easternera\\shipping\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\x64\\unrealgame\\shipping\\auroradevs_rhs\\definitions.auroradevs_rhs.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\rhs_animnotifybase.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\rhs_data.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\rhs_data.generated.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\rhs_animnotifybase.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

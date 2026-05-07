@@ -1,0 +1,20 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\plugins\\commongame\\source\\private\\commonlocalplayer.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\easternera\\development\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\plugins\\commongame\\intermediate\\build\\win64\\x64\\unrealgame\\development\\commongame\\definitions.commongame.h",
+            "h:\\project\\plugins\\commongame\\source\\public\\commonlocalplayer.h",
+            "h:\\project\\plugins\\commongame\\intermediate\\build\\win64\\unrealgame\\inc\\commongame\\uht\\commonlocalplayer.generated.h",
+            "h:\\project\\plugins\\commongame\\source\\public\\gameuimanagersubsystem.h",
+            "h:\\project\\plugins\\commongame\\intermediate\\build\\win64\\unrealgame\\inc\\commongame\\uht\\gameuimanagersubsystem.generated.h",
+            "h:\\project\\plugins\\commongame\\source\\public\\gameuipolicy.h",
+            "h:\\project\\plugins\\commongame\\intermediate\\build\\win64\\unrealgame\\inc\\commongame\\uht\\gameuipolicy.generated.h",
+            "h:\\project\\plugins\\commongame\\intermediate\\build\\win64\\unrealgame\\inc\\commongame\\uht\\commonlocalplayer.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

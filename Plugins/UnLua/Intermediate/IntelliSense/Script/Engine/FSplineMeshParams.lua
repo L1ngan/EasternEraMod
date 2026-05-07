@@ -1,0 +1,15 @@
+---Structure that holds info about spline, passed to renderer to deform UStaticMesh.
+---Also used by Lightmass, so be sure to update Lightmass::FSplineMeshParams and the static lighting code if this changes!
+---@class FSplineMeshParams
+---@field public StartPos FVector @Start location of spline, in component space.
+---@field public StartTangent FVector @Start tangent of spline, in component space.
+---@field public StartScale FVector2D @X and Y scale applied to mesh at start of spline.
+---@field public StartRoll number @Roll around spline applied at start, in radians.
+---@field public EndRoll number @Roll around spline applied at end, in radians.
+---@field public StartOffset FVector2D @Starting offset of the mesh from the spline, in component space.
+---@field public EndPos FVector @End location of spline, in component space.
+---@field public EndScale FVector2D @X and Y scale applied to mesh at end of spline.
+---@field public EndTangent FVector @End tangent of spline, in component space.
+---@field public EndOffset FVector2D @Ending offset of the mesh from the spline, in component space.
+---@field public NaniteClusterBoundsScale number @How much to scale the calculated culling bounds of Nanite clusters after deformation. NOTE: This should only be set greater than 1.0 if it fixes visible issues with clusters being incorrectly culled.
+local FSplineMeshParams = {}

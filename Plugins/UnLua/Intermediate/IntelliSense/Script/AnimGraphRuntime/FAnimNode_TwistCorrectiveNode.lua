@@ -1,0 +1,13 @@
+---This is the node that apply corrective morphtarget for twist
+---Good example is that if you twist your neck too far right or left, you're going to see odd stretch shape of neck,
+---This node can detect the angle and apply morphtarget curve
+---This isn't the twist control node for bone twist
+---@class FAnimNode_TwistCorrectiveNode : FAnimNode_SkeletalControlBase
+---@field public BaseFrame FReferenceBoneFrame @Base Frame of the reference for the twist node
+---@field public TwistFrame FReferenceBoneFrame @Transform component to use as input
+---@field public TwistPlaneNormalAxis FAxis @Normal of the Plane that we'd like to calculate angle calculation from in BaseFrame. Please note we're looking for Normal Axis
+---@field public RangeMax number @Maximum limit of the input value (mapped to RemappedMax, only used when limiting the source range) We can't go more than 180 right now because this is dot product driver
+---@field public RemappedMin number @Minimum value to apply to the destination (remapped from the input range)
+---@field public RemappedMax number @Maximum value to apply to the destination (remapped from the input range)
+---@field public CurveName string
+local FAnimNode_TwistCorrectiveNode = {}

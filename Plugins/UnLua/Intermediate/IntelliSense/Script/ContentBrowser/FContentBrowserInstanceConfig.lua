@@ -1,0 +1,17 @@
+---@class FContentBrowserInstanceConfig
+---@field public PathView FPathViewConfig
+---@field public bShowFavorites boolean
+---@field public bFavoritesExpanded boolean
+---@field public bSourcesExpanded boolean
+---@field public bFilterRecursively boolean
+---@field public bShowFolders boolean
+---@field public bShowEmptyFolders boolean
+---@field public bShowEngineContent boolean
+---@field public bShowDeveloperContent boolean
+---@field public bShowLocalizedContent boolean
+---@field public bShowPluginContent boolean
+---@field public bShowCppFolders boolean
+---@field public bSearchClasses boolean
+---@field public bSearchAssetPaths boolean
+---@field public bSearchCollections boolean
+local FContentBrowserInstanceConfig = {}

@@ -1,0 +1,14 @@
+---@class ECollisionGeometryType
+---@field public CopyFromInputs integer
+---@field public AlignedBoxes integer
+---@field public OrientedBoxes integer
+---@field public MinimalSpheres integer
+---@field public Capsules integer
+---@field public ConvexHulls integer
+---@field public ConvexDecompositions integer
+---@field public SweptHulls integer
+---@field public LevelSets integer
+---@field public MinVolume integer
+---@field public Empty integer
+---@field public ECollisionGeometryType_MAX integer
+local ECollisionGeometryType = {}

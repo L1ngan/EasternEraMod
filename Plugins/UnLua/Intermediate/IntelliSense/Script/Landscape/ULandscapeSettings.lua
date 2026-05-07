@@ -1,0 +1,22 @@
+---@class ULandscapeSettings : UDeveloperSettings
+---@field public MaxNumberOfLayers integer @This option controls the maximum editing layers that can be added to a Landscape
+---@field public bShowDialogForAutomaticLayerCreation boolean @When true, automatic edit layer creation pops up a dialog where the new layer can be reordered relative to other layers.
+---@field public MaxComponents integer @Maximum Dimension of Landscape in Components
+---@field public MaxImageImportCacheSizeMegaBytes integer @Maximum Size of Import Image Cache in MB
+---@field public PaintStrengthGamma number @Exponent for the Paint Tool Strength
+---@field public bDisablePaintingStartupSlowdown boolean @Disable Painting Startup Slowdown
+---@field public LandscapeDirtyingMode ELandscapeDirtyingMode @Defines when the engine requires the landscape actors to be resaved
+---@field protected SideResolutionLimit integer
+---@field protected DefaultLandscapeMaterial TSoftObjectPtr<UMaterialInterface> @Default Landscape Material will be prefilled when creating a new landscape.
+---@field protected DefaultLayerInfoObject TSoftObjectPtr<ULandscapeLayerInfoObject> @Default Layer Info Object
+---@field protected BrushSizeUIMax number @Maximum size that can be set via the slider for the landscape sculpt/paint brushes
+---@field protected BrushSizeClampMax number @Maximum size that can be set manually for the landscape sculpt/paint brushes
+---@field protected HLODMaxTextureSize integer @Maximum size of the textures generated for landscape HLODs
+---@field protected bShouldUpdateEditLayersDuringInteractiveChanges boolean @For landscape layers-affecting changes, allows the landscape to be updated when performing an interactive change (e.g. when changing an edit layer's alpha). Set to false if the performance when editing gets too bad (the landscape will be properly updated when the dragging operation is done).
+---@field protected bRestrictiveMode boolean
+---@field protected SplineIconWorldZOffset number @Offset in Z for the landscape spline icon in world-space.
+---@field protected SplineIconScale number
+---@field protected bDisplayTargetLayerThumbnails boolean @When true, each target layer will have a representative thumbnail in landscape mode. However, the thumbnail system can be slow. Plus, certain landscape materials (e.g. using RVT) are not able to properly render thumbnails. Thus, setting this to false will skip needlessly rendering landscape layer thumbnails, which can improve the editing experience
+---@field protected bDisableTemporalAntiAliasingInLandscapeMode boolean @When true, temporal anti-aliasing will be inactive while in landscape mode. This avoids the ghosting effect on the landscape brush but can lead to aliasing or shimmering on other parts of the image.
+local ULandscapeSettings = {}
+

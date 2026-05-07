@@ -1,0 +1,16 @@
+---A brush which contains information about how to draw a Slate element
+---//, meta = (HasNativeMake = ""))
+---@class FSlateBrush
+---@field public TintColor FSlateColor @Tinting applied to the image.
+---@field public DrawAs integer @How to draw the image
+---@field public Tiling integer @How to tile the image in Image mode
+---@field public Mirroring integer @How to mirror the image in Image mode.  This is normally only used for dynamic image brushes where the source texture           comes from a hardware device such as a web camera.
+---@field public ImageType integer @The type of image
+---@field public ImageSize FDeprecateSlateVector2D @Size of the resource in Slate Units
+---@field public Margin FMargin @The margin to use in Box and Border modes
+---@field private ResourceObject UObject @The image to render for this brush, can be a UTexture or UMaterialInterface or an object implementing the AtlasedTextureInterface.
+---@field public OutlineSettings FSlateBrushOutlineSettings @How to draw the outline.  Currently only used for RoundedBox type brushes.
+---@field protected UVRegion FBox2f @Optional UV region for an image When valid - overrides UV region specified in resource proxy
+---@field protected bIsDynamicallyLoaded boolean @Whether or not the brush path is a path to a UObject
+---@field protected ResourceName string @The name of the rendering resource to use
+local FSlateBrush = {}

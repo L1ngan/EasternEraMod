@@ -1,0 +1,15 @@
+---The CCID solver can solve N-Bone chains using
+---the Cyclic Coordinate Descent Inverse Kinematics algorithm.
+---For now this node supports single effector chains only.
+---@class FRigUnit_CCDIKItemArray : FRigUnit_HighlevelBaseMutable
+---@field public Items TArray<FRigElementKey> @The chain to use
+---@field public EffectorTransform FTransform @The transform of the effector in global space
+---@field public Precision number @The precision to use for the fabrik solver
+---@field public Weight number @The weight of the solver - how much the IK should be applied.
+---@field public MaxIterations integer @The maximum number of iterations. Values between 4 and 16 are common.
+---@field public bStartFromTail boolean @If set to true the direction of the solvers is flipped.
+---@field public BaseRotationLimit number @The general rotation limit to be applied to bones
+---@field public RotationLimits TArray<FRigUnit_CCDIK_RotationLimitPerItem> @Defines the limits of rotation per bone.
+---@field public bPropagateToChildren boolean @If set to true all of the global transforms of the children of this bone will be recalculated based on their local transforms. Note: This is computationally more expensive than turning it off.
+---@field public WorkData FRigUnit_CCDIK_WorkData
+local FRigUnit_CCDIKItemArray = {}

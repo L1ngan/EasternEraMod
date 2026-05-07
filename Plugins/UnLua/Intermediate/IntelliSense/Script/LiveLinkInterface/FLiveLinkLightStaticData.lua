@@ -1,0 +1,12 @@
+---Static data for Light data.
+---@class FLiveLinkLightStaticData : FLiveLinkTransformStaticData
+---@field public bIsTemperatureSupported boolean @Whether Temperature can be used in the frame data
+---@field public bIsIntensitySupported boolean @Whether Intensity can be used in the frame data
+---@field public bIsLightColorSupported boolean @Whether LightColor can be used in the frame data
+---@field public bIsInnerConeAngleSupported boolean @Whether InnerConeAngle can be used in the frame data. Only used for spot lights
+---@field public bIsOuterConeAngleSupported boolean @Whether OuterConeAngle can be used in the frame data. Only used for spot lights
+---@field public bIsAttenuationRadiusSupported boolean @Whether AttenuationRadius can be used in the frame data. Only used for spot lights
+---@field public bIsSourceLenghtSupported boolean @Whether SourceLength can be used in the frame data. Only used for spot lights
+---@field public bIsSourceRadiusSupported boolean @Whether SourceRadius can be used in the frame data. Only used for spot lights
+---@field public bIsSoftSourceRadiusSupported boolean @Whether SoftSourceRadius can be used in the frame data. Only used for spot lights
+local FLiveLinkLightStaticData = {}

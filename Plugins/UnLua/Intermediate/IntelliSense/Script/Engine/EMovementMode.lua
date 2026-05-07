@@ -1,0 +1,11 @@
+---Movement modes for Characters.
+---@class EMovementMode
+---@field public MOVE_None integer
+---@field public MOVE_Walking integer
+---@field public MOVE_NavWalking integer
+---@field public MOVE_Falling integer
+---@field public MOVE_Swimming integer
+---@field public MOVE_Flying integer
+---@field public MOVE_Custom integer
+---@field public MOVE_MAX integer
+local EMovementMode = {}

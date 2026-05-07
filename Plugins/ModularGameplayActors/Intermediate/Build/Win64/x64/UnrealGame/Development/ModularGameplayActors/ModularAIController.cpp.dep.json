@@ -1,0 +1,41 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\plugins\\modulargameplayactors\\source\\modulargameplayactors\\private\\modularaicontroller.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\easternera\\development\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\plugins\\modulargameplayactors\\intermediate\\build\\win64\\x64\\unrealgame\\development\\modulargameplayactors\\definitions.modulargameplayactors.h",
+            "h:\\project\\plugins\\modulargameplayactors\\source\\modulargameplayactors\\public\\modularaicontroller.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\aimodule\\classes\\aicontroller.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\aimodule\\classes\\aitypes.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\navigationsystem\\public\\navigationsystemtypes.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\ai\\navigation\\navagentselector.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\navagentselector.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\aimodule\\uht\\aitypes.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\gameplaytasks\\classes\\gameplaytaskownerinterface.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\gameplaytasks\\public\\gameplaytasktypes.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\gameplaytasks\\uht\\gameplaytaskownerinterface.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\gameplaytasks\\classes\\gameplaytask.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\gameplaytasks\\uht\\gameplaytask.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\aimodule\\classes\\perception\\aiperceptionlistenerinterface.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\aimodule\\uht\\aiperceptionlistenerinterface.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\aimodule\\classes\\genericteamagentinterface.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\aimodule\\uht\\genericteamagentinterface.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\public\\visuallogger\\visualloggerdebugsnapshotinterface.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\visualloggerdebugsnapshotinterface.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\aimodule\\uht\\aicontroller.generated.h",
+            "h:\\project\\plugins\\modulargameplayactors\\intermediate\\build\\win64\\unrealgame\\inc\\modulargameplayactors\\uht\\modularaicontroller.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\runtime\\modulargameplay\\source\\modulargameplay\\public\\components\\gameframeworkcomponentmanager.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\runtime\\modulargameplay\\source\\modulargameplay\\public\\components\\gameframeworkcomponentdelegates.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\gameplaytags\\classes\\gameplaytagcontainer.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\core\\public\\misc\\comparisonutility.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\gameplaytags\\uht\\gameplaytagcontainer.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\runtime\\modulargameplay\\intermediate\\build\\win64\\unrealgame\\inc\\modulargameplay\\uht\\gameframeworkcomponentdelegates.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\runtime\\modulargameplay\\intermediate\\build\\win64\\unrealgame\\inc\\modulargameplay\\uht\\gameframeworkcomponentmanager.generated.h",
+            "h:\\project\\plugins\\modulargameplayactors\\intermediate\\build\\win64\\unrealgame\\inc\\modulargameplayactors\\uht\\modularaicontroller.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

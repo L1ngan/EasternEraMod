@@ -1,0 +1,11 @@
+---Mapping issues arising from a QueryMapKeyIn... call
+---@class EMappingQueryIssue
+---@field public NoIssue integer
+---@field public ReservedByAction integer
+---@field public HidesExistingMapping integer
+---@field public HiddenByExistingMapping integer
+---@field public CollisionWithMappingInSameContext integer
+---@field public ForcesTypePromotion integer
+---@field public ForcesTypeDemotion integer
+---@field public EMappingQueryIssue_MAX integer
+local EMappingQueryIssue = {}

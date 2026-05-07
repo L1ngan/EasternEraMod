@@ -1,0 +1,31 @@
+---Editor Fracture Mode / Fracture / Mesh tool
+---Fracture using the shape of a chosen static mesh and/or array of dynamic meshes
+---@class FMeshCutterDataflowNode : FDataflowNode
+---@field public Collection FManagedArrayCollection @Collection to cut
+---@field public BoundingBox FBox @Boundingbox to create the cutting planes in
+---@field public TransformSelection FDataflowTransformSelection @The selected pieces to cut
+---@field public Transform FTransform @Transform to apply to cut planes
+---@field public CuttingDynamicMeshes TArray<UDynamicMesh> @Dynamic Meshes to cut with
+---@field public CuttingStaticMesh UStaticMesh @Static Mesh to cut with
+---@field public bUseHiRes boolean @If using a Static Mesh to cut, attempt to use the Nanite HiRes source mesh, if available and non-empty.
+---@field public LODLevel integer @If using a Static Mesh to cut, and not using the Nanite HiRes source mesh, use this LOD level's mesh
+---@field public CutDistribution EMeshCutterCutDistribution @How to arrange the mesh cuts in space
+---@field public PerCutMeshSelection EMeshCutterPerCutMeshSelection @When there are multiple cutting meshes, how to choose the cut mesh to apply at each location
+---@field public NumberToScatter integer @Number of meshes to random scatter
+---@field public GridX integer @Number of meshes to add to grid in X
+---@field public GridY integer @Number of meshes to add to grid in Y
+---@field public GridZ integer @Number of meshes to add to grid in Z
+---@field public Variability number @Magnitude of random displacement to cutting meshes
+---@field public MinScaleFactor number @Minimum scale factor to apply to cutting meshes. A random scale will be chosen between Min and Max
+---@field public MaxScaleFactor number @Maximum scale factor to apply to cutting meshes. A random scale will be chosen between Min and Max
+---@field public bRandomOrientation boolean @Whether to randomly vary the orientation of the cutting meshes
+---@field public RollRange number @Roll will be chosen between -Range and +Range
+---@field public PitchRange number @Pitch will be chosen between -Range and +Range
+---@field public YawRange number @Yaw will be chosen between -Range and +Range
+---@field public RandomSeed integer @Seed for random
+---@field public ChanceToFracture number @Chance to fracture each selected bone. If 0, no bones will fracture; if 1, all bones will fracture.
+---@field public SplitIslands boolean @Whether to split the fractured mesh pieces based on geometric connectivity after fracturing
+---@field public AddSamplesForCollision boolean @If enabled, add extra vertices (without triangles) to the geometry in regions where vertices are spaced too far apart (e.g. across large triangles) These extra vertices will be used as collision samples in particle-implicit collisions, and can help the physics system detect collisions more accurately Note this is *only* useful for simulations that use particle-implicit collisions
+---@field public CollisionSampleSpacing number @The number of centimeters to allow between vertices on the mesh surface: If there are gaps larger than this, add additional vertices (without triangles) to help support particle-implicit collisions Only used if Add Samples For Collision is enabled
+---@field public NewGeometryTransformSelection FDataflowTransformSelection @Fractured Pieces
+local FMeshCutterDataflowNode = {}

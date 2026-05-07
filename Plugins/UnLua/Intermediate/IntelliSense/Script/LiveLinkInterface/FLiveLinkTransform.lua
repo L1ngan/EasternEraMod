@@ -1,0 +1,2 @@
+---@class FLiveLinkTransform
+local FLiveLinkTransform = {}

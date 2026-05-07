@@ -1,0 +1,12 @@
+---@class EInterchangeMaterialXShaders
+---@field public OpenPBRSurface integer
+---@field public OpenPBRSurfaceTransmission integer
+---@field public StandardSurface integer
+---@field public StandardSurfaceTransmission integer
+---@field public SurfaceUnlit integer
+---@field public UsdPreviewSurface integer
+---@field public Surface integer
+---@field public Displacement integer
+---@field public MaxShaderCount integer
+---@field public EInterchangeMaterialXShaders_MAX integer
+local EInterchangeMaterialXShaders = {}

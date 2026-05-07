@@ -1,0 +1,12 @@
+---@class EStateTreeStateSelectionBehavior
+---@field public None integer
+---@field public TryEnterState integer
+---@field public TrySelectChildrenInOrder integer
+---@field public TrySelectChildrenAtRandom integer
+---@field public TrySelectChildrenWithHighestUtility integer
+---@field public TrySelectChildrenAtRandomWeightedByUtility integer
+---@field public TryFollowTransitions integer
+---@field public TrySelectChildrenAtUniformRandom integer
+---@field public TrySelectChildrenBasedOnRelativeUtility integer
+---@field public EStateTreeStateSelectionBehavior_MAX integer
+local EStateTreeStateSelectionBehavior = {}

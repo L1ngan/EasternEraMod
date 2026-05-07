@@ -1,0 +1,18 @@
+---Describes the execution state of the current State Tree instance.
+---@class FStateTreeExecutionState
+---@field public ActiveFrames TArray<FStateTreeExecutionFrame> @Currently active frames (and states)
+---@field public DelayedTransitions TArray<FStateTreeTransitionDelayedState> @Pending delayed transitions.
+---@field public RandomStream FRandomStream @Used by state tree random-based operations.
+---@field public ExecutionExtension FInstancedStruct @Optional extension for the execution context.
+---@field public EnterStateFailedFrameIndex FStateTreeIndex16 @The index of the task that failed during enter state. Exit state uses it to call ExitState() symmetrically.
+---@field public EnterStateFailedTaskIndex FStateTreeIndex16 @The index of the frame that failed during enter state. Exit state uses it to call ExitState() symmetrically.
+---@field public LastExitedNodeIndex FStateTreeIndex16 @The index of the node that just finished exiting.
+---@field public LastTickStatus EStateTreeRunStatus @Result of last TickTasks
+---@field public TreeRunStatus EStateTreeRunStatus @Running status of the instance
+---@field public RequestedStop EStateTreeRunStatus @Completion status stored if Stop was called during the Tick and needed to be deferred.
+---@field public CurrentPhase EStateTreeUpdatePhase @Current update phase used to validate reentrant calls to the main entry points of the execution context (i.e. Start, Stop, Tick).
+---@field public StateChangeCount integer @Number of times a new state has been changed.
+---@field public bHasPendingCompletedState boolean @A task that completed a state or a global task that completed a global frame.
+---@field public CompletedFrameIndex FStateTreeIndex16 @Handle of the state that was first to report state completed (success or failure), used to trigger completion transitions.
+---@field public CompletedStateHandle FStateTreeStateHandle
+local FStateTreeExecutionState = {}

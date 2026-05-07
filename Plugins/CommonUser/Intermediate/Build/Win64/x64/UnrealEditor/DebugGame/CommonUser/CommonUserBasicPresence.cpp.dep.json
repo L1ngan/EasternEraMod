@@ -1,0 +1,41 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\commonuser\\source\\commonuser\\private\\commonuserbasicpresence.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\commonuser\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\commonuser\\definitions.commonuser.h",
+            "g:\\modproject\\plugins\\commonuser\\source\\commonuser\\public\\commonuserbasicpresence.h",
+            "g:\\modproject\\plugins\\commonuser\\intermediate\\build\\win64\\unrealeditor\\inc\\commonuser\\uht\\commonuserbasicpresence.generated.h",
+            "g:\\modproject\\plugins\\commonuser\\source\\commonuser\\public\\commonsessionsubsystem.h",
+            "g:\\modproject\\plugins\\commonuser\\source\\commonuser\\public\\commonusertypes.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystemtypes.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystemnames.h",
+            "g:\\modproject\\plugins\\commonuser\\intermediate\\build\\win64\\unrealeditor\\inc\\commonuser\\uht\\commonusertypes.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\interfaces\\onlinesessioninterface.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinedelegatemacros.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\interfaces\\onlinesessiondelegates.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinekeyvaluepair.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesessionsettings.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystem.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystemmodule.h",
+            "g:\\modproject\\plugins\\commonuser\\intermediate\\build\\win64\\unrealeditor\\inc\\commonuser\\uht\\commonsessionsubsystem.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystemutils\\source\\onlinesubsystemutils\\public\\onlinesubsystemutils.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\interfaces\\onlineexternaluiinterface.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\interfaces\\onlinemessageinterface.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlineerror.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystemutils\\source\\onlinesubsystemutils\\public\\onlinesubsystemutilsmodule.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\interfaces\\onlinefriendsinterface.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\interfaces\\onlineidentityinterface.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\interfaces\\onlinetitlefileinterface.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\interfaces\\onlineusercloudinterface.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\interfaces\\voiceinterface.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystempackage.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\signalprocessing\\public\\dsp\\multithreadedpatching.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\interfaces\\onlinepresenceinterface.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

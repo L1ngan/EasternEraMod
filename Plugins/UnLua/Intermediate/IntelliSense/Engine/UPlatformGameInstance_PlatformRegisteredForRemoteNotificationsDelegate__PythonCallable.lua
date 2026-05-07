@@ -1,0 +1,3 @@
+---@class UPlatformGameInstance_PlatformRegisteredForRemoteNotificationsDelegate__PythonCallable : UPythonCallableForDelegate
+local UPlatformGameInstance_PlatformRegisteredForRemoteNotificationsDelegate__PythonCallable = {}
+

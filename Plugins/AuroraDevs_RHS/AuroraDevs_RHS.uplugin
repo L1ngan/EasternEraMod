@@ -1,0 +1,29 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Replicated Hitbox System",
+	"Description": "This project allows you to easily and quickly add fully replicated animation hitboxes, projectiles with adaptable collision and different spawning methods, as well as damage volumes to your animations/world.",
+	"Category": "Code Plugin",
+	"CreatedBy": "Aurora Devs",
+	"CreatedByURL": "https://www.unrealengine.com/marketplace/en-US/profile/Aurora+Devs",
+	"DocsURL": "https://coda.io/@aurora-devs/documentation-replicated-hitbox-system",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/74aa9bd9994d45bea1ca40624b8764bb",
+	"SupportURL": "mailto:support@auroradevs.eu",
+	"EngineVersion": "5.6.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "AuroraDevs_RHS",
+			"Type": "Runtime",
+			"LoadingPhase": "PostConfigInit",
+			"PlatformAllowList": [
+				"Win64"
+			],
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	]
+}

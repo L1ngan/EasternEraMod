@@ -1,0 +1,2 @@
+---@class FStaticMaterialMinimalInfo
+local FStaticMaterialMinimalInfo = {}

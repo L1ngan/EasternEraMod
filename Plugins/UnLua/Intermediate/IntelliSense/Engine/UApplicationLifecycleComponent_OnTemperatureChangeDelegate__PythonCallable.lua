@@ -1,0 +1,3 @@
+---@class UApplicationLifecycleComponent_OnTemperatureChangeDelegate__PythonCallable : UPythonCallableForDelegate
+local UApplicationLifecycleComponent_OnTemperatureChangeDelegate__PythonCallable = {}
+

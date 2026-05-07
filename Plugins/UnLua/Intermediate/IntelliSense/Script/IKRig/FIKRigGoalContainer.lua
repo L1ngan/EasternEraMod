@@ -1,0 +1,2 @@
+---@class FIKRigGoalContainer
+local FIKRigGoalContainer = {}

@@ -1,0 +1,11 @@
+---FiB data versioning
+---@class ERigVMFiBVersion
+---@field public RIGVM_FIB_VER_NONE integer
+---@field public RIGVM_FIB_VER_BASE integer
+---@field public RIGVM_FIB_VER_VARIABLE_REFERENCE integer
+---@field public RIGVM_FIB_VER_INTERFACE_GRAPHS integer
+---@field public RIGVM_FIB_VER_FUNC_CALL_SITES integer
+---@field public RIGVM_FIB_VER_PLUS_ONE integer
+---@field public RIGVM_FIB_VER_LATEST integer
+---@field public RIGVM_FIB_VER_MAX integer
+local ERigVMFiBVersion = {}

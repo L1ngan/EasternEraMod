@@ -1,0 +1,14 @@
+---The register offset represents a memory offset within a register's memory.
+---This can be used to represent memory addresses of array elements within
+---a struct, for example.
+---A register offset's path can look like MyTransformStruct.Transforms[3].Translation.X
+---@class FRigVMRegisterOffset
+---@field private Segments TArray<integer> @Segments represent the memory offset(s) to use when accessing the target memory. In case of indirection in the source memory each memory offset / jump is stored. So for example: If you are accessing the third Rotation.X of an array of transforms, the segments would read as: [-2, 12] (second array element, and the fourth float) Segment indices less than zero represent array element offsets, while positive numbers represents jumps within a struct.
+---@field private Type ERigVMRegisterType @Type of resulting register (for example Plain for Transform.Translation.X)
+---@field private CPPType string @The c++ type of the resulting memory (for example float for Transform.Translation.X)
+---@field private ScriptStruct UScriptStruct @The c++ script struct of the resulting memory (for example FVector for Transform.Translation)
+---@field private ParentScriptStruct UScriptStruct @The c++ script struct of the source memory (for example FTransform for Transform.Translation)
+---@field private ArrayIndex integer @The index of the element within an array (for example 3 for Transform[3])
+---@field private ElementSize integer @The number of bytes of the resulting memory (for example 4 (float) for Transform.Translation.X)
+---@field private CachedSegmentPath string @The cached path of the segments within this register, for example FTransform.Translation.X
+local FRigVMRegisterOffset = {}

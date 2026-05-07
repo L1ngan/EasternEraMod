@@ -1,0 +1,13 @@
+---Enum used by MassBatchCommands to declare their "type". This data is later used to group commands so that command
+---effects are applied in a controllable fashion
+---Important: if changed make sure to update FMassCommandBuffer::Flush.CommandTypeOrder as well
+---@class EMassCommandOperationType
+---@field public None integer
+---@field public Create integer
+---@field public Add integer
+---@field public Remove integer
+---@field public ChangeComposition integer
+---@field public Set integer
+---@field public Destroy integer
+---@field public MAX integer
+local EMassCommandOperationType = {}

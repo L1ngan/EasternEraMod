@@ -1,0 +1,18 @@
+---The below is a bit hardcoded to try and match how scalability settings are set up in Scalability.h.
+---This is because unfortunately scalability settings at their core are not very extensible or data-driven
+---and so it's difficult to do this in a data driven way. So I've made enums here to make the setup user friendly here,
+---and then do the mapping in code. If scalability gets re-architected, this will need be to be updated to match.
+---@class EMovieSceneScalabilityConditionGroup
+---@field public ViewDistance integer
+---@field public AntiAliasing integer
+---@field public Shadow integer
+---@field public GlobalIllumination integer
+---@field public Reflection integer
+---@field public PostProcess integer
+---@field public Texture integer
+---@field public Effects integer
+---@field public Foliage integer
+---@field public Shading integer
+---@field public Landscape integer
+---@field public EMovieSceneScalabilityConditionGroup_MAX integer
+local EMovieSceneScalabilityConditionGroup = {}

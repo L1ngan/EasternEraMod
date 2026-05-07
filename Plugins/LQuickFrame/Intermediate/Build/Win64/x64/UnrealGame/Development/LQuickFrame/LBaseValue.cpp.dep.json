@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\plugins\\lquickframe\\source\\lquickframe\\base\\lbasevalue.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\easternera\\development\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\plugins\\lquickframe\\intermediate\\build\\win64\\x64\\unrealgame\\development\\lquickframe\\definitions.lquickframe.h",
+            "h:\\project\\plugins\\lquickframe\\source\\lquickframe\\base\\lbasevalue.h",
+            "h:\\project\\plugins\\lquickframe\\source\\lquickframe\\misc\\llog.h",
+            "h:\\project\\plugins\\lquickframe\\intermediate\\build\\win64\\unrealgame\\inc\\lquickframe\\uht\\llog.generated.h",
+            "h:\\project\\plugins\\lquickframe\\intermediate\\build\\win64\\unrealgame\\inc\\lquickframe\\uht\\lbasevalue.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

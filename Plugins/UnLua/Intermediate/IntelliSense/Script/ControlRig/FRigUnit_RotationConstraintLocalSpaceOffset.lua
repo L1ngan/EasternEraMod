@@ -1,0 +1,11 @@
+---Constrains an item's rotation to multiple items' rotations
+---@class FRigUnit_RotationConstraintLocalSpaceOffset : FRigUnit_HighlevelBaseMutable
+---@field public Child FRigElementKey
+---@field public bMaintainOffset boolean
+---@field public Filter FFilterOptionPerAxis
+---@field public Parents TArray<FConstraintParent>
+---@field public AdvancedSettings FRigUnit_RotationConstraint_AdvancedSettings
+---@field public Weight number
+---@field public ChildCache FCachedRigElement
+---@field public ParentCaches TArray<FCachedRigElement>
+local FRigUnit_RotationConstraintLocalSpaceOffset = {}

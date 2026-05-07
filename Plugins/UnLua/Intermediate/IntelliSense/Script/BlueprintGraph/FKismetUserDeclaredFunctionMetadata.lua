@@ -1,0 +1,16 @@
+---This structure describes metadata associated with a user declared function or macro
+---It will be turned into regular metadata during compilation
+---@class FKismetUserDeclaredFunctionMetadata
+---@field public ToolTip string
+---@field public Category string
+---@field public Keywords string
+---@field public CompactNodeTitle string
+---@field public InstanceTitleColor FLinearColor
+---@field public DeprecationMessage string
+---@field public bIsDeprecated boolean
+---@field public bCallInEditor boolean
+---@field public bThreadSafe boolean
+---@field public bIsUnsafeDuringActorConstruction boolean
+---@field public HasLatentFunctions integer @Cached value for whether or not the graph has latent functions, positive for TRUE, zero for FALSE, and INDEX_None for undetermined
+---@field private MetaDataMap TMap<string, string>
+local FKismetUserDeclaredFunctionMetadata = {}

@@ -1,0 +1,12 @@
+---Common set of settings that are uses as submix sends.
+---@class FSoundSubmixSendInfoBase
+---@field public SendLevelControlMethod ESendLevelControlMethod @Manual: Use Send Level only Linear: Interpolate between Min and Max Send Levels based on listener distance (between Min/Max Send Distance) Custom Curve: Use the float curve to map Send Level to distance (0.0-1.0 on curve maps to Min/Max Send Distance)
+---@field public SoundSubmix USoundSubmixBase @The Submix to send the audio to
+---@field public SendLevel number @Manually set the amount of audio to send
+---@field public DisableManualSendClamp boolean @Whether to disable the internal 0-1 clamp for Manual Send Level control
+---@field public MinSendLevel number @The amount to send to the Submix when sound is located at a distance less than or equal to value specified in the Min Send Distance
+---@field public MaxSendLevel number @The amount to send to the Submix when sound is located at a distance greater than or equal to value specified in the Max Send Distance
+---@field public MinSendDistance number @The distance at which to start mapping between to Min/Max Send Level Distances LESS than this will result in a clamped Min Send Level
+---@field public MaxSendDistance number @The distance at which to stop mapping between Min/Max Send Level Distances GREATER than this will result in a clamped Max Send Level
+---@field public CustomSendLevelCurve FRuntimeFloatCurve @The custom send curve to use for distance-based send level. (0.0-1.0 on the curve's X-axis maps to Min/Max Send Distance)
+local FSoundSubmixSendInfoBase = {}

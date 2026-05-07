@@ -1,0 +1,2 @@
+---@class FBlendFilter
+local FBlendFilter = {}

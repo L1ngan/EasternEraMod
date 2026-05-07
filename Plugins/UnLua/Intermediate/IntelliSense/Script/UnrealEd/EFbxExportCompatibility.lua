@@ -1,0 +1,12 @@
+---Fbx export compatibility
+---@class EFbxExportCompatibility
+---@field public FBX_2011 integer
+---@field public FBX_2012 integer
+---@field public FBX_2013 integer
+---@field public FBX_2014 integer
+---@field public FBX_2016 integer
+---@field public FBX_2018 integer
+---@field public FBX_2019 integer
+---@field public FBX_2020 integer
+---@field public FBX_MAX integer
+local EFbxExportCompatibility = {}

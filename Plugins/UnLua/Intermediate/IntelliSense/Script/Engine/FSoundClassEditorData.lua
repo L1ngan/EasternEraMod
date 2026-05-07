@@ -1,0 +1,2 @@
+---@class FSoundClassEditorData
+local FSoundClassEditorData = {}

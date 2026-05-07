@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\binkmedia\\source\\binkmediaplayer\\private\\binkpluginrhi.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\binkmedia\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\binkmediaplayer\\definitions.binkmediaplayer.h",
+            "g:\\modproject\\plugins\\binkmedia\\source\\binkmediaplayersdk\\include\\egttypes.h",
+            "g:\\modproject\\plugins\\binkmedia\\source\\binkmediaplayersdk\\include\\binktiny.h",
+            "g:\\modproject\\plugins\\binkmedia\\source\\binkmediaplayersdk\\include\\binktextures.h",
+            "g:\\modproject\\plugins\\binkmedia\\source\\binkmediaplayersdk\\include\\binkplugin.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

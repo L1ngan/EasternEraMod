@@ -1,0 +1,12 @@
+---Bitfield used to mark if a slate post RT is used or not
+---@class ESlatePostRT
+---@field public None integer
+---@field public ESlatePostRT_0 integer
+---@field public ESlatePostRT_1 integer
+---@field public ESlatePostRT_2 integer
+---@field public ESlatePostRT_3 integer
+---@field public ESlatePostRT_4 integer
+---@field public All integer
+---@field public Num integer
+---@field public ESlatePostRT_MAX integer
+local ESlatePostRT = {}

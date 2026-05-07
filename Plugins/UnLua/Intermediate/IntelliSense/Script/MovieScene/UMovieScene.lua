@@ -1,0 +1,29 @@
+---Implements a movie scene asset.
+---@class UMovieScene : UMovieSceneDecorationContainerObject
+---@field private Spawnables TArray<FMovieSceneSpawnable> @Data-only blueprints for all of the objects that we we're able to spawn. These describe objects and actors that we may instantiate at runtime, or create proxy objects for previewing in the editor.
+---@field private Possessables TArray<FMovieScenePossessable> @Typed slots for already-spawned objects that we are able to control with this MovieScene
+---@field private ObjectBindings TArray<FMovieSceneBinding> @Tracks bound to possessed or spawned objects
+---@field private BindingGroups TMap<string, FMovieSceneObjectBindingIDs> @Map of persistent tagged bindings for this sequence
+---@field private Tracks TArray<UMovieSceneTrack> @Tracks which are not bound to spawned or possessed objects
+---@field private CameraCutTrack UMovieSceneTrack @The camera cut track is a specialized track for switching between cameras on a cinematic
+---@field private CustomClock UMovieSceneClock @A custom clock implementation
+---@field private SelectionRange FMovieSceneFrameRange @User-defined selection range.
+---@field private PlaybackRange FMovieSceneFrameRange @User-defined playback range for this movie scene. Must be a finite range. Relative to this movie-scene's 0-time origin.
+---@field private TickResolution FFrameRate @The resolution at which all frame numbers within this movie-scene data are stored
+---@field private DisplayRate FFrameRate @The rate at which we should interact with this moviescene data on UI, and to movie scene players. Also defines the frame locked frame rate.
+---@field private EvaluationType EMovieSceneEvaluationType @The type of evaluation to use when playing back this sequence
+---@field private ClockSource EUpdateClockSource
+---@field private MarkedFrames TArray<FMovieSceneMarkedFrame> @The set of user-marked frames
+---@field private GeneratedConditions TArray<UMovieSceneGroupCondition> @List of compiler generated group conditions, stored here to prevent garbage collection.
+---@field private bReadOnly boolean @Indicates whether this movie scene is read only
+---@field private bPlaybackRangeLocked boolean @User-defined playback range is locked.
+---@field private bMarkedFramesLocked boolean @User-defined marked frames are locked.
+---@field private ObjectsToDisplayNames TMap<string, string> @Maps object GUIDs to user defined display names.
+---@field private ObjectsToLabels TMap<string, FMovieSceneTrackLabels> @Maps object GUIDs to user defined labels.
+---@field private EditorData FMovieSceneEditorData @Editor only data that needs to be saved between sessions for editing but has no runtime purpose
+---@field private RootFolders TArray<UMovieSceneFolder> @The root folders for this movie scene.
+---@field private SectionGroups TArray<FMovieSceneSectionGroup> @Groups of sections which should maintain the same relative offset
+---@field private NodeGroupCollection UMovieSceneNodeGroupCollection @Collection of user-defined groups
+---@field private bGloballyShowMarkedFrames boolean @Whether this scene's marked frames should be shown globally
+local UMovieScene = {}
+

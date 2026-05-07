@@ -1,0 +1,27 @@
+---The property bag details child rows can be completely customized by assigning a combination of these values
+---to their FPropertyBag 'ChildRowFeatures' metadata via the meta specifier. TODO: It isn't currently possible
+---to specify bitwise operations in the metadata string, but this will be added shortly. More configurations can be
+---added in the meantime to satisfy specific needs.
+---@class EPropertyBagChildRowFeatures
+---@field public Fixed integer
+---@field public Renaming integer
+---@field public Deletion integer
+---@field public DragAndDrop integer
+---@field public CompactTypeSelector integer
+---@field public AccessSpecifierButton integer
+---@field public DropDownMenuButton integer
+---@field public Categories integer
+---@field public AllGeneralOptions integer
+---@field public Menu_TypeSelector integer
+---@field public Menu_Rename integer
+---@field public Menu_Delete integer
+---@field public Menu_Categories integer
+---@field public AllMenuOptions integer
+---@field public Deprecated integer
+---@field public ReadOnly integer
+---@field public Core integer
+---@field public Extended integer
+---@field public All integer
+---@field public Default integer
+---@field public EPropertyBagChildRowFeatures_MAX integer
+local EPropertyBagChildRowFeatures = {}

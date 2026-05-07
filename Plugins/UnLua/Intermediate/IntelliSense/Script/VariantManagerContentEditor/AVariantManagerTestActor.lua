@@ -1,0 +1,24 @@
+---@class AVariantManagerTestActor : AActor
+---@field public EnumWithNoDefault EVariantManagerTestEnum @Captured byte property
+---@field public EnumWithSecondDefault EVariantManagerTestEnum @Captured byte property
+---@field public CapturedByteProperty integer @Captured byte property
+---@field public CapturedIntProperty integer @Captured int32 property
+---@field public CapturedFloatProperty number @Captured float property
+---@field public bCapturedBoolProperty boolean @Captured boolean property
+---@field public CapturedObjectProperty UObject @Captured UObject property
+---@field public CapturedInterfaceProperty TScriptInterface<UInterface> @Captured UInterface property
+---@field public CapturedNameProperty string @Captured FName property
+---@field public CapturedStrProperty string @Captured FString property
+---@field public CapturedTextProperty string @Captured FText property
+---@field public CapturedRotatorProperty FRotator @Captured FRotator property
+---@field public CapturedColorProperty FColor @Captured FColor property
+---@field public CapturedLinearColorProperty FLinearColor @Captured FLinearColor property
+---@field public CapturedVectorProperty FVector @Captured FVector property
+---@field public CapturedQuatProperty FQuat @Captured FQuat property
+---@field public CapturedVector4Property FVector4 @Captured FVector4 property
+---@field public CapturedVector2DProperty FVector2D @Captured FVector2D property
+---@field public CapturedIntPointProperty FIntPoint @Captured FIntPoint property
+---@field public CapturedUObjectArrayProperty TArray<UObject> @Captured UObject array property
+---@field public CapturedVectorArrayProperty TArray<FVector> @Captured FVector array property
+local AVariantManagerTestActor = {}
+

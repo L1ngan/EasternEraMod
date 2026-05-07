@@ -1,0 +1,27 @@
+---@class UReferenceViewerSettings : UObject
+---@field private bLimitSearchDepth boolean @Whether to limit the search depth for Referencers & Dependencies
+---@field private bIsShowReferencers boolean @Whether to display the Referencers
+---@field private MaxSearchReferencerDepth integer @How deep to search references
+---@field private bIsShowDependencies boolean @Whether to display the Dependencies
+---@field private MaxSearchDependencyDepth integer @How deep to search dependanies
+---@field private MaxSearchBreadth integer @The max number of siblings that can appear from a node
+---@field private bEnableCollectionFilter boolean @Whether or not to filter from a collection
+---@field private bEnablePluginFilter boolean @Whether or not to filter for assets by plugins.
+---@field private bIsShowSoftReferences boolean @Show/Hide Soft References
+---@field private bIsShowHardReferences boolean @Show/Hide Hard References
+---@field private bIsShowEditorOnlyReferences boolean
+---@field private EditorOnlyReferenceFilterType EEditorOnlyReferenceFilterType
+---@field private bIsShowManagementReferences boolean @Show/Hide Management Assets (i.e. PrimaryAssetIds)
+---@field private bIsShowSearchableNames boolean @Show/Hide Searchable Names (i.e. Gameplay Tags)
+---@field private bIsShowCodePackages boolean @Show/Hide Native Packages
+---@field private bIsShowDuplicates boolean @Whether to show duplicate asset references
+---@field private bIsShowFilteredPackagesOnly boolean @Whether to filter the search results or just select them
+---@field private bIsCompactMode boolean @Whether to show the nodes in a compact (no thumbnail) view
+---@field private bIsShowExternalReferencers boolean @Whether to show external referencers or collapsed owner asset
+---@field private bIsShowPath boolean @Whether to show the package's path as a comment
+---@field private bFiltersEnabled boolean @This turns on/off any filtering done though the SFilterBar
+---@field private bAutoUpdateFilters boolean @When true, the filters bar auto updates based on the node types, otherwise user filters will be used
+---@field private UserFilters TArray<FilterState> @The list of filters the user has built up
+---@field private bFindPathEnabled boolean @Enable the Find Path tool
+local UReferenceViewerSettings = {}
+

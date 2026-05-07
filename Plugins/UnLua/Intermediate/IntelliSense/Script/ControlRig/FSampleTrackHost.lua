@@ -1,0 +1,2 @@
+---@class FSampleTrackHost
+local FSampleTrackHost = {}

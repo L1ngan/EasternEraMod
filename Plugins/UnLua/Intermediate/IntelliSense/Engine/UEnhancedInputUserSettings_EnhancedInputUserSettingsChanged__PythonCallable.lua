@@ -1,0 +1,3 @@
+---@class UEnhancedInputUserSettings_EnhancedInputUserSettingsChanged__PythonCallable : UPythonCallableForDelegate
+local UEnhancedInputUserSettings_EnhancedInputUserSettingsChanged__PythonCallable = {}
+

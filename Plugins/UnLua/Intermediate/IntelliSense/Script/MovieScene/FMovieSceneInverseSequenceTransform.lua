@@ -1,0 +1,16 @@
+---The inverse of a FMovieSceneSequenceTransform representing a transformation from transformed, to untransformed space.
+---This uses a different class and API because the algorithms for computing the inverse of non-linear are different,
+---often more complex, and can fail. Whereas an FMovieSceneSequenceTransform can only represent a 1:1 mapping from outer
+---to inner space, its inverse is a (sometimes empty) many:many mapping.
+---Consider a looping transform with a duration of 10 frames: [0, 10). Every time in the outer space maps to a time in the
+---inner space, but the opposite is not true. Only frames 0-10 exist in the inner space, and each frame in that time maps
+---to an infinite number of solutions in the outer space. Conversely, any inner time outside the loop range, ie, [-inf, 0)..(10, +inf]
+---cannot be transformed into the outer space.
+---For this reason, the API only has functions for attempting such computations (TryTransformTime), and iterating the solutions
+---for any given time within a range.
+---The inverse of an inverse transform is the original transform such that T*(1/T)=I theoretically holds true, although transform
+---multiplication is not actually supported by the API.
+---@class FMovieSceneInverseSequenceTransform
+---@field private LinearTransform FMovieSceneTimeTransform @The final linear transformation represented as a 2D matrix. Always applied last.
+---@field private NestedTransforms TArray<FMovieSceneInverseNestedSequenceTransform> @Additional transformations that should be applied before LinearTransform. This array is populated whenever a non-linear transform is encountered.
+local FMovieSceneInverseSequenceTransform = {}

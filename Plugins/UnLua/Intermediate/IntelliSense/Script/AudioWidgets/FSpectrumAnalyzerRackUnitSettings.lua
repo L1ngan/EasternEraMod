@@ -1,0 +1,12 @@
+---namespace AudioWidgets
+---@class FSpectrumAnalyzerRackUnitSettings
+---@field public Ballistics EAudioSpectrumAnalyzerBallistics
+---@field public AnalyzerType EAudioSpectrumAnalyzerType
+---@field public FFTAnalyzerFFTSize EFFTSize
+---@field public CQTAnalyzerFFTSize EConstantQFFTSizeEnum
+---@field public TiltSpectrum EAudioSpectrumPlotTilt
+---@field public PixelPlotMode EAudioSpectrumPlotFrequencyAxisPixelBucketMode
+---@field public FrequencyScale EAudioSpectrumPlotFrequencyAxisScale
+---@field public bDisplayFrequencyAxisLabels boolean
+---@field public bDisplaySoundLevelAxisLabels boolean
+local FSpectrumAnalyzerRackUnitSettings = {}

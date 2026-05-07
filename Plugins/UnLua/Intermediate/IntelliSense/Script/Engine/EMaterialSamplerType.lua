@@ -1,0 +1,21 @@
+---Describes how textures are sampled for materials
+---@class EMaterialSamplerType
+---@field public SAMPLERTYPE_Color integer
+---@field public SAMPLERTYPE_Grayscale integer
+---@field public SAMPLERTYPE_Alpha integer
+---@field public SAMPLERTYPE_Normal integer
+---@field public SAMPLERTYPE_Masks integer
+---@field public SAMPLERTYPE_DistanceFieldFont integer
+---@field public SAMPLERTYPE_LinearColor integer
+---@field public SAMPLERTYPE_LinearGrayscale integer
+---@field public SAMPLERTYPE_Data integer
+---@field public SAMPLERTYPE_External integer
+---@field public SAMPLERTYPE_VirtualColor integer
+---@field public SAMPLERTYPE_VirtualGrayscale integer
+---@field public SAMPLERTYPE_VirtualAlpha integer
+---@field public SAMPLERTYPE_VirtualNormal integer
+---@field public SAMPLERTYPE_VirtualMasks integer
+---@field public SAMPLERTYPE_VirtualLinearColor integer
+---@field public SAMPLERTYPE_VirtualLinearGrayscale integer
+---@field public SAMPLERTYPE_MAX integer
+local EMaterialSamplerType = {}

@@ -1,0 +1,12 @@
+---@class FObjectMixerOutlinerModeConfig
+---@field public bHideTemporaryActors boolean @True when the Scene Outliner is hiding temporary/run-time Actors
+---@field public bShowOnlyActorsInCurrentLevel boolean @True when the Scene Outliner is showing only Actors that exist in the current level
+---@field public bShowOnlyActorsInCurrentDataLayers boolean @True when the Scene Outliner is showing only Actors that exist in the current data layers
+---@field public bShowOnlyActorsInCurrentContentBundle boolean @True when the Scene Outliner is showing only Actors that exist in the current content bundle
+---@field public bShowOnlySelectedActors boolean @True when the Scene Outliner is only displaying selected Actors
+---@field public bHideActorComponents boolean @True when the Scene Outliner is not displaying Actor Components
+---@field public bHideLevelInstanceHierarchy boolean @True when the Scene Outliner is not displaying LevelInstances
+---@field public bHideUnloadedActors boolean @True when the Scene Outliner is not displaying unloaded actors
+---@field public bHideEmptyFolders boolean @True when the Scene Outliner is not displaying empty folders
+---@field public bAlwaysFrameSelection boolean @True when the Scene Outliner updates when an actor is selected in the viewport
+local FObjectMixerOutlinerModeConfig = {}

@@ -1,0 +1,16 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\plugins\\commongame\\source\\private\\messaging\\commonmessagingsubsystem.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\easternera\\development\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\plugins\\commongame\\intermediate\\build\\win64\\x64\\unrealgame\\development\\commongame\\definitions.commongame.h",
+            "h:\\project\\plugins\\commongame\\source\\public\\messaging\\commonmessagingsubsystem.h",
+            "h:\\project\\plugins\\commongame\\intermediate\\build\\win64\\unrealgame\\inc\\commongame\\uht\\commonmessagingsubsystem.generated.h",
+            "h:\\project\\plugins\\commongame\\intermediate\\build\\win64\\unrealgame\\inc\\commongame\\uht\\commonmessagingsubsystem.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

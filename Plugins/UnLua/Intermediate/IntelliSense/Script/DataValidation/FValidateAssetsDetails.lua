@@ -1,0 +1,2 @@
+---@class FValidateAssetsDetails
+local FValidateAssetsDetails = {}

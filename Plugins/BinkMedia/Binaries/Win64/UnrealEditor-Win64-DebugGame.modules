@@ -1,0 +1,8 @@
+{
+	"BuildId": "43139311",
+	"Modules": 
+	{
+		"BinkMediaPlayer": "UnrealEditor-BinkMediaPlayer-Win64-DebugGame.dll",
+		"BinkMediaPlayerEditor": "UnrealEditor-BinkMediaPlayerEditor-Win64-DebugGame.dll"
+	}
+}

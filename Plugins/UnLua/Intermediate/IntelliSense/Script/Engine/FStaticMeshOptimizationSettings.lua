@@ -1,0 +1,12 @@
+---Old optimization settings.
+---@class FStaticMeshOptimizationSettings
+---@field public ReductionMethod integer @The method to use when optimizing the skeletal mesh LOD
+---@field public NumOfTrianglesPercentage number @If ReductionMethod equals SMOT_NumOfTriangles this value is the ratio of triangles [0-1] to remove from the mesh
+---@field public MaxDeviationPercentage number @If ReductionMethod equals SMOT_MaxDeviation this value is the maximum deviation from the base mesh as a percentage of the bounding sphere.
+---@field public WeldingThreshold number @The welding threshold distance. Vertices under this distance will be welded.
+---@field public bRecalcNormals boolean @Whether Normal smoothing groups should be preserved. If false then NormalsThreshold is used *
+---@field public NormalsThreshold number @If the angle between two triangles are above this value, the normals will not be       smooth over the edge between those two triangles. Set in degrees. This is only used when PreserveNormals is set to false
+---@field public SilhouetteImportance integer @How important the shape of the geometry is (EImportanceLevel).
+---@field public TextureImportance integer @How important texture density is (EImportanceLevel).
+---@field public ShadingImportance integer @How important shading quality is.
+local FStaticMeshOptimizationSettings = {}

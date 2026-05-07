@@ -1,0 +1,2 @@
+---@class FRigBaseComponent
+local FRigBaseComponent = {}

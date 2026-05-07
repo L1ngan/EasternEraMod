@@ -1,0 +1,39 @@
+---@class FMaterialCachedExpressionData
+---@field public RuntimeEntries FMaterialCachedParameterEntry
+---@field public ScalarPrimitiveDataIndexValues TArray<integer>
+---@field public VectorPrimitiveDataIndexValues TArray<integer>
+---@field public ScalarValues TArray<number>
+---@field public StaticSwitchValues TArray<boolean>
+---@field public DynamicSwitchValues TArray<boolean>
+---@field public VectorValues TArray<FLinearColor>
+---@field public DoubleVectorValues TArray<FVector4d>
+---@field public TextureValues TArray<TSoftObjectPtr<UTexture>>
+---@field public TextureCollectionValues TArray<TSoftObjectPtr<UTextureCollection>>
+---@field public FontValues TArray<TSoftObjectPtr<UFont>>
+---@field public FontPageValues TArray<integer>
+---@field public RuntimeVirtualTextureValues TArray<TSoftObjectPtr<URuntimeVirtualTexture>>
+---@field public SparseVolumeTextureValues TArray<TSoftObjectPtr<USparseVolumeTexture>>
+---@field public ReferencedTextures TArray<UObject> @Array of all texture referenced by this material
+---@field public ReferencedTextureCollections TArray<UTextureCollection>
+---@field public ReferencedExternalCodeExpressionClasses TArray<TSubclassOf<UObject>> @Array of all material expression classes that contain external code declarations.
+---@field public FunctionInfos TArray<FMaterialFunctionInfo> @Array of all functions this material depends on.
+---@field public FunctionInfosStateCRC integer @CRC of the FunctionInfos StateIds.
+---@field public ParameterCollectionInfos TArray<FMaterialParameterCollectionInfo> @Array of all parameter collections this material depends on.
+---@field public GrassTypes TArray<ULandscapeGrassType>
+---@field public MaterialLayers FMaterialLayersFunctionsRuntimeData
+---@field public DynamicParameterNames TArray<string>
+---@field public QualityLevelsUsed TArray<boolean>
+---@field public bHasMaterialLayers boolean
+---@field public bHasRuntimeVirtualTextureOutput boolean
+---@field public bHasFirstPersonOutput boolean
+---@field public bHasMaterialCacheOutput boolean
+---@field public bMaterialCacheHasNonUVDerivedExpression boolean
+---@field public bHasSceneColor boolean
+---@field public bHasPerInstanceCustomData boolean
+---@field public bHasPerInstanceRandom boolean
+---@field public bHasVertexInterpolator boolean
+---@field public bHasCustomizedUVs boolean
+---@field public bHasMeshPaintTexture boolean
+---@field public bHasWorldPosition boolean
+---@field public PropertyConnectedMask integer @Each bit corresponds to EMaterialProperty connection status.
+local FMaterialCachedExpressionData = {}

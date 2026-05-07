@@ -1,0 +1,12 @@
+---@class EDNADataLayer
+---@field public None integer
+---@field public Descriptor integer
+---@field public Definition integer
+---@field public Behavior integer
+---@field public Geometry integer
+---@field public GeometryWithoutBlendShapes integer
+---@field public MachineLearnedBehavior integer
+---@field public RBFBehavior integer
+---@field public All integer
+---@field public EDNADataLayer_MAX integer
+local EDNADataLayer = {}

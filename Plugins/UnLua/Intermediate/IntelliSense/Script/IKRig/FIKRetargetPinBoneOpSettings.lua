@@ -1,0 +1,12 @@
+---@class FIKRetargetPinBoneOpSettings : FIKRetargetOpSettingsBase
+---@field public BonesToPin TArray<FPinBoneData> @A list of bone-pairs to copy transforms between
+---@field public SkeletonToCopyFrom ERetargetSourceOrTarget @Which skeleton to copy animation from.
+---@field public bCopyTranslation boolean @Copy the translation of the bone.
+---@field public TranslationMode EPinBoneTranslationMode @The method used to calculate the translation of the bone.
+---@field public bCopyRotation boolean @Copy the rotation of the bone.
+---@field public RotationMode EPinBoneRotationMode @The method used to calculate the rotation of the bone.
+---@field public bCopyScale boolean @Copy the scale of the bone.
+---@field public bPropagateToChildren boolean @Update children bone transforms (recursively).
+---@field public GlobalOffset FTransform @A manual offset to apply in global space
+---@field public LocalOffset FTransform @A manual offset to apply in local space
+local FIKRetargetPinBoneOpSettings = {}

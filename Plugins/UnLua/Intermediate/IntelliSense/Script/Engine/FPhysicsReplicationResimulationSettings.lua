@@ -1,0 +1,11 @@
+---Default settings for physics replication using EPhysicsReplicationMode::Resimulation
+---@class FPhysicsReplicationResimulationSettings
+---@field public bEnableResimulationErrorPositionThreshold boolean @Enable positional error threshold to trigger resimulation
+---@field public ResimulationErrorPositionThreshold number @Enable positional error threshold to trigger resimulation and set distance in centimeters before a state discrepancy triggers a resimulation
+---@field public bEnableResimulationErrorRotationThreshold boolean @Enable rotational error threshold to trigger resimulation
+---@field public ResimulationErrorRotationThreshold number @Enable rotational error threshold to trigger resimulation and set rotation difference in degrees before a state discrepancy triggers a resimulation
+---@field public bEnableResimulationErrorLinearVelocityThreshold boolean @Enable linear velocity error threshold to trigger resimulation
+---@field public ResimulationErrorLinearVelocityThreshold number @Enable linear velocity error threshold to trigger resimulation and set velocity difference in centimeters / second before a state discrepancy triggers a resimulation
+---@field public bEnableResimulationErrorAngularVelocityThreshold boolean @Enable angular velocity error threshold to trigger resimulation
+---@field public ResimulationErrorAngularVelocityThreshold number @Enable angular velocity error threshold to trigger resimulation and set velocity degrees / second before a state discrepancy triggers a resimulation
+local FPhysicsReplicationResimulationSettings = {}

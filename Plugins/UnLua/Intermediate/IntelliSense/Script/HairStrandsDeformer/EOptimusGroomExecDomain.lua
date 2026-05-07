@@ -1,0 +1,12 @@
+---@class EOptimusGroomExecDomain
+---@field public None integer
+---@field public ControlPoint integer
+---@field public Curve integer
+---@field public StrandsEdges integer
+---@field public StrandsObjects integer
+---@field public GuidesPoints integer
+---@field public GuidesCurves integer
+---@field public GuidesEdges integer
+---@field public GuidesObjects integer
+---@field public EOptimusGroomExecDomain_MAX integer
+local EOptimusGroomExecDomain = {}

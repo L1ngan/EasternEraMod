@@ -1,0 +1,41 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Create Mod Plugin",
+	"Description": "Plugin for creating mod data structures with configurable fields from FEastRimWorldHumanData",
+	"Category": "Modding",
+	"CreatedBy": "EastRimWorld",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EngineVersion": "5.6.0",
+	"EnabledByDefault": true,
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Plugins": [
+		{
+			"Name": "SmartObjects",
+			"Enabled": true
+		}
+	],
+	"Modules": [
+		{
+			"Name": "CreateModPlugin",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64"
+			]
+		},
+		{
+			"Name": "CreateModPluginEditor",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		}
+	]
+}
+

@@ -1,0 +1,25 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\plugins\\lquickframe\\source\\lquickframe\\misc\\llog.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\easternera\\development\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\plugins\\lquickframe\\intermediate\\build\\win64\\x64\\unrealgame\\development\\lquickframe\\definitions.lquickframe.h",
+            "h:\\project\\plugins\\lquickframe\\source\\lquickframe\\misc\\llog.h",
+            "h:\\project\\plugins\\lquickframe\\intermediate\\build\\win64\\unrealgame\\inc\\lquickframe\\uht\\llog.generated.h",
+            "h:\\project\\plugins\\lquickframe\\source\\lquickframe\\misc\\lfile.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\kismet\\blueprintasyncactionbase.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\blueprintasyncactionbase.generated.h",
+            "h:\\project\\plugins\\lquickframe\\intermediate\\build\\win64\\unrealgame\\inc\\lquickframe\\uht\\lfile.generated.h",
+            "h:\\project\\plugins\\lquickframe\\source\\lquickframe\\public\\lquickframesetting.h",
+            "h:\\project\\plugins\\lquickframe\\intermediate\\build\\win64\\unrealgame\\inc\\lquickframe\\uht\\lquickframesetting.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetsystemlibrary.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\assetregistry\\arfilter.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\kismetsystemlibrary.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

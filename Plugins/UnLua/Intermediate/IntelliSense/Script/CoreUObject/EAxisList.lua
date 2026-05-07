@@ -1,0 +1,23 @@
+---Generic axis list enum (mirrored for native use in Axis.h).
+---@class EAxisList
+---@field public None integer
+---@field public X integer
+---@field public Y integer
+---@field public Z integer
+---@field public Screen integer
+---@field public XY integer
+---@field public XZ integer
+---@field public YZ integer
+---@field public XYZ integer
+---@field public All integer
+---@field public ZRotation integer
+---@field public Rotate2D integer
+---@field public Left integer
+---@field public Up integer
+---@field public Forward integer
+---@field public LU integer
+---@field public LF integer
+---@field public UF integer
+---@field public LeftUpForward integer
+---@field public EAxisList_MAX integer
+local EAxisList = {}

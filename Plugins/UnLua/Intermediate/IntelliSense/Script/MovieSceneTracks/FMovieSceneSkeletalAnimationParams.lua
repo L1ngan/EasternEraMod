@@ -1,0 +1,15 @@
+---@class FMovieSceneSkeletalAnimationParams
+---@field public Animation UAnimSequenceBase @The animation this section plays
+---@field public FirstLoopStartFrameOffset FFrameNumber @The offset into the beginning of the animation clip for the first loop of play.
+---@field public StartFrameOffset FFrameNumber @The offset into the beginning of the animation clip
+---@field public EndFrameOffset FFrameNumber @The offset into the end of the animation clip
+---@field public PlayRate FMovieSceneTimeWarpVariant @The playback rate of the animation clip
+---@field public bReverse boolean @Reverse the playback of the animation clip
+---@field public SlotName string @The slot name to use for the animation
+---@field public MirrorDataTable UMirrorDataTable
+---@field public Weight FMovieSceneFloatChannel @The weight curve for this animation section
+---@field public bSkipAnimNotifiers boolean @If on will skip sending animation notifies
+---@field public bForceCustomMode boolean @If on animation sequence will always play when active even if the animation is controlled by a Blueprint or Anim Instance Class
+---@field public SwapRootBone ESwapRootBone @If on the root bone transform will be swapped to the specified root
+---@field public bLinearPlaybackWhenScaled boolean
+local FMovieSceneSkeletalAnimationParams = {}

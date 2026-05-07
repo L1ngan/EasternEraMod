@@ -1,0 +1,61 @@
+---@class FModularSynthPreset : FTableRowBase
+---@field public bEnablePolyphony boolean @Whether or not to allow multiple synth voices.
+---@field public Osc1Type ESynth1OscType @What type of oscillator to use for oscillator 1
+---@field public Osc1Gain number @The linear gain of oscillator 1 [0.0, 1.0]
+---@field public Osc1Octave number @The octave of oscillator 1. [-8.0, 8.0]
+---@field public Osc1Semitones number @The semi-tones of oscillator 1. [-12.0, 12.0]
+---@field public Osc1Cents number @The cents (hundreds of a semitone) of oscillator 1. [-100.0, 100.0]
+---@field public Osc1PulseWidth number @The pulsewidth of oscillator 1 (when using a square wave type oscillator). [0.0, 1.0]
+---@field public Osc2Type ESynth1OscType @What type of oscillator to use for oscillator 2
+---@field public Osc2Gain number @The linear gain of oscillator 2 [0.0, 1.0]
+---@field public Osc2Octave number @The octave of oscillator 2. [-8.0, 8.0]
+---@field public Osc2Semitones number @The semi-tones of oscillator 2. [-12.0, 12.0]
+---@field public Osc2Cents number @The cents (hundreds of a semitone) of oscillator 2. [-100.0, 100.0]
+---@field public Osc2PulseWidth number @The pulsewidth of oscillator 2 (when using a square wave type oscillator). [0.0, 1.0]
+---@field public Portamento number @The amount of portamento to use, which is the amount of pitch sliding from current note to next [0.0, 1.0]
+---@field public bEnableUnison boolean @Enables forcing the oscillators to have no stereo spread.
+---@field public bEnableOscillatorSync boolean @Whether or not oscillator sync is enabled. Oscillator sync forces oscillator 2's phase to align with oscillator 1's phase.
+---@field public Spread number @The amount of stereo spread to use between oscillator 1 and oscillator 2 [0.0, 1.0]
+---@field public Pan number @The stereo pan to use. 0.0 is center. -1.0 is left, 1.0 is right.
+---@field public LFO1Frequency number @The frequency to use for LFO 1 (in hz) [0.0, 50.0]
+---@field public LFO1Gain number @The linear gain to use for LFO 1 [0.0, 1.0]
+---@field public LFO1Type ESynthLFOType @The type of LFO to use for LFO 1
+---@field public LFO1Mode ESynthLFOMode @The mode to use for LFO 1
+---@field public LFO1PatchType ESynthLFOPatchType @The built-in patch type to use for LFO 1 (you can route this to any patchable parameter using the Patches parameter)
+---@field public LFO2Frequency number @The frequency to use for LFO 2 (in hz) [0.0, 50.0]
+---@field public LFO2Gain number @The linear gain to use for LFO 2 [0.0, 1.0]
+---@field public LFO2Type ESynthLFOType @The type of LFO to use for LFO 2
+---@field public LFO2Mode ESynthLFOMode @The mode to use for LFO 2
+---@field public LFO2PatchType ESynthLFOPatchType @The built-in patch type to use for LFO 2 (you can route this to any patchable parameter using the Patches parameter)
+---@field public GainDb number @The overall gain to use for the synthesizer in dB [-90.0, 20.0]
+---@field public AttackTime number @The amplitude envelope attack time (in ms) [0.0, 10000]
+---@field public DecayTime number @The amplitude envelope decay time (in ms)[0.0, 10000]
+---@field public SustainGain number @The amplitude envelope sustain amount (linear gain) [0.0, 1.0]
+---@field public ReleaseTime number @The amplitude envelope release time (in ms) [0.0, 10000]
+---@field public ModEnvPatchType ESynthModEnvPatch @The built-in patch type for the envelope modulator
+---@field public ModEnvBiasPatchType ESynthModEnvBiasPatch @The built-in patch type for the envelope modulator bias output. Bias is when the envelope output is offset by the sustain gain.
+---@field public bInvertModulationEnvelope boolean @Whether or not to invert the modulation envelope
+---@field public bInvertModulationEnvelopeBias boolean @Whether or not to invert the modulation envelope bias output
+---@field public ModulationEnvelopeDepth number @The "depth" (i.e. how much) modulation envelope to use. This scales the modulation envelope output. [0.0, 1.0]
+---@field public ModulationEnvelopeAttackTime number @The modulation envelope attack time (in ms) [0.0, 10000]
+---@field public ModulationEnvelopeDecayTime number @The modulation envelope decay time (in ms) [0.0, 10000]
+---@field public ModulationEnvelopeSustainGain number @The modulation envelope sustain gain (linear gain) [0.0, 1.0]
+---@field public ModulationEnvelopeReleaseTime number @The modulation envelope release time (in ms) [0.0, 10000]
+---@field public bLegato boolean @Whether or not to use legato mode.
+---@field public bRetrigger boolean @Whether or not to use retrigger mode.
+---@field public FilterFrequency number @The output filter cutoff frequency (hz) [0.0, 20000.0]
+---@field public FilterQ number @The output filter resonance (Q) [0.5, 10]
+---@field public FilterType ESynthFilterType @The output filter type (lowpass, highpass, bandpass, bandstop)
+---@field public FilterAlgorithm ESynthFilterAlgorithm @The output filter circuit/algorithm type (one-pole ladder, ladder, state-variable)
+---@field public bStereoDelayEnabled boolean @Whether or not stereo delay is enabled on the synth
+---@field public StereoDelayMode ESynthStereoDelayMode @The stereo delay mode of the synth
+---@field public StereoDelayTime number @The stereo delay time (in ms) [0.0, 2000.0]
+---@field public StereoDelayFeedback number @The amount of feedback in the stereo delay line [0.0, 1.0]
+---@field public StereoDelayWetlevel number @The output wet level to use for the stereo delay time [0.0, 1.0]
+---@field public StereoDelayRatio number @The ratio between left and right stereo delay lines (wider value is more separation) [0.0, 1.0]
+---@field public bChorusEnabled boolean @Whether or not the chorus effect is enabled
+---@field public ChorusDepth number @The depth of the chorus effect [0.0, 1.0]
+---@field public ChorusFeedback number @The amount of feedback in the chorus effect [0.0, 1.0]
+---@field public ChorusFrequency number @The chorus LFO frequency [0.0, 20.0]
+---@field public Patches TArray<FEpicSynth1Patch> @The modular synth patch cords to use for the synth. Allows routing the LFO1/LFO2 and Modulation Envelope to any patchable destination.
+local FModularSynthPreset = {}

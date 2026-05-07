@@ -1,0 +1,33 @@
+---ACombinedTransformGizmoActor is an Actor type intended to be used with UCombinedTransformGizmo,
+---as the in-scene visual representation of the Gizmo.
+---FCombinedTransformGizmoActorFactory returns an instance of this Actor type (or a subclass), and based on
+---which Translate and Rotate UProperties are initialized, will associate those Components
+---with UInteractiveGizmo's that implement Axis Translation, Plane Translation, and Axis Rotation.
+---If a particular sub-Gizmo is not required, simply set that FProperty to null.
+---The static factory method ::ConstructDefault3AxisGizmo() creates and initializes an
+---Actor suitable for use in a standard 3-axis Transformation Gizmo.
+---@class ACombinedTransformGizmoActor : AGizmoActor
+---@field public TranslateX UPrimitiveComponent @X Axis Translation Component
+---@field public TranslateY UPrimitiveComponent @Y Axis Translation Component
+---@field public TranslateZ UPrimitiveComponent @Z Axis Translation Component
+---@field public TranslateYZ UPrimitiveComponent @YZ Plane Translation Component
+---@field public TranslateXZ UPrimitiveComponent @XZ Plane Translation Component
+---@field public TranslateXY UPrimitiveComponent @XY Plane Translation Component
+---@field public RotateX UPrimitiveComponent @X Axis Rotation Component
+---@field public RotateY UPrimitiveComponent @Y Axis Rotation Component
+---@field public RotateZ UPrimitiveComponent @Z Axis Rotation Component
+---@field public RotationSphere UPrimitiveComponent @Circle that gets drawn around the outside of the gizmo to make it look like a sphere
+---@field public FreeRotateHandle UPrimitiveComponent
+---@field public FreeTranslateHandle UPrimitiveComponent
+---@field public UniformScale UPrimitiveComponent @Uniform Scale Component
+---@field public AxisScaleX UPrimitiveComponent @X Axis Scale Component
+---@field public AxisScaleY UPrimitiveComponent @Y Axis Scale Component
+---@field public AxisScaleZ UPrimitiveComponent @Z Axis Scale Component
+---@field public PlaneScaleYZ UPrimitiveComponent @YZ Plane Scale Component
+---@field public PlaneScaleXZ UPrimitiveComponent @XZ Plane Scale Component
+---@field public PlaneScaleXY UPrimitiveComponent @XY Plane Scale Component
+---@field private FullAxisScaleX UPrimitiveComponent @These store versions of the axis scale components that can be used when not using a combined gizmo,  if they differ.
+---@field private FullAxisScaleY UPrimitiveComponent
+---@field private FullAxisScaleZ UPrimitiveComponent
+local ACombinedTransformGizmoActor = {}
+

@@ -1,0 +1,27 @@
+---Implements the settings for the UMG Editor Project Settings
+---@class UWidgetEditingProjectSettings : UDeveloperSettings
+---@field public DefaultCompilerOptions FWidgetCompilerOptions
+---@field protected DirectoryCompilerOptions TArray<FDirectoryWidgetCompilerOptions>
+---@field public bShowWidgetsFromEngineContent boolean
+---@field public bShowWidgetsFromDeveloperContent boolean
+---@field public CategoriesToHide TArray<string>
+---@field public WidgetClassesToHide TArray<FSoftClassPath>
+---@field public bUseWidgetTemplateSelector boolean @Enables a dialog that lets you select a root widget before creating a widget blueprint
+---@field public CommonRootWidgetClasses TArray<TSoftClassPtr<UPanelWidget>> @This list populates the common class section of the root widget selection dialog
+---@field public DefaultRootWidget TSubclassOf<UPanelWidget> @The panel widget to place at the root of all newly constructed widget blueprints. Can be empty.
+---@field public bUseEditorConfigPaletteFiltering boolean @Set true to filter all categories and widgets out in the palette, selectively enabling them later via permission lists.
+---@field public bUseUserWidgetParentClassViewerSelector boolean @Enables a dialog that lets you select the parent class in a tree view.
+---@field public bUseUserWidgetParentDefaultClassViewerSelector boolean @Enables a dialog that lets you select the parent class in a default view.
+---@field public bEnableMakeVariable boolean @Set true to enable the Is Variable checkbox in the UMG editor DetailView.
+---@field public bEnableWidgetAnimationEditor boolean @Set true to hide widget animation related elements in the UMG editor.
+---@field public bEnablePaletteWindow boolean @Set true to enabled the Palette window in the UMG editor.
+---@field public bEnableLibraryWindow boolean @Set true to enabled the LIbrary window in the UMG editor.
+---@field public bEnableHierarchyWindow boolean @Set true to enabled the Widget Hierarchy window in the UMG editor.
+---@field public bEnableBindWidgetWindow boolean @Set true to enabled the Bind Widget window in the UMG editor.
+---@field public bEnableNavigationSimulationWindow boolean @Set true to enabled the Navigation Simulation window in the UMG editor.
+---@field public bCanCallInitializedWithoutPlayerContext boolean @The default value of bCanCallInitializedWithoutPlayerContext.
+---@field public FavoriteWidgetParentClasses TArray<TSoftClassPtr<UUserWidget>> @The list of parent classes to choose from for newly constructed widget blueprints. The classes must have empty widget hierarchies.
+---@field public DebugResolutions TArray<FDebugResolution>
+---@field protected Version integer
+local UWidgetEditingProjectSettings = {}
+

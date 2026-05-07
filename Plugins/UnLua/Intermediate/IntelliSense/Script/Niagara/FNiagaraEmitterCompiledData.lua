@@ -1,0 +1,11 @@
+---@class FNiagaraEmitterCompiledData
+---@field public SpawnAttributes TArray<string> @Attribute names in the data set that are driving each emitter's spawning.
+---@field public EmitterSpawnIntervalVar FNiagaraVariable @Explicit list of Niagara Variables to bind to Emitter instances.
+---@field public EmitterInterpSpawnStartDTVar FNiagaraVariable
+---@field public EmitterSpawnGroupVar FNiagaraVariable
+---@field public EmitterAgeVar FNiagaraVariable
+---@field public EmitterRandomSeedVar FNiagaraVariable
+---@field public EmitterInstanceSeedVar FNiagaraVariable
+---@field public EmitterTotalSpawnedParticlesVar FNiagaraVariable
+---@field public DataSetCompiledData FNiagaraDataSetCompiledData @Per-Emitter DataSet Data.
+local FNiagaraEmitterCompiledData = {}

@@ -1,0 +1,2 @@
+---@class FRigVMProfilingInfo
+local FRigVMProfilingInfo = {}

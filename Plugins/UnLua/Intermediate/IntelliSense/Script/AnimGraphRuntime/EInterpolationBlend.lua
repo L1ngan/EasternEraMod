@@ -1,0 +1,11 @@
+---Various ways to interpolate TAlphaBlend.
+---@class EInterpolationBlend
+---@field public Linear integer
+---@field public Cubic integer
+---@field public Sinusoidal integer
+---@field public EaseInOutExponent2 integer
+---@field public EaseInOutExponent3 integer
+---@field public EaseInOutExponent4 integer
+---@field public EaseInOutExponent5 integer
+---@field public MAX integer
+local EInterpolationBlend = {}

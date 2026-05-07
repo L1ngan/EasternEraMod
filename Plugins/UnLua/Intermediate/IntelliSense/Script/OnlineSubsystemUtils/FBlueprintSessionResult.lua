@@ -1,0 +1,2 @@
+---@class FBlueprintSessionResult
+local FBlueprintSessionResult = {}

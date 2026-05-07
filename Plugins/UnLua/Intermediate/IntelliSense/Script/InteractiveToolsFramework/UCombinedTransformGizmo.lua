@@ -1,0 +1,35 @@
+---UCombinedTransformGizmo provides standard Transformation Gizmo interactions,
+---applied to a UTransformProxy target object. By default the Gizmo will be
+---a standard XYZ translate/rotate Gizmo (axis and plane translation).
+---The in-scene representation of the Gizmo is a ACombinedTransformGizmoActor (or subclass).
+---This Actor has FProperty members for the various sub-widgets, each as a separate Component.
+---Any particular sub-widget of the Gizmo can be disabled by setting the respective
+---Actor Component to null.
+---So, to create non-standard variants of the Transform Gizmo, set a new GizmoActorBuilder
+---in the UCombinedTransformGizmoBuilder registered with the GizmoManager. Return
+---a suitably-configured GizmoActor and everything else will be handled automatically.
+---@class UCombinedTransformGizmo : UInteractiveGizmo
+---@field public ActiveTarget UTransformProxy @The active target object for the Gizmo
+---@field public bSnapToWorldGrid boolean @bSnapToWorldGrid controls whether any position snapping is applied, if possible, for Axis and Plane translations, via the ContextQueriesAPI Despite the name, this flag controls both world-space grid snapping and relative snapping
+---@field public bGridSizeIsExplicit boolean @Optional grid size which overrides the Context Grid
+---@field public ExplicitGridSize FVector
+---@field public bRotationGridSizeIsExplicit boolean @Optional grid size which overrides the Context Rotation Grid
+---@field public ExplicitRotationGridSize FRotator
+---@field public bSnapToWorldRotGrid boolean @If true, then when using world frame, Axis and Plane rotation snap to the world grid via the ContextQueriesAPI (in RotationSnapFunction)
+---@field public bSnapToScaleGrid boolean @If true, scaling snaps to the grid
+---@field public bUseContextCoordinateSystem boolean @Whether to use the World/Local coordinate system provided by the context via the ContextyQueriesAPI.
+---@field public CurrentCoordinateSystem EToolContextCoordinateSystem @Current coordinate system in use. If bUseContextCoordinateSystem is true, this value will be updated internally every Tick() by quering the ContextyQueriesAPI, otherwise the default is Local and the client can change it as necessary
+---@field public bUseContextGizmoMode boolean @Whether to use the Gizmo Mode provided by the context via the ContextyQueriesAPI.
+---@field public ActiveGizmoMode EToolContextTransformGizmoMode @Current dynamic sub-widget visibility mode to use (eg Translate-Only, Scale-Only, Combined, etc) If bUseContextGizmoMode is true, this value will be updated internally every Tick() by quering the ContextyQueriesAPI, otherwise the default is Combined and the client can change it as necessary
+---@field protected ActiveComponents TArray<UPrimitiveComponent> @List of current-active child components
+---@field protected ActiveGizmos TArray<UInteractiveGizmo> @list of currently-active child gizmos
+---@field protected CameraAxisSource UGizmoConstantFrameAxisSource @Axis that points towards camera, X/Y plane tangents aligned to right/up. Shared across Gizmos, and created internally during SetActiveTarget()
+---@field protected AxisXSource UGizmoComponentAxisSource @X-axis source is shared across Gizmos, and created internally during SetActiveTarget()
+---@field protected AxisYSource UGizmoComponentAxisSource @Y-axis source is shared across Gizmos, and created internally during SetActiveTarget()
+---@field protected AxisZSource UGizmoComponentAxisSource @Z-axis source is shared across Gizmos, and created internally during SetActiveTarget()
+---@field protected UnitAxisXSource UGizmoComponentAxisSource @Local X-axis source (ie 1,0,0) is shared across Scale Gizmos, and created internally during SetActiveTarget()
+---@field protected UnitAxisYSource UGizmoComponentAxisSource @Y-axis source (ie 0,1,0) is shared across Scale Gizmos, and created internally during SetActiveTarget()
+---@field protected UnitAxisZSource UGizmoComponentAxisSource @Z-axis source (ie 0,0,1) is shared across Scale Gizmos, and created internally during SetActiveTarget()
+---@field protected StateTarget UGizmoTransformChangeStateTarget @State target is shared across gizmos, and created internally during SetActiveTarget(). Several FChange providers are registered with this StateTarget, including the UCombinedTransformGizmo itself (IToolCommandChangeSource implementation above is called)
+local UCombinedTransformGizmo = {}
+

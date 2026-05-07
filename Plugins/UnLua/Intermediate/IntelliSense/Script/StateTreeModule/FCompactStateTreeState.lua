@@ -1,0 +1,46 @@
+---Runtime representation of a StateTree state.
+---@class FCompactStateTreeState
+---@field public RequiredEventToEnter FCompactEventDesc @Description of an event required to enter the state.
+---@field public Name string @Name of the State
+---@field public Tag FGameplayTag @GameplayTag describing the State
+---@field public LinkedAsset UStateTree
+---@field public LinkedState FStateTreeStateHandle @Linked state handle if the state type is linked state.
+---@field public Parent FStateTreeStateHandle @Parent state handle, invalid if root state.
+---@field public ChildrenBegin integer @Index to first child state
+---@field public ChildrenEnd integer @Index one past the last child state.
+---@field public EnterConditionsBegin integer @Index to first state enter condition
+---@field public UtilityConsiderationsBegin integer @Index to first state utility consideration
+---@field public TransitionsBegin integer @Index to first transition
+---@field public TasksBegin integer @Index to first task
+---@field public ParameterTemplateIndex FStateTreeIndex16 @Index to state instance data.
+---@field public ParameterDataHandle FStateTreeDataHandle
+---@field public ParameterBindingsBatch FStateTreeIndex16
+---@field public EventDataIndex FStateTreeIndex16
+---@field public Weight number @Weight used to scale the normalized final utility score for this state
+---@field public CustomTickRate number @Tick rate in seconds the state tasks and transitions should tick If set the state cannot sleep. Must be greater than or equal to 0.
+---@field public CompletionTasksMask integer @Mask used to test the tasks completion.
+---@field public CompletionTasksMaskBufferIndex integer @Index in the mask buffer used by the state. CompletionTasksMaskBufferIndex = (Final Task Bit) / (size of mask:32)
+---@field public CompletionTasksMaskBitsOffset integer @Offset, in bits, of the first flag inside the mask. Used to access the bit from the state task index. CompletionTasksMaskBitsOffset = (Final Task Bit) % (size of mask:32)
+---@field public CompletionTasksControl EStateTreeTaskCompletionType @How the tasks control the completion of the state.
+---@field public EnterConditionsNum integer @Number of enter conditions
+---@field public UtilityConsiderationsNum integer @Number of utility considerations
+---@field public TransitionsNum integer @Number of transitions
+---@field public TasksNum integer @Number of tasks
+---@field public EnabledTasksNum integer @Number of enabled tasks todo: this should be removed once we finished only compiling enabled elements for StateTree Compiler
+---@field public InstanceDataNum integer @Number of instance data
+---@field public Depth integer @Distance to root state.
+---@field public Type EStateTreeStateType @Type of the state
+---@field public SelectionBehavior EStateTreeStateSelectionBehavior @What to do when the state is considered for selection.
+---@field public bHasTransitionTasks boolean @True if the state contains tasks that should be called during transition handling.
+---@field public bHasStateChangeConditions boolean @True if the state contains conditions which require call to enter/completed/exit state.
+---@field public bHasTickTriggerTransitions boolean @True if the state contains transitions with tick trigger.
+---@field public bHasEventTriggerTransitions boolean @True if the state contains transitions with event trigger.
+---@field public bHasDelegateTriggerTransitions boolean @True if the state contains transitions with delegate trigger.
+---@field public bHasCompletedTriggerTransitions boolean @True if the state contains transitions with completed trigger.
+---@field public bHasSucceededTriggerTransitions boolean @True if the state contains transitions with Succeeded trigger.
+---@field public bHasFailedTriggerTransitions boolean @True if the state contains transitions with Succeeded trigger.
+---@field public bCheckPrerequisitesWhenActivatingChildDirectly boolean @Should state's required event and enter conditions be evaluated when transition leads directly to it's child.
+---@field public bEnabled boolean @True if the state is Enabled (i.e. not explicitly marked as disabled).
+---@field public bConsumeEventOnSelect boolean @If set to true, the required event is consumed (later state selection cannot react to it) if state selection can be made.
+---@field public bHasCustomTickRate boolean @If set to true, the state has a custom tick rate.
+local FCompactStateTreeState = {}

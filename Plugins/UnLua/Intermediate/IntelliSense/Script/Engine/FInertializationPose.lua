@@ -1,0 +1,2 @@
+---@class FInertializationPose
+local FInertializationPose = {}

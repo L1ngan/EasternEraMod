@@ -1,0 +1,16 @@
+---When to call the function during the execution of the animation graph
+---@class EAnimFunctionCallSite
+---@field public OnInitialize integer
+---@field public OnUpdate integer
+---@field public OnBecomeRelevant integer
+---@field public OnEvaluate integer
+---@field public OnInitializePostRecursion integer
+---@field public OnUpdatePostRecursion integer
+---@field public OnBecomeRelevantPostRecursion integer
+---@field public OnEvaluatePostRecursion integer
+---@field public OnStartedBlendingOut integer
+---@field public OnStartedBlendingIn integer
+---@field public OnFinishedBlendingOut integer
+---@field public OnFinishedBlendingIn integer
+---@field public EAnimFunctionCallSite_MAX integer
+local EAnimFunctionCallSite = {}

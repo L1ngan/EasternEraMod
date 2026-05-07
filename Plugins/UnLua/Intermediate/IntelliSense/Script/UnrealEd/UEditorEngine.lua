@@ -1,0 +1,68 @@
+---Engine that drives the Editor.
+---Separate from UGameEngine because it may have much different functionality than desired for an instance of a game itself.
+---@class UEditorEngine : UEngine
+---@field public TempModel UModel @Objects.
+---@field public ConversionTempModel UModel
+---@field public Trans UTransactor
+---@field public Bad UTexture2D @Textures.
+---@field public EditorFont UFont @Font used by Canvas-based editors
+---@field public PreviewSoundCue USoundCue @Audio
+---@field public PreviewAudioComponent UAudioComponent
+---@field public EditorCube UStaticMesh @Used in UnrealEd for showing materials
+---@field public EditorSphere UStaticMesh
+---@field public EditorPlane UStaticMesh
+---@field public EditorCylinder UStaticMesh
+---@field public bFastRebuild boolean @Toggles.
+---@field public IsImportingT3D boolean
+---@field public ClickFlags integer @Other variables.
+---@field public ParentContext UPackage
+---@field public UnsnappedClickLocation FVector
+---@field public ClickLocation FVector
+---@field public ClickPlane FPlane
+---@field public MouseMovement FVector
+---@field public DetailMode integer @Setting for the detail mode to show in the editor viewports
+---@field public UseSizingBox boolean @Advanced.
+---@field public UseAxisIndicator boolean
+---@field public GameCommandLine string
+---@field public bShowBrushMarkerPolys boolean
+---@field public bEnableSocketSnapping boolean @If true, socket snapping is enabled in the main level viewports.
+---@field public bEnableLODLocking boolean
+---@field public HeightMapExportClassName string
+---@field public ActorFactories TArray<UActorFactory> @Array of actor factories created at editor startup and used by context menu etc.
+---@field public UserOpenedFile string @The name of the file currently being opened in the editor. "" if no file is being opened.
+---@field public InEditorGameURLOptions string @Additional per-user/per-game options set in the .ini file. Should be in the form "?option1=X?option2?option3=Y"
+---@field public PlayWorld UWorld @A pointer to a UWorld that is the duplicated/saved-loaded to be played in with "Play From Here"
+---@field public bIsToggleBetweenPIEandSIEQueued boolean @Has a request to toggle between PIE and SIE been made?
+---@field public bAllowMultiplePIEWorlds boolean @Allows multiple PIE worlds under a single instance. If false, you can only do multiple UE processes for pie networking
+---@field public bRequestEndPlayMapQueued boolean @True if there is a pending end play map queued
+---@field public bIgnoreSelectionChange boolean @True if we should ignore noting any changes to selection on undo/redo
+---@field public bSuspendBroadcastPostUndoRedo boolean @True if we should suspend notifying clients post undo/redo
+---@field public bSquelchTransactionNotification boolean @True if we should not display notifications about undo/redo
+---@field public bNotifyUndoRedoSelectionChange boolean @True if we should force a selection change notification during an undo/redo
+---@field public PlayFromHerePlayerStartClass TSubclassOf<ANavigationObjectBase> @The PlayerStart class used when spawning the player at the current camera location.
+---@field public EditorWorld UWorld @When Simulating In Editor, a pointer to the original (non-simulating) editor world
+---@field public ActorsThatWereSelected TArray<TWeakObjectPtr<AActor>> @When Simulating In Editor, an array of all actors that were selected when it began
+---@field public PlayWorldDestination integer @Where did the person want to play? Where to play the game - -1 means in editor, 0 or more is an index into the GConsoleSupportContainer
+---@field public CurrentPlayWorldDestination integer @The current play world destination (I.E console).  -1 means no current play world destination, 0 or more is an index into the GConsoleSupportContainer
+---@field public bMobilePreviewPortrait boolean @Mobile preview settings for what orientation to default to
+---@field public BuildPlayDevice integer @Currently targeted device for mobile previewer.
+---@field public UserEditedPlayWorldURL string @Play world url string edited by a user.
+---@field public ScratchRenderTarget2048 UTextureRenderTarget2D @Temporary render target that can be used by the editor.
+---@field public ScratchRenderTarget1024 UTextureRenderTarget2D
+---@field public ScratchRenderTarget512 UTextureRenderTarget2D
+---@field public ScratchRenderTarget256 UTextureRenderTarget2D
+---@field public PreviewMeshComp UStaticMeshComponent @A mesh component used to preview in editor without spawning a static mesh actor.
+---@field public PreviewMeshIndex integer @The index of the mesh to use from the list of preview meshes.
+---@field public bShowPreviewMesh boolean @When true, the preview mesh mode is activated.
+---@field public bCustomCameraAlignEmitter boolean @If "Camera Align" emitter handling uses a custom zoom or not
+---@field public CustomCameraAlignEmitterDistance number @The distance to place the camera from an emitter actor when custom zooming is enabled
+---@field public bDrawSocketsInGMode boolean @If true, then draw sockets when socket snapping is enabled in 'g' mode
+---@field public bDrawParticleHelpers boolean @If true, then draw particle debug helpers in editor viewports
+---@field public BrushBuilders TArray<UBrushBuilder> @Brush builders that have been created in the editor
+---@field private EditorWorldExtensionsManager UEditorWorldExtensionManager @Manager that holds all extensions paired with a world
+---@field private DragDropHandler ULevelEditorDragDropHandler
+---@field protected ActorGroupingUtilsClassName FSoftClassPath
+---@field protected ActorGroupingUtils UActorGroupingUtils
+---@field public bIsSimulatingInEditor boolean @True if we're Simulating In Editor, as opposed to Playing In Editor.  In this mode, simulation takes place right the level editing environment // UE_DEPRECATED(4.25, "Use IsSimulateInEditorInProgress instead.")
+local UEditorEngine = {}
+

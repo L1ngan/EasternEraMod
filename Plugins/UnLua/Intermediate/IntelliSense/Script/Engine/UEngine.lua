@@ -1,0 +1,293 @@
+---Abstract base class of all Engine classes, responsible for management of systems critical to editor or game systems.
+---Also defines default classes for certain engine systems.
+---@class UEngine : UObject
+---@field private TinyFont UFont
+---@field public TinyFontName FSoftObjectPath @Sets the font used for the smallest engine text
+---@field private SmallFont UFont
+---@field public SmallFontName FSoftObjectPath @Sets the font used for small engine text, used for most debug displays
+---@field private MediumFont UFont
+---@field public MediumFontName FSoftObjectPath @Sets the font used for medium engine text
+---@field private LargeFont UFont
+---@field public LargeFontName FSoftObjectPath @Sets the font used for large engine text
+---@field private SubtitleFont UFont
+---@field public SubtitleFontName FSoftObjectPath @Sets the font used by the default Subtitle Manager
+---@field private AdditionalFonts TArray<UFont>
+---@field public AdditionalFontNames TArray<string> @Sets additional fonts that will be loaded at startup and available using GetAdditionalFont.
+---@field public ConsoleClass TSubclassOf<UConsole>
+---@field public ConsoleClassName FSoftClassPath @Sets the class to use for the game console summoned with ~
+---@field public GameViewportClientClass TSubclassOf<UGameViewportClient>
+---@field public GameViewportClientClassName FSoftClassPath @Sets the class to use for the game viewport client, which can be overridden to change game-specific input and display behavior.
+---@field public LocalPlayerClass TSubclassOf<ULocalPlayer>
+---@field public LocalPlayerClassName FSoftClassPath @Sets the class to use for local players, which can be overridden to store game-specific information for a local player.
+---@field public WorldSettingsClass TSubclassOf<AWorldSettings>
+---@field public WorldSettingsClassName FSoftClassPath @Sets the class to use for WorldSettings, which can be overridden to store game-specific information on map/world.
+---@field public NavigationSystemClassName FSoftClassPath
+---@field public NavigationSystemClass TSubclassOf<UNavigationSystemBase> @Sets the class to use for NavigationSystem, which can be overridden to change game-specific navigation/AI behavior.
+---@field public NavigationSystemConfigClassName FSoftClassPath @Sets the Navigation System Config class, which can be overridden to change game-specific navigation/AI behavior.
+---@field public NavigationSystemConfigClass TSubclassOf<UNavigationSystemConfig>
+---@field public AvoidanceManagerClassName FSoftClassPath @Sets the AvoidanceManager class, which can be overridden to change AI crowd behavior.
+---@field public AvoidanceManagerClass TSubclassOf<UAvoidanceManager>
+---@field public AIControllerClassName FSoftClassPath @Sets the class to be used as the default AIController class for pawns.
+---@field public PhysicsCollisionHandlerClass TSubclassOf<UPhysicsCollisionHandler>
+---@field public PhysicsCollisionHandlerClassName FSoftClassPath @Sets the PhysicsCollisionHandler class to use by default, which can be overridden to change game-specific behavior when objects collide using physics.
+---@field public GameUserSettingsClassName FSoftClassPath @Sets the GameUserSettings class, which can be overridden to support game-specific options for Graphics/Sound/Gameplay.
+---@field public GameUserSettingsClass TSubclassOf<UGameUserSettings>
+---@field public GameUserSettings UGameUserSettings @Global instance of the user game settings
+---@field public LevelScriptActorClass TSubclassOf<ALevelScriptActor>
+---@field public LevelScriptActorClassName FSoftClassPath @Sets the Level Script Actor class, which can be overridden to allow game-specific behavior in per-map blueprint scripting
+---@field public DefaultBlueprintBaseClassName FSoftClassPath @Sets the base class to use for new blueprints created in the editor, configurable on a per-game basis
+---@field public GameSingletonClassName FSoftClassPath @Sets the class for a global object spawned at startup to handle game-specific data. If empty, it will not spawn one
+---@field public GameSingleton UObject @A UObject spawned at initialization time to handle game-specific data
+---@field public AssetManagerClassName FSoftClassPath @Sets the class to spawn as the global AssetManager, configurable per game. If empty, it will not spawn one
+---@field public AssetManager UAssetManager @A UObject spawned at initialization time to handle runtime asset loading and management
+---@field public DefaultTexture UTexture2D @A global default texture.
+---@field public DefaultTextureName FSoftObjectPath @Path of the global default texture that is used when no texture is specified.
+---@field public DefaultDiffuseTexture UTexture @A global default diffuse texture.
+---@field public DefaultDiffuseTextureName FSoftObjectPath @Path of the global default diffuse texture.
+---@field public DefaultBSPVertexTexture UTexture2D @Texture used to render a vertex in the editor
+---@field public DefaultBSPVertexTextureName FSoftObjectPath @Path of the texture used to render a vertex in the editor
+---@field public HighFrequencyNoiseTexture UTexture2D @Texture used to get random image grain values for post processing
+---@field public HighFrequencyNoiseTextureName FSoftObjectPath @Path of the texture used to get random image grain values for post processing
+---@field public DefaultBokehTexture UTexture2D @Texture used to blur out of focus content, mimics the Bokeh shape of actual cameras
+---@field public DefaultBokehTextureName FSoftObjectPath @Path of the texture used to blur out of focus content, mimics the Bokeh shape of actual cameras
+---@field public DefaultBloomKernelTexture UTexture2D @Texture used to bloom when using FFT, mimics characteristic bloom produced in a camera from a signle bright source
+---@field public DefaultBloomKernelTextureName FSoftObjectPath @Path of the texture used to bloom when using FFT, mimics characteristic bloom produced in a camera from a signle bright source
+---@field public DefaultFilmGrainTexture UTexture2D @Texture used to film grain by default.
+---@field public DefaultFilmGrainTextureName FSoftObjectPath @Path of the texture used by film grain by default.
+---@field public WireframeMaterial UMaterial @The material used to render wireframe meshes.
+---@field public WireframeMaterialName string @Path of the material used to render wireframe meshes in the editor and debug tools.
+---@field public GeomMaterial UMaterial @A translucent material used to render things in geometry mode.
+---@field public GeomMaterialName FSoftObjectPath @Path of the translucent material used to render things in geometry mode.
+---@field public DebugMeshMaterial UMaterial @A material used to render debug meshes.
+---@field public DebugMeshMaterialName FSoftObjectPath @Path of the default material for debug mesh
+---@field public NaniteHiddenSectionMaterial UMaterial @Material used for removing Nanite mesh sections from rasterization.
+---@field public NaniteHiddenSectionMaterialName string @Path of the material used for removing Nanite mesh sections from rasterization.
+---@field public EmissiveMeshMaterial UMaterial @A material used to render emissive meshes (e.g. light source surface).
+---@field public EmissiveMeshMaterialName FSoftObjectPath @Path of the default material for emissive mesh
+---@field public LevelColorationLitMaterial UMaterial @Material used for visualizing level membership in lit view port modes.
+---@field public LevelColorationLitMaterialName string @Path of the material used for visualizing level membership in lit view port modes.
+---@field public LevelColorationUnlitMaterial UMaterial @Material used for visualizing level membership in unlit view port modes.
+---@field public LevelColorationUnlitMaterialName string @Path of the material used for visualizing level membership in unlit view port modes.
+---@field public LightingTexelDensityMaterial UMaterial @Material used for visualizing lighting only w/ lightmap texel density.
+---@field public LightingTexelDensityName string @Path of the material used for visualizing lighting only w/ lightmap texel density.
+---@field public ShadedLevelColorationLitMaterial UMaterial @Material used for visualizing level membership in lit view port modes. Uses shading to show axis directions.
+---@field public ShadedLevelColorationLitMaterialName string @Path of the material used for visualizing level membership in lit view port modes. Uses shading to show axis directions.
+---@field public ShadedLevelColorationUnlitMaterial UMaterial @Material used for visualizing level membership in unlit view port modes.  Uses shading to show axis directions.
+---@field public ShadedLevelColorationUnlitMaterialName string @Path of the material used for visualizing level membership in unlit view port modes.  Uses shading to show axis directions.
+---@field public RemoveSurfaceMaterial UMaterial @Material used to indicate that the associated BSP surface should be removed.
+---@field public RemoveSurfaceMaterialName FSoftObjectPath @Path of the material used to indicate that the associated BSP surface should be removed.
+---@field public VertexColorMaterial UMaterial @Material used to visualize vertex colors as emissive
+---@field public VertexColorMaterialName string @Path of the material used to visualize vertex colors as emissive
+---@field public VertexColorViewModeMaterial_ColorOnly UMaterial @Material for visualizing vertex colors on meshes in the scene (color only, no alpha)
+---@field public VertexColorViewModeMaterialName_ColorOnly string @Path of the material for visualizing vertex colors on meshes in the scene (color only, no alpha)
+---@field public VertexColorViewModeMaterial_AlphaAsColor UMaterial @Material for visualizing vertex colors on meshes in the scene (alpha channel as color)
+---@field public VertexColorViewModeMaterialName_AlphaAsColor string @Path of the material for visualizing vertex colors on meshes in the scene (alpha channel as color)
+---@field public VertexColorViewModeMaterial_RedOnly UMaterial @Material for visualizing vertex colors on meshes in the scene (red only)
+---@field public VertexColorViewModeMaterialName_RedOnly string @Path of the material for visualizing vertex colors on meshes in the scene (red only)
+---@field public VertexColorViewModeMaterial_GreenOnly UMaterial @Material for visualizing vertex colors on meshes in the scene (green only)
+---@field public VertexColorViewModeMaterialName_GreenOnly string @Path of the material for visualizing vertex colors on meshes in the scene (green only)
+---@field public VertexColorViewModeMaterial_BlueOnly UMaterial @Material for visualizing vertex colors on meshes in the scene (blue only)
+---@field public VertexColorViewModeMaterialName_BlueOnly string @Path of the material for visualizing vertex colors on meshes in the scene (blue only)
+---@field public TextureColorViewModeMaterial UMaterial @Material for visualizing mesh paint texture colors on meshes in the scene
+---@field public TextureColorViewModeMaterialName string @Path of the material for visualizing mesh paint texture colors on meshes in the scene
+---@field public DefaultZenStreamingTextureName FSoftObjectPath @Path of the texture used to indicate zen streaming is active.
+---@field public BoneWeightMaterial UMaterial @Material used to render bone weights on skeletal meshes
+---@field public BoneWeightMaterialName FSoftObjectPath @Path of the material used to render bone weights on skeletal meshes
+---@field public ClothPaintMaterial UMaterial @Materials used to render cloth properties on skeletal meshes
+---@field public ClothPaintOpaqueMaterial UMaterial
+---@field public ClothPaintMaterialWireframe UMaterial
+---@field public ClothPaintOpaqueMaterialWireframe UMaterial
+---@field public ClothPaintMaterialInstance UMaterialInstanceDynamic
+---@field public ClothPaintOpaqueMaterialInstance UMaterialInstanceDynamic
+---@field public ClothPaintMaterialWireframeInstance UMaterialInstanceDynamic
+---@field public ClothPaintOpaqueMaterialWireframeInstance UMaterialInstanceDynamic
+---@field public ClothPaintMaterialName FSoftObjectPath @Name of the material used to render cloth in the clothing tools
+---@field public ClothPaintOpaqueMaterialName FSoftObjectPath @Name of the material used to render cloth in the clothing tools with full opacity
+---@field public ClothPaintMaterialWireframeName FSoftObjectPath @Name of the material used to render cloth wireframe in the clothing tools
+---@field public ClothPaintOpaqueMaterialWireframeName FSoftObjectPath @Name of the material used to render cloth wireframe in the clothing tools with full opacity
+---@field public PhysicalMaterialMaskMaterial UMaterial @A material used to render physical material mask on mesh.
+---@field public PhysicalMaterialMaskMaterialName FSoftObjectPath @A material used to render physical material mask on mesh.
+---@field public DebugEditorMaterial UMaterial @A material used to render debug meshes.
+---@field public DefaultFlattenMaterialName FSoftObjectPath @A material used to flatten materials.
+---@field public DefaultHLODFlattenMaterialName FSoftObjectPath @A material used to flatten materials to VT textures.
+---@field public DefaultLandscapeFlattenMaterialName FSoftObjectPath @A material used to flatten materials to VT textures, with the normals being in world space.
+---@field public DefaultFlattenMaterial UMaterial @Materials used when flattening materials
+---@field public DefaultHLODFlattenMaterial UMaterial
+---@field public DefaultLandscapeFlattenMaterial UMaterial
+---@field public TexturePaintingMaskMaterial UMaterial @A material used to render the debug texture painting mask on mesh.
+---@field public TexturePaintingMaskMaterialName FSoftObjectPath @A material used to render the debug texture painting mask on mesh.
+---@field public DebugEditorMaterialName FSoftObjectPath @A material used to render debug opaque material. Used in various animation editor viewport features.
+---@field public ConstraintLimitMaterial UMaterial @Material used to render constraint limits
+---@field public ConstraintLimitMaterialX UMaterialInstanceDynamic
+---@field public ConstraintLimitMaterialXAxis UMaterialInstanceDynamic
+---@field public ConstraintLimitMaterialY UMaterialInstanceDynamic
+---@field public ConstraintLimitMaterialYAxis UMaterialInstanceDynamic
+---@field public ConstraintLimitMaterialZ UMaterialInstanceDynamic
+---@field public ConstraintLimitMaterialZAxis UMaterialInstanceDynamic
+---@field public ConstraintLimitMaterialPrismatic UMaterialInstanceDynamic
+---@field public InvalidLightmapSettingsMaterial UMaterial @Material that renders a message about lightmap settings being invalid.
+---@field public InvalidLightmapSettingsMaterialName FSoftObjectPath @Path of the material that renders a message about lightmap settings being invalid.
+---@field public PreviewShadowsIndicatorMaterial UMaterial @Material that renders a message about preview shadows being used.
+---@field public PreviewShadowsIndicatorMaterialName FSoftObjectPath @Path of the material that renders a message about preview shadows being used.
+---@field public ArrowMaterial UMaterial @Material that 'fakes' lighting, used for arrows, widgets.
+---@field public ArrowMaterialYellow UMaterialInstanceDynamic @Arrow material instance with yellow color.
+---@field public ArrowMaterialName FSoftObjectPath @Path of the material that 'fakes' lighting, used for arrows, widgets.
+---@field public LightingOnlyBrightness FLinearColor @Color used for the lighting only render mode
+---@field public ShaderComplexityColors TArray<FLinearColor> @The colors used to render shader complexity.
+---@field public QuadComplexityColors TArray<FLinearColor> @The colors used to render quad complexity.
+---@field public LightComplexityColors TArray<FLinearColor> @The colors used to render light complexity.
+---@field public StationaryLightOverlapColors TArray<FLinearColor> @The colors used to render stationary light overlap.
+---@field public LODColorationColors TArray<FLinearColor> @The colors used to render LOD coloration.
+---@field public HLODColorationColors TArray<FLinearColor> @The colors used to render LOD coloration.
+---@field public StreamingAccuracyColors TArray<FLinearColor> @The colors used for texture streaming accuracy debug view modes.
+---@field public GPUSkinCacheVisualizationExcludedColor FLinearColor @The visualization color when sk mesh not using skin cache.
+---@field public GPUSkinCacheVisualizationIncludedColor FLinearColor @The visualization color when sk mesh using skin cache.
+---@field public GPUSkinCacheVisualizationRecomputeTangentsColor FLinearColor @The visualization color when sk mesh using recompute tangents.
+---@field public GPUSkinCacheVisualizationLowMemoryThresholdInMB number @The memory visualization threshold in MB for a skin cache entry
+---@field public GPUSkinCacheVisualizationHighMemoryThresholdInMB number
+---@field public GPUSkinCacheVisualizationLowMemoryColor FLinearColor @The memory visualization colors of skin cache
+---@field public GPUSkinCacheVisualizationMidMemoryColor FLinearColor
+---@field public GPUSkinCacheVisualizationHighMemoryColor FLinearColor
+---@field public GPUSkinCacheVisualizationRayTracingLODOffsetColors TArray<FLinearColor> @The visualization colors of ray tracing LOD index offset from raster LOD
+---@field public MaxPixelShaderAdditiveComplexityCount number @Complexity limits for the various complexity view mode combinations. These limits are used to map instruction counts to ShaderComplexityColors.
+---@field public MaxES3PixelShaderAdditiveComplexityCount number
+---@field public MinLightMapDensity number @Minimum lightmap density value for coloring.
+---@field public IdealLightMapDensity number @Ideal lightmap density value for coloring.
+---@field public MaxLightMapDensity number @Maximum lightmap density value for coloring.
+---@field public bRenderLightMapDensityGrayscale boolean @If true, then render gray scale density.
+---@field public RenderLightMapDensityGrayscaleScale number @The scale factor when rendering gray scale density.
+---@field public RenderLightMapDensityColorScale number @The scale factor when rendering color density.
+---@field public LightMapDensityVertexMappedColor FLinearColor @The color to render vertex mapped objects in for LightMap Density view mode.
+---@field public LightMapDensitySelectedColor FLinearColor @The color to render selected objects in for LightMap Density view mode.
+---@field public StatColorMappings TArray<FStatColorMapping> @Colors used to display specific profiling stats
+---@field public EditorBrushMaterial UMaterial @A material used to render the sides of the builder brush/volumes/etc.
+---@field public EditorBrushMaterialName FSoftObjectPath @Path of the material used to render the sides of the builder brush/volumes/etc.
+---@field public DefaultPhysMaterial UPhysicalMaterial @PhysicalMaterial to use if none is defined for a particular object.
+---@field public DefaultPhysMaterialName FSoftObjectPath @Path of the PhysicalMaterial to use if none is defined for a particular object.
+---@field public DefaultDestructiblePhysMaterial UPhysicalMaterial @PhysicalMaterial to use if none is defined for a Destructible object.
+---@field public DefaultDestructiblePhysMaterialName FSoftObjectPath @Path of the PhysicalMaterial to use if none is defined for a particular object.
+---@field public ActiveGameNameRedirects TArray<FGameNameRedirect> @Deprecated rules for redirecting renamed objects, replaced by the CoreRedirects system
+---@field public ActiveClassRedirects TArray<FClassRedirect>
+---@field public ActivePluginRedirects TArray<FPluginRedirect>
+---@field public ActiveStructRedirects TArray<FStructRedirect>
+---@field public PreIntegratedSkinBRDFTexture UTexture2D @Texture used for pre-integrated skin shading
+---@field public PreIntegratedSkinBRDFTextureName FSoftObjectPath @Path of the texture used for pre-integrated skin shading
+---@field public BlueNoiseScalarTexture UTexture2D @Tiled blue-noise texture
+---@field public BlueNoiseVec2Texture UTexture2D @Spatial-temporal blue noise texture with two channel output
+---@field public BlueNoiseScalarTextureName FSoftObjectPath @Path of the tiled blue-noise texture
+---@field public BlueNoiseScalarMobileTextureName FSoftObjectPath @Path of the tiled blue-noise texture
+---@field public BlueNoiseVec2TextureName FSoftObjectPath @Path of the tiled blue-noise texture
+---@field public GGXLTCAmpTexture UTexture2D @Texture used for GGX LTC integration (Amplitude Texture)
+---@field public GGXLTCAmpTextureName FSoftObjectPath @Path of the texture used for GGX LTC integration (Amplitude Texture)
+---@field public GGXLTCMatTexture UTexture2D @Texture used for GGX LTC integration (Matrix Texture)
+---@field public GGXLTCMatTextureName FSoftObjectPath @Path of the texture used for GGX LTC integration (Matrix Texture)
+---@field public SheenLTCTexture UTexture2D @Texture used for Sheen LTC integration (Matrix Texture)
+---@field public SheenLTCTextureName FSoftObjectPath @Path of the texture used for Sheen LTC integration (Matrix Texture)
+---@field public GGXReflectionEnergyTexture UTexture2D @Texture used for specular reflection energy conservation
+---@field public GGXReflectionEnergyTextureName FSoftObjectPath @Path of the texture used for specular reflection energy conservation
+---@field public GGXTransmissionEnergyTexture UTexture2D @Texture used for specular transmission energy conservation
+---@field public GGXTransmissionEnergyTextureName FSoftObjectPath @Path of the texture used for specular transmission energy conservation
+---@field public SheenEnergyTexture UTexture2D @Texture used for sheen energy conservation
+---@field public SheenLegacyEnergyTextureName FSoftObjectPath @Path of the texture used for sheen energy conservation
+---@field public SheenEnergyTextureName FSoftObjectPath @Path of the texture used for sheen energy conservation
+---@field public DiffuseEnergyTexture UTexture2D @Texture used for rough diffuse energy conservation
+---@field public DiffuseEnergyTextureName FSoftObjectPath @Path of the texture used for rough diffuse energy conservation
+---@field public GlintTexture UTexture2DArray @Stable glint BSDF texture
+---@field public GlintTexture2 UTexture2DArray @Stable glint BSDF texture with more variety to cover slope space and avoid circular artifact
+---@field public GlintTextureName FSoftObjectPath @Path of the glint BSDF texture
+---@field public GlintTexture2Name FSoftObjectPath @Path of the glint BSDF texture 2
+---@field public SimpleVolumeTexture UVolumeTexture @Simple volume LUT texture
+---@field public SimpleVolumeTextureName FSoftObjectPath @Path of the simple volume LUT texture
+---@field public SimpleVolumeEnvTexture UVolumeTexture @Simple volume environment LUT texture
+---@field public SimpleVolumeEnvTextureName FSoftObjectPath @Path of the simple volume environment LUT texture
+---@field public MiniFontTexture UTexture2D @Texture used to do font rendering in shaders
+---@field public MiniFontTextureName FSoftObjectPath @Path of the texture used to do font rendering in shaders
+---@field public WeightMapPlaceholderTexture UTexture @Texture used as a placeholder for terrain weight-maps to give the material the correct texture format.
+---@field public WeightMapArrayPlaceholderTexture UTexture
+---@field public WeightMapPlaceholderTextureName FSoftObjectPath @Path of the texture used as a placeholder for terrain weight-maps to give the material the correct texture format.
+---@field public WeightMapArrayPlaceholderTextureName FSoftObjectPath
+---@field public LightMapDensityTexture UTexture2D @Texture used to display LightMapDensity
+---@field public LightMapDensityTextureName FSoftObjectPath @Path of the texture used to display LightMapDensity
+---@field public GameViewport UGameViewportClient @The view port representing the current game instance. Can be 0 so don't use without checking.
+---@field public DeferredCommands TArray<string> @Array of deferred command strings/ execs that get executed at the end of the frame
+---@field public NearClipPlane number @The distance of the camera's near clipping plane.
+---@field public bSubtitlesEnabled boolean @Flag for completely disabling subtitles for localized sounds.
+---@field public bSubtitlesForcedOff boolean @Flag for forcibly disabling subtitles even if you try to turn them back on they will be off
+---@field public MaximumLoopIterationCount integer @Script maximum loop iteration count used as a threshold to warn users about script execution runaway
+---@field public bCanBlueprintsTickByDefault boolean @Controls whether Blueprint subclasses of actors or components can tick by default. Blueprints that derive from native C++ classes that have bCanEverTick=true will always be able to tick Blueprints that derive from exactly AActor or UActorComponent will always be able to tick Otherwise, they can tick as long as the parent doesn't have meta=(ChildCannotTick) and either bCanBlueprintsTickByDefault is true or the parent has meta=(ChildCanTick)
+---@field public bOptimizeAnimBlueprintMemberVariableAccess boolean @Controls whether anim blueprint nodes that access member variables of their class directly should use the optimized path that avoids a thunk to the Blueprint VM. This will force all anim blueprints to be recompiled.
+---@field public bAllowMultiThreadedAnimationUpdate boolean @Controls whether by default we allow anim blueprint graph updates to be performed on non-game threads. This enables some extra checks in the anim blueprint compiler that will warn when unsafe operations are being attempted. This will force all anim blueprints to be recompiled.
+---@field public bEnableEditorPSysRealtimeLOD boolean @Controls whether cascade particle system LODs are updated in real time, or use the set value
+---@field public bSmoothFrameRate boolean @Whether to enable framerate smoothing.
+---@field public bUseFixedFrameRate boolean @Whether to use a fixed framerate.
+---@field public FixedFrameRate number @The fixed framerate to use.
+---@field public SmoothedFrameRateRange FFloatRange @Range of framerates in which smoothing will kick in
+---@field private CustomTimeStep UEngineCustomTimeStep @Controls how the Engine process the Framerate/Timestep
+---@field public CustomTimeStepClassName FSoftClassPath @Override how the Engine process the Framerate/Timestep. This class will be responsible of updating the application Time and DeltaTime. Can be used to synchronize the engine with another process (gen-lock).
+---@field private TimecodeProvider UTimecodeProvider @Controls the Engine's timecode.
+---@field public TimecodeProviderClassName FSoftClassPath @Set TimecodeProvider when the engine is started.
+---@field public bGenerateDefaultTimecode boolean @Generate a default timecode from the computer clock when there is no timecode provider. On desktop, the system time will be used and will behave as if a USystemTimecodeProvider was set. On console, the high performance clock will be used. That may introduce drift over time. If you wish to use the system time on console, set the timecode provider to USystemeTimecodeProvider.
+---@field public GenerateDefaultTimecodeFrameRate FFrameRate @When generating a default timecode (bGenerateDefaultTimecode is true and no timecode provider is set) at which frame rate it should be generated (number of frames).
+---@field public GenerateDefaultTimecodeFrameDelay number @Number of frames to subtract from generated default timecode.
+---@field public bCheckForMultiplePawnsSpawnedInAFrame boolean @Whether we should check for more than N pawns spawning in a single frame. Basically, spawning pawns and all of their attachments can be slow.  And on consoles it can be really slow.  If enabled, we will display an on-screen warning whenever this multi-spawn occurs.
+---@field public NumPawnsAllowedToBeSpawnedInAFrame integer @If bCheckForMultiplePawnsSpawnedInAFrame==true, then we will check to see that no more than this number of pawns are spawned in a frame. *
+---@field public C_WorldBox FColor @Various Colors used for editor and debug rendering
+---@field public C_BrushWire FColor
+---@field public C_AddWire FColor
+---@field public C_SubtractWire FColor
+---@field public C_SemiSolidWire FColor
+---@field public C_NonSolidWire FColor
+---@field public C_WireBackground FColor
+---@field public C_ScaleBoxHi FColor
+---@field public C_VolumeCollision FColor
+---@field public C_BSPCollision FColor
+---@field public C_OrthoBackground FColor
+---@field public C_Volume FColor
+---@field public C_BrushShape FColor
+---@field public GameScreenshotSaveDirectory FDirectoryPath @The save directory for newly created screenshots
+---@field public UseStaticMeshMinLODPerQualityLevels boolean
+---@field public UseSkeletalMeshMinLODPerQualityLevels boolean
+---@field public UseClothAssetMinLODPerQualityLevels boolean
+---@field public UseGrassVarityPerQualityLevels boolean
+---@field public TransitionType ETransitionType @The state of the current map transition.
+---@field public TransitionDescription string @The current transition description text.
+---@field public TransitionGameMode string @The gamemode for the destination map
+---@field public bAllowMatureLanguage boolean @Whether to play mature language sound nodes
+---@field public CameraRotationThreshold number @camera rotation (deg) beyond which occlusion queries are ignored from previous frame (because they are likely not valid)
+---@field public CameraTranslationThreshold number @camera movement beyond which occlusion queries are ignored from previous frame (because they are likely not valid)
+---@field public PrimitiveProbablyVisibleTime number @The amount of time a primitive is considered to be probably visible after it was last actually visible.
+---@field public MaxOcclusionPixelsFraction number @Max screen pixel fraction where retesting when unoccluded is worth the GPU time.
+---@field public bPauseOnLossOfFocus boolean @Whether to pause the game if focus is lost.
+---@field public MaxParticleResize integer @The maximum allowed size to a ParticleEmitterInstance::Resize call. If larger, the function will return without resizing.
+---@field public MaxParticleResizeWarn integer @If the resize request is larger than this, spew out a warning to the log
+---@field public PendingDroppedNotes TArray<FDropNoteInfo> @List of notes to place during Play in Editor
+---@field public NetClientTicksPerSecond number @Number of times to tick each client per second
+---@field public DisplayGamma number @Current display gamma setting
+---@field public MinDesiredFrameRate number @Minimum desired framerate setting, below this frame rate visual detail may be lowered
+---@field private DefaultSelectedMaterialColor FLinearColor @Default color of selected objects in the level viewport (additive)
+---@field private SelectedMaterialColor FLinearColor @Color of selected objects in the level viewport (additive)
+---@field private SelectionOutlineColor FLinearColor @Color of the selection outline color.  Generally the same as selected material color unless the selection material color is being overridden
+---@field private SubduedSelectionOutlineColor FLinearColor @Subdued version of the selection outline color. Used for indicating sub-selection of components vs actors
+---@field private SelectedMaterialColorOverride FLinearColor @An override to use in some cases instead of the selected material color
+---@field private bIsOverridingSelectedColor boolean @Whether or not selection color is being overridden
+---@field public bEnableOnScreenDebugMessages boolean @If true, then disable OnScreenDebug messages. Can be toggled in real-time.
+---@field public bEnableOnScreenDebugMessagesDisplay boolean @If true, then disable the display of OnScreenDebug messages (used when running)
+---@field public bSuppressMapWarnings boolean @If true, then skip drawing map warnings on screen even in non (UE_BUILD_SHIPPING || UE_BUILD_TEST) builds
+---@field public bDisableAILogging boolean @determines whether AI logging should be processed or not
+---@field public bEnableVisualLogRecordingOnStart integer @If true, the visual logger will start recording as soon as the engine starts
+---@field private ScreenSaverInhibitorSemaphore integer @Semaphore to control screen saver inhibitor thread access.
+---@field public bLockReadOnlyLevels boolean @true if the the user cannot modify levels that are read only.
+---@field public ParticleEventManagerClassPath string @Sets the class to use to spawn a ParticleEventManager that can handle game-specific particle system behavior
+---@field public SelectionHighlightIntensity number @Used to alter the intensity level of the selection highlight on selected objects
+---@field public BSPSelectionHighlightIntensity number @Used to alter the intensity level of the selection highlight on selected BSP surfaces
+---@field public SelectionHighlightIntensityBillboards number @Used to alter the intensity level of the selection highlight on selected billboard objects
+---@field private GlobalNetTravelCount integer @Increments every time a non-seamless travel happens on a server, to generate net session id's. Written to config to preserve id upon crash.
+---@field public NetDriverDefinitions TArray<FNetDriverDefinition> @A list of named UNetDriver definitions
+---@field public IrisNetDriverConfigs TArray<FIrisNetDriverConfig> @A list of Iris NetDriverConfigs
+---@field public ServerActors TArray<string> @A configurable list of actors that are automatically spawned upon server startup (just prior to InitGame)
+---@field public RuntimeServerActors TArray<string> @Runtime-modified list of server actors, allowing plugins to use serveractors, without permanently adding them to config files
+---@field public NetErrorLogInterval number @Amount of time in seconds between network error logging
+---@field public bStartedLoadMapMovie boolean @true if the loading movie was started during LoadMap().
+---@field protected NextWorldContextHandle integer
+local UEngine = {}
+

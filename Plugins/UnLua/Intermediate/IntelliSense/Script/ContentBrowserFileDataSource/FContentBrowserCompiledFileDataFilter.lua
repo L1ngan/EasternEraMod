@@ -1,0 +1,2 @@
+---@class FContentBrowserCompiledFileDataFilter
+local FContentBrowserCompiledFileDataFilter = {}

@@ -1,0 +1,13 @@
+---@class FNiagaraNamespaceMetadata
+---@field public Namespaces TArray<string>
+---@field public RequiredNamespaceModifier string
+---@field public DisplayName string
+---@field public DisplayNameLong string
+---@field public Description string
+---@field public BackgroundColor FLinearColor
+---@field public ForegroundStyle string
+---@field public SortId integer
+---@field public OptionalNamespaceModifiers TArray<string>
+---@field public Options TArray<ENiagaraNamespaceMetadataOptions>
+---@field private Guid FGuid
+local FNiagaraNamespaceMetadata = {}

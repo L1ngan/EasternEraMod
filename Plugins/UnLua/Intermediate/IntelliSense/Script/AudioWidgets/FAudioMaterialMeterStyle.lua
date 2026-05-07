@@ -1,0 +1,16 @@
+---Represents the appearance of an Audio Material Meter
+---@class FAudioMaterialMeterStyle : FAudioMaterialWidgetStyle
+---@field public MeterFillMinColor FLinearColor @The meter's Fill color value representing the Starting section of the fill.
+---@field public MeterFillMidColor FLinearColor @The meter's Fill color value representing the Middle section of the fill.
+---@field public MeterFillMaxColor FLinearColor @The meter's Fill color value representing the Ending section of the fill.
+---@field public MeterFillBackgroundColor FLinearColor @The meter's Background Fill color value.
+---@field public MeterPadding FVector2D @How much padding to add around the meter
+---@field public ValueRangeDb FVector2D @The minimum and maximum value to display in dB (values are clamped in this range)
+---@field public bShowScale boolean @Whether or not to show the decibel scale alongside the meter
+---@field public bScaleSide boolean @Which side to show the scale. If vertical, true means left side, false means right side. If horizontal, true means above, false means below.
+---@field public ScaleHashOffset number @Offset for the hashes
+---@field public ScaleHashWidth number @The width of each hash mark
+---@field public ScaleHashHeight number @The height of each hash mark
+---@field public DecibelsPerHash integer @How wide to draw the decibel scale, if it's enabled
+---@field public Font FSlateFontInfo @Font family and size to be used when displaying the meter scale.
+local FAudioMaterialMeterStyle = {}

@@ -1,0 +1,13 @@
+---Transforms a Collection
+---@class FTransformCollectionDataflowNode : FDataflowNode
+---@field public Collection FManagedArrayCollection @Output mesh
+---@field public TransformSelection FDataflowTransformSelection @Transform selection for transforming
+---@field public Translate FVector @Translation
+---@field public RotationOrder ERotationOrderEnum @Rotation Order
+---@field public Rotate FVector @Rotation
+---@field public Scale FVector @Scale
+---@field public UniformScale number @Uniform scale
+---@field public RotatePivot FVector @Pivot for the rotation
+---@field public ScalePivot FVector @Pivot for the scale
+---@field public bInvertTransformation boolean @Invert the transformation
+local FTransformCollectionDataflowNode = {}

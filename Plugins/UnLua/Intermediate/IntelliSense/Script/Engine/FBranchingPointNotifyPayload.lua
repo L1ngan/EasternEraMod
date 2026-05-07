@@ -1,0 +1,2 @@
+---@class FBranchingPointNotifyPayload
+local FBranchingPointNotifyPayload = {}

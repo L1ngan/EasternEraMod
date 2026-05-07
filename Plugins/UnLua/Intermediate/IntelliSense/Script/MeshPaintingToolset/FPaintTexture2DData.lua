@@ -1,0 +1,11 @@
+---@class FPaintTexture2DData
+---@field public PaintingTexture2D UTexture2D @The original texture that we're painting
+---@field public PaintRenderTargetTexture UTextureRenderTarget2D @Render target texture for painting
+---@field public PaintRenderTargetTextureAdapter UVirtualTextureAdapter @Optional virtual texture adapter that we can use to visualize PaintRenderTargetTexture in materials that sample virtual textures
+---@field public PaintBrushRenderTargetTexture UTextureRenderTarget2D @Optional render target texture used as an input while painting that contains a clone of the texture painting brush
+---@field public BrushRenderTargetTexture UTextureRenderTarget2D @Temporary render target used to draw incremental paint to
+---@field public BrushMaskRenderTargetTexture UTextureRenderTarget2D @Temporary render target used to store a mask of the affected paint region, updated every time we add incremental texture paint
+---@field public SeamMaskRenderTargetTexture UTextureRenderTarget2D @Optional render target used to store generated mask for texture seams. We create this by projecting object triangles into texture space using the selected UV channel.
+---@field public TextureOverrideComponents TArray<UMeshComponent> @Array of components that have the PaintRenderTargetTexture set as a texture override
+---@field public PaintedComponents TArray<UMeshComponent> @Array of components that have been painted
+local FPaintTexture2DData = {}

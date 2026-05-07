@@ -1,0 +1,23 @@
+---Sub sequence data that is stored within an evaluation template as a backreference to the originating sequence, and section
+---@class FMovieSceneSubSequenceData
+---@field public Sequence FSoftObjectPath @The sequence that the sub section references
+---@field public OuterToInnerTransform FMovieSceneSequenceTransform @The transform from this sub sequence's parent to its own play space.
+---@field public RootToSequenceTransform FMovieSceneSequenceTransform @Transform that transforms a given time from the sequences outer space, to its authored space.
+---@field public LocalToWarpedLocalTransform FMovieSceneSequenceTransform @Transform that turns local space into warped local space based on a timewarp track that exists in this sequence.
+---@field public RootToUnwarpedLocalTransform FMovieSceneSequenceTransform @The transform from root space to this sub-sequence's unwarped local space.
+---@field public StartTimeBreadcrumbs FMovieSceneTransformBreadcrumbs
+---@field public EndTimeBreadcrumbs FMovieSceneTransformBreadcrumbs
+---@field public TickResolution FFrameRate @The tick resolution of the inner sequence.
+---@field public DeterministicSequenceID FMovieSceneSequenceID @This sequence's deterministic sequence ID. Used in editor to reduce the risk of collisions on recompilation.
+---@field public PlayRange FMovieSceneFrameRange @This sub sequence's playback range according to its parent sub section. Clamped recursively during template generation
+---@field public ParentPlayRange FMovieSceneFrameRange @The range of the sub-sequence in its parent space. Unclamped.
+---@field public PreRollRange FMovieSceneFrameRange @The sequence preroll range considering the start offset
+---@field public PostRollRange FMovieSceneFrameRange @The sequence postroll range considering the start offset
+---@field public HierarchicalBias integer @The accumulated hierarchical bias of this sequence. Higher bias will take precedence
+---@field public AccumulatedFlags EMovieSceneSubSectionFlags @Flags accumulated from parent->child for each sub-section that led to the inclusion of this sub-sequence
+---@field public bCanLoop boolean @Whether this sub-sequence can loop
+---@field public InstanceData FMovieSceneSequenceInstanceDataPtr @Instance data that should be used for any tracks contained immediately within this sub sequence
+---@field public SectionPath string @This sequence's path within its movie scene
+---@field public WeakCondition TWeakObjectPtr<UMovieSceneCondition> @Optional condition pulled off of the UMovieSceneSubSection or UMovieSceneSubTrack
+---@field private SubSectionSignature FGuid @The sub section's signature at the time this structure was populated.
+local FMovieSceneSubSequenceData = {}

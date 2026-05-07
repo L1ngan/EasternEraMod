@@ -1,0 +1,11 @@
+---Build the guides skinning by transferring the indices weights from a skelmesh
+---@class FTransferSkinWeightsGroomNode : FDataflowNode
+---@field public Collection FManagedArrayCollection @Managed array collection to be used to store datas
+---@field public SkeletalMesh USkeletalMesh @SkeletalMesh used to transfer the skinning weights. Will be stored onto the groom asset
+---@field public LODIndex integer @LOD used to transfer the weights
+---@field public GroupIndex integer @Group index on which the dats will be transfered. -1 will transfer on all the groups
+---@field public RelativeTransform FTransform @The relative transform between the skeletal mesh and the groom asset.
+---@field public CurvesType EGroomCollectionType @Type of curves to use to fill the groom collection (guides/strands)
+---@field public BoneIndicesKey FCollectionAttributeKey @Bone indices key to be used in other nodes if necessary
+---@field public BoneWeightsKey FCollectionAttributeKey @Bone weights key to be used in other nodes if necessary
+local FTransferSkinWeightsGroomNode = {}

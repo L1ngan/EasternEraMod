@@ -1,0 +1,13 @@
+---@class ETextureClass
+---@field public Invalid integer
+---@field public TwoD integer
+---@field public Cube integer
+---@field public Array integer
+---@field public CubeArray integer
+---@field public Volume integer
+---@field public TwoDDynamic integer
+---@field public RenderTarget integer
+---@field public Other2DNoSource integer
+---@field public OtherUnknown integer
+---@field public ETextureClass_MAX integer
+local ETextureClass = {}

@@ -1,0 +1,21 @@
+---@class FEnvTraceData
+---@field public VersionNum integer @version number for updates
+---@field public NavigationFilter TSubclassOf<UNavigationQueryFilter> @navigation filter for tracing
+---@field public ProjectDown number @search height: below point
+---@field public ProjectUp number @search height: above point
+---@field public ExtentX number @shape parameter for trace
+---@field public ExtentY number @shape parameter for trace
+---@field public ExtentZ number @shape parameter for trace
+---@field public PostProjectionVerticalOffset number @this value will be added to resulting location's Z axis. Can be useful when     projecting points to navigation since navmesh is just an approximation of level     geometry and items may end up being under collide-able geometry which would     for example falsify visibility tests.
+---@field public TraceChannel integer @geometry trace channel
+---@field public SerializedChannel integer @geometry trace channel for serialization purposes
+---@field public TraceProfileName string @geometry trace profile
+---@field public TraceShape integer @shape used for geometry tracing
+---@field public TraceMode integer @shape used for geometry tracing
+---@field public bTraceComplex boolean @if set, trace will run on complex collisions
+---@field public bOnlyBlockingHits boolean @if set, trace will look only for blocking hits
+---@field public bCanTraceOnNavMesh boolean @if set, editor will allow picking navmesh trace
+---@field public bCanTraceOnGeometry boolean @if set, editor will allow picking geometry trace
+---@field public bCanDisableTrace boolean @if set, editor will allow
+---@field public bCanProjectDown boolean @if set, editor show height up/down properties for projection
+local FEnvTraceData = {}

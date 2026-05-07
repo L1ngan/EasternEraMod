@@ -1,0 +1,14 @@
+---Implements a message that is sent in response to FAutomationWorkerFindWorkers.
+---@class FAutomationWorkerFindWorkersResponse : FAutomationWorkerMessageBase
+---@field public DeviceName string @Holds the name of the device that the worker is running on.
+---@field public InstanceName string @Holds the name of the worker's application instance.
+---@field public Platform string @Holds the name of the platform that the worker is running on.
+---@field public OSVersionName string @Holds the name of the operating system version.
+---@field public ModelName string @Holds the name of the device model.
+---@field public GPUName string @Holds the name of the GPU.
+---@field public CPUModelName string @Holds the name of the CPU model.
+---@field public RAMInGB integer @Holds the amount of RAM this device has in gigabytes.
+---@field public RenderModeName string @Holds the name of the current render mode.
+---@field public SessionId FGuid @Holds the worker's application session identifier.
+---@field public RHIName string @Holds the name of the current RHI.
+local FAutomationWorkerFindWorkersResponse = {}

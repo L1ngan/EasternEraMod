@@ -1,0 +1,43 @@
+---This has to be kept in sync with EMaterialValueType.
+---To consolidate those enums, EMaterialValueType must be made an 'enum class' but it has to be deprecated first.
+---NOTE: Remove UMETA(Hidden) markers once the respective entry is used in BaseMaterialExpressions.ini file.
+---@class EMaterialValueTypeBridge
+---@field public Float1 integer
+---@field public Float2 integer
+---@field public Float3 integer
+---@field public Float4 integer
+---@field public Texture2D integer
+---@field public TextureCube integer
+---@field public Texture2DArray integer
+---@field public TextureCubeArray integer
+---@field public VolumeTexture integer
+---@field public StaticBool integer
+---@field public Unknown integer
+---@field public MaterialAttributes integer
+---@field public TextureExternal integer
+---@field public TextureVirtual integer
+---@field public SparseVolumeTexture integer
+---@field public VTPageTableResult integer
+---@field public ShadingModel integer
+---@field public Substrate integer
+---@field public LWCScalar integer
+---@field public LWCVector2 integer
+---@field public LWCVector3 integer
+---@field public LWCVector4 integer
+---@field public Execution integer
+---@field public VoidStatement integer
+---@field public Bool integer
+---@field public UInt1 integer
+---@field public UInt2 integer
+---@field public UInt3 integer
+---@field public UInt4 integer
+---@field public TextureCollection integer
+---@field public TextureMeshPaint integer
+---@field public TextureMaterialCache integer
+---@field public Texture integer
+---@field public Float integer
+---@field public UInt integer
+---@field public LWCType integer
+---@field public Numeric integer
+---@field public EMaterialValueTypeBridge_MAX integer
+local EMaterialValueTypeBridge = {}

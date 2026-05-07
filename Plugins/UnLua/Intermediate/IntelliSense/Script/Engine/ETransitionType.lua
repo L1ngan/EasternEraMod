@@ -1,0 +1,11 @@
+---Enumerates transition types.
+---@class ETransitionType
+---@field public None integer
+---@field public Paused integer
+---@field public Loading integer
+---@field public Saving integer
+---@field public Connecting integer
+---@field public Precaching integer
+---@field public WaitingToConnect integer
+---@field public MAX integer
+local ETransitionType = {}

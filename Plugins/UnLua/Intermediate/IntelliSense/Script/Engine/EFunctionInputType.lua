@@ -1,0 +1,17 @@
+---Supported input types
+---@class EFunctionInputType
+---@field public FunctionInput_Scalar integer
+---@field public FunctionInput_Vector2 integer
+---@field public FunctionInput_Vector3 integer
+---@field public FunctionInput_Vector4 integer
+---@field public FunctionInput_Texture2D integer
+---@field public FunctionInput_TextureCube integer
+---@field public FunctionInput_Texture2DArray integer
+---@field public FunctionInput_VolumeTexture integer
+---@field public FunctionInput_StaticBool integer
+---@field public FunctionInput_MaterialAttributes integer
+---@field public FunctionInput_TextureExternal integer
+---@field public FunctionInput_Bool integer
+---@field public FunctionInput_Substrate integer
+---@field public FunctionInput_MAX integer
+local EFunctionInputType = {}

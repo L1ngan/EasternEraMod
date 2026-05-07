@@ -1,0 +1,12 @@
+---Enum denoting message dialog return types.
+---@class EAppReturnType
+---@field public No integer
+---@field public Yes integer
+---@field public YesAll integer
+---@field public NoAll integer
+---@field public Cancel integer
+---@field public Ok integer
+---@field public Retry integer
+---@field public Continue integer
+---@field public EAppReturnType_MAX integer
+local EAppReturnType = {}

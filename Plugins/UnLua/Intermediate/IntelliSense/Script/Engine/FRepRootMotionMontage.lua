@@ -1,0 +1,15 @@
+---Replicated data when playing a root motion montage.
+---@class FRepRootMotionMontage
+---@field public Animation UAnimSequenceBase @Animation providing Root Motion
+---@field public bIsActive boolean @Whether this has useful/active data.
+---@field public bRelativePosition boolean @Additional replicated flag, if MovementBase can't be resolved on the client. So we don't use wrong data.
+---@field public bRelativeRotation boolean @Whether rotation is relative or absolute.
+---@field public Position number @Track position of Montage
+---@field public Location FVector_NetQuantize100 @Location
+---@field public Rotation FRotator @Rotation
+---@field public MovementBase UPrimitiveComponent @Movement Relative to Base
+---@field public MovementBaseBoneName string @Bone on the MovementBase, if a skeletal mesh.
+---@field public AuthoritativeRootMotion FRootMotionSourceGroup @State of Root Motion Sources on Authority
+---@field public Acceleration FVector_NetQuantize10 @Acceleration
+---@field public LinearVelocity FVector_NetQuantize10 @Velocity
+local FRepRootMotionMontage = {}

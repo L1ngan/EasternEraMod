@@ -1,0 +1,34 @@
+---In order to use PropertyEditorModule.CreateSingleProperty we have to give it an object instance
+---and the name of the target property to edit. It will then iterate the object for a property with that
+---name and create a property editor widget.
+---This is very limiting when editing a single entry within an FArrayProperty, as the inner and the
+---array prop will have the same name, leading it to create an array editor. Also, since we have to
+---give it an instance, modifying the widget will automatically modify the object, which we may not
+---want, we may just want a property editor of a particular type.
+---This class is a hack around all that: It has an instance of most property types,
+---so that you can instantiate one of these and just pass along the name of the property type you want.
+---They are all be named Captured<propertyType> (e.g. CapturedFloatProperty, CapturedObjectProperty,
+---bCapturedBoolProperty) but you can use the helper function to get the name of the property you want.
+---// TODO: Convert this into a static dictionary that maps to a small separate class for each property type
+---// Maybe even template it for array/map/set property types
+---@class UPropertyTemplateObject : UObject
+---@field public CapturedByteProperty integer @Captured byte property
+---@field public CapturedUInt16Property integer @Captured uint16 property
+---@field public CapturedUInt32Property integer @Captured uint32 property
+---@field public CapturedUInt64Property integer @Captured uint16 property
+---@field public CapturedInt8Property integer @Captured int8 property
+---@field public CapturedInt16Property integer @Captured int16 property
+---@field public CapturedIntProperty integer @Captured int32 property
+---@field public CapturedInt64Property integer @Captured int64 property
+---@field public CapturedFloatProperty number @Captured float property
+---@field public CapturedDoubleProperty number @Captured double property
+---@field public bCapturedBoolProperty boolean @Captured boolean property
+---@field public CapturedObjectProperty UObject @Captured UObject property
+---@field public CapturedSoftObjectProperty TSoftObjectPtr<UObject> @Captured Soft UObject property
+---@field public CapturedInterfaceProperty TScriptInterface<UInterface> @Captured UInterface property
+---@field public CapturedNameProperty string @Captured FName property
+---@field public CapturedStrProperty string @Captured FString property
+---@field public CapturedTextProperty string @Captured FText property
+---@field public CapturedVectorProperty FVector @Captured FVector property
+local UPropertyTemplateObject = {}
+

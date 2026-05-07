@@ -1,0 +1,2 @@
+---@class FNavAvoidanceData
+local FNavAvoidanceData = {}

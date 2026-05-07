@@ -1,0 +1,25 @@
+---* The type of meta data stored on an element
+---@class ERigMetadataType
+---@field public Bool integer
+---@field public BoolArray integer
+---@field public Float integer
+---@field public FloatArray integer
+---@field public Int32 integer
+---@field public Int32Array integer
+---@field public Name integer
+---@field public NameArray integer
+---@field public Vector integer
+---@field public VectorArray integer
+---@field public Rotator integer
+---@field public RotatorArray integer
+---@field public Quat integer
+---@field public QuatArray integer
+---@field public Transform integer
+---@field public TransformArray integer
+---@field public LinearColor integer
+---@field public LinearColorArray integer
+---@field public RigElementKey integer
+---@field public RigElementKeyArray integer
+---@field public Invalid integer
+---@field public ERigMetadataType_MAX integer
+local ERigMetadataType = {}

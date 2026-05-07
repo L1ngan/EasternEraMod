@@ -1,0 +1,22 @@
+---Function property for all Dataflow nodes.
+---The structure is also used in DataFlow::FFunctionPropertyCustomization to appear as text and/or image buttons.
+---This helps with the equivalent UCLASS UFUNCTION CallInEditor functionality that is missing from the USTRUCT implementation.
+---By default the text of the button is the name of the structure property.
+---The tooltip is the property source documentation.
+---Further (but optional) customizations can be achieved by using the following Meta tags where declaring the property:
+---  DisplayName
+---  ButtonImage
+---Specifying an empty DisplayName string will only display the icon and no text.
+---For example:
+---  UPROPERTY(EditAnywhere, Category = "Functions")
+---  FDataflowFunctionProperty ReimportAssetTextOnly;
+---  UPROPERTY(EditAnywhere, Category = "Functions", Meta = (ButtonImage = "Persona.ReimportAsset"))
+---  FDataflowFunctionProperty ReimportAssetTextAndIcon;
+---  UPROPERTY(EditAnywhere, Category = "Functions", Meta = (DisplayName = "", ButtonImage = "Persona.ReimportAsset"))
+---  FDataflowFunctionProperty ReimportAssetIconOnly;
+---  UPROPERTY(EditAnywhere, Category = "Functions", Meta = (DisplayName = "Reimport Asset"))
+---  FDataflowFunctionProperty ReimportAssetOverriddenText;
+---  UPROPERTY(EditAnywhere, Category = "Functions", Meta = (DisplayName = "Reimport Asset", ButtonImage = "Persona.ReimportAsset"))
+---  FDataflowFunctionProperty ReimportAssetOverriddenTextAndIcon;
+---@class FDataflowFunctionProperty
+local FDataflowFunctionProperty = {}

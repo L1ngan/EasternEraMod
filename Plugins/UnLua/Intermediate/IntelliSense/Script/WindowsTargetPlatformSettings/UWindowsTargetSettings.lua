@@ -1,0 +1,33 @@
+---Implements the settings for the Windows target platform. The first instance of this class is initialized in
+---WindowsTargetPlatform, really early during the startup sequence before the CDO has been constructed, so its config
+---settings are read manually from there.
+---@class UWindowsTargetSettings : UObject
+---@field public DefaultGraphicsRHI EDefaultGraphicsRHI @Select which RHI to use. Make sure its also selected as a Targeted RHI. Requires Editor restart.
+---@field public D3D12TargetedShaderFormats TArray<string>
+---@field public D3D11TargetedShaderFormats TArray<string>
+---@field public VulkanTargetedShaderFormats TArray<string>
+---@field public bGenerateNaniteFallbackMeshes boolean @Whether to include Nanite Fallback Meshes in cooked builds for Windows. Can be overriden for specific assets in Static Mesh Editor.
+---@field public Compiler ECompilerVersion @The compiler version to use for this project. May be different to the chosen IDE.
+---@field public AudioSampleRate integer @Sample rate to run the audio mixer with.
+---@field public AudioCallbackBufferFrameSize integer @The amount of audio to compute each callback block. Lower values decrease latency but may increase CPU cost.
+---@field public AudioNumBuffersToEnqueue integer @The number of buffers to keep enqueued. More buffers increases latency, but can compensate for variable compute availability in audio callbacks on some platforms.
+---@field public AudioMaxChannels integer @The max number of channels (voices) to limit for this platform. The max channels used will be the minimum of this value and the global audio quality settings. A value of 0 will not apply a platform channel count max.
+---@field public AudioNumSourceWorkers integer @The number of workers to use to compute source audio. Will only use up to the max number of sources. Will evenly divide sources to each source worker.
+---@field public SpatializationPlugin string @Which of the currently enabled spatialization plugins to use.
+---@field public SourceDataOverridePlugin string @Which of the currently enabled source data override plugins to use.
+---@field public ReverbPlugin string @Which of the currently enabled reverb plugins to use.
+---@field public OcclusionPlugin string @Which of the currently enabled occlusion plugins to use.
+---@field public CompressionOverrides FPlatformRuntimeAudioCompressionOverrides @Various overrides for how this platform should handle compression and decompression
+---@field public CacheSizeKB integer @This determines the max amount of memory that should be used for the cache at any given time. If set low (<= 8 MB), it lowers the size of individual chunks of audio during cook.
+---@field public MaxChunkSizeOverrideKB integer @This overrides the default max chunk size used when chunking audio for stream caching (ignored if < 0)
+---@field public bResampleForDevice boolean
+---@field public MaxSampleRate number @Mapping of which sample rates are used for each sample rate quality for a specific platform.
+---@field public HighSampleRate number
+---@field public MedSampleRate number
+---@field public LowSampleRate number
+---@field public MinSampleRate number
+---@field public CompressionQualityModifier number @Scales all compression qualities when cooking to this platform. For example, 0.5 will halve all compression qualities, and 1.0 will leave them unchanged.
+---@field public AutoStreamingThreshold number @When set to anything beyond 0, this will ensure any SoundWaves longer than this value, in seconds, to stream directly off of the disk.
+---@field public SoundCueCookQualityIndex integer @Quality Level to COOK SoundCues at (if set, all other levels will be stripped by the cooker).
+local UWindowsTargetSettings = {}
+

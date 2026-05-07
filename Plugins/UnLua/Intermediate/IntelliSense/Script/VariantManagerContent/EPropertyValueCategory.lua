@@ -1,0 +1,12 @@
+---@class EPropertyValueCategory
+---@field public Undefined integer
+---@field public Generic integer
+---@field public RelativeLocation integer
+---@field public RelativeRotation integer
+---@field public RelativeScale3D integer
+---@field public Visibility integer
+---@field public Material integer
+---@field public Color integer
+---@field public Option integer
+---@field public EPropertyValueCategory_MAX integer
+local EPropertyValueCategory = {}

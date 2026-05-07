@@ -1,0 +1,2 @@
+---@class FPropertyCollector
+local FPropertyCollector = {}

@@ -1,0 +1,17 @@
+---@class EModularRigNotification
+---@field public ModuleAdded integer
+---@field public ModuleRenamed integer
+---@field public ModuleRemoved integer
+---@field public ModuleReparented integer
+---@field public ConnectionChanged integer
+---@field public ModuleConfigValueChanged integer
+---@field public ModuleShortNameChanged integer
+---@field public InteractionBracketOpened integer
+---@field public InteractionBracketClosed integer
+---@field public InteractionBracketCanceled integer
+---@field public ModuleClassChanged integer
+---@field public ModuleSelected integer
+---@field public ModuleDeselected integer
+---@field public Max integer
+---@field public EModularRigNotification_MAX integer
+local EModularRigNotification = {}

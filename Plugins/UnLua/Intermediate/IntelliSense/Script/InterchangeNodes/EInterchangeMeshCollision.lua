@@ -1,0 +1,12 @@
+---@class EInterchangeMeshCollision
+---@field public Box integer
+---@field public Sphere integer
+---@field public Capsule integer
+---@field public Convex10DOP_X integer
+---@field public Convex10DOP_Y integer
+---@field public Convex10DOP_Z integer
+---@field public Convex18DOP integer
+---@field public Convex26DOP integer
+---@field public None integer
+---@field public EInterchangeMeshCollision_MAX integer
+local EInterchangeMeshCollision = {}

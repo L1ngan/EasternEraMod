@@ -1,0 +1,28 @@
+---Represents a camera pose.
+---@class FBlueprintCameraPose
+---@field public Location FVector @The location of the camera.
+---@field public Rotation FRotator @The rotation of the camera.
+---@field public TargetDistance number @The distance of the target of the camera.
+---@field public FieldOfView number @The field of view of the camera. May be negative if driven by focal length.
+---@field public FocalLength number @The focal length of the camera. May be negative if driven directly by field of view.
+---@field public OrthographicWidth number @The desired width (in world units) of the orthographic view (ignored in Perspective mode)
+---@field public Aperture number @The aperture (f-stop) of the camera's lens.
+---@field public ShutterSpeed number @The shutter speed of the camera's lens, in 1/seconds
+---@field public FocusDistance number @The focus distance of the camera, if different from target distance.
+---@field public SensorWidth number @The width of the camera's sensor.
+---@field public SensorHeight number @The height of the camera's sensor.
+---@field public SensorHorizontalOffset number @Horizontal offset of the sensor, in mm.
+---@field public SensorVerticalOffset number @Vertical offset of the sensor, in mm.
+---@field public ISO number @The camera sensor sensitivity in ISO.
+---@field public SqueezeFactor number @The squeeze factor of the camera's lens.
+---@field public Overscan number @Sensor overscan in percentage
+---@field public DiaphragmBladeCount integer @Number of blades in the lens diaphragm
+---@field public NearClippingPlane number @The camera's near clipping plane.
+---@field public FarClippingPlane number @The camera's far clipping plane.
+---@field public PhysicalCameraBlendWeight number @Internal weight for physical camera post-process settings.
+---@field public EnablePhysicalCamera boolean @Whether to setup post-process settings based on physical camera properties such as Aperture, FocusDistance, DiaphragmBladeCount, and so on.
+---@field public ConstrainAspectRatio boolean @Whether the camera should constrain aspect ratio.
+---@field public OverrideAspectRatioAxisConstraint boolean @Whether to override the default aspect ratio axis constraint defined on the player controller
+---@field public AspectRatioAxisConstraint integer @The aspect ratio axis constraint to use if aspect ratio is constrained.
+---@field public ProjectionMode integer @Projection mode - Perspective or orthographic
+local FBlueprintCameraPose = {}

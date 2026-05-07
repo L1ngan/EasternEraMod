@@ -1,0 +1,22 @@
+---Configure miscellaneous settings for the Level Editor.
+---@class ULevelEditorMiscSettings : UDeveloperSettings
+---@field public bAutoApplyLightingEnable boolean @If checked lighting will be automatically applied to the level after a static lighting build is complete. Otherwise you will be prompted to apply it
+---@field public bBSPAutoUpdate boolean @If true, BSP will auto-update
+---@field public bAutoMoveBSPPivotOffset boolean @If true, the pivot offset for BSP will be automatically moved to stay centered on its vertices
+---@field public bNavigationAutoUpdate boolean @If true, Navigation will auto-update
+---@field public bReplaceRespectsScale boolean @If enabled, replacing actors will respect the scale of the original actor.  Otherwise, the replaced actors will have a scale of 1.0
+---@field public bAvoidRelabelOnPasteSelected boolean @If enabled, will avoid relabeling actors in UUnrealEdEngine::edactPasteSelected
+---@field public bCheckReferencesOnDelete boolean @If enabled, will force checking references during a delete. Note: disabling this is for advanced usage only and not recommended.
+---@field public bAllowBackgroundAudio boolean @If checked audio playing in the editor will continue to play even if the editor is in the background
+---@field public bCreateNewAudioDeviceForPlayInEditor boolean @If checked, will create a new audio engine instance for the play-in-editor window. Otherwise, will re-use the audio device used in content browser.
+---@field public bEnableRealTimeAudio boolean @If true audio will be enabled in the editor. Does not affect PIE *
+---@field public EditorVolumeLevel number @Global volume setting for the editor
+---@field public bEnableEditorSounds boolean @Enables audio feedback for certain operations in Unreal Editor, such as entering and exiting Play mode
+---@field public DefaultLevelStreamingClass TSubclassOf<ULevelStreaming> @The default level streaming class to use when adding new streaming levels
+---@field public bPromptWhenAddingToLevelBeforeCheckout boolean
+---@field public bPromptWhenAddingToLevelOutsideBounds boolean
+---@field public PercentageThresholdForPrompt number
+---@field public MinimumBoundsForCheckingSize FVector
+---@field public EditorScreenshotSaveDirectory FDirectoryPath @The save directory for newly created screenshots
+local ULevelEditorMiscSettings = {}
+

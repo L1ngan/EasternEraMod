@@ -1,0 +1,24 @@
+---Snapshot of source control state of a file
+---@class FSourceControlState
+---@field public Filename string @Get the local filename that this state represents
+---@field public bIsValid boolean @Indicates whether this source control state has valid information (true) or not (false)
+---@field public bIsUnknown boolean @Determine if we know anything about the source control state of this file
+---@field public bCanCheckIn boolean @Determine if this file can be checked in.
+---@field public bCanCheckOut boolean @Determine if this file can be checked out
+---@field public bIsCheckedOut boolean @Determine if this file is checked out
+---@field public bIsCurrent boolean @Determine if this file is up-to-date with the version in source control
+---@field public bIsSourceControlled boolean @Determine if this file is under source control
+---@field public bIsAdded boolean @Determine if this file is marked for add
+---@field public bIsDeleted boolean @Determine if this file is marked for delete
+---@field public bIsIgnored boolean @Determine if this file is ignored by source control
+---@field public bCanEdit boolean @Determine if source control allows this file to be edited
+---@field public bCanDelete boolean @Determine if source control allows this file to be deleted.
+---@field public bIsModified boolean @Determine if this file is modified compared to the version in source control.
+---@field public bCanAdd boolean @Determine if this file can be added to source control (i.e. is part of the directory structure currently under source control)
+---@field public bIsConflicted boolean @Determine if this file is in a conflicted state
+---@field public bCanRevert boolean @Determine if this file can be reverted, i.e. discard changes and the file will no longer be checked-out.
+---@field public bIsCheckedOutOther boolean @Determine if this file is checked out by someone else
+---@field public CheckedOutOther string @Get name of other user who this file already checked out or "" if no other user has it checked out
+---@field public bIsCheckedOutInOtherBranch boolean @Determine if this file is checked out by someone else in another branch
+---@field public bIsModifiedInOtherBranch boolean @Determine if this file is modified by someone in another branch
+local FSourceControlState = {}

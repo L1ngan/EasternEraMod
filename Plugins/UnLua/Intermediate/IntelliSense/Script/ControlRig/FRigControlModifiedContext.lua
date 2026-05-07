@@ -1,0 +1,2 @@
+---@class FRigControlModifiedContext
+local FRigControlModifiedContext = {}

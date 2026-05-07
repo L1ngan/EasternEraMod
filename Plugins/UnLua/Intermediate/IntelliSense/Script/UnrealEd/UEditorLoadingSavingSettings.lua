@@ -1,0 +1,29 @@
+---Implements the Level Editor's loading and saving settings.
+---@class UEditorLoadingSavingSettings : UObject
+---@field public LoadLevelAtStartup integer @Whether to load a default example map at startup
+---@field public bForceCompilationAtStartup boolean @Force project compilation at startup
+---@field public RestoreOpenAssetTabsOnRestart ERestoreOpenAssetTabsMethod @Whether to restore previously open assets at startup after a clean shutdown
+---@field public bMonitorContentDirectories boolean @When enabled, changes to source content files inside the content directories will automatically be reflected in the content browser. Note that source content files must reside in one of the monitored directories to be eligible for auto-reimport. Advanced setup options are available below.
+---@field public AutoReimportDirectorySettings TArray<FAutoReimportDirectoryConfig> @Lists every directory to monitor for content changes. Can be virtual package paths (eg /Game/ or /MyPlugin/), or absolute paths on disk. Paths should point to the locations of the source content files (e.g. *.fbx, *.png) you want to be eligible for auto-reimport.
+---@field public AutoReimportThreshold number @Specifies an amount of time to wait before a specific file change is considered for auto reimport
+---@field public bAutoCreateAssets boolean @When enabled, newly added source content files will be automatically imported into new assets.
+---@field public bAutoDeleteAssets boolean @When enabled, deleting a source content file will automatically prompt the deletion of any related assets.
+---@field public bDetectChangesOnStartup boolean @When enabled, changes to monitored directories since UE was closed will be detected on restart. (Not recommended when working in collaboration with others using revision control).
+---@field public bPromptBeforeAutoImporting boolean @Whether to prompt the user to import detected changes.
+---@field public bDeleteSourceFilesWithAssets boolean @Internal setting to control whether we should ask the user whether we should automatically delete source files when their assets are deleted
+---@field public bDirtyMigratedBlueprints boolean @Whether to mark blueprints dirty if they are automatically migrated during loads
+---@field public bAutoSaveEnable boolean @Whether to automatically save after a time interval
+---@field public bAutoSaveMaps boolean @Whether to automatically save maps during an autosave
+---@field public bAutoSaveContent boolean @Whether to automatically save content packages during an autosave
+---@field public AutoSaveMethod EAutoSaveMethod @What method should be used when performing an autosave?
+---@field public AutoSaveTimeMinutes integer @The time interval after which to auto save
+---@field public AutoSaveInteractionDelayInSeconds integer @The minimum number of seconds to wait after the last user interactions (with the editor) before auto-save can trigger
+---@field public AutoSaveWarningInSeconds integer @The number of seconds warning before an autosave
+---@field public AutoSaveMaxBackups integer @How many auto save files to keep around
+---@field public bAutomaticallyCheckoutOnAssetModification boolean @Whether to automatically checkout on asset modification
+---@field public bPromptForCheckoutOnAssetModification boolean @Whether to automatically prompt for SCC checkout on asset modification
+---@field public bSCCAutoAddNewFiles boolean @Auto add files to source control
+---@field public bSCCUseGlobalSettings boolean @Use global source control login settings, rather than per-project. Changing this will require you to login again
+---@field public TextDiffToolPath FFilePath @Specifies the file path to the tool to be used for diffing text files
+local UEditorLoadingSavingSettings = {}
+

@@ -1,0 +1,37 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.LQuickFrame.cpp.obj": [
+			"LActor.gen.cpp.obj",
+			"LAICtrl.gen.cpp.obj",
+			"LBaseValue.gen.cpp.obj",
+			"LComp.gen.cpp.obj",
+			"LFile.gen.cpp.obj",
+			"LGameActorMng.gen.cpp.obj",
+			"LGameInst.gen.cpp.obj",
+			"LGameMode.gen.cpp.obj",
+			"LGameRoleMng.gen.cpp.obj",
+			"LLatent.gen.cpp.obj",
+			"LLog.gen.cpp.obj",
+			"LPlayerCtrl.gen.cpp.obj",
+			"LQuickFrame.init.gen.cpp.obj",
+			"LQuickFrameSetting.gen.cpp.obj",
+			"LQuickTools.gen.cpp.obj",
+			"LActor.cpp.obj",
+			"LBaseValue.cpp.obj",
+			"LComp.cpp.obj",
+			"LFile.cpp.obj",
+			"LLatent.cpp.obj",
+			"LLog.cpp.obj",
+			"LQuickTools.cpp.obj",
+			"LGameActorMng.cpp.obj",
+			"LGameInst.cpp.obj",
+			"LGameMode.cpp.obj",
+			"LGameRoleMng.cpp.obj",
+			"LQuickFrame.cpp.obj",
+			"LQuickFrameSetting.cpp.obj",
+			"LAICtrl.cpp.obj",
+			"LPlayerCtrl.cpp.obj"
+		]
+	}
+}

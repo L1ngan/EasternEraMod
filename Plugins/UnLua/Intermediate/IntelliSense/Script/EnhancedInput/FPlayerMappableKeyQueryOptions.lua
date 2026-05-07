@@ -1,0 +1,11 @@
+---Options when querying what keys are mapped to a specific action on the player mappable
+---key profile.
+---@class FPlayerMappableKeyQueryOptions
+---@field public MappingName string @The mapping name to search for
+---@field public KeyToMatch FKey @If specified, then this key will be used to match against when checking if the key types and axis are the same.
+---@field public SlotToMatch EPlayerMappableKeySlot @The key slot that will be required to match if set. By default this is EPlayerMappableKeySlot::Unspecified, which will not filter by the slot at all.
+---@field public bMatchBasicKeyTypes boolean @If true, then only keys that have the same value for IsGamepadKey, IsTouch, and IsGesture will be included in the results of this query
+---@field public bMatchKeyAxisType boolean @If true, then only keys that have the same value of IsAxis1D, IsAxis2D, and IsAxis3D will be included in the results of this query
+---@field public RequiredDeviceType EHardwareDevicePrimaryType @If set, then only player mappings whose hardware device identifier that has the same primary input device type will be included in the results of this query
+---@field public RequiredDeviceFlags integer @If set, then only player mappings whose Hardware Device Identifier that has the same flags as this will be included in the results
+local FPlayerMappableKeyQueryOptions = {}

@@ -1,0 +1,12 @@
+---For a node, the known information of the partial derivatives.
+---NotAware     - This node is made by a function that has no knowledge of analytic partial derivatives.
+---NotValid     - This node is aware of partial derivatives, and knows that one of its source inputs is not partial derivative aware, and therefore its value is not to be used.
+---Zero         - This node is aware of partial derivatives, and knows that it's value is zero, as is the case for uniform parameters.
+---Valid                - This node is aware of partial derivatives, and knows that it has a calculated value.
+---@class EDerivativeStatus
+---@field public NotAware integer
+---@field public NotValid integer
+---@field public Zero integer
+---@field public Valid integer
+---@field public EDerivativeStatus_MAX integer
+local EDerivativeStatus = {}

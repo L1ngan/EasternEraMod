@@ -1,0 +1,17 @@
+---@class FResonanceAudioReverbPluginSettings
+---@field public bEnableRoomEffects boolean @Whether Resonance Audio room effects are enabled
+---@field public bGetTransformFromAudioVolume boolean @Whether the room transform should be taken from the Audio Volume this preset is attached to. If not used with the Audio Volume, last saved values will be used.
+---@field public RoomPosition FVector @Room position in 3D space
+---@field public RoomRotation FQuat @Room rotation in 3D space
+---@field public RoomDimensions FVector @Room dimensions in 3D space
+---@field public LeftWallMaterial ERaMaterialName @Left wall acoustic material
+---@field public RightWallMaterial ERaMaterialName @Right wall acoustic material
+---@field public FloorMaterial ERaMaterialName @Floor acoustic material
+---@field public CeilingMaterial ERaMaterialName @Ceiling acoustic material
+---@field public FrontWallMaterial ERaMaterialName @Front wall acoustic material
+---@field public BackWallMaterial ERaMaterialName @Back wall acoustic material
+---@field public ReflectionScalar number @Early reflections gain multiplier. Default: 1.0
+---@field public ReverbGain number @Reverb gain multiplier. Default: 1.0
+---@field public ReverbTimeModifier number @Reverb time modifier. Default: 1.0
+---@field public ReverbBrightness number @Reverb brightness modifier. Default: 0.0
+local FResonanceAudioReverbPluginSettings = {}

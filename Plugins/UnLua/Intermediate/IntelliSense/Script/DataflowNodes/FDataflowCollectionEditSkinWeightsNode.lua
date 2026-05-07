@@ -1,0 +1,13 @@
+---Edit skin weights vertex properties.
+---@class FDataflowCollectionEditSkinWeightsNode : FDataflowPrimitiveNode
+---@field public Collection FManagedArrayCollection
+---@field public BoneIndicesName string @The name to be set as a weight map attribute.
+---@field public BoneWeightsName string @The name to be set as a weight map attribute.
+---@field public VertexGroup FScalarVertexPropertyGroup @Target group in which the attributes are stored
+---@field public BoneIndicesKey FCollectionAttributeKey @Bone indices key to be used in other nodes if necessary
+---@field public BoneWeightsKey FCollectionAttributeKey @Bone weights key to be used in other nodes if necessary
+---@field public ObjectSkeleton USkeleton @Skeletal mesh to extract the skeleton from for the skinning
+---@field public bCompressSkinWeights boolean @Boolean to use a compressed format (FVector4f, FIntVector) to store the skin weights
+---@field public SkinWeights TArray<FDataflowSkinWeightData> @List of skin weights
+---@field private SkeletalMeshes TArray<USkeletalMesh> @Transient skeletal mesh built from dataflow render collection
+local FDataflowCollectionEditSkinWeightsNode = {}

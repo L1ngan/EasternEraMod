@@ -1,0 +1,2 @@
+---@class FDataflowSelection
+local FDataflowSelection = {}

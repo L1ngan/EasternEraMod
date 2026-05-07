@@ -1,0 +1,16 @@
+---Represents the appearance of an SEditableTextBox
+---@class FEditableTextBoxStyle : FSlateWidgetStyle
+---@field public BackgroundImageNormal FSlateBrush @Border background image when the box is not hovered or focused
+---@field public BackgroundImageHovered FSlateBrush @Border background image when the box is hovered
+---@field public BackgroundImageFocused FSlateBrush @Border background image when the box is focused
+---@field public BackgroundImageReadOnly FSlateBrush @Border background image when the box is read-only
+---@field public Padding FMargin @Padding
+---@field public TextStyle FTextBlockStyle @The style of the text block, which dictates the font, color, and shadow options. Style overrides all other properties!
+---@field public ForegroundColor FSlateColor @The foreground color of text.
+---@field public BackgroundColor FSlateColor @The background color applied to the active background image
+---@field public ReadOnlyForegroundColor FSlateColor @The read-only foreground color of text in read-only mode.
+---@field public FocusedForegroundColor FSlateColor @The foreground color of text when the edit box has keyboard focus.
+---@field public HScrollBarPadding FMargin @Padding around the horizontal scrollbar
+---@field public VScrollBarPadding FMargin @Padding around the vertical scrollbar
+---@field public ScrollBarStyle FScrollBarStyle @Style used for the scrollbars
+local FEditableTextBoxStyle = {}

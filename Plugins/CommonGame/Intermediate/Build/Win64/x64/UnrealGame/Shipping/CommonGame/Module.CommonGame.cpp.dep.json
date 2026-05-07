@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\commongame\\intermediate\\build\\win64\\x64\\unrealgame\\shipping\\commongame\\module.commongame.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\easternera\\shipping\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\commongame\\intermediate\\build\\win64\\x64\\unrealgame\\shipping\\commongame\\definitions.commongame.h",
+            "g:\\modproject\\plugins\\commongame\\intermediate\\build\\win64\\unrealgame\\inc\\commongame\\uht\\commongame.init.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

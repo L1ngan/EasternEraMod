@@ -1,0 +1,2 @@
+---@class FTimedDataChannelSampleTime
+local FTimedDataChannelSampleTime = {}

@@ -1,0 +1,23 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\private\\rhs_hitboxanimnotify.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\auroradevs_rhs\\definitions.auroradevs_rhs.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\rhs_hitboxanimnotify.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\rhs_data.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealeditor\\inc\\auroradevs_rhs\\uht\\rhs_data.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\animation\\animnotifies\\animnotifystate.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\animnotifystate.generated.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealeditor\\inc\\auroradevs_rhs\\uht\\rhs_hitboxanimnotify.generated.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\rhs_collisionshape.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealeditor\\inc\\auroradevs_rhs\\uht\\rhs_collisionshape.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\public\\net\\unrealnetwork.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\net\\core\\public\\net\\core\\propertyconditions\\propertyconditions.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

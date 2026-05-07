@@ -1,0 +1,30 @@
+---StateTree asset. Contains the StateTree definition in both editor and runtime (baked) formats.
+---@class UStateTree : UDataAsset
+---@field public EditorData UObject @Edit time data for the StateTree, instance of UStateTreeEditorData
+---@field public LastCompiledEditorDataHash integer @Hash of the editor data from last compile. Also used to detect mismatching events from recorded traces.
+---@field private Schema UStateTreeSchema @Schema used to compile the StateTree.
+---@field private Frames TArray<FCompactStateTreeFrame> @Runtime frames
+---@field private States TArray<FCompactStateTreeState> @Runtime states, root state at index 0
+---@field private Transitions TArray<FCompactStateTransition> @Runtime transitions.
+---@field private Nodes FInstancedStructContainer @Evaluators, Tasks, Condition and Consideration nodes.
+---@field private DefaultInstanceData FStateTreeInstanceData @Default node instance data (e.g. evaluators, tasks).
+---@field private SharedInstanceData FStateTreeInstanceData @Shared node instance data (e.g. conditions, considerations).
+---@field private ContextDataDescs TArray<FStateTreeExternalDataDesc> @List of names external data enforced by the schema, created at compilation.
+---@field private PropertyBindings FStateTreePropertyBindings
+---@field private IDToStateMappings TArray<FStateTreeStateIdToHandle> @Mapping of state guid for the Editor and state handles, created at compilation.
+---@field private IDToNodeMappings TArray<FStateTreeNodeIdToIndex> @Mapping of node guid for the Editor and node index, created at compilation.
+---@field private IDToTransitionMappings TArray<FStateTreeTransitionIdToIndex> @Mapping of state transition identifiers and runtime compact transition index, created at compilation.
+---@field private Parameters FInstancedPropertyBag @Parameters that could be used for bindings within the Tree. Default values are stored within the asset but StateTreeReference can be used to parameterized the tree.
+---@field private ExternalDataDescs TArray<FStateTreeExternalDataDesc> @List of external data required by the state tree, created during linking.
+---@field private CompletionGlobalTasksMask integer @Mask used to test the global tasks completion.
+---@field private NumContextData integer @Number of context data, include parameters and all context data.
+---@field private NumGlobalInstanceData integer @Number of global instance data.
+---@field private EvaluatorsBegin integer @Index of first evaluator in Nodes.
+---@field private EvaluatorsNum integer @Number of evaluators.
+---@field private GlobalTasksBegin integer @Index of first global task in Nodes.
+---@field private GlobalTasksNum integer @Number of global tasks.
+---@field private CompletionGlobalTasksControl EStateTreeTaskCompletionType @How the global tasks control the completion of the frame.
+---@field private ParameterDataType EStateTreeParameterDataType @The parameter data type used by the schema.
+---@field private bHasGlobalTransitionTasks boolean @True if any global task is a transition task.
+local UStateTree = {}
+

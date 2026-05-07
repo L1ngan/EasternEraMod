@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\unlua\\source\\unluaeditor\\private\\unluaeditorsettings.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\unlua\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\unluaeditor\\definitions.unluaeditor.h",
+            "g:\\modproject\\plugins\\unlua\\source\\unluaeditor\\private\\unluaeditorsettings.h",
+            "g:\\modproject\\plugins\\unlua\\intermediate\\build\\win64\\unrealeditor\\inc\\unluaeditor\\uht\\unluaeditorsettings.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

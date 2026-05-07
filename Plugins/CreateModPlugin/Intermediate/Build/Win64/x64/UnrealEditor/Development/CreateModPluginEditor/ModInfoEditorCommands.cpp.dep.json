@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\createmodplugin\\source\\createmodplugineditor\\private\\modinfoeditorcommands.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\createmodplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\createmodplugineditor\\definitions.createmodplugineditor.h",
+            "g:\\modproject\\plugins\\createmodplugin\\source\\createmodplugineditor\\public\\modinfoeditorcommands.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\editor\\editorstyle\\public\\editorstyleset.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

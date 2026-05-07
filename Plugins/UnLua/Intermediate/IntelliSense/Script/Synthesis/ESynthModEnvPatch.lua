@@ -1,0 +1,12 @@
+---@class ESynthModEnvPatch
+---@field public PatchToNone integer
+---@field public PatchToOscFreq integer
+---@field public PatchToFilterFreq integer
+---@field public PatchToFilterQ integer
+---@field public PatchToLFO1Gain integer
+---@field public PatchToLFO2Gain integer
+---@field public PatchToLFO1Freq integer
+---@field public PatchToLFO2Freq integer
+---@field public Count integer
+---@field public ESynthModEnvPatch_MAX integer
+local ESynthModEnvPatch = {}

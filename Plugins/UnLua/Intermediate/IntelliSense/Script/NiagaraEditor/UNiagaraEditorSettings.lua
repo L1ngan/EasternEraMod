@@ -1,0 +1,42 @@
+---@class UNiagaraEditorSettings : UDeveloperSettings
+---@field public DefaultScript FSoftObjectPath @Niagara script to duplicate as the base of all new script assets created.
+---@field public DefaultDynamicInputScript FSoftObjectPath @Niagara script to duplicate as the base of all new script assets created.
+---@field public DefaultFunctionScript FSoftObjectPath @Niagara script to duplicate as the base of all new script assets created.
+---@field public DefaultModuleScript FSoftObjectPath @Niagara script to duplicate as the base of all new script assets created.
+---@field public DefaultEmptyEmitter FSoftObjectPath @Niagara emitter to duplicate as the base for minimal emitters. Useful to set up default state. If empty, a truly empty emitter will be used.
+---@field public DefaultDecalRendererMaterial FSoftObjectPath @Default material to use with new decal renderers.
+---@field public DefaultMeshRendererMesh FSoftObjectPath @Default mesh to use with new mesh renderers.
+---@field public DefaultRibbonRendererMaterial FSoftObjectPath @Default material to use with new ribbon renderers.
+---@field public DefaultSpriteRendererMaterial FSoftObjectPath @Default material to use with new sprite renderers.
+---@field public RequiredSystemUpdateScript FSoftObjectPath @Niagara script which is required in the system update script to control system state.
+---@field public DefaultValidationRuleSets TArray<TSoftObjectPtr<UNiagaraValidationRuleSet>> @Validation rules applied to all Niagara systems.
+---@field public GraphCreationShortcuts TArray<FNiagaraSpawnShortcut> @Shortcut key bindings that if held down while doing a mouse click, will spawn the specified type of Niagara node.
+---@field public bSimplifyStackNodesAtLowResolution boolean @If true then emitter and system nodes will show a simplified representation on low zoom levels. This improves performance and readablity when zoomed out of the system overview graph.
+---@field public LowResolutionNodeMaxNameChars integer @The max number of chars before names on the low resolution nodes are truncated.
+---@field public bAlwaysZoomToFitSystemGraph boolean @If true then the system editor will zoom to fit all emitters when opening an asset.
+---@field public RendererCategoryExpandState ENiagaraCategoryExpandState
+---@field public DefaultsSequencerSubtracks ENiagaraAddDefaultsTrackMode
+---@field public ScriptGraphZoomLimitHandling EGraphZoomLimitHandling
+---@field private bAutoCompile boolean @Whether or not auto-compile is enabled in the editors.
+---@field private bAutoPlay boolean @Whether or not simulations should start playing automatically when the emitter or system editor is opened, or when the data is changed in the editor.
+---@field private bResetSimulationOnChange boolean @Whether or not the simulation should reset when a value on the emitter or system is changed.
+---@field private bResimulateOnChangeWhilePaused boolean @Whether or not to rerun the simulation to the current time when making modifications while paused.
+---@field private bResetDependentSystemsWhenEditingEmitters boolean @Whether or not to reset all components that include the system currently being reset.
+---@field private bDisplayAdvancedParameterPanelCategories boolean @Whether or not to display advanced categories for the parameter panel.
+---@field private bDisplayAffectedAssetStats boolean @If true, then the emitter and script editors will show an info message how many downstream asset are affected by a change. Gathering this information for large asset graphs can delay the opening of the asset editors a bit.
+---@field private AffectedAssetSearchLimit integer @The maximum amount of asset references that are searched before stopping. Setting this too high can lead to long load times when opening default assets (basically the same as disabling the breadth limit in the reference viewer).
+---@field private bUpdateStackValuesOnCommitOnly boolean @This affects numeric inputs for modules. When set to false, the inputs update the simulation while typing. When set to true, the simulation is only updated after submitting the change by pressing Enter.
+---@field private PlaybackSpeeds TArray<number> @Speeds used for slowing down and speeding up the playback speeds
+---@field private ActionColors FNiagaraActionColors
+---@field private DefaultNoteColor FLinearColor
+---@field private HLSLKeywordReplacements TMap<string, string>
+---@field private NamespaceMetadata TArray<FNiagaraNamespaceMetadata>
+---@field private NamespaceModifierMetadata TArray<FNiagaraNamespaceMetadata>
+---@field private DefaultNamespaceMetadata FNiagaraNamespaceMetadata
+---@field private DefaultNamespaceModifierMetadata FNiagaraNamespaceMetadata
+---@field private CurveTemplates TArray<FNiagaraCurveTemplate>
+---@field private ViewportSettings FNiagaraViewportSharedSettings
+---@field private SystemParameterPanelSectionData TArray<FNiagaraParameterPanelSectionStorage>
+---@field private bForceSilentLoadingOfCachedAssets boolean
+local UNiagaraEditorSettings = {}
+

@@ -1,0 +1,19 @@
+---* This is rig element types that we support
+---* This can be used as a mask so supported as a bitfield
+---@class ERigElementType
+---@field public None integer
+---@field public Bone integer
+---@field public Null integer
+---@field public Space integer
+---@field public Control integer
+---@field public Curve integer
+---@field public Physics integer
+---@field public Reference integer
+---@field public Connector integer
+---@field public Socket integer
+---@field public First integer
+---@field public Last integer
+---@field public All integer
+---@field public ToResetAfterConstructionEvent integer
+---@field public ERigElementType_MAX integer
+local ERigElementType = {}

@@ -1,0 +1,2 @@
+---@class FPBIKSolver
+local FPBIKSolver = {}

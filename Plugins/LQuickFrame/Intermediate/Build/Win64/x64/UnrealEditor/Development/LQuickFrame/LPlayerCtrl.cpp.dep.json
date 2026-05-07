@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\lquickframe\\source\\lquickframe\\role\\lplayerctrl.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\lquickframe\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\lquickframe\\definitions.lquickframe.h",
+            "g:\\modproject\\plugins\\lquickframe\\source\\lquickframe\\role\\lplayerctrl.h",
+            "g:\\modproject\\plugins\\lquickframe\\intermediate\\build\\win64\\unrealeditor\\inc\\lquickframe\\uht\\lplayerctrl.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

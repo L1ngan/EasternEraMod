@@ -1,0 +1,24 @@
+---UBaseMeshProcessingTool is a base Tool (ie has no functionality of it's own and must be subclassed)
+---that provides the following structure:
+---  - a Background-Compute-With-Preview Temp Actor/Component is created based on the input mesh
+---  - The Subclass provides FDynamicMeshOperator instances (via IDynamicMeshOperatorFactory) that process/modify and update this Preview
+---  - PropertySets with custom visibility can be registered, and on change will invalidate the current computation
+---Optional support for a WeightMap property set and tracking of active weight map can be enabled by calling
+---AddWeightMapPropertySet(), GetActiveWeightMap() will then return the active WeightMap, and changes to the
+---WeightMap selection will invalidate the computation.
+---Most subclasses will only need to define their PropertySets and implement MakeNewOperator(), see eg SmoothMeshTool for a minimal example
+---Other functions:
+---  - GetInitialMesh() : return reference to copy of initial mesh, used to initialize FDynamicMeshOperator
+---  - GetUPreviewMesh() : return the UPreviewMesh inside the background compute (for configuration/etc - should not directly touch the mesh!)
+---  - GetPreviewTransform() : return active FTransform on the Preview mesh, should be passed to FDynamicMeshOperator unless it is outputting world position
+---  - InvalidateResult() : subclasses call this to notify the base class that current result/computation has been invalidated
+---The Base tool will do various optional precomputations or changes to the input mesh, which can be configured by
+---overriding various functions below.
+---  RequiresInitialVtxNormals() : return true (default=false) to calculate per-vertex normals on the input mesh, returned by GetInitialVtxNormals()
+---  RequiresInitialBoundaryLoops() : return true (default=false) to calculate boundary loops on the input mesh, returned by GetInitialBoundaryLoops()
+---  RequiresScaleNormalization() : return true (default=true) to apply an initial scale to the input mesh so that it has consistent size
+---    before being sent into the computation. Scaling factor (eg for scaling UI constants) can be accessed via GetScaleNormalizationFactor()
+---@class UBaseMeshProcessingTool : USingleTargetWithSelectionTool
+---@field protected Preview UMeshOpPreviewWithBackgroundCompute @Preview object holds temporary Actor with preview mesh component
+local UBaseMeshProcessingTool = {}
+

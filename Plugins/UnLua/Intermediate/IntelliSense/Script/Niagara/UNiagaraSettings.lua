@@ -1,0 +1,42 @@
+---@class UNiagaraSettings : UDeveloperSettings
+---@field public AdditionalParameterTypes TArray<FSoftObjectPath>
+---@field public AdditionalPayloadTypes TArray<FSoftObjectPath>
+---@field public AdditionalParameterEnums TArray<FSoftObjectPath>
+---@field public bSystemViewportInOrbitMode boolean @Sets the default navigation behavior for the system preview viewport.
+---@field public bShowConvertibleInputsInStack boolean @If true then the "link input" menu will also show variables of different types, as long as there is a conversion script for them.
+---@field public QuickSimCacheCaptureFrameCount integer @The number of frames to capture when capturing a Sim Cache from the Niagara Component Details Panel. *
+---@field public bSystemsSupportLargeWorldCoordinates boolean @If true then active effects rebase the simulation positions to not lose precision. Can be turned off if not needed to skip unnecessary rebasing calculations.
+---@field public LargeWorldCoordinateTileUpdateMode ENiagaraLwcTileUpdateMode @Controls how we respond to a system instance crossing large world coordinate tiles. Can be overriden on individual assets.
+---@field public LargeWorldCoordinateMaxTilesBeforeReset integer @The maximum tiles we can cross before forcing a simulation to reset, if the tile update mode is set to RebaseOrResetSimulation.
+---@field public bEnforceStrictStackTypes boolean @If set to true, types like positions and vectors cannot be assigned to each other without an explicit conversion step. If false, type checks are loosened and some types can be implicitly converted into each other. It is recommended to not disable this when working with large world coordinates.
+---@field public bAccurateQuatInterpolation boolean @If set to true, quaternion attributes will be interpolated via slerp instead of lerp in interpolated spawn scripts.
+---@field public InvalidNamespaceWriteSeverity ENiagaraCompileErrorSeverity @If the Niagara compiler sees that a script writes to a namespace that is read only (e.g. a particle script writing to a system attribute), what should it do.
+---@field public bLimitDeltaTime boolean @Whether to limit the max tick delta time or not.
+---@field public MaxDeltaTimePerTick number @Limits the delta time per tick for emitters to prevent simulation spikes due to frame lags.
+---@field public DefaultEffectType FSoftObjectPath @Default effect type to use for effects that don't define their own. Can be null.
+---@field public bAllowCreateActorFromSystemWithNoEffectType boolean @Should we allow placing a Niagara System in the editor into a level which has no effect type assigned?
+---@field public PositionPinTypeColor FLinearColor @Position pin type color. The other pin colors are defined in the general editor settings.
+---@field public ByteCodeStripOption ENiagaraStripScriptByteCodeOption @Controls how byte code will be stripped when loading assets that have multiple sets of bytecode (i.e. optimized).
+---@field public CompilationMode ENiagaraCompilationMode
+---@field public QualityLevels TArray<string> @The quality levels Niagara uses.
+---@field public ComponentRendererWarningsPerClass TMap<string, string> @Info texts that the component renderer shows the user depending on the selected component class.
+---@field public DefaultRenderTargetFormat integer @The default render target format used by all Niagara Render Target Data Interfaces unless overridden.
+---@field public DefaultGridFormat ENiagaraGpuBufferFormat @The default buffer format used by all Niagara Grid Data Interfaces unless overridden.
+---@field public DefaultRendererMotionVectorSetting ENiagaraDefaultRendererMotionVectorSetting @The default setting for motion vectors in Niagara renderers
+---@field public DefaultPixelCoverageMode ENiagaraDefaultRendererPixelCoverageMode @The default setting for pixel coverage mode when automatic is set on the Niagara Renderer.
+---@field public DefaultSortPrecision ENiagaraDefaultSortPrecision @The default setting for sorting precision when automatic is set on the Niagara Renderer.
+---@field public DefaultGpuTranslucentLatency ENiagaraDefaultGpuTranslucentLatency @The default setting for Gpu simulation translucent draw latency.
+---@field public DefaultLightInverseExposureBlend number @The default InverseExposureBlend used for the light renderer.
+---@field public NDISkelMesh_SupportReadingDeformedGeometry boolean @When enabled we will read deformed geometry if available, i.e. data from the deformed graph / skin cache When disable we will only read from the default vertex data which does not include morph targets, skin, etc. Changing this setting requires restarting the editor. Note: Enabling this does add additional branches to the skel mesh data reading.
+---@field public NDISkelMesh_Support16BitIndexWeight boolean @Enabled support for 16 bit bone index & bone weight, optional to reduce shader complexity.  Changing this setting requires restarting the editor.
+---@field public NDISkelMesh_GpuMaxInfluences integer @Controls the maximum number of influences we allow the Skeletal Mesh Data Interface to use on the GPU.  Changing this setting requires restarting the editor.
+---@field public NDISkelMesh_GpuUniformSamplingFormat integer @Controls the format used for uniform sampling on the GPU.  Changing this setting requires restarting the editor.
+---@field public NDISkelMesh_AdjacencyTriangleIndexFormat integer @Controls the format used for specifying triangle indexes in adjacency buffers.  Changing this setting requires restarting the editor.
+---@field public NDIStaticMesh_AllowDistanceFields boolean @When enabled the static mesh data interface is allowed to sample from the distance field data (if present) on the GPU. Enabling this feature will move all systems that contain static mesh samples into PostRenderOpaque tick group regardless of the features used. Changing this setting requires restarting the editor.
+---@field public NDICollisionQuery_AsyncGpuTraceProviderOrder TArray<integer> @Defines how traces tagged as 'Project Default' will be interpreted when using the AsyncGpuTrace data interface. The system will go through (starting at element 0) to find the first provider that is available.
+---@field public SimCacheAuxiliaryFileBasePath string @Base path for auxiliary files written out during the generation of a Niagara Sim Cache (ie: volume files).
+---@field public SimCacheMaxCPUMemoryVolumetrics integer @Max memory in megabytes for total CPU memory for cached volumetric data
+---@field public PlatformSetRedirects TArray<FNiagaraPlatformSetRedirect>
+---@field public bGenerateMetaDataOnCompile boolean
+local UNiagaraSettings = {}
+

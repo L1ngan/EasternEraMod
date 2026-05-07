@@ -1,0 +1,2 @@
+---@class FSwarmTaskRequestMessage
+local FSwarmTaskRequestMessage = {}

@@ -1,0 +1,11 @@
+---Make a stair mesh
+---@class FMakeStairMeshDataflowNode : FDataflowNode
+---@field private StairType EDataflowStairTypeEnum @Type of staircase
+---@field private NumSteps integer @The number of steps in this staircase.
+---@field private StepWidth number @The width of each step.
+---@field private StepHeight number @The height of each step.
+---@field private StepDepth number @The height of each step.
+---@field private CurveAngle number @Inner radius of the curved staircase
+---@field private InnerRadius number @Curve angle of the staircase (in degrees)
+---@field private Mesh UDynamicMesh @Output mesh
+local FMakeStairMeshDataflowNode = {}

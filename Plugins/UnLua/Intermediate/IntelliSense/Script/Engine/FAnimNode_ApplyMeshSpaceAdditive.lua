@@ -1,0 +1,13 @@
+---@class FAnimNode_ApplyMeshSpaceAdditive : FAnimNode_Base
+---@field public Base FPoseLink
+---@field public Additive FPoseLink
+---@field public bRootSpaceAdditive boolean
+---@field public AlphaInputType EAnimAlphaInputType @The data type used to control the alpha blending of the additive pose.               Note: Changing this value will disconnect alpha input pins.
+---@field public Alpha number @The float value that controls the alpha blending when the alpha input type is set to 'Float'
+---@field public bAlphaBoolEnabled boolean @The boolean value that controls the alpha blending when the alpha input type is set to 'Bool'
+---@field public AlphaBoolBlend FInputAlphaBoolBlend
+---@field public AlphaCurveName string
+---@field public AlphaScaleBias FInputScaleBias
+---@field public AlphaScaleBiasClamp FInputScaleBiasClamp
+---@field public LODThreshold integer @* Max LOD that this node is allowed to run * For example if you have LODThreshold to be 2, it will run until LOD 2 (based on 0 index) * when the component LOD becomes 3, it will stop update/evaluate * currently transition would be issue and that has to be re-visited
+local FAnimNode_ApplyMeshSpaceAdditive = {}

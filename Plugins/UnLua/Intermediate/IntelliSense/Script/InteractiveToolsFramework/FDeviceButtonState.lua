@@ -1,0 +1,13 @@
+---Current State of a physical device button (mouse, key, etc) at a point in time.
+---Each "click" of a button should involve at minimum two separate state
+---events, one where bPressed=true and one where bReleased=true.
+---Each of these states should occur only once.
+---In addition there may be additional frames where the button is
+---held down and bDown=true and bPressed=false.
+---@class FDeviceButtonState
+---@field public Button FKey @Button identifier
+---@field public bPressed boolean @Was the button pressed down this frame. This should happen once per "click"
+---@field public bDown boolean @Is the button currently pressed down. This should be true every frame the button is pressed.
+---@field public bReleased boolean @Was the button released this frame. This should happen once per "click"
+---@field public bDoubleClicked boolean @Was the button double clicked this frame. This should happen only once per "double click"
+local FDeviceButtonState = {}

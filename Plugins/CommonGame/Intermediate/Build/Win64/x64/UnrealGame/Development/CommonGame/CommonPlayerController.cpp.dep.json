@@ -1,0 +1,20 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\plugins\\commongame\\source\\private\\commonplayercontroller.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\easternera\\development\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\plugins\\commongame\\intermediate\\build\\win64\\x64\\unrealgame\\development\\commongame\\definitions.commongame.h",
+            "h:\\project\\plugins\\commongame\\source\\public\\commonplayercontroller.h",
+            "h:\\project\\plugins\\modulargameplayactors\\source\\modulargameplayactors\\public\\modularplayercontroller.h",
+            "h:\\project\\plugins\\modulargameplayactors\\intermediate\\build\\win64\\unrealgame\\inc\\modulargameplayactors\\uht\\modularplayercontroller.generated.h",
+            "h:\\project\\plugins\\commongame\\intermediate\\build\\win64\\unrealgame\\inc\\commongame\\uht\\commonplayercontroller.generated.h",
+            "h:\\project\\plugins\\commongame\\source\\public\\commonlocalplayer.h",
+            "h:\\project\\plugins\\commongame\\intermediate\\build\\win64\\unrealgame\\inc\\commongame\\uht\\commonlocalplayer.generated.h",
+            "h:\\project\\plugins\\commongame\\intermediate\\build\\win64\\unrealgame\\inc\\commongame\\uht\\commonplayercontroller.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

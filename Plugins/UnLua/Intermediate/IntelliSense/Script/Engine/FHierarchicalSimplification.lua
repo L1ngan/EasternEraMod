@@ -1,0 +1,15 @@
+---@class FHierarchicalSimplification
+---@field public TransitionScreenSize number @The screen radius an mesh object should reach before swapping to the LOD actor, once one of parent displays, it won't draw any of children.
+---@field public OverrideDrawDistance number
+---@field public bUseOverrideDrawDistance boolean
+---@field public bAllowSpecificExclusion boolean
+---@field public bOnlyGenerateClustersForVolumes boolean @Only generate clusters for HLOD volumes
+---@field public bReusePreviousLevelClusters boolean @Will reuse the clusters generated for the previous (lower) HLOD level
+---@field public SimplificationMethod EHierarchicalSimplificationMethod
+---@field public ProxySetting FMeshProxySettings @Simplification settings, used if SimplificationMethod is Simplify
+---@field public MergeSetting FMeshMergingSettings @Merge settings, used if SimplificationMethod is Merge
+---@field public ApproximateSettings FMeshApproximationSettings @Approximate settings, used if SimplificationMethod is Approximate
+---@field public DesiredBoundRadius number @Desired Bounding Radius for clustering - this is not guaranteed but used to calculate filling factor for auto clustering
+---@field public DesiredFillingPercentage number @Desired Filling Percentage for clustering - this is not guaranteed but used to calculate filling factor  for auto clustering
+---@field public MinNumberOfActorsToBuild integer @Min number of actors to build LODActor
+local FHierarchicalSimplification = {}

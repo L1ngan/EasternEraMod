@@ -1,0 +1,13 @@
+---Defines a mapping between a key activation and the resulting enhanced action
+---An key could be a button press, joystick axis movement, etc.
+---An enhanced action could be MoveForward, Jump, Fire, etc.
+---@class FEnhancedActionKeyMapping
+---@field public Triggers TArray<UInputTrigger> @Trigger qualifiers. If any trigger qualifiers exist the mapping will not trigger unless: If there are any Explicit triggers in this list at least one of them must be met. All Implicit triggers in this list must be met.
+---@field public Modifiers TArray<UInputModifier> @Modifiers applied to the raw key value. These are applied sequentially in array order. Note: Modifiers defined in individual key mappings will be applied before those defined in the Input Action asset. Modifiers will not override any that are defined on the Input Action asset, they will be combined together during evaluation.
+---@field public Action UInputAction @Action to be affected by the key
+---@field public Key FKey @Key that affect the action.
+---@field public bShouldBeIgnored boolean @If true, then this Key Mapping should be ignored. This is set to true if the key is down during a rebuild of it's owning PlayerInput ControlMappings.
+---@field public bHasAlwaysTickTrigger boolean @True if any triggers on this mapping or its associated UInputAction are flagged as "always tick" triggers. This is only set when control mappings are rebuilt.
+---@field protected SettingBehavior EPlayerMappableKeySettingBehaviors @Defines which Player Mappable Key Setting to use for a Action Key Mapping.
+---@field protected PlayerMappableKeySettings UPlayerMappableKeySettings @Used to expose this mapping or to opt-out of settings completely.
+local FEnhancedActionKeyMapping = {}

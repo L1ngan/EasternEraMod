@@ -1,0 +1,11 @@
+---@class FNavigationToolBuiltInFilterParams
+---@field private FilterId string
+---@field private ObjectClasses TArray<TSubclassOf<UObject>>
+---@field private FilterMode ENavigationToolFilterMode
+---@field private FilterText string
+---@field private DisplayName string
+---@field private TooltipText string
+---@field private OverrideIcon FSlateBrush
+---@field private bUseOverrideIcon boolean
+---@field private bEnabledByDefault boolean
+local FNavigationToolBuiltInFilterParams = {}

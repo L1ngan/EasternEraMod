@@ -1,0 +1,23 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\unlua\\source\\unluaeditor\\private\\unluaeditorstyle.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\unlua\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\unluaeditor\\definitions.unluaeditor.h",
+            "g:\\modproject\\plugins\\unlua\\source\\unluaeditor\\private\\unluaeditorstyle.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\projects\\public\\interfaces\\ipluginmanager.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\projects\\public\\plugindescriptor.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\projects\\public\\custombuildsteps.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\projects\\public\\localizationdescriptor.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\projects\\public\\moduledescriptor.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\projects\\public\\plugindisalloweddescriptor.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\projects\\public\\pluginreferencedescriptor.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\projects\\public\\versescope.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\slatecore\\public\\styling\\slatestyleregistry.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

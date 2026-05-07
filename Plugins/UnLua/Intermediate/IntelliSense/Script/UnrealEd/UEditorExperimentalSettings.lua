@@ -1,0 +1,40 @@
+---Implements Editor settings for experimental features.
+---@class UEditorExperimentalSettings : UObject
+---@field public bEnableAsyncTextureCompilation boolean @Enable async texture compilation to improve PIE and map load time performance when compilation is required
+---@field public bEnableAsyncStaticMeshCompilation boolean @Enable async static mesh compilation to improve import and map load time performance when compilation is required
+---@field public bEnableAsyncSkeletalMeshCompilation boolean @, Category = Performance, meta = (DisplayName = "Enable async skeletal mesh compilation and loading")
+---@field public bEnableAsyncSkinnedAssetCompilation boolean @Enable async skinned asset compilation to improve import and map load time performance when compilation is required
+---@field public bEnableAsyncSoundWaveCompilation boolean @Enable async sound compilation to improve import and map load time performance when compilation is required
+---@field public bEnableAsyncGroomBindingCompilation boolean @Enable async groom binding compilation to improve import and map load time performance when compilation is required
+---@field public bHDREditor boolean @Allows the editor to run on HDR monitors on Windows 10
+---@field public HDREditorNITLevel number @The brightness of the slate UI on HDR monitors
+---@field public bProceduralFoliage boolean @Allows usage of the procedural foliage system
+---@field public bEnableTranslationPicker boolean @Allows usage of the Translation Picker
+---@field public ConsoleForGamepadLabels integer @Specify which console-specific nomenclature to use for gamepad label text
+---@field public bToolbarCustomization boolean @Allows for customization of toolbars and menus throughout the editor
+---@field public bBreakOnExceptions boolean @Break on Exceptions allows you to trap Access Nones and other exceptional events in Blueprints.
+---@field public bDrawMidpointArrowsInBlueprints boolean @, Category=Blueprints, meta=(DisplayName="Draw midpoint arrows in Blueprints")
+---@field public bContextMenuChunkAssignments boolean @Allows ChunkIDs to be assigned to assets to via the content browser context menu.
+---@field public bDisableCookInEditor boolean @Disable cook in the editor
+---@field public bSharedCookedBuilds boolean
+---@field public bAllowLateJoinInPIE boolean @Enable late joining in PIE
+---@field public bAllowVulkanPreview boolean @Allow Vulkan Preview
+---@field public bEnableMultithreadedLightmapEncoding boolean @Enable multithreaded lightmap encoding (decreases time taken to encode lightmaps)
+---@field public bEnableMultithreadedShadowmapEncoding boolean @Enable multithreaded shadow map encoding (decreases time taken to encode shadow maps)
+---@field public bUseOpenCLForConvexHullDecomp boolean @Whether to use OpenCL to accelerate convex hull decomposition (uses GPU to decrease time taken to decompose meshes, currently only available on Mac OS X)
+---@field public bAllowPotentiallyUnsafePropertyEditing boolean @Allows editing of potentially unsafe properties during PIE. Advanced use only - use with caution.
+---@field public bFacialAnimationImporter boolean @Enable experimental bulk facial animation importer (found in Developer Tools menu, requires editor restart)
+---@field public bProjectCustomBuildTools boolean @Shows the option to import a custom project launcher profile in the project packaging 'custom builds' section
+---@field public bEnableProjectLauncherExtensions boolean @Enables Extensions for the new Project Launcher
+---@field public bMobilePIEPreviewDeviceLaunch boolean @Enable experimental PIE preview device launch
+---@field public bTextAssetFormatSupport boolean @Enables in-editor support for text asset formats
+---@field public bVirtualizedAssetRehydration boolean @Enables in-editor support for rehydrating virtualized assets
+---@field public bExampleLayersAndBlends boolean @When creating new Material Layers and Material Layer Blends, set up example graphs.
+---@field public bEnableLongPathsSupport boolean @Allows creation of assets with paths longer than 260 characters. Note that this also requires the Windows 10 Anniversary Update (1607), and support for long paths to be enabled through the group policy editor.
+---@field public bEnableWorldPartitionActorFilters boolean
+---@field public bEnableWorldPartitionExternalDataLayers boolean
+---@field public bEnableStandaloneHLOD boolean
+---@field public bEnableLevelInstancePropertyOverrides boolean
+---@field public bEnableLevelInstanceLandscapeEdit boolean @Allows editing of landscapes inside an editing level instance.
+local UEditorExperimentalSettings = {}
+

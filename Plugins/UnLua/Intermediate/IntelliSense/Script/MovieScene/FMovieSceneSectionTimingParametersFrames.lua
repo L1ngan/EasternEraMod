@@ -1,0 +1,17 @@
+---Parameter utility that converts section timing parameters to a transform using inner frame values.
+---Transformation happens in the following order:
+---InputTime (relative to section start)
+---    >> Play Rate / Time Warp
+---    >> FrameRate conversion
+---    >> +StartTimeOffset
+---    >> Loop (% duration)
+---    >> Reverse
+---@class FMovieSceneSectionTimingParametersFrames
+---@field public PlayRate FMovieSceneTimeWarpVariant @Playrate optionally implemented as time-warp
+---@field public InnerStartOffset FFrameNumber @Start offset (in inner framerate frames) to apply to all loops
+---@field public InnerEndOffset FFrameNumber @End offset (in inner framerate frames) to apply to all loops ie, loop_range=[0 + InnerStartOffset, End- InnerEndOffset)
+---@field public FirstLoopStartOffset FFrameNumber @Start offset to apply only to the first loop
+---@field public bLoop boolean @When true, apply looping to the inner range. Mutually exclusive with bClamp.
+---@field public bClamp boolean @When true, apply clamping to the inner range. Mutually exclusive with bLoop.
+---@field public bReverse boolean @When true, reverses the play direction. Applied after all other transformations
+local FMovieSceneSectionTimingParametersFrames = {}

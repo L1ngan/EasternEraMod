@@ -1,0 +1,28 @@
+---@class UCubeGridToolProperties : UInteractiveToolPropertySet
+---@field public GridFrameOrigin FVector
+---@field public GridFrameOrientation FRotator
+---@field public bShowGrid boolean
+---@field public bShowGizmo boolean
+---@field public GridPower integer @Determines cube grid scale. Can also be adjusted with hotkeys. This changes Current        Block Size to match the current Base Block Size and Grid Power (differently depending        on the Power of Two setting).
+---@field public CurrentBlockSize number @Sets the size of a block at the current grid power. This changes Base Block Size such that the given value is achieved at the the current value of Grid Power.
+---@field public BlocksPerStep integer @How many blocks each push/pull invocation will do at a time.
+---@field public bPowerOfTwoBlockSizes boolean @When true, block sizes change by powers of two as Grid Power is changed. When false, block sizes change by twos and fives, much like the default editor grid snapping options (for instance, sizes might increase from 10 to 50 to 100 to 500). Note that toggling this option will reset Grid Power and Current Block Size to default values.
+---@field public BlockBaseSize number @Smallest block size to use in the grid, i.e. the block size at Grid Power 0. This        changes Current Block Size according to current value of Grid Power.
+---@field public bCrosswiseDiagonal boolean @When pushing/pulling in a way where the diagonal matters, setting this to true        makes the diagonal generally try to lie flat across the face rather than at        an incline.
+---@field public bKeepSideGroups boolean @When performing multiple push/pulls with the same selection, attempt to keep the        same group IDs on the sides of the new geometry (ie multiple E/Q presses will not        result in different group topology around the sides compared to a single Ctrl+drag).
+---@field public bShowSelectionMeasurements boolean @When true, displays dimensions of the given selection in the viewport.
+---@field public PlaneTolerance number @When performing selection, the tolerance to use when determining        whether things lie in the same plane as a cube face.
+---@field public bHitUnrelatedGeometry boolean @When raycasting to find a selected grid face, this determines whether geometry        in the scene that is not part of the edited mesh is hit.
+---@field public bHitGridGroundPlaneIfCloser boolean @When the grid ground plane is above some geometry, whether we should hit that        plane or pass through to the other geometry.
+---@field public FaceSelectionMode ECubeGridToolFaceSelectionMode @How the selected face is determined.
+---@field public ToggleCornerMode string
+---@field public PushPull string
+---@field public ResizeGrid string
+---@field public FlipSelection string
+---@field public GridGizmo string
+---@field public QuickShiftGizmo string
+---@field public AlignGizmo string
+---@field public bInCornerMode boolean
+---@field public bAllowedToEditGrid boolean
+local UCubeGridToolProperties = {}
+

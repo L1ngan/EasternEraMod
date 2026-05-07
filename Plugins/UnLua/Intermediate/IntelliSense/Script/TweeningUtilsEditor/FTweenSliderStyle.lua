@@ -1,0 +1,16 @@
+---Style for STweenSlider
+---@class FTweenSliderStyle : FSlateWidgetStyle
+---@field public BarDimensions FVector2D @The dimensions of the slider.
+---@field public BarBrush FSlateBrush @Brush of the bar on which the points are drawn. The slider brush is drawn over it. Usually the bar's brush is smaller than the button.
+---@field public NormalSliderButton FSlateBrush @Brush when the button is not hovered or pressed
+---@field public HoveredSliderButton FSlateBrush @Brush when hovered
+---@field public PressedSliderButton FSlateBrush @Brush when pressed
+---@field public NormalIconTint FSlateColor @Tint for the icon when the button is not hovered or pressed
+---@field public HoveredIconTint FSlateColor @Tint for the icon when hovered
+---@field public PressedIconTint FSlateColor @Tint for the icon when pressed
+---@field public SmallPoint FTweenPointStyle @Brushes for the small points on the bar.
+---@field public MediumPoint FTweenPointStyle @When overshoot mode is enabled, the bars at 100% and -100%.
+---@field public EndPoint FTweenPointStyle @Brushes for points on the left or right end.
+---@field public PassedValueBackground FSlateBrush @Brush drawn from center to slider when moving the slider (should be a little transparent, drawn over points but under the slider).
+---@field public IconPadding FMargin @Padding of the icon placed in the slider button
+local FTweenSliderStyle = {}

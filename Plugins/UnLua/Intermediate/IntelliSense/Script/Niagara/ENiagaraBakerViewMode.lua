@@ -1,0 +1,11 @@
+---@class ENiagaraBakerViewMode
+---@field public Perspective integer
+---@field public OrthoFront integer
+---@field public OrthoBack integer
+---@field public OrthoLeft integer
+---@field public OrthoRight integer
+---@field public OrthoTop integer
+---@field public OrthoBottom integer
+---@field public Num integer
+---@field public ENiagaraBakerViewMode_MAX integer
+local ENiagaraBakerViewMode = {}

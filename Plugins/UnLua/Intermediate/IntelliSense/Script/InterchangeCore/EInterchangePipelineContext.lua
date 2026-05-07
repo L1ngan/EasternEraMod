@@ -1,0 +1,14 @@
+---@class EInterchangePipelineContext
+---@field public None integer
+---@field public AssetImport integer
+---@field public AssetReimport integer
+---@field public SceneImport integer
+---@field public SceneReimport integer
+---@field public AssetCustomLODImport integer
+---@field public AssetCustomLODReimport integer
+---@field public AssetAlternateSkinningImport integer
+---@field public AssetAlternateSkinningReimport integer
+---@field public AssetCustomMorphTargetImport integer
+---@field public AssetCustomMorphTargetReImport integer
+---@field public EInterchangePipelineContext_MAX integer
+local EInterchangePipelineContext = {}

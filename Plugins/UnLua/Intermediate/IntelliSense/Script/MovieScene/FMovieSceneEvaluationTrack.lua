@@ -1,0 +1,14 @@
+---Evaluation track that is stored within an evaluation template for a sequence.
+---Contains user-defined evaluation templates, and an optional track implementation
+---@class FMovieSceneEvaluationTrack
+---@field private ObjectBindingID FGuid @ID of the possessable or spawnable within the UMovieScene this track belongs to, if any. Zero guid where this relates to a root track.
+---@field private EvaluationPriority integer @Evaluation priority. Highest is evaluated first
+---@field private EvaluationMethod EEvaluationMethod @Evaluation method - static or swept
+---@field private SourceTrack TWeakObjectPtr<UMovieSceneTrack> @The movie scene track that created this evaluation track.
+---@field private ChildTemplates TArray<FMovieSceneEvalTemplatePtr> @Domain-specific evaluation templates (normally 1 per section)
+---@field private TrackTemplate FMovieSceneTrackImplementationPtr @Domain-specific track implementation override.
+---@field private EvaluationGroup string @Flush group that determines whether this track belongs to a group of tracks
+---@field private bEvaluateInPreroll boolean @Whether this track is evaluated in preroll
+---@field private bEvaluateInPostroll boolean @Whether this track is evaluated in postroll
+---@field private bTearDownPriority boolean @Whether track should be given priority when being torn down
+local FMovieSceneEvaluationTrack = {}

@@ -1,0 +1,13 @@
+---@class FAnimationStateEntry
+---@field public State integer @Enum value linked to this state
+---@field public AnimationSetups TArray<FAnimationSetup> @Per state animation setup
+---@field public bOnDemand boolean @Flag whether or not this state is an on-demand state, this means that we kick off a unique animation when needed
+---@field public bAdditive boolean @Whether or not this state is an additive state
+---@field public BlendTime number @Duration of blending when blending to this state
+---@field public bReturnToPreviousState boolean @Flag whether or not we should return to the previous state, only used when this state is an on-demand one
+---@field public bSetNextState boolean
+---@field public NextState integer @State value to which the actors part of an on demand state should be set to when its animation has finished
+---@field public MaximumNumberOfConcurrentInstances FPerPlatformInt @Number of instances that will be created for this state (platform-specific)
+---@field public WiggleTimePercentage number @Percentage of 'wiggle' frames, this is used when we run out of available entries in Components, if one of the on-demand animations has started SequenceLength * WiggleFramePercentage ago or earlier,       it is used instead of a brand new one
+---@field public bRequiresCurves boolean @Whether or not this animation requires curves or morphtargets to function correctly for follower components
+local FAnimationStateEntry = {}

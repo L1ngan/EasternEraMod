@@ -1,0 +1,7 @@
+---@class FNetworkPhysicsSettingsResimulationErrorCorrection
+---@field public bOverrideResimErrorInterpolationSettings boolean @Enable override for post-resimulation error correction settings during render interpolation NOTE: This currently does not work if the experimental p.RenderInterp.ErrorVelocityCorrection CVar is set to true (false by default)
+---@field public ResimErrorCorrectionDuration number @Overrides CVar: p.RenderInterp.ErrorCorrectionDuration -- How long in seconds to apply error correction over
+---@field public ResimErrorMaximumDistanceBeforeSnapping number @Overrides CVar : p.RenderInterp.MaximumErrorCorrectionBeforeSnapping -- Maximum error correction in cm before we stop interpolating and snap to target
+---@field public ResimErrorMaximumDesyncTimeBeforeSnapping number @Overrides CVar: p.RenderInterp.MaximumErrorCorrectionDesyncTimeBeforeSnapping -- Time multiplied by the particles velocity to get the distance that error correction will be performed within without snapping, disable by setting a negative value NOTE: ResimErrorMaximumDistanceBeforeSnapping will act as a lowest distance clamp.
+---@field public ResimErrorDirectionalDecayMultiplier number @Overrides CVar: p.RenderInterp.DirectionalDecayMultiplier -- Decay error offset in the direction that the physics object is moving, value is multiplier of projected offset direction, 0.25 means a 25 % decay of the magnitude in the direction of physics travel.Deactivate by setting to 0
+local FNetworkPhysicsSettingsResimulationErrorCorrection = {}

@@ -1,0 +1,31 @@
+---A tile map is a 2D grid with a defined width and height (in tiles).  There can be multiple layers, each of which can specify which tile should appear in each cell of the map for that layer.
+---@class UPaperTileMap : UObject
+---@field public MapWidth integer @Width of map (in tiles)
+---@field public MapHeight integer @Height of map (in tiles)
+---@field public TileWidth integer @Width of one tile (in pixels)
+---@field public TileHeight integer @Height of one tile (in pixels)
+---@field public PixelsPerUnrealUnit number @The scaling factor between pixels and Unreal units (cm) (e.g., 0.64 would make a 64 pixel wide tile take up 100 cm)
+---@field public SeparationPerTileX number @The Z-separation incurred as you travel in X (not strictly applied, batched tiles will be put at the same Z level)
+---@field public SeparationPerTileY number @The Z-separation incurred as you travel in Y (not strictly applied, batched tiles will be put at the same Z level)
+---@field public SeparationPerLayer number @The Z-separation between each layer of the tile map
+---@field public SelectedTileSet TSoftObjectPtr<UPaperTileSet> @Last tile set that was selected when editing the tile map
+---@field public Material UMaterialInterface @The material to use on a tile map instance if not overridden
+---@field public TileLayers TArray<UPaperTileLayer> @The list of layers
+---@field protected CollisionThickness number @The extrusion thickness of collision geometry when using a 3D collision domain
+---@field protected SpriteCollisionDomain integer @Collision domain (no collision, 2D, or 3D)
+---@field public ProjectionMode integer @Tile map type
+---@field public HexSideLength integer @The vertical height of the sides of the hex cell for a tile. Note: This value should already be included as part of the TileHeight, and is purely cosmetic; it only affects how the tile cursor preview is drawn.
+---@field public BodySetup UBodySetup @Baked physics data.
+---@field public AssetImportData UAssetImportData @Importing data and options used for this tile map
+---@field public SelectedLayerIndex integer @The currently selected layer index
+---@field public BackgroundColor FLinearColor @The background color displayed in the tile map editor
+---@field public TileGridColor FLinearColor @The color of the tile grid
+---@field public MultiTileGridColor FLinearColor @The color of the multi tile grid
+---@field public MultiTileGridWidth integer @Number of tiles the multi tile grid spans horizontally. 0 removes vertical lines
+---@field public MultiTileGridHeight integer @Number of tiles the multi tile grid spans vertically. 0 removes horizontal lines
+---@field public MultiTileGridOffsetX integer @Number of tiles the multi tile grid is shifted to the right
+---@field public MultiTileGridOffsetY integer @Number of tiles the multi tile grid is shifted downwards
+---@field public LayerGridColor FLinearColor @The color of the layer grid
+---@field public LayerNameIndex integer @The naming index to start at when trying to create a new layer
+local UPaperTileMap = {}
+

@@ -1,0 +1,18 @@
+---Replicated movement data of our RootComponent.
+---Struct used for efficient replication as velocity and location are generally replicated together (this saves a repindex)
+---and velocity.Z is commonly zero (most position replications are for walking pawns).
+---@class FRepMovement
+---@field public LinearVelocity FVector @Velocity of component in world space
+---@field public AngularVelocity FVector @Velocity of rotation for component (only valid if bRepPhysics is set)
+---@field public Location FVector @Location in world space
+---@field public Rotation FRotator @Current rotation
+---@field public Acceleration FVector @Acceleration of component in world space. Only valid if bRepAcceleration is set.
+---@field public bSimulatedPhysicSleep boolean @If set, RootComponent should be sleeping.
+---@field public bRepPhysics boolean @If set, additional physic data (angular velocity) will be replicated.
+---@field public bRepAcceleration boolean @If set, additional acceleration data will be replicated.
+---@field public ServerFrame integer @Server physics step
+---@field public ServerPhysicsHandle integer @ID assigned by server used to ensure determinism by physics.
+---@field public LocationQuantizationLevel EVectorQuantization @Allows tuning the compression level for the replicated location vector. You should only need to change this from the default if you see visual artifacts.
+---@field public VelocityQuantizationLevel EVectorQuantization @Allows tuning the compression level for the replicated velocity vectors. You should only need to change this from the default if you see visual artifacts.
+---@field public RotationQuantizationLevel ERotatorQuantization @Allows tuning the compression level for replicated rotation. You should only need to change this from the default if you see visual artifacts.
+local FRepMovement = {}

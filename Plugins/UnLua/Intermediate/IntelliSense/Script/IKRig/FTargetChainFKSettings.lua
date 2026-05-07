@@ -1,0 +1,11 @@
+---NOTE: Replaced by FK Chain Op
+---@class FTargetChainFKSettings
+---@field public EnableFK boolean
+---@field public RotationMode ERetargetRotationMode
+---@field public RotationAlpha number
+---@field public TranslationMode ERetargetTranslationMode
+---@field public TranslationAlpha number
+---@field public PoleVectorMatching number
+---@field public PoleVectorMaintainOffset boolean
+---@field public PoleVectorOffset number
+local FTargetChainFKSettings = {}

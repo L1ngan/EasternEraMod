@@ -1,0 +1,11 @@
+---@class UAsyncMessageDeveloperSettings : UDeveloperSettings
+---@field private bMessageQueueDebugEnabled boolean @Enabled the conditional logging of stack traces and C++ breakpoints being triggered when certain messages are queued for broadcasting to the message system. This can make it easier to debug where messages are coming from, since the processing of messages is all deferred and it can be difficult to track down what is queuing a message in cooked/optimized builds. This will only work if the ENABLE_ASYNC_MESSAGES_DEBUG pre-processor definition is non-zero. By default, ENABLE_ASYNC_MESSAGES_DEBUG is "1" for any non-shipping or editor build (WITH_EDITOR || !UE_BUILD_SHIPPING). If you wish to override this behavior, then you can add a definition to your game's .build.cs file:              PublicDefinitions.Add("ENABLE_ASYNC_MESSAGES_DEBUG=1");
+---@field private bTriggerDebugBreakpointWhenMessageQueued boolean @If true, then a native C++ breakpoint will be triggered when when certain messages are queued for broadcasting to the message system.
+---@field private bPrintScriptCallstackWhenMessageQueued boolean @If true, then the script callstack will also be printed when certain messages are queued for broadcasting to the message system.
+---@field private bShouldRecordQueueCallstackOnMessages boolean @If true, then the callstack at the time of a message being queued will be recorded and stored on the FAsyncMessage instance itself. This can make debugging listeners significantly easier if you need to get an idea of where a message is coming from.
+---@field private bEnabledDebuggingForAllQueuedMessages boolean @If true, then ALL messages queued for broadcast will have their debug information processed. Note: This will likely have a large performance impact. If false, then only messages in the "EnabledDebugMessages" array will be debugged when queued.
+---@field private EnabledDebugMessages TArray<FAsyncMessageId> @Array of Async Message Id's which you would like to enable for debugging when they are queued for broadcasting to the message system.
+---@field private bEnableWorldSubsystem boolean @If true, then the async message world subsystem will be enabled.
+---@field private bEnableWorldSubsystemInEditor boolean @If true, then the async message subsystem will be created for editor worlds.
+local UAsyncMessageDeveloperSettings = {}
+

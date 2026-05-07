@@ -1,0 +1,23 @@
+---@class UTemplateProjectDefs : UObject
+---@field public LocalizedDisplayNames TArray<FLocalizedTemplateString>
+---@field public LocalizedDescriptions TArray<FLocalizedTemplateString>
+---@field public FoldersToIgnore TArray<string>
+---@field public FilesToIgnore TArray<string>
+---@field public FolderRenames TArray<FTemplateFolderRename>
+---@field public FilenameReplacements TArray<FTemplateReplacement>
+---@field public ReplacementsInFiles TArray<FTemplateReplacement>
+---@field public SortKey string
+---@field public Categories TArray<string>
+---@field public ClassTypes string
+---@field public AssetTypes string
+---@field public bAllowProjectCreation boolean @Should we allow creation of a project from this template. If this is false, the template is treated as a feature pack.
+---@field public bIsEnterprise boolean @Is this an enterprise template?
+---@field public bIsBlank boolean @Is this a blank template? Determines whether we can override the default map when creating the project.
+---@field public bThumbnailAsIcon boolean @Is there a rendered thumbnail that should be treated as the project template icon. If this is true the thumbnail takes up the full tile size rather than a 64x64 icon
+---@field public HiddenSettings TArray<ETemplateSetting> @Optional list of settings to hide. If none are specified, then all settings are shown.
+---@field public PacksToInclude TArray<string> @Optional list of feature packs to include
+---@field public EditDetailLevelPreference EFeaturePackDetailLevel @What detail level to edit when editing shared template resources
+---@field public SharedContentPacks TArray<FFeaturePackLevelSet> @Shared feature packs. The files in these packs listed in these structures marked as 'additionalfiles' will be copied on project generation
+---@field public Variants TArray<FTemplateVariant> @List of variants for this template. Using an Array instead of a Map purely for ease of writing the ini file (allowing one variant per line)
+local UTemplateProjectDefs = {}
+

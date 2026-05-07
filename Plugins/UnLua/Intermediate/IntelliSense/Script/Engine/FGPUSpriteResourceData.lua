@@ -1,0 +1,44 @@
+---The source data for runtime resources.
+---@class FGPUSpriteResourceData
+---@field public QuantizedColorSamples TArray<FColor> @Quantized color samples.
+---@field public QuantizedMiscSamples TArray<FColor> @Quantized samples for misc curve attributes to be evaluated at runtime.
+---@field public QuantizedSimulationAttrSamples TArray<FColor> @Quantized samples for simulation attributes.
+---@field public ColorScale FVector4 @Scale and bias to be applied to the color of sprites.
+---@field public ColorBias FVector4
+---@field public MiscScale FVector4 @Scale and bias to be applied to the misc curve.
+---@field public MiscBias FVector4
+---@field public SimulationAttrCurveScale FVector4 @Scale and bias to be applied to the simulation attribute curves.
+---@field public SimulationAttrCurveBias FVector4
+---@field public SubImageSize FVector4 @Size of subimages. X:SubImageCountH Y:SubImageCountV Z:1/SubImageCountH W:1/SubImageCountV
+---@field public SizeBySpeed FVector4 @SizeBySpeed parameters. XY=SpeedScale ZW=MaxSpeedScale.
+---@field public ConstantAcceleration FVector @Constant acceleration to apply to particles.
+---@field public OrbitOffsetBase FVector @Offset at which to orbit.
+---@field public OrbitOffsetRange FVector
+---@field public OrbitFrequencyBase FVector @Frequency at which the particle orbits around each axis.
+---@field public OrbitFrequencyRange FVector
+---@field public OrbitPhaseBase FVector @Phase offset of orbit around each axis.
+---@field public OrbitPhaseRange FVector
+---@field public GlobalVectorFieldScale number @Scale to apply to global vector fields.
+---@field public GlobalVectorFieldTightness number @Tightness override value for the global vector fields.
+---@field public PerParticleVectorFieldScale number @Scale to apply to per-particle vector field scale.
+---@field public PerParticleVectorFieldBias number @Bias to apply to per-particle vector field scale.
+---@field public DragCoefficientScale number @Scale to apply to per-particle drag coefficient.
+---@field public DragCoefficientBias number @Bias to apply to per-particle drag coefficient.
+---@field public ResilienceScale number @Scale to apply to per-particle damping factor.
+---@field public ResilienceBias number @Bias to apply to per-particle damping factor.
+---@field public CollisionRadiusScale number @Scale to apply to per-particle size for collision.
+---@field public CollisionRadiusBias number @Bias to apply to per-particle size for collision.
+---@field public CollisionTimeBias number @Bias applied to relative time upon collision.
+---@field public CollisionRandomSpread number @Control on reflection's random distribution spread.
+---@field public CollisionRandomDistribution number @Control on reflection's random distribution when colliding. (1=uniform distribution)
+---@field public OneMinusFriction number @One minus the coefficient of friction applied to particles upon collision.
+---@field public RotationRateScale number @Scale to apply to per-particle rotation rate.
+---@field public CameraMotionBlurAmount number @How much to stretch sprites based on camera motion blur.
+---@field public ScreenAlignment integer @Screen alignment for particles.
+---@field public LockAxisFlag integer @The method for locking the particles to a particular axis.
+---@field public PivotOffset FVector2D @Pivot offset in UV space for placing the verts of each particle.
+---@field public bUseVelocityForMotionBlur boolean @If true, use velocity to approximate motion blur
+---@field public bRemoveHMDRoll boolean @If true, removes the HMD view roll (e.g. in VR)
+---@field public MinFacingCameraBlendDistance number @The distance at which PSA_FacingCameraDistanceBlend    is fully PSA_Square
+---@field public MaxFacingCameraBlendDistance number @The distance at which PSA_FacingCameraDistanceBlend    is fully PSA_FacingCameraPosition
+local FGPUSpriteResourceData = {}

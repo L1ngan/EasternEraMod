@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-LuaProtobuf.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"G:/EasternEra/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/LuaProtobufModule.cpp.obj"
+"G:/EasternEra/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/pb.cpp.obj"
+"G:/EasternEra/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/PerModuleInline.gen.cpp.obj"
+"G:/EasternEra/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/Default.rc2.res"
+/OUT:"G:/EasternEra/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/UnrealEditor-LuaProtobuf.lib"

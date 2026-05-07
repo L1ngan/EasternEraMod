@@ -1,0 +1,14 @@
+---Describes a state tree transition. Source is the state where the transition started, Target describes the state where the transition pointed at,
+---and Next describes the selected state. The reason Transition and Next are different is that Transition state can be a selector state,
+---in which case the children will be visited until a leaf state is found, which will be the next state.
+---@class FStateTreeTransitionResult
+---@field public NextActiveFrames TArray<FStateTreeExecutionFrame> @States selected as result of the transition.
+---@field public SourceState FStateTreeStateHandle @Transition source state.
+---@field public TargetState FStateTreeStateHandle @Transition target state. It can be a completion state.
+---@field public CurrentState FStateTreeStateHandle @The current state being executed. On enter/exit callbacks this is the state of the task.
+---@field public CurrentRunStatus EStateTreeRunStatus @Current Run status.
+---@field public ChangeType EStateTreeStateChangeType @If the change type is Sustained, then the CurrentState was reselected, or if Changed then the state was just activated.
+---@field public Priority EStateTreeTransitionPriority @Priority of the transition that caused the state change.
+---@field public SourceStateTree UStateTree @StateTree asset that was active when the transition was requested.
+---@field public SourceRootState FStateTreeStateHandle @Root state the execution frame where the transition was requested.
+local FStateTreeTransitionResult = {}

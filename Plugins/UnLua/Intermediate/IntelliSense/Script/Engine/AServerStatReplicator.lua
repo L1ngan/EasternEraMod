@@ -1,0 +1,55 @@
+---Class used to replicate server "stat net" data over. For server only values, the client data is
+---is overwritten when bUpdateStatNet == true. For data that both the client and server set, the server
+---data will only overwrite if bUpdateStatNet == true && bOverwriteClientStats == true.
+---@class AServerStatReplicator : AInfo
+---@field public bUpdateStatNet boolean @Whether to update stat net with data from the server or not
+---@field public bOverwriteClientStats boolean @Whether to overwrite client data stat net with data from the server or not
+---@field public Channels integer @
+---@field public InRate integer @
+---@field public OutRate integer @
+---@field public MaxPacketOverhead integer @
+---@field public InRateClientMax integer @
+---@field public InRateClientMin integer @
+---@field public InRateClientAvg integer @
+---@field public InPacketsClientMax integer @
+---@field public InPacketsClientMin integer @
+---@field public InPacketsClientAvg integer @
+---@field public OutRateClientMax integer @
+---@field public OutRateClientMin integer @
+---@field public OutRateClientAvg integer @
+---@field public OutPacketsClientMax integer @
+---@field public OutPacketsClientMin integer @
+---@field public OutPacketsClientAvg integer @
+---@field public NetNumClients integer @
+---@field public InPackets integer @
+---@field public OutPackets integer @
+---@field public InBunches integer @
+---@field public OutBunches integer @
+---@field public OutLoss integer @
+---@field public InLoss integer @
+---@field public VoiceBytesSent integer @
+---@field public VoiceBytesRecv integer @
+---@field public VoicePacketsSent integer @
+---@field public VoicePacketsRecv integer @
+---@field public PercentInVoice integer @
+---@field public PercentOutVoice integer @
+---@field public NumActorChannels integer @
+---@field public NumConsideredActors integer @
+---@field public PrioritizedActors integer @
+---@field public NumRelevantActors integer @
+---@field public NumRelevantDeletedActors integer @
+---@field public NumReplicatedActorAttempts integer @
+---@field public NumReplicatedActors integer @
+---@field public NumActors integer @
+---@field public NumNetActors integer @
+---@field public NumDormantActors integer @
+---@field public NumInitiallyDormantActors integer @
+---@field public NumNetGUIDsAckd integer @
+---@field public NumNetGUIDsPending integer @
+---@field public NumNetGUIDsUnAckd integer @
+---@field public ObjPathBytes integer @
+---@field public NetGUIDOutRate integer @
+---@field public NetGUIDInRate integer @
+---@field public NetSaturated integer @
+local AServerStatReplicator = {}
+

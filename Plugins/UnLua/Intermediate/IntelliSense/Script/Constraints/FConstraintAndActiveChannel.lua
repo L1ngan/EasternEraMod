@@ -1,0 +1,14 @@
+---#if WITH_EDITOR
+---namespace MovieSceneClipboard
+---{
+---      template<> inline FName GetKeyTypeName<bool>()
+---      {
+---              static FName Name("Bool");
+---              return Name;
+---      }
+---}
+---#endif
+---@class FConstraintAndActiveChannel
+---@field public ActiveChannel FMovieSceneConstraintChannel
+---@field private ConstraintCopyToSpawn UTickableConstraint
+local FConstraintAndActiveChannel = {}

@@ -1,0 +1,13 @@
+---service results that can be used by all services
+---@class EMetaHumanServiceRequestResult
+---@field public Ok integer
+---@field public Busy integer
+---@field public Unauthorized integer
+---@field public EulaNotAccepted integer
+---@field public InvalidArguments integer
+---@field public ServerError integer
+---@field public LoginFailed integer
+---@field public Timeout integer
+---@field public GatewayError integer
+---@field public EMetaHumanServiceRequestResult_MAX integer
+local EMetaHumanServiceRequestResult = {}

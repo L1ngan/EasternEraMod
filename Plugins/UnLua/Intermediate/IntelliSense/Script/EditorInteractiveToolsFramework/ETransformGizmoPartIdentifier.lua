@@ -1,0 +1,34 @@
+---Part identifiers are used to associate transform gizmo parts with their corresponding representation
+---in the render and hit target. The render and hit target should use the default identifier for
+---any of their internal elements that do not correspond to transform gizmo parts, for example non-hittable
+---visual guide elements.
+---@class ETransformGizmoPartIdentifier
+---@field public Default integer
+---@field public TranslateAll integer
+---@field public TranslateXAxis integer
+---@field public TranslateYAxis integer
+---@field public TranslateZAxis integer
+---@field public TranslateXYPlanar integer
+---@field public TranslateYZPlanar integer
+---@field public TranslateXZPlanar integer
+---@field public TranslateScreenSpace integer
+---@field public RotateAll integer
+---@field public RotateXAxis integer
+---@field public RotateYAxis integer
+---@field public RotateZAxis integer
+---@field public RotateScreenSpace integer
+---@field public RotateArcball integer
+---@field public RotateXGimbal integer
+---@field public RotateYGimbal integer
+---@field public RotateZGimbal integer
+---@field public ScaleAll integer
+---@field public ScaleXAxis integer
+---@field public ScaleYAxis integer
+---@field public ScaleZAxis integer
+---@field public ScaleXYPlanar integer
+---@field public ScaleYZPlanar integer
+---@field public ScaleXZPlanar integer
+---@field public ScaleUniform integer
+---@field public Max integer
+---@field public ETransformGizmoPartIdentifier_MAX integer
+local ETransformGizmoPartIdentifier = {}

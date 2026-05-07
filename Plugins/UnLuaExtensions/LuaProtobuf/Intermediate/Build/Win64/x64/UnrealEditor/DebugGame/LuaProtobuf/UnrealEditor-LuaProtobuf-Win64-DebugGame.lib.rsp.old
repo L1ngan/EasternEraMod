@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-LuaProtobuf-Win64-DebugGame.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"G:/ProjectMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaProtobuf/LuaProtobufModule.cpp.obj"
+"G:/ProjectMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaProtobuf/pb.cpp.obj"
+"G:/ProjectMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaProtobuf/PerModuleInline.gen.cpp.obj"
+"G:/ProjectMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaProtobuf/Default.rc2.res"
+/OUT:"G:/ProjectMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaProtobuf/UnrealEditor-LuaProtobuf-Win64-DebugGame.lib"

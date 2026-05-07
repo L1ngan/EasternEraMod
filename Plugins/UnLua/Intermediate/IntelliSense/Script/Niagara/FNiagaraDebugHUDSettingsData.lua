@@ -1,0 +1,79 @@
+---Settings for Niagara debug HUD. Contained in it's own struct so that we can pass it whole in a message to the debugger client.
+---@class FNiagaraDebugHUDSettingsData
+---@field public bWidgetEnabled boolean
+---@field public bHudEnabled boolean @Primary control for all HUD features.
+---@field public bHudRenderingEnabled boolean @Primary control for HUD rendering.
+---@field public bValidationEnabled boolean @Primary control for validation settings.
+---@field public bOverviewEnabled boolean @When enabled the overview display will be enabled.
+---@field public OverviewMode ENiagaraDebugHUDOverviewMode
+---@field public OverviewSortMode ENiagaraDebugHUDDOverviewSort @How to sort the displayed list of systems
+---@field public bIncludeCascade boolean @When enabled the overview display will include cascade FX.
+---@field public bShowRegisteredComponents boolean
+---@field public bOverviewShowFilteredSystemOnly boolean @When enabled the overview will only show the filter system information.
+---@field public bShowGlobalBudgetInfo boolean
+---@field public bSystemFilterEnabled boolean @If enabled, then only systems matching the filters will be considered by the debug hud
+---@field public SystemFilter string @Wildcard filter for the systems to show more detailed information about. For example,. "NS_*" would match all systems starting with NS_.
+---@field public bEmitterFilterEnabled boolean
+---@field public EmitterFilter string @Wildcard filter used to match emitters when generating particle attribute view. For example,. "Fluid*" would match all emitters starting with Fluid and only particle attributes for those would be visible. Requires a valid SystemFilter to be set.
+---@field public bActorFilterEnabled boolean
+---@field public ActorFilter string @Wildcard filter which is compared against the Components Actor name to narrow down the detailed information. For example, "*Water*" would match all actors that contain the string "water". Requires a valid SystemFilter to be set.
+---@field public bComponentFilterEnabled boolean
+---@field public ComponentFilter string @Wildcard filter for the components to show more detailed information about. For example, "*MyComp*" would match all components that contain MyComp. Requires a valid SystemFilter to be set.
+---@field public bValidateSystemSimulationDataBuffers boolean @When enabled all Niagara systems that pass the filter will have the simulation data buffers validation. i.e. we will look for NaN or other invalidate data  inside it Note: This will have an impact on performance.
+---@field public bValidateParticleDataBuffers boolean @When enabled all Niagara systems that pass the filter will have the particle data buffers validation. i.e. we will look for NaN or other invalidate data  inside it Note: This will have an impact on performance.
+---@field public bValidationLogErrors boolean @When enabled all validation errors will be sent to the log as warnings. This can be useful to try and narrow down the exact source of an invalid value in the data buffers as often they will cascade from the first frame where one is generated into other attributes in the subsequent frames.
+---@field public ValidationAttributeDisplayTruncate integer @When > 0 this is the maximum number of attributes we will display that contain a NaN, there could be more but the display will be truncated to this amount.  This is to reduce generating long strings.
+---@field public SystemDebugVerbosity ENiagaraDebugHudVerbosity @When enabled system debug information will be displayed in world.
+---@field public SystemEmitterVerbosity ENiagaraDebugHudVerbosity @When enabled we show information about emitter / particle counts.
+---@field public DataInterfaceVerbosity ENiagaraDebugHudVerbosity @When enabled allows data interfaces to include additional debugging information.
+---@field public SystemVariables TArray<FNiagaraDebugHUDVariable> @List of attributes to show about the system, each entry uses wildcard matching. For example, "System.*" would match all system attributes.
+---@field public bSystemShowActiveOnlyInWorld boolean @When disabled in world rendering will show systems deactivated by scalability.
+---@field public bShowParticleVariables boolean @When enabled will show particle attributes from the list.
+---@field public ParticlesVariables TArray<FNiagaraDebugHUDVariable> @List of attributes to show per particle, each entry uses wildcard matching. For example, "*Position" would match all attributes that end in Position.
+---@field public bEnableGpuParticleReadback boolean @When enabled GPU particle data will be copied from the GPU to the CPU. Warning: This has an impact on performance & memory since we copy the whole buffer. The displayed data is latent since we are seeing what happened a few frames ago.
+---@field public bShowParticleIndex boolean @When enabled the particle index will be displayed along with any attributes. Note: This is the index in the particle data buffer and not the persistent ID index.
+---@field public bShowParticlesVariablesWithSystem boolean @When enabled particle attributes will display with the system information rather than in world at the particle location. Only enabled if system is set up to display information as well.
+---@field public bShowParticleVariablesVertical boolean
+---@field public bUseMaxParticlesToDisplay boolean
+---@field public MaxParticlesToDisplay integer @When enabled, the maximum number of particles to show information about. When disabled all particles will show attributes, this can result in poor performance & potential OOM on some platforms.
+---@field public bUseParticleDisplayClip boolean @When enabled we use the clip planes to narrow down which particles to display
+---@field public ParticleDisplayClip FVector2D @Clipping planes used to display particle attributes.
+---@field public bUseParticleDisplayCenterRadius boolean @When enabled we use a radius from the display center to avoid showing too many particle attributes.
+---@field public ParticleDisplayCenterRadius number @Radius from screen center where 0 is center to 1.0 is edge to avoid display too many particle attributes.
+---@field public PerfReportFrames integer @How many frames to capture in between updates to the max and average perf report values.
+---@field public PerfSampleMode ENiagaraDebugHUDPerfSampleMode
+---@field public PerfUnits ENiagaraDebugHUDPerfUnits
+---@field public bShowPerfColumGameThreadOnly boolean @Adds a column that displays only the GT cost to the perf overview. Only enabled when performance overview mode is active.
+---@field public PerfGraphMode ENiagaraDebugHUDPerfGraphMode @Time range of the Y Axis of the perf graph
+---@field public PerfHistoryFrames integer @How many frames of history to display in the perf graphs.
+---@field public bUsePerfGraphTimeRange boolean @Use the specified user range when enabled, otherwise we will auto detect the range to use.
+---@field public PerfGraphTimeRange number @Time range of the Y Axis of the perf graph
+---@field public PerfGraphSize FVector2D @Pixel size of the perf graph.
+---@field public PerfGraphAxisColor FLinearColor
+---@field public SmoothingWidth integer @Number of samples to use either size of a value when smoothing perf graphs.
+---@field public OverviewFont ENiagaraDebugHudFont @Overview display font to use.
+---@field public OverviewLocation FVector2D @Overview display location.
+---@field public SystemTextOptions FNiagaraDebugHudTextOptions @Sets display text options for system information.
+---@field public ParticleTextOptions FNiagaraDebugHudTextOptions @Sets display text options for particle information.
+---@field public bDrawBoundsEnabled boolean
+---@field public bDrawBoundsWireframe boolean
+---@field public DrawBoundsAlpha number
+---@field public DefaultBackgroundColor FLinearColor @Default background color used generally for panels
+---@field public OverviewHeadingColor FLinearColor @Overview heading text color
+---@field public OverviewDetailColor FLinearColor @Overview detail text color
+---@field public OverviewDetailHighlightColor FLinearColor @Overview detail highlight text color
+---@field public InWorldErrorTextColor FLinearColor @In world text if an error is detected
+---@field public InWorldTextColor FLinearColor @In world text color
+---@field public MessageInfoTextColor FLinearColor @Message display text color
+---@field public MessageWarningTextColor FLinearColor @Message display warning text color
+---@field public MessageErrorTextColor FLinearColor @Message display error text color
+---@field public SystemColorTableOpacity number @Opacity of the system color background tile in overview table rows.
+---@field public SystemColorSeed integer @Additional seed value for random system colors. Useful if current colors of systems are too similar.
+---@field public SystemColorHSVMin FVector @Minimum HSV values for the random colors generated for each System.
+---@field public SystemColorHSVMax FVector @Maximum HSV values for the random colors generated for each System.
+---@field public PlaybackMode ENiagaraDebugPlaybackMode
+---@field public bPlaybackRateEnabled boolean
+---@field public PlaybackRate number
+---@field public bLoopTimeEnabled boolean
+---@field public LoopTime number
+local FNiagaraDebugHUDSettingsData = {}

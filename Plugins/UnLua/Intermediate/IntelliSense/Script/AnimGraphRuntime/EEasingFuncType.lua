@@ -1,0 +1,19 @@
+---An easing type defining how to ease float values.
+---@class EEasingFuncType
+---@field public Linear integer
+---@field public Sinusoidal integer
+---@field public Cubic integer
+---@field public QuadraticInOut integer
+---@field public CubicInOut integer
+---@field public HermiteCubic integer
+---@field public QuarticInOut integer
+---@field public QuinticInOut integer
+---@field public CircularIn integer
+---@field public CircularOut integer
+---@field public CircularInOut integer
+---@field public ExpIn integer
+---@field public ExpOut integer
+---@field public ExpInOut integer
+---@field public CustomCurve integer
+---@field public EEasingFuncType_MAX integer
+local EEasingFuncType = {}

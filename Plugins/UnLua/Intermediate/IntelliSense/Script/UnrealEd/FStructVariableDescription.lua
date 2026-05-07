@@ -1,0 +1,19 @@
+---@class FStructVariableDescription
+---@field public VarName string
+---@field public VarGuid FGuid
+---@field public FriendlyName string
+---@field public DefaultValue string
+---@field public Category string @TYPE DATA
+---@field public SubCategory string
+---@field public SubCategoryObject TSoftObjectPtr<UObject>
+---@field public PinValueType FEdGraphTerminalType
+---@field public ContainerType EPinContainerType
+---@field public bInvalidMember boolean
+---@field public bDontEditOnInstance boolean
+---@field public bEnableSaveGame boolean
+---@field public bEnableMultiLineText boolean
+---@field public bEnable3dWidget boolean
+---@field public CurrentDefaultValue string @CurrentDefaultValue stores the actual default value, after the DefaultValue was changed, and before the struct was recompiled
+---@field public ToolTip string
+---@field public MetaData TMap<string, string>
+local FStructVariableDescription = {}

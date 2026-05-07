@@ -1,0 +1,11 @@
+---Test structure for optional properties.
+---@class FStructSerializerOptionalTestStruct
+---@field public StrOptional Unknown
+---@field public StrOptionalUnset Unknown
+---@field public IntOptional Unknown
+---@field public IntOptionalUnset Unknown
+---@field public NameOptional Unknown
+---@field public NameOptionalUnset Unknown
+---@field public StructOptional Unknown
+---@field public StructOptionalUnset Unknown
+local FStructSerializerOptionalTestStruct = {}

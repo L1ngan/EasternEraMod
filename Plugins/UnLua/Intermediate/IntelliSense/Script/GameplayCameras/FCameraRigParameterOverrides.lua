@@ -1,0 +1,18 @@
+---A structure that holds lists of camera rig interface parameter overrides, one list
+---per parameter type.
+---@class FCameraRigParameterOverrides
+---@field private BooleanOverrides TArray<FBooleanCameraRigParameterOverride>
+---@field private Integer32Overrides TArray<FInteger32CameraRigParameterOverride>
+---@field private FloatOverrides TArray<FFloatCameraRigParameterOverride>
+---@field private DoubleOverrides TArray<FDoubleCameraRigParameterOverride>
+---@field private Vector2fOverrides TArray<FVector2fCameraRigParameterOverride>
+---@field private Vector2dOverrides TArray<FVector2dCameraRigParameterOverride>
+---@field private Vector3fOverrides TArray<FVector3fCameraRigParameterOverride>
+---@field private Vector3dOverrides TArray<FVector3dCameraRigParameterOverride>
+---@field private Vector4fOverrides TArray<FVector4fCameraRigParameterOverride>
+---@field private Vector4dOverrides TArray<FVector4dCameraRigParameterOverride>
+---@field private Rotator3fOverrides TArray<FRotator3fCameraRigParameterOverride>
+---@field private Rotator3dOverrides TArray<FRotator3dCameraRigParameterOverride>
+---@field private Transform3fOverrides TArray<FTransform3fCameraRigParameterOverride>
+---@field private Transform3dOverrides TArray<FTransform3dCameraRigParameterOverride>
+local FCameraRigParameterOverrides = {}

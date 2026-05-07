@@ -1,0 +1,2 @@
+---@class FSmartNameContainer
+local FSmartNameContainer = {}

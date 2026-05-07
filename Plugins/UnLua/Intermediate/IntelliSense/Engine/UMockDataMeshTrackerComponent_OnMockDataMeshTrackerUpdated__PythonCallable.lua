@@ -1,0 +1,3 @@
+---@class UMockDataMeshTrackerComponent_OnMockDataMeshTrackerUpdated__PythonCallable : UPythonCallableForDelegate
+local UMockDataMeshTrackerComponent_OnMockDataMeshTrackerUpdated__PythonCallable = {}
+

@@ -1,0 +1,14 @@
+---@class FMeshAutoGenerateUVsSettings
+---@field public Method EGeometryFlow_AutoUVMethod
+---@field public UVAtlasStretch number @UVAtlas parameters
+---@field public UVAtlasNumCharts integer
+---@field public XAtlasMaxIterations integer @XAtlas parameters
+---@field public NumInitialPatches integer @PatchBuilder parameters
+---@field public CurvatureAlignment number
+---@field public MergingThreshold number
+---@field public MaxAngleDeviationDeg number
+---@field public SmoothingSteps integer
+---@field public SmoothingAlpha number
+---@field public bAutoPack boolean
+---@field public PackingTargetWidth integer
+local FMeshAutoGenerateUVsSettings = {}

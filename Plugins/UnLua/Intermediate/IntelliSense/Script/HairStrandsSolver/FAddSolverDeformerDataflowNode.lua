@@ -1,0 +1,16 @@
+---Add a graph deformer to the groom simulation
+---@class FAddSolverDeformerDataflowNode : FDataflowSimulationNode
+---@field public PhysicsSolvers TArray<FDataflowSimulationProperty> @Physics solvers to advance in time
+---@field public SimulationTime FDataflowSimulationTime @Delta time to use to advance the solver
+---@field public MeshDeformer UOptimusDeformer @Graph deformer solver the component is using
+---@field public DeformerNumericInputs TArray<FDataflowNumericTypes> @List of deformer numeric inputs that will appear in the option pins
+---@field public DeformerVectorInputs TArray<FDataflowVectorTypes> @List of deformer vector inputs that will appear in the option pins
+---@field public DeformerStringInputs TArray<FDataflowStringTypes> @List of deformer string inputs that will appear in the option pins
+---@field public DeformerBoolInputs TArray<FDataflowBoolTypes> @List of deformer bool inputs that will appear in the option pins
+---@field public DeformerTransformInputs TArray<FDataflowTransformTypes> @List of deformer transform inputs that will appear in the option pins
+---@field public DeformerNumericArrays TArray<FDataflowNumericArrayTypes> @List of deformer numeric arrays that will appear in the option pins
+---@field public DeformerVectorArrays TArray<FDataflowVectorArrayTypes> @List of deformer vector arrays that will appear in the option pins
+---@field public DeformerStringArrays TArray<FDataflowStringArrayTypes> @List of deformer string arrays that will appear in the option pins
+---@field public DeformerBoolArrays TArray<FDataflowBoolArrayTypes> @List of deformer bool arrays that will appear in the option pins
+---@field public DeformerTransformArrays TArray<FDataflowTransformArrayTypes> @List of deformer transform arrays that will appear in the option pins
+local FAddSolverDeformerDataflowNode = {}

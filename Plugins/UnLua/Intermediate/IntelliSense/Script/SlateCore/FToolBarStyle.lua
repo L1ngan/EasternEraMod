@@ -1,0 +1,41 @@
+---Represents the appearance of a toolbar
+---@class FToolBarStyle : FSlateWidgetStyle
+---@field public BackgroundBrush FSlateBrush @The brush used for the background of the toolbar
+---@field public SeparatorBrush FSlateBrush
+---@field public LabelStyle FTextBlockStyle
+---@field public EditableTextStyle FEditableTextBoxStyle
+---@field public ToggleButton FCheckBoxStyle
+---@field public ComboButtonStyle FComboButtonStyle
+---@field public SettingsButtonStyle FButtonStyle
+---@field public SettingsComboButton FComboButtonStyle
+---@field public SettingsToggleButton FCheckBoxStyle
+---@field public ButtonStyle FButtonStyle
+---@field public LabelPadding FMargin
+---@field public UniformBlockWidth number
+---@field public UniformBlockHeight number
+---@field public NumColumns integer
+---@field public IconPadding FMargin
+---@field public SeparatorPadding FMargin
+---@field public SeparatorThickness number
+---@field public ComboButtonPadding FMargin
+---@field public ButtonPadding FMargin
+---@field public CheckBoxPadding FMargin
+---@field public BlockPadding FMargin
+---@field public IndentedBlockPadding FMargin
+---@field public BlockHovered FSlateBrush @Hovered brush for an entire block
+---@field public BackgroundPadding FMargin
+---@field public WrapButtonStyle FWrapButtonStyle
+---@field public bAllowWrapButton boolean @Set to false if the wrap button should never be shown (even if entries are clipped)
+---@field public bAllowWrappingDefault boolean @Set to false if the toolbar should not wrap (to the next line) by default, but can be overridden per section or entry
+---@field public IconSize FDeprecateSlateVector2D
+---@field public bShowLabels boolean
+---@field public ButtonContentMaxWidth number
+---@field public ButtonContentFillWidth number
+---@field public ComboContentMinWidth number @Min width that label text block slot in combo buttons should have.
+---@field public ComboContentMaxWidth number @Max width that label text block slot in combo buttons should have. 0 means no max.
+---@field public ComboContentHorizontalAlignment integer
+---@field public IconPaddingWithVisibleLabel FMargin
+---@field public IconPaddingWithCollapsedLabel FMargin
+---@field public VerticalAlignmentOverride Unknown
+---@field public RaisedChildrenRightPadding number
+local FToolBarStyle = {}

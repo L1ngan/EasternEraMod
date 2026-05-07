@@ -1,0 +1,11 @@
+---Transitions behavior.
+---@class EStateTreeTransitionType
+---@field public None integer
+---@field public Succeeded integer
+---@field public Failed integer
+---@field public GotoState integer
+---@field public NextState integer
+---@field public NextSelectableState integer
+---@field public NotSet integer
+---@field public EStateTreeTransitionType_MAX integer
+local EStateTreeTransitionType = {}

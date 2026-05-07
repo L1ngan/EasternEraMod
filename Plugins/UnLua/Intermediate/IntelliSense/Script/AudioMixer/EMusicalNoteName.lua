@@ -1,0 +1,15 @@
+---@class EMusicalNoteName
+---@field public C integer
+---@field public Db integer
+---@field public D integer
+---@field public Eb integer
+---@field public E integer
+---@field public F integer
+---@field public Gb integer
+---@field public G integer
+---@field public Ab integer
+---@field public A integer
+---@field public Bb integer
+---@field public B integer
+---@field public EMusicalNoteName_MAX integer
+local EMusicalNoteName = {}

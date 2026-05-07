@@ -1,0 +1,19 @@
+---Contains all the settings that should be shared across sessions.
+---@class FNiagaraViewportSharedSettings
+---@field public ViewportType integer @The viewport type
+---@field public PerspViewModeIndex integer @View mode to set when this viewport is of type LVT_Perspective.
+---@field public OrthoViewModeIndex integer @View mode to set when this viewport is not of type LVT_Perspective.
+---@field public EditorShowFlagsString string @A set of flags that determines visibility for various scene elements (FEngineShowFlags), converted to string form. These have to be saved as strings since FEngineShowFlags is too complex for UHT to parse correctly.
+---@field public GameShowFlagsString string @A set of flags that determines visibility for various scene elements (FEngineShowFlags), converted to string form. These have to be saved as strings since FEngineShowFlags is too complex for UHT to parse correctly.
+---@field public ExposureSettings FExposureSettings @Setting to allow designers to override the automatic expose.
+---@field public FOVAngle number @Field of view angle for the viewport.
+---@field public bIsRealtime boolean @Whether this viewport is updating in real-time.
+---@field public bShowOnScreenStats boolean @Whether viewport statistics should be shown.
+---@field public bShowGridInViewport boolean
+---@field public bShowInstructionsCount boolean
+---@field public bShowParticleCountsInViewport boolean
+---@field public bShowEmitterExecutionOrder boolean
+---@field public bShowGpuTickInformation boolean
+---@field public bShowMemoryInfo boolean
+---@field public bShowStatelessInfo boolean
+local FNiagaraViewportSharedSettings = {}

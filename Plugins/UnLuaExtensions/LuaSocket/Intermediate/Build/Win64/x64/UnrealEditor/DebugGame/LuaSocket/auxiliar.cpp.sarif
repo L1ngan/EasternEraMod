@@ -1,0 +1,94 @@
+{
+    "version": "2.1.0",
+    "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+    "runs": [
+        {
+            "results": [
+                {
+                    "ruleId": "C4996",
+                    "message": {
+                        "text": "'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details."
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/auxiliar.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/auxiliar.cpp"
+                                },
+                                "region": {
+                                    "startLine": 54,
+                                    "startColumn": 5,
+                                    "snippet": {
+                                        "text": "    sprintf(buf, \"%p\", lua_touserdata(L, 1));"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "C4996",
+                    "message": {
+                        "text": "'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details."
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/auxiliar.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/auxiliar.cpp"
+                                },
+                                "region": {
+                                    "startLine": 91,
+                                    "startColumn": 9,
+                                    "snippet": {
+                                        "text": "        sprintf(msg, \"%.35s expected\", classname);"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "C4996",
+                    "message": {
+                        "text": "'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details."
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/auxiliar.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/auxiliar.cpp"
+                                },
+                                "region": {
+                                    "startLine": 105,
+                                    "startColumn": 9,
+                                    "snippet": {
+                                        "text": "        sprintf(msg, \"%.35s expected\", groupname);"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "tool": {
+                "driver": {
+                    "name": "MSVC",
+                    "shortDescription": {
+                        "text": "Microsoft Visual C++ Compiler Warnings/Errors"
+                    },
+                    "informationUri": "https://docs.microsoft.com/cpp/error-messages/compiler-errors-1/c-cpp-build-errors"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+---@class FRigUnit_ChainHarmonics_WorkData
+---@field public Time FVector
+---@field public Items TArray<FCachedRigElement>
+---@field public Ratio TArray<number>
+---@field public LocalTip TArray<FVector>
+---@field public PendulumTip TArray<FVector>
+---@field public PendulumPosition TArray<FVector>
+---@field public PendulumVelocity TArray<FVector>
+---@field public HierarchyLine TArray<FVector>
+---@field public VelocityLines TArray<FVector>
+local FRigUnit_ChainHarmonics_WorkData = {}

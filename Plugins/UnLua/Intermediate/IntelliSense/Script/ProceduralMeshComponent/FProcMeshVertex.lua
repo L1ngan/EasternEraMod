@@ -1,0 +1,11 @@
+---One vertex for the procedural mesh, used for storing data internally
+---@class FProcMeshVertex
+---@field public Position FVector @Vertex position
+---@field public Normal FVector @Vertex normal
+---@field public Tangent FProcMeshTangent @Vertex tangent
+---@field public Color FColor @Vertex color
+---@field public UV0 FVector2D @Vertex texture co-ordinate
+---@field public UV1 FVector2D @Vertex texture co-ordinate
+---@field public UV2 FVector2D @Vertex texture co-ordinate
+---@field public UV3 FVector2D @Vertex texture co-ordinate
+local FProcMeshVertex = {}

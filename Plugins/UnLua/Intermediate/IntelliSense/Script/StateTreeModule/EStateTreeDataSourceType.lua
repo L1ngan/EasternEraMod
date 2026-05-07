@@ -1,0 +1,19 @@
+---Data type the FStateTreeDataHandle is pointing at.
+---@class EStateTreeDataSourceType
+---@field public None integer
+---@field public GlobalInstanceData integer
+---@field public GlobalInstanceDataObject integer
+---@field public ActiveInstanceData integer
+---@field public ActiveInstanceDataObject integer
+---@field public SharedInstanceData integer
+---@field public SharedInstanceDataObject integer
+---@field public ContextData integer
+---@field public ExternalData integer
+---@field public GlobalParameterData integer
+---@field public SubtreeParameterData integer
+---@field public StateParameterData integer
+---@field public TransitionEvent integer
+---@field public StateEvent integer
+---@field public ExternalGlobalParameterData integer
+---@field public EStateTreeDataSourceType_MAX integer
+local EStateTreeDataSourceType = {}

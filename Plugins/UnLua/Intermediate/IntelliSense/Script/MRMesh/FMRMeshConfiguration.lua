@@ -1,0 +1,2 @@
+---@class FMRMeshConfiguration
+local FMRMeshConfiguration = {}

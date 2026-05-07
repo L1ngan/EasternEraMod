@@ -1,0 +1,11 @@
+---Represents what ETriggerEvent types can be triggered off of a give UInputTrigger.
+---Used to determine if a warning should be placed on a exec pin that would never get called
+---on a K2Node_EnhancedInputAction node
+---@class ETriggerEventsSupported
+---@field public None integer
+---@field public Instant integer
+---@field public Uninterruptible integer
+---@field public Ongoing integer
+---@field public All integer
+---@field public ETriggerEventsSupported_MAX integer
+local ETriggerEventsSupported = {}

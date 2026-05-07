@@ -1,0 +1,13 @@
+---Array of heterogeneous structs. Can be used as a property, supports serialization,
+---but does not have type customizations (no editing in the UI).
+---If you need UI editable array of heterogeneous structs, use TArray<FInstancedStruct> instead.
+---The array item values and the index to an item are stored in one contiguous block of memory.
+---The size required to specific layout of structs is larger than the sum of their sizes due to alignment,
+---and because the index to the structs is stored along with the value memory. Each item takes extra 16 bytes
+---for index. If your items are roughly same size, a TArray<TVariant<>> might be more performant.
+---Adding new items is more expensive than on regular TArray<>, layout of the structs needs to be updated,
+---and initialization is done via UScriptStruct. Adding and removing items should be done in chunks if possible.
+---The allocation of new items does not allocate extra space as most array implementations do.
+---Use Reserve() to reserve certain sized buffer in bytes if that is applicable to your use case.
+---@class FInstancedStructContainer
+local FInstancedStructContainer = {}

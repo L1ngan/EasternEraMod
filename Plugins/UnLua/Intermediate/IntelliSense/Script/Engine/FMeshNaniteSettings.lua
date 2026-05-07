@@ -1,0 +1,28 @@
+---Settings applied when building Nanite data.
+---@class FMeshNaniteSettings
+---@field public bEnabled boolean @If true, Nanite data will be generated.
+---@field public bPreserveArea boolean @Whether to try and maintain the same surface area at all distances. Useful for foliage that thins out otherwise.
+---@field public bExplicitTangents boolean @Whether to store explicit tangents instead of using the implicitly derived ones.
+---@field public bLerpUVs boolean @Whether to interpolate UVs when simplifying. Should be enabled whenever possible. For real UV coordinates this allows calculating the lowest error optimal UVs for new vertices when simplifying, assuming the UVs are used as normal texture coordinates and will interpolate across the face of the triangles. Disable if data stored in UVs isn't valid to interpolate, for example if indexes are stored in UVs. Lerping an index doesn't make sense and would break the shader trying to use it. Note: If disabled, error from UVs is no longer accounted for when Nanite selects the LOD to render because error due to arbitrary vertex attributes that aren't interpolatable can't be generally reasoned about.
+---@field public bSeparable boolean
+---@field public bVoxelNDF boolean
+---@field public bVoxelOpacity boolean
+---@field public PositionPrecision integer @Position Precision. Step size is 2^(-PositionPrecision) cm. MIN_int32 is auto.
+---@field public NormalPrecision integer @Normal Precision in bits. -1 is auto.
+---@field public TangentPrecision integer @Tangent Precision in bits. -1 is auto.
+---@field public BoneWeightPrecision integer @Blend Weight Precision in bits. -1 is auto. 0 is rigid.
+---@field public TargetMinimumResidencyInKB integer @How much of the resource should always be resident (In KB). Approximate due to paging. 0: Minimum size (single page). MAX_uint32: Entire mesh.
+---@field public KeepPercentTriangles number @Percentage of triangles to keep from source mesh. 1.0 = no reduction, 0.0 = no triangles.
+---@field public TrimRelativeError number @Reduce until at least this amount of error is reached relative to size of the mesh
+---@field public GenerateFallback ENaniteGenerateFallback @Whether fallback mesh should be generated.
+---@field public FallbackTarget ENaniteFallbackTarget @Which heuristic to use when generating the fallback mesh.
+---@field public FallbackPercentTriangles number @Percentage of triangles to keep from source mesh for fallback. 1.0 = no reduction, 0.0 = no triangles.
+---@field public FallbackRelativeError number @Reduce until at least this amount of error is reached relative to size of the mesh
+---@field public MaxEdgeLengthFactor number @Controls the maximum distance allowed between each vertex of the mesh on screen. Can be used to prevent oversimplification of meshes that are intended to be deformed (e.g. animation using World Position Offset, Spline Mesh Component, etc.). Should be left at default of 0 unless explicitly needed to fix oversimplification issues.
+---@field public NumRays integer @Number of rays
+---@field public VoxelLevel integer
+---@field public RayBackUp number
+---@field public DisplacementUVChannel integer @UV channel used to sample displacement maps
+---@field public DisplacementMaps TArray<FMeshDisplacementMap>
+---@field public NaniteAssemblyData FNaniteAssemblyData @Nanite Assembly data set up by the import
+local FMeshNaniteSettings = {}

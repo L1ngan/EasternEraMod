@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\lquickframe\\source\\lquickframe\\base\\lactor.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\lquickframe\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\lquickframe\\definitions.lquickframe.h",
+            "g:\\modproject\\plugins\\lquickframe\\source\\lquickframe\\base\\lactor.h",
+            "g:\\modproject\\plugins\\lquickframe\\source\\lquickframe\\base\\lbasevalue.h",
+            "g:\\modproject\\plugins\\lquickframe\\source\\lquickframe\\misc\\llog.h",
+            "g:\\modproject\\plugins\\lquickframe\\intermediate\\build\\win64\\unrealeditor\\inc\\lquickframe\\uht\\llog.generated.h",
+            "g:\\modproject\\plugins\\lquickframe\\intermediate\\build\\win64\\unrealeditor\\inc\\lquickframe\\uht\\lbasevalue.generated.h",
+            "g:\\modproject\\plugins\\lquickframe\\intermediate\\build\\win64\\unrealeditor\\inc\\lquickframe\\uht\\lactor.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

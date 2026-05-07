@@ -1,0 +1,2 @@
+---@class FAdvancedCopyParams
+local FAdvancedCopyParams = {}

@@ -1,0 +1,12 @@
+---Generates convex hull representation for the bones for simulation
+---@class FCreateNonOverlappingConvexHullsDataflowNode : FDataflowNode
+---@field private Collection FManagedArrayCollection
+---@field private CanExceedFraction number @Fraction (of geometry volume) by which a cluster's convex hull volume can exceed the actual geometry volume before instead using the hulls of the children.  0 means the convex volume cannot exceed the geometry volume; 1 means the convex volume is allowed to be 100% larger (2x) the geometry volume.
+---@field private SimplificationDistanceThreshold number @Computed convex hulls are simplified to keep points spaced at least this far apart (except where needed to keep the hull from collapsing to zero volume)
+---@field private OverlapRemovalMethod EConvexOverlapRemovalMethodEnum @Whether and in what cases to automatically cut away overlapping parts of the convex hulls, to avoid the simulation 'popping' to fix the overlaps
+---@field private OverlapRemovalShrinkPercent number @Overlap removal will be computed as if convex hulls were this percentage smaller (in range 0-100)
+---@field private CanRemoveFraction number @Fraction of the convex hulls for a cluster that we can remove before using the hulls of the children
+---@field private DebugDrawRenderSettings FDataflowNodeDebugDrawSettings
+---@field private bRandomizeColor boolean @Randomize color per convex hull
+---@field private ColorRandomSeed integer @Random seed
+local FCreateNonOverlappingConvexHullsDataflowNode = {}

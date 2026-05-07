@@ -1,0 +1,15 @@
+---Subset of EPixelFormat exposed to UTextureRenderTarget2D
+---@class ETextureRenderTargetFormat
+---@field public RTF_R8 integer
+---@field public RTF_RG8 integer
+---@field public RTF_RGBA8 integer
+---@field public RTF_RGBA8_SRGB integer
+---@field public RTF_R16f integer
+---@field public RTF_RG16f integer
+---@field public RTF_RGBA16f integer
+---@field public RTF_R32f integer
+---@field public RTF_RG32f integer
+---@field public RTF_RGBA32f integer
+---@field public RTF_RGB10A2 integer
+---@field public RTF_MAX integer
+local ETextureRenderTargetFormat = {}

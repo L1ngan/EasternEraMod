@@ -1,0 +1,20 @@
+---Test structure for Non-LWC version of built in types.
+---@class FStructSerializerNonLWCTypesTest
+---@field public Vector FVector3f
+---@field public Vector2D FVector2f
+---@field public Vector4 FVector4f
+---@field public Matrix FMatrix44f
+---@field public Plane FPlane4f
+---@field public Quat FQuat4f
+---@field public Rotator FRotator3f
+---@field public Transform FTransform3f
+---@field public Box FBox3f
+---@field public Box2D FBox2f
+---@field public BoxSphereBounds FBoxSphereBounds3f
+---@field public OrientedBox FOrientedBoxFloat
+---@field public Float number
+---@field public Double number
+---@field public VectorArray TArray<FVector3f>
+---@field public StrToVec TMap<string, FVector3f>
+---@field public VectorSet TSet<FVector3f>
+local FStructSerializerNonLWCTypesTest = {}

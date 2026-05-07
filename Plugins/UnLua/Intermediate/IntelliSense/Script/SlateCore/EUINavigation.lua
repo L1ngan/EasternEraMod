@@ -1,0 +1,12 @@
+---Navigation context for event
+---@class EUINavigation
+---@field public Left integer
+---@field public Right integer
+---@field public Up integer
+---@field public Down integer
+---@field public Next integer
+---@field public Previous integer
+---@field public Num integer
+---@field public Invalid integer
+---@field public EUINavigation_MAX integer
+local EUINavigation = {}

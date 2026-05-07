@@ -1,0 +1,27 @@
+---Implements a message that is sent in response to target device service discovery messages.
+---@class FTargetDeviceServicePong
+---@field public Connected boolean @Holds a flag indicating whether the device is currently connected.
+---@field public Authorized boolean @Holds a flag indicating whether the device is authorized.
+---@field public HostName string @Holds the name of the host computer that the device is attached to.
+---@field public HostUser string @Holds the name of the user under which the host computer is running.
+---@field public Make string @Holds the make of the device, i.e. Microsoft or Sony.
+---@field public Model string @Holds the model of the device.
+---@field public Name string @Holds the human readable name of the device, i.e "Bob's XBox'.
+---@field public DeviceUser string @Holds the name of the user that we log in to remote device as, i.e "root".
+---@field public DeviceUserPassword string @Holds the password of the user that we log in to remote device as, i.e "12345".
+---@field public Shared boolean @Holds a flag indicating whether this device is shared with other users on the network.
+---@field public SupportsMultiLaunch boolean @Holds a flag indicating whether the device supports running multiple application instances in parallel.
+---@field public SupportsPowerOff boolean @Holds a flag indicating whether the device can be powered off.
+---@field public SupportsPowerOn boolean @Holds a flag indicating whether the device can be powered on.
+---@field public SupportsReboot boolean @Holds a flag indicating whether the device can be rebooted.
+---@field public SupportsVariants boolean @Holds a flag indicating whether the device's target platform supports variants.
+---@field public Type string @Holds the device type.
+---@field public OSVersion string @Holds the device OS Version.
+---@field public Architecture string @Holds the device architecture.
+---@field public ConnectionType string @Holds the connection type.
+---@field public DefaultVariant string @Holds the variant name of the default device.
+---@field public Variants TArray<FTargetDeviceVariant> @List of the Flavors this service supports
+---@field public Aggregated boolean @Flag for the "All devices" proxy.
+---@field public AllDevicesName string @Holds the name of "All devices" proxy.
+---@field public AllDevicesDefaultVariant string @Holds the default variant name of "All devices" proxy.
+local FTargetDeviceServicePong = {}

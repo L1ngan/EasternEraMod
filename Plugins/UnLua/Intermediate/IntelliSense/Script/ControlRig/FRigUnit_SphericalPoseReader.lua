@@ -1,0 +1,24 @@
+---* Outputs a float value between 0-1 based off of the driver item's rotation in a specified region.
+---@class FRigUnit_SphericalPoseReader : FRigUnit_HighlevelBaseMutable
+---@field public OutputParam number @The normalized output parameter; ranges from 0 (when outside yellow region) to 1 (in the green region) and smoothly blends from 0-1 in the yellow region.
+---@field public DriverItem FRigElementKey @The bone that will drive the output parameter when rotated into the active regions of this pose reader.
+---@field public DriverAxis FVector @The axis of the driver transform that is compared against the falloff regions. Typically the axis that is pointing at the child; usually X by convention. Default is X-axis (1,0,0).
+---@field public RotationOffset FVector @Rotate the entire falloff region to align with the desired area of effect.
+---@field public ActiveRegionSize number @The size of the active region (green) that outputs the full value (1.0). Range is 0-1. Default is 0.1.
+---@field public ActiveRegionScaleFactors FRegionScaleFactors @The directional scaling parameters for the active region (green).
+---@field public FalloffSize number @The size of the falloff region (yellow) that defines the start of the output range. A value of 1 wraps the entire sphere with falloff. Range is 0-1. Default is 0.2.
+---@field public FalloffRegionScaleFactors FRegionScaleFactors @The directional scaling parameters for the falloff region (yellow).
+---@field public FlipWidthScaling boolean @Flip the positive / negative directions of the width scale factors.
+---@field public FlipHeightScaling boolean @Flip the positive / negative directions of the height scale factors.
+---@field public OptionalParentItem FRigElementKey @An optional parent to use as a stable frame of reference for the active regions (defaults to DriverItem's parent if unset).
+---@field public Debug FSphericalPoseReaderDebugSettings
+---@field public InnerRegion FSphericalRegion @private work data
+---@field public OuterRegion FSphericalRegion
+---@field public DriverNormal FVector
+---@field public Driver2D FVector
+---@field public DriverCache FCachedRigElement
+---@field public OptionalParentCache FCachedRigElement
+---@field public LocalDriverTransformInit FTransform
+---@field public CachedRotationOffset FVector
+---@field public bCachedInitTransforms boolean
+local FRigUnit_SphericalPoseReader = {}

@@ -1,0 +1,33 @@
+---Per Physics Asset parameters that determine how debug draw functions
+---should render that asset in an editor viewport.
+---These parameters are used across different editor modes to ensure the
+---debug draw is consistent. This makes it easier to create or debug
+---physics assets whilst switching between editor modes.
+---@class FPhysicsAssetRenderSettings
+---@field public CenterOfMassViewMode EPhysicsAssetEditorCenterOfMassViewMode @Physics Asset Editor Viewport Options
+---@field public CollisionViewMode EPhysicsAssetEditorCollisionViewMode
+---@field public ConstraintViewMode EPhysicsAssetEditorConstraintViewMode
+---@field public ConstraintViewportManipulationFlags EConstraintTransformComponentFlags @Flags that determine which parts of the constraints transforms (parent frame, child frame, position and rotation) are currently begin manipulated in the viewport.
+---@field public ConstraintTransformComponentDisplayRelativeToDefaultFlags EConstraintTransformComponentFlags @Flags that determine which parts of the constraints transforms (parent/child position/rotation) should be displayed as an offset from the default (snapped) transforms.
+---@field public ConstraintDrawSize number
+---@field public PhysicsBlend number
+---@field public bHideKinematicBodies boolean
+---@field public bHideSimulatedBodies boolean
+---@field public bHideBodyMass boolean
+---@field public bRenderOnlySelectedConstraints boolean
+---@field public bShowConstraintsAsPoints boolean
+---@field public bHighlightOverlapingBodies boolean
+---@field public bDrawViolatedLimits boolean
+---@field public bHideCenterOfMassForKinematicBodies boolean
+---@field public BoneUnselectedColor FColor @Draw colors
+---@field public NoCollisionColor FColor
+---@field public COMRenderColor FColor
+---@field public COMRenderSize number
+---@field public COMRenderLineThickness number
+---@field public COMRenderMassTextOffsetScreenspace number
+---@field public InfluenceLineLength number
+---@field public BoneUnselectedMaterial UMaterialInterface @Materials
+---@field public BoneNoCollisionMaterial UMaterialInterface
+---@field public HiddenBodies TArray<integer>
+---@field public HiddenConstraints TArray<integer>
+local FPhysicsAssetRenderSettings = {}

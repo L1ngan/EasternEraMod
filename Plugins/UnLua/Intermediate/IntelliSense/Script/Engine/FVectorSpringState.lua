@@ -1,0 +1,2 @@
+---@class FVectorSpringState
+local FVectorSpringState = {}

@@ -1,0 +1,2 @@
+---@class FMovieSceneEvaluationFieldEntityTree
+local FMovieSceneEvaluationFieldEntityTree = {}

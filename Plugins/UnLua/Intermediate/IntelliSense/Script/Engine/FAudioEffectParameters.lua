@@ -1,0 +1,2 @@
+---@class FAudioEffectParameters
+local FAudioEffectParameters = {}

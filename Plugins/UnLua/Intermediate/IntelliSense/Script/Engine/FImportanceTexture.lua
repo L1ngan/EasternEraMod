@@ -1,0 +1,11 @@
+---Texture processed for importance sampling
+---Holds marginal PDF of the rows, as well as the PDF of each row
+---@class FImportanceTexture
+---@field public Size FIntPoint @active texture dimensions, capped to 1024 x 1024
+---@field public NumMips integer @active number of MIP levels
+---@field public MarginalCDF TArray<number> @Unnormalized cumulative density of the image by rows (Size.Y+1) First entry is zero, final entry is the CDF normalization factor
+---@field public ConditionalCDF TArray<number> @Unnormalized cumulative probability of each pixel in a row (Size.Y row CDFs of Size.X+1) First entry of each row is zero, final entry in each row is the CDF normalization factor for that row
+---@field public LinearTextureData TArray<FLinearColor> @packed copy of MIP level data for filtered sampling (capped to 1024x1024) local copy seems better than allocating and copying the same data temporarily for each sample
+---@field public Texture TWeakObjectPtr<UTexture2D> @Original texture object for Break function
+---@field public Weighting integer @Original importance weight for Break function
+local FImportanceTexture = {}

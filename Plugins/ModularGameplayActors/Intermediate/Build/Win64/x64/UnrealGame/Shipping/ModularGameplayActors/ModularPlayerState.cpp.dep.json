@@ -1,0 +1,29 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\modulargameplayactors\\source\\modulargameplayactors\\private\\modularplayerstate.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\easternera\\shipping\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\modulargameplayactors\\intermediate\\build\\win64\\x64\\unrealgame\\shipping\\modulargameplayactors\\definitions.modulargameplayactors.h",
+            "g:\\modproject\\plugins\\modulargameplayactors\\source\\modulargameplayactors\\public\\modularplayerstate.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\playerstate.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\playerstate.generated.h",
+            "g:\\modproject\\plugins\\modulargameplayactors\\intermediate\\build\\win64\\unrealgame\\inc\\modulargameplayactors\\uht\\modularplayerstate.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\runtime\\modulargameplay\\source\\modulargameplay\\public\\components\\gameframeworkcomponentmanager.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\runtime\\modulargameplay\\source\\modulargameplay\\public\\components\\gameframeworkcomponentdelegates.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\gameplaytags\\classes\\gameplaytagcontainer.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\core\\public\\misc\\comparisonutility.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\gameplaytags\\uht\\gameplaytagcontainer.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\runtime\\modulargameplay\\intermediate\\build\\win64\\unrealgame\\inc\\modulargameplay\\uht\\gameframeworkcomponentdelegates.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\runtime\\modulargameplay\\intermediate\\build\\win64\\unrealgame\\inc\\modulargameplay\\uht\\gameframeworkcomponentmanager.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\runtime\\modulargameplay\\source\\modulargameplay\\public\\components\\playerstatecomponent.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\runtime\\modulargameplay\\source\\modulargameplay\\public\\components\\gameframeworkcomponent.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\runtime\\modulargameplay\\intermediate\\build\\win64\\unrealgame\\inc\\modulargameplay\\uht\\gameframeworkcomponent.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\runtime\\modulargameplay\\intermediate\\build\\win64\\unrealgame\\inc\\modulargameplay\\uht\\playerstatecomponent.generated.h",
+            "g:\\modproject\\plugins\\modulargameplayactors\\intermediate\\build\\win64\\unrealgame\\inc\\modulargameplayactors\\uht\\modularplayerstate.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

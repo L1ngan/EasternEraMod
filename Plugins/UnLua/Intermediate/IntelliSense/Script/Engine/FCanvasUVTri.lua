@@ -1,0 +1,12 @@
+---Simple 2d triangle with UVs
+---@class FCanvasUVTri
+---@field public V0_Pos FVector2D @Position of first vertex
+---@field public V0_UV FVector2D @UV of first vertex
+---@field public V0_Color FLinearColor @Color of first vertex
+---@field public V1_Pos FVector2D @Position of second vertex
+---@field public V1_UV FVector2D @UV of second vertex
+---@field public V1_Color FLinearColor @Color of second vertex
+---@field public V2_Pos FVector2D @Position of third vertex
+---@field public V2_UV FVector2D @UV of third vertex
+---@field public V2_Color FLinearColor @Color of third vertex
+local FCanvasUVTri = {}

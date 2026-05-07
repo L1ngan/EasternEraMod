@@ -1,0 +1,20 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\unlua\\source\\unluaeditor\\private\\unluaaboutscreen.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\unlua\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\unluaeditor\\definitions.unluaeditor.h",
+            "g:\\modproject\\plugins\\unlua\\source\\unluaeditor\\private\\unluaaboutscreen.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\core\\public\\misc\\engineversioncomparison.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\editor\\editorstyle\\public\\editorstyleset.h",
+            "g:\\modproject\\plugins\\unlua\\source\\unluaeditor\\private\\unluaeditorfunctionlibrary.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\developer\\directorywatcher\\public\\idirectorywatcher.h",
+            "g:\\modproject\\plugins\\unlua\\intermediate\\build\\win64\\unrealeditor\\inc\\unluaeditor\\uht\\unluaeditorfunctionlibrary.generated.h",
+            "g:\\modproject\\plugins\\unlua\\source\\unluaeditor\\private\\unluaeditorstyle.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

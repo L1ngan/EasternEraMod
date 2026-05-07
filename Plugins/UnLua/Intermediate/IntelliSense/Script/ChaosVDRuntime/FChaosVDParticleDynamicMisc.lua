@@ -1,0 +1,16 @@
+---Simplified UStruct version of FParticleDynamicMisc.
+---Used to be able to show the values in the editor and allow changes via the Property Editor.
+---@class FChaosVDParticleDynamicMisc : FChaosVDWrapperDataBase
+---@field public MLinearEtherDrag number
+---@field public MAngularEtherDrag number
+---@field public MMaxLinearSpeedSq number
+---@field public MMaxAngularSpeedSq number
+---@field public MInitialOverlapDepenetrationVelocity number
+---@field public MSleepThresholdMultiplier number
+---@field public MCollisionGroup integer
+---@field public MObjectState EChaosVDObjectStateType
+---@field public MSleepType EChaosVDSleepType
+---@field public MCollisionConstraintFlag integer
+---@field public MControlFlags FChaosVDFRigidParticleControlFlags
+---@field public bDisabled boolean
+local FChaosVDParticleDynamicMisc = {}

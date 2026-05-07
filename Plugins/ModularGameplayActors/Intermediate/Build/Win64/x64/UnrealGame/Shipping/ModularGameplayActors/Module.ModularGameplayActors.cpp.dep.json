@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\modulargameplayactors\\intermediate\\build\\win64\\x64\\unrealgame\\shipping\\modulargameplayactors\\module.modulargameplayactors.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\easternera\\shipping\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\modulargameplayactors\\intermediate\\build\\win64\\x64\\unrealgame\\shipping\\modulargameplayactors\\definitions.modulargameplayactors.h",
+            "g:\\modproject\\plugins\\modulargameplayactors\\intermediate\\build\\win64\\unrealgame\\inc\\modulargameplayactors\\uht\\modulargameplayactors.init.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

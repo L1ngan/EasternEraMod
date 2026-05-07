@@ -1,0 +1,12 @@
+---Transfer float properties from a sample collection to a target collection.
+---@class FGeometryCollectionTransferVertexScalarAttributeNode : FDataflowNode
+---@field public Collection FManagedArrayCollection @Target collection to transfer vertex float attribute to.
+---@field public FromCollection FManagedArrayCollection @Sample collection to transfer vertex float attribute from.
+---@field public AttributeKey FCollectionAttributeKey @The name of the vertex attribute to generate indices from.
+---@field public BoundingVolumeType EDataflowTransferNodeBoundingVolume @Bounding volume type for source assets[default: Triangle]
+---@field public SampleScale EDataflowTransferNodeSampleScale @Bounding volume hierarchy cell size for neighboring vertices to transfer into[default: Asset]
+---@field public Falloff EDataflowTransferNodeFalloff @Falloff of sample value based on distance from sample triangle[default: Squared]
+---@field public FalloffThreshold number @Threshold based on distance from sample triangle.Values sampled past the threshold will falloff.[Defaults to 1 percent of triangle size(0.01)]
+---@field public EdgeMultiplier number @Edge multiplier for the Bounding Volume Hierarchy(BVH) target's particle search radius.
+---@field public BoundMultiplier number @Max bound multiplier for the Bounding Volume Hierarchy(BVH) target's particle search radius.
+local FGeometryCollectionTransferVertexScalarAttributeNode = {}

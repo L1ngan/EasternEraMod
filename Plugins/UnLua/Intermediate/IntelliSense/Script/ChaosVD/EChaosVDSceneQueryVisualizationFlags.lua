@@ -1,0 +1,13 @@
+---Set of visualization flags options for Scene Queries
+---@class EChaosVDSceneQueryVisualizationFlags
+---@field public None integer
+---@field public EnableDraw integer
+---@field public DrawLineTraceQueries integer
+---@field public DrawSweepQueries integer
+---@field public DrawOverlapQueries integer
+---@field public DrawHits integer
+---@field public OnlyDrawSelectedQuery integer
+---@field public HideEmptyQueries integer
+---@field public HideSubQueries integer
+---@field public EChaosVDSceneQueryVisualizationFlags_MAX integer
+local EChaosVDSceneQueryVisualizationFlags = {}

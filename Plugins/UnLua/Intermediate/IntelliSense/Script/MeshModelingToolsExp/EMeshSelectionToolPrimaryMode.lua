@@ -1,0 +1,13 @@
+---@class EMeshSelectionToolPrimaryMode
+---@field public Brush integer
+---@field public VolumetricBrush integer
+---@field public AngleFiltered integer
+---@field public Visible integer
+---@field public AllConnected integer
+---@field public AllInGroup integer
+---@field public ByMaterial integer
+---@field public ByMaterialAll integer
+---@field public ByUVIsland integer
+---@field public AllWithinAngle integer
+---@field public EMeshSelectionToolPrimaryMode_MAX integer
+local EMeshSelectionToolPrimaryMode = {}

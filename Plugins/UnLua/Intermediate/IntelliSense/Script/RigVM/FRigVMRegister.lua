@@ -1,0 +1,25 @@
+---The register represents an address with the VM's memory. Within a register
+---we can store arbitrary data, so it provides a series of properties to
+---describe the memory location.
+---Registers also support the notion of slices. A slice is a complete copy of
+---the memory - so for example if your register stores 4 Vectors, then a slice
+---would contain 48 bytes (4 * 3 * 4). The register can however store multiple
+---slices / copies of that if needed. Slices can be used to provide
+---per-invocation memory to functions within the same register.
+---An integrator for example that needs to store a simulated position
+---might want access to a separate memory per loop iteration.
+---@class FRigVMRegister
+---@field public Type ERigVMRegisterType @The type of register (plain, name, string, etc.)
+---@field public ByteIndex integer @The index of the first work byte
+---@field public ElementSize integer @The size of each store element (for example 4 for a float)
+---@field public ElementCount integer @The number of elements in this register (for example the number of elements in an array)
+---@field public SliceCount integer @The number of slices (complete copies) (for example the number of iterations on a fixed loop) Potentially redundant state - can be removed.
+---@field public AlignmentBytes integer @The number of leading bytes for alignment. Bytes that had to be introduced before the register to align the registers memory as per platform specification.
+---@field public TrailingBytes integer @The number of trailing bytes. These originate after shrinking a register. Potentially unused state - can be removed.
+---@field public Name string @The name of the register (can be None)
+---@field public ScriptStructIndex integer @For struct registers this is the index of the struct used - otherwise INDEX_NONE
+---@field public bIsArray boolean @If true defines this register as an array
+---@field public bIsDynamic boolean @If true defines this register to use dynamic storage. Is this an array or singleton value with multiple slices which potentially requires changing count at runtime.
+---@field public BaseCPPType string @Defines the CPP type used for the register This is only used for debugging purposes in editor.
+---@field public BaseCPPTypeObject UObject @The resolved UScriptStruct / UObject (in the future) used for debugging.
+local FRigVMRegister = {}

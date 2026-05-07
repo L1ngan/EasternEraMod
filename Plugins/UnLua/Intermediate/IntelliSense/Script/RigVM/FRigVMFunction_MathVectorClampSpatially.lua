@@ -1,0 +1,15 @@
+---Clamps a position using a plane collision, cylindric collision or spherical collision.
+---The collision happens both towards an inner envelope (minimum) and towards an outer envelope (maximum).
+---You can disable the inner / outer envelope / collision by setting the minimum / maximum to 0.0.
+---@class FRigVMFunction_MathVectorClampSpatially : FRigVMFunction_MathVectorBase
+---@field public Value FVector
+---@field public Axis integer
+---@field public Type integer
+---@field public Minimum number @The minimum allowed distance at which a collision occurs. Note: For capsule this represents the radius. Disable by setting to 0.0.
+---@field public Maximum number @This maximum allowed distance. A collision will occur towards the center at this wall. Note: For capsule this represents the length. Disable by setting to 0.0.
+---@field public Space FTransform @The space this spatial clamp happens within. The input position will be projected into this space.
+---@field public bDrawDebug boolean
+---@field public DebugColor FLinearColor
+---@field public DebugThickness number
+---@field public Result FVector
+local FRigVMFunction_MathVectorClampSpatially = {}

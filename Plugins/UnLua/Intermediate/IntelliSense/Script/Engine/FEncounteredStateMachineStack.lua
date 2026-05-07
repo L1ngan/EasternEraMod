@@ -1,0 +1,2 @@
+---@class FEncounteredStateMachineStack
+local FEncounteredStateMachineStack = {}

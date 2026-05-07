@@ -1,0 +1,13 @@
+---@class FAnimNode_SkeletalControlBase : FAnimNode_Base
+---@field public ComponentPose FComponentSpacePoseLink @Input link
+---@field public LODThreshold integer @* Max LOD that this node is allowed to run * For example if you have LODThreshold to be 2, it will run until LOD 2 (based on 0 index) * when the component LOD becomes 3, it will stop update/evaluate * currently transition would be issue and that has to be re-visited
+---@field public ActualAlpha number
+---@field public AlphaInputType EAnimAlphaInputType
+---@field public bAlphaBoolEnabled boolean
+---@field public Alpha number @Current strength of the skeletal control
+---@field public AlphaScaleBias FInputScaleBias
+---@field public AlphaBoolBlend FInputAlphaBoolBlend
+---@field public AlphaCurveName string
+---@field public AlphaScaleBiasClamp FInputScaleBiasClamp
+---@field private ValidationVisualWarningMessage string
+local FAnimNode_SkeletalControlBase = {}

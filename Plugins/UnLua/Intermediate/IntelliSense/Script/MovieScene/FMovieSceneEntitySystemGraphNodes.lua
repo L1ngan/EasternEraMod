@@ -1,0 +1,2 @@
+---@class FMovieSceneEntitySystemGraphNodes
+local FMovieSceneEntitySystemGraphNodes = {}

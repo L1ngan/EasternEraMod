@@ -1,0 +1,25 @@
+---Enumeration for the different update phases.
+---This is used as context information when tracing debug events.
+---@class EStateTreeUpdatePhase
+---@field public Unset integer
+---@field public StartTree integer
+---@field public StopTree integer
+---@field public StartGlobalTasks integer
+---@field public StartGlobalTasksForSelection integer
+---@field public StopGlobalTasks integer
+---@field public StopGlobalTasksForSelection integer
+---@field public TickStateTree integer
+---@field public ApplyTransitions integer
+---@field public TickTransitions integer
+---@field public TriggerTransitions integer
+---@field public TickingGlobalTasks integer
+---@field public TickingTasks integer
+---@field public TransitionConditions integer
+---@field public StateSelection integer
+---@field public TrySelectBehavior integer
+---@field public EnterConditions integer
+---@field public EnterStates integer
+---@field public ExitStates integer
+---@field public StateCompleted integer
+---@field public EStateTreeUpdatePhase_MAX integer
+local EStateTreeUpdatePhase = {}

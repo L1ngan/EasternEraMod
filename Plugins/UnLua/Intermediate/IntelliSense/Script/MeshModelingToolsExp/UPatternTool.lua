@@ -1,0 +1,23 @@
+---UPatternTool takes input meshes and generates 3D Patterns of those meshes, by
+---placing repeated copies along geometric paths like lines, grids, circles, etc.
+---The output can be a single Actor per pattern Element, or combined into single
+---Actors in various ways depending on the input mesh type.
+---@class UPatternTool : UMultiSelectionMeshEditingTool
+---@field public Settings UPatternToolSettings
+---@field public BoundingBoxSettings UPatternTool_BoundingBoxSettings
+---@field public LinearSettings UPatternTool_LinearSettings
+---@field public GridSettings UPatternTool_GridSettings
+---@field public RadialSettings UPatternTool_RadialSettings
+---@field public RotationSettings UPatternTool_RotationSettings
+---@field public TranslationSettings UPatternTool_TranslationSettings
+---@field public ScaleSettings UPatternTool_ScaleSettings
+---@field public OutputSettings UPatternTool_OutputSettings
+---@field protected PatternGizmoProxy UComponentBoundTransformProxy @Pattern Gizmo:
+---@field protected PatternGizmo UInteractiveGizmo
+---@field protected PatternGizmoComponent UPrimitiveComponent
+---@field protected DragAlignmentMechanic UDragAlignmentMechanic
+---@field protected PlaneMechanic UConstructionPlaneMechanic
+---@field protected AllComponents TSet<UPrimitiveComponent>
+---@field protected PreviewGeometry UPreviewGeometry
+local UPatternTool = {}
+

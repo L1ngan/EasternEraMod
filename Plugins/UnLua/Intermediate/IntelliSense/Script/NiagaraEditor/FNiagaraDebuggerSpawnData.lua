@@ -1,0 +1,12 @@
+---@class FNiagaraDebuggerSpawnData
+---@field public SystemsToSpawn TArray<TSoftObjectPtr<UNiagaraSystem>> @List of all the systems we want to spawn.
+---@field public bSpawnAllAtOnce boolean
+---@field public TimeBetweenSpawns number @The time delay we should use between spawning if we have a list to spawn.
+---@field public bKillBeforeSpawn boolean @Should we kill systems we spawn before we spawn another.
+---@field public bWorldLocation boolean @When true the location is a world location, when false it's relative to the player and is in camera space.
+---@field public Location FVector @The location we should use to spawn the system at, either world or local to the player depending on WorldLocation flag.
+---@field public bAttachToPlayer boolean @Should we attach to the player controlled by the camera or not
+---@field public bAutoActivate boolean @Should we auto activate or not
+---@field public bAutoDestroy boolean @Should we auto destroy when complete or not
+---@field public bDoPreCullCheck boolean @Should we perform the pre cull check or not
+local FNiagaraDebuggerSpawnData = {}

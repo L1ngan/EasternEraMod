@@ -1,0 +1,33 @@
+---Properties from the base material that can be overridden in material instances.
+---@class FMaterialInstanceBasePropertyOverrides
+---@field public bOverride_OpacityMaskClipValue boolean @Enables override of the opacity mask clip value.
+---@field public bOverride_BlendMode boolean @Enables override of the blend mode.
+---@field public bOverride_ShadingModel boolean @Enables override of the shading model.
+---@field public bOverride_DitheredLODTransition boolean @Enables override of the dithered LOD transition property.
+---@field public bOverride_CastDynamicShadowAsMasked boolean @Enables override of whether to shadow using masked opacity on translucent materials.
+---@field public bOverride_TwoSided boolean @Enables override of the two sided property.
+---@field public bOverride_bIsThinSurface boolean @Enables override of the IsThinSurface property.
+---@field public bOverride_OutputTranslucentVelocity boolean @Enables override of the output velocity property.
+---@field public bOverride_bHasPixelAnimation boolean @Enables override of the has pixel animation property.
+---@field public bOverride_bEnableTessellation boolean @Enables override of the enable tessellation property.
+---@field public bOverride_DisplacementScaling boolean @Enables override of the displacement magnitude and center property.
+---@field public bOverride_bEnableDisplacementFade boolean @Enables override of the eanble displacement fade property.
+---@field public bOverride_DisplacementFadeRange boolean @Enables override of the displacement fading range.
+---@field public bOverride_MaxWorldPositionOffsetDisplacement boolean @Enables override of the max world position offset property.
+---@field public bOverride_CompatibleWithLumenCardSharing boolean @Enables override of the bCompatibleWithLumenCardSharing property.
+---@field public TwoSided boolean @Indicates that the material should be rendered without backface culling and the normal should be flipped for backfaces.
+---@field public bIsThinSurface boolean @Indicates that the material should be rendered as.
+---@field public DitheredLODTransition boolean @Whether the material should support a dithered LOD transition when used with the foliage system.
+---@field public bCastDynamicShadowAsMasked boolean @Whether the material should cast shadows as masked even though it has a translucent blend mode.
+---@field public bOutputTranslucentVelocity boolean @Whether the material should output velocity even though it has a translucent blend mode.
+---@field public bHasPixelAnimation boolean @Whether the opaque material has any pixel animations happening, that isn't included in the geometric velocities. This allows to disable renderer's heuristics that assumes animation is fully described with motion vector, such as TSR's anti-flickering heuristic.
+---@field public bEnableTessellation boolean @Whether or not tessellation is enabled. Required for displacement to work.
+---@field public bEnableDisplacementFade boolean @Whether or not displacement fade is enabled.
+---@field public bCompatibleWithLumenCardSharing boolean @When true, allows to share Lumen Cards between different instances even when material uses world position or per instance data, which may change material look per instance. All materials on a component needs this flag set for sharing to work.
+---@field public BlendMode integer @The blend mode
+---@field public ShadingModel integer @The shading model
+---@field public OpacityMaskClipValue number @If BlendMode is BLEND_Masked, the surface is not rendered where OpacityMask < OpacityMaskClipValue.
+---@field public DisplacementScaling FDisplacementScaling
+---@field public DisplacementFadeRange FDisplacementFadeRange
+---@field public MaxWorldPositionOffsetDisplacement number @The maximum World Position Offset distance. Zero means no maximum.
+local FMaterialInstanceBasePropertyOverrides = {}

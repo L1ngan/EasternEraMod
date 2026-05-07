@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\private\\auroradevs_rhs.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\auroradevs_rhs\\definitions.auroradevs_rhs.h",
+            "g:\\modproject\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\auroradevs_rhs.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

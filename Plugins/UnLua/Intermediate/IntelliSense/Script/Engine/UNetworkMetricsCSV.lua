@@ -1,0 +1,24 @@
+---A metrics listener that reports an array of metrics to CSV.
+---The function SetCategory() is expected to be called before the listener is registered with
+---FNetworkMetricsDatabase::Register(). This function will associate the instance of UNetworkMetricsCSV
+---with a category of values in CSV.
+---To use UNetworkMetricsCSV in a configuration file, a sub-class of UNetworkMetricsCSV must be
+---created that calls SetCategory() from the constructor to provide the CSV category to use.
+---UCLASS()
+---class UNetworkMetricsCSV_ExampleCategory : public UNetworkMetricsCSV
+---{
+---            GENERATED_BODY()
+---public:
+---            virtual ~UNetworkMetricsCSV_ExampleCategory() = default;
+---            UNetworkMetricsCSV_ExampleCategory() : UNetworkMetricsCSV()
+---            {
+---                    SetCategory("ExampleCategory");
+---            }
+---};
+---This sub-class can then be used in the configuration file when registering a listener:
+---    [/Script/Engine.NetworkMetricsConfig]
+---    +Listeners=(MetricName=ExampleMetric, ClassName=/Script/Engine.NetworkMetricsCSV_ExampleCategory)
+---If the base UNetworkMetricsCSV class is used in the configuration file, CSV stats will be recorded to the default 'Networking' category.
+---@class UNetworkMetricsCSV : UNetworkMetricsBaseListener
+local UNetworkMetricsCSV = {}
+

@@ -1,0 +1,11 @@
+---@class FMovieSceneNiagaraCacheParams : FMovieSceneBaseCacheParams
+---@field public CacheParameters FNiagaraSimCacheCreateParameters
+---@field public SimCache UNiagaraSimCache @The sim cache this section plays and records into
+---@field public bLockCacheToReadOnly boolean @If true then the section properties might still be changed (so the section itself is not locked), but the cache cannot be rerecorded to prevent accidentally overriding the data within
+---@field public bOverrideQualityLevel boolean
+---@field public RecordQualityLevel EPerQualityLevels @If set, then the engine scalability setting will be overriden with this value when recording a new cache for this track
+---@field public CacheReplayPlayMode ENiagaraSimCacheSectionPlayMode @What should the effect do when the track has no cache data to display
+---@field public SectionStretchMode ENiagaraSimCacheSectionStretchMode @What should the effect do when the cache section is stretched?
+---@field public bOverrideRecordRate boolean @True if the cache should be recorded at a rate that is slower than the sequencer play rate.
+---@field public CacheRecordRateFPS number @The rate at which the cache should be recorded. Will be ignored if the sequence plays at a lower rate than this number. This option is useful if you need to play the sequence at a very high fps for simulation stability (e.g. 240fps), but then later want to play back the cache at a normal rate (e.g. 24fps). Please note that using this option might result in rendering artifacts for things like motion blur, velocity interpolation or inconsistent grid data in fluids, due to the dropped cache frames.
+local FMovieSceneNiagaraCacheParams = {}

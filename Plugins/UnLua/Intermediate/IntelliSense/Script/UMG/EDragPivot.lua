@@ -1,0 +1,15 @@
+---Controls where the drag widget visual will appear when dragged relative to the pointer performing
+---the drag operation.
+---@class EDragPivot
+---@field public MouseDown integer
+---@field public TopLeft integer
+---@field public TopCenter integer
+---@field public TopRight integer
+---@field public CenterLeft integer
+---@field public CenterCenter integer
+---@field public CenterRight integer
+---@field public BottomLeft integer
+---@field public BottomCenter integer
+---@field public BottomRight integer
+---@field public EDragPivot_MAX integer
+local EDragPivot = {}

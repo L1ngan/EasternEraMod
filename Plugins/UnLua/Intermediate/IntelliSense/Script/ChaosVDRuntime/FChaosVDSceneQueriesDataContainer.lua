@@ -1,0 +1,2 @@
+---@class FChaosVDSceneQueriesDataContainer
+local FChaosVDSceneQueriesDataContainer = {}

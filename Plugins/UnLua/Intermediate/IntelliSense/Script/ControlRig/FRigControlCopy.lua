@@ -1,0 +1,11 @@
+---The Data Stored For Each Control in A Pose.
+---@class FRigControlCopy
+---@field public Name string
+---@field public ControlType ERigControlType
+---@field public ParentKey FRigElementKey
+---@field public Value FRigControlValue
+---@field public OffsetTransform FTransform
+---@field public ParentTransform FTransform
+---@field public LocalTransform FTransform
+---@field public GlobalTransform FTransform
+local FRigControlCopy = {}

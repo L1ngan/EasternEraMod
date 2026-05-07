@@ -1,0 +1,99 @@
+---@class UFoliageType : UObject
+---@field public UpdateGuid FGuid @A GUID that is updated every time the foliage type is modified,          so foliage placed in the level can detect the FoliageType has changed.
+---@field public Density number @Foliage instances will be placed at this density, specified in instances per 1000x1000 unit area
+---@field public DensityAdjustmentFactor number @The factor by which to adjust the density of instances. Values >1 will increase density while values <1 will decrease it.
+---@field public Radius number @The minimum distance between foliage instances
+---@field public bSingleInstanceModeOverrideRadius boolean @Option to override radius used to detect collision with other instances when painting in single instance mode
+---@field public SingleInstanceModeRadius number @The radius used in single instance mode to detect collision with other instances
+---@field public Scaling EFoliageScaling @Specifies foliage instance scaling behavior when painting.
+---@field public ScaleX FFloatInterval @Specifies the range of scale, from minimum to maximum, to apply to a foliage instance's X Scale property
+---@field public ScaleY FFloatInterval @Specifies the range of scale, from minimum to maximum, to apply to a foliage instance's Y Scale property
+---@field public ScaleZ FFloatInterval @Specifies the range of scale, from minimum to maximum, to apply to a foliage instance's Z Scale property
+---@field public VertexColorMaskByChannel FFoliageVertexColorChannelMask
+---@field public ZOffset FFloatInterval @Specifies a range from minimum to maximum of the offset to apply to a foliage instance's Z location
+---@field public AlignToNormal boolean @Whether foliage instances should have their angle adjusted away from vertical to match the normal of the surface they're painted on If AlignToNormal is enabled and RandomYaw is disabled, the instance will be rotated so that the +X axis points down-slope
+---@field public AverageNormal boolean @Will average normal based on Foliage Type base radius (this as a cost as it will do extra line traces)
+---@field public AverageNormalSingleComponent boolean @Whether to discard normals originating from other hit components or not when averaging normals
+---@field public AlignMaxAngle number @The maximum angle in degrees that foliage instances will be adjusted away from the vertical
+---@field public RandomYaw boolean @If selected, foliage instances will have a random yaw rotation around their vertical axis applied
+---@field public RandomPitchAngle number @A random pitch adjustment can be applied to each instance, up to the specified angle in degrees, from the original vertical
+---@field public GroundSlopeAngle FFloatInterval @Foliage instances will only be placed on surfaces sloping in the specified angle range from the horizontal
+---@field public Height FFloatInterval @The valid altitude range where foliage instances will be placed, specified using minimum and maximum world coordinate Z values
+---@field public LandscapeLayers TArray<string> @If layer names are specified, painting on landscape will limit the foliage to areas of landscape with the specified layers painted
+---@field public MinimumLayerWeight number @Specifies the minimum value above which the landscape layer weight value must be, in order for foliage instances to be placed in a specific area
+---@field public ExclusionLandscapeLayers TArray<string> @If layer names are specified, painting on landscape will exclude the foliage to areas of landscape without the specified layers painted
+---@field public MinimumExclusionLayerWeight number @Specifies the minimum value above which the landscape exclusion layer weight value must be, in order for foliage instances to be excluded in a specific area
+---@field public CollisionWithWorld boolean @If checked, an overlap test with existing world geometry is performed before each instance is placed
+---@field public CollisionScale FVector @The foliage instance's collision bounding box will be scaled by the specified amount before performing the overlap check
+---@field public AverageNormalSampleCount integer @Line trace count to use around hit location when averaging normal
+---@field public MeshBounds FBoxSphereBounds
+---@field public LowBoundOriginRadius FVector @X, Y is origin position and Z is radius...
+---@field public Mobility integer @Mobility property to apply to foliage components
+---@field public CullDistance FInt32Interval @The distance where instances will begin to fade out if using a PerInstanceFadeAmount material node. 0 disables. When the entire cluster is beyond this distance, the cluster is completely culled and not rendered at all.
+---@field public CastShadow boolean @Controls whether the foliage should cast a shadow or not.
+---@field public bAffectDynamicIndirectLighting boolean @Controls whether the foliage should inject light into the Light Propagation Volume.  This flag is only used if CastShadow is true.
+---@field public bAffectDistanceFieldLighting boolean @Controls whether the primitive should affect dynamic distance field lighting methods.  This flag is only used if CastShadow is true.
+---@field public bCastDynamicShadow boolean @Controls whether the foliage should cast shadows in the case of non precomputed shadowing.  This flag is only used if CastShadow is true.
+---@field public bCastStaticShadow boolean @Whether the foliage should cast a static shadow from shadow casting lights.  This flag is only used if CastShadow is true.
+---@field public bCastContactShadow boolean @Whether the object should cast contact shadows. This flag is only used if CastShadow is true.
+---@field public bCastShadowAsTwoSided boolean @Whether this foliage should cast dynamic shadows as if it were a two sided material.
+---@field public bReceivesDecals boolean @Whether the foliage receives decals.
+---@field public bOverrideLightMapRes boolean @Whether to override the lightmap resolution defined in the static mesh.
+---@field public ShadowCacheInvalidationBehavior EShadowCacheInvalidationBehavior @Control shadow invalidation behavior, in particular with respect to Virtual Shadow Maps and material effects like World Position Offset.
+---@field public OverriddenLightMapRes integer @Overrides the lightmap resolution defined in the static mesh
+---@field public LightmapType ELightmapType @Controls the type of lightmap used for this component.
+---@field public bUseAsOccluder boolean @If enabled, foliage will render a pre-pass which allows it to occlude other primitives, and also allows it to correctly receive DBuffer decals. Enabling this setting may have a negative performance impact.
+---@field public bVisibleInRayTracing boolean
+---@field public bEvaluateWorldPositionOffset boolean
+---@field public WorldPositionOffsetDisableDistance integer
+---@field public BodyInstance FBodyInstance @Custom collision for foliage
+---@field public CustomNavigableGeometry integer @Force navmesh
+---@field public LightingChannels FLightingChannels @Lighting channels that placed foliage will be assigned. Lights with matching channels will affect the foliage. These channels only apply to opaque materials, direct lighting, and dynamic lighting and shadowing.
+---@field public bRenderCustomDepth boolean @If true, the foliage will be rendered in the CustomDepth pass (usually used for outlines)
+---@field public CustomDepthStencilWriteMask ERendererStencilMask @Mask used for stencil buffer writes.
+---@field public CustomDepthStencilValue integer @Optionally write this 0-255 value to the stencil buffer in CustomDepth pass (Requires project setting or r.CustomDepth == 3)
+---@field public TranslucencySortPriority integer @Translucent objects with a lower sort priority draw behind objects with a higher priority. Translucent objects with the same priority are rendered from back-to-front based on their bounds origin. This setting is also used to sort objects being drawn into a runtime virtual texture. Ignored if the object is not translucent.  The default priority is zero. Warning: This should never be set to a non-default value unless you know what you are doing, as it will prevent the renderer from sorting correctly. It is especially problematic on dynamic gameplay effects.
+---@field public HiddenEditorViews integer @Bitflag to represent in which editor views this foliage mesh is hidden.
+---@field public IsSelected boolean
+---@field public CollisionRadius number @The CollisionRadius determines when two instances overlap. When two instances overlap a winner will be picked based on rules and priority.
+---@field public ShadeRadius number @The ShadeRadius determines when two instances overlap. If an instance can grow in the shade this radius is ignored.
+---@field public NumSteps integer @The number of times we age the species and spread its seeds.
+---@field public InitialSeedDensity number @Specifies the number of seeds to populate along 10 meters. The number is implicitly squared to cover a 10m x 10m area
+---@field public AverageSpreadDistance number @The average distance between the spreading instance and its seeds. For example, a tree with an AverageSpreadDistance 10 will ensure the average distance between the tree and its seeds is 10cm
+---@field public SpreadVariance number @Specifies how much seed distance varies from the average. For example, a tree with an AverageSpreadDistance 10 and a SpreadVariance 1 will produce seeds with an average distance of 10cm plus or minus 1cm
+---@field public SeedsPerStep integer @The number of seeds an instance will spread in a single step of the simulation.
+---@field public DistributionSeed integer @The seed that determines placement of initial seeds.
+---@field public MaxInitialSeedOffset number @The max seed used to compute global offset.
+---@field public bCanGrowInShade boolean @If true, seeds of this type will ignore shade radius during overlap tests with other types.
+---@field public bSpawnsInShade boolean @Whether new seeds are spawned exclusively in shade. Occurs in a second pass after all types that do not spawn in shade have been simulated. Only valid when CanGrowInShade is true.
+---@field public MaxInitialAge number @Allows a new seed to be older than 0 when created. New seeds will be randomly assigned an age in the range [0,MaxInitialAge]
+---@field public MaxAge number @Specifies the oldest a seed can be. After reaching this age the instance will still spread seeds, but will not get any older
+---@field public OverlapPriority number @When two instances overlap we must determine which instance to remove. The instance with a lower OverlapPriority will be removed. In the case where OverlapPriority is the same regular simulation rules apply.
+---@field public ProceduralScale FFloatInterval @The scale range of this type when being procedurally generated. Configured with the Scale Curve.
+---@field public ScaleCurve FRuntimeFloatCurve @Instance scale factor as a function of normalized age (i.e. Current Age / Max Age). X = 0 corresponds to Age = 0, X = 1 corresponds to Age = Max Age. Y = 0 corresponds to Min Scale, Y = 1 corresponds to Max Scale.
+---@field public DensityFalloff FFoliageDensityFalloff
+---@field public ChangeCount integer
+---@field public ReapplyDensity boolean @If checked, the density of foliage instances already placed will be adjusted by the density adjustment factor.
+---@field public ReapplyRadius boolean @If checked, foliage instances not meeting the new Radius constraint will be removed
+---@field public ReapplyAlignToNormal boolean @If checked, foliage instances will have their normal alignment adjusted by the Reapply tool
+---@field public ReapplyRandomYaw boolean @If checked, foliage instances will have their yaw adjusted by the Reapply tool
+---@field public ReapplyScaling boolean @If checked, foliage instances will have their scale adjusted to fit the specified scaling behavior by the Reapply tool
+---@field public ReapplyScaleX boolean @If checked, foliage instances will have their X scale adjusted by the Reapply tool
+---@field public ReapplyScaleY boolean @If checked, foliage instances will have their Y scale adjusted by the Reapply tool
+---@field public ReapplyScaleZ boolean @If checked, foliage instances will have their Z scale adjusted by the Reapply tool
+---@field public ReapplyRandomPitchAngle boolean @If checked, foliage instances will have their pitch adjusted by the Reapply tool
+---@field public ReapplyGroundSlope boolean @If checked, foliage instances not meeting the ground slope condition will be removed by the Reapply too
+---@field public ReapplyHeight boolean @If checked, foliage instances not meeting the valid Z height condition will be removed by the Reapply tool
+---@field public ReapplyLandscapeLayers boolean @If checked, foliage instances painted on areas that do not have the appropriate landscape layer painted will be removed by the Reapply tool
+---@field public ReapplyZOffset boolean @If checked, foliage instances will have their Z offset adjusted by the Reapply tool
+---@field public ReapplyCollisionWithWorld boolean @If checked, foliage instances will have an overlap test with the world reapplied, and overlapping instances will be removed by the Reapply tool
+---@field public ReapplyVertexColorMask boolean @If checked, foliage instances no longer matching the vertex color constraint will be removed by the Reapply too
+---@field public bEnableDensityScaling boolean @Whether this foliage type should be affected by the Engine Scalability system's Foliage scalability setting. Enable for detail meshes that don't really affect the game. Disable for anything important. Typically, this will be enabled for small meshes without collision (e.g. grass) and disabled for large meshes with collision (e.g. trees)
+---@field public bEnableDiscardOnLoad boolean @Whether this foliage type should be discarded when CVarFoliageDiscardDataOnLoad is enabled.
+---@field public bEnableCullDistanceScaling boolean @* Whether this foliage type should be affected by the Engine's "foliage.CullDistanceScale" setting
+---@field public RuntimeVirtualTextures TArray<URuntimeVirtualTexture> @Array of runtime virtual textures into which we draw the instances. The mesh material also needs to be set up to output to a virtual texture.
+---@field public VirtualTextureCullMips integer @Number of lower mips in the runtime virtual texture to skip for rendering this primitive. Larger values reduce the effective draw distance in the runtime virtual texture. This culling method doesn't take into account primitive size or virtual texture size.
+---@field public VirtualTextureRenderPassType ERuntimeVirtualTextureMainPassType @Controls if this component draws in the main pass as well as in the virtual texture.
+---@field public bIncludeInHLOD boolean
+local UFoliageType = {}
+

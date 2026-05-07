@@ -1,0 +1,26 @@
+---Struct containing information for a particular LOD level, such as materials and info for when to use it.
+---@class FSkeletalMeshLODInfo
+---@field public ScreenSize FPerPlatformFloat @ScreenSize to display this LOD. The screen size is based around the projected diameter of the bounding sphere of the model. i.e. 0.5 means half the screen's maximum dimension.
+---@field public LODHysteresis number @Used to avoid 'flickering' when on LOD boundary. Only taken into account when moving from complex->simple.
+---@field public LODMaterialMap TArray<integer> @Mapping table from this LOD's materials to the USkeletalMesh materials array. section index is the key remapped material index is the value, can be INDEX_NONE for no remapping
+---@field public BuildSettings FSkeletalMeshBuildSettings @build settings to apply when building render data.
+---@field public ReductionSettings FSkeletalMeshOptimizationSettings @Reduction settings to apply when building render data.
+---@field public BonesToRemove TArray<FBoneReference> @Bones which should be removed from the skeleton for the LOD level
+---@field public BonesToPrioritize TArray<FBoneReference> @Bones which should be prioritized for the quality, this will be weighted toward keeping source data. Use WeightOfPrioritization to control the value.
+---@field public SectionsToPrioritize TArray<FSectionReference> @Sections which should be prioritized for the quality, this will be weighted toward keeping source data. Use WeightOfPrioritization to control the value.
+---@field public WeightOfPrioritization number @How much to consideration to give BonesToPrioritize and SectionsToPrioritize.  The weight is an additional vertex simplification penalty where 0 means nothing.
+---@field public BakePose UAnimSequence @Pose which should be used to reskin vertex influences for which the bones will be removed in this LOD level, uses ref-pose by default
+---@field public BakePoseOverride UAnimSequence @This is used when you are sharing the LOD settings, but you'd like to override the BasePose. This precedes prior to BakePose
+---@field public SourceImportFilename string @The filename of the file tha was used to import this LOD if it was not auto generated.
+---@field public SkinCacheUsage ESkinCacheUsage @How this LOD uses the skin cache feature. Auto will defer to the default project global option. If Support Ray Tracing is enabled on the mesh, will imply Enabled
+---@field public MorphTargetPositionErrorTolerance number @The Morph target position error tolerance in microns. Larger values result in better compression and lower memory footprint, but also lower quality.
+---@field public ImportedMorphTargetSourceFilename TMap<string, FMorphTargetImportedSourceFileInfo> @Store the custom import morph target source file. The key of the map is the morph target name and the value is the source file path.
+---@field public bHasBeenSimplified boolean @Whether to disable morph targets for this LOD.
+---@field public bHasPerLODVertexColors boolean
+---@field public bAllowCPUAccess boolean @Keeps this LODs data on the CPU so it can be used for things such as sampling in FX.
+---@field public bBuildHalfEdgeBuffers boolean @Whether to force cache/cook half edge data that provides vertex connectivity information across material sections, which may be useful for other systems like Mesh Deformer. Please note that Half Edge buffers are always built if the Skeletal Mesh Asset has Default Mesh Deformer assigned, and the LOD has AllowMeshDeformer enabled,
+---@field public bAllowMeshDeformer boolean @Whether a Mesh Deformer applied to the mesh asset or Skinned Mesh Component should be used on this LOD or not
+---@field public VertexAttributes TArray<FSkeletalMeshVertexAttributeInfo> @List of vertex attributes to include for rendering and what type they should be
+---@field public bSupportUniformlyDistributedSampling boolean @Mesh supports uniformly distributed sampling in constant time. Memory cost is 8 bytes per triangle. Example usage is uniform spawning of particles.
+---@field public bImportWithBaseMesh boolean @* This boolean specify if the LOD was imported with the base mesh or not.
+local FSkeletalMeshLODInfo = {}

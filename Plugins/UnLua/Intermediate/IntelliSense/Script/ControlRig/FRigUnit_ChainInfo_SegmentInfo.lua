@@ -1,0 +1,11 @@
+---@class FRigUnit_ChainInfo_SegmentInfo
+---@field public SegmentIndex integer @* The current segment index
+---@field public SegmentLength number @* The current segment length
+---@field public SegmentParam number @* The current segment parameter from 0 to 1
+---@field public SegmentParamLength number @* Local segment length of segment param
+---@field public SegmentStartItem FRigElementKey @* The item starting the current segment
+---@field public SegmentStartItemIndex integer @* The item index starting the current segment
+---@field public SegmentEndItem FRigElementKey @* The item ending the current segment
+---@field public SegmentEndItemIndex integer @* The item index ending the current segment
+---@field public SegmentStretchFactor number @* Stretch factor of current segment
+local FRigUnit_ChainInfo_SegmentInfo = {}

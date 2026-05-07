@@ -1,0 +1,12 @@
+---@class EAlignObjectsBoxPoint
+---@field public Center integer
+---@field public Bottom integer
+---@field public Top integer
+---@field public Left integer
+---@field public Right integer
+---@field public Front integer
+---@field public Back integer
+---@field public Min integer
+---@field public Max integer
+---@field public EAlignObjectsBoxPoint_MAX integer
+local EAlignObjectsBoxPoint = {}

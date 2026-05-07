@@ -1,0 +1,11 @@
+---Possible results from a scene query
+---@class EChaosVDSQHitFlags
+---@field public None integer
+---@field public Position integer
+---@field public Normal integer
+---@field public Distance integer
+---@field public UV integer
+---@field public MTD integer
+---@field public FaceIndex integer
+---@field public EChaosVDSQHitFlags_MAX integer
+local EChaosVDSQHitFlags = {}

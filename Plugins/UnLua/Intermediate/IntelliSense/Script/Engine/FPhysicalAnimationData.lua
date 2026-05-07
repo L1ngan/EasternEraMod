@@ -1,0 +1,11 @@
+---Stores info on the type of motor that will be used for a given bone
+---@class FPhysicalAnimationData
+---@field public BodyName string @The body we will be driving. We specifically hide this from users since they provide the body name and bodies below in the component API.
+---@field public bIsLocalSimulation boolean @Whether the drive targets are in world space or local
+---@field public OrientationStrength number @The strength used to correct orientation error
+---@field public AngularVelocityStrength number @The strength used to correct angular velocity error
+---@field public PositionStrength number @The strength used to correct linear position error. Only used for non-local simulation
+---@field public VelocityStrength number @The strength used to correct linear velocity error. Only used for non-local simulation
+---@field public MaxLinearForce number @The max force used to correct linear errors
+---@field public MaxAngularForce number @The max force used to correct angular errors
+local FPhysicalAnimationData = {}

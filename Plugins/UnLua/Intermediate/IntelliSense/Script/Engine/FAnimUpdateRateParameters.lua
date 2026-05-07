@@ -1,0 +1,20 @@
+---Container for Animation Update Rate parameters.
+---They are shared for all components of an Actor, so they can be updated in sync.
+---@class FAnimUpdateRateParameters
+---@field public ShiftBucket EUpdateRateShiftBucket @The bucket to use when deciding which counter to use to calculate shift values
+---@field public bInterpolateSkippedFrames boolean @When skipping a frame, should it be interpolated or frozen?
+---@field public bShouldUseLodMap boolean @Whether or not to use the defined LOD/Frameskip map instead of separate distance factor thresholds
+---@field public bShouldUseMinLod boolean @If set, LOD/Frameskip map will be queried with mesh's MinLodModel instead of current LOD (PredictedLODLevel)
+---@field public bSkipUpdate boolean @(This frame) animation update should be skipped.
+---@field public bSkipEvaluation boolean @(This frame) animation evaluation should be skipped.
+---@field public UpdateRate integer @How often animation will be updated/ticked. 1 = every frame, 2 = every 2 frames, etc.
+---@field public EvaluationRate integer @How often animation will be evaluated. 1 = every frame, 2 = every 2 frames, etc. has to be a multiple of UpdateRate.
+---@field public TickedPoseOffestTime number @Track time we have lost via skipping
+---@field public AdditionalTime number @Total time of the last series of skipped updates
+---@field public BaseNonRenderedUpdateRate integer @Rate of animation evaluation when non rendered (off screen and dedicated servers). a value of 4 means evaluated 1 frame, then 3 frames skipped
+---@field public MaxEvalRateForInterpolation integer @Max Evaluation Rate allowed for interpolation to be enabled. Beyond, interpolation will be turned off.
+---@field public BaseVisibleDistanceFactorThesholds TArray<number> @Array of MaxDistanceFactor to use for AnimUpdateRate when mesh is visible (rendered). MaxDistanceFactor is size on screen, as used by LODs Example:             BaseVisibleDistanceFactorThesholds.Add(0.4f)             BaseVisibleDistanceFactorThesholds.Add(0.2f) means:             0 frame skip, MaxDistanceFactor > 0.4f             1 frame skip, MaxDistanceFactor > 0.2f             2 frame skip, MaxDistanceFactor > 0.0f
+---@field public LODToFrameSkipMap TMap<integer, integer> @Map of LOD levels to frame skip amounts. if bShouldUseLodMap is set these values will be used for the frameskip amounts and the distance factor thresholds will be ignored. The flag and these values should be configured using the customization callback when parameters are created for a component. Note that this is # of frames to skip, so if you have 20, that means every 21th frame, it will update, and evaluate.
+---@field public SkippedUpdateFrames integer @Number of update frames that have been skipped in a row
+---@field public SkippedEvalFrames integer @Number of evaluate frames that have been skipped in a row
+local FAnimUpdateRateParameters = {}

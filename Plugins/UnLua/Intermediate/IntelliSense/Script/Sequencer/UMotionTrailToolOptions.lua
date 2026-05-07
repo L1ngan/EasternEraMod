@@ -1,0 +1,24 @@
+---TODO: option to make tick size proportional to distance from camera to get a sense of perspective and scale
+---@class UMotionTrailToolOptions : UObject
+---@field public bShowTrails boolean @Whether or not to show motion trails
+---@field public bShowSelectedTrails boolean @Whether or not to show selected motion trails
+---@field public TrailStyle EMotionTrailTrailStyle @How To Show Color
+---@field public DefaultColor FLinearColor @The color of the motion trail
+---@field public TimePreColor FLinearColor @The color of the motion trail before current time if show alternating time colors
+---@field public TimePostColor FLinearColor @The color of the motion trail after current time if show alternating time colors
+---@field public DashPreColor FLinearColor @The color of the first motion trail color when alternating between frames
+---@field public DashPostColor FLinearColor @The color of the next motion trail color when alternating between frames
+---@field public bShowFullTrail boolean @Whether or not to show the full motion trail
+---@field public TrailThickness number @The thickness of the motion trail
+---@field public FramesBefore integer @The number of frames to draw before the start of the trail. Requires not showing the full trail
+---@field public FramesAfter integer @The number of frames to draw after the end of the trail. Requires not showing the full trail
+---@field public bShowKeys boolean @Whether or not to show keys on the motion trail
+---@field public KeyColor FLinearColor @The color of the keys
+---@field public SelectedKeyColor FLinearColor @The color of the selected keys
+---@field public KeySize number @The size of the keys
+---@field public bShowMarks boolean @Whether or not to show marks along the motion trail
+---@field public MarkColor FLinearColor @The color of the marks
+---@field public MarkSize number @The size of the marks
+---@field public MaxNumberPinned integer @Max number of pinned trails
+local UMotionTrailToolOptions = {}
+

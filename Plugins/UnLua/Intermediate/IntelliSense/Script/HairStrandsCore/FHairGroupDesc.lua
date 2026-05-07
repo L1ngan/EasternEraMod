@@ -1,0 +1,25 @@
+---Note: If a new field is added to this struct, think to update GroomComponentDestailsCustomization.cpp to handle override flags
+---@class FHairGroupDesc
+---@field public HairLength number @Length of the longest hair strands
+---@field public HairWidth number @Hair width (in centimeters)
+---@field public HairWidth_Override boolean
+---@field public HairRootScale number @Scale the hair width at the root
+---@field public HairRootScale_Override boolean
+---@field public HairTipScale number @Scale the hair width at the tip
+---@field public HairTipScale_Override boolean
+---@field public HairShadowDensity number @Override the hair shadow density factor (unit less).
+---@field public HairShadowDensity_Override boolean
+---@field public HairRaytracingRadiusScale number @Scale the hair geometry radius for ray tracing effects (e.g. shadow)
+---@field public HairRaytracingRadiusScale_Override boolean
+---@field public bUseHairRaytracingGeometry boolean @Enable hair strands geomtry for raytracing
+---@field public bUseHairRaytracingGeometry_Override boolean
+---@field public LODBias number @Bias the selected LOD. A value >0 will progressively select lower detailed lods. Used when r.HairStrands.Cluster.Culling = 1.
+---@field public bUseStableRasterization boolean @Insure the hair does not alias. When enable, group of hairs might appear thicker. Isolated hair should remain thin.
+---@field public bUseStableRasterization_Override boolean
+---@field public bScatterSceneLighting boolean @Light hair with the scene color. This is used for vellus/short hair to bring light from the surrounding surface, like skin.
+---@field public bScatterSceneLighting_Override boolean
+---@field public bSupportVoxelization boolean
+---@field public bSupportVoxelization_Override boolean
+---@field public HairLengthScale number @When enabled, Length Scale allow to scale the length of the hair.
+---@field public HairLengthScale_Override boolean
+local FHairGroupDesc = {}

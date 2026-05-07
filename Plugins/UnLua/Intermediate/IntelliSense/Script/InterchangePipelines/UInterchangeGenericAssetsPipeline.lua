@@ -1,0 +1,21 @@
+---This pipeline is the generic option for all types of meshes. It should be called before specialized mesh pipelines like the generic static mesh or skeletal mesh pipelines.
+---All import options that are shared between mesh types should be added here.
+---@class UInterchangeGenericAssetsPipeline : UInterchangePipelineBase
+---@field public PipelineDisplayName string @The name of the pipeline that will be display in the import dialog.
+---@field public ReimportStrategy EReimportStrategyFlags @Set the reimport strategy.
+---@field public bUseSourceNameForAsset boolean @If enabled, and the Asset Name setting is empty, and there is only one asset and one source, the imported asset is given the same name as the source data.
+---@field public bSceneNameSubFolder boolean @Create an additional Content folder inside of the chosen import directory, and name it after the imported scene
+---@field public bAssetTypeSubFolders boolean @Group the assets according to their type into additional Content folders created on the import directory (/Materials, /StaticMeshes, /SkeletalMeshes, etc.)
+---@field public AssetName string @If set, and there is only one asset and one source, the imported asset is given this name.
+---@field public ImportOffsetTranslation FVector @Translation offset applied to meshes and animations.
+---@field public ImportOffsetRotation FRotator @Rotation offset applied to meshes and animations.
+---@field public ImportOffsetUniformScale number @Uniform scale offset applied to meshes and animations.
+---@field public CommonMeshesProperties UInterchangeGenericCommonMeshesProperties @COMMON_MESHES_CATEGORY Properties
+---@field public CommonSkeletalMeshesAndAnimationsProperties UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties @COMMON_SKELETAL_ANIMATIONS_CATEGORY
+---@field public MeshPipeline UInterchangeGenericMeshPipeline @MESHES_CATEGORY Properties
+---@field public AnimationPipeline UInterchangeGenericAnimationPipeline @ANIMATIONS_CATEGORY Properties
+---@field public MaterialPipeline UInterchangeGenericMaterialPipeline @MATERIALS_CATEGORY Properties
+---@field public ContentPathExistingSkeleton FSoftObjectPath @We need to store the adjusted content path existing skeleton to restore it in PreDialogCleanup
+---@field public bImportOnlyAnimationAdjusted boolean @We need to store the adjusted import only animation boolean to restore it in PreDialogCleanup
+local UInterchangeGenericAssetsPipeline = {}
+

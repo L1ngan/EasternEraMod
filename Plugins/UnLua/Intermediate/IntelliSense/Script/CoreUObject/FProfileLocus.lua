@@ -1,0 +1,2 @@
+---@class FProfileLocus
+local FProfileLocus = {}

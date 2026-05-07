@@ -1,0 +1,21 @@
+---Voronoi fracture
+---Fracture using a Voronoi diagram with a uniform random pattern, creating fracture pieces of similar volume across the shape.
+---@class FVoronoiFractureDataflowNode_v2 : FDataflowNode
+---@field public Collection FManagedArrayCollection @Collection to fracture
+---@field public Points TArray<FVector> @Voronoi source points
+---@field public TransformSelection FDataflowTransformSelection @Pieces to fracture
+---@field public Transform FTransform @Transform to apply to cut planes
+---@field public RandomSeed integer @Seed for random
+---@field public ChanceToFracture number @Chance to fracture each selected bone. If 0, no bones will fracture; if 1, all bones will fracture.
+---@field public SplitIslands boolean @Whether to split the fractured mesh pieces based on geometric connectivity after fracturing
+---@field public Grout number @Amount of space to leave between cut pieces
+---@field public Amplitude number @Size of the Perlin noise displacement (in cm). If 0, no noise will be applied
+---@field public Frequency number @Period of the Perlin noise.  Smaller values will create a smoother noise pattern
+---@field public Persistence number @Persistence of the layers of Perlin noise. At each layer (octave) after the first, the amplitude of the Perlin noise is scaled by this factor
+---@field public Lacunarity number @Lacunarity of the layers of Perlin noise. At each layer (octave) after the first, the frequency of the Perlin noise is scaled by this factor
+---@field public OctaveNumber integer @Number of fractal layers of Perlin noise to apply. Each layer is additive, with Amplitude and Frequency parameters scaled by Persistence and Lacunarity Smaller values (1 or 2) will create noise that looks like gentle rolling hills, while larger values (> 4) will tend to look more like craggy mountains
+---@field public PointSpacing number @Distance (in cm) between vertices on cut surfaces where noise is added.  Larger spacing between vertices will create more efficient meshes with fewer triangles, but less resolution to see the shape of the added noise
+---@field public AddSamplesForCollision boolean @If enabled, add extra vertices (without triangles) to the geometry in regions where vertices are spaced too far apart (e.g. across large triangles) These extra vertices will be used as collision samples in particle-implicit collisions, and can help the physics system detect collisions more accurately Note this is *only* useful for simulations that use particle-implicit collisions
+---@field public CollisionSampleSpacing number @The number of centimeters to allow between vertices on the mesh surface: If there are gaps larger than this, add additional vertices (without triangles) to help support particle-implicit collisions Only used if Add Samples For Collision is enabled
+---@field public NewGeometryTransformSelection FDataflowTransformSelection @Fractured Pieces
+local FVoronoiFractureDataflowNode_v2 = {}

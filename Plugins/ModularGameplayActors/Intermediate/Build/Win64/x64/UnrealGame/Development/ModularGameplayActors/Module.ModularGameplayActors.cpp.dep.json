@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\plugins\\modulargameplayactors\\intermediate\\build\\win64\\x64\\unrealgame\\development\\modulargameplayactors\\module.modulargameplayactors.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\easternera\\development\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\plugins\\modulargameplayactors\\intermediate\\build\\win64\\x64\\unrealgame\\development\\modulargameplayactors\\definitions.modulargameplayactors.h",
+            "h:\\project\\plugins\\modulargameplayactors\\intermediate\\build\\win64\\unrealgame\\inc\\modulargameplayactors\\uht\\modulargameplayactors.init.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

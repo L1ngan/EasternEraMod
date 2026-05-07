@@ -1,0 +1,17 @@
+---Visualizing fracture/cluster info in fractured collection
+---@class FVisualizeFractureDataflowNode : FDataflowNode
+---@field private Collection FManagedArrayCollection @Collection to visualize
+---@field private Level integer
+---@field private RandomSeed integer @Seed for random
+---@field private bApplyExplodedView boolean @Use cluster level for coloring and explode
+---@field private ExplodeAmount number @Scale amount to expand the pieces uniformly in all directions
+---@field private Scale FVector @Scale amounts to expand the pieces in all 3 directions
+---@field private bApplyColor boolean
+---@field private ColoringType EDataflowVisualizeFractureColoringType
+---@field private RandomColorRangeMin integer
+---@field private RandomColorRangeMax integer
+---@field private Attribute string
+---@field private Min FMinSettings
+---@field private Max FMaxSettings
+---@field private Offset FVector @Translate collection for exploded view
+local FVisualizeFractureDataflowNode = {}

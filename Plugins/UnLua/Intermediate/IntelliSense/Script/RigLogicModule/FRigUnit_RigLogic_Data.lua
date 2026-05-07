@@ -1,0 +1,13 @@
+---The work data used by the FRigUnit_RigLogic
+---@class FRigUnit_RigLogic_Data
+---@field public SkelMeshComponent TWeakObjectPtr<USkeletalMeshComponent> @Cached Skeletal Mesh Component *
+---@field public InputCurveIndices TArray<integer> @RL input index to ControlRig's input curve index *
+---@field public NeuralNetMaskCurveIndices TArray<integer> @RL neural network mask index to ControlRig's input curve index *
+---@field public HierarchyBoneIndices TArray<integer> @RL joint index to ControlRig's hierarchy bone index *
+---@field public DriverJointsToControlAttributesMap TArray<FBoneIndexControlAttributeMapping> @RL driver joint index to ControlRig's hierarchy bone index and RigLogic control attribute mapping *
+---@field public MorphTargetCurveIndices TArray<FRigUnit_RigLogic_IntArray> @RL mesh blend shape index to ControlRig's output blendshape curve index for each LOD *
+---@field public BlendShapeIndices TArray<FRigUnit_RigLogic_IntArray> @RL mesh+blend shape array index to RL blend shape index for each LOD *
+---@field public CurveElementIndicesForAnimMaps TArray<FRigUnit_RigLogic_IntArray> @RL animated map index to ControlRig's output anim map curve index for each LOD *
+---@field public RigLogicIndicesForAnimMaps TArray<FRigUnit_RigLogic_IntArray> @RL animated map index to RL anim map curve index for each LOD *
+---@field public CurrentLOD integer @LOD for which the model is rendered *
+local FRigUnit_RigLogic_Data = {}

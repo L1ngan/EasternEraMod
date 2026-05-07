@@ -1,0 +1,14 @@
+---NOTE: Replaced by IK Chain Op
+---@class FTargetChainIKSettings
+---@field public EnableIK boolean
+---@field public BlendToSource number
+---@field public BlendToSourceTranslation number
+---@field public BlendToSourceRotation number
+---@field public BlendToSourceWeights FVector
+---@field public StaticOffset FVector
+---@field public StaticLocalOffset FVector
+---@field public StaticRotationOffset FRotator
+---@field public ScaleVertical number
+---@field public Extension number
+---@field public bAffectedByIKWarping boolean
+local FTargetChainIKSettings = {}

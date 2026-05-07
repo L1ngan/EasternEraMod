@@ -1,0 +1,3 @@
+---@class UMultiLineEditableText_OnMultiLineEditableTextCommittedEvent__PythonCallable : UPythonCallableForDelegate
+local UMultiLineEditableText_OnMultiLineEditableTextCommittedEvent__PythonCallable = {}
+

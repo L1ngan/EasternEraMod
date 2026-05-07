@@ -1,0 +1,13 @@
+---struct with all the settings we want in UNeuralProfile, separate to make it easer to pass this data around in the engine.
+---@class FNeuralProfileStruct
+---@field public InputFormat ENeuralProfileFormat @Define the expected input format, if any output from material is not this format, a custom conversion will be applied for this conversion.
+---@field public OutputFormat ENeuralProfileFormat @Define the expected output format. A conversion between the output format and the actual format will be applied automatically.
+---@field public RuntimeType ENeuralProfileRuntimeType @runtime type (support "NNERuntimeORTDml" only at this moment)
+---@field public NNEModelData UObject @Stores the NNEModelData imported from e.g., onnx model
+---@field public InputDimension FIntVector4 @Input dimension of the NNEModelData model
+---@field public OutputDimension FIntVector4 @Output dimension of the NNEModelData model
+---@field public BatchSizeOverride integer @Used to override the batch size if the batch dimension is dynamic (-1)
+---@field public TileSize ENeuralModelTileType @Total tiles used. Each tile will be executed by 1 batch
+---@field public TileOverlap FIntPoint @Tile border overlaps (Left|Right, Top|Bottom). The larger this value, the more tiles are required to cover the whole screen when TileSize is Auto.
+---@field public TileOverlapResolveType ETileOverlapResolveType
+local FNeuralProfileStruct = {}

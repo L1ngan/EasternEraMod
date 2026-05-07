@@ -1,0 +1,21 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.BinkMediaPlayer.cpp.obj": [
+			"BinkFunctionLibrary.gen.cpp.obj",
+			"BinkMediaPlayer.gen.cpp.obj",
+			"BinkMediaPlayer.init.gen.cpp.obj",
+			"BinkMediaTexture.gen.cpp.obj",
+			"BinkMoviePlayerSettings.gen.cpp.obj",
+			"BinkMediaPlayer.cpp.obj",
+			"BinkMediaTexture.cpp.obj",
+			"BinkMediaTextureResource.cpp.obj",
+			"BinkFunctionLibrary.cpp.obj",
+			"BinkMediaPlayerModule.cpp.obj",
+			"BinkMoviePlayerSettings.cpp.obj",
+			"BinkMovieStreamer.cpp.obj",
+			"binkpluginRHI.cpp.obj",
+			"binktexturesRHI.cpp.obj"
+		]
+	}
+}

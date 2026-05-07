@@ -1,0 +1,11 @@
+---@class FWrapButtonStyle
+---@field public Padding FMargin @The padding around the wrap button
+---@field public WrapButtonIndex integer @Where in the toolbar the wrap button should appear. e.g. 0 for the left side, -1 for the right side.
+---@field public ExpandBrush FSlateBrush @The brush used for the expand arrow when the toolbar runs out of room and needs to display toolbar items in a menu
+---@field public bHasDownArrow boolean @Whether the combo box includes a down arrow
+---@field public ComboButtonStyle Unknown @The styling of the combo button that opens the wrapping menu
+---@field public bIncludeSeparator boolean @Whether a separator should appear adjacent to the combo button
+---@field public SeparatorBrush Unknown @The appearance of the separator
+---@field public SeparatorThickness Unknown @How wide/tall the separator should be
+---@field public SeparatorPadding Unknown @Any padding around the separator
+local FWrapButtonStyle = {}

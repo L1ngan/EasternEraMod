@@ -1,0 +1,15 @@
+---@class EStateTreeBindableStructSource
+---@field public Context integer
+---@field public Parameter integer
+---@field public Evaluator integer
+---@field public GlobalTask integer
+---@field public StateParameter integer
+---@field public Task integer
+---@field public Condition integer
+---@field public Consideration integer
+---@field public TransitionEvent integer
+---@field public StateEvent integer
+---@field public PropertyFunction integer
+---@field public Transition integer
+---@field public EStateTreeBindableStructSource_MAX integer
+local EStateTreeBindableStructSource = {}

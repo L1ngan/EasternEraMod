@@ -1,0 +1,16 @@
+---Types of server travel failures broadcast by the engine
+---@class ETravelFailure
+---@field public NoLevel integer
+---@field public LoadMapFailure integer
+---@field public InvalidURL integer
+---@field public PackageMissing integer
+---@field public PackageVersion integer
+---@field public NoDownload integer
+---@field public TravelFailure integer
+---@field public CheatCommands integer
+---@field public PendingNetGameCreateFailure integer
+---@field public CloudSaveFailure integer
+---@field public ServerTravelFailure integer
+---@field public ClientTravelFailure integer
+---@field public ETravelFailure_MAX integer
+local ETravelFailure = {}

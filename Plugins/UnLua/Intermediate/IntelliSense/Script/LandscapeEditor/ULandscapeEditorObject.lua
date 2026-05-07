@@ -1,0 +1,112 @@
+---@class ULandscapeEditorObject : UObject
+---@field public ToolStrength number @Strength of the Sculpt tool. If you're using a pen/tablet with pressure-sensing, the pressure used affects the strength of the tool.
+---@field public PaintToolStrength number @Strength of the Paint tool. If you're using a pen/tablet with pressure-sensing, the pressure used affects the strength of the tool.
+---@field public bUseWeightTargetValue boolean @Enable to make tools blend towards a target value
+---@field public WeightTargetValue number @Enable to make tools blend towards a target value
+---@field public MaximumValueRadius number @I have no idea what this is for but it's used by the noise and erosion tools, and isn't exposed to the UI
+---@field public bCombinedLayersOperation boolean @Use the combined result of the underlying layers as input to the operation.  When not checked, it will use only the data in the currently selected layer as input.
+---@field public FlattenMode ELandscapeToolFlattenMode @Whether to flatten by lowering, raising, both or terracing
+---@field public bUseSlopeFlatten boolean @Flattens to the angle of the clicked point, instead of horizontal
+---@field public bPickValuePerApply boolean @Constantly picks new values to flatten towards when dragging around, instead of only using the first clicked point
+---@field public bUseFlattenTarget boolean @Enable to flatten towards a target height
+---@field public FlattenTarget number @Target height to flatten towards (in Unreal Units)
+---@field public bShowFlattenTargetPreview boolean @Whether to show the preview grid for the flatten target height
+---@field public TerraceInterval number @Height of the terrace intervals in unreal units, for the terrace flatten mode
+---@field public TerraceSmooth number @Smoothing value for terrace flatten mode
+---@field public bFlattenEyeDropperModeActivated boolean @Whether the Eye Dropper mode is activated
+---@field public bFlattenEyeDropperModeMousingOverViewport boolean @When in Eye Dropper mode, indicates whether we're currently mousing over the viewport
+---@field public FlattenEyeDropperModeDesiredTarget number
+---@field public RampWidth number @Width of ramp
+---@field public RampSideFalloff number @Falloff on side of ramp
+---@field public SmoothFilterKernelSize integer @The radius smoothing is performed over Higher values smooth out bigger details, lower values only smooth out smaller details
+---@field public bDetailSmooth boolean @If checked, performs a detail preserving smooth using the specified detail smoothing value
+---@field public DetailScale number @Larger detail smoothing values remove more details, while smaller values preserve more details
+---@field public ErodeThresh integer @The minimum height difference necessary for the erosion effects to be applied. Smaller values will result in more erosion being applied
+---@field public ErodeSurfaceThickness integer @The thickness of the surface for the layer weight erosion effect
+---@field public ErodeIterationNum integer @Number of erosion iterations, more means more erosion but is slower
+---@field public ErosionNoiseMode ELandscapeToolErosionMode @Whether to erode by lowering, raising, or both
+---@field public ErosionNoiseScale number @The size of the perlin noise filter used
+---@field public bErosionUseLayerHardness boolean @Whether the erosion tool should take into account the paint layer's hardness parameter (a hardness of 0 means the layer is fully affected by erosion, while 1 means fully unaffected)
+---@field public RainAmount integer @The amount of rain to apply to the surface. Larger values will result in more erosion
+---@field public SedimentCapacity number @The amount of sediment that the water can carry. Larger values will result in more erosion
+---@field public HErodeIterationNum integer @Number of erosion iterations, more means more erosion but is slower
+---@field public RainDistMode ELandscapeToolHydroErosionMode @Selects how rain is distributed over the brush area for hydro erosion
+---@field public RainDistScale number @The size of the noise filter for applying initial rain to the surface
+---@field public bHErosionDetailSmooth boolean @If checked, performs a detail-preserving smooth to the erosion effect using the specified detail smoothing value
+---@field public HErosionDetailScale number @Larger detail smoothing values remove more details, while smaller values preserve more details
+---@field public NoiseMode ELandscapeToolNoiseMode @Whether to apply noise that raises, lowers, or both
+---@field public NoiseScale number @The size of the perlin noise filter used
+---@field public bUseSelectedRegion boolean @Uses selected region as a mask for other tools
+---@field public bUseNegativeMask boolean @If enabled, protects the selected region from changes If disabled, only allows changes in the selected region
+---@field public PasteMode ELandscapeToolPasteMode @Whether to paste will only raise, only lower, or both
+---@field public bApplyToAllTargets boolean @If set, copies/pastes all layers, otherwise only copy/pastes the layer selected in the targets panel
+---@field public SnapMode ELandscapeGizmoSnapType
+---@field public bSmoothGizmoBrush boolean @Smooths the edges of the gizmo data into the landscape. Without this, the edges of the pasted data will be sharp
+---@field public GizmoHeightmapFilenameString string
+---@field public GizmoImportSize FIntPoint
+---@field public GizmoImportLayers TArray<FGizmoImportLayer>
+---@field public MirrorPoint FVector2D @Location of the mirror plane, defaults to the center of the landscape. Doesn't normally need to be changed!
+---@field public MirrorOp ELandscapeMirrorOperation @Type of mirroring operation to perform e.g. "Minus X To Plus X" copies and flips the -X half of the landscape onto the +X half
+---@field public MirrorSmoothingWidth integer @Number of vertices either side of the mirror plane to smooth over
+---@field public BlueprintBrush TSubclassOf<ALandscapeBlueprintBrushBase> @Selects the blueprint brush to apply to the current edit layer. Click on the landscape to apply it.
+---@field public ResizeLandscape_QuadsPerSection integer @Number of quads per landscape component section
+---@field public ResizeLandscape_SectionsPerComponent integer @Number of sections per landscape component
+---@field public ResizeLandscape_ComponentCount FIntPoint @Number of components in resulting landscape
+---@field public ResizeLandscape_ConvertMode ELandscapeConvertMode @Determines how the new component size will be applied to the existing landscape geometry.
+---@field public NewLandscape_Material TWeakObjectPtr<UMaterialInterface> @Material initially applied to the landscape. Setting a material here exposes properties for setting up layer info based on the landscape blend nodes in the material.
+---@field public NewLandscape_QuadsPerSection integer @The number of quads in a single landscape section. One section is the unit of LOD transition for landscape rendering.
+---@field public NewLandscape_SectionsPerComponent integer @The number of sections in a single landscape component. This along with the section size determines the size of each landscape component. A component is the base unit of rendering and culling.
+---@field public NewLandscape_ComponentCount FIntPoint @The number of components in the X and Y direction, determining the overall size of the landscape.
+---@field public NewLandscape_Location FVector @The location of the new landscape
+---@field public NewLandscape_Rotation FRotator @The rotation of the new landscape
+---@field public NewLandscape_Scale FVector @The scale of the new landscape. This is the distance between each vertex on the landscape, defaulting to 100 units.
+---@field public ImportLandscape_HeightmapImportResult ELandscapeImportResult
+---@field public ImportLandscape_HeightmapErrorMessage string
+---@field public ImportLandscape_HeightmapFilename string @Specify a height map file in 16-bit RAW or PNG format
+---@field public ImportLandscape_Width integer
+---@field public ImportLandscape_Height integer
+---@field public HeightmapExportFilename string
+---@field public ImportLandscape_GizmoLocalPosition FIntPoint
+---@field public ImportType ELandscapeImportTransformType
+---@field public bHeightmapSelected boolean
+---@field public bExportEditLayer boolean @When true exports the selected edit layer, if false exports the blended result
+---@field public bExportSingleFile boolean @(World Partition only) When true, exports the landscape as a single file, if false exports each grid tile individually.
+---@field public ImportExportMode ELandscapeImportExportMode
+---@field public HeightmapImportDescriptor FLandscapeImportDescriptor
+---@field public HeightmapImportDescriptorIndex integer
+---@field private ImportLandscape_Data TArray<integer>
+---@field public bCanHaveLayersContent boolean @Enable support for landscape edit layers.
+---@field public bFlipYAxis boolean @Whether to flip Y coordinate of imported files.
+---@field public WorldPartitionGridSize integer @Number of components per landscape streaming proxies per axis
+---@field public WorldPartitionRegionSize integer @Number of components per Landscape World Partition Region per axis.
+---@field public ImportLandscape_AlphamapType ELandscapeImportAlphamapType @Whether the imported alpha maps are to be interpreted as "layered" or "additive" (UE uses additive internally)
+---@field public ImportLandscape_Layers TArray<FLandscapeImportLayer> @The landscape layers that will be created via Import tab. Only layer names referenced in the material assigned above are shown here. Modify the material to add more layers.
+---@field public NewLandscape_Layers TArray<FLandscapeImportLayer> @The landscape layers that will be created via New tab. Only layer names referenced in the material assigned above are shown here. Modify the material to add more layers.
+---@field public BrushRadius number @Radius of the sculpt editing brush. The maximum slider/clamp value can be set with the BrushSizeUIMax/BrushSizeClampMax values in the Landscape project settings.
+---@field public PaintBrushRadius number @Radius of the paint editing brush. The maximum slider/clamp value can be set with the BrushSizeUIMax/BrushSizeClampMax values in the Landscape project settings.
+---@field public BrushFalloff number @The falloff at the edge of the sculpt brush, as a fraction of the brush's size. 0 = no falloff, 1 = all falloff
+---@field public PaintBrushFalloff number @The falloff at the edge of the paint brush, as a fraction of the brush's size. 0 = no falloff, 1 = all falloff
+---@field public bUseClayBrush boolean @Selects the Clay Brush painting mode
+---@field public bApplyWithoutMovingSculpt boolean @Apply brush continuously while held stationary, after a small delay
+---@field public bApplyWithoutMovingPaint boolean @Apply brush continuously while held stationary, after a small delay
+---@field public AlphaBrushScale number @Scale of the brush texture. A scale of 1.000 maps the brush texture to the landscape at a 1 pixel = 1 vertex size
+---@field public bAlphaBrushAutoRotate boolean @Rotate brush to follow mouse
+---@field public AlphaBrushRotation number @Rotates the brush mask texture
+---@field public AlphaBrushPanU number @Horizontally offsets the brush mask texture
+---@field public AlphaBrushPanV number @Vertically offsets the brush mask texture
+---@field public bUseWorldSpacePatternBrush boolean @Tile the pattern in world space (this only takes scale and position into account, not rotation)
+---@field public WorldSpacePatternBrushSettings FLandscapePatternBrushWorldSpaceSettings
+---@field public AlphaTexture UTexture2D @Mask texture to use
+---@field public AlphaTextureChannel ELandscapeTextureColorChannel @Channel of Mask Texture to use
+---@field public AlphaTextureSizeX integer
+---@field public AlphaTextureSizeY integer
+---@field public AlphaTextureData TArray<integer>
+---@field public BrushComponentSize integer @Number of components X/Y to affect at once. 1 means 1x1, 2 means 2x2, etc
+---@field public bBrushComponentIncludeBorder boolean @When true, the brush will affect all pixels within the component, including those on the border, which means neightboring components (which share a line/row with their neighbor) will be affected as well
+---@field public PaintingRestriction ELandscapeLayerPaintingRestriction @Limits painting to only the components that already have the selected layer
+---@field public TargetLayerAssetFilePath FLandscapeTargetLayerAssetFilePath
+---@field public TargetLayersFilterString string @This allows to hide layer names that do not match the filter
+---@field public TargetDisplayOrder ELandscapeLayerDisplayMode @Display order of the targets
+---@field public ShowUnusedLayers boolean @Show layers that are not currently being painted anywhere
+local ULandscapeEditorObject = {}
+

@@ -1,0 +1,2 @@
+---@class FSolarisProfilingData
+local FSolarisProfilingData = {}

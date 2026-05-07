@@ -1,0 +1,25 @@
+---@class UAnimSeqExportOption : UObject
+---@field public bExportTransforms boolean @If enabled, export the transforms from the animation
+---@field public bExportMorphTargets boolean @If enabled, export the morph targets from the animation
+---@field public bExportAttributeCurves boolean @If enabled, export the attribute curves from the animation
+---@field public bExportMaterialCurves boolean @If enabled, export the material curves from the animation
+---@field public bRecordInWorldSpace boolean @If enabled we record in World Space otherwise we record from 0,0,0
+---@field public bEvaluateAllSkeletalMeshComponents boolean @If true we evaluate all other skeletal mesh components under the same actor, this may be needed for example, to get physics to get baked
+---@field public Interpolation EAnimInterpolationType @This defines how values between keys are calculated for transforms
+---@field public CurveInterpolation integer @This defines how values between keys are calculated for curves
+---@field public IncludeAnimationNames TArray<string> @Include only the animation bones/curves that match this list
+---@field public ExcludeAnimationNames TArray<string> @Exclude all animation bones/curves that match this list
+---@field public WarmUpFrames FFrameNumber @Number of Display Rate frames to evaluate before doing the export. It will evaluate after any Delay. This will use frames before the start frame. Use it if there is some post anim BP effects you want to run before export start time.
+---@field public DelayBeforeStart FFrameNumber @Number of Display Rate frames to delay at the same frame before doing the export. It will evalaute first, then any warm up, then the export. Use it if there is some post anim BP effects you want to ran repeatedly at the start.
+---@field public bTransactRecording boolean @Whether or not to transact the animation sequence data recording
+---@field public bBakeTimecode boolean @Set to true if sequence timecode should be baked into the sequence. Timecode rate will default to the project setting "Generate Default Timecode Frame Rate"
+---@field public bTimecodeRateOverride boolean @Set to true if the timecode rate should be overridden with the specified value.
+---@field public OverrideTimecodeRate FFrameRate @Overriding timecode rate to be used when baking.
+---@field public bUseCustomTimeRange boolean @Whether or not to use custom time range
+---@field public CustomStartFrame FFrameNumber @Custom start frame in custom display rate
+---@field public CustomEndFrame FFrameNumber @Custom end frame in custom display rate
+---@field public CustomDisplayRate FFrameRate @Custom display rate for use when specifying custom start and end frame, should be set from the movie scene/sequencer display rate
+---@field public bUseCustomFrameRate boolean @Whether or not to use custom frame rate when recording the anim sequence, if false will use Sequencers display rate
+---@field public CustomFrameRate FFrameRate @Custom frame rate that the anim sequence will be recorded at
+local UAnimSeqExportOption = {}
+

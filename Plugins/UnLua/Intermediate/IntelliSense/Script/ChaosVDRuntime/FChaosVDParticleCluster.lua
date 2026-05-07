@@ -1,0 +1,17 @@
+---Structure contained data from a Clustered Particle.
+---Used to be able to show the values in the editor and allow changes via the Property Editor.
+---@class FChaosVDParticleCluster : FChaosVDWrapperDataBase
+---@field public ParentParticleID integer
+---@field public NumChildren integer
+---@field public ChildToParent FTransform
+---@field public ClusterGroupIndex integer
+---@field public bInternalCluster boolean
+---@field public CollisionImpulse number
+---@field public ExternalStrains number
+---@field public InternalStrains number
+---@field public Strain number
+---@field public ConnectivityEdges TArray<FChaosVDConnectivityEdge>
+---@field public bIsAnchored boolean
+---@field public bUnbreakable boolean
+---@field public bIsChildToParentLocked boolean
+local FChaosVDParticleCluster = {}

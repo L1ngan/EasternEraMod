@@ -1,0 +1,30 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\plugins\\asyncloadingscreen\\source\\asyncloadingscreen\\private\\asyncloadingscreen.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\easternera\\development\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\plugins\\asyncloadingscreen\\intermediate\\build\\win64\\x64\\unrealgame\\development\\asyncloadingscreen\\definitions.asyncloadingscreen.h",
+            "h:\\project\\plugins\\asyncloadingscreen\\source\\asyncloadingscreen\\public\\asyncloadingscreen.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\movieplayer\\public\\movieplayer.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\public\\slate\\slatetextures.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\slatecore\\public\\textures\\slateupdatabletexture.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\movieplayer\\uht\\movieplayer.generated.h",
+            "h:\\project\\plugins\\asyncloadingscreen\\source\\asyncloadingscreen\\public\\loadingscreensettings.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\slate\\public\\widgets\\layout\\sscalebox.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\slate\\uht\\sscalebox.generated.h",
+            "h:\\project\\plugins\\asyncloadingscreen\\intermediate\\build\\win64\\unrealgame\\inc\\asyncloadingscreen\\uht\\loadingscreensettings.generated.h",
+            "h:\\project\\plugins\\asyncloadingscreen\\source\\asyncloadingscreen\\public\\scenterlayout.h",
+            "h:\\project\\plugins\\asyncloadingscreen\\source\\asyncloadingscreen\\public\\sloadingscreenlayout.h",
+            "h:\\project\\plugins\\asyncloadingscreen\\source\\asyncloadingscreen\\public\\sclassiclayout.h",
+            "h:\\project\\plugins\\asyncloadingscreen\\source\\asyncloadingscreen\\public\\sletterboxlayout.h",
+            "h:\\project\\plugins\\asyncloadingscreen\\source\\asyncloadingscreen\\public\\ssidebarlayout.h",
+            "h:\\project\\plugins\\asyncloadingscreen\\source\\asyncloadingscreen\\public\\sdualsidebarlayout.h",
+            "h:\\project\\plugins\\asyncloadingscreen\\source\\asyncloadingscreen\\public\\asyncloadingscreenlibrary.h",
+            "h:\\project\\plugins\\asyncloadingscreen\\intermediate\\build\\win64\\unrealgame\\inc\\asyncloadingscreen\\uht\\asyncloadingscreenlibrary.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,18 @@
+---@class FXRMotionControllerData
+---@field public bValid boolean
+---@field public DeviceName string
+---@field public ApplicationInstanceID FGuid
+---@field public DeviceVisualType EXRVisualType
+---@field public HandIndex EControllerHand
+---@field public TrackingStatus ETrackingStatus
+---@field public GripPosition FVector @Vector representing an object being held in the player's hand
+---@field public GripRotation FQuat @Quaternion representing an object being held in the player's hand
+---@field public AimPosition FVector @For handheld controllers, gives a vector for pointing at objects
+---@field public AimRotation FQuat @For handheld controllers, gives a quaternion for pointing at objects
+---@field public PalmPosition FVector @For handheld controllers, gives a vector for representing the hand
+---@field public PalmRotation FQuat @For handheld controllers, gives a quaternion for representing the hand
+---@field public HandKeyPositions TArray<FVector> @The indices of this array are the values of EHandKeypoint (Palm, Wrist, ThumbMetacarpal, etc).
+---@field public HandKeyRotations TArray<FQuat> @The indices of this array are the values of EHandKeypoint (Palm, Wrist, ThumbMetacarpal, etc).
+---@field public HandKeyRadii TArray<number> @The indices of this array are the values of EHandKeypoint (Palm, Wrist, ThumbMetacarpal, etc).
+---@field public bIsGrasped boolean
+local FXRMotionControllerData = {}

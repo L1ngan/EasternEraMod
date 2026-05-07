@@ -1,0 +1,2 @@
+---@class FNiagaraParametersChangedData
+local FNiagaraParametersChangedData = {}

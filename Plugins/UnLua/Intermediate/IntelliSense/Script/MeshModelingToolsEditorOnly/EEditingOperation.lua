@@ -1,0 +1,11 @@
+---EEditingOperation represents the current tool's operation
+---@class EEditingOperation
+---@field public Select integer
+---@field public Create integer
+---@field public Remove integer
+---@field public Transform integer
+---@field public Parent integer
+---@field public Rename integer
+---@field public Mirror integer
+---@field public EEditingOperation_MAX integer
+local EEditingOperation = {}

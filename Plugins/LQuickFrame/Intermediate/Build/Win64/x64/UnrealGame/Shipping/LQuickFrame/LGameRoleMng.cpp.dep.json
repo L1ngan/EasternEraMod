@@ -1,0 +1,21 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\lquickframe\\source\\lquickframe\\mode\\lgamerolemng.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\easternera\\shipping\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\lquickframe\\intermediate\\build\\win64\\x64\\unrealgame\\shipping\\lquickframe\\definitions.lquickframe.h",
+            "g:\\modproject\\plugins\\lquickframe\\source\\lquickframe\\mode\\lgamerolemng.h",
+            "g:\\modproject\\plugins\\lquickframe\\source\\lquickframe\\base\\lcomp.h",
+            "g:\\modproject\\plugins\\lquickframe\\source\\lquickframe\\base\\lbasevalue.h",
+            "g:\\modproject\\plugins\\lquickframe\\source\\lquickframe\\misc\\llog.h",
+            "g:\\modproject\\plugins\\lquickframe\\intermediate\\build\\win64\\unrealgame\\inc\\lquickframe\\uht\\llog.generated.h",
+            "g:\\modproject\\plugins\\lquickframe\\intermediate\\build\\win64\\unrealgame\\inc\\lquickframe\\uht\\lbasevalue.generated.h",
+            "g:\\modproject\\plugins\\lquickframe\\intermediate\\build\\win64\\unrealgame\\inc\\lquickframe\\uht\\lcomp.generated.h",
+            "g:\\modproject\\plugins\\lquickframe\\intermediate\\build\\win64\\unrealgame\\inc\\lquickframe\\uht\\lgamerolemng.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

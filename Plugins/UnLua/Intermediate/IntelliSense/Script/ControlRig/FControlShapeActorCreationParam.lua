@@ -1,0 +1,2 @@
+---@class FControlShapeActorCreationParam
+local FControlShapeActorCreationParam = {}

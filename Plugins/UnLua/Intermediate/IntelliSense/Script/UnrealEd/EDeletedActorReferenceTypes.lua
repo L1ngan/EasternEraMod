@@ -1,0 +1,11 @@
+---@class EDeletedActorReferenceTypes
+---@field public None integer
+---@field public ActorOrAsset integer
+---@field public Group integer
+---@field public LevelBlueprint integer
+---@field public All integer
+---@field public LevelAndActorOrAsset integer
+---@field public GroupAndActorOrAsset integer
+---@field public LevelAndGroup integer
+---@field public EDeletedActorReferenceTypes_MAX integer
+local EDeletedActorReferenceTypes = {}

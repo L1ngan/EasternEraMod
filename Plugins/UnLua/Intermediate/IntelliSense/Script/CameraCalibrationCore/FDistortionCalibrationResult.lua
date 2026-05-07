@@ -1,0 +1,14 @@
+---Results from a distortion calibration, including camera intrinsics and either the parameters to an analytical model or an ST Map
+---@class FDistortionCalibrationResult
+---@field public EvaluatedFocus number @Nominal focus distance of the lens associated with this result
+---@field public EvaluatedZoom number @Nominal focal length of the lens associated with this result
+---@field public ReprojectionError number @Final reprojection error produced using this result
+---@field public FocalLength FFocalLengthInfo @Calibrated focal length result
+---@field public ImageCenter FImageCenterInfo @Calibrated image center result
+---@field public CameraPoses TArray<FTransform> @Calibrated camera pose for each input image
+---@field public NodalOffset FNodalPointOffset @Calibrated nodal offset result
+---@field public Parameters FDistortionInfo @Distortion parameters for the model specified by the lens file. And empty parameter array implies that there is a valid ST Map instead.
+---@field public STMap FSTMapInfo @ST Map that represents the UV displacements for this result. If the ST Map UTexture is not imported by the solver, a path string should be provided so that the lens distortion tool can import it.
+---@field public STMapFullPath string @Absolute path to an ST Map file on disk that should be imported when this result is processed.
+---@field public ErrorMessage string @Error text to be written by a solver to provide the reason why the solve may have failed. No error message implies that the solve was successful and the result is valid.
+local FDistortionCalibrationResult = {}

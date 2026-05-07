@@ -1,0 +1,2 @@
+---@class FMovieSceneEvaluationInstanceKey
+local FMovieSceneEvaluationInstanceKey = {}

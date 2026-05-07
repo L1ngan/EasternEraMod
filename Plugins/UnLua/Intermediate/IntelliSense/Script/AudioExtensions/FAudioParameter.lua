@@ -1,0 +1,15 @@
+---@class FAudioParameter
+---@field public ParamName string @Name of the parameter
+---@field public FloatParam number @Float value of parameter
+---@field public BoolParam boolean @Boolean value of parameter
+---@field public IntParam integer @Integer value of parameter. If set to 'Default Construct', value is number of array items to construct.
+---@field public ObjectParam UObject @Object value of parameter
+---@field public StringParam string @String value of parameter
+---@field public ArrayFloatParam TArray<number> @Array Float value of parameter
+---@field public ArrayBoolParam TArray<boolean> @Boolean value of parameter
+---@field public ArrayIntParam TArray<integer> @Integer value of parameter
+---@field public ArrayObjectParam TArray<UObject> @Object value of parameter
+---@field public ArrayStringParam TArray<string> @String value of parameter
+---@field public ParamType EAudioParameterType
+---@field public TypeName string @Optional TypeName used to describe what constructed type this parameter should be initializing.
+local FAudioParameter = {}

@@ -1,0 +1,11 @@
+---Relevant information about a groom animation
+---@class FGroomAnimationInfo
+---@field public NumFrames integer
+---@field public SecondsPerFrame number
+---@field public Duration number
+---@field public StartTime number
+---@field public EndTime number
+---@field public StartFrame integer
+---@field public EndFrame integer
+---@field public Attributes EGroomCacheAttributes
+local FGroomAnimationInfo = {}

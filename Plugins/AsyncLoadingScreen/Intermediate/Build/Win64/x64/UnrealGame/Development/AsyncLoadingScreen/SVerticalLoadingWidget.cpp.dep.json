@@ -1,0 +1,25 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\plugins\\asyncloadingscreen\\source\\asyncloadingscreen\\private\\sverticalloadingwidget.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\easternera\\development\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\plugins\\asyncloadingscreen\\intermediate\\build\\win64\\x64\\unrealgame\\development\\asyncloadingscreen\\definitions.asyncloadingscreen.h",
+            "h:\\project\\plugins\\asyncloadingscreen\\source\\asyncloadingscreen\\public\\sverticalloadingwidget.h",
+            "h:\\project\\plugins\\asyncloadingscreen\\source\\asyncloadingscreen\\public\\sloadingwidget.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\slate\\public\\widgets\\images\\sthrobber.h",
+            "h:\\project\\plugins\\asyncloadingscreen\\source\\asyncloadingscreen\\public\\loadingscreensettings.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\movieplayer\\public\\movieplayer.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\public\\slate\\slatetextures.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\slatecore\\public\\textures\\slateupdatabletexture.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\movieplayer\\uht\\movieplayer.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\slate\\public\\widgets\\layout\\sscalebox.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\slate\\uht\\sscalebox.generated.h",
+            "h:\\project\\plugins\\asyncloadingscreen\\intermediate\\build\\win64\\unrealgame\\inc\\asyncloadingscreen\\uht\\loadingscreensettings.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\public\\slate\\deferredcleanupslatebrush.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

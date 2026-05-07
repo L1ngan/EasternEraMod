@@ -1,0 +1,30 @@
+---Structure describing the state of a camera.
+---Fields are private and can only be accessed via the getters and setters.
+---The ChangedFlags structure keeps track of which fields were changed via the setters.
+---@class FCameraPose
+---@field private Location FVector3d @The location of the camera in the world
+---@field private Rotation FRotator3d @The rotation of the camera in the world
+---@field private TargetDistance number @Distance to the target
+---@field private FieldOfView number @The horizontal field of view of the camera, in degrees If zero or less, focal length is used instead
+---@field private FocalLength number @The focal length of the camera's lens, in millimeters If zero or less, field of view is used instead
+---@field private OrthographicWidth number @The desired width (in world units) of the orthographic view (ignored in Perspective mode)
+---@field private Aperture number @The aperture of the camera's lens, in f-stops
+---@field private ShutterSpeed number @The shutter speed of the camera's lens, in 1/seconds
+---@field private FocusDistance number @The focus distance of the camera's lens, in world units
+---@field private SensorWidth number @The width of the camera's sensor, in millimeters
+---@field private SensorHeight number @The height of the camera's sensor, in millimeters
+---@field private SensorHorizontalOffset number @Horizontal offset of the sensor, in mm.
+---@field private SensorVerticalOffset number @Vertical offset of the sensor, in mm.
+---@field private ISO number @The camera sensor sensitivity in ISO.
+---@field private SqueezeFactor number @Squeeze factor for anamorphic lenses
+---@field private Overscan number @Sensor overscan in percentage
+---@field private DiaphragmBladeCount integer @Number of blades in the lens diaphragm
+---@field private NearClippingPlane number @The distance to the near clipping plane, in world units
+---@field private FarClippingPlane number @The distance to the far clipping plane, in world units
+---@field private PhysicalCameraBlendWeight number @An internal weight for the physical camera post-process settings, used when blending between cameras with EnablePhysicalCamera enabled/disabled.
+---@field private EnablePhysicalCamera boolean @Whether to setup post-process settings based on physical camera properties such as Aperture, FocusDistance, DiaphragmBladeCount, and so on.
+---@field private ConstrainAspectRatio boolean @Whether to constrain aspect ratio
+---@field private OverrideAspectRatioAxisConstraint boolean @Whether to override the default aspect ratio axis constraint defined on the player controller
+---@field private AspectRatioAxisConstraint integer @If ConstrainAspectRatio is false and OverrideAspectRatioAxisConstraint is true, how we should compute FieldOfView
+---@field private ProjectionMode integer @Projection mode - Perspective or orthographic
+local FCameraPose = {}

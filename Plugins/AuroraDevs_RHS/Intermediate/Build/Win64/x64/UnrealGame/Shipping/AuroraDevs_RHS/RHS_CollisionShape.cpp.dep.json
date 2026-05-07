@@ -1,0 +1,23 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\private\\rhs_collisionshape.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\easternera\\shipping\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\x64\\unrealgame\\shipping\\auroradevs_rhs\\definitions.auroradevs_rhs.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\rhs_collisionshape.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\rhs_collisionshape.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\physicsengine\\physicssettings.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\physicscore\\public\\physicssettingscore.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\experimental\\chaos\\public\\chaossolverconfiguration.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\experimental\\chaos\\public\\solvereventfilters.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\chaos\\uht\\solvereventfilters.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\chaos\\uht\\chaossolverconfiguration.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\physicscore\\uht\\physicssettingscore.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\physicssettings.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

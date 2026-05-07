@@ -1,0 +1,19 @@
+---Enumeration specifying the control type and channel
+---@class FControlRigChannelEnum
+---@field public Bool integer
+---@field public Enum integer
+---@field public Integer integer
+---@field public Float integer
+---@field public Vector2DX integer
+---@field public Vector2DY integer
+---@field public PositionX integer
+---@field public PositionY integer
+---@field public PositionZ integer
+---@field public RotatorX integer
+---@field public RotatorY integer
+---@field public RotatorZ integer
+---@field public ScaleX integer
+---@field public ScaleY integer
+---@field public ScaleZ integer
+---@field public FControlRigChannelEnum_MAX integer
+local FControlRigChannelEnum = {}

@@ -1,0 +1,12 @@
+---These flags govern how the data type can be used
+---@class EOptimusDataTypeUsageFlags
+---@field public None integer
+---@field public Resource integer
+---@field public Variable integer
+---@field public AnimAttributes integer
+---@field public DataInterfaceOutput integer
+---@field public PinType integer
+---@field public PerBoneAnimAttribute integer
+---@field public Property integer
+---@field public EOptimusDataTypeUsageFlags_MAX integer
+local EOptimusDataTypeUsageFlags = {}

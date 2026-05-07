@@ -1,0 +1,2 @@
+---@class FFreezablePerPlatformInt
+local FFreezablePerPlatformInt = {}

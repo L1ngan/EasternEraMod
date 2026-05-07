@@ -1,0 +1,12 @@
+---Holds information about a screen resolution to be used for playing.
+---@class FPlayScreenResolution
+---@field public Description string @FText
+---@field public Width integer @The screen resolution's width (in pixels).
+---@field public Height integer @The screen resolution's height (in pixels).
+---@field public AspectRatio string @The screen resolution's aspect ratio (as a string).
+---@field public bCanSwapAspectRatio boolean @Whether or not this device supports both landscape and portrait modes
+---@field public ProfileName string @The name of the device profile this links to
+---@field public ScaleFactor number
+---@field public LogicalHeight integer
+---@field public LogicalWidth integer
+local FPlayScreenResolution = {}

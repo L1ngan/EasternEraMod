@@ -1,0 +1,15 @@
+---@class FSourceEffectDynamicsProcessorSettings
+---@field public DynamicsProcessorType ESourceEffectDynamicsProcessorType @Type of processor to apply
+---@field public PeakMode ESourceEffectDynamicsPeakMode @Mode of peak detection used on input key signal
+---@field public LookAheadMsec number @The amount of time to look ahead of the current audio (Allows for transients to be included in dynamics processing)
+---@field public AttackTimeMsec number @The amount of time to ramp into any dynamics processing effect
+---@field public ReleaseTimeMsec number @The amount of time to release the dynamics processing effect
+---@field public ThresholdDb number @The threshold at which to perform a dynamics processing operation
+---@field public Ratio number @The dynamics processor ratio used for compression/expansion
+---@field public KneeBandwidthDb number @The knee bandwidth of the processor to use
+---@field public InputGainDb number @The input gain of the dynamics processor
+---@field public OutputGainDb number @The output gain of the dynamics processor
+---@field public bStereoLinked boolean @Whether the left and right channels are linked when determining envelopes
+---@field public bAnalogMode boolean @Toggles treating the attack and release envelopes as analog-style vs digital-style (Analog will respond a bit more naturally/slower)
+---@field public bBypass boolean @Whether or not to bypass effect
+local FSourceEffectDynamicsProcessorSettings = {}

@@ -1,0 +1,11 @@
+---@class ENavPathEvent
+---@field public Cleared integer
+---@field public NewPath integer
+---@field public UpdatedDueToGoalMoved integer
+---@field public UpdatedDueToNavigationChanged integer
+---@field public Invalidated integer
+---@field public RePathFailed integer
+---@field public MetaPathUpdate integer
+---@field public Custom integer
+---@field public ENavPathEvent_MAX integer
+local ENavPathEvent = {}

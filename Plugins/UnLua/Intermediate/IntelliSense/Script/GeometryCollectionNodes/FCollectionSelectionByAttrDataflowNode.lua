@@ -1,0 +1,15 @@
+---Selects specified Vertices/Faces/Transforms in the GeometryCollection by using an attribute value
+---Currently supported attribute types: float, int32, String, bool
+---@class FCollectionSelectionByAttrDataflowNode : FDataflowNode
+---@field public Collection FManagedArrayCollection @GeometryCollection for the selection
+---@field public AttributeKey FCollectionAttributeKey @AttributeKey input
+---@field public Group ESelectionByAttrGroup @Group
+---@field public Attribute string @Attribute for the selection
+---@field public Operation ESelectionByAttrOperation @Operation
+---@field public Value string @Attribute value for the operation
+---@field public VertexSelection FDataflowVertexSelection @Vertex selection output
+---@field public FaceSelection FDataflowFaceSelection @Face selection output
+---@field public TransformSelection FDataflowTransformSelection @Transform selection output
+---@field public GeometrySelection FDataflowGeometrySelection @Geometry selection output
+---@field public MaterialSelection FDataflowMaterialSelection @Material selection output
+local FCollectionSelectionByAttrDataflowNode = {}

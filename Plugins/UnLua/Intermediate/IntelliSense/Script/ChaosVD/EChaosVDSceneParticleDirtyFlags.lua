@@ -1,0 +1,15 @@
+---Set of flags used to indicate which data was modified and needs to be evaluated again by other systems
+---@class EChaosVDSceneParticleDirtyFlags
+---@field public None integer
+---@field public Visibility integer
+---@field public Coloring integer
+---@field public Active integer
+---@field public Transform integer
+---@field public Parent integer
+---@field public Geometry integer
+---@field public CollisionData integer
+---@field public PreUpdatePass integer
+---@field public TEDS integer
+---@field public StreamingBounds integer
+---@field public EChaosVDSceneParticleDirtyFlags_MAX integer
+local EChaosVDSceneParticleDirtyFlags = {}

@@ -1,0 +1,15 @@
+---@class EGameplayDebuggerShape
+---@field public Invalid integer
+---@field public Point integer
+---@field public Segment integer
+---@field public Box integer
+---@field public Cone integer
+---@field public Cylinder integer
+---@field public Circle integer
+---@field public Rectangle integer
+---@field public Capsule integer
+---@field public Polygon integer
+---@field public Polyline integer
+---@field public Arrow integer
+---@field public EGameplayDebuggerShape_MAX integer
+local EGameplayDebuggerShape = {}

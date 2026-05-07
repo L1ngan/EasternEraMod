@@ -1,0 +1,30 @@
+---Editor representation of a state in StateTree
+---@class UStateTreeState : UObject
+---@field public Name string @Display name of the State
+---@field public Description string @Description of the State
+---@field public Tag FGameplayTag @GameplayTag describing the State
+---@field public ColorRef FStateTreeEditorColorRef @Display color of the State
+---@field public Type EStateTreeStateType @Type the State, allows e.g. states to be linked to other States.
+---@field public SelectionBehavior EStateTreeStateSelectionBehavior @How to treat child states when this State is selected.
+---@field public TasksCompletion EStateTreeTaskCompletionType @How tasks will complete the state. Only tasks that are considered for completion can complete the state.
+---@field public LinkedSubtree FStateTreeStateLink @Subtree to run as extension of this State.
+---@field public LinkedAsset UStateTree @Another State Tree asset to run as extension of this State.
+---@field public CustomTickRate number @Tick rate in seconds the state tasks and transitions should tick. If set the state cannot sleep. If set all the other states (children or parents) will also tick at that rate. If more than one active states has a custom tick rate then the smallest custom tick rate wins. If not set, the state will tick every frame unless the state tree is allowed to sleep.
+---@field public bHasCustomTickRate boolean @Activate the CustomTickRate.
+---@field public Parameters FStateTreeStateParameters @Parameters of this state. If the state is linked to another state or asset, the parameters are for the linked state.
+---@field public bCheckPrerequisitesWhenActivatingChildDirectly boolean @Should state's required event and enter conditions be evaluated when transition leads directly to it's child.
+---@field public bHasRequiredEventToEnter boolean
+---@field public RequiredEventToEnter FStateTreeEventDesc @Defines the event required to be present during state selection for the state to be selected.
+---@field public Weight number @Weight used to scale the normalized final utility score for this state
+---@field public EnterConditions TArray<FStateTreeEditorNode> @Expression of enter conditions that needs to evaluate true to allow the state to be selected.
+---@field public Tasks TArray<FStateTreeEditorNode>
+---@field public Considerations TArray<FStateTreeEditorNode> @Expression of enter conditions that needs to evaluate true to allow the state to be selected.
+---@field public SingleTask FStateTreeEditorNode @Single item used when schema calls for single task per state.
+---@field public Transitions TArray<FStateTreeTransition>
+---@field public Children TArray<UStateTreeState>
+---@field public ID FGuid
+---@field public bExpanded boolean
+---@field public bEnabled boolean
+---@field public Parent UStateTreeState
+local UStateTreeState = {}
+

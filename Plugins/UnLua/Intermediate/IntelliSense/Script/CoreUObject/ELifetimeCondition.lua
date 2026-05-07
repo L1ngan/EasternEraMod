@@ -1,0 +1,22 @@
+---Secondary condition to check before considering the replication of a lifetime property.
+---@class ELifetimeCondition
+---@field public COND_None integer
+---@field public COND_InitialOnly integer
+---@field public COND_OwnerOnly integer
+---@field public COND_SkipOwner integer
+---@field public COND_SimulatedOnly integer
+---@field public COND_AutonomousOnly integer
+---@field public COND_SimulatedOrPhysics integer
+---@field public COND_InitialOrOwner integer
+---@field public COND_Custom integer
+---@field public COND_ReplayOrOwner integer
+---@field public COND_ReplayOnly integer
+---@field public COND_SimulatedOnlyNoReplay integer
+---@field public COND_SimulatedOrPhysicsNoReplay integer
+---@field public COND_SkipReplay integer
+---@field public COND_Dynamic integer
+---@field public COND_Never integer
+---@field public COND_NetGroup integer
+---@field public COND_Max integer
+---@field public COND_MAX integer
+local ELifetimeCondition = {}

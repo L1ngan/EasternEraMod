@@ -1,0 +1,13 @@
+---Supported types for a camera node's context data.
+---NOTE: simple types (bool, integer, float, etc.) and vector types (vector, rotator, transform)
+---are not supported as context data because they are supported as blendable parameters.
+---@class ECameraContextDataType
+---@field public Name integer
+---@field public String integer
+---@field public Enum integer
+---@field public Struct integer
+---@field public Object integer
+---@field public Class integer
+---@field public Count integer
+---@field public ECameraContextDataType_MAX integer
+local ECameraContextDataType = {}

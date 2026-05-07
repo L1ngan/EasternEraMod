@@ -1,0 +1,11 @@
+---@class EGeometryFlow_SimpleCollisionGeometryType
+---@field public AlignedBoxes integer
+---@field public OrientedBoxes integer
+---@field public MinimalSpheres integer
+---@field public Capsules integer
+---@field public ConvexHulls integer
+---@field public SweptHulls integer
+---@field public MinVolume integer
+---@field public None integer
+---@field public EGeometryFlow_MAX integer
+local EGeometryFlow_SimpleCollisionGeometryType = {}

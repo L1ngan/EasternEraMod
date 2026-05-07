@@ -1,0 +1,13 @@
+---Implements a message that is published in response to FSessionServicePing.
+---@class FSessionServicePong
+---@field public Authorized boolean @Indicates whether the pinging user is authorized to interact with this session.
+---@field public BuildDate string @Holds the application's build date.
+---@field public DeviceName string @Holds the name of the device that the application is running on.
+---@field public InstanceId FGuid @Holds the application's instance identifier.
+---@field public InstanceName string @Holds the application's instance name.
+---@field public PlatformName string @Holds the name of the platform that the application is running on.
+---@field public SessionId FGuid @Holds the identifier of the session that the application belongs to.
+---@field public SessionName string @Holds the user defined name of the session.
+---@field public SessionOwner string @Holds the name of the user that started the session.
+---@field public Standalone boolean @Indicates whether the application is the only one in that session.
+local FSessionServicePong = {}

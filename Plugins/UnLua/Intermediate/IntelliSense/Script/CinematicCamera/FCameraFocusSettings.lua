@@ -1,0 +1,11 @@
+---Settings to control camera focus
+---@class FCameraFocusSettings
+---@field public FocusMethod ECameraFocusMethod @Which method to use to handle camera focus
+---@field public ManualFocusDistance number @Manually-controlled focus distance (manual focus mode only)
+---@field public TrackingFocusSettings FCameraTrackingFocusSettings @Settings to control tracking focus (tracking focus mode only)
+---@field public bDrawDebugFocusPlane boolean @True to draw a translucent plane at the current focus depth, for easy tweaking.
+---@field public DebugFocusPlaneColor FColor @For customizing the focus plane color, in case the default doesn't show up well in your scene.
+---@field public bSmoothFocusChanges boolean @True to use interpolation to smooth out changes in focus distance, false for focus distance changes to be instantaneous.
+---@field public FocusSmoothingInterpSpeed number @Controls interpolation speed when smoothing focus distance changes. Ignored if bSmoothFocusChanges is false.
+---@field public FocusOffset number @Additional focus depth offset, used for manually tweaking if your chosen focus method needs adjustment
+local FCameraFocusSettings = {}

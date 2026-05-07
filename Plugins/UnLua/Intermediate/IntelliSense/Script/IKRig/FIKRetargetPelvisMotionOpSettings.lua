@@ -1,0 +1,17 @@
+---@class FIKRetargetPelvisMotionOpSettings : FIKRetargetOpSettingsBase
+---@field public SourcePelvisBone FBoneReference @The Pelvis bone on the source skeleton to copy motion FROM.
+---@field public TargetPelvisBone FBoneReference @The Pelvis bone on the target skeleton to copy motion TO.
+---@field public RotationAlpha number @Range 0 to 1. Default 1. Blends the amount of retargeted pelvis rotation to apply. At 0 the pelvis is left at the rotation from the retarget pose. At 1 the pelvis is rotated fully to match the source pelvis rotation.
+---@field public RotationOffset FRotator @Applies a static local-space rotation offset to the retarget pelvis.
+---@field public TranslationAlpha number @Range 0 to 1. Default 1. Blends the amount of retargeted pelvis translation to apply. At 0 the pelvis is left at the position from the retarget pose. At 1 the pelvis will follow the source motion according to the behavior defined in the subsequent settings.
+---@field public TranslationOffset FVector @Applies a static component-space translation offset to the pelvis.
+---@field public BlendToSourceTranslation number @Range 0 to 1. Default 0. Blends the retarget pelvis' translation to the exact source location. At 0 the pelvis is placed at the retargeted location. At 1 the pelvis is placed at the location of the source's pelvis bone.
+---@field public BlendToSourceTranslationWeights FVector @Per-axis weights for the Blend to Source.
+---@field public ScaleHorizontal number @Default 1. Scales the translation of the pelvis in the horizontal plane (X,Y).
+---@field public ScaleVertical number @Default 1. Scales the translation of the pelvis in the vertical direction (Z).
+---@field public AffectIKHorizontal number @Range 0 to 1. Default 1. Control whether modifications made to the pelvis will affect the horizontal component of IK positions. At 0 the IK positions are independent of the pelvis modifications. At 1 the IK positions are calculated relative to the modified pelvis location.
+---@field public AffectIKVertical number @Range 0 to 1. Default 0. Control whether modifications made to the pelvis will affect the vertical component of IK positions. At 0 the IK positions are independent of the pelvis modifications. At 1 the IK positions are calculated relative to the modified pelvis location.
+---@field public bEnableDebugDraw boolean @Toggle debug drawing on/off in the viewport
+---@field public DebugDrawSize number @Adjust size of the debug drawing
+---@field public DebugDrawThickness number @Adjust thickness of the debug drawing
+local FIKRetargetPelvisMotionOpSettings = {}

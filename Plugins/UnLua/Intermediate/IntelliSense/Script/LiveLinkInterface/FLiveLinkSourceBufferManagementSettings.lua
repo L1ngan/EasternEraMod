@@ -1,0 +1,18 @@
+---@class FLiveLinkSourceBufferManagementSettings
+---@field public bValidEngineTimeEnabled boolean @Enabled the ValidEngineTime setting.
+---@field public ValidEngineTime number @If the frame is older than ValidTime, remove it from the buffer list (in seconds).
+---@field public EngineTimeOffset number @When evaluating with time: how far back from current time should we read the buffer (in seconds)
+---@field public EngineTimeClockOffset number @Continuously updated clock offset estimator between source clock and engine clock (in seconds)
+---@field public SmoothEngineTimeOffset number @Continuously updated offset to achieve a smooth evaluation time (in seconds)
+---@field public bGenerateSubFrame boolean
+---@field public DetectedFrameRate FFrameRate @FrameRate taken from one of the subjects. It's expected that all subjects have the same FrameRate
+---@field public bUseTimecodeSmoothLatest boolean @When evaluating with timecode, align source timecode using a continuous clock offset to do a smooth latest This means that even if engine Timecode and source Timecode are not aligned, the offset between both clocks will be tracked to keep them aligned. With an additionnal offset, 1.5 is a good number, you can evaluate your subject using the latest frame by keeping just enough margin to have a smooth playback and avoid starving.
+---@field public SourceTimecodeFrameRate FFrameRate @What is the source frame rate. When the refresh rate of the source is bigger than the timecode frame rate, LiveLink will try to generate sub frame numbers.
+---@field public bValidTimecodeFrameEnabled boolean @If the frame timecode is older than ValidTimecodeFrame, remove it from the buffer list (in TimecodeFrameRate).
+---@field public ValidTimecodeFrame integer @If the frame timecode is older than ValidTimecodeFrame, remove it from the buffer list (in TimecodeFrameRate).
+---@field public TimecodeFrameOffset number @When evaluating with timecode: how far back from current timecode should we read the buffer (in TimecodeFrameRate).
+---@field public TimecodeClockOffset number @Continuously updated clock offset estimator between source timecode clock and engine timecode provider clock (in seconds)
+---@field public LatestOffset integer @When evaluating with latest: how far back from latest frame should we read the buffer
+---@field public MaxNumberOfFrameToBuffered integer @Maximum number of frames to keep in memory.
+---@field public bKeepAtLeastOneFrame boolean @When cleaning the buffer keep at least one frame, even if the frame doesn't matches the other options.
+local FLiveLinkSourceBufferManagementSettings = {}

@@ -1,0 +1,14 @@
+---Runtime-generated access node.
+---Represents:
+---- An offset within an object
+---- An indirection to follow (object, array, function)
+---@class FPropertyAccessIndirection
+---@field private Property Unknown @Property of this indirection. Used for arrays and functions (holds the return value property for functions)
+---@field private Function UFunction @Function if this is a script of native function indirection
+---@field private ReturnBufferSize integer @Return buffer size if this is a script of native function indirection
+---@field private ReturnBufferAlignment integer @Return buffer alignment if this is a script of native function indirection
+---@field private ArrayIndex integer @Array index if this is an array indirection
+---@field private Offset integer @Offset of this indirection within its containing object
+---@field private ObjectType EPropertyAccessObjectType @Object type if this is an object indirection
+---@field private Type EPropertyAccessIndirectionType @The type of this indirection
+local FPropertyAccessIndirection = {}

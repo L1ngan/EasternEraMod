@@ -1,0 +1,16 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\asyncloadingscreen\\source\\asyncloadingscreen\\private\\sloadingscreenlayout.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\asyncloadingscreen\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\asyncloadingscreen\\definitions.asyncloadingscreen.h",
+            "g:\\modproject\\plugins\\asyncloadingscreen\\source\\asyncloadingscreen\\public\\sloadingscreenlayout.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\engine\\userinterfacesettings.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\userinterfacesettings.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

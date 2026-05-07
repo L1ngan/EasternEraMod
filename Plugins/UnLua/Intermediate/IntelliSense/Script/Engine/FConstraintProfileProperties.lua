@@ -1,0 +1,29 @@
+---Container for properties of a physics constraint that can be easily swapped at runtime. This is useful for switching different setups when going from ragdoll to standup for example
+---@class FConstraintProfileProperties
+---@field public ProjectionLinearTolerance number @If the joint error is above this distance after the solve phase, the child body will be teleported to fix the error. Only used if bEnableProjection is true.
+---@field public ProjectionAngularTolerance number @If the joint error is above this distance after the solve phase, the child body will be teleported to fix the error. Only used if bEnableProjection is true.
+---@field public ProjectionLinearAlpha number @How much semi-physical linear projection correction to apply [0-1]. Only used if bEnableProjection is true and if hard limits are used.
+---@field public ProjectionAngularAlpha number @How much semi-physical angular projection correction to apply [0-1]. Only used if bEnableProjection is true and if hard limits are used.
+---@field public ShockPropagationAlpha number @How much shock propagation to apply [0-1]. Shock propagation increases the mass of the parent body for the last iteration of the position and velocity solve phases. This can help stiffen up joint chains, but is also prone to introducing energy down the chain especially at high alpha. Only used in bEnableShockPropagation is true.
+---@field public LinearBreakThreshold number @Force needed to break the distance constraint.
+---@field public LinearPlasticityThreshold number @[Chaos Only] Percent threshold from center of mass distance needed to reset the linear drive position target. This value can be greater than 1.
+---@field public AngularBreakThreshold number @Torque needed to break the joint.
+---@field public AngularPlasticityThreshold number @[Chaos Only] Degree threshold from target angle needed to reset the target angle.
+---@field public ContactTransferScale number @[Chaos Only] Colliison transfer on parent from the joints child. Range is 0.0-MAX
+---@field public LinearLimit FLinearConstraint
+---@field public ConeLimit FConeConstraint
+---@field public TwistLimit FTwistConstraint
+---@field public bDisableCollision boolean @Disable collision between bodies joined by this constraint.
+---@field public bParentDominates boolean @When set, the parent body in a constraint will not be affected by the motion of the child
+---@field public bEnableShockPropagation boolean @Shock propagation increases the mass of the parent body for the last iteration of the position and velocity solve phases. This can help stiffen up joint chains, but is also prone to introducing energy down the chain especially at high alpha. It also does not work well if there are collisions on the bodies preventing the joints from correctly resolving - this can lead to jitter, especially if collision shock propagation is also enabled.
+---@field public bEnableProjection boolean @Projection is a post-solve position and angular fixup consisting of two correction procedures. First, if the constraint limits are exceeded by more that the Linear or Angular Tolerance, the bodies are teleported to eliminate the error. Second, if the constraint limits are exceeded by less than the tolerance, a semi-physical correction is applied,  with the parent body in the constraint is treated as having infinite mass. The teleport tolerance are controlled by ProjectionLinearTolerance and ProjectionAngularTolerance. The semi-physical correction is controlled by ProjectionLinearAlpha and ProjectionAnguilarAlpha. You may have one, none, or both systems enabled at the same time. Projection only works well if the chain is not interacting with other objects (e.g., through collisions) because the projection of the bodies in the chain will cause other constraints to be violated. Likewise, if a body is influenced by multiple constraints, then enabling projection on more than one constraint may lead to unexpected results - the  "last" constraint would win but the order in which constraints are solved cannot be directly controlled. Note that the semi-physical projection (ProjectionLinearAlpha and ProjectionAngularAlpha) is only applied to hard-limit constraints and not those with soft limits because the soft limit is the point at which the soft-constraint (spring) kicks in, and not really a limit on how far the joint can be separated.
+---@field public bEnableMassConditioning boolean @Whether mass conditioning is enabled for this joint. Mass conditioning applies a non-physical scale to the mass and inertia of the two bodies that only affects this joint, so that the mass and inertia ratios are smaller. This helps stabilize joints where the bodies are very different sizes, and especially when the parent body is heavier than the child. However, it can lead to unrealistic behaviour, especially when collisions are involved.
+---@field public bUseLinearJointSolver boolean @World Solver: Whether to use linear solver for this joint. Linear solver is faster and less accurate. The nonlinear solver is slower and more convergent.
+---@field public bAngularBreakable boolean @Whether it is possible to break the joint with angular force.
+---@field public bAngularPlasticity boolean @Whether it is possible to reset target rotations from the angular displacement.
+---@field public bLinearBreakable boolean @Whether it is possible to break the joint with linear force.
+---@field public bLinearPlasticity boolean @Whether it is possible to reset spring rest length from the linear deformation.
+---@field public LinearDrive FLinearDriveConstraint
+---@field public AngularDrive FAngularDriveConstraint
+---@field public LinearPlasticityType integer @Whether linear plasticity has a operation mode [free]
+local FConstraintProfileProperties = {}

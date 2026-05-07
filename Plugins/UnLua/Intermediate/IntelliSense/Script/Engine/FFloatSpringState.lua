@@ -1,0 +1,2 @@
+---@class FFloatSpringState
+local FFloatSpringState = {}

@@ -1,0 +1,2 @@
+---@class FMeshThickenSettings
+local FMeshThickenSettings = {}

@@ -1,0 +1,16 @@
+---NonUniform Sampling on a DynamicMesh
+---@class FNonUniformPointSamplingDataflowNode : FDataflowNode
+---@field public TargetMesh UDynamicMesh @Mesh to sample points on
+---@field public SamplingRadius number @Desired "radius" of sample points. Spacing between samples is at least 2x this value.
+---@field public MaxNumSamples integer @Maximum number of samples requested. If 0 or default value, mesh will be maximally sampled
+---@field public SubSampleDensity number @Density of subsampling used in Poisson strategy. Larger numbers mean "more accurate" (but slower) results.
+---@field public RandomSeed integer @Random Seed used to initialize sampling strategies
+---@field public MaxSamplingRadius number @If MaxSampleRadius > SampleRadius, then output sample radius will be in range [SampleRadius, MaxSampleRadius]
+---@field public SizeDistribution ENonUniformSamplingDistributionMode @SizeDistribution setting controls the distribution of sample radii
+---@field public SizeDistributionPower number @SizeDistributionPower is used to control how extreme the Size Distribution shift is. Valid range is [1,10]
+---@field public SamplePoints TArray<FVector> @Sampled positions on the mesh
+---@field public SampleRadii TArray<number> @Sampled radii
+---@field public SampleTriangleIDs TArray<integer> @Sampled triangleID
+---@field public SampleBarycentricCoords TArray<FVector> @Barycentric Coordinates of each Sample Point in it's respective Triangle.
+---@field public NumSamplePoints integer @Number of Sampled positions on the mesh
+local FNonUniformPointSamplingDataflowNode = {}

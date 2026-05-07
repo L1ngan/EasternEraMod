@@ -1,0 +1,12 @@
+---Allows multiple animations to be blended between based on input parameters
+---@class FAnimNode_RotationOffsetBlendSpaceGraph : FAnimNode_BlendSpaceGraphBase
+---@field private BasePose FPoseLink
+---@field private LODThreshold integer @* Max LOD that this node is allowed to run * For example if you have LODThreshold to be 2, it will run until LOD 2 (based on 0 index) * when the component LOD becomes 3, it will stop update/evaluate * currently transition would be issue and that has to be re-visited
+---@field private Alpha number @Current strength of the AimOffset
+---@field private AlphaScaleBias FInputScaleBias
+---@field private AlphaBoolBlend FInputAlphaBoolBlend
+---@field private AlphaCurveName string
+---@field private AlphaScaleBiasClamp FInputScaleBiasClamp
+---@field private AlphaInputType EAnimAlphaInputType
+---@field private bAlphaBoolEnabled boolean
+local FAnimNode_RotationOffsetBlendSpaceGraph = {}

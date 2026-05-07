@@ -1,0 +1,36 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\private\\rhs_adaptablecollisionactor.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\auroradevs_rhs\\definitions.auroradevs_rhs.h",
+            "g:\\modproject\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\rhs_adaptablecollisionactor.h",
+            "g:\\modproject\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealeditor\\inc\\auroradevs_rhs\\uht\\rhs_adaptablecollisionactor.generated.h",
+            "g:\\modproject\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\rhs_collisionshape.h",
+            "g:\\modproject\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealeditor\\inc\\auroradevs_rhs\\uht\\rhs_collisionshape.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\audiocomponent.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\public\\audio\\soundparametercontrollerinterface.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\soundparametercontrollerinterface.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\audioextensions\\public\\iaudioparametertransmitter.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\audiomixer\\public\\quartz\\audiomixerquantizedcommands.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\audiomixer\\public\\quartz\\audiomixerclock.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\audiomixer\\public\\quartz\\quartzmetronome.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\sound\\quartzsubscription.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\sound\\quartzsubscriptiontoken.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\sound\\quartzinterfaces.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\audiocomponent.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\boxcomponent.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\shapecomponent.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\boxcomponent.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\capsulecomponent.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\capsulecomponent.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\spherecomponent.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\spherecomponent.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

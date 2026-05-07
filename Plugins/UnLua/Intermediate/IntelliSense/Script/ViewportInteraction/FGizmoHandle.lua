@@ -1,0 +1,2 @@
+---@class FGizmoHandle
+local FGizmoHandle = {}

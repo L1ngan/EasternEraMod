@@ -1,0 +1,21 @@
+---@class UParticleModuleTypeDataBeam2 : UParticleModuleTypeDataBase
+---@field public BeamMethod integer @The method with which to form the beam(s). Must be one of the following:         PEB2M_Distance  - Use the distance property to emit a beam along the X-axis of the emitter.         PEB2M_Target    - Emit a beam from the source to the supplied target.         PEB2M_Branch    - Currently unimplemented.
+---@field public TextureTile integer @The number of times to tile the texture along each beam. Overridden by TextureTilingDistance if it is > 0.0.     1st UV set only. 2nd UV set does not Tile.
+---@field public TextureTileDistance number @The distance per texture tile.     1st UV set only. 2nd UV set does not Tile.
+---@field public Sheets integer @The number of sheets to render
+---@field public MaxBeamCount integer @The number of live beams
+---@field public Speed number @The speed at which the beam should move from source to target when firing up.     '0' indicates instantaneous
+---@field public InterpolationPoints integer @Indicates whether the beam should be interpolated.     <= 0 --> no     >  0 --> yes (and is equal to the number of interpolation steps that should be taken.
+---@field public bAlwaysOn boolean @If true, there will ALWAYS be a beam...
+---@field public UpVectorStepSize integer @The approach to use for determining the Up vector(s) for the beam. 0 indicates that the Up FVector should be calculated at EVERY point in the beam. 1 indicates a single Up FVector should be determined at the start of the beam and used at every point. N indicates an Up FVector should be calculated every N points of the beam and interpolated between them.     [NOTE: This mode is currently unsupported.]
+---@field public BranchParentName string @The name of the emitter to branch from (if mode is PEB2M_Branch) MUST BE IN THE SAME PARTICLE SYSTEM!
+---@field public Distance FRawDistributionFloat @The distance along the X-axis to stretch the beam Distance is only used if BeamMethod is PEB2M_Distance
+---@field public TaperMethod integer @Tapering mode - one of the following: PEBTM_None              - No tapering is applied PEBTM_Full              - Taper the beam relative to source-->target, regardless of current beam length PEBTM_Partial   - Taper the beam relative to source-->location, 0=source,1=endpoint
+---@field public TaperFactor FRawDistributionFloat @Tapering factor, 0 = source of beam, 1 = target
+---@field public TaperScale FRawDistributionFloat @Tapering scaling     This is intended to be either a constant, uniform or a ParticleParam.     If a curve is used, 0/1 mapping of source/target... which could be integrated into     the taper factor itself, and therefore makes no sense.
+---@field public RenderGeometry boolean @Beam Rendering Variables.
+---@field public RenderDirectLine boolean
+---@field public RenderLines boolean
+---@field public RenderTessellation boolean
+local UParticleModuleTypeDataBeam2 = {}
+

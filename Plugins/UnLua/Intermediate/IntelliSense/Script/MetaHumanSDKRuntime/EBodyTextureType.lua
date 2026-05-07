@@ -1,0 +1,15 @@
+---@class EBodyTextureType
+---@field public Body_Basecolor integer
+---@field public Body_Normal integer
+---@field public Body_Cavity integer
+---@field public Body_Underwear_Basecolor integer
+---@field public Body_Underwear_Normal integer
+---@field public Body_Underwear_Mask integer
+---@field public Chest_Basecolor integer
+---@field public Chest_Normal integer
+---@field public Chest_Cavity integer
+---@field public Chest_Underwear_Basecolor integer
+---@field public Chest_Underwear_Normal integer
+---@field public Count integer
+---@field public EBodyTextureType_MAX integer
+local EBodyTextureType = {}

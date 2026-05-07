@@ -1,0 +1,2 @@
+---@class FRigVMPythonSettings
+local FRigVMPythonSettings = {}

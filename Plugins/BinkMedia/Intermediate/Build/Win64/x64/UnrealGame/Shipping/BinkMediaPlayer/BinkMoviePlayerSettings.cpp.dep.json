@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\binkmedia\\source\\binkmediaplayer\\private\\binkmovieplayersettings.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\easternera\\shipping\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\binkmedia\\intermediate\\build\\win64\\x64\\unrealgame\\shipping\\binkmediaplayer\\definitions.binkmediaplayer.h",
+            "g:\\modproject\\plugins\\binkmedia\\source\\binkmediaplayer\\private\\binkmovieplayersettings.h",
+            "g:\\modproject\\plugins\\binkmedia\\intermediate\\build\\win64\\unrealgame\\inc\\binkmediaplayer\\uht\\binkmovieplayersettings.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

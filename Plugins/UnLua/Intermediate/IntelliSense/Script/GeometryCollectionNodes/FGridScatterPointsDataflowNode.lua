@@ -1,0 +1,11 @@
+---@class FGridScatterPointsDataflowNode : FDataflowNode
+---@field public NumberOfPointsInX integer @Number of points in X direction
+---@field public NumberOfPointsInY integer @Number of points in Y direction
+---@field public NumberOfPointsInZ integer @Number of points in Z direction
+---@field public RandomSeed integer @Seed for random
+---@field public MaxRandomDisplacementX number @Random displacement in X direction will be in the range (-MaxRandomDisplacementX, MaxRandomDisplacementX)
+---@field public MaxRandomDisplacementY number @Random displacement in Y direction will be in the range (-MaxRandomDisplacementY, MaxRandomDisplacementY)
+---@field public MaxRandomDisplacementZ number @Random displacement in Z direction will be in the range (-MaxRandomDisplacementZ, MaxRandomDisplacementZ)
+---@field public BoundingBox FBox @BoundingBox to generate points inside of
+---@field public Points TArray<FVector> @Generated points
+local FGridScatterPointsDataflowNode = {}

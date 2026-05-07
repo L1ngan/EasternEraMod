@@ -1,0 +1,22 @@
+---@class FGeomComponentCacheParameters
+---@field public CacheMode EGeometryCollectionCacheType @Cache mode, whether disabled, playing or recording
+---@field public TargetCache UGeometryCollectionCache @The cache to target when recording or playing
+---@field public ReverseCacheBeginTime number @Cache mode, whether disabled, playing or recording
+---@field public SaveCollisionData boolean @Whether to buffer collisions during recording
+---@field public DoGenerateCollisionData boolean @Whether to generate collisions during playback
+---@field public CollisionDataSizeMax integer @Maximum size of the collision buffer
+---@field public DoCollisionDataSpatialHash boolean @Spatial hash collision data
+---@field public CollisionDataSpatialHashRadius number @Spatial hash radius for collision data
+---@field public MaxCollisionPerCell integer @Maximum number of collisions per cell
+---@field public SaveBreakingData boolean @Whether to buffer breakings during recording
+---@field public DoGenerateBreakingData boolean @Whether to generate breakings during playback
+---@field public BreakingDataSizeMax integer @Maximum size of the breaking buffer
+---@field public DoBreakingDataSpatialHash boolean @Spatial hash breaking data
+---@field public BreakingDataSpatialHashRadius number @Spatial hash radius for breaking data
+---@field public MaxBreakingPerCell integer @Maximum number of breaking per cell
+---@field public SaveTrailingData boolean @Whether to buffer trailings during recording
+---@field public DoGenerateTrailingData boolean @Whether to generate trailings during playback
+---@field public TrailingDataSizeMax integer @Maximum size of the trailing buffer
+---@field public TrailingMinSpeedThreshold number @Minimum speed to record trailing
+---@field public TrailingMinVolumeThreshold number @Minimum volume to record trailing
+local FGeomComponentCacheParameters = {}

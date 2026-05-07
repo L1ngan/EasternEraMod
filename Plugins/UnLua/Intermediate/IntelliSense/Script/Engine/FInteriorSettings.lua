@@ -1,0 +1,12 @@
+---Struct encapsulating settings for interior areas.
+---@class FInteriorSettings
+---@field public bIsWorldSettings boolean @Whether these interior settings are the default values for the world
+---@field public ExteriorVolume number @The desired volume of sounds outside the volume when the player is inside the volume
+---@field public ExteriorTime number @The time over which to interpolate from the current volume to the desired volume of sounds outside the volume when the player enters the volume
+---@field public ExteriorLPF number @The desired LPF frequency cutoff in hertz of sounds outside the volume when the player is inside the volume
+---@field public ExteriorLPFTime number @The time over which to interpolate from the current LPF to the desired LPF of sounds outside the volume when the player enters the volume
+---@field public InteriorVolume number @The desired volume of sounds inside the volume when the player is outside the volume
+---@field public InteriorTime number @The time over which to interpolate from the current volume to the desired volume of sounds inside the volume when the player exits the volume
+---@field public InteriorLPF number @The desired LPF frequency cutoff in hertz of sounds inside the volume when the player is outside the volume
+---@field public InteriorLPFTime number @The time over which to interpolate from the current LPF to the desired LPF of sounds inside the volume when the player exits the volume
+local FInteriorSettings = {}

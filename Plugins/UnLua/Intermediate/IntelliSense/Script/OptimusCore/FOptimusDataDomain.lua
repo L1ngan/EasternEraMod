@@ -1,0 +1,16 @@
+---A struct to specify the domain range of a resource buffer, as defined by compute kernels and data
+--- interfaces. Data domains can be multi-dimensional, expression-based, or empty. Empty domains on pins imply a single
+--- value, like a parameter.
+--- Domains come in two flavors, either as a pre-defined list with a multiplier, or as an arithmetic expression. For
+--- domains with a multiplier, the multiplier only applies to the innermost dimension (e.g. Vertex.Bone x 2, allows
+--- for two values per-bone, but not two values per-bone _and_ per-vertex)
+--- The expression can take any execution domain, or none (e.g. "Vertex * 2 + 1", "Triangle * 2 + Vertex * 6", "1024").
+--- If an expression is used, the domain is one-dimensional.
+--- As of now, expression domain comparison is done on the string level, such that "Vertex * 2" and "2 * Vertex" are
+--- not marked as compatible domains.
+---@class FOptimusDataDomain
+---@field public Type EOptimusDataDomainType
+---@field public DimensionNames TArray<string> @The name of the context that this resource/kernel applies to.
+---@field public Multiplier integer
+---@field public Expression string
+local FOptimusDataDomain = {}

@@ -1,0 +1,35 @@
+---@class FShaderCompilerCounters
+---@field public AccumulatedLocalWorkerIdleTime number @This tracks accumulated wait time from local workers during the lifetime of the stats. Wait time is only counted for local workers that are alive and not between their invocations
+---@field public TimesLocalWorkersWereIdle number @How many times we registered idle time?
+---@field public JobsAssigned integer @Number of jobs assigned to workers, no matter if they completed or not - used to average pending time.
+---@field public JobsCompleted integer @Total number jobs completed.
+---@field public AccumulatedPendingTime number @Amount of time a job had to spent in pending queue (i.e. waiting to be assigned to a worker).
+---@field public MaxPendingTime number @Max amount of time any single job was pending (waiting to be assigned to a worker).
+---@field public AccumulatedJobExecutionTime number @Amount of time job spent being processed by the worker.
+---@field public MaxJobExecutionTime number @Max amount of time any single job spent being processed by the worker.
+---@field public AccumulatedJobLifeTime number @Amount of time job spent being processed overall.
+---@field public MaxJobLifeTime number @Max amount of time any single job spent being processed overall.
+---@field public AccumulatedTaskSubmitJobs number @Time spent in tasks generated in FShaderJobCache::SubmitJobs, plus stall time on mutex locks in those tasks
+---@field public AccumulatedTaskSubmitJobsStall number
+---@field public LocalJobBatchesSeen integer @Number of local job batches seen.
+---@field public TotalJobsReportedInLocalJobBatches integer @Total jobs in local job batches.
+---@field public DistributedJobBatchesSeen integer @Number of distributed job batches seen.
+---@field public TotalJobsReportedInDistributedJobBatches integer @Total jobs in local job batches.
+---@field public MinShaderCodeSize integer @Size of the smallest output shader code.
+---@field public MaxShaderCodeSize integer @Size of the largest output shader code.
+---@field public AccumulatedShaderCodeSize integer @Total accumulated size of all output shader codes.
+---@field public NumAccumulatedShaderCodes integer @Number of accumulated output shader codes.
+---@field public ShaderMapDDCMisses integer @Total number of DDC misses on shader maps.
+---@field public ShaderMapDDCHits integer @Total number of DDC hits on shader maps.
+---@field public TotalCacheSearchAttempts integer @Total number of job cache query attempts.
+---@field public TotalCacheHits integer @Total number of hits in the job cache (i.e. input hashes seen >1 time)
+---@field public TotalCacheDuplicates integer @Total number of duplicate jobs (input hash matches an in-flight job, processed when in-flight job completes)
+---@field public TotalCacheDDCQueries integer @Total number of DDC queries in the job cache (per-shader DDC).
+---@field public TotalCacheDDCHits integer @Total number of DDC hits in the job cache (per shader DDC, as opposed to shader map DDC stats above).
+---@field public UniqueCacheInputHashes integer @Total number of unique input hashes seen in job cache queries
+---@field public UniqueCacheOutputs integer @Total number of unique job outputs stored in the cache. Outputs are deduplicated based on a content hash so this number is in practice smaller than UniqueCacheInputHashes.
+---@field public CacheMemUsed integer @Total amount of memory currently used by the job cache
+---@field public CacheMemBudget integer @Memory budget allocated for the job cache
+---@field public MaxRemoteAgents integer @Maximum number of remote agents used during compilation.
+---@field public MaxActiveAgentCores integer @Maximum number of CPU cores active across all remote agents.
+local FShaderCompilerCounters = {}

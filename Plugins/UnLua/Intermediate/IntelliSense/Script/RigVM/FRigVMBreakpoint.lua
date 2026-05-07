@@ -1,0 +1,2 @@
+---@class FRigVMBreakpoint
+local FRigVMBreakpoint = {}

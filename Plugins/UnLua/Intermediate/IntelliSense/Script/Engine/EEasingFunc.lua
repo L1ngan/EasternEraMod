@@ -1,0 +1,18 @@
+---Provides different easing functions that can be used in blueprints
+---@class EEasingFunc
+---@field public Linear integer
+---@field public Step integer
+---@field public SinusoidalIn integer
+---@field public SinusoidalOut integer
+---@field public SinusoidalInOut integer
+---@field public EaseIn integer
+---@field public EaseOut integer
+---@field public EaseInOut integer
+---@field public ExpoIn integer
+---@field public ExpoOut integer
+---@field public ExpoInOut integer
+---@field public CircularIn integer
+---@field public CircularOut integer
+---@field public CircularInOut integer
+---@field public EEasingFunc_MAX integer
+local EEasingFunc = {}

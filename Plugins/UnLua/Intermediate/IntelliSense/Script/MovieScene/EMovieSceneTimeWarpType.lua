@@ -1,0 +1,12 @@
+---Enumeration defining the type stored within an FMovieSceneTimeWarpVariant
+---@class EMovieSceneTimeWarpType
+---@field public FixedPlayRate integer
+---@field public Custom integer
+---@field public FixedTime integer
+---@field public FrameRate integer
+---@field public Loop integer
+---@field public Clamp integer
+---@field public LoopFloat integer
+---@field public ClampFloat integer
+---@field public EMovieSceneTimeWarpType_MAX integer
+local EMovieSceneTimeWarpType = {}

@@ -1,0 +1,12 @@
+---Draws an arc in the viewport, can take in different min and max degrees
+---@class FRigVMFunction_DebugArcNoSpace : FRigVMFunction_DebugBaseMutable
+---@field public Transform FTransform
+---@field public Color FLinearColor
+---@field public Radius number
+---@field public MinimumDegrees number
+---@field public MaximumDegrees number
+---@field public Thickness number
+---@field public Detail integer
+---@field public WorldOffset FTransform
+---@field public bEnabled boolean
+local FRigVMFunction_DebugArcNoSpace = {}

@@ -1,0 +1,12 @@
+---Records a value over time and can access the value from the past
+---@class FRigVMFunction_TimeOffsetFloat : FRigVMFunction_SimBase
+---@field public Value number @The value to record
+---@field public SecondsAgo number @Seconds of time in the past you want to query the value for
+---@field public BufferSize integer @The sampling precision of the buffer. The higher the more precise - the more memory usage.
+---@field public TimeRange number @The maximum time required for offsetting in seconds.
+---@field public Result number
+---@field public Buffer TArray<number>
+---@field public DeltaTimes TArray<number>
+---@field public LastInsertIndex integer
+---@field public UpperBound integer
+local FRigVMFunction_TimeOffsetFloat = {}

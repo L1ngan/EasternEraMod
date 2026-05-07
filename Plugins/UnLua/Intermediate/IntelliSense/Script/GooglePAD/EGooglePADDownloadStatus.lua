@@ -1,0 +1,18 @@
+---The status associated with Asset Pack download operations.
+---@class EGooglePADDownloadStatus
+---@field public AssetPack_UNKNOWN integer
+---@field public AssetPack_DOWNLOAD_PENDING integer
+---@field public AssetPack_DOWNLOADING integer
+---@field public AssetPack_TRANSFERRING integer
+---@field public AssetPack_DOWNLOAD_COMPLETED integer
+---@field public AssetPack_DOWNLOAD_FAILED integer
+---@field public AssetPack_DOWNLOAD_CANCELED integer
+---@field public AssetPack_WAITING_FOR_WIFI integer
+---@field public AssetPack_NOT_INSTALLED integer
+---@field public AssetPack_INFO_PENDING integer
+---@field public AssetPack_INFO_FAILED integer
+---@field public AssetPack_REMOVAL_PENDING integer
+---@field public AssetPack_REMOVAL_FAILED integer
+---@field public AssetPack_REQUIRES_USER_CONFIRMATION integer
+---@field public AssetPack_MAX integer
+local EGooglePADDownloadStatus = {}

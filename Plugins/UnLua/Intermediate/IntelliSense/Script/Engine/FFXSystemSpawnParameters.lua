@@ -1,0 +1,16 @@
+---Parameters controlling the spawning behavior of FX systems via the SpawnSystemAtLocation and SpawnSystemAttached.
+---@class FFXSystemSpawnParameters
+---@field public WorldContextObject UObject
+---@field public SystemTemplate UFXSystemAsset
+---@field public Location FVector
+---@field public Rotation FRotator
+---@field public Scale FVector
+---@field public AttachToComponent USceneComponent
+---@field public AttachPointName string
+---@field public LocationType integer
+---@field public bAutoDestroy boolean
+---@field public bAutoActivate boolean
+---@field public PoolingMethod EPSCPoolMethod
+---@field public bPreCullCheck boolean
+---@field public bIsPlayerEffect boolean
+local FFXSystemSpawnParameters = {}

@@ -1,0 +1,11 @@
+---@class ETextureRotationDirection
+---@field public None integer
+---@field public Left integer
+---@field public Right integer
+---@field public Down integer
+---@field public LeftMirrored integer
+---@field public RightMirrored integer
+---@field public DownMirrored integer
+---@field public UpMirrored integer
+---@field public ETextureRotationDirection_MAX integer
+local ETextureRotationDirection = {}

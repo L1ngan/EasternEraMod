@@ -1,0 +1,17 @@
+---StateTree struct ref allows to get a reference/pointer to a specified type via property binding.
+---It is useful for referencing larger properties to avoid copies of the data, or to be able to write to a bounds property.
+---The expected type of the reference should be set in "BaseStruct" meta tag.
+---Example:
+---    USTRUCT()
+---    struct FAwesomeTaskInstanceData
+---    {
+---            GENERATED_BODY()
+---            UPROPERTY(VisibleAnywhere, Category = Input, meta = (BaseStruct = "/Script/AwesomeModule.AwesomeData"))
+---            FStateTreeStructRef Data;
+---    };
+---    if (const FAwesomeData* Awesome = InstanceData.Data.GetPtr<FAwesomeData>())
+---    {
+---            ...
+---    }
+---@class FStateTreeStructRef
+local FStateTreeStructRef = {}

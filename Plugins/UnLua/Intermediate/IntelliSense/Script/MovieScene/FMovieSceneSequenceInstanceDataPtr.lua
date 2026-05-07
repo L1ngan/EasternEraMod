@@ -1,0 +1,2 @@
+---@class FMovieSceneSequenceInstanceDataPtr
+local FMovieSceneSequenceInstanceDataPtr = {}

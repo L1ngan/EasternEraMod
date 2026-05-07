@@ -1,0 +1,11 @@
+---@class ETedsDebugEnum
+---@field public Red integer
+---@field public Blue integer
+---@field public Green integer
+---@field public Yellow integer
+---@field public Black integer
+---@field public Pink integer
+---@field public Orange integer
+---@field public Purple integer
+---@field public ETedsDebugEnum_MAX integer
+local ETedsDebugEnum = {}

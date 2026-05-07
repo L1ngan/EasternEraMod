@@ -1,0 +1,15 @@
+---Sequence player node that can be used with constant folding
+---@class FAnimNode_SequencePlayer : FAnimNode_SequencePlayerBase
+---@field protected GroupName string @The group name that we synchronize with (NAME_None if it is not part of any group).
+---@field protected GroupRole integer @The role this node can assume within the group (ignored if GroupName is not set)
+---@field protected bOverridePositionWhenJoiningSyncGroupAsLeader boolean @When enabled, acting as the leader, and using marker-based sync, this asset player will not sync to the previous leader's sync position when joining a sync group and before becoming the leader but instead force everyone else to match its position.
+---@field protected Method EAnimSyncMethod @How this node will synchronize with other animations.
+---@field protected bIgnoreForRelevancyTest boolean @If true, "Relevant anim" nodes that look for the highest weighted animation in a state will ignore this node
+---@field protected Sequence UAnimSequenceBase @The animation sequence asset to play
+---@field protected PlayRateBasis number @The Basis in which the PlayRate is expressed in. This is used to rescale PlayRate inputs. For example a Basis of 100 means that the PlayRate input will be divided by 100.
+---@field protected PlayRate number @The play rate multiplier. Can be negative, which will cause the animation to play in reverse.
+---@field protected PlayRateScaleBiasClampConstants FInputScaleBiasClampConstants @Additional scaling, offsetting and clamping of PlayRate input. Performed after PlayRateBasis.
+---@field protected StartPosition number @The start position between 0 and the length of the sequence to use when initializing. When looping, play will still jump back to the beginning when reaching the end.
+---@field protected bLoopAnimation boolean @Should the animation loop back to the start when it reaches the end?
+---@field protected bStartFromMatchingPose boolean @Use pose matching to choose the start position. Requires PoseSearch plugin.
+local FAnimNode_SequencePlayer = {}

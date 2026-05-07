@@ -1,0 +1,23 @@
+---A font object, for use by Slate, UMG, and Canvas.
+---A font can either be:
+---  * Runtime cached - The font contains a series of TTF files that combine to form a composite font. The glyphs are cached on demand when required at runtime.
+---  * Offline cached - The font contains a series of textures containing pre-baked cached glyphs and their associated texture coordinates.
+---@class UFont : UObject
+---@field public FontCacheType EFontCacheType @What kind of font caching should we use? This controls which options we see
+---@field public Characters TArray<FFontCharacter> @List of characters in the font.  For a MultiFont, this will include all characters in all sub-fonts!  Thus,               the number of characters in this array isn't necessary the number of characters available in the font
+---@field public Textures TArray<UTexture2D> @Textures that store this font's glyph image data //NOTE: Do not expose this to the editor as it has nasty crash potential
+---@field public IsRemapped integer @True if font is 'remapped'.  That is, the character array is not a direct mapping to unicode values.  Instead,               all characters are indexed indirectly through the CharRemap array
+---@field public EmScale number @Font metrics.
+---@field public Ascent number @
+---@field public Descent number @
+---@field public Leading number @
+---@field public Kerning integer @Default horizontal spacing between characters when rendering text with this font
+---@field public ImportOptions FFontImportOptionsData @Options used when importing this font
+---@field public NumCharacters integer @Number of characters in the font, not including multiple instances of the same character (for multi-fonts).               This is cached at load-time or creation time, and is never serialized.
+---@field public MaxCharHeight TArray<integer> @The maximum height of a character in this font.  For multi-fonts, this array will contain a maximum               character height for each multi-font, otherwise the array will contain only a single element.  This is               cached at load-time or creation time, and is never serialized.
+---@field public ScalingFactor number @Scale to apply to the font.
+---@field public LegacyFontSize integer @The default size of the font used for legacy Canvas APIs that don't specify a font size
+---@field public LegacyFontName string @The default font name to use for legacy Canvas APIs that don't specify a font name
+---@field public CompositeFont FCompositeFont @Embedded composite font data
+local UFont = {}
+

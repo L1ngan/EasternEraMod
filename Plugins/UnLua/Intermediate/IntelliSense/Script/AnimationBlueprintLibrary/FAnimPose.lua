@@ -1,0 +1,15 @@
+---Script friendly representation of an evaluated animation bone pose
+---@class FAnimPose
+---@field protected BoneNames TArray<string>
+---@field protected BoneIndices TArray<integer>
+---@field protected ParentBoneIndices TArray<integer>
+---@field protected LocalSpacePoses TArray<FTransform>
+---@field protected WorldSpacePoses TArray<FTransform>
+---@field protected RefLocalSpacePoses TArray<FTransform>
+---@field protected RefWorldSpacePoses TArray<FTransform>
+---@field protected CurveNames TArray<string>
+---@field protected CurveValues TArray<number>
+---@field protected SocketNames TArray<string>
+---@field protected SocketParentBoneNames TArray<string>
+---@field protected SocketTransforms TArray<FTransform>
+local FAnimPose = {}

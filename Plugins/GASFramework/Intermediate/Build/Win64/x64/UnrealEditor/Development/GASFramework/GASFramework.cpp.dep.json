@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\gasframework\\source\\gasframework\\private\\gasframework.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\gasframework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\gasframework\\definitions.gasframework.h",
+            "g:\\modproject\\plugins\\gasframework\\source\\gasframework\\public\\gasframework.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

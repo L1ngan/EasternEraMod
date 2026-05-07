@@ -1,0 +1,11 @@
+---UMaterial interface settings for Lightmass
+---@class FLightmassMaterialInterfaceSettings
+---@field public EmissiveBoost number @Scales the emissive contribution of this material to static lighting.
+---@field public DiffuseBoost number @Scales the diffuse contribution of this material to static lighting.
+---@field public ExportResolutionScale number @Scales the resolution that this material's attributes were exported at. This is useful for increasing material resolution when details are needed.
+---@field public bCastShadowAsMasked boolean @If true, forces translucency to cast static shadows as if the material were masked.
+---@field public bOverrideCastShadowAsMasked boolean @If true, override the bCastShadowAsMasked setting of the parent material.
+---@field public bOverrideEmissiveBoost boolean @If true, override the emissive boost setting of the parent material.
+---@field public bOverrideDiffuseBoost boolean @If true, override the diffuse boost setting of the parent material.
+---@field public bOverrideExportResolutionScale boolean @If true, override the export resolution scale setting of the parent material.
+local FLightmassMaterialInterfaceSettings = {}

@@ -1,0 +1,13 @@
+---Simple controller that make a bone to look at the point or another bone
+---@class FAnimNode_LookAt : FAnimNode_SkeletalControlBase
+---@field public BoneToModify FBoneReference @Name of bone to control. This is the main bone chain to modify from. *
+---@field public LookAtTarget FBoneSocketTarget @Target socket to look at. Used if LookAtBone is empty. - You can use  LookAtLocation if you need offset from this point. That location will be used in their local space. *
+---@field public LookAtLocation FVector @Target Offset. It's in world space if LookAtBone is empty or it is based on LookAtBone or LookAtSocket in their local space
+---@field public LookAt_Axis FAxis
+---@field public bUseLookUpAxis boolean @Whether or not to use Look up axis
+---@field public InterpolationType integer
+---@field public LookUp_Axis FAxis
+---@field public LookAtClamp number @Look at Clamp value in degrees - if your look at axis is Z, only X, Y degree of clamp will be used
+---@field public InterpolationTime number
+---@field public InterpolationTriggerThreashold number
+local FAnimNode_LookAt = {}

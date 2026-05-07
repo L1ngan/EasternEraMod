@@ -1,0 +1,12 @@
+---@class ENiagaraCompilationState
+---@field public CheckDDC integer
+---@field public Precompile integer
+---@field public StartCompileJob integer
+---@field public AwaitResult integer
+---@field public OptimizeByteCode integer
+---@field public ProcessResult integer
+---@field public PutToDDC integer
+---@field public Finished integer
+---@field public Aborted integer
+---@field public ENiagaraCompilationState_MAX integer
+local ENiagaraCompilationState = {}

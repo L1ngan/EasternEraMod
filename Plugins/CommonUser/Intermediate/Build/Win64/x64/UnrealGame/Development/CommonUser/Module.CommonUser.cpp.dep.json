@@ -1,0 +1,22 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\plugins\\commonuser\\intermediate\\build\\win64\\x64\\unrealgame\\development\\commonuser\\module.commonuser.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\easternera\\development\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\plugins\\commonuser\\intermediate\\build\\win64\\x64\\unrealgame\\development\\commonuser\\definitions.commonuser.h",
+            "h:\\project\\plugins\\commonuser\\intermediate\\build\\win64\\unrealgame\\inc\\commonuser\\uht\\commonuser.init.gen.cpp",
+            "h:\\project\\plugins\\commonuser\\intermediate\\build\\win64\\unrealgame\\inc\\commonuser\\uht\\commonuserbasicpresence.gen.cpp",
+            "h:\\project\\plugins\\commonuser\\source\\commonuser\\public\\commonuserbasicpresence.h",
+            "h:\\project\\plugins\\commonuser\\intermediate\\build\\win64\\unrealgame\\inc\\commonuser\\uht\\commonuserbasicpresence.generated.h",
+            "h:\\project\\plugins\\commonuser\\intermediate\\build\\win64\\unrealgame\\inc\\commonuser\\uht\\commonusertypes.gen.cpp",
+            "h:\\project\\plugins\\commonuser\\source\\commonuser\\public\\commonusertypes.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystemtypes.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystemnames.h",
+            "h:\\project\\plugins\\commonuser\\intermediate\\build\\win64\\unrealgame\\inc\\commonuser\\uht\\commonusertypes.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

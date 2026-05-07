@@ -1,0 +1,27 @@
+---Various cooker settings.
+---@class UCookerSettings : UDeveloperSettings
+---@field public bEnableCookOnTheSide boolean
+---@field public bEnableBuildDDCInBackground boolean
+---@field public bIterativeCookingForLaunchOn boolean @Enable -iterate for launch on
+---@field public bIterativeCookingForFileCookContent boolean @Enable -iterate when triggering from Platforms dropdown menu
+---@field public bCookOnTheFlyForLaunchOn boolean @Enable -cookonthefly for launch on
+---@field public CookProgressDisplayMode ECookProgressDisplayMode @Controls log output of the cooker
+---@field public bIgnoreIniSettingsOutOfDateForIteration boolean @Ignore ini changes when doing iterative cooking, either in editor or out of editor
+---@field public bIgnoreScriptPackagesOutOfDateForIteration boolean @Ignore native header file changes when doing iterative cooking, either in editor or out of editor
+---@field public bCompileBlueprintsInDevelopmentMode boolean @Whether or not to compile Blueprints in development mode when cooking.
+---@field public BlueprintComponentDataCookingMethod EBlueprintComponentDataCookingMethod @Generate optimized component data to speed up Blueprint construction at runtime. This option can increase the overall Blueprint memory usage in a cooked build. Requires Event-Driven Loading (EDL), which is enabled by default.
+---@field public BlueprintPropertyGuidsCookingMethod EBlueprintPropertyGuidsCookingMethod @Should we include the property GUIDs for a Blueprint class in a cooked build, so that SaveGame archives can redirect property names via the GUIDs?
+---@field public ClassesExcludedOnDedicatedServer TArray<string> @List of class names to exclude when cooking for dedicated server
+---@field public ModulesExcludedOnDedicatedServer TArray<string> @List of module names to exclude when cooking for dedicated server
+---@field public ClassesExcludedOnDedicatedClient TArray<string> @List of class names to exclude when cooking for dedicated client
+---@field public ModulesExcludedOnDedicatedClient TArray<string> @List of module names to exclude when cooking for dedicated client
+---@field public VersionedIntRValues TArray<string> @List of r values that need to be versioned
+---@field public DefaultASTCQualityBySpeed integer @Quality of 0 means fastest, 3 means best quality
+---@field public DefaultASTCQualityBySize integer @Quality of 0 means smallest (12x12 block size), 4 means best (4x4 block size)
+---@field public DefaultASTCQualityBySizeHQ integer @Quality of 0 means smallest (12x12 block size), 4 means best (4x4 block size)
+---@field public DefaultASTCCompressor ETextureFormatASTCCompressor @which compressor to use for ASTC textures
+---@field public bAllowASTCHDRProfile boolean @whether to allow ASTC HDR profile using Arm encoder, the hdr format is only supported on some devices, e.g. Apple A13, Mali-G72, Adreno (TM) 660
+---@field public bAllowCookedDataInEditorBuilds boolean @If true, the editor will be able to open cooked assets (limited to a subset of supported asset types).
+---@field private bCookBlueprintComponentTemplateData boolean @Deprecated. Use BlueprintComponentDataCookingMethod instead.
+local UCookerSettings = {}
+

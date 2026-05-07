@@ -1,0 +1,11 @@
+---@class FWaveTableTransform
+---@field public Curve EWaveTableCurve @The curve to apply when transforming the output.
+---@field public Scalar number @When curve set to log, exponential or exponential inverse, value is factor 'b' in following equations with output 'y' and input 'x': Exponential: y = x * 10^-b(1-x) Exponential (Inverse): y = ((x - 1) * 10^(-bx)) + 1 Logarithmic: y = b * log(x) + 1
+---@field public CurveCustom FRichCurve @Custom curve to apply if output curve type is set to 'Custom.'
+---@field public CurveShared UCurveFloat @Asset curve reference to apply if output curve type is set to 'Shared.'
+---@field protected TableData FWaveTableData
+---@field protected Duration number @Duration of curve or file.  Only valid if parent SampleRate is set and SamplingMode is set to 'FixedSampleRate' (If set to 'FixedResolution', duration is variable depending on the resolution (number of samples in the table data) and device's sample rate.
+---@field public WaveTableSettings FWaveTableSettings
+---@field public WaveTable TArray<number>
+---@field public FinalValue number
+local FWaveTableTransform = {}

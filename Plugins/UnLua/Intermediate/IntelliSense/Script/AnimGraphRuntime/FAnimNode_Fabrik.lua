@@ -1,0 +1,12 @@
+---Controller which implements the FABRIK IK approximation algorithm -  see http://www.academia.edu/9165835/FABRIK_A_fast_iterative_solver_for_the_Inverse_Kinematics_problem for details
+---@class FAnimNode_Fabrik : FAnimNode_SkeletalControlBase
+---@field public EffectorTransform FTransform @Coordinates for target location of tip bone - if EffectorLocationSpace is bone, this is the offset from Target Bone to use as target location
+---@field public EffectorTarget FBoneSocketTarget @If EffectorTransformSpace is a bone, this is the bone to use. *
+---@field public TipBone FBoneReference @Name of tip bone
+---@field public RootBone FBoneReference @Name of the root bone
+---@field public Precision number @Tolerance for final tip location delta from EffectorLocation
+---@field public MaxIterations integer @Maximum number of iterations allowed, to control performance.
+---@field public EffectorTransformSpace integer @Reference frame of Effector Transform.
+---@field public EffectorRotationSource integer
+---@field public bEnableDebugDraw boolean @Toggle drawing of axes to debug joint rotation
+local FAnimNode_Fabrik = {}

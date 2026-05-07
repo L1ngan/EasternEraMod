@@ -1,0 +1,88 @@
+---@class ARecastNavMesh : ANavigationData
+---@field public bDrawTriangleEdges boolean @Draw edges of every navmesh's triangle
+---@field public bDrawPolyEdges boolean @Draw edges of every poly (i.e. not only border-edges)
+---@field public bDrawFilledPolys boolean @if disabled skips filling drawn navmesh polygons
+---@field public bDrawNavMeshEdges boolean @Draw border-edges
+---@field public bDrawTileBounds boolean @Draw the tile boundaries
+---@field public bDrawTileResolutions boolean @Draw the tile resolutions
+---@field public bDrawPathCollidingGeometry boolean @Draw input geometry passed to the navmesh generator.  Recommend disabling other geometry rendering via viewport showflags in editor.
+---@field public bDrawTileLabels boolean
+---@field public bDrawTileBuildTimes boolean
+---@field public bDrawTileBuildTimesHeatMap boolean
+---@field public bDrawPolygonLabels boolean @Draw a label for every poly that indicates its poly and tile indices
+---@field public bDrawDefaultPolygonCost boolean @Draw a label for every poly that indicates its default and fixed costs
+---@field public bDrawPolygonFlags boolean @Draw a label for every poly that indicates its poly and area flags
+---@field public bDrawLabelsOnPathNodes boolean
+---@field public bDrawNavLinks boolean @Draw valid links (both ends are valid).
+---@field public bDrawFailedNavLinks boolean @Draw failed links and valid links.
+---@field public bDrawClusters boolean @Draw navmesh's clusters and cluster links. (Requires WITH_NAVMESH_CLUSTER_LINKS=1)
+---@field public bDrawOctree boolean @Draw octree used to store navigation relevant actors
+---@field public bDrawOctreeDetails boolean @Draw octree used to store navigation relevant actors with the elements bounds
+---@field public bDrawMarkedForbiddenPolys boolean
+---@field public bDistinctlyDrawTilesBeingBuilt boolean @if true, show currently rebuilding tiles differently when visualizing
+---@field public DrawOffset number @vertical offset added to navmesh's debug representation for better readability
+---@field public TileGenerationDebug FRecastNavMeshTileGenerationDebug
+---@field public bFixedTilePoolSize boolean @if true, the NavMesh will allocate fixed size pool for tiles, should be enabled to support streaming
+---@field public TilePoolSize integer @maximum number of tiles NavMesh can hold
+---@field public TileSizeUU number @size of single tile, expressed in uu
+---@field public CellSize number
+---@field public CellHeight number
+---@field public AgentMaxStepHeight number
+---@field public NavMeshResolutionParams FNavMeshResolutionParam @Resolution params If using multiple resolutions, it's recommended to chose the highest resolution first and set it according to the highest desired precision and then the other resolutions.
+---@field public AgentRadius number @Radius of smallest agent to traverse this navmesh
+---@field public AgentHeight number @Size of the tallest agent that will path with this navmesh.
+---@field public AgentMaxSlope number @The maximum slope (angle) that the agent can move on.
+---@field public MinRegionArea number @The minimum dimension of area. Areas smaller than this will be discarded
+---@field public MergeRegionSize number @The size limit of regions to be merged with bigger regions (watershed partitioning only)
+---@field public MaxVerticalMergeError integer
+---@field public MaxSimplificationError number @How much navigable shapes can get simplified - the higher the value the more freedom
+---@field public SimplificationElevationRatio number @When simplifying contours, how much is the vertical error taken into account when comparing with MaxSimplificationError. Use 0 to deactivate (Recast behavior), use 1 as a typical value.
+---@field public MaxSimultaneousTileGenerationJobsCount integer @Sets the limit for number of asynchronous tile generators running at one time, also used for some synchronous tasks
+---@field public TileNumberHardLimit integer @Absolute hard limit to number of navmesh tiles. Be very, very careful while modifying it while     having big maps with navmesh. A single, empty tile takes 176 bytes and empty tiles are     allocated up front (subject to change, but that's where it's at now)     @@note TileNumberHardLimit is always rounded up to the closest power of 2
+---@field public ExpectedMaxLayersPerTile integer @Used when connecting segment links across layers to determine how much memory to allocate to hold skipped layers
+---@field public PolyRefTileBits integer
+---@field public PolyRefNavPolyBits integer
+---@field public PolyRefSaltBits integer
+---@field public NavMeshOriginOffset FVector @Use this if you don't want your tiles to start at (0,0,0)
+---@field public DefaultDrawDistance number @navmesh draw distance in game (always visible in editor)
+---@field public DefaultMaxSearchNodes number @specifies default limit to A* nodes used when performing navigation queries.     Can be overridden by passing custom FNavigationQueryFilter
+---@field public DefaultMaxHierarchicalSearchNodes number @specifies default limit to A* nodes used when performing hierarchical navigation queries.
+---@field public LedgeSlopeFilterMode ENavigationLedgeSlopeFilterMode @filtering methode used for filtering ledge slopes
+---@field public RegionPartitioning integer @partitioning method for creating navmesh polys
+---@field public LayerPartitioning integer @partitioning method for creating tile layers
+---@field public RegionChunkSplits integer @number of chunk splits (along single axis) used for region's partitioning: ChunkyMonotone
+---@field public LayerChunkSplits integer @number of chunk splits (along single axis) used for layer's partitioning: ChunkyMonotone
+---@field public bSortNavigationAreasByCost boolean @Controls whether Navigation Areas will be sorted by cost before application     to navmesh during navmesh generation. This is relevant when there are     areas overlapping and we want to have area cost express area relevancy     as well. Setting it to true will result in having area sorted by cost,     but it will also increase navmesh generation cost a bit
+---@field public bIsWorldPartitioned boolean @In a world partitioned map, is this navmesh using world partitioning
+---@field public bGenerateNavLinks boolean @Experimental: if set, navlinks will be automatically generated.
+---@field public bPerformVoxelFiltering boolean @controls whether voxel filtering will be applied (via FRecastTileGenerator::ApplyVoxelFilter).     Results in generated navmesh better fitting navigation bounds, but hits (a bit) generation performance
+---@field public bMarkLowHeightAreas boolean @mark areas with insufficient free height above instead of cutting them out (accessible only for area modifiers using replace mode)
+---@field public bUseExtraTopCellWhenMarkingAreas boolean @Expand the top of the area nav modifier's bounds by one cell height when applying to the navmesh.               If unset, navmesh on top of surfaces might not be marked by marking bounds flush with top surfaces (since navmesh is generated slightly above collision, depending on cell height).
+---@field public bFilterLowSpanSequences boolean @if set, only single low height span will be allowed under valid one
+---@field public bFilterLowSpanFromTileCache boolean @if set, only low height spans with corresponding area modifier will be stored in tile cache (reduces memory, can't modify without full tile rebuild)
+---@field public bDoFullyAsyncNavDataGathering boolean @if set, navmesh data gathering will never happen on the game thread and will only be done on background threads
+---@field public bUseBetterOffsetsFromCorners boolean @TODO: switch to disable new code from OffsetFromCorners if necessary - remove it later
+---@field public bStoreEmptyTileLayers boolean @If set, tiles generated without any navmesh data will be marked to distinguish them from not generated / streamed out ones. Defaults to false.
+---@field public bUseVirtualFilters boolean @Indicates whether default navigation filters will use virtual functions. Defaults to true.
+---@field public bUseVirtualGeometryFilteringAndDirtying boolean @Indicates whether to use the virtual methods to check if an object should generate geometry or if we should call the normal method directly (i.e. FNavigationOctreeElement::ShouldUseGeometry). If enabled, will also check if an object requesting an update on the navmesh is excluded to avoid dirtying the areas unnecessarily. Defaults to false.
+---@field public bAllowNavLinkAsPathEnd boolean @If set, paths can end at navlink poly (not the ground one!)
+---@field public TimeSliceFilterLedgeSpansMaxYProcess integer @The maximum number of y coords to process when time slicing filter ledge spans during navmesh regeneration.
+---@field public TimeSliceLongDurationDebug number @If a single time sliced section of navmesh regen code exceeds this duration then it will trigger debug logging
+---@field public InvokerTilePriorityBumpDistanceThresholdInTileUnits integer @If >= 1, when sorting pending tiles by priority, tiles near invokers (within the distance threshold) will have their priority increased.
+---@field public InvokerTilePriorityBumpIncrease integer @Priority increase steps for tiles that are withing near distance.
+---@field protected bAllowWorldPartitionedNavMesh boolean @World partitioned navmesh are only allowed in partitioned worlds.
+---@field protected NavLinkJumpDownConfig FNavLinkGenerationJumpDownConfig @Experimental configuration to generate vertical links.
+---@field private bUseVoxelCache boolean @Cache rasterized voxels instead of just collision vertices/indices in navigation octree
+---@field private TileSetUpdateInterval number @indicates how often we will sort navigation tiles to mach players position
+---@field public HeuristicScale number @Euclidean distance heuristic scale used while pathfinding
+---@field public VerticalDeviationFromGroundCompensation number @Value added to each search height to compensate for error between navmesh polys and walkable geometry
+local ARecastNavMesh = {}
+
+---
+---@param Bounds FBox
+---@param OldArea TSubclassOf_UNavArea_
+---@param NewArea TSubclassOf_UNavArea_
+---@param ReplaceLinks boolean @[opt] 
+---@return boolean
+function ARecastNavMesh:K2_ReplaceAreaInTileBounds(Bounds, OldArea, NewArea, ReplaceLinks) end
+

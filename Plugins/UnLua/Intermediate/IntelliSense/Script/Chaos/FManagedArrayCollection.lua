@@ -1,0 +1,16 @@
+---ManagedArrayCollection
+---  The ManagedArrayCollection is an entity system that implements a homogeneous, dynamically allocated, manager of
+---  primitive TArray structures. The collection stores groups of TArray attributes, where each attribute within a
+---  group is the same length. The collection will make use of the TManagedArray class, providing limited interaction
+---  with the underlying TArray.
+---  For example:
+---       FManagedArrayCollection* Collection(NewObject<FManagedArrayCollection>());
+---       Collection->AddElements(10, "GroupBar"); // Create a group GroupBar and add 10 elements.
+---       Collection->AddAttribute<FVector3f>("AttributeFoo", "GroupBar"); // Add a FVector array named AttributeFoo to GroupBar.
+---       TManagedArray<FVector3f>&  Foo = Collection->GetAttribute<FVector3f>("AttributeFoo", "GroupBar"); // Get AttributeFoo
+---       for (int32 i = 0; i < Foo.Num(); i++)
+---       {
+---               Foo[i] = FVector(i, i, i); // Update AttribureFoo's elements
+---       }
+---@class FManagedArrayCollection
+local FManagedArrayCollection = {}

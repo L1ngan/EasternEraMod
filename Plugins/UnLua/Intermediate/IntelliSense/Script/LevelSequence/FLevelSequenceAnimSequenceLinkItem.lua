@@ -1,0 +1,23 @@
+---Link To Anim Sequence that we are linked too.
+---@class FLevelSequenceAnimSequenceLinkItem
+---@field public SkelTrackGuid FGuid
+---@field public PathToAnimSequence FSoftObjectPath
+---@field public bExportTransforms boolean @From Editor Only UAnimSeqExportOption we cache this since we can re-import dynamically
+---@field public bExportMorphTargets boolean
+---@field public bExportAttributeCurves boolean
+---@field public bExportMaterialCurves boolean
+---@field public Interpolation EAnimInterpolationType
+---@field public CurveInterpolation integer
+---@field public bRecordInWorldSpace boolean
+---@field public bEvaluateAllSkeletalMeshComponents boolean
+---@field public IncludeAnimationNames TArray<string> @Include only the animation bones/curves that match this list
+---@field public ExcludeAnimationNames TArray<string> @Exclude all animation bones/curves that match this list
+---@field public WarmUpFrames FFrameNumber @Number of Display Rate frames to evaluate before doing the export. It will evaluate after any Delay. This will use frames before the start frame. Use it if there is some post anim BP effects you want to run before export start time.
+---@field public DelayBeforeStart FFrameNumber @Number of Display Rate frames to delay at the same frame before doing the export. It will evalaute first, then any warm up, then the export. Use it if there is some post anim BP effects you want to ran repeatedly at the start.
+---@field public bUseCustomTimeRange boolean @Whether or not to use custom time range
+---@field public CustomStartFrame FFrameNumber @Custom start frame in display rate
+---@field public CustomEndFrame FFrameNumber @Custom end frame in display rate
+---@field public CustomDisplayRate FFrameRate @Custom display rate, should be set from the movie scene/sequencer display rate
+---@field public bUseCustomFrameRate boolean @Whether or not to use custom frame rate or Sequencer display rate
+---@field public CustomFrameRate FFrameRate @Custom frame rate that the anim sequence may have been recorded at
+local FLevelSequenceAnimSequenceLinkItem = {}

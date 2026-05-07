@@ -1,0 +1,22 @@
+---@class UMaterialEditorInstanceConstant : UMaterialEditorParameters
+---@field public PhysMaterial UPhysicalMaterial @Physical material to use for this graphics material. Used for sounds, effects etc.
+---@field public Parent UMaterialInterface @since the Parent may point across levels and the property editor needs to import this text, it must be marked lazy so it doesn't set itself to NULL in FindImportedObject
+---@field public ParameterGroups TArray<FEditorParameterGroup>
+---@field public RefractionDepthBias number @This is the refraction depth bias, larger values offset distortion to prevent closer objects from rendering into the distorted surface at acute viewing angles but increases the disconnect between surface and where the refraction starts.
+---@field public SubsurfaceProfile USubsurfaceProfile @SubsurfaceProfile, for Screen Space Subsurface Scattering
+---@field public bOverrideSubsurfaceProfile boolean @Defines if SubsurfaceProfile from this instance is used or it uses the parent one.
+---@field public SpecularProfile USpecularProfile @Specular profile
+---@field public bOverrideSpecularProfile boolean @Defines if SpecularProfile from this instance is used or it uses the parent one.
+---@field public bIsFunctionPreviewMaterial boolean
+---@field public bIsFunctionInstanceDirty boolean
+---@field public BasePropertyOverrides FMaterialInstanceBasePropertyOverrides
+---@field public SourceInstance UMaterialInstanceConstant
+---@field public SourceFunction UMaterialFunctionInstance
+---@field public VisibleExpressions TArray<FMaterialParameterInfo>
+---@field public LightmassSettings FLightmassParameterizedMaterialSettings @The Lightmass override settings for this object.
+---@field public bUseOldStyleMICEditorGroups boolean @Should we use old style typed arrays for unassigned parameters instead of a None group (new style)?
+---@field public bNaniteOverride boolean @When set we will use the override from NaniteOverrideMaterial. Otherwise we inherit any override on the parent.
+---@field public NaniteOverrideMaterial UMaterialInterface @An override material which will be used instead of this one when rendering with nanite.
+---@field public PostProcessOverrides FMaterialEditorPostProcessOverrides @Overrides specific to Post Process domain materials.
+local UMaterialEditorInstanceConstant = {}
+

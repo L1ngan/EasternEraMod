@@ -1,0 +1,21 @@
+---An error code associated with Asset Pack operations.
+---@class EGooglePADErrorCode
+---@field public AssetPack_NO_ERROR integer
+---@field public AssetPack_APP_UNAVAILABLE integer
+---@field public AssetPack_UNAVAILABLE integer
+---@field public AssetPack_INVALID_REQUEST integer
+---@field public AssetPack_DOWNLOAD_NOT_FOUND integer
+---@field public AssetPack_API_NOT_AVAILABLE integer
+---@field public AssetPack_NETWORK_ERROR integer
+---@field public AssetPack_ACCESS_DENIED integer
+---@field public AssetPack_INSUFFICIENT_STORAGE integer
+---@field public AssetPack_PLAY_STORE_NOT_FOUND integer
+---@field public AssetPack_NETWORK_UNRESTRICTED integer
+---@field public AssetPack_INTERNAL_ERROR integer
+---@field public AssetPack_INITIALIZATION_NEEDED integer
+---@field public AssetPack_INITIALIZATION_FAILED integer
+---@field public AssetPack_APP_NOT_OWNED integer
+---@field public AssetPack_CONFIRMATION_NOT_REQUIRED integer
+---@field public AssetPack_UNRECOGNIZED_INSTALLATION integer
+---@field public AssetPack_MAX integer
+local EGooglePADErrorCode = {}

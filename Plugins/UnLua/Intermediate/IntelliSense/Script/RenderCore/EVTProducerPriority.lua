@@ -1,0 +1,13 @@
+---Enumeration of the priority assigned to a given virtual texture producer. Must match EVTProducerPriority in RenderCore (they are duplicate because RenderCore cannot declare UENUMs)
+---@class EVTProducerPriority
+---@field public Lowest integer
+---@field public Lower integer
+---@field public Low integer
+---@field public BelowNormal integer
+---@field public Normal integer
+---@field public AboveNormal integer
+---@field public High integer
+---@field public Highest integer
+---@field public Count integer
+---@field public EVTProducerPriority_MAX integer
+local EVTProducerPriority = {}

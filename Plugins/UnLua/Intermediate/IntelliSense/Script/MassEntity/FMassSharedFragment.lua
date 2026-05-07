@@ -1,0 +1,2 @@
+---@class FMassSharedFragment
+local FMassSharedFragment = {}

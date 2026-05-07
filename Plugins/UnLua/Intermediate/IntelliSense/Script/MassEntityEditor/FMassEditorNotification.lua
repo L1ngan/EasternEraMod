@@ -1,0 +1,2 @@
+---@class FMassEditorNotification
+local FMassEditorNotification = {}

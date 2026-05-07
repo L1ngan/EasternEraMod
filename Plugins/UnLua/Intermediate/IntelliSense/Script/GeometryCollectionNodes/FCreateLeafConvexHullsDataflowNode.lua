@@ -1,0 +1,15 @@
+---@class FCreateLeafConvexHullsDataflowNode : FDataflowNode
+---@field private Collection FManagedArrayCollection
+---@field private SphereCovering FDataflowSphereCovering
+---@field private OptionalSelectionFilter FDataflowTransformSelection @Optional transform selection to compute leaf hulls on -- if not provided, all leaf hulls will be computed.
+---@field private GenerateMethod EGenerateConvexMethod @How convex hulls are generated -- computed from geometry, imported from external collision shapes, or an intersection of both options.
+---@field private IntersectIfComputedIsSmallerByFactor number @If GenerateMethod is Intersect, only actually intersect when the volume of the Computed Hull is less than this fraction of the volume of the External Hull(s).
+---@field private MinExternalVolumeToIntersect number @If GenerateMethod is Intersect, only actually intersect if the volume of the External Hull(s) exceed this threshold.
+---@field private bComputeIntersectionsBeforeHull boolean @Whether to compute the intersection before computing convex hulls. Typically should be enabled.
+---@field private SimplificationDistanceThreshold number @Computed convex hulls are simplified to keep points spaced at least this far apart (except where needed to keep the hull from collapsing to zero volume).
+---@field private ConvexDecompositionSettings FDataflowConvexDecompositionSettings
+---@field private DebugDrawRenderSettings FDataflowNodeDebugDrawSettings
+---@field private bRandomizeColor boolean @Randomize color per convex hull
+---@field private ColorRandomSeed integer @Random seed
+---@field private SphereCoveringDebugDrawRenderSettings FDataflowNodeSphereCoveringDebugDrawSettings
+local FCreateLeafConvexHullsDataflowNode = {}

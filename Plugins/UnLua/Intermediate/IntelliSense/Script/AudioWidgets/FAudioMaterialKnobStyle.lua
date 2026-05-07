@@ -1,0 +1,16 @@
+---Represents the appearance of an Audio Material Knob
+---@class FAudioMaterialKnobStyle : FAudioMaterialWidgetStyle
+---@field public KnobMainColor FLinearColor @The knob's Main color value.
+---@field public KnobAccentColor FLinearColor @The knob's Accent color value.
+---@field public KnobShadowColor FLinearColor @The knob's Shadow color value.
+---@field public KnobSmoothBevelColor FLinearColor @The knob's Smooth Bevel color value.
+---@field public KnobIndicatorDotColor FLinearColor @The knob's Indicator Dot color value.
+---@field public KnobEdgeFillColor FLinearColor @The knob's Edge Fill color value.
+---@field public KnobBarColor FLinearColor @The knob Bar's Color value.
+---@field public KnobBarShadowColor FLinearColor @The knob Bar's Shadow color value.
+---@field public KnobBarFillMinColor FLinearColor @The knob Bar's Fill color value representing the Starting section of the fill.
+---@field public KnobBarFillMidColor FLinearColor @The knob Bar's Fill color value representing the Middle section of the fill.
+---@field public KnobBarFillMaxColor FLinearColor @The knob Bar's Fill color value representing the Ending section of the fill.
+---@field public KnobBarFillTintColor FLinearColor @The knob Bar Fill color's Tint value.
+---@field public TextBoxStyle FAudioTextBoxStyle @The style to use for the audio text box widget.
+local FAudioMaterialKnobStyle = {}

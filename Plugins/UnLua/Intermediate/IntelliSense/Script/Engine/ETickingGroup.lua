@@ -1,0 +1,12 @@
+---Determines which ticking group a tick function belongs to.
+---@class ETickingGroup
+---@field public TG_PrePhysics integer
+---@field public TG_StartPhysics integer
+---@field public TG_DuringPhysics integer
+---@field public TG_EndPhysics integer
+---@field public TG_PostPhysics integer
+---@field public TG_PostUpdateWork integer
+---@field public TG_LastDemotable integer
+---@field public TG_NewlySpawned integer
+---@field public TG_MAX integer
+local ETickingGroup = {}

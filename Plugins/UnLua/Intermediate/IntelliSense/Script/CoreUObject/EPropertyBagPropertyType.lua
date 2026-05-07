@@ -1,0 +1,23 @@
+---Property bag property type, loosely based on BluePrint pin types.
+---@class EPropertyBagPropertyType
+---@field public None integer
+---@field public Bool integer
+---@field public Byte integer
+---@field public Int32 integer
+---@field public Int64 integer
+---@field public Float integer
+---@field public Double integer
+---@field public Name integer
+---@field public String integer
+---@field public Text integer
+---@field public Enum integer
+---@field public Struct integer
+---@field public Object integer
+---@field public SoftObject integer
+---@field public Class integer
+---@field public SoftClass integer
+---@field public UInt32 integer
+---@field public UInt64 integer
+---@field public Count integer
+---@field public EPropertyBagPropertyType_MAX integer
+local EPropertyBagPropertyType = {}

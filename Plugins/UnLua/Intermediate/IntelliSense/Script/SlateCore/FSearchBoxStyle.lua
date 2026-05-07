@@ -1,0 +1,13 @@
+---Represents the appearance of an SSearchBox
+---@class FSearchBoxStyle : FSlateWidgetStyle
+---@field public TextBoxStyle FEditableTextBoxStyle @Style to use for the text box part of the search box
+---@field public ActiveFontInfo FSlateFontInfo @Font to use for the text box part of the search box when a search term is entered
+---@field public UpArrowImage FSlateBrush @Image to use for the search "up" arrow
+---@field public DownArrowImage FSlateBrush @Image to use for the search "down" arrow
+---@field public GlassImage FSlateBrush @Image to use for the search "glass"
+---@field public ClearImage FSlateBrush @Image to use for the search "clear" button
+---@field public ImagePadding FMargin @Padding to use around the images
+---@field public ImageSizeOverride Unknown @Size of the images (auto size if not set)
+---@field public bLeftAlignSearchResultButtons boolean @If true, search result buttons appear to the left of the search text
+---@field public bLeftAlignGlassImageAndClearButton boolean @If true, glass image and clear button appear to the left of the search text
+local FSearchBoxStyle = {}

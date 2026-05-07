@@ -1,0 +1,70 @@
+---Implements the Editor's play settings.
+---@class ULevelEditorPlaySettings : UObject
+---@field public PlayFromHerePlayerStartClassName string @The PlayerStart class used when spawning the player at the current camera location.
+---@field public GameGetsMouseControl boolean @Give the game mouse control when PIE starts or require a click in the viewport first
+---@field public UseMouseForTouch boolean @While using the game viewport, it sends mouse movement and clicks as touch events, instead of as mouse events.
+---@field public ShowMouseControlLabel boolean @Whether to show a label for mouse control gestures in the PIE view.
+---@field public MouseControlLabelPosition integer @Location on screen to anchor the mouse control label when in PIE mode.
+---@field public ViewportGetsHMDControl boolean @Whether or not HMD orientation should be used when playing in viewport
+---@field public ShouldMinimizeEditorOnVRPIE boolean @Whether or not the editor is minimized on VR PIE
+---@field public bShouldMinimizeEditorOnNonVRPIE boolean @Whether or not the editor is minimized on non-VR PIE
+---@field public bEmulateStereo boolean @Whether we should emulate stereo (helps checking VR rendering issues).
+---@field public AutoRecompileBlueprints boolean @Automatically recompile blueprints used by the current level when initiating a Play In Editor session
+---@field public EnableGameSound boolean @Whether to play sounds when in a Play In Editor session
+---@field public SoloAudioInFirstPIEClient boolean @Whether to automatically solo audio in first PIE client
+---@field public EnablePIEEnterAndExitSounds boolean @Whether to play a sound when entering and exiting PIE
+---@field public PlayInEditorSoundQualityLevel integer @Which quality level to use when playing in editor
+---@field public bUseNonRealtimeAudioDevice boolean @Whether to use a non-realtime audio device during PIE
+---@field public bOnlyLoadVisibleLevelsInPIE boolean @True if Play In Editor should only load currently-visible levels in PIE.
+---@field public bPreferToStreamLevelsInPIE boolean @Prefer to stream sub-levels from the disk instead of duplicating editor sub-levels
+---@field public bPromoteOutputLogWarningsDuringPIE boolean @Should warnings and errors in the Output Log during "Play in Editor" be promoted to the message log?
+---@field public NewWindowWidth integer @The width of the new view port window in pixels (0 = use the desktop's screen resolution).
+---@field public NewWindowHeight integer @The height of the new view port window in pixels (0 = use the desktop's screen resolution).
+---@field public NewWindowPosition FIntPoint @The position of the new view port window on the screen in pixels.
+---@field public CenterNewWindow boolean @Whether the new window should be centered on the screen.
+---@field public PIEAlwaysOnTop boolean @Always have the PIE window on top of the parent windows.
+---@field public DisableStandaloneSound boolean @Whether sound should be disabled when playing standalone games.
+---@field public AdditionalLaunchParameters string @Extra parameters to be include as part of the command line for the standalone game.
+---@field public BuildGameBeforeLaunch integer @Whether to build the game before launching on device.
+---@field public LaunchConfiguration integer @Which build configuration to use when launching on device.
+---@field public PackFilesForLaunch EPlayOnPakFileMode @Whether to content should be stored in pak files when launching on device. */
+---@field public bAutoCompileBlueprintsOnLaunch boolean @Whether to automatically recompile dirty Blueprints before launching
+---@field public bLaunchSeparateServer boolean @This is a rarely used option that will launch a separate server (possibly hidden in-process depending on RunUnderOneProcess) even if the net mode does not require a server (such as Standalone). If the net mode requires a server (such as Client) a server will be launched for you (regardless of this setting). This allows you to test offline -> server workflows by connecting ("open 127.0.0.1:<ServerPort>") from the offline game.
+---@field private PlayNetMode integer @NetMode to use for Play In Editor.
+---@field private RunUnderOneProcess boolean @Spawn multiple player windows in a single instance of UE. This will load much faster, but has potential to have more issues.
+---@field private PlayNumberOfClients integer @The number of client windows to open. The first one to open will respect the Play In Editor "Modes" option (PIE, PINW), additional clients respect the RunUnderOneProcess setting.
+---@field private PrimaryPIEClientIndex integer @In multiplayer PIE which client will be the 'primary'. Considered most important and given a larger client window, access to unique hardware like a VirtualReality HMD, etc. Intended to help test issues that affect the second, etc client.  0 is the first client. If the setting is >= than the number of clients the last will be primary. -1 will result in no primary.  Note that this is an index only of PIE instance windows, in netmode 'Play as Client' pie instance zero is a windowless dedicated server, so setting 0 here would make the fist pie window the primary which would be PIEInstance 1, rather than 0 as in other netmodes.
+---@field private ServerPort integer @What port used by the server for simple networking
+---@field private ClientWindowWidth integer @Width to use when spawning additional windows.
+---@field private RouteGamepadToSecondWindow boolean @When running multiple player windows in a single process, this option determines how the game pad input gets routed. If unchecked (default) then the 1st game pad is attached to the 1st window, 2nd to the 2nd window, and so on. If it is checked, the 1st game pad goes the 2nd window. The 1st window can then be controlled by keyboard/mouse, which is convenient if two people are testing on the same computer.
+---@field private CreateAudioDeviceForEveryPlayer boolean @If checked, a separate audio device is created for every player. If unchecked, a separate audio device is created for only the first two players and uses the main audio device for more than 2 players. Enabling this will allow rendering accurate audio from every player's perspective but will use more CPU. Keep this disabled on lower-perf machines.
+---@field private ClientWindowHeight integer @Height to use when spawning additional windows.
+---@field private ServerMapNameOverride string @Override the map launched by the dedicated server (currently only used when in PIE_StandaloneWithServer net mode)
+---@field private AdditionalServerGameOptions string @Additional options that will be passed to the server as URL parameters, in the format ?bIsLanMatch=1?listen - any additional command line switches should be passed in the Additional Server Launch Parameters field below.
+---@field private bShowServerDebugDrawingByDefault boolean @Controls the default value of the show flag ServerDrawDebug
+---@field private ServerDebugDrawingColorTintStrength number @How strongly debug drawing originating from the server will be biased towards the tint color
+---@field private ServerDebugDrawingColorTint FLinearColor @Debug drawing originating from the server will be biased towards this color
+---@field private bHMDForPrimaryProcessOnly boolean @When running multiple player windows in multiple processes, this option determines how HMD(s)/Simulator(s) is/are attached to processes. If checked (default), there is only one HMD/Simulator and it is only attached to the primary process. If unchecked, there could be multiple HMDs/Simulators if HMD/XRSimulator supports it, and each process could have its own attached HMD or XRSimulator, or all processes could share the same HMD by switching the HMD to the active process dynamically.
+---@field public AdditionalServerLaunchParameters string @Additional options that will be passed to the server as arguments, for example -debug. Only works with separate process servers.
+---@field public ServerFixedFPS integer @If > 0, Tick dedicated server at a fixed frame rate. Does not impact Listen Server (use ClientFixedFPS setting). This is the target frame rate, e.g, "20" for 20fps, which will result in 1/20 second tick steps.
+---@field public ClientFixedFPS TArray<integer> @If > 0, Tick clients at a fixed frame rate. Each client instance will map to an element in the list, wrapping around if num clients exceeds size of list. Includes Listen Server. This is the target frame rate, e.g, "20" for 20fps, which will result in 1/20 second tick steps.
+---@field public NetworkEmulationSettings FLevelEditorPlayNetworkEmulationSettings @Customizable settings allowing to emulate latency and packetloss for game network transmissions
+---@field public LastSize FIntPoint @The last known screen size for the first instance window (in pixels).
+---@field public MultipleInstancePositions TArray<FIntPoint> @The last known screen positions of multiple instance windows (in pixels).
+---@field public LastExecutedLaunchDevice string @The name of the last platform that the user ran a play session on.
+---@field public LastExecutedLaunchName string @The name of the last device that the user ran a play session on.
+---@field public LastExecutedLaunchModeType integer @The last type of play-on session the user ran.
+---@field public LastExecutedPlayModeLocation integer @The last type of play location the user ran.
+---@field public LastExecutedPlayModeType integer @The last type of play session the user ran.
+---@field public LastExecutedPIEPreviewDevice string @The name of the last device that the user ran a play session on.
+---@field public LaptopScreenResolutions TArray<FPlayScreenResolution> @Collection of common screen resolutions on mobile phones.
+---@field public MonitorScreenResolutions TArray<FPlayScreenResolution> @Collection of common screen resolutions on desktop monitors.
+---@field public PhoneScreenResolutions TArray<FPlayScreenResolution> @Collection of common screen resolutions on mobile phones.
+---@field public TabletScreenResolutions TArray<FPlayScreenResolution> @Collection of common screen resolutions on tablet devices.
+---@field public TelevisionScreenResolutions TArray<FPlayScreenResolution> @Collection of common screen resolutions on television screens.
+---@field public DeviceToEmulate string
+---@field public PIESafeZoneOverride FMargin
+---@field public CustomUnsafeZoneStarts TArray<FVector2D>
+---@field public CustomUnsafeZoneDimensions TArray<FVector2D>
+local ULevelEditorPlaySettings = {}
+

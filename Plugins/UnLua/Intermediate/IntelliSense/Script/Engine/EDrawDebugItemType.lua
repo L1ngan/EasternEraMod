@@ -1,0 +1,13 @@
+---@class EDrawDebugItemType
+---@field public DirectionalArrow integer
+---@field public Sphere integer
+---@field public Line integer
+---@field public OnScreenMessage integer
+---@field public CoordinateSystem integer
+---@field public Point integer
+---@field public Circle integer
+---@field public Cone integer
+---@field public InWorldMessage integer
+---@field public Capsule integer
+---@field public EDrawDebugItemType_MAX integer
+local EDrawDebugItemType = {}

@@ -1,0 +1,2 @@
+---@class FRigComputedTransform
+local FRigComputedTransform = {}

@@ -1,0 +1,2 @@
+---@class FKeyConsumptionOptions
+local FKeyConsumptionOptions = {}

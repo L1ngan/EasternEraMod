@@ -1,0 +1,21 @@
+---Simplified UStruct version of FChaosVDParticleDataWrapper.
+---Used to be able to show the values in the editor and allow changes via the Property Editor.
+---@class FChaosVDParticleDataWrapper : FChaosVDWrapperDataBase
+---@field public DirtyFlagsBits integer
+---@field public ParticleContext EChaosVDParticleContext
+---@field public GeometryHash integer
+---@field public DebugName string
+---@field public ParticleIndex integer
+---@field public SolverID integer
+---@field public Type EChaosVDParticleType
+---@field public ParticlePositionRotation FChaosVDParticlePositionRotation
+---@field public ParticleVelocities FChaosVDParticleVelocities
+---@field public ParticleInflatedBounds FChaosVDParticleBounds
+---@field public ParticleKinematicTarget FChaosVDKinematicTarget
+---@field public ParticleVWSmooth FChaosVDVSmooth
+---@field public ParticleDynamics FChaosVDParticleDynamics
+---@field public ParticleDynamicsMisc FChaosVDParticleDynamicMisc
+---@field public ParticleMassProps FChaosVDParticleMassProps
+---@field public ParticleCluster FChaosVDParticleCluster
+---@field public CollisionDataPerShape TArray<FChaosVDShapeCollisionData>
+local FChaosVDParticleDataWrapper = {}

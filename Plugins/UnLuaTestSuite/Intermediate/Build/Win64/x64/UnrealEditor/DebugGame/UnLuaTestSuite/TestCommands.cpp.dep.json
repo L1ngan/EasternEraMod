@@ -1,0 +1,37 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\unlua-feature-ue5.6\\plugins\\unluatestsuite\\source\\unluatestsuite\\private\\testcommands.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\unlua-feature-ue5.6\\intermediate\\build\\win64\\x64\\tpsprojecteditor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.novalfmtstr.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\unlua-feature-ue5.6\\plugins\\unluatestsuite\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\unluatestsuite\\definitions.unluatestsuite.h",
+            "h:\\project\\unlua-feature-ue5.6\\plugins\\unluatestsuite\\source\\unluatestsuite\\public\\testcommands.h",
+            "g:\\5.6\\ue_5.6\\engine\\source\\runtime\\engine\\public\\tests\\automationcommon.h",
+            "g:\\5.6\\ue_5.6\\engine\\source\\editor\\unrealed\\public\\filehelpers.h",
+            "g:\\5.6\\ue_5.6\\engine\\source\\editor\\unrealed\\public\\packagetools.h",
+            "g:\\5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealed\\uht\\packagetools.generated.h",
+            "g:\\5.6\\ue_5.6\\engine\\source\\developer\\sourcecontrol\\public\\isourcecontrolprovider.h",
+            "g:\\5.6\\ue_5.6\\engine\\source\\developer\\sourcecontrol\\public\\isourcecontrolchangelist.h",
+            "g:\\5.6\\ue_5.6\\engine\\source\\developer\\sourcecontrol\\public\\isourcecontrolchangeliststate.h",
+            "g:\\5.6\\ue_5.6\\engine\\source\\developer\\sourcecontrol\\public\\isourcecontrolstate.h",
+            "g:\\5.6\\ue_5.6\\engine\\source\\developer\\sourcecontrol\\public\\isourcecontroloperation.h",
+            "g:\\5.6\\ue_5.6\\engine\\source\\developer\\sourcecontrol\\public\\sourcecontrolresultinfo.h",
+            "g:\\5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealed\\uht\\filehelpers.generated.h",
+            "g:\\5.6\\ue_5.6\\engine\\source\\editor\\leveleditor\\public\\leveleditor.h",
+            "g:\\5.6\\ue_5.6\\engine\\source\\editor\\leveleditor\\public\\ileveleditor.h",
+            "g:\\5.6\\ue_5.6\\engine\\source\\runtime\\engine\\public\\elements\\framework\\engineelementslibrary.h",
+            "g:\\5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\engineelementslibrary.generated.h",
+            "g:\\5.6\\ue_5.6\\engine\\source\\editor\\leveleditor\\public\\viewporttypedefinition.h",
+            "g:\\5.6\\ue_5.6\\engine\\source\\editor\\leveleditor\\public\\leveleditoroutlinersettings.h",
+            "g:\\5.6\\ue_5.6\\engine\\source\\developer\\toolwidgets\\public\\filters\\genericfilter.h",
+            "g:\\5.6\\ue_5.6\\engine\\source\\developer\\toolwidgets\\public\\filters\\filterbase.h",
+            "g:\\5.6\\ue_5.6\\engine\\source\\editor\\unrealed\\public\\tests\\automationeditorcommon.h",
+            "g:\\5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\tests\\automationtestsettings.h",
+            "g:\\5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\automationtestsettings.generated.h",
+            "g:\\5.6\\ue_5.6\\engine\\source\\editor\\unrealed\\public\\editorworldutils.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

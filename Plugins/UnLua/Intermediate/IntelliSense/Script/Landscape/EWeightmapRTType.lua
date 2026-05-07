@@ -1,0 +1,16 @@
+---@class EWeightmapRTType
+---@field public WeightmapRT_Scratch_RGBA integer
+---@field public WeightmapRT_Scratch1 integer
+---@field public WeightmapRT_Scratch2 integer
+---@field public WeightmapRT_Scratch3 integer
+---@field public WeightmapRT_Mip0 integer
+---@field public WeightmapRT_Mip1 integer
+---@field public WeightmapRT_Mip2 integer
+---@field public WeightmapRT_Mip3 integer
+---@field public WeightmapRT_Mip4 integer
+---@field public WeightmapRT_Mip5 integer
+---@field public WeightmapRT_Mip6 integer
+---@field public WeightmapRT_Mip7 integer
+---@field public WeightmapRT_Count integer
+---@field public WeightmapRT_MAX integer
+local EWeightmapRTType = {}

@@ -1,0 +1,15 @@
+---Parameter struct for adding new camera animations to UCameraAnimationCameraModifier
+---@class FCameraAnimationParams
+---@field public PlayRate number @Time scale for playing the new camera animation
+---@field public Scale number @Global scale to use for the new camera animation
+---@field public EaseInType ECameraAnimationEasingType @Ease-in function type
+---@field public EaseInDuration number @Ease-in duration in seconds
+---@field public EaseOutType ECameraAnimationEasingType @Ease-out function type
+---@field public EaseOutDuration number @Ease-out duration in seconds
+---@field public bLoop boolean @Whether the camera animation should loop
+---@field public StartOffset integer @Offset, in frames, into the animation to start at
+---@field public bRandomStartTime boolean @Whether the camera animation should have a random start time
+---@field public DurationOverride number @Override the duration of the animation with a new duration (including blends)
+---@field public PlaySpace ECameraAnimationPlaySpace @The transform space to use for the new camera shake
+---@field public UserPlaySpaceRot FRotator @User space to use when PlaySpace is UserDefined
+local FCameraAnimationParams = {}

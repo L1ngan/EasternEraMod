@@ -1,0 +1,11 @@
+---@class FGatherTextFromMetaDataConfiguration
+---@field public IsEnabled boolean @If enabled, metadata will be gathered according to this configuration.
+---@field public IncludePathWildcards TArray<FGatherTextIncludePath> @Metadata from source files whose paths match these wildcard patterns, specified relative to the project's root, may be processed for gathering.
+---@field public ExcludePathWildcards TArray<FGatherTextExcludePath> @Metadata from source files whose paths match these wildcard patterns will be excluded from gathering.
+---@field public KeySpecifications TArray<FMetaDataKeyGatherSpecification> @Specifications for how to gather text from specific metadata keys.
+---@field public FieldTypesToInclude TArray<string> @List of field types (eg, Property, Function, ScriptStruct, Enum, etc) that should be included in the gather, or empty to include everything.
+---@field public FieldTypesToExclude TArray<string> @List of field types (eg, Property, Function, ScriptStruct, Enum, etc) the should be excluded from the gather.
+---@field public FieldOwnerTypesToInclude TArray<string> @List of field owner types (eg, MyClass, MyStruct, etc) that should have fields within them included in the gather, or empty to include everything.
+---@field public FieldOwnerTypesToExclude TArray<string> @List of field owner types (eg, MyClass, MyStruct, etc) that should have fields within them excluded from the gather.
+---@field public ShouldGatherFromEditorOnlyData boolean @If enabled, data that is specified as editor-only may be processed for gathering.
+local FGatherTextFromMetaDataConfiguration = {}

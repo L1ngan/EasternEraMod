@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\unlua-feature-ue5.6\\plugins\\unluatestsuite\\source\\unluatestsuite\\unluatestsuite.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\unlua-feature-ue5.6\\intermediate\\build\\win64\\x64\\tpsprojecteditor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.novalfmtstr.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\unlua-feature-ue5.6\\plugins\\unluatestsuite\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\unluatestsuite\\definitions.unluatestsuite.h",
+            "h:\\project\\unlua-feature-ue5.6\\plugins\\unluatestsuite\\source\\unluatestsuite\\public\\unluatestsuite.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

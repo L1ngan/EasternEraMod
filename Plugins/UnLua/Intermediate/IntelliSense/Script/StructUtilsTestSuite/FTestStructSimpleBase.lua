@@ -1,0 +1,2 @@
+---@class FTestStructSimpleBase
+local FTestStructSimpleBase = {}

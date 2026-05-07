@@ -1,0 +1,88 @@
+---Implements the Level Editor's view port settings.
+---@class ULevelEditorViewportSettings : UObject
+---@field public FlightCameraControlType integer @Enable the use of flight camera controls under various circumstances.
+---@field public FlightCameraControlExperimentalNavigation boolean @Enable the use of the experimental navigation in the flight camera controls.
+---@field public LandscapeEditorControlType ELandscapeFoliageEditorControlType @Choose the control scheme for landscape tools (ignored for pen input)
+---@field public FoliageEditorControlType ELandscapeFoliageEditorControlType @Choose the control scheme for foliage tools
+---@field public bPanMovesCanvas boolean @If true, moves the canvas and shows the mouse.  If false, uses original camera movement.
+---@field public bCenterZoomAroundCursor boolean @If checked, in orthographic view ports zooming will center on the mouse position.  If unchecked, the zoom is around the center of the viewport.
+---@field public MinimumOrthographicZoom number @The closest possible distance allowed when viewing through an orthographic camera
+---@field public bAllowTranslateRotateZWidget boolean @Allow translate/rotate widget
+---@field public bAllowArcballRotate boolean @Allow arcball rotation with rotate widget
+---@field public bAllowScreenRotate boolean @Allow screen rotation with rotate widget
+---@field public bClickBSPSelectsBrush boolean @If true, Clicking a BSP selects the brush and ctrl+shift+click selects the surface. If false, vice versa
+---@field public bShowActorEditorContext boolean @If true, viewport will show actor editor context (current level, current data layer(s), current folder)
+---@field public bShowBrushMarkerPolys boolean @If true, show translucent marker polygons on the builder brush and volumes.
+---@field public bAllowEditWidgetAxisDisplay boolean @If true, the Edit widget of a transform will display the axis
+---@field public CameraSpeed integer @How fast the perspective camera moves when flying through the world.
+---@field public CameraSpeedScalar number @Scalar applied to perspective camera movement to increase movement range.
+---@field public MouseScrollCameraSpeed integer @How fast the perspective camera moves through the world when using mouse scroll.
+---@field public MouseSensitivty number @The sensitivity of mouse movement when rotating the camera.
+---@field public bUseLegacyCameraMovementNotifications boolean @Camera movement notification toggle to switch back to the behavior that caused camera notifications to be sent during gizmo movement.
+---@field public bInvertMouseLookYAxis boolean @Whether or not to invert mouse on the y axis in free look mode
+---@field public bInvertOrbitYAxis boolean @Whether or not to invert mouse on y axis in orbit mode
+---@field public bInvertMiddleMousePan boolean @Whether or not to invert the direction of middle mouse panning in viewports
+---@field public bInvertRightMouseDollyYAxis boolean @Whether or not to invert the direction of right mouse dolly on the Y axis in orbit mode
+---@field public bUseAbsoluteTranslation boolean @Whether to use mouse position as direct widget position.
+---@field public bLevelStreamingVolumePrevis boolean @If enabled, the viewport will stream in levels automatically when the camera is moved.
+---@field public bUseUE3OrbitControls boolean @When checked, orbit the camera by using the L or U keys when unchecked, Alt and Left Mouse Drag will orbit around the look at point
+---@field public ScrollGestureDirectionFor3DViewports EScrollGestureDirection @Direction of the scroll gesture for 3D viewports
+---@field public ScrollGestureDirectionForOrthoViewports EScrollGestureDirection @Direction of the scroll gesture for orthographic viewports
+---@field public bLevelEditorJoystickControls boolean @Enables joystick-based camera movement in 3D level editing viewports
+---@field public bUseDistanceScaledCameraSpeed boolean @If enabled, scale the perspective camera speed based on the distance between the camera and its look-at position
+---@field public bOrbitCameraAroundSelection boolean @If enabled, the camera will orbit around the current selection in the viewport
+---@field public bUsePowerOf2SnapSize boolean @If enabled will use power of 2 grid settings (e.g, 1,2,4,8,16,...,1024) instead of decimal grid sizes
+---@field public DecimalGridSizes TArray<number> @Decimal grid sizes (for translation snapping and grid rendering)
+---@field public DecimalGridIntervals TArray<number> @The number of lines between each major line interval for decimal grids
+---@field public Pow2GridSizes TArray<number> @Power of 2 grid sizes (for translation snapping and grid rendering)
+---@field public Pow2GridIntervals TArray<number> @The number of lines between each major line interval for pow2 grids
+---@field public CommonRotGridSizes TArray<number> @User defined grid intervals for rotations
+---@field public DivisionsOf360RotGridSizes TArray<number> @Preset grid intervals for rotations
+---@field public ScalingGridSizes TArray<number> @Grid sizes for scaling
+---@field public GridEnabled boolean @If enabled, actor positions will snap to the grid.
+---@field public RotGridEnabled boolean @If enabled, actor rotations will snap to the grid.
+---@field public SnapScaleEnabled boolean @If enabled, actor sizes will snap to the grid.
+---@field public SnapToSurface FSnapToSurfaceSettings @If enabled, actors will snap to surfaces in the viewport when dragged around
+---@field private bUsePercentageBasedScaling boolean @If enabled, use the old-style multiplicative/percentage scaling method instead of the new additive/fraction method
+---@field public bEnableLayerSnap boolean @If enabled, new Actors that you drag into the viewport snap to the active 2D layer.
+---@field public ActiveSnapLayerIndex integer @The index of the snap plane to use when 2D Layer Snapping is enabled, from the array of Snap Layers set for the project.
+---@field public bEnableActorSnap boolean @If true actor snap will be enabled in the editor *
+---@field public ActorSnapScale number @Global actor snap scale for the editor
+---@field public ActorSnapDistance number @Global actor snap distance setting for the editor
+---@field public bSnapVertices boolean
+---@field public SnapDistance number
+---@field public CurrentPosGridSize integer
+---@field public CurrentRotGridSize integer
+---@field public CurrentScalingGridSize integer
+---@field public PreserveNonUniformScale boolean
+---@field public CurrentRotGridMode integer @Controls which array of rotation grid values we are using
+---@field public AspectRatioAxisConstraint integer @How to constrain perspective view port FOV
+---@field public bEnableViewportHoverFeedback boolean @Enables real-time hover feedback when mousing over objects in editor view ports
+---@field public bHighlightWithBrackets boolean @If enabled, selected objects will be highlighted with brackets in all modes rather than a special highlight color.
+---@field public bUseLinkedOrthographicViewports boolean @If checked all orthographic view ports are linked to the same position and move together.
+---@field public bUseLODViewLocking boolean @If true, same type views will be camera tied, and ortho views will use perspective view for LOD parenting
+---@field public bStrictBoxSelection boolean @True if viewport box selection requires objects to be fully encompassed by the selection box to be selected
+---@field public bTransparentBoxSelection boolean @True if viewport box selection also selects occluded objects, false if only objects with visible pixels are selected
+---@field public bUseSelectionOutline boolean @Whether to show selection outlines for selected Actors
+---@field public SelectionHighlightIntensity number @Sets the intensity of the overlay displayed when an object is selected
+---@field public BSPSelectionHighlightIntensity number @Sets the intensity of the overlay displayed when an object is selected
+---@field public bEnableViewportCameraToUpdateFromPIV boolean @Enables the editor perspective camera to be dropped at the last PlayInViewport cam position
+---@field public bPreviewSelectedCameras boolean @When enabled, selecting a camera actor will display a live 'picture in picture' preview from the camera's perspective within the current editor view port.  This can be used to easily tweak camera positioning, post-processing and other settings without having to possess the camera itself.  This feature may reduce application performance when enabled.
+---@field public CameraPreviewSize number @Affects the size of 'picture in picture' previews if they are enabled
+---@field public BackgroundDropDistance number @Distance from the camera to place actors which are dropped on nothing in the view port.
+---@field public PreviewMeshes TArray<FSoftObjectPath> @A list of meshes that can be used as preview mesh in the editor view port by holding down the backslash key
+---@field public BillboardScale number
+---@field public bSaveEngineStats boolean @When enabled, engine stats that are enabled in level viewports are preserved between editor sessions
+---@field public MeasuringToolUnits integer @Specify the units used by the measuring tool
+---@field public SelectedSplinePointSizeAdjustment number @The size adjustment to apply to selected spline points (in screen space units).
+---@field public SplineLineThicknessAdjustment number @The size adjustment to apply to spline line thickness which increases the spline's hit tolerance.
+---@field public SplineTangentHandleSizeAdjustment number @The size adjustment to apply to spline tangent handle (in screen space units).
+---@field public SplineTangentScale number @The scale to apply to spline tangent lengths
+---@field public LastInViewportMenuLocation FVector2D
+---@field public MaterialForDroppedTextures TSoftObjectPtr<UMaterialInterface> @When dropping a texture in the viewport, create an instance of this material instead of creating a new material. Populate MaterialParamsForDroppedTextures to specify the parameter names.
+---@field public MaterialParamsForDroppedTextures TMap<EMaterialKind, string> @When dropping a texture in the viewport, determines which material parameter to assign for each found texture type. Only relevant if MaterialForDroppedTextures is assigned.
+---@field public EditorViews TMap<TSoftObjectPtr<UWorld>, FLevelEditorViewporEditorViews> @Store the last camera settings for all the viewport of each world loaded in the editor.
+---@field public PropertyColorationColorForMatchingObjects FColor @Property coloration color for matching objects
+---@field private PerInstanceSettings TArray<FLevelEditorViewportInstanceSettingsKeyValuePair> @Per-instance viewport settings.
+local ULevelEditorViewportSettings = {}
+

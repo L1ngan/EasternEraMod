@@ -1,0 +1,16 @@
+---@class EMaterialParameterType
+---@field public Scalar integer
+---@field public Vector integer
+---@field public DoubleVector integer
+---@field public Texture integer
+---@field public TextureCollection integer
+---@field public Font integer
+---@field public RuntimeVirtualTexture integer
+---@field public SparseVolumeTexture integer
+---@field public StaticSwitch integer
+---@field public NumRuntime integer
+---@field public StaticComponentMask integer
+---@field public Num integer
+---@field public None integer
+---@field public EMaterialParameterType_MAX integer
+local EMaterialParameterType = {}

@@ -1,0 +1,17 @@
+---Extended attributes that the curve editor understands
+---@class FKeyAttributes
+---@field private bHasArriveTangent boolean @True if this key supports entry tangents
+---@field private bHasLeaveTangent boolean @True if this key supports exit tangents
+---@field private bHasInterpMode boolean @True if this key supports interpolation modes
+---@field private bHasTangentMode boolean @True if this key supports tangent modes
+---@field private bHasTangentWeightMode boolean @True if this key supports tangent modes
+---@field private bHasArriveTangentWeight boolean @True if this key supports entry tangents weights
+---@field private bHasLeaveTangentWeight boolean @True if this key supports exit tangents weights
+---@field private ArriveTangent number @This key's entry tangent, if bHasArriveTangent
+---@field private LeaveTangent number @This key's exit tangent, if bHasLeaveTangent
+---@field private InterpMode integer @This key's interpolation mode, if bHasInterpMode
+---@field private TangentMode integer @This key's tangent mode, if bHasTangentMode
+---@field private TangentWeightMode integer @This key's tangent weight mode, if bHasTangentWeightMode
+---@field private ArriveTangentWeight number @This key's entry tangent weight, if bHasArriveTangentWeight
+---@field private LeaveTangentWeight number @This key's exit tangent weight, if bHasLeaveTangentWeight
+local FKeyAttributes = {}

@@ -1,0 +1,13 @@
+---@class FHairGroupsCardsSourceDescription
+---@field public Material UMaterialInterface @Deprecated
+---@field public MaterialSlotName string
+---@field public bInvertUV boolean
+---@field public GuideType EHairCardsGuideType
+---@field public ImportedMesh UStaticMesh
+---@field public Textures FHairGroupCardsTextures
+---@field public GroupIndex integer @Group index on which this cards geometry will be used (#hair_todo: change this to be a dropdown selection menu in FHairLODSettings instead)
+---@field public LODIndex integer @LOD on which this cards geometry will be used. -1 means not used  (#hair_todo: change this to be a dropdown selection menu in FHairLODSettings instead)
+---@field public GenerationSettings UHairCardGenerationSettings @Card generation data saved from the last procedural run. Dependent on the generator responsible for running the generation.
+---@field public CardsInfo FHairGroupCardsInfo
+---@field public ImportedMeshKey string
+local FHairGroupsCardsSourceDescription = {}

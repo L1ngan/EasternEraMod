@@ -1,0 +1,13 @@
+---@class ECollectionBakeTextureAttribute
+---@field public None integer
+---@field public DistanceToExternal integer
+---@field public AmbientOcclusion integer
+---@field public Curvature integer
+---@field public NormalX integer
+---@field public NormalY integer
+---@field public NormalZ integer
+---@field public PositionX integer
+---@field public PositionY integer
+---@field public PositionZ integer
+---@field public ECollectionBakeTextureAttribute_MAX integer
+local ECollectionBakeTextureAttribute = {}

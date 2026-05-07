@@ -1,0 +1,2 @@
+---@class FShaderValueTypeHandle
+local FShaderValueTypeHandle = {}

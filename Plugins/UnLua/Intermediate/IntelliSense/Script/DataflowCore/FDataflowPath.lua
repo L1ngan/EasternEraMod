@@ -1,0 +1,2 @@
+---@class FDataflowPath
+local FDataflowPath = {}

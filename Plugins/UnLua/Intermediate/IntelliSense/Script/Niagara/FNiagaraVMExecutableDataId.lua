@@ -1,0 +1,15 @@
+---Struct containing all of the data necessary to look up a NiagaraScript's VM executable results from the Derived Data Cache.
+---@class FNiagaraVMExecutableDataId
+---@field public CompilerVersionID FGuid @The version of the compiler that this needs to be built against.
+---@field public InterpolatedSpawnMode ENiagaraInterpolatedSpawnMode @Do we require interpolated spawning
+---@field public ScriptUsageTypeID FGuid @The instance id of this script usage type.
+---@field public ScriptUsageType ENiagaraScriptUsage @The type of script this was used for.
+---@field public AdditionalDefines TArray<string> @Configuration options
+---@field public AdditionalVariables TArray<FNiagaraVariableBase>
+---@field public bDisableDebugSwitches boolean @Whether or not we allow debug switches to be used.
+---@field public bRequiresPersistentIDs boolean @Do we require persistent IDs
+---@field public bUsesRapidIterationParams boolean @Whether or not we need to bake Rapid Iteration params. True to keep params, false to bake.
+---@field public BaseScriptCompileHash FNiagaraCompileHash @The hash of the subgraph this shader primarily represents.
+---@field public ReferencedCompileHashes TArray<FNiagaraCompileHash> @Compile hashes of any top level scripts the script was dependent on that might trigger a recompile if they change.
+---@field public ScriptVersionID FGuid @The version of the script that was compiled. If empty then just the latest version.
+local FNiagaraVMExecutableDataId = {}

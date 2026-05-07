@@ -1,0 +1,13 @@
+---Given a pose, execute iteratively across all items in the pose
+---@class FRigUnit_PoseLoop : FRigUnit_HierarchyBaseMutable
+---@field public BlockToRun string
+---@field public Pose FRigPose
+---@field public Item FRigElementKey
+---@field public GlobalTransform FTransform
+---@field public LocalTransform FTransform
+---@field public CurveValue number
+---@field public Index integer
+---@field public Count integer
+---@field public Ratio number @Ranging from 0.0 (first item) and 1.0 (last item) This is useful to drive a consecutive node with a curve or an ease to distribute a value.
+---@field public Completed FControlRigExecuteContext
+local FRigUnit_PoseLoop = {}

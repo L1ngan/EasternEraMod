@@ -1,0 +1,12 @@
+---@class EProcessorExecutionFlags
+---@field public None integer
+---@field public Standalone integer
+---@field public Server integer
+---@field public Client integer
+---@field public Editor integer
+---@field public EditorWorld integer
+---@field public AllNetModes integer
+---@field public AllWorldModes integer
+---@field public All integer
+---@field public EProcessorExecutionFlags_MAX integer
+local EProcessorExecutionFlags = {}

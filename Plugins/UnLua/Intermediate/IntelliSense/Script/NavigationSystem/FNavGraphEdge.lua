@@ -1,0 +1,2 @@
+---@class FNavGraphEdge
+local FNavGraphEdge = {}

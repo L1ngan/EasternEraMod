@@ -1,0 +1,20 @@
+---Editor Fracture Mode / Utilities / TinyGeo tool
+---Merge pieces of geometry onto their neighbors -- use it to, for example, clean up too small pieces of geometry.
+---@class FFixTinyGeoDataflowNode : FDataflowNode
+---@field public Collection FManagedArrayCollection @Collection to use
+---@field public TransformSelection FDataflowTransformSelection @The selected pieces to use
+---@field public MergeType EFixTinyGeoMergeType @Whether to merge small geometry, or small clusters
+---@field public bOnFractureLevel boolean @Only consider bones at the current Fracture Level
+---@field public bOnlyClusters boolean @Only auto - consider clusters for merging.Note that leaf nodes can still be consider if manually selected.
+---@field public bOnlySameParent boolean @Only merge to neighbors with the same parent in the hierarchy
+---@field public bFractureLevelIsAll boolean @Helper variable to let the EditConditions above check whether the Fracture Level is set to 'All'
+---@field public NeighborSelection EFixTinyGeoNeighborSelectionMethod
+---@field public bOnlyToConnected boolean @Only merge pieces that are connected in the proximity graph.If unchecked, connected pieces will still be favored, but if none are available the closest disconnected piece can be merged.
+---@field public bUseCollectionProximityForConnections boolean @Whether to use the Proximity (as computed by the Proximity node) to determine which bones are connected, and thus can be considered for merging. Otherwise will compute and use a reasonable default connectivity.
+---@field public UseBoneSelection EFixTinyGeoUseBoneSelection @Options for using the current bone selection
+---@field public SelectionMethod EFixTinyGeoGeometrySelectionMethod
+---@field public MinVolumeCubeRoot number @If size (cube root of volume) is less than this value, geometry should be merged into neighbors -- i.e. a value of 2 merges geometry smaller than a 2x2x2 cube
+---@field public RelativeVolume number @If cube root of volume relative to the overall shape's cube root of volume is less than this, the geometry should be merged into its neighbors.       (Note: This is a bit different from the histogram viewer's "Relative Size," which instead shows values relative to the largest rigid bone.)
+---@field public AddSamplesForCollision boolean @If enabled, add extra vertices (without triangles) to the geometry in regions where vertices are spaced too far apart (e.g. across large triangles) These extra vertices will be used as collision samples in particle-implicit collisions, and can help the physics system detect collisions more accurately Note this is *only* useful for simulations that use particle-implicit collisions
+---@field public CollisionSampleSpacing number @The number of centimeters to allow between vertices on the mesh surface: If there are gaps larger than this, add additional vertices (without triangles) to help support particle-implicit collisions Only used if Add Samples For Collision is enabled
+local FFixTinyGeoDataflowNode = {}

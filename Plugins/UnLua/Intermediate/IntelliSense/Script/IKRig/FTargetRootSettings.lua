@@ -1,0 +1,13 @@
+---NOTE: Replaced by Pelvis Motion Op
+---@class FTargetRootSettings
+---@field public RotationAlpha number
+---@field public TranslationAlpha number
+---@field public BlendToSource number
+---@field public BlendToSourceWeights FVector
+---@field public ScaleHorizontal number
+---@field public ScaleVertical number
+---@field public TranslationOffset FVector
+---@field public RotationOffset FRotator
+---@field public AffectIKHorizontal number
+---@field public AffectIKVertical number
+local FTargetRootSettings = {}

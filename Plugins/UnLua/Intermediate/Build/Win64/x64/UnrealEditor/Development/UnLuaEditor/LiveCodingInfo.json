@@ -1,0 +1,27 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.UnLuaEditor.cpp.obj": [
+			"UnLuaEditor.init.gen.cpp.obj",
+			"UnLuaEditorFunctionLibrary.gen.cpp.obj",
+			"UnLuaEditorSettings.gen.cpp.obj",
+			"UnLuaIntelliSenseCommandlet.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"UnLuaIntelliSenseCommandlet.cpp.obj",
+			"UObjectHash.cpp.obj",
+			"AnimationBlueprintToolbar.cpp.obj",
+			"BlueprintToolbar.cpp.obj",
+			"MainMenuToolbar.cpp.obj",
+			"UnLuaEditorToolbar.cpp.obj",
+			"UnLuaAboutScreen.cpp.obj",
+			"UnLuaEditorCommands.cpp.obj",
+			"UnLuaEditorCore.cpp.obj",
+			"UnLuaEditorFunctionLibrary.cpp.obj",
+			"UnLuaEditorModule.cpp.obj",
+			"UnLuaEditorSettings.cpp.obj",
+			"UnLuaEditorStyle.cpp.obj",
+			"UnLuaIntelliSense.cpp.obj",
+			"UnLuaIntelliSenseGenerator.cpp.obj"
+		]
+	}
+}

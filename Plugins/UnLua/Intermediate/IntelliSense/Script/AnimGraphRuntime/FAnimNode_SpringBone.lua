@@ -1,0 +1,15 @@
+---Simple controller that replaces or adds to the translation/rotation of a single bone.
+---@class FAnimNode_SpringBone : FAnimNode_SkeletalControlBase
+---@field public SpringBone FBoneReference @Name of bone to control. This is the main bone chain to modify from. *
+---@field public MaxDisplacement number @If bLimitDisplacement is true, this indicates how long a bone can stretch beyond its length in the ref-pose.
+---@field public SpringStiffness number @Stiffness of spring
+---@field public SpringDamping number @Damping of spring
+---@field public ErrorResetThresh number @If spring stretches more than this, reset it. Useful for catching teleports etc
+---@field public bLimitDisplacement boolean @Limit the amount that a bone can stretch from its ref-pose length.
+---@field public bTranslateX boolean @If true take the spring calculation for translation in X
+---@field public bTranslateY boolean @If true take the spring calculation for translation in Y
+---@field public bTranslateZ boolean @If true take the spring calculation for translation in Z
+---@field public bRotateX boolean @If true take the spring calculation for rotation in X
+---@field public bRotateY boolean @If true take the spring calculation for rotation in Y
+---@field public bRotateZ boolean @If true take the spring calculation for rotation in Z
+local FAnimNode_SpringBone = {}

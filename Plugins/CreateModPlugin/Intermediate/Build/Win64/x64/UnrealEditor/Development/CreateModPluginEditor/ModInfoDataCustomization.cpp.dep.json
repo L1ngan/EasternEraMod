@@ -1,0 +1,32 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\createmodplugin\\source\\createmodplugineditor\\private\\modinfodatacustomization.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\createmodplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\createmodplugineditor\\definitions.createmodplugineditor.h",
+            "g:\\modproject\\plugins\\createmodplugin\\source\\createmodplugineditor\\public\\modinfodatacustomization.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\editor\\propertyeditor\\public\\idetailcustomization.h",
+            "g:\\modproject\\plugins\\createmodplugin\\source\\createmodplugineditor\\public\\modinfoeditordata.h",
+            "g:\\modproject\\plugins\\createmodplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\createmodplugineditor\\uht\\modinfoeditordata.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\editor\\propertyeditor\\public\\detaillayoutbuilder.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\editor\\propertyeditor\\public\\idetailpropertyrow.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\editor\\propertyeditor\\public\\detailcategorybuilder.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\editor\\propertyeditor\\public\\idetailcustomnodebuilder.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\editor\\propertyeditor\\public\\detailbuildertypes.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\editor\\propertyeditor\\public\\propertyeditorcopypaste.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\editor\\propertyeditor\\public\\detailwidgetrow.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\editor\\propertyeditor\\public\\idetailchildrenbuilder.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\editor\\propertyeditor\\public\\propertycustomizationhelpers.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\editor\\propertyeditor\\public\\sresettodefaultmenu.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\editor\\actorpickermode\\public\\actorpickermode.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\editor\\scenedepthpickermode\\public\\scenedepthpickermode.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\editor\\classviewer\\public\\classviewermodule.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\developer\\desktopplatform\\public\\desktopplatformmodule.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\developer\\desktopplatform\\public\\idesktopplatform.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

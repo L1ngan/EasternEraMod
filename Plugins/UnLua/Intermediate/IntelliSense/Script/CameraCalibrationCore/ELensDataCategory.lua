@@ -1,0 +1,11 @@
+---Data categories manipulated in the camera calibration tools
+---@class ELensDataCategory
+---@field public Focus integer
+---@field public Iris integer
+---@field public Zoom integer
+---@field public Distortion integer
+---@field public ImageCenter integer
+---@field public STMap integer
+---@field public NodalOffset integer
+---@field public ELensDataCategory_MAX integer
+local ELensDataCategory = {}

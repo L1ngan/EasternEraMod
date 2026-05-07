@@ -1,0 +1,445 @@
+---To be able to use struct PostProcessSettings. // Each property consists of a bool to enable it (by default off),
+---// the variable declaration and further down the default value for it.
+---// The comment should include the meaning and usable range.
+---@class FPostProcessSettings
+---@field public bOverride_TemperatureType boolean @first all bOverride_... as they get grouped together into bitfields
+---@field public bOverride_WhiteTemp boolean
+---@field public bOverride_WhiteTint boolean
+---@field public bOverride_ColorSaturation boolean @Color Correction controls
+---@field public bOverride_ColorContrast boolean
+---@field public bOverride_ColorGamma boolean
+---@field public bOverride_ColorGain boolean
+---@field public bOverride_ColorOffset boolean
+---@field public bOverride_ColorSaturationShadows boolean
+---@field public bOverride_ColorContrastShadows boolean
+---@field public bOverride_ColorGammaShadows boolean
+---@field public bOverride_ColorGainShadows boolean
+---@field public bOverride_ColorOffsetShadows boolean
+---@field public bOverride_ColorSaturationMidtones boolean
+---@field public bOverride_ColorContrastMidtones boolean
+---@field public bOverride_ColorGammaMidtones boolean
+---@field public bOverride_ColorGainMidtones boolean
+---@field public bOverride_ColorOffsetMidtones boolean
+---@field public bOverride_ColorSaturationHighlights boolean
+---@field public bOverride_ColorContrastHighlights boolean
+---@field public bOverride_ColorGammaHighlights boolean
+---@field public bOverride_ColorGainHighlights boolean
+---@field public bOverride_ColorOffsetHighlights boolean
+---@field public bOverride_ColorCorrectionShadowsMax boolean
+---@field public bOverride_ColorCorrectionHighlightsMin boolean
+---@field public bOverride_ColorCorrectionHighlightsMax boolean
+---@field public bOverride_BlueCorrection boolean
+---@field public bOverride_ExpandGamut boolean
+---@field public bOverride_ToneCurveAmount boolean
+---@field public bOverride_FilmSlope boolean
+---@field public bOverride_FilmToe boolean
+---@field public bOverride_FilmShoulder boolean
+---@field public bOverride_FilmBlackClip boolean
+---@field public bOverride_FilmWhiteClip boolean
+---@field public bOverride_SceneColorTint boolean
+---@field public bOverride_SceneFringeIntensity boolean
+---@field public bOverride_ChromaticAberrationStartOffset boolean
+---@field public bOverride_bMegaLights boolean
+---@field public bOverride_AmbientCubemapTint boolean
+---@field public bOverride_AmbientCubemapIntensity boolean
+---@field public bOverride_BloomMethod boolean
+---@field public bOverride_BloomIntensity boolean
+---@field public bOverride_BloomThreshold boolean
+---@field public bOverride_Bloom1Tint boolean
+---@field public bOverride_Bloom1Size boolean
+---@field public bOverride_Bloom2Size boolean
+---@field public bOverride_Bloom2Tint boolean
+---@field public bOverride_Bloom3Tint boolean
+---@field public bOverride_Bloom3Size boolean
+---@field public bOverride_Bloom4Tint boolean
+---@field public bOverride_Bloom4Size boolean
+---@field public bOverride_Bloom5Tint boolean
+---@field public bOverride_Bloom5Size boolean
+---@field public bOverride_Bloom6Tint boolean
+---@field public bOverride_Bloom6Size boolean
+---@field public bOverride_BloomSizeScale boolean
+---@field public bOverride_BloomConvolutionTexture boolean
+---@field public bOverride_BloomConvolutionScatterDispersion boolean
+---@field public bOverride_BloomConvolutionSize boolean
+---@field public bOverride_BloomConvolutionCenterUV boolean
+---@field public bOverride_BloomConvolutionPreFilterMin boolean
+---@field public bOverride_BloomConvolutionPreFilterMax boolean
+---@field public bOverride_BloomConvolutionPreFilterMult boolean
+---@field public bOverride_BloomConvolutionBufferScale boolean
+---@field public bOverride_BloomDirtMaskIntensity boolean
+---@field public bOverride_BloomDirtMaskTint boolean
+---@field public bOverride_BloomDirtMask boolean
+---@field public bOverride_CameraShutterSpeed boolean
+---@field public bOverride_CameraISO boolean
+---@field public bOverride_AutoExposureMethod boolean
+---@field public bOverride_AutoExposureLowPercent boolean
+---@field public bOverride_AutoExposureHighPercent boolean
+---@field public bOverride_AutoExposureMinBrightness boolean
+---@field public bOverride_AutoExposureMaxBrightness boolean
+---@field public bOverride_AutoExposureSpeedUp boolean
+---@field public bOverride_AutoExposureSpeedDown boolean
+---@field public bOverride_AutoExposureBias boolean
+---@field public bOverride_AutoExposureBiasCurve boolean
+---@field public bOverride_AutoExposureMeterMask boolean
+---@field public bOverride_AutoExposureApplyPhysicalCameraExposure boolean
+---@field public bOverride_HistogramLogMin boolean
+---@field public bOverride_HistogramLogMax boolean
+---@field public bOverride_LocalExposureMethod boolean
+---@field public bOverride_LocalExposureHighlightContrastScale boolean
+---@field public bOverride_LocalExposureShadowContrastScale boolean
+---@field public bOverride_LocalExposureHighlightContrastCurve boolean
+---@field public bOverride_LocalExposureShadowContrastCurve boolean
+---@field public bOverride_LocalExposureHighlightThreshold boolean
+---@field public bOverride_LocalExposureShadowThreshold boolean
+---@field public bOverride_LocalExposureDetailStrength boolean
+---@field public bOverride_LocalExposureBlurredLuminanceBlend boolean
+---@field public bOverride_LocalExposureBlurredLuminanceKernelSizePercent boolean
+---@field public bOverride_LocalExposureHighlightThresholdStrength boolean
+---@field public bOverride_LocalExposureShadowThresholdStrength boolean
+---@field public bOverride_LocalExposureMiddleGreyBias boolean
+---@field public bOverride_LensFlareIntensity boolean
+---@field public bOverride_LensFlareTint boolean
+---@field public bOverride_LensFlareTints boolean
+---@field public bOverride_LensFlareBokehSize boolean
+---@field public bOverride_LensFlareBokehShape boolean
+---@field public bOverride_LensFlareThreshold boolean
+---@field public bOverride_VignetteIntensity boolean
+---@field public bOverride_Sharpen boolean
+---@field public bOverride_FilmGrainIntensity boolean
+---@field public bOverride_FilmGrainIntensityShadows boolean
+---@field public bOverride_FilmGrainIntensityMidtones boolean
+---@field public bOverride_FilmGrainIntensityHighlights boolean
+---@field public bOverride_FilmGrainShadowsMax boolean
+---@field public bOverride_FilmGrainHighlightsMin boolean
+---@field public bOverride_FilmGrainHighlightsMax boolean
+---@field public bOverride_FilmGrainTexelSize boolean
+---@field public bOverride_FilmGrainTexture boolean
+---@field public bOverride_AmbientOcclusionIntensity boolean
+---@field public bOverride_AmbientOcclusionStaticFraction boolean
+---@field public bOverride_AmbientOcclusionRadius boolean
+---@field public bOverride_AmbientOcclusionFadeDistance boolean
+---@field public bOverride_AmbientOcclusionFadeRadius boolean
+---@field public bOverride_AmbientOcclusionRadiusInWS boolean
+---@field public bOverride_AmbientOcclusionPower boolean
+---@field public bOverride_AmbientOcclusionBias boolean
+---@field public bOverride_AmbientOcclusionQuality boolean
+---@field public bOverride_AmbientOcclusionMipBlend boolean
+---@field public bOverride_AmbientOcclusionMipScale boolean
+---@field public bOverride_AmbientOcclusionMipThreshold boolean
+---@field public bOverride_AmbientOcclusionTemporalBlendWeight boolean
+---@field public bOverride_RayTracingAO boolean
+---@field public bOverride_RayTracingAOSamplesPerPixel boolean
+---@field public bOverride_RayTracingAOIntensity boolean
+---@field public bOverride_RayTracingAORadius boolean
+---@field public bOverride_IndirectLightingColor boolean
+---@field public bOverride_IndirectLightingIntensity boolean
+---@field public bOverride_ColorGradingIntensity boolean
+---@field public bOverride_ColorGradingLUT boolean
+---@field public bOverride_DepthOfFieldFocalDistance boolean
+---@field public bOverride_DepthOfFieldFstop boolean
+---@field public bOverride_DepthOfFieldMinFstop boolean
+---@field public bOverride_DepthOfFieldBladeCount boolean
+---@field public bOverride_DepthOfFieldSensorWidth boolean
+---@field public bOverride_DepthOfFieldSqueezeFactor boolean
+---@field public bOverride_DepthOfFieldDepthBlurRadius boolean
+---@field public bOverride_DepthOfFieldUseHairDepth boolean
+---@field public bOverride_DepthOfFieldPetzvalBokeh boolean
+---@field public bOverride_DepthOfFieldPetzvalBokehFalloff boolean
+---@field public bOverride_DepthOfFieldPetzvalExclusionBoxExtents boolean
+---@field public bOverride_DepthOfFieldPetzvalExclusionBoxRadius boolean
+---@field public bOverride_DepthOfFieldAspectRatioScalar boolean
+---@field public bOverride_DepthOfFieldMatteBoxFlags boolean
+---@field public bOverride_DepthOfFieldBarrelRadius boolean
+---@field public bOverride_DepthOfFieldBarrelLength boolean
+---@field public bOverride_DepthOfFieldDepthBlurAmount boolean
+---@field public bOverride_DepthOfFieldFocalRegion boolean
+---@field public bOverride_DepthOfFieldNearTransitionRegion boolean
+---@field public bOverride_DepthOfFieldFarTransitionRegion boolean
+---@field public bOverride_DepthOfFieldScale boolean
+---@field public bOverride_DepthOfFieldNearBlurSize boolean
+---@field public bOverride_DepthOfFieldFarBlurSize boolean
+---@field public bOverride_MobileHQGaussian boolean
+---@field public bOverride_DepthOfFieldOcclusion boolean
+---@field public bOverride_DepthOfFieldSkyFocusDistance boolean
+---@field public bOverride_DepthOfFieldVignetteSize boolean
+---@field public bOverride_MotionBlurAmount boolean
+---@field public bOverride_MotionBlurMax boolean
+---@field public bOverride_MotionBlurTargetFPS boolean
+---@field public bOverride_MotionBlurPerObjectSize boolean
+---@field public bOverride_ReflectionMethod boolean
+---@field public bOverride_LumenReflectionQuality boolean
+---@field public bOverride_ScreenSpaceReflectionIntensity boolean
+---@field public bOverride_ScreenSpaceReflectionQuality boolean
+---@field public bOverride_ScreenSpaceReflectionMaxRoughness boolean
+---@field public bOverride_ScreenSpaceReflectionRoughnessScale boolean
+---@field public bOverride_UserFlags boolean @TODO: look useless...
+---@field public bOverride_RayTracingReflectionsMaxRoughness boolean
+---@field public bOverride_RayTracingReflectionsMaxBounces boolean
+---@field public bOverride_RayTracingReflectionsSamplesPerPixel boolean
+---@field public bOverride_RayTracingReflectionsShadows boolean
+---@field public bOverride_RayTracingReflectionsTranslucency boolean
+---@field public bOverride_TranslucencyType boolean
+---@field public bOverride_RayTracingTranslucencyMaxRoughness boolean
+---@field public bOverride_RayTracingTranslucencyRefractionRays boolean
+---@field public bOverride_RayTracingTranslucencySamplesPerPixel boolean
+---@field public bOverride_RayTracingTranslucencyShadows boolean
+---@field public bOverride_RayTracingTranslucencyRefraction boolean
+---@field public bOverride_RayTracingTranslucencyMaxPrimaryHitEvents boolean
+---@field public bOverride_RayTracingTranslucencyMaxSecondaryHitEvents boolean
+---@field public bOverride_RayTracingTranslucencyUseRayTracedRefraction boolean
+---@field public bOverride_DynamicGlobalIlluminationMethod boolean
+---@field public bOverride_LumenSceneLightingQuality boolean
+---@field public bOverride_LumenSceneDetail boolean
+---@field public bOverride_LumenSceneViewDistance boolean
+---@field public bOverride_LumenSceneLightingUpdateSpeed boolean
+---@field public bOverride_LumenFinalGatherQuality boolean
+---@field public bOverride_LumenFinalGatherLightingUpdateSpeed boolean
+---@field public bOverride_LumenFinalGatherScreenTraces boolean
+---@field public bOverride_LumenMaxTraceDistance boolean
+---@field public bOverride_LumenDiffuseColorBoost boolean
+---@field public bOverride_LumenSkylightLeaking boolean
+---@field public bOverride_LumenSkylightLeakingTint boolean
+---@field public bOverride_LumenFullSkylightLeakingDistance boolean
+---@field public bOverride_LumenRayLightingMode boolean
+---@field public bOverride_LumenReflectionsScreenTraces boolean
+---@field public bOverride_LumenFrontLayerTranslucencyReflections boolean
+---@field public bOverride_LumenMaxRoughnessToTraceReflections boolean
+---@field public bOverride_LumenMaxReflectionBounces boolean
+---@field public bOverride_LumenMaxRefractionBounces boolean
+---@field public bOverride_LumenSurfaceCacheResolution boolean
+---@field public bOverride_RayTracingGI boolean
+---@field public bOverride_RayTracingGIMaxBounces boolean
+---@field public bOverride_RayTracingGISamplesPerPixel boolean
+---@field public bOverride_PathTracingMaxBounces boolean
+---@field public bOverride_PathTracingSamplesPerPixel boolean
+---@field public bOverride_PathTracingMaxPathIntensity boolean
+---@field public bOverride_PathTracingEnableEmissiveMaterials boolean
+---@field public bOverride_PathTracingEnableReferenceDOF boolean
+---@field public bOverride_PathTracingEnableReferenceAtmosphere boolean
+---@field public bOverride_PathTracingEnableDenoiser boolean
+---@field public bOverride_PathTracingIncludeEmissive boolean
+---@field public bOverride_PathTracingIncludeDiffuse boolean
+---@field public bOverride_PathTracingIncludeIndirectDiffuse boolean
+---@field public bOverride_PathTracingIncludeSpecular boolean
+---@field public bOverride_PathTracingIncludeIndirectSpecular boolean
+---@field public bOverride_PathTracingIncludeVolume boolean
+---@field public bOverride_PathTracingIncludeIndirectVolume boolean
+---@field public bMobileHQGaussian boolean @Enable HQ Gaussian on high end mobile platforms. (ES3_1)
+---@field public BloomMethod integer @Bloom algorithm
+---@field public AutoExposureMethod integer @Luminance computation method
+---@field public TemperatureType integer @Selects the type of temperature calculation. White Balance uses the Temperature value to control the virtual camera's White Balance. This is the default selection. Color Temperature uses the Temperature value to adjust the color temperature of the scene, which is the inverse of the White Balance operation.
+---@field public WhiteTemp number @Controls the color temperature or white balance in degrees Kelvin which the scene considers as white light.
+---@field public WhiteTint number @Controls the color of the scene along the magenta - green axis (orthogonal to the color temperature).  This feature is equivalent to color tint in digital cameras.
+---@field public ColorSaturation FVector4 @Control the intensity of the color(hue) for the entire image.Higher values will result in more vibrant colors.
+---@field public ColorContrast FVector4 @Control the range of light and dark values in your scene. Lower values will reduce the difference between bright and dark areas while higher values will increase the difference between the bright and dark areas.
+---@field public ColorGamma FVector4 @Control the luminance curve of the scene. Raising or lowering this value will result brightening or darkening the mid-tones of the entire image.
+---@field public ColorGain FVector4 @This value multiplies the colors of the image.  Raising or lowering this value will result in brightening or darkening the entire scene.
+---@field public ColorOffset FVector4 @This value is added to the colors of the scene.  Raising or lowering this value will result in the image being more or less washed-out.
+---@field public ColorSaturationShadows FVector4 @Control the intensity of the colors (hue) in the shadow region of the image.  Higher values will result in more vibrant colors.
+---@field public ColorContrastShadows FVector4 @Control the range of light and dark values in your scene. Lower values will reduce the difference between bright and dark areas while higher values will increase the difference between the bright and dark areas.
+---@field public ColorGammaShadows FVector4 @Control the luminance curve of the shadow region. Raising or lowering this value will result brightening or darkening the mid-tones of the shadow region.
+---@field public ColorGainShadows FVector4 @This value multiplies the colors in the shadow region.  Raising or lowering this value will result in brightening or darkening the affected region.
+---@field public ColorOffsetShadows FVector4 @This value is added to the colors in the shadow region.  Raising or lowering this value will result in the shadows being more or less washed-out.
+---@field public ColorSaturationMidtones FVector4 @Control the intensity of the colors (hue) in the mid-tone region of the image.  Higher values will result in more vibrant colors.
+---@field public ColorContrastMidtones FVector4 @Control the range of light and dark values in the mid-tone region. Lower values will reduce the difference between bright and dark areas while higher values will increase the difference between the bright and dark areas.
+---@field public ColorGammaMidtones FVector4 @Control the luminance curve of the mid-tone region of the image. Raising or lowering this value will result brightening or darkening the mid-tones of the image.
+---@field public ColorGainMidtones FVector4 @This value multiplies the colors in the mid-tone region of the image.  Raising or lowering this value will result in brightening or darkening the affected region.
+---@field public ColorOffsetMidtones FVector4 @This value is added to the colors in the mid-tone region of the image.  Raising or lowering this value will result in the mid-tones being more or less washed-out.
+---@field public ColorSaturationHighlights FVector4 @Control the intensity of the color (hue) for the highlights region of the image.  Higher values will result in more vibrant colors.
+---@field public ColorContrastHighlights FVector4 @Control the range of light and dark values in the highlights region. Lower values will reduce the difference between bright and dark areas while higher values will increase the difference between the bright and dark areas.
+---@field public ColorGammaHighlights FVector4 @Control the luminance curve of the highlight region. Raising or lowering this value will result brightening or darkening the mid-tones of the highlight region.
+---@field public ColorGainHighlights FVector4 @This value multiplies the colors in the highlight region.  Raising or lowering this value will result in brightening or darkening the affected region.
+---@field public ColorOffsetHighlights FVector4 @This value is added to the colors in the highlight region.  Raising or lowering this value will result in the highlights being more or less washed-out.
+---@field public ColorCorrectionHighlightsMin number @This value sets the lower threshold for what is considered to be the highlight region of the image.
+---@field public ColorCorrectionHighlightsMax number @This value sets the upper threshold for what is considered to be the highlight region of the image.  This value should be larger than HighlightsMin. Default is 1.0, for backwards compatibility
+---@field public ColorCorrectionShadowsMax number @This value sets the threshold for what is considered to be the shadow region of the image.
+---@field public BlueCorrection number @Correct for artifacts with "electric" blues due to the ACEScg color space. Bright blue desaturates instead of going to violet.
+---@field public ExpandGamut number @Expand bright saturated colors outside the sRGB gamut to fake wide gamut rendering.
+---@field public ToneCurveAmount number @Allow effect of Tone Curve to be reduced (Set ToneCurveAmount and ExpandGamut to 0.0 to fully disable tone curve)
+---@field public FilmSlope number @Controls the overall steepness of the tonemapper curve.  Larger values increase scene contrast and smaller values reduce contrast.
+---@field public FilmToe number @Controls the contrast of the dark end of the tonemapper curve. Larger values increase contrast and smaller values decrease contrast.
+---@field public FilmShoulder number @Sometimes referred to as highlight rolloff.  Controls the contrast of the bright end of the tonemapper curve. Larger values increase contrast and smaller values decrease contrast.
+---@field public FilmBlackClip number @Lowers the toe of the tonemapper curve by this amount. Increasing this value causes more of the scene to clip to black.  For most purposes, this property should remain 0
+---@field public FilmWhiteClip number @Controls the height of the tonemapper curve.  Raising this value can cause bright values to more quickly approach fully-saturated white.
+---@field public SceneColorTint FLinearColor @Scene tint color
+---@field public SceneFringeIntensity number @in percent, Scene chromatic aberration / color fringe (camera imperfection) to simulate an artifact that happens in real-world lens, mostly visible in the image corners.
+---@field public ChromaticAberrationStartOffset number @A normalized distance to the center of the framebuffer where the effect takes place.
+---@field public BloomIntensity number @Multiplier for all bloom contributions >=0: off, 1(default), >1 brighter
+---@field public BloomThreshold number @minimum brightness the bloom starts having effect -1:all pixels affect bloom equally (physically correct, faster as a threshold pass is omitted), 0:all pixels affect bloom brights more, 1(default), >1 brighter
+---@field public BloomSizeScale number @Scale for all bloom sizes
+---@field public Bloom1Size number @Diameter size for the Bloom1 in percent of the screen width (is done in 1/2 resolution, larger values cost more performance, good for high frequency details) >=0: can be clamped because of shader limitations
+---@field public Bloom2Size number @Diameter size for Bloom2 in percent of the screen width (is done in 1/4 resolution, larger values cost more performance) >=0: can be clamped because of shader limitations
+---@field public Bloom3Size number @Diameter size for Bloom3 in percent of the screen width (is done in 1/8 resolution, larger values cost more performance) >=0: can be clamped because of shader limitations
+---@field public Bloom4Size number @Diameter size for Bloom4 in percent of the screen width (is done in 1/16 resolution, larger values cost more performance, best for wide contributions) >=0: can be clamped because of shader limitations
+---@field public Bloom5Size number @Diameter size for Bloom5 in percent of the screen width (is done in 1/32 resolution, larger values cost more performance, best for wide contributions) >=0: can be clamped because of shader limitations
+---@field public Bloom6Size number @Diameter size for Bloom6 in percent of the screen width (is done in 1/64 resolution, larger values cost more performance, best for wide contributions) >=0: can be clamped because of shader limitations
+---@field public Bloom1Tint FLinearColor @Bloom1 tint color
+---@field public Bloom2Tint FLinearColor @Bloom2 tint color
+---@field public Bloom3Tint FLinearColor @Bloom3 tint color
+---@field public Bloom4Tint FLinearColor @Bloom4 tint color
+---@field public Bloom5Tint FLinearColor @Bloom5 tint color
+---@field public Bloom6Tint FLinearColor @Bloom6 tint color
+---@field public BloomConvolutionScatterDispersion number @Intensity multiplier on the scatter dispersion energy of the kernel. 1.0 means exactly use the same energy as the kernel scatter dispersion.
+---@field public BloomConvolutionSize number @Relative size of the convolution kernel image compared to the minor axis of the viewport
+---@field public BloomConvolutionTexture UTexture2D @Texture to replace default convolution bloom kernel
+---@field public BloomConvolutionCenterUV FVector2D @The UV location of the center of the kernel.  Should be very close to (.5,.5)
+---@field public BloomConvolutionPreFilterMin number @Boost intensity of select pixels  prior to computing bloom convolution (Min, Max, Multiplier).  Max < Min disables
+---@field public BloomConvolutionPreFilterMax number @Boost intensity of select pixels  prior to computing bloom convolution (Min, Max, Multiplier).  Max < Min disables
+---@field public BloomConvolutionPreFilterMult number @Boost intensity of select pixels  prior to computing bloom convolution (Min, Max, Multiplier).  Max < Min disables
+---@field public BloomConvolutionBufferScale number @Implicit buffer region as a fraction of the screen size to insure the bloom does not wrap across the screen.  Larger sizes have perf impact.
+---@field public BloomDirtMask UTexture @Texture that defines the dirt on the camera lens where the light of very bright objects is scattered.
+---@field public BloomDirtMaskIntensity number @BloomDirtMask intensity
+---@field public BloomDirtMaskTint FLinearColor @BloomDirtMask tint color
+---@field public DynamicGlobalIlluminationMethod integer @Chooses the Dynamic Global Illumination method.  Not compatible with Forward Shading.
+---@field public IndirectLightingColor FLinearColor @Adjusts indirect lighting color. (1,1,1) is default. (0,0,0) to disable GI. The show flag 'Global Illumination' must be enabled to use this property.
+---@field public IndirectLightingIntensity number @Scales the indirect lighting contribution. A value of 0 disables GI. Default is 1. The show flag 'Global Illumination' must be enabled to use this property.
+---@field public LumenRayLightingMode ELumenRayLightingModeOverride @Controls how Lumen rays are lit when Lumen is using Hardware Ray Tracing.  By default, Lumen uses the Surface Cache for best performance, but can be set to 'Hit Lighting' for higher quality.
+---@field public LumenSceneLightingQuality number @Scales Lumen Scene's quality.  Larger scales cause Lumen Scene to be calculated with a higher fidelity, which can be visible in reflections, but increase GPU cost.
+---@field public LumenSceneDetail number @Controls the size of instances that can be represented in Lumen Scene.  Larger values will ensure small objects are represented, but increase GPU cost.
+---@field public LumenSceneViewDistance number @Sets the maximum view distance of the scene that Lumen maintains for ray tracing against.  Larger values will increase the effective range of sky shadowing and Global Illumination, but increase GPU cost.
+---@field public LumenSceneLightingUpdateSpeed number @Controls how much Lumen Scene is allowed to cache lighting results to improve performance.  Larger scales cause lighting changes to propagate faster, but increase GPU cost.
+---@field public LumenFinalGatherQuality number @Scales Lumen's Final Gather quality.  Larger scales reduce noise, but greatly increase GPU cost.
+---@field public LumenFinalGatherLightingUpdateSpeed number @Controls how much Lumen Final Gather is allowed to cache lighting results to improve performance.  Larger scales cause lighting changes to propagate faster, but increase GPU cost and noise.
+---@field public LumenFinalGatherScreenTraces boolean @Whether to use screen space traces for Lumen Global Illumination. Screen space traces bypass Lumen Scene and instead sample Scene Depth and Scene Color. This improves quality, as it bypasses Lumen Scene, but causes view dependent lighting.
+---@field public LumenMaxTraceDistance number @Controls the maximum distance that Lumen should trace while solving lighting.  Values that are too small will cause lighting to leak into large caves, while values that are large will increase GPU cost.
+---@field public LumenDiffuseColorBoost number @Allows brightening indirect lighting by calculating material diffuse color for indirect lighting. Values above 1 (original diffuse color) aren't physically correct, but they can be useful as an art direction knob to increase the amount of bounced light in the scene. Best to keep below 2 as it also causes reflections to be brighter than the scene.
+---@field public LumenSkylightLeaking number @Controls what fraction of the skylight intensity should be allowed to leak.  This can be useful as an art direction knob (non-physically based) to keep indoor areas from going fully black.
+---@field public LumenSkylightLeakingTint FLinearColor @Color tint for Lumen Skylight Leaking.
+---@field public LumenFullSkylightLeakingDistance number @Controls the distance from a receiving surface where skylight leaking reaches its full intensity.  Smaller values make the skylight leaking flatter, while larger values create an Ambient Occlusion effect.
+---@field public LumenSurfaceCacheResolution number @Scale factor for Lumen Surface Cache resolution, for Scene Capture.  Smaller values save GPU memory, at a cost in quality.  Defaults to 0.5 if not overridden.
+---@field public ReflectionMethod integer @Chooses the Reflection method. Not compatible with Forward Shading.
+---@field public LumenReflectionQuality number @Scales the Reflection quality.  Larger scales reduce noise in reflections, but increase GPU cost.
+---@field public LumenReflectionsScreenTraces boolean @Whether to use screen space traces for Lumen Reflections. Screen space traces bypass Lumen Scene and instead sample Scene Depth and Scene Color. This improves quality, as it bypasses Lumen Scene, but causes view dependent lighting.
+---@field public LumenFrontLayerTranslucencyReflections boolean @Whether to use high quality mirror reflections on the front layer of translucent surfaces.  Other layers will use the lower quality Radiance Cache method that can only produce glossy reflections.  Increases GPU cost when enabled.
+---@field public LumenMaxRoughnessToTraceReflections number @Sets the maximum roughness value for which Lumen still traces dedicated reflection rays. Higher values improve reflection quality, but greatly increase GPU cost.
+---@field public LumenMaxReflectionBounces integer @Sets the maximum number of recursive reflection bounces. 1 means a single reflection ray (no secondary reflections in mirrors). Currently only supported by Hardware Ray Tracing with Hit Lighting.
+---@field public LumenMaxRefractionBounces integer @The maximum count of refraction event to trace. When hit lighting is used, Translucent meshes will be traced when LumenMaxRefractionBounces > 0, making the reflection tracing more expenssive.
+---@field public ScreenSpaceReflectionIntensity number @Enable/Fade/disable the Screen Space Reflection feature, in percent, avoid numbers between 0 and 1 fo consistency
+---@field public ScreenSpaceReflectionQuality number @0=lowest quality..100=maximum quality, only a few quality levels are implemented, no soft transition, 50 is the default for better performance.
+---@field public ScreenSpaceReflectionMaxRoughness number @Until what roughness we fade the screen space reflections, 0.8 works well, smaller can run faster
+---@field public bMegaLights boolean @Allows forcing MegaLights on or off for this volume, regardless of the project setting for MegaLights. MegaLights will stochastically sample lights, which allows many shadow casting lights to be rendered efficiently, with a consistent and low GPU cost. When MegaLights is enabled, other direct lighting algorithms like Deferred Shading will no longer be used, and other shadowing methods like Ray Traced Shadows, Distance Field Shadows and Shadow Maps will no longer be used. MegaLights requires Hardware Ray Tracing and Shader Model 6.
+---@field public AmbientCubemapTint FLinearColor @AmbientCubemap tint color
+---@field public AmbientCubemapIntensity number @To scale the Ambient cubemap brightness >=0: off, 1(default), >1 brighter
+---@field public AmbientCubemap UTextureCube @The Ambient cubemap (Affects diffuse and specular shading), blends additively which if different from all other settings here
+---@field public CameraShutterSpeed number @The camera shutter in 1/seconds.
+---@field public CameraISO number @The camera sensor sensitivity
+---@field public DepthOfFieldFstop number @Defines the opening of the camera lens, Aperture is 1/fstop, typical lens go down to f/1.2 (large opening), larger numbers reduce the DOF effect
+---@field public DepthOfFieldMinFstop number @Defines the maximum opening of the camera lens to control the curvature of blades of the diaphragm. Set it to 0 to get straight blades.
+---@field public DepthOfFieldBladeCount integer @Defines the number of blades of the diaphragm within the lens (between 4 and 16).
+---@field public AutoExposureBias number @Logarithmic adjustment for the exposure. Only used if a tonemapper is specified. 0: no adjustment, -1:2x darker, -2:4x darker, 1:2x brighter, 2:4x brighter, ...
+---@field public AutoExposureBiasBackup number @With the auto exposure changes, we are changing the AutoExposureBias inside the serialization code. We are storing that value before conversion here as a backup. Hopefully it will not be needed, and removed in the next engine revision.
+---@field public bOverride_AutoExposureBiasBackup boolean @With the auto exposure changes, we are also changing the auto exposure override value, so we are storing that backup as well.
+---@field public AutoExposureApplyPhysicalCameraExposure boolean @Only affects Manual exposure mode.
+---@field public AutoExposureBiasCurve UCurveFloat @Exposure compensation based on the scene EV100. Used to calibrate the final exposure differently depending on the average scene luminance. 0: no adjustment, -1:2x darker, -2:4x darker, 1:2x brighter, 2:4x brighter, ...
+---@field public AutoExposureMeterMask UTexture @Exposure metering mask. Bright spots on the mask will have high influence on auto-exposure metering and dark spots will have low influence.
+---@field public AutoExposureLowPercent number @The eye adaptation will adapt to a value extracted from the luminance histogram of the scene color. The value is defined as having x percent below this brightness. Higher values give bright spots on the screen more priority but can lead to less stable results. Lower values give the medium and darker values more priority but might cause burn out of bright spots. >0, <100, good values are in the range 70 .. 80
+---@field public AutoExposureHighPercent number @The eye adaptation will adapt to a value extracted from the luminance histogram of the scene color. The value is defined as having x percent below this brightness. Higher values give bright spots on the screen more priority but can lead to less stable results. Lower values give the medium and darker values more priority but might cause burn out of bright spots. >0, <100, good values are in the range 80 .. 95
+---@field public AutoExposureMinBrightness number @Auto-Exposure minimum adaptation. Eye Adaptation is disabled if Min = Max. Auto-exposure is implemented by choosing an exposure value for which the average luminance generates a pixel brightness equal to the Constant Calibration value. The Min/Max are expressed in pixel luminance (cd/m2) or in EV100 when using ExtendDefaultLuminanceRange (see project settings).
+---@field public AutoExposureMaxBrightness number @Auto-Exposure maximum adaptation. Eye Adaptation is disabled if Min = Max. Auto-exposure is implemented by choosing an exposure value for which the average luminance generates a pixel brightness equal to the Constant Calibration value. The Min/Max are expressed in pixel luminance (cd/m2) or in EV100 when using ExtendDefaultLuminanceRange (see project settings).
+---@field public AutoExposureSpeedUp number @In F-stops per second, should be >0
+---@field public AutoExposureSpeedDown number @In F-stops per second, should be >0
+---@field public HistogramLogMin number @Histogram Min value. Expressed in Log2(Luminance) or in EV100 when using ExtendDefaultLuminanceRange (see project settings)
+---@field public HistogramLogMax number @Histogram Max value. Expressed in Log2(Luminance) or in EV100 when using ExtendDefaultLuminanceRange (see project settings)
+---@field public LocalExposureMethod ELocalExposureMethod @Local Exposure algorithm
+---@field public LocalExposureHighlightContrastScale number @Local Exposure decomposes luminance of the frame into a base layer and a detail layer. Contrast of the base layer is reduced based on this value. Value less than 1 will enable local exposure. Good values are usually in the range 0.6 .. 1.0.
+---@field public LocalExposureShadowContrastScale number @Local Exposure decomposes luminance of the frame into a base layer and a detail layer. Contrast of the base layer is reduced based on this value. Value less than 1 will enable local exposure. Good values are usually in the range 0.6 .. 1.0.
+---@field public LocalExposureHighlightContrastCurve UCurveFloat @Local Exposure Highlight Contrast based on the scene EV100. Used to calibrate Local Exposure differently depending on the average scene luminance.
+---@field public LocalExposureShadowContrastCurve UCurveFloat @Local Exposure Shadow Contrast based on the scene EV100. Used to calibrate Local Exposure differently depending on the average scene luminance.
+---@field public LocalExposureHighlightThreshold number @Threshold used to determine which regions of the screen are considered highlights.
+---@field public LocalExposureShadowThreshold number @Threshold used to determine which regions of the screen are considered shadows.
+---@field public LocalExposureDetailStrength number @Local Exposure decomposes luminance of the frame into a base layer and a detail layer. Value different than 1 will enable local exposure. This value should be set to 1 in most cases.
+---@field public LocalExposureBlurredLuminanceBlend number @Local Exposure decomposes luminance of the frame into a base layer and a detail layer. Blend between bilateral filtered and blurred luminance as the base layer. Blurred luminance helps preserve image appearance and specular highlights, and reduce ringing. Good values are usually in the range 0.4 .. 0.6
+---@field public LocalExposureBlurredLuminanceKernelSizePercent number @Kernel size (percentage of screen) used to blur frame luminance.
+---@field public LocalExposureHighlightThresholdStrength number @Strength of the highlight threshold.
+---@field public LocalExposureShadowThresholdStrength number @Strength of the shadow threshold.
+---@field public LocalExposureMiddleGreyBias number @Logarithmic adjustment for the local exposure middle grey. 0: no adjustment, -1:2x darker, -2:4x darker, 1:2x brighter, 2:4x brighter, ...
+---@field public LensFlareIntensity number @Brightness scale of the image cased lens flares (linear)
+---@field public LensFlareTint FLinearColor @Tint color for the image based lens flares.
+---@field public LensFlareBokehSize number @Size of the Lens Blur (in percent of the view width) that is done with the Bokeh texture (note: performance cost is radius*radius)
+---@field public LensFlareThreshold number @Minimum brightness the lens flare starts having effect (this should be as high as possible to avoid the performance cost of blurring content that is too dark too see)
+---@field public LensFlareBokehShape UTexture @Defines the shape of the Bokeh when the image base lens flares are blurred, cannot be blended
+---@field public LensFlareTints FLinearColor @RGB defines the lens flare color, A it's position. This is a temporary solution.
+---@field public VignetteIntensity number @0..1 0=off/no vignette .. 1=strong vignette
+---@field public Sharpen number @Controls the strength of image sharpening applied during tonemapping.
+---@field public FilmGrainIntensity number @0..1 Film grain intensity to apply. LinearSceneColor *= lerp(1.0, DecodedFilmGrainTexture, FilmGrainIntensity)
+---@field public FilmGrainIntensityShadows number @Control over the grain intensity in the regions of the image considered shadow areas.
+---@field public FilmGrainIntensityMidtones number @Control over the grain intensity in the mid-tone region of the image.
+---@field public FilmGrainIntensityHighlights number @Control over the grain intensity in the regions of the image considered highlight areas.
+---@field public FilmGrainShadowsMax number @Sets the upper bound used for Film Grain Shadow Intensity.
+---@field public FilmGrainHighlightsMin number @Sets the lower bound used for Film Grain Highlight Intensity.
+---@field public FilmGrainHighlightsMax number @Sets the upper bound used for Film Grain Highlight Intensity. This value should be larger than HighlightsMin.. Default is 1.0, for backwards compatibility
+---@field public FilmGrainTexelSize number @Controls the size of the film grain. Size of texel of FilmGrainTexture on screen.
+---@field public FilmGrainTexture UTexture2D @Defines film grain texture to use.
+---@field public AmbientOcclusionIntensity number @0..1 0=off/no ambient occlusion .. 1=strong ambient occlusion, defines how much it affects the non direct lighting after base pass
+---@field public AmbientOcclusionStaticFraction number @0..1 0=no effect on static lighting .. 1=AO affects the stat lighting, 0 is free meaning no extra rendering pass
+---@field public AmbientOcclusionRadius number @>0, in unreal units, bigger values means even distant surfaces affect the ambient occlusion
+---@field public AmbientOcclusionRadiusInWS boolean @true: AO radius is in world space units, false: AO radius is locked the view space in 400 units
+---@field public AmbientOcclusionFadeDistance number @>0, in unreal units, at what distance the AO effect disppears in the distance (avoding artifacts and AO effects on huge object)
+---@field public AmbientOcclusionFadeRadius number @>0, in unreal units, how many units before AmbientOcclusionFadeOutDistance it starts fading out
+---@field public AmbientOcclusionPower number @>0, in unreal units, bigger values means even distant surfaces affect the ambient occlusion
+---@field public AmbientOcclusionBias number @>0, in unreal units, default (3.0) works well for flat surfaces but can reduce details
+---@field public AmbientOcclusionQuality number @0=lowest quality..100=maximum quality, only a few quality levels are implemented, no soft transition
+---@field public AmbientOcclusionMipBlend number @Affects the blend over the multiple mips (lower resolution versions) , 0:fully use full resolution, 1::fully use low resolution, around 0.6 seems to be a good value
+---@field public AmbientOcclusionMipScale number @Affects the radius AO radius scale over the multiple mips (lower resolution versions)
+---@field public AmbientOcclusionMipThreshold number @to tweak the bilateral upsampling when using multiple mips (lower resolution versions)
+---@field public AmbientOcclusionTemporalBlendWeight number @How much to blend the current frame with previous frames when using GTAO with temporal accumulation
+---@field public RayTracingAO boolean @Enables ray tracing ambient occlusion.
+---@field public RayTracingAOSamplesPerPixel integer @Sets the samples per pixel for ray tracing ambient occlusion.
+---@field public RayTracingAOIntensity number @Scalar factor on the ray-tracing ambient occlusion score.
+---@field public RayTracingAORadius number @Defines the world-space search radius for occlusion rays.
+---@field public ColorGradingIntensity number @Color grading lookup table intensity. 0 = no intensity, 1=full intensity
+---@field public ColorGradingLUT UTexture @Look up table texture to use or none of not used
+---@field public DepthOfFieldSensorWidth number @Width of the camera sensor to assume, in mm.
+---@field public DepthOfFieldSqueezeFactor number @This is the squeeze factor for the DOF, which emulates the properties of anamorphic lenses.
+---@field public DepthOfFieldFocalDistance number @Distance in which the Depth of Field effect should be sharp, in unreal units (cm)
+---@field public DepthOfFieldDepthBlurAmount number @CircleDOF only: Depth blur km for 50%
+---@field public DepthOfFieldDepthBlurRadius number @CircleDOF only: Depth blur radius in pixels at 1920x
+---@field public DepthOfFieldUseHairDepth boolean @For depth of field to use the hair depth for computing circle of confusion size. Otherwise use an interpolated distance between the hair depth and the scene depth based on the hair coverage (default).
+---@field public DepthOfFieldPetzvalBokeh number @Simulate stretching in blur and bokeh. Positive values for sagittal (swirly bokeh), negative values for tangential.
+---@field public DepthOfFieldPetzvalBokehFalloff number @How quickly does the Petzval bokeh effect increase towards the edge of the image
+---@field public DepthOfFieldPetzvalExclusionBoxExtents FVector2f @Box, centered on screen, around which the Petzval effect is applied.
+---@field public DepthOfFieldPetzvalExclusionBoxRadius number @Corner radius
+---@field public DepthOfFieldAspectRatioScalar number @Amount to scale the output viewport's aspect ratio by when computing depth of field properties.
+---@field public DepthOfFieldBarrelRadius number @The lens barrel creates vignetting and occludes bokeh, i.e. cat's eye bokeh
+---@field public DepthOfFieldBarrelLength number @The lens barrel creates vignetting and occludes bokeh, i.e. cat's eye bokeh
+---@field public DepthOfFieldMatteBoxFlags FMatteBoxFlag @Panels around the front of the lens barrel that occlude bokeh
+---@field public DepthOfFieldFocalRegion number @Artificial region where all content is in focus, starting after DepthOfFieldFocalDistance, in unreal units  (cm)
+---@field public DepthOfFieldNearTransitionRegion number @To define the width of the transition region next to the focal region on the near side (cm)
+---@field public DepthOfFieldFarTransitionRegion number @To define the width of the transition region next to the focal region on the near side (cm)
+---@field public DepthOfFieldScale number @SM5: BokehDOF only: To amplify the depth of field effect (like aperture)  0=off           ES3_1: Used to blend DoF. 0=off
+---@field public DepthOfFieldNearBlurSize number @Gaussian only: Maximum size of the Depth of Field blur (in percent of the view width) (note: performance cost scales with size)
+---@field public DepthOfFieldFarBlurSize number @Gaussian only: Maximum size of the Depth of Field blur (in percent of the view width) (note: performance cost scales with size)
+---@field public DepthOfFieldOcclusion number @Occlusion tweak factor 1 (0.18 to get natural occlusion, 0.4 to solve layer color leaking issues)
+---@field public DepthOfFieldSkyFocusDistance number @Artificial distance to allow the skybox to be in focus (e.g. 200000), <=0 to switch the feature off, only for GaussianDOF, can cost performance
+---@field public DepthOfFieldVignetteSize number @Artificial circular mask to (near) blur content outside the radius, only for GaussianDOF, diameter in percent of screen width, costs performance if the mask is used, keep Feather can Radius on default to keep it off
+---@field public MotionBlurAmount number @Strength of motion blur, 0:off
+---@field public MotionBlurMax number @max distortion caused by motion blur, in percent of the screen width, 0:off
+---@field public MotionBlurTargetFPS integer @Defines the target FPS for motion blur. Makes motion blur independent of actual frame rate and relative to the specified target FPS instead. Higher target FPS results in shorter frames, which means shorter shutter times and less motion blur. Lower FPS means more motion blur. A value of zero makes the motion blur dependent on the actual frame rate.
+---@field public MotionBlurPerObjectSize number @The minimum projected screen radius for a primitive to be drawn in the velocity pass, percentage of screen width. smaller numbers cause more draw calls, default: 4%
+---@field public TranslucencyType ETranslucencyType @Sets the translucency type
+---@field public RayTracingTranslucencyMaxRoughness number @Sets the maximum roughness until which ray tracing translucency will be visible (lower value is faster). Translucency contribution is smoothly faded when close to roughness threshold. This parameter behaves similarly to ScreenSpaceReflectionMaxRoughness.
+---@field public RayTracingTranslucencyRefractionRays integer @Sets the maximum number of ray tracing refraction rays.
+---@field public RayTracingTranslucencySamplesPerPixel integer @Sets the samples per pixel for ray traced translucency.
+---@field public RayTracingTranslucencyMaxPrimaryHitEvents integer @Maximum number of hit events allowed on primary ray paths
+---@field public RayTracingTranslucencyMaxSecondaryHitEvents integer @Maximum number of hit events allowed on secondary ray paths
+---@field public RayTracingTranslucencyShadows EReflectedAndRefractedRayTracedShadows @Sets the translucency shadows type.
+---@field public RayTracingTranslucencyRefraction boolean @Sets whether refraction should be enabled or not (if not rays will not scatter and only travel in the same direction as before the intersection event).
+---@field public RayTracingTranslucencyUseRayTracedRefraction boolean @Whether to use ray traced refraction which currently doesn't work well with rough refraction or simulate it using a screen space effect
+---@field public PathTracingMaxBounces integer @Sets the path tracing maximum bounces
+---@field public PathTracingSamplesPerPixel integer @Sets the samples per pixel for the path tracer.
+---@field public PathTracingMaxPathIntensity number @Sets the maximum intensity of indirect samples to reduce fireflies. Lowering this value reduces noise at the expense of accuracy. Increasing it is more accurate but may lead to more noise.
+---@field public PathTracingEnableEmissiveMaterials boolean @Should emissive materials contribute to scene lighting?
+---@field public PathTracingEnableReferenceDOF boolean @Enables a reference quality depth-of-field which replaces the post-process effect.
+---@field public PathTracingEnableReferenceAtmosphere boolean @Enables path tracing in the atmosphere instead of baking the sky atmosphere contribution into a skylight. Any skylight present in the scene will be automatically ignored when this is enabled.
+---@field public PathTracingEnableDenoiser boolean @Run the currently loaded denoiser plugin on the last sample to remove noise from the output. Has no effect if a plug-in is not loaded.
+---@field public PathTracingIncludeEmissive boolean @Should the render include directly visible emissive elements?
+---@field public PathTracingIncludeDiffuse boolean @Should the render include diffuse lighting contributions?
+---@field public PathTracingIncludeIndirectDiffuse boolean @Should the render include indirect diffuse lighting contributions?
+---@field public PathTracingIncludeSpecular boolean @Should the render include specular lighting contributions?
+---@field public PathTracingIncludeIndirectSpecular boolean @Should the render include indirect specular lighting contributions?
+---@field public PathTracingIncludeVolume boolean @Should the render include volume lighting contributions?
+---@field public PathTracingIncludeIndirectVolume boolean @Should the render include volume lighting contributions?
+---@field public UserFlags integer @Per-view user flags accessible in materials via TestPostVolumeUserFlag node, allowing per-view overrides of material behavior.
+---@field public WeightedBlendables FWeightedBlendables @Allows custom post process materials to be defined, using a MaterialInstance with the same Material as its parent to allow blending. For materials this needs to be the "PostProcess" domain type. This can be used for any UObject object implementing the IBlendableInterface (e.g. could be used to fade weather settings).
+---@field public PreviewBlendable UObject @For editor material preview windows, we need to support visualizing the output of a blendable that writes to a UserSceneTexture.  Stores a pointer to a blendable that's being previewed, forcing its output to write to SceneColor instead of the UserSceneTexture, making it visible.
+local FPostProcessSettings = {}

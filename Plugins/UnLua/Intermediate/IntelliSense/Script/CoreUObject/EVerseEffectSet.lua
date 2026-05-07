@@ -1,0 +1,12 @@
+---Mirrors uLang::SEffectSet for UE serialization
+---@class EVerseEffectSet
+---@field public None integer
+---@field public Suspends integer
+---@field public Decides integer
+---@field public Diverges integer
+---@field public Reads integer
+---@field public Writes integer
+---@field public Allocates integer
+---@field public NoRollback integer
+---@field public EVerseEffectSet_MAX integer
+local EVerseEffectSet = {}

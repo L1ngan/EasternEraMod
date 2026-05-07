@@ -1,0 +1,11 @@
+---FOrientOptions
+---@class EOrientAxis
+---@field public None integer
+---@field public PositiveX integer
+---@field public PositiveY integer
+---@field public PositiveZ integer
+---@field public NegativeX integer
+---@field public NegativeY integer
+---@field public NegativeZ integer
+---@field public EOrientAxis_MAX integer
+local EOrientAxis = {}

@@ -1,0 +1,22 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\plugins\\binkmedia\\source\\binkmediaplayer\\private\\binkfunctionlibrary.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\easternera\\development\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\plugins\\binkmedia\\intermediate\\build\\win64\\x64\\unrealgame\\development\\binkmediaplayer\\definitions.binkmediaplayer.h",
+            "h:\\project\\plugins\\binkmedia\\source\\binkmediaplayer\\public\\binkfunctionlibrary.h",
+            "h:\\project\\plugins\\binkmedia\\intermediate\\build\\win64\\unrealgame\\inc\\binkmediaplayer\\uht\\binkfunctionlibrary.generated.h",
+            "h:\\project\\plugins\\binkmedia\\source\\binkmediaplayer\\private\\binkmoviestreamer.h",
+            "h:\\project\\plugins\\binkmedia\\source\\binkmediaplayersdk\\include\\binkplugin.h",
+            "h:\\project\\plugins\\binkmedia\\source\\binkmediaplayersdk\\include\\egttypes.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\movieplayer\\public\\movieplayer.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\public\\slate\\slatetextures.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\slatecore\\public\\textures\\slateupdatabletexture.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\movieplayer\\uht\\movieplayer.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

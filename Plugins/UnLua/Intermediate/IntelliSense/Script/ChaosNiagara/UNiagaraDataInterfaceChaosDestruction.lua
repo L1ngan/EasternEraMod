@@ -1,0 +1,52 @@
+---Data Interface allowing sampling of Chaos Destruction data.
+---@class UNiagaraDataInterfaceChaosDestruction : UNiagaraDataInterface
+---@field public ChaosSolverActorSet TSet<AChaosSolverActor> @Chaos Solver
+---@field public DataSourceType EDataSourceTypeEnum
+---@field public DataProcessFrequency integer @Number of times the RBD collision data gets processed every second
+---@field public MaxNumberOfDataEntriesToSpawn integer @Maximum number of collision/breaking/trailing entry used for spawning particles every time data from the physics solver gets processed
+---@field public DoSpawn boolean @Turn on/off particle spawning
+---@field public SpawnMultiplierMinMax FVector2D @For every collision random number of particles will be spawned in the range of [SpawnMultiplierMin, SpawnMultiplierMax]
+---@field public SpawnChance number @For every collision random number of particles will be spawned in the range of [SpawnMultiplierMin, SpawnMultiplierMax]
+---@field public ImpulseToSpawnMinMax FVector2D @Min/Max collision accumulated impulse to spawn particles
+---@field public SpeedToSpawnMinMax FVector2D @Min/Max speed to spawn particles
+---@field public MassToSpawnMinMax FVector2D @Min/Max mass to spawn particles
+---@field public ExtentMinToSpawnMinMax FVector2D @Min/Max ExtentMin to spawn particles
+---@field public ExtentMaxToSpawnMinMax FVector2D @Min/Max ExtentMax to spawn particles
+---@field public VolumeToSpawnMinMax FVector2D @Min/Max volume to spawn particles
+---@field public SolverTimeToSpawnMinMax FVector2D @Min/Max solver time mass to spawn particles
+---@field public SurfaceTypeToSpawn integer @SurfaceType to spawn particles
+---@field public LocationFilteringMode ELocationFilteringModeEnum @Location Filtering Mode
+---@field public LocationXToSpawn ELocationXToSpawnEnum @How to use LocationX to filter
+---@field public LocationXToSpawnMinMax FVector2D @Min/Max LocationX to spawn particles
+---@field public LocationYToSpawn ELocationYToSpawnEnum @How to use LocationY to filter
+---@field public LocationYToSpawnMinMax FVector2D @Min/Max LocationY to spawn particles
+---@field public LocationZToSpawn ELocationZToSpawnEnum @How to use LocationZ to filter
+---@field public LocationZToSpawnMinMax FVector2D @Min/Max LocationX to spawn particles
+---@field public TrailMinSpeedToSpawn number @Min Linear Speed to generate trailing particles
+---@field public DataSortingType EDataSortTypeEnum @Sorting method to sort the collision data
+---@field public bGetExternalCollisionData boolean @TODO: Explanatory comment
+---@field public DoSpatialHash boolean
+---@field public SpatialHashVolumeMin FVector @SpatialHash volume min
+---@field public SpatialHashVolumeMax FVector @SpatialHash volume max
+---@field public SpatialHashVolumeCellSize FVector @SpatialHash volume resolution
+---@field public MaxDataPerCell integer
+---@field public bApplyMaterialsFilter boolean @Materials Filter
+---@field public ChaosBreakingMaterialSet TSet<UPhysicalMaterial> @TODO: Explanatory comment
+---@field public bGetExternalBreakingData boolean @TODO: Explanatory comment
+---@field public bGetExternalTrailingData boolean @TODO: Explanatory comment
+---@field public RandomPositionMagnitudeMinMax FVector2D @Random displacement value for the particle spawn position
+---@field public InheritedVelocityMultiplier number @How much of the collision velocity gets inherited
+---@field public RandomVelocityGenerationType ERandomVelocityGenerationTypeEnum @The method used to create the random velocities for the newly spawned particles
+---@field public RandomVelocityMagnitudeMinMax FVector2D @Every particles will be spawned with random velocity with magnitude in the range of [RandomVelocityMagnitudeMin, RandomVelocityMagnitudeMax]
+---@field public SpreadAngleMax number
+---@field public VelocityOffsetMin FVector @Min Offset value added to spawned particles velocity
+---@field public VelocityOffsetMax FVector @Max Offset value added to spawned particles velocity
+---@field public FinalVelocityMagnitudeMinMax FVector2D @Clamp particles velocity
+---@field public MaxLatency number
+---@field public DebugType EDebugTypeEnum @Debug visualization method
+---@field protected LastSpawnedPointID integer
+---@field protected LastSpawnTime number
+---@field protected SolverTime number
+---@field protected TimeStampOfLastProcessedData number
+local UNiagaraDataInterfaceChaosDestruction = {}
+

@@ -1,0 +1,14 @@
+---Where to place a post process material in the post processing chain.
+---@class EBlendableLocation
+---@field public BL_SceneColorBeforeDOF integer
+---@field public BL_SceneColorAfterDOF integer
+---@field public BL_TranslucencyAfterDOF integer
+---@field public BL_SSRInput integer
+---@field public BL_SceneColorBeforeBloom integer
+---@field public BL_ReplacingTonemapper integer
+---@field public BL_SceneColorAfterTonemapping integer
+---@field public BL_MAX integer
+---@field public BL_BeforeTranslucency integer
+---@field public BL_BeforeTonemapping integer
+---@field public BL_AfterTonemapping integer
+local EBlendableLocation = {}

@@ -1,0 +1,34 @@
+---@class FNetworkPhysicsSettingsPredictiveInterpolation
+---@field public bOverridePosCorrectionTimeBase boolean
+---@field public PosCorrectionTimeBase number @Overrides CVar: np2.PredictiveInterpolation.PosCorrectionTimeBase -- Base time to correct positional offset over. RoundTripTime * PosCorrectionTimeMultiplier is added on top of this.
+---@field public bOverridePosCorrectionTimeMin boolean
+---@field public PosCorrectionTimeMin number @Overrides CVar: np2.PredictiveInterpolation.PosCorrectionTimeMin -- Min time to correct positional offset over. DeltaSeconds is added on top of this.
+---@field public bOverridePosCorrectionTimeMultiplier boolean
+---@field public PosCorrectionTimeMultiplier number @Overrides CVar: np2.PredictiveInterpolation.PosCorrectionTimeMultiplier -- Multiplier to adjust how much of RoundTripTime to add to positional offset correction.
+---@field public bOverrideRotCorrectionTimeBase boolean
+---@field public RotCorrectionTimeBase number @Overrides CVar: np2.PredictiveInterpolation.RotCorrectionTimeBase -- Base time to correct rotational offset over. RoundTripTime * RotCorrectionTimeMultiplier is added on top of this.
+---@field public bOverrideRotCorrectionTimeMin boolean
+---@field public RotCorrectionTimeMin number @Overrides CVar: np2.PredictiveInterpolation.RotCorrectionTimeMin -- Min time to correct rotational offset over. DeltaSeconds is added on top of this.
+---@field public bOverrideRotCorrectionTimeMultiplier boolean
+---@field public RotCorrectionTimeMultiplier number @Overrides CVar: np2.PredictiveInterpolation.RotCorrectionTimeMultiplier -- Multiplier to adjust how much of RoundTripTime to add to rotational offset correction.
+---@field public bOverridePosInterpolationTimeMultiplier boolean
+---@field public PosInterpolationTimeMultiplier number @Overrides CVar: np2.PredictiveInterpolation.InterpolationTimeMultiplier -- Multiplier to adjust the interpolation time which is based on the sendrate of state data from the server.
+---@field public bOverrideRotInterpolationTimeMultiplier boolean
+---@field public RotInterpolationTimeMultiplier number @Overrides CVar: np2.PredictiveInterpolation.RotInterpolationTimeMultiplier -- Multiplier to adjust the rotational interpolation time which is based on the sendrate of state data from the server.
+---@field public bOverrideSoftSnapPosStrength boolean
+---@field public SoftSnapPosStrength number @Overrides CVar: np2.PredictiveInterpolation.SoftSnapPosStrength -- Value in percent between 0.0 - 1.0 representing how much to softsnap each tick of the remaining positional distance.
+---@field public bOverrideSoftSnapRotStrength boolean
+---@field public SoftSnapRotStrength number @Overrides CVar: np2.PredictiveInterpolation.SoftSnapRotStrength -- Value in percent between 0.0 - 1.0 representing how much to softsnap each tick of the remaining rotational distance.
+---@field public bOverrideSoftSnapToSource boolean
+---@field public bSoftSnapToSource boolean @Overrides CVar: np2.PredictiveInterpolation.SoftSnapToSource -- If true, softsnap will be performed towards the source state of the current target instead of the predicted state of the current target.
+---@field public bOverrideDisableSoftSnap boolean
+---@field public bDisableSoftSnap boolean @Overrides CVar: np2.PredictiveInterpolation.DisableSoftSnap -- When true, predictive interpolation will not use softsnap to correct the replication with when velocity fails. Hardsnap will still eventually kick in if replication can't reach the target.
+---@field public bOverrideSkipVelocityRepOnPosEarlyOut boolean
+---@field public bSkipVelocityRepOnPosEarlyOut boolean @Overrides CVar: np2.PredictiveInterpolation.SkipVelocityRepOnPosEarlyOut -- If true, don't run linear velocity replication if position can early out but angular can't early out.
+---@field public bOverridePostResimWaitForUpdate boolean
+---@field public bPostResimWaitForUpdate boolean @Overrides CVar: np2.PredictiveInterpolation.PostResimWaitForUpdate -- After a resimulation, wait for replicated states that correspond to post-resim state before processing replication again.
+---@field public bOverrideCorrectConnectedBodies boolean
+---@field public bCorrectConnectedBodies boolean @Overrides CVar: np2.PredictiveInterpolation.CorrectConnectedBodies -- When true, transform corrections will also apply to any connected physics object.
+---@field public bOverrideCorrectConnectedBodiesFriction boolean
+---@field public bCorrectConnectedBodiesFriction boolean @Overrides CVar: np2.PredictiveInterpolation.CorrectConnectedBodiesFriction -- When true, transform correction on any connected physics object will also recalculate their friction.
+local FNetworkPhysicsSettingsPredictiveInterpolation = {}

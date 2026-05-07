@@ -1,0 +1,14 @@
+---@class FNiagaraSystemStateData
+---@field public bRunSpawnScript boolean
+---@field public bRunUpdateScript boolean
+---@field public bIgnoreSystemState boolean
+---@field public bRecalculateDurationEachLoop boolean
+---@field public bLoopDelayEnabled boolean
+---@field public bDelayFirstLoopOnly boolean
+---@field public bRecalculateDelayEachLoop boolean
+---@field public InactiveResponse ENiagaraSystemInactiveResponse
+---@field public LoopBehavior ENiagaraLoopBehavior
+---@field public LoopDuration FNiagaraDistributionRangeFloat
+---@field public LoopCount integer
+---@field public LoopDelay FNiagaraDistributionRangeFloat
+local FNiagaraSystemStateData = {}

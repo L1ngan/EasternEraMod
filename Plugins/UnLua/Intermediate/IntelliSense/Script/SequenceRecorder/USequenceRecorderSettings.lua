@@ -1,0 +1,29 @@
+---@class USequenceRecorderSettings : UObject
+---@field public bCreateLevelSequence boolean @Whether to create a level sequence when recording. Actors and animations will be inserted into this sequence
+---@field public bImmersiveMode boolean @Whether to maximize the viewport when recording
+---@field public SequenceLength number @The length of the recorded sequence
+---@field public RecordingDelay number @Delay that we will use before starting recording
+---@field public bAllowLooping boolean @Allow the recording to be looped. Subsequence recorded assets will be saved to unique filenames.
+---@field public GlobalTimeDilation number @Global Time dilation to set the world to when recording starts. Useful for playing back a scene in slow motion.
+---@field public bIgnoreTimeDilation boolean @Should Sequence Recorder ignore global time dilation? If true recorded animations will only be as long as they would have been without global time dilation.
+---@field public AnimationSubDirectory string @The name of the subdirectory animations will be placed in. Leave this empty to place into the same directory as the sequence base path
+---@field public RecordAudio EAudioRecordingMode @Whether to record audio alongside animation or not
+---@field public AudioGain number @Gain in decibels to apply to recorded audio
+---@field public bSplitAudioChannelsIntoSeparateTracks boolean @Whether or not to split mic channels into separate audio tracks. If not true, a max of 2 input channels is supported.
+---@field public bReplaceRecordedAudio boolean @Replace existing recorded audio with any newly recorded audio
+---@field public AudioTrackName string @Name of the recorded audio track name
+---@field public AudioSubDirectory string @The name of the subdirectory audio will be placed in. Leave this empty to place into the same directory as the sequence base path
+---@field public bRecordNearbySpawnedActors boolean @Whether to record nearby spawned actors. If an actor matches a class in the ActorFilter, this state will be bypassed.
+---@field public NearbyActorRecordingProximity number @Proximity to currently recorded actors to record newly spawned actors.
+---@field public bRecordWorldSettingsActor boolean @Whether to record the world settings actor in the sequence (some games use this to attach world SFX)
+---@field public bReduceKeys boolean @Whether to remove keyframes within a tolerance from the recorded tracks
+---@field public bAutoSaveAsset boolean @Whether to auto-save asset when recording is completed. Defaults to false
+---@field public ActorFilter FSequenceRecorderActorFilter @Filter to check spawned actors against to see if they should be recorded
+---@field public LevelSequenceActorsToTrigger TArray<TLazyObjectPtr<ALevelSequenceActor>> @Sequence actors to trigger playback on when recording starts (e.g. for recording synchronized sequences)
+---@field public DefaultAnimationSettings FAnimationRecordingSettings @Default animation settings which are used to initialize all new actor recording's animation settings
+---@field public bRecordSequencerSpawnedActors boolean @Whether to record actors that are spawned by sequencer itself (this is usually disabled as results can be unexpected)
+---@field public ClassesAndPropertiesToRecord TArray<FPropertiesToRecordForClass> @The properties to record for specified classes. Component classes specified here will be recorded. If an actor does not contain one of these classes it will be ignored.
+---@field public ActorsAndPropertiesToRecord TArray<FPropertiesToRecordForActorClass> @The properties to record for specified actors. Actor classes specified here will be recorded. If an actor does not contain one of these properties it will be ignored.
+---@field public PerActorSettings TArray<FSettingsForActorClass> @Settings applied to actors of a specified class
+local USequenceRecorderSettings = {}
+

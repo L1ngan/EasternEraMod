@@ -1,0 +1,22 @@
+---This needs to be mirrored in EditorFactories.cpp.
+---TC_EncodedReflectionCapture is no longer used and could be deleted
+---@class TextureCompressionSettings
+---@field public TC_Default integer
+---@field public TC_Normalmap integer
+---@field public TC_Masks integer
+---@field public TC_Grayscale integer
+---@field public TC_Displacementmap integer
+---@field public TC_VectorDisplacementmap integer
+---@field public TC_HDR integer
+---@field public TC_EditorIcon integer
+---@field public TC_Alpha integer
+---@field public TC_DistanceFieldFont integer
+---@field public TC_HDR_Compressed integer
+---@field public TC_BC7 integer
+---@field public TC_HalfFloat integer
+---@field public TC_LQ integer
+---@field public TC_EncodedReflectionCapture integer
+---@field public TC_SingleFloat integer
+---@field public TC_HDR_F32 integer
+---@field public TC_MAX integer
+local TextureCompressionSettings = {}

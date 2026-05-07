@@ -1,0 +1,26 @@
+---Solves the two bone IK given two bones.
+---Note: This node operates in world space!
+---@class FRigUnit_TwoBoneIKSimple : FRigUnit_HighlevelBaseMutable
+---@field public BoneA string @The name of first bone
+---@field public BoneB string @The name of second bone
+---@field public EffectorBone string @The name of the effector bone (if exists)
+---@field public Effector FTransform @The transform of the effector
+---@field public PrimaryAxis FVector @The major axis being aligned - along the bone
+---@field public SecondaryAxis FVector @The minor axis being aligned - towards the polevector
+---@field public SecondaryAxisWeight number @Determines how much the secondary axis roll is being applied
+---@field public PoleVector FVector @The polevector to use for the IK solver This can be a location or direction.
+---@field public PoleVectorKind EControlRigVectorKind @The kind of pole vector this is representing - can be a direction or a location
+---@field public PoleVectorSpace string @The space in which the pole vector is expressed
+---@field public bEnableStretch boolean @If set to true the stretch feature of the solver will be enabled
+---@field public StretchStartRatio number @The ratio where the stretch starts
+---@field public StretchMaximumRatio number @The maximum allowed stretch ratio
+---@field public Weight number @The weight of the solver - how much the IK should be applied.
+---@field public BoneALength number @The length of the first bone. If set to 0.0 it will be determined by the hierarchy
+---@field public BoneBLength number @The length of the second  bone. If set to 0.0 it will be determined by the hierarchy
+---@field public bPropagateToChildren boolean @If set to true all of the global transforms of the children of this bone will be recalculated based on their local transforms. Note: This is computationally more expensive than turning it off.
+---@field public DebugSettings FRigUnit_TwoBoneIKSimple_DebugSettings @The settings for debug drawing
+---@field public CachedBoneAIndex FCachedRigElement
+---@field public CachedBoneBIndex FCachedRigElement
+---@field public CachedEffectorBoneIndex FCachedRigElement
+---@field public CachedPoleVectorSpaceIndex FCachedRigElement
+local FRigUnit_TwoBoneIKSimple = {}

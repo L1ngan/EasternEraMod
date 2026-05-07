@@ -1,0 +1,22 @@
+---Editor data for stateless emitters
+---Generates runtime data to be consumed by the game
+---@class UNiagaraStatelessEmitter : UObject
+---@field protected UniqueEmitterName string
+---@field protected EmitterTemplateClass TSubclassOf<UObject>
+---@field protected bDeterministic boolean
+---@field protected bForceOutputAllAttributes boolean @When enabled the emitter will output all available attributes. You should not need to modify this with the exception of debugging / testing and as it will impact cooked performance and memory
+---@field protected bForceOutputUniqueID boolean @When enabled the emitter will always include UniqueID in the output attributes. You should not need to modify this with the exception of debugging / testing and as it will impact cooked performance and memory
+---@field protected AllowedFeatureMask integer
+---@field protected RandomSeed integer
+---@field protected FixedBounds FBox
+---@field protected EmitterState FNiagaraEmitterStateData
+---@field protected SpawnInfos TArray<FNiagaraStatelessSpawnInfo>
+---@field protected Modules TArray<UNiagaraStatelessModule>
+---@field protected RendererProperties TArray<UNiagaraRendererProperties>
+---@field protected Platforms FNiagaraPlatformSet
+---@field protected ScalabilityOverrides FNiagaraEmitterScalabilityOverrides
+---@field protected ParticleDataSetCompiledData FNiagaraDataSetCompiledData
+---@field protected ComponentOffsets TArray<integer>
+---@field protected CachedParameterCollectionReferences TArray<UNiagaraParameterCollection>
+local UNiagaraStatelessEmitter = {}
+

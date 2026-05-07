@@ -1,0 +1,31 @@
+---@class UMaterialEditorOnlyData : UMaterialInterfaceEditorOnlyData
+---@field public BaseColor FColorMaterialInput @Reflection
+---@field public Metallic FScalarMaterialInput
+---@field public Specular FScalarMaterialInput
+---@field public Roughness FScalarMaterialInput
+---@field public Anisotropy FScalarMaterialInput
+---@field public Normal FVectorMaterialInput
+---@field public Tangent FVectorMaterialInput
+---@field public EmissiveColor FColorMaterialInput
+---@field public Opacity FScalarMaterialInput @Transmission.
+---@field public OpacityMask FScalarMaterialInput
+---@field public WorldPositionOffset FVectorMaterialInput @Adds to world position in the vertex shader.
+---@field public Displacement FScalarMaterialInput
+---@field public SubsurfaceColor FColorMaterialInput @Inner material color, only used for ShadingModel=Subsurface
+---@field public ClearCoat FScalarMaterialInput
+---@field public ClearCoatRoughness FScalarMaterialInput
+---@field public AmbientOcclusion FScalarMaterialInput @output ambient occlusion to the GBuffer
+---@field public Refraction FScalarMaterialInput @output refraction index for translucent rendering Air:1.0 Water:1.333 Ice:1.3 Glass:~1.6 Diamond:2.42
+---@field public CustomizedUVs FVector2MaterialInput @These inputs are evaluated in the vertex shader and allow artists to do arbitrary vertex shader operations and access them in the pixel shader. When unconnected or hidden they default to passing through the vertex UVs.
+---@field public MaterialAttributes FMaterialAttributesInput
+---@field public PixelDepthOffset FScalarMaterialInput
+---@field public ShadingModelFromMaterialExpression FShadingModelMaterialInput
+---@field public SurfaceThickness FScalarMaterialInput
+---@field public FrontMaterial FSubstrateMaterialInput
+---@field public ExpressionCollection FMaterialExpressionCollection
+---@field public ParameterGroupData TArray<FParameterGroupData> @Controls where this parameter group is displayed in a material instance parameter list.  The lower the number the higher up in the parameter list.
+---@field public SubstrateConversionVersion integer @Store the version of the Substrate's auto-conversion applied to this material if any (default, no conversion =-1).
+---@field public SubstrateVersion integer @Store the version of the Substrate code used by this material (default, no version =-1).
+---@field public bIsSubsutrateAutoConvertedAndNotSaved boolean @Whether the material has been auto - converted at load time, and hasn't been saved.
+local UMaterialEditorOnlyData = {}
+

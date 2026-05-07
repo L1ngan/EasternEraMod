@@ -1,0 +1,15 @@
+---Types of network failures broadcast from the engine
+---@class ENetworkFailure
+---@field public NetDriverAlreadyExists integer
+---@field public NetDriverCreateFailure integer
+---@field public NetDriverListenFailure integer
+---@field public ConnectionLost integer
+---@field public ConnectionTimeout integer
+---@field public FailureReceived integer
+---@field public OutdatedClient integer
+---@field public OutdatedServer integer
+---@field public PendingConnectionFailure integer
+---@field public NetGuidMismatch integer
+---@field public NetChecksumMismatch integer
+---@field public ENetworkFailure_MAX integer
+local ENetworkFailure = {}

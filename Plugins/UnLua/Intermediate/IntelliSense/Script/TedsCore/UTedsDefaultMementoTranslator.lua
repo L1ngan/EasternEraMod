@@ -1,0 +1,27 @@
+---Turn-key translator to convert columns to mementos and back
+---Creates a new struct that has the same UPROPERTIES the ColumnType
+---To opt-in a column to be mementoized, override the GetColumnType with the column that should be mementoized
+---As an example, suppose there was a column defined as:
+---```
+---USTRUCT()
+---struct FPathColumn : public FEditorDataStorageColumn
+---{
+---            GENERATED_BODY()
+---            UPROPERTY()
+---            FString Path;
+---};
+---```
+---To opt into a default memento translator for FPathColumn, define a default translator:
+---```
+---UCLASS()
+---class UTypedElementPathColumnTranslator : public UTypedElementDefaultMementoTranslator
+---{
+---    virtual const UScriptStruct* GetColumnType() const override { return FPathColumn::StaticStruct; }
+---};
+---```
+---The system will take care of doing the required operations when rows are deleted that
+---that have both FTypedElementMementoOnDelete and FPathColumn columns
+---@class UTedsDefaultMementoTranslator : UTedsMementoTranslatorBase
+---@field private MementoType UScriptStruct
+local UTedsDefaultMementoTranslator = {}
+

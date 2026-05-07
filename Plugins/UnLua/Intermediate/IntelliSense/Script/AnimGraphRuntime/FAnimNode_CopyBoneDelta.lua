@@ -1,0 +1,13 @@
+---Simple controller to copy a transform relative to the ref pose to the target bone,
+---instead of the copy bone node which copies the absolute transform
+---@class FAnimNode_CopyBoneDelta : FAnimNode_SkeletalControlBase
+---@field public SourceBone FBoneReference
+---@field public TargetBone FBoneReference
+---@field public bCopyTranslation boolean
+---@field public bCopyRotation boolean
+---@field public bCopyScale boolean
+---@field public CopyMode CopyBoneDeltaMode
+---@field public TranslationMultiplier number
+---@field public RotationMultiplier number
+---@field public ScaleMultiplier number
+local FAnimNode_CopyBoneDelta = {}

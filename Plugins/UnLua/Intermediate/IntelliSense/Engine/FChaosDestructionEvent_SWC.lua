@@ -1,0 +1,11 @@
+---@class FChaosDestructionEvent_SWC
+---@field public Position FVector3f
+---@field public Normal FVector3f
+---@field public Velocity FVector3f
+---@field public AngularVelocity FVector3f
+---@field public ExtentMin number
+---@field public ExtentMax number
+---@field public ParticleID integer
+---@field public Time number
+---@field public Type integer
+local FChaosDestructionEvent_SWC = {}

@@ -1,0 +1,11 @@
+---Description of a single edge in a UComputeGraph.
+---todo[CF]: Consider better storage for graph data structure that is easier to interrogate efficiently.
+---@class FComputeGraphEdge
+---@field public KernelIndex integer
+---@field public KernelBindingIndex integer
+---@field public DataInterfaceIndex integer
+---@field public DataInterfaceBindingIndex integer
+---@field public bKernelInput boolean
+---@field public BindingFunctionNameOverride string @Optional name to use for the proxy generation function, in case the kernel expects something other than the interface's bind name. Leave empty to go with the default.
+---@field public BindingFunctionNamespace string @Optional namespace to wrap the binding function in. A blank mean global namespace.
+local FComputeGraphEdge = {}

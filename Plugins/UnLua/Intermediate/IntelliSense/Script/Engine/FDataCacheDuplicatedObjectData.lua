@@ -1,0 +1,2 @@
+---@class FDataCacheDuplicatedObjectData
+local FDataCacheDuplicatedObjectData = {}

@@ -1,0 +1,18 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\commongame\\source\\private\\gameuimanagersubsystem.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\commongame\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\commongame\\definitions.commongame.h",
+            "g:\\modproject\\plugins\\commongame\\source\\public\\gameuimanagersubsystem.h",
+            "g:\\modproject\\plugins\\commongame\\intermediate\\build\\win64\\unrealeditor\\inc\\commongame\\uht\\gameuimanagersubsystem.generated.h",
+            "g:\\modproject\\plugins\\commongame\\source\\public\\gameuipolicy.h",
+            "g:\\modproject\\plugins\\commongame\\intermediate\\build\\win64\\unrealeditor\\inc\\commongame\\uht\\gameuipolicy.generated.h",
+            "g:\\modproject\\plugins\\commongame\\intermediate\\build\\win64\\unrealeditor\\inc\\commongame\\uht\\gameuimanagersubsystem.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

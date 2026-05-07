@@ -1,0 +1,23 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\private\\rhs_projectilebase.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\easternera\\shipping\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\x64\\unrealgame\\shipping\\auroradevs_rhs\\definitions.auroradevs_rhs.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\rhs_projectilebase.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\rhs_adaptablecollisionactor.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\rhs_adaptablecollisionactor.generated.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\rhs_projectilebase.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\shapecomponent.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\projectilemovementcomponent.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\movementcomponent.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\movementcomponent.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\projectilemovementcomponent.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

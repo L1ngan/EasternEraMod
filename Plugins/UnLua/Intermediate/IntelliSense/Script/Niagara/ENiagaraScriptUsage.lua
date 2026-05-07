@@ -1,0 +1,17 @@
+---Defines different usages for a niagara script.
+---@class ENiagaraScriptUsage
+---@field public Function integer
+---@field public Module integer
+---@field public DynamicInput integer
+---@field public ParticleSpawnScript integer
+---@field public ParticleSpawnScriptInterpolated integer
+---@field public ParticleUpdateScript integer
+---@field public ParticleEventScript integer
+---@field public ParticleSimulationStageScript integer
+---@field public ParticleGPUComputeScript integer
+---@field public EmitterSpawnScript integer
+---@field public EmitterUpdateScript integer
+---@field public SystemSpawnScript integer
+---@field public SystemUpdateScript integer
+---@field public ENiagaraScriptUsage_MAX integer
+local ENiagaraScriptUsage = {}

@@ -1,0 +1,11 @@
+---@class FXRHandTrackingState
+---@field public bValid boolean @The state is valid if poses have ever been provided.
+---@field public DeviceName string
+---@field public ApplicationInstanceID FGuid
+---@field public XRSpaceType EXRSpaceType
+---@field public Hand EControllerHand
+---@field public TrackingStatus ETrackingStatus
+---@field public HandKeyLocations TArray<FVector> @The indices of this array are the values of EHandKeypoint (Palm, Wrist, ThumbMetacarpal, etc).
+---@field public HandKeyRotations TArray<FQuat> @The indices of this array are the values of EHandKeypoint (Palm, Wrist, ThumbMetacarpal, etc).
+---@field public HandKeyRadii TArray<number> @The indices of this array are the values of EHandKeypoint (Palm, Wrist, ThumbMetacarpal, etc).
+local FXRHandTrackingState = {}

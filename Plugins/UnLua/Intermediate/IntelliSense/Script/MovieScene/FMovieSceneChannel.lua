@@ -1,0 +1,2 @@
+---@class FMovieSceneChannel
+local FMovieSceneChannel = {}

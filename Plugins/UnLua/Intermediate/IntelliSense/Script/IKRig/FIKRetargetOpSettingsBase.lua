@@ -1,0 +1,13 @@
+---This is the base class for defining editable settings for your custom retargeting operation.
+---All user-configurable properties for your "op" should be stored in a subclass of this.
+---These settings will automatically be:
+---1. Displayed in the details panel when the op is selected
+---2. Saved/loaded with the op in the retarget asset
+---3. Applied to the op at runtime as part of a profile
+---NOTE: the derived type must be returned by the op's GetSettingsType() and GetSettings()
+---NOTE: UProperties that require reinitialization when modified must be marked meta=(ReinitializeOnEdit)
+---When modified, in the editor, these properties will trigger a reinitialization at which point
+---the runtime Op will get the latest values automatically.
+---@class FIKRetargetOpSettingsBase
+---@field public OwningOpName string @the op these settings belong to
+local FIKRetargetOpSettingsBase = {}

@@ -1,0 +1,12 @@
+---@class ELinkGenerationDebugFlags
+---@field public WalkableSurface integer
+---@field public WalkableBorders integer
+---@field public SelectedEdge integer
+---@field public SelectedEdgeTrajectory integer
+---@field public SelectedEdgeLandingSamples integer
+---@field public SelectedEdgeCollisions integer
+---@field public SelectedEdgeCollisionsSamples integer
+---@field public Links integer
+---@field public FilteredLinks integer
+---@field public ELinkGenerationDebugFlags_MAX integer
+local ELinkGenerationDebugFlags = {}

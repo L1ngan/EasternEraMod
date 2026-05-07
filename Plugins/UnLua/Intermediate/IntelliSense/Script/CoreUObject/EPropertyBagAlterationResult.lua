@@ -1,0 +1,12 @@
+---Property bag alterations result code.
+---@class EPropertyBagAlterationResult
+---@field public Success integer
+---@field public NoOperation integer
+---@field public InternalError integer
+---@field public PropertyNameEmpty integer
+---@field public PropertyNameInvalidCharacters integer
+---@field public SourcePropertyNotFound integer
+---@field public TargetPropertyNotFound integer
+---@field public TargetPropertyAlreadyExists integer
+---@field public EPropertyBagAlterationResult_MAX integer
+local EPropertyBagAlterationResult = {}

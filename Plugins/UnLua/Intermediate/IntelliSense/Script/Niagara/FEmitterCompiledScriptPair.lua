@@ -1,0 +1,2 @@
+---@class FEmitterCompiledScriptPair
+local FEmitterCompiledScriptPair = {}

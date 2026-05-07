@@ -1,0 +1,23 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\modulargameplayactors\\source\\modulargameplayactors\\private\\modularpawn.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\easternera\\shipping\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\modulargameplayactors\\intermediate\\build\\win64\\x64\\unrealgame\\shipping\\modulargameplayactors\\definitions.modulargameplayactors.h",
+            "g:\\modproject\\plugins\\modulargameplayactors\\source\\modulargameplayactors\\public\\modularpawn.h",
+            "g:\\modproject\\plugins\\modulargameplayactors\\intermediate\\build\\win64\\unrealgame\\inc\\modulargameplayactors\\uht\\modularpawn.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\runtime\\modulargameplay\\source\\modulargameplay\\public\\components\\gameframeworkcomponentmanager.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\runtime\\modulargameplay\\source\\modulargameplay\\public\\components\\gameframeworkcomponentdelegates.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\gameplaytags\\classes\\gameplaytagcontainer.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\core\\public\\misc\\comparisonutility.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\gameplaytags\\uht\\gameplaytagcontainer.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\runtime\\modulargameplay\\intermediate\\build\\win64\\unrealgame\\inc\\modulargameplay\\uht\\gameframeworkcomponentdelegates.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\runtime\\modulargameplay\\intermediate\\build\\win64\\unrealgame\\inc\\modulargameplay\\uht\\gameframeworkcomponentmanager.generated.h",
+            "g:\\modproject\\plugins\\modulargameplayactors\\intermediate\\build\\win64\\unrealgame\\inc\\modulargameplayactors\\uht\\modularpawn.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

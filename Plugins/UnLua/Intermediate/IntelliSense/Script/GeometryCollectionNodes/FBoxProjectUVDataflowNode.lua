@@ -1,0 +1,11 @@
+---Generates UVs using a box projection
+---@class FBoxProjectUVDataflowNode : FDataflowNode
+---@field private Collection FManagedArrayCollection @Target Collection
+---@field private UVChannel integer @UV channel to unwrap into ( 0 by default )
+---@field private GutterSize integer @Approximate space to leave between UV islands, measured in texels for 512x512 texture
+---@field private ProjectionScale FVector
+---@field private UVOffset FVector2f
+---@field private bAutoFitToBounds boolean
+---@field private bCenterBoxAtPivot boolean
+---@field private bUniformProjectionScale boolean
+local FBoxProjectUVDataflowNode = {}

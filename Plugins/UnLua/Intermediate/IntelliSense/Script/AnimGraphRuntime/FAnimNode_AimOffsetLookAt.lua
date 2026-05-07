@@ -1,0 +1,11 @@
+---This node uses a source transform of a socket on the skeletal mesh to automatically calculate
+---Yaw and Pitch directions for a referenced aim offset given a point in the world to look at.
+---@class FAnimNode_AimOffsetLookAt : FAnimNode_BlendSpacePlayer
+---@field public BasePose FPoseLink
+---@field public LODThreshold integer @* Max LOD that this node is allowed to run * For example if you have LODThreshold to be 2, it will run until LOD 2 (based on 0 index) * when the component LOD becomes 3, it will stop update/evaluate * currently transition would be issue and that has to be re-visited
+---@field public SourceSocketName string @Socket or bone to treat as the look at source. This will then be pointed at LookAtLocation
+---@field public PivotSocketName string @Socket or bone to treat as the look at pivot (optional). This will overwrite the translation of the source socket transform improve the lookat direction, especially when the target is close to the character
+---@field public LookAtLocation FVector @Location, in world space to look at
+---@field public SocketAxis FVector @Direction in the socket transform to consider the 'forward' or look at axis
+---@field public Alpha number @Amount of this node to blend into the output pose
+local FAnimNode_AimOffsetLookAt = {}

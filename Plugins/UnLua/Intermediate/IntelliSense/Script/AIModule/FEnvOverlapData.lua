@@ -1,0 +1,11 @@
+---@class FEnvOverlapData
+---@field public ExtentX number @shape parameter for overlap
+---@field public ExtentY number @shape parameter for overlap
+---@field public ExtentZ number @shape parameter for overlap
+---@field public ShapeOffset FVector @Offset from the item location at which to test the overlap.  For example, you may need to offset vertically to avoid overlaps with flat ground.
+---@field public OverlapChannel integer @geometry trace channel used for overlap
+---@field public OverlapShape integer @shape used for geometry overlap
+---@field public bOnlyBlockingHits boolean @if set, overlap will look only for blocking hits
+---@field public bOverlapComplex boolean @if set, overlap will run on complex collisions
+---@field public bSkipOverlapQuerier boolean @if set, overlap will skip querier context hits
+local FEnvOverlapData = {}

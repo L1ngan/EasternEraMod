@@ -1,0 +1,13 @@
+---@class EAggCollisionShape
+---@field public Sphere integer
+---@field public Box integer
+---@field public Sphyl integer
+---@field public Convex integer
+---@field public TaperedCapsule integer
+---@field public LevelSet integer
+---@field public SkinnedLevelSet integer
+---@field public MLLevelSet integer
+---@field public SkinnedTriangleMesh integer
+---@field public Unknown integer
+---@field public EAggCollisionShape_MAX integer
+local EAggCollisionShape = {}

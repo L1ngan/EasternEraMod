@@ -1,0 +1,48 @@
+---Container for a physics representation of an object
+---@class FBodyInstance : FBodyInstanceCore
+---@field public PositionSolverIterationCount integer @This physics body's solver iteration count for position. Increasing this will be more CPU intensive, but better stabilized.
+---@field public VelocitySolverIterationCount integer @This physics body's solver iteration count for velocity. Increasing this will be more CPU intensive, but better stabilized.
+---@field public ProjectionSolverIterationCount integer @This physics body's solver iteration count for projection. Increasing this will be more CPU intensive, but better stabilized.
+---@field private ObjectType integer @Enum indicating what type of object this should be considered as when it moves
+---@field private CollisionEnabled integer @Type of collision enabled.       No Collision      : Will not create any representation in the physics engine. Cannot be used for spatial queries (raycasts, sweeps, overlaps) or simulation (rigid body, constraints). Best performance possible (especially for moving objects)       Query Only        : Only used for spatial queries (raycasts, sweeps, and overlaps). Cannot be used for simulation (rigid body, constraints). Useful for character movement and things that do not need physical simulation. Performance gains by keeping data out of simulation tree.       Physics Only      : Only used only for physics simulation (rigid body, constraints). Cannot be used for spatial queries (raycasts, sweeps, overlaps). Useful for jiggly bits on characters that do not need per bone detection. Performance gains by keeping data out of query tree       Collision Enabled : Can be used for both spatial queries (raycasts, sweeps, overlaps) and simulation (rigid body, constraints).
+---@field public SleepFamily ESleepFamily @The set of values used in considering when put this body to sleep.
+---@field public DOFMode integer @Locks physical movement along specified axis.
+---@field public bUseCCD boolean @If true Continuous Collision Detection (CCD) will be used for this component
+---@field private bUseMACD boolean @[EXPERIMENTAL] If true Motion-Aware Collision Detection (MACD) will be used for this component
+---@field public bIgnoreAnalyticCollisions boolean @If true ignore analytic collisions and treat objects as a general implicit surface
+---@field public bNotifyRigidBodyCollision boolean @Should 'Hit' events fire when this object collides during physics simulation.
+---@field public bSmoothEdgeCollisions boolean @Remove unnecessary edge collisions to allow smooth sliding over surfaces composed of multiple actors/components. This is fairly expensive and should only be enabled on hero objects.
+---@field public bLockTranslation boolean @When a Locked Axis Mode is selected, will lock translation on the specified axis
+---@field public bLockRotation boolean @When a Locked Axis Mode is selected, will lock rotation to the specified axis
+---@field public bLockXTranslation boolean @Lock translation along the X-axis
+---@field public bLockYTranslation boolean @Lock translation along the Y-axis
+---@field public bLockZTranslation boolean @Lock translation along the Z-axis
+---@field public bLockXRotation boolean @Lock rotation about the X-axis
+---@field public bLockYRotation boolean @Lock rotation about the Y-axis
+---@field public bLockZRotation boolean @Lock rotation about the Z-axis
+---@field public bOverrideMaxAngularVelocity boolean @Override the default max angular velocity
+---@field protected bOverrideMaxDepenetrationVelocity boolean @Whether this body instance has its own custom MaxDepenetrationVelocity
+---@field protected bOverrideWalkableSlopeOnInstance boolean @Whether this instance of the object has its own custom walkable slope override setting.
+---@field protected bInterpolateWhenSubStepping boolean @Internal flag to allow us to quickly check whether we should interpolate when substepping e.g. kinematic bodies that are QueryOnly do not need to interpolate as we will not be querying them at a sub-position. This is complicated by welding, where multiple the CollisionEnabled flag of the root must be considered.
+---@field protected bInertiaConditioning boolean @ Inertia conditioning increases inertia when an object is long and thin and also when it has joints that are outside the collision shapes of the body. Increasing the inertia reduces the amount of rotation applied at joints which helps stabilize joint chains, especially when bodies are small. In principle you can get the same behaviour by setting the InertiaTensorScale appropriately, but this takes some of the guesswork out of it. which will still report the inertia calculated from the mass, shapes, and InertiaTensorScale. joints are added or removed (automatically - no user action required).
+---@field protected bOneWayInteraction boolean @If set to true, this body will treat bodies that do not have the flag set as having infinite mass
+---@field public bOverrideSolverAsyncDeltaTime boolean @Set the desired delta time for the body. *
+---@field public SolverAsyncDeltaTime number @Override value for physics solver async delta time.  With multiple actors specifying this, the solver will use the smallest delta time *
+---@field private CollisionProfileName string @Collision Profile Name *
+---@field private CollisionResponses FCollisionResponse @Custom Channels for Responses
+---@field protected MaxDepenetrationVelocity number @The maximum velocity used to depenetrate this object from others when spawned or teleported with initial overlaps (does not affect overlaps as a result of normal movement). A value of zero will allow objects that are spawned overlapping to go to sleep without moving rather than pop out of each other. E.g., use zero if you spawn dynamic rocks partially embedded in the ground and want them to be interactive but not pop out of the ground when touched. A negative value is equivalent to bOverrideMaxDepenetrationVelocity = false, meaning use the project setting. This overrides the CollisionInitialOverlapDepenetrationVelocity project setting on a per-body basis (and not the MaxDepenetrationVelocity solver setting that will be deprecated).
+---@field protected MassInKgOverride number @Mass of the body in KG. By default we compute this based on physical material and mass scale.
+---@field public LinearDamping number @'Drag' force added to reduce linear movement
+---@field public AngularDamping number @'Drag' force added to reduce angular movement
+---@field public CustomDOFPlaneNormal FVector @Locks physical movement along a custom plane for a given normal.
+---@field public COMNudge FVector @User specified offset for this object's Center of Mass. The offset is defined in bone space and will be added to the calculated location.
+---@field public MassScale number @Per-instance scaling of mass
+---@field public GravityGroupIndex integer @What gravity group the BI should use, which determines rate of acceleration
+---@field public InertiaTensorScale FVector @Per-instance scaling of inertia (bigger number means  it'll be harder to rotate)
+---@field protected WalkableSlopeOverride FWalkableSlopeOverride @Custom walkable slope override setting for this instance.
+---@field protected PhysMaterialOverride UPhysicalMaterial @Allows you to override the PhysicalMaterial to use for simple collision on this body.
+---@field public MaxAngularVelocity number @The maximum angular velocity for this instance [degrees/s]
+---@field public CustomSleepThresholdMultiplier number @If the SleepFamily is set to custom, multiply the natural sleep threshold by this amount. A higher number will cause the body to sleep sooner.
+---@field public StabilizationThresholdMultiplier number @Stabilization factor for this body if Physics stabilization is enabled. A higher number will cause more aggressive stabilization at the risk of loss of momentum at low speeds. A value of 0 will disable stabilization for this body.
+---@field public PhysicsBlendWeight number @Provide appropriate interface for doing this instead of allowing BlueprintReadWrite *
+local FBodyInstance = {}

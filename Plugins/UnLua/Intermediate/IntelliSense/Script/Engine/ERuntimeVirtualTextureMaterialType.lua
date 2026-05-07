@@ -1,0 +1,15 @@
+---Enumeration of virtual texture stack layouts to support.
+---Extend this enumeration with other layouts as required. For example we will probably want to add a displacement texture option.
+---This "fixed function" approach will probably break down if we end up needing to support some complex set of attribute combinations but it is OK to begin with.
+---@class ERuntimeVirtualTextureMaterialType
+---@field public BaseColor integer
+---@field public Mask4 integer
+---@field public BaseColor_Normal_Roughness integer
+---@field public BaseColor_Normal_Specular integer
+---@field public BaseColor_Normal_Specular_YCoCg integer
+---@field public BaseColor_Normal_Specular_Mask_YCoCg integer
+---@field public WorldHeight integer
+---@field public Displacement integer
+---@field public Count integer
+---@field public ERuntimeVirtualTextureMaterialType_MAX integer
+local ERuntimeVirtualTextureMaterialType = {}

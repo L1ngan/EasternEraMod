@@ -1,0 +1,11 @@
+---@class ETestInstanceDataObjectFullFlags
+---@field public None integer
+---@field public Flag0 integer
+---@field public Flag1 integer
+---@field public Flag2 integer
+---@field public Flag4 integer
+---@field public Flag5 integer
+---@field public Flag6 integer
+---@field public Flag7 integer
+---@field public ETestInstanceDataObjectFullFlags_MAX integer
+local ETestInstanceDataObjectFullFlags = {}

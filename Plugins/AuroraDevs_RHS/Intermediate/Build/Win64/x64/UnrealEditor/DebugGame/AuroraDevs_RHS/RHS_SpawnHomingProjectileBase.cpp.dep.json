@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\private\\rhs_spawnhomingprojectilebase.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\auroradevs_rhs\\definitions.auroradevs_rhs.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\rhs_spawnhomingprojectilebase.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\rhs_animnotifybase.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\rhs_data.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealeditor\\inc\\auroradevs_rhs\\uht\\rhs_data.generated.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealeditor\\inc\\auroradevs_rhs\\uht\\rhs_animnotifybase.generated.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealeditor\\inc\\auroradevs_rhs\\uht\\rhs_spawnhomingprojectilebase.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

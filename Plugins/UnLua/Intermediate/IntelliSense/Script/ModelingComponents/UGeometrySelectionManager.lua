@@ -1,0 +1,34 @@
+---UGeometrySelectionManager provides the infrastructure for "Element Selection", ie
+---geometric sub-elements of some geometry object like a Triangle Mesh. The Manager is
+---designed to work with a relatively vague concept of "element", so it doesn't explicitly
+---reference triangles/etc, and the selectable-elements and how-elements-are-selected
+---concepts are provided by abstract-interfaces that allow various implememtations.
+---The "Geometry Objects", eg like a DynamicMeshComponent, Gameplay Volume, etc, are
+---referred to as "Active Targets" in the Manager. External code provides and updates
+---the set of Active Targets, eg for example tracking the active Actor Selection in the Editor.
+---For a given Target, a tuple (Selector, Selection, SelectionEditor) is created and maintained.
+---The FGeometrySelection is ultimately a basic list of integers and does not have any knowledge
+---of what it is a selection *of*, and is not intended to be directly edited. Instead the
+---SelectionEditor provides that functionality. This separation allows "selection editing" to
+---be customized, eg to enforce invariants or constraints that might apply to certain kinds of selections.
+---The IGeometrySelector provides the core implementation of what "selection" means for a given
+---Target, eg like a mesh Component, or mesh object like a UDynamicMesh. The Selector is
+---created by a registered Factory, allowing client code to provide custom implementations for
+---different Target Types. Updates to the Selection are done via the Selector, as well as queries
+---about (eg) renderable selection geometry. 3D Transforms are also applied via the Selector,
+---as only it has the knowledge about what can be transformed and how it can be applied.
+---The GeometrySelectionManager provides high-level interfaces for this system, for example
+---external code (eg such as something that creates a Gizmo for the active selection) only
+---needs to interact with SelectionManager, calling functions like
+---::BeginTransformation() / ::UpdateTransformation() / ::EndTransformation().
+---The SelectionManager also handles Transactions/FChanges for the active Targets and Selections.
+---@class UGeometrySelectionManager : UObject
+---@field protected SelectionArguments UGeometrySelectionEditCommandArguments @This is set to current selection during CanExecuteSelectionCommand/ExecuteSelectionCommand, to keep the UObject alive Not expected to be used outside that context
+---@field protected ToolsContext UInteractiveToolsContext @ITF references
+---@field protected PreviewGeometry UPreviewGeometry @todo [nickolas.drake]: cane we move CachedSelectionRenderElements, Cached[Un]selectedPreviewRenderElements, and bSelectionRenderCachesDirty to private?
+---@field protected UnselectedParams FMeshElementSelectionParams
+---@field protected HoverOverSelectedParams FMeshElementSelectionParams
+---@field protected HoverOverUnselectedParams FMeshElementSelectionParams
+---@field protected SelectedParams FMeshElementSelectionParams
+local UGeometrySelectionManager = {}
+

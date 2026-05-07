@@ -1,0 +1,22 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\binkmedia\\source\\binkmediaplayereditor\\private\\binkmediaplayereditortoolkit.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\binkmedia\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\binkmediaplayereditor\\definitions.binkmediaplayereditor.h",
+            "g:\\modproject\\plugins\\binkmedia\\source\\binkmediaplayereditor\\private\\binkmediaplayereditortoolkit.h",
+            "g:\\modproject\\plugins\\binkmedia\\source\\binkmediaplayer\\public\\binkmediaplayer.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\public\\slate\\slatetextures.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\slatecore\\public\\textures\\slateupdatabletexture.h",
+            "g:\\modproject\\plugins\\binkmedia\\intermediate\\build\\win64\\unrealeditor\\inc\\binkmediaplayer\\uht\\binkmediaplayer.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\editor\\unrealed\\public\\editorreimporthandler.h",
+            "g:\\modproject\\plugins\\binkmedia\\source\\binkmediaplayereditor\\private\\models\\binkmediaplayereditorcommands.h",
+            "g:\\modproject\\plugins\\binkmedia\\source\\binkmediaplayereditor\\private\\sbinkwidgets.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\slate\\public\\widgets\\input\\sslider.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

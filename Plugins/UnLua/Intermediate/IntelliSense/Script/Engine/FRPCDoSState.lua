@@ -1,0 +1,19 @@
+---Stores the RPC DoS detection state (either settings from the config file, or the active DDoS detection state)
+---@class FRPCDoSState
+---@field public bLogEscalate boolean @Whether or not to log when escalating to this state
+---@field public bSendEscalateAnalytics boolean @Whether or not to send analytics when escalating to this state
+---@field public bKickPlayer boolean @Whether or not to kick the player when they escalate to this state
+---@field public bTrackRecentRPCs boolean @Whether or not to keep a temporary record of recent RPC's, for potential logging/analytics
+---@field public EscalateQuotaRPCsPerFrame integer @The number of RPC's per frame before the next stage of DoS detection is triggered
+---@field public EscalateTimeQuotaMSPerFrame integer @The amount of time spent executing RPC's per frame, before the next stage of DoS detection is triggered
+---@field public EscalateQuotaRPCsPerPeriod integer @The number of RPC's per EscalateQuotaPeriod before the next stage of DoS detection is triggered
+---@field public EscalateTimeQuotaMSPerPeriod integer @The amount of time spent executing RPC's per EscalateQuotaPeriod, before the next stage of DoS detection is triggered
+---@field public EscalateQuotaTimePeriod integer @The time period to use for determining RPC count and time escalation quotas (Max: 16)
+---@field public EscalationCountTolerance integer @The number of times this stage must be escalated to, before it is 'confirmed' as having been escalated to (for analytics)
+---@field public EscalationTimeToleranceMS integer @The maximum time spent executing RPC's per frame, before this escalation stage is automatically 'confirmed' for analytics
+---@field public RPCRepeatLimitPerPeriod integer @The limit for the number of times a single RPC can be repeated, over the time period specified by RPCRepeatTimeLimitPeriod
+---@field public RPCRepeatLimitMSPerPeriod integer @The limit for the number of milliseconds a single RPC can spend executing, over the time period specified by RPCRepeatTimeLimitPeriod
+---@field public RPCRepeatLimitTimePeriod integer @The time period to use for measuring excessive execution time for a single RPC (Max: 16)
+---@field public CooloffTime integer @The amount of time, in seconds, before the current DoS severity category cools off and de-escalates
+---@field public AutoEscalateTime integer @The amount of time, in seconds, spent in the current DoS severity category before it automatically escalates to the next category
+local FRPCDoSState = {}

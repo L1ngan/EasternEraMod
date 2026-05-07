@@ -1,0 +1,21 @@
+---The type of a camera variable.
+---Only a fixed set of types are supported for camera variables because of
+---simplicity, and because these types need to be blendable.
+---@class ECameraVariableType
+---@field public Boolean integer
+---@field public Integer32 integer
+---@field public Float integer
+---@field public Double integer
+---@field public Vector2f integer
+---@field public Vector2d integer
+---@field public Vector3f integer
+---@field public Vector3d integer
+---@field public Vector4f integer
+---@field public Vector4d integer
+---@field public Rotator3f integer
+---@field public Rotator3d integer
+---@field public Transform3f integer
+---@field public Transform3d integer
+---@field public BlendableStruct integer
+---@field public ECameraVariableType_MAX integer
+local ECameraVariableType = {}

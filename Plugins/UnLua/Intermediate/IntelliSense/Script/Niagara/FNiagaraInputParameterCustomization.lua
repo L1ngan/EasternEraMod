@@ -1,0 +1,14 @@
+---@class FNiagaraInputParameterCustomization
+---@field public WidgetType ENiagaraInputWidgetType @Changes the widget implementation used for the input
+---@field public bHasMinValue boolean
+---@field public MinValue number @min ui value (float and int types only)
+---@field public bHasMaxValue boolean
+---@field public MaxValue number @max ui value (float and int types only)
+---@field public bHasStepWidth boolean
+---@field public StepWidth number @Step width used by the input when dragging
+---@field public InputDropdownValues TArray<FWidgetNamedInputValue>
+---@field public EnumStyleDropdownValues TArray<FNiagaraWidgetNamedIntegerInputValue>
+---@field public MaxSegmentsPerRow integer @Limits the number of buttons shown per row, 0 = unlimited
+---@field public SegmentValueOverrides TArray<FWidgetSegmentValueOverride>
+---@field public bBroadcastValueChangesOnCommitOnly boolean @If set to true then values will not be updated while typing, only when committing the input field. This is useful for values that cause big downstream changes and computational overhead, like grid size or spawned particles.
+local FNiagaraInputParameterCustomization = {}

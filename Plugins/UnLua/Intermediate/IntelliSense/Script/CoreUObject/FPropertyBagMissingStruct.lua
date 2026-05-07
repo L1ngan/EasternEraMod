@@ -1,0 +1,2 @@
+---@class FPropertyBagMissingStruct
+local FPropertyBagMissingStruct = {}

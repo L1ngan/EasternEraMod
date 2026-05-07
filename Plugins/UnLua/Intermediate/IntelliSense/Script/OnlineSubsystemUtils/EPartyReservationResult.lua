@@ -1,0 +1,21 @@
+---The result code that will be returned during party reservation
+---@class EPartyReservationResult
+---@field public NoResult integer
+---@field public RequestPending integer
+---@field public GeneralError integer
+---@field public PartyLimitReached integer
+---@field public IncorrectPlayerCount integer
+---@field public RequestTimedOut integer
+---@field public ReservationDuplicate integer
+---@field public ReservationNotFound integer
+---@field public ReservationAccepted integer
+---@field public ReservationDenied integer
+---@field public ReservationDenied_CrossPlayRestriction integer
+---@field public ReservationDenied_Banned integer
+---@field public ReservationRequestCanceled integer
+---@field public ReservationInvalid integer
+---@field public BadSessionId integer
+---@field public ReservationDenied_ContainsExistingPlayers integer
+---@field public ReservationDenied_ValidationFailed integer
+---@field public EPartyReservationResult_MAX integer
+local EPartyReservationResult = {}

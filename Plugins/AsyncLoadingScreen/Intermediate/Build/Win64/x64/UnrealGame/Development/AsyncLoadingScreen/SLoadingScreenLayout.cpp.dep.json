@@ -1,0 +1,16 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\plugins\\asyncloadingscreen\\source\\asyncloadingscreen\\private\\sloadingscreenlayout.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\easternera\\development\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\plugins\\asyncloadingscreen\\intermediate\\build\\win64\\x64\\unrealgame\\development\\asyncloadingscreen\\definitions.asyncloadingscreen.h",
+            "h:\\project\\plugins\\asyncloadingscreen\\source\\asyncloadingscreen\\public\\sloadingscreenlayout.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\engine\\userinterfacesettings.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\userinterfacesettings.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

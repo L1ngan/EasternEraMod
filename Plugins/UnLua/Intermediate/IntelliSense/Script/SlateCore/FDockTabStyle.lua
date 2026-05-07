@@ -1,0 +1,21 @@
+---Represents the appearance of an SDockTab
+---@class FDockTabStyle : FSlateWidgetStyle
+---@field public CloseButtonStyle FButtonStyle @Style used for the close button
+---@field public NormalBrush FSlateBrush @Brush used when this tab is in its normal state
+---@field public ColorOverlayTabBrush FSlateBrush @Brush used to overlay a given color onto this tab
+---@field public ColorOverlayIconBrush FSlateBrush @Brush used to overlay a given color onto this tab
+---@field public ForegroundBrush FSlateBrush @Brush used when this tab is in the foreground
+---@field public HoveredBrush FSlateBrush @Brush used when this tab is hovered over
+---@field public ContentAreaBrush FSlateBrush @Brush used by the SDockingTabStack to draw the content associated with this tab; Documents, Apps, and Tool Panels have different backgrounds
+---@field public TabWellBrush FSlateBrush @Brush used by the SDockingTabStack to draw the content associated with this tab; Documents, Apps, and Tool Panels have different backgrounds
+---@field public TabTextStyle FTextBlockStyle @Tab Text Style
+---@field public TabPadding FMargin @Padding used around this tab
+---@field public IconSize FDeprecateSlateVector2D @Icon size for icons in this tab
+---@field public OverlapWidth number @The width that this tab will overlap with side-by-side tabs
+---@field public FlashColor FSlateColor @Color used when flashing this tab
+---@field public NormalForegroundColor FSlateColor @Foreground Color when the tab is not hovered, pressed, active or in the foreground
+---@field public HoveredForegroundColor FSlateColor @Foreground Color when hovered
+---@field public ActiveForegroundColor FSlateColor @Foreground Color when Active
+---@field public ForegroundForegroundColor FSlateColor @Foreground Color when this tab is the Foreground tab
+---@field public IconBorderPadding number @The padding applied to the border around the tab icon
+local FDockTabStyle = {}

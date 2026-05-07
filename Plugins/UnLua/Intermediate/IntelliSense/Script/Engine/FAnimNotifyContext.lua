@@ -1,0 +1,2 @@
+---@class FAnimNotifyContext
+local FAnimNotifyContext = {}

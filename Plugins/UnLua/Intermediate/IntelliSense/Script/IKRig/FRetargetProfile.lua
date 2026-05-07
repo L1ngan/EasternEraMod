@@ -1,0 +1,14 @@
+---@class FRetargetProfile
+---@field public RetargetOpProfiles TArray<FRetargetOpProfile> @A polymorphic list of override settings to apply to retargeting operations in the stack
+---@field public bApplyTargetRetargetPose boolean @If true, the TARGET Retarget Pose specified in this profile will be applied to the Retargeter (when plugged into the Retargeter).
+---@field public TargetRetargetPoseName string @Override the TARGET Retarget Pose to use when this profile is active. The pose must be present in the Retarget Asset and is not applied unless bApplyTargetRetargetPose is true.
+---@field public bApplySourceRetargetPose boolean @If true, the Source Retarget Pose specified in this profile will be applied to the Retargeter (when plugged into the Retargeter).
+---@field public SourceRetargetPoseName string @Override the SOURCE Retarget Pose to use when this profile is active. The pose must be present in the Retarget Asset and is not applied unless bApplySourceRetargetPose is true.
+---@field public bForceAllIKOff boolean @Globally forces all IK solving off
+---@field public bApplyChainSettings boolean
+---@field public ChainSettings TMap<string, FTargetChainSettings>
+---@field public bApplyRootSettings boolean
+---@field public RootSettings FTargetRootSettings
+---@field public bApplyGlobalSettings boolean
+---@field public GlobalSettings FRetargetGlobalSettings
+local FRetargetProfile = {}

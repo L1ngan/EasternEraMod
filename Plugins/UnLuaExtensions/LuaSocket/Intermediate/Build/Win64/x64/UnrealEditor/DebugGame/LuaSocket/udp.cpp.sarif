@@ -1,0 +1,64 @@
+{
+    "version": "2.1.0",
+    "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+    "runs": [
+        {
+            "results": [
+                {
+                    "ruleId": "C4005",
+                    "message": {
+                        "text": "“gai_strerror”: 宏重定义"
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/udp.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/udp.cpp"
+                                },
+                                "region": {
+                                    "startLine": 17,
+                                    "startColumn": 9,
+                                    "snippet": {
+                                        "text": "#define gai_strerror(err) FTCHARToUTF8(gai_strerrorW(err)).Get()"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "relatedLocations": [
+                        {
+                            "id": 0,
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///C:/Program Files (x86)/Windows Kits/10/include/10.0.22621.0/um/ws2tcpip.h"
+                                },
+                                "region": {
+                                    "startLine": 670,
+                                    "startColumn": 9,
+                                    "snippet": {
+                                        "text": "#define gai_strerror   gai_strerrorW"
+                                    }
+                                }
+                            },
+                            "message": {
+                                "text": "参见“gai_strerror”的前一个定义"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "tool": {
+                "driver": {
+                    "name": "MSVC",
+                    "shortDescription": {
+                        "text": "Microsoft Visual C++ Compiler Warnings/Errors"
+                    },
+                    "informationUri": "https://docs.microsoft.com/cpp/error-messages/compiler-errors-1/c-cpp-build-errors"
+                }
+            }
+        }
+    ]
+}

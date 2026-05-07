@@ -1,0 +1,11 @@
+---Given a transform, will draw a point, axis, or a box in the viewport
+---@class FRigUnit_DebugTransformMutableItemSpace : FRigUnit_DebugBaseMutable
+---@field public Transform FTransform
+---@field public Mode ERigUnitDebugTransformMode
+---@field public Color FLinearColor
+---@field public Thickness number
+---@field public Scale number
+---@field public Space FRigElementKey
+---@field public WorldOffset FTransform
+---@field public bEnabled boolean
+local FRigUnit_DebugTransformMutableItemSpace = {}

@@ -1,0 +1,13 @@
+---This represents a baked transition
+---@class FAnimationTransitionBetweenStates : FAnimationStateBase
+---@field public PreviousState integer @Transition-only: State being transitioned from
+---@field public NextState integer @Transition-only: State being transitioned to
+---@field public CrossfadeDuration number
+---@field public StartNotify integer
+---@field public EndNotify integer
+---@field public InterruptNotify integer
+---@field public BlendMode EAlphaBlendOption
+---@field public CustomCurve UCurveFloat
+---@field public BlendProfile UBlendProfile
+---@field public LogicType integer
+local FAnimationTransitionBetweenStates = {}

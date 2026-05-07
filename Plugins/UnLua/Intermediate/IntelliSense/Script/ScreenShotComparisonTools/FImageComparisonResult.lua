@@ -1,0 +1,25 @@
+---This struct holds the results of comparing an incoming image from a platform with an approved image that exists under the
+---project hierarchy.
+---All paths in this structure should be portable. Test results (including this struct) result can be serialized to
+---JSON and stored on the network as during automation runs then opened in the editor to commit / approve changes
+---to the local project.
+---@class FImageComparisonResult
+---@field public CreationTime FDateTime @Time that the comparison was performed
+---@field public SourcePlatform string @Platform that the incoming image was generated on
+---@field public SourceRHI string @RHI that the incoming image was generated with
+---@field public IdealApprovedFolderPath string @Path to a folder where the idealized ground-truth for this comparison would be. Relative to the project directory. Note: This path may not exist a fallback is being used for approval, or if there is no approved image at all. Comparing this value with the FPaths::GetPath(ApprovedFilePath) can be used to determine that. (the IsIdeal() function performs that check).
+---@field public ApprovedFilePath string @Path to the file that was considered as the ground-truth. Relative to the project directory
+---@field public IncomingFilePath string @Path to the file that was generated in the test. Relative to the project directory, only valid when a test is run locally
+---@field public ComparisonFilePath string @Path to the delta image between the ground-truth and the incoming file. Relative to the project directory, only valid when a test is run locally
+---@field public ReportApprovedFilePath string @Name of the approved file saved for the report. Path is relative to the location of the metadata for the report
+---@field public ReportIncomingFilePath string @name of the incoming file saved for the report.  Path is relative to the location of the metadata for the report
+---@field public ReportComparisonFilePath string @Name of the delta image saved for the report.  Path is relative to the location of the metadata for the report
+---@field public MaxLocalDifference number @Largest local difference found during comparison
+---@field public GlobalDifference number @Global difference found during comparison
+---@field public Tolerance FImageTolerance @Tolerance values for comparison
+---@field public ErrorMessage string @Error message that can be set during a comparison
+---@field public ScreenshotPath string @Path of the screenshot (includes variant if applicable)
+---@field public ComparisonId FGuid @Id of the comparison request
+---@field public bSkipAttachingImages boolean @Whether to skip saving and attaching images to the report for this test
+---@field public Version integer @Version of the image comparision result
+local FImageComparisonResult = {}

@@ -1,0 +1,11 @@
+---Draws vectors on each bone in the viewport across the entire pose
+---@class FRigUnit_DebugPose : FRigVMFunction_DebugBase
+---@field public ExecutePin FRigVMExecutePin
+---@field public Pose FRigPose
+---@field public Items TArray<FRigElementKey> @the items to draw the pose cache for. if this is empty we'll draw the whole pose cache
+---@field public Scale number
+---@field public Color FLinearColor
+---@field public Thickness number
+---@field public WorldOffset FTransform
+---@field public bEnabled boolean
+local FRigUnit_DebugPose = {}

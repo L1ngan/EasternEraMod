@@ -1,0 +1,11 @@
+---Get the sum of volumes of the convex hulls on the selected nodes
+---@class FGetConvexHullVolumeDataflowNode : FDataflowNode
+---@field private Collection FManagedArrayCollection
+---@field private TransformSelection FDataflowTransformSelection @The transforms to consider
+---@field private Volume number @Sum of convex hull volumes
+---@field private bSumChildrenForClustersWithoutHulls boolean @For any cluster transform that has no convex hulls, whether to fall back to the convex hulls of the cluster's children. Otherwise, the cluster will not add to the total volume sum.
+---@field private bVolumeOfUnion boolean @Whether to take the volume of the union of selected hulls, rather than the sum of each hull volume separately. This is more expensive but more accurate when hulls overlap.
+---@field private DebugDrawRenderSettings FDataflowNodeDebugDrawSettings
+---@field private bRandomizeColor boolean @Randomize color per convex hull
+---@field private ColorRandomSeed integer @Random seed
+local FGetConvexHullVolumeDataflowNode = {}

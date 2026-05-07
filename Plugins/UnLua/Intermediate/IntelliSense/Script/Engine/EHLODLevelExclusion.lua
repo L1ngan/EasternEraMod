@@ -1,0 +1,12 @@
+---Bitflag enum to allow editing of UPrimitiveComponent::ExcludeFromHLODLevels as a bitmask in the properties
+---@class EHLODLevelExclusion
+---@field public HLOD0 integer
+---@field public HLOD1 integer
+---@field public HLOD2 integer
+---@field public HLOD3 integer
+---@field public HLOD4 integer
+---@field public HLOD5 integer
+---@field public HLOD6 integer
+---@field public HLOD7 integer
+---@field public EHLODLevelExclusion_MAX integer
+local EHLODLevelExclusion = {}

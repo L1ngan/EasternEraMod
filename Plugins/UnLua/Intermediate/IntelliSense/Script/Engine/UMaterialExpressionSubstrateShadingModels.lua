@@ -1,0 +1,26 @@
+---@class UMaterialExpressionSubstrateShadingModels : UMaterialExpressionSubstrateBSDF
+---@field public BaseColor FExpressionInput @Defines the overall color of the Material. (type = float3, unit = unitless, defaults to 0.18)
+---@field public Metallic FExpressionInput @Controls how \"metal-like\" your surface looks like. 0 means dielectric, 1 means conductor (type = float, unit = unitless, defaults to 0)
+---@field public Specular FExpressionInput @Used to scale the current amount of specularity on non-metallic surfaces and is a value between 0 and 1 (type = float, unit = unitless, defaults to plastic 0.5)
+---@field public Roughness FExpressionInput @Controls how rough the Material is. Roughness of 0 (smooth) is a mirror reflection and 1 (rough) is completely matte or diffuse. When using anisotropy, it is the roughness used along the Tangent axis. (type = float, unit = unitless, defaults to 0.5)
+---@field public Anisotropy FExpressionInput @Controls the anisotropy factor of the roughness. Positive value elongates the specular lobe along the Tangent vector, Negative value elongates the specular lobe along the perpendicular of the Tangent. (type = float, unit = unitless).
+---@field public EmissiveColor FExpressionInput @Emissive color on top of the surface (type = float3, unit = luminance, default = 0)
+---@field public Normal FExpressionInput @Take the surface normal as input. The normal is considered tangent or world space according to the space properties on the main material node. (type = float3, unit = unitless, defaults to vertex normal)
+---@field public Tangent FExpressionInput @Take a surface tangent as input. The tangent is considered tangent or world space according to the space properties on the main material node. (type = float3, unit = unitless, defaults to vertex tangent)
+---@field public SubSurfaceColor FExpressionInput @Scale the mean free path radius of the SSS profile according to a value between 0 and 1. Always used, when a subsurface profile is provided or not. (type = float, unitless, defaults to 1)
+---@field public ClearCoat FExpressionInput @Coverage of the clear coat layer. (type = float, unit = unitless, defaults to 0.0)
+---@field public ClearCoatRoughness FExpressionInput @Roughness of the top clear coat layer. (type = float, unit = unitless, defaults to 0.0)
+---@field public Opacity FExpressionInput @Opacity of the material
+---@field public TransmittanceColor FExpressionInput @The amount of transmitted light from the back side of the surface to the front side of the surface (type = float3, unit = unitless, defaults to 1)
+---@field public WaterScatteringCoefficients FExpressionInput @The single scattering Albedo defining the overall color of the Material (type = float3, unit = unitless, default = 0)
+---@field public WaterAbsorptionCoefficients FExpressionInput @The rate at which light is absorbed or out-scattered by the medium. Mean Free Path = 1 / Extinction. (type = float3, unit = 1/cm, default = 0)
+---@field public WaterPhaseG FExpressionInput @Anisotropy of the volume with values lower than 0 representing back-scattering, equal 0 representing isotropic scattering and greater than 0 representing forward scattering. (type = float, unit = unitless, defaults to 0)
+---@field public ColorScaleBehindWater FExpressionInput @A scale to apply on the scene color behind the water surface. It can be used to approximate caustics for instance. (type = float3, unit = unitless, defaults to 1)
+---@field public ClearCoatNormal FExpressionInput @The iris or clear coat bottom normal. (type = float3, unit = unitless, defaults to vertex normal)
+---@field public CustomTangent FExpressionInput @Take the tangent output node as input. The tangent is considered tangent or world space according to the space properties on the main material node. (type = float3, unit = unitless, defaults to vertex tangent)
+---@field public ShadingModel FShadingModelMaterialInput @Shading models
+---@field public ThinTranslucentSurfaceCoverage FExpressionInput @The coverage of the surface using a thin translucent shading model. This will reduce the visibility of the thin translucent surface & plastic/metal BRDF overall. (type = float1, unit = unitless, dafaults to 1, range is [0,1])
+---@field public ShadingModelOverride integer @Always show at the bottom of the pin list
+---@field public SubsurfaceProfile USubsurfaceProfile @SubsurfaceProfile, for Screen Space Subsurface Scattering. The profile needs to be set up on both the Substrate diffuse node, and the material node at the moment.
+local UMaterialExpressionSubstrateShadingModels = {}
+

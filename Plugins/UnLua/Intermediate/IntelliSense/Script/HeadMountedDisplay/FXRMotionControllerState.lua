@@ -1,0 +1,13 @@
+---@class FXRMotionControllerState
+---@field public bValid boolean @The state is valid if a pose has ever been provided.
+---@field public DeviceName string
+---@field public ApplicationInstanceID FGuid
+---@field public XRSpaceType EXRSpaceType
+---@field public Hand EControllerHand
+---@field public TrackingStatus ETrackingStatus @If a controller pose has been provided this frame the TrackingStatus will be Tracked.
+---@field public XRControllerPoseType EXRControllerPoseType
+---@field public ControllerLocation FVector
+---@field public ControllerRotation FQuat
+---@field public GripUnrealSpaceLocation FVector @These are used by the XRVisualizationFunctionLibrary, and are not exposed to blueprint.
+---@field public GripUnrealSpaceRotation FQuat
+local FXRMotionControllerState = {}

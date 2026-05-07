@@ -1,0 +1,12 @@
+---@class FHairGroupInfo
+---@field public GroupIndex integer
+---@field public GroupID integer
+---@field public GroupName string
+---@field public NumCurves integer
+---@field public NumGuides integer
+---@field public NumCurveVertices integer
+---@field public NumGuideVertices integer
+---@field public MaxCurveLength number
+---@field public Flags integer
+---@field public LODInfos TArray<FHairGroupLODInfo>
+local FHairGroupInfo = {}

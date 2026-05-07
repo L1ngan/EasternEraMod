@@ -1,0 +1,2 @@
+---@class FChaosVDAABBTreeSelectionContext
+local FChaosVDAABBTreeSelectionContext = {}

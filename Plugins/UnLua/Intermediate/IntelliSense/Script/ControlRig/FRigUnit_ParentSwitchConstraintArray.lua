@@ -1,0 +1,14 @@
+---The Parent Switch Constraint is used to have an item follow one of multiple parents,
+---and allowing to switch between the parent in question.
+---@class FRigUnit_ParentSwitchConstraintArray : FRigUnitMutable
+---@field public Subject FRigElementKey @The subject to constrain
+---@field public ParentIndex integer @The parent index to use for constraining the subject
+---@field public Parents TArray<FRigElementKey> @The list of parents to constrain to
+---@field public InitialGlobalTransform FTransform @The initial global transform for the subject
+---@field public Weight number @The weight of the change - how much the change should be applied
+---@field public Transform FTransform @The transform result (full without weighting)
+---@field public Switched boolean @Returns true if the parent has changed
+---@field public CachedSubject FCachedRigElement @Used to cache the internally used subject
+---@field public CachedParent FCachedRigElement @Used to cache the internally used parent
+---@field public RelativeOffset FTransform @The cached relative offset between subject and parent
+local FRigUnit_ParentSwitchConstraintArray = {}

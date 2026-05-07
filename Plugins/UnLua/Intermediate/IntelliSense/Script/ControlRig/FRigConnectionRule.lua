@@ -1,0 +1,2 @@
+---@class FRigConnectionRule
+local FRigConnectionRule = {}

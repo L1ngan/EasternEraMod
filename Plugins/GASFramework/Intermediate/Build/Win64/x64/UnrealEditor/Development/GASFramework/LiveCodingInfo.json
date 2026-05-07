@@ -1,0 +1,17 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.GASFramework.cpp.obj": [
+			"AbilityEnum.gen.cpp.obj",
+			"AbilityStruct.gen.cpp.obj",
+			"EastRimWorldAbilityTypes.gen.cpp.obj",
+			"EastRimWorldTargetType.gen.cpp.obj",
+			"GASFramework.init.gen.cpp.obj",
+			"ProjectileStruct.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"EastRimWorldAbilityTypes.cpp.obj",
+			"EastRimWorldTargetType.cpp.obj",
+			"GASFramework.cpp.obj"
+		]
+	}
+}

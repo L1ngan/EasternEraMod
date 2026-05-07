@@ -1,0 +1,13 @@
+---@class EPropertyBindingPropertyAccessType
+---@field public Offset integer
+---@field public Object integer
+---@field public WeakObject integer
+---@field public SoftObject integer
+---@field public ObjectInstance integer
+---@field public StructInstance integer
+---@field public IndexArray integer
+---@field public SharedStruct integer
+---@field public StructInstanceContainer integer
+---@field public Unset integer
+---@field public EPropertyBindingPropertyAccessType_MAX integer
+local EPropertyBindingPropertyAccessType = {}

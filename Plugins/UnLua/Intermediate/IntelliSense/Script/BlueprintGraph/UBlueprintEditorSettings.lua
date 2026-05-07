@@ -1,0 +1,61 @@
+---@class UBlueprintEditorSettings : UDeveloperSettings
+---@field public bDrawMidpointArrowsInBlueprints boolean @Should arrows indicating data/execution flow be drawn halfway along wires?
+---@field public bShowGraphInstructionText boolean @Determines if lightweight tutorial text shows up at the top of empty blueprint graphs
+---@field public bHideUnrelatedNodes boolean @If true, fade nodes which are not connected to the selected nodes
+---@field public bShowShortTooltips boolean @If true, use short tooltips whenever possible
+---@field public bShowFunctionParameterIcon boolean @If true, show an icon next to function parameter nodes.
+---@field public bShowFunctionLocalVariableIcon boolean @If true, show an icon next to function local variable nodes.
+---@field public bEnableInputTriggerSupportWarnings boolean @If enabled Input Action nodes will hide unsupported trigger pins and give warnings when using unsupported triggers. This warning only works with triggers set up in an Input Action, not Input Mapping Contexts.
+---@field public bSplitContextTargetSettings boolean @If enabled, we'll save off your chosen target setting based off of the context (allowing you to have different preferences based off what you're operating on).
+---@field public bExposeAllMemberComponentFunctions boolean @If enabled, then ALL component functions are exposed to the context menu (when the contextual target is a component owner). Ignores "ExposeFunctionCategories" metadata for components.
+---@field public bShowContextualFavorites boolean @If enabled, then a separate section with your Blueprint favorites will be pined to the top of the context menu.
+---@field public bExposeDeprecatedFunctions boolean @If enabled, deprecated functions will be visible in the context menu and will be available for override implementation. By default, functions marked as deprecated are not exposed in either case.
+---@field public bCompactCallOnMemberNodes boolean @If enabled, then call-on-member actions will be spawned as a single node (instead of a GetMember + FunctionCall node).
+---@field public bFlattenFavoritesMenus boolean @If enabled, then your Blueprint favorites will be uncategorized, leaving you with less nested categories to sort through.
+---@field public bAutoCastObjectConnections boolean @If enabled, then you'll be able to directly connect arbitrary object pins together (a pure cast node will be injected automatically).
+---@field public bShowViewportOnSimulate boolean @If true will show the viewport tab when simulate is clicked.
+---@field public bSpawnDefaultBlueprintNodes boolean @If set will spawn default "ghost" event nodes in new Blueprints, modifiable in the [DefaultEventNodes] section of EditorPerProjectUserSettings
+---@field public bHideConstructionScriptComponentsInDetailsView boolean @If set will exclude components added in a Blueprint class Construction Script from the component details view
+---@field public bHostFindInBlueprintsInGlobalTab boolean
+---@field public bNavigateToNativeFunctionsFromCallNodes boolean @If set, double clicking on a call function node will attempt to navigate an open C++ editor to the native source definition
+---@field public bDoubleClickNavigatesToParent boolean @Double click to navigate up to the parent graph
+---@field public bEnableTypePromotion boolean @Allows for pin types to be promoted to others, i.e. float to double
+---@field public bShowPanelContextMenuForIncompatibleConnections boolean @When enabled the the list of compatible nodes will be shown when a connection is attempted between incompatible pins
+---@field public TypePromotionPinDenyList TSet<string> @If a pin type is within this list, then it will never be marked as a possible promotable function.
+---@field public AdditionalBlueprintCategories TArray<FAdditionalBlueprintCategory> @List of additional category names to show in Blueprints, optionally filtered by parent class type.
+---@field public BreakpointReloadMethod EBlueprintBreakpointReloadMethod @How to handle previously-set breakpoints on reload.
+---@field public bEnablePinValueInspectionTooltips boolean @If enabled, pin tooltips during PIE will be interactive
+---@field public bEnableNamespaceEditorFeatures boolean @Whether to enable namespace importing and filtering features in the Blueprint editor
+---@field public NamespacesToAlwaysInclude TArray<string> @A list of namespace identifiers that the Blueprint editor should always import by default. Requires Blueprint namespace features to be enabled and only applies to the current local user. Editing this list will also cause any visible Blueprint editor windows to be closed.
+---@field public bEnableContextMenuTimeSlicing boolean @When the Blueprint graph context menu is invoked (e.g. by right-clicking in the graph or dragging off a pin), do not block the UI while populating the available actions list.
+---@field public ContextMenuTimeSlicingThresholdMs integer @The maximum amount of time (in milliseconds) allowed per frame for Blueprint graph context menu building when the non-blocking option is enabled. Larger values will complete the menu build in fewer frames, but will also make the UI feel less responsive. Smaller values will make the UI feel more responsive, but will also take longer to fully populate the menu.
+---@field public bIncludeActionsForSelectedAssetsInContextMenu boolean @If enabled, invoking the Blueprint graph context menu with one or more compatible assets selected in the Content Browser will generate an additional set of pre-bound menu actions when the "Context Sensitive" option is enabled. For example, selecting a Static Mesh asset in the Content Browser will result in an extra "Add Static Mesh Component" menu action that's already bound to the selected asset.
+---@field public bLimitAssetActionBindingToSingleSelectionOnly boolean @Only generate pre-bound "Add Component" actions when there is a single asset selected in the Content Browser. If more than one asset is selected, pre-bound "Add Component" actions will not be generated. Enabling this option can improve UI responsiveness and decrease the time it takes to build the context menu, while still preserving the ability to include actions pre-bound to the selected asset.
+---@field public bLoadSelectedAssetsForContextMenuActionBinding boolean @When generating pre-bound "Add Component" actions, any selected assets that are not yet loaded will be synchronously loaded as part of building the Blueprint Graph context menu. Enabling this option will ensure that all pre-bound actions for all selected assets are included in the menu, but load times may also affect editor UI responsiveness while the context menu is building.
+---@field public bDoNotMarkAllInstancesDirtyOnDefaultValueChange boolean @If enabled, assets containing Blueprint instances (e.g. maps) will not be marked dirty when default values are edited, unless it results in the instance becoming realigned with the new default value.
+---@field public bFavorPureCastNodes boolean @If enabled, then placed cast nodes will default to their "pure" form (meaning: without execution pins).
+---@field public SaveOnCompile integer @Determines when to save Blueprints post-compile
+---@field public bJumpToNodeErrors boolean @When enabled, if a blueprint has compiler errors, then the graph will jump and focus on the first node generating an error
+---@field public bAllowExplicitImpureNodeDisabling boolean @If enabled, nodes can be explicitly disabled via context menu when right-clicking on impure nodes in the Blueprint editor. Disabled nodes will not be compiled, but also will not break existing connections.
+---@field public bShowActionMenuItemSignatures boolean @If enabled, tooltips on action menu items will show the associated action's signature id (can be used to setup custom favorites menus).
+---@field public bBlueprintNodeUniqueNames boolean @If enabled, blueprint nodes in the event graph will display with unique names rather than their display name.
+---@field public NodeTemplateCacheCapMB number @The node template cache is used to speed up blueprint menuing. This determines the peak data size for that cache.
+---@field public AllowIndexAllBlueprints EFiBIndexAllPermission @Whether to enable the "Index All" action in the Find-in-Blueprints search window when blueprint assets with an out-of-date index (search metadata) are found and whether to allow automatic resaving. WARNING: Only allow "Index All" if your project is small enough that all assets can be loaded in memory at once. Only enable saving if you are allowed to potentially checkout and resave all assets.
+---@field public bShowInheritedVariables boolean @If set we'll show the inherited variables in the My Blueprint view.
+---@field public bAlwaysShowInterfacesInOverrides boolean @If set interface functions will always show in the overrides menu, even if they are already shown in the interfaces menu
+---@field public bShowParentClassInOverrides boolean @If set then the parent class will be listed next to the override function name in the overrides function menu
+---@field public bShowEmptySections boolean @If set we'll show empty sections in the My Blueprint view.
+---@field public bShowAccessSpecifier boolean @If set we'll show the access specifier of functions in the My Blueprint view
+---@field public Bookmarks TMap<FGuid, FEditedDocumentInfo> @Blueprint bookmark database
+---@field public BookmarkNodes TArray<FBPEditorBookmarkNode> @Blueprint bookmark nodes (for display)
+---@field public PerBlueprintSettings TMap<string, FPerBlueprintSettings> @Maps Blueprint path to settings such as breakpoints
+---@field public bIncludeCommentNodesInBookmarksTab boolean @If enabled, comment nodes will be included in the tree view display in the Bookmarks tab.
+---@field public bShowBookmarksForCurrentDocumentOnlyInTab boolean @If enabled, only the bookmarks for the current document will be shown in the Bookmarks tab.
+---@field public GraphEditorQuickJumps TMap<integer, FEditedDocumentInfo> @Blueprint graph editor "Quick Jump" command bindings
+---@field public bEnableNamespaceFilteringFeatures boolean @Whether to enable namespace filtering features in the Blueprint editor // @@todo_namespaces - Remove this if/when dependent code is changed to utilize the single setting above.
+---@field public bEnableNamespaceImportingFeatures boolean @Whether to enable namespace importing features in the Blueprint editor // @@todo_namespaces - Remove this if/when dependent code is changed to utilize the single setting above.
+---@field public bInheritImportedNamespacesFromParentBP boolean @Whether to inherit the set of imported namespaces from the parent class hierarchy // @@todo_namespaces - Remove this if/when this becomes a permanent setting. For now this is experimental.
+---@field public BaseClassesToAllowRecompilingDuringPlayInEditor TArray<TSoftClassPtr<UObject>>
+---@field public BaseClassesToDisallowRecompilingDuringPlayInEditor TArray<TSoftClassPtr<UObject>> @Any blueprint deriving from one of these base classes will be disallowed to recompile during Play-in-Editor (This setting exists both as an editor preference and project setting, and will be allowed if listed in either place)
+local UBlueprintEditorSettings = {}
+

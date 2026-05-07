@@ -1,0 +1,19 @@
+---Struct for configuring a node. You can inherit from this
+---and include data passed to the operator
+---and/or data used to determine an override of the node's interface.
+---In order for node configuration data to be editable in the details panel,
+---UProperties on your substruct should be marked with EditAnywhere.
+---Optional custom details customizations can be registered via
+---IMetasoundEditorModule::RegisterCustomNodeConfigurationDetailsCustomization
+---Example:
+---USTRUCT()
+---struct FMetaSoundExperimentalExampleNodeConfiguration : public FMetaSoundFrontendNodeConfiguration
+---{
+---       GENERATED_BODY()
+---       UPROPERTY(EditAnywhere, Category = General, meta = (ClampMin = "1", ClampMax = "1000"))
+---       uint32 NumInputs;
+---       virtual TInstancedStruct<FMetasoundFrontendClassInterface> OverrideDefaultInterface(const FMetasoundFrontendClass& InNodeClass) const;
+---       virtual TSharedPtr<const Metasound::IOperatorData> GetOperatorData() const override;
+---}
+---@class FMetaSoundFrontendNodeConfiguration
+local FMetaSoundFrontendNodeConfiguration = {}

@@ -1,0 +1,42 @@
+---@class ULandscapeSplineControlPoint : UObject
+---@field public Location FVector @Location in Landscape-space
+---@field public Rotation FRotator @Rotation of tangent vector at this point (in landscape-space)
+---@field public Width number @Half-Width of the spline at this point.
+---@field public LayerWidthRatio number @Layer Width ratio of the spline at this point.
+---@field public SideFalloff number @Falloff at the sides of the spline at this point.
+---@field public LeftSideFalloffFactor number
+---@field public RightSideFalloffFactor number
+---@field public LeftSideLayerFalloffFactor number
+---@field public RightSideLayerFalloffFactor number
+---@field public EndFalloff number @Falloff at the start/end of the spline (if this point is a start or end point, otherwise ignored).
+---@field public SegmentMeshOffset number @Vertical offset of the spline segment mesh. Useful for a river's surface, among other things.
+---@field public LayerName string @Name of blend layer to paint when applying spline to landscape If "none", no layer is painted
+---@field public bRaiseTerrain boolean @If the spline is above the terrain, whether to raise the terrain up to the level of the spline when applying it to the landscape.
+---@field public bLowerTerrain boolean @If the spline is below the terrain, whether to lower the terrain down to the level of the spline when applying it to the landscape.
+---@field public Mesh UStaticMesh @Mesh to use on the control point
+---@field public MaterialOverrides TArray<UMaterialInterface> @Overrides mesh's materials
+---@field public MeshScale FVector @Scale of the control point mesh
+---@field public bCastShadow boolean @Whether the Control Point Mesh should cast a shadow.
+---@field public bHiddenInGame boolean @Whether to hide the mesh in game
+---@field public bPlaceSplineMeshesInStreamingLevels boolean @Whether control point mesh should be placed in landscape proxy streaming level (true) or the spline's level (false)
+---@field public LDMaxDrawDistance number @Max draw distance for the mesh used on this control point
+---@field public TranslucencySortPriority integer @Translucent objects with a lower sort priority draw behind objects with a higher priority. Translucent objects with the same priority are rendered from back-to-front based on their bounds origin. This setting is also used to sort objects being drawn into a runtime virtual texture. Ignored if the object is not translucent.  The default priority is zero. Warning: This should never be set to a non-default value unless you know what you are doing, as it will prevent the renderer from sorting correctly.
+---@field public bRenderCustomDepth boolean @If true, this component will be rendered in the CustomDepth pass (usually used for outlines)
+---@field public CustomDepthStencilWriteMask ERendererStencilMask @Mask used for stencil buffer writes.
+---@field public CustomDepthStencilValue integer @Optionally write this 0-255 value to the stencil buffer in CustomDepth pass (Requires project setting or r.CustomDepth == 3)
+---@field public RuntimeVirtualTextures TArray<URuntimeVirtualTexture> @Array of runtime virtual textures into which we draw the spline segment. The material also needs to be set up to output to a virtual texture.
+---@field public VirtualTextureLodBias integer @Lod bias for rendering to runtime virtual texture.
+---@field public VirtualTextureCullMips integer @Number of lower mips in the runtime virtual texture to skip for rendering this primitive. Larger values reduce the effective draw distance in the runtime virtual texture. This culling method doesn't take into account primitive size or virtual texture size.
+---@field public VirtualTextureMainPassMaxDrawDistance number @Desired cull distance in the main pass if we are rendering to both the virtual texture AND the main pass. A value of 0 has no effect.
+---@field public VirtualTextureRenderPassType ERuntimeVirtualTextureMainPassType @Controls if this component draws in the main pass as well as in the virtual texture.
+---@field public BodyInstance FBodyInstance @Mesh Collision Settings
+---@field protected bSelected boolean
+---@field protected bNavDirty boolean
+---@field public ConnectedSegments TArray<FLandscapeSplineConnection>
+---@field protected Points TArray<FLandscapeSplineInterpPoint> @Spline points
+---@field protected Bounds FBox @Bounds of points
+---@field protected LocalMeshComponent UControlPointMeshComponent @Control point mesh
+---@field protected ForeignWorld TSoftObjectPtr<UWorld> @World reference for if mesh component is stored in another streaming level
+---@field protected ModificationKey FGuid @Key for tracking whether this segment has been modified relative to the mesh component stored in another streaming level
+local ULandscapeSplineControlPoint = {}
+

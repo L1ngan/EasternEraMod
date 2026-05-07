@@ -1,0 +1,14 @@
+---@class FChaosVDCollisionMaterial
+---@field public FaceIndex integer
+---@field public MaterialDynamicFriction number
+---@field public MaterialStaticFriction number
+---@field public MaterialRestitution number
+---@field public DynamicFriction number
+---@field public StaticFriction number
+---@field public Restitution number
+---@field public RestitutionThreshold number
+---@field public InvMassScale0 number
+---@field public InvMassScale1 number
+---@field public InvInertiaScale0 number
+---@field public InvInertiaScale1 number
+local FChaosVDCollisionMaterial = {}

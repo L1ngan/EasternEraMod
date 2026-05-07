@@ -1,0 +1,12 @@
+---Rule for a single section of a terrain material
+---@class FPaperTerrainMaterialRule
+---@field public StartCap UPaperSprite @The sprite to use at the 'left' (closest to spline start) edge of the terrain segment
+---@field public Body TArray<UPaperSprite> @A set of sprites to randomly choose to fill up the interior space between the caps in a terrain segment
+---@field public EndCap UPaperSprite @The sprite to use at the 'right' (closest to spline end) edge of the terrain segment
+---@field public MinimumAngle number @Minimum slope angle (in degrees) to apply this rule
+---@field public MaximumAngle number @Maximum slope angle (in degrees) to apply this rule
+---@field public bEnableCollision boolean @If true, collision is enabled for sections matching this rule
+---@field public CollisionOffset number @How much should the collision be lofted from the spline (positive values go out from the spline, negative values go in to the spline)
+---@field public DrawOrder integer @Specify a draw order for different materials in a spline. Smaller draw orders are drawn first, negative values are allowed.
+---@field public Description string @Readable description for the rule (unused anywhere, just for clarity when editing the material)
+local FPaperTerrainMaterialRule = {}

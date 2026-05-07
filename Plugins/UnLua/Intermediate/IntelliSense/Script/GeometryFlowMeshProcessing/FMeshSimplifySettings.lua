@@ -1,0 +1,15 @@
+---@class FMeshSimplifySettings
+---@field public SimplifyType EGeometryFlow_MeshSimplifyType
+---@field public TargetType EGeomtryFlow_MeshSimplifyTargetType
+---@field public TargetCount integer
+---@field public TargetFraction number
+---@field public GeometricTolerance number
+---@field public bDiscardAttributes boolean
+---@field public bPreventNormalFlips boolean
+---@field public bPreserveSharpEdges boolean
+---@field public bAllowSeamCollapse boolean
+---@field public bAllowSeamSplits boolean
+---@field public MeshBoundaryConstraints EGeometryFlow_EdgeRefineFlags
+---@field public GroupBorderConstraints EGeometryFlow_EdgeRefineFlags
+---@field public MaterialBorderConstraints EGeometryFlow_EdgeRefineFlags
+local FMeshSimplifySettings = {}

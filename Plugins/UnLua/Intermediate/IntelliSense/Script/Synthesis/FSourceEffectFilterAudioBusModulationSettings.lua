@@ -1,0 +1,11 @@
+---@class FSourceEffectFilterAudioBusModulationSettings
+---@field public AudioBus UAudioBus @Audio bus to use to modulate the filter
+---@field public EnvelopeFollowerAttackTimeMsec integer @The amplitude envelope follower attack time (in milliseconds) on the audio bus.
+---@field public EnvelopeFollowerReleaseTimeMsec integer @The amplitude envelope follower release time (in milliseconds) on the audio bus.
+---@field public EnvelopeGainMultiplier number @An amount to scale the envelope follower output to map to the modulation values.
+---@field public FilterParam ESourceEffectFilterParam @Which parameter to modulate.
+---@field public MinFrequencyModulation number @The frequency modulation value (in semitones from the filter frequency) to use when the envelope is quietest
+---@field public MaxFrequencyModulation number @The frequency modulation value (in semitones from the filter frequency) to use when the envelope is loudest
+---@field public MinResonanceModulation number @The resonance modulation value to use when the envelope is quietest
+---@field public MaxResonanceModulation number @The resonance modulation value to use when the envelope is loudest
+local FSourceEffectFilterAudioBusModulationSettings = {}

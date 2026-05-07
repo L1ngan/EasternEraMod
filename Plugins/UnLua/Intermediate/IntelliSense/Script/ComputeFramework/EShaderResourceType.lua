@@ -1,0 +1,11 @@
+---@class EShaderResourceType
+---@field public None integer
+---@field public Texture1D integer
+---@field public Texture2D integer
+---@field public Texture3D integer
+---@field public TextureCube integer
+---@field public Buffer integer
+---@field public StructuredBuffer integer
+---@field public ByteAddressBuffer integer
+---@field public EShaderResourceType_MAX integer
+local EShaderResourceType = {}

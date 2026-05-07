@@ -1,0 +1,2 @@
+---@class FQuaternionSpringState
+local FQuaternionSpringState = {}

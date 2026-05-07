@@ -1,0 +1,13 @@
+---@class FUAssetMeta
+---@field public assetID string
+---@field public assetName string
+---@field public assetType string
+---@field public assetSubType string
+---@field public assetTier integer
+---@field public assetRootPath string
+---@field public meshList TArray<FMeshInfo>
+---@field public foliageAssetPaths TArray<string>
+---@field public materialInstances TArray<FMaterialInstanceInfo>
+---@field public textureSets TArray<FTexturesList>
+---@field public masterMaterials TArray<FMasterMaterialInfo>
+local FUAssetMeta = {}

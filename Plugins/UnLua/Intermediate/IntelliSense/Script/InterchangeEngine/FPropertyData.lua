@@ -1,0 +1,2 @@
+---@class FPropertyData
+local FPropertyData = {}

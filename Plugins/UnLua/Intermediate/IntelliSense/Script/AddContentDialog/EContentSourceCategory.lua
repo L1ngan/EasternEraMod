@@ -1,0 +1,11 @@
+---Defines categories for content sources.
+---@class EContentSourceCategory
+---@field public BlueprintFeature integer
+---@field public CodeFeature integer
+---@field public EnterpriseFeature integer
+---@field public Content integer
+---@field public EnterpriseContent integer
+---@field public SharedPack integer
+---@field public Unknown integer
+---@field public EContentSourceCategory_MAX integer
+local EContentSourceCategory = {}

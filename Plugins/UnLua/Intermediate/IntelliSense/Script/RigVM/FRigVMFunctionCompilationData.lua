@@ -1,0 +1,16 @@
+---@class FRigVMFunctionCompilationData
+---@field public ByteCode FRigVMByteCode
+---@field public FunctionNames TArray<string>
+---@field public WorkPropertyDescriptions TArray<FRigVMFunctionCompilationPropertyDescription>
+---@field public WorkPropertyPathDescriptions TArray<FRigVMFunctionCompilationPropertyPath>
+---@field public LiteralPropertyDescriptions TArray<FRigVMFunctionCompilationPropertyDescription>
+---@field public LiteralPropertyPathDescriptions TArray<FRigVMFunctionCompilationPropertyPath>
+---@field public DebugPropertyDescriptions TArray<FRigVMFunctionCompilationPropertyDescription>
+---@field public DebugPropertyPathDescriptions TArray<FRigVMFunctionCompilationPropertyPath>
+---@field public ExternalPropertyDescriptions TArray<FRigVMFunctionCompilationPropertyDescription>
+---@field public ExternalPropertyPathDescriptions TArray<FRigVMFunctionCompilationPropertyPath>
+---@field public ExternalRegisterIndexToVariable TMap<integer, string>
+---@field public Operands TMap<string, FRigVMOperand>
+---@field public Hash integer
+---@field public bEncounteredSurpressedErrors boolean
+local FRigVMFunctionCompilationData = {}

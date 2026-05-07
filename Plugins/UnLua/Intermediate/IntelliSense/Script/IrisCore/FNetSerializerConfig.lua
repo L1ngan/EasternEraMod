@@ -1,0 +1,2 @@
+---@class FNetSerializerConfig
+local FNetSerializerConfig = {}

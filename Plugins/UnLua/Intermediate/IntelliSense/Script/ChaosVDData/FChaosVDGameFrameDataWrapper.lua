@@ -1,0 +1,2 @@
+---@class FChaosVDGameFrameDataWrapper
+local FChaosVDGameFrameDataWrapper = {}

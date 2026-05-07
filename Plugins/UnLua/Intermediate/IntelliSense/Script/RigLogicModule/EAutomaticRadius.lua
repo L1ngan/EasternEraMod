@@ -1,0 +1,34 @@
+---UENUM(BlueprintType)
+---enum class ERBFSolverType : uint8
+---{
+---       Additive,
+---       Interpolative
+---};
+---UENUM(BlueprintType)
+---enum class ERBFFunctionType : uint8
+---{
+---       Gaussian,
+---       Exponential,
+---       Linear,
+---       Cubic,
+---       Quintic,
+---};
+---UENUM(BlueprintType)
+---enum class ERBFDistanceMethod : uint8
+---{
+---       Euclidean,
+---       Quaternion,
+---       SwingAngle,
+---       TwistAngle,
+---};
+---UENUM(BlueprintType)
+---enum class ERBFNormalizeMethod : uint8
+---{
+---       OnlyNormalizeAboveOne,
+---       AlwaysNormalize
+---};
+---@class EAutomaticRadius
+---@field public On integer
+---@field public Off integer
+---@field public EAutomaticRadius_MAX integer
+local EAutomaticRadius = {}

@@ -1,0 +1,13 @@
+---@class FRigUnit_ChainHarmonics_Pendulum
+---@field public bEnabled boolean
+---@field public PendulumStiffness number
+---@field public PendulumGravity FVector
+---@field public PendulumBlend number
+---@field public PendulumDrag number
+---@field public PendulumMinimum number
+---@field public PendulumMaximum number
+---@field public PendulumEase ERigVMAnimEasingType
+---@field public UnwindAxis FVector
+---@field public UnwindMinimum number
+---@field public UnwindMaximum number
+local FRigUnit_ChainHarmonics_Pendulum = {}

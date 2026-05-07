@@ -1,0 +1,40 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\x64\\unrealgame\\development\\auroradevs_rhs\\module.auroradevs_rhs.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\easternera\\development\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\x64\\unrealgame\\development\\auroradevs_rhs\\definitions.auroradevs_rhs.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\auroradevs_rhs.init.gen.cpp",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\rhs_adaptablecollisionactor.gen.cpp",
+            "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\rhs_adaptablecollisionactor.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\rhs_adaptablecollisionactor.generated.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\rhs_animnotifybase.gen.cpp",
+            "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\rhs_animnotifybase.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\rhs_data.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\rhs_data.generated.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\rhs_animnotifybase.generated.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\rhs_blueprintfunctionlibrary.gen.cpp",
+            "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\rhs_blueprintfunctionlibrary.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\rhs_blueprintfunctionlibrary.generated.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\rhs_collisionshape.gen.cpp",
+            "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\rhs_collisionshape.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\rhs_collisionshape.generated.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\rhs_data.gen.cpp",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\rhs_hitboxanimnotify.gen.cpp",
+            "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\rhs_hitboxanimnotify.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\animation\\animnotifies\\animnotifystate.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\animnotifystate.generated.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\rhs_hitboxanimnotify.generated.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\rhs_projectilebase.gen.cpp",
+            "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\rhs_projectilebase.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\rhs_projectilebase.generated.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\rhs_spawnhomingprojectilebase.gen.cpp",
+            "h:\\project\\plugins\\auroradevs_rhs\\source\\auroradevs_rhs\\public\\rhs_spawnhomingprojectilebase.h",
+            "h:\\project\\plugins\\auroradevs_rhs\\intermediate\\build\\win64\\unrealgame\\inc\\auroradevs_rhs\\uht\\rhs_spawnhomingprojectilebase.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

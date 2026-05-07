@@ -1,0 +1,16 @@
+---@class FChaosVDQueryDataWrapper
+---@field public ID integer
+---@field public ParentQueryID integer
+---@field public WorldSolverID integer
+---@field public bIsRetryQuery boolean
+---@field public GeometryOrientation FQuat
+---@field public Type EChaosVDSceneQueryType
+---@field public Mode EChaosVDSceneQueryMode
+---@field public StartLocation FVector
+---@field public EndLocation FVector
+---@field public CollisionChannel integer
+---@field public CollisionQueryParams FChaosVDCollisionQueryParams
+---@field public CollisionResponseParams FChaosVDCollisionResponseParams
+---@field public CollisionObjectQueryParams FChaosVDCollisionObjectQueryParams
+---@field public Hits TArray<FChaosVDQueryVisitStep>
+local FChaosVDQueryDataWrapper = {}

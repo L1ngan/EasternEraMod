@@ -1,0 +1,13 @@
+---Describes an active branch of a State Tree.
+---@class FStateTreeExecutionFrame
+---@field public StateTree UStateTree @The State Tree used for ticking this frame.
+---@field public RootState FStateTreeStateHandle @The root state of the frame (e.g. Root state or a subtree).
+---@field public ActiveStates FStateTreeActiveStates @Active states in this frame
+---@field public ActiveTasksStatus FStateTreeTasksCompletionStatus @Flag to track the completion of a global task or a task from a state in the ActiveStates.
+---@field public ExternalDataBaseIndex FStateTreeIndex16 @First index of the external data for this frame.
+---@field public GlobalInstanceIndexBase FStateTreeIndex16 @Index within the instance data to the first global instance data (e.g. global tasks)
+---@field public ActiveInstanceIndexBase FStateTreeIndex16 @Index within the instance data to the first active state's instance data (e.g. tasks)
+---@field public StateParameterDataHandle FStateTreeDataHandle @Handle to the state parameter data, exists in ParentFrame.
+---@field public GlobalParameterDataHandle FStateTreeDataHandle @Handle to the global parameter data, exists in ParentFrame.
+---@field public bIsGlobalFrame boolean @If true, the global tasks of the State Tree should be handle in this frame.
+local FStateTreeExecutionFrame = {}

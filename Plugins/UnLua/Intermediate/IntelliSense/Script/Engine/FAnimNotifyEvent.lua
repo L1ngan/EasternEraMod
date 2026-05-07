@@ -1,0 +1,23 @@
+---Triggers an animation notify.  Each AnimNotifyEvent contains an AnimNotify object
+---which has its Notify method called and passed to the animation.
+---@class FAnimNotifyEvent : FAnimLinkableElement
+---@field public TriggerTimeOffset number @An offset from the DisplayTime to the actual time we will trigger the notify, as we cannot always trigger it exactly at the time the user wants
+---@field public EndTriggerTimeOffset number @An offset similar to TriggerTimeOffset but used for the end scrub handle of a notify state's duration
+---@field public TriggerWeightThreshold number
+---@field public NotifyName string
+---@field public Notify UAnimNotify
+---@field public NotifyStateClass UAnimNotifyState
+---@field public Duration number
+---@field public EndLink FAnimLinkableElement @Linkable element to use for the end handle representing a notify state duration
+---@field public bConvertedFromBranchingPoint boolean @If TRUE, this notify has been converted from an old BranchingPoint.
+---@field public MontageTickType integer
+---@field public NotifyTriggerChance number @Defines the chance of this notify triggering, 0 = No Chance, 1 = Always triggers
+---@field public NotifyFilterType integer @Defines a method for filtering notifies (stopping them triggering) e.g. by looking at the meshes current LOD
+---@field public NotifyFilterLOD integer @LOD to start filtering this notify from.
+---@field public bCanBeFilteredViaRequest boolean @Allow notify event to be filtered if requested at runtime (e. g. via an Anim Graph Message)
+---@field public bTriggerOnDedicatedServer boolean @If disabled this notify will be skipped on dedicated servers
+---@field public bTriggerOnFollower boolean @If enabled this notify will trigger when the animation is a follower in a sync group (by default only the sync group leaders notifies trigger
+---@field public NotifyColor FColor @Color of Notify in editor
+---@field public Guid FGuid @Guid for tracking notifies in editor
+---@field public TrackIndex integer @'Track' that the notify exists on, used for visual placement in editor and sorting priority in runtime
+local FAnimNotifyEvent = {}

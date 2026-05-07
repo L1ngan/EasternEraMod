@@ -1,0 +1,13 @@
+---MovieSceneSpawnable describes an object that can be spawned for this MovieScene
+---@class FMovieSceneSpawnable
+---@field public SpawnTransform FTransform @Optional spawn transform
+---@field public Tags TArray<string> @Array of tags that can be used for grouping and categorizing.
+---@field public bContinuouslyRespawn boolean @When enabled, this spawnable will always be respawned if it gets destroyed externally. When disabled, this object will only ever be spawned once for each spawn key even if it is destroyed externally.
+---@field public bNetAddressableName boolean @When enabled, the actor will be spawned with a unique name so that it can be addressable between clients and servers.
+---@field private Guid FGuid @Unique identifier of the spawnable object. // @@todo sequencer: Guids need to be handled carefully when the asset is duplicated (or loaded after being copied on disk). //                                     Sometimes we'll need to generate fresh Guids.
+---@field private Name string @Name label // @@todo sequencer: Should be editor-only probably
+---@field private ObjectTemplate UObject
+---@field private ChildPossessables TArray<FGuid> @Set of GUIDs to possessable object bindings that are bound to an object inside this spawnable // @@todo sequencer: This should be a TSet, but they don't duplicate correctly atm
+---@field private Ownership ESpawnOwnership @Property indicating where ownership responsibility for this object lies
+---@field public LevelName string @Name of level to spawn into
+local FMovieSceneSpawnable = {}

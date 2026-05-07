@@ -1,0 +1,11 @@
+---Struct that's serialized into the DDC record for "Audio" DDC task.
+---Filled in by the encoders, additional relevant state is passed back here.
+---Like decisions make during encoding, like resampling, transformations etc.
+---@class FAudioCookOutputs
+---@field public Id integer
+---@field public Version integer
+---@field public NumChannels integer @Final channel count that was encoded by the IAudioFormat
+---@field public SampleRate integer @Final Sample rate that was encoded by IAudioFormat
+---@field public NumFrames integer @Number of frames in the encoded data.
+---@field public EncodedData TArray<integer> @The Binary output of the IAudioFormat.
+local FAudioCookOutputs = {}

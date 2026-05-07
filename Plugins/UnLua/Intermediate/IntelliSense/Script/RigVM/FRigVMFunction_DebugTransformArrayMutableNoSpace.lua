@@ -1,0 +1,11 @@
+---Given a transform array, will draw a point, axis, or a box in the viewport
+---@class FRigVMFunction_DebugTransformArrayMutableNoSpace : FRigVMFunction_DebugBaseMutable
+---@field public Transforms TArray<FTransform>
+---@field public ParentIndices TArray<integer>
+---@field public Mode ERigUnitDebugTransformMode
+---@field public Color FLinearColor
+---@field public Thickness number
+---@field public Scale number
+---@field public WorldOffset FTransform
+---@field public bEnabled boolean
+local FRigVMFunction_DebugTransformArrayMutableNoSpace = {}

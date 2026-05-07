@@ -1,0 +1,31 @@
+---@class FNiagaraFunctionSignature
+---@field public Name string @Name of the function.
+---@field public Inputs TArray<FNiagaraVariable> @Input parameters to this function. The data stored in the variables is used for default values.
+---@field public Outputs TArray<FNiagaraVariableBase> @Output parameters of this function.
+---@field public OwnerName string @Id of the owner is this is a member function.
+---@field public bRequiresContext boolean
+---@field public bRequiresExecPin boolean @Does this function need an exec pin for control flow because it has internal side effects that be seen by the script VM and could therefore be optimized out? If so, set to true. Default is false.
+---@field public bMemberFunction boolean @True if this is the signature for a "member" function of a data interface. If this is true, the first input is the owner.
+---@field public bExperimental boolean @Is this function experimental?
+---@field public ExperimentalMessage string @The message to display when a function is marked experimental.
+---@field public FunctionVersion integer @Per function version, it is up to the discretion of the function as to what the version means.
+---@field public NoDefaultValueInputs TArray<FNiagaraVariableBase> @All the inputs here must be wired to something in the graph and will produce a compile error if that's not the case. This is useful if the default value for an input makes no sense and would lead to a failed function call at runtime.
+---@field public bSupportsCPU boolean @Support running on the CPU.
+---@field public bSupportsGPU boolean @Support running on the GPU.
+---@field public bWriteFunction boolean @Writes data owned by the data interface.  Any stage using it will be marked as an Output stage.
+---@field public bReadFunction boolean @Reads data owned by the data interface.  Any stage using it will be marked as an Input stage.
+---@field public bSoftDeprecatedFunction boolean @Whether or not this function should show up in normal usage.
+---@field public bIsCompileTagGenerator boolean @Whether or not this function should be treated as a compile tag.
+---@field public bHidden boolean @Hidden functions can not be placed but may be bound and used.  This is useful to hide functionality while developing.
+---@field public ModuleUsageBitmask integer @Bitmask for which scripts are supported for this function. Use UNiagaraScript::MakeSupportedUsageContextBitmask to make the bitmask.
+---@field public MiscUsageBitMask integer @Bit mask for misc usage.
+---@field public ContextStageIndex integer @When using simulation stages and bRequiresContext is true this will be the index of the stage that is associated with the function.
+---@field public RequiredInputs integer @Number of required inputs. Can be less than the actual number of inputs when using bVariadicInput. INDEX_NONE when not using bVariadicInput, denoting that all inputs are required.
+---@field public RequiredOutputs integer @Number of required outputs. Can be less than the actual number of outputs when using bVariadicOutput. INDEX_NONE when not using bVariadicOutput, denoting that all outputs are required.
+---@field public FunctionSpecifiers TMap<string, string> @Function specifiers verified at bind time.
+---@field public Description string
+---@field public InputDescriptions TMap<FNiagaraVariableBase, string>
+---@field public OutputDescriptions TMap<FNiagaraVariableBase, string>
+---@field public SourceFile string
+---@field public SourceLine integer
+local FNiagaraFunctionSignature = {}

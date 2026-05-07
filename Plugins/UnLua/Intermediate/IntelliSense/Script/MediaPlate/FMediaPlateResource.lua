@@ -1,0 +1,11 @@
+---Helper struct to wrap source selection functionality,
+---and enabling the usage of media source properties for places like Remote Control.
+---This struct allows to choose between Asset, External File, Playlist options.
+---It's mainly conceived to be used by MediaPlateComponent.
+---See FMediaPlayerResourceCustomization class for its customization.
+---@class FMediaPlateResource
+---@field private Type EMediaPlateResourceType @Media Source Type
+---@field private ExternalMediaPath string @A path pointing to an external media resource
+---@field private MediaAsset TSoftObjectPtr<UMediaSource> @Media source coming from MediaSource asset
+---@field private SourcePlaylist TSoftObjectPtr<UMediaPlaylist> @User facing Playlist asset
+local FMediaPlateResource = {}

@@ -1,0 +1,12 @@
+---@class FChannelMapInfo
+---@field public ControlIndex integer
+---@field public TotalChannelIndex integer
+---@field public ChannelIndex integer
+---@field public ParentControlIndex integer @channel index for it's type.. (e.g  float, int, bool).
+---@field public ChannelTypeName string
+---@field public bDoesHaveSpace boolean
+---@field public SpaceChannelIndex integer
+---@field public MaskIndex integer @if it has space what's the space channel index
+---@field public CategoryIndex integer @index for the mask
+---@field public ConstraintsIndex TArray<integer> @temp index set by the ControlRigParameterTrack, not saved
+local FChannelMapInfo = {}

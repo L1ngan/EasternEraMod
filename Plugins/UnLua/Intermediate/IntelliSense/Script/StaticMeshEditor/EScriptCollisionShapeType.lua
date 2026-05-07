@@ -1,0 +1,12 @@
+---Types of Collision Construct that are generated *
+---@class EScriptCollisionShapeType
+---@field public Box integer
+---@field public Sphere integer
+---@field public Capsule integer
+---@field public NDOP10_X integer
+---@field public NDOP10_Y integer
+---@field public NDOP10_Z integer
+---@field public NDOP18 integer
+---@field public NDOP26 integer
+---@field public EScriptCollisionShapeType_MAX integer
+local EScriptCollisionShapeType = {}

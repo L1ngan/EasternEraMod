@@ -1,0 +1,12 @@
+---The FRigVMByteCode is a container to store a list of instructions with
+---their corresponding data. The byte code is then used within a VM to
+---execute. To iterate over the instructions within the byte code you can
+---use GetInstructions() to retrieve a FRigVMInstructionArray.
+---@class FRigVMByteCode
+---@field private ByteCode TArray<integer> @memory for all instructions
+---@field private NumInstructions integer @number of instructions stored here
+---@field private Entries TArray<FRigVMByteCodeEntry> @a look up table from entry name to instruction index
+---@field private BranchInfos TArray<FRigVMBranchInfo> @a list of all lazily evaluation branches
+---@field private PredicateBranches TArray<FRigVMPredicateBranch> @a list of all predicate branches
+---@field private PublicContextAssetPath FTopLevelAssetPath
+local FRigVMByteCode = {}

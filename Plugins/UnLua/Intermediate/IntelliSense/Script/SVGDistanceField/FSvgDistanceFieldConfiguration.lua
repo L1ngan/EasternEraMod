@@ -1,0 +1,13 @@
+---@class FSvgDistanceFieldConfiguration
+---@field public DistanceFieldType ESvgDistanceFieldType @Sets which type of signed distance field should be generated.
+---@field public BaseDistanceSpread number @The base portion of the representable distance spread that will be divided equally between the inside and outside.
+---@field public ExtraOuterDistanceSpread number @The additional asymmetrical outer portion of the representable distance spread.
+---@field public ExtraInnerDistanceSpread number @The additional asymmetrical inner portion of the representable distance spread.
+---@field public DistanceSpreadUnits ESvgDistanceFieldUnits @Specifies the units in which all distance spread values are expressed.
+---@field public OutputWidth integer @The width of the output image in pixels
+---@field public OutputHeight integer @The height of the output image in pixels
+---@field public ScaleMode ESvgDistanceFieldScaleMode @Specifies how the SVG coordinates are scaled when converting to output pixel coordinates.
+---@field public Scale number @The scaling factor from SVG coordinates to pixel coordinates if ScaleMode is set to ExplicitScale, otherwise ignored
+---@field public PlacementMode ESvgDistanceFieldPlacementMode @Specifies how the SVG coordinates are translated when converting to output pixel coordinates.
+---@field public MiterLimit number @If DistanceFieldType is set to Perpendicular or MultiChannelAndSimple, specifies the miter limit when computing the bounding box.
+local FSvgDistanceFieldConfiguration = {}

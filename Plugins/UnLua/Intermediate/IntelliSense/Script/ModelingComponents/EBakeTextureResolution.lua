@@ -1,0 +1,13 @@
+---@class EBakeTextureResolution
+---@field public Resolution16 integer
+---@field public Resolution32 integer
+---@field public Resolution64 integer
+---@field public Resolution128 integer
+---@field public Resolution256 integer
+---@field public Resolution512 integer
+---@field public Resolution1024 integer
+---@field public Resolution2048 integer
+---@field public Resolution4096 integer
+---@field public Resolution8192 integer
+---@field public EBakeTextureResolution_MAX integer
+local EBakeTextureResolution = {}

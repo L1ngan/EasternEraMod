@@ -1,0 +1,3 @@
+---@class UApplicationLifecycleComponent_ApplicationLifetimeDelegate__PythonCallable : UPythonCallableForDelegate
+local UApplicationLifecycleComponent_ApplicationLifetimeDelegate__PythonCallable = {}
+

@@ -1,0 +1,2 @@
+---@class FSwarmQuitMessage
+local FSwarmQuitMessage = {}

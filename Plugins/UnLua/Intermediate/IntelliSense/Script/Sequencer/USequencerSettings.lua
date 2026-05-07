@@ -1,0 +1,88 @@
+---Serializable options for sequencer.
+---@class USequencerSettings : UObject
+---@field protected AutoChangeMode EAutoChangeMode @The auto change mode (auto-key, auto-track or none).
+---@field protected AllowEditsMode EAllowEditsMode @Allow edits mode.
+---@field protected KeyGroupMode EKeyGroupMode @Key group mode.
+---@field protected KeyInterpolation EMovieSceneKeyInterpolation @The interpolation type for newly created keyframes
+---@field protected bAutoSetTrackDefaults boolean @When setting keys on properties and transforms automatically update the track default values used when there are no keys.
+---@field protected SpawnPosition integer @The default location of a spawnable when it is first dragged into the viewport from the content browser.
+---@field protected bCreateSpawnableCameras boolean @Enable or disable creating of spawnable cameras whenever cameras are created.
+---@field protected bShowRangeSlider boolean @Show the in/out range in the timeline with respect to the start/end range.
+---@field protected bIsSnapEnabled boolean @Enable or disable snapping in the timeline.
+---@field protected bSnapKeyTimesToElements boolean @Enable or disable snapping keys to other elements.
+---@field protected bSnapSectionTimesToElements boolean @Enable or disable snapping sections to other elements.
+---@field protected bSnapKeysAndSectionsToPlayRange boolean @Enable or disable keeping keys and sections in the playback range.
+---@field protected bSnapPlayTimeToKeys boolean @Enable or disable snapping the playhead to keys while scrubbing.
+---@field protected bSnapPlayTimeToSections boolean @Enable or disable snapping the playhead to section bounds while scrubbing.
+---@field protected bSnapPlayTimeToMarkers boolean @Enable or disable snapping the playhead to markers while scrubbing.
+---@field protected bSnapPlayTimeToPressedKey boolean @Enable or disable snapping the playhead to the pressed key.
+---@field protected bSnapPlayTimeToDraggedKey boolean @Enable or disable snapping the playhead to the dragged key.
+---@field protected bSnapCurveValueToInterval boolean @Enable or disable snapping the curve value to the curve value interval.
+---@field protected bForceWholeFrames boolean @Enable or disable snapping keys/sections/playhead to the interval which forces whole frames
+---@field protected bShowSelectedNodesOnly boolean @Only show selected nodes in the tree view.
+---@field protected bRewindOnRecord boolean @Defines whether to jump back to the start of the sequence when a recording is started
+---@field protected bLeftMouseDragDoesMarquee boolean @Defines whether left mouse drag does marquee select instead of camera orbit
+---@field protected ZoomPosition integer @Whether to zoom in on the current position or the current time in the timeline.
+---@field protected bAutoScrollEnabled boolean @Enable or disable auto scroll in the timeline when playing.
+---@field protected bLinkCurveEditorTimeRange boolean @Enable or disable linking the curve editor time range to the sequencer timeline's time range.
+---@field protected bLinkFiltersWithCurveEditor boolean @Enable or disable linking sequence filters with the curve editor tree
+---@field protected bSynchronizeCurveEditorSelection boolean @When enabled, changing the sequencer tree selection will also select the relevant nodes in the curve editor tree if possible.
+---@field protected bIsolateCurveEditorToSelection boolean @When enabled, changing the sequencer tree selection will isolate (auto-filter) the selected nodes in the curve editor.
+---@field protected bCurveEditorVisible boolean @Whether the curve editor is visible
+---@field protected CurveEditorZoomScaling FCurveEditorZoomScaleConfig @Affects the zooming behavior of in Sequencer's Curve Editor.
+---@field protected LoopMode integer @The loop mode of the playback in timeline.
+---@field protected bResetPlayheadWhenNavigating boolean @Enable or disable resetting the playhead when navigating in and out of subsequences.
+---@field protected bKeepCursorInPlayRangeWhileScrubbing boolean @Enable or disable keeping the playhead in the current playback range while scrubbing.
+---@field protected bKeepPlayRangeInSectionBounds boolean @Enable or disable keeping the playback range constrained to the section bounds.
+---@field protected ZeroPadFrames integer @The number of zeros to pad the frame numbers by.
+---@field protected JumpFrameIncrement FFrameNumber @The number of frames to jump by when jumping forward or backwards.
+---@field protected TimeWarpDisplay ESequencerTimeWarpDisplay @Controls how time-warped time is displayed on the timeline.
+---@field protected bShowLayerBars boolean @Enable or disable the layer bars to edit keyframes in bulk.
+---@field protected bShowKeyBars boolean @Enable or disable key bar connections.
+---@field protected bInfiniteKeyAreas boolean @Enable or disable setting key area sections as infinite by default.
+---@field protected bShowChannelColors boolean @Enable or disable displaying channel bar colors for the key bars.
+---@field protected bShowInfoButton boolean @Enable or disable displaying the info button in the playback controls.
+---@field protected bShowTickLines boolean @Enable or disable displaying the tick lines.
+---@field protected bShowSequencerToolbar boolean @Enable or disable displaying the sequencer toolbar.
+---@field protected bShowMarkedFrames boolean @Enable or disable showing marked frames
+---@field protected bShowScalingAnchors boolean @Enable or disable showing scaling anchors
+---@field protected KeyAreaCurveExtents string @The key area curve extents, stored per channel name
+---@field protected KeyAreaHeightWithCurves number @The key area height when showing curves
+---@field protected ReduceKeysTolerance number @The tolerance to use when reducing keys
+---@field protected bDeleteKeysWhenTrimming boolean @Enable or disable deleting keys that fall beyond the section range when trimming.
+---@field protected bDisableSectionsAfterBaking boolean @Whether to disable sections after baking as opposed to deleting.
+---@field protected MarkedFrameColor FLinearColor @Default marked frame color
+---@field protected SectionColorTints TArray<FColor> @Section color tints
+---@field protected bCleanPlaybackMode boolean @When enabled, sequencer will playback in clean mode (game view, hide viewport UI)
+---@field protected bActivateRealtimeViewports boolean @When enabled, sequencer will activate 'Realtime' in viewports
+---@field protected bEvaluateSubSequencesInIsolation boolean @When enabled, entering a sub sequence will evaluate that sub sequence in isolation, rather than from the root sequence
+---@field protected bRerunConstructionScripts boolean @When enabled, construction scripts will be rerun on bound actors for every frame
+---@field protected bShowDebugVisualization boolean @Enable or disable showing of debug visualization.
+---@field protected bVisualizePreAndPostRoll boolean @Enable or disable showing of pre and post roll visualization.
+---@field protected bCompileDirectorOnEvaluate boolean @Whether to recompile the director blueprint when the sequence is evaluated (if one exists)
+---@field protected TrajectoryPathCap integer @Specifies the maximum number of keys to draw when rendering trajectories in viewports
+---@field protected FrameNumberDisplayFormat EFrameNumberDisplayFormats @What format do we display time in to the user?
+---@field protected MovieRendererName string @Which movie renderer to use
+---@field protected bAutoExpandNodesOnSelection boolean @Whether to expand the sequencer tree view when a child element is selected (from outside of the tree view).
+---@field protected bRestoreOriginalViewportOnCameraCutUnlock boolean @Whether unlocking a camera cut track should return the viewport to its original location, or keep it where the camera cut was. WARNING: Disabling this will make previewing camera cut blends useless, since it will blend to the same position.
+---@field protected TreeViewWidth number @The tree view width percentage
+---@field protected ViewDensity string
+---@field protected AssetBrowserWidth number @The width for the asset browsers in Sequencer
+---@field protected AssetBrowserHeight number @The height for the asset browsers in Sequencer
+---@field protected TrackFilters TArray<string> @The track filters that are enabled
+---@field protected ColumnVisibilitySettings TArray<FColumnVisibilitySetting> @List of all columns and their visibility, in the order to be displayed in the outliner view
+---@field protected SidebarState TMap<string, FSidebarState> @The state of a sidebar to be restored when each Sequencer type is initialized
+---@field protected TrackFilterBars TMap<string, FSequencerFilterBarConfig> @Saved settings for each unique filter bar instance mapped by instance identifier
+---@field protected bIncludePinnedInFilter boolean @Apply filtering to pinned tracks that would otherwise ignore filters
+---@field protected bAutoExpandNodesOnFilterPass boolean @Automatically expand tracks that pass filters
+---@field protected bUseFilterSubmenusForCategories boolean @Display the filter menu categories as submenus instead of sections
+---@field protected bFilterBarVisible boolean @Last saved visibility of the filter bar to restore after closed
+---@field protected LastFilterBarLayout EFilterBarLayout @Last saved layout orientation of the filter bar to restore after closed
+---@field protected LastFilterBarSizeCoefficient number @Last saved size of the filter bar to restore after closed
+---@field protected ThumbnailCaptureSettings FSequencerThumbnailCaptureSettings @Controls how the thumbnail is captured when the sequence is saved.
+---@field protected bNavigationToolVisible boolean @Last saved visibility of the Navigation Tool to restore after closed
+local USequencerSettings = {}
+
+---@return boolean
+function USequencerSettings.ShouldShowThumbnailCaptureSettings() end
+

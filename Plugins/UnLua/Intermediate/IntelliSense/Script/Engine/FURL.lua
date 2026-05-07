@@ -1,0 +1,11 @@
+---URL structure.
+---@class FURL
+---@field public Protocol string @Protocol, i.e. "unreal" or "http".
+---@field public Host string @Optional hostname, i.e. "204.157.115.40" or "unreal.epicgames.com", blank if local.
+---@field public Port integer @Optional host port.
+---@field public Valid integer
+---@field public Map string @Map name, i.e. "SkyCity", default is "Entry".
+---@field public RedirectURL string @Optional place to download Map if client does not possess it
+---@field public Op TArray<string> @Options.
+---@field public Portal string @Portal to enter through, default is "".
+local FURL = {}

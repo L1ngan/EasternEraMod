@@ -1,0 +1,2 @@
+---@class FAnimGroupInstance
+local FAnimGroupInstance = {}

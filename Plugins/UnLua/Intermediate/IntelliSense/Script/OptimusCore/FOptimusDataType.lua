@@ -1,0 +1,12 @@
+---@class FOptimusDataType
+---@field public TypeName string
+---@field public DisplayName string
+---@field public ShaderValueType FShaderValueTypeHandle @Shader value type that goes with this Optimus pin type.
+---@field public ShaderValueSize integer @Size of the shader value that can hold a value of this type. If this type is not a shader value, then this value is zero.
+---@field public TypeCategory string
+---@field public TypeObject TWeakObjectPtr<UObject>
+---@field public bHasCustomPinColor boolean
+---@field public CustomPinColor FLinearColor
+---@field public UsageFlags EOptimusDataTypeUsageFlags
+---@field public TypeFlags EOptimusDataTypeFlags
+local FOptimusDataType = {}

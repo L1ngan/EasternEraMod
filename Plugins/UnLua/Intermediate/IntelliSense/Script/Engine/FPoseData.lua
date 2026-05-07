@@ -1,0 +1,11 @@
+---Pose data
+---This is one pose data structure
+---This will let us blend poses quickly easily
+---All poses within this asset should contain same number of tracks,
+---so that we can blend quickly
+---@class FPoseData
+---@field public SourceLocalSpacePose TArray<FTransform> @source local space pose, this pose is always full pose the size this array matches Tracks in the pose container
+---@field public SourceCurveData TArray<number> @source curve data that is full value
+---@field public LocalSpacePose TArray<FTransform> @local space pose, # of array match with # of TrackToBufferIndex it only saves the one with delta as base pose or ref pose if full pose
+---@field public CurveData TArray<number> @# of array match with # of Curves in PoseDataContainer curve data is not compressed
+local FPoseData = {}

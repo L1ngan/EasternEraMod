@@ -1,0 +1,2 @@
+---@class FRigVMSlice
+local FRigVMSlice = {}

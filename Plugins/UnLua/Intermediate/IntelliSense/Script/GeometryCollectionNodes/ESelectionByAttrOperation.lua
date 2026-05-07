@@ -1,0 +1,11 @@
+---@class ESelectionByAttrOperation
+---@field public Equal integer
+---@field public NotEqual integer
+---@field public Greater integer
+---@field public GreaterOrEqual integer
+---@field public Smaller integer
+---@field public SmallerOrEqual integer
+---@field public Maximum integer
+---@field public Minimum integer
+---@field public ESelectionByAttrOperation_MAX integer
+local ESelectionByAttrOperation = {}

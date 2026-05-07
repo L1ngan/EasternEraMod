@@ -1,0 +1,14 @@
+---Represents entries in menus such as buttons, checkboxes, and sub-menus.
+---Many entries are created for you via the methods of FToolMenuSection, such as FToolMenuSection::AddMenuEntry.
+---@class FToolMenuEntry
+---@field public Name string
+---@field public Owner FToolMenuOwner
+---@field public Type EMultiBlockType
+---@field public UserInterfaceActionType EUserInterfaceActionType
+---@field public TutorialHighlightName string
+---@field public InsertPosition FToolMenuInsert
+---@field public bShouldCloseWindowAfterMenuSelection boolean
+---@field public ScriptObject UToolMenuEntryScript
+---@field public StyleNameOverride string
+---@field private bCommandIsKeybindOnly boolean
+local FToolMenuEntry = {}

@@ -1,0 +1,2 @@
+---@class FMaterialLayersFunctionsTree
+local FMaterialLayersFunctionsTree = {}

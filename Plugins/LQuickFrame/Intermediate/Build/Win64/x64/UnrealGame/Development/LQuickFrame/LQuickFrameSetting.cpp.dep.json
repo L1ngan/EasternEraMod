@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\plugins\\lquickframe\\source\\lquickframe\\private\\lquickframesetting.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\easternera\\development\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\plugins\\lquickframe\\intermediate\\build\\win64\\x64\\unrealgame\\development\\lquickframe\\definitions.lquickframe.h",
+            "h:\\project\\plugins\\lquickframe\\source\\lquickframe\\public\\lquickframesetting.h",
+            "h:\\project\\plugins\\lquickframe\\intermediate\\build\\win64\\unrealgame\\inc\\lquickframe\\uht\\lquickframesetting.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

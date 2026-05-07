@@ -1,0 +1,30 @@
+---Note: UPixelInspectorView is only ever created as a transient object, so making properties transient is redundant.
+---@class UPixelInspectorView : UObject
+---@field public FinalColor FLinearColor @Final color in display space after tone mapping.
+---@field public PreExposure number @Amount of exposure applied to Scene Color due to auto-exposure and/or exposure compensation.
+---@field public SceneColorBeforePostProcessing FLinearColor @HDR scene-linear color in working color space, before post-processing. Previously called Scene Color.
+---@field public SceneColorBeforeTonemap FLinearColor @HDR scene-linear color in working color space, before tone mapping. Previously called Hdr Color.
+---@field public LuminanceBeforeTonemap number @Luminance of the Scene Color Before Tonemap.
+---@field public Normal FVector @From the GBufferA RGB Channels.
+---@field public PerObjectGBufferData number @From the GBufferA A Channel.
+---@field public Metallic number @From the GBufferB R Channel.
+---@field public Specular number @From the GBufferB G Channel.
+---@field public Roughness number @From the GBufferB B Channel.
+---@field public MaterialShadingModel integer @From the GBufferB A Channel encoded with SelectiveOutputMask.
+---@field public SelectiveOutputMask integer @From the GBufferB A Channel encoded with ShadingModel.
+---@field public BaseColor FLinearColor @From the GBufferC RGB Channels.
+---@field public IndirectIrradiance number @From the GBufferC A Channel encoded with AmbientOcclusion.
+---@field public AmbientOcclusion number @From the GBufferC A Channel encoded with IndirectIrradiance.
+---@field public SubSurfaceColor FLinearColor @From the GBufferD RGB Channels.
+---@field public SubsurfaceProfile FVector @From the GBufferD RGB Channels.
+---@field public Opacity number @From the GBufferD A Channel.
+---@field public ClearCoat number @From the GBufferD R Channel.
+---@field public ClearCoatRoughness number @From the GBufferD G Channel.
+---@field public WorldNormal FVector @From the GBufferD RG Channels.
+---@field public BackLit number @From the GBufferD B Channel.
+---@field public Cloth number @From the GBufferD A Channel.
+---@field public EyeTangent FVector @From the GBufferD RG Channels.
+---@field public IrisMask number @From the GBufferD B Channel.
+---@field public IrisDistance number @From the GBufferD A Channel.
+local UPixelInspectorView = {}
+

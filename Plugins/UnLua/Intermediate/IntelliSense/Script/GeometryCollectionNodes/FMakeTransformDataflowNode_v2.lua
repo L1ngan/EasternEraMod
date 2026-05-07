@@ -1,0 +1,11 @@
+---Make a FTransform
+---Deprecated (5.6)
+---Use FMakeTransformDataflowNode instead
+---@class FMakeTransformDataflowNode_v2 : FDataflowNode
+---@field private Translation FVector @Translation
+---@field private Rotation FVector @Rotation as Euler
+---@field private Rotator FRotator @Rotation a Rotator
+---@field private Quat FQuat @Rotation as a quaternion
+---@field private Scale FVector @Scale
+---@field private Transform FTransform @Result transform
+local FMakeTransformDataflowNode_v2 = {}

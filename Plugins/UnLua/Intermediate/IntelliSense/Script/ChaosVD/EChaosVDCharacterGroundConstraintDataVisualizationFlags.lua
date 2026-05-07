@@ -1,0 +1,14 @@
+---@class EChaosVDCharacterGroundConstraintDataVisualizationFlags
+---@field public None integer
+---@field public TargetDeltaPosition integer
+---@field public TargetDeltaFacing integer
+---@field public GroundQueryDistance integer
+---@field public GroundQueryNormal integer
+---@field public AppliedRadialForce integer
+---@field public AppliedNormalForce integer
+---@field public AppliedTorque integer
+---@field public DrawDisabled integer
+---@field public OnlyDrawSelected integer
+---@field public EnableDraw integer
+---@field public EChaosVDCharacterGroundConstraintDataVisualizationFlags_MAX integer
+local EChaosVDCharacterGroundConstraintDataVisualizationFlags = {}

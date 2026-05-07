@@ -1,0 +1,12 @@
+---@class FAnimMontageInstance
+---@field public Montage UAnimMontage @Montage reference
+---@field public bPlaying boolean
+---@field public DefaultBlendTimeMultiplier number @Blend Time multiplier to allow extending and narrowing blendtimes
+---@field private NextSections TArray<integer> @list of next sections per section - index of array is section id
+---@field private PrevSections TArray<integer> @list of prev sections per section - index of array is section id
+---@field private ActiveStateBranchingPoints TArray<FAnimNotifyEvent> @Currently Active AnimNotifyState, stored as a copy of the event as we need to               call NotifyEnd on the event after a deletion in the editor. After this the event               is removed correctly.
+---@field private Position number
+---@field private PlayRate number
+---@field private Blend FAlphaBlend
+---@field private DisableRootMotionCount integer
+local FAnimMontageInstance = {}

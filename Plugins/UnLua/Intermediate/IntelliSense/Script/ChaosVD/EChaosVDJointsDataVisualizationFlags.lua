@@ -1,0 +1,14 @@
+---@class EChaosVDJointsDataVisualizationFlags
+---@field public None integer
+---@field public PushOut integer
+---@field public AngularImpulse integer
+---@field public ActorConnector integer
+---@field public CenterOfMassConnector integer
+---@field public Stretch integer
+---@field public Axes integer
+---@field public DrawKinematic integer
+---@field public DrawDisabled integer
+---@field public OnlyDrawSelected integer
+---@field public EnableDraw integer
+---@field public EChaosVDJointsDataVisualizationFlags_MAX integer
+local EChaosVDJointsDataVisualizationFlags = {}

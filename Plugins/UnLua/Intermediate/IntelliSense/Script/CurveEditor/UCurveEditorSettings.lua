@@ -1,0 +1,22 @@
+---Serializable options for curve editor.
+---@class UCurveEditorSettings : UObject
+---@field protected bAutoFrameCurveEditor boolean
+---@field protected bShowBars boolean
+---@field protected FrameInputPadding integer @Number of pixels to add as padding in the input axis when framing curve keys
+---@field protected FrameOutputPadding integer @Number of pixels to add as padding in the output axis when framing curve keys
+---@field protected bShowBufferedCurves boolean
+---@field protected bShowCurveEditorCurveToolTips boolean
+---@field protected TangentVisibility ECurveEditorTangentVisibility
+---@field protected ZoomPosition ECurveEditorZoomPosition
+---@field protected SnapAxis ECurveEditorSnapAxis
+---@field protected bSnapTimeToSelection boolean
+---@field protected SelectionColor FLinearColor
+---@field protected CustomColors TArray<FCustomColorForChannel>
+---@field protected ParentSpaceCustomColor FLinearColor
+---@field protected WorldSpaceCustomColor FLinearColor
+---@field protected ControlSpaceCustomColors TArray<FCustomColorForSpaceSwitch>
+---@field protected TreeViewWidth number
+---@field protected MarqueePointSensitivity number @Determines how close you must move the selection marque to the center of a point in order to select it. This is the percentage of point's center to the point's widget border that must be overlapped with the marquee in order for the point to be selected. 1.0 means as soon as marquee overlaps any portion of the point. 0.0 means you must touch the point's center to select it.
+---@field protected bShowValueIndicators boolean @When you select a single curve, whether to draw a dotted line for the minimum and maximum key in the selected key range.
+local UCurveEditorSettings = {}
+

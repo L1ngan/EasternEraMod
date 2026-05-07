@@ -1,0 +1,14 @@
+---Runtime representation of a StateTree transition.
+---@class FCompactStateTransition
+---@field public RequiredEvent FCompactEventDesc @Event Description
+---@field public RequiredDelegateDispatcher FStateTreeDelegateDispatcher @Delegate dispatcher the transition is waiting for.
+---@field public ConditionsBegin integer @Index to first condition to test
+---@field public State FStateTreeStateHandle @Target state of the transition
+---@field public Delay FStateTreeRandomTimeDuration @Transition delay.
+---@field public Trigger EStateTreeTransitionTrigger @Type of the transition trigger.
+---@field public Priority EStateTreeTransitionPriority @Priority of the transition.
+---@field public Fallback EStateTreeSelectionFallback @Fallback of the transition if it fails to select the target state
+---@field public ConditionsNum integer @Number of conditions to test.
+---@field public bTransitionEnabled boolean @Indicates if the transition is enabled and should be considered.
+---@field public bConsumeEventOnSelect boolean @If set to true, the required event is consumed (later state selection cannot react to it) if state selection can be made.
+local FCompactStateTransition = {}

@@ -1,0 +1,15 @@
+---Data needed for local vector fields.
+---@class FGPUSpriteLocalVectorFieldInfo
+---@field public Field UVectorField @Local vector field to apply to this emitter.
+---@field public Transform FTransform @Local vector field transform.
+---@field public MinInitialRotation FRotator @Minimum initial rotation.
+---@field public MaxInitialRotation FRotator @Maximum initial rotation.
+---@field public RotationRate FRotator @Local vector field rotation rate.
+---@field public Intensity number @Local vector field intensity.
+---@field public Tightness number @Local vector field tightness.
+---@field public bIgnoreComponentTransform boolean @Ignore Components Transform
+---@field public bTileX boolean @Tile vector field in x axis?
+---@field public bTileY boolean @Tile vector field in y axis?
+---@field public bTileZ boolean @Tile vector field in z axis?
+---@field public bUseFixDT boolean @Use fix delta time in the simulation?
+local FGPUSpriteLocalVectorFieldInfo = {}

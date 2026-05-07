@@ -1,0 +1,13 @@
+---The input device mapping policy controls how Human Interface Devices (HID's)
+---are "mapped" or "assigned" to local players in your game. Depending on this
+---policy, the creation of FPlatformUserId's and FInputDeviceId's can change.
+---This policy is only in affect on platforms which do NOT have a managed user login
+---or some kind of dedicated input mapping OS functionality (consoles).
+---@class EInputDeviceMappingPolicy
+---@field public Invalid integer
+---@field public UseManagedPlatformLogin integer
+---@field public PrimaryUserSharesKeyboardAndFirstGamepad integer
+---@field public CreateUniquePlatformUserForEachDevice integer
+---@field public MapAllDevicesToPrimaryUser integer
+---@field public EInputDeviceMappingPolicy_MAX integer
+local EInputDeviceMappingPolicy = {}

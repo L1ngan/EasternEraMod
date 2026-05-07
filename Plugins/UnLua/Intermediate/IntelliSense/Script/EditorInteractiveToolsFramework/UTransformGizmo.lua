@@ -1,0 +1,85 @@
+---UTransformGizmo provides standard Transformation Gizmo interactions,
+---applied to a UTransformProxy target object. By default the Gizmo will be
+---a standard XYZ translate/rotate Gizmo (axis and plane translation).
+---@class UTransformGizmo : UInteractiveGizmo
+---@field public ActiveTarget UTransformProxy @The active target object for the Gizmo
+---@field public HitTarget UGizmoElementHitMultiTarget @The hit target object
+---@field public MultiIndirectClickDragBehavior UMultiButtonClickDragBehavior @The multi button mouse click behavior is accessible so that it can be modified to use different mouse keys.
+---@field public TransformGizmoSource TScriptInterface<UTransformGizmoSource> @Transform Gizmo Source
+---@field public GizmoElementRoot UGizmoElementGroup @Root of renderable gizmo elements
+---@field public GizmoViewContext UGizmoViewContext @Gizmo view context, needed for screen space interactions
+---@field public bVisible boolean @Whether gizmo is visible.
+---@field public bInInteraction boolean @Whether gizmo is interacting.
+---@field public bSnapToWorldGrid boolean @If true, then when using world frame, Axis and Plane translation snap to the world grid via the ContextQueriesAPI (in PositionSnapFunction)
+---@field public bGridSizeIsExplicit boolean @Optional grid size which overrides the Context Grid
+---@field public ExplicitGridSize FVector
+---@field public bRotationGridSizeIsExplicit boolean @Optional grid size which overrides the Context Rotation Grid
+---@field public ExplicitRotationGridSize FRotator
+---@field public bSnapToWorldRotGrid boolean @If true, then when using world frame, Axis and Plane translation snap to the world grid via the ContextQueriesAPI (in RotationSnapFunction)
+---@field protected TranslateXAxisElement UGizmoElementArrow @Translate X Axis
+---@field protected TranslateYAxisElement UGizmoElementArrow @Translate Y Axis
+---@field protected TranslateZAxisElement UGizmoElementArrow @Translate Z Axis
+---@field protected TranslateScreenSpaceElement UGizmoElementRectangle @Translate screen-space
+---@field protected TranslatePlanarXYElement UGizmoElementBox @Translate planar XY handle
+---@field protected TranslatePlanarYZElement UGizmoElementBox @Translate planar YZ handle
+---@field protected TranslatePlanarXZElement UGizmoElementBox @Translate planar XZ handle
+---@field protected RotateXAxisElement UGizmoElementTorus @Rotate X Axis
+---@field protected RotateYAxisElement UGizmoElementTorus @Rotate Y Axis
+---@field protected RotateZAxisElement UGizmoElementTorus @Rotate Z Axis
+---@field protected RotateXGimbalElement UGizmoElementTorus @Gimbal Rotate X Axis
+---@field protected RotateYGimbalElement UGizmoElementTorus @Gimbal Rotate Y Axis
+---@field protected RotateZGimbalElement UGizmoElementTorus @Gimbal Rotate Z Axis
+---@field protected RotateGimbalElement UGizmoElementGimbal @Gimbal Rotate root element
+---@field protected RotateArcballElement UGizmoElementCircle @Rotate arcball inner circle
+---@field protected RotateScreenSpaceElement UGizmoElementCircle @Rotate screen space circle
+---@field protected ScaleXAxisElement UGizmoElementArrow @Scale X Axis object
+---@field protected ScaleYAxisElement UGizmoElementArrow @Scale Y Axis object
+---@field protected ScaleZAxisElement UGizmoElementArrow @Scale Z Axis object
+---@field protected ScalePlanarXYElement UGizmoElementBox @Scale planar XY handle
+---@field protected ScalePlanarYZElement UGizmoElementBox @Scale planar YZ handle
+---@field protected ScalePlanarXZElement UGizmoElementBox @Scale planar XZ handle
+---@field protected ScaleUniformElement UGizmoElementBox @Uniform scale object
+---@field protected CameraAxisSource UGizmoConstantFrameAxisSource @Axis that points towards camera, X/Y plane tangents aligned to right/up. Shared across Gizmos, and created internally during SetActiveTarget()
+---@field protected StateTarget TScriptInterface<UGizmoStateTarget> @The state target is created internally during SetActiveTarget() if no one is provided.
+---@field protected TransparentVertexColorMaterial UMaterialInterface @Materials and colors to be used when drawing the items for each axis
+---@field protected GridMaterial UMaterialInterface
+---@field protected AxisMaterialX UMaterialInstanceDynamic
+---@field protected AxisMaterialY UMaterialInstanceDynamic
+---@field protected AxisMaterialZ UMaterialInstanceDynamic
+---@field protected CurrentAxisMaterial UMaterialInstanceDynamic
+---@field protected GreyMaterial UMaterialInstanceDynamic
+---@field protected WhiteMaterial UMaterialInstanceDynamic
+---@field protected OpaquePlaneMaterialXY UMaterialInstanceDynamic
+---@field protected ScaleMultiplier number @Percentage-based scale multiplier
+---@field protected CurrentTransform FTransform @Current transform
+---@field protected CurrentMode EGizmoTransformMode @Currently rendered transform mode
+---@field protected CurrentAxisToDraw integer @Currently rendered axis list
+---@field protected LastHitPart ETransformGizmoPartIdentifier @Last hit part
+---@field protected InteractionAxisList integer @Active axis type (only valid between state target BeginModify/EndModify)
+---@field protected InteractionAxisOrigin FVector @Active world space axis origin (only valid between state target BeginModify/EndModify)
+---@field protected InteractionAxisDirection FVector @Active world space axis (only valid between state target BeginModify/EndModify)
+---@field protected InteractionAxisStartParam number @Active interaction start hit param (only valid between state target BeginModify/EndModify)
+---@field protected InteractionAxisCurrParam number @Active interaction current hit param (only valid between state target BeginModify/EndModify)
+---@field protected InteractionPlanarOrigin FVector @Active world space planar origin (only valid between state target BeginModify/EndModify)
+---@field protected InteractionPlanarNormal FVector @Active world space normal used for planar (only valid between state target BeginModify/EndModify)
+---@field protected NormalToRemove FVector @Active normal to remove from axis translation (only valid between state target BeginModify/EndModify)
+---@field protected InteractionPlanarAxisX FVector @Active world space axis X used for planar (only valid between state target BeginModify/EndModify)
+---@field protected InteractionPlanarAxisY FVector @Active world space axis Y used for planar (only valid between state target BeginModify/EndModify)
+---@field protected InteractionPlanarStartPoint FVector @Active interaction start point planar (only valid between state target BeginModify/EndModify)
+---@field protected InteractionPlanarCurrPoint FVector @Active interaction current point planar (only valid between state target BeginModify/EndModify)
+---@field protected InteractionStartAngle number @Active interaction rotation start angle (only valid between state target BeginModify/EndModify)
+---@field protected InteractionCurrAngle number @Active interaction rotation curr angle (only valid between state target BeginModify/EndModify)
+---@field protected InteractionScreenAxisDirection FVector2D @Active interaction screen axis dir (only valid between state target BeginModify/EndModify)
+---@field protected NormalProjectionToRemove FVector2D @Active normal projection to remove from drag when rotating
+---@field protected InteractionScreenStartPos FVector2D @Active interaction screen start pos (only valid between state target BeginModify/EndModify)
+---@field protected InteractionScreenEndPos FVector2D @Active interaction screen end pos (only valid between state target BeginModify/EndModify)
+---@field protected InteractionScreenCurrPos FVector2D @Active interaction screen current pos (only valid between state target BeginModify/EndModify)
+---@field protected InteractionArcBallStartPoint FVector @Active interaction arc ball start point
+---@field protected InteractionArcBallCurrPoint FVector @Active interaction arc ball current point
+---@field protected StartRotation FQuat @Arc ball start rotation
+---@field protected bIndirectManipulation boolean @Indirect manipulation
+---@field protected bDeferDrag boolean @Defer drag function on tick to avoid firing too many drag moves
+---@field protected bCtrlMiddleDoesY boolean @Use Ctrl + MMB to do indirect manipulation on the Y axis
+---@field protected DefaultRotateMode integer @Default rotate mode used when using axis rotation handles.
+local UTransformGizmo = {}
+

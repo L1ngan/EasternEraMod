@@ -1,0 +1,24 @@
+---Common movie-scene capture settings
+---@class FMovieSceneCaptureSettings
+---@field public OutputDirectory FDirectoryPath @The directory to output the captured file(s) in
+---@field public GameModeOverride TSubclassOf<AGameModeBase> @Optional game mode to override the map's default game mode with.  This can be useful if the game's normal mode displays UI elements or loading screens that you don't want captured.
+---@field public OutputFormat string @The format to use for the resulting filename. Extension will be added automatically. Any tokens of the form {token} will be replaced with the corresponding value: {fps}                - The captured framerate {frame}              - The current frame number (only relevant for image sequences) {width}              - The width of the captured frames {height}             - The height of the captured frames {world}              - The name of the current world {quality}    - The image compression quality setting {material}   - The material/render pass {shot}       - The name of the level sequence asset shot being played {sequence}   - The name of the level sequence asset being played {camera}     - The name of the current camera {date}       - The date in the format of {year}.{month}.{day} {year}       - The current year {month}      - The current month {day}        - The current day {time}       - The current time in the format of hours.minutes.seconds
+---@field public bOverwriteExisting boolean @Whether to overwrite existing files or not
+---@field public bUseRelativeFrameNumbers boolean @True if frame numbers in the output files should be relative to zero, rather than the actual frame numbers in the originating animation content.
+---@field public HandleFrames integer @Number of frame handles to include for each shot
+---@field public MovieExtension string @Filename extension for movies referenced in the XMLs/EDLs
+---@field public ZeroPadFrameNumbers integer @How much to zero-pad frame numbers on filenames
+---@field public FrameRate FFrameRate @The sequence's frame rate at which to capture if "Use Custom Frame Rate" is not enabled
+---@field public bUseCustomFrameRate boolean @Specify using the custom frame rate as opposed to the sequence's display rate
+---@field public CustomFrameRate FFrameRate @The custom frame rate at which to capture if "Use Custom Frame Rate" is enabled
+---@field public Resolution FCaptureResolution @The resolution at which to capture
+---@field public bEnableTextureStreaming boolean @Whether to texture streaming should be enabled while capturing.  Turning off texture streaming may cause much more memory to be used, but also reduces the chance of blurry textures in your captured video.
+---@field public bCinematicEngineScalability boolean @Whether to enable cinematic engine scalability settings
+---@field public bCinematicMode boolean @Whether to enable cinematic mode whilst capturing
+---@field public bAllowMovement boolean @Whether to allow player movement whilst capturing
+---@field public bAllowTurning boolean @Whether to allow player rotation whilst capturing
+---@field public bShowPlayer boolean @Whether to show the local player whilst capturing
+---@field public bShowHUD boolean @Whether to show the in-game HUD whilst capturing
+---@field public bUsePathTracer boolean @Whether to use the path tracer (if supported) to render the scene
+---@field public PathTracerSamplePerPixel integer @Number of sampler per pixel to be used when rendering the scene with the path tracer (if supported)
+local FMovieSceneCaptureSettings = {}

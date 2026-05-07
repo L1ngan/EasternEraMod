@@ -1,0 +1,2 @@
+---@class FSpriteAssetInitParameters
+local FSpriteAssetInitParameters = {}

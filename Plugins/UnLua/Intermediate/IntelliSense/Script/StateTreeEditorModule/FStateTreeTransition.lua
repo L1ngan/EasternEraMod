@@ -1,0 +1,14 @@
+---Editor representation of a transition in StateTree
+---@class FStateTreeTransition
+---@field public Trigger EStateTreeTransitionTrigger @When to try trigger the transition.
+---@field public RequiredEvent FStateTreeEventDesc @Defines the event required to be present during state selection for the transition to trigger.
+---@field public State FStateTreeStateLink @Transition target state.
+---@field public ID FGuid
+---@field public DelegateListener FStateTreeTransitionDelegateListener @Listener to the selected delegate dispatcher.
+---@field public Priority EStateTreeTransitionPriority @Transition priority when multiple transitions happen at the same time. During transition handling, the transitions are visited from leaf to root. The first visited transition, of highest priority, that leads to a state selection, will be activated.
+---@field public bDelayTransition boolean @Delay the triggering of the transition.
+---@field public DelayDuration number @Transition delay duration in seconds.
+---@field public DelayRandomVariance number @Transition delay random variance in seconds.
+---@field public Conditions TArray<FStateTreeEditorNode> @Expression of conditions that need to evaluate to true to allow transition to be triggered.
+---@field public bTransitionEnabled boolean @True if the Transition is Enabled (i.e. not explicitly disabled in the asset).
+local FStateTreeTransition = {}

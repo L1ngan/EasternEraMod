@@ -1,0 +1,2 @@
+---@class FMovieSceneEventParameters
+local FMovieSceneEventParameters = {}

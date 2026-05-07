@@ -1,0 +1,12 @@
+---Enum for controlling buckets for update rate optimizations if we need to stagger
+---Multiple actor populations separately.
+---@class EUpdateRateShiftBucket
+---@field public ShiftBucket0 integer
+---@field public ShiftBucket1 integer
+---@field public ShiftBucket2 integer
+---@field public ShiftBucket3 integer
+---@field public ShiftBucket4 integer
+---@field public ShiftBucket5 integer
+---@field public ShiftBucketMax integer
+---@field public EUpdateRateShiftBucket_MAX integer
+local EUpdateRateShiftBucket = {}

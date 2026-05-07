@@ -1,0 +1,17 @@
+---@class EAudioParameterType
+---@field public None integer
+---@field public Boolean integer
+---@field public Integer integer
+---@field public Float integer
+---@field public String integer
+---@field public Object integer
+---@field public NoneArray integer
+---@field public BooleanArray integer
+---@field public IntegerArray integer
+---@field public FloatArray integer
+---@field public StringArray integer
+---@field public ObjectArray integer
+---@field public Trigger integer
+---@field public COUNT integer
+---@field public EAudioParameterType_MAX integer
+local EAudioParameterType = {}

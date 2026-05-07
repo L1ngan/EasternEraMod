@@ -1,0 +1,17 @@
+---@class EDataflowMathConstantsEnum
+---@field public Dataflow_Math_Constants_Pi integer
+---@field public Dataflow_Math_Constants_HalfPi integer
+---@field public Dataflow_Math_Constants_TwoPi integer
+---@field public Dataflow_Math_Constants_FourPi integer
+---@field public Dataflow_Math_Constants_InvPi integer
+---@field public Dataflow_Math_Constants_InvTwoPi integer
+---@field public Dataflow_Math_Constants_Sqrt2 integer
+---@field public Dataflow_Math_Constants_InvSqrt2 integer
+---@field public Dataflow_Math_Constants_Sqrt3 integer
+---@field public Dataflow_Math_Constants_InvSqrt3 integer
+---@field public Dataflow_Math_Constants_E integer
+---@field public Dataflow_Math_Constants_Gamma integer
+---@field public Dataflow_Math_Constants_GoldenRatio integer
+---@field public Dataflow_Math_Constants_Max integer
+---@field public Dataflow_Math_Constants_MAX integer
+local EDataflowMathConstantsEnum = {}

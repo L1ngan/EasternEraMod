@@ -1,0 +1,12 @@
+---* Captured state tree transition result that can be cached for recording purposes.
+---* Primarily, when transitions are recorded through this structure, we can replicate them down
+---* to clients to keep our state tree in sync.
+---@class FRecordedStateTreeTransitionResult
+---@field public NextActiveFrames TArray<FRecordedStateTreeExecutionFrame> @States selected as result of the transition.
+---@field public NextActiveFrameEvents TArray<FStateTreeEvent> @Captured events from the transition that we've recorded
+---@field public SourceState FStateTreeStateHandle @Transition source state.
+---@field public TargetState FStateTreeStateHandle @Transition target state.
+---@field public Priority EStateTreeTransitionPriority @Priority of the transition that caused the state change.
+---@field public SourceStateTree UStateTree @StateTree asset that was active when the transition was requested.
+---@field public SourceRootState FStateTreeStateHandle @Root state the execution frame where the transition was requested.
+local FRecordedStateTreeTransitionResult = {}

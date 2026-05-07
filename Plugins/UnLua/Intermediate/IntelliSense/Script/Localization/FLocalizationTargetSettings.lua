@@ -1,0 +1,16 @@
+---@class FLocalizationTargetSettings
+---@field public Name string @Unique name for the target.
+---@field public Guid FGuid
+---@field public ConflictStatus ELocalizationTargetConflictStatus @Whether the target has outstanding conflicts that require resolution.
+---@field public TargetDependencies TArray<FGuid> @Text present in these targets will not be duplicated in this target.
+---@field public AdditionalManifestDependencies TArray<FFilePath> @Text present in these manifests will not be duplicated in this target.
+---@field public RequiredModuleNames TArray<string> @The names of modules which must be loaded when gathering text. Use to gather from packages or metadata sourced from a module that isn't the primary game module.
+---@field public GatherFromTextFiles FGatherTextFromTextFilesConfiguration @Parameters for defining what text is gathered from text files and how.
+---@field public GatherFromPackages FGatherTextFromPackagesConfiguration @Parameters for defining what text is gathered from packages and how.
+---@field public GatherFromMetaData FGatherTextFromMetaDataConfiguration @Parameters for defining what text is gathered from metadata and how.
+---@field public ExportSettings FLocalizationExportingSettings @Settings for exporting translations.
+---@field public CompileSettings FLocalizationCompilationSettings @Settings for compiling translations.
+---@field public ImportDialogueSettings FLocalizationImportDialogueSettings @Settings for importing dialogue from WAV files.
+---@field public NativeCultureIndex integer @The index of the native language among the supported languages.
+---@field public SupportedCulturesStatistics TArray<FCultureStatistics> @Language for which the source text is being localized for.
+local FLocalizationTargetSettings = {}

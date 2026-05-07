@@ -1,0 +1,74 @@
+---A Niagara System contains multiple Niagara Emitters to create various effects.
+---Niagara Systems can be placed in the world, unlike Emitters, and expose User Parameters to configure an effect at runtime.
+---@class UNiagaraSystem : UFXSystemAsset
+---@field public ThumbnailImage UTexture2D @Internal: The thumbnail image.
+---@field public LibraryVisibility ENiagaraScriptLibraryVisibility @If this system is exposed to the library, or should be explicitly hidden.
+---@field public TemplateAssetDescription string
+---@field public Category string @Category of this system.
+---@field public AssetTags TArray<FNiagaraAssetTagDefinitionReference>
+---@field public ScratchPadScripts TArray<UNiagaraScript>
+---@field public EditorOnlyAddedParameters FNiagaraParameterStore
+---@field public UpdateContext FNiagaraSystemUpdateContext
+---@field protected bBakeOutRapidIteration boolean @When enable constant values are baked into the scripts while editing the system, this will increase iteration times but improve performance.
+---@field protected bBakeOutRapidIterationOnCook boolean @When enabled constant values are baked into scripts to improve performance.
+---@field protected bCompressAttributes boolean @Toggles whether or not emitters within this system will try and compress their particle attributes.       In some cases, this precision change can lead to perceivable differences, but memory costs and or performance (especially true for GPU emitters) can improve.
+---@field protected bTrimAttributes boolean @When enabled we trim particle attributes while editing the system.
+---@field protected bTrimAttributesOnCook boolean @If true Particle attributes will be removed from the DataSet if they are unnecessary (are never read by ParameterMap)
+---@field protected bIgnoreParticleReadsForAttributeTrim boolean @If true ParticleReads will not absolutely prevent attribute trimming - User must ensure that the appropriate attributes are preserved on the source emitter!
+---@field protected bDisableDebugSwitches boolean @When enable debug switches are disabled while editing the system.
+---@field protected bDisableDebugSwitchesOnCook boolean @When enabled debug switches are disabled when compiling the system.
+---@field public ParameterDefinitionsSubscriptions TArray<FParameterDefinitionsSubscription> @Subscriptions to definitions of parameters.
+---@field public bSupportLargeWorldCoordinates boolean @If true then position type values will be rebased on system activation to fit into a float precision vector. This needs to be turned off when using a custom data interface or renderer that does not support the rebasing.
+---@field public bOverrideCastShadow boolean @Various optional overrides for component properties when spawning a system
+---@field public bOverrideReceivesDecals boolean
+---@field public bOverrideRenderCustomDepth boolean
+---@field public bOverrideCustomDepthStencilValue boolean
+---@field public bOverrideCustomDepthStencilWriteMask boolean
+---@field public bOverrideTranslucencySortPriority boolean
+---@field public bOverrideTranslucencySortDistanceOffset boolean
+---@field public bCastShadow boolean @When enabled this is the default value set on the component. Controls whether the primitive component should cast a shadow or not.
+---@field public bReceivesDecals boolean @When enabled this is the default value set on the component. Whether the primitive receives decals.
+---@field public bRenderCustomDepth boolean @When enabled this is the default value set on the component. This primitive has bRenderCustomDepth enabled.
+---@field private bInitialOwnerVelocityFromActor boolean @When enabled we use the owner actor's velocity for the first frame. If we do not have an owner actor, or this is disable then the first frame's velocity will be zero.
+---@field private LargeWorldCoordinateTileUpdateMode Unknown
+---@field public CustomDepthStencilWriteMask ERendererStencilMask @When enabled this is the default value set on the component. Mask used for stencil buffer writes.
+---@field public CustomDepthStencilValue integer @When enabled this is the default value set on the component. Optionally write this 0-255 value to the stencil buffer in CustomDepth pass (Requires project setting or r.CustomDepth == 3)
+---@field public TranslucencySortPriority integer @When enabled this is the default value set on the component. Adjusts the translucent object sorting priority, see PrimitiveComponent description for more details.
+---@field public TranslucencySortDistanceOffset number @When enabled this is the default value set on the component. Modifies the sort distance for translucent objects, see PrimitiveComponent description for more details.
+---@field public bDumpDebugSystemInfo boolean
+---@field public bDumpDebugEmitterInfo boolean
+---@field public bRequireCurrentFrameData boolean @When enabled, we follow the settings on the UNiagaraComponent for tick order. When this option is disabled, we ignore any dependencies from data interfaces or other variables and instead fire off the simulation as early in the frame as possible. This greatly       reduces overhead and allows the game thread to run faster, but comes at a tradeoff if the dependencies might leave gaps or other visual artifacts.
+---@field protected bOverrideScalabilitySettings boolean
+---@field public bFixedBounds boolean @Whether or not fixed bounds are enabled.
+---@field protected EffectType UNiagaraEffectType @An effect types defines settings shared between systems, for example scalability and validation rules. Things like environment fx usually have a different effect type than gameplay relevant fx such as weapon impacts. This way whole classes of effects can be adjusted at once.
+---@field protected bOverrideAllowCullingForLocalPlayers boolean @Controls whether we should override the Effect Type value for bAllowCullingForLocalPlayers.
+---@field protected bAllowCullingForLocalPlayersOverride boolean @The override value for bAllowCullingForLocalPlayers from the Effect Type.
+---@field protected SystemScalabilityOverrides FNiagaraSystemScalabilityOverrides
+---@field protected Platforms FNiagaraPlatformSet
+---@field protected EmitterHandles TArray<FNiagaraEmitterHandle> @Handles to the emitter this System will simulate.
+---@field protected ParameterCollectionOverrides TArray<UNiagaraParameterCollectionInstance>
+---@field protected SystemSpawnScript UNiagaraScript @The script which defines the System parameters, and which generates the bindings from System               parameter to emitter parameter.
+---@field protected SystemUpdateScript UNiagaraScript @The script which defines the System parameters, and which generates the bindings from System       parameter to emitter parameter.
+---@field protected SystemCompiledData FNiagaraSystemCompiledData @/ Post compile generated data used for initializing System Instances during runtime.
+---@field protected ExposedParameters FNiagaraUserRedirectionParameterStore @Variables exposed to the outside work for tweaking
+---@field protected EditorData UNiagaraEditorDataBase @Data used by the editor to maintain UI state etc..
+---@field protected EditorParameters UNiagaraEditorParametersAdapterBase @Wrapper for editor only parameters.
+---@field protected FixedBounds FBox @The fixed bounding box value for the whole system. When placed in the level and the bounding box is not visible to the camera, the effect is culled from rendering.
+---@field protected bUseInitialStreamingBounds boolean
+---@field protected InitialStreamingBounds FBox @Initial streaming bounds are only included when the streaming system asks for the inital bounds, it is the union of the currently calculated generated bounds and these bounds. Any future updates to the bounds in the streamer will use the component bounds only and not these bounds. Setting initial streaming bounds can help in situations where textures do not stream in correctly as the heuristic to updating the bounds inside the streaming system does not update them at all, or frequently enough. This is generally an issue with dynamic bounds, if your system has fixed bounds it is unlikely you will need to use this.
+---@field protected bNeedsGPUContextInitForDataInterfaces boolean
+---@field protected bDeterminism boolean @When disabled we will generate a RandomSeed per instance on reset which is not deterministic. When enabled we will always use the RandomSeed from the system plus the components RandomSeedOffset, this allows for determinism but variance between components.
+---@field protected bFixedTickDelta boolean
+---@field protected RandomSeed integer @Seed used for system script random number generator.
+---@field protected WarmupTime number @Warm up time in seconds. Used to calculate WarmupTickCount. Rounds down to the nearest multiple of WarmupTickDelta.
+---@field protected WarmupTickCount integer @Number of ticks to process for warmup. You can set by this or by time via WarmupTime.
+---@field protected WarmupTickDelta number @Delta time to use for warmup ticks.
+---@field protected FixedTickDeltaTime number @If activated, the system ticks with a fixed delta time instead of the varying game thread delta time. This leads to much more stable simulations. When the fixed tick delta is smaller than the game thread tick time the simulation is substepping by executing multiple ticks per frame. Note that activating this feature forces the system to tick on the game thread instead of an async task in parallel. The max number of substeps per frame can be set via fx.Niagara.SystemSimulation.MaxTickSubsteps
+---@field protected BakerSettings UNiagaraBakerSettings @Settings used inside the baker
+---@field protected BakerGeneratedSettings UNiagaraBakerSettings @Generated data baker settings, will be null until we have generated at least once.
+---@field protected bAllowSystemStateFastPath boolean @When enabled if all emitters don't require script execution and the system script is empty / constant we can invoke a faster CPU path.
+---@field protected bSystemStateFastPathEnabled boolean
+---@field protected MessageStore FNiagaraMessageStore
+---@field protected SystemStateDataStruct FInstancedStruct
+local UNiagaraSystem = {}
+

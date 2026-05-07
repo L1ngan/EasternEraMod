@@ -1,0 +1,23 @@
+---@class FNiagaraEmitterStateData
+---@field public InactiveResponse ENiagaraEmitterInactiveResponse @UPROPERTY(EditAnywhere, Category="Emitter State") ENiagaraStatelessEmitterState_SelfSystem LifeCycleMode = ENiagaraStatelessEmitterState_SelfSystem::Self;
+---@field public LoopBehavior ENiagaraLoopBehavior
+---@field public LoopCount integer
+---@field public LoopDurationMode ENiagaraLoopDurationMode
+---@field public LoopDuration FNiagaraDistributionRangeFloat
+---@field public LoopDelay FNiagaraDistributionRangeFloat
+---@field public bLoopDelayEnabled boolean
+---@field public bRecalculateDurationEachLoop boolean
+---@field public bDelayFirstLoopOnly boolean
+---@field public bRecalculateDelayEachLoop boolean
+---@field public bEnableDistanceCulling boolean
+---@field public bEnableVisibilityCulling boolean
+---@field public bMinDistanceEnabled boolean
+---@field public bMaxDistanceEnabled boolean
+---@field public bResetAgeOnAwaken boolean
+---@field public MinDistance number
+---@field public MinDistanceReaction ENiagaraExecutionStateManagement
+---@field public MaxDistance number
+---@field public MaxDistanceReaction ENiagaraExecutionStateManagement
+---@field public VisibilityCullReaction ENiagaraExecutionStateManagement
+---@field public VisibilityCullDelay number
+local FNiagaraEmitterStateData = {}

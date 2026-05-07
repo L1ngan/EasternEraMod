@@ -1,0 +1,27 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\asyncloadingscreen\\source\\asyncloadingscreen\\private\\loadingscreensettings.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\easternera\\shipping\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\asyncloadingscreen\\intermediate\\build\\win64\\x64\\unrealgame\\shipping\\asyncloadingscreen\\definitions.asyncloadingscreen.h",
+            "g:\\modproject\\plugins\\asyncloadingscreen\\source\\asyncloadingscreen\\public\\loadingscreensettings.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\movieplayer\\public\\movieplayer.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\public\\slate\\slatetextures.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\slatecore\\public\\textures\\slateupdatabletexture.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\movieplayer\\uht\\movieplayer.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\slate\\public\\widgets\\layout\\sscalebox.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\slate\\uht\\sscalebox.generated.h",
+            "g:\\modproject\\plugins\\asyncloadingscreen\\intermediate\\build\\win64\\unrealgame\\inc\\asyncloadingscreen\\uht\\loadingscreensettings.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\engine\\font.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\engine\\fontimportoptions.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\fontimportoptions.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\slatecore\\public\\fonts\\fontproviderinterface.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\slatecore\\uht\\fontproviderinterface.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\font.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

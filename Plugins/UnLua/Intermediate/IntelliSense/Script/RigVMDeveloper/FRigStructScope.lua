@@ -1,0 +1,2 @@
+---@class FRigStructScope
+local FRigStructScope = {}

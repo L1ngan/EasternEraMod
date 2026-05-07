@@ -1,0 +1,2 @@
+---@class FInstancedStaticMeshMappingInfo
+local FInstancedStaticMeshMappingInfo = {}

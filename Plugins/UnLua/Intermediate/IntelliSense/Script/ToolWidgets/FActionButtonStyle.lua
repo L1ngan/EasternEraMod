@@ -1,0 +1,16 @@
+---Represents the appearance of an SActionButton
+---@class FActionButtonStyle : FSlateWidgetStyle
+---@field public ButtonStyle FButtonStyle @The style to use for our SButton.
+---@field public ButtonContentPadding Unknown @Spacing between button's border and the content. Default uses ButtonStyle.
+---@field public ComboButtonStyle FComboButtonStyle @The style to use for our SComboButton.
+---@field public bHasDownArrow boolean @Whether to show a down arrow for the combo button
+---@field public ComboButtonContentPadding Unknown @Spacing between button's border and the content. Default uses ComboButtonStyle.
+---@field public HorizontalContentAlignment integer @Horizontal Content alignment within the button.
+---@field public TextBlockStyle FTextBlockStyle @The style to use for the button Text.
+---@field public IconBrush Unknown @Icon Brush to use.
+---@field public IconColorAndOpacity Unknown @Icon Color/Tint, defaults is determined by ActionButtonType.
+---@field public IconNormalPadding Unknown @If set and the button's icon is non-null, overrides the button style's additional spacing between the button's border and the content when not pressed.
+---@field public IconPressedPadding Unknown @If set and the button's icon is non-null, overrides the button style's additional spacing between the button's border and the content when pressed.
+---@field private ActionButtonType string @The type to use for our SActionButton.
+---@field private IconButtonStyle Unknown @The style to use for our SButton when an icon is present. ButtonStyle used if not specified.
+local FActionButtonStyle = {}

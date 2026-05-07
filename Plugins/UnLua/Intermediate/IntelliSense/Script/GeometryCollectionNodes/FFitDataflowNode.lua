@@ -1,0 +1,11 @@
+---Fits a value from one range to another
+---Returns a number between newmin and newmax that is relative to num in the range between oldmin and oldmax.
+---If the value is outside the old range, it will be clamped to the new range.
+---@class FFitDataflowNode : FDataflowNode
+---@field public Float number
+---@field public OldMin number
+---@field public OldMax number
+---@field public NewMin number
+---@field public NewMax number
+---@field public ReturnValue number
+local FFitDataflowNode = {}

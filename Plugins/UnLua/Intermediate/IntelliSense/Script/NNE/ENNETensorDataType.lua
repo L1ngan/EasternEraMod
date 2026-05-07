@@ -1,0 +1,22 @@
+---The enum lists all tensor data types used in NNE.
+---See UE::NNE::GetTensorDataTypeSizeInBytes(ENNETensorDataType InType) to get the size of each data type in bytes.
+---@class ENNETensorDataType
+---@field public None integer
+---@field public Char integer
+---@field public Boolean integer
+---@field public Half integer
+---@field public Float integer
+---@field public Double integer
+---@field public Int8 integer
+---@field public Int16 integer
+---@field public Int32 integer
+---@field public Int64 integer
+---@field public UInt8 integer
+---@field public UInt16 integer
+---@field public UInt32 integer
+---@field public UInt64 integer
+---@field public Complex64 integer
+---@field public Complex128 integer
+---@field public BFloat16 integer
+---@field public ENNETensorDataType_MAX integer
+local ENNETensorDataType = {}

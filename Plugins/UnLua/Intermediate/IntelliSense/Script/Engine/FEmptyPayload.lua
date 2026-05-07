@@ -1,0 +1,2 @@
+---@class FEmptyPayload
+local FEmptyPayload = {}

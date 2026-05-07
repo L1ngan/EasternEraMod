@@ -1,0 +1,25 @@
+---Container for task status for all the active states and global tasks.
+---Each task needs 2 bits of information. The information is in 2 different int32. 1 bit per int32 instead of 2bits inside the same int32.
+---The int32 are sequential: The first masks takes the 2 first int32 and (if needed) the second mask takes the 3rd and 4th int32.
+---A state/global has at least 1 entry (2bits), even if there are no tasks on the state/global. It is to represent if the state completes (ex: when no tasks are ticked the state completes).
+---The bits, from different states, are packed until there are too many to fit inside the same int32.
+---When it can't be packed, all the bits from that overflow state are moved to the next int32.
+---When possible (when the number of tasks is below 32), the buffer will be inlined. Otherwise, it will use dynamic memory.
+---We allocate the worst case scenario when the frame is created.
+---Ex: For the tree:
+---    (0)Global task: 8 tasks. (1)State Root: 6 tasks. (2)StateA: no task (it takes one bit). (3)StateB: 10 tasks.
+---    (4)State: 8 tasks, not enough space go to the next int32. (5)State: 1 task, takes one bit.
+---    The mask looks like:
+---[------33333333333211111100000000|-----------------------544444444]
+---    The buffer will be 4 int32.
+---    The first 2 int32 are for the (0)Global task, (1)State Root, (2)State, (3)StateB
+---    The next 2 int32 are for the (4)State, (5)State
+---The first bit of each buffer is combined to represent the ETaskCompletionStatus.
+---Ex: (on int8 instead of int32 to be shorter in this description)
+---    There are 3 tasks. The bits 0-2 are used. The other bits are never set/read. We use the "completion mask" to filter them.
+---[00001100|00001010]
+---    Task 1 has the value 00 (0 from the first buffer and 0 from the second buffer). It's Running.
+---    Task 2 has the value 01 (0 from the first buffer and 1 from the second buffer). It's Stopped.
+---    Task 3 has the value 10 (1 from the first buffer and 0 from the second buffer). It's Succeeded.
+---@class FStateTreeTasksCompletionStatus
+local FStateTreeTasksCompletionStatus = {}

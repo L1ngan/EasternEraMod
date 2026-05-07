@@ -1,0 +1,11 @@
+---@class EChunkMemorySize
+---@field public Size4Kb integer
+---@field public Size8Kb integer
+---@field public Size16Kb integer
+---@field public Size32Kb integer
+---@field public Size64Kb integer
+---@field public Size128Kb integer
+---@field public Size256Kb integer
+---@field public Size512Kb integer
+---@field public EChunkMemorySize_MAX integer
+local EChunkMemorySize = {}

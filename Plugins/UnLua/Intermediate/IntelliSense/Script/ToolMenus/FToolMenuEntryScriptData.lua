@@ -1,0 +1,11 @@
+---@class FToolMenuEntryScriptData
+---@field public Menu string
+---@field public Section string
+---@field public Name string
+---@field public Label string
+---@field public ToolTip string
+---@field public Icon FScriptSlateIcon
+---@field public OwnerName string @Optional identifier used for unregistering a group of menu items
+---@field public InsertPosition FToolMenuInsert
+---@field public Advanced FToolMenuEntryScriptDataAdvanced
+local FToolMenuEntryScriptData = {}

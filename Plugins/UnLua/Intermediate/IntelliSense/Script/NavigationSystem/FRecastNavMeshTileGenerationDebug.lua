@@ -1,0 +1,26 @@
+---@class FRecastNavMeshTileGenerationDebug
+---@field public bEnabled boolean @If set, the selected internal debug data will be kept during tile generation to be displayed with the navmesh.
+---@field public TileCoordinate FIntVector @Selected tile coordinate, only this tile will have it's internal data kept. When MaxTileCoordinate is enabled, this defines the lower bound of a rectangle. Tip: displaying the navmesh using 'Draw Tile Labels' show tile coordinates.
+---@field public MaxTileCoordinate FIntVector @Optional: Highest bound included tile to define a rectangle with TileCoordinate for which the internal data is kept. Tip: displaying the navmesh using 'Draw Tile Labels' show tile coordinates.
+---@field public bGenerateDebugTileOnly boolean @If set, the generator will only generate the tile selected to debug (set in TileCoordinate).
+---@field public bCollisionGeometry boolean @Display the collision used for the navmesh rasterization. Note: The visualization is affected by the DrawOffset of the RecastNavmesh owner
+---@field public HeightFieldRenderMode EHeightFieldRenderMode
+---@field public bHeightfieldFromRasterization boolean
+---@field public bHeightfieldPostInclusionBoundsFiltering boolean
+---@field public bHeightfieldPostHeightFiltering boolean
+---@field public bHeightfieldBounds boolean
+---@field public bCompactHeightfield boolean
+---@field public bCompactHeightfieldEroded boolean
+---@field public bHeightFieldLayers boolean
+---@field public bCompactHeightfieldRegions boolean
+---@field public bCompactHeightfieldDistances boolean
+---@field public bTileCacheLayerAreas boolean
+---@field public bTileCacheLayerRegions boolean
+---@field public bSkipContourSimplification boolean @If set, the contour simplification step will be skipped. Beware that enabling this changes the way navmesh will generate when Tile Generation Debug is enabled.
+---@field public bTileCacheContours boolean
+---@field public bTileCachePolyMesh boolean
+---@field public bTileCacheDetailMesh boolean
+---@field public bUseMaxTileCoordinate boolean
+---@field public LinkGenerationDebugFlags integer
+---@field public LinkGenerationSelectedEdge integer @Using -1 as no selected edge.
+local FRecastNavMeshTileGenerationDebug = {}

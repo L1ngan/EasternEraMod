@@ -1,0 +1,2 @@
+---@class FWorldPartitionActorFilter
+local FWorldPartitionActorFilter = {}

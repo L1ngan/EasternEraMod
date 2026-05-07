@@ -1,0 +1,11 @@
+---@class FGroomCacheImportSettings
+---@field public bImportGroomCache boolean @Import the animated groom that was detected in this file
+---@field public ImportType EGroomCacheImportType @Groom Cache types to import
+---@field public FrameStart integer @Starting index to start sampling the animation from
+---@field public FrameEnd integer @Ending index to stop sampling the animation at
+---@field public bSkipEmptyFrames boolean @Skip empty (pre-roll) frames and start importing at the frame which actually contains data
+---@field public bImportGroomAsset boolean @Import or re-import the groom asset from this file
+---@field public GroomAsset FSoftObjectPath @The groom asset the groom cache will be built from (must be compatible)
+---@field public bOverrideConversionSettings boolean @Set to true to override the groom conversion settings. Otherwise, use the settings from the groom import options
+---@field public ConversionSettings FGroomConversionSettings @Conversion settings to apply to the groom cache import when override is enabled
+local FGroomCacheImportSettings = {}

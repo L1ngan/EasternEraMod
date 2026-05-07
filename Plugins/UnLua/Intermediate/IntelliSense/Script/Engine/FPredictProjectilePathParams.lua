@@ -1,0 +1,17 @@
+---Input parameters to PredictProjectilePath functions.
+---@class FPredictProjectilePathParams
+---@field public StartLocation FVector @Location of the start of the trace.
+---@field public LaunchVelocity FVector @Initial launch velocity at the start of the trace.
+---@field public bTraceWithCollision boolean @Whether to trace along the path looking for blocking collision and stopping at the first hit.
+---@field public ProjectileRadius number @Projectile radius, used when tracing for collision. If <= 0, a line trace is used instead.
+---@field public MaxSimTime number @Maximum simulation time for the virtual projectile.
+---@field public bTraceWithChannel boolean @Whether or not to use TraceChannel, if tracing with collision.
+---@field public TraceChannel integer @Trace channel to use, if tracing with collision.
+---@field public ObjectTypes TArray<integer> @Object type to use, if tracing with collision.
+---@field public ActorsToIgnore TArray<AActor> @Actors to ignore when tracing with collision.
+---@field public SimFrequency number @Determines size of each sub-step in the simulation (chopping up MaxSimTime). Recommended between 10 to 30 depending on desired quality versus performance.
+---@field public OverrideGravityZ number @Optional override of Gravity (if 0, uses WorldGravityZ).
+---@field public DrawDebugType integer @Debug drawing duration option.
+---@field public DrawDebugTime number @Duration of debug lines (only relevant for DrawDebugType::Duration)
+---@field public bTraceComplex boolean @Trace against complex collision (triangles rather than simple primitives) if tracing with collision.
+local FPredictProjectilePathParams = {}

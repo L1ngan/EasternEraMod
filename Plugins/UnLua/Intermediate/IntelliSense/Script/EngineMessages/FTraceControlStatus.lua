@@ -1,0 +1,18 @@
+---Response for FTraceControlStatusPing. Meant to be fairly high
+---frequency.
+---@class FTraceControlStatus
+---@field public Endpoint string
+---@field public SessionGuid FGuid
+---@field public TraceGuid FGuid
+---@field public BytesSent integer
+---@field public BytesTraced integer
+---@field public MemoryUsed integer
+---@field public CacheAllocated integer
+---@field public CacheUsed integer
+---@field public CacheWaste integer
+---@field public bAreStatNamedEventsEnabled boolean
+---@field public bIsPaused boolean
+---@field public bIsTracing boolean
+---@field public StatusTimestamp FDateTime
+---@field public TraceSystemStatus integer
+local FTraceControlStatus = {}

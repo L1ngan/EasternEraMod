@@ -1,0 +1,29 @@
+---@class FNetworkPhysicsSettingsNetworkPhysicsComponent
+---@field public bOverrideRedundantInputs boolean
+---@field public RedundantInputs integer @Overrides CVar : np2.Resim.RedundantInputs -- How many extra inputs to send with each unreliable network message, to account for packetloss.From owning client to server and server to owning client.        * NOTE: This is disabled while np2.Resim.DynamicInputScaling.Enabled is enabled.
+---@field public bOverrideRedundantRemoteInputs boolean
+---@field public RedundantRemoteInputs integer @Overrides CVar: np2.Resim.RedundantRemoteInputs -- How many extra inputs to send with each unreliable network message, to account for packetloss. From Server to remote clients.
+---@field public bOverrideRedundantStates boolean
+---@field public RedundantStates integer @Overrides CVar: np2.Resim.RedundantStates -- How many extra states to send with each unreliable network message, to account for packetloss. From Server to remote clients.
+---@field public bOverrideCompareStateToTriggerRewind boolean
+---@field public bCompareStateToTriggerRewind boolean @Overrides CVar: np2.Resim.CompareStateToTriggerRewind -- When true, cache local FNetworkPhysicsData state in rewind history and compare the predicted state with incoming server state to trigger resimulations if they differ, comparison done through FNetworkPhysicsData::CompareData.
+---@field public bOverridebCompareStateToTriggerRewindIncludeSimProxies boolean
+---@field public bCompareStateToTriggerRewindIncludeSimProxies boolean @Overrides CVar: np2.Resim.CompareStateToTriggerRewind.IncludeSimProxies -- When true, include simulated proxies when np2.Resim.CompareStateToTriggerRewind is enabled.
+---@field public bOverrideCompareInputToTriggerRewind boolean
+---@field public bCompareInputToTriggerRewind boolean @Overrides CVar: np2.Resim.CompareInputToTriggerRewind -- When true, compare local predicted FNetworkPhysicsData input with incoming server input to trigger resimulations if they differ, comparison done through FNetworkPhysicsData::CompareData.
+---@field public bOverrideEnableUnreliableFlow boolean
+---@field public bEnableUnreliableFlow boolean @Overrides CVar: np2.Resim.EnableUnreliableFlow -- When true, allow data to be sent unreliably. Also sends FNetworkPhysicsData not marked with FNetworkPhysicsData::bimportant unreliably over the network.
+---@field public bOverrideEnableReliableFlow boolean
+---@field public bEnableReliableFlow boolean @Overrides CVar: np2.Resim.EnableReliableFlow -- EXPERIMENTAL -- When true, allow data to be sent reliably. Also send FNetworkPhysicsData marked with FNetworkPhysicsData::bimportant reliably over the network.
+---@field public bOverrideApplyDataInsteadOfMergeData boolean
+---@field public bApplyDataInsteadOfMergeData boolean @Overrides CVar: np2.Resim.ApplyDataInsteadOfMergeData -- When true, call ApplyData for each data instead of MergeData when having to use multiple data entries in one frame.
+---@field public bOverrideAllowInputExtrapolation boolean
+---@field public bAllowInputExtrapolation boolean @Overrides CVar: np2.Resim.AllowInputExtrapolation -- When true and not locally controlled, allow inputs to be extrapolated from last known and if there is a gap allow interpolation between two known inputs.
+---@field public bOverrideValidateDataOnGameThread boolean
+---@field public bValidateDataOnGameThread boolean @Overrides CVar: np2.Resim.ValidateDataOnGameThread -- When true, perform server-side input validation through FNetworkPhysicsData::ValidateData on the Game Thread. If false, perform the call on the Physics Thread.
+---@field public bOverrideApplySimProxyStateAtRuntime boolean
+---@field public bApplySimProxyStateAtRuntime boolean @Overrides CVar: np2.Resim.ApplySimProxyStateAtRuntime -- When true, call ApplyData on received states for simulated proxies at runtime.
+---@field public bOverrideApplySimProxyInputAtRuntime boolean
+---@field public bApplySimProxyInputAtRuntime boolean @Overrides CVar: np2.Resim.ApplySimProxyInputAtRuntime -- When true, call ApplyData on received inputs for simulated proxies at runtime.
+---@field public InputDecayCurve FRuntimeFloatCurve @Curve for input decay during resimulation if input is being reused.       * XAxis = Alpha value from 0.0 to 1.0 where 0 is the start of reusing input and 1 is the last time we will reuse the input this resimulation.       * YAxis = The Input Decay value from 0.0 to 1.0 (as a percentage where 1.0 = 100% decay) for the given Alpha.
+local FNetworkPhysicsSettingsNetworkPhysicsComponent = {}

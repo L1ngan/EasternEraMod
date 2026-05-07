@@ -1,0 +1,11 @@
+---@class EStandardGroupNameEnum
+---@field public Dataflow_EStandardGroupNameEnum_Transform integer
+---@field public Dataflow_EStandardGroupNameEnum_Geometry integer
+---@field public Dataflow_EStandardGroupNameEnum_Faces integer
+---@field public Dataflow_EStandardGroupNameEnum_Vertices integer
+---@field public Dataflow_EStandardGroupNameEnum_Material integer
+---@field public Dataflow_EStandardGroupNameEnum_Breaking integer
+---@field public Dataflow_EStandardGroupNameEnum_Custom integer
+---@field public Dataflow_Max integer
+---@field public Dataflow_MAX integer
+local EStandardGroupNameEnum = {}

@@ -1,0 +1,11 @@
+---@class FAudioMaterialEnvelopeSettings
+---@field public EnvelopeType EAudioMaterialEnvelopeType @The Type of the envelope curve.
+---@field public AttackCurve number @Curve of the envelopes attack stage. Attack is the time taken for the rise of the level from zero to a given value.
+---@field public AttackValue number @Value of the envelopes attack stage. Attack is the time taken for the rise of the level from zero to a given value.
+---@field public AttackTime number @Time the Value reaches the Attack stage. Attack is the time taken for the rise of the level from zero to a given value.
+---@field public DecayCurve number @Curve of the envelopes Decay stage. Decay is the time taken for the level to reduce from the attack level to the sustain level.
+---@field public DecayTime number @Time that takes to reach the level of the Sustain stage. Decay is the time taken for the level to reduce from the attack level to the sustain level.
+---@field public SustainValue number @Value of the envelopes Sustain stage. Sustain is the level maintained until release stage.
+---@field public ReleaseCurve number @Curve of the envelopes Release stage. Release is the time taken for the level to decay from sustain to zero.
+---@field public ReleaseTime number @Time that takes to reach zero level Release is the time taken for the level to decay from sustain to zero.
+local FAudioMaterialEnvelopeSettings = {}

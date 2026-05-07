@@ -1,0 +1,22 @@
+---Async GroomBinding Compilation
+---@class EGroomBindingAsyncProperties
+---@field public None integer
+---@field public GroomBindingType integer
+---@field public Groom integer
+---@field public SourceSkeletalMesh integer
+---@field public SourceMeshRequestedLOD integer
+---@field public SourceMeshUsedLOD integer
+---@field public TargetSkeletalMesh integer
+---@field public TargetMeshRequestedMinLOD integer
+---@field public TargetMeshUsedMinLOD integer
+---@field public SourceGeometryCache integer
+---@field public TargetGeometryCache integer
+---@field public NumInterpolationPoints integer
+---@field public MatchingSection integer
+---@field public GroupInfos integer
+---@field public HairGroupResources integer
+---@field public HairGroupPlatformData integer
+---@field public TargetBindingAttribute integer
+---@field public All integer
+---@field public EGroomBindingAsyncProperties_MAX integer
+local EGroomBindingAsyncProperties = {}

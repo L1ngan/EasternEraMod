@@ -1,0 +1,2 @@
+---@class FTypedElementQueryProcessorData
+local FTypedElementQueryProcessorData = {}

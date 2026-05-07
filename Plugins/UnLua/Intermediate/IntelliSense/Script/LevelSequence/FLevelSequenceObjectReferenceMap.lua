@@ -1,0 +1,2 @@
+---@class FLevelSequenceObjectReferenceMap
+local FLevelSequenceObjectReferenceMap = {}

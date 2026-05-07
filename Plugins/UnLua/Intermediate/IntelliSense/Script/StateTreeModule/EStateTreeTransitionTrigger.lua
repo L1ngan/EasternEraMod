@@ -1,0 +1,11 @@
+---Transitions trigger.
+---@class EStateTreeTransitionTrigger
+---@field public None integer
+---@field public OnStateCompleted integer
+---@field public OnStateSucceeded integer
+---@field public OnStateFailed integer
+---@field public OnTick integer
+---@field public OnEvent integer
+---@field public OnDelegate integer
+---@field public MAX integer
+local EStateTreeTransitionTrigger = {}

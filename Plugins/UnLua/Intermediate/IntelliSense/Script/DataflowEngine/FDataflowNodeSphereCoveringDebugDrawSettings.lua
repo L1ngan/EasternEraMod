@@ -1,0 +1,11 @@
+---@class FDataflowNodeSphereCoveringDebugDrawSettings
+---@field public bDisplaySphereCovering boolean @Display sphere covering
+---@field public RenderType EDataflowDebugDrawRenderType
+---@field public bTranslucent boolean
+---@field public LineWidthMultiplier number
+---@field public ColorMethod EDataflowSphereCoveringColorMethod
+---@field public Color FLinearColor
+---@field public ColorRandomSeed integer @Random seed
+---@field public ColorA FLinearColor
+---@field public ColorB FLinearColor
+local FDataflowNodeSphereCoveringDebugDrawSettings = {}

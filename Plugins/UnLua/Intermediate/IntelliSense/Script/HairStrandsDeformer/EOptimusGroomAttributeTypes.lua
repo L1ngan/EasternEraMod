@@ -1,0 +1,20 @@
+---List of attribute types on which you could paint in dataflow
+---@class EOptimusGroomAttributeTypes
+---@field public None integer
+---@field public Bool integer
+---@field public Int integer
+---@field public IntVector2 integer
+---@field public IntVector3 integer
+---@field public IntVector4 integer
+---@field public Uint integer
+---@field public Float integer
+---@field public Vector2 integer
+---@field public Vector3 integer
+---@field public Vector4 integer
+---@field public LinearColor integer
+---@field public Quat integer
+---@field public Rotator integer
+---@field public Transform integer
+---@field public Matrix3x4 integer
+---@field public EOptimusGroomAttributeTypes_MAX integer
+local EOptimusGroomAttributeTypes = {}

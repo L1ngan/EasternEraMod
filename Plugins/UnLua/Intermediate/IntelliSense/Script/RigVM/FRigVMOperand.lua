@@ -1,0 +1,13 @@
+---The FRigVMOperand represents an argument used for an operator
+---within the virtual machine. Operands provide information about
+---which memory needs to be referred to, which register within the
+---memory all the way to the actual byte address in memory.
+---The FRigVMOperand is a light weight address for a register in
+---a FRigVMMemoryContainer.
+---For external variables the register index represents the
+---index of the external variable within the running VM.
+---@class FRigVMOperand
+---@field private MemoryType ERigVMMemoryType
+---@field private RegisterIndex integer @The index of the register inside of the specific type of memory (work, literal etc). For external variables the register index represents the index of the external variable within the running VM.
+---@field private RegisterOffset integer
+local FRigVMOperand = {}

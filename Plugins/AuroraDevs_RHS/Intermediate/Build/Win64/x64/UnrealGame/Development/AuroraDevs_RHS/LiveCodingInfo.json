@@ -1,0 +1,16 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AuroraDevs_RHS.gen.cpp.obj": [
+			"AuroraDevs_RHS.init.gen.cpp.obj",
+			"RHS_AdaptableCollisionActor.gen.cpp.obj",
+			"RHS_AnimNotifyBase.gen.cpp.obj",
+			"RHS_BlueprintFunctionLibrary.gen.cpp.obj",
+			"RHS_CollisionShape.gen.cpp.obj",
+			"RHS_Data.gen.cpp.obj",
+			"RHS_HitboxAnimNotify.gen.cpp.obj",
+			"RHS_ProjectileBase.gen.cpp.obj",
+			"RHS_SpawnHomingProjectileBase.gen.cpp.obj"
+		]
+	}
+}

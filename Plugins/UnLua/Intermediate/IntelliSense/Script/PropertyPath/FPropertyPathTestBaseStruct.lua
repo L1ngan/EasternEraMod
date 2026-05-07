@@ -1,0 +1,2 @@
+---@class FPropertyPathTestBaseStruct
+local FPropertyPathTestBaseStruct = {}

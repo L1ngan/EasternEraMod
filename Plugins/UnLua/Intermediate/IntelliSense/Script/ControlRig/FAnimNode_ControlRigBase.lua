@@ -1,0 +1,16 @@
+---Animation node that allows animation ControlRig output to be used in an animation graph
+---@class FAnimNode_ControlRigBase : FAnimNode_CustomProperty
+---@field protected Source FPoseLink
+---@field protected bResetInputPoseToInitial boolean @If this is checked the rig's pose needs to be reset to its initial prior to evaluating the rig.
+---@field protected bTransferInputPose boolean @If this is checked the bone pose coming from the AnimBP will be transferred into the Control Rig.
+---@field protected bTransferInputCurves boolean @If this is checked the curves coming from the AnimBP will be transferred into the Control Rig.
+---@field protected bTransferPoseInGlobalSpace boolean @Transferring the pose in global space guarantees a global pose match, while transferring in local space ensures a match of the local transforms. In general transforms only differ if the hierarchy topology differs between the Control Rig and the skeleton used in the AnimBP. Note: Turning this off can potentially improve performance.
+---@field protected InputBonesToTransfer TArray<FBoneReference> @An inclusive list of bones to transfer as part of the input pose transfer phase. If this list is empty all bones will be transferred.
+---@field protected OutputBonesToTransfer TArray<FBoneReference> @An inclusive list of bones to transfer as part of the output pose transfer phase. If this list is empty all bones will be transferred.
+---@field protected AssetUserData TArray<UAssetUserData>
+---@field protected NodeMappingContainer TWeakObjectPtr<UNodeMappingContainer> @Node Mapping Container
+---@field protected InputSettings FControlRigIOSettings
+---@field protected OutputSettings FControlRigIOSettings
+---@field protected bExecute boolean
+---@field protected EventQueue TArray<FControlRigAnimNodeEventName> @The customized event queue to run
+local FAnimNode_ControlRigBase = {}

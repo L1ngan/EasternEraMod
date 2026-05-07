@@ -1,0 +1,14 @@
+---@class FValidateAssetsSettings
+---@field public bSkipExcludedDirectories boolean @If true, will not validate files in excluded directories
+---@field public bShowIfNoFailures boolean @If true, will add notifications for files with no validation and display even if everything passes
+---@field public bCollectPerAssetDetails boolean @If true, will add an FValidateAssetsDetails for each asset to the results
+---@field public ValidationUsecase EDataValidationUsecase @The usecase requiring datavalidation
+---@field public bLoadAssetsForValidation boolean @If false, unloaded assets will get skipped from validation.
+---@field public bUnloadAssetsLoadedForValidation boolean @If true, will attempt to unload assets which were previously unloaded, and loaded for validation.
+---@field public bLoadExternalObjectsForValidation boolean @If false, external objects (e.g. actors stored separately from maps) will not be loaded when validating their associated asset (e.g. the map)
+---@field public bCaptureAssetLoadLogs boolean @If true, captures log warnings and errors from loading assets for validation and reports them as validation results
+---@field public bCaptureLogsDuringValidation boolean @If true, captures log warnings and errors from other operations that happen during validation and adds them to validation results
+---@field public bCaptureWarningsDuringValidationAsErrors boolean @If true, captured log warnings during validation are added to the validation results as errors (requires bCaptureLogsDuringValidation)
+---@field public MaxAssetsToValidate integer @Maximum number of assets to attempt to validate
+---@field public bValidateReferencersOfDeletedAssets boolean @Should we validate referencers of deleted assets in changelists
+local FValidateAssetsSettings = {}

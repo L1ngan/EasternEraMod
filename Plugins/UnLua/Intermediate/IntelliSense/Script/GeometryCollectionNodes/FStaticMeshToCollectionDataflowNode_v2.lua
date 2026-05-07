@@ -1,0 +1,11 @@
+---Create a geometry collection from a UStaticMesh
+---@class FStaticMeshToCollectionDataflowNode_v2 : FDataflowNode
+---@field private StaticMesh UStaticMesh @Asset input
+---@field private MeshTransform FTransform @Transform to apply to the mesh before converting it to a collection
+---@field private Collection FManagedArrayCollection @Geometry collection newly created
+---@field private Materials TArray<UMaterialInterface> @Material array from the static mesh
+---@field private InstancedMeshes TArray<FGeometryCollectionAutoInstanceMesh> @Array of instanced meshes
+---@field private RootProxyMeshes TArray<FDataflowRootProxyMesh> @corresponding source proxies
+---@field private bSetInternalFromMaterialIndex boolean @Set the internal faces from material index
+---@field private bSplitComponents boolean @Split components - when enabled, each island of the mesh will be converted to an individual transform in the collection
+local FStaticMeshToCollectionDataflowNode_v2 = {}

@@ -1,0 +1,45 @@
+---@class UEditorPerProjectUserSettings : UObject
+---@field public bDisplayUIExtensionPoints boolean @If enabled, any newly opened UI menus, menu bars, and toolbars will show the developer hooks that would accept extensions
+---@field public bDisplayDocumentationLink boolean @If enabled, tooltips linked to documentation will show the developer the link bound to that UI item
+---@field public bDisplayActionListItemRefIds boolean @, Category=DeveloperTools
+---@field public bAlwaysGatherBehaviorTreeDebuggerData boolean @If enabled, behavior tree debugger will collect its data even when all behavior tree editor windows are closed
+---@field public bDisplayBlackboardKeysInAlphabeticalOrder boolean @If enabled, blackboard keys displayed in blackboard editor and key selector will be sorted in alphabetical order .
+---@field public bDisplayEngineVersionInBadge boolean @When enabled, Engine Version Number is displayed in the ProjectBadge
+---@field public bUseSimplygonSwarm boolean @When enabled, use SimplygonSwarm Module / server to create proxies
+---@field public SimplygonServerIP string @Server IP for the distributed Simplygon server
+---@field public bEnableSwarmDebugging boolean @Enable swarm debugging features. Temp ssf files are not removed. Detailed message printing
+---@field public SimplygonSwarmDelay integer @Time between JSON net requests for Simplygon Swarm
+---@field public SwarmNumOfConcurrentJobs integer @Number of concurrent swarm jobs to execute. This is independent of the main job queue.
+---@field public SwarmMaxUploadChunkSizeInMB integer
+---@field public SwarmIntermediateFolder string @Folder in which Simplygon Swarm will store intermediate texture and mesh data that is uploaded to the Swarm
+---@field public bAutomaticallyHotReloadNewClasses boolean @If enabled, any newly added classes will be automatically compiled and trigger a hot-reload of the module they were added to
+---@field public bShowCompilerLogOnCompileError boolean @If enabled, the compile message log window will open if there is a compiler error on Hot Reload
+---@field public bKeepFbxNamespace boolean @If enabled, the fbx parser will keep the fbx namespaces, otherwise the namespace will be append to fbx node.
+---@field public bShowImportDialogAtReimport boolean @If enabled, the fbx option dialog will show when user re-import a fbx
+---@field public DataSourceFolder FDirectoryPath @Specify a project data source folder to store relative source file path to ease the re-import process
+---@field public bKeepAttachHierarchy boolean @If enabled, export level with attachment hierarchy set
+---@field public bAnimationReimportWarnings boolean @If enabled, will compare an animation's sequence length and curves against the old data and inform the user if something changed
+---@field public bConfirmEditorClose boolean @If enabled, you'll be asked to confirm if you really want to close the editor.
+---@field public bUseCurvesForDistributions boolean @Select to make Distributions use the curves, not the baked lookup tables.
+---@field public PropertyMatrix_NumberOfPasteOperationsBeforeWarning integer @Controls the minimum value at which the property matrix editor will display a loading bar when pasting values
+---@field public bSCSEditorShowGrid boolean
+---@field public bSCSEditorShowFloor boolean
+---@field public bGetAttentionOnUATCompletion boolean @If enabled, the Editor will attempt to get the users attention whenever a UAT task (such as cooking or packaging) is completed
+---@field public bAlwaysBuildUAT boolean @Always build UAT\UBT before launching the game. It will decrease iteration times if disabled
+---@field public SCSViewportCameraSpeed integer @How fast the SCS viewport camera moves
+---@field public bAutoloadCheckedOutPackages boolean @Controls whether packages which are checked-out are automatically fully loaded at startup
+---@field public bSuppressFullyLoadPrompt boolean @If this is true, the user will not be asked to fully load a package before saving or before creating a new object
+---@field public bAllowSelectTranslucent boolean @True if user should be allowed to select translucent objects in perspective viewports
+---@field public bShowSelectionSubcomponents boolean @If this is true, all of an actors' components will be drawn when the actor or one of its component is selected
+---@field public BlueprintFavorites UBlueprintPaletteFavorites
+---@field public AssetViewerProfileIndex integer @Per project user settings for which asset viewer profile should be used
+---@field public AssetViewerProfileName string
+---@field public PreviewFeatureLevel integer @The feature level we should use when loading or creating a new world
+---@field public PreviewPlatformName string @The platform name to preview, or NAME_None if there is no preview platform
+---@field public PreviewShaderFormatName string @The shader format to preview, or NAME_None if there is no preview platform
+---@field public PreviewShaderPlatformName string @The shader platform to preview, or NAME_None if there is no preview platform
+---@field public bPreviewFeatureLevelActive boolean @Is feature level preview currently active
+---@field public bPreviewFeatureLevelWasDefault boolean
+---@field public PreviewDeviceProfileName string
+local UEditorPerProjectUserSettings = {}
+

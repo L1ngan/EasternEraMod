@@ -1,0 +1,2 @@
+---@class FChaosVDMultiSolverDebugShapeDataContainer
+local FChaosVDMultiSolverDebugShapeDataContainer = {}

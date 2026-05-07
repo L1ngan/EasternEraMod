@@ -1,0 +1,29 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\binkmedia\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\binkmediaplayereditor\\module.binkmediaplayereditor.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\binkmedia\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\binkmediaplayereditor\\definitions.binkmediaplayereditor.h",
+            "g:\\modproject\\plugins\\binkmedia\\intermediate\\build\\win64\\unrealeditor\\inc\\binkmediaplayereditor\\uht\\binkmediaplayereditor.init.gen.cpp",
+            "g:\\modproject\\plugins\\binkmedia\\intermediate\\build\\win64\\unrealeditor\\inc\\binkmediaplayereditor\\uht\\binkmediaplayerfactory.gen.cpp",
+            "g:\\modproject\\plugins\\binkmedia\\source\\binkmediaplayereditor\\private\\factories\\binkmediaplayerfactory.h",
+            "g:\\modproject\\plugins\\binkmedia\\intermediate\\build\\win64\\unrealeditor\\inc\\binkmediaplayereditor\\uht\\binkmediaplayerfactory.generated.h",
+            "g:\\modproject\\plugins\\binkmedia\\intermediate\\build\\win64\\unrealeditor\\inc\\binkmediaplayereditor\\uht\\binkmediaplayerfactorynew.gen.cpp",
+            "g:\\modproject\\plugins\\binkmedia\\source\\binkmediaplayereditor\\private\\factories\\binkmediaplayerfactorynew.h",
+            "g:\\modproject\\plugins\\binkmedia\\source\\binkmediaplayer\\public\\binkmediaplayer.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\engine\\public\\slate\\slatetextures.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\slatecore\\public\\textures\\slateupdatabletexture.h",
+            "g:\\modproject\\plugins\\binkmedia\\intermediate\\build\\win64\\unrealeditor\\inc\\binkmediaplayer\\uht\\binkmediaplayer.generated.h",
+            "g:\\modproject\\plugins\\binkmedia\\intermediate\\build\\win64\\unrealeditor\\inc\\binkmediaplayereditor\\uht\\binkmediaplayerfactorynew.generated.h",
+            "g:\\modproject\\plugins\\binkmedia\\intermediate\\build\\win64\\unrealeditor\\inc\\binkmediaplayereditor\\uht\\binkmediatexturefactorynew.gen.cpp",
+            "g:\\modproject\\plugins\\binkmedia\\source\\binkmediaplayereditor\\private\\factories\\binkmediatexturefactorynew.h",
+            "g:\\modproject\\plugins\\binkmedia\\intermediate\\build\\win64\\unrealeditor\\inc\\binkmediaplayereditor\\uht\\binkmediatexturefactorynew.generated.h",
+            "g:\\modproject\\plugins\\binkmedia\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\binkmediaplayereditor\\permoduleinline.gen.cpp",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

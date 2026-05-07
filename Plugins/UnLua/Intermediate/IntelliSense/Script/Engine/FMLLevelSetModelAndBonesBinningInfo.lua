@@ -1,0 +1,17 @@
+---@class FMLLevelSetModelAndBonesBinningInfo : FTableRowBase
+---@field public ParentBoneName string @The bone that MLLevelSet is attached to. Note that the deformations near this joint is not trained
+---@field public ActiveBoneNames string @The bones that are trained for deformation. We suggest only train one bone per MLLevelSet for efficiency
+---@field public MLModelInferenceInfoDataTablePath string @The path to the DataTable that includes information about NNE Model
+---@field public MLModelInferenceInfoDataTableIndex string @The index of the DataTable that includes information about NNE Model for signed distance
+---@field public MLModelInferenceForIncorrectZoneInfoDataTableIndex string @The index of the DataTable that includes information about NNE Model for incorrect (safe-danger) zone. If uninitialized, this means no safe zone is used.
+---@field public NumberOfRotationComponentsPerBone TArray<integer> @E.g. Use {1,2} if ActiveBone1 has one and ActiveBone2 has two active rotations.
+---@field public RotationComponentIndexes TArray<integer> @The indices of the rotation components. E.g. use {1,1,2} if ActiveBone1 uses Rot.Y and ActiveBone2 uses Rot.Y and Rot.Z.
+---@field public SignedDistanceScaling number @Usually MLModels for SDF are trained so that output lies in [-1,1]. To do so the SignedDistances (in the dataset) are divided by SignedDistanceScaling.       SignedDistanceScaling is generally defined to be the max length of the training bounding box.
+---@field public DebugGridResolution TArray<integer> @Resolution of the Grid that is used for debug visualization
+---@field public ReferenceBoneRotations TArray<number> @Reference Rotations for the Active Bones.
+---@field public ReferenceBoneTranslations TArray<number> @Reference Translations for the Active Bones.
+---@field public TrainingGridOrigin TArray<number> @Min Corner of bounding box that MLLevelSet is trained on.
+---@field public TrainingGridAxisX TArray<number> @First Edge of the bounding box that MLLevelSet is trained on.
+---@field public TrainingGridAxisY TArray<number> @Second Edge of the bounding box that MLLevelSet is trained on.
+---@field public TrainingGridAxisZ TArray<number> @Third Edge of the bounding box that MLLevelSet is trained on.
+local FMLLevelSetModelAndBonesBinningInfo = {}

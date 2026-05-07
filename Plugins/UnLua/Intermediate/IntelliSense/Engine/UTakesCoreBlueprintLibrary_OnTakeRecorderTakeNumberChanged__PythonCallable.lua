@@ -1,0 +1,3 @@
+---@class UTakesCoreBlueprintLibrary_OnTakeRecorderTakeNumberChanged__PythonCallable : UPythonCallableForDelegate
+local UTakesCoreBlueprintLibrary_OnTakeRecorderTakeNumberChanged__PythonCallable = {}
+

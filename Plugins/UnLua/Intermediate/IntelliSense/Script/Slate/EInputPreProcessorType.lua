@@ -1,0 +1,12 @@
+---Priority bucket type for Input Pre-Processors. They will be evaluated in ascending order and may block input from later buckets.
+---@class EInputPreProcessorType
+---@field public Overlay integer
+---@field public PreEngine integer
+---@field public Engine integer
+---@field public PreEditor integer
+---@field public Editor integer
+---@field public PreGame integer
+---@field public Game integer
+---@field public Count integer
+---@field public EInputPreProcessorType_MAX integer
+local EInputPreProcessorType = {}

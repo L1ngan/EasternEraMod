@@ -1,0 +1,9 @@
+---@class ENiagara_MeshOrientationOptions
+---@field public NewEnumerator7 integer
+---@field public NewEnumerator0 integer
+---@field public NewEnumerator1 integer
+---@field public NewEnumerator2 integer
+---@field public NewEnumerator5 integer
+---@field public NewEnumerator6 integer
+---@field public ENiagara_MAX integer
+local ENiagara_MeshOrientationOptions = {}

@@ -1,0 +1,11 @@
+---Spherical lens distortion parameters
+---All parameters are unitless and represent the coefficients used to undistort a distorted image
+---Refer to the OpenCV camera calibration documentation for the intended units/usage of these parameters:
+---https://docs.opencv.org/3.4/d9/d0c/group__calib3d.html
+---@class FSphericalDistortionParameters
+---@field public K1 number @Radial coefficient of the r^2 term
+---@field public K2 number @Radial coefficient of the r^4 term
+---@field public K3 number @Radial coefficient of the r^6 term
+---@field public P1 number @First tangential coefficient
+---@field public P2 number @Second tangential coefficient
+local FSphericalDistortionParameters = {}

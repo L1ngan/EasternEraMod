@@ -1,0 +1,2 @@
+---@class FInputActionValue
+local FInputActionValue = {}

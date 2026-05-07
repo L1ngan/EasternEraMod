@@ -1,0 +1,22 @@
+---@class UInterchangeGenericAnimationPipeline : UInterchangePipelineBase
+---@field public CommonSkeletalMeshesAndAnimationsProperties TWeakObjectPtr<UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties> @Common SkeletalMeshes And Animations Properties Settings Pointer
+---@field public CommonMeshesProperties TWeakObjectPtr<UInterchangeGenericCommonMeshesProperties> @Common Meshes Properties Settings Pointer
+---@field public bImportAnimations boolean @If enabled, import all animation assets found in the source.
+---@field public bImportBoneTracks boolean @Import bone transform tracks. If false, this will discard any bone transform tracks.
+---@field public AnimationRange EInterchangeAnimationRange @Determines which animation range to import: the range defined at export, the range of frames with animation, or a manually defined range.
+---@field public FrameImportRange FInt32Interval @The frame range used when the Animation Length setting is set to Set Range.
+---@field public bUse30HzToBakeBoneAnimation boolean @If enabled, samples all animation curves to 30 FPS
+---@field public CustomBoneAnimationSampleRate integer @Sample fbx animation data at the specified sample rate, 0 find automaticaly the best sample rate
+---@field public bSnapToClosestFrameBoundary boolean @If enabled, snaps the animation to the closest frame boundary using the import sampling rate.
+---@field public bImportCustomAttribute boolean @If enabled, import node attributes as either Animation Curves or Animation Attributes.
+---@field public bSetMaterialDriveParameterOnCustomAttribute boolean @Set the material curve type for all custom attributes.
+---@field public MaterialCurveSuffixes TArray<string> @Set the Material Curve Type for custom attributes that have the specified suffixes. This setting is not used if the Set Material Curve Type setting is enabled.
+---@field public bRemoveCurveRedundantKeys boolean @When importing custom attributes as curves, remove redundant keys.
+---@field public bDoNotImportCurveWithZero boolean @When importing a custom attribute or morph target as a curve, only import if it has a value other than zero. This avoids adding extra curves to evaluate.
+---@field public bDeleteExistingNonCurveCustomAttributes boolean @If enabled, all previous node attributes imported as Animation Attributes will be deleted when doing a reimport.
+---@field public bDeleteExistingCustomAttributeCurves boolean @If enabled, all previous node attributes imported as Animation Curves will be deleted when doing a reimport.
+---@field public bDeleteExistingMorphTargetCurves boolean @If enabled, all previous morph target curves will be deleted when doing a reimport.
+---@field public SourceAnimationName string @Name of the source animation that was imported. This is used to reimport correct animation from the translated source.
+---@field private bSceneImport boolean @Set as a property to carry this value over during a duplicate
+local UInterchangeGenericAnimationPipeline = {}
+

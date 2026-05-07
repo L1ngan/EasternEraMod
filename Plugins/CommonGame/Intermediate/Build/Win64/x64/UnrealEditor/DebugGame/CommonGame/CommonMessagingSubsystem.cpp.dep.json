@@ -1,0 +1,16 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\commongame\\source\\private\\messaging\\commonmessagingsubsystem.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\commongame\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\commongame\\definitions.commongame.h",
+            "g:\\modproject\\plugins\\commongame\\source\\public\\messaging\\commonmessagingsubsystem.h",
+            "g:\\modproject\\plugins\\commongame\\intermediate\\build\\win64\\unrealeditor\\inc\\commongame\\uht\\commonmessagingsubsystem.generated.h",
+            "g:\\modproject\\plugins\\commongame\\intermediate\\build\\win64\\unrealeditor\\inc\\commongame\\uht\\commonmessagingsubsystem.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

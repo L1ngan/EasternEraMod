@@ -1,0 +1,36 @@
+---@class FNavigationLinkBase
+---@field public LeftProjectHeight number @if greater than 0 nav system will attempt to project navlink's start point on geometry below
+---@field public MaxFallDownLength number @if greater than 0 nav system will attempt to project navlink's end point on geometry below
+---@field public SnapRadius number
+---@field public SnapHeight number
+---@field public SupportedAgents FNavAgentSelector @restrict link only to specified agents
+---@field public bSupportsAgent0 boolean @DEPRECATED AGENT CONFIG
+---@field public bSupportsAgent1 boolean
+---@field public bSupportsAgent2 boolean
+---@field public bSupportsAgent3 boolean
+---@field public bSupportsAgent4 boolean
+---@field public bSupportsAgent5 boolean
+---@field public bSupportsAgent6 boolean
+---@field public bSupportsAgent7 boolean
+---@field public bSupportsAgent8 boolean
+---@field public bSupportsAgent9 boolean
+---@field public bSupportsAgent10 boolean
+---@field public bSupportsAgent11 boolean
+---@field public bSupportsAgent12 boolean
+---@field public bSupportsAgent13 boolean
+---@field public bSupportsAgent14 boolean
+---@field public bSupportsAgent15 boolean
+---@field public Description string @this is an editor-only property to put descriptions in navlinks setup, to be able to identify it easier
+---@field public Direction integer
+---@field public bUseSnapHeight boolean
+---@field public bSnapToCheapestArea boolean @If set, link will try to snap to the cheapest area in given radius
+---@field public bCustomFlag0 boolean @custom flag, check DescribeCustomFlags for details
+---@field public bCustomFlag1 boolean @custom flag, check DescribeCustomFlags for details
+---@field public bCustomFlag2 boolean @custom flag, check DescribeCustomFlags for details
+---@field public bCustomFlag3 boolean @custom flag, check DescribeCustomFlags for details
+---@field public bCustomFlag4 boolean @custom flag, check DescribeCustomFlags for details
+---@field public bCustomFlag5 boolean @custom flag, check DescribeCustomFlags for details
+---@field public bCustomFlag6 boolean @custom flag, check DescribeCustomFlags for details
+---@field public bCustomFlag7 boolean @custom flag, check DescribeCustomFlags for details
+---@field private AreaClass TSubclassOf<UNavAreaBase> @Area type of this link (empty = default)
+local FNavigationLinkBase = {}

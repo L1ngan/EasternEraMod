@@ -1,0 +1,14 @@
+---Visualization flags used to control what is debug draw of the recorded acceleration structure data
+---@class EChaosVDAccelerationStructureDataVisualizationFlags
+---@field public None integer
+---@field public DrawNodesBounds integer
+---@field public DrawBranches integer
+---@field public DrawLeavesBounds integer
+---@field public DrawLeavesElementBounds integer
+---@field public DrawLeavesElementConnections integer
+---@field public DrawDynamicTrees integer
+---@field public DrawStaticTrees integer
+---@field public DrawLeavesRealElementBounds integer
+---@field public EnableDraw integer
+---@field public EChaosVDAccelerationStructureDataVisualizationFlags_MAX integer
+local EChaosVDAccelerationStructureDataVisualizationFlags = {}

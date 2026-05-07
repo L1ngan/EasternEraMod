@@ -1,0 +1,15 @@
+---@class FWorldPartitionRuntimeCellObjectMapping
+---@field public Package string @The name of the package to load to resolve on disk (can contain a single actor or a data chunk)
+---@field public Path string @The complete name path of the contained object
+---@field public BaseClass FTopLevelAssetPath @The actor's base class
+---@field public NativeClass FTopLevelAssetPath @The actor's native base class
+---@field public ContainerID FActorContainerID @ID of the owning container instance
+---@field public ContainerTransform FTransform @Transform of the owning container instance
+---@field public EditorOnlyParentTransform FTransform @Transform of the owning actor if editor only
+---@field public ContainerPackage string @Package of the owning container instance
+---@field public WorldPackage string @Package of the World
+---@field public ActorInstanceGuid FGuid @GUID of the actor instance
+---@field public LoadedPath string @Loaded actor path (when cooking or pie) Depending on if the actor was part of a container instance or the main partition this will be the path of the loaded or duplicated actor before it is moved into its runtime cell. If the actor was part of the world partition this path should match the Path property.
+---@field public bIsEditorOnly boolean
+---@field public PropertyOverrides TArray<FWorldPartitionRuntimeCellPropertyOverride>
+local FWorldPartitionRuntimeCellObjectMapping = {}

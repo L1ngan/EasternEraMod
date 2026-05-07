@@ -1,0 +1,2 @@
+---@class FExponentialHeightFogStaticState
+local FExponentialHeightFogStaticState = {}

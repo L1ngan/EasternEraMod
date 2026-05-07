@@ -1,0 +1,25 @@
+---@class FNetworkPhysicsSettingsResimulation
+---@field public bOverrideResimulationErrorPositionThreshold boolean
+---@field public ResimulationErrorPositionThreshold number @Overrides Project Settings -> Physics -> Replication -> Physics Prediction -> Resimulation Error Position Threshold -- Distance that the object is allowed to desync from the server before triggering a resimulation, within this threshold runtime correction can be performed if RuntimeCorrectionEnabled is true.
+---@field public bOverrideResimulationErrorRotationThreshold boolean
+---@field public ResimulationErrorRotationThreshold number @Overrides Project Settings -> Physics -> Replication -> Physics Prediction -> Resimulation Error Rotation Threshold -- Rotation difference in degrees that the object is allowed to desync from the server before triggering a resimulation, within this threshold runtime correction can be performed if RuntimeCorrectionEnabled is true.
+---@field public bOverrideResimulationErrorLinearVelocityThreshold boolean
+---@field public ResimulationErrorLinearVelocityThreshold number @Overrides Project Settings -> Physics -> Replication -> Physics Prediction -> Resimulation Error Linear Velocity Threshold -- Velocity difference in centimeters / second that the object is allowed to desync from the server before triggering a resimulation, within this threshold runtime correction can be performed if RuntimeCorrectionEnabled is true.
+---@field public bOverrideResimulationErrorAngularVelocityThreshold boolean
+---@field public ResimulationErrorAngularVelocityThreshold number @Overrides Project Settings -> Physics -> Replication -> Physics Prediction -> Resimulation Error Angular Velocity Threshold -- Degrees / second that the object is allowed to desync from the server before triggering a resimulation, within this threshold runtime correction can be performed if RuntimeCorrectionEnabled is true.
+---@field public bOverrideRuntimeCorrectionEnabled boolean
+---@field public bRuntimeCorrectionEnabled boolean @Overrides CVar: np2.Resim.RuntimeCorrectionEnabled -- Apply positional and rotational runtime corrections while within resim trigger distance.
+---@field public bOverrideRuntimeVelocityCorrection boolean
+---@field public bRuntimeVelocityCorrection boolean @Overrides CVar: np2.Resim.RuntimeVelocityCorrection -- Apply linear and angular velocity corrections in runtime while within resim trigger distance. Used if RuntimeCorrectionEnabled is true.
+---@field public bOverrideRuntimeCorrectConnectedBodies boolean
+---@field public bRuntimeCorrectConnectedBodies boolean @Overrides CVar: np2.Resim.RuntimeCorrectConnectedBodies -- If true runtime position and rotation correction will also shift transform of any connected physics objects. Used if RuntimeCorrectionEnabled is true.
+---@field public bOverridePosStabilityMultiplier boolean
+---@field public PosStabilityMultiplier number @Overrides CVar: np2.Resim.PosStabilityMultiplier -- Recommended range between 0.0-1.0. Lower value means more stable positional corrections.
+---@field public bOverrideRotStabilityMultiplier boolean
+---@field public RotStabilityMultiplier number @Overrides CVar: np2.Resim.RotStabilityMultiplier -- Recommended range between 0.0-1.0. Lower value means more stable rotational corrections.
+---@field public bOverrideVelStabilityMultiplier boolean
+---@field public VelStabilityMultiplier number @Overrides CVar: np2.Resim.VelStabilityMultiplier -- Recommended range between 0.0-1.0. Lower value means more stable linear velocity corrections.
+---@field public bOverrideAngVelStabilityMultiplier boolean
+---@field public AngVelStabilityMultiplier number @Overrides CVar: np2.Resim.AngVelStabilityMultiplier -- Recommended range between 0.0-1.0. Lower value means more stable angular velocity corrections.
+---@field public ResimulationErrorCorrectionSettings FNetworkPhysicsSettingsResimulationErrorCorrection
+local FNetworkPhysicsSettingsResimulation = {}

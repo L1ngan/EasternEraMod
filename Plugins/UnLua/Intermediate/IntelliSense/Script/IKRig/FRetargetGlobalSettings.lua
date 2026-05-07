@@ -1,0 +1,17 @@
+---NOTE: Replaced IK/FK/Post toggle flags with Op-enabled flags. Warping settings now in Stride Warp Op.
+---@class FRetargetGlobalSettings
+---@field public bEnableRoot boolean
+---@field public bEnableFK boolean
+---@field public bEnableIK boolean
+---@field public bEnablePost boolean
+---@field public bCopyBasePose boolean
+---@field public CopyBasePoseRoot string
+---@field public SourceScaleFactor number
+---@field public bWarping boolean
+---@field public DirectionSource EWarpingDirectionSource
+---@field public ForwardDirection EBasicAxis
+---@field public DirectionChain string
+---@field public WarpForwards number
+---@field public SidewaysOffset number
+---@field public WarpSplay number
+local FRetargetGlobalSettings = {}

@@ -1,0 +1,17 @@
+---@class FTimeline
+---@field private LengthMode integer @Specified how the timeline determines its own length (e.g. specified length, last keyframe)
+---@field private bLooping boolean @Whether timeline should loop when it reaches the end, or stop
+---@field private bReversePlayback boolean @If playback should move the current position backwards instead of forwards
+---@field private PlayingStateTracker integer @If the first bit is set to 1 (PlayingStateTracker & 0x01 == 1), then we are playing The rest of the bits in the uint8 are reserved for keeping track of the "dirty" state, being incremented when our state is modified. This ensures that the value is replicated if it changes multiple times in one frame, such as calling "Play From Start" in the resulting "Finished" delegate. You should modify this value using the "ChangeMarkPlayingState" function.
+---@field private Length number @How long the timeline is, will stop or loop at the end
+---@field private PlayRate number @How fast we should play through the timeline
+---@field private Position number @Current position in the timeline
+---@field private Events TArray<FTimelineEventEntry> @Array of events that are fired at various times during the timeline
+---@field private InterpVectors TArray<FTimelineVectorTrack> @Array of vector interpolations performed during the timeline
+---@field private InterpFloats TArray<FTimelineFloatTrack> @Array of float interpolations performed during the timeline
+---@field private InterpLinearColors TArray<FTimelineLinearColorTrack> @Array of linear color interpolations performed during the timeline
+---@field private TimelinePostUpdateFunc Delegate @Called whenever this timeline is playing and updates - done after all delegates are executed and variables updated
+---@field private TimelineFinishedFunc Delegate @Called whenever this timeline is finished. Is not called if 'stop' is used to terminate timeline early
+---@field private PropertySetObject TWeakObjectPtr<UObject> @Optional. If set, Timeline will also set float/vector properties on this object using the PropertyName set in the tracks.
+---@field private DirectionPropertyName string @Optional. If set, Timeline will also set ETimelineDirection property on PropertySetObject using the name.
+local FTimeline = {}

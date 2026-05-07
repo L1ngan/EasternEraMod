@@ -1,0 +1,39 @@
+---@class FMaterialProxySettings
+---@field public TextureSizingType integer @Method that should be used to generate the sizes of the output textures
+---@field public TextureSize FIntPoint @Size of generated BaseColor map
+---@field public TargetTexelDensityPerMeter number @Target texel density
+---@field public MeshMaxScreenSizePercent number @Expected maximum screen size for the mesh
+---@field public MeshMinDrawDistance number @Expected minimum distance at which the mesh will be rendered
+---@field public GutterSpace number @Gutter space to take into account
+---@field public MetallicConstant number @Constant value to use for the Metallic property
+---@field public RoughnessConstant number @Constant value to use for the Roughness property
+---@field public AnisotropyConstant number @Constant value to use for the Anisotropy property
+---@field public SpecularConstant number @Constant value to use for the Specular property
+---@field public OpacityConstant number @Constant value to use for the Opacity property
+---@field public OpacityMaskConstant number @Constant value to use for the Opacity mask property
+---@field public AmbientOcclusionConstant number @Constant value to use for the Ambient Occlusion property
+---@field public MaterialMergeType integer
+---@field public BlendMode integer @Target blend mode for the generated material
+---@field public bAllowTwoSidedMaterial boolean @Whether or not to allow the generated material can be two-sided
+---@field public bNormalMap boolean @Whether to generate a texture for the Normal property
+---@field public bTangentMap boolean @Whether to generate a texture for the Tangent property
+---@field public bMetallicMap boolean @Whether to generate a texture for the Metallic property
+---@field public bRoughnessMap boolean @Whether to generate a texture for the Roughness property
+---@field public bAnisotropyMap boolean @Whether to generate a texture for the Anisotropy property
+---@field public bSpecularMap boolean @Whether to generate a texture for the Specular property
+---@field public bEmissiveMap boolean @Whether to generate a texture for the Emissive property
+---@field public bOpacityMap boolean @Whether to generate a texture for the Opacity property
+---@field public bOpacityMaskMap boolean @Whether to generate a texture for the Opacity Mask property
+---@field public bAmbientOcclusionMap boolean @Whether to generate a texture for the Ambient Occlusion property
+---@field public DiffuseTextureSize FIntPoint @Override Diffuse texture size
+---@field public NormalTextureSize FIntPoint @Override Normal texture size
+---@field public TangentTextureSize FIntPoint @Override Tangent texture size
+---@field public MetallicTextureSize FIntPoint @Override Metallic texture size
+---@field public RoughnessTextureSize FIntPoint @Override Roughness texture size
+---@field public AnisotropyTextureSize FIntPoint @Override Anisotropy texture size
+---@field public SpecularTextureSize FIntPoint @Override Specular texture size
+---@field public EmissiveTextureSize FIntPoint @Override Emissive texture size
+---@field public OpacityTextureSize FIntPoint @Override Opacity texture size
+---@field public OpacityMaskTextureSize FIntPoint @Override Opacity Mask texture size
+---@field public AmbientOcclusionTextureSize FIntPoint @Override Ambient Occlusion texture size
+local FMaterialProxySettings = {}

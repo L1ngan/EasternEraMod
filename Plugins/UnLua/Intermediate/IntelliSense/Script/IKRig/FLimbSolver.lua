@@ -1,0 +1,2 @@
+---@class FLimbSolver
+local FLimbSolver = {}

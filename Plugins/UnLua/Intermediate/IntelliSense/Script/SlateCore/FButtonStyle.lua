@@ -1,0 +1,16 @@
+---Represents the appearance of an SButton
+---@class FButtonStyle : FSlateWidgetStyle
+---@field public Normal FSlateBrush @Button appearance when the button is not hovered or pressed
+---@field public Hovered FSlateBrush @Button appearance when hovered
+---@field public Pressed FSlateBrush @Button appearance when pressed
+---@field public Disabled FSlateBrush @Button appearance when disabled, by default this is set to an invalid resource when that is the case default disabled drawing is used.
+---@field public NormalForeground FSlateColor @Foreground Color when the button is not hovered or pressed
+---@field public HoveredForeground FSlateColor @Foreground Color when hovered
+---@field public PressedForeground FSlateColor @Foreground Color when pressed
+---@field public DisabledForeground FSlateColor @Foreground Color when disabled
+---@field public NormalPadding FMargin @Padding that accounts for the border in the button's background image. When this is applied, the content of the button should appear flush with the button's border. Use this padding when the button is not pressed.
+---@field public PressedPadding FMargin @Same as NormalPadding but used when the button is pressed. Allows for moving the content to match any "movement" in the button's border image.
+---@field public PressedSlateSound FSlateSound @The sound the button should play when pressed
+---@field public ClickedSlateSound FSlateSound @The sound the button should play when clicked
+---@field public HoveredSlateSound FSlateSound @The sound the button should play when initially hovered over
+local FButtonStyle = {}

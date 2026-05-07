@@ -1,0 +1,26 @@
+---A bitmask of supported features that a hardware device has.
+---@class EHardwareDeviceSupportedFeatures
+---@field public Unspecified integer
+---@field public Keypress integer
+---@field public Pointer integer
+---@field public Gamepad integer
+---@field public Touch integer
+---@field public Camera integer
+---@field public MotionTracking integer
+---@field public Lights integer
+---@field public TriggerHaptics integer
+---@field public ForceFeedback integer
+---@field public AudioBasedVibrations integer
+---@field public Acceleration integer
+---@field public Virtual integer
+---@field public Microphone integer
+---@field public Orientation integer
+---@field public Guitar integer
+---@field public Drums integer
+---@field public CustomA integer
+---@field public CustomB integer
+---@field public CustomC integer
+---@field public CustomD integer
+---@field public All integer
+---@field public EHardwareDeviceSupportedFeatures_MAX integer
+local EHardwareDeviceSupportedFeatures = {}

@@ -1,0 +1,30 @@
+---LOD settings for a single texture group.
+---@class FTextureLODGroup
+---@field public Group integer @Group ID.
+---@field public MipGenSettings integer @Defines how the the mip-map generation works, e.g. sharpening
+---@field public MipLoadOptions ETextureMipLoadOptions
+---@field public LODBias integer @Group LOD bias.
+---@field public LODBias_Smaller integer
+---@field public LODBias_Smallest integer
+---@field public LODBias_VT integer
+---@field public NumStreamedMips integer @Number of mip-levels that can be streamed. -1 means all mips can stream.
+---@field public MinLODSize integer @Prevent LODBias from making the textures smaller than this value. Note that this does _not_ affect the smallest mip level size.
+---@field public MaxLODSize integer @Cap the number of mips such that the largest mip is this big. Has no effect for textures with no mip chain. Not used for virtual textures.
+---@field public MaxLODSize_Smaller integer @Cap the number of mips such that the largest mip is this big. Has no effect for textures with no mip chain. Used for platforms with the "Smaller" memory bucket. Not used for virtual textures.
+---@field public MaxLODSize_Smallest integer @Cap the number of mips such that the largest mip is this big. Has no effect for textures with no mip chain. Used for platforms with the "Smallest" memory bucket. Not used for virtual textures.
+---@field public MaxLODSize_VT integer @Cap the number of mips such that the largest mip is this big. Has no effect for textures with no mip chain. Used for virtual textures.
+---@field public OptionalLODBias integer @If this is greater than 0 will put that number of mips into an optional bulkdata package
+---@field public OptionalMaxLODSize integer @Put all the mips which have a width / height larger then OptionalLODSize into an optional bulkdata package
+---@field public MinMagFilter string
+---@field public MipFilter string
+---@field public HighPriorityLoad boolean @Whether those assets should be loaded with higher load order and higher IO priority. Allows ProjectXX texture groups to behave as character textures.
+---@field public DuplicateNonOptionalMips boolean
+---@field public CookPlatformTilingDisabled boolean @If true textures with CookPlatformTilingSettings set to TCPTS_FromTextureGroup will not be tiled during cook. They will be tiled when uploaded to the GPU if necessary
+---@field public DownscaleOptions ETextureDownscaleOptions
+---@field public LossyCompressionAmount integer
+---@field public Downscale number
+---@field public VirtualTextureTileCountBias integer
+---@field public VirtualTextureTileSizeBias integer
+---@field public VirtualTextureStreamingPriority EVTProducerPriority
+---@field public MaxAniso integer @Allows us to override max anisotropy. If unspecified, uses r.MaxAnisotropy
+local FTextureLODGroup = {}

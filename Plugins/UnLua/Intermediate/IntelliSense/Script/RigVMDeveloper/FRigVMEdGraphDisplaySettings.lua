@@ -1,0 +1,16 @@
+---@class FRigVMEdGraphDisplaySettings
+---@field public bShowNodeInstructionIndex boolean @When enabled shows the first node instruction index matching the execution stack window.
+---@field public bShowNodeRunCounts boolean @When enabled shows the node counts both in the graph view as we as in the execution stack window. The number on each node represents how often the node has been run. Keep in mind when looking at nodes in a function the count represents the sum of all counts for each node based on all references of the function currently running.
+---@field public NodeRunLowerBound integer @A lower limit for counts for nodes used for debugging. Any node lower than this count won't show the run count.
+---@field public NodeRunLimit integer @A upper limit for counts for nodes used for debugging. If a node reaches this count a warning will be issued for the node and displayed both in the execution stack as well as in the graph. Setting this to <= 1 disables the warning. Note: The count limit doesn't apply to functions / collapse nodes.
+---@field public MinMicroSeconds number @The duration in microseconds of the fastest instruction / node
+---@field public MaxMicroSeconds number @The duration in microseconds of the slowest instruction / node
+---@field public TotalMicroSeconds number @The total duration of the last execution of the rig
+---@field public AverageFrames integer @If you set this to more than 1 the results will be averaged across multiple frames
+---@field public bAutoDetermineRange boolean
+---@field public LastMinMicroSeconds number
+---@field public LastMaxMicroSeconds number
+---@field public MinDurationColor FLinearColor @The color of the fastest instruction / node
+---@field public MaxDurationColor FLinearColor @The color of the slowest instruction / node
+---@field public TagDisplayMode ERigVMTagDisplayMode @The color of the slowest instruction / node
+local FRigVMEdGraphDisplaySettings = {}

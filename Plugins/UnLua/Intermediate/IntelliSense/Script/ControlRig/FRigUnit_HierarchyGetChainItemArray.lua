@@ -1,0 +1,12 @@
+---Returns a chain between two items
+---@class FRigUnit_HierarchyGetChainItemArray : FRigUnit_HierarchyBase
+---@field public Start FRigElementKey
+---@field public End FRigElementKey
+---@field public bIncludeStart boolean
+---@field public bIncludeEnd boolean
+---@field public bReverse boolean
+---@field public Chain TArray<FRigElementKey>
+---@field public CachedStart FCachedRigElement @Used to cache the internally used item
+---@field public CachedEnd FCachedRigElement @Used to cache the internally used item
+---@field public CachedChain FRigElementKeyCollection @Used to cache the internally used siblings
+local FRigUnit_HierarchyGetChainItemArray = {}

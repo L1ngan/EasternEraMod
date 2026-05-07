@@ -1,0 +1,24 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\modproject\\plugins\\commonuser\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\commonuser\\module.commonuser.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\modproject\\plugins\\commonuser\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\commonuser\\definitions.commonuser.h",
+            "g:\\modproject\\plugins\\commonuser\\intermediate\\build\\win64\\unrealeditor\\inc\\commonuser\\uht\\commonuser.init.gen.cpp",
+            "g:\\modproject\\plugins\\commonuser\\intermediate\\build\\win64\\unrealeditor\\inc\\commonuser\\uht\\commonuserbasicpresence.gen.cpp",
+            "g:\\modproject\\plugins\\commonuser\\source\\commonuser\\public\\commonuserbasicpresence.h",
+            "g:\\modproject\\plugins\\commonuser\\intermediate\\build\\win64\\unrealeditor\\inc\\commonuser\\uht\\commonuserbasicpresence.generated.h",
+            "g:\\modproject\\plugins\\commonuser\\intermediate\\build\\win64\\unrealeditor\\inc\\commonuser\\uht\\commonusertypes.gen.cpp",
+            "g:\\modproject\\plugins\\commonuser\\source\\commonuser\\public\\commonusertypes.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystemtypes.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystemnames.h",
+            "g:\\modproject\\plugins\\commonuser\\intermediate\\build\\win64\\unrealeditor\\inc\\commonuser\\uht\\commonusertypes.generated.h",
+            "g:\\modproject\\plugins\\commonuser\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\commonuser\\permoduleinline.gen.cpp",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

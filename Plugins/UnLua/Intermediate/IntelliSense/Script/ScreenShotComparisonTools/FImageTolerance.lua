@@ -1,0 +1,12 @@
+---@class FImageTolerance
+---@field public Red integer
+---@field public Green integer
+---@field public Blue integer
+---@field public Alpha integer
+---@field public MinBrightness integer
+---@field public MaxBrightness integer
+---@field public IgnoreAntiAliasing boolean
+---@field public IgnoreColors boolean
+---@field public MaximumLocalError number
+---@field public MaximumGlobalError number
+local FImageTolerance = {}

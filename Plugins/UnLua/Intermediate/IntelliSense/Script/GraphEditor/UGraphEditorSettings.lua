@@ -1,0 +1,78 @@
+---Implements settings for the graph editor.
+---@class UGraphEditorSettings : UObject
+---@field public DataPinStyle integer @The visual styling to use for graph editor pins (in Blueprints, materials, etc...)
+---@field public PanningMouseButton EGraphPanningMouseButton @Switch between using the right and middle mouse button for panning (defaults to right)
+---@field public bUseHighPrecisionMouseMovement boolean @Whether to use high precision mouse movement for more accurate mouse movement without mouse ballistics (defaults to true)
+---@field public bUseInterpolationWithManualPanning boolean @Whether to interpolate movement when manually panning a graph for smoother movement (defaults to false)
+---@field public PaddingAbovePin number @The amount of padding above a pin (defaults to 4)
+---@field public PaddingBelowPin number @The amount of padding below a pin (defaults to 4)
+---@field public PaddingRightOfInput number @The amount of horizontal padding towards the center of a node on an input pin (defaults to 10)
+---@field public PaddingLeftOfOutput number @The amount of horizontal padding towards the center of a node on an output pin (defaults to 10)
+---@field public PaddingTowardsNodeEdge number @The amount of padding towards the node edge (defaults to 10, can be negative to make pins overlap or stick out of a node
+---@field public bTreatSplinesLikePins boolean @If enabled, allows splines to be Alt+Clicked to break them or Ctrl+Dragged to move them as if these actions were taking place on the associated pin.
+---@field public SplineHoverTolerance number @The distance threshold controlling how close the mouse has to be to the spline in order to trigger a hover response
+---@field public SplineCloseTolerance number @The additional distance around the spline to count as close, preventing other actions if the user just misses the spline when clicking
+---@field public ForwardSplineHorizontalDeltaRange number @The maximum value to clamp the absolute value of the horizontal distance between endpoints when calculating tangents (when the wire is moving forward)
+---@field public ForwardSplineVerticalDeltaRange number @The maximum value to clamp the absolute value of the vertical distance between endpoints when calculating tangents (when the wire is moving forward)
+---@field public ForwardSplineTangentFromHorizontalDelta FDeprecateSlateVector2D @The amount that the horizontal delta affects the generated tangent handle of splines (when the wire is moving forward)
+---@field public ForwardSplineTangentFromVerticalDelta FDeprecateSlateVector2D @The amount that the vertical delta affects the generated tangent handle of splines (when the wire is moving forward)
+---@field public BackwardSplineHorizontalDeltaRange number @The maximum value to clamp the absolute value of the horizontal distance between endpoints when calculating tangents (when the wire is moving backwards)
+---@field public BackwardSplineVerticalDeltaRange number @The maximum value to clamp the absolute value of the vertical distance between endpoints when calculating tangents (when the wire is moving backwards)
+---@field public BackwardSplineTangentFromHorizontalDelta FDeprecateSlateVector2D @The amount that the horizontal delta affects the generated tangent handle of splines (when the wire is moving backwards)
+---@field public BackwardSplineTangentFromVerticalDelta FDeprecateSlateVector2D @The amount that the vertical delta affects the generated tangent handle of splines (when the wire is moving backwards)
+---@field public DefaultPinTypeColor FLinearColor @The default color is used only for types not specifically defined below.  Generally if it's seen, it means another type needs to be defined so that the wire in question can have an appropriate color.
+---@field public ExecutionPinTypeColor FLinearColor @Execution pin type color
+---@field public BooleanPinTypeColor FLinearColor @Boolean pin type color
+---@field public BytePinTypeColor FLinearColor @Byte pin type color
+---@field public ClassPinTypeColor FLinearColor @Class pin type color
+---@field public IntPinTypeColor FLinearColor @Integer pin type color
+---@field public Int64PinTypeColor FLinearColor @Integer64 pin type color
+---@field public FloatPinTypeColor FLinearColor @Floating-point pin type color
+---@field public DoublePinTypeColor FLinearColor @Double pin type color
+---@field public RealPinTypeColor FLinearColor @Real pin type color
+---@field public NamePinTypeColor FLinearColor @Name pin type color
+---@field public SoftObjectPinTypeColor FLinearColor @Asset pin type color
+---@field public SoftClassPinTypeColor FLinearColor @Asset Class pin type color
+---@field public DelegatePinTypeColor FLinearColor @Delegate pin type color
+---@field public ObjectPinTypeColor FLinearColor @Object pin type color
+---@field public InterfacePinTypeColor FLinearColor @Interface pin type color
+---@field public StringPinTypeColor FLinearColor @String pin type color
+---@field public TextPinTypeColor FLinearColor @Text pin type color
+---@field public StructPinTypeColor FLinearColor @Struct pin type color
+---@field public WildcardPinTypeColor FLinearColor @Wildcard pin type color
+---@field public VectorPinTypeColor FLinearColor @Vector pin type color
+---@field public RotatorPinTypeColor FLinearColor @Rotator pin type color
+---@field public TransformPinTypeColor FLinearColor @Transform pin type color
+---@field public IndexPinTypeColor FLinearColor @Index pin type color
+---@field public EventNodeTitleColor FLinearColor @Event node title color
+---@field public FunctionCallNodeTitleColor FLinearColor @CallFunction node title color
+---@field public PureFunctionCallNodeTitleColor FLinearColor @Pure function call node title color
+---@field public ParentFunctionCallNodeTitleColor FLinearColor @Parent class function call node title color
+---@field public FunctionTerminatorNodeTitleColor FLinearColor @Function Terminator node title color
+---@field public ExecBranchNodeTitleColor FLinearColor @Exec Branch node title color
+---@field public ExecSequenceNodeTitleColor FLinearColor @Exec Sequence node title color
+---@field public ResultNodeTitleColor FLinearColor @Result node title color
+---@field public DefaultCommentNodeTitleColor FLinearColor @Default Comment node title color
+---@field public PreviewNodeTitleColor FLinearColor @Preview node title color
+---@field public DefaultDataWireThickness number @The thickness of a data wire
+---@field public DefaultExecutionWireThickness number @The thickness of an execution wire when not debugging
+---@field public TraceAttackColor FLinearColor @The color to display execution wires that were just executed
+---@field public TraceAttackWireThickness number
+---@field public TraceAttackHoldPeriod number @How long is the attack color fully visible
+---@field public TraceDecayPeriod number @How long does it take to fade from the attack to the sustain color
+---@field public TraceDecayExponent number
+---@field public TraceSustainColor FLinearColor
+---@field public TraceSustainWireThickness number
+---@field public TraceSustainHoldPeriod number @How long is the sustain color fully visible
+---@field public TraceReleaseColor FLinearColor @The color to fade to for execution wires on release
+---@field public TraceReleaseWireThickness number @The thickness to drop down to during release / for unexecuted wires when debugging
+---@field public TraceReleasePeriod number @How long does it take to fade from the sustain to the release color
+---@field public TraceReleaseExponent number
+---@field public TracePositionBonusPeriod number @How much of a bonus does an exec get for being near the top of the trace stack, and how does that fall off with position?
+---@field public TracePositionExponent number
+---@field public PaddingAutoCollateIncrement number @The amount of padding to add in order to auto collate multiple created nodes when using tab context menu (defaults to 20)
+---@field public bOpenCreateMenuOnBlankGraphAreas boolean @If a key press (default Tab) should open the create node context menu when the mouse is on top of blank areas of the graph (defaults to true)
+---@field public DefaultCommentNodeMoveMode integer @Whether a comment node should move any fully enclosed nodes around when it is moved
+---@field public bShowCommentBubbleWhenZoomedOut boolean @Whether to show a zoom-invariant comment bubble when zoomed out (making the comment node's text readable at any distance)
+local UGraphEditorSettings = {}
+

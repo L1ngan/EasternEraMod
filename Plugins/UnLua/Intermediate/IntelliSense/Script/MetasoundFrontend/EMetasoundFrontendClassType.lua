@@ -1,0 +1,14 @@
+---@class EMetasoundFrontendClassType
+---@field public External integer
+---@field public Graph integer
+---@field public Input integer
+---@field public Output integer
+---@field public Literal integer
+---@field public Variable integer
+---@field public VariableDeferredAccessor integer
+---@field public VariableAccessor integer
+---@field public VariableMutator integer
+---@field public Template integer
+---@field public Invalid integer
+---@field public EMetasoundFrontendClassType_MAX integer
+local EMetasoundFrontendClassType = {}
