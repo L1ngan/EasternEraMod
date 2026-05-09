@@ -22,8 +22,8 @@
 | `ModInformationAssetPath` | 字符串 | **建议必填** | 指向本 Mod 的 **`UModInformationAsset`** 软对象路径，需含资产名与后缀，例如 `/Game/Mods/<ModName>/DA_ModDataAsset.DA_ModDataAsset`。创建向导在留空时会按 `ModFolderPath` 补默认路径。 |
 | `NewGameLoad` | 布尔 | 可选 | 是否在新游戏时加载（对应 `UModInfoData::bNewGameLoad`）。 |
 | `MinGameVersion` | 字符串 | 可选 | 支持的游戏**最低**版本。 |
-| `IncludeGameplayTags` | 布尔 | 可选 | 是否启用随 Mod 分发的 **GameplayTag** ini（引擎 GameplayTag 管理用）。 |
-| `GameplayTagsIniFile` | 字符串 | 条件 | 当 `IncludeGameplayTags` 为真时，一般为相对 Mod 根目录的 ini 文件名，约定可为 **`{ModId}GameplayTags.ini`**（见 `UModInfoData::MakeGameplayTagsIniFileName`）。 |
+| `IncludeGameplayTags` | 布尔 | 可选 | 是否启用随 Mod 分发的 **GameplayTag** ini（引擎 GameplayTag 管理用）。流程与编辑器操作见 [ModGameplayTags标签配置.md](./ModGameplayTags标签配置.md)。 |
+| `GameplayTagsIniFile` | 字符串 | 条件 | 当 `IncludeGameplayTags` 为真时，一般为相对 Mod 根目录的 ini 文件名，约定 **`{ModId}GameplayTags.ini`**（见 `UModInfoData::MakeGameplayTagsIniFileName`）。详见 [ModGameplayTags标签配置.md](./ModGameplayTags标签配置.md)。 |
 | `PublishedFileId` | 字符串 | 可选 | **Steam 创意工坊**等发布流程写入的文件 ID；编辑器保存时若内存中为空则可能**不写该键**，避免覆盖；勿在插件 UI 中当常规字段编辑。 |
 | `AdditionalAssets` | 字符串数组 | 可选 | 额外打进 Pak 的路径列表，**相对项目 `Content` 目录**。除 Mod 目录默认收集的资源外，**附加的 `.lua` 等文件必须在此声明**才会被打包（不会自动扫描某脚本文件夹）。详见 [ModLua脚本说明.md](./ModLua脚本说明.md)。 |
 | `Dependencies` | 对象数组 | 可选 | 其它 Mod 依赖，见 §2。 |
@@ -77,6 +77,7 @@
 
 - [Mod文档索引.md](./Mod文档索引.md)  
 - [ModLua脚本说明.md](./ModLua脚本说明.md)（`MainLuaFile`、UnLua 蓝图绑定、`AdditionalAssets`）  
+- [ModGameplayTags标签配置.md](./ModGameplayTags标签配置.md)（`IncludeGameplayTags`、ini、管理器 Source）  
 - [Mod工程与目录说明.md](./Mod工程与目录说明.md)  
 - [Mod编辑器与打包说明.md](./Mod编辑器与打包说明.md)  
 - [Plugins/CreateModPlugin/README.md](./Plugins/CreateModPlugin/README.md)

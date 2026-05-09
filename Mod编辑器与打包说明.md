@@ -63,6 +63,7 @@ Cook 输出目录常见形式包括（随引擎版本可能变化）：
 - [Mod文档索引.md](./Mod文档索引.md)  
 - [Mod工程与目录说明.md](./Mod工程与目录说明.md)  
 - [ModInfo字段说明.md](./ModInfo字段说明.md)（`ModInfo.json` 与 `ModToolVersion`）  
+- [ModGameplayTags标签配置.md](./ModGameplayTags标签配置.md)（Tag ini 与打包）  
 - [ModLua脚本说明.md](./ModLua脚本说明.md)（`Main.lua`、蓝图 UnLua 绑定、`AdditionalAssets`）  
 - [Mod测试说明.md](./Mod测试说明.md)  
 - `Plugins/CreateModPlugin/README.md`

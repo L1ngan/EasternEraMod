@@ -144,6 +144,8 @@ BeforeObserveName | 动物头顶显示的名字，可自由起名
 
 创建标签管理文件（非常重要）
 
+GameplayTag 与 `ModInfo`、ini 命名的通用说明见 **[ModGameplayTags标签配置.md](./ModGameplayTags标签配置.md)**。
+
 ![](./assets/动物or怪物配置_r198_c6_20.png)
 
 1 | 每次新增怪物时，其有独特的攻击动画模组，就需要为其建立独立的技能标签
