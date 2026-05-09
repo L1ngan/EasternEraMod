@@ -1,6 +1,10 @@
 # 动物or怪物配置
 
-创建mod后，将动物所有相关资产（骨骼、模型、贴图、材质、动画）放到如下路径（Content/{Mod文件名}）
+创建 Mod 后，将动物相关资产（骨骼、模型、贴图、材质、动画）放在 **Mod 根目录**下，即：
+
+**`Content/Mods/<Mod文件夹名>/`**
+
+其中 `<Mod文件夹名>` 与你在「创建 Mod」时使用的 **Mod Id / 文件夹名**一致；Mod 内容必须位于 **`Content/Mods/` 的一级子文件夹**内（勿写成 `Content/` 下与 `Mods` 平级的其它路径）。目录结构与打包校验说明见 [Mod工程与目录说明.md](./Mod工程与目录说明.md)。
 
 ![](./assets/动物or怪物配置_r2_c2_01.png)
 
@@ -20,7 +24,7 @@
 
 创建关联配置表时需注意与ConfigType保持一致
 
-所有创建的配置表需放到Mods/XXX文件夹名/Config目录下
+所有创建的配置表需放到 **`Content/Mods/<Mod文件夹名>/Config/`** 目录下（下文「Mods/XXX」均指该路径）
 
 Override：勾选后将覆盖原始数据，建议AnimalConfig选择勾选，其余2个表不勾选
 
