@@ -22,19 +22,19 @@
 
 ## Suggested reading order
 
-1. New to the project: **ModProjectAndDirectoryStructure**.  
-2. Mod metadata & `ModInfo.json`: **ModInfoFields**.  
-3. **GameplayTag / Mod ini**: **ModGameplayTagsConfiguration**.  
-4. Mod **Lua entry & extra scripts**: **ModLuaScripting**.  
-5. Character/creature models: **ModelImportAndSkeletonMatching**.  
-6. Filling mesh/animation paths in tables: **ModDataTablesAndSkeletalMeshFields**, plus struct headers.  
-7. Shipping a Pak: **ModEditorAndPackaging**.  
-8. Verifying in installed game: **ModTesting**.
+1. New to the project: [ModProjectAndDirectoryStructure.md](./ModProjectAndDirectoryStructure.md).  
+2. Mod metadata & `ModInfo.json`: [ModInfoFields.md](./ModInfoFields.md).  
+3. **GameplayTag / Mod ini**: [ModGameplayTagsConfiguration.md](./ModGameplayTagsConfiguration.md).  
+4. Mod **Lua entry & extra scripts**: [ModLuaScripting.md](./ModLuaScripting.md).  
+5. Character/creature models: [ModelImportAndSkeletonMatching.md](./ModelImportAndSkeletonMatching.md).  
+6. Filling mesh/animation paths in tables: [ModDataTablesAndSkeletalMeshFields.md](./ModDataTablesAndSkeletalMeshFields.md), plus struct headers.  
+7. Shipping a Pak: [ModEditorAndPackaging.md](./ModEditorAndPackaging.md).  
+8. Verifying in installed game: [ModTesting.md](./ModTesting.md).
 
 ## Plugin & source (quick ref)
 
 - Data structures: `Plugins/CreateModPlugin/Source/CreateModPlugin/Public/`  
-- Plugin overview: `Plugins/CreateModPlugin/README.md`  
+- Plugin overview: [Plugins/CreateModPlugin/README.md](../../Plugins/CreateModPlugin/README.md)  
 - Project: `EasternEra.uproject` (UE **5.6**)
 
 ---
