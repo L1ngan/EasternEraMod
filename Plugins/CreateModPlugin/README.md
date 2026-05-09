@@ -33,7 +33,7 @@
 
 1. **Mod Info Editor** — 选择或维护 `Content/Mods/<ModName>/`，编辑并 **保存/加载 `ModInfo.json`**。  
 2. **Create New Mod** — 在 `Content/Mods` 下 **一层子目录** 中生成 Mod 目录、`ModInfo.json`、**`UModInformationAsset`** 等初始资产。  
-3. **Package Mod** — 列出可打包 Mod、可选 **Cook**，调用 **UnrealPak** 生成 **`<ModId>.pak`**，并将 `ModInfo.json`、主 Lua、图标、GameplayTags ini 等同步到 **项目根目录 `Mods/<ModId>/`**（详见工程根目录文档）。
+3. **Package Mod** — 列出可打包 Mod、可选 **Cook**，调用 **UnrealPak** 生成 **`<ModId>.pak`**，并将 `ModInfo.json`、主 Lua、图标、GameplayTags ini 等同步到 **项目根目录 `Mods/<ModId>/`**（详见 [Docs](../../Docs/README.md) 中的打包与测试说明）。
 
 打包过程中 **Package Mod** 窗口可能禁止关闭，直至当前任务结束（见 `CreateModPluginEditor.cpp` 中 `SetRequestDestroyWindowOverride`）。
 
@@ -56,7 +56,7 @@
 
 `UModInfoData` 定义于 `ModInfoEditorData.h`，用于 **Mod Info Editor / Create Mod** 窗体，序列化为 Mod 根目录下的 **`ModInfo.json`**。
 
-**字段逐项说明（JSON 键名、依赖数组、`ModToolVersion` 等）**见工程根目录文档：[ModInfo字段说明.md](../../ModInfo字段说明.md)。**GameplayTag（`IncludeGameplayTags`、`GameplayTagsIniFile`）**见：[ModGameplayTags标签配置.md](../../ModGameplayTags标签配置.md)。**`MainLuaFile` / `Main.lua`、UnLua 蓝图绑定与附加 Lua（`AdditionalAssets`）**见：[ModLua脚本说明.md](../../ModLua脚本说明.md)。
+**字段逐项说明（JSON 键名、依赖数组、`ModToolVersion` 等）**：[ModInfo字段说明.md](../../Docs/zh-CN/ModInfo字段说明.md) · [ModInfoFields.md (EN)](../../Docs/en-US/ModInfoFields.md)。**GameplayTag（`IncludeGameplayTags`、`GameplayTagsIniFile`）**：[ModGameplayTags标签配置.md](../../Docs/zh-CN/ModGameplayTags标签配置.md) · [ModGameplayTagsConfiguration.md (EN)](../../Docs/en-US/ModGameplayTagsConfiguration.md)。**`MainLuaFile` / `Main.lua`、UnLua 蓝图绑定与附加 Lua（`AdditionalAssets`）**：[ModLua脚本说明.md](../../Docs/zh-CN/ModLua脚本说明.md) · [ModLuaScripting.md (EN)](../../Docs/en-US/ModLuaScripting.md)。
 
 以下为概要字段表：
 
@@ -118,16 +118,53 @@ DataTable 在编辑器中创建时，**行结构** 选上表对应 struct，**�
 
 ---
 
-## 与工程说明文档的关系
+## 多语言说明文档索引
 
-本仓库根目录另有 **Mod 工程、模型骨骼、数据表字段、打包与测试** 等说明，建议搭配阅读（相对本文件路径为 `../../`）：
+完整 Mod 说明已整理到 **`Docs/`**：每种语言一个子文件夹；文中的截图引用仓库根目录 **`assets/`**（`Docs` 内已使用 `../../assets/` 相对路径）。
 
-- [Mod文档索引.md](../../Mod文档索引.md)  
-- [ModInfo字段说明.md](../../ModInfo字段说明.md)  
-- [ModGameplayTags标签配置.md](../../ModGameplayTags标签配置.md)  
-- [ModLua脚本说明.md](../../ModLua脚本说明.md)  
-- [Mod编辑器与打包说明.md](../../Mod编辑器与打包说明.md)  
-- [Mod测试说明.md](../../Mod测试说明.md)  
+| 入口 | 路径 |
+|------|------|
+| 多语言总览 | [Docs/README.md](../../Docs/README.md) |
+| 简体中文索引 | [Docs/zh-CN/Mod文档索引.md](../../Docs/zh-CN/Mod文档索引.md) |
+| English index | [Docs/en-US/ModDocumentationIndex.md](../../Docs/en-US/ModDocumentationIndex.md) |
+
+### 简体中文（`Docs/zh-CN/`）
+
+| 文档 |
+|------|
+| [Mod文档索引.md](../../Docs/zh-CN/Mod文档索引.md) |
+| [Mod工程与目录说明.md](../../Docs/zh-CN/Mod工程与目录说明.md) |
+| [ModInfo字段说明.md](../../Docs/zh-CN/ModInfo字段说明.md) |
+| [ModGameplayTags标签配置.md](../../Docs/zh-CN/ModGameplayTags标签配置.md) |
+| [ModLua脚本说明.md](../../Docs/zh-CN/ModLua脚本说明.md) |
+| [模型导入与骨骼匹配说明.md](../../Docs/zh-CN/模型导入与骨骼匹配说明.md) |
+| [Mod数据表与骨骼网格字段说明.md](../../Docs/zh-CN/Mod数据表与骨骼网格字段说明.md) |
+| [Mod编辑器与打包说明.md](../../Docs/zh-CN/Mod编辑器与打包说明.md) |
+| [Mod测试说明.md](../../Docs/zh-CN/Mod测试说明.md) |
+| [基础配置.md](../../Docs/zh-CN/基础配置.md) |
+| [角色配置.md](../../Docs/zh-CN/角色配置.md) |
+| [动物or怪物配置.md](../../Docs/zh-CN/动物or怪物配置.md) |
+| [Mod打包测试简易教程.md](../../Docs/zh-CN/Mod打包测试简易教程.md) |
+
+### English（`Docs/en-US/`）
+
+| Document |
+|----------|
+| [ModDocumentationIndex.md](../../Docs/en-US/ModDocumentationIndex.md) |
+| [ModProjectAndDirectoryStructure.md](../../Docs/en-US/ModProjectAndDirectoryStructure.md) |
+| [ModInfoFields.md](../../Docs/en-US/ModInfoFields.md) |
+| [ModGameplayTagsConfiguration.md](../../Docs/en-US/ModGameplayTagsConfiguration.md) |
+| [ModLuaScripting.md](../../Docs/en-US/ModLuaScripting.md) |
+| [ModelImportAndSkeletonMatching.md](../../Docs/en-US/ModelImportAndSkeletonMatching.md) |
+| [ModDataTablesAndSkeletalMeshFields.md](../../Docs/en-US/ModDataTablesAndSkeletalMeshFields.md) |
+| [ModEditorAndPackaging.md](../../Docs/en-US/ModEditorAndPackaging.md) |
+| [ModTesting.md](../../Docs/en-US/ModTesting.md) |
+| [BasicConfiguration.md](../../Docs/en-US/BasicConfiguration.md) |
+| [CharacterConfiguration.md](../../Docs/en-US/CharacterConfiguration.md) |
+| [CreatureConfiguration.md](../../Docs/en-US/CreatureConfiguration.md) |
+| [ModPackagingQuickStart.md](../../Docs/en-US/ModPackagingQuickStart.md) |
+
+仓库根目录若仍存在同名中文 `.md`，可与 `Docs/zh-CN` 对照使用；**推荐以 `Docs/zh-CN` 为准**（资源相对路径已按子目录修正）。
 
 ---
 
