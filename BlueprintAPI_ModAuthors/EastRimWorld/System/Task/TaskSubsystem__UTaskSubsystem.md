@@ -13,7 +13,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintPure, Category="TaskSubsystem" |
-| 返回类型 | `UTaskSubsystem *` |
+| 返回类型 | [UTaskSubsystem](TaskSubsystem__UTaskSubsystem.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure, Category = "TaskSubsystem") static UTaskSubsystem * GetInstance();`
@@ -32,7 +32,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Condition` | `const FCommonTaskCondition &` |
+| `Condition` | const [FCommonTaskCondition](../../Struct/CommonTaskStruct__FCommonTaskCondition.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "TaskSubsystem") void UpdateTaskCondition(const FCommonTaskCondition & Condition);`
 
@@ -54,7 +54,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Condition` | `UPARAM(ref) FCommonTaskCondition &` |
+| `Condition` | UPARAM(ref) [FCommonTaskCondition](../../Struct/CommonTaskStruct__FCommonTaskCondition.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "TaskSubsystem") void CheckConditionCompletion(UPARAM(ref) FCommonTaskCondition & Condition);`
 

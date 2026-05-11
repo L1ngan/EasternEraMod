@@ -12,7 +12,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGuid,FCharacterWorldMoveInfo>` |
+| C++ 类型 | TMap<FGuid,[FCharacterWorldMoveInfo](WorldStruct__FCharacterWorldMoveInfo.md)> |
 | 反射说明符 | BlueprintReadOnly, Category="World Map" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame,BlueprintReadOnly,EditAnywhere,Category="World Map") TMap<FGuid,FCharacterWorldMoveInfo> CharacterWorldMoveInfos;` |
@@ -27,7 +27,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGuid,TObjectPtr<AWorldMapMoveActor>>` |
+| C++ 类型 | TMap<FGuid,TObjectPtr<[AWorldMapMoveActor](../Character/WorldMapMoveActor__AWorldMapMoveActor.md)>> |
 | 反射说明符 | BlueprintReadOnly, Category="World Map" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="World Map") TMap<FGuid,TObjectPtr<AWorldMapMoveActor>> CharacterWorldMoveActors;` |
@@ -98,7 +98,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<AERW_PlayerPawn>` |
+| C++ 类型 | TObjectPtr<[AERW_PlayerPawn](../Framework/ERW_PlayerPawn__AERW_PlayerPawn.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AERW_PlayerPawn> WorldMapPawn;` |
@@ -109,7 +109,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<AERW_PlayerPawn>` |
+| C++ 类型 | TObjectPtr<[AERW_PlayerPawn](../Framework/ERW_PlayerPawn__AERW_PlayerPawn.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AERW_PlayerPawn> OtherWorldPawn;` |
@@ -123,7 +123,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `AWorldMapManage *` |
+| 返回类型 | [AWorldMapManage](WorldMapManage__AWorldMapManage.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) static AWorldMapManage * GetWorldMapManage();`
@@ -188,7 +188,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `PlayerPawnType` | `EPlayerPawnType` |
-| `PlayerPawn` | `AERW_PlayerPawn *` |
+| `PlayerPawn` | [AERW_PlayerPawn](../Framework/ERW_PlayerPawn__AERW_PlayerPawn.md) * |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RegisterPlayerPawn(EPlayerPawnType PlayerPawnType,AERW_PlayerPawn * PlayerPawn);`
 
@@ -232,7 +232,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacterWorldMoveInfo` | `const FCharacterWorldMoveInfo &` |
+| `CharacterWorldMoveInfo` | const [FCharacterWorldMoveInfo](WorldStruct__FCharacterWorldMoveInfo.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CharacterLeaveWorldMap(const FCharacterWorldMoveInfo & CharacterWorldMoveInfo);`
 
@@ -254,7 +254,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacterWorldMoveInfo` | `FCharacterWorldMoveInfo &` |
+| `CharacterWorldMoveInfo` | [FCharacterWorldMoveInfo](WorldStruct__FCharacterWorldMoveInfo.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool CalculateWorldActorPosition(FCharacterWorldMoveInfo & CharacterWorldMoveInfo);`
 
@@ -300,7 +300,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacterWorldMoveInfo` | `FCharacterWorldMoveInfo &` |
+| `CharacterWorldMoveInfo` | [FCharacterWorldMoveInfo](WorldStruct__FCharacterWorldMoveInfo.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CalculateNavigationPath(FCharacterWorldMoveInfo & CharacterWorldMoveInfo);`
 
@@ -422,7 +422,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AWorldMapMoveActor*` |
+| 返回类型 | [AWorldMapMoveActor](../Character/WorldMapMoveActor__AWorldMapMoveActor.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -466,7 +466,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="Transportation" |
-| 返回类型 | `TArray<ABuildingActorBase*>` |
+| 返回类型 | TArray<[ABuildingActorBase](../Building/BuildingActorBase__ABuildingActorBase.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -493,7 +493,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `MoveInfo` | `FCharacterWorldMoveInfo&` |
+| `MoveInfo` | [FCharacterWorldMoveInfo](WorldStruct__FCharacterWorldMoveInfo.md)& |
 | `TransportationType` | `ETransportationType` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "Transportation") bool AssignTransportationToMoveInfo(FCharacterWorldMoveInfo& MoveInfo , ETransportationType TransportationType);`
@@ -555,7 +555,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FPlaceDistanceTimeAndSpeed` |
+| 返回类型 | [FPlaceDistanceTimeAndSpeed](WorldStruct__FPlaceDistanceTimeAndSpeed.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -564,7 +564,7 @@
 | `EndPlaceLocation` | `const FVector &` |
 | `TransportationType` | `ETransportationType` |
 | `WorldMapMoveType` | `EWorldMapMoveType` |
-| `CharacterSaveData` | `const TArray<FCharacterSaveData> &` |
+| `CharacterSaveData` | const TArray<[FCharacterSaveData](WorldCharacterData__FCharacterSaveData.md)> & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FPlaceDistanceTimeAndSpeed WorldMoveCalculateDistanceAndTime(const FVector & StartPlaceLocation , const FVector & EndPlaceLocation , ETransportationType TransportationType , EWorldMapMoveType WorldMapMoveType , const TArray<FCharacterSaveData> & CharacterSaveData);`
 

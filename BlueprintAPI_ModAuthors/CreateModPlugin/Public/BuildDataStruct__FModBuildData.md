@@ -119,7 +119,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FModRelativeGridPoses>` |
+| C++ 类型 | TArray<[FModRelativeGridPoses](BuildDataStruct__FModRelativeGridPoses.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") TArray<FModRelativeGridPoses> EntranceGridPoses;` |
@@ -224,7 +224,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FModAutoTileMeshConfigData>` |
+| C++ 类型 | TArray<[FModAutoTileMeshConfigData](BuildDataStruct__FModAutoTileMeshConfigData.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Mesh" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Mesh") TArray<FModAutoTileMeshConfigData> AutoTileMeshes;` |
@@ -374,7 +374,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FModBuildLightSourceData>` |
+| C++ 类型 | TArray<[FModBuildLightSourceData](BuildDataStruct__FModBuildLightSourceData.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Light" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Light") TArray<FModBuildLightSourceData> LightParams;` |

@@ -147,7 +147,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FPlaceInitGameplayEffect>` |
+| C++ 类型 | TArray<[FPlaceInitGameplayEffect](CharacterStruct__FPlaceInitGameplayEffect.md)> |
 | 反射说明符 | BlueprintReadOnly, Category="Attributes" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Attributes") TArray<FPlaceInitGameplayEffect> PlaceInitGameplayEffect;` |
@@ -192,7 +192,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FItemSimpleData>` |
+| C++ 类型 | TArray<[FItemSimpleData](CommonStruct__FItemSimpleData.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") TArray<FItemSimpleData> InitResource;` |
@@ -443,7 +443,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<int32,FCharacterTeamInfo>` |
+| C++ 类型 | TMap<int32,[FCharacterTeamInfo](CharacterStruct__FCharacterTeamInfo.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category= "Base") TMap<int32,FCharacterTeamInfo> CharacterTeamInfo;` |
@@ -548,7 +548,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FOutputDatas` |
+| C++ 类型 | [FOutputDatas](ItemStruct__FOutputDatas.md) |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") FOutputDatas Output;` |

@@ -23,7 +23,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName,FGOAP_Action>` |
+| C++ 类型 | TMap<FName,[FGOAP_Action](../GOAP/GOAP_Data__FGOAP_Action.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere,SaveGame) TMap<FName,FGOAP_Action> TransportGoodsActions;` |
@@ -68,7 +68,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InGoodsInfos` | `const TMap<FName,FTravelerGoodsInfo>&` |
+| `InGoodsInfos` | const TMap<FName,[FTravelerGoodsInfo](../Struct/ItemStruct__FTravelerGoodsInfo.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CreateTransportAction(const TMap<FName,FTravelerGoodsInfo>& InGoodsInfos);`
 
@@ -86,7 +86,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InItems` | `const TArray<UInventoryItemInstance*>&` |
+| `InItems` | const TArray<[UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)*>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddTradeGoods(const TArray<UInventoryItemInstance*>& InItems);`
 
@@ -126,7 +126,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InGoodsInfos` | `const TMap<FName,FTravelerGoodsInfo>&` |
+| `InGoodsInfos` | const TMap<FName,[FTravelerGoodsInfo](../Struct/ItemStruct__FTravelerGoodsInfo.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void PopTradeGoods(const TMap<FName,FTravelerGoodsInfo>& InGoodsInfos);`
 

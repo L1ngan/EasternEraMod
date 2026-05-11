@@ -104,7 +104,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FCommonTaskCondition>` |
+| C++ 类型 | TArray<[FCommonTaskCondition](CommonTaskStruct__FCommonTaskCondition.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Runtime" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Runtime") TArray<FCommonTaskCondition> Condition;` |
@@ -119,7 +119,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , FCommonTaskCondition>` |
+| C++ 类型 | TMap<FName , [FCommonTaskCondition](CommonTaskStruct__FCommonTaskCondition.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Runtime" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Runtime") TMap<FName , FCommonTaskCondition> SubConditions;` |

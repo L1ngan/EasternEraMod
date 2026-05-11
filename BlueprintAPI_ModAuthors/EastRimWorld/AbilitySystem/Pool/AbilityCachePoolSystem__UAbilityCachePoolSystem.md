@@ -13,13 +13,13 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="AbilityCachePoolSystem" |
-| 返回类型 | `AAbilityProjectileEmitterBase *` |
+| 返回类型 | [AAbilityProjectileEmitterBase](../Projectile/AbilityProjectileEmitterBase__AAbilityProjectileEmitterBase.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
 | `InOwner` | `AActor *` |
-| `nullptr` | `TSubclassOf<AAbilityProjectileEmitterBase> ProjectileEmitterClass =` |
+| `nullptr` | TSubclassOf<[AAbilityProjectileEmitterBase](../Projectile/AbilityProjectileEmitterBase__AAbilityProjectileEmitterBase.md)> ProjectileEmitterClass = |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "AbilityCachePoolSystem") AAbilityProjectileEmitterBase * GetVacancyAbilityProjectileEmitter(AActor * InOwner,TSubclassOf<AAbilityProjectileEmitterBase> ProjectileEmitterClass = nullptr);`
 
@@ -37,7 +37,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `AbilityProjectileEmitter` | `AAbilityProjectileEmitterBase *` |
+| `AbilityProjectileEmitter` | [AAbilityProjectileEmitterBase](../Projectile/AbilityProjectileEmitterBase__AAbilityProjectileEmitterBase.md) * |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool RecycleAbilityProjectileEmitter(AAbilityProjectileEmitterBase * AbilityProjectileEmitter);`
 
@@ -50,13 +50,13 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="AbilityCachePoolSystem" |
-| 返回类型 | `AEastRimWorldProjectileBase *` |
+| 返回类型 | [AEastRimWorldProjectileBase](../Projectile/EastRimWorldProjectileBase__AEastRimWorldProjectileBase.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
 | `InOwner` | `AActor*` |
-| `nullptr` | `TSubclassOf<AEastRimWorldProjectileBase> ProjectileClass =` |
+| `nullptr` | TSubclassOf<[AEastRimWorldProjectileBase](../Projectile/EastRimWorldProjectileBase__AEastRimWorldProjectileBase.md)> ProjectileClass = |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "AbilityCachePoolSystem") AEastRimWorldProjectileBase * GetVacancyAbilityProjectile(AActor* InOwner,TSubclassOf<AEastRimWorldProjectileBase> ProjectileClass = nullptr);`
 
@@ -74,7 +74,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `AbilityProjectile` | `AEastRimWorldProjectileBase*` |
+| `AbilityProjectile` | [AEastRimWorldProjectileBase](../Projectile/EastRimWorldProjectileBase__AEastRimWorldProjectileBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "AbilityCachePoolSystem") bool RecycleAbilityProjectile(AEastRimWorldProjectileBase* AbilityProjectile);`
 
@@ -87,12 +87,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="AbilityCachePoolSystem" |
-| 返回类型 | `ASceneTextActor *` |
+| 返回类型 | [ASceneTextActor](../SceneText/SceneTextActor__ASceneTextActor.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `nullptr` | `TSubclassOf<ASceneTextActor> SceneTextActorClass =` |
+| `nullptr` | TSubclassOf<[ASceneTextActor](../SceneText/SceneTextActor__ASceneTextActor.md)> SceneTextActorClass = |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "AbilityCachePoolSystem") ASceneTextActor * GetVacancySceneTextActor(TSubclassOf<ASceneTextActor> SceneTextActorClass = nullptr);`
 
@@ -110,7 +110,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `SceneTextActor` | `ASceneTextActor*` |
+| `SceneTextActor` | [ASceneTextActor](../SceneText/SceneTextActor__ASceneTextActor.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "AbilityCachePoolSystem") bool RecycleSceneTextActor(ASceneTextActor* SceneTextActor);`
 

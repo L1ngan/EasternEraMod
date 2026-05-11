@@ -50,7 +50,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InWeapon` | `const FCharacterWeapon &` |
+| `InWeapon` | const [FCharacterWeapon](../Struct/ItemStruct__FCharacterWeapon.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintImplementableEvent) void UpdateBattleWeapon(const FCharacterWeapon & InWeapon);`
 

@@ -90,7 +90,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<AInventoryItemWidgetActor>` |
+| C++ 类型 | TObjectPtr<[AInventoryItemWidgetActor](InventoryItemWidgetActor__AInventoryItemWidgetActor.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AInventoryItemWidgetActor> InventoryItemWidget;` |
@@ -111,7 +111,7 @@
 |--------|------|
 | `Min` | `const FVector&` |
 | `Max` | `const FVector&` |
-| `Instances` | `TArray<UInventoryItemInstance*>&` |
+| `Instances` | TArray<[UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md)*>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) void GetItemInstancesByRange(const FVector& Min , const FVector& Max , TArray<UInventoryItemInstance*>& Instances) const;`
 
@@ -128,7 +128,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintPure, BlueprintNativeEvent |
-| 返回类型 | `TArray<UInventoryItemInstance*>` |
+| 返回类型 | TArray<[UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -150,7 +150,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UInventoryItemInstance*` |
+| 返回类型 | [UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -325,7 +325,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UInventoryItemInstance *` |
+| 返回类型 | [UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -412,7 +412,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InventoryItemInstance` | `UInventoryItemInstance*` |
+| `InventoryItemInstance` | [UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md)* |
 | `（匿名/仅类型）` | `FTransform NewTransform = FTransform()` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void InitItemInfoByInstance(UInventoryItemInstance* InventoryItemInstance,FTransform NewTransform = FTransform());`
@@ -435,7 +435,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InventoryItemInstance` | `UInventoryItemInstance*` |
+| `InventoryItemInstance` | [UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md)* |
 | `（匿名/仅类型）` | `FTransform NewTransform = FTransform()` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void InitResourcePackageByInstance(UInventoryItemInstance* InventoryItemInstance,FTransform NewTransform = FTransform());`
@@ -458,7 +458,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `AcceptResource` | `const TMap<FName,FItemSimpleData>&` |
+| `AcceptResource` | const TMap<FName,[FItemSimpleData](../Struct/CommonStruct__FItemSimpleData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void InitItemInfoBySimpleData(const TMap<FName,FItemSimpleData>& AcceptResource);`
 
@@ -475,13 +475,13 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UFarmlandPlantInstance*` |
+| 返回类型 | [UFarmlandPlantInstance](FarmlandPlantInstance__UFarmlandPlantInstance.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
 | `Location` | `const FVector&` |
-| `CollectItemData` | `const FCollectItem&` |
+| `CollectItemData` | const [FCollectItem](../Struct/ItemStruct__FCollectItem.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) UFarmlandPlantInstance* PlantAtLocation(const FVector& Location,const FCollectItem& CollectItemData);`
 

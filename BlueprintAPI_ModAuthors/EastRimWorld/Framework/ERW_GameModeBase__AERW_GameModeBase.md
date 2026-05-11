@@ -14,7 +14,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UERW_GameConfigComponent>` |
+| C++ 类型 | TObjectPtr<[UERW_GameConfigComponent](../Components/ERW_GameConfigComponent__UERW_GameConfigComponent.md)> |
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="Configs" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Configs", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UERW_GameConfigComponent> GameConfigComponent;` |
@@ -62,7 +62,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , FGoalBaseInfo>` |
+| C++ 类型 | TMap<FName , [FGoalBaseInfo](ERW_GameModeBase__FGoalBaseInfo.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TMap<FName , FGoalBaseInfo> GoalBaseInfos;` |
@@ -176,7 +176,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintImplementableEvent |
-| 返回类型 | `AERW_SceneManager*` |
+| 返回类型 | [AERW_SceneManager](../ERW_SceneManager__AERW_SceneManager.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable , BlueprintImplementableEvent) AERW_SceneManager* GetSceneManager() const;`
@@ -194,7 +194,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FCharacterAttributeInfo &` |
+| 返回类型 | [FCharacterAttributeInfo](../Struct/ItemStruct__FCharacterAttributeInfo.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -241,7 +241,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FCharacterActionAbility &` |
+| 返回类型 | const [FCharacterActionAbility](../Player/EastRimWorldAIController__FCharacterActionAbility.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -285,7 +285,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FBuffTagInfo &` |
+| 返回类型 | const [FBuffTagInfo](../AbilitySystem/Abilities/EastRimWorldGameplayAbility__FBuffTagInfo.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -351,7 +351,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UGamePlayConfigurationAsset *` |
+| 返回类型 | [UGamePlayConfigurationAsset](../Components/ERW_GameConfigComponent__UGamePlayConfigurationAsset.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) UGamePlayConfigurationAsset * GetGamePlayConfigurationAsset();`
@@ -369,7 +369,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FSceneTextInfo &` |
+| 返回类型 | const [FSceneTextInfo](../AbilitySystem/SceneText/SceneTextStruct__FSceneTextInfo.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -391,7 +391,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FModuleUIConfig` |
+| 返回类型 | [FModuleUIConfig](../UI/Struct/UIStruct__FModuleUIConfig.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -413,7 +413,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FGridCollectData &` |
+| 返回类型 | const [FGridCollectData](../Components/ERW_MapDataMgr__FGridCollectData.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -457,7 +457,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FCollectItem &` |
+| 返回类型 | const [FCollectItem](../Struct/ItemStruct__FCollectItem.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -479,7 +479,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FInventoryItem &` |
+| 返回类型 | const [FInventoryItem](../Struct/ItemStruct__FInventoryItem.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -519,7 +519,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FTreasureItem &` |
+| 返回类型 | const [FTreasureItem](../Components/TreasureComponent__FTreasureItem.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -541,7 +541,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FCharacterWeapon &` |
+| 返回类型 | const [FCharacterWeapon](../Struct/ItemStruct__FCharacterWeapon.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -563,7 +563,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FCharacterTool &` |
+| 返回类型 | const [FCharacterTool](../Struct/ItemStruct__FCharacterTool.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -585,7 +585,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FBuildingData &` |
+| 返回类型 | const [FBuildingData](../Struct/BuildingData__FBuildingData.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -607,7 +607,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FEquipmentAttribute &` |
+| 返回类型 | const [FEquipmentAttribute](../Struct/ItemStruct__FEquipmentAttribute.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -629,7 +629,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FCharacterApparel &` |
+| 返回类型 | const [FCharacterApparel](../Struct/ItemStruct__FCharacterApparel.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -651,7 +651,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FCommonUIConfig &` |
+| 返回类型 | const [FCommonUIConfig](../UI/Struct/UIStruct__FCommonUIConfig.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -673,7 +673,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FCommonButton &` |
+| 返回类型 | const [FCommonButton](../UI/Struct/UIStruct__FCommonButton.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -718,7 +718,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FForceData&` |
+| 返回类型 | const [FForceData](../Struct/ForceStruct__FForceData.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -745,7 +745,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutData` | `TArray<FForceData>&` |
+| `OutData` | TArray<[FForceData](../Struct/ForceStruct__FForceData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllForceData(TArray<FForceData>& OutData) const;`
 
@@ -762,7 +762,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FPassGameConditionDescribe>` |
+| 返回类型 | TArray<[FPassGameConditionDescribe](../Struct/ForceStruct__FPassGameConditionDescribe.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -784,7 +784,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FCharacterAttributeInfo &` |
+| 返回类型 | const [FCharacterAttributeInfo](../Struct/ItemStruct__FCharacterAttributeInfo.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -806,7 +806,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FCharacterAttributeInfo &` |
+| 返回类型 | const [FCharacterAttributeInfo](../Struct/ItemStruct__FCharacterAttributeInfo.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -828,7 +828,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FCharacterAttributeInfo>` |
+| 返回类型 | TArray<[FCharacterAttributeInfo](../Struct/ItemStruct__FCharacterAttributeInfo.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -850,7 +850,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FCharacterAttributeInfo &` |
+| 返回类型 | const [FCharacterAttributeInfo](../Struct/ItemStruct__FCharacterAttributeInfo.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -872,7 +872,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FEquipmentQualityRange &` |
+| 返回类型 | const [FEquipmentQualityRange](../Struct/CommonStruct__FEquipmentQualityRange.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -894,7 +894,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FFabricateEquipmentData &` |
+| 返回类型 | const [FFabricateEquipmentData](../Struct/CommonStruct__FFabricateEquipmentData.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -916,7 +916,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FGenerateEquipmentData &` |
+| 返回类型 | const [FGenerateEquipmentData](../Struct/CommonStruct__FGenerateEquipmentData.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -938,7 +938,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FFormulaData &` |
+| 返回类型 | const [FFormulaData](../Struct/CommonStruct__FFormulaData.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -960,7 +960,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FItemClassify &` |
+| 返回类型 | const [FItemClassify](../Struct/ItemStruct__FItemClassify.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -987,7 +987,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutItemClassifyArray` | `UPARAM(ref) TArray<FItemClassify>&` |
+| `OutItemClassifyArray` | UPARAM(ref) TArray<[FItemClassify](../Struct/ItemStruct__FItemClassify.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllItemClassifyInfo(UPARAM(ref) TArray<FItemClassify>& OutItemClassifyArray);`
 
@@ -1004,7 +1004,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FGOAP_Action_Data&` |
+| 返回类型 | const [FGOAP_Action_Data](../GOAP/GOAP_Data__FGOAP_Action_Data.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1026,7 +1026,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FGOAP_Action_Data>` |
+| 返回类型 | TArray<[FGOAP_Action_Data](../GOAP/GOAP_Data__FGOAP_Action_Data.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1066,7 +1066,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FCommonButton &` |
+| 返回类型 | const [FCommonButton](../UI/Struct/UIStruct__FCommonButton.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1111,7 +1111,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FEastRimWorldHumanData &` |
+| 返回类型 | const [FEastRimWorldHumanData](../Struct/CharacterStruct__FEastRimWorldHumanData.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1151,7 +1151,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FEastRimWorldSummonsData &` |
+| 返回类型 | const [FEastRimWorldSummonsData](../Struct/CharacterStruct__FEastRimWorldSummonsData.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1173,7 +1173,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FEastRimWorldAnimalData &` |
+| 返回类型 | const [FEastRimWorldAnimalData](../Struct/CharacterStruct__FEastRimWorldAnimalData.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1195,7 +1195,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FTechCategoryUIConfigStruct&` |
+| 返回类型 | const [FTechCategoryUIConfigStruct](../Struct/TechnologyStruct__FTechCategoryUIConfigStruct.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1217,7 +1217,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FTechnologyConfigStruct&` |
+| 返回类型 | const [FTechnologyConfigStruct](../Struct/TechnologyStruct__FTechnologyConfigStruct.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1239,7 +1239,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FTechPointConverConfigStruct&` |
+| 返回类型 | const [FTechPointConverConfigStruct](../Struct/TechnologyStruct__FTechPointConverConfigStruct.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1267,7 +1267,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `TechPointType` | `ETechPointType` |
-| `Config` | `FTechPointConverConfigStruct&` |
+| `Config` | [FTechPointConverConfigStruct](../Struct/TechnologyStruct__FTechPointConverConfigStruct.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) bool GetTechPointConvertConfigByType(ETechPointType TechPointType , FTechPointConverConfigStruct& Config) const;`
 
@@ -1290,7 +1290,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `BuildID` | `const FName&` |
-| `Config` | `FTechPointConverConfigStruct&` |
+| `Config` | [FTechPointConverConfigStruct](../Struct/TechnologyStruct__FTechPointConverConfigStruct.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) bool GetTechPointConvertConfigByBuildID(const FName& BuildID , FTechPointConverConfigStruct& Config) const;`
 
@@ -1307,7 +1307,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FTechUnlockItemConigStruct&` |
+| 返回类型 | const [FTechUnlockItemConigStruct](../Struct/TechnologyStruct__FTechUnlockItemConigStruct.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1329,7 +1329,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FTechUnlockItemConigStruct>` |
+| 返回类型 | TArray<[FTechUnlockItemConigStruct](../Struct/TechnologyStruct__FTechUnlockItemConigStruct.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1351,7 +1351,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FTechnologyConfigStruct>` |
+| 返回类型 | TArray<[FTechnologyConfigStruct](../Struct/TechnologyStruct__FTechnologyConfigStruct.md)> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<FTechnologyConfigStruct> GetAllTechnologyConfigs() const;`
@@ -1369,7 +1369,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FTechCategoryUIConfigStruct>` |
+| 返回类型 | TArray<[FTechCategoryUIConfigStruct](../Struct/TechnologyStruct__FTechCategoryUIConfigStruct.md)> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<FTechCategoryUIConfigStruct> GetAllTechCategoryUIConfigs() const;`
@@ -1387,7 +1387,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FWorkAttributeLevelConfig &` |
+| 返回类型 | const [FWorkAttributeLevelConfig](../Struct/CharacterStruct__FWorkAttributeLevelConfig.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1409,7 +1409,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UNewGameConfigAsset *` |
+| 返回类型 | [UNewGameConfigAsset](../Struct/NewGameStruct__UNewGameConfigAsset.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) UNewGameConfigAsset * GetNewGameConfigurationAsset();`
@@ -1427,7 +1427,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FStoryBackgroundQuestionData>` |
+| 返回类型 | TArray<[FStoryBackgroundQuestionData](../Struct/StoryBackgroundStruct__FStoryBackgroundQuestionData.md)> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<FStoryBackgroundQuestionData> GetAllStoryBackgroundData() const;`
@@ -1445,7 +1445,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FStoryBackgroundAnswerData&` |
+| 返回类型 | const [FStoryBackgroundAnswerData](../Struct/StoryBackgroundStruct__FStoryBackgroundAnswerData.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1473,7 +1473,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Type` | `FName` |
-| `OutAnswer` | `UPARAM(ref) TArray<FStoryBackgroundAnswerData>&` |
+| `OutAnswer` | UPARAM(ref) TArray<[FStoryBackgroundAnswerData](../Struct/StoryBackgroundStruct__FStoryBackgroundAnswerData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetStoryBackAnswersByType(FName Type,UPARAM(ref) TArray<FStoryBackgroundAnswerData>& OutAnswer);`
 
@@ -1490,7 +1490,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FCharacterOrganConfig &` |
+| 返回类型 | const [FCharacterOrganConfig](../Struct/CharacterStruct__FCharacterOrganConfig.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1513,7 +1513,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FCharacterOrganConfig>` |
+| 返回类型 | TArray<[FCharacterOrganConfig](../Struct/CharacterStruct__FCharacterOrganConfig.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1535,7 +1535,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FCharacterOrganConfig&` |
+| 返回类型 | const [FCharacterOrganConfig](../Struct/CharacterStruct__FCharacterOrganConfig.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1557,7 +1557,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FCharacterOrganConfig&` |
+| 返回类型 | const [FCharacterOrganConfig](../Struct/CharacterStruct__FCharacterOrganConfig.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1579,7 +1579,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FOrganStatus` |
+| 返回类型 | [FOrganStatus](../Struct/CharacterStruct__FOrganStatus.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1604,7 +1604,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FOrganStatus` |
+| 返回类型 | [FOrganStatus](../Struct/CharacterStruct__FOrganStatus.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1627,7 +1627,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FCharacterOrganUIConfig>` |
+| 返回类型 | TArray<[FCharacterOrganUIConfig](../Struct/CharacterStruct__FCharacterOrganUIConfig.md)> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<FCharacterOrganUIConfig> GetCharacterOrganUIConfig() const;`
@@ -1645,7 +1645,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FCharacterMainSkillUIConfig>` |
+| 返回类型 | TArray<[FCharacterMainSkillUIConfig](../Struct/ItemStruct__FCharacterMainSkillUIConfig.md)> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<FCharacterMainSkillUIConfig> GetCharacterMainSkillUIConfigs() const;`
@@ -1669,7 +1669,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `ID` | `const FName&` |
-| `ConfigData` | `FCharacterMainSkillUIConfig&` |
+| `ConfigData` | [FCharacterMainSkillUIConfig](../Struct/ItemStruct__FCharacterMainSkillUIConfig.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetCharacterMainSkillUIConfigByID(const FName& ID , FCharacterMainSkillUIConfig& ConfigData) const;`
 
@@ -1686,7 +1686,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FCharacterAttributeUpgradeConfig &` |
+| 返回类型 | [FCharacterAttributeUpgradeConfig](../Struct/CharacterStruct__FCharacterAttributeUpgradeConfig.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1708,7 +1708,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FAnimalActionAbility&` |
+| 返回类型 | const [FAnimalActionAbility](../Player/EastRimWorldAIController__FAnimalActionAbility.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1730,7 +1730,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FAnimalCultivationConfig&` |
+| 返回类型 | const [FAnimalCultivationConfig](../Struct/CharacterStruct__FAnimalCultivationConfig.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1752,7 +1752,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FMartialArtsBookData &` |
+| 返回类型 | const [FMartialArtsBookData](../Struct/MartialArts__FMartialArtsBookData.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1774,7 +1774,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FRealmData>` |
+| 返回类型 | TArray<[FRealmData](../Struct/MartialArts__FRealmData.md)> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<FRealmData> GetAllRealmData();`
@@ -1792,7 +1792,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FRealmData &` |
+| 返回类型 | const [FRealmData](../Struct/MartialArts__FRealmData.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1814,7 +1814,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FMartialArtsEntries &` |
+| 返回类型 | [FMartialArtsEntries](../Struct/MartialArts__FMartialArtsEntries.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1898,7 +1898,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FCharacteristicInfo &` |
+| 返回类型 | const [FCharacteristicInfo](../Struct/CommonStruct__FCharacteristicInfo.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1925,7 +1925,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacteristicInfos` | `TArray<FCharacteristicInfo>&` |
+| `CharacteristicInfos` | TArray<[FCharacteristicInfo](../Struct/CommonStruct__FCharacteristicInfo.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllCharacteristicInfo(TArray<FCharacteristicInfo>& CharacteristicInfos);`
 
@@ -1947,7 +1947,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacteristicInfos` | `TMap<EItemQuality,FCharacteristicInfoArray>&` |
+| `CharacteristicInfos` | TMap<EItemQuality,[FCharacteristicInfoArray](../Struct/CommonStruct__FCharacteristicInfoArray.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllCharacteristicInfoQualityMap(TMap<EItemQuality,FCharacteristicInfoArray>& CharacteristicInfos);`
 
@@ -1960,7 +1960,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FCommonBuff &` |
+| 返回类型 | const [FCommonBuff](../Struct/CommonStruct__FCommonBuff.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1988,7 +1988,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `ID` | `const FName&` |
-| `Data` | `FBreakdownValueConfigData&` |
+| `Data` | [FBreakdownValueConfigData](../ERW_ConfigTypes__FBreakdownValueConfigData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool GetBreakdownValueData(const FName& ID , FBreakdownValueConfigData& Data);`
 
@@ -2012,7 +2012,7 @@
 |--------|------|
 | `CurrentMood` | `float` |
 | `BreakdownThresholdChangeValue` | `float` |
-| `Data` | `FBreakdownValueConfigData&` |
+| `Data` | [FBreakdownValueConfigData](../ERW_ConfigTypes__FBreakdownValueConfigData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool GetBreakdownValueDataByCurrentMood(float CurrentMood, float BreakdownThresholdChangeValue, FBreakdownValueConfigData& Data);`
 
@@ -2034,7 +2034,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ConfigDatas` | `TArray<FWorkPriorityUIConfigData>&` |
+| `ConfigDatas` | TArray<[FWorkPriorityUIConfigData](../UI/Struct/UIStruct__FWorkPriorityUIConfigData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllWorkPriorityUIConfigData(TArray<FWorkPriorityUIConfigData>& ConfigDatas);`
 
@@ -2056,7 +2056,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Datas` | `TArray<FBuildConfigData>&` |
+| `Datas` | TArray<[FBuildConfigData](../ERW_ConfigTypes__FBuildConfigData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllBuildConfigData(TArray<FBuildConfigData>& Datas);`
 
@@ -2079,7 +2079,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `ID` | `const FName&` |
-| `Data` | `FBuildConfigData&` |
+| `Data` | [FBuildConfigData](../ERW_ConfigTypes__FBuildConfigData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool GetBuildConfigData(const FName& ID , FBuildConfigData& Data);`
 
@@ -2101,7 +2101,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Datas` | `TArray<FBuildConfigData>&` |
+| `Datas` | TArray<[FBuildConfigData](../ERW_ConfigTypes__FBuildConfigData.md)>& |
 | `GOAPActionType` | `FName` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllBuildConfigDataByType(TArray<FBuildConfigData>& Datas,FName GOAPActionType);`
@@ -2124,7 +2124,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Datas` | `TArray<FBuildConfigData>&` |
+| `Datas` | TArray<[FBuildConfigData](../ERW_ConfigTypes__FBuildConfigData.md)>& |
 | `BType` | `EBuildingType` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllBuildConfigDataByBuildingType(TArray<FBuildConfigData>& Datas,EBuildingType BType);`
@@ -2147,7 +2147,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Datas` | `TArray<FBuildConfigData>&` |
+| `Datas` | TArray<[FBuildConfigData](../ERW_ConfigTypes__FBuildConfigData.md)>& |
 | `EType` | `EEnvironType` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllBuildConfigDataByEnvironType(TArray<FBuildConfigData>& Datas,EEnvironType EType);`
@@ -2187,7 +2187,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FMartialArtsBookCategoryData>` |
+| 返回类型 | TArray<[FMartialArtsBookCategoryData](../Struct/MartialArts__FMartialArtsBookCategoryData.md)> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<FMartialArtsBookCategoryData> GetAllMartialArtsBookCateConfigs() const;`
@@ -2205,7 +2205,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FMartialArtsBookCategoryData>` |
+| 返回类型 | TArray<[FMartialArtsBookCategoryData](../Struct/MartialArts__FMartialArtsBookCategoryData.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2227,7 +2227,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FWorldPlaceInfo &` |
+| 返回类型 | const [FWorldPlaceInfo](../WorldSystem/WorldStruct__FWorldPlaceInfo.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2245,7 +2245,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FWorldForceInfo &` |
+| 返回类型 | const [FWorldForceInfo](../WorldSystem/WorldStruct__FWorldForceInfo.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2263,7 +2263,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FWorldAreaInfo` |
+| 返回类型 | [FWorldAreaInfo](../WorldSystem/WorldStruct__FWorldAreaInfo.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2281,7 +2281,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `class UWorldForceConfigurationAsset*` |
+| 返回类型 | class [UWorldForceConfigurationAsset](../WorldSystem/WorldStruct__UWorldForceConfigurationAsset.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) class UWorldForceConfigurationAsset* GetWorldForceConfigurationAsset();`
@@ -2295,7 +2295,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `class UPlayerDiplomacyConfigAsset*` |
+| 返回类型 | class [UPlayerDiplomacyConfigAsset](../Struct/DiplomacyStruct__UPlayerDiplomacyConfigAsset.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) class UPlayerDiplomacyConfigAsset* GetPlayerDiplomacyConfigAsset();`
@@ -2309,7 +2309,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FForceAimInfo&` |
+| 返回类型 | const [FForceAimInfo](../WorldSystem/WorldStruct__FForceAimInfo.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2327,7 +2327,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FWorldPlaceWeatherInfo &` |
+| 返回类型 | const [FWorldPlaceWeatherInfo](../WorldSystem/WorldStruct__FWorldPlaceWeatherInfo.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2349,7 +2349,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FWorldPlaceWeatherInfo&` |
+| 返回类型 | const [FWorldPlaceWeatherInfo](../WorldSystem/WorldStruct__FWorldPlaceWeatherInfo.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2371,7 +2371,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FInjuryEffectConfig &` |
+| 返回类型 | const [FInjuryEffectConfig](../Struct/CharacterStruct__FInjuryEffectConfig.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2393,7 +2393,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UWorldGameConfigurationAsset *` |
+| 返回类型 | [UWorldGameConfigurationAsset](../Components/ERW_GameConfigComponent__UWorldGameConfigurationAsset.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) UWorldGameConfigurationAsset * GetWorldConfigurationAsset();`
@@ -2411,7 +2411,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FInjuryEffectConfig&` |
+| 返回类型 | const [FInjuryEffectConfig](../Struct/CharacterStruct__FInjuryEffectConfig.md)& |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) const FInjuryEffectConfig& GetInjuryScar();`
@@ -2429,7 +2429,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FWorldMoveInfoPreset &` |
+| 返回类型 | const [FWorldMoveInfoPreset](../WorldSystem/WorldStruct__FWorldMoveInfoPreset.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2451,7 +2451,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FForceFavorabilityConfig &` |
+| 返回类型 | const [FForceFavorabilityConfig](../WorldSystem/WorldStruct__FForceFavorabilityConfig.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2469,7 +2469,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UWorldEventData *` |
+| 返回类型 | [UWorldEventData](../Components/ERW_GameConfigComponent__UWorldEventData.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) UWorldEventData * GetWorldEventConfigurationAsset();`
@@ -2487,7 +2487,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FCommonTips` |
+| 返回类型 | [FCommonTips](../WorldSystem/WorldStruct__FCommonTips.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2509,7 +2509,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FCommonTaskInfo &` |
+| 返回类型 | const [FCommonTaskInfo](../Struct/CommonTaskStruct__FCommonTaskInfo.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2537,7 +2537,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `DialogueID` | `const FName&` |
-| `Dialogue` | `FBeginnerGuideDialogue&` |
+| `Dialogue` | [FBeginnerGuideDialogue](../Struct/CommonTaskStruct__FBeginnerGuideDialogue.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool GetBeginnerGuideDialogue(const FName& DialogueID , FBeginnerGuideDialogue& Dialogue);`
 
@@ -2560,7 +2560,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `ID` | `const FName&` |
-| `PopupData` | `FBeginnerGuidePopup&` |
+| `PopupData` | [FBeginnerGuidePopup](../Struct/CommonTaskStruct__FBeginnerGuidePopup.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool GetBeginnerGuidePopupData(const FName& ID , FBeginnerGuidePopup& PopupData);`
 
@@ -2583,7 +2583,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `ID` | `const FName&` |
-| `TipsData` | `FBeginnerGuideTips&` |
+| `TipsData` | [FBeginnerGuideTips](../Struct/CommonTaskStruct__FBeginnerGuideTips.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool GetBeginnerGuideTipsData(const FName& ID , FBeginnerGuideTips& TipsData);`
 
@@ -2600,7 +2600,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FCommonTaskCondition &` |
+| 返回类型 | const [FCommonTaskCondition](../Struct/CommonTaskStruct__FCommonTaskCondition.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2622,7 +2622,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FDialogueGroup &` |
+| 返回类型 | const [FDialogueGroup](../System/Dialogue/DialogueStruct__FDialogueGroup.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2644,7 +2644,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FDialogueInfo &` |
+| 返回类型 | const [FDialogueInfo](../System/Dialogue/DialogueStruct__FDialogueInfo.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2662,7 +2662,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FDialogueOption&` |
+| 返回类型 | const [FDialogueOption](../System/Dialogue/DialogueStruct__FDialogueOption.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2686,7 +2686,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `NPCId` | `const FName &` |
-| `OutOptions` | `TArray<FDialogueOption>&` |
+| `OutOptions` | TArray<[FDialogueOption](../System/Dialogue/DialogueStruct__FDialogueOption.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetDialogueOptionsByNPCId(const FName & NPCId,TArray<FDialogueOption>& OutOptions);`
 
@@ -2699,7 +2699,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UFarmlandConfigAsset *` |
+| 返回类型 | [UFarmlandConfigAsset](../Struct/FarmlandStruct__UFarmlandConfigAsset.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) UFarmlandConfigAsset * GetFarmlandConfigAsset() const;`
@@ -2717,7 +2717,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FPlantTypeTabInfo&` |
+| 返回类型 | [FPlantTypeTabInfo](../Struct/FarmlandStruct__FPlantTypeTabInfo.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2739,7 +2739,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FForceLevelInfo &` |
+| 返回类型 | const [FForceLevelInfo](../WorldSystem/WorldStruct__FForceLevelInfo.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2761,7 +2761,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FForceLevelInfo &` |
+| 返回类型 | const [FForceLevelInfo](../WorldSystem/WorldStruct__FForceLevelInfo.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2783,7 +2783,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const TArray<FForceLevelInfo>` |
+| 返回类型 | const TArray<[FForceLevelInfo](../WorldSystem/WorldStruct__FForceLevelInfo.md)> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) const TArray<FForceLevelInfo> GetAllForceLevelInfo();`
@@ -2819,7 +2819,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const TArray<FForcePurpose>` |
+| 返回类型 | const TArray<[FForcePurpose](../WorldSystem/WorldStruct__FForcePurpose.md)> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) const TArray<FForcePurpose> GetAllForcePurpose();`
@@ -2837,7 +2837,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FForcePurpose` |
+| 返回类型 | const [FForcePurpose](../WorldSystem/WorldStruct__FForcePurpose.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2859,7 +2859,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FPlaceLevelInfo &` |
+| 返回类型 | const [FPlaceLevelInfo](../WorldSystem/WorldStruct__FPlaceLevelInfo.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2882,7 +2882,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const TArray<FPlaceLevelInfo>` |
+| 返回类型 | const TArray<[FPlaceLevelInfo](../WorldSystem/WorldStruct__FPlaceLevelInfo.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2904,7 +2904,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FSeasonWeathersInfo>` |
+| 返回类型 | TArray<[FSeasonWeathersInfo](../WorldSystem/WorldStruct__FSeasonWeathersInfo.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2927,7 +2927,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FGOAP_ActionIcon &` |
+| 返回类型 | const [FGOAP_ActionIcon](../GOAP/GOAP_Data__FGOAP_ActionIcon.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2955,7 +2955,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `TeamId` | `const FGenericTeamId` |
-| `GameplayTeamInfo` | `FGameplayTeamInfo&` |
+| `GameplayTeamInfo` | [FGameplayTeamInfo](../Struct/CharacterStruct__FGameplayTeamInfo.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetGameplayTeamInfoByTeamID(const FGenericTeamId TeamId , FGameplayTeamInfo& GameplayTeamInfo) const;`
 
@@ -2977,7 +2977,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutData` | `TArray<FResourcePackage>&` |
+| `OutData` | TArray<[FResourcePackage](../Struct/ItemStruct__FResourcePackage.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetNewGameResourcePackages(TArray<FResourcePackage>& OutData) const;`
 
@@ -2994,7 +2994,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FSoundChangeEventConfig &` |
+| 返回类型 | const [FSoundChangeEventConfig](../System/Sound/PlaySoundSystem__FSoundChangeEventConfig.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3017,7 +3017,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Datas` | `TArray<FStoryBackgroundData>&` |
+| `Datas` | TArray<[FStoryBackgroundData](../Struct/StoryBackgroundStruct__FStoryBackgroundData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllStoryBackgroundStorys(TArray<FStoryBackgroundData>& Datas);`
 
@@ -3034,7 +3034,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FMonsterGenerationConfig &` |
+| 返回类型 | const [FMonsterGenerationConfig](../WorldSystem/WorldStruct__FMonsterGenerationConfig.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3056,7 +3056,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FEnemyAttackGenerationConfig &` |
+| 返回类型 | const [FEnemyAttackGenerationConfig](../WorldSystem/WorldStruct__FEnemyAttackGenerationConfig.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3083,7 +3083,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Datas` | `TArray<FAchievementUIConfigData>&` |
+| `Datas` | TArray<[FAchievementUIConfigData](../UI/Struct/UIStruct__FAchievementUIConfigData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllAchievementUIConfigs(TArray<FAchievementUIConfigData>& Datas);`
 
@@ -3100,7 +3100,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FRoomConfigData&` |
+| 返回类型 | const [FRoomConfigData](../ERW_ConfigTypes__FRoomConfigData.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3122,7 +3122,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FRoomConfigData&` |
+| 返回类型 | const [FRoomConfigData](../ERW_ConfigTypes__FRoomConfigData.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3149,7 +3149,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutRoomData` | `TArray<FRoomConfigData>&` |
+| `OutRoomData` | TArray<[FRoomConfigData](../ERW_ConfigTypes__FRoomConfigData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllRoomConfigData(TArray<FRoomConfigData>& OutRoomData);`
 
@@ -3166,7 +3166,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FSeasonMaterialInfo&` |
+| 返回类型 | const [FSeasonMaterialInfo](../WorldSystem/WorldStruct__FSeasonMaterialInfo.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3188,7 +3188,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `URoomConfigAsset*` |
+| 返回类型 | [URoomConfigAsset](../ERW_ConfigTypes__URoomConfigAsset.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) URoomConfigAsset* GetRoomConfigAsset();`
@@ -3202,7 +3202,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FBuildCombination&` |
+| 返回类型 | const [FBuildCombination](../ERW_ConfigTypes__FBuildCombination.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3229,7 +3229,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutAllCombinations` | `TArray<FBuildCombination>&` |
+| `OutAllCombinations` | TArray<[FBuildCombination](../ERW_ConfigTypes__FBuildCombination.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllBuildCombinations(TArray<FBuildCombination>& OutAllCombinations);`
 
@@ -3246,7 +3246,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `class UCharacterChatConfigAsset *` |
+| 返回类型 | class [UCharacterChatConfigAsset](../Struct/CharacterChatStruct__UCharacterChatConfigAsset.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) class UCharacterChatConfigAsset * GetCharacterChatConfigAsset();`
@@ -3264,7 +3264,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FSocialRelationshipConfig&` |
+| 返回类型 | const [FSocialRelationshipConfig](../Struct/CharacterChatStruct__FSocialRelationshipConfig.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3291,7 +3291,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutSocialRelationshipConfigs` | `TArray<FSocialRelationshipConfig>&` |
+| `OutSocialRelationshipConfigs` | TArray<[FSocialRelationshipConfig](../Struct/CharacterChatStruct__FSocialRelationshipConfig.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllSocialRelationshipConfig(TArray<FSocialRelationshipConfig>& OutSocialRelationshipConfigs);`
 
@@ -3311,7 +3311,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FHobbyConfig&` |
+| 返回类型 | const [FHobbyConfig](../Struct/CharacterStruct__FHobbyConfig.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3333,7 +3333,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FBattleRuleset` |
+| 返回类型 | [FBattleRuleset](../WorldSystem/WorldBattleSystem/WorldBattleStruct__FBattleRuleset.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3355,7 +3355,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FCharacterSaveData` |
+| 返回类型 | [FCharacterSaveData](../WorldSystem/WorldCharacterData__FCharacterSaveData.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3377,7 +3377,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FWorldNPCForceConfig` |
+| 返回类型 | [FWorldNPCForceConfig](../WorldSystem/WorldStruct__FWorldNPCForceConfig.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3399,7 +3399,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FStratagemAbility` |
+| 返回类型 | [FStratagemAbility](../WorldSystem/WorldBattleSystem/WorldBattleStruct__FStratagemAbility.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3426,7 +3426,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutSaData` | `TArray<FStratagemAbility>&` |
+| `OutSaData` | TArray<[FStratagemAbility](../WorldSystem/WorldBattleSystem/WorldBattleStruct__FStratagemAbility.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) void GetAllStratagemAbilityInfo(TArray<FStratagemAbility>& OutSaData);`
 
@@ -3443,7 +3443,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FAutoUseCharacterRule` |
+| 返回类型 | [FAutoUseCharacterRule](../WorldSystem/WorldBattleSystem/WorldBattleStruct__FAutoUseCharacterRule.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3466,7 +3466,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FDropSetConfig` |
+| 返回类型 | [FDropSetConfig](../Struct/CommonStruct__FDropSetConfig.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3488,7 +3488,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FWorldPlaceBuildConfig&` |
+| 返回类型 | const [FWorldPlaceBuildConfig](../WorldSystem/WorldStruct__FWorldPlaceBuildConfig.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3510,7 +3510,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FWorldPlaceEffectConfig&` |
+| 返回类型 | const [FWorldPlaceEffectConfig](../WorldSystem/WorldStruct__FWorldPlaceEffectConfig.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3532,7 +3532,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FWorldPlaceSpecialEffectConfig&` |
+| 返回类型 | const [FWorldPlaceSpecialEffectConfig](../WorldSystem/WorldStruct__FWorldPlaceSpecialEffectConfig.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3554,7 +3554,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FWorldPlaceJobConfig` |
+| 返回类型 | [FWorldPlaceJobConfig](../WorldSystem/WorldStruct__FWorldPlaceJobConfig.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3572,7 +3572,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UCommonLogConfigurationAsset*` |
+| 返回类型 | [UCommonLogConfigurationAsset](../Components/ERW_GameConfigComponent__UCommonLogConfigurationAsset.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) UCommonLogConfigurationAsset* GetCommonLogConfigurationAsset();`
@@ -3586,7 +3586,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FTransportationInfo` |
+| 返回类型 | [FTransportationInfo](../WorldSystem/WorldStruct__FTransportationInfo.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3608,7 +3608,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FTransportationInfo` |
+| 返回类型 | [FTransportationInfo](../WorldSystem/WorldStruct__FTransportationInfo.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3635,7 +3635,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutData` | `TArray<FTransportationInfo>&` |
+| `OutData` | TArray<[FTransportationInfo](../WorldSystem/WorldStruct__FTransportationInfo.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllTransportationInfo(TArray<FTransportationInfo>& OutData) const;`
 
@@ -3652,7 +3652,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `class UPuppetPlatformConfigurationAsset *` |
+| 返回类型 | class [UPuppetPlatformConfigurationAsset](../ERW_ConfigTypes__UPuppetPlatformConfigurationAsset.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) class UPuppetPlatformConfigurationAsset * GetPuppetPlatformConfigAsset();`
@@ -3670,7 +3670,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FWorldPlaceLightInfluenceInfo` |
+| 返回类型 | [FWorldPlaceLightInfluenceInfo](../WorldSystem/WorldStruct__FWorldPlaceLightInfluenceInfo.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3688,7 +3688,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FWorldPlaceLightInfluenceInfo` |
+| 返回类型 | [FWorldPlaceLightInfluenceInfo](../WorldSystem/WorldStruct__FWorldPlaceLightInfluenceInfo.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3706,7 +3706,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FTournamentRule` |
+| 返回类型 | [FTournamentRule](../System/Tournament/TournamentStruct__FTournamentRule.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3728,7 +3728,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UTournamentConfigurationAsset *` |
+| 返回类型 | [UTournamentConfigurationAsset](../Components/ERW_GameConfigComponent__UTournamentConfigurationAsset.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) UTournamentConfigurationAsset * GetTournamentConfigurationAsset();`
@@ -3746,7 +3746,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FOffFieldOperationInfo` |
+| 返回类型 | [FOffFieldOperationInfo](../System/Tournament/TournamentStruct__FOffFieldOperationInfo.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3764,7 +3764,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UPostStationConfigAsset*` |
+| 返回类型 | [UPostStationConfigAsset](../PostStation/PostStationStruct__UPostStationConfigAsset.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) UPostStationConfigAsset* GetPostStationConfigAsset();`
@@ -3787,7 +3787,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutData` | `TArray<FPostStationGenerateConfig>&` |
+| `OutData` | TArray<[FPostStationGenerateConfig](../PostStation/PostStationStruct__FPostStationGenerateConfig.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllPostStationGenerateConfig(TArray<FPostStationGenerateConfig>& OutData);`
 
@@ -3810,7 +3810,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InIDs` | `const TArray<FName>&` |
-| `OutData` | `TArray<FPostStationGenerateConfig>&` |
+| `OutData` | TArray<[FPostStationGenerateConfig](../PostStation/PostStationStruct__FPostStationGenerateConfig.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetPostStationGenerateConfigByIDs(const TArray<FName>& InIDs,TArray<FPostStationGenerateConfig>& OutData);`
 
@@ -3823,7 +3823,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FAnnualRewardConfig` |
+| 返回类型 | [FAnnualRewardConfig](../System/Tournament/TournamentStruct__FAnnualRewardConfig.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3845,7 +3845,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UBreakThroughConfigurationAsset *` |
+| 返回类型 | [UBreakThroughConfigurationAsset](../System/BreakThrough/BreakThroughStruct__UBreakThroughConfigurationAsset.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) UBreakThroughConfigurationAsset * GetBreakThroughConfigurationAsset();`
@@ -3863,7 +3863,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FTrainingRoomConfig` |
+| 返回类型 | [FTrainingRoomConfig](../System/BreakThrough/BreakThroughStruct__FTrainingRoomConfig.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3911,7 +3911,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TMap<int32, FNameArr>` |
+| 返回类型 | TMap<int32, [FNameArr](../Components/ERW_GameConfigComponent__FNameArr.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3934,7 +3934,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FSkillPoolConfig` |
+| 返回类型 | [FSkillPoolConfig](../System/BreakThrough/BreakThroughStruct__FSkillPoolConfig.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3956,7 +3956,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FCharacteristicInfo` |
+| 返回类型 | [FCharacteristicInfo](../Struct/CommonStruct__FCharacteristicInfo.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -4000,7 +4000,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UPracticeConfigurationAsset *` |
+| 返回类型 | [UPracticeConfigurationAsset](../Components/ERW_GameConfigComponent__UPracticeConfigurationAsset.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) UPracticeConfigurationAsset * GetPracticeConfigurationAsset();`
@@ -4018,7 +4018,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FTravelerGoodsConfig&` |
+| 返回类型 | const [FTravelerGoodsConfig](../Struct/ItemStruct__FTravelerGoodsConfig.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -4040,7 +4040,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UDefaultTeamInfoAsset *` |
+| 返回类型 | [UDefaultTeamInfoAsset](../Struct/CharacterStruct__UDefaultTeamInfoAsset.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) UDefaultTeamInfoAsset * GetDefaultTeamInfoAsset();`
@@ -4058,7 +4058,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FExchangeMartialArtsConfig&` |
+| 返回类型 | const [FExchangeMartialArtsConfig](../PostStation/PostStationStruct__FExchangeMartialArtsConfig.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -4080,7 +4080,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `URaidConfigurationAsset*` |
+| 返回类型 | [URaidConfigurationAsset](../WorldSystem/WorldStruct__URaidConfigurationAsset.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) URaidConfigurationAsset* GetRaidConfigurationAsset();`
@@ -4098,7 +4098,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UPrisonConfigAsset*` |
+| 返回类型 | [UPrisonConfigAsset](../Components/ERW_GameConfigComponent__UPrisonConfigAsset.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) UPrisonConfigAsset* GetPrisonConfigAsset();`
@@ -4116,7 +4116,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FThreatPoolInfo&` |
+| 返回类型 | const [FThreatPoolInfo](../WorldSystem/WorldStruct__FThreatPoolInfo.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -4138,7 +4138,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FThreatPoolInfo>` |
+| 返回类型 | TArray<[FThreatPoolInfo](../WorldSystem/WorldStruct__FThreatPoolInfo.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -4160,7 +4160,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FRaidRuleset&` |
+| 返回类型 | const [FRaidRuleset](../WorldSystem/WorldStruct__FRaidRuleset.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -4182,7 +4182,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FCharacterLoyaltyConfig&` |
+| 返回类型 | const [FCharacterLoyaltyConfig](../Struct/CharacterStruct__FCharacterLoyaltyConfig.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -4204,7 +4204,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FCharacterLoyaltyConfig&` |
+| 返回类型 | const [FCharacterLoyaltyConfig](../Struct/CharacterStruct__FCharacterLoyaltyConfig.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |

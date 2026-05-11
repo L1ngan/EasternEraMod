@@ -49,7 +49,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UInventoryItemInstance>` |
+| C++ 类型 | TObjectPtr<[UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md)> |
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|InventoryEntity" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|InventoryEntity", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UInventoryItemInstance> InventoryItemInstance;` |
@@ -90,7 +90,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<AERW_PlayerControllerBase>` |
+| C++ 类型 | TObjectPtr<[AERW_PlayerControllerBase](../Framework/ERW_PlayerControllerBase__AERW_PlayerControllerBase.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly) TObjectPtr<AERW_PlayerControllerBase> PlayerControllerBase;` |
@@ -427,8 +427,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Action` | `const FGOAP_Action&` |
-| `GOAPManagerComponent` | `UGOAP_ManagerComponent*` |
+| `Action` | const [FGOAP_Action](../GOAP/GOAP_Data__FGOAP_Action.md)& |
+| `GOAPManagerComponent` | [UGOAP_ManagerComponent](../GOAP/GOAP_ManagerComponent__UGOAP_ManagerComponent.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddGOAPAction(const FGOAP_Action& Action , UGOAP_ManagerComponent* GOAPManagerComponent);`
 
@@ -451,7 +451,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `GoalID` | `const FName&` |
-| `GOAPManagerComponent` | `UGOAP_ManagerComponent*` |
+| `GOAPManagerComponent` | [UGOAP_ManagerComponent](../GOAP/GOAP_ManagerComponent__UGOAP_ManagerComponent.md)* |
 | `true` | `bool AbortAgent =` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveGOAPAction(const FName& GoalID , UGOAP_ManagerComponent* GOAPManagerComponent , bool AbortAgent = true);`
@@ -497,7 +497,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InActionID` | `const FName&` |
-| `GOAPManagerComponent` | `UGOAP_ManagerComponent*` |
+| `GOAPManagerComponent` | [UGOAP_ManagerComponent](../GOAP/GOAP_ManagerComponent__UGOAP_ManagerComponent.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveGOAPActionByActionID(const FName& InActionID, UGOAP_ManagerComponent* GOAPManagerComponent);`
 

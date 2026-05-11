@@ -38,7 +38,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FTreasureItemSubData>` |
+| C++ 类型 | TArray<[FTreasureItemSubData](TreasureComponent__FTreasureItemSubData.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TArray<FTreasureItemSubData> TreasureItems;` |
@@ -53,7 +53,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FTreasureStatisticsInfo>` |
+| C++ 类型 | TArray<[FTreasureStatisticsInfo](TreasureComponent__FTreasureStatisticsInfo.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TArray<FTreasureStatisticsInfo> TreasureCount;` |
@@ -68,7 +68,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , FTreasureStatisticsTotalInfo>` |
+| C++ 类型 | TMap<FName , [FTreasureStatisticsTotalInfo](TreasureComponent__FTreasureStatisticsTotalInfo.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FName , FTreasureStatisticsTotalInfo> TotalTreasureCount;` |
@@ -83,7 +83,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<int32 , FStallInfo>` |
+| C++ 类型 | TMap<int32 , [FStallInfo](TreasureComponent__FStallInfo.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<int32 , FStallInfo> Stalls;` |
@@ -98,7 +98,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FLogData>` |
+| C++ 类型 | TArray<[FLogData](../ERW_CommonTypes__FLogData.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TArray<FLogData> Log;` |
@@ -109,7 +109,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<int32 , FSaveItemArr>` |
+| C++ 类型 | TMap<int32 , [FSaveItemArr](TreasureComponent__FSaveItemArr.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<int32 , FSaveItemArr> TreasureResource;` |
@@ -127,7 +127,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FTreasureStatisticsInfo>&` |
+| 返回类型 | TArray<[FTreasureStatisticsInfo](TreasureComponent__FTreasureStatisticsInfo.md)>& |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<FTreasureStatisticsInfo>& GetTreasureCount();`
@@ -145,7 +145,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TMap<FName , FTreasureStatisticsTotalInfo>&` |
+| 返回类型 | TMap<FName , [FTreasureStatisticsTotalInfo](TreasureComponent__FTreasureStatisticsTotalInfo.md)>& |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TMap<FName , FTreasureStatisticsTotalInfo>& GetTotalTreasureCount();`
@@ -163,7 +163,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FLogData>&` |
+| 返回类型 | TArray<[FLogData](../ERW_CommonTypes__FLogData.md)>& |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<FLogData>& GetTreasureHouseLogLog();`
@@ -181,7 +181,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FStallInfo&` |
+| 返回类型 | [FStallInfo](TreasureComponent__FStallInfo.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -208,7 +208,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Human` | `AEastRimWorldCharacter_Human*` |
+| `Human` | [AEastRimWorldCharacter_Human](../Character/EastRimWorldCharacter_Human__AEastRimWorldCharacter_Human.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool DiscipleBuyTreasure(AEastRimWorldCharacter_Human* Human);`
 
@@ -247,12 +247,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FTreasureItemSubData>` |
+| 返回类型 | TArray<[FTreasureItemSubData](TreasureComponent__FTreasureItemSubData.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `Character` | `AEastRimWorldCharacter*` |
+| `Character` | [AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 | `TypeIndex` | `int32` |
 | `SubTypeIndex` | `int32` |
 
@@ -320,7 +320,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TMap<int32 , FStallInfo>&` |
+| 返回类型 | TMap<int32 , [FStallInfo](TreasureComponent__FStallInfo.md)>& |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TMap<int32 , FStallInfo>& GetStall();`
@@ -361,7 +361,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FTreasureItemSubData>` |
+| 返回类型 | TArray<[FTreasureItemSubData](TreasureComponent__FTreasureItemSubData.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -412,7 +412,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `NeedSortArr` | `UPARAM(ref) TArray<FTreasureStatisticsTotalInfo> &` |
+| `NeedSortArr` | UPARAM(ref) TArray<[FTreasureStatisticsTotalInfo](TreasureComponent__FTreasureStatisticsTotalInfo.md)> & |
 | `bIsAsc` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool SortByCurTreasureCount(UPARAM(ref) TArray<FTreasureStatisticsTotalInfo> & NeedSortArr , bool bIsAsc);`
@@ -435,7 +435,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `NeedSortArr` | `UPARAM(ref) TArray<FTreasureStatisticsTotalInfo> &` |
+| `NeedSortArr` | UPARAM(ref) TArray<[FTreasureStatisticsTotalInfo](TreasureComponent__FTreasureStatisticsTotalInfo.md)> & |
 | `bIsAsc` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool SortByTotalTreasureCount(UPARAM(ref) TArray<FTreasureStatisticsTotalInfo> & NeedSortArr , bool bIsAsc);`
@@ -458,7 +458,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `NeedSortArr` | `UPARAM(ref) TArray<FTreasureStatisticsTotalInfo> &` |
+| `NeedSortArr` | UPARAM(ref) TArray<[FTreasureStatisticsTotalInfo](TreasureComponent__FTreasureStatisticsTotalInfo.md)> & |
 | `bIsAsc` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool SortByRemainingInventory(UPARAM(ref) TArray<FTreasureStatisticsTotalInfo> & NeedSortArr , bool bIsAsc);`
@@ -481,7 +481,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `NeedSortArr` | `UPARAM(ref) TArray<FTreasureStatisticsTotalInfo> &` |
+| `NeedSortArr` | UPARAM(ref) TArray<[FTreasureStatisticsTotalInfo](TreasureComponent__FTreasureStatisticsTotalInfo.md)> & |
 | `bIsAsc` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool SortByMonasticBelief(UPARAM(ref) TArray<FTreasureStatisticsTotalInfo> & NeedSortArr , bool bIsAsc);`

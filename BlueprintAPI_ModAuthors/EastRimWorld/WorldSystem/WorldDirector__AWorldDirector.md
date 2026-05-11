@@ -12,7 +12,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UCommonTaskComponent>` |
+| C++ 类型 | TObjectPtr<[UCommonTaskComponent](../System/Task/CommonTaskComponent__UCommonTaskComponent.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) TObjectPtr<UCommonTaskComponent> CommonTaskComponent;` |
@@ -117,7 +117,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FForceFavorabilityInfo>` |
+| C++ 类型 | TArray<[FForceFavorabilityInfo](WorldStruct__FForceFavorabilityInfo.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FForceFavorabilityInfo> AllForceFavorability;` |
@@ -177,7 +177,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<int32,FApplyTeamBuffData>` |
+| C++ 类型 | TMap<int32,[FApplyTeamBuffData](WorldDirector__FApplyTeamBuffData.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<int32,FApplyTeamBuffData> TeamBuffData;` |
@@ -192,7 +192,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FWorldAgreement,bool>` |
+| C++ 类型 | TMap<[FWorldAgreement](WorldStruct__FWorldAgreement.md),bool> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<FWorldAgreement,bool> WorldAgreements;` |
@@ -357,7 +357,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<AWorldPlace>` |
+| C++ 类型 | TObjectPtr<[AWorldPlace](WorldPlace__AWorldPlace.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<AWorldPlace> CurWorldPlace;` |
@@ -417,7 +417,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FWorldPlaceWeatherInfo` |
+| C++ 类型 | [FWorldPlaceWeatherInfo](WorldStruct__FWorldPlaceWeatherInfo.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FWorldPlaceWeatherInfo CurrentWorldPlaceWeatherInfo;` |
@@ -432,7 +432,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FWorldPlaceWeatherInfo` |
+| C++ 类型 | [FWorldPlaceWeatherInfo](WorldStruct__FWorldPlaceWeatherInfo.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FWorldPlaceWeatherInfo CurrentActualWeatherInfo;` |
@@ -552,7 +552,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<TObjectPtr<AWorldLightActor>>` |
+| C++ 类型 | TArray<TObjectPtr<[AWorldLightActor](WorldLightActor__AWorldLightActor.md)>> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) TArray<TObjectPtr<AWorldLightActor>> WorldLightActors;` |
@@ -668,7 +668,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<class AWorldForce>` |
+| C++ 类型 | TObjectPtr<class [AWorldForce](WorldForce__AWorldForce.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<class AWorldForce> PlayerWorldForce;` |
@@ -922,7 +922,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGuid,TObjectPtr<class AWorldForce>>` |
+| C++ 类型 | TMap<FGuid,TObjectPtr<class [AWorldForce](WorldForce__AWorldForce.md)>> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FGuid,TObjectPtr<class AWorldForce>> WorldForces;` |
@@ -937,7 +937,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGuid,TObjectPtr<class AWorldArea>>` |
+| C++ 类型 | TMap<FGuid,TObjectPtr<class [AWorldArea](WorldArea__AWorldArea.md)>> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FGuid,TObjectPtr<class AWorldArea>> WorldAreas;` |
@@ -948,7 +948,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGuid,TObjectPtr<class AWorldPlace>>` |
+| C++ 类型 | TMap<FGuid,TObjectPtr<class [AWorldPlace](WorldPlace__AWorldPlace.md)>> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FGuid,TObjectPtr<class AWorldPlace>> WorldPlaces;` |
@@ -962,7 +962,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `AWorldDirector *` |
+| 返回类型 | [AWorldDirector](WorldDirector__AWorldDirector.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, BlueprintPure) static AWorldDirector * GetWorldDirector();`
@@ -1022,12 +1022,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `TArray<FCharacterSaveData>` |
+| 返回类型 | TArray<[FCharacterSaveData](WorldCharacterData__FCharacterSaveData.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldPlace` | `const AWorldPlace *` |
+| `WorldPlace` | const [AWorldPlace](WorldPlace__AWorldPlace.md) * |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) TArray<FCharacterSaveData> GetAllCharacterBeInPlace(const AWorldPlace * WorldPlace);`
 
@@ -1044,7 +1044,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `AWorldPlace *` |
+| 返回类型 | [AWorldPlace](WorldPlace__AWorldPlace.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) AWorldPlace * GetCurWorldPlace();`
@@ -1062,7 +1062,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `AWorldPlace *` |
+| 返回类型 | [AWorldPlace](WorldPlace__AWorldPlace.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1080,7 +1080,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `AWorldPlace *` |
+| 返回类型 | [AWorldPlace](WorldPlace__AWorldPlace.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1102,13 +1102,13 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AWorldPlace *` |
+| 返回类型 | [AWorldPlace](WorldPlace__AWorldPlace.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `（匿名/仅类型）` | `AWorldArea *OuterArea` |
-| `WorldPlaceInfo` | `const FWorldPlaceInfo &` |
+| `（匿名/仅类型）` | [AWorldArea](WorldArea__AWorldArea.md) *OuterArea |
+| `WorldPlaceInfo` | const [FWorldPlaceInfo](WorldStruct__FWorldPlaceInfo.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) AWorldPlace * CreateWorldPlace(AWorldArea *OuterArea,const FWorldPlaceInfo & WorldPlaceInfo);`
 
@@ -1130,7 +1130,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldPlace` | `AWorldPlace *` |
+| `WorldPlace` | [AWorldPlace](WorldPlace__AWorldPlace.md) * |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool MoveToPlace(AWorldPlace * WorldPlace);`
 
@@ -1209,7 +1209,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AEastRimWorldCharacter*` |
+| 返回类型 | [AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1236,7 +1236,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Character` | `AEastRimWorldCharacter *` |
+| `Character` | [AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md) * |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void BirthToCurWorldPlace(AEastRimWorldCharacter * Character);`
 
@@ -1275,7 +1275,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FWorldPlaceTemperatureInfo` |
+| 返回类型 | [FWorldPlaceTemperatureInfo](WorldStruct__FWorldPlaceTemperatureInfo.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1298,7 +1298,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FWorldPlaceLightInfo` |
+| 返回类型 | [FWorldPlaceLightInfo](WorldStruct__FWorldPlaceLightInfo.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1340,7 +1340,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutWorldPlaceWeatherInfo` | `FWorldPlaceWeatherInfo &` |
+| `OutWorldPlaceWeatherInfo` | [FWorldPlaceWeatherInfo](WorldStruct__FWorldPlaceWeatherInfo.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) int GetCurWeatherTemperatureVariation(FWorldPlaceWeatherInfo & OutWorldPlaceWeatherInfo);`
 
@@ -1433,7 +1433,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FCharacterWorldMoveInfo` |
+| 返回类型 | [FCharacterWorldMoveInfo](WorldStruct__FCharacterWorldMoveInfo.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1442,7 +1442,7 @@
 | `InStartPlaceGuid` | `const FGuid &` |
 | `InTargetPlaceGuid` | `const FGuid &` |
 | `WorldMapMoveType` | `EWorldMapMoveType` |
-| `Resource` | `const TMap<FName,FItemSimpleData>&` |
+| `Resource` | const TMap<FName,[FItemSimpleData](../Struct/CommonStruct__FItemSimpleData.md)>& |
 | `（匿名/仅类型）` | `FVector EnterPlacePosition = FVector::ZeroVector` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FCharacterWorldMoveInfo GetCharacterWorldMoveInfo(const TArray<FGuid> & CharacterGuid,const FGuid & InStartPlaceGuid,const FGuid & InTargetPlaceGuid,EWorldMapMoveType WorldMapMoveType,const TMap<FName,FItemSimpleData>& Resource,FVector EnterPlacePosition = FVector::ZeroVector);`
@@ -1465,7 +1465,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacterWorldMoveInfo` | `UPARAM(ref) FCharacterWorldMoveInfo &` |
+| `CharacterWorldMoveInfo` | UPARAM(ref) [FCharacterWorldMoveInfo](WorldStruct__FCharacterWorldMoveInfo.md) & |
 | `（匿名/仅类型）` | `ETransportationType TransportationType = ETransportationType::Walking` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool CharacterMoveToPlaceByGuid(UPARAM(ref) FCharacterWorldMoveInfo & CharacterWorldMoveInfo , ETransportationType TransportationType = ETransportationType::Walking);`
@@ -1507,7 +1507,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FCharacterWorldMoveInfo` |
+| 返回类型 | [FCharacterWorldMoveInfo](WorldStruct__FCharacterWorldMoveInfo.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1576,7 +1576,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Tip` | `FCommonTips` |
+| `Tip` | [FCommonTips](WorldStruct__FCommonTips.md) |
 | `IsAddTip` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void BroadcastUpdateTips(FCommonTips Tip, bool IsAddTip);`
@@ -1662,7 +1662,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AWorldPlace *` |
+| 返回类型 | [AWorldPlace](WorldPlace__AWorldPlace.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) AWorldPlace * GetPlayerMainConstructionBase();`
@@ -1685,7 +1685,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldLight` | `AWorldLightActor *` |
+| `WorldLight` | [AWorldLightActor](WorldLightActor__AWorldLightActor.md) * |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RegisterWorldLightActor(AWorldLightActor * WorldLight);`
 
@@ -1707,7 +1707,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldLight` | `AWorldLightActor *` |
+| `WorldLight` | [AWorldLightActor](WorldLightActor__AWorldLightActor.md) * |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UnregisterWorldLightActor(AWorldLightActor * WorldLight);`
 
@@ -1724,7 +1724,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `TArray<AWorldLightActor*>` |
+| 返回类型 | TArray<[AWorldLightActor](WorldLightActor__AWorldLightActor.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1833,7 +1833,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InResources` | `const TMap<FName,FItemSimpleData> &` |
+| `InResources` | const TMap<FName,[FItemSimpleData](../Struct/CommonStruct__FItemSimpleData.md)> & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RecycledWorldResource(const TMap<FName,FItemSimpleData> & InResources);`
 
@@ -1850,7 +1850,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AWorldForce *` |
+| 返回类型 | [AWorldForce](WorldForce__AWorldForce.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1872,7 +1872,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AWorldForce *` |
+| 返回类型 | [AWorldForce](WorldForce__AWorldForce.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1890,7 +1890,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AWorldForce *` |
+| 返回类型 | [AWorldForce](WorldForce__AWorldForce.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1931,7 +1931,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FForceFavorabilityInfo &` |
+| 返回类型 | [FForceFavorabilityInfo](WorldStruct__FForceFavorabilityInfo.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1984,7 +1984,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `ForceGuid` | `const FGuid` |
-| `WorldPlace` | `const AWorldPlace*` |
+| `WorldPlace` | const [AWorldPlace](WorldPlace__AWorldPlace.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AttackCityFavorabilityChange(const FGuid ForceGuid,const AWorldPlace* WorldPlace);`
 
@@ -2001,7 +2001,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `AWorldForce *` |
+| 返回类型 | [AWorldForce](WorldForce__AWorldForce.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) AWorldForce * GetPlayerWorldForce();`
@@ -2107,7 +2107,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `CharacterGuids` | `const TArray<FGuid>&` |
-| `OutCharacterDatas` | `TArray<FCharacterSaveData>&` |
+| `OutCharacterDatas` | TArray<[FCharacterSaveData](WorldCharacterData__FCharacterSaveData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void FindCharacterSaveDatas(const TArray<FGuid>& CharacterGuids,TArray<FCharacterSaveData>& OutCharacterDatas);`
 
@@ -2125,7 +2125,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InCharacterDatas` | `UPARAM(ref) TArray<FCharacterSaveData>&` |
+| `InCharacterDatas` | UPARAM(ref) TArray<[FCharacterSaveData](WorldCharacterData__FCharacterSaveData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SortCharacterSaveDatasByCombatScore(UPARAM(ref) TArray<FCharacterSaveData>& InCharacterDatas);`
 
@@ -2143,8 +2143,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InCharacterData` | `const FCharacterSaveData&` |
-| `OutEquipments` | `TArray<FCharacterApparel>&` |
+| `InCharacterData` | const [FCharacterSaveData](WorldCharacterData__FCharacterSaveData.md)& |
+| `OutEquipments` | TArray<[FCharacterApparel](../Struct/ItemStruct__FCharacterApparel.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetCharacterEquipmentsBySaveData(const FCharacterSaveData& InCharacterData,TArray<FCharacterApparel>& OutEquipments);`
 
@@ -2180,7 +2180,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FCommonBuff>` |
+| 返回类型 | TArray<[FCommonBuff](../Struct/CommonStruct__FCommonBuff.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2202,7 +2202,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FCommonBuff>` |
+| 返回类型 | TArray<[FCommonBuff](../Struct/CommonStruct__FCommonBuff.md)> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<FCommonBuff> GetPlayerTeamBuffInfo();`
@@ -2226,7 +2226,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `TeamId` | `int32` |
-| `BuffInfo` | `const FCommonBuff &` |
+| `BuffInfo` | const [FCommonBuff](../Struct/CommonStruct__FCommonBuff.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddTeamBuffByInfo(int32 TeamId,const FCommonBuff & BuffInfo);`
 
@@ -2282,7 +2282,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldAgreement` | `const FWorldAgreement&` |
+| `WorldAgreement` | const [FWorldAgreement](WorldStruct__FWorldAgreement.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) bool CheckCanSignWorldAgreement(const FWorldAgreement& WorldAgreement);`
 
@@ -2304,7 +2304,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldAgreement` | `const FWorldAgreement&` |
+| `WorldAgreement` | const [FWorldAgreement](WorldStruct__FWorldAgreement.md)& |
 | `IsSuccess` | `const bool&` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void ForceSignWorldAgreement(const FWorldAgreement& WorldAgreement,const bool& IsSuccess);`
@@ -2344,7 +2344,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AWorldArea *` |
+| 返回类型 | [AWorldArea](WorldArea__AWorldArea.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2366,7 +2366,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AWorldPlace *` |
+| 返回类型 | [AWorldPlace](WorldPlace__AWorldPlace.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2388,7 +2388,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AWorldPlace*` |
+| 返回类型 | [AWorldPlace](WorldPlace__AWorldPlace.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2412,7 +2412,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InPlaceIDs` | `const TArray<FName>&` |
-| `OutPlaces` | `TArray<AWorldPlace*>&` |
+| `OutPlaces` | TArray<[AWorldPlace](WorldPlace__AWorldPlace.md)*>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void FindWorldPlaceByIDs(const TArray<FName>& InPlaceIDs,TArray<AWorldPlace*>& OutPlaces);`
 
@@ -2603,7 +2603,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TaskInfo` | `const FCommonTaskInfo&` |
+| `TaskInfo` | const [FCommonTaskInfo](../Struct/CommonTaskStruct__FCommonTaskInfo.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FGuid TriggerTask(const FCommonTaskInfo& TaskInfo);`
 
@@ -2621,7 +2621,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TaskInstance` | `const FCommonTaskInstance&` |
+| `TaskInstance` | const [FCommonTaskInstance](../Struct/CommonTaskStruct__FCommonTaskInstance.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FGuid TriggerTaskByInstance(const FCommonTaskInstance& TaskInstance);`
 
@@ -2652,7 +2652,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FBuildPersonConfigData>` |
+| 返回类型 | TArray<[FBuildPersonConfigData](../ERW_ConfigTypes__FBuildPersonConfigData.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2855,8 +2855,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InGameMode` | `AERW_GameModeBase*` |
-| `InCharacterData` | `const FCharacterSaveData&` |
+| `InGameMode` | [AERW_GameModeBase](../Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
+| `InCharacterData` | const [FCharacterSaveData](WorldCharacterData__FCharacterSaveData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) static float CalcuCharacterFightingScoreByData(AERW_GameModeBase* InGameMode,const FCharacterSaveData& InCharacterData);`
 
@@ -2878,8 +2878,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InGameMode` | `AERW_GameModeBase*` |
-| `InCharacter` | `const class AEastRimWorldCharacter*` |
+| `InGameMode` | [AERW_GameModeBase](../Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
+| `InCharacter` | const class [AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) static float CalcuCharacterFightingScore(AERW_GameModeBase* InGameMode,const class AEastRimWorldCharacter* InCharacter);`
 
@@ -2914,12 +2914,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<AWorldPlace*>` |
+| 返回类型 | TArray<[AWorldPlace](WorldPlace__AWorldPlace.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldPlaceArray` | `const TArray<AWorldPlace*> &` |
+| `WorldPlaceArray` | const TArray<[AWorldPlace](WorldPlace__AWorldPlace.md)*> & |
 | `bIsAsc` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<AWorldPlace*> SortByDiscipleNum(const TArray<AWorldPlace*> & WorldPlaceArray , bool bIsAsc);`
@@ -2937,12 +2937,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<AWorldPlace*>` |
+| 返回类型 | TArray<[AWorldPlace](WorldPlace__AWorldPlace.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldPlaceArray` | `const TArray<AWorldPlace*> &` |
+| `WorldPlaceArray` | const TArray<[AWorldPlace](WorldPlace__AWorldPlace.md)*> & |
 | `bIsAsc` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<AWorldPlace*> SortByPower(const TArray<AWorldPlace*> & WorldPlaceArray , bool bIsAsc);`
@@ -2960,12 +2960,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<AWorldPlace*>` |
+| 返回类型 | TArray<[AWorldPlace](WorldPlace__AWorldPlace.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldPlaceArray` | `const TArray<AWorldPlace*> &` |
+| `WorldPlaceArray` | const TArray<[AWorldPlace](WorldPlace__AWorldPlace.md)*> & |
 | `bIsAsc` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<AWorldPlace*> SortByFavorability(const TArray<AWorldPlace*> & WorldPlaceArray , bool bIsAsc);`
@@ -2983,12 +2983,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<AWorldPlace*>` |
+| 返回类型 | TArray<[AWorldPlace](WorldPlace__AWorldPlace.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldPlaceArray` | `const TArray<AWorldPlace*> &` |
+| `WorldPlaceArray` | const TArray<[AWorldPlace](WorldPlace__AWorldPlace.md)*> & |
 | `bIsAsc` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<AWorldPlace*> SortByWorldplaceType(const TArray<AWorldPlace*> & WorldPlaceArray , bool bIsAsc);`
@@ -3006,12 +3006,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<AWorldForce*>` |
+| 返回类型 | TArray<[AWorldForce](WorldForce__AWorldForce.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldPlaceArray` | `const TArray<AWorldForce*> &` |
+| `WorldPlaceArray` | const TArray<[AWorldForce](WorldForce__AWorldForce.md)*> & |
 | `bIsAsc` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<AWorldForce*> SortByReputation(const TArray<AWorldForce*> & WorldPlaceArray , bool bIsAsc);`
@@ -3029,12 +3029,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<AWorldForce*>` |
+| 返回类型 | TArray<[AWorldForce](WorldForce__AWorldForce.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldPlaceArray` | `const TArray<AWorldForce*> &` |
+| `WorldPlaceArray` | const TArray<[AWorldForce](WorldForce__AWorldForce.md)*> & |
 | `bIsAsc` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<AWorldForce*> SortByForcePower(const TArray<AWorldForce*> & WorldPlaceArray , bool bIsAsc);`
@@ -3052,12 +3052,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<AWorldForce*>` |
+| 返回类型 | TArray<[AWorldForce](WorldForce__AWorldForce.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldPlaceArray` | `const TArray<AWorldForce*> &` |
+| `WorldPlaceArray` | const TArray<[AWorldForce](WorldForce__AWorldForce.md)*> & |
 | `bIsAsc` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<AWorldForce*> SortByPlaceNum(const TArray<AWorldForce*> & WorldPlaceArray , bool bIsAsc);`
@@ -3075,12 +3075,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<AWorldForce*>` |
+| 返回类型 | TArray<[AWorldForce](WorldForce__AWorldForce.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldPlaceArray` | `const TArray<AWorldForce*> &` |
+| `WorldPlaceArray` | const TArray<[AWorldForce](WorldForce__AWorldForce.md)*> & |
 | `bIsAsc` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<AWorldForce*> SortByForceDiziNum(const TArray<AWorldForce*> & WorldPlaceArray , bool bIsAsc);`
@@ -3103,7 +3103,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InItems` | `const TMap<FName,FItemSimpleData>&` |
+| `InItems` | const TMap<FName,[FItemSimpleData](../Struct/CommonStruct__FItemSimpleData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddItemToPostStation(const TMap<FName,FItemSimpleData>& InItems);`
 
@@ -3125,7 +3125,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InventoryItemInstance` | `UInventoryItemInstance *` |
+| `InventoryItemInstance` | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md) * |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddItemInstanceToPostStation(UInventoryItemInstance * InventoryItemInstance);`
 
@@ -3142,7 +3142,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<AWorldForce*>` |
+| 返回类型 | TArray<[AWorldForce](WorldForce__AWorldForce.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3164,7 +3164,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TMap<AWorldForce*,float>` |
+| 返回类型 | TMap<[AWorldForce](WorldForce__AWorldForce.md)*,float> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |

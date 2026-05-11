@@ -44,7 +44,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FTeamBaseInformation>` |
+| C++ 类型 | TArray<[FTeamBaseInformation](WorldBattleStruct__FTeamBaseInformation.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FTeamBaseInformation> TeamBaseInformation;` |
@@ -104,7 +104,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<int32,FCharacterRealmRelevancyData>` |
+| C++ 类型 | TMap<int32,[FCharacterRealmRelevancyData](WorldBattleStruct__FCharacterRealmRelevancyData.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<int32,FCharacterRealmRelevancyData> CharacterRealmRelevancyData;` |
@@ -269,7 +269,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FAutoReleaseStrategyRule` |
+| C++ 类型 | [FAutoReleaseStrategyRule](WorldBattleStruct__FAutoReleaseStrategyRule.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FAutoReleaseStrategyRule AutoReleaseStrategyRule;` |
@@ -374,7 +374,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FCaptureDisposal>` |
+| C++ 类型 | TArray<[FCaptureDisposal](WorldBattleStruct__FCaptureDisposal.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FCaptureDisposal> CaptureCharacterDisposal = { {FCaptureDisposal(ECaptureCharacterDisposalType::Release,50,10,10)}, {FCaptureDisposal(ECaptureCharacterDisposalType::Recruit,25,0,0)}, {FCaptureDisposal(ECaptureCharacterDisposalType::Kill,25,-10,-10)}, };` |
@@ -389,7 +389,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FPlaceDisposal>` |
+| C++ 类型 | TArray<[FPlaceDisposal](WorldBattleStruct__FPlaceDisposal.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FPlaceDisposal> PlaceDisposal = { {FPlaceDisposal(EPlaceDisposalType::OccupyPlace,1,0)}, {FPlaceDisposal(EPlaceDisposalType::PlunderPlace,1,-0.5)}, {FPlaceDisposal(EPlaceDisposalType::DestroyPlace,1,-1)}, };` |

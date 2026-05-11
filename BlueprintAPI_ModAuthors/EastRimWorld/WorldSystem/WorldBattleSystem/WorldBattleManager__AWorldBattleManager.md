@@ -12,7 +12,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<int32,FWorldBattleCharacterInfo>` |
+| C++ 类型 | TMap<int32,[FWorldBattleCharacterInfo](WorldBattleManager__FWorldBattleCharacterInfo.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<int32,FWorldBattleCharacterInfo> WorldBattleCharacterInfo;` |
@@ -27,7 +27,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UCommonLogComponent>` |
+| C++ 类型 | TObjectPtr<[UCommonLogComponent](../../Components/CommonLogComponent__UCommonLogComponent.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TObjectPtr<UCommonLogComponent> CommonLogComponent;` |
@@ -219,7 +219,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `AWorldBattleManager *` |
+| 返回类型 | [AWorldBattleManager](WorldBattleManager__AWorldBattleManager.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, BlueprintPure) static AWorldBattleManager * GetWorldBattleManager();`
@@ -233,7 +233,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FBattlefieldInformation&` |
+| 返回类型 | [FBattlefieldInformation](WorldBattleStruct__FBattlefieldInformation.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -285,7 +285,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InBattlefieldGuid` | `const FGuid &` |
-| `OutBattlefieldInformation` | `FBattlefieldInformation &` |
+| `OutBattlefieldInformation` | [FBattlefieldInformation](WorldBattleStruct__FBattlefieldInformation.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool GetBattlefieldInformation(const FGuid & InBattlefieldGuid, FBattlefieldInformation & OutBattlefieldInformation);`
 
@@ -307,9 +307,9 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldForce` | `AWorldForce *` |
+| `WorldForce` | [AWorldForce](../WorldForce__AWorldForce.md) * |
 | `InBattlefieldGuid` | `const FGuid &` |
-| `BattleTeamInfo` | `const FBattleTeamInfo &` |
+| `BattleTeamInfo` | const [FBattleTeamInfo](WorldBattleStruct__FBattleTeamInfo.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool JoinBattle(AWorldForce * WorldForce,const FGuid & InBattlefieldGuid,const FBattleTeamInfo & BattleTeamInfo);`
 
@@ -331,7 +331,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InBattlefieldInformation` | `const FBattlefieldInformation&` |
+| `InBattlefieldInformation` | const [FBattlefieldInformation](WorldBattleStruct__FBattlefieldInformation.md)& |
 | `TeamId` | `int32` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool CheckCanRetreatBattle(const FBattlefieldInformation& InBattlefieldInformation,int32 TeamId);`
@@ -462,7 +462,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FBattlefieldInformation` |
+| 返回类型 | [FBattlefieldInformation](WorldBattleStruct__FBattlefieldInformation.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FBattlefieldInformation GetCurPlaceBattlefieldInformation();`
@@ -530,7 +530,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `TArray<AEastRimWorldCharacter*>` |
+| 返回类型 | TArray<[AEastRimWorldCharacter](../../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -553,7 +553,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `AEastRimWorldCharacter*` |
+| 返回类型 | [AEastRimWorldCharacter](../../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -580,7 +580,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `StratagemAbility` | `FStratagemAbility` |
+| `StratagemAbility` | [FStratagemAbility](WorldBattleStruct__FStratagemAbility.md) |
 | `TeamId` | `int32` |
 | `ProjectileHitEventData` | `FProjectileHitEventData` |
 
@@ -604,7 +604,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `StratagemAbility` | `const FStratagemAbility &` |
+| `StratagemAbility` | const [FStratagemAbility](WorldBattleStruct__FStratagemAbility.md) & |
 | `TeamId` | `int32` |
 | `ProjectileHitEventData` | `const FProjectileHitEventData &` |
 
@@ -628,7 +628,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `StratagemAbility` | `const FStratagemAbility &` |
+| `StratagemAbility` | const [FStratagemAbility](WorldBattleStruct__FStratagemAbility.md) & |
 | `TeamId` | `int32` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void ReleaseGlobalAbility(const FStratagemAbility & StratagemAbility,int32 TeamId);`
@@ -651,8 +651,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `StratagemAbility` | `const FStratagemAbility &` |
-| `BattleTeamState` | `const FBattleTeamState &` |
+| `StratagemAbility` | const [FStratagemAbility](WorldBattleStruct__FStratagemAbility.md) & |
+| `BattleTeamState` | const [FBattleTeamState](WorldBattleStruct__FBattleTeamState.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool CheckCanReleaseStrategic(const FStratagemAbility & StratagemAbility,const FBattleTeamState & BattleTeamState);`
 
@@ -674,7 +674,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BattleTeamState` | `FBattleTeamState &` |
+| `BattleTeamState` | [FBattleTeamState](WorldBattleStruct__FBattleTeamState.md) & |
 | `Number` | `int` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void ExtractStratagemAbility(FBattleTeamState & BattleTeamState,int Number);`
@@ -697,7 +697,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BattleTeamState` | `FBattleTeamState &` |
+| `BattleTeamState` | [FBattleTeamState](WorldBattleStruct__FBattleTeamState.md) & |
 | `Number` | `int` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void ExtractCharacters(FBattleTeamState & BattleTeamState,int Number);`
@@ -761,7 +761,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FBattleTeamState` |
+| 返回类型 | [FBattleTeamState](WorldBattleStruct__FBattleTeamState.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -788,7 +788,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BattleTeamState` | `FBattleTeamState &` |
+| `BattleTeamState` | [FBattleTeamState](WorldBattleStruct__FBattleTeamState.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void StartExtractionStratagemTiming(FBattleTeamState & BattleTeamState);`
 
@@ -810,7 +810,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BattleTeamState` | `const FBattleTeamState &` |
+| `BattleTeamState` | const [FBattleTeamState](WorldBattleStruct__FBattleTeamState.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool CheckCanExtractionStratagem(const FBattleTeamState & BattleTeamState);`
 
@@ -832,7 +832,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BattleTeamState` | `FBattleTeamState &` |
+| `BattleTeamState` | [FBattleTeamState](WorldBattleStruct__FBattleTeamState.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void StartExtractionCharacterTiming(FBattleTeamState & BattleTeamState);`
 
@@ -854,7 +854,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BattleTeamState` | `const FBattleTeamState &` |
+| `BattleTeamState` | const [FBattleTeamState](WorldBattleStruct__FBattleTeamState.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool CheckCanExtractionCharacter(const FBattleTeamState & BattleTeamState);`
 
@@ -907,7 +907,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FBattleTeamState` |
+| 返回类型 | [FBattleTeamState](WorldBattleStruct__FBattleTeamState.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FBattleTeamState GetPlayerBattleTeamState();`
@@ -925,7 +925,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FBattleTeamState` |
+| 返回类型 | [FBattleTeamState](WorldBattleStruct__FBattleTeamState.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -952,7 +952,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacterSaveData` | `const FCharacterSaveData &` |
+| `CharacterSaveData` | const [FCharacterSaveData](../WorldCharacterData__FCharacterSaveData.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool UseCharacterCard(const FCharacterSaveData & CharacterSaveData);`
 
@@ -974,8 +974,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacterSaveData` | `const FCharacterSaveData &` |
-| `BattleTeamState` | `const FBattleTeamState &` |
+| `CharacterSaveData` | const [FCharacterSaveData](../WorldCharacterData__FCharacterSaveData.md) & |
+| `BattleTeamState` | const [FBattleTeamState](WorldBattleStruct__FBattleTeamState.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool CheckCanUseCharacterCard(const FCharacterSaveData & CharacterSaveData,const FBattleTeamState & BattleTeamState);`
 
@@ -998,7 +998,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `PointValue` | `int32` |
-| `BattleTeamState` | `FBattleTeamState &` |
+| `BattleTeamState` | [FBattleTeamState](WorldBattleStruct__FBattleTeamState.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void ChangeStrategyPoint(int32 PointValue,FBattleTeamState & BattleTeamState);`
 
@@ -1021,7 +1021,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `PointValue` | `int32` |
-| `BattleTeamState` | `FBattleTeamState &` |
+| `BattleTeamState` | [FBattleTeamState](WorldBattleStruct__FBattleTeamState.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void ChangeResourcePoint(int32 PointValue,FBattleTeamState & BattleTeamState);`
 
@@ -1043,7 +1043,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BattleTeamState` | `const FBattleTeamState&` |
+| `BattleTeamState` | const [FBattleTeamState](WorldBattleStruct__FBattleTeamState.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) int32 GetMaxStrategyPoint(const FBattleTeamState& BattleTeamState);`
 
@@ -1065,7 +1065,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BattleTeamState` | `const FBattleTeamState&` |
+| `BattleTeamState` | const [FBattleTeamState](WorldBattleStruct__FBattleTeamState.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) int32 GetMaxResourcePoint(const FBattleTeamState& BattleTeamState);`
 
@@ -1087,7 +1087,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacterDeathInformation` | `const FCharacterDeathInformation &` |
+| `CharacterDeathInformation` | const [FCharacterDeathInformation](../../Struct/CharacterDeathInformation__FCharacterDeathInformation.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RecordCombatData(const FCharacterDeathInformation & CharacterDeathInformation);`
 
@@ -1109,7 +1109,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BattleTeamState` | `FBattleTeamState &` |
+| `BattleTeamState` | [FBattleTeamState](WorldBattleStruct__FBattleTeamState.md) & |
 | `DeltaTime` | `float` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateAutoReleaseStrategyTime(FBattleTeamState & BattleTeamState,float DeltaTime);`
@@ -1132,8 +1132,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `StratagemAbility` | `FStratagemAbility` |
-| `BattleTeamState` | `FBattleTeamState &` |
+| `StratagemAbility` | [FStratagemAbility](WorldBattleStruct__FStratagemAbility.md) |
+| `BattleTeamState` | [FBattleTeamState](WorldBattleStruct__FBattleTeamState.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool AutoReleaseStrategy(FStratagemAbility StratagemAbility,FBattleTeamState & BattleTeamState);`
 
@@ -1155,7 +1155,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BattleTeamState` | `FBattleTeamState &` |
+| `BattleTeamState` | [FBattleTeamState](WorldBattleStruct__FBattleTeamState.md) & |
 | `DeltaTime` | `float` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateAutoUseCharacterTime(FBattleTeamState & BattleTeamState,float DeltaTime);`
@@ -1332,7 +1332,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Character` | `AEastRimWorldCharacter *` |
+| `Character` | [AEastRimWorldCharacter](../../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md) * |
 | `CharacterCureState` | `ECharacterCureState` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateSeriousInjuryCharacterState(AEastRimWorldCharacter * Character,ECharacterCureState CharacterCureState);`
@@ -1350,12 +1350,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `FCharacterCureInfo` |
+| 返回类型 | [FCharacterCureInfo](WorldBattleStruct__FCharacterCureInfo.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `InjuredCharacter` | `AEastRimWorldCharacter *` |
+| `InjuredCharacter` | [AEastRimWorldCharacter](../../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md) * |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) FCharacterCureInfo FindLayDownSeriousInjuryPoint(AEastRimWorldCharacter * InjuredCharacter);`
 
@@ -1372,12 +1372,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `FCharacterCureInfo` |
+| 返回类型 | [FCharacterCureInfo](WorldBattleStruct__FCharacterCureInfo.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `InjuredCharacter` | `AEastRimWorldCharacter *` |
+| `InjuredCharacter` | [AEastRimWorldCharacter](../../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md) * |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) FCharacterCureInfo GetCharacterCureInfo(AEastRimWorldCharacter * InjuredCharacter);`
 

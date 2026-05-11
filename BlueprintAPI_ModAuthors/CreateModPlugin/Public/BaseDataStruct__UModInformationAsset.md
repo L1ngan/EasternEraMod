@@ -12,7 +12,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FModConfig>` |
+| C++ 类型 | TArray<[FModConfig](BaseDataStruct__FModConfig.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<FModConfig> DataTables;` |
@@ -27,7 +27,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FModAsset>` |
+| C++ 类型 | TArray<[FModAsset](BaseDataStruct__FModAsset.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<FModAsset> DataAssets;` |

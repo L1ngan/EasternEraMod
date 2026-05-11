@@ -14,7 +14,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FString , FWorkScheduleData>` |
+| C++ 类型 | TMap<FString , [FWorkScheduleData](ERW_WorkScheduleComponent__FWorkScheduleData.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<FString , FWorkScheduleData> WorkSchedules;` |
@@ -190,7 +190,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `ScheduleName` | `const FString&` |
-| `OtherCharacters` | `TArray<AEastRimWorldCharacter*>&` |
+| `OtherCharacters` | TArray<[AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)*>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetOtherScheduleCharacters(const FString& ScheduleName , TArray<AEastRimWorldCharacter*>& OtherCharacters);`
 
@@ -212,7 +212,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Agent` | `AEastRimWorldCharacter*` |
+| `Agent` | [AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 | `ToScheduleName` | `const FString&` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void TransferAgent(AEastRimWorldCharacter* Agent , const FString& ToScheduleName);`

@@ -29,7 +29,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<ABuildingActorBase*>` |
+| C++ 类型 | TArray<[ABuildingActorBase](Building/BuildingActorBase__ABuildingActorBase.md)*> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<ABuildingActorBase*> TransmissionBuildings;` |
@@ -44,7 +44,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<ABuildingActorBase*>` |
+| C++ 类型 | TArray<[ABuildingActorBase](Building/BuildingActorBase__ABuildingActorBase.md)*> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<ABuildingActorBase*> EnergyStorageBuildings;` |
@@ -59,7 +59,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<ABuildingActorBase*>` |
+| C++ 类型 | TArray<[ABuildingActorBase](Building/BuildingActorBase__ABuildingActorBase.md)*> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<ABuildingActorBase*> ConsumeBuildings;` |
@@ -74,7 +74,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<ABuildingActorBase*>` |
+| C++ 类型 | TArray<[ABuildingActorBase](Building/BuildingActorBase__ABuildingActorBase.md)*> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<ABuildingActorBase*> ControlBuildings;` |
@@ -89,7 +89,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<ABuildingActorBase*>` |
+| C++ 类型 | TArray<[ABuildingActorBase](Building/BuildingActorBase__ABuildingActorBase.md)*> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<ABuildingActorBase*> GenerateEnergyBuildings;` |

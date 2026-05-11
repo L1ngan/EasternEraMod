@@ -312,7 +312,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGuid,FSocialRelationshipData>` |
+| C++ 类型 | TMap<FGuid,[FSocialRelationshipData](../Struct/CharacterChatStruct__FSocialRelationshipData.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Runtime" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") TMap<FGuid,FSocialRelationshipData> CharacterRelationshipData;` |
@@ -462,7 +462,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FCommonBuff>` |
+| C++ 类型 | TArray<[FCommonBuff](../Struct/CommonStruct__FCommonBuff.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) TArray<FCommonBuff> BuffArray;` |
@@ -477,7 +477,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FInjuryEffectInstance>` |
+| C++ 类型 | TArray<[FInjuryEffectInstance](../Struct/CharacterStruct__FInjuryEffectInstance.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame) TArray<FInjuryEffectInstance> CurInjuryEffectArr;` |
@@ -507,7 +507,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName,FMartialArtsLearnData>` |
+| C++ 类型 | TMap<FName,[FMartialArtsLearnData](../Struct/MartialArts__FMartialArtsLearnData.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) TMap<FName,FMartialArtsLearnData> MartialArtsLearnData;` |
@@ -672,7 +672,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FBreakThroughHarvest>` |
+| C++ 类型 | TArray<[FBreakThroughHarvest](WorldCharacterData__FBreakThroughHarvest.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Runtime" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") TArray<FBreakThroughHarvest> BreakThroughHarvest;` |
@@ -687,7 +687,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FUseItemSaveData>` |
+| C++ 类型 | TArray<[FUseItemSaveData](../Struct/ItemStruct__FUseItemSaveData.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame) TArray<FUseItemSaveData> UseItemSaveData;` |

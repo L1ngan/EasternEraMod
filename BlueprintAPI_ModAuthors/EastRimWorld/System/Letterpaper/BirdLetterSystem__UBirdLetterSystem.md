@@ -23,7 +23,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGuid, FCharacterLetterData>` |
+| C++ 类型 | TMap<FGuid, [FCharacterLetterData](BirdLetterSystem__FCharacterLetterData.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TMap<FGuid, FCharacterLetterData> CharacterLetterMap;` |
@@ -54,7 +54,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `LetterType` | `ELetterDialogueType` |
-| `Character` | `AEastRimWorldCharacter_Human*` |
+| `Character` | [AEastRimWorldCharacter_Human](../../Character/EastRimWorldCharacter_Human__AEastRimWorldCharacter_Human.md)* |
 | `AddTime` | `int32` |
 | `Mandatory` | `bool` |
 
@@ -88,7 +88,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Character` | `AEastRimWorldCharacter_Human*` |
+| `Character` | [AEastRimWorldCharacter_Human](../../Character/EastRimWorldCharacter_Human__AEastRimWorldCharacter_Human.md)* |
 | `dialogueindex` | `FDialogueNode` |
 | `addtime` | `int32` |
 
@@ -134,7 +134,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacterArri` | `TArray<AEastRimWorldCharacter_Human*>` |
+| `CharacterArri` | TArray<[AEastRimWorldCharacter_Human](../../Character/EastRimWorldCharacter_Human__AEastRimWorldCharacter_Human.md)*> |
 | `AddTime` | `int32` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "Dialogue Events") void CharacterWishEquipment(TArray<AEastRimWorldCharacter_Human*> CharacterArri,int32 AddTime);`
@@ -157,7 +157,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacterArr` | `TArray<AEastRimWorldCharacter_Human*>` |
+| `CharacterArr` | TArray<[AEastRimWorldCharacter_Human](../../Character/EastRimWorldCharacter_Human__AEastRimWorldCharacter_Human.md)*> |
 | `AddTime` | `int32` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "Dialogue Events") void CharacterHaveDebuff(TArray<AEastRimWorldCharacter_Human*> CharacterArr, int32 AddTime);`

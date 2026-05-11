@@ -73,7 +73,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InInventoryItemInstance` | `UInventoryItemInstance *` |
+| `InInventoryItemInstance` | [UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md) * |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent) void InitItemWidgetActor(UInventoryItemInstance * InInventoryItemInstance);`
 

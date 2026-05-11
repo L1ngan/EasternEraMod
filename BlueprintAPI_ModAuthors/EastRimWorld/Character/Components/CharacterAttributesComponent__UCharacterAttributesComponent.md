@@ -18,7 +18,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InASC` | `UEastRimWorldAbilitySystemComponent*` |
+| `InASC` | [UEastRimWorldAbilitySystemComponent](../../AbilitySystem/EastRimWorldAbilitySystemComponent__UEastRimWorldAbilitySystemComponent.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "EastRimWorld|CharacterAttributesComponent") virtual void InitializeWithAbilitySystem(UEastRimWorldAbilitySystemComponent* InASC);`
 

@@ -14,7 +14,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FPathfindingConfig` |
+| C++ 类型 | [FPathfindingConfig](WorldMapPathSubsystem__FPathfindingConfig.md) |
 | 反射说明符 | BlueprintReadWrite, Category="Pathfinding" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Pathfinding") FPathfindingConfig Config;` |
@@ -29,7 +29,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FPathfindingStats` |
+| C++ 类型 | [FPathfindingStats](WorldMapPathSubsystem__FPathfindingStats.md) |
 | 反射说明符 | BlueprintReadOnly, Category="Pathfinding" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Pathfinding") FPathfindingStats Stats;` |
@@ -52,9 +52,9 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Start` | `AWorldMapWayPoint*` |
-| `Goal` | `AWorldMapWayPoint*` |
-| `OutPath` | `TArray<AWorldMapWayPoint*>&` |
+| `Start` | [AWorldMapWayPoint](WorldMapWayPoint__AWorldMapWayPoint.md)* |
+| `Goal` | [AWorldMapWayPoint](WorldMapWayPoint__AWorldMapWayPoint.md)* |
+| `OutPath` | TArray<[AWorldMapWayPoint](WorldMapWayPoint__AWorldMapWayPoint.md)*>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "WorldMapPathSubsystem") static bool FindPath_BFS(AWorldMapWayPoint* Start, AWorldMapWayPoint* Goal, TArray<AWorldMapWayPoint*>& OutPath);`
 
@@ -76,9 +76,9 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Start` | `AWorldMapWayPoint*` |
-| `Goal` | `AWorldMapWayPoint*` |
-| `OutPath` | `TArray<AWorldMapWayPoint*>&` |
+| `Start` | [AWorldMapWayPoint](WorldMapWayPoint__AWorldMapWayPoint.md)* |
+| `Goal` | [AWorldMapWayPoint](WorldMapWayPoint__AWorldMapWayPoint.md)* |
+| `OutPath` | TArray<[AWorldMapWayPoint](WorldMapWayPoint__AWorldMapWayPoint.md)*>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,Category = "worldMapPathSubsystem") static bool FindPath_Dijkstra(AWorldMapWayPoint* Start, AWorldMapWayPoint* Goal, TArray<AWorldMapWayPoint*>& OutPath);`
 
@@ -100,9 +100,9 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Start` | `AWorldMapWayPoint*` |
-| `Goal` | `AWorldMapWayPoint*` |
-| `OutPath` | `TArray<AWorldMapWayPoint*>&` |
+| `Start` | [AWorldMapWayPoint](WorldMapWayPoint__AWorldMapWayPoint.md)* |
+| `Goal` | [AWorldMapWayPoint](WorldMapWayPoint__AWorldMapWayPoint.md)* |
+| `OutPath` | TArray<[AWorldMapWayPoint](WorldMapWayPoint__AWorldMapWayPoint.md)*>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,Category = "worldMapPathSubsystem") static bool FindPath_AStar(AWorldMapWayPoint* Start, AWorldMapWayPoint* Goal, TArray<AWorldMapWayPoint*>& OutPath);`
 
@@ -124,9 +124,9 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Start` | `AWorldMapWayPoint*` |
-| `Goal` | `AWorldMapWayPoint*` |
-| `OutPath` | `TArray<AWorldMapWayPoint*>&` |
+| `Start` | [AWorldMapWayPoint](WorldMapWayPoint__AWorldMapWayPoint.md)* |
+| `Goal` | [AWorldMapWayPoint](WorldMapWayPoint__AWorldMapWayPoint.md)* |
+| `OutPath` | TArray<[AWorldMapWayPoint](WorldMapWayPoint__AWorldMapWayPoint.md)*>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "WorldMapPathSubsystem") bool FindPath_AStar_Optimized(AWorldMapWayPoint* Start, AWorldMapWayPoint* Goal, TArray<AWorldMapWayPoint*>& OutPath);`
 
@@ -143,7 +143,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="worldMapPathSubsystem" |
-| 返回类型 | `AWorldMapWayPoint *` |
+| 返回类型 | [AWorldMapWayPoint](WorldMapWayPoint__AWorldMapWayPoint.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -165,7 +165,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="WorldMapPathSubsystem" |
-| 返回类型 | `AWorldMapWayPoint*` |
+| 返回类型 | [AWorldMapWayPoint](WorldMapWayPoint__AWorldMapWayPoint.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -214,7 +214,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FPathfindingResult` |
+| 返回类型 | [FPathfindingResult](WorldMapPathSubsystem__FPathfindingResult.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -239,7 +239,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintPure, Category="Pathfinding" |
-| 返回类型 | `const FPathfindingStats&` |
+| 返回类型 | const [FPathfindingStats](WorldMapPathSubsystem__FPathfindingStats.md)& |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure, Category = "Pathfinding") const FPathfindingStats& GetStats() const { return Stats; }`

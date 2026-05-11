@@ -209,7 +209,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TSoftClassPtr<AInventoryEntityActor>` |
+| C++ 类型 | TSoftClassPtr<[AInventoryEntityActor](../Inventory/InventoryEntityActor__AInventoryEntityActor.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TSoftClassPtr<AInventoryEntityActor> ItemSubstituteClass;` |
@@ -239,7 +239,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FStackModel>` |
+| C++ 类型 | TArray<[FStackModel](ItemStruct__FStackModel.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TArray<FStackModel> StackModels;` |
@@ -374,7 +374,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FEfficiencyByTemperature>` |
+| C++ 类型 | TArray<[FEfficiencyByTemperature](ItemStruct__FEfficiencyByTemperature.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TArray<FEfficiencyByTemperature> TemperatureThreshold;` |
@@ -524,7 +524,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<ECharacterBehaviorState,FGroupCorrespondingAnim>` |
+| C++ 类型 | TMap<ECharacterBehaviorState,[FGroupCorrespondingAnim](ItemStruct__FGroupCorrespondingAnim.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<ECharacterBehaviorState,FGroupCorrespondingAnim> BehaviorAnimation;` |
@@ -539,7 +539,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<ECharacterBehaviorState,FGroupCorrespondingAnim>` |
+| C++ 类型 | TMap<ECharacterBehaviorState,[FGroupCorrespondingAnim](ItemStruct__FGroupCorrespondingAnim.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<ECharacterBehaviorState,FGroupCorrespondingAnim> BehaviorBlendAnimation;` |

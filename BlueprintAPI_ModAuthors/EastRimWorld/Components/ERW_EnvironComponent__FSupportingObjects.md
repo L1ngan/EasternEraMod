@@ -14,7 +14,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGridPosition , FGuid>` |
+| C++ 类型 | TMap<[FGridPosition](../ERW_CommonTypes__FGridPosition.md) , FGuid> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) TMap<FGridPosition , FGuid> Objects;` |

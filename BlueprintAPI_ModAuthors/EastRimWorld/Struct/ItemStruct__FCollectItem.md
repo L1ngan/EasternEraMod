@@ -44,7 +44,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FGrowStage>` |
+| C++ 类型 | TArray<[FGrowStage](ItemStruct__FGrowStage.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Collect" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") TArray<FGrowStage> GrowStage;` |
@@ -164,7 +164,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EGrowStageType,FCollectedGroup>` |
+| C++ 类型 | TMap<EGrowStageType,[FCollectedGroup](ItemStruct__FCollectedGroup.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Collect" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") TMap<EGrowStageType,FCollectedGroup> OutputByStage;` |
@@ -494,7 +494,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FTemperatureRange` |
+| C++ 类型 | [FTemperatureRange](ItemStruct__FTemperatureRange.md) |
 | 反射说明符 | BlueprintReadWrite, Category="Collect" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") FTemperatureRange ToleranceTemperatureRange;` |
@@ -569,7 +569,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FOutputInformation>` |
+| C++ 类型 | TArray<[FOutputInformation](ItemStruct__FOutputInformation.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Collect" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") TArray<FOutputInformation> AllPutInfo;` |
@@ -584,7 +584,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EGrowStageType,FOutputInformations>` |
+| C++ 类型 | TMap<EGrowStageType,[FOutputInformations](ItemStruct__FOutputInformations.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Collect" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") TMap<EGrowStageType,FOutputInformations> StagePutInfo;` |
@@ -614,7 +614,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<int32,FExplorationRewards>` |
+| C++ 类型 | TMap<int32,[FExplorationRewards](ItemStruct__FExplorationRewards.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Collect" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") TMap<int32,FExplorationRewards> ExplorationInfo;` |
@@ -659,7 +659,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<ETechUnlockItemType,FIDs>` |
+| C++ 类型 | TMap<ETechUnlockItemType,[FIDs](../ERW_CommonTypes__FIDs.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Observe" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") TMap<ETechUnlockItemType,FIDs> ObserveUnlock;` |
@@ -689,7 +689,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FObserveUnlockInfo>` |
+| C++ 类型 | TArray<[FObserveUnlockInfo](ObserveStruct__FObserveUnlockInfo.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Observe" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") TArray<FObserveUnlockInfo> ObserveUnlockInfo;` |

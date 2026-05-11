@@ -23,7 +23,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FWorldAreaInfo` |
+| C++ 类型 | [FWorldAreaInfo](WorldStruct__FWorldAreaInfo.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, VisibleAnywhere) FWorldAreaInfo WorldAreaInfo;` |

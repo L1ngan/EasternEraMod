@@ -12,7 +12,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UInventoryManagerComponent>` |
+| C++ 类型 | TObjectPtr<[UInventoryManagerComponent](../Inventory/InventoryManagerComponent__UInventoryManagerComponent.md)> |
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="Inventory" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Inventory", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UInventoryManagerComponent> InventoryManagerComponent;` |
@@ -328,7 +328,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutResources` | `TArray<FItemNumData>&` |
+| `OutResources` | TArray<[FItemNumData](../Struct/ItemStruct__FItemNumData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllOwendResources(TArray<FItemNumData>& OutResources);`
 
@@ -346,7 +346,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutResources` | `UPARAM(ref) TMap<FGameplayTag,FItemNumData>&` |
+| `OutResources` | UPARAM(ref) TMap<FGameplayTag,[FItemNumData](../Struct/ItemStruct__FItemNumData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllOwendResourcesTagMapInfo(UPARAM(ref) TMap<FGameplayTag,FItemNumData>& OutResources);`
 
@@ -530,7 +530,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ItemInstance` | `UInventoryItemInstance*` |
+| `ItemInstance` | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 | `InResourceNumber` | `int` |
 | `InSpawnTransform` | `FTransform` |
 | `CurLevel` | `ULevel *` |
@@ -603,7 +603,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AInventoryItemSet *` |
+| 返回类型 | [AInventoryItemSet](../Inventory/InventoryItemSet__AInventoryItemSet.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -625,12 +625,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AInventoryItemSet *` |
+| 返回类型 | [AInventoryItemSet](../Inventory/InventoryItemSet__AInventoryItemSet.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `EquipmentQualityRang` | `const FEquipmentQualityRange &` |
+| `EquipmentQualityRang` | const [FEquipmentQualityRange](../Struct/CommonStruct__FEquipmentQualityRange.md) & |
 | `InEquipmentNumber` | `int` |
 | `InSpawnTransform` | `FTransform` |
 | `CurLevel` | `ULevel *` |
@@ -652,7 +652,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AInventoryItemSet*` |
+| 返回类型 | [AInventoryItemSet](../Inventory/InventoryItemSet__AInventoryItemSet.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -682,7 +682,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `AI` | `class AEastRimWorldAIController*` |
+| `AI` | class [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
 | `128` | `int32 NumSamples =` |
 | `（匿名/仅类型）` | `float Duration = 0.15f` |
 | `（匿名/仅类型）` | `float ZLift = 50.f` |
@@ -702,12 +702,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AInventoryItemSet*` |
+| 返回类型 | [AInventoryItemSet](../Inventory/InventoryItemSet__AInventoryItemSet.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `ItemInstance` | `UInventoryItemInstance*` |
+| `ItemInstance` | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 | `InSpawnTransform` | `FTransform` |
 | `CurLevel` | `ULevel *` |
 
@@ -731,7 +731,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `UseItemSaveData` | `FUseItemSaveData` |
+| `UseItemSaveData` | [FUseItemSaveData](../Struct/ItemStruct__FUseItemSaveData.md) |
 | `InRadius` | `float` |
 | `InSpawnTransform` | `FTransform` |
 | `CurLevel` | `ULevel *` |
@@ -779,7 +779,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutCharacters` | `TArray<AEastRimWorldCharacter_Human*>&` |
+| `OutCharacters` | TArray<[AEastRimWorldCharacter_Human](../Character/EastRimWorldCharacter_Human__AEastRimWorldCharacter_Human.md)*>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllPlayerTeamCharacter(TArray<AEastRimWorldCharacter_Human*>& OutCharacters);`
 
@@ -796,7 +796,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AEastRimWorldCharacter_Human*` |
+| 返回类型 | [AEastRimWorldCharacter_Human](../Character/EastRimWorldCharacter_Human__AEastRimWorldCharacter_Human.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -818,7 +818,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AEastRimWorldCharacter_Human*` |
+| 返回类型 | [AEastRimWorldCharacter_Human](../Character/EastRimWorldCharacter_Human__AEastRimWorldCharacter_Human.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -846,7 +846,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutCharacters` | `TArray<AEastRimWorldCharacter_Summons*>&` |
+| `OutCharacters` | TArray<[AEastRimWorldCharacter_Summons](../Character/EastRimWorldCharacter_Summons__AEastRimWorldCharacter_Summons.md)*>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllRobotTeamCharacter(TArray<AEastRimWorldCharacter_Summons*>& OutCharacters);`
 
@@ -868,7 +868,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutCharacters` | `TArray<AEastRimWorldCharacter_Summons*>&` |
+| `OutCharacters` | TArray<[AEastRimWorldCharacter_Summons](../Character/EastRimWorldCharacter_Summons__AEastRimWorldCharacter_Summons.md)*>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllFightRobotTeamCharacter(TArray<AEastRimWorldCharacter_Summons*>& OutCharacters);`
 
@@ -890,7 +890,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutCharacters` | `TArray<AEastRimWorldCharacter_Animal*>&` |
+| `OutCharacters` | TArray<[AEastRimWorldCharacter_Animal](../Character/EastRimWorldCharacter_Animal__AEastRimWorldCharacter_Animal.md)*>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllAnimaTeamCharacter(TArray<AEastRimWorldCharacter_Animal*>& OutCharacters);`
 
@@ -912,7 +912,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutCharacters` | `TArray<AEastRimWorldCharacter*>&` |
+| `OutCharacters` | TArray<[AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)*>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllCharacter(TArray<AEastRimWorldCharacter*>& OutCharacters);`
 
@@ -934,7 +934,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutCharacters` | `TArray<AEastRimWorldCharacter*>&` |
+| `OutCharacters` | TArray<[AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)*>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllCharacter2(TArray<AEastRimWorldCharacter*>& OutCharacters);`
 
@@ -954,7 +954,7 @@
 |--------|------|
 | `ActionID` | `const FName&` |
 | `ItemID` | `const FName&` |
-| `GOAPAction` | `FGOAP_Action&` |
+| `GOAPAction` | [FGOAP_Action](../GOAP/GOAP_Data__FGOAP_Action.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintImplementableEvent) void GetGOAPAction(const FName& ActionID , const FName& ItemID , FGOAP_Action& GOAPAction);`
 
@@ -971,7 +971,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UInventoryItemInstance*` |
+| 返回类型 | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -994,7 +994,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `MainWidgetUI` | `const TSoftClassPtr<UEastRimWorldActivatableWidget> &` |
+| `MainWidgetUI` | const TSoftClassPtr<[UEastRimWorldActivatableWidget](../UI/EastRimWorldActivatableWidget__UEastRimWorldActivatableWidget.md)> & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent) void CreateMainUI(const TSoftClassPtr<UEastRimWorldActivatableWidget> & MainWidgetUI);`
 
@@ -1070,7 +1070,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildingActor` | `ABuildingActorBase *` |
+| `BuildingActor` | [ABuildingActorBase](../Building/BuildingActorBase__ABuildingActorBase.md) * |
 | `AbilityProjectileStruct` | `const FAbilityProjectileStruct &` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SpawnBuildingFaultProjectile(ABuildingActorBase * BuildingActor,const FAbilityProjectileStruct & AbilityProjectileStruct);`
@@ -1130,7 +1130,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Human` | `class AEastRimWorldCharacter_Human*` |
+| `Human` | class [AEastRimWorldCharacter_Human](../Character/EastRimWorldCharacter_Human__AEastRimWorldCharacter_Human.md)* |
 | `bControlled` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category="Vision|Debug") void OnHumanControlledChanged(class AEastRimWorldCharacter_Human* Human, bool bControlled);`

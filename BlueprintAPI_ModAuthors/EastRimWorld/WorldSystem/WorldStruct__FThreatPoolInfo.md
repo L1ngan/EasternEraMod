@@ -119,7 +119,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName,FNameIDArray>` |
+| C++ 类型 | TMap<FName,[FNameIDArray](../Struct/CommonStruct__FNameIDArray.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TMap<FName,FNameIDArray> GenerationIDsMap;` |

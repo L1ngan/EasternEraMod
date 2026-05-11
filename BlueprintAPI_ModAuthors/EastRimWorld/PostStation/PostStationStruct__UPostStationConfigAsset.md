@@ -42,7 +42,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FPostStationGenerateLineConfig>` |
+| C++ 类型 | TArray<[FPostStationGenerateLineConfig](PostStationStruct__FPostStationGenerateLineConfig.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<FPostStationGenerateLineConfig> GenerateLineConfigs;` |
@@ -432,7 +432,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName,FNameArr>` |
+| C++ 类型 | TMap<FName,[FNameArr](../Components/ERW_GameConfigComponent__FNameArr.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TMap<FName,FNameArr> NPCDestroyRemoveTaskRecord;` |

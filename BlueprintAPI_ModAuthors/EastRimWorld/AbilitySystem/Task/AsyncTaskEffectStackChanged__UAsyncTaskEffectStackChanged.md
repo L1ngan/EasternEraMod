@@ -26,7 +26,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UAsyncTaskEffectStackChanged*` |
+| 返回类型 | [UAsyncTaskEffectStackChanged](AsyncTaskEffectStackChanged__UAsyncTaskEffectStackChanged.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -45,7 +45,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UAsyncTaskEffectStackChanged*` |
+| 返回类型 | [UAsyncTaskEffectStackChanged](AsyncTaskEffectStackChanged__UAsyncTaskEffectStackChanged.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |

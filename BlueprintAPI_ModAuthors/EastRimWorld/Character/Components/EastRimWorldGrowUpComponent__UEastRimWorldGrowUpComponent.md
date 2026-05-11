@@ -135,7 +135,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName,FMartialArtsLearnData>` |
+| C++ 类型 | TMap<FName,[FMartialArtsLearnData](../../Struct/MartialArts__FMartialArtsLearnData.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FName,FMartialArtsLearnData> MartialArtsLearnData;` |
@@ -270,7 +270,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName,FMartialArtsBookData>` |
+| C++ 类型 | TMap<FName,[FMartialArtsBookData](../../Struct/MartialArts__FMartialArtsBookData.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FName,FMartialArtsBookData> MartialArtsBookDataInfos;` |
@@ -330,7 +330,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FBreakThroughHarvest>` |
+| C++ 类型 | TArray<[FBreakThroughHarvest](../../WorldSystem/WorldCharacterData__FBreakThroughHarvest.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TArray<FBreakThroughHarvest> BreakThroughHarvest;` |
@@ -345,7 +345,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FMartialArtsEntries>` |
+| C++ 类型 | TArray<[FMartialArtsEntries](../../Struct/MartialArts__FMartialArtsEntries.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TArray<FMartialArtsEntries> MartialArtsEntries;` |
@@ -453,7 +453,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintPure, Category="EastRimWorld|GrowUp" |
-| 返回类型 | `UEastRimWorldGrowUpComponent*` |
+| 返回类型 | [UEastRimWorldGrowUpComponent](EastRimWorldGrowUpComponent__UEastRimWorldGrowUpComponent.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -539,7 +539,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BookData` | `const FMartialArtsBookData &` |
+| `BookData` | const [FMartialArtsBookData](../../Struct/MartialArts__FMartialArtsBookData.md) & |
 | `Level` | `int32` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,Category="MartialArts") void UpdateOrAddMartialArtsLevelEffect(const FMartialArtsBookData & BookData,int32 Level);`
@@ -584,7 +584,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `LearnData` | `FMartialArtsLearnData &` |
+| `LearnData` | [FMartialArtsLearnData](../../Struct/MartialArts__FMartialArtsLearnData.md) & |
 | `MinLevel` | `int32` |
 | `MaxLevel` | `int32` |
 
@@ -818,7 +818,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutMartialArtsLearnData` | `FMartialArtsLearnData &` |
+| `OutMartialArtsLearnData` | [FMartialArtsLearnData](../../Struct/MartialArts__FMartialArtsLearnData.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CalculateMartialArtsLevel(FMartialArtsLearnData & OutMartialArtsLearnData);`
 
@@ -840,7 +840,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InMartialArtsBookData` | `const FMartialArtsBookData&` |
+| `InMartialArtsBookData` | const [FMartialArtsBookData](../../Struct/MartialArts__FMartialArtsBookData.md)& |
 | `TargetScore` | `int32` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) int32 GetSocreMartialArtsLevel(const FMartialArtsBookData& InMartialArtsBookData, int32 TargetScore);`
@@ -863,7 +863,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InMartialArtsLearnData` | `const FMartialArtsLearnData &` |
+| `InMartialArtsLearnData` | const [FMartialArtsLearnData](../../Struct/MartialArts__FMartialArtsLearnData.md) & |
 | `MinLevel` | `int` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddMartialArtsEntries(const FMartialArtsLearnData & InMartialArtsLearnData,int MinLevel);`
@@ -932,7 +932,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InMartialArtsBookData` | `FMartialArtsBookData` |
+| `InMartialArtsBookData` | [FMartialArtsBookData](../../Struct/MartialArts__FMartialArtsBookData.md) |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SetCurReadMartialArts(FMartialArtsBookData InMartialArtsBookData);`
 
@@ -1044,7 +1044,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InMartialArtsLevel` | `const FMartialArtsLevel &` |
+| `InMartialArtsLevel` | const [FMartialArtsLevel](../../Struct/MartialArts__FMartialArtsLevel.md) & |
 | `InMartialArtsName` | `FName` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void ApplyMartialArtsLevelAttribute(const FMartialArtsLevel & InMartialArtsLevel , FName InMartialArtsName);`
@@ -1067,7 +1067,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InMartialArtsLevel` | `const FMartialArtsLevel &` |
+| `InMartialArtsLevel` | const [FMartialArtsLevel](../../Struct/MartialArts__FMartialArtsLevel.md) & |
 | `InMartialArtsName` | `FName` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveMartialArtsLevelAttribute(const FMartialArtsLevel & InMartialArtsLevel , FName InMartialArtsName);`
@@ -1090,7 +1090,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InRealmData` | `const FRealmData &` |
+| `InRealmData` | const [FRealmData](../../Struct/MartialArts__FRealmData.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void ApplyRealmLevelAttribute(const FRealmData & InRealmData);`
 
@@ -1112,7 +1112,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InRealmData` | `const FRealmData &` |
+| `InRealmData` | const [FRealmData](../../Struct/MartialArts__FRealmData.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveRealmLevelAttribute(const FRealmData & InRealmData);`
 

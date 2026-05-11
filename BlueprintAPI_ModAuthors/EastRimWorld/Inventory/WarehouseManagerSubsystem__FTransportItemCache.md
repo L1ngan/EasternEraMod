@@ -14,7 +14,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FUObjectData` |
+| C++ 类型 | [FUObjectData](../ERW_CommonTypes__FUObjectData.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FUObjectData ObjectData;` |
@@ -44,7 +44,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FGOAP_Action>` |
+| C++ 类型 | TArray<[FGOAP_Action](../GOAP/GOAP_Data__FGOAP_Action.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TArray<FGOAP_Action> Plans;` |

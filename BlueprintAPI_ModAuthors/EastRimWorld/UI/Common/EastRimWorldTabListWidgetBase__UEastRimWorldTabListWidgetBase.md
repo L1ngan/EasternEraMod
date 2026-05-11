@@ -36,7 +36,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `TabNameId` | `const FName` |
-| `OutTabInfo` | `FEastRimWorldTabDescriptor&` |
+| `OutTabInfo` | [FEastRimWorldTabDescriptor](EastRimWorldTabListWidgetBase__FEastRimWorldTabDescriptor.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Tab List") bool GetPreregisteredTabInfo(const FName TabNameId, FEastRimWorldTabDescriptor& OutTabInfo);`
 
@@ -77,7 +77,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TabDescriptor` | `const FEastRimWorldTabDescriptor&` |
+| `TabDescriptor` | const [FEastRimWorldTabDescriptor](EastRimWorldTabListWidgetBase__FEastRimWorldTabDescriptor.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "Tab List") bool RegisterDynamicTab(const FEastRimWorldTabDescriptor& TabDescriptor);`
 

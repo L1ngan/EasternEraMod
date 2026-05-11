@@ -12,7 +12,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `class AERW_GameModeBase*` |
+| C++ 类型 | class [AERW_GameModeBase](../../Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 | 反射说明符 | BlueprintReadWrite, Category="Guide" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, Category = "Guide") class AERW_GameModeBase* GameModeBase = nullptr;` |
@@ -23,7 +23,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `class UERW_GameInstanceBase *` |
+| C++ 类型 | class [UERW_GameInstanceBase](../../Framework/ERW_GameInstanceBase__UERW_GameInstanceBase.md) * |
 | 反射说明符 | BlueprintReadWrite, Category="Guide" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, Category = "Guide") class UERW_GameInstanceBase * GameInstance = nullptr;` |
@@ -49,7 +49,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FCommonTaskInstance>` |
+| C++ 类型 | TArray<[FCommonTaskInstance](../../Struct/CommonTaskStruct__FCommonTaskInstance.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Guide" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame, Category = "Guide") TArray<FCommonTaskInstance> NoviceTaskInfo;` |
@@ -64,7 +64,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FCommonTaskInstance` |
+| C++ 类型 | [FCommonTaskInstance](../../Struct/CommonTaskStruct__FCommonTaskInstance.md) |
 | 反射说明符 | BlueprintReadWrite, Category="Guide" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame, Category = "Guide") FCommonTaskInstance CurNoviceTaskInfo;` |
@@ -125,7 +125,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `AGOAP_ActorBase*` |
+| C++ 类型 | [AGOAP_ActorBase](../../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) AGOAP_ActorBase* SelectActor = nullptr;` |
@@ -140,7 +140,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `UInventoryItemInstance*` |
+| C++ 类型 | [UInventoryItemInstance](../../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) UInventoryItemInstance* SelectItemInstance { nullptr };` |
@@ -155,7 +155,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `AERW_SceneManager*` |
+| C++ 类型 | [AERW_SceneManager](../../ERW_SceneManager__AERW_SceneManager.md)* |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) AERW_SceneManager* SceneManager { nullptr };` |
@@ -309,7 +309,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Actor` | `ANewGameResourceSpawnerActor*` |
+| `Actor` | [ANewGameResourceSpawnerActor](../../Actor/NewGameResourceSpawnerActor__ANewGameResourceSpawnerActor.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void ReceiveAward(ANewGameResourceSpawnerActor* Actor);`
 
@@ -371,7 +371,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TaskInfo` | `FCommonTaskInstance` |
+| `TaskInfo` | [FCommonTaskInstance](../../Struct/CommonTaskStruct__FCommonTaskInstance.md) |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateNoviceTask(FCommonTaskInstance TaskInfo);`
 
@@ -415,7 +415,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `（匿名/仅类型）` | `const FCommonTaskInstance &Task` |
+| `（匿名/仅类型）` | const [FCommonTaskInstance](../../Struct/CommonTaskStruct__FCommonTaskInstance.md) &Task |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void BroadcastBeginnerGuide(const FCommonTaskInstance &Task);`
 
@@ -468,7 +468,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FCommonTaskInstance` |
+| 返回类型 | [FCommonTaskInstance](../../Struct/CommonTaskStruct__FCommonTaskInstance.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FCommonTaskInstance GetNextNoviceTask();`
@@ -592,7 +592,7 @@
 |--------|------|
 | `ConditionType` | `ECommonTaskConditionType` |
 | `RequiredID` | `const FName&` |
-| `ConditionData` | `FCommonTaskCondition&` |
+| `ConditionData` | [FCommonTaskCondition](../../Struct/CommonTaskStruct__FCommonTaskCondition.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) int32 GetConditionData(ECommonTaskConditionType ConditionType , const FName& RequiredID , FCommonTaskCondition& ConditionData) const;`
 
@@ -704,7 +704,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `ConditionType` | `ECommonTaskConditionType` |
-| `TaskCondition` | `FCommonTaskCondition&` |
+| `TaskCondition` | [FCommonTaskCondition](../../Struct/CommonTaskStruct__FCommonTaskCondition.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) bool GetConditionByConditionType(ECommonTaskConditionType ConditionType , FCommonTaskCondition& TaskCondition) const;`
 
@@ -780,7 +780,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Actor` | `ANewGameResourceSpawnerActor*` |
+| `Actor` | [ANewGameResourceSpawnerActor](../../Actor/NewGameResourceSpawnerActor__ANewGameResourceSpawnerActor.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CloseBeginnerGuide(ANewGameResourceSpawnerActor* Actor);`
 

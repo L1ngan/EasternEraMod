@@ -12,7 +12,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FWorldEventSpawnConfig>` |
+| C++ 类型 | TArray<[FWorldEventSpawnConfig](WorldEventManagerActor__FWorldEventSpawnConfig.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame) TArray<FWorldEventSpawnConfig> WorldEventSpawnConfigs;` |
@@ -27,7 +27,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FWorldEventInfo>` |
+| C++ 类型 | TArray<[FWorldEventInfo](WorldEventManagerActor__FWorldEventInfo.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame) TArray<FWorldEventInfo> WorldEventInfos;` |
@@ -42,7 +42,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FWorldEventInfo` |
+| C++ 类型 | [FWorldEventInfo](WorldEventManagerActor__FWorldEventInfo.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame) FWorldEventInfo UnderWayWorldEventInfo;` |
@@ -57,7 +57,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<int,FWorldEventInfo>` |
+| C++ 类型 | TMap<int,[FWorldEventInfo](WorldEventManagerActor__FWorldEventInfo.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame) TMap<int,FWorldEventInfo> PauseWorldEventInfos;` |
@@ -72,7 +72,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `UCommonTaskComponent*` |
+| C++ 类型 | [UCommonTaskComponent](../../System/Task/CommonTaskComponent__UCommonTaskComponent.md)* |
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,SaveGame,BlueprintReadOnly, meta = (AllowPrivateAccess = "true")) UCommonTaskComponent* TaskComponent;` |
@@ -191,7 +191,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `AWorldEventManagerActor *` |
+| 返回类型 | [AWorldEventManagerActor](WorldEventManagerActor__AWorldEventManagerActor.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) static AWorldEventManagerActor * GetWorldEventManager();`
@@ -228,7 +228,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldEventSpawnConfig` | `const FWorldEventSpawnConfig &` |
+| `WorldEventSpawnConfig` | const [FWorldEventSpawnConfig](WorldEventManagerActor__FWorldEventSpawnConfig.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool CheckWorldEventConfigAlreadySpawn(const FWorldEventSpawnConfig & WorldEventSpawnConfig);`
 
@@ -245,7 +245,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FWorldEventInfo` |
+| 返回类型 | [FWorldEventInfo](WorldEventManagerActor__FWorldEventInfo.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -331,7 +331,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FWorldEventDetail` |
+| 返回类型 | [FWorldEventDetail](WorldEventManagerActor__FWorldEventDetail.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -398,7 +398,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldEventInfo` | `FWorldEventInfo &` |
+| `WorldEventInfo` | [FWorldEventInfo](WorldEventManagerActor__FWorldEventInfo.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void TriggerWorldEvent(FWorldEventInfo & WorldEventInfo);`
 
@@ -455,7 +455,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FUnlockedPauseSlotInfo` |
+| 返回类型 | [FUnlockedPauseSlotInfo](WorldEventManagerActor__FUnlockedPauseSlotInfo.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -477,7 +477,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FWorldEventInfo` |
+| 返回类型 | [FWorldEventInfo](WorldEventManagerActor__FWorldEventInfo.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -504,7 +504,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InWorldEventInfo` | `const FWorldEventInfo &` |
+| `InWorldEventInfo` | const [FWorldEventInfo](WorldEventManagerActor__FWorldEventInfo.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool SetSlotWorldEventInfo(const FWorldEventInfo & InWorldEventInfo);`
 
@@ -526,7 +526,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InWorldEventInfo` | `const FWorldEventInfo &` |
+| `InWorldEventInfo` | const [FWorldEventInfo](WorldEventManagerActor__FWorldEventInfo.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool RemoveSlotWorldEventInfo(const FWorldEventInfo & InWorldEventInfo);`
 
@@ -566,7 +566,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TaskInfo` | `FCommonTaskInstance` |
+| `TaskInfo` | [FCommonTaskInstance](../../Struct/CommonTaskStruct__FCommonTaskInstance.md) |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateWorldTask(FCommonTaskInstance TaskInfo);`
 
@@ -610,7 +610,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TaskInfo` | `const FCommonTaskInstance &` |
+| `TaskInfo` | const [FCommonTaskInstance](../../Struct/CommonTaskStruct__FCommonTaskInstance.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetWorldTaskRewards(const FCommonTaskInstance & TaskInfo);`
 
@@ -632,7 +632,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Condition` | `const FCommonTaskCondition&` |
+| `Condition` | const [FCommonTaskCondition](../../Struct/CommonTaskStruct__FCommonTaskCondition.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateTaskCondition(const FCommonTaskCondition& Condition);`
 

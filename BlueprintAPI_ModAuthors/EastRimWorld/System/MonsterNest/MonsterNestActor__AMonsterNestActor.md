@@ -12,7 +12,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UEventGenerateCharacterComponent>` |
+| C++ 类型 | TObjectPtr<[UEventGenerateCharacterComponent](../EventGenerateCharacterComponent__UEventGenerateCharacterComponent.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly) TObjectPtr<UEventGenerateCharacterComponent> GenerateCharacterComponent;` |
@@ -38,7 +38,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGuid,AEastRimWorldCharacter*>` |
+| C++ 类型 | TMap<FGuid,[AEastRimWorldCharacter](../../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)*> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FGuid,AEastRimWorldCharacter*> AllMonsters;` |
@@ -49,7 +49,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FMonsterNestInfo` |
+| C++ 类型 | [FMonsterNestInfo](../../WorldSystem/WorldStruct__FMonsterNestInfo.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FMonsterNestInfo MonsterNestInfo;` |

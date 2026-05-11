@@ -133,7 +133,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `AchievementName` | `const FString&` |
-| `OutAchievementInfo` | `FSteamAchievementInfo&` |
+| `OutAchievementInfo` | [FSteamAchievementInfo](SteamAchievementLibrary__FSteamAchievementInfo.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Steam Achievement") static bool GetAchievementInfo(const FString& AchievementName, FSteamAchievementInfo& OutAchievementInfo);`
 
@@ -184,7 +184,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutAchievements` | `TArray<FSteamAchievementInfo>&` |
+| `OutAchievements` | TArray<[FSteamAchievementInfo](SteamAchievementLibrary__FSteamAchievementInfo.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "Steam Achievement") static int32 GetAllAchievements(TArray<FSteamAchievementInfo>& OutAchievements);`
 

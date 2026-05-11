@@ -13,7 +13,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="System|GPU" |
-| 返回类型 | `FGPUInfo` |
+| 返回类型 | [FGPUInfo](GPUInfoLibrary__FGPUInfo.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category="System|GPU") static FGPUInfo GetGPUInfo();`

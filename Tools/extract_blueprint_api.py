@@ -1,11 +1,15 @@
 """Scan UE headers for Blueprint-visible API and emit detailed Markdown for mod authors."""
 from __future__ import annotations
 
+import os
 import re
 import shutil
 import sys
 from collections import defaultdict
 from pathlib import Path
+
+# UE 反射类型名（与生成文档中的 UCLASS/USTRUCT 名称对应），用于交叉链接
+UE_DOC_TYPE_RE = re.compile(r"\b(F[A-Z]\w*|U[A-Z]\w*|A[A-Z]\w*|E[A-Z]\w*)\b")
 
 
 def strip_line_comment(line: str) -> str:
@@ -248,6 +252,75 @@ def summarize_type_doc_for_index(doc: str, max_len: int = 360) -> str:
     return trunc_one_line(one, max_len)
 
 
+def build_type_doc_index(by_file: dict) -> dict[str, str]:
+    """Map reflected type name (e.g. FBreakThroughInfo) -> md path posix relative to api_root."""
+    buckets: dict[str, list[str]] = defaultdict(list)
+    for rel in by_file:
+        hp = Path(rel)
+        stem = hp.stem
+        parent = hp.parent
+        for _kind, cls_name, _tdoc, _mems in by_file[rel]:
+            fname = f"{stem}__{cls_name}.md"
+            md_rel = (parent / fname).as_posix()
+            buckets[cls_name].append(md_rel)
+
+    resolved: dict[str, str] = {}
+    for name, paths in buckets.items():
+        unique = sorted(set(paths))
+        resolved[name] = unique[0]
+        if len(unique) > 1:
+            print(
+                f"[extract_blueprint_api] duplicate generated type name '{name}' -> using {unique[0]!r}, also: {unique[1:]!r}",
+                file=sys.stderr,
+            )
+    return resolved
+
+
+def markdown_rel_link(from_md_file: Path, target_md_rel_posix: str, api_root: Path) -> str:
+    """Relative href from one generated .md file to another under api_root."""
+    src_dir = from_md_file.parent
+    tgt = api_root / target_md_rel_posix
+    return Path(os.path.relpath(tgt, src_dir)).as_posix()
+
+
+def linkify_ue_types(
+    text: str,
+    type_index: dict[str, str],
+    from_md_file: Path,
+    api_root: Path,
+) -> str:
+    """Turn FFoo / UBar substrings into [FFoo](relative.md) when a generated doc exists."""
+    if not text or not type_index:
+        return text
+    out: list[str] = []
+    last = 0
+    for m in UE_DOC_TYPE_RE.finditer(text):
+        out.append(text[last : m.start()])
+        tok = m.group(1)
+        dest = type_index.get(tok)
+        if dest:
+            href = markdown_rel_link(from_md_file, dest, api_root)
+            out.append(f"[{tok}]({href})")
+        else:
+            out.append(tok)
+        last = m.end()
+    out.append(text[last:])
+    return "".join(out)
+
+
+def format_type_cell_markdown(
+    text: str,
+    type_index: dict[str, str],
+    from_md_file: Path,
+    api_root: Path,
+) -> str:
+    """Table cell for C++ type: link known UE types; wrap plain text in backticks."""
+    linked = linkify_ue_types(text, type_index, from_md_file, api_root)
+    if "[" in linked:
+        return linked
+    return f"`{linked}`"
+
+
 def split_params(params_inner: str) -> list[tuple[str, str]]:
     """Rough split on commas (not template-aware). Good enough for docs."""
     if not params_inner.strip():
@@ -389,19 +462,30 @@ def extract_uclasses_with_docs(
     return results
 
 
-def format_property_md(full: str, *, heading_level: str = "####") -> list[str]:
+def format_property_md(
+    full: str,
+    *,
+    heading_level: str = "####",
+    type_index: dict[str, str] | None = None,
+    from_md_file: Path | None = None,
+    api_root: Path | None = None,
+) -> list[str]:
     sp = split_macro_args(full, "UPROPERTY")
     if not sp:
         return [f"- （无法解析）`{full[:180]}…`" if len(full) > 180 else f"- `{full}`"]
     args, rest = sp
     typ, name = parse_property_decl(rest)
     spec = blueprint_spec_summary(args)
+    if type_index is not None and from_md_file is not None and api_root is not None:
+        typ_cell = format_type_cell_markdown(typ, type_index, from_md_file, api_root)
+    else:
+        typ_cell = f"`{typ}`"
     out = [
         f"{heading_level} 属性 `{name}`",
         "",
         "| 项目 | 内容 |",
         "|------|------|",
-        f"| C++ 类型 | `{typ}` |",
+        f"| C++ 类型 | {typ_cell} |",
         f"| 反射说明符 | {spec} |",
         f"| 蓝图侧含义 | {usage_hints_property(args)} |",
         f"| 原始声明（单行节选） | `{trunc_one_line(full)}` |",
@@ -409,7 +493,14 @@ def format_property_md(full: str, *, heading_level: str = "####") -> list[str]:
     return out
 
 
-def format_function_md(full: str, *, heading_level: str = "####") -> list[str]:
+def format_function_md(
+    full: str,
+    *,
+    heading_level: str = "####",
+    type_index: dict[str, str] | None = None,
+    from_md_file: Path | None = None,
+    api_root: Path | None = None,
+) -> list[str]:
     sp = split_macro_args(full, "UFUNCTION")
     if not sp:
         return [f"- （无法解析）`{full[:180]}…`" if len(full) > 180 else f"- `{full}`"]
@@ -417,13 +508,17 @@ def format_function_md(full: str, *, heading_level: str = "####") -> list[str]:
     ret, fname, params_inner = parse_function_decl(rest)
     params = split_params(params_inner)
     spec = blueprint_spec_summary(args)
+    if type_index is not None and from_md_file is not None and api_root is not None:
+        ret_cell = format_type_cell_markdown(ret, type_index, from_md_file, api_root)
+    else:
+        ret_cell = f"`{ret}`"
     out = [
         f"{heading_level} 函数 `{fname}`",
         "",
         "| 项目 | 内容 |",
         "|------|------|",
         f"| 反射说明符 | {spec} |",
-        f"| 返回类型 | `{ret}` |",
+        f"| 返回类型 | {ret_cell} |",
     ]
     if params:
         out.append("| 参数 | 见下表 |")
@@ -432,7 +527,11 @@ def format_function_md(full: str, *, heading_level: str = "####") -> list[str]:
         out.append("|--------|------|")
         for t, pn in params:
             pname = pn or "（匿名/仅类型）"
-            out.append(f"| `{pname}` | `{t}` |")
+            if type_index is not None and from_md_file is not None and api_root is not None:
+                t_cell = format_type_cell_markdown(t, type_index, from_md_file, api_root)
+            else:
+                t_cell = f"`{t}`"
+            out.append(f"| `{pname}` | {t_cell} |")
     else:
         out.append("| 参数 | （无） |")
     out.append("")
@@ -448,6 +547,10 @@ def emit_standalone_class_md(
     type_doc: str,
     members: list[tuple[str, str, int, str]],
     source_header_rel: str,
+    *,
+    type_index: dict[str, str],
+    out_md_file: Path,
+    api_root: Path,
 ) -> list[str]:
     """Single markdown document for one UCLASS/USTRUCT (mod author per-type page)."""
     sec: list[str] = [
@@ -477,7 +580,15 @@ def emit_standalone_class_md(
         sec.append("## 蓝图暴露变量")
         sec.append("")
         for _, full, _, doc in props:
-            sec.extend(format_property_md(full, heading_level="###"))
+            sec.extend(
+                format_property_md(
+                    full,
+                    heading_level="###",
+                    type_index=type_index,
+                    from_md_file=out_md_file,
+                    api_root=api_root,
+                )
+            )
             if doc:
                 sec.append("")
                 sec.append("**源码注释：**")
@@ -492,7 +603,15 @@ def emit_standalone_class_md(
         sec.append("## 蓝图暴露函数")
         sec.append("")
         for _, full, _, doc in funcs:
-            sec.extend(format_function_md(full, heading_level="###"))
+            sec.extend(
+                format_function_md(
+                    full,
+                    heading_level="###",
+                    type_index=type_index,
+                    from_md_file=out_md_file,
+                    api_root=api_root,
+                )
+            )
             if doc:
                 sec.append("")
                 sec.append("**源码注释：**")
@@ -536,6 +655,8 @@ def main() -> int:
             by_file[rel] = rows
             header_count += 1
 
+    type_index = build_type_doc_index(by_file)
+
     if api_root.is_dir():
         shutil.rmtree(api_root)
     api_root.mkdir(parents=True)
@@ -552,7 +673,16 @@ def main() -> int:
             subdir.mkdir(parents=True, exist_ok=True)
             fname = f"{stem}__{cls_name}.md"
             out_file = subdir / fname
-            body = emit_standalone_class_md(kind, cls_name, type_doc, mems, rel)
+            body = emit_standalone_class_md(
+                kind,
+                cls_name,
+                type_doc,
+                mems,
+                rel,
+                type_index=type_index,
+                out_md_file=out_file,
+                api_root=api_root,
+            )
             out_file.write_text("\n".join(body), encoding="utf-8")
             type_count += 1
             md_link = (parent / fname).as_posix()
@@ -576,6 +706,7 @@ def main() -> int:
         "",
         "- **覆盖范围**：`Source/EastRimWorld`、`Plugins/CreateModPlugin`、`CreateModPluginEditor`。",
         "- **路径**：文档路径与源码模块目录对应，文件名 `{头文件名}__{类型名}.md`。",
+        "- **关联跳转**：属性「C++ 类型」与函数「返回类型 / 参数类型」中出现的 `F*` / `U*` / `A*` / `E*` 名称若在本文档集中有对应页面，会自动变为 **Markdown 相对链接**（可点击跳转至该类型文档）。",
         "- **参数拆分**：复杂模板可能被简化；**最权威签名以对应 `.h` 为准**。",
         "- **更新**：`python Tools/extract_blueprint_api.py`（会清空并重建 `BlueprintAPI_ModAuthors/`）",
         "",

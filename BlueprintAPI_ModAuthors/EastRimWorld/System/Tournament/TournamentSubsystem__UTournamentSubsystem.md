@@ -32,7 +32,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `UTournamentSubsystem*` |
+| 返回类型 | [UTournamentSubsystem](TournamentSubsystem__UTournamentSubsystem.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, BlueprintPure) static UTournamentSubsystem* GetTournamentSubsystem();`
@@ -50,7 +50,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FSectReputationInfo>` |
+| 返回类型 | TArray<[FSectReputationInfo](TournamentStruct__FSectReputationInfo.md)> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<FSectReputationInfo> GetAllSectReputationInfo();`
@@ -74,7 +74,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `SectGuid` | `const FGuid&` |
-| `OutReputationInfo` | `FSectReputationInfo&` |
+| `OutReputationInfo` | [FSectReputationInfo](TournamentStruct__FSectReputationInfo.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool GetSectReputationInfo(const FGuid& SectGuid, FSectReputationInfo& OutReputationInfo);`
 

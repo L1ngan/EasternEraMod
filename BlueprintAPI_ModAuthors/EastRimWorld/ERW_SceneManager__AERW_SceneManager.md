@@ -62,7 +62,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InBuilding` | `ABuildingActorBase*` |
+| `InBuilding` | [ABuildingActorBase](Building/BuildingActorBase__ABuildingActorBase.md)* |
 | `InShowRangeActor` | `AActor*` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddBuildingEffectRangeActor(ABuildingActorBase* InBuilding,AActor* InShowRangeActor);`
@@ -81,7 +81,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InBuilding` | `ABuildingActorBase*` |
+| `InBuilding` | [ABuildingActorBase](Building/BuildingActorBase__ABuildingActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveBUildingEffectRangeAtor(ABuildingActorBase* InBuilding);`
 
@@ -99,7 +99,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InBuilding` | `ABuildingActorBase*` |
+| `InBuilding` | [ABuildingActorBase](Building/BuildingActorBase__ABuildingActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) AActor* FindBuildingEffectRangeActor(ABuildingActorBase* InBuilding);`
 
@@ -135,7 +135,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InBuilding` | `ABuildingActorBase*` |
+| `InBuilding` | [ABuildingActorBase](Building/BuildingActorBase__ABuildingActorBase.md)* |
 | `bIsShow` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void ShowOneBuildingEffectRangeActor(ABuildingActorBase* InBuilding,bool bIsShow);`
@@ -244,7 +244,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ItemInstance` | `UInventoryItemInstance*` |
+| `ItemInstance` | [UInventoryItemInstance](Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) void CreateBeginnerGuideBillboard(UInventoryItemInstance* ItemInstance);`
 

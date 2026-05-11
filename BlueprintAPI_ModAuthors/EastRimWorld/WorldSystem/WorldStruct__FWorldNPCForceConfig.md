@@ -29,7 +29,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName,FNameIDArray>` |
+| C++ 类型 | TMap<FName,[FNameIDArray](../Struct/CommonStruct__FNameIDArray.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<FName,FNameIDArray> ExpatriateCharacters;` |
@@ -59,7 +59,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<int,FWorldNPCForceTroops>` |
+| C++ 类型 | TMap<int,[FWorldNPCForceTroops](WorldStruct__FWorldNPCForceTroops.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<int,FWorldNPCForceTroops> WorldNPCForceTroops;` |
@@ -74,7 +74,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EArmorType,FNPCForceArmorPool>` |
+| C++ 类型 | TMap<EArmorType,[FNPCForceArmorPool](WorldStruct__FNPCForceArmorPool.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Cultivate" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Cultivate") TMap<EArmorType,FNPCForceArmorPool> ForceArmorDataPools;` |
@@ -164,7 +164,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<int32,FCultivateAttributeWeight>` |
+| C++ 类型 | TMap<int32,[FCultivateAttributeWeight](WorldStruct__FCultivateAttributeWeight.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Cultivate" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Cultivate") TMap<int32,FCultivateAttributeWeight> RealmGrowAttributeWeight;` |
@@ -179,7 +179,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<ENPCCultivateCharacterType,FNPCCultivateCharacterTypeData>` |
+| C++ 类型 | TMap<ENPCCultivateCharacterType,[FNPCCultivateCharacterTypeData](WorldStruct__FNPCCultivateCharacterTypeData.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Cultivate" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Cultivate") TMap<ENPCCultivateCharacterType,FNPCCultivateCharacterTypeData> CultivateCharacterTypes;` |

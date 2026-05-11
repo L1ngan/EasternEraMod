@@ -12,7 +12,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FPostStationGenerateConfig` |
+| C++ 类型 | [FPostStationGenerateConfig](PostStationStruct__FPostStationGenerateConfig.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FPostStationGenerateConfig GenerateConfig;` |
@@ -42,7 +42,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FMonsterGenerationConfig>` |
+| C++ 类型 | TArray<[FMonsterGenerationConfig](../WorldSystem/WorldStruct__FMonsterGenerationConfig.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FMonsterGenerationConfig> AllMonsterGenerateConfig;` |
@@ -72,7 +72,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FPostStationGenerateInstanceInfo>` |
+| C++ 类型 | TArray<[FPostStationGenerateInstanceInfo](PostStationStruct__FPostStationGenerateInstanceInfo.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FPostStationGenerateInstanceInfo> ComponentGenerateInfos;` |

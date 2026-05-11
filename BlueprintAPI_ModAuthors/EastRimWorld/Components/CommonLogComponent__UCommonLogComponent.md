@@ -12,7 +12,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<class AERW_GameModeBase>` |
+| C++ 类型 | TObjectPtr<class [AERW_GameModeBase](../Framework/ERW_GameModeBase__AERW_GameModeBase.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TObjectPtr<class AERW_GameModeBase> GameMode;` |
@@ -27,7 +27,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<class UERW_GameInstanceBase>` |
+| C++ 类型 | TObjectPtr<class [UERW_GameInstanceBase](../Framework/ERW_GameInstanceBase__UERW_GameInstanceBase.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TObjectPtr<class UERW_GameInstanceBase> GameInstance;` |
@@ -93,7 +93,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutLogs` | `TArray<FCommonLogData>&` |
+| `OutLogs` | TArray<[FCommonLogData](../Struct/CommonLogStruct__FCommonLogData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) void GetAllLogData(TArray<FCommonLogData>& OutLogs) const;`
 
@@ -112,7 +112,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InFilterString` | `const FString&` |
-| `OutLogString` | `TArray<FCommonLogData>&` |
+| `OutLogString` | TArray<[FCommonLogData](../Struct/CommonLogStruct__FCommonLogData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void FindAllLogStringByFilterString(const FString& InFilterString,TArray<FCommonLogData>& OutLogString);`
 
@@ -135,7 +135,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InFilterString` | `const FString&` |
-| `OutLogString` | `TArray<FCommonLogData>&` |
+| `OutLogString` | TArray<[FCommonLogData](../Struct/CommonLogStruct__FCommonLogData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void FindAllLogNotInclueFilterString(const FString& InFilterString,TArray<FCommonLogData>& OutLogString);`
 

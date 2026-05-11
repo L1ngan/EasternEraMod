@@ -18,7 +18,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `AERW_SceneManager*` |
+| C++ 类型 | [AERW_SceneManager](../ERW_SceneManager__AERW_SceneManager.md)* |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) AERW_SceneManager* SceneManager { nullptr };` |
@@ -33,7 +33,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `UERW_MapDataMgr*` |
+| C++ 类型 | [UERW_MapDataMgr](ERW_MapDataMgr__UERW_MapDataMgr.md)* |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) UERW_MapDataMgr* MapDataMgr { nullptr };` |
@@ -230,7 +230,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintPure |
-| 返回类型 | `AGOAP_ActorBase*` |
+| 返回类型 | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -276,7 +276,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) EEmbeddedWallType GetEmbeddedWallType(AGOAP_ActorBase* BuildObject) const;`
 
@@ -408,8 +408,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
-| `EnvironComponent` | `const UERW_EnvironComponent* const` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `EnvironComponent` | const [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* const |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddRoomUnitInstance(AGOAP_ActorBase* BuildObject , const UERW_EnvironComponent* const EnvironComponent);`
 
@@ -431,7 +431,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveRoomUnitInstance(AGOAP_ActorBase* BuildObject);`
 
@@ -478,8 +478,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
-| `EnvironComponent` | `const UERW_EnvironComponent* const` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `EnvironComponent` | const [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* const |
 | `（匿名/仅类型）` | `EEntranceArrowState ShowState = EEntranceArrowState::Highlight` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddEntranceArrowInstances(AGOAP_ActorBase* BuildObject , const UERW_EnvironComponent* const EnvironComponent , EEntranceArrowState ShowState = EEntranceArrowState::Highlight);`
@@ -502,7 +502,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveEntranceArrowInstance(AGOAP_ActorBase* BuildObject);`
 
@@ -524,8 +524,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
-| `EnvironComponent` | `const UERW_EnvironComponent* const` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `EnvironComponent` | const [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* const |
 | `（匿名/仅类型）` | `EEntranceArrowState ShowState = EEntranceArrowState::Highlight` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateEntranceArrowInstances(AGOAP_ActorBase* BuildObject , const UERW_EnvironComponent* const EnvironComponent , EEntranceArrowState ShowState = EEntranceArrowState::Highlight);`
@@ -570,7 +570,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void OnEntranceArrowAddToMap(AGOAP_ActorBase* BuildObject);`
 
@@ -592,8 +592,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
-| `EnvironComponent` | `const UERW_EnvironComponent* const` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `EnvironComponent` | const [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* const |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RecoverEntranceArrowOnLoading(AGOAP_ActorBase* BuildObject , const UERW_EnvironComponent* const EnvironComponent);`
 
@@ -671,7 +671,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `VariantIndex` | `int32` |
 | `UseZIndex` | `bool` |
 | `0` | `int32 ZIndex =` |
@@ -696,9 +696,9 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Stair` | `AGOAP_ActorBase*` |
+| `Stair` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `ZIndex` | `int32` |
-| `GridPos` | `const FGridPosition&` |
+| `GridPos` | const [FGridPosition](../ERW_CommonTypes__FGridPosition.md)& |
 | `UseCustomHeight` | `bool` |
 | `Height` | `float` |
 
@@ -722,10 +722,10 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Stair` | `AGOAP_ActorBase*` |
+| `Stair` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `VariantIndex` | `int32` |
 | `ZIndex` | `int32` |
-| `GridPos` | `const FGridPosition&` |
+| `GridPos` | const [FGridPosition](../ERW_CommonTypes__FGridPosition.md)& |
 | `UseCustomHeight` | `bool` |
 | `Height` | `float` |
 
@@ -749,7 +749,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `Show` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SetBuildObjectInstanceShow(AGOAP_ActorBase* BuildObject , bool Show);`
@@ -772,7 +772,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `Show` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void TemporarySetBuildObjectShow(AGOAP_ActorBase* BuildObject , bool Show);`
@@ -795,7 +795,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `UseZIndex` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateBuildObjectInstanceTransform(AGOAP_ActorBase* BuildObject , bool UseZIndex);`
@@ -818,8 +818,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Stair` | `AGOAP_ActorBase*` |
-| `GridInfos` | `const TMap<FGridPosition , FStairGridInfo>&` |
+| `Stair` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `GridInfos` | const TMap<[FGridPosition](../ERW_CommonTypes__FGridPosition.md) , [FStairGridInfo](ERW_AreaOperationComponent__FStairGridInfo.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateStairInstanceTransform(AGOAP_ActorBase* Stair , const TMap<FGridPosition , FStairGridInfo>& GridInfos);`
 
@@ -841,8 +841,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Stair` | `AGOAP_ActorBase*` |
-| `GridInfos` | `const TMap<FGridPosition , FStairGridInfo>&` |
+| `Stair` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `GridInfos` | const TMap<[FGridPosition](../ERW_CommonTypes__FGridPosition.md) , [FStairGridInfo](ERW_AreaOperationComponent__FStairGridInfo.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RecoverLostStairInstanceOnLoading(AGOAP_ActorBase* Stair , const TMap<FGridPosition , FStairGridInfo>& GridInfos);`
 
@@ -864,7 +864,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `CanPlace` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateBuildObjectColor(AGOAP_ActorBase* BuildObject , bool CanPlace);`
@@ -887,7 +887,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `CanPlace` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SetFillerColor(AGOAP_ActorBase* BuildObject , bool CanPlace);`
@@ -933,7 +933,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `ShowType` | `EISMType` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SwitchBuildObjectInstanceShow(AGOAP_ActorBase* BuildObject , EISMType ShowType);`
@@ -956,7 +956,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `State` | `EBuildObjectState` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateBuildObjectState(AGOAP_ActorBase* BuildObject , EBuildObjectState State);`
@@ -979,7 +979,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `StencilValue` | `int32` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateBuildObjectOutlineShow(AGOAP_ActorBase* BuildObject , int32 StencilValue);`
@@ -1002,7 +1002,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `Enable` | `bool` |
 | `Floor` | `float` |
 
@@ -1026,7 +1026,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Wall` | `AGOAP_ActorBase*` |
+| `Wall` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `WallType` | `EEmbeddedWallType` |
 | `DistributionType` | `EGridDistributionType` |
 
@@ -1050,7 +1050,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Wall` | `AGOAP_ActorBase*` |
+| `Wall` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) float GetWallRotation(AGOAP_ActorBase* Wall) const;`
 
@@ -1068,7 +1068,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Wall` | `AGOAP_ActorBase*` |
+| `Wall` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `Yaw` | `float` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateWallInstanceRotation(AGOAP_ActorBase* Wall , float Yaw);`
@@ -1091,7 +1091,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Wall` | `AGOAP_ActorBase*` |
+| `Wall` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateWallDisplayEffect(AGOAP_ActorBase* Wall);`
 
@@ -1113,7 +1113,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Wall` | `AGOAP_ActorBase*` |
+| `Wall` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `DisplayType` | `EWallDisplayType` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SetWallDisplayType(AGOAP_ActorBase* Wall , EWallDisplayType DisplayType);`
@@ -1136,7 +1136,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `IsPause` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SetVertexAnimBuildObjectPaused(AGOAP_ActorBase* BuildObject , bool IsPause);`
@@ -1159,7 +1159,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `OnlyRemoveInstance` | `bool` |
 | `SwitchEmbeddedWall` | `bool` |
 
@@ -1183,7 +1183,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Stair` | `AGOAP_ActorBase*` |
+| `Stair` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveStairInstances(AGOAP_ActorBase* Stair);`
 
@@ -1205,7 +1205,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Stair` | `AGOAP_ActorBase*` |
+| `Stair` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `PosInfos` | `TMap<FVector , bool>&` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetStairPositionInfo(AGOAP_ActorBase* Stair , TMap<FVector , bool>& PosInfos);`
@@ -1228,8 +1228,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Stair` | `AGOAP_ActorBase*` |
-| `GridPoses` | `TArray<FGridPosition>&` |
+| `Stair` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `GridPoses` | TArray<[FGridPosition](../ERW_CommonTypes__FGridPosition.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetStairGridPoses(AGOAP_ActorBase* Stair , TArray<FGridPosition>& GridPoses);`
 
@@ -1251,7 +1251,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Stair` | `AGOAP_ActorBase*` |
+| `Stair` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) float GetStairHeight(AGOAP_ActorBase* Stair) const;`
 
@@ -1273,7 +1273,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) bool IsEmbeddedWall(AGOAP_ActorBase* BuildObject) const;`
 
@@ -1322,8 +1322,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
-| `GridPos` | `const FGridPosition&` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `GridPos` | const [FGridPosition](../ERW_CommonTypes__FGridPosition.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) float CalcFillerHeight(AGOAP_ActorBase* BuildObject , const FGridPosition& GridPos) const;`
 
@@ -1345,7 +1345,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) float GetFillerHeight(AGOAP_ActorBase* BuildObject) const;`
 
@@ -1367,8 +1367,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
-| `DistributionInfo` | `const TMap<FGridPosition , EGridDistributionType>&` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `DistributionInfo` | const TMap<[FGridPosition](../ERW_CommonTypes__FGridPosition.md) , EGridDistributionType>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void HideFillers(AGOAP_ActorBase* BuildObject , const TMap<FGridPosition , EGridDistributionType>& DistributionInfo);`
 
@@ -1390,10 +1390,10 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
-| `AreaOperationComponent` | `UERW_AreaOperationComponent*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `AreaOperationComponent` | [UERW_AreaOperationComponent](ERW_AreaOperationComponent__UERW_AreaOperationComponent.md)* |
 | `EnvironType` | `EEnvironType` |
-| `GridPos` | `const FGridPosition&` |
+| `GridPos` | const [FGridPosition](../ERW_CommonTypes__FGridPosition.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateSurroundingFillers(AGOAP_ActorBase* BuildObject , UERW_AreaOperationComponent* AreaOperationComponent , EEnvironType EnvironType , const FGridPosition& GridPos);`
 
@@ -1415,10 +1415,10 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
-| `AreaOperationComponent` | `UERW_AreaOperationComponent*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `AreaOperationComponent` | [UERW_AreaOperationComponent](ERW_AreaOperationComponent__UERW_AreaOperationComponent.md)* |
 | `EnvironType` | `EEnvironType` |
-| `DistributionInfo` | `const TMap<FGridPosition , EGridDistributionType>&` |
+| `DistributionInfo` | const TMap<[FGridPosition](../ERW_CommonTypes__FGridPosition.md) , EGridDistributionType>& |
 | `GridMinHeight` | `float` |
 | `false` | `bool UpdateSurrounding =` |
 | `false` | `bool CheckSurroundingHeight =` |
@@ -1444,10 +1444,10 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
-| `AreaOperationComponent` | `UERW_AreaOperationComponent*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `AreaOperationComponent` | [UERW_AreaOperationComponent](ERW_AreaOperationComponent__UERW_AreaOperationComponent.md)* |
 | `EnvironType` | `EEnvironType` |
-| `GridPos` | `const FGridPosition&` |
+| `GridPos` | const [FGridPosition](../ERW_CommonTypes__FGridPosition.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateFillerPreview(AGOAP_ActorBase* BuildObject , UERW_AreaOperationComponent* AreaOperationComponent , EEnvironType EnvironType , const FGridPosition& GridPos);`
 
@@ -1469,8 +1469,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
-| `GridPoses` | `const TArray<FGridPosition>&` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `GridPoses` | const TArray<[FGridPosition](../ERW_CommonTypes__FGridPosition.md)>& |
 | `OnlyRemoveHideInstance` | `bool` |
 | `RemoveData` | `bool` |
 
@@ -1494,8 +1494,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
-| `GridPoses` | `TArray<FGridPosition>&` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `GridPoses` | TArray<[FGridPosition](../ERW_CommonTypes__FGridPosition.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) void GetFillerGridPoses(AGOAP_ActorBase* BuildObject , TArray<FGridPosition>& GridPoses) const;`
 
@@ -1517,7 +1517,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `State` | `EBuildObjectState` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateFillerState(AGOAP_ActorBase* BuildObject , EBuildObjectState State);`
@@ -1586,7 +1586,7 @@
 |--------|------|
 | `ID` | `const FName&` |
 | `Layer` | `int32` |
-| `GridSeamPoint` | `const FGridSeamPoint&` |
+| `GridSeamPoint` | const [FGridSeamPoint](../ERW_CommonTypes__FGridSeamPoint.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddPillarInstance(const FName& ID , int32 Layer , const FGridSeamPoint& GridSeamPoint);`
 
@@ -1609,7 +1609,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Layer` | `int32` |
-| `GridSeamPoint` | `const FGridSeamPoint&` |
+| `GridSeamPoint` | const [FGridSeamPoint](../ERW_CommonTypes__FGridSeamPoint.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemovePillarInstance(int32 Layer , const FGridSeamPoint& GridSeamPoint);`
 
@@ -1631,7 +1631,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `GridSeamPoint` | `const FGridSeamPoint&` |
+| `GridSeamPoint` | const [FGridSeamPoint](../ERW_CommonTypes__FGridSeamPoint.md)& |
 | `ShowType` | `EISMType` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SwitchPillarInstanceShow(const FGridSeamPoint& GridSeamPoint , EISMType ShowType);`
@@ -1654,7 +1654,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void OnBuildObjectBuildComplete(AGOAP_ActorBase* BuildObject);`
 
@@ -1676,7 +1676,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `State` | `EBuildObjectState` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdatePillarState(AGOAP_ActorBase* BuildObject , EBuildObjectState State);`
@@ -1700,7 +1700,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Layer` | `int32` |
-| `GridSeamPoint` | `const FGridSeamPoint&` |
+| `GridSeamPoint` | const [FGridSeamPoint](../ERW_CommonTypes__FGridSeamPoint.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddPillarToMap(int32 Layer , const FGridSeamPoint& GridSeamPoint);`
 
@@ -1749,7 +1749,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Walls` | `const TMap<EEmbeddedWallType , FReplacedWallData>&` |
+| `Walls` | const TMap<EEmbeddedWallType , [FReplacedWallData](ERW_HISMManager__FReplacedWallData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateEmbeddedWallInfo(const TMap<EEmbeddedWallType , FReplacedWallData>& Walls);`
 
@@ -1771,7 +1771,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Wall` | `AGOAP_ActorBase*` |
+| `Wall` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SwitchEmbeddedWallInstance(AGOAP_ActorBase* Wall);`
 
@@ -1815,7 +1815,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void ReplaceWall(AGOAP_ActorBase* BuildObject);`
 
@@ -1865,7 +1865,7 @@
 |--------|------|
 | `ID` | `const FName&` |
 | `RoofPartType` | `ERoofPartType` |
-| `Roof` | `AGOAP_ActorBase*` |
+| `Roof` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddRoofInstance(const FName& ID , ERoofPartType RoofPartType , AGOAP_ActorBase* Roof);`
 
@@ -1889,7 +1889,7 @@
 |--------|------|
 | `ID` | `const FName&` |
 | `RoofPartType` | `ERoofPartType` |
-| `Roofs` | `const TArray<AGOAP_ActorBase*>&` |
+| `Roofs` | const TArray<[AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)*>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddRoofInstances(const FName& ID , ERoofPartType RoofPartType , const TArray<AGOAP_ActorBase*>& Roofs);`
 
@@ -1912,7 +1912,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `RoofPartType` | `ERoofPartType` |
-| `Roof` | `AGOAP_ActorBase*` |
+| `Roof` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `Transform` | `const FTransform&` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateRoofInstanceTransform(ERoofPartType RoofPartType , AGOAP_ActorBase* Roof , const FTransform& Transform);`
@@ -1993,7 +1993,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Roof` | `AGOAP_ActorBase*` |
+| `Roof` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `State` | `EBuildObjectState` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateRoofState(AGOAP_ActorBase* Roof , EBuildObjectState State);`
@@ -2060,8 +2060,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `AssembleActor` | `AGOAP_ActorBase*` |
-| `AssemblePartTransforms` | `const TArray<FAssemblePartTransform>&` |
+| `AssembleActor` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `AssemblePartTransforms` | const TArray<[FAssemblePartTransform](../ERW_CommonTypes__FAssemblePartTransform.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddAssembleInstances(AGOAP_ActorBase* AssembleActor , const TArray<FAssemblePartTransform>& AssemblePartTransforms);`
 
@@ -2083,7 +2083,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `AssembleActor` | `AGOAP_ActorBase*` |
+| `AssembleActor` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `RotateOrientation` | `ERotateOrientation` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateAssembleInstanceTransforms(AGOAP_ActorBase* AssembleActor , ERotateOrientation RotateOrientation);`
@@ -2106,7 +2106,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Assembles` | `const TMap<AGOAP_ActorBase* , FVector>&` |
+| `Assembles` | const TMap<[AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* , FVector>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddAssemblesPartInstances(const TMap<AGOAP_ActorBase* , FVector>& Assembles);`
 
@@ -2128,7 +2128,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `AssembleActor` | `AGOAP_ActorBase*` |
+| `AssembleActor` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveAssembleInstances(AGOAP_ActorBase* AssembleActor);`
 
@@ -2150,8 +2150,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Assembles` | `const TMap<AGOAP_ActorBase* , FVector>&` |
-| `AssembleActor` | `AGOAP_ActorBase*` |
+| `Assembles` | const TMap<[AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* , FVector>& |
+| `AssembleActor` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveAssemblePartInstances(const TMap<AGOAP_ActorBase* , FVector>& Assembles , AGOAP_ActorBase* AssembleActor);`
 
@@ -2173,8 +2173,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Assembles` | `const TMap<AGOAP_ActorBase* , FVector>&` |
-| `AssembleActor` | `AGOAP_ActorBase*` |
+| `Assembles` | const TMap<[AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* , FVector>& |
+| `AssembleActor` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `Show` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateAssemblePartInstanceShow(const TMap<AGOAP_ActorBase* , FVector>& Assembles , AGOAP_ActorBase* AssembleActor , bool Show);`
@@ -2197,8 +2197,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `AssembleActor` | `AGOAP_ActorBase*` |
-| `AssemblePartInfos` | `TArray<FAssemblePartInfo>&` |
+| `AssembleActor` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `AssemblePartInfos` | TArray<[FAssemblePartInfo](../ERW_CommonTypes__FAssemblePartInfo.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAssemblePartInfos(AGOAP_ActorBase* AssembleActor , TArray<FAssemblePartInfo>& AssemblePartInfos);`
 

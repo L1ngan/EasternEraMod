@@ -16,7 +16,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="Mod System" |
-| 返回类型 | `class UModSubsystem*` |
+| 返回类型 | class [UModSubsystem](ModSubsystem__UModSubsystem.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -61,7 +61,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="Mod System" |
-| 返回类型 | `class UModRuntimeInfo*` |
+| 返回类型 | class [UModRuntimeInfo](ModInfo__UModRuntimeInfo.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |

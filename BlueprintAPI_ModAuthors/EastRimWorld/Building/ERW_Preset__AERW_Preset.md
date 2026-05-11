@@ -14,7 +14,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<UERW_PresetComponent*>` |
+| C++ 类型 | TArray<[UERW_PresetComponent](../Components/ERW_PresetComponent__UERW_PresetComponent.md)*> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) TArray<UERW_PresetComponent*> PresetComponents;` |
@@ -29,7 +29,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , FPresetMeshInfos>` |
+| C++ 类型 | TMap<FName , [FPresetMeshInfos](ERW_Preset__FPresetMeshInfos.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) TMap<FName , FPresetMeshInfos> DoorOrWindowMeshInfos;` |
@@ -45,7 +45,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , FWallMeshInfos>` |
+| C++ 类型 | TMap<FName , [FWallMeshInfos](ERW_Preset__FWallMeshInfos.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) TMap<FName , FWallMeshInfos> WallMeshInfos;` |
@@ -76,7 +76,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , FPresetInfos>` |
+| C++ 类型 | TMap<FName , [FPresetInfos](../ERW_CommonTypes__FPresetInfos.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) TMap<FName , FPresetInfos> PresetData;` |
@@ -91,7 +91,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , FPresetInfos>` |
+| C++ 类型 | TMap<FName , [FPresetInfos](../ERW_CommonTypes__FPresetInfos.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) TMap<FName , FPresetInfos> WallPillarData;` |
@@ -115,7 +115,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `ID` | `const FName&` |
-| `Data` | `const TArray<FPresetData>&` |
+| `Data` | const TArray<[FPresetData](../ERW_CommonTypes__FPresetData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddPresetData(const FName& ID , const TArray<FPresetData>& Data);`
 
@@ -138,7 +138,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `ID` | `const FName&` |
-| `Data` | `const TArray<FPresetData>&` |
+| `Data` | const TArray<[FPresetData](../ERW_CommonTypes__FPresetData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddWallPillarData(const FName& ID , const TArray<FPresetData>& Data);`
 

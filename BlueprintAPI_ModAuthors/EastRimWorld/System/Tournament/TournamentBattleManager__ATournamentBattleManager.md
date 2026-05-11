@@ -15,7 +15,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGuid, FTournamentBattleCharacterInfo>` |
+| C++ 类型 | TMap<FGuid, [FTournamentBattleCharacterInfo](TournamentBattleManager__FTournamentBattleCharacterInfo.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FGuid, FTournamentBattleCharacterInfo> TournamentBattleCharacterInfo;` |
@@ -89,7 +89,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `ATournamentBattleManager*` |
+| 返回类型 | [ATournamentBattleManager](TournamentBattleManager__ATournamentBattleManager.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, BlueprintPure) static ATournamentBattleManager* GetTournamentBattleManager();`
@@ -108,7 +108,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TournamentBattleInfo` | `const FTournamentBattleInfo &` |
+| `TournamentBattleInfo` | const [FTournamentBattleInfo](TournamentStruct__FTournamentBattleInfo.md) & |
 | `TournamentType` | `ETournamentType` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CreateBattle(const FTournamentBattleInfo & TournamentBattleInfo,ETournamentType TournamentType);`
@@ -184,7 +184,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FTournamentBattleInfo` |
+| 返回类型 | [FTournamentBattleInfo](TournamentStruct__FTournamentBattleInfo.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FTournamentBattleInfo GetCurrentBattleInfo() const;`
@@ -202,7 +202,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `TArray<AEastRimWorldCharacter*>` |
+| 返回类型 | TArray<[AEastRimWorldCharacter](../../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -354,7 +354,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<AEastRimWorldCharacter*>` |
+| 返回类型 | TArray<[AEastRimWorldCharacter](../../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -381,7 +381,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacterDeathInformation` | `const FCharacterDeathInformation &` |
+| `CharacterDeathInformation` | const [FCharacterDeathInformation](../../Struct/CharacterDeathInformation__FCharacterDeathInformation.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RecordCombatData(const FCharacterDeathInformation & CharacterDeathInformation);`
 

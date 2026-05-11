@@ -53,7 +53,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FWarehouseSmallGrid>` |
+| C++ 类型 | TArray<[FWarehouseSmallGrid](../Struct/ItemStruct__FWarehouseSmallGrid.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<FWarehouseSmallGrid> SmallGrids;` |
@@ -173,7 +173,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UInventoryManagerComponent>` |
+| C++ 类型 | TObjectPtr<[UInventoryManagerComponent](InventoryManagerComponent__UInventoryManagerComponent.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<UInventoryManagerComponent> InventoryManagerComponent = nullptr;` |
@@ -188,7 +188,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<AInventoryEntityActor>` |
+| C++ 类型 | TObjectPtr<[AInventoryEntityActor](InventoryEntityActor__AInventoryEntityActor.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AInventoryEntityActor> SubstituteActor = nullptr;` |
@@ -203,7 +203,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<AInventoryItemWidgetActor>` |
+| C++ 类型 | TObjectPtr<[AInventoryItemWidgetActor](InventoryItemWidgetActor__AInventoryItemWidgetActor.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AInventoryItemWidgetActor> InventoryItemWidgetActor = nullptr;` |
@@ -289,7 +289,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<AWorldPlace>` |
+| C++ 类型 | TObjectPtr<[AWorldPlace](../WorldSystem/WorldPlace__AWorldPlace.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AWorldPlace> WorldPlace;` |
@@ -411,7 +411,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InNewInventoryManagerComponent` | `UInventoryManagerComponent *` |
+| `InNewInventoryManagerComponent` | [UInventoryManagerComponent](InventoryManagerComponent__UInventoryManagerComponent.md) * |
 | `InManifestationObject` | `UObject*` |
 | `（匿名/仅类型）` | `int InInstanceIndex = -1` |
 | `true` | `bool bAddInventoryManager =` |
@@ -437,7 +437,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InSubstituteActor` | `AInventoryEntityActor *` |
+| `InSubstituteActor` | [AInventoryEntityActor](InventoryEntityActor__AInventoryEntityActor.md) * |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SetSubstituteActor(AInventoryEntityActor * InSubstituteActor);`
 
@@ -454,7 +454,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AInventoryEntityActor*` |
+| 返回类型 | [AInventoryEntityActor](InventoryEntityActor__AInventoryEntityActor.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) AInventoryEntityActor* CreateInventorySubstitute();`
@@ -508,7 +508,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AInventoryEntityActor*` |
+| 返回类型 | [AInventoryEntityActor](InventoryEntityActor__AInventoryEntityActor.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) AInventoryEntityActor* GetInventoryActor();`
@@ -531,9 +531,9 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InNewInventoryManagerComponent` | `UInventoryManagerComponent *` |
+| `InNewInventoryManagerComponent` | [UInventoryManagerComponent](InventoryManagerComponent__UInventoryManagerComponent.md) * |
 | `DepositionActor` | `AActor *` |
-| `InSmallGrids` | `const TArray<FWarehouseSmallGrid> &` |
+| `InSmallGrids` | const TArray<[FWarehouseSmallGrid](../Struct/ItemStruct__FWarehouseSmallGrid.md)> & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void DepositOnWarehouse(UInventoryManagerComponent * InNewInventoryManagerComponent , AActor * DepositionActor ,const TArray<FWarehouseSmallGrid> & InSmallGrids);`
 
@@ -555,9 +555,9 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InNewInventoryManagerComponent` | `UInventoryManagerComponent *` |
+| `InNewInventoryManagerComponent` | [UInventoryManagerComponent](InventoryManagerComponent__UInventoryManagerComponent.md) * |
 | `DepositionActor` | `AActor *` |
-| `InSmallGrids` | `const TArray<FWarehouseSmallGrid> &` |
+| `InSmallGrids` | const TArray<[FWarehouseSmallGrid](../Struct/ItemStruct__FWarehouseSmallGrid.md)> & |
 | `true` | `bool bShowMesh =` |
 | `true` | `bool bShowUI =` |
 
@@ -577,7 +577,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OtherItemInstance` | `UInventoryItemInstance *` |
+| `OtherItemInstance` | [UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md) * |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool CheckSameType(UInventoryItemInstance * OtherItemInstance);`
 
@@ -719,7 +719,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AInventoryItemWidgetActor *` |
+| 返回类型 | [AInventoryItemWidgetActor](InventoryItemWidgetActor__AInventoryItemWidgetActor.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -769,7 +769,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InInventoryItemWidgetActor` | `AInventoryItemWidgetActor*` |
+| `InInventoryItemWidgetActor` | [AInventoryItemWidgetActor](InventoryItemWidgetActor__AInventoryItemWidgetActor.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SetInventoryWidgetActor(AInventoryItemWidgetActor* InInventoryItemWidgetActor);`
 
@@ -804,7 +804,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FInventoryGeneralData` |
+| 返回类型 | [FInventoryGeneralData](../Struct/ItemStruct__FInventoryGeneralData.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FInventoryGeneralData GetInventoryGeneralData();`
@@ -827,7 +827,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Agent` | `AEastRimWorldAIController_Human*` |
+| `Agent` | [AEastRimWorldAIController_Human](../Player/EastRimWorldAIController_Human__AEastRimWorldAIController_Human.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) int GetCarryItemNumber(AEastRimWorldAIController_Human* Agent);`
 

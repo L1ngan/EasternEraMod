@@ -104,7 +104,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FFacilityNeed>` |
+| C++ 类型 | TArray<[FFacilityNeed](ERW_ConfigTypes__FFacilityNeed.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FFacilityNeed> FacilityNeed;` |
@@ -149,7 +149,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<int32,FRoomLevel>` |
+| C++ 类型 | TMap<int32,[FRoomLevel](ERW_ConfigTypes__FRoomLevel.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<int32,FRoomLevel> RoomLevels;` |

@@ -12,7 +12,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `UERW_TechnologyMgr*` |
+| C++ 类型 | [UERW_TechnologyMgr](../Components/ERW_TechnologyMgr__UERW_TechnologyMgr.md)* |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) UERW_TechnologyMgr* TechnologyMgr { nullptr };` |
@@ -27,7 +27,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `UCommonTaskComponent*` |
+| C++ 类型 | [UCommonTaskComponent](../System/Task/CommonTaskComponent__UCommonTaskComponent.md)* |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) UCommonTaskComponent* CommonTaskComponent { nullptr };` |
@@ -42,7 +42,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UCommonLogComponent>` |
+| C++ 类型 | TObjectPtr<[UCommonLogComponent](../Components/CommonLogComponent__UCommonLogComponent.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere,SaveGame) TObjectPtr<UCommonLogComponent> LogComponent;` |
@@ -285,7 +285,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EObserveObjectType,FObserveObjectsRecordMap>` |
+| C++ 类型 | TMap<EObserveObjectType,[FObserveObjectsRecordMap](../Struct/ObserveStruct__FObserveObjectsRecordMap.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<EObserveObjectType,FObserveObjectsRecordMap> ObservedObjectRecordMap;` |
@@ -300,7 +300,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EObserveObjectType,FObserveProgressesMap>` |
+| C++ 类型 | TMap<EObserveObjectType,[FObserveProgressesMap](../Struct/ObserveStruct__FObserveProgressesMap.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<EObserveObjectType,FObserveProgressesMap> ObservingObjectProgress;` |
@@ -315,7 +315,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGenericTeamId,FGameplayTeamInfo>` |
+| C++ 类型 | TMap<FGenericTeamId,[FGameplayTeamInfo](../Struct/CharacterStruct__FGameplayTeamInfo.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FGenericTeamId,FGameplayTeamInfo> TeamInfos;` |
@@ -330,7 +330,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FTeamChangeInformationInfo>` |
+| C++ 类型 | TArray<[FTeamChangeInformationInfo](../Struct/CharacterStruct__FTeamChangeInformationInfo.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FTeamChangeInformationInfo> TeamChangeInformationInfos;` |
@@ -345,7 +345,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FCommonBuff>` |
+| C++ 类型 | TArray<[FCommonBuff](../Struct/CommonStruct__FCommonBuff.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FCommonBuff> GlobalBuffs;` |
@@ -405,7 +405,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGuid, FCharacterLetterData>` |
+| C++ 类型 | TMap<FGuid, [FCharacterLetterData](../System/Letterpaper/BirdLetterSystem__FCharacterLetterData.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, SaveGame) TMap<FGuid, FCharacterLetterData> CharacterLetterMap;` |
@@ -435,7 +435,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<int32 , FStallInfo>` |
+| C++ 类型 | TMap<int32 , [FStallInfo](../Components/TreasureComponent__FStallInfo.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame ) TMap<int32 , FStallInfo> Stalls;` |
@@ -690,7 +690,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , FBuildingNumData>` |
+| C++ 类型 | TMap<FName , [FBuildingNumData](../System/Letterpaper/BirdLetterSystem__FBuildingNumData.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame) TMap<FName , FBuildingNumData> BuildingNumData;` |
@@ -765,7 +765,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FEastRimWorldHumanData` |
+| C++ 类型 | [FEastRimWorldHumanData](../Struct/CharacterStruct__FEastRimWorldHumanData.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) FEastRimWorldHumanData ProtagonistData;` |
@@ -798,7 +798,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `ASaveGameDataActor *` |
+| 返回类型 | [ASaveGameDataActor](SaveGameDataActor__ASaveGameDataActor.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) static ASaveGameDataActor * GetSaveGameDataActor();`
@@ -1338,7 +1338,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FGameplayTeamInfo` |
+| 返回类型 | [FGameplayTeamInfo](../Struct/CharacterStruct__FGameplayTeamInfo.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1360,7 +1360,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FCommonBuff>` |
+| 返回类型 | TArray<[FCommonBuff](../Struct/CommonStruct__FCommonBuff.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1406,7 +1406,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FEastRimWorldHumanData` |
+| 返回类型 | [FEastRimWorldHumanData](../Struct/CharacterStruct__FEastRimWorldHumanData.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FEastRimWorldHumanData GetProtagonistData() const {return ProtagonistData;}`
@@ -1453,7 +1453,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InForceGuid` | `const FGuid&` |
-| `OutLogs` | `TArray<FCommonLogData>&` |
+| `OutLogs` | TArray<[FCommonLogData](../Struct/CommonLogStruct__FCommonLogData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) void GetAllForceLogByGuid(const FGuid& InForceGuid,TArray<FCommonLogData>& OutLogs) const;`
 
@@ -1475,7 +1475,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutLogs` | `TArray<FCommonLogData>&` |
+| `OutLogs` | TArray<[FCommonLogData](../Struct/CommonLogStruct__FCommonLogData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) void GetAllForceLog(TArray<FCommonLogData>& OutLogs) const;`
 
@@ -1497,7 +1497,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutLogs` | `TArray<FCommonLogData>&` |
+| `OutLogs` | TArray<[FCommonLogData](../Struct/CommonLogStruct__FCommonLogData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) void GetAllNotPlayerForceLog(TArray<FCommonLogData>& OutLogs) const;`
 
@@ -1537,7 +1537,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutLogs` | `TArray<FCommonLogData>&` |
+| `OutLogs` | TArray<[FCommonLogData](../Struct/CommonLogStruct__FCommonLogData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) void GetAllBigMapLog(TArray<FCommonLogData>& OutLogs) const;`
 
@@ -1559,7 +1559,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutLogs` | `TArray<FCommonLogData>&` |
+| `OutLogs` | TArray<[FCommonLogData](../Struct/CommonLogStruct__FCommonLogData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) void GetAllPlayerLog(TArray<FCommonLogData>& OutLogs) const;`
 

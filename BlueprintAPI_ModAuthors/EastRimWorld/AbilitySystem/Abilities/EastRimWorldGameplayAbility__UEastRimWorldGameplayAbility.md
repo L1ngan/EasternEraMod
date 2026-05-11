@@ -220,7 +220,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="EastRimWorld|Ability" |
-| 返回类型 | `UEastRimWorldAbilitySystemComponent*` |
+| 返回类型 | [UEastRimWorldAbilitySystemComponent](../EastRimWorldAbilitySystemComponent__UEastRimWorldAbilitySystemComponent.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "EastRimWorld|Ability") UEastRimWorldAbilitySystemComponent* GetEastRimWorldAbilitySystemComponentFromActorInfo() const;`
@@ -234,7 +234,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="EastRimWorld|Ability" |
-| 返回类型 | `AEastRimWorldCharacter *` |
+| 返回类型 | [AEastRimWorldCharacter](../../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "EastRimWorld|Ability") AEastRimWorldCharacter * GetEastRimWorldCharacterFromActorInfo() const;`
@@ -583,7 +583,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="Projectile" |
-| 返回类型 | `TMap<ETargetClassType,FAllGameplayEffectSpecHandles>` |
+| 返回类型 | TMap<ETargetClassType,[FAllGameplayEffectSpecHandles](../Projectile/AbilityProjectileEmitterBase__FAllGameplayEffectSpecHandles.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -738,7 +738,7 @@
 |--------|------|
 | `ProjectileOwner` | `const AActor*` |
 | `ProjectileConfig` | `UPARAM(ref) const FProjectileStruct&` |
-| `InputMap` | `UPARAM(ref) const TMap<ETargetClassType,FAllGameplayEffectSpecHandles>&` |
+| `InputMap` | UPARAM(ref) const TMap<ETargetClassType,[FAllGameplayEffectSpecHandles](../Projectile/AbilityProjectileEmitterBase__FAllGameplayEffectSpecHandles.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintNativeEvent,BlueprintCallable) void AbilitySpawnProjectile(const AActor* ProjectileOwner,UPARAM(ref) const FProjectileStruct& ProjectileConfig,UPARAM(ref) const TMap<ETargetClassType,FAllGameplayEffectSpecHandles>& InputMap);`
 
@@ -1001,7 +1001,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `SaveData` | `FGameplayAbilitySaveData&` |
+| `SaveData` | [FGameplayAbilitySaveData](../../ERW_CommonTypes__FGameplayAbilitySaveData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintImplementableEvent) void SaveGameplayAbilityData(FGameplayAbilitySaveData& SaveData);`
 

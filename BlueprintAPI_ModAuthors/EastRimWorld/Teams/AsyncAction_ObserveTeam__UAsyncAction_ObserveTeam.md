@@ -32,7 +32,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UAsyncAction_ObserveTeam*` |
+| 返回类型 | [UAsyncAction_ObserveTeam](AsyncAction_ObserveTeam__UAsyncAction_ObserveTeam.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |

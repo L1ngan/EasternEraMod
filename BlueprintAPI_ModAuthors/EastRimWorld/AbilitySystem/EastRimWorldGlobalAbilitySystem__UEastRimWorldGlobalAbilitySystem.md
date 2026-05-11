@@ -136,7 +136,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CommonBuff` | `const FCommonBuff &` |
+| `CommonBuff` | const [FCommonBuff](../Struct/CommonStruct__FCommonBuff.md) & |
 | `bTemporary` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly, Category = "EastRimWorld") void ApplyBuffFromAll(const FCommonBuff & CommonBuff,bool bTemporary);`

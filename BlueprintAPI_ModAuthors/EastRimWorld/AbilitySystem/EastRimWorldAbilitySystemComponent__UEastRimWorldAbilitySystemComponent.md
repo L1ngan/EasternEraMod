@@ -13,7 +13,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UEastRimWorldAbilitySystemComponent *` |
+| 返回类型 | [UEastRimWorldAbilitySystemComponent](EastRimWorldAbilitySystemComponent__UEastRimWorldAbilitySystemComponent.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -59,7 +59,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="Projectile" |
-| 返回类型 | `TMap<ETargetClassType,FAllGameplayEffectSpecHandles>` |
+| 返回类型 | TMap<ETargetClassType,[FAllGameplayEffectSpecHandles](Projectile/AbilityProjectileEmitterBase__FAllGameplayEffectSpecHandles.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -183,7 +183,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UEastRimWorldGameplayAbility*` |
+| 返回类型 | [UEastRimWorldGameplayAbility](Abilities/EastRimWorldGameplayAbility__UEastRimWorldGameplayAbility.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |

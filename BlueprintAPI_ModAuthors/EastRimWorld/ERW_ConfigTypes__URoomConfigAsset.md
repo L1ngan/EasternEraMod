@@ -14,7 +14,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<ERoomScoreType,FRoomScoreDataArray>` |
+| C++ 类型 | TMap<ERoomScoreType,[FRoomScoreDataArray](ERW_ConfigTypes__FRoomScoreDataArray.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<ERoomScoreType,FRoomScoreDataArray> RoomScoreTypeData;` |
@@ -29,7 +29,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FRoomTemperatureScoreData>` |
+| C++ 类型 | TArray<[FRoomTemperatureScoreData](ERW_ConfigTypes__FRoomTemperatureScoreData.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FRoomTemperatureScoreData> RoomTemperatureScoreData;` |
@@ -44,7 +44,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FRoomSizeTemperatureRate>` |
+| C++ 类型 | TArray<[FRoomSizeTemperatureRate](ERW_ConfigTypes__FRoomSizeTemperatureRate.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FRoomSizeTemperatureRate> RoomSizeTemperatureRates;` |

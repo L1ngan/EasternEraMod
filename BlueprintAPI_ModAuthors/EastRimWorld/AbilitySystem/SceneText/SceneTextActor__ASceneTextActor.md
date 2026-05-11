@@ -88,7 +88,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `SceneTextInfo` | `const FSceneTextInfo &` |
+| `SceneTextInfo` | const [FSceneTextInfo](SceneTextStruct__FSceneTextInfo.md) & |
 | `InGenericTeamId` | `const FGenericTeamId &` |
 | `InTextValue` | `const FText &` |
 | `InTransform` | `const FTransform &` |

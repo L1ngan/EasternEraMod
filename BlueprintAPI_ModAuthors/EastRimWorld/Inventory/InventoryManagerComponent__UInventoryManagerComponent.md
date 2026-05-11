@@ -12,7 +12,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FUseItemSaveData>` |
+| C++ 类型 | TArray<[FUseItemSaveData](../Struct/ItemStruct__FUseItemSaveData.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) TArray<FUseItemSaveData> UseItemSaveData;` |
@@ -27,7 +27,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName,FCollectSaveDataList>` |
+| C++ 类型 | TMap<FName,[FCollectSaveDataList](../Struct/ItemStruct__FCollectSaveDataList.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) TMap<FName,FCollectSaveDataList> CollectSaveDataMap;` |
@@ -38,7 +38,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName,FFarmlandPlantSaveDataList>` |
+| C++ 类型 | TMap<FName,[FFarmlandPlantSaveDataList](../Struct/ItemStruct__FFarmlandPlantSaveDataList.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) TMap<FName,FFarmlandPlantSaveDataList> FarmlandPlantSaveDataMap;` |
@@ -71,7 +71,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGuid , UInventoryItemInstance*>` |
+| C++ 类型 | TMap<FGuid , [UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md)*> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FGuid , UInventoryItemInstance*> ItemData;` |
@@ -131,7 +131,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FGridPosition` |
+| C++ 类型 | [FGridPosition](../ERW_CommonTypes__FGridPosition.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadWrite,SaveGame) FGridPosition TradeAreaEndGridPos;` |
@@ -180,7 +180,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FGridPosition` |
+| C++ 类型 | [FGridPosition](../ERW_CommonTypes__FGridPosition.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadWrite,SaveGame) FGridPosition TradeAreaCurGridPos;` |
@@ -191,7 +191,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<UInventoryItemInstance* , UGOAP_ActionComponent*>` |
+| C++ 类型 | TMap<[UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md)* , [UGOAP_ActionComponent](../GOAP/GOAP_ActionComponent__UGOAP_ActionComponent.md)*> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) TMap<UInventoryItemInstance* , UGOAP_ActionComponent*> ItemActions;` |
@@ -207,7 +207,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<UInventoryItemInstance* , UGOAP_MemoryComponent*>` |
+| C++ 类型 | TMap<[UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md)* , [UGOAP_MemoryComponent](../GOAP/GOAP_MemoryComponent__UGOAP_MemoryComponent.md)*> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) TMap<UInventoryItemInstance* , UGOAP_MemoryComponent*> ItemMemories;` |
@@ -339,7 +339,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `UInventoryItemInstance *` |
+| 返回类型 | [UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -361,12 +361,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="InventoryItemInstance" |
-| 返回类型 | `UInventoryItemInstance *` |
+| 返回类型 | [UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `InInventoryManagerComponent` | `UInventoryManagerComponent *` |
+| `InInventoryManagerComponent` | [UInventoryManagerComponent](InventoryManagerComponent__UInventoryManagerComponent.md) * |
 | `InCollectItem` | `const FInstancedStruct&` |
 | `InItemTransform` | `const FTransform &` |
 | `InItemCount` | `const int32` |
@@ -395,7 +395,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutData` | `TMap<FName,FItemSimpleData>&` |
+| `OutData` | TMap<FName,[FItemSimpleData](../Struct/CommonStruct__FItemSimpleData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) void GetAllCanUseItemSimpleData(TMap<FName,FItemSimpleData>& OutData);`
 
@@ -413,7 +413,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutData` | `TArray<FTravelerGoodsInfo> &` |
+| `OutData` | TArray<[FTravelerGoodsInfo](../Struct/ItemStruct__FTravelerGoodsInfo.md)> & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) void GetAllItemsData(TArray<FTravelerGoodsInfo> & OutData);`
 
@@ -435,7 +435,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutData` | `TMap<FName,FTravelerGoodsInfo>&` |
+| `OutData` | TMap<FName,[FTravelerGoodsInfo](../Struct/ItemStruct__FTravelerGoodsInfo.md)>& |
 | `InUseState` | `EItemUseState` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) void GetAllTradeGoodData(TMap<FName,FTravelerGoodsInfo>& OutData,EItemUseState InUseState);`
@@ -449,7 +449,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FUseItemSaveData>` |
+| 返回类型 | TArray<[FUseItemSaveData](../Struct/ItemStruct__FUseItemSaveData.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -472,7 +472,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const TArray<UInventoryItemInstance*> &` |
+| 返回类型 | const TArray<[UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md)*> & |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) const TArray<UInventoryItemInstance*> & GetAllInventoryItems();`
@@ -517,7 +517,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `NewInventoryItemInstance` | `UInventoryItemInstance *` |
+| `NewInventoryItemInstance` | [UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md) * |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) int GetCanPlaceItemNumberByInstance(UInventoryItemInstance * NewInventoryItemInstance);`
 
@@ -572,7 +572,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UInventoryItemInstance *` |
+| 返回类型 | [UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -595,12 +595,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UInventoryItemInstance *` |
+| 返回类型 | [UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `InItemInstance` | `UInventoryItemInstance *` |
+| `InItemInstance` | [UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md) * |
 | `InItemCount` | `int32` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) UInventoryItemInstance * TakeOutInventoryItemInstanceByInstance(UInventoryItemInstance * InItemInstance,int32 InItemCount);`
@@ -614,12 +614,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UInventoryItemInstance *` |
+| 返回类型 | [UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `OtherManagerComponent` | `UInventoryManagerComponent *` |
+| `OtherManagerComponent` | [UInventoryManagerComponent](InventoryManagerComponent__UInventoryManagerComponent.md) * |
 | `ItemID` | `const FName` |
 | `InItemCount` | `int32` |
 
@@ -685,7 +685,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<UInventoryItemInstance*>` |
+| 返回类型 | TArray<[UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -709,7 +709,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<UInventoryItemInstance*>` |
+| 返回类型 | TArray<[UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -733,7 +733,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<UInventoryItemInstance*>` |
+| 返回类型 | TArray<[UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -757,7 +757,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<UInventoryItemInstance*>` |
+| 返回类型 | TArray<[UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -779,7 +779,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<UInventoryItemInstance*>` |
+| 返回类型 | TArray<[UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -805,14 +805,14 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<UInventoryItemInstance*>` |
+| 返回类型 | TArray<[UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
 | `ItemType1` | `EEquipmentType` |
 | `ArmorType2` | `EArmorType` |
-| `CharInventoryManagerComponent` | `UInventoryManagerComponent*` |
+| `CharInventoryManagerComponent` | [UInventoryManagerComponent](InventoryManagerComponent__UInventoryManagerComponent.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<UInventoryItemInstance*> GetEquItemInstancesItemByType2(EEquipmentType ItemType1,EArmorType ArmorType2,UInventoryManagerComponent* CharInventoryManagerComponent);`
 
@@ -833,7 +833,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<UInventoryItemInstance*>` |
+| 返回类型 | TArray<[UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -856,7 +856,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const TArray<FWarehouseSmallGrid>&` |
+| 返回类型 | const TArray<[FWarehouseSmallGrid](../Struct/ItemStruct__FWarehouseSmallGrid.md)>& |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) const TArray<FWarehouseSmallGrid>& GetAllSmallGrid();`
@@ -875,7 +875,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InResources` | `const TMap<FName, FItemSimpleData>&` |
+| `InResources` | const TMap<FName, [FItemSimpleData](../Struct/CommonStruct__FItemSimpleData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<FInstancedStruct> AddItemBySimpleData(const TMap<FName, FItemSimpleData>& InResources);`
 

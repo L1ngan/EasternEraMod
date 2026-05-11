@@ -104,7 +104,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure, Category="World|BuildingLight" |
-| 返回类型 | `AWorldBuildingLightManager*` |
+| 返回类型 | [AWorldBuildingLightManager](WorldBuildingLightManager__AWorldBuildingLightManager.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "World|BuildingLight") static AWorldBuildingLightManager* GetWorldBuildingLightManager();`
@@ -118,7 +118,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="World|BuildingLight" |
-| 返回类型 | `AWorldBuildingLightManager*` |
+| 返回类型 | [AWorldBuildingLightManager](WorldBuildingLightManager__AWorldBuildingLightManager.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -145,7 +145,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildingActor` | `ABuildingActorBase*` |
+| `BuildingActor` | [ABuildingActorBase](../Building/BuildingActorBase__ABuildingActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "World|BuildingLight") void RegisterBuildingWithLights(ABuildingActorBase* BuildingActor);`
 
@@ -167,7 +167,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildingActor` | `ABuildingActorBase*` |
+| `BuildingActor` | [ABuildingActorBase](../Building/BuildingActorBase__ABuildingActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "World|BuildingLight") void UnregisterBuilding(ABuildingActorBase* BuildingActor);`
 
@@ -185,7 +185,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildingActor` | `ABuildingActorBase*` |
+| `BuildingActor` | [ABuildingActorBase](../Building/BuildingActorBase__ABuildingActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "World|BuildingLight") void NotifyBuildingRuntimeStateChanged(ABuildingActorBase* BuildingActor);`
 

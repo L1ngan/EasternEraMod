@@ -37,7 +37,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OwnerData` | `const FUObjectData&` |
+| `OwnerData` | const [FUObjectData](../ERW_CommonTypes__FUObjectData.md)& |
 | `Time` | `float` |
 | `FuncName` | `const FString&` |
 | `IsLoop` | `bool` |
@@ -63,7 +63,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OwnerData` | `const FUObjectData&` |
+| `OwnerData` | const [FUObjectData](../ERW_CommonTypes__FUObjectData.md)& |
 | `Time` | `float` |
 | `FuncName` | `const FString&` |
 | `Parameters` | `const TArray<FString>&` |
@@ -237,7 +237,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `TimerID` | `int32` |
-| `TimerInfo` | `FTimerInfo&` |
+| `TimerInfo` | [FTimerInfo](ERW_TimerManager__FTimerInfo.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetTimerInfo(int32 TimerID , FTimerInfo& TimerInfo);`
 

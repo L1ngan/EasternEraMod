@@ -306,7 +306,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FGWOWave>` |
+| C++ 类型 | TArray<[FGWOWave](GWOTypes__FGWOWave.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Global World Optimization | Spawn" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Global World Optimization | Spawn", meta=(EditCondition="spawnerType == EGWOSpawnerType::WAVE"),meta=(Tooltip = "用于创建波的生成列表。您可以为它们指定任意数量的列表和优先级。如果您为多个位置设置了相同的优先级，生成器会将它们合并。这为生成器的设置提供了更多灵活性。 ")) TArray<FGWOWave> wavesArr;` |
@@ -461,7 +461,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `class AGWOGeneralAccess*` |
+| C++ 类型 | class [AGWOGeneralAccess](GWOGeneralAccess__AGWOGeneralAccess.md)* |
 | 反射说明符 | BlueprintReadOnly, Category="Global World Optimization | Variables" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly, Category = "Global World Optimization | Variables") class AGWOGeneralAccess* generalAccess = nullptr;` |

@@ -55,7 +55,7 @@
 |--------|------|
 | `ConditionType` | `EGOAP_ConditionType` |
 | `ID` | `const FName&` |
-| `GOAPValue` | `FGOAP_Value&` |
+| `GOAPValue` | [FGOAP_Value](GOAP_Data__FGOAP_Value.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool GetMemoryInfo(EGOAP_ConditionType ConditionType , const FName& ID , FGOAP_Value& GOAPValue);`
 
@@ -80,7 +80,7 @@
 | `Delete` | `bool` |
 | `ConditionType` | `EGOAP_ConditionType` |
 | `ID` | `const FName&` |
-| `GOAPValue` | `const FGOAP_Value&` |
+| `GOAPValue` | const [FGOAP_Value](GOAP_Data__FGOAP_Value.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateMemory(bool Delete , EGOAP_ConditionType ConditionType , const FName& ID , const FGOAP_Value& GOAPValue);`
 
@@ -105,7 +105,7 @@
 | `Delete` | `bool` |
 | `ConditionType` | `EGOAP_ConditionType` |
 | `ID` | `const FName&` |
-| `GOAPValue` | `const FGOAP_Value&` |
+| `GOAPValue` | const [FGOAP_Value](GOAP_Data__FGOAP_Value.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) bool IsMemoryDifferent(bool Delete , EGOAP_ConditionType ConditionType , const FName& ID , const FGOAP_Value& GOAPValue) const;`
 

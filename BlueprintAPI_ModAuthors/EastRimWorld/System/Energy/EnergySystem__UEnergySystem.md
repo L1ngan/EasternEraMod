@@ -26,7 +26,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintPure, Category="EnergySystem" |
-| 返回类型 | `UEnergySystem *` |
+| 返回类型 | [UEnergySystem](EnergySystem__UEnergySystem.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure, Category = "EnergySystem") static UEnergySystem * GetInstance();`
@@ -68,9 +68,9 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InBuilding` | `ABuildingActorBase *` |
-| `IgnoreBuilding` | `ABuildingActorBase *` |
-| `OutBuildings` | `TArray<ABuildingActorBase*> &` |
+| `InBuilding` | [ABuildingActorBase](../../Building/BuildingActorBase__ABuildingActorBase.md) * |
+| `IgnoreBuilding` | [ABuildingActorBase](../../Building/BuildingActorBase__ABuildingActorBase.md) * |
+| `OutBuildings` | TArray<[ABuildingActorBase](../../Building/BuildingActorBase__ABuildingActorBase.md)*> & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void FindConnectedTransmissionBuilding(ABuildingActorBase * InBuilding,ABuildingActorBase * IgnoreBuilding,TArray<ABuildingActorBase*> & OutBuildings);`
 

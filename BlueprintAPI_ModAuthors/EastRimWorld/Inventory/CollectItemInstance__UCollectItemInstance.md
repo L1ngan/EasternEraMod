@@ -102,7 +102,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FGrowStage` |
+| C++ 类型 | [FGrowStage](../Struct/ItemStruct__FGrowStage.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) FGrowStage CurGrowStage;` |
@@ -260,7 +260,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `FCollectItem` |
+| 返回类型 | [FCollectItem](../Struct/ItemStruct__FCollectItem.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) FCollectItem GetCollectInfo();`
@@ -386,7 +386,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FOutputInformation>` |
+| 返回类型 | TArray<[FOutputInformation](../Struct/ItemStruct__FOutputInformation.md)> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<FOutputInformation> GetAllOutput();`
@@ -404,7 +404,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FOutputInformation>` |
+| 返回类型 | TArray<[FOutputInformation](../Struct/ItemStruct__FOutputInformation.md)> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<FOutputInformation> GetCurStageOutput();`
@@ -471,7 +471,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Outputs` | `TMap<FName , FAllTypeItemDrop>&` |
+| `Outputs` | TMap<FName , [FAllTypeItemDrop](../Struct/ItemStruct__FAllTypeItemDrop.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void OneTimeExploration(TMap<FName , FAllTypeItemDrop>& Outputs);`
 

@@ -20,7 +20,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `GameModeBase` | `AERW_GameModeBase*` |
+| `GameModeBase` | [AERW_GameModeBase](Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static void SetGameMode(AERW_GameModeBase* GameModeBase);`
 
@@ -42,7 +42,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CurWorldPlace` | `AWorldPlace*` |
+| `CurWorldPlace` | [AWorldPlace](WorldSystem/WorldPlace__AWorldPlace.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static void SetWorldPlace(AWorldPlace* CurWorldPlace);`
 
@@ -89,7 +89,7 @@
 |--------|------|
 | `PartType` | `EAssemblePartType` |
 | `StaticMeshComponent` | `UStaticMeshComponent*` |
-| `AssembleCollisions` | `UPARAM(Ref) TMap<EAssemblePartType , FStaticMeshComponents>&` |
+| `AssembleCollisions` | UPARAM(Ref) TMap<EAssemblePartType , [FStaticMeshComponents](ERW_CommonTypes__FStaticMeshComponents.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static void AddAssembleCollision(EAssemblePartType PartType , UStaticMeshComponent* StaticMeshComponent , UPARAM(Ref) TMap<EAssemblePartType , FStaticMeshComponents>& AssembleCollisions);`
 
@@ -181,7 +181,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Descending` | `bool` |
-| `Abilities` | `UPARAM(ref) TMap<AEastRimWorldCharacter_Human* , float>&` |
+| `Abilities` | UPARAM(ref) TMap<[AEastRimWorldCharacter_Human](Character/EastRimWorldCharacter_Human__AEastRimWorldCharacter_Human.md)* , float>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static void SortByCharacterAbility(bool Descending , UPARAM(ref) TMap<AEastRimWorldCharacter_Human* , float>& Abilities);`
 
@@ -203,8 +203,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Start` | `const FGridPosition&` |
-| `End` | `const FGridPosition&` |
+| `Start` | const [FGridPosition](ERW_CommonTypes__FGridPosition.md)& |
+| `End` | const [FGridPosition](ERW_CommonTypes__FGridPosition.md)& |
 | `Min` | `FVector&` |
 | `Max` | `FVector&` |
 
@@ -230,7 +230,7 @@
 |--------|------|
 | `Location` | `const FVector&` |
 | `GridPositionType` | `EGridPositionType` |
-| `GridPos` | `FGridPosition&` |
+| `GridPos` | [FGridPosition](ERW_CommonTypes__FGridPosition.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) static void GetGridPosition(const FVector& Location , EGridPositionType GridPositionType , FGridPosition& GridPos);`
 
@@ -252,7 +252,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `GridPos` | `const FGridPosition&` |
+| `GridPos` | const [FGridPosition](ERW_CommonTypes__FGridPosition.md)& |
 | `GridPositionType` | `EGridPositionType` |
 | `WorldPos` | `FVector&` |
 
@@ -277,7 +277,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Pos` | `const FVector&` |
-| `GridPos` | `const FGridPosition&` |
+| `GridPos` | const [FGridPosition](ERW_CommonTypes__FGridPosition.md)& |
 | `GridWorldPos` | `const FVector&` |
 | `SideWorldPos` | `FVector&` |
 | `RotateOrientation` | `ERotateOrientation&` |
@@ -503,8 +503,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Condition` | `const FGOAP_Condition&` |
-| `Value` | `const FGOAP_Value&` |
+| `Condition` | const [FGOAP_Condition](GOAP/GOAP_Data__FGOAP_Condition.md)& |
+| `Value` | const [FGOAP_Value](GOAP/GOAP_Data__FGOAP_Value.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) static bool CompareGOAPCondition(const FGOAP_Condition& Condition , const FGOAP_Value& Value);`
 
@@ -526,8 +526,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Condition` | `const FCommonCondition&` |
-| `Value` | `const FConditionValue&` |
+| `Condition` | const [FCommonCondition](ERW_CommonTypes__FCommonCondition.md)& |
+| `Value` | const [FConditionValue](ERW_CommonTypes__FConditionValue.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) static bool CompareCommonCondition(const FCommonCondition& Condition , const FConditionValue& Value);`
 
@@ -686,7 +686,7 @@
 |--------|------|
 | `MaxDropNum` | `int32` |
 | `DropItemConfig` | `const TMap<FName, float>&` |
-| `OutAwards` | `UPARAM(ref) TMap<FName, FItemSimpleData>&` |
+| `OutAwards` | UPARAM(ref) TMap<FName, [FItemSimpleData](Struct/CommonStruct__FItemSimpleData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static void RandDropItem(int32 MaxDropNum,const TMap<FName, float>& DropItemConfig,UPARAM(ref) TMap<FName, FItemSimpleData>& OutAwards);`
 
@@ -699,12 +699,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<ABuildingActorBase*>` |
+| 返回类型 | TArray<[ABuildingActorBase](Building/BuildingActorBase__ABuildingActorBase.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `Buildings` | `const TArray<ABuildingActorBase*>` |
+| `Buildings` | const TArray<[ABuildingActorBase](Building/BuildingActorBase__ABuildingActorBase.md)*> |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static TArray<ABuildingActorBase*> SortBuildingByBuildingScore(const TArray<ABuildingActorBase*> Buildings);`
 
@@ -722,8 +722,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Agent` | `AEastRimWorldAIController*` |
-| `GeneralData` | `const FInventoryGeneralData&` |
+| `Agent` | [AEastRimWorldAIController](Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
+| `GeneralData` | const [FInventoryGeneralData](Struct/ItemStruct__FInventoryGeneralData.md)& |
 | `ItemNum` | `int32` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static int32 CalcCarryItemNum(AEastRimWorldAIController* Agent , const FInventoryGeneralData& GeneralData , int32 ItemNum);`
@@ -764,12 +764,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<UInventoryItemInstance*>&` |
+| 返回类型 | TArray<[UInventoryItemInstance](Inventory/InventoryItemInstance__UInventoryItemInstance.md)*>& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `Items` | `UPARAM(ref) TArray<UInventoryItemInstance*> &` |
+| `Items` | UPARAM(ref) TArray<[UInventoryItemInstance](Inventory/InventoryItemInstance__UInventoryItemInstance.md)*> & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static TArray<UInventoryItemInstance*>& SortInventoryQuality(UPARAM(ref) TArray<UInventoryItemInstance*> & Items);`
 
@@ -793,7 +793,7 @@
 |--------|------|
 | `Category` | `const FName&` |
 | `ID` | `const FName&` |
-| `BuildNames` | `UPARAM(ref) TMap<FName , FIDs>&` |
+| `BuildNames` | UPARAM(ref) TMap<FName , [FIDs](ERW_CommonTypes__FIDs.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static void AddBuildNames(const FName& Category , const FName& ID , UPARAM(ref) TMap<FName , FIDs>& BuildNames);`
 
@@ -1035,7 +1035,7 @@
 |--------|------|
 | `Context` | `const UObject*` |
 | `SlotHandle` | `const FSmartObjectSlotHandle&` |
-| `DefinitionData` | `FFacilityDefineData&` |
+| `DefinitionData` | [FFacilityDefineData](Struct/BuildingData__FFacilityDefineData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static void GetFacilityDefinitionData(const UObject* Context,const FSmartObjectSlotHandle& SlotHandle,FFacilityDefineData& DefinitionData);`
 
@@ -1073,7 +1073,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Agent` | `AEastRimWorldAIController*` |
+| `Agent` | [AEastRimWorldAIController](Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
 | `SmartObjectComponent` | `USmartObjectComponent*` |
 | `OutSlotHandle` | `FSmartObjectSlotHandle&` |
 | `FilterClass` | `TSubclassOf<UNavigationQueryFilter>` |
@@ -1096,7 +1096,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Agent` | `AEastRimWorldAIController*` |
+| `Agent` | [AEastRimWorldAIController](Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
 | `SmartObjectComponent` | `USmartObjectComponent*` |
 | `SlotIndex` | `int32` |
 | `OutSlotHandle` | `FSmartObjectSlotHandle&` |
@@ -1118,7 +1118,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Agent` | `const AEastRimWorldAIController*` |
+| `Agent` | const [AEastRimWorldAIController](Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
 | `SmartObjectComponent` | `USmartObjectComponent*` |
 | `FilterClass` | `TSubclassOf<UNavigationQueryFilter>` |
 | `UserTag` | `const FGameplayTag&` |
@@ -1169,7 +1169,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InSecond` | `const float&` |
-| `InGameMode` | `class AERW_GameModeBase*` |
+| `InGameMode` | class [AERW_GameModeBase](Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 | `OutYear` | `int&` |
 | `OutMonths` | `int&` |
 | `OutDays` | `int&` |
@@ -1197,7 +1197,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InSecond` | `const float&` |
-| `InGameMode` | `class AERW_GameModeBase*` |
+| `InGameMode` | class [AERW_GameModeBase](Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 | `OutYear` | `int&` |
 | `OutMonths` | `int&` |
 | `OutDays` | `int&` |
@@ -1224,7 +1224,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InSecond` | `const float&` |
-| `InGameMode` | `class AERW_GameModeBase*` |
+| `InGameMode` | class [AERW_GameModeBase](Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 | `OutYear` | `int&` |
 | `OutDays` | `int&` |
 | `OutHour` | `int&` |
@@ -1250,7 +1250,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InSecond` | `const float&` |
-| `InGameMode` | `class AERW_GameModeBase*` |
+| `InGameMode` | class [AERW_GameModeBase](Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 | `OutYear` | `int&` |
 | `OutMonths` | `int&` |
 | `OutDays` | `int&` |
@@ -1273,7 +1273,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InSecond` | `const float&` |
-| `InGameMode` | `class AERW_GameModeBase*` |
+| `InGameMode` | class [AERW_GameModeBase](Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 | `OutYear` | `int&` |
 | `OutMonths` | `int&` |
 | `OutDays` | `int&` |
@@ -1300,7 +1300,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InSecond` | `const float&` |
-| `InGameMode` | `class AERW_GameModeBase*` |
+| `InGameMode` | class [AERW_GameModeBase](Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 | `OutYear` | `int&` |
 | `OutDays` | `int&` |
 
@@ -1321,7 +1321,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InSecond` | `const float&` |
-| `InGameMode` | `class AERW_GameModeBase*` |
+| `InGameMode` | class [AERW_GameModeBase](Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 | `OutSeason` | `float&` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static void GetGameSeasonByInputSecond(const float& InSecond,class AERW_GameModeBase* InGameMode,float& OutSeason);`
@@ -1345,7 +1345,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InSecond` | `const float&` |
-| `InGameMode` | `class AERW_GameModeBase*` |
+| `InGameMode` | class [AERW_GameModeBase](Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static float CalcPercentOfYear(const float& InSecond,class AERW_GameModeBase* InGameMode);`
 
@@ -1364,7 +1364,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InSecond` | `const float&` |
-| `InGameMode` | `class AERW_GameModeBase*` |
+| `InGameMode` | class [AERW_GameModeBase](Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) static float ConvertToDays(const float& InSecond,class AERW_GameModeBase* InGameMode);`
 
@@ -1387,7 +1387,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InSecond` | `const float&` |
-| `InGameMode` | `class AERW_GameModeBase*` |
+| `InGameMode` | class [AERW_GameModeBase](Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) static float GetTimeofUltraDynamicSky(const float& InSecond,class AERW_GameModeBase* InGameMode);`
 
@@ -1409,7 +1409,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InGameMode` | `class AERW_GameModeBase*` |
+| `InGameMode` | class [AERW_GameModeBase](Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 | `seasonIndex` | `int` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) static float CalUDSDayLength(class AERW_GameModeBase* InGameMode, int seasonIndex);`
@@ -1432,7 +1432,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InGameMode` | `class AERW_GameModeBase*` |
+| `InGameMode` | class [AERW_GameModeBase](Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 | `seasonIndex` | `int` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) static float CalUDSNightLength(class AERW_GameModeBase* InGameMode, int seasonIndex);`
@@ -1455,7 +1455,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InGameMode` | `class AERW_GameModeBase*` |
+| `InGameMode` | class [AERW_GameModeBase](Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 | `seasonIndex` | `int` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) static float GetDawnTime(class AERW_GameModeBase* InGameMode, int seasonIndex);`
@@ -1478,7 +1478,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InGameMode` | `class AERW_GameModeBase*` |
+| `InGameMode` | class [AERW_GameModeBase](Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 | `seasonIndex` | `int` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) static float GetDuskTime(class AERW_GameModeBase* InGameMode, int seasonIndex);`
@@ -1502,7 +1502,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Days` | `const int32&` |
-| `InGameMode` | `class AERW_GameModeBase*` |
+| `InGameMode` | class [AERW_GameModeBase](Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) static FText ConvertDayToText(const int32& Days,class AERW_GameModeBase* InGameMode);`
 
@@ -1525,7 +1525,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InSecond` | `const float&` |
-| `InGameMode` | `class AERW_GameModeBase*` |
+| `InGameMode` | class [AERW_GameModeBase](Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) static FText ConvertSecondToText(const float& InSecond,class AERW_GameModeBase* InGameMode);`
 
@@ -1548,7 +1548,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InSecond` | `const float&` |
-| `InGameMode` | `class AERW_GameModeBase*` |
+| `InGameMode` | class [AERW_GameModeBase](Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) static FText ConvertSecondToTimeText(const float& InSecond, class AERW_GameModeBase* InGameMode);`
 
@@ -1571,7 +1571,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InSecond` | `const float&` |
-| `InGameMode` | `class AERW_GameModeBase*` |
+| `InGameMode` | class [AERW_GameModeBase](Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) static FText FormatTimeText(const float& InSecond, class AERW_GameModeBase* InGameMode);`
 
@@ -1594,7 +1594,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InSecond` | `const float&` |
-| `InGameMode` | `class AERW_GameModeBase*` |
+| `InGameMode` | class [AERW_GameModeBase](Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) static FText SecondToCountdownText(const float& InSecond, class AERW_GameModeBase* InGameMode);`
 
@@ -2048,7 +2048,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `TeamMaxAttributes` | `UPARAM(ref) TMap<FName,float>&` |
-| `OtherCharacerData` | `const TArray<FEastRimWorldCharacterData>&` |
+| `OtherCharacerData` | const TArray<[FEastRimWorldCharacterData](Struct/CharacterStruct__FEastRimWorldCharacterData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static void GetTeamMaxAttributes(UPARAM(ref) TMap<FName,float>& TeamMaxAttributes,const TArray<FEastRimWorldCharacterData>& OtherCharacerData);`
 
@@ -2088,8 +2088,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TargetArray` | `UPARAM(ref) TArray<FItemSimpleData>&` |
-| `SourceArray` | `UPARAM(ref) const TArray<FItemSimpleData>&` |
+| `TargetArray` | UPARAM(ref) TArray<[FItemSimpleData](Struct/CommonStruct__FItemSimpleData.md)>& |
+| `SourceArray` | UPARAM(ref) const TArray<[FItemSimpleData](Struct/CommonStruct__FItemSimpleData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static void AppendItemSimpleDataArray(UPARAM(ref) TArray<FItemSimpleData>& TargetArray,UPARAM(ref) const TArray<FItemSimpleData>& SourceArray);`
 
@@ -2107,7 +2107,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Character` | `AEastRimWorldCharacter*` |
+| `Character` | [AEastRimWorldCharacter](Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static FString GetAptitudeAttributeString(AEastRimWorldCharacter* Character);`
 
@@ -2129,7 +2129,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Character` | `AEastRimWorldCharacter*` |
+| `Character` | [AEastRimWorldCharacter](Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static FString GetComprehensionAttributeString(AEastRimWorldCharacter* Character);`
 
@@ -2151,7 +2151,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Character` | `AEastRimWorldCharacter*` |
+| `Character` | [AEastRimWorldCharacter](Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static FString GetMoveSpeedAttributeString(AEastRimWorldCharacter* Character);`
 
@@ -2173,7 +2173,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Character` | `AEastRimWorldCharacter*` |
+| `Character` | [AEastRimWorldCharacter](Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static FString GetPreferenceTemperatureAttributeString(AEastRimWorldCharacter* Character);`
 
@@ -2195,7 +2195,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Character` | `AEastRimWorldCharacter*` |
+| `Character` | [AEastRimWorldCharacter](Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static FString GetAttachAttributeString(AEastRimWorldCharacter* Character);`
 
@@ -2217,7 +2217,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacterData` | `FCharacterSaveData` |
+| `CharacterData` | [FCharacterSaveData](WorldSystem/WorldCharacterData__FCharacterSaveData.md) |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static FString GetAttachAttributeStringFromSaveData(FCharacterSaveData CharacterData);`
 
@@ -2235,7 +2235,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Character` | `AEastRimWorldCharacter*` |
+| `Character` | [AEastRimWorldCharacter](Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static FString GetResistanceAttributeString(AEastRimWorldCharacter* Character);`
 
@@ -2257,7 +2257,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacterData` | `FCharacterSaveData` |
+| `CharacterData` | [FCharacterSaveData](WorldSystem/WorldCharacterData__FCharacterSaveData.md) |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static FString GetResistanceAttributeStringFromSaveData(FCharacterSaveData CharacterData);`
 
@@ -2275,7 +2275,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Character` | `AEastRimWorldCharacter*` |
+| `Character` | [AEastRimWorldCharacter](Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static FString GetCriticalAttributeString(AEastRimWorldCharacter* Character);`
 
@@ -2297,7 +2297,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacterData` | `FCharacterSaveData` |
+| `CharacterData` | [FCharacterSaveData](WorldSystem/WorldCharacterData__FCharacterSaveData.md) |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static FString GetCriticalAttributeStringFromSaveData(FCharacterSaveData CharacterData);`
 
@@ -2315,7 +2315,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Character` | `AEastRimWorldCharacter*` |
+| `Character` | [AEastRimWorldCharacter](Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static FString GetSubjoinAttackAttributeString(AEastRimWorldCharacter* Character);`
 
@@ -2337,7 +2337,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacterData` | `FCharacterSaveData` |
+| `CharacterData` | [FCharacterSaveData](WorldSystem/WorldCharacterData__FCharacterSaveData.md) |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static FString GetSubjoinAttackAttributeStringFromSaveData(FCharacterSaveData CharacterData);`
 
@@ -2455,7 +2455,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Outer` | `UObject*` |
-| `GridPosition` | `const FGridPosition&` |
+| `GridPosition` | const [FGridPosition](ERW_CommonTypes__FGridPosition.md)& |
 | `（匿名/仅类型）` | `TSoftObjectPtr<UMaterialInterface> DecalMaterial=nullptr` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static UDecalComponent* CreateDecalComponentAtLocation(UObject* Outer,const FGridPosition& GridPosition,TSoftObjectPtr<UMaterialInterface> DecalMaterial=nullptr);`
@@ -2613,7 +2613,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacterSaveData` | `const FCharacterSaveData &` |
+| `CharacterSaveData` | const [FCharacterSaveData](WorldSystem/WorldCharacterData__FCharacterSaveData.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static TMap<FName, float> CalDrugResistanceBySaveData(const FCharacterSaveData & CharacterSaveData);`
 
@@ -2673,7 +2673,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `WorldContextObject` | `const UObject*` |
-| `InResource` | `const TMap<FName,FItemSimpleData>&` |
+| `InResource` | const TMap<FName,[FItemSimpleData](Struct/CommonStruct__FItemSimpleData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static float CastResourceToGrowScore(const UObject* WorldContextObject, const TMap<FName,FItemSimpleData>& InResource);`
 
@@ -2765,8 +2765,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `StartGrid` | `FGridPosition&` |
-| `EndGrid` | `FGridPosition&` |
+| `StartGrid` | [FGridPosition](ERW_CommonTypes__FGridPosition.md)& |
+| `EndGrid` | [FGridPosition](ERW_CommonTypes__FGridPosition.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static void CalcStartAndEnd(FGridPosition& StartGrid,FGridPosition& EndGrid);`
 
@@ -2779,13 +2779,13 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FGridPosition` |
+| 返回类型 | [FGridPosition](ERW_CommonTypes__FGridPosition.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `StartGrid` | `UPARAM(ref)FGridPosition&` |
-| `EndGrid` | `UPARAM(ref)FGridPosition&` |
+| `StartGrid` | UPARAM(ref)[FGridPosition](ERW_CommonTypes__FGridPosition.md)& |
+| `EndGrid` | UPARAM(ref)[FGridPosition](ERW_CommonTypes__FGridPosition.md)& |
 | `MinX` | `const int32 &` |
 | `MinY` | `const int32 &` |
 
@@ -2831,7 +2831,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InAnimal` | `AEastRimWorldCharacter_Animal*` |
+| `InAnimal` | [AEastRimWorldCharacter_Animal](Character/EastRimWorldCharacter_Animal__AEastRimWorldCharacter_Animal.md)* |
 | `OutLocation` | `FVector&` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) static bool GetAnimalTroughLocation(AEastRimWorldCharacter_Animal* InAnimal, FVector& OutLocation);`

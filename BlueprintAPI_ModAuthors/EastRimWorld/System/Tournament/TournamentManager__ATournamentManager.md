@@ -59,7 +59,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TWeakObjectPtr<UTournamentConfigurationAsset>` |
+| C++ 类型 | TWeakObjectPtr<[UTournamentConfigurationAsset](../../Components/ERW_GameConfigComponent__UTournamentConfigurationAsset.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TWeakObjectPtr<UTournamentConfigurationAsset> TournamentConfigurationAsset;` |
@@ -219,7 +219,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `ATournamentManager*` |
+| 返回类型 | [ATournamentManager](TournamentManager__ATournamentManager.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, BlueprintPure) static ATournamentManager* GetTournamentManager();`
@@ -238,7 +238,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutTournamentInfo` | `FTournamentInstance&` |
+| `OutTournamentInfo` | [FTournamentInstance](TournamentStruct__FTournamentInstance.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool GetCurrentTournamentInfo(FTournamentInstance& OutTournamentInfo) const;`
 
@@ -260,7 +260,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutTournamentInfo` | `FTournamentInstance&` |
+| `OutTournamentInfo` | [FTournamentInstance](TournamentStruct__FTournamentInstance.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool GetLastTournamentInfo(FTournamentInstance& OutTournamentInfo) const;`
 
@@ -421,7 +421,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `SectGuid` | `const FGuid&` |
-| `OutSectInfo` | `FTournamentSectInfo&` |
+| `OutSectInfo` | [FTournamentSectInfo](TournamentStruct__FTournamentSectInfo.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool GetRegistrationInfo(const FGuid& SectGuid,FTournamentSectInfo& OutSectInfo) const;`
 
@@ -693,7 +693,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BattleInfo` | `FTournamentBattleInfo &` |
+| `BattleInfo` | [FTournamentBattleInfo](TournamentStruct__FTournamentBattleInfo.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SkipAndCalculateBattleResult(FTournamentBattleInfo & BattleInfo);`
 

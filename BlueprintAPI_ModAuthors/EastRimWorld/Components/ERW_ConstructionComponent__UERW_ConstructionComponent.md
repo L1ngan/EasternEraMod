@@ -121,7 +121,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , FGOAP_Action>` |
+| C++ 类型 | TMap<FName , [FGOAP_Action](../GOAP/GOAP_Data__FGOAP_Action.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FName , FGOAP_Action> Actions;` |
@@ -137,7 +137,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FGOAP_Action` |
+| C++ 类型 | [FGOAP_Action](../GOAP/GOAP_Data__FGOAP_Action.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FGOAP_Action ConstructAction;` |
@@ -152,7 +152,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FUObjectData` |
+| C++ 类型 | [FUObjectData](../ERW_CommonTypes__FUObjectData.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) FUObjectData OwnerData;` |
@@ -207,7 +207,7 @@
 |--------|------|
 | `Resources` | `const TMap<FName , int32>&` |
 | `Workload` | `int32` |
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void InitResources(const TMap<FName , int32>& Resources , int32 Workload , AGOAP_ActorBase* BuildObject);`
 
@@ -296,7 +296,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Agent` | `AEastRimWorldAIController*` |
+| `Agent` | [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
 | `Workload` | `int32` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool OnReceiveWorkload(AEastRimWorldAIController* Agent , int32 Workload);`

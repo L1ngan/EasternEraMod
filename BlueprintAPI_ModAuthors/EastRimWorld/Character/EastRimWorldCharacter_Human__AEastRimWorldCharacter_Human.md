@@ -34,7 +34,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UEastRimWorldCharacterChatComponent>` |
+| C++ 类型 | TObjectPtr<[UEastRimWorldCharacterChatComponent](Components/EastRimWorldCharacterChatComponent__UEastRimWorldCharacterChatComponent.md)> |
 | 反射说明符 | BlueprintReadOnly, Category="EastRimWorld|Human" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Human") TObjectPtr<UEastRimWorldCharacterChatComponent> CharacterChatComponent;` |
@@ -101,7 +101,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName,FTravelerGoodsInfo>` |
+| C++ 类型 | TMap<FName,[FTravelerGoodsInfo](../Struct/ItemStruct__FTravelerGoodsInfo.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Traveler" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame,Category="Traveler") TMap<FName,FTravelerGoodsInfo> GoodsInfos;` |
@@ -182,7 +182,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<int32 , FExchangeRuleData>` |
+| C++ 类型 | TMap<int32 , [FExchangeRuleData](../Struct/CharacterStruct__FExchangeRuleData.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<int32 , FExchangeRuleData> CharacterExchangeRule;` |
@@ -227,7 +227,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FLogData>` |
+| C++ 类型 | TArray<[FLogData](../ERW_CommonTypes__FLogData.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) TArray<FLogData> CharacterLog;` |
@@ -365,7 +365,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FEastRimWorldHumanData` |
+| 返回类型 | [FEastRimWorldHumanData](../Struct/CharacterStruct__FEastRimWorldHumanData.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FEastRimWorldHumanData GetHumanData() { if (auto HumanData = EastRimWorldCharacterData.GetPtr<FEastRimWorldHumanData>()) { return *HumanData; } return {}; }`
@@ -478,7 +478,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutGoodsInfo` | `TMap<FName,FTravelerGoodsInfo>&` |
+| `OutGoodsInfo` | TMap<FName,[FTravelerGoodsInfo](../Struct/ItemStruct__FTravelerGoodsInfo.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) void GetTravelerGoodsInfo(TMap<FName,FTravelerGoodsInfo>& OutGoodsInfo);`
 
@@ -496,8 +496,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InBuyGoods` | `const TMap<FName,FTravelerGoodsInfo>&` |
-| `InSaleGoods` | `const TMap<FName,FTravelerGoodsInfo>&` |
+| `InBuyGoods` | const TMap<FName,[FTravelerGoodsInfo](../Struct/ItemStruct__FTravelerGoodsInfo.md)>& |
+| `InSaleGoods` | const TMap<FName,[FTravelerGoodsInfo](../Struct/ItemStruct__FTravelerGoodsInfo.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void BuyAndSaleTravelerGoods(const TMap<FName,FTravelerGoodsInfo>& InBuyGoods,const TMap<FName,FTravelerGoodsInfo>& InSaleGoods);`
 
@@ -568,12 +568,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FBuyTreasureInfo` |
+| 返回类型 | [FBuyTreasureInfo](../Components/TreasureComponent__FBuyTreasureInfo.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `TreasureHouse` | `ABuildingActorBase*` |
+| `TreasureHouse` | [ABuildingActorBase](../Building/BuildingActorBase__ABuildingActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FBuyTreasureInfo GetExchangeProduct(ABuildingActorBase* TreasureHouse);`
 
@@ -595,7 +595,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InItems` | `TArray<FTreasureItemSubData> &` |
+| `InItems` | TArray<[FTreasureItemSubData](../Components/TreasureComponent__FTreasureItemSubData.md)> & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void ScreeningCanUseTreasureItems(TArray<FTreasureItemSubData> & InItems);`
 
@@ -660,7 +660,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `MartialArtsItem` | `FTreasureItemSubData` |
+| `MartialArtsItem` | [FTreasureItemSubData](../Components/TreasureComponent__FTreasureItemSubData.md) |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool CheckCanReadMartialArts(FTreasureItemSubData MartialArtsItem);`
 
@@ -682,7 +682,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ItemData` | `FTreasureItemSubData` |
+| `ItemData` | [FTreasureItemSubData](../Components/TreasureComponent__FTreasureItemSubData.md) |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool CheckDrugResistance(FTreasureItemSubData ItemData);`
 
@@ -748,7 +748,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InLog` | `FLogData` |
+| `InLog` | [FLogData](../ERW_CommonTypes__FLogData.md) |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddCharacterLog(FLogData InLog);`
 
@@ -766,7 +766,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InHuman` | `AEastRimWorldCharacter_Human*` |
+| `InHuman` | [AEastRimWorldCharacter_Human](EastRimWorldCharacter_Human__AEastRimWorldCharacter_Human.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SetCharacterRescuedBy(AEastRimWorldCharacter_Human* InHuman);`
 
@@ -788,7 +788,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OutAbortUsers` | `TArray<AEastRimWorldAIController*>&` |
+| `OutAbortUsers` | TArray<[AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)*>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveRescueAction(TArray<AEastRimWorldAIController*>& OutAbortUsers);`
 

@@ -14,7 +14,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FFacilityBelongData>` |
+| C++ 类型 | TArray<[FFacilityBelongData](GOAP_ActorBase__FFacilityBelongData.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) TArray<FFacilityBelongData> FacilityBelongData;` |

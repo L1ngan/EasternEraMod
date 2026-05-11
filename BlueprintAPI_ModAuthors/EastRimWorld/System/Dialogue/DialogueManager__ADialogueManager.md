@@ -12,7 +12,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGuid,FDialogueSpec>` |
+| C++ 类型 | TMap<FGuid,[FDialogueSpec](DialogueStruct__FDialogueSpec.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<FGuid,FDialogueSpec> UnderWayDialogueInfo;` |
@@ -27,7 +27,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGuid,FDialogueSpec>` |
+| C++ 类型 | TMap<FGuid,[FDialogueSpec](DialogueStruct__FDialogueSpec.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<FGuid,FDialogueSpec> QueueDialogueInfo;` |
@@ -57,7 +57,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FDialogueSpec` |
+| C++ 类型 | [FDialogueSpec](DialogueStruct__FDialogueSpec.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) FDialogueSpec CurDialogueInfo;` |
@@ -75,7 +75,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `ADialogueManager *` |
+| 返回类型 | [ADialogueManager](DialogueManager__ADialogueManager.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) static ADialogueManager * GetDialogueManager();`
@@ -118,7 +118,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InDialogueInfo` | `const FDialogueGroup &` |
+| `InDialogueInfo` | const [FDialogueGroup](DialogueStruct__FDialogueGroup.md) & |
 | `nullptr` | `AActor * Initiator =` |
 | `nullptr` | `AActor * Target =` |
 
@@ -253,7 +253,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FDialogueSpec` |
+| 返回类型 | [FDialogueSpec](DialogueStruct__FDialogueSpec.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FDialogueSpec GetCurDialogueSpec();`
@@ -277,7 +277,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `DialogueID` | `FName` |
-| `InDialogueOption` | `const FDialogueOption &` |
+| `InDialogueOption` | const [FDialogueOption](DialogueStruct__FDialogueOption.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SelectDialogueOption(FName DialogueID,const FDialogueOption & InDialogueOption);`
 
@@ -321,7 +321,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InDialogueOption` | `UPARAM(ref) FDialogueOption &` |
+| `InDialogueOption` | UPARAM(ref) [FDialogueOption](DialogueStruct__FDialogueOption.md) & |
 | `OutFailedText` | `TArray<FText>&` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) bool CheckDialogueOptionClickCondition(UPARAM(ref) FDialogueOption & InDialogueOption,TArray<FText>& OutFailedText);`
@@ -344,7 +344,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InDialogueOption` | `const FDialogueOption &` |
+| `InDialogueOption` | const [FDialogueOption](DialogueStruct__FDialogueOption.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void TriggerDialogueOptionFunctions(const FDialogueOption & InDialogueOption);`
 
@@ -380,9 +380,9 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InDialogueInfo` | `const FDialogueInfo&` |
-| `OutOptionIDs` | `TArray<FDialogueOption>&` |
-| `InCharacter` | `class AEastRimWorldCharacter*` |
+| `InDialogueInfo` | const [FDialogueInfo](DialogueStruct__FDialogueInfo.md)& |
+| `OutOptionIDs` | TArray<[FDialogueOption](DialogueStruct__FDialogueOption.md)>& |
+| `InCharacter` | class [AEastRimWorldCharacter](../../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) void GetRandOptions(const FDialogueInfo& InDialogueInfo,TArray<FDialogueOption>& OutOptionIDs,class AEastRimWorldCharacter* InCharacter);`
 

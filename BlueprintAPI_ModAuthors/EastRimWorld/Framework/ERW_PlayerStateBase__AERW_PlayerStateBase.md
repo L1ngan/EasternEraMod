@@ -14,7 +14,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UEastRimWorldAbilitySystemComponent>` |
+| C++ 类型 | TObjectPtr<[UEastRimWorldAbilitySystemComponent](../AbilitySystem/EastRimWorldAbilitySystemComponent__UEastRimWorldAbilitySystemComponent.md)> |
 | 反射说明符 | BlueprintReadOnly, Category="GAS" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "GAS") TObjectPtr<UEastRimWorldAbilitySystemComponent> AbilitySystemComponent;` |

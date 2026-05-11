@@ -57,7 +57,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FBuildConfigData` |
+| C++ 类型 | [FBuildConfigData](../ERW_ConfigTypes__FBuildConfigData.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) FBuildConfigData BuildData;` |
@@ -102,7 +102,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<ABuildingActorBase*>` |
+| C++ 类型 | TArray<[ABuildingActorBase](BuildingActorBase__ABuildingActorBase.md)*> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) TArray<ABuildingActorBase*> ConnectBuildingActors;` |
@@ -293,7 +293,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<AEastRimWorldCharacter_Summons>` |
+| C++ 类型 | TObjectPtr<[AEastRimWorldCharacter_Summons](../Character/EastRimWorldCharacter_Summons__AEastRimWorldCharacter_Summons.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AEastRimWorldCharacter_Summons> SummonCharacter;` |
@@ -364,7 +364,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FTransportationInfo` |
+| C++ 类型 | [FTransportationInfo](../WorldSystem/WorldStruct__FTransportationInfo.md) |
 | 反射说明符 | BlueprintReadOnly, Category="Transportation" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Transportation") FTransportationInfo TransportationInfo;` |
@@ -754,7 +754,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="Building" |
-| 返回类型 | `TArray<ABuildingActorBase*>` |
+| 返回类型 | TArray<[ABuildingActorBase](BuildingActorBase__ABuildingActorBase.md)*> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "Building") TArray<ABuildingActorBase*> GetConcatenateBuildings();`
@@ -790,7 +790,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="Building" |
-| 返回类型 | `FEnergyGridData` |
+| 返回类型 | [FEnergyGridData](../ERW_ConfigTypes__FEnergyGridData.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "Building") FEnergyGridData GetCurEnergyGridData();`
@@ -808,7 +808,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="Building" |
-| 返回类型 | `FEnergyData` |
+| 返回类型 | [FEnergyData](../GOAP/GOAP_ActorBase__FEnergyData.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "Building") FEnergyData GetCurEnergyData();`
@@ -1155,7 +1155,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Agent` | `AEastRimWorldCharacter*` |
+| `Agent` | [AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void PracticeBuildingRandomTriggerOverclocking(AEastRimWorldCharacter* Agent);`
 
@@ -1362,7 +1362,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InPrisoner` | `AEastRimWorldCharacter*` |
+| `InPrisoner` | [AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CreatePrisonerExecutedAction(AEastRimWorldCharacter* InPrisoner);`
 
@@ -1398,8 +1398,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Executioner` | `AEastRimWorldCharacter*` |
-| `InPrisoner` | `AEastRimWorldCharacter*` |
+| `Executioner` | [AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
+| `InPrisoner` | [AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool RegisterArrivedExecutioner(AEastRimWorldCharacter* Executioner,AEastRimWorldCharacter* InPrisoner);`
 
@@ -1421,7 +1421,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InPrisoner` | `AEastRimWorldCharacter*` |
+| `InPrisoner` | [AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool RegisterArrivedPrisoner(AEastRimWorldCharacter* InPrisoner);`
 
@@ -1443,8 +1443,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Torturer` | `AEastRimWorldCharacter*` |
-| `InPrisoner` | `AEastRimWorldCharacter*` |
+| `Torturer` | [AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
+| `InPrisoner` | [AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool RegisterArrivedTorturer(AEastRimWorldCharacter* Torturer,AEastRimWorldCharacter* InPrisoner);`
 
@@ -1466,7 +1466,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InPrisoner` | `AEastRimWorldCharacter*` |
+| `InPrisoner` | [AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CreatePrisonerTorturedAction(AEastRimWorldCharacter* InPrisoner);`
 
@@ -1645,7 +1645,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `RefitItem` | `UCanUseInventoryItemInstance*` |
+| `RefitItem` | [UCanUseInventoryItemInstance](../Inventory/CanUseInventoryItemInstance__UCanUseInventoryItemInstance.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "PuppetModification") void StartRefitPuppet(UCanUseInventoryItemInstance* RefitItem);`
 
@@ -1721,7 +1721,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InResources` | `const TMap<FName, FItemSimpleData>&` |
+| `InResources` | const TMap<FName, [FItemSimpleData](../Struct/CommonStruct__FItemSimpleData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "RecycledResource") void AddResourceByItemSimpleData(const TMap<FName, FItemSimpleData>& InResources);`
 
@@ -1992,7 +1992,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure, Category="Transportation" |
-| 返回类型 | `FTransportationInfo` |
+| 返回类型 | [FTransportationInfo](../WorldSystem/WorldStruct__FTransportationInfo.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Transportation") FTransportationInfo GetTransportationInfo() const;`
@@ -2033,7 +2033,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InPrisoner` | `AEastRimWorldCharacter*` |
+| `InPrisoner` | [AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,Category="Prison") void CreateImprisonBackAction(AEastRimWorldCharacter* InPrisoner);`
 
@@ -2123,7 +2123,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ItemClassify` | `const TArray<FItemClassify>` |
+| `ItemClassify` | const TArray<[FItemClassify](../Struct/ItemStruct__FItemClassify.md)> |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CancelAllSelectStorageTag(const TArray<FItemClassify> ItemClassify);`
 

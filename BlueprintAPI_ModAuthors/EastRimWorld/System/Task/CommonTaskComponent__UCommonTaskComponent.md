@@ -12,7 +12,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FCommonTaskInstance>` |
+| C++ 类型 | TArray<[FCommonTaskInstance](../../Struct/CommonTaskStruct__FCommonTaskInstance.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Task" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite, SaveGame,Category = "Task") TArray<FCommonTaskInstance> CurrentTask;` |
@@ -154,7 +154,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TaskInfo` | `const FCommonTaskInfo&` |
+| `TaskInfo` | const [FCommonTaskInfo](../../Struct/CommonTaskStruct__FCommonTaskInfo.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) bool CheckCanAcceptTask(const FCommonTaskInfo& TaskInfo);`
 
@@ -189,7 +189,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintPure |
-| 返回类型 | `FCommonTaskInstance` |
+| 返回类型 | [FCommonTaskInstance](../../Struct/CommonTaskStruct__FCommonTaskInstance.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -207,7 +207,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintPure |
-| 返回类型 | `FCommonTaskInstance` |
+| 返回类型 | [FCommonTaskInstance](../../Struct/CommonTaskStruct__FCommonTaskInstance.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -230,7 +230,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Task` | `FCommonTaskInstance` |
+| `Task` | [FCommonTaskInstance](../../Struct/CommonTaskStruct__FCommonTaskInstance.md) |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void BroadcastUpdateTask(FCommonTaskInstance Task);`
 
@@ -252,7 +252,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Condition` | `const FCommonTaskCondition &` |
+| `Condition` | const [FCommonTaskCondition](../../Struct/CommonTaskStruct__FCommonTaskCondition.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateTaskProgress(const FCommonTaskCondition & Condition);`
 
@@ -331,7 +331,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FCommonTaskInstance>` |
+| 返回类型 | TArray<[FCommonTaskInstance](../../Struct/CommonTaskStruct__FCommonTaskInstance.md)> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<FCommonTaskInstance> GetAllTask() { return CurrentTask; };`
@@ -354,7 +354,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TaskInfo` | `const FCommonTaskInfo&` |
+| `TaskInfo` | const [FCommonTaskInfo](../../Struct/CommonTaskStruct__FCommonTaskInfo.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) bool CheckPreTask(const FCommonTaskInfo& TaskInfo);`
 
@@ -376,7 +376,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TaskInfo` | `const FCommonTaskInfo&` |
+| `TaskInfo` | const [FCommonTaskInfo](../../Struct/CommonTaskStruct__FCommonTaskInfo.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) bool CheckRepelTask(const FCommonTaskInfo& TaskInfo);`
 
@@ -443,7 +443,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `TaskID` | `const FName&` |
-| `SubmitItems` | `const TArray<FItemSimpleData>&` |
+| `SubmitItems` | const TArray<[FItemSimpleData](../../Struct/CommonStruct__FItemSimpleData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool SubmitItemToTask(const FName& TaskID,const TArray<FItemSimpleData>& SubmitItems);`
 
@@ -488,7 +488,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InTaskGuid` | `const FGuid&` |
-| `SelectedAwards` | `const TArray<FTaskSelectableAward>&` |
+| `SelectedAwards` | const TArray<[FTaskSelectableAward](../../Struct/CommonTaskStruct__FTaskSelectableAward.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool SubmitTask(const FGuid& InTaskGuid,const TArray<FTaskSelectableAward>& SelectedAwards);`
 
@@ -510,8 +510,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TaskInstance` | `const FCommonTaskInstance&` |
-| `SelectedAwards` | `const TArray<FTaskSelectableAward>&` |
+| `TaskInstance` | const [FCommonTaskInstance](../../Struct/CommonTaskStruct__FCommonTaskInstance.md)& |
+| `SelectedAwards` | const TArray<[FTaskSelectableAward](../../Struct/CommonTaskStruct__FTaskSelectableAward.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GiveAwards(const FCommonTaskInstance& TaskInstance,const TArray<FTaskSelectableAward>& SelectedAwards);`
 
@@ -555,7 +555,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TaskInstance` | `const FCommonTaskInstance&` |
+| `TaskInstance` | const [FCommonTaskInstance](../../Struct/CommonTaskStruct__FCommonTaskInstance.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveTrackTask(const FCommonTaskInstance& TaskInstance);`
 
@@ -577,7 +577,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InFunction` | `const FTriggerFunction&` |
+| `InFunction` | const [FTriggerFunction](../../Struct/CommonTaskStruct__FTriggerFunction.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void TryTriggerFunction(const FTriggerFunction& InFunction);`
 

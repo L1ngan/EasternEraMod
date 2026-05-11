@@ -154,7 +154,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TSoftClassPtr<AEnergySplineActor>` |
+| C++ 类型 | TSoftClassPtr<[AEnergySplineActor](../System/Energy/EnergySplineActor__AEnergySplineActor.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Connection" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category ="Connection") TSoftClassPtr<AEnergySplineActor> EnergySplineActor;` |

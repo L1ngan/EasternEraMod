@@ -68,7 +68,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<UDLCInformationAsset*>` |
+| C++ 类型 | TArray<[UDLCInformationAsset](../DLC/DLCSubsystem__UDLCInformationAsset.md)*> |
 | 反射说明符 | BlueprintReadWrite, Category="DLC" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="DLC") TArray<UDLCInformationAsset*> DLCInformationAsset;` |
@@ -113,7 +113,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FEastRimWorldHumanData` |
+| C++ 类型 | [FEastRimWorldHumanData](../Struct/CharacterStruct__FEastRimWorldHumanData.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) FEastRimWorldHumanData NewGameProtagonist;` |
@@ -143,7 +143,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FTeamBuffData>` |
+| C++ 类型 | TArray<[FTeamBuffData](../Struct/CharacterStruct__FTeamBuffData.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TArray<FTeamBuffData> NewGameTeamBuffs;` |
@@ -203,7 +203,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FItemSimpleData>` |
+| C++ 类型 | TArray<[FItemSimpleData](../Struct/CommonStruct__FItemSimpleData.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TArray<FItemSimpleData> NewGameResources;` |
@@ -524,7 +524,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `USaveGlobalGameData *` |
+| C++ 类型 | [USaveGlobalGameData](../SaveGame/SaveGlobalGameData__USaveGlobalGameData.md) * |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite) USaveGlobalGameData * DefaultCurrencySaveData;` |
@@ -861,7 +861,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InWorldPlace` | `AWorldPlace*` |
+| `InWorldPlace` | [AWorldPlace](../WorldSystem/WorldPlace__AWorldPlace.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool RemoveAllSubLevelDataRecord(AWorldPlace* InWorldPlace);`
 
@@ -910,7 +910,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `USaveGlobalGameData *` |
+| 返回类型 | [USaveGlobalGameData](../SaveGame/SaveGlobalGameData__USaveGlobalGameData.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) USaveGlobalGameData * GetSaveCurrencyObject();`

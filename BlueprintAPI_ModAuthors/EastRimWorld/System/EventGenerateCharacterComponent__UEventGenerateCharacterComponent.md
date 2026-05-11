@@ -27,7 +27,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FMonsterGenerationInfo>` |
+| C++ 类型 | TArray<[FMonsterGenerationInfo](../WorldSystem/WorldStruct__FMonsterGenerationInfo.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) TArray<FMonsterGenerationInfo> MonsterGenerationInfoQueue;` |
@@ -42,7 +42,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGuid,FGenerationInstanceInfo>` |
+| C++ 类型 | TMap<FGuid,[FGenerationInstanceInfo](../WorldSystem/WorldStruct__FGenerationInstanceInfo.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) TMap<FGuid,FGenerationInstanceInfo> GenerationInstanceInfos;` |
@@ -57,7 +57,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FMonsterGenerationInfo>` |
+| C++ 类型 | TArray<[FMonsterGenerationInfo](../WorldSystem/WorldStruct__FMonsterGenerationInfo.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FMonsterGenerationInfo> MonsterDissatisfyGenerationInfo;` |
@@ -72,7 +72,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FEnemyForceAttackGenerationInfo>` |
+| C++ 类型 | TArray<[FEnemyForceAttackGenerationInfo](../WorldSystem/WorldStruct__FEnemyForceAttackGenerationInfo.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) TArray<FEnemyForceAttackGenerationInfo> EnemyForceAttackGenerationInfoQueue;` |
@@ -157,7 +157,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FInstanceGenerationActorInfo` |
+| 返回类型 | [FInstanceGenerationActorInfo](../WorldSystem/WorldStruct__FInstanceGenerationActorInfo.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -179,7 +179,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FMonsterGenerationInfo` |
+| 返回类型 | [FMonsterGenerationInfo](../WorldSystem/WorldStruct__FMonsterGenerationInfo.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -247,7 +247,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `GenerationInstanceGuid` | `const FGuid &` |
-| `CharacterActor` | `AEastRimWorldCharacter *` |
+| `CharacterActor` | [AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md) * |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void ExcludeCharacter(const FGuid & GenerationInstanceGuid,AEastRimWorldCharacter * CharacterActor);`
 
@@ -286,7 +286,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<AEastRimWorldCharacter*>` |
+| 返回类型 | TArray<[AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)*> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |

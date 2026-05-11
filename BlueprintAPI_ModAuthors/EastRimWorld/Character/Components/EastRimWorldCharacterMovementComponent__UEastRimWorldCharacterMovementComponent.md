@@ -16,7 +16,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="EastRimWorld|CharacterMovement" |
-| 返回类型 | `const FEastRimWorldCharacterGroundInfo&` |
+| 返回类型 | const [FEastRimWorldCharacterGroundInfo](EastRimWorldCharacterMovementComponent__FEastRimWorldCharacterGroundInfo.md)& |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "EastRimWorld|CharacterMovement") const FEastRimWorldCharacterGroundInfo& GetGroundInfo();`

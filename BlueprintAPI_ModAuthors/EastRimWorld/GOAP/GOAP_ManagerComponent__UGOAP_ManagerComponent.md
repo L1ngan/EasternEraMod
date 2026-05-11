@@ -62,7 +62,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FUObjectData , FPreActionData>` |
+| C++ 类型 | TMap<[FUObjectData](../ERW_CommonTypes__FUObjectData.md) , FPreActionData> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FUObjectData , FPreActionData> PreActionData;` |
@@ -94,7 +94,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FUObjectData , FOccupyObject>` |
+| C++ 类型 | TMap<[FUObjectData](../ERW_CommonTypes__FUObjectData.md) , FOccupyObject> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FUObjectData , FOccupyObject> SuspendGrowItems;` |
@@ -110,7 +110,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FUObjectData , FGOAP_Actions>` |
+| C++ 类型 | TMap<[FUObjectData](../ERW_CommonTypes__FUObjectData.md) , FGOAP_Actions> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) TMap<FUObjectData , FGOAP_Actions> PracticeActions;` |
@@ -140,7 +140,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<AWorldPlace>` |
+| C++ 类型 | TObjectPtr<[AWorldPlace](../WorldSystem/WorldPlace__AWorldPlace.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AWorldPlace> WorldPlace;` |
@@ -174,8 +174,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Action` | `const FGOAP_Action&` |
-| `ActionComponent` | `UGOAP_ActionComponent*` |
+| `Action` | const [FGOAP_Action](GOAP_Data__FGOAP_Action.md)& |
+| `ActionComponent` | [UGOAP_ActionComponent](GOAP_ActionComponent__UGOAP_ActionComponent.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RecoverLargeUserAction(const FGOAP_Action& Action , UGOAP_ActionComponent* ActionComponent);`
 
@@ -197,9 +197,9 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Agent` | `AEastRimWorldAIController*` |
-| `ItemInstance` | `UInventoryItemInstance*` |
-| `Action` | `const FGOAP_Action&` |
+| `Agent` | [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
+| `ItemInstance` | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
+| `Action` | const [FGOAP_Action](GOAP_Data__FGOAP_Action.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddSpecifiedItemAction(AEastRimWorldAIController* Agent , UInventoryItemInstance* ItemInstance , const FGOAP_Action& Action);`
 
@@ -221,8 +221,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Agent` | `AEastRimWorldAIController*` |
-| `ItemInstance` | `UInventoryItemInstance*` |
+| `Agent` | [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
+| `ItemInstance` | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 | `GoalID` | `const FName&` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveSpecifiedItemAction(AEastRimWorldAIController* Agent , UInventoryItemInstance* ItemInstance , const FName& GoalID);`
@@ -245,7 +245,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ItemInstance` | `UInventoryItemInstance*` |
+| `ItemInstance` | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveSpecifiedItemAllAction(UInventoryItemInstance* ItemInstance);`
 
@@ -267,7 +267,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Action` | `const FGOAP_Action&` |
+| `Action` | const [FGOAP_Action](GOAP_Data__FGOAP_Action.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddAction(const FGOAP_Action& Action);`
 
@@ -289,7 +289,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Action` | `const FGOAP_Action&` |
+| `Action` | const [FGOAP_Action](GOAP_Data__FGOAP_Action.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveAction(const FGOAP_Action& Action);`
 
@@ -333,7 +333,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Action` | `const FGOAP_Action&` |
+| `Action` | const [FGOAP_Action](GOAP_Data__FGOAP_Action.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddRTreeNode(const FGOAP_Action& Action);`
 
@@ -355,7 +355,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Action` | `const FGOAP_Action&` |
+| `Action` | const [FGOAP_Action](GOAP_Data__FGOAP_Action.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveRTreeNode(const FGOAP_Action& Action);`
 
@@ -377,7 +377,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObjectData` | `const FUObjectData&` |
+| `BuildObjectData` | const [FUObjectData](../ERW_CommonTypes__FUObjectData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveSuspendGrowItems(const FUObjectData& BuildObjectData);`
 
@@ -399,7 +399,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Action` | `const FGOAP_Action&` |
+| `Action` | const [FGOAP_Action](GOAP_Data__FGOAP_Action.md)& |
 | `Active` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateActionActivity(const FGOAP_Action& Action , bool Active);`
@@ -422,7 +422,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Action` | `const FGOAP_Action&` |
+| `Action` | const [FGOAP_Action](GOAP_Data__FGOAP_Action.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveCompleteAction(const FGOAP_Action& Action);`
 
@@ -444,13 +444,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Action` | `const FGOAP_Action&` |
-| `Agent` | `AEastRimWorldAIController*` |
+| `Action` | const [FGOAP_Action](GOAP_Data__FGOAP_Action.md)& |
+| `Agent` | [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
 | `Target` | `UObject*` |
 | `MinCost` | `float` |
 | `OwnerLocation` | `const FVector&` |
 | `IsPathGoal` | `bool` |
-| `Plans` | `TArray<FGOAP_Action>&` |
+| `Plans` | TArray<[FGOAP_Action](GOAP_Data__FGOAP_Action.md)>& |
 | `NAME_None` | `FName SpecifiedGoal =` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) float CheckCondition(const FGOAP_Action& Action , AEastRimWorldAIController* Agent , UObject* Target , float MinCost , const FVector& OwnerLocation , bool IsPathGoal , TArray<FGOAP_Action>& Plans,FName SpecifiedGoal = NAME_None);`
@@ -491,7 +491,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ItemInstance` | `UInventoryItemInstance*` |
+| `ItemInstance` | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool CheckSpecifiedItemAction(UInventoryItemInstance* ItemInstance);`
 
@@ -513,7 +513,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Agent` | `AEastRimWorldAIController*` |
+| `Agent` | [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
 | `EquipmentType` | `EEquipmentType` |
 | `ArmorType` | `EArmorType` |
 
@@ -532,12 +532,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UInventoryItemInstance*` |
+| 返回类型 | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `Agent` | `AEastRimWorldAIController*` |
+| `Agent` | [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
 | `EquipmentType` | `EEquipmentType` |
 | `ArmorType` | `EArmorType` |
 

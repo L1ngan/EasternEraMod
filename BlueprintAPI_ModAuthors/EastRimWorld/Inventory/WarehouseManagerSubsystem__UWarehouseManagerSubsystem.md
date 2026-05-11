@@ -22,7 +22,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WarehouseComponent` | `UInventoryManagerComponent*` |
+| `WarehouseComponent` | [UInventoryManagerComponent](InventoryManagerComponent__UInventoryManagerComponent.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "WarehouseManager") bool IsWarehouseFull(UInventoryManagerComponent* WarehouseComponent);`
 
@@ -39,12 +39,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="WarehouseManager" |
-| 返回类型 | `FWarehouseCacheState` |
+| 返回类型 | [FWarehouseCacheState](WarehouseManagerSubsystem__FWarehouseCacheState.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `WarehouseComponent` | `UInventoryManagerComponent*` |
+| `WarehouseComponent` | [UInventoryManagerComponent](InventoryManagerComponent__UInventoryManagerComponent.md)* |
 | `bOutValid` | `bool&` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "WarehouseManager") FWarehouseCacheState GetWarehouseState(UInventoryManagerComponent* WarehouseComponent, bool& bOutValid);`
@@ -69,8 +69,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WarehouseComponent` | `UInventoryManagerComponent*` |
-| `NewInventoryItemInstance` | `UInventoryItemInstance*` |
+| `WarehouseComponent` | [UInventoryManagerComponent](InventoryManagerComponent__UInventoryManagerComponent.md)* |
+| `NewInventoryItemInstance` | [UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "WarehouseManager") int32 GetCanPlaceItemNumberByInstanceFromCache(UInventoryManagerComponent* WarehouseComponent, UInventoryItemInstance* NewInventoryItemInstance);`
 
@@ -93,8 +93,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WarehouseComponent` | `UInventoryManagerComponent*` |
-| `InventoryData` | `const FInventoryGeneralData &` |
+| `WarehouseComponent` | [UInventoryManagerComponent](InventoryManagerComponent__UInventoryManagerComponent.md)* |
+| `InventoryData` | const [FInventoryGeneralData](../Struct/ItemStruct__FInventoryGeneralData.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "WarehouseManager") bool CanPlaceItemInWarehouseByItemData(UInventoryManagerComponent* WarehouseComponent, const FInventoryGeneralData & InventoryData);`
 
@@ -112,7 +112,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="WarehouseManager" |
-| 返回类型 | `TArray<UInventoryManagerComponent*>` |
+| 返回类型 | TArray<[UInventoryManagerComponent](InventoryManagerComponent__UInventoryManagerComponent.md)*> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "WarehouseManager") TArray<UInventoryManagerComponent*> GetRegisteredWarehouses() const;`

@@ -52,7 +52,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UInventoryManagerComponent>` |
+| C++ 类型 | TObjectPtr<[UInventoryManagerComponent](../Inventory/InventoryManagerComponent__UInventoryManagerComponent.md)> |
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="Inventory" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Inventory", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UInventoryManagerComponent> InventoryManagerComponent;` |
@@ -74,7 +74,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `UGOAP_PlanComponent*` |
+| C++ 类型 | [UGOAP_PlanComponent](../GOAP/GOAP_PlanComponent__UGOAP_PlanComponent.md)* |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) UGOAP_PlanComponent* PlanComponent { nullptr };` |
@@ -89,7 +89,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `UGOAP_MemoryComponent*` |
+| C++ 类型 | [UGOAP_MemoryComponent](../GOAP/GOAP_MemoryComponent__UGOAP_MemoryComponent.md)* |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) UGOAP_MemoryComponent* GOAP_MemoryComponent { nullptr };` |
@@ -104,7 +104,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `UGOAP_ActionComponent*` |
+| C++ 类型 | [UGOAP_ActionComponent](../GOAP/GOAP_ActionComponent__UGOAP_ActionComponent.md)* |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) UGOAP_ActionComponent* GoapActionComponent{ nullptr };` |
@@ -115,7 +115,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , UEastRimWorldGameplayAbility*>` |
+| C++ 类型 | TMap<FName , [UEastRimWorldGameplayAbility](../AbilitySystem/Abilities/EastRimWorldGameplayAbility__UEastRimWorldGameplayAbility.md)*> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TMap<FName , UEastRimWorldGameplayAbility*> GameplayAbilities;` |
@@ -163,7 +163,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , FUObjectData>` |
+| C++ 类型 | TMap<FName , [FUObjectData](../ERW_CommonTypes__FUObjectData.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<FName , FUObjectData> OwnFacilities;` |
@@ -194,7 +194,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UERW_GameInstanceBase>` |
+| C++ 类型 | TObjectPtr<[UERW_GameInstanceBase](../Framework/ERW_GameInstanceBase__UERW_GameInstanceBase.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<UERW_GameInstanceBase> GameInstance;` |
@@ -205,7 +205,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `AERW_GameModeBase *` |
+| C++ 类型 | [AERW_GameModeBase](../Framework/ERW_GameModeBase__AERW_GameModeBase.md) * |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) AERW_GameModeBase * GameModeBase = nullptr;` |
@@ -216,7 +216,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<AWorldPlace>` |
+| C++ 类型 | TObjectPtr<[AWorldPlace](../WorldSystem/WorldPlace__AWorldPlace.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AWorldPlace> WorldPlace;` |
@@ -227,7 +227,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<AEastRimWorldCharacter>` |
+| C++ 类型 | TObjectPtr<[AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TObjectPtr<AEastRimWorldCharacter> ControlledCharacter;` |
@@ -287,7 +287,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FGOAP_Action` |
+| C++ 类型 | [FGOAP_Action](../GOAP/GOAP_Data__FGOAP_Action.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) FGOAP_Action CacheAction;` |
@@ -569,7 +569,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<AEastRimWorldAIController>` |
+| C++ 类型 | TObjectPtr<[AEastRimWorldAIController](EastRimWorldAIController__AEastRimWorldAIController.md)> |
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="Summons" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Summons", Meta = (AllowPrivateAccess = "true")) TObjectPtr<AEastRimWorldAIController> SummonsAI;` |
@@ -660,7 +660,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Asset` | `UGamePlayConfigurationAsset*` |
+| `Asset` | [UGamePlayConfigurationAsset](../Components/ERW_GameConfigComponent__UGamePlayConfigurationAsset.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) virtual void CalcGoalScores(UGamePlayConfigurationAsset* Asset);`
 
@@ -695,7 +695,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AEastRimWorldCharacter *` |
+| 返回类型 | [AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) AEastRimWorldCharacter * GetControlledCharacter();`
@@ -713,7 +713,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AERW_PlayerControllerBase *` |
+| 返回类型 | [AERW_PlayerControllerBase](../Framework/ERW_PlayerControllerBase__AERW_PlayerControllerBase.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) AERW_PlayerControllerBase * GetPlayerControllerBase();`
@@ -727,7 +727,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AERW_GameModeBase *` |
+| 返回类型 | [AERW_GameModeBase](../Framework/ERW_GameModeBase__AERW_GameModeBase.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) AERW_GameModeBase * GetGameModeBase();`
@@ -747,7 +747,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `TargetActor` | `UObject*` |
-| `Ability` | `UEastRimWorldGameplayAbility*` |
+| `Ability` | [UEastRimWorldGameplayAbility](../AbilitySystem/Abilities/EastRimWorldGameplayAbility__UEastRimWorldGameplayAbility.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) void StartOutputWorkload(UObject* TargetActor , UEastRimWorldGameplayAbility* Ability);`
 
@@ -1069,7 +1069,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Ability` | `UEastRimWorldGameplayAbility*` |
+| `Ability` | [UEastRimWorldGameplayAbility](../AbilitySystem/Abilities/EastRimWorldGameplayAbility__UEastRimWorldGameplayAbility.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintNativeEvent , BlueprintCallable) void AddGameplayAbility(UEastRimWorldGameplayAbility* Ability);`
 
@@ -1091,7 +1091,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Ability` | `UEastRimWorldGameplayAbility*` |
+| `Ability` | [UEastRimWorldGameplayAbility](../AbilitySystem/Abilities/EastRimWorldGameplayAbility__UEastRimWorldGameplayAbility.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveGameplayAbility(UEastRimWorldGameplayAbility* Ability);`
 
@@ -1113,7 +1113,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `SaveData` | `FGameplayAbilitySaveData&` |
+| `SaveData` | [FGameplayAbilitySaveData](../ERW_CommonTypes__FGameplayAbilitySaveData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool GetGameplayAbilitySaveData(FGameplayAbilitySaveData& SaveData);`
 
@@ -1215,7 +1215,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EatItems` | `TMap<EGameConfigType , FIDs>&` |
+| `EatItems` | TMap<EGameConfigType , [FIDs](../ERW_CommonTypes__FIDs.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetEatItems(TMap<EGameConfigType , FIDs>& EatItems) const;`
 
@@ -1237,7 +1237,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Ability` | `UEastRimWorldGameplayAbility*` |
+| `Ability` | [UEastRimWorldGameplayAbility](../AbilitySystem/Abilities/EastRimWorldGameplayAbility__UEastRimWorldGameplayAbility.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) void StartReading(UEastRimWorldGameplayAbility* Ability);`
 
@@ -1259,7 +1259,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ItemInstance` | `const UInventoryItemInstance*` |
+| `ItemInstance` | const [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 | `IsInterrupted` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) bool ReadManualEnd(const UInventoryItemInstance* ItemInstance , bool IsInterrupted);`
@@ -1282,7 +1282,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ItemInstance` | `const UInventoryItemInstance*` |
+| `ItemInstance` | const [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 | `IsInterrupted` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) bool EatManualEnd(const UInventoryItemInstance* ItemInstance , bool IsInterrupted);`
@@ -1305,7 +1305,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Ability` | `UEastRimWorldGameplayAbility*` |
+| `Ability` | [UEastRimWorldGameplayAbility](../AbilitySystem/Abilities/EastRimWorldGameplayAbility__UEastRimWorldGameplayAbility.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) void StartWriteCopy(UEastRimWorldGameplayAbility* Ability);`
 
@@ -1440,7 +1440,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FCharacterActionAbility &` |
+| 返回类型 | const [FCharacterActionAbility](EastRimWorldAIController__FCharacterActionAbility.md) & |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) const FCharacterActionAbility & GetCurCharacterActionAbility();`
@@ -1458,7 +1458,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FAnimalActionAbility&` |
+| 返回类型 | const [FAnimalActionAbility](EastRimWorldAIController__FAnimalActionAbility.md)& |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) const FAnimalActionAbility& GetCurAnimalActionAbility();`
@@ -1603,7 +1603,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InventoryItemInstance` | `UInventoryItemInstance*` |
+| `InventoryItemInstance` | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 | `true` | `bool NeedEquipDefault =` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool ThrowItemToWorld(UInventoryItemInstance* InventoryItemInstance,bool NeedEquipDefault = true);`
@@ -1626,7 +1626,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InventoryItemInstance` | `UInventoryItemInstance*` |
+| `InventoryItemInstance` | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 | `InTransform` | `FTransform` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void ThrowEquipmentToWorld(UInventoryItemInstance* InventoryItemInstance , FTransform InTransform);`
@@ -1649,7 +1649,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InventoryItemInstance` | `UInventoryItemInstance*` |
+| `InventoryItemInstance` | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool EquipEquipment(UInventoryItemInstance* InventoryItemInstance);`
 
@@ -1671,7 +1671,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InventoryItemInstance` | `UInventoryItemInstance*` |
+| `InventoryItemInstance` | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool LoadEquipEquipment(UInventoryItemInstance* InventoryItemInstance);`
 
@@ -1693,7 +1693,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InventoryItemInstance` | `UInventoryItemInstance*` |
+| `InventoryItemInstance` | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool GoToGetEquipment(UInventoryItemInstance* InventoryItemInstance);`
 
@@ -1715,7 +1715,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InventoryItemInstance` | `UInventoryItemInstance*` |
+| `InventoryItemInstance` | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CancelGetEquipment(UInventoryItemInstance* InventoryItemInstance);`
 
@@ -1737,7 +1737,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InventoryItemInstance` | `UInventoryItemInstance*` |
+| `InventoryItemInstance` | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool GoToGetBookToRead(UInventoryItemInstance* InventoryItemInstance);`
 
@@ -1759,7 +1759,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InventoryItemInstance` | `UInventoryItemInstance*` |
+| `InventoryItemInstance` | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool GoToGetItemToEat(UInventoryItemInstance* InventoryItemInstance);`
 
@@ -1781,7 +1781,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InventoryItemInstance` | `UInventoryItemInstance*` |
+| `InventoryItemInstance` | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveSpecifiedItemReservedNum(UInventoryItemInstance* InventoryItemInstance);`
 
@@ -1803,7 +1803,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InventoryItemInstance` | `UInventoryItemInstance*` |
+| `InventoryItemInstance` | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 | `bHaveDurability` | `bool &` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool ReadBookUseDurability(UInventoryItemInstance* InventoryItemInstance,bool & bHaveDurability);`
@@ -1826,7 +1826,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InventoryItemInstance` | `UInventoryItemInstance*` |
+| `InventoryItemInstance` | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool GoToGetBookToWriteCopy(UInventoryItemInstance* InventoryItemInstance);`
 
@@ -1848,7 +1848,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InventoryItemInstance` | `UInventoryItemInstance*` |
+| `InventoryItemInstance` | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 | `bHaveDurability` | `bool &` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool WriteCopyUseDurability(UInventoryItemInstance* InventoryItemInstance,bool & bHaveDurability);`
@@ -1889,7 +1889,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UCanUseInventoryItemInstance*` |
+| 返回类型 | [UCanUseInventoryItemInstance](../Inventory/CanUseInventoryItemInstance__UCanUseInventoryItemInstance.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1983,7 +1983,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EquipmentData` | `const FUseItemSaveData &` |
+| `EquipmentData` | const [FUseItemSaveData](../Struct/ItemStruct__FUseItemSaveData.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GiveAndEquipByEquipmentData(const FUseItemSaveData & EquipmentData);`
 
@@ -2051,7 +2051,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacterWeapon` | `const FCharacterWeapon &` |
+| `CharacterWeapon` | const [FCharacterWeapon](../Struct/ItemStruct__FCharacterWeapon.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool ChangeCharacterWeapon(const FCharacterWeapon & CharacterWeapon);`
 
@@ -2096,7 +2096,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `NewSummonsAI` | `AEastRimWorldAIController *` |
+| `NewSummonsAI` | [AEastRimWorldAIController](EastRimWorldAIController__AEastRimWorldAIController.md) * |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,Category = "Summons") bool SetControlSummons(AEastRimWorldAIController * NewSummonsAI);`
 
@@ -2171,7 +2171,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UEastRimWorldGameplayAbility *` |
+| 返回类型 | [UEastRimWorldGameplayAbility](../AbilitySystem/Abilities/EastRimWorldGameplayAbility__UEastRimWorldGameplayAbility.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2216,7 +2216,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacterEquipment` | `const FCharacterEquipment&` |
+| `CharacterEquipment` | const [FCharacterEquipment](../Struct/ItemStruct__FCharacterEquipment.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,Category= "Equipment") bool ActivateEquipmentAttribute(const FCharacterEquipment& CharacterEquipment);`
 
@@ -2238,7 +2238,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacterEquipment` | `const FCharacterEquipment&` |
+| `CharacterEquipment` | const [FCharacterEquipment](../Struct/ItemStruct__FCharacterEquipment.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,Category= "Equipment") bool RemoveEquipmentAttribute(const FCharacterEquipment& CharacterEquipment);`
 
@@ -2260,7 +2260,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `NewAction` | `FGOAP_Action` |
+| `NewAction` | [FGOAP_Action](../GOAP/GOAP_Data__FGOAP_Action.md) |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void BroadCastActionChange(FGOAP_Action NewAction);`
 
@@ -2345,7 +2345,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ItemInstance` | `UInventoryItemInstance*` |
+| `ItemInstance` | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)* |
 | `ActionID` | `const FName&` |
 | `GoalID` | `const FName&` |
 
@@ -2454,7 +2454,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="GOAP" |
-| 返回类型 | `FGameplayTeamGoals` |
+| 返回类型 | [FGameplayTeamGoals](../Struct/CharacterStruct__FGameplayTeamGoals.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,Category="GOAP") FGameplayTeamGoals GetOnWorldPlaceGoals();`

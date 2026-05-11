@@ -2282,7 +2282,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FCharacterOrganConfig` |
+| 返回类型 | [FCharacterOrganConfig](../../Struct/CharacterStruct__FCharacterOrganConfig.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2309,8 +2309,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `AttackedMainOrgan` | `const FCharacterOrganConfig &` |
-| `SharedOrgan` | `FCharacterOrganConfig &` |
+| `AttackedMainOrgan` | const [FCharacterOrganConfig](../../Struct/CharacterStruct__FCharacterOrganConfig.md) & |
+| `SharedOrgan` | [FCharacterOrganConfig](../../Struct/CharacterStruct__FCharacterOrganConfig.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) float CalAttackedShared(const FCharacterOrganConfig & AttackedMainOrgan, FCharacterOrganConfig & SharedOrgan);`
 
@@ -2332,7 +2332,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OrganConfig` | `const FCharacterOrganConfig &` |
+| `OrganConfig` | const [FCharacterOrganConfig](../../Struct/CharacterStruct__FCharacterOrganConfig.md) & |
 | `DamageType` | `EDamageType` |
 | `HurtLevel` | `EHurtLevel` |
 

@@ -44,7 +44,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FAbilityTargetEntriesEffect>` |
+| C++ 类型 | TArray<[FAbilityTargetEntriesEffect](MartialArts__FAbilityTargetEntriesEffect.md)> |
 | 反射说明符 | BlueprintReadOnly, Category="Entries" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Entries") TArray<FAbilityTargetEntriesEffect> AbilityTargetEntriesEffects;` |
@@ -89,7 +89,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FReduceCoolDownConfig>` |
+| C++ 类型 | TArray<[FReduceCoolDownConfig](MartialArts__FReduceCoolDownConfig.md)> |
 | 反射说明符 | BlueprintReadOnly, Category="Entries" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Entries") TArray<FReduceCoolDownConfig> ReduceCooldown;` |

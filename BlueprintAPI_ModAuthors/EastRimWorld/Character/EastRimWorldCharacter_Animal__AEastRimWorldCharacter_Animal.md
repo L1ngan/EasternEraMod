@@ -12,7 +12,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UCharacterBreedingComponent>` |
+| C++ 类型 | TObjectPtr<[UCharacterBreedingComponent](Components/CharacterBreedingComponent__UCharacterBreedingComponent.md)> |
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Animal" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Animal", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UCharacterBreedingComponent> BreedingComponent;` |
@@ -27,7 +27,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UAnimalCultivationComponent>` |
+| C++ 类型 | TObjectPtr<[UAnimalCultivationComponent](Components/AnimalCultivationComponent__UAnimalCultivationComponent.md)> |
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Animal" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Animal", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UAnimalCultivationComponent> CultivationComponent;` |
@@ -141,7 +141,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FEastRimWorldAnimalData` |
+| 返回类型 | [FEastRimWorldAnimalData](../Struct/CharacterStruct__FEastRimWorldAnimalData.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FEastRimWorldAnimalData GetAnimalData();`
@@ -192,7 +192,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TameCharacter` | `AEastRimWorldCharacter*` |
+| `TameCharacter` | [AEastRimWorldCharacter](EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool CalcTameIsSuccessful(AEastRimWorldCharacter* TameCharacter);`
 

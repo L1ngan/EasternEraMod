@@ -12,7 +12,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGuid,FSocialRelationshipData>` |
+| C++ 类型 | TMap<FGuid,[FSocialRelationshipData](../../Struct/CharacterChatStruct__FSocialRelationshipData.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<FGuid,FSocialRelationshipData> RelationshipDataMap;` |
@@ -59,7 +59,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Initiator` | `UEastRimWorldCharacterChatComponent*` |
+| `Initiator` | [UEastRimWorldCharacterChatComponent](EastRimWorldCharacterChatComponent__UEastRimWorldCharacterChatComponent.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool TryStartChat(UEastRimWorldCharacterChatComponent* Initiator);`
 
@@ -118,7 +118,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintPure |
-| 返回类型 | `UEastRimWorldCharacterChatComponent*` |
+| 返回类型 | [UEastRimWorldCharacterChatComponent](EastRimWorldCharacterChatComponent__UEastRimWorldCharacterChatComponent.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) UEastRimWorldCharacterChatComponent* GetChatTargetComponent();`
@@ -138,7 +138,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InCharacterGuid` | `const FGuid&` |
-| `OutRelationshipData` | `FSocialRelationshipData&` |
+| `OutRelationshipData` | [FSocialRelationshipData](../../Struct/CharacterChatStruct__FSocialRelationshipData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) bool FindRelationshipData(const FGuid& InCharacterGuid,FSocialRelationshipData& OutRelationshipData);`
 

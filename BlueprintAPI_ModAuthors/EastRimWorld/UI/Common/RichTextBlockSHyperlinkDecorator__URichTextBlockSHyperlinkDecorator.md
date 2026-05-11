@@ -24,7 +24,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `ID` | `const FString&` |
-| `CGamemode` | `AERW_GameModeBase*` |
+| `CGamemode` | [AERW_GameModeBase](../../Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintImplementableEvent) void NoticeRichInlineSHyperlink(const FString& ID, AERW_GameModeBase* CGamemode);`
 

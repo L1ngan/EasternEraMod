@@ -12,7 +12,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `class AGWOSectorsDirector *` |
+| C++ 类型 | class [AGWOSectorsDirector](GWOSectorsDirector__AGWOSectorsDirector.md) * |
 | 反射说明符 | BlueprintReadOnly, Category="Sectors" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, VisibleDefaultsOnly, Category = "Sectors") class AGWOSectorsDirector *sectorsDirector = nullptr;` |
@@ -38,7 +38,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<class UGWOActorComponent*>` |
+| C++ 类型 | TArray<class [UGWOActorComponent](GWOActorComponent__UGWOActorComponent.md)*> |
 | 反射说明符 | BlueprintReadOnly, Category="Global World Optimization | Variables" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Global World Optimization | Variables") TArray<class UGWOActorComponent*> actorsCompArr;` |
@@ -49,7 +49,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<class AGWOSpawner*>` |
+| C++ 类型 | TArray<class [AGWOSpawner](GWOSpawner__AGWOSpawner.md)*> |
 | 反射说明符 | BlueprintReadOnly, Category="Global World Optimization | Variables" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Global World Optimization | Variables") TArray<class AGWOSpawner*> spawnersArr;` |

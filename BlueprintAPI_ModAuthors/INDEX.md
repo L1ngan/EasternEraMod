@@ -11,6 +11,7 @@
 
 - **覆盖范围**：`Source/EastRimWorld`、`Plugins/CreateModPlugin`、`CreateModPluginEditor`。
 - **路径**：文档路径与源码模块目录对应，文件名 `{头文件名}__{类型名}.md`。
+- **关联跳转**：属性「C++ 类型」与函数「返回类型 / 参数类型」中出现的 `F*` / `U*` / `A*` / `E*` 名称若在本文档集中有对应页面，会自动变为 **Markdown 相对链接**（可点击跳转至该类型文档）。
 - **参数拆分**：复杂模板可能被简化；**最权威签名以对应 `.h` 为准**。
 - **更新**：`python Tools/extract_blueprint_api.py`（会清空并重建 `BlueprintAPI_ModAuthors/`）
 

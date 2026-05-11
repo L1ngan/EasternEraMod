@@ -16,7 +16,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="Pathfinding" |
-| 返回类型 | `UWorldMapPathSubsystem*` |
+| 返回类型 | [UWorldMapPathSubsystem](WorldMapPathSubsystem__UWorldMapPathSubsystem.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -64,7 +64,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="Pathfinding" |
-| 返回类型 | `FPathfindingResult` |
+| 返回类型 | [FPathfindingResult](WorldMapPathSubsystem__FPathfindingResult.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -90,7 +90,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="Pathfinding" |
-| 返回类型 | `AWorldMapWayPoint*` |
+| 返回类型 | [AWorldMapWayPoint](WorldMapWayPoint__AWorldMapWayPoint.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -137,7 +137,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="Pathfinding" |
-| 返回类型 | `TArray<FPathfindingResult>` |
+| 返回类型 | TArray<[FPathfindingResult](WorldMapPathSubsystem__FPathfindingResult.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -162,7 +162,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="Pathfinding" |
-| 返回类型 | `FPathfindingStats` |
+| 返回类型 | [FPathfindingStats](WorldMapPathSubsystem__FPathfindingStats.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -339,7 +339,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="Pathfinding" |
-| 返回类型 | `FPathfindingConfig` |
+| 返回类型 | [FPathfindingConfig](WorldMapPathSubsystem__FPathfindingConfig.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -367,7 +367,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `WorldContextObject` | `UObject*` |
-| `Config` | `const FPathfindingConfig&` |
+| `Config` | const [FPathfindingConfig](WorldMapPathSubsystem__FPathfindingConfig.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "Pathfinding") static void SetPathfindingConfig(UObject* WorldContextObject, const FPathfindingConfig& Config);`
 

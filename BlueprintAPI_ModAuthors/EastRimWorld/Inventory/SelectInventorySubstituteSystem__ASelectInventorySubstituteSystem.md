@@ -30,7 +30,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure, Category="SelectInventorySubstituteSystem" |
-| 返回类型 | `ASelectInventorySubstituteSystem *` |
+| 返回类型 | [ASelectInventorySubstituteSystem](SelectInventorySubstituteSystem__ASelectInventorySubstituteSystem.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |

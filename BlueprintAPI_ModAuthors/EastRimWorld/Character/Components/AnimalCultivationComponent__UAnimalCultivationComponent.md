@@ -124,7 +124,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintPure, Category="EastRimWorld|AnimalCultivation" |
-| 返回类型 | `UAnimalCultivationComponent*` |
+| 返回类型 | [UAnimalCultivationComponent](AnimalCultivationComponent__UAnimalCultivationComponent.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |

@@ -34,7 +34,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FCharacterWorldMoveInfo` |
+| C++ 类型 | [FCharacterWorldMoveInfo](../WorldSystem/WorldStruct__FCharacterWorldMoveInfo.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly) FCharacterWorldMoveInfo CharacterWorldMoveInfo;` |
@@ -75,7 +75,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `NewCharacterWorldMoveInfo` | `const FCharacterWorldMoveInfo &` |
+| `NewCharacterWorldMoveInfo` | const [FCharacterWorldMoveInfo](../WorldSystem/WorldStruct__FCharacterWorldMoveInfo.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintImplementableEvent,DisplayName="InitWorldMapActor") void K2_InitWorldMapActor(const FCharacterWorldMoveInfo & NewCharacterWorldMoveInfo);`
 

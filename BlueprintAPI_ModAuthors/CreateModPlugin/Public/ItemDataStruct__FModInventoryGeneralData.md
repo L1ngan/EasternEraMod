@@ -119,7 +119,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FModEfficiencyByTemperature>` |
+| C++ 类型 | TArray<[FModEfficiencyByTemperature](ItemDataStruct__FModEfficiencyByTemperature.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TArray<FModEfficiencyByTemperature> TemperatureThreshold;` |
@@ -164,7 +164,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FModStackModel>` |
+| C++ 类型 | TArray<[FModStackModel](ItemDataStruct__FModStackModel.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TArray<FModStackModel> StackModels;` |
@@ -359,7 +359,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FModFormatText` |
+| C++ 类型 | [FModFormatText](BaseDataStruct__FModFormatText.md) |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FModFormatText FormatItemDescription;` |
@@ -494,7 +494,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EModCharacterBehaviorState,FModGroupCorrespondingAnim>` |
+| C++ 类型 | TMap<EModCharacterBehaviorState,[FModGroupCorrespondingAnim](ItemDataStruct__FModGroupCorrespondingAnim.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<EModCharacterBehaviorState,FModGroupCorrespondingAnim> BehaviorAnimation;` |
@@ -509,7 +509,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EModCharacterBehaviorState,FModGroupCorrespondingAnim>` |
+| C++ 类型 | TMap<EModCharacterBehaviorState,[FModGroupCorrespondingAnim](ItemDataStruct__FModGroupCorrespondingAnim.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<EModCharacterBehaviorState,FModGroupCorrespondingAnim> BehaviorBlendAnimation;` |

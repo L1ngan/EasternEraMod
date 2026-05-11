@@ -40,7 +40,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `UAsyncTaskGameplayTagAddedRemoved*` |
+| 返回类型 | [UAsyncTaskGameplayTagAddedRemoved](AsyncTaskGameplayTagAddedRemoved__UAsyncTaskGameplayTagAddedRemoved.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |

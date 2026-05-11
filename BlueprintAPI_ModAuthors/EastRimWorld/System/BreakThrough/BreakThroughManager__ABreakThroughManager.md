@@ -122,7 +122,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `ABreakThroughManager*` |
+| 返回类型 | [ABreakThroughManager](BreakThroughManager__ABreakThroughManager.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, BlueprintPure) static ABreakThroughManager* GetBreakThroughManager();`
@@ -315,7 +315,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `CharacterGuid` | `const FGuid&` |
-| `OutInfo` | `FBreakThroughInfo&` |
+| `OutInfo` | [FBreakThroughInfo](BreakThroughStruct__FBreakThroughInfo.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool GetCharacterBreakThroughInfo(const FGuid& CharacterGuid, FBreakThroughInfo& OutInfo) const;`
 
@@ -359,7 +359,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InCharacter` | `AEastRimWorldCharacter *` |
+| `InCharacter` | [AEastRimWorldCharacter](../../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md) * |
 | `TrainingRoomLevel` | `int32` |
 | `ElementValue` | `float` |
 | `ElementType` | `const EFiveElementType` |
@@ -385,7 +385,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Location` | `const FVector&` |
-| `OutRoomInfo` | `FRoomInfo &` |
+| `OutRoomInfo` | [FRoomInfo](../../ERW_ConfigTypes__FRoomInfo.md) & |
 | `OutElementType` | `EFiveElementType&` |
 | `OutLevel` | `int32&` |
 

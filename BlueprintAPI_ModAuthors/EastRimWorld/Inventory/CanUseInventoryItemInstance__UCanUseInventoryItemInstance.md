@@ -117,7 +117,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `FInventoryItem` |
+| 返回类型 | [FInventoryItem](../Struct/ItemStruct__FInventoryItem.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure) FInventoryItem GetUseInventoryItemInfo();`

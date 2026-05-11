@@ -29,7 +29,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<AWorldPlace>` |
+| C++ 类型 | TObjectPtr<[AWorldPlace](../WorldSystem/WorldPlace__AWorldPlace.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AWorldPlace> WorldPlace;` |
@@ -44,7 +44,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<AERW_GameModeBase>` |
+| C++ 类型 | TObjectPtr<[AERW_GameModeBase](../Framework/ERW_GameModeBase__AERW_GameModeBase.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AERW_GameModeBase> GameMode;` |
@@ -70,7 +70,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `UERW_HISMManager*` |
+| C++ 类型 | [UERW_HISMManager](../Components/ERW_HISMManager__UERW_HISMManager.md)* |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) UERW_HISMManager* HISMManager { nullptr };` |
@@ -85,7 +85,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `UERW_ConstructionComponent*` |
+| C++ 类型 | [UERW_ConstructionComponent](../Components/ERW_ConstructionComponent__UERW_ConstructionComponent.md)* |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) UERW_ConstructionComponent* ConstructionComponent { nullptr };` |
@@ -100,7 +100,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `UGOAP_ActionComponent*` |
+| C++ 类型 | [UGOAP_ActionComponent](GOAP_ActionComponent__UGOAP_ActionComponent.md)* |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) UGOAP_ActionComponent* GOAP_ActionComponent { nullptr };` |
@@ -115,7 +115,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `UGOAP_MemoryComponent*` |
+| C++ 类型 | [UGOAP_MemoryComponent](GOAP_MemoryComponent__UGOAP_MemoryComponent.md)* |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) UGOAP_MemoryComponent* GOAP_MemoryComponent { nullptr };` |
@@ -130,7 +130,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `UERW_DoorCollisionComponent*` |
+| C++ 类型 | [UERW_DoorCollisionComponent](../Components/ERW_DoorCollisionComponent__UERW_DoorCollisionComponent.md)* |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) UERW_DoorCollisionComponent* DoorCollisionComponent { nullptr };` |
@@ -280,7 +280,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UInventoryManagerComponent>` |
+| C++ 类型 | TObjectPtr<[UInventoryManagerComponent](../Inventory/InventoryManagerComponent__UInventoryManagerComponent.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<UInventoryManagerComponent> InventoryManagerComponent;` |
@@ -295,7 +295,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UFabricateActorComponent>` |
+| C++ 类型 | TObjectPtr<[UFabricateActorComponent](../Components/FabricateActorComponent__UFabricateActorComponent.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<UFabricateActorComponent> FabricateActorComponent;` |
@@ -310,7 +310,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UTreasureComponent>` |
+| C++ 类型 | TObjectPtr<[UTreasureComponent](../Components/TreasureComponent__UTreasureComponent.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<UTreasureComponent> TreasureComponent;` |
@@ -333,7 +333,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `FuelData` | `FFuelData&` |
+| `FuelData` | [FFuelData](GOAP_ActorBase__FFuelData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) void GetFuelData(FFuelData& FuelData) const;`
 
@@ -351,7 +351,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EnergyData` | `FEnergyData&` |
+| `EnergyData` | [FEnergyData](GOAP_ActorBase__FEnergyData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) void GetEnergyData(FEnergyData& EnergyData) const;`
 
@@ -369,7 +369,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CeremonyData` | `FCeremonyData&` |
+| `CeremonyData` | [FCeremonyData](GOAP_ActorBase__FCeremonyData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) void GetCeremonyData(FCeremonyData& CeremonyData) const;`
 
@@ -387,7 +387,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `PuppetData` | `FPuppetData&` |
+| `PuppetData` | [FPuppetData](GOAP_ActorBase__FPuppetData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) void GetPuppetData(FPuppetData& PuppetData) const;`
 
@@ -405,7 +405,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `FacilityBelongData` | `TArray<FFacilityBelongData>&` |
+| `FacilityBelongData` | TArray<[FFacilityBelongData](GOAP_ActorBase__FFacilityBelongData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) void GetFacilityBelongData(TArray<FFacilityBelongData>& FacilityBelongData) const;`
 
@@ -455,7 +455,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `HeatSourceData` | `FHeatSourceData&` |
+| `HeatSourceData` | [FHeatSourceData](GOAP_ActorBase__FHeatSourceData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, BlueprintPure) bool GetHeatSourceData(FHeatSourceData& HeatSourceData);`
 
@@ -655,7 +655,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Agent` | `AEastRimWorldAIController*` |
+| `Agent` | [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
 | `Tag` | `const FGameplayTag&` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SetNearestSlotHandle(AEastRimWorldAIController* Agent , const FGameplayTag& Tag);`
@@ -884,7 +884,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `（匿名/仅类型）` | `const FBuildConfigData &BuildConfigData` |
+| `（匿名/仅类型）` | const [FBuildConfigData](../ERW_ConfigTypes__FBuildConfigData.md) &BuildConfigData |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) virtual void OnNativeBuildingComplete(const FBuildConfigData &BuildConfigData);`
 
@@ -906,7 +906,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildConfigData` | `const FBuildConfigData&` |
+| `BuildConfigData` | const [FBuildConfigData](../ERW_ConfigTypes__FBuildConfigData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) virtual void OnNativeInitConstruction(const FBuildConfigData& BuildConfigData);`
 
@@ -1140,7 +1140,7 @@
 |--------|------|
 | `Index` | `int32` |
 | `BelongState` | `EFacilityBelongState` |
-| `Agent` | `AEastRimWorldAIController*` |
+| `Agent` | [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SetFacilityBelongData(int32 Index , EFacilityBelongState BelongState , AEastRimWorldAIController* Agent);`
 
@@ -1401,7 +1401,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintPure, BlueprintNativeEvent |
-| 返回类型 | `AGOAP_ActorBase*` |
+| 返回类型 | [AGOAP_ActorBase](GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintNativeEvent , BlueprintPure) AGOAP_ActorBase* GetRealTargetActor();`
@@ -1486,7 +1486,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `GridPoses` | `TArray<FGridPosition>&` |
+| `GridPoses` | TArray<[FGridPosition](../ERW_CommonTypes__FGridPosition.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) void GetBuildingGridPoses(TArray<FGridPosition>& GridPoses);`
 
@@ -1508,7 +1508,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `GridPos` | `const FGridPosition&` |
+| `GridPos` | const [FGridPosition](../ERW_CommonTypes__FGridPosition.md)& |
 | `Height` | `float` |
 | `IsFlat` | `bool` |
 

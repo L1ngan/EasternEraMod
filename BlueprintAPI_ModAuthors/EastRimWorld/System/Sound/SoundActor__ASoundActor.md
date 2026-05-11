@@ -106,7 +106,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `NewGameSoundInfo` | `const FGameSoundInfo &` |
+| `NewGameSoundInfo` | const [FGameSoundInfo](PlaySoundSystem__FGameSoundInfo.md) & |
 | `（匿名/仅类型）` | `FGuid PlayGuid = FGuid()` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void InitSoundActor(const FGameSoundInfo & NewGameSoundInfo,FGuid PlayGuid = FGuid());`
@@ -129,7 +129,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `SoundOperate` | `const FSoundOperateConfig &` |
+| `SoundOperate` | const [FSoundOperateConfig](PlaySoundSystem__FSoundOperateConfig.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void OnSoundChangeEvent(const FSoundOperateConfig & SoundOperate);`
 

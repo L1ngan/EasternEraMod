@@ -27,7 +27,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<UDLCInformationAsset*>` |
+| 返回类型 | TArray<[UDLCInformationAsset](DLCSubsystem__UDLCInformationAsset.md)*> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<UDLCInformationAsset*> GetAllDLCInformationAsset();`
@@ -141,7 +141,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `DLCInfoConfig` | `const FDLCInfoConfig &` |
+| `DLCInfoConfig` | const [FDLCInfoConfig](DLCSubsystem__FDLCInfoConfig.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) EDLCActiveState GetDLCState(const FDLCInfoConfig & DLCInfoConfig);`
 

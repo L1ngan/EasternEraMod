@@ -59,7 +59,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FOrganStatus>` |
+| C++ 类型 | TArray<[FOrganStatus](CharacterStruct__FOrganStatus.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="CharacterOrganConfig" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") TArray<FOrganStatus> OrganStatus;` |
@@ -134,7 +134,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FOrganAttackedShareConfig>` |
+| C++ 类型 | TArray<[FOrganAttackedShareConfig](CharacterStruct__FOrganAttackedShareConfig.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="CharacterOrganConfig" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") TArray<FOrganAttackedShareConfig> AttackedShareConfigs;` |
@@ -216,7 +216,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FInjuryConfig>` |
+| C++ 类型 | TArray<[FInjuryConfig](CharacterStruct__FInjuryConfig.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="CharacterOrganConfig" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") TArray<FInjuryConfig> InjuryConfigs;` |

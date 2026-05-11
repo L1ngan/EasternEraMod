@@ -102,7 +102,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CommonBuff` | `FCommonBuff` |
+| `CommonBuff` | [FCommonBuff](../../Struct/CommonStruct__FCommonBuff.md) |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CheckNeedAnimalStopPregnant(FCommonBuff CommonBuff);`
 

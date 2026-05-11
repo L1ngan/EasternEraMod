@@ -74,7 +74,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FTeamBuffData>` |
+| C++ 类型 | TArray<[FTeamBuffData](CharacterStruct__FTeamBuffData.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TArray<FTeamBuffData> BuffIds;` |
@@ -89,7 +89,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FItemSimpleData>` |
+| C++ 类型 | TArray<[FItemSimpleData](CommonStruct__FItemSimpleData.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TArray<FItemSimpleData> Resource;` |

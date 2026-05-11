@@ -14,7 +14,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TSoftClassPtr<AERW_PlayerPawn>` |
+| C++ 类型 | TSoftClassPtr<[AERW_PlayerPawn](../Framework/ERW_PlayerPawn__AERW_PlayerPawn.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftClassPtr<AERW_PlayerPawn> WorldMapPossessPlayerPawn;` |
@@ -44,7 +44,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TSoftClassPtr<UEastRimWorldActivatableWidget>` |
+| C++ 类型 | TSoftClassPtr<[UEastRimWorldActivatableWidget](../UI/EastRimWorldActivatableWidget__UEastRimWorldActivatableWidget.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftClassPtr<UEastRimWorldActivatableWidget> MainWidgetUI;` |
@@ -59,7 +59,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TSoftClassPtr<AWorldMapMoveActor>` |
+| C++ 类型 | TSoftClassPtr<[AWorldMapMoveActor](../Character/WorldMapMoveActor__AWorldMapMoveActor.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftClassPtr<AWorldMapMoveActor> WorldMapMoveActorClass;` |
@@ -104,7 +104,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TSoftClassPtr<UEastRimWorldActivatableWidget>` |
+| C++ 类型 | TSoftClassPtr<[UEastRimWorldActivatableWidget](../UI/EastRimWorldActivatableWidget__UEastRimWorldActivatableWidget.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftClassPtr<UEastRimWorldActivatableWidget> ForceCharacterEditorWidgetUI;` |
@@ -119,7 +119,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TSoftClassPtr<AERW_PlayerPawn>` |
+| C++ 类型 | TSoftClassPtr<[AERW_PlayerPawn](../Framework/ERW_PlayerPawn__AERW_PlayerPawn.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftClassPtr<AERW_PlayerPawn> ForceCharacterEditorPawn;` |

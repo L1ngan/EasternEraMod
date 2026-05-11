@@ -29,7 +29,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `AERW_PlayerPawn*` |
+| C++ 类型 | [AERW_PlayerPawn](../Framework/ERW_PlayerPawn__AERW_PlayerPawn.md)* |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) AERW_PlayerPawn* PlayerPawn { nullptr };` |
@@ -40,7 +40,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<AERW_AreaCurve*>` |
+| C++ 类型 | TArray<[AERW_AreaCurve](../ERW_AreaCurve__AERW_AreaCurve.md)*> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TArray<AERW_AreaCurve*> AreaCurves;` |
@@ -275,7 +275,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FBuildData>&` |
+| 返回类型 | TArray<[FBuildData](ERW_MapDataMgr__FBuildData.md)>& |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<FBuildData>& GetMapBuildingData();`
@@ -289,7 +289,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TMap<EFabricateType, FGuidArr>&` |
+| 返回类型 | TMap<EFabricateType, [FGuidArr](../Struct/CommonStruct__FGuidArr.md)>& |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TMap<EFabricateType, FGuidArr>& GetMapFabricateData();`
@@ -327,7 +327,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `GridPoses` | `const TMap<FGridPosition , bool> &` |
+| `GridPoses` | const TMap<[FGridPosition](../ERW_CommonTypes__FGridPosition.md) , bool> & |
 | `nullptr` | `ACharacter * Character =` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FVector GetRandomRoomLocationByGridPoses(const TMap<FGridPosition , bool> & GridPoses,ACharacter * Character = nullptr );`
@@ -341,7 +341,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `AGOAP_ActorBase*` |
+| 返回类型 | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -388,7 +388,7 @@
 |--------|------|
 | `ItemID` | `const FName&` |
 | `Num` | `int32` |
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddConstructionResource(const FName& ItemID , int32 Num , AGOAP_ActorBase* BuildObject);`
 
@@ -410,7 +410,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveConstructionResource(AGOAP_ActorBase* BuildObject);`
 
@@ -517,8 +517,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `GridPos` | `const FGridPosition&` |
-| `GridData` | `FGridData&` |
+| `GridPos` | const [FGridPosition](../ERW_CommonTypes__FGridPosition.md)& |
+| `GridData` | [FGridData](ERW_MapDataMgr__FGridData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) void GetGridData(const FGridPosition& GridPos , FGridData& GridData);`
 
@@ -540,7 +540,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `GridPos` | `const FGridPosition&` |
+| `GridPos` | const [FGridPosition](../ERW_CommonTypes__FGridPosition.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) float GetGridTopHeight(const FGridPosition& GridPos) const;`
 
@@ -557,13 +557,13 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintPure |
-| 返回类型 | `AGOAP_ActorBase*` |
+| 返回类型 | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
 | `Layer` | `int32` |
-| `GridPos` | `const FGridPosition&` |
+| `GridPos` | const [FGridPosition](../ERW_CommonTypes__FGridPosition.md)& |
 | `EnvironType` | `EEnvironType` |
 | `DistributionType` | `EGridDistributionType` |
 
@@ -588,7 +588,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Layer` | `int32` |
-| `GridPos` | `const FGridPosition&` |
+| `GridPos` | const [FGridPosition](../ERW_CommonTypes__FGridPosition.md)& |
 | `EnvironType` | `EEnvironType` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) bool IsEnvironTypeExist(int32 Layer , const FGridPosition& GridPos , EEnvironType EnvironType) const;`
@@ -611,7 +611,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `GridPos` | `const FGridPosition&` |
+| `GridPos` | const [FGridPosition](../ERW_CommonTypes__FGridPosition.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool CheckGridPositionHaveOtherObject(const FGridPosition& GridPos);`
 
@@ -630,9 +630,9 @@
 | 参数名 | 类型 |
 |--------|------|
 | `EnvironType` | `EEnvironType` |
-| `GridPoses` | `const TArray<FGridPosition>&` |
+| `GridPoses` | const TArray<[FGridPosition](../ERW_CommonTypes__FGridPosition.md)>& |
 | `RemovedObjects` | `const TArray<UObject*>&` |
-| `BuildObjects` | `TArray<AGOAP_ActorBase*>&` |
+| `BuildObjects` | TArray<[AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)*>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CollectSurroundingFillerBuildings(EEnvironType EnvironType , const TArray<FGridPosition>& GridPoses , const TArray<UObject*>& RemovedObjects , TArray<AGOAP_ActorBase*>& BuildObjects);`
 
@@ -654,13 +654,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EnvironComponent` | `UERW_EnvironComponent*` |
+| `EnvironComponent` | [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* |
 | `StairFlatHeight` | `float` |
 | `StairHeight` | `float` |
 | `AutoTileHeight` | `float` |
 | `IsLoading` | `bool` |
 | `StairZValue` | `float` |
-| `GridInfos` | `TMap<FGridPosition , FStairGridInfo>&` |
+| `GridInfos` | TMap<[FGridPosition](../ERW_CommonTypes__FGridPosition.md) , [FStairGridInfo](ERW_AreaOperationComponent__FStairGridInfo.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool GetStairGridInfos(UERW_EnvironComponent* EnvironComponent , float StairFlatHeight , float StairHeight , float AutoTileHeight , bool IsLoading , float StairZValue , TMap<FGridPosition , FStairGridInfo>& GridInfos);`
 
@@ -682,8 +682,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EnvironComponent` | `UERW_EnvironComponent*` |
-| `HISMManager` | `UERW_HISMManager*` |
+| `EnvironComponent` | [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* |
+| `HISMManager` | [UERW_HISMManager](ERW_HISMManager__UERW_HISMManager.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CheckUpdateSurroundingWallPillars(UERW_EnvironComponent* EnvironComponent , UERW_HISMManager* HISMManager);`
 
@@ -705,7 +705,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EnvironComponent` | `UERW_EnvironComponent*` |
+| `EnvironComponent` | [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* |
 | `ShackBottomHeight` | `float` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) float CalcHeightDifference(UERW_EnvironComponent* EnvironComponent , float ShackBottomHeight);`
@@ -728,8 +728,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EnvironComponent` | `UERW_EnvironComponent*` |
-| `Assembles` | `TMap<AGOAP_ActorBase* , FVector>&` |
+| `EnvironComponent` | [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* |
+| `Assembles` | TMap<[AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* , FVector>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAdjacentAssembles(UERW_EnvironComponent* EnvironComponent , TMap<AGOAP_ActorBase* , FVector>& Assembles);`
 
@@ -751,8 +751,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EnvironComponent` | `UERW_EnvironComponent*` |
-| `SeamPoints` | `TArray<FGridSeamPoint>&` |
+| `EnvironComponent` | [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* |
+| `SeamPoints` | TArray<[FGridSeamPoint](../ERW_CommonTypes__FGridSeamPoint.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CheckAssemblePillarSeamPoints(UERW_EnvironComponent* EnvironComponent , TArray<FGridSeamPoint>& SeamPoints);`
 
@@ -774,8 +774,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EnvironComponent` | `UERW_EnvironComponent*` |
-| `HISMManager` | `UERW_HISMManager*` |
+| `EnvironComponent` | [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* |
+| `HISMManager` | [UERW_HISMManager](ERW_HISMManager__UERW_HISMManager.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CheckUpdateAssemblePillar(UERW_EnvironComponent* EnvironComponent , UERW_HISMManager* HISMManager);`
 
@@ -797,8 +797,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Actor` | `AGOAP_ActorBase*` |
-| `EnvironComponent` | `UERW_EnvironComponent*` |
+| `Actor` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `EnvironComponent` | [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* |
 | `WallHeight` | `float` |
 | `false` | `bool FromLoading =` |
 
@@ -822,7 +822,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Actor` | `AGOAP_ActorBase*` |
+| `Actor` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveEnvironData(AGOAP_ActorBase* Actor);`
 
@@ -844,7 +844,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EnvironComponent` | `UERW_EnvironComponent*` |
+| `EnvironComponent` | [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* |
 | `IsBreakdown` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CheckHandleUpperBuildings(UERW_EnvironComponent* EnvironComponent , bool IsBreakdown);`
@@ -867,8 +867,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Actor` | `AGOAP_ActorBase*` |
-| `EnvironComponent` | `UERW_EnvironComponent*` |
+| `Actor` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `EnvironComponent` | [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddExtraInfo(AGOAP_ActorBase* Actor , UERW_EnvironComponent* EnvironComponent);`
 
@@ -890,7 +890,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EnvironComponent` | `UERW_EnvironComponent*` |
+| `EnvironComponent` | [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveInvalidExtraInfo(UERW_EnvironComponent* EnvironComponent);`
 
@@ -1048,7 +1048,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EnvironComponent` | `UERW_EnvironComponent*` |
+| `EnvironComponent` | [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CollectNoAreaWall(UERW_EnvironComponent* EnvironComponent);`
 
@@ -1070,8 +1070,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EnvironComponent` | `UERW_EnvironComponent*` |
-| `HISMManager` | `UERW_HISMManager*` |
+| `EnvironComponent` | [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* |
+| `HISMManager` | [UERW_HISMManager](ERW_HISMManager__UERW_HISMManager.md)* |
 | `false` | `bool IsLoading =` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateClosureAreaInfo(UERW_EnvironComponent* EnvironComponent , UERW_HISMManager* HISMManager , bool IsLoading = false);`
@@ -1094,7 +1094,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Wall` | `AGOAP_ActorBase*` |
+| `Wall` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `DisplayType` | `EWallDisplayType` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RecordWallDisplayType(AGOAP_ActorBase* Wall , EWallDisplayType DisplayType);`
@@ -1117,7 +1117,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Wall` | `AGOAP_ActorBase*` |
+| `Wall` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveWallDisplayType(AGOAP_ActorBase* Wall);`
 
@@ -1139,8 +1139,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildObject` | `AGOAP_ActorBase*` |
-| `HISMManager` | `UERW_HISMManager*` |
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `HISMManager` | [UERW_HISMManager](ERW_HISMManager__UERW_HISMManager.md)* |
 | `IsBroken` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CheckRemoveRoomElement(AGOAP_ActorBase* BuildObject , UERW_HISMManager* HISMManager , bool IsBroken);`
@@ -1163,7 +1163,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `HISMManager` | `UERW_HISMManager*` |
+| `HISMManager` | [UERW_HISMManager](ERW_HISMManager__UERW_HISMManager.md)* |
 | `Show` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateRoomUnitsShow(UERW_HISMManager* HISMManager , bool Show);`
@@ -1186,7 +1186,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `GridPosition` | `const FGridPosition&` |
+| `GridPosition` | const [FGridPosition](../ERW_CommonTypes__FGridPosition.md)& |
 | `Height` | `const float&` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) int32 GetLayer(const FGridPosition& GridPosition,const float& Height) const;`
@@ -1249,7 +1249,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InGridPosition` | `const FGridPosition&` |
+| `InGridPosition` | const [FGridPosition](../ERW_CommonTypes__FGridPosition.md)& |
 | `InZ` | `const float&` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool CheckPositionInRoomByGridPos(const FGridPosition& InGridPosition,const float& InZ) const;`
@@ -1263,7 +1263,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const FClosureAreaData&` |
+| 返回类型 | const [FClosureAreaData](ERW_MapDataMgr__FClosureAreaData.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1314,7 +1314,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InLayer` | `const int32&` |
-| `InRoomAreaData` | `const FClosureAreaData&` |
+| `InRoomAreaData` | const [FClosureAreaData](ERW_MapDataMgr__FClosureAreaData.md)& |
 | `OutRoomBuilds` | `TArray<AActor*>&` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllBuildCompleteRoomBuilding(const int32& InLayer,const FClosureAreaData& InRoomAreaData,TArray<AActor*>& OutRoomBuilds);`
@@ -1337,7 +1337,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Human` | `class AEastRimWorldCharacter_Human*` |
+| `Human` | class [AEastRimWorldCharacter_Human](../Character/EastRimWorldCharacter_Human__AEastRimWorldCharacter_Human.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateRoomInsideBuffToHuman(class AEastRimWorldCharacter_Human* Human);`
 
@@ -1361,7 +1361,7 @@
 |--------|------|
 | `InBuildIdNum` | `const TMap<FName,int32>&` |
 | `InBuildTabNum` | `const TMap<FName,int32>&` |
-| `InRoomConfig` | `const FRoomConfigData&` |
+| `InRoomConfig` | const [FRoomConfigData](../ERW_ConfigTypes__FRoomConfigData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool CheckRoomFacilityNeed(const TMap<FName,int32>& InBuildIdNum,const TMap<FName,int32>& InBuildTabNum,const FRoomConfigData& InRoomConfig);`
 
@@ -1385,7 +1385,7 @@
 |--------|------|
 | `InBuildIdNum` | `const TMap<FName,int32>&` |
 | `InBuildTabNum` | `const TMap<FName,int32>&` |
-| `InFacilityNeed` | `const TArray<FFacilityNeed>&` |
+| `InFacilityNeed` | const TArray<[FFacilityNeed](../ERW_ConfigTypes__FFacilityNeed.md)>& |
 | `InFacilityNeedNum` | `const int32&` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool CheckFacilityNeed(const TMap<FName,int32>& InBuildIdNum,const TMap<FName,int32>& InBuildTabNum,const TArray<FFacilityNeed>& InFacilityNeed,const int32& InFacilityNeedNum);`
@@ -1405,7 +1405,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InFiveElement` | `const TMap<EFiveElementType,float> &` |
-| `InRoomConfig` | `const FRoomConfigData&` |
+| `InRoomConfig` | const [FRoomConfigData](../ERW_ConfigTypes__FRoomConfigData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool CheckFiveElementNeed(const TMap<EFiveElementType,float> & InFiveElement,const FRoomConfigData& InRoomConfig);`
 
@@ -1472,7 +1472,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InRoomData` | `const FClosureAreaData&` |
+| `InRoomData` | const [FClosureAreaData](ERW_MapDataMgr__FClosureAreaData.md)& |
 | `OutRoomLack` | `TMap<int32,int32>&` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetRoomLackFacility(const FClosureAreaData& InRoomData,TMap<int32,int32>& OutRoomLack);`
@@ -1495,7 +1495,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InRoomData` | `const FClosureAreaData&` |
+| `InRoomData` | const [FClosureAreaData](ERW_MapDataMgr__FClosureAreaData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) float GetRoomTemperature(const FClosureAreaData& InRoomData);`
 
@@ -1517,7 +1517,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InRoomData` | `const FClosureAreaData&` |
+| `InRoomData` | const [FClosureAreaData](ERW_MapDataMgr__FClosureAreaData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) float GetRoomBuildingTemperature(const FClosureAreaData& InRoomData);`
 
@@ -1535,7 +1535,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InRoomData` | `const FClosureAreaData&` |
+| `InRoomData` | const [FClosureAreaData](ERW_MapDataMgr__FClosureAreaData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) float GetRoomLight(const FClosureAreaData& InRoomData);`
 
@@ -1557,8 +1557,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EnvironComponent` | `UERW_EnvironComponent*` |
-| `OutCombinationAreas` | `TArray<FCombinationBuildAreaData>&` |
+| `EnvironComponent` | [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* |
+| `OutCombinationAreas` | TArray<[FCombinationBuildAreaData](ERW_MapDataMgr__FCombinationBuildAreaData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetCombinationBuildAreas(UERW_EnvironComponent* EnvironComponent,TArray<FCombinationBuildAreaData>& OutCombinationAreas);`
 
@@ -1580,8 +1580,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EnvironComponent` | `UERW_EnvironComponent*` |
-| `OutCombinationAreas` | `TArray<FCombinationBuildAreaData>&` |
+| `EnvironComponent` | [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* |
+| `OutCombinationAreas` | TArray<[FCombinationBuildAreaData](ERW_MapDataMgr__FCombinationBuildAreaData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetCombinationBuildAreasByMember(UERW_EnvironComponent* EnvironComponent,TArray<FCombinationBuildAreaData>& OutCombinationAreas);`
 
@@ -1604,7 +1604,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InLayer` | `const int32&` |
-| `GridPos` | `const FGridPosition&` |
+| `GridPos` | const [FGridPosition](../ERW_CommonTypes__FGridPosition.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) int32 GetGridTemperature(const int32& InLayer,const FGridPosition& GridPos);`
 
@@ -1639,7 +1639,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FClosureAreaData>` |
+| 返回类型 | TArray<[FClosureAreaData](ERW_MapDataMgr__FClosureAreaData.md)> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<FClosureAreaData> GetAllPlayerRoomS();`
@@ -1663,7 +1663,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InRoomType` | `ERoomType` |
-| `OutRooms` | `TArray<FClosureAreaData>&` |
+| `OutRooms` | TArray<[FClosureAreaData](ERW_MapDataMgr__FClosureAreaData.md)>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetAllRoomsByType(ERoomType InRoomType, TArray<FClosureAreaData>& OutRooms);`
 
@@ -1686,7 +1686,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InRoomType` | `ERoomType` |
-| `OutBuildings` | `TArray<AGOAP_ActorBase*>&` |
+| `OutBuildings` | TArray<[AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)*>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GetEmptyCoreFacilityBuildingsByRoomType(ERoomType InRoomType, TArray<AGOAP_ActorBase*>& OutBuildings);`
 

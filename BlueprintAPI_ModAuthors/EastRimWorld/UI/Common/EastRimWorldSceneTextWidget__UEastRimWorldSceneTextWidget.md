@@ -47,7 +47,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `GenericTeamId` | `const FGenericTeamId &` |
-| `SceneTextInfo` | `const FSceneTextInfo &` |
+| `SceneTextInfo` | const [FSceneTextInfo](../../AbilitySystem/SceneText/SceneTextStruct__FSceneTextInfo.md) & |
 | `InText` | `const FText &` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintNativeEvent) void InitSceneTextWidget(const FGenericTeamId & GenericTeamId,const FSceneTextInfo & SceneTextInfo,const FText & InText);`

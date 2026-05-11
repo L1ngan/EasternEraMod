@@ -132,7 +132,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EAnimalAgeStage , FGrowthInfo>` |
+| C++ 类型 | TMap<EAnimalAgeStage , [FGrowthInfo](CharacterStruct__FGrowthInfo.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="AnimalBase" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") TMap<EAnimalAgeStage , FGrowthInfo> AnimalGrowthInfo;` |
@@ -267,7 +267,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EGameConfigType , FIDs>` |
+| C++ 类型 | TMap<EGameConfigType , [FIDs](../ERW_CommonTypes__FIDs.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Abilities" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities") TMap<EGameConfigType , FIDs> EatItems;` |
@@ -373,7 +373,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<ETechUnlockItemType,FIDs>` |
+| C++ 类型 | TMap<ETechUnlockItemType,[FIDs](../ERW_CommonTypes__FIDs.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Observe" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") TMap<ETechUnlockItemType,FIDs> ObserveUnlock;` |
@@ -388,7 +388,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FObserveUnlockInfo>` |
+| C++ 类型 | TArray<[FObserveUnlockInfo](ObserveStruct__FObserveUnlockInfo.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Observe" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") TArray<FObserveUnlockInfo> ObserveUnlockInfo;` |
@@ -583,7 +583,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , FAllTypeItemDrop>` |
+| C++ 类型 | TMap<FName , [FAllTypeItemDrop](ItemStruct__FAllTypeItemDrop.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Taming" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Taming", meta = (EditConditionHides = "bHaveOutput")) TMap<FName , FAllTypeItemDrop>OutputProducts;` |

@@ -12,7 +12,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FFabricateTaskData>` |
+| C++ 类型 | TArray<[FFabricateTaskData](../Struct/CommonStruct__FFabricateTaskData.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TArray<FFabricateTaskData> FabricateTaskQueue;` |
@@ -117,7 +117,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ABuildingActorBase *` |
+| C++ 类型 | [ABuildingActorBase](../Building/BuildingActorBase__ABuildingActorBase.md) * |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) ABuildingActorBase * Owner { nullptr };` |
@@ -132,7 +132,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `UGOAP_ManagerComponent*` |
+| C++ 类型 | [UGOAP_ManagerComponent](../GOAP/GOAP_ManagerComponent__UGOAP_ManagerComponent.md)* |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) UGOAP_ManagerComponent* GOAPManagerComponent { nullptr };` |
@@ -147,7 +147,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , FGOAP_Action>` |
+| C++ 类型 | TMap<FName , [FGOAP_Action](../GOAP/GOAP_Data__FGOAP_Action.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FName , FGOAP_Action> ResourceActions;` |
@@ -163,7 +163,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGameplayTag , FGOAP_Action>` |
+| C++ 类型 | TMap<FGameplayTag , [FGOAP_Action](../GOAP/GOAP_Data__FGOAP_Action.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FGameplayTag , FGOAP_Action> SelectableResourceAction;` |
@@ -179,7 +179,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FGOAP_Action` |
+| C++ 类型 | [FGOAP_Action](../GOAP/GOAP_Data__FGOAP_Action.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FGOAP_Action FabricateAction;` |
@@ -233,7 +233,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InCorrelationID` | `FName` |
-| `OwnerBuilding` | `ABuildingActorBase *` |
+| `OwnerBuilding` | [ABuildingActorBase](../Building/BuildingActorBase__ABuildingActorBase.md) * |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void InitFabricateActorComponent(FName InCorrelationID,ABuildingActorBase * OwnerBuilding);`
 
@@ -255,7 +255,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InFormulaData` | `const FFormulaData&` |
+| `InFormulaData` | const [FFormulaData](../Struct/CommonStruct__FFormulaData.md)& |
 | `InSelectableConsumingResourceTag` | `const TArray<FGameplayTag> &` |
 | `InFabricateRule` | `EFabricateRule` |
 | `InTargetNumber` | `int` |
@@ -338,7 +338,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FFabricateTaskData&` |
+| 返回类型 | [FFabricateTaskData](../Struct/CommonStruct__FFabricateTaskData.md)& |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FFabricateTaskData& GetCurFabricateTaskData();`
@@ -384,7 +384,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `FabricateTaskData` | `UPARAM(ref)FFabricateTaskData&` |
+| `FabricateTaskData` | UPARAM(ref)[FFabricateTaskData](../Struct/CommonStruct__FFabricateTaskData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool CheckCurFabricateTask(UPARAM(ref)FFabricateTaskData& FabricateTaskData);`
 
@@ -445,7 +445,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FFormulaData>` |
+| 返回类型 | TArray<[FFormulaData](../Struct/CommonStruct__FFormulaData.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -472,7 +472,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InFabricateTaskData` | `const FFabricateTaskData&` |
+| `InFabricateTaskData` | const [FFabricateTaskData](../Struct/CommonStruct__FFabricateTaskData.md)& |
 | `InCharacterGuid` | `const FGuid&` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GenerateFabricateItem(const FFabricateTaskData& InFabricateTaskData,const FGuid& InCharacterGuid);`
@@ -572,7 +572,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InFabricateTaskData` | `const FFabricateTaskData&` |
+| `InFabricateTaskData` | const [FFabricateTaskData](../Struct/CommonStruct__FFabricateTaskData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SetFabricateTaskNewInfo(const FFabricateTaskData& InFabricateTaskData);`
 
@@ -594,7 +594,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InFabricateTaskData` | `const FFabricateTaskData&` |
+| `InFabricateTaskData` | const [FFabricateTaskData](../Struct/CommonStruct__FFabricateTaskData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void FortifyFabricateTaskSequence(const FFabricateTaskData& InFabricateTaskData);`
 
@@ -616,7 +616,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InFabricateTaskData` | `const FFabricateTaskData&` |
+| `InFabricateTaskData` | const [FFabricateTaskData](../Struct/CommonStruct__FFabricateTaskData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void ReduceFabricateTaskSequence(const FFabricateTaskData& InFabricateTaskData);`
 
@@ -633,7 +633,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FFabricateTaskData` |
+| 返回类型 | [FFabricateTaskData](../Struct/CommonStruct__FFabricateTaskData.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -660,7 +660,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InventoryItemInstance` | `UInventoryItemInstance *` |
+| `InventoryItemInstance` | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md) * |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateFabricateTaskState(UInventoryItemInstance * InventoryItemInstance);`
 
@@ -678,7 +678,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `FabricateTaskData` | `const FFabricateTaskData&` |
+| `FabricateTaskData` | const [FFabricateTaskData](../Struct/CommonStruct__FFabricateTaskData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddFabricateGOAPAction(const FFabricateTaskData& FabricateTaskData);`
 
@@ -695,7 +695,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<AEastRimWorldAIController*>` |
+| 返回类型 | TArray<[AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)*> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<AEastRimWorldAIController*> RemoveFabricateGOAPAction();`
@@ -718,7 +718,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TaskData` | `const FFabricateTaskData&` |
+| `TaskData` | const [FFabricateTaskData](../Struct/CommonStruct__FFabricateTaskData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void StopFabricateTaskRemoveAction(const FFabricateTaskData& TaskData);`
 
@@ -758,7 +758,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `FabricateTaskData` | `const FFabricateTaskData&` |
+| `FabricateTaskData` | const [FFabricateTaskData](../Struct/CommonStruct__FFabricateTaskData.md)& |
 | `bStartAutoFabricate` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AddAutoFabricateGOAPAction(const FFabricateTaskData& FabricateTaskData , bool bStartAutoFabricate);`

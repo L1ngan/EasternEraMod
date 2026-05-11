@@ -212,7 +212,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FGWOActorReplaceParameters` |
+| C++ 类型 | [FGWOActorReplaceParameters](GWOTypes__FGWOActorReplaceParameters.md) |
 | 反射说明符 | BlueprintReadWrite, Category="Global World Optimization | Parameters" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Global World Optimization | Parameters", meta=(EditCondition="bReplaceStaticMesh", EditConditionHides),SaveGame) FGWOActorReplaceParameters replaceParameters;` |

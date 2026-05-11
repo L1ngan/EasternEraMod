@@ -29,7 +29,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<int32 , FWorkPriorityData>` |
+| C++ 类型 | TMap<int32 , [FWorkPriorityData](ERW_GameConfigComponent__FWorkPriorityData.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TMap<int32 , FWorkPriorityData> WorkCostPriorityRate;` |
@@ -150,7 +150,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TSubclassOf<AAbilityProjectileEmitterBase>` |
+| C++ 类型 | TSubclassOf<[AAbilityProjectileEmitterBase](../AbilitySystem/Projectile/AbilityProjectileEmitterBase__AAbilityProjectileEmitterBase.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSubclassOf<AAbilityProjectileEmitterBase> AbilityProjectileEmitter;` |
@@ -180,7 +180,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TSubclassOf<AEastRimWorldProjectileBase>` |
+| C++ 类型 | TSubclassOf<[AEastRimWorldProjectileBase](../AbilitySystem/Projectile/EastRimWorldProjectileBase__AEastRimWorldProjectileBase.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSubclassOf<AEastRimWorldProjectileBase> AbilityProjectileBase;` |
@@ -195,7 +195,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TSubclassOf<ASceneTextActor>` |
+| C++ 类型 | TSubclassOf<[ASceneTextActor](../AbilitySystem/SceneText/SceneTextActor__ASceneTextActor.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSubclassOf<ASceneTextActor> SceneTextActor;` |
@@ -510,7 +510,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EGoapGoalType , FRobotTypeAction>` |
+| C++ 类型 | TMap<EGoapGoalType , [FRobotTypeAction](../ERW_CommonTypes__FRobotTypeAction.md)> |
 | 反射说明符 | BlueprintReadOnly, Category="Goap" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , EditAnywhere, Category="Goap") TMap<EGoapGoalType , FRobotTypeAction> RobotActionGoal;` |
@@ -615,7 +615,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EFabricateType , FNameArr>` |
+| C++ 类型 | TMap<EFabricateType , [FNameArr](ERW_GameConfigComponent__FNameArr.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , EditAnywhere) TMap<EFabricateType , FNameArr> FabricateType;` |
@@ -675,7 +675,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TSoftClassPtr<AInventoryItemWidgetActor>` |
+| C++ 类型 | TSoftClassPtr<[AInventoryItemWidgetActor](../Inventory/InventoryItemWidgetActor__AInventoryItemWidgetActor.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSoftClassPtr<AInventoryItemWidgetActor> ItemWidgetActor;` |
@@ -750,7 +750,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TSoftClassPtr<AInventoryItemSet>` |
+| C++ 类型 | TSoftClassPtr<[AInventoryItemSet](../Inventory/InventoryItemSet__AInventoryItemSet.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSoftClassPtr<AInventoryItemSet> ItemActorClass;` |
@@ -840,7 +840,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<ECanManageTagType , FGameplayTagArr>` |
+| C++ 类型 | TMap<ECanManageTagType , [FGameplayTagArr](ERW_GameConfigComponent__FGameplayTagArr.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<ECanManageTagType , FGameplayTagArr> CanManageItemTags;` |
@@ -855,7 +855,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FManageGoalName>` |
+| C++ 类型 | TArray<[FManageGoalName](ERW_GameConfigComponent__FManageGoalName.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FManageGoalName> CanManageActionGoals;` |
@@ -915,7 +915,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TSoftClassPtr<AEastRimWorldCharacter>` |
+| C++ 类型 | TSoftClassPtr<[AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSoftClassPtr<AEastRimWorldCharacter> CharacterClass;` |
@@ -945,7 +945,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EStorageSpace,FNameIDArray>` |
+| C++ 类型 | TMap<EStorageSpace,[FNameIDArray](../Struct/CommonStruct__FNameIDArray.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TMap<EStorageSpace,FNameIDArray> CharacterWorldSpaceDurationBuffs;` |
@@ -1050,7 +1050,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<int32 , FProductTypeInfo>` |
+| C++ 类型 | TMap<int32 , [FProductTypeInfo](ERW_GameConfigComponent__FProductTypeInfo.md)> |
 | 反射说明符 | BlueprintReadOnly, Category="Treasure" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere , Category = "Treasure") TMap<int32 , FProductTypeInfo> ProductTypeInfo;` |
@@ -1185,7 +1185,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<int32 , FTreasureAddMoodRule>` |
+| C++ 类型 | TMap<int32 , [FTreasureAddMoodRule](../ERW_CommonTypes__FTreasureAddMoodRule.md)> |
 | 反射说明符 | BlueprintReadOnly, Category="Treasure" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere , Category = "Treasure") TMap<int32 , FTreasureAddMoodRule> TreasureAddMoodRule;` |
@@ -1365,7 +1365,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EMartialArtsMajorCategories,FFMartialArtsCateInfo>` |
+| C++ 类型 | TMap<EMartialArtsMajorCategories,[FFMartialArtsCateInfo](../Struct/MartialArts__FFMartialArtsCateInfo.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TMap<EMartialArtsMajorCategories,FFMartialArtsCateInfo> MartialArtsAttributeTypeDict;` |
@@ -1695,7 +1695,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName,FIDs>` |
+| C++ 类型 | TMap<FName,[FIDs](../ERW_CommonTypes__FIDs.md)> |
 | 反射说明符 | BlueprintReadOnly, Category="Goap" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , EditAnywhere, Category="Goap") TMap<FName,FIDs> GoapGoalCantAbortOtherGoal;` |
@@ -1788,7 +1788,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FPathTracerSetting` |
+| C++ 类型 | [FPathTracerSetting](../ERW_CommonTypes__FPathTracerSetting.md) |
 | 反射说明符 | BlueprintReadOnly, Category="PathTracer" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , EditAnywhere ,Category="PathTracer") FPathTracerSetting BuildEffectRangeLineSetting;` |
@@ -1908,7 +1908,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EArmorType,FNameIDArray>` |
+| C++ 类型 | TMap<EArmorType,[FNameIDArray](../Struct/CommonStruct__FNameIDArray.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<EArmorType,FNameIDArray> ForceApparels;` |
@@ -1938,7 +1938,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FResourceTypeTextForTag>` |
+| C++ 类型 | TArray<[FResourceTypeTextForTag](../Struct/ItemStruct__FResourceTypeTextForTag.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FResourceTypeTextForTag> ResourceTypeTag;` |
@@ -1949,7 +1949,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FResourceTypeTextForTag>` |
+| C++ 类型 | TArray<[FResourceTypeTextForTag](../Struct/ItemStruct__FResourceTypeTextForTag.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FResourceTypeTextForTag> ResourceWorthTag;` |
@@ -1979,7 +1979,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TSoftClassPtr<UEastRimWorldActivatableWidget>` |
+| C++ 类型 | TSoftClassPtr<[UEastRimWorldActivatableWidget](../UI/EastRimWorldActivatableWidget__UEastRimWorldActivatableWidget.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Task" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Task") TSoftClassPtr<UEastRimWorldActivatableWidget> TransportToTaskPlaceUI;` |

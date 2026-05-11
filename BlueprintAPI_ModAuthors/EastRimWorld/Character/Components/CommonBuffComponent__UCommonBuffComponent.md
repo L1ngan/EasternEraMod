@@ -12,7 +12,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FCommonBuff>` |
+| C++ 类型 | TArray<[FCommonBuff](../../Struct/CommonStruct__FCommonBuff.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TArray<FCommonBuff> BuffArray;` |
@@ -68,7 +68,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `AddBuffInfo` | `FCommonBuff` |
+| `AddBuffInfo` | [FCommonBuff](../../Struct/CommonStruct__FCommonBuff.md) |
 | `true` | `bool bCoverBuff =` |
 | `true` | `bool bSave =` |
 
@@ -176,7 +176,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FCommonBuff> &` |
+| 返回类型 | TArray<[FCommonBuff](../../Struct/CommonStruct__FCommonBuff.md)> & |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<FCommonBuff> & GetAllBuff();`
@@ -194,7 +194,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FCommonBuff>` |
+| 返回类型 | TArray<[FCommonBuff](../../Struct/CommonStruct__FCommonBuff.md)> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<FCommonBuff> GetAllActivateBuff();`

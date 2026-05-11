@@ -40,7 +40,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `UCameraConfigAsset *` |
+| C++ 类型 | [UCameraConfigAsset](../Components/ERW_GameConfigComponent__UCameraConfigAsset.md) * |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) UCameraConfigAsset * CameraConfigAsset;` |
@@ -55,7 +55,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<class AWorldPlace>` |
+| C++ 类型 | TObjectPtr<class [AWorldPlace](../WorldSystem/WorldPlace__AWorldPlace.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) TObjectPtr<class AWorldPlace> CurWorldPlace;` |
@@ -85,7 +85,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `AEastRimWorldCharacter*` |
+| C++ 类型 | [AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) AEastRimWorldCharacter* CurSummon;` |
@@ -173,7 +173,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `FarmlandActor` | `AEastRimWorldFarmlandActor*` |
+| `FarmlandActor` | [AEastRimWorldFarmlandActor](../Farmland/EastRimWorldFarmlandActor__AEastRimWorldFarmlandActor.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent) void SetPreviewFarmlandActor(AEastRimWorldFarmlandActor* FarmlandActor);`
 
@@ -209,12 +209,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `ABuildingActorBase *` |
+| 返回类型 | [ABuildingActorBase](../Building/BuildingActorBase__ABuildingActorBase.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `PresetBuilding` | `const FPresetBuilding &` |
+| `PresetBuilding` | const [FPresetBuilding](../ERW_ConfigTypes__FPresetBuilding.md) & |
 | `NewTeamID` | `const FGenericTeamId&` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) ABuildingActorBase * SpawnBuildingByPresetInfo(const FPresetBuilding & PresetBuilding,const FGenericTeamId& NewTeamID);`
@@ -232,12 +232,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintImplementableEvent |
-| 返回类型 | `ABuildingActorBase *` |
+| 返回类型 | [ABuildingActorBase](../Building/BuildingActorBase__ABuildingActorBase.md) * |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `PresetBuilding` | `const FPresetBuilding &` |
+| `PresetBuilding` | const [FPresetBuilding](../ERW_ConfigTypes__FPresetBuilding.md) & |
 | `NewTeamID` | `const FGenericTeamId&` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintImplementableEvent,DisplayName="SpawnBuildingByPresetInfo") ABuildingActorBase * K2_SpawnBuildingByPresetInfo(const FPresetBuilding & PresetBuilding,const FGenericTeamId& NewTeamID);`
@@ -302,7 +302,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TrackingCharacter` | `const AEastRimWorldCharacter*` |
+| `TrackingCharacter` | const [AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) void TrackingCharacter(const AEastRimWorldCharacter* TrackingCharacter);`
 
@@ -337,7 +337,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintImplementableEvent |
-| 返回类型 | `FPawnSaveInfo` |
+| 返回类型 | [FPawnSaveInfo](../WorldSystem/WorldStruct__FPawnSaveInfo.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) FPawnSaveInfo GetPawnSaveInfo();`
@@ -360,7 +360,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `PawnSaveInfo` | `const FPawnSaveInfo &` |
+| `PawnSaveInfo` | const [FPawnSaveInfo](../WorldSystem/WorldStruct__FPawnSaveInfo.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) void SetPawnSaveInfo(const FPawnSaveInfo & PawnSaveInfo);`
 

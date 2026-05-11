@@ -14,7 +14,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , FGOAP_Users>` |
+| C++ 类型 | TMap<FName , [FGOAP_Users](GOAP_ActionComponent__FGOAP_Users.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FName , FGOAP_Users> GOAP_Users = {};` |
@@ -30,7 +30,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , FGOAP_Action>` |
+| C++ 类型 | TMap<FName , [FGOAP_Action](GOAP_Data__FGOAP_Action.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FName , FGOAP_Action> GOAP_Actions = {};` |
@@ -86,8 +86,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Action` | `const FGOAP_Action&` |
-| `Agent` | `AEastRimWorldAIController*` |
+| `Action` | const [FGOAP_Action](GOAP_Data__FGOAP_Action.md)& |
+| `Agent` | [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintNativeEvent , BlueprintCallable) void RegisterUser(const FGOAP_Action& Action , AEastRimWorldAIController* Agent);`
 
@@ -109,8 +109,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Action` | `const FGOAP_Action&` |
-| `Agent` | `AEastRimWorldAIController*` |
+| `Action` | const [FGOAP_Action](GOAP_Data__FGOAP_Action.md)& |
+| `Agent` | [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintNativeEvent , BlueprintCallable) void UnregisterUser(const FGOAP_Action& Action , AEastRimWorldAIController* Agent);`
 
@@ -132,7 +132,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Action` | `const FGOAP_Action&` |
+| `Action` | const [FGOAP_Action](GOAP_Data__FGOAP_Action.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintNativeEvent , BlueprintCallable) bool RegisterGOAPAction(const FGOAP_Action& Action);`
 
@@ -154,8 +154,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Action` | `const FGOAP_Action&` |
-| `AbortUsers` | `TArray<AEastRimWorldAIController*>&` |
+| `Action` | const [FGOAP_Action](GOAP_Data__FGOAP_Action.md)& |
+| `AbortUsers` | TArray<[AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)*>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintNativeEvent , BlueprintCallable) void UnregisterGOAPAction(const FGOAP_Action& Action , TArray<AEastRimWorldAIController*>& AbortUsers);`
 
@@ -177,8 +177,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Action` | `const FGOAP_Action&` |
-| `Users` | `TArray<AEastRimWorldAIController*>&` |
+| `Action` | const [FGOAP_Action](GOAP_Data__FGOAP_Action.md)& |
+| `Users` | TArray<[AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)*>& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) void GetActionUsers(const FGOAP_Action& Action , TArray<AEastRimWorldAIController*>& Users);`
 
@@ -200,8 +200,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ManagerComponent` | `UGOAP_ManagerComponent*` |
-| `Action` | `const FGOAP_Action&` |
+| `ManagerComponent` | [UGOAP_ManagerComponent](GOAP_ManagerComponent__UGOAP_ManagerComponent.md)* |
+| `Action` | const [FGOAP_Action](GOAP_Data__FGOAP_Action.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CheckActionState(UGOAP_ManagerComponent* ManagerComponent , const FGOAP_Action& Action);`
 
@@ -223,7 +223,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ManagerComponent` | `UGOAP_ManagerComponent*` |
+| `ManagerComponent` | [UGOAP_ManagerComponent](GOAP_ManagerComponent__UGOAP_ManagerComponent.md)* |
 | `ID` | `const FName&` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CheckUserNum(UGOAP_ManagerComponent* ManagerComponent , const FName& ID);`
@@ -246,7 +246,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `User` | `AEastRimWorldAIController*` |
+| `User` | [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
 | `ItemID` | `const FName&` |
 | `Num` | `int32` |
 
@@ -270,7 +270,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `User` | `AEastRimWorldAIController*` |
+| `User` | [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveReservedUser(AEastRimWorldAIController* User);`
 
@@ -338,9 +338,9 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `GameMode` | `AERW_GameModeBase*` |
-| `Condition` | `const FGOAP_Condition&` |
-| `GOAPValue` | `UPARAM(ref) FGOAP_Value&` |
+| `GameMode` | [AERW_GameModeBase](../Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
+| `Condition` | const [FGOAP_Condition](GOAP_Data__FGOAP_Condition.md)& |
+| `GOAPValue` | UPARAM(ref) [FGOAP_Value](GOAP_Data__FGOAP_Value.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void ReservedCorrection(AERW_GameModeBase* GameMode , const FGOAP_Condition& Condition , UPARAM(ref) FGOAP_Value& GOAPValue);`
 
@@ -357,7 +357,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FGOAP_Action` |
+| 返回类型 | [FGOAP_Action](GOAP_Data__FGOAP_Action.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |

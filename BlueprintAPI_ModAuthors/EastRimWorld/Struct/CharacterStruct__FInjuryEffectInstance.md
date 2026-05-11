@@ -119,7 +119,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FInjuryEffectConfig` |
+| C++ 类型 | [FInjuryEffectConfig](CharacterStruct__FInjuryEffectConfig.md) |
 | 反射说明符 | BlueprintReadWrite, Category="FInjuryEffectInstance" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryEffectInstance") FInjuryEffectConfig InjuryConfig;` |

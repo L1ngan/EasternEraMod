@@ -44,7 +44,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FWarehouseCellLayerEmptyState>` |
+| C++ 类型 | TArray<[FWarehouseCellLayerEmptyState](WarehouseManagerSubsystem__FWarehouseCellLayerEmptyState.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TArray<FWarehouseCellLayerEmptyState> CellLayerEmptyStates;` |
@@ -74,7 +74,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName,FTransportToWarehouseCache>` |
+| C++ 类型 | TMap<FName,[FTransportToWarehouseCache](WarehouseManagerSubsystem__FTransportToWarehouseCache.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FName,FTransportToWarehouseCache> TransportToWarehouseCache;` |

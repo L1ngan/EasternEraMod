@@ -246,7 +246,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintPure, Category="EastRimWorld|Health" |
-| 返回类型 | `UEastRimWorldHealthComponent*` |
+| 返回类型 | [UEastRimWorldHealthComponent](EastRimWorldHealthComponent__UEastRimWorldHealthComponent.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |

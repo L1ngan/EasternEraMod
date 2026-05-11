@@ -44,7 +44,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FCommonTaskCondition>` |
+| C++ 类型 | TArray<[FCommonTaskCondition](CommonTaskStruct__FCommonTaskCondition.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FCommonTaskCondition> TriggerCondition;` |
@@ -164,7 +164,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FItemSimpleData>` |
+| C++ 类型 | TArray<[FItemSimpleData](CommonStruct__FItemSimpleData.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FItemSimpleData> TaskAwards;` |
@@ -179,7 +179,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FTaskSelectableAward>` |
+| C++ 类型 | TArray<[FTaskSelectableAward](CommonTaskStruct__FTaskSelectableAward.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,meta=(EditCondition="!bAutoComplete")) TArray<FTaskSelectableAward> SelectableAwards;` |
@@ -464,7 +464,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FTriggerFunction>` |
+| C++ 类型 | TArray<[FTriggerFunction](CommonTaskStruct__FTriggerFunction.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FTriggerFunction> TriggerFunction;` |
@@ -494,7 +494,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FCommonTaskCondition>` |
+| C++ 类型 | TArray<[FCommonTaskCondition](CommonTaskStruct__FCommonTaskCondition.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Runtime" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Runtime") TArray<FCommonTaskCondition> Condition;` |
@@ -509,7 +509,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FItemSimpleData>` |
+| C++ 类型 | TArray<[FItemSimpleData](CommonStruct__FItemSimpleData.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FItemSimpleData> SubmitItems;` |

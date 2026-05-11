@@ -98,7 +98,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName,FGOAP_Action>` |
+| C++ 类型 | TMap<FName,[FGOAP_Action](../../GOAP/GOAP_Data__FGOAP_Action.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) TMap<FName,FGOAP_Action> TreatGoapActions;` |
@@ -128,7 +128,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FInjuryEffectInstance>` |
+| C++ 类型 | TArray<[FInjuryEffectInstance](../../Struct/CharacterStruct__FInjuryEffectInstance.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite) TArray<FInjuryEffectInstance> CurInjuryEffectArr;` |
@@ -151,7 +151,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `AddInjuryConfig` | `const FInjuryEffectConfig &` |
+| `AddInjuryConfig` | const [FInjuryEffectConfig](../../Struct/CharacterStruct__FInjuryEffectConfig.md) & |
 | `OrganID` | `FName` |
 | `OrganType` | `EBodyOrganType` |
 
@@ -197,7 +197,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InjuryEffectInstance` | `FInjuryEffectInstance&` |
+| `InjuryEffectInstance` | [FInjuryEffectInstance](../../Struct/CharacterStruct__FInjuryEffectInstance.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void ActiveInjury(FInjuryEffectInstance& InjuryEffectInstance);`
 
@@ -215,7 +215,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `AddInjuryConfig` | `const FInjuryEffectConfig &` |
+| `AddInjuryConfig` | const [FInjuryEffectConfig](../../Struct/CharacterStruct__FInjuryEffectConfig.md) & |
 | `OrganType` | `EBodyOrganType` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool InjuryCanAdd(const FInjuryEffectConfig & AddInjuryConfig ,EBodyOrganType OrganType);`
@@ -298,7 +298,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InjuryInfo` | `const FInjuryEffectInstance&` |
+| `InjuryInfo` | const [FInjuryEffectInstance](../../Struct/CharacterStruct__FInjuryEffectInstance.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) float CalHealingRate(const FInjuryEffectInstance& InjuryInfo) const;`
 
@@ -315,7 +315,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FInjuryEffectInstance&` |
+| 返回类型 | [FInjuryEffectInstance](../../Struct/CharacterStruct__FInjuryEffectInstance.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -337,7 +337,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FInjuryEffectInstance>` |
+| 返回类型 | TArray<[FInjuryEffectInstance](../../Struct/CharacterStruct__FInjuryEffectInstance.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -359,7 +359,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FInjuryEffectInstance>` |
+| 返回类型 | TArray<[FInjuryEffectInstance](../../Struct/CharacterStruct__FInjuryEffectInstance.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -381,7 +381,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FInjuryEffectInstance>` |
+| 返回类型 | TArray<[FInjuryEffectInstance](../../Struct/CharacterStruct__FInjuryEffectInstance.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -408,7 +408,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Doctor` | `AEastRimWorldCharacter*` |
+| `Doctor` | [AEastRimWorldCharacter](../EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool TreatInjuries(AEastRimWorldCharacter* Doctor);`
 
@@ -453,7 +453,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InjuryInstanceID` | `FGuid` |
-| `InventoryManagerComponent` | `UInventoryManagerComponent*` |
+| `InventoryManagerComponent` | [UInventoryManagerComponent](../../Inventory/InventoryManagerComponent__UInventoryManagerComponent.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool ReMoveScarUseMedicines(FGuid InjuryInstanceID,UInventoryManagerComponent* InventoryManagerComponent);`
 
@@ -511,7 +511,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FInjuryEffectInstance>` |
+| 返回类型 | TArray<[FInjuryEffectInstance](../../Struct/CharacterStruct__FInjuryEffectInstance.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |

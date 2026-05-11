@@ -128,7 +128,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<ETargetClassType,FAllGameplayEffectSpecHandles>` |
+| C++ 类型 | TMap<ETargetClassType,[FAllGameplayEffectSpecHandles](AbilityProjectileEmitterBase__FAllGameplayEffectSpecHandles.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,meta=(ExposeOnSpawn = true)) TMap<ETargetClassType,FAllGameplayEffectSpecHandles> ProjectileSpecHandles;` |
@@ -183,7 +183,7 @@
 |--------|------|
 | `InTransform` | `const FTransform &` |
 | `InProjectileStruct` | `const FProjectileStruct &` |
-| `InProjectileSpecHandles` | `const TMap<ETargetClassType,FAllGameplayEffectSpecHandles> &` |
+| `InProjectileSpecHandles` | const TMap<ETargetClassType,[FAllGameplayEffectSpecHandles](AbilityProjectileEmitterBase__FAllGameplayEffectSpecHandles.md)> & |
 | `InDirection` | `const FVector &` |
 | `InTargetActor` | `AActor *` |
 

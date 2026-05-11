@@ -367,7 +367,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `class AGWOGeneralAccess *` |
+| C++ 类型 | class [AGWOGeneralAccess](GWOGeneralAccess__AGWOGeneralAccess.md) * |
 | 反射说明符 | BlueprintReadOnly, Category="Global World Optimization | Variables" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Global World Optimization | Variables") class AGWOGeneralAccess * generalAccess = nullptr;` |
@@ -378,7 +378,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `AERW_GameModeBase*` |
+| C++ 类型 | [AERW_GameModeBase](../Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) AERW_GameModeBase* GameModeBase { nullptr };` |

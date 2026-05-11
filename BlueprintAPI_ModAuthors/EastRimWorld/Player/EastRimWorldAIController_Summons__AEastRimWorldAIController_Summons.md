@@ -12,7 +12,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<AEastRimWorldAIController>` |
+| C++ 类型 | TObjectPtr<[AEastRimWorldAIController](EastRimWorldAIController__AEastRimWorldAIController.md)> |
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="Summons" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Summons", Meta = (AllowPrivateAccess = "true")) TObjectPtr<AEastRimWorldAIController> SelfController;` |
@@ -50,7 +50,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `NewController` | `AEastRimWorldAIController *` |
+| `NewController` | [AEastRimWorldAIController](EastRimWorldAIController__AEastRimWorldAIController.md) * |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,Category = "Summons") bool SetSummonsController(AEastRimWorldAIController * NewController);`
 
@@ -67,7 +67,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FEastRimWorldSummonsData` |
+| 返回类型 | [FEastRimWorldSummonsData](../Struct/CharacterStruct__FEastRimWorldSummonsData.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FEastRimWorldSummonsData GetSummonsData();`

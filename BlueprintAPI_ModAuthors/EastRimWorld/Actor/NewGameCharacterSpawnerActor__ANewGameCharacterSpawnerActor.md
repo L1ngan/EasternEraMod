@@ -26,7 +26,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure, Category="NewGame|Spawner" |
-| 返回类型 | `ANewGameCharacterSpawnerActor*` |
+| 返回类型 | [ANewGameCharacterSpawnerActor](NewGameCharacterSpawnerActor__ANewGameCharacterSpawnerActor.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |

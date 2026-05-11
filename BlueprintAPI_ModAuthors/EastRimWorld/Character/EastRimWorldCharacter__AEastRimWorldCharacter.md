@@ -45,7 +45,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `UInventoryItemInstance *` |
+| C++ 类型 | [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md) * |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) UInventoryItemInstance * PickInventoryItem = nullptr;` |
@@ -102,7 +102,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FCharacterSaveData` |
+| C++ 类型 | [FCharacterSaveData](../WorldSystem/WorldCharacterData__FCharacterSaveData.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) FCharacterSaveData CharacterSaveData;` |
@@ -253,7 +253,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName,FCarryWeaponsInfo>` |
+| C++ 类型 | TMap<FName,[FCarryWeaponsInfo](../Struct/CharacterStruct__FCarryWeaponsInfo.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FName,FCarryWeaponsInfo> CarryWeapons;` |
@@ -395,7 +395,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `AERW_GameModeBase*` |
+| C++ 类型 | [AERW_GameModeBase](../Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) AERW_GameModeBase* GameModeBase { nullptr };` |
@@ -406,7 +406,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<AWorldPlace>` |
+| C++ 类型 | TObjectPtr<[AWorldPlace](../WorldSystem/WorldPlace__AWorldPlace.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AWorldPlace> WorldPlace;` |
@@ -417,7 +417,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UERW_GameInstanceBase>` |
+| C++ 类型 | TObjectPtr<[UERW_GameInstanceBase](../Framework/ERW_GameInstanceBase__UERW_GameInstanceBase.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<UERW_GameInstanceBase> GameInstance;` |
@@ -630,7 +630,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UEastRimWorldHealthComponent>` |
+| C++ 类型 | TObjectPtr<[UEastRimWorldHealthComponent](Components/EastRimWorldHealthComponent__UEastRimWorldHealthComponent.md)> |
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Character" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Character", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UEastRimWorldHealthComponent> HealthComponent;` |
@@ -652,7 +652,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UEastRimWorldGrowUpComponent>` |
+| C++ 类型 | TObjectPtr<[UEastRimWorldGrowUpComponent](Components/EastRimWorldGrowUpComponent__UEastRimWorldGrowUpComponent.md)> |
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Character" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Character", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UEastRimWorldGrowUpComponent> GrowUpComponent;` |
@@ -663,7 +663,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UCommonBuffComponent>` |
+| C++ 类型 | TObjectPtr<[UCommonBuffComponent](Components/CommonBuffComponent__UCommonBuffComponent.md)> |
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Character" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Character", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UCommonBuffComponent> CommonBuffComponent;` |
@@ -674,7 +674,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<UInjuryBuffComponent>` |
+| C++ 类型 | TObjectPtr<[UInjuryBuffComponent](Components/InjuryBuffComponent__UInjuryBuffComponent.md)> |
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Character" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Character", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UInjuryBuffComponent> InjuryBuffComponent;` |
@@ -744,7 +744,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FCharacterDeathInformation` |
+| C++ 类型 | [FCharacterDeathInformation](../Struct/CharacterDeathInformation__FCharacterDeathInformation.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame) FCharacterDeathInformation CharacterDamageInformation;` |
@@ -759,7 +759,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FCharacterDeathInformation` |
+| C++ 类型 | [FCharacterDeathInformation](../Struct/CharacterDeathInformation__FCharacterDeathInformation.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame) FCharacterDeathInformation AnyDamageInformation;` |
@@ -864,7 +864,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `AEastRimWorldCharacter*` |
+| C++ 类型 | [AEastRimWorldCharacter](EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) AEastRimWorldCharacter* ProtectTarget;` |
@@ -939,7 +939,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `AEastRimWorldCharacter*` |
+| C++ 类型 | [AEastRimWorldCharacter](EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) AEastRimWorldCharacter* PrisonerArrestedBy;` |
@@ -1107,7 +1107,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName,FNameIDArray>` |
+| C++ 类型 | TMap<FName,[FNameIDArray](../Struct/CommonStruct__FNameIDArray.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame,VisibleAnywhere) TMap<FName,FNameIDArray> DialogueRandOptionRecords;` |
@@ -1125,7 +1125,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="ERW|Character" |
-| 返回类型 | `UEastRimWorldAbilitySystemComponent*` |
+| 返回类型 | [UEastRimWorldAbilitySystemComponent](../AbilitySystem/EastRimWorldAbilitySystemComponent__UEastRimWorldAbilitySystemComponent.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "ERW|Character") UEastRimWorldAbilitySystemComponent* GetEastRimWorldAbilitySystemComponent();`
@@ -1179,7 +1179,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FGameplayTeamInfo` |
+| 返回类型 | [FGameplayTeamInfo](../Struct/CharacterStruct__FGameplayTeamInfo.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) virtual FGameplayTeamInfo GetTeamInfo() override;`
@@ -1212,7 +1212,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AERW_GameModeBase *` |
+| 返回类型 | [AERW_GameModeBase](../Framework/ERW_GameModeBase__AERW_GameModeBase.md) * |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) AERW_GameModeBase * GetGameModeBase();`
@@ -1382,7 +1382,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TMap<FName , FAllTypeItemDrop>` |
+| 返回类型 | TMap<FName , [FAllTypeItemDrop](../Struct/ItemStruct__FAllTypeItemDrop.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1400,7 +1400,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FEastRimWorldCharacterData` |
+| 返回类型 | [FEastRimWorldCharacterData](../Struct/CharacterStruct__FEastRimWorldCharacterData.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) virtual FEastRimWorldCharacterData GetCharacterData() override;`
@@ -1725,7 +1725,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InWeapon` | `const FCharacterWeapon &` |
+| `InWeapon` | const [FCharacterWeapon](../Struct/ItemStruct__FCharacterWeapon.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void GiveWeapon(const FCharacterWeapon & InWeapon);`
 
@@ -1747,7 +1747,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InWeapon` | `const FCharacterWeapon &` |
+| `InWeapon` | const [FCharacterWeapon](../Struct/ItemStruct__FCharacterWeapon.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void RemoveWeapon(const FCharacterWeapon & InWeapon);`
 
@@ -1769,7 +1769,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InWeapon` | `const FCharacterWeapon &` |
+| `InWeapon` | const [FCharacterWeapon](../Struct/ItemStruct__FCharacterWeapon.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void HandWeapon(const FCharacterWeapon & InWeapon);`
 
@@ -1791,7 +1791,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InWeapon` | `const FCharacterWeapon &` |
+| `InWeapon` | const [FCharacterWeapon](../Struct/ItemStruct__FCharacterWeapon.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void PackUpWeapon(const FCharacterWeapon & InWeapon);`
 
@@ -2507,7 +2507,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintPure |
-| 返回类型 | `UEastRimWorldCharacterChatComponent*` |
+| 返回类型 | [UEastRimWorldCharacterChatComponent](Components/EastRimWorldCharacterChatComponent__UEastRimWorldCharacterChatComponent.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) virtual UEastRimWorldCharacterChatComponent* GetCharacterChatComponent(){return nullptr;}`
@@ -2607,7 +2607,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `DeathInformation` | `const FCharacterDeathInformation &` |
+| `DeathInformation` | const [FCharacterDeathInformation](../Struct/CharacterDeathInformation__FCharacterDeathInformation.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SetDeathInformation(const FCharacterDeathInformation & DeathInformation) { CharacterDamageInformation = DeathInformation; };`
 
@@ -2629,7 +2629,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Information` | `const FCharacterDeathInformation &` |
+| `Information` | const [FCharacterDeathInformation](../Struct/CharacterDeathInformation__FCharacterDeathInformation.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SetLastDamageInformation(const FCharacterDeathInformation & Information) { AnyDamageInformation = Information; };`
 
@@ -2809,7 +2809,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `NewProtectTarget` | `AEastRimWorldCharacter*` |
+| `NewProtectTarget` | [AEastRimWorldCharacter](EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SetNewProtectTarget(AEastRimWorldCharacter* NewProtectTarget);`
 
@@ -2994,7 +2994,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AEastRimWorldCharacter*` |
+| 返回类型 | [AEastRimWorldCharacter](EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -3035,7 +3035,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintPure |
-| 返回类型 | `AEastRimWorldCharacter*` |
+| 返回类型 | [AEastRimWorldCharacter](EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) virtual AEastRimWorldCharacter* GetSubstituteCharacter() const;`
@@ -3075,7 +3075,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FGOAP_Action` |
+| 返回类型 | [FGOAP_Action](../GOAP/GOAP_Data__FGOAP_Action.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FGOAP_Action CreateImprisonArrestAction();`
@@ -3093,7 +3093,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FGOAP_Action` |
+| 返回类型 | [FGOAP_Action](../GOAP/GOAP_Data__FGOAP_Action.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FGOAP_Action CreateSpecifiedArrestAction();`
@@ -3130,7 +3130,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Prison` | `AEastRimWorldCharacter*` |
+| `Prison` | [AEastRimWorldCharacter](EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SetArrestedPrison(AEastRimWorldCharacter* Prison);`
 
@@ -3188,7 +3188,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InCharacter` | `AEastRimWorldCharacter*` |
+| `InCharacter` | [AEastRimWorldCharacter](EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SetPrisonerArrestedBy(AEastRimWorldCharacter* InCharacter);`
 
@@ -3246,7 +3246,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Torturer` | `AEastRimWorldCharacter*` |
+| `Torturer` | [AEastRimWorldCharacter](EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void OnPrisonerTortured(AEastRimWorldCharacter* Torturer);`
 
@@ -3268,7 +3268,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Recruiter` | `AEastRimWorldCharacter*` |
+| `Recruiter` | [AEastRimWorldCharacter](EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void OnPrisonerRecruited(AEastRimWorldCharacter* Recruiter);`
 
@@ -3285,12 +3285,12 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FGOAP_Action` |
+| 返回类型 | [FGOAP_Action](../GOAP/GOAP_Data__FGOAP_Action.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `Recruiter` | `AEastRimWorldCharacter*` |
+| `Recruiter` | [AEastRimWorldCharacter](EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FGOAP_Action CreateRecruitPrisonerAction(AEastRimWorldCharacter* Recruiter);`
 
@@ -3422,7 +3422,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InTaskInfo` | `const FCommonTaskInfo&` |
+| `InTaskInfo` | const [FCommonTaskInfo](../Struct/CommonTaskStruct__FCommonTaskInfo.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AcceptNPCTask(const FCommonTaskInfo& InTaskInfo);`
 
@@ -3477,7 +3477,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Building` | `ABuildingActorBase*` |
+| `Building` | [ABuildingActorBase](../Building/BuildingActorBase__ABuildingActorBase.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SetIdleAroundBuilding(ABuildingActorBase* Building);`
 

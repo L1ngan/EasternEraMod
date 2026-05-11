@@ -15,7 +15,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintPure, Category="WorldPlaceSpecialEffect" |
-| 返回类型 | `UWorldPlaceSpecialEffectSubsystem*` |
+| 返回类型 | [UWorldPlaceSpecialEffectSubsystem](WorldPlaceSpecialEffectSubsystem__UWorldPlaceSpecialEffectSubsystem.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -38,7 +38,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldPlace` | `AWorldPlace*` |
+| `WorldPlace` | [AWorldPlace](WorldPlace__AWorldPlace.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "WorldPlaceSpecialEffect") void RecalculatePlaceEffects(AWorldPlace* WorldPlace);`
 
@@ -60,7 +60,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldPlace` | `AWorldPlace*` |
+| `WorldPlace` | [AWorldPlace](WorldPlace__AWorldPlace.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "WorldPlaceSpecialEffect") void ClearPlaceEffectCache(AWorldPlace* WorldPlace);`
 
@@ -82,7 +82,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldPlace` | `AWorldPlace*` |
+| `WorldPlace` | [AWorldPlace](WorldPlace__AWorldPlace.md)* |
 | `EffectId` | `FName` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "WorldPlaceSpecialEffect") void ApplyEffect(AWorldPlace* WorldPlace, FName EffectId);`
@@ -105,7 +105,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldPlace` | `AWorldPlace*` |
+| `WorldPlace` | [AWorldPlace](WorldPlace__AWorldPlace.md)* |
 | `EffectId` | `FName` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, Category = "WorldPlaceSpecialEffect") void RemoveEffect(AWorldPlace* WorldPlace, FName EffectId);`
@@ -128,7 +128,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldPlace` | `AWorldPlace*` |
+| `WorldPlace` | [AWorldPlace](WorldPlace__AWorldPlace.md)* |
 | `EffectType` | `EWorldPlaceSpecialEffectType` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "WorldPlaceSpecialEffect") float GetEffectValue(AWorldPlace* WorldPlace, EWorldPlaceSpecialEffectType EffectType) const;`
@@ -151,7 +151,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldPlace` | `AWorldPlace*` |
+| `WorldPlace` | [AWorldPlace](WorldPlace__AWorldPlace.md)* |
 | `OutBuffIds` | `TArray<FName>&` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "WorldPlaceSpecialEffect") void GetFactionGlobalBuffIds(AWorldPlace* WorldPlace, TArray<FName>& OutBuffIds) const;`

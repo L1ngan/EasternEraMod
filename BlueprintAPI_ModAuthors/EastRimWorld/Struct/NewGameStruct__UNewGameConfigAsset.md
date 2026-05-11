@@ -254,7 +254,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EItemQuality, FCharacteristicNumWeight>` |
+| C++ 类型 | TMap<EItemQuality, [FCharacteristicNumWeight](NewGameStruct__FCharacteristicNumWeight.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<EItemQuality, FCharacteristicNumWeight> ProtagonistCharacteristicRand;` |
@@ -284,7 +284,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EArmorType,FNameIDArray>` |
+| C++ 类型 | TMap<EArmorType,[FNameIDArray](CommonStruct__FNameIDArray.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<EArmorType,FNameIDArray> SelectableArmors;` |
@@ -419,7 +419,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FNewGamePlace>` |
+| C++ 类型 | TArray<[FNewGamePlace](NewGameStruct__FNewGamePlace.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FNewGamePlace> CanSelectStations;` |

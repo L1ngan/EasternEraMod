@@ -30,7 +30,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintPure, Category="PlaySoundSystem" |
-| 返回类型 | `UPlaySoundSystem*` |
+| 返回类型 | [UPlaySoundSystem](PlaySoundSystem__UPlaySoundSystem.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure, Category = "PlaySoundSystem") static UPlaySoundSystem* GetInstance();`

@@ -74,7 +74,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, Category="Mod System" |
-| 返回类型 | `UModSubsystem*` |
+| 返回类型 | [UModSubsystem](ModSubsystem__UModSubsystem.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -182,7 +182,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure, Category="Mod System" |
-| 返回类型 | `UModRuntimeInfo*` |
+| 返回类型 | [UModRuntimeInfo](ModInfo__UModRuntimeInfo.md)* |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -204,7 +204,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure, Category="Mod System" |
-| 返回类型 | `TArray<UModRuntimeInfo*>` |
+| 返回类型 | TArray<[UModRuntimeInfo](ModInfo__UModRuntimeInfo.md)*> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Mod System") TArray<UModRuntimeInfo*> GetAllLoadedMods() const;`
@@ -222,7 +222,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure, Category="Mod System" |
-| 返回类型 | `TArray<UModRuntimeInfo*>` |
+| 返回类型 | TArray<[UModRuntimeInfo](ModInfo__UModRuntimeInfo.md)*> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Mod System") TArray<UModRuntimeInfo*> GetAllDiscoveredMods() const;`

@@ -23,7 +23,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FForceAimInfo` |
+| C++ 类型 | [FForceAimInfo](WorldStruct__FForceAimInfo.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame,BlueprintReadOnly) FForceAimInfo ForceAimInfo;` |
@@ -203,7 +203,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FWorldForceInfo` |
+| C++ 类型 | [FWorldForceInfo](WorldStruct__FWorldForceInfo.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) FWorldForceInfo WorldForceInfo;` |
@@ -353,7 +353,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName, FPuppetModificationInfo>` |
+| C++ 类型 | TMap<FName, [FPuppetModificationInfo](../Struct/ItemStruct__FPuppetModificationInfo.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TMap<FName, FPuppetModificationInfo> PuppetEquipmentData;` |
@@ -383,7 +383,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FCommonTaskCondition>` |
+| C++ 类型 | TArray<[FCommonTaskCondition](../Struct/CommonTaskStruct__FCommonTaskCondition.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TArray<FCommonTaskCondition> LevelUpConditions;` |
@@ -454,7 +454,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FForceLevelInfo` |
+| C++ 类型 | [FForceLevelInfo](WorldStruct__FForceLevelInfo.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FForceLevelInfo ForceLevelInfo;` |
@@ -469,7 +469,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGuid,FCharacterSaveData>` |
+| C++ 类型 | TMap<FGuid,[FCharacterSaveData](WorldCharacterData__FCharacterSaveData.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame) TMap<FGuid,FCharacterSaveData> WorldCharacterData;` |
@@ -484,7 +484,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGuid,FCharacterSaveData>` |
+| C++ 类型 | TMap<FGuid,[FCharacterSaveData](WorldCharacterData__FCharacterSaveData.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame) TMap<FGuid,FCharacterSaveData> CacheFixRemovedCharacterData;` |
@@ -499,7 +499,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FForceSubClassInfo>` |
+| C++ 类型 | TArray<[FForceSubClassInfo](WorldStruct__FForceSubClassInfo.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TArray<FForceSubClassInfo> SubClassArr;` |
@@ -515,7 +515,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FForceSubClassInfo` |
+| C++ 类型 | [FForceSubClassInfo](WorldStruct__FForceSubClassInfo.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) FForceSubClassInfo LeaderSubClassInfo;` |
@@ -530,7 +530,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FForceMemberJobInfo>` |
+| C++ 类型 | TArray<[FForceMemberJobInfo](WorldStruct__FForceMemberJobInfo.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TArray<FForceMemberJobInfo> ForceMemberJob;` |
@@ -575,7 +575,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FWorldNPCForceConfig` |
+| C++ 类型 | [FWorldNPCForceConfig](WorldStruct__FWorldNPCForceConfig.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FWorldNPCForceConfig WorldNPCForceConfig;` |
@@ -620,7 +620,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , FFGuidArr>` |
+| C++ 类型 | TMap<FName , [FFGuidArr](WorldStruct__FFGuidArr.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame) TMap<FName , FFGuidArr> ActivePurpose;` |
@@ -731,7 +731,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldPlace` | `class AWorldPlace*` |
+| `WorldPlace` | class [AWorldPlace](WorldPlace__AWorldPlace.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AttackWorldPlaceSuccess(class AWorldPlace* WorldPlace);`
 
@@ -753,7 +753,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldPlace` | `class AWorldPlace*` |
+| `WorldPlace` | class [AWorldPlace](WorldPlace__AWorldPlace.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void AttackWorldPlaceFail(class AWorldPlace* WorldPlace);`
 
@@ -775,7 +775,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldPlace` | `const AWorldPlace*` |
+| `WorldPlace` | const [AWorldPlace](WorldPlace__AWorldPlace.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) float WorldPlaceWithSelfDistance(const AWorldPlace* WorldPlace);`
 
@@ -910,7 +910,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FForceMemberJobInfo>` |
+| 返回类型 | TArray<[FForceMemberJobInfo](WorldStruct__FForceMemberJobInfo.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -932,7 +932,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FForceMemberJobInfo>` |
+| 返回类型 | TArray<[FForceMemberJobInfo](WorldStruct__FForceMemberJobInfo.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -960,7 +960,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `MemberId` | `const FGuid&` |
-| `OutForceMemberJobInfo` | `FForceMemberJobInfo&` |
+| `OutForceMemberJobInfo` | [FForceMemberJobInfo](WorldStruct__FForceMemberJobInfo.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable,BlueprintPure,DisplayName="FindMemberJobInfo") bool K2_FindMemberJobInfo(const FGuid& MemberId,FForceMemberJobInfo& OutForceMemberJobInfo);`
 
@@ -1059,7 +1059,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FForceSubClassInfo&` |
+| 返回类型 | [FForceSubClassInfo](WorldStruct__FForceSubClassInfo.md)& |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1127,7 +1127,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TMap<EArmorType,FNameIDArray>` |
+| 返回类型 | TMap<EArmorType,[FNameIDArray](../Struct/CommonStruct__FNameIDArray.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1194,7 +1194,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TMap<bool,FCustomApparelsSkin>` |
+| 返回类型 | TMap<bool,[FCustomApparelsSkin](WorldStruct__FCustomApparelsSkin.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1525,7 +1525,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FEastRimWorldCharacterData` |
+| 返回类型 | [FEastRimWorldCharacterData](../Struct/CharacterStruct__FEastRimWorldCharacterData.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1553,7 +1553,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `CharacterGuid` | `const FGuid&` |
-| `CharacterData` | `FEastRimWorldCharacterData&` |
+| `CharacterData` | [FEastRimWorldCharacterData](../Struct/CharacterStruct__FEastRimWorldCharacterData.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool GetCharacterDataByGuidPtr(const FGuid& CharacterGuid,FEastRimWorldCharacterData& CharacterData);`
 
@@ -1566,7 +1566,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FCharacterSaveData` |
+| 返回类型 | [FCharacterSaveData](WorldCharacterData__FCharacterSaveData.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1588,7 +1588,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `const TMap<FGuid,FCharacterSaveData>&` |
+| 返回类型 | const TMap<FGuid,[FCharacterSaveData](WorldCharacterData__FCharacterSaveData.md)>& |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) const TMap<FGuid,FCharacterSaveData>& GetAllForceCharacterData();`
@@ -1602,7 +1602,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FCharacterSaveData &` |
+| 返回类型 | [FCharacterSaveData](WorldCharacterData__FCharacterSaveData.md) & |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1651,7 +1651,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Character` | `AEastRimWorldCharacter*` |
+| `Character` | [AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateCharacterData(AEastRimWorldCharacter* Character);`
 
@@ -1674,7 +1674,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `CharacterGuid` | `FGuid` |
-| `NewWorldPlace` | `AWorldPlace*` |
+| `NewWorldPlace` | [AWorldPlace](WorldPlace__AWorldPlace.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void SetCharacterInPlace(FGuid CharacterGuid,AWorldPlace* NewWorldPlace);`
 
@@ -1746,7 +1746,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InAgreement` | `const FWorldAgreement&` |
+| `InAgreement` | const [FWorldAgreement](WorldStruct__FWorldAgreement.md)& |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool TrySignAgreementWith(const FWorldAgreement& InAgreement){return false;}`
 
@@ -1884,7 +1884,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacterData` | `const FCharacterSaveData &` |
+| `CharacterData` | const [FCharacterSaveData](WorldCharacterData__FCharacterSaveData.md) & |
 | `BelongToPlaceGuid` | `const FGuid &` |
 | `BeInPlaceGuid` | `FGuid &` |
 
@@ -1925,7 +1925,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `AWorldPlace*` |
+| 返回类型 | [AWorldPlace](WorldPlace__AWorldPlace.md)* |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) AWorldPlace* GetWorldForceMainConstruction();`
@@ -1948,7 +1948,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BattlefieldInformation` | `const FBattlefieldInformation &` |
+| `BattlefieldInformation` | const [FBattlefieldInformation](WorldBattleSystem/WorldBattleStruct__FBattlefieldInformation.md) & |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) int GetBattleCanRecruitNumber(const FBattlefieldInformation & BattlefieldInformation);`
 
@@ -2037,7 +2037,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TArray<FBattleBuffGroup>` |
+| 返回类型 | TArray<[FBattleBuffGroup](WorldStruct__FBattleBuffGroup.md)> |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) TArray<FBattleBuffGroup> GetBattleBuffGroups();`
@@ -2079,7 +2079,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FUseItemSaveData` |
+| 返回类型 | [FUseItemSaveData](../Struct/ItemStruct__FUseItemSaveData.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2110,7 +2110,7 @@
 |--------|------|
 | `PuppetID` | `const FName&` |
 | `EquipmentType` | `EEquipmentType` |
-| `ItemData` | `const FUseItemSaveData&` |
+| `ItemData` | const [FUseItemSaveData](../Struct/ItemStruct__FUseItemSaveData.md)& |
 | `（匿名/仅类型）` | `EArmorType ArmorType = EArmorType::None` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) bool SetPuppetEquippedItem(const FName& PuppetID, EEquipmentType EquipmentType, const FUseItemSaveData& ItemData, EArmorType ArmorType = EArmorType::None);`
@@ -2176,7 +2176,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FPuppetModificationInfo` |
+| 返回类型 | [FPuppetModificationInfo](../Struct/ItemStruct__FPuppetModificationInfo.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |

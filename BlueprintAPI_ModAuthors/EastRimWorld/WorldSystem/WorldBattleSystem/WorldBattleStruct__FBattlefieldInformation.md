@@ -59,7 +59,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FBattleRuleset` |
+| C++ 类型 | [FBattleRuleset](WorldBattleStruct__FBattleRuleset.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FBattleRuleset BattleRuleset;` |
@@ -74,7 +74,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGuid,FBattleTeamState>` |
+| C++ 类型 | TMap<FGuid,[FBattleTeamState](WorldBattleStruct__FBattleTeamState.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FGuid,FBattleTeamState> BattleTeamState;` |
@@ -134,7 +134,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FBattlefieldResult` |
+| C++ 类型 | [FBattlefieldResult](WorldBattleStruct__FBattlefieldResult.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FBattlefieldResult BattlefieldResult;` |
@@ -149,7 +149,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FBattlefieldAward` |
+| C++ 类型 | [FBattlefieldAward](WorldBattleStruct__FBattlefieldAward.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FBattlefieldAward BattlefieldAward;` |

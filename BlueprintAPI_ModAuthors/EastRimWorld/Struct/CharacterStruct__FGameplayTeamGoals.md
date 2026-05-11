@@ -74,7 +74,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<ERobotType , FGoals>` |
+| C++ 类型 | TMap<ERobotType , [FGoals](CharacterStruct__FGoals.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "GOAP") TMap<ERobotType , FGoals> SummonInitGoal;` |

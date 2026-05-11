@@ -59,7 +59,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGuid, FCharacterBattleInfo>` |
+| C++ 类型 | TMap<FGuid, [FCharacterBattleInfo](WorldBattleStruct__FCharacterBattleInfo.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FGuid, FCharacterBattleInfo> CharacterBattleInfos;` |
@@ -89,7 +89,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FTeamBaseInformation` |
+| C++ 类型 | [FTeamBaseInformation](WorldBattleStruct__FTeamBaseInformation.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FTeamBaseInformation TeamBaseInformation;` |
@@ -104,7 +104,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FBattleTeamInfo` |
+| C++ 类型 | [FBattleTeamInfo](WorldBattleStruct__FBattleTeamInfo.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FBattleTeamInfo BattleTeamInfo;` |
@@ -119,7 +119,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FStratagemAbility>` |
+| C++ 类型 | TArray<[FStratagemAbility](WorldBattleStruct__FStratagemAbility.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FStratagemAbility> HandStratagemAbility;` |
@@ -134,7 +134,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FStratagemAbility>` |
+| C++ 类型 | TArray<[FStratagemAbility](WorldBattleStruct__FStratagemAbility.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FStratagemAbility> PoolStratagemAbility;` |
@@ -149,7 +149,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FCharacterSaveData>` |
+| C++ 类型 | TArray<[FCharacterSaveData](../WorldCharacterData__FCharacterSaveData.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FCharacterSaveData> HandCharacterCard;` |
@@ -164,7 +164,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FCharacterSaveData>` |
+| C++ 类型 | TArray<[FCharacterSaveData](../WorldCharacterData__FCharacterSaveData.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FCharacterSaveData> PoolCharacterCard;` |
@@ -179,7 +179,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FStratagemAbility>` |
+| C++ 类型 | TArray<[FStratagemAbility](WorldBattleStruct__FStratagemAbility.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FStratagemAbility> ApplyStratagemAbility;` |
@@ -194,7 +194,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FCharacterSaveData>` |
+| C++ 类型 | TArray<[FCharacterSaveData](../WorldCharacterData__FCharacterSaveData.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FCharacterSaveData> AliveCharacterCard;` |
@@ -269,7 +269,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FStratagemAbility` |
+| C++ 类型 | [FStratagemAbility](WorldBattleStruct__FStratagemAbility.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FStratagemAbility NextUseStratagemAbility;` |
@@ -359,7 +359,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FAutoUseCharacterRule` |
+| C++ 类型 | [FAutoUseCharacterRule](WorldBattleStruct__FAutoUseCharacterRule.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FAutoUseCharacterRule AutoUseCharacterRule;` |
@@ -374,7 +374,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `FCharacterSaveData` |
+| C++ 类型 | [FCharacterSaveData](../WorldCharacterData__FCharacterSaveData.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FCharacterSaveData NextCharacterSaveData;` |
@@ -434,7 +434,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FBattleBuffGroup>` |
+| C++ 类型 | TArray<[FBattleBuffGroup](../WorldStruct__FBattleBuffGroup.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FBattleBuffGroup> BattleBuffGroup;` |
@@ -449,7 +449,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGuid,FCharacterCureInfo>` |
+| C++ 类型 | TMap<FGuid,[FCharacterCureInfo](WorldBattleStruct__FCharacterCureInfo.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<FGuid,FCharacterCureInfo> CharacterCureInfo;` |

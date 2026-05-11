@@ -14,7 +14,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `AERW_GameModeBase*` |
+| C++ 类型 | [AERW_GameModeBase](../Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) AERW_GameModeBase* GameMode { nullptr };` |
@@ -25,7 +25,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TObjectPtr<AWorldPlace>` |
+| C++ 类型 | TObjectPtr<[AWorldPlace](../WorldSystem/WorldPlace__AWorldPlace.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TObjectPtr<AWorldPlace> WorldPlace;` |
@@ -36,7 +36,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FGameplayTag , FItemUseState>` |
+| C++ 类型 | TMap<FGameplayTag , [FItemUseState](GOAP_PlanComponent__FItemUseState.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<FGameplayTag , FItemUseState> ItemUseStates;` |
@@ -52,7 +52,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , FGOAPScoreData>` |
+| C++ 类型 | TMap<FName , [FGOAPScoreData](GOAP_PlanComponent__FGOAPScoreData.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<FName , FGOAPScoreData> Goals;` |
@@ -115,7 +115,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<FGOAP_Action>` |
+| C++ 类型 | TArray<[FGOAP_Action](GOAP_Data__FGOAP_Action.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) TArray<FGOAP_Action> CurrentPlans;` |
@@ -265,7 +265,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `GoalID` | `const FName&` |
-| `ScoreData` | `const FGOAPScoreData&` |
+| `ScoreData` | const [FGOAPScoreData](GOAP_PlanComponent__FGOAPScoreData.md)& |
 | `Remove` | `bool` |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void UpdateGoal(const FName& GoalID , const FGOAPScoreData& ScoreData , bool Remove);`
@@ -393,7 +393,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `FromAgent` | `const AEastRimWorldAIController*` |
+| `FromAgent` | const [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CopyWorkPriorities(const AEastRimWorldAIController* FromAgent);`
 
@@ -415,7 +415,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `FromAgent` | `const AEastRimWorldAIController*` |
+| `FromAgent` | const [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CopyCustomWorkPriorities(const AEastRimWorldAIController* FromAgent);`
 
@@ -437,8 +437,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ManagerComponent` | `UGOAP_ManagerComponent*` |
-| `Agent` | `AEastRimWorldAIController*` |
+| `ManagerComponent` | [UGOAP_ManagerComponent](GOAP_ManagerComponent__UGOAP_ManagerComponent.md)* |
+| `Agent` | [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void FindPlans(UGOAP_ManagerComponent* ManagerComponent , AEastRimWorldAIController* Agent);`
 
@@ -482,7 +482,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ManagerComponent` | `UGOAP_ManagerComponent*` |
+| `ManagerComponent` | [UGOAP_ManagerComponent](GOAP_ManagerComponent__UGOAP_ManagerComponent.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintPure) bool IsBatchAction(UGOAP_ManagerComponent* ManagerComponent) const;`
 
@@ -521,7 +521,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FGOAP_Action` |
+| 返回类型 | [FGOAP_Action](GOAP_Data__FGOAP_Action.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FGOAP_Action GetCurrentFirstPlans();`
@@ -539,7 +539,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `FGOAP_Action` |
+| 返回类型 | [FGOAP_Action](GOAP_Data__FGOAP_Action.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) FGOAP_Action GetCurrentNextPlans();`
@@ -656,8 +656,8 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ManagerComponent` | `UGOAP_ManagerComponent*` |
-| `Agent` | `AEastRimWorldAIController*` |
+| `ManagerComponent` | [UGOAP_ManagerComponent](GOAP_ManagerComponent__UGOAP_ManagerComponent.md)* |
+| `Agent` | [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
 
 **原始声明（单行节选）：** `UFUNCTION(BlueprintCallable) void CreatePrisonerRecruitedAction(UGOAP_ManagerComponent* ManagerComponent,AEastRimWorldAIController* Agent);`
 
