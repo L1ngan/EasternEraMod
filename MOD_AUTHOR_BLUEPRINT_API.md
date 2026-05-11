@@ -7,8 +7,8 @@
 **说明：**
 
 - 仅包含在反射系统中标记为蓝图可用的符号；未加对应标记的 C++ 成员**不会**出现在蓝图节点中。
-- 工程内还有大量 gameplay 类（如 `UERW_MapDataMgr`、`UERW_HISMManager`、`AWorldBattleManager` 等）带有繁多蓝图 API，本文对模组链路作完整梳理，对其余系统作索引级指引；**最权威的完整列表请以编辑器中对该类调用右键 → Go to Definition / 蓝图节点搜索为准**。
-- 源码路径默认相对于仓库：`Source/EastRimWorld/`。
+- 工程内还有大量 gameplay 类（如 `UERW_MapDataMgr`、`UERW_HISMManager`、`AWorldBattleManager` 等）带有繁多蓝图 API，本文对模组链路作完整梳理，对其余系统作索引级指引；
+
 
 ---
 
