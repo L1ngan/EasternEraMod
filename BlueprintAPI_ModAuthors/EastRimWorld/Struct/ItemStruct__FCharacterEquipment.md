@@ -1,0 +1,131 @@
+# `struct` `FCharacterEquipment`
+
+**源码头文件：** `EastRimWorld/Struct/ItemStruct.h`
+
+---
+
+## 功能说明（来自头文件注释）
+
+> 角色装备
+
+## 蓝图暴露变量
+
+### 属性 `EquipmentGuid`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FGuid` |
+| 反射说明符 | BlueprintReadWrite, Category="Equipment Base" |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment Base") FGuid EquipmentGuid = FGuid();` |
+
+**源码注释：**
+
+> 装备的唯一GUID 运行时生成
+
+---
+
+### 属性 `EquipmentType`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `EEquipmentType` |
+| 反射说明符 | BlueprintReadWrite, Category="Equipment Base" |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment Base") EEquipmentType EquipmentType = EEquipmentType::None;` |
+
+**源码注释：**
+
+> 装备的类型
+
+---
+
+### 属性 `MainAttributes`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TArray<FName>` |
+| 反射说明符 | BlueprintReadWrite, Category="Equipment Base" |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment Base") TArray<FName> MainAttributes;` |
+
+**源码注释：**
+
+> 此装备的主属性(EquipmentAttribute表）
+
+---
+
+### 属性 `SubAttributes`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TArray<FName>` |
+| 反射说明符 | BlueprintReadWrite, Category="Equipment Base" |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment Base") TArray<FName> SubAttributes;` |
+
+**源码注释：**
+
+> 此装备的次属性(EquipmentAttribute表）
+
+---
+
+### 属性 `EquipmentAbility`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TArray<FName>` |
+| 反射说明符 | BlueprintReadWrite, Category="Equipment Base" |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment Base") TArray<FName> EquipmentAbility;` |
+
+**源码注释：**
+
+> 此装备自带的技能
+
+---
+
+### 属性 `CharacterName`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FString` |
+| 反射说明符 | BlueprintReadWrite, Category="Equipment Base" |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment Base") FString CharacterName;` |
+
+**源码注释：**
+
+> 打造的人名字
+
+---
+
+### 属性 `CharacterGUID`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FGuid` |
+| 反射说明符 | BlueprintReadWrite, Category="Equipment Base" |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment Base") FGuid CharacterGUID;` |
+
+**源码注释：**
+
+> 打造的人GUID
+
+---
+
+### 属性 `RefitDurability`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadWrite, Category="Puppet Equipment" |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Puppet Equipment") float RefitDurability = 500.f;` |
+
+**源码注释：**
+
+> 傀儡改装耐久度
+
+---

@@ -1,0 +1,547 @@
+# `struct` `FForceLevelInfo`
+
+**源码头文件：** `EastRimWorld/WorldSystem/WorldStruct.h`
+
+---
+
+## 功能说明（来自头文件注释）
+
+> 势力等级信息（势力声望级别配置）
+
+## 蓝图暴露变量
+
+### 属性 `ForceLevel`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 ForceLevel = 1;` |
+
+**源码注释：**
+
+> 势力等级
+
+---
+
+### 属性 `ForceLevelName`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FText` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText ForceLevelName;` |
+
+**源码注释：**
+
+> 声望级别名称
+
+---
+
+### 属性 `LevelUpConditionIDs`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TArray<FName>` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> LevelUpConditionIDs;` |
+
+**源码注释：**
+
+> 升级条件ID(关联DT_CommonTaskCondition表)(从低一级升级到本级需要的条件)
+
+---
+
+### 属性 `UnlockContentIDs`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TArray<FName>` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> UnlockContentIDs;` |
+
+**源码注释：**
+
+> 解锁内容(关联DT_TechUnlockItemConig表)
+
+---
+
+### 属性 `LevelReputation`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float LevelReputation = 100.f;` |
+
+**源码注释：**
+
+> 升级所需最低声望值
+
+---
+
+### 属性 `NumberOfSubclasses`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 NumberOfSubclasses = 2;` |
+
+**源码注释：**
+
+> 分堂数量
+
+---
+
+### 属性 `ForceMaxCharacterNum`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 ForceMaxCharacterNum = 0;` |
+
+**源码注释：**
+
+> 宗门人数上限
+
+---
+
+### 属性 `NumberOfSubclassesMembers`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TArray<int32>` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<int32> NumberOfSubclassesMembers;` |
+
+**源码注释：**
+
+> 分堂成员数量（包含：分堂堂主+弟子）
+
+---
+
+### 属性 `NumberOfSubclassesFeature`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 NumberOfSubclassesFeature = 2;` |
+
+**源码注释：**
+
+> 可配置的分堂特性数量
+
+---
+
+### 属性 `SubclassesFeatureIDs`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TArray<FName>` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> SubclassesFeatureIDs;` |
+
+**源码注释：**
+
+> 可选择的分堂特性
+
+---
+
+### 属性 `PurposeNum`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 PurposeNum = 0;` |
+
+**源码注释：**
+
+> 可激活的宗旨数量
+
+---
+
+### 属性 `NumberOfStations`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 NumberOfStations = 1;` |
+
+**源码注释：**
+
+> 驻地数量
+
+---
+
+### 属性 `NumberOfTowns`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 NumberOfTowns = 1;` |
+
+**源码注释：**
+
+> 城镇数量
+
+---
+
+### 属性 `NumberOfResourcePoints`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 NumberOfResourcePoints = 2;` |
+
+**源码注释：**
+
+> 资源点数量
+
+---
+
+### 属性 `TradeMarkup`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float TradeMarkup = 0.f;` |
+
+**源码注释：**
+
+> 贸易加成
+
+---
+
+### 属性 `SpeedOfTrade`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float SpeedOfTrade = 0.f;` |
+
+**源码注释：**
+
+> 贸易速度
+
+---
+
+### 属性 `FeudalOfficialUnlockBuilding`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TArray<FName>` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName>FeudalOfficialUnlockBuilding;` |
+
+---
+
+### 属性 `ChamberOfCommerceUnlockBuilding`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TArray<FName>` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName>ChamberOfCommerceUnlockBuilding;` |
+
+**源码注释：**
+
+> 商会解锁的建筑物
+
+---
+
+### 属性 `MasterSalary`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 MasterSalary = 0;` |
+
+**源码注释：**
+
+> 宗主工资
+
+---
+
+### 属性 `SubMasterSalary`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 SubMasterSalary = 0;` |
+
+**源码注释：**
+
+> 堂主工资
+
+---
+
+### 属性 `CoreCharacterSalary`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 CoreCharacterSalary = 0;` |
+
+**源码注释：**
+
+> 内门工资
+
+---
+
+### 属性 `MarginalCharacterSalary`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 MarginalCharacterSalary = 0;` |
+
+**源码注释：**
+
+> 外门工资
+
+---
+
+### 属性 `FactionUnlockBuilding`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TArray<FName>` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName>FactionUnlockBuilding;` |
+
+**源码注释：**
+
+> 帮派解锁的建筑物
+
+---
+
+### 属性 `SectUnlockBuilding`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TArray<FName>` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName>SectUnlockBuilding;` |
+
+**源码注释：**
+
+> 门派解锁的建筑物
+
+---
+
+### 属性 `HomotropyFavorability`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float HomotropyFavorability = 0.f;` |
+
+**源码注释：**
+
+> 同倾向好感度增加
+
+---
+
+### 属性 `DifferentTendenciesFavorability`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float DifferentTendenciesFavorability = 0.f;` |
+
+**源码注释：**
+
+> 不同倾向好感度增加
+
+---
+
+### 属性 `CanForceOperation`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TArray<EForceOperationType>` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<EForceOperationType> CanForceOperation;` |
+
+**源码注释：**
+
+> 允许的势力操作
+
+---
+
+### 属性 `MaxGrowScore`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float MaxGrowScore = 999999.f;` |
+
+**源码注释：**
+
+> NPC势力成长积分上限
+
+---
+
+### 属性 `AddGrowScore`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float AddGrowScore = 0.f;` |
+
+**源码注释：**
+
+> NPC势力成长积分定期加值
+
+---
+
+### 属性 `NPCConstructionTimes`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TArray<int32>` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<int32> NPCConstructionTimes;` |
+
+**源码注释：**
+
+> 每周期自动建造升级设施的次数随机数组
+
+---
+
+### 属性 `UnlockDogfaceIDs`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TArray<FName>` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> UnlockDogfaceIDs;` |
+
+**源码注释：**
+
+> 小兵
+
+---
+
+### 属性 `UnlockStrategicAbility`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TArray<FName>` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> UnlockStrategicAbility;` |
+
+**源码注释：**
+
+> 战略技能
+
+---
+
+### 属性 `UnlockTowerDefense`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TArray<FName>` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> UnlockTowerDefense;` |
+
+**源码注释：**
+
+> 防御塔
+
+---
+
+### 属性 `BattleBuffGroup`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TArray<FBattleBuffGroup>` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FBattleBuffGroup> BattleBuffGroup;` |
+
+**源码注释：**
+
+> 战斗中生效的Buff
+
+---
+
+### 属性 `AddMainPlaceStationedNum`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 AddMainPlaceStationedNum = 0;` |
+
+**源码注释：**
+
+> 增加主城驻扎上限
+
+---
+
+### 属性 `RecruitRate`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float RecruitRate = 0.f;` |
+
+**源码注释：**
+
+> 招募成功率影响
+
+---
