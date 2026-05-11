@@ -1,0 +1,202 @@
+# `struct` `FSocialRelationshipConfig`
+
+**Source header:** `EastRimWorld/Struct/CharacterChatStruct.h`
+
+---
+
+## Functional description (from header comments)
+
+> 社交关系配置
+
+## Blueprint-exposed variables
+
+### Property `Name`
+
+| Field | Details |
+|------|------|
+| C++ type | `FText` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) FText Name;` |
+
+**Source comments:**
+
+> 关系名称
+
+---
+
+### Property `MinGoodOpinion`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) int32 MinGoodOpinion = 0;` |
+
+**Source comments:**
+
+> 好感度
+
+---
+
+### Property `MaxGoodOpinion`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) int32 MaxGoodOpinion = 0;` |
+
+---
+
+### Property `OnlyOppositeSex`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) bool OnlyOppositeSex = false;` |
+
+**Source comments:**
+
+> 仅异性?
+
+---
+
+### Property `MaleDesc`
+
+| Field | Details |
+|------|------|
+| C++ type | `FText` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) FText MaleDesc;` |
+
+**Source comments:**
+
+> 关系中对男性的描述(例如丈夫)
+
+---
+
+### Property `FemaleDesc`
+
+| Field | Details |
+|------|------|
+| C++ type | `FText` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) FText FemaleDesc;` |
+
+**Source comments:**
+
+> 关系中对女性的描述(例如妻子)
+
+---
+
+### Property `LevelUpType`
+
+| Field | Details |
+|------|------|
+| C++ type | `ERelationshipLevelUpType` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) ERelationshipLevelUpType LevelUpType = ERelationshipLevelUpType::Auto;` |
+
+**Source comments:**
+
+> 达成此关系的方式
+
+---
+
+### Property `LevelUpBuilding`
+
+| Field | Details |
+|------|------|
+| C++ type | `TArray<FName>` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) TArray<FName> LevelUpBuilding;` |
+
+**Source comments:**
+
+> 非自动升级时所需仪式建筑ID
+
+---
+
+### Property `ApplyTimes`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) int32 ApplyTimes = 0;` |
+
+**Source comments:**
+
+> 申请次数
+
+---
+
+### Property `ChatBuffs`
+
+| Field | Details |
+|------|------|
+| C++ type | `TArray<FName>` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) TArray<FName> ChatBuffs;` |
+
+**Source comments:**
+
+> 对话buff
+
+---
+
+### Property `DeathBuffs`
+
+| Field | Details |
+|------|------|
+| C++ type | `TArray<FName>` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) TArray<FName> DeathBuffs;` |
+
+**Source comments:**
+
+> 关系人死亡触发buff
+
+---
+
+### Property `ConflictRelationID`
+
+| Field | Details |
+|------|------|
+| C++ type | `TArray<FName>` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) TArray<FName> ConflictRelationID;` |
+
+**Source comments:**
+
+> 冲突关系(当与其他人存在以下关系时不能发展为此关系)
+
+---
+
+### Property `UIOrder`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) int32 UIOrder = 0;` |
+
+**Source comments:**
+
+> UI显示上的排序
+
+---

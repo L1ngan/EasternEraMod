@@ -9,8 +9,7 @@
 
 ## Mod 作者蓝图 API
 
-| 文档 | 说明 |
-|------|------|
-| [MOD_AUTHOR_BLUEPRINT_API.md](./MOD_AUTHOR_BLUEPRINT_API.md) | EastRimWorld 模组相关蓝图可调用接口汇总（`UFUNCTION`/`UPROPERTY` 等） |
-| [BlueprintAPI_ModAuthors/INDEX.md](./BlueprintAPI_ModAuthors/INDEX.md) | 按类型拆分的详细文档目录入口 |
-| [BlueprintAPI_Reference_ModAuthors.md](./BlueprintAPI_Reference_ModAuthors.md) | 简短导引（根目录） |
+| Language | Index |
+|----------|--------|
+| 简体中文 | [BlueprintAPI_ModAuthors/zh/INDEX.md](BlueprintAPI_ModAuthors/zh/INDEX.md) |
+| English (US) | [BlueprintAPI_ModAuthors/en/INDEX.md](BlueprintAPI_ModAuthors/en/INDEX.md) |

@@ -1,0 +1,117 @@
+# `struct` `FWorkPriorityUIConfigData`
+
+**Source header:** `EastRimWorld/UI/Struct/UIStruct.h`
+
+---
+
+## Functional description (from header comments)
+
+> 工作优先级UI配置结构
+
+## Blueprint-exposed variables
+
+### Property `Name`
+
+| Field | Details |
+|------|------|
+| C++ type | `FText` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FText Name;` |
+
+**Source comments:**
+
+> 显示名称
+> !!!Warning!!! 该表的配置顺序决定了UI的显示顺序
+
+---
+
+### Property `Goals`
+
+| Field | Details |
+|------|------|
+| C++ type | `TArray<FName>` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FName> Goals;` |
+
+**Source comments:**
+
+> 对应的GOAP目标
+
+---
+
+### Property `Actions`
+
+| Field | Details |
+|------|------|
+| C++ type | `TArray<FName>` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FName> Actions;` |
+
+**Source comments:**
+
+> 包含的GOAP Action
+
+---
+
+### Property `CanSort`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) bool CanSort { false };` |
+
+**Source comments:**
+
+> 能否排序
+
+---
+
+### Property `RelativeRowName`
+
+| Field | Details |
+|------|------|
+| C++ type | `FName` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FName RelativeRowName;` |
+
+**Source comments:**
+
+> 对应DT_CharacterMainSkillUIConfig表的行名
+
+---
+
+### Property `Tips`
+
+| Field | Details |
+|------|------|
+| C++ type | `FText` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FText Tips;` |
+
+**Source comments:**
+
+> 显示的Tips
+
+---
+
+### Property `SubClassType`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 SubClassType = 2;` |
+
+**Source comments:**
+
+> 内门0，外门1，内外门通用2
+
+---

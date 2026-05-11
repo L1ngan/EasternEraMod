@@ -1,0 +1,41 @@
+# `struct` `FPresetBuilding`
+
+**源码头文件:** `EastRimWorld/ERW_ConfigTypes.h`
+
+---
+
+## 功能说明（来自头文件注释）
+
+> 预设建筑物信息
+
+## 蓝图暴露变量
+
+### 属性 `BuildingID`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FName` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName BuildingID;` |
+
+**源码注释:**
+
+> 建筑物ID
+
+---
+
+### 属性 `BuildingTransform`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FTransform` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FTransform BuildingTransform;` |
+
+**源码注释:**
+
+> 建筑物坐标
+
+---
