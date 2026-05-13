@@ -64,6 +64,8 @@ enum class EModConfigType : uint8
 	EnemyAttackGenerationConfig,
 	//怪物生成配置
 	MonsterGenerationConfig,
+	//威胁池信息
+	ThreatPoolInfo,
 };
 
 //Mod资产类型

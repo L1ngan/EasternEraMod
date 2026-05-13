@@ -68,7 +68,7 @@ public:
 };
 
 USTRUCT(BlueprintType)
-struct FModGenerationData:public FModDataBase
+struct FModGenerationData:public FTableRowBase
 {
 	GENERATED_USTRUCT_BODY()
 	//生成的位置 如果是战场小兵模板则不填
@@ -92,6 +92,9 @@ struct FModGenerationData:public FModDataBase
 	//闲逛时移动的范围 以出生点为中心
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 MovingRange = 0.f;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FName ID;
 	friend uint32 GetTypeHash(FModGenerationData const & This)
 	{
 		return GetTypeHash(This.ID);
