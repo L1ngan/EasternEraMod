@@ -189,3 +189,33 @@
 > 等级属性GE
 
 ---
+
+### 属性 `GiveAbility`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TArray<FName>` |
+| 反射说明符 | BlueprintReadOnly, Category="Entries" |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Entries") TArray<FName> GiveAbility;` |
+
+**源码注释:**
+
+> 获得得技能
+
+---
+
+### 属性 `BaseAbility`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FName` |
+| 反射说明符 | BlueprintReadOnly, Category="Entries" |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Entries") FName BaseAbility;` |
+
+**源码注释:**
+
+> 关联的基础技能
+
+---

@@ -2,8 +2,8 @@
 
 One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
 
-**Types:** 658
-**Headers:** 196
+**Types:** 728
+**Headers:** 204
 
 **Description:** Each entry summarizes comments **immediately above** the type’s **`UCLASS` / `USTRUCT`** (`//` or block; what it does and which area it covers; flattened to one line and truncated). If there is no comment, a placeholder is shown; authoritative detail is still in the `.h` and per-type `.md`.
 
@@ -200,14 +200,44 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
 - `class` **`UEastRimWorldWorkSet`** — [EastRimWorldWorkSet__UEastRimWorldWorkSet](EastRimWorld/AbilitySystem/Attributes/EastRimWorldWorkSet__UEastRimWorldWorkSet.md)
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
 
+## `EastRimWorld/AbilitySystem/EastRimWorldAbilitySet.h`
+
+- `struct` **`FEastRimWorldAbilitySet_AttributeSet`** — [EastRimWorldAbilitySet__FEastRimWorldAbilitySet_AttributeSet](EastRimWorld/AbilitySystem/EastRimWorldAbilitySet__FEastRimWorldAbilitySet_AttributeSet.md)
+  - **Description:** FEastRimWorldAbilitySet_AttributeSet Data used by the ability set to grant attribute sets.
+- `struct` **`FEastRimWorldAbilitySet_GameplayAbility`** — [EastRimWorldAbilitySet__FEastRimWorldAbilitySet_GameplayAbility](EastRimWorld/AbilitySystem/EastRimWorldAbilitySet__FEastRimWorldAbilitySet_GameplayAbility.md)
+  - **Description:** FEastRimWorldAbilitySet_GameplayAbility Data used by the ability set to grant gameplay abilities.
+- `struct` **`FEastRimWorldAbilitySet_GameplayEffect`** — [EastRimWorldAbilitySet__FEastRimWorldAbilitySet_GameplayEffect](EastRimWorld/AbilitySystem/EastRimWorldAbilitySet__FEastRimWorldAbilitySet_GameplayEffect.md)
+  - **Description:** FEastRimWorldAbilitySet_GameplayEffect Data used by the ability set to grant gameplay effects.
+- `struct` **`FEastRimWorldAbilitySet_GrantedHandles`** — [EastRimWorldAbilitySet__FEastRimWorldAbilitySet_GrantedHandles](EastRimWorld/AbilitySystem/EastRimWorldAbilitySet__FEastRimWorldAbilitySet_GrantedHandles.md)
+  - **Description:** FEastRimWorldAbilitySet_GrantedHandles Data used to store handles to what has been granted by the ability set.
+
 ## `EastRimWorld/AbilitySystem/EastRimWorldAbilitySystemComponent.h`
 
 - `class` **`UEastRimWorldAbilitySystemComponent`** — [EastRimWorldAbilitySystemComponent__UEastRimWorldAbilitySystemComponent](EastRimWorld/AbilitySystem/EastRimWorldAbilitySystemComponent__UEastRimWorldAbilitySystemComponent.md)
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
 
+## `EastRimWorld/AbilitySystem/EastRimWorldAbilityTagRelationshipMapping.h`
+
+- `struct` **`FEastRimWorldAbilityTagRelationship`** — [EastRimWorldAbilityTagRelationshipMapping__FEastRimWorldAbilityTagRelationship](EastRimWorld/AbilitySystem/EastRimWorldAbilityTagRelationshipMapping__FEastRimWorldAbilityTagRelationship.md)
+  - **Description:** Struct that defines the relationship between different ability tags
+
+## `EastRimWorld/AbilitySystem/EastRimWorldGameplayEffectContext.h`
+
+- `struct` **`FEastRimWorldGameplayEffectContext`** — [EastRimWorldGameplayEffectContext__FEastRimWorldGameplayEffectContext](EastRimWorld/AbilitySystem/EastRimWorldGameplayEffectContext__FEastRimWorldGameplayEffectContext.md)
+  - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
+
 ## `EastRimWorld/AbilitySystem/EastRimWorldGlobalAbilitySystem.h`
 
+- `struct` **`FGlobalAppliedAbilityList`** — [EastRimWorldGlobalAbilitySystem__FGlobalAppliedAbilityList](EastRimWorld/AbilitySystem/EastRimWorldGlobalAbilitySystem__FGlobalAppliedAbilityList.md)
+  - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
+- `struct` **`FGlobalAppliedEffectList`** — [EastRimWorldGlobalAbilitySystem__FGlobalAppliedEffectList](EastRimWorld/AbilitySystem/EastRimWorldGlobalAbilitySystem__FGlobalAppliedEffectList.md)
+  - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
 - `class` **`UEastRimWorldGlobalAbilitySystem`** — [EastRimWorldGlobalAbilitySystem__UEastRimWorldGlobalAbilitySystem](EastRimWorld/AbilitySystem/EastRimWorldGlobalAbilitySystem__UEastRimWorldGlobalAbilitySystem.md)
+  - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
+
+## `EastRimWorld/AbilitySystem/EffectComponent/ActivateAbilitiesGameplayEffect.h`
+
+- `struct` **`FActivateAbilitiesConfig`** — [ActivateAbilitiesGameplayEffect__FActivateAbilitiesConfig](EastRimWorld/AbilitySystem/EffectComponent/ActivateAbilitiesGameplayEffect__FActivateAbilitiesConfig.md)
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
 
 ## `EastRimWorld/AbilitySystem/GamplyCue/GameplayCueNotifyActor.h`
@@ -407,6 +437,8 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
   - **Description:** 沿格子边线生成的Actor的信息
 - `struct` **`FRoofActors`** — [ERW_AreaOperationComponent__FRoofActors](EastRimWorld/Components/ERW_AreaOperationComponent__FRoofActors.md)
   - **Description:** 同一屋顶部位类型显示和隐藏的Actor
+- `struct` **`FRoofPartData`** — [ERW_AreaOperationComponent__FRoofPartData](EastRimWorld/Components/ERW_AreaOperationComponent__FRoofPartData.md)
+  - **Description:** 屋顶部位数据
 - `struct` **`FStairGridInfo`** — [ERW_AreaOperationComponent__FStairGridInfo](EastRimWorld/Components/ERW_AreaOperationComponent__FStairGridInfo.md)
   - **Description:** 阶梯格子信息
 - `class` **`UERW_AreaOperationComponent`** — [ERW_AreaOperationComponent__UERW_AreaOperationComponent](EastRimWorld/Components/ERW_AreaOperationComponent__UERW_AreaOperationComponent.md)
@@ -414,16 +446,22 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
 
 ## `EastRimWorld/Components/ERW_ConstructionComponent.h`
 
+- `struct` **`FConstructionSaveData`** — [ERW_ConstructionComponent__FConstructionSaveData](EastRimWorld/Components/ERW_ConstructionComponent__FConstructionSaveData.md)
+  - **Description:** 建造组件存档数据
 - `class` **`UERW_ConstructionComponent`** — [ERW_ConstructionComponent__UERW_ConstructionComponent](EastRimWorld/Components/ERW_ConstructionComponent__UERW_ConstructionComponent.md)
   - **Description:** 建造组件
 
 ## `EastRimWorld/Components/ERW_DoorCollisionComponent.h`
 
+- `struct` **`FDoorCollisionSaveData`** — [ERW_DoorCollisionComponent__FDoorCollisionSaveData](EastRimWorld/Components/ERW_DoorCollisionComponent__FDoorCollisionSaveData.md)
+  - **Description:** 门的碰撞存档数据
 - `class` **`UERW_DoorCollisionComponent`** — [ERW_DoorCollisionComponent__UERW_DoorCollisionComponent](EastRimWorld/Components/ERW_DoorCollisionComponent__UERW_DoorCollisionComponent.md)
   - **Description:** 门的碰撞管理组件
 
 ## `EastRimWorld/Components/ERW_EnvironComponent.h`
 
+- `struct` **`FEnvironSaveData`** — [ERW_EnvironComponent__FEnvironSaveData](EastRimWorld/Components/ERW_EnvironComponent__FEnvironSaveData.md)
+  - **Description:** 环境信息关数据
 - `struct` **`FSupportingObjects`** — [ERW_EnvironComponent__FSupportingObjects](EastRimWorld/Components/ERW_EnvironComponent__FSupportingObjects.md)
   - **Description:** 格子坐标对应的配套物体
 - `class` **`UERW_EnvironComponent`** — [ERW_EnvironComponent__UERW_EnvironComponent](EastRimWorld/Components/ERW_EnvironComponent__UERW_EnvironComponent.md)
@@ -470,6 +508,8 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
 
 - `struct` **`FEmbeddedWallInfo`** — [ERW_HISMManager__FEmbeddedWallInfo](EastRimWorld/Components/ERW_HISMManager__FEmbeddedWallInfo.md)
   - **Description:** 嵌入式墙体在ISM中的信息
+- `struct` **`FPillarSaveData`** — [ERW_HISMManager__FPillarSaveData](EastRimWorld/Components/ERW_HISMManager__FPillarSaveData.md)
+  - **Description:** 建筑柱子的存档数据
 - `struct` **`FReplacedWallData`** — [ERW_HISMManager__FReplacedWallData](EastRimWorld/Components/ERW_HISMManager__FReplacedWallData.md)
   - **Description:** 需要替换的墙体的数据
 - `class` **`UERW_HISMManager`** — [ERW_HISMManager__UERW_HISMManager](EastRimWorld/Components/ERW_HISMManager__UERW_HISMManager.md)
@@ -477,20 +517,34 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
 
 ## `EastRimWorld/Components/ERW_MapDataMgr.h`
 
+- `struct` **`FActorData`** — [ERW_MapDataMgr__FActorData](EastRimWorld/Components/ERW_MapDataMgr__FActorData.md)
+  - **Description:** Actor数据
 - `struct` **`FBuildData`** — [ERW_MapDataMgr__FBuildData](EastRimWorld/Components/ERW_MapDataMgr__FBuildData.md)
+  - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
+- `struct` **`FBuildObjectSaveData`** — [ERW_MapDataMgr__FBuildObjectSaveData](EastRimWorld/Components/ERW_MapDataMgr__FBuildObjectSaveData.md)
+  - **Description:** 建筑存档数据
+- `struct` **`FBuildingNum`** — [ERW_MapDataMgr__FBuildingNum](EastRimWorld/Components/ERW_MapDataMgr__FBuildingNum.md)
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
 - `struct` **`FClosureAreaData`** — [ERW_MapDataMgr__FClosureAreaData](EastRimWorld/Components/ERW_MapDataMgr__FClosureAreaData.md)
   - **Description:** 闭合区域数据
+- `struct` **`FClosureAreaRange`** — [ERW_MapDataMgr__FClosureAreaRange](EastRimWorld/Components/ERW_MapDataMgr__FClosureAreaRange.md)
+  - **Description:** 闭合区域范围信息
 - `struct` **`FClosureAreas`** — [ERW_MapDataMgr__FClosureAreas](EastRimWorld/Components/ERW_MapDataMgr__FClosureAreas.md)
   - **Description:** 同一层的所有闭合区域
+- `struct` **`FColumnData`** — [ERW_MapDataMgr__FColumnData](EastRimWorld/Components/ERW_MapDataMgr__FColumnData.md)
+  - **Description:** 环境列数据
 - `struct` **`FCombinationBuildAreaData`** — [ERW_MapDataMgr__FCombinationBuildAreaData](EastRimWorld/Components/ERW_MapDataMgr__FCombinationBuildAreaData.md)
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
+- `struct` **`FEnvironData`** — [ERW_MapDataMgr__FEnvironData](EastRimWorld/Components/ERW_MapDataMgr__FEnvironData.md)
+  - **Description:** 环境数据
 - `struct` **`FGridCollectData`** — [ERW_MapDataMgr__FGridCollectData](EastRimWorld/Components/ERW_MapDataMgr__FGridCollectData.md)
   - **Description:** 地格属性
 - `struct` **`FGridData`** — [ERW_MapDataMgr__FGridData](EastRimWorld/Components/ERW_MapDataMgr__FGridData.md)
   - **Description:** 格子数据
 - `struct` **`FHeatSourceAreaData`** — [ERW_MapDataMgr__FHeatSourceAreaData](EastRimWorld/Components/ERW_MapDataMgr__FHeatSourceAreaData.md)
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
+- `struct` **`FRoomElementGuids`** — [ERW_MapDataMgr__FRoomElementGuids](EastRimWorld/Components/ERW_MapDataMgr__FRoomElementGuids.md)
+  - **Description:** 房间要素的Guid
 - `class` **`UERW_MapDataMgr`** — [ERW_MapDataMgr__UERW_MapDataMgr](EastRimWorld/Components/ERW_MapDataMgr__UERW_MapDataMgr.md)
   - **Description:** 地图数据管理
 
@@ -520,6 +574,8 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
 
 ## `EastRimWorld/Components/FabricateActorComponent.h`
 
+- `struct` **`FFabricateSaveData`** — [FabricateActorComponent__FFabricateSaveData](EastRimWorld/Components/FabricateActorComponent__FFabricateSaveData.md)
+  - **Description:** 制造存档数据
 - `class` **`UFabricateActorComponent`** — [FabricateActorComponent__UFabricateActorComponent](EastRimWorld/Components/FabricateActorComponent__UFabricateActorComponent.md)
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
 
@@ -566,12 +622,16 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
   - **Description:** 组装建筑部位的Transform
 - `struct` **`FBuildLightSourceData`** — [ERW_CommonTypes__FBuildLightSourceData](EastRimWorld/ERW_CommonTypes__FBuildLightSourceData.md)
   - **Description:** 建筑光源配置数据
+- `struct` **`FBuildObjectData`** — [ERW_CommonTypes__FBuildObjectData](EastRimWorld/ERW_CommonTypes__FBuildObjectData.md)
+  - **Description:** 建筑模型Instance的数据
 - `struct` **`FCommonCondition`** — [ERW_CommonTypes__FCommonCondition](EastRimWorld/ERW_CommonTypes__FCommonCondition.md)
   - **Description:** 通用条件
 - `struct` **`FConditionValue`** — [ERW_CommonTypes__FConditionValue](EastRimWorld/ERW_CommonTypes__FConditionValue.md)
   - **Description:** 通用条件判断的值
 - `struct` **`FConditions`** — [ERW_CommonTypes__FConditions](EastRimWorld/ERW_CommonTypes__FConditions.md)
   - **Description:** 通用条件的数组
+- `struct` **`FFillerSaveData`** — [ERW_CommonTypes__FFillerSaveData](EastRimWorld/ERW_CommonTypes__FFillerSaveData.md)
+  - **Description:** 填充模型存档数据
 - `struct` **`FGameplayAbilitySaveData`** — [ERW_CommonTypes__FGameplayAbilitySaveData](EastRimWorld/ERW_CommonTypes__FGameplayAbilitySaveData.md)
   - **Description:** 当前能力存档数据
 - `struct` **`FGridPosition`** — [ERW_CommonTypes__FGridPosition](EastRimWorld/ERW_CommonTypes__FGridPosition.md)
@@ -594,6 +654,8 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
 - `struct` **`FStaticMeshComponents`** — [ERW_CommonTypes__FStaticMeshComponents](EastRimWorld/ERW_CommonTypes__FStaticMeshComponents.md)
   - **Description:** 静态模型组件的集合
+- `struct` **`FTargetActorInfo`** — [ERW_CommonTypes__FTargetActorInfo](EastRimWorld/ERW_CommonTypes__FTargetActorInfo.md)
+  - **Description:** 目标Actor的信息
 - `struct` **`FTreasureAddMoodRule`** — [ERW_CommonTypes__FTreasureAddMoodRule](EastRimWorld/ERW_CommonTypes__FTreasureAddMoodRule.md)
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
 - `struct` **`FUObjectData`** — [ERW_CommonTypes__FUObjectData](EastRimWorld/ERW_CommonTypes__FUObjectData.md)
@@ -723,8 +785,12 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
 
 ## `EastRimWorld/GOAP/GOAP_ActionComponent.h`
 
+- `struct` **`FGOAPActionSaveData`** — [GOAP_ActionComponent__FGOAPActionSaveData](EastRimWorld/GOAP/GOAP_ActionComponent__FGOAPActionSaveData.md)
+  - **Description:** GOAP Action存档数据
 - `struct` **`FGOAP_Users`** — [GOAP_ActionComponent__FGOAP_Users](EastRimWorld/GOAP/GOAP_ActionComponent__FGOAP_Users.md)
   - **Description:** GOAP用户的数组
+- `struct` **`FUserReserveData`** — [GOAP_ActionComponent__FUserReserveData](EastRimWorld/GOAP/GOAP_ActionComponent__FUserReserveData.md)
+  - **Description:** 用户预留的物品数据
 - `class` **`UGOAP_ActionComponent`** — [GOAP_ActionComponent__UGOAP_ActionComponent](EastRimWorld/GOAP/GOAP_ActionComponent__UGOAP_ActionComponent.md)
   - **Description:** GOAP行动组件
 
@@ -742,10 +808,14 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
   - **Description:** 设施归属数据
 - `struct` **`FFacilityBelongSaveData`** — [GOAP_ActorBase__FFacilityBelongSaveData](EastRimWorld/GOAP/GOAP_ActorBase__FFacilityBelongSaveData.md)
   - **Description:** 设施归属存档数据
+- `struct` **`FFillerSaveDatas`** — [GOAP_ActorBase__FFillerSaveDatas](EastRimWorld/GOAP/GOAP_ActorBase__FFillerSaveDatas.md)
+  - **Description:** 填充模型相关数据
 - `struct` **`FFuelData`** — [GOAP_ActorBase__FFuelData](EastRimWorld/GOAP/GOAP_ActorBase__FFuelData.md)
   - **Description:** 燃料相关数据
 - `struct` **`FHeatSourceData`** — [GOAP_ActorBase__FHeatSourceData](EastRimWorld/GOAP/GOAP_ActorBase__FHeatSourceData.md)
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
+- `struct` **`FOverlappingItemData`** — [GOAP_ActorBase__FOverlappingItemData](EastRimWorld/GOAP/GOAP_ActorBase__FOverlappingItemData.md)
+  - **Description:** 建筑覆盖采集物相关数据
 - `struct` **`FPuppetData`** — [GOAP_ActorBase__FPuppetData](EastRimWorld/GOAP/GOAP_ActorBase__FPuppetData.md)
   - **Description:** 傀儡相关数据
 - `struct` **`FTransportationData`** — [GOAP_ActorBase__FTransportationData](EastRimWorld/GOAP/GOAP_ActorBase__FTransportationData.md)
@@ -772,11 +842,41 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
 
 ## `EastRimWorld/GOAP/GOAP_ManagerComponent.h`
 
+- `struct` **`FActionData`** — [GOAP_ManagerComponent__FActionData](EastRimWorld/GOAP/GOAP_ManagerComponent__FActionData.md)
+  - **Description:** Actor对应的GOAP_Action的数据
+- `struct` **`FBatchActionData`** — [GOAP_ManagerComponent__FBatchActionData](EastRimWorld/GOAP/GOAP_ManagerComponent__FBatchActionData.md)
+  - **Description:** 批量处理的Action的数据
+- `struct` **`FBatchActions`** — [GOAP_ManagerComponent__FBatchActions](EastRimWorld/GOAP/GOAP_ManagerComponent__FBatchActions.md)
+  - **Description:** 批量处理的Action
+- `struct` **`FBatchData`** — [GOAP_ManagerComponent__FBatchData](EastRimWorld/GOAP/GOAP_ManagerComponent__FBatchData.md)
+  - **Description:** 批量处理的数据
+- `struct` **`FGOAP_Actions`** — [GOAP_ManagerComponent__FGOAP_Actions](EastRimWorld/GOAP/GOAP_ManagerComponent__FGOAP_Actions.md)
+  - **Description:** 包含同类型GOAP_Action的结构体
+- `struct` **`FGameplayTagActions`** — [GOAP_ManagerComponent__FGameplayTagActions](EastRimWorld/GOAP/GOAP_ManagerComponent__FGameplayTagActions.md)
+  - **Description:** Gameplay标签对应的Action数据
+- `struct` **`FGameplayTagLayer2`** — [GOAP_ManagerComponent__FGameplayTagLayer2](EastRimWorld/GOAP/GOAP_ManagerComponent__FGameplayTagLayer2.md)
+  - **Description:** 第二层标签包含GOAPAction的数据
+- `struct` **`FGameplayTagLayer3`** — [GOAP_ManagerComponent__FGameplayTagLayer3](EastRimWorld/GOAP/GOAP_ManagerComponent__FGameplayTagLayer3.md)
+  - **Description:** 第三场标签包含GOAPAction的数据
+- `struct` **`FItemActions`** — [GOAP_ManagerComponent__FItemActions](EastRimWorld/GOAP/GOAP_ManagerComponent__FItemActions.md)
+  - **Description:** 每种物品对应的Action数据
+- `struct` **`FItemInfoActions`** — [GOAP_ManagerComponent__FItemInfoActions](EastRimWorld/GOAP/GOAP_ManagerComponent__FItemInfoActions.md)
+  - **Description:** 物品信息对应的GOAP Action数据
+- `struct` **`FPreActionData`** — [GOAP_ManagerComponent__FPreActionData](EastRimWorld/GOAP/GOAP_ManagerComponent__FPreActionData.md)
+  - **Description:** 前置Action的数据
+- `struct` **`FSpecifiedArrestActions`** — [GOAP_ManagerComponent__FSpecifiedArrestActions](EastRimWorld/GOAP/GOAP_ManagerComponent__FSpecifiedArrestActions.md)
+  - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
+- `struct` **`FSpecifiedItemActions`** — [GOAP_ManagerComponent__FSpecifiedItemActions](EastRimWorld/GOAP/GOAP_ManagerComponent__FSpecifiedItemActions.md)
+  - **Description:** 指定物品的Action数据
 - `class` **`UGOAP_ManagerComponent`** — [GOAP_ManagerComponent__UGOAP_ManagerComponent](EastRimWorld/GOAP/GOAP_ManagerComponent__UGOAP_ManagerComponent.md)
   - **Description:** GOAP管理组件
 
 ## `EastRimWorld/GOAP/GOAP_MemoryComponent.h`
 
+- `struct` **`FGOAPMemorySaveData`** — [GOAP_MemoryComponent__FGOAPMemorySaveData](EastRimWorld/GOAP/GOAP_MemoryComponent__FGOAPMemorySaveData.md)
+  - **Description:** GOAP记忆存档数据
+- `struct` **`FMemoryData`** — [GOAP_MemoryComponent__FMemoryData](EastRimWorld/GOAP/GOAP_MemoryComponent__FMemoryData.md)
+  - **Description:** GOAP记忆数据
 - `class` **`UGOAP_MemoryComponent`** — [GOAP_MemoryComponent__UGOAP_MemoryComponent](EastRimWorld/GOAP/GOAP_MemoryComponent__UGOAP_MemoryComponent.md)
   - **Description:** GOAP记忆组件
 
@@ -908,6 +1008,8 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
   - **Description:** AEastRimWorldPlayerBotController The controller class used by player bots in this project.
 - `struct` **`FAnimalActionAbility`** — [EastRimWorldAIController__FAnimalActionAbility](EastRimWorld/Player/EastRimWorldAIController__FAnimalActionAbility.md)
   - **Description:** 动物ActionAbility配置表结构
+- `struct` **`FBlackboardSaveData`** — [EastRimWorldAIController__FBlackboardSaveData](EastRimWorld/Player/EastRimWorldAIController__FBlackboardSaveData.md)
+  - **Description:** 黑板存档数据
 - `struct` **`FCharacterActionAbility`** — [EastRimWorldAIController__FCharacterActionAbility](EastRimWorld/Player/EastRimWorldAIController__FCharacterActionAbility.md)
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
 - `struct` **`FCharacterActionAbilityAnimSections`** — [EastRimWorldAIController__FCharacterActionAbilityAnimSections](EastRimWorld/Player/EastRimWorldAIController__FCharacterActionAbilityAnimSections.md)
@@ -974,6 +1076,15 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
 - `class` **`AGWOGeneralAccess`** — [GWOGeneralAccess__AGWOGeneralAccess](EastRimWorld/SpawnActorSystem/GWOGeneralAccess__AGWOGeneralAccess.md)
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
 
+## `EastRimWorld/SpawnActorSystem/GWOSaveGame.h`
+
+- `struct` **`FGWOSaveFrozenActorStruct`** — [GWOSaveGame__FGWOSaveFrozenActorStruct](EastRimWorld/SpawnActorSystem/GWOSaveGame__FGWOSaveFrozenActorStruct.md)
+  - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
+- `struct` **`FGWOSaveGameData`** — [GWOSaveGame__FGWOSaveGameData](EastRimWorld/SpawnActorSystem/GWOSaveGame__FGWOSaveGameData.md)
+  - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
+- `struct` **`FGWOSaveSector`** — [GWOSaveGame__FGWOSaveSector](EastRimWorld/SpawnActorSystem/GWOSaveGame__FGWOSaveSector.md)
+  - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
+
 ## `EastRimWorld/SpawnActorSystem/GWOSectorsDirector.h`
 
 - `class` **`AGWOSectorsDirector`** — [GWOSectorsDirector__AGWOSectorsDirector](EastRimWorld/SpawnActorSystem/GWOSectorsDirector__AGWOSectorsDirector.md)
@@ -995,9 +1106,21 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
 - `struct` **`FGWOActorSpawnStruct`** — [GWOTypes__FGWOActorSpawnStruct](EastRimWorld/SpawnActorSystem/GWOTypes__FGWOActorSpawnStruct.md)
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
+- `struct` **`FGWOFrozenActorStruct`** — [GWOTypes__FGWOFrozenActorStruct](EastRimWorld/SpawnActorSystem/GWOTypes__FGWOFrozenActorStruct.md)
+  - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
+- `struct` **`FGWOPointStructData`** — [GWOTypes__FGWOPointStructData](EastRimWorld/SpawnActorSystem/GWOTypes__FGWOPointStructData.md)
+  - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
+- `struct` **`FGWOReplaceInstanceMeshStruct`** — [GWOTypes__FGWOReplaceInstanceMeshStruct](EastRimWorld/SpawnActorSystem/GWOTypes__FGWOReplaceInstanceMeshStruct.md)
+  - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
 - `struct` **`FGWOReplaceMeshRuleStruct`** — [GWOTypes__FGWOReplaceMeshRuleStruct](EastRimWorld/SpawnActorSystem/GWOTypes__FGWOReplaceMeshRuleStruct.md)
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
 - `struct` **`FGWOSaveSpawnedActorStruct`** — [GWOTypes__FGWOSaveSpawnedActorStruct](EastRimWorld/SpawnActorSystem/GWOTypes__FGWOSaveSpawnedActorStruct.md)
+  - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
+- `struct` **`FGWOSector`** — [GWOTypes__FGWOSector](EastRimWorld/SpawnActorSystem/GWOTypes__FGWOSector.md)
+  - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
+- `struct` **`FGWOSpawnerIdentification`** — [GWOTypes__FGWOSpawnerIdentification](EastRimWorld/SpawnActorSystem/GWOTypes__FGWOSpawnerIdentification.md)
+  - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
+- `struct` **`FGWOSpawnerStruct`** — [GWOTypes__FGWOSpawnerStruct](EastRimWorld/SpawnActorSystem/GWOTypes__FGWOSpawnerStruct.md)
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
 - `struct` **`FGWOTime`** — [GWOTypes__FGWOTime](EastRimWorld/SpawnActorSystem/GWOTypes__FGWOTime.md)
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
@@ -1031,14 +1154,22 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
 
 ## `EastRimWorld/Struct/CharacterStruct.h`
 
+- `struct` **`FAbilityInfo`** — [CharacterStruct__FAbilityInfo](EastRimWorld/Struct/CharacterStruct__FAbilityInfo.md)
+  - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
 - `struct` **`FAnimalCultivationConfig`** — [CharacterStruct__FAnimalCultivationConfig](EastRimWorld/Struct/CharacterStruct__FAnimalCultivationConfig.md)
   - **Description:** 动物修炼配置数据 每个怪物类型对应的修炼配置
 - `struct` **`FAnimalCultivationLevelUpgrade`** — [CharacterStruct__FAnimalCultivationLevelUpgrade](EastRimWorld/Struct/CharacterStruct__FAnimalCultivationLevelUpgrade.md)
   - **Description:** 动物修炼等级升级功能配置 用于配置到达某个等级时增加的各项功能（经验值、行为树、Goals、能力、Buff、属性、掉落组、模型等）
+- `struct` **`FAttributeSetSaveData`** — [CharacterStruct__FAttributeSetSaveData](EastRimWorld/Struct/CharacterStruct__FAttributeSetSaveData.md)
+  - **Description:** 属性存档数据
 - `struct` **`FCarryWeaponsInfo`** — [CharacterStruct__FCarryWeaponsInfo](EastRimWorld/Struct/CharacterStruct__FCarryWeaponsInfo.md)
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
+- `struct` **`FCharacterAttributeSaveData`** — [CharacterStruct__FCharacterAttributeSaveData](EastRimWorld/Struct/CharacterStruct__FCharacterAttributeSaveData.md)
+  - **Description:** 角色属性存档数据
 - `struct` **`FCharacterAttributeUpgradeConfig`** — [CharacterStruct__FCharacterAttributeUpgradeConfig](EastRimWorld/Struct/CharacterStruct__FCharacterAttributeUpgradeConfig.md)
   - **Description:** 角色属性升级配置
+- `struct` **`FCharacterBaseInfoData`** — [CharacterStruct__FCharacterBaseInfoData](EastRimWorld/Struct/CharacterStruct__FCharacterBaseInfoData.md)
+  - **Description:** 角色的基础信息
 - `struct` **`FCharacterLoyaltyConfig`** — [CharacterStruct__FCharacterLoyaltyConfig](EastRimWorld/Struct/CharacterStruct__FCharacterLoyaltyConfig.md)
   - **Description:** 角色忠诚度配置
 - `struct` **`FCharacterOrganConfig`** — [CharacterStruct__FCharacterOrganConfig](EastRimWorld/Struct/CharacterStruct__FCharacterOrganConfig.md)
@@ -1062,6 +1193,8 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
 - `struct` **`FEastRimWorldSummonsData`** — [CharacterStruct__FEastRimWorldSummonsData](EastRimWorld/Struct/CharacterStruct__FEastRimWorldSummonsData.md)
   - **Description:** 召唤物的数据
 - `struct` **`FExchangeRuleData`** — [CharacterStruct__FExchangeRuleData](EastRimWorld/Struct/CharacterStruct__FExchangeRuleData.md)
+  - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
+- `struct` **`FGameplayEffectInfo`** — [CharacterStruct__FGameplayEffectInfo](EastRimWorld/Struct/CharacterStruct__FGameplayEffectInfo.md)
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
 - `struct` **`FGameplayTeamBehaviorTree`** — [CharacterStruct__FGameplayTeamBehaviorTree](EastRimWorld/Struct/CharacterStruct__FGameplayTeamBehaviorTree.md)
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
@@ -1410,6 +1543,13 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
 - `class` **`UEventGenerateCharacterComponent`** — [EventGenerateCharacterComponent__UEventGenerateCharacterComponent](EastRimWorld/System/EventGenerateCharacterComponent__UEventGenerateCharacterComponent.md)
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
 
+## `EastRimWorld/System/GameplayTagStack.h`
+
+- `struct` **`FGameplayTagStack`** — [GameplayTagStack__FGameplayTagStack](EastRimWorld/System/GameplayTagStack__FGameplayTagStack.md)
+  - **Description:** Represents one stack of a gameplay tag (tag + count)
+- `struct` **`FGameplayTagStackContainer`** — [GameplayTagStack__FGameplayTagStackContainer](EastRimWorld/System/GameplayTagStack__FGameplayTagStackContainer.md)
+  - **Description:** Container of gameplay tag stacks
+
 ## `EastRimWorld/System/Letterpaper/BirdLetterSystem.h`
 
 - `struct` **`FBuildingNumData`** — [BirdLetterSystem__FBuildingNumData](EastRimWorld/System/Letterpaper/BirdLetterSystem__FBuildingNumData.md)
@@ -1455,6 +1595,8 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
 
 ## `EastRimWorld/System/Task/BeginnerGuideComponent.h`
 
+- `struct` **`FBeginnerGuideSaveData`** — [BeginnerGuideComponent__FBeginnerGuideSaveData](EastRimWorld/System/Task/BeginnerGuideComponent__FBeginnerGuideSaveData.md)
+  - **Description:** 新手引导存档数据
 - `class` **`UBeginnerGuideComponent`** — [BeginnerGuideComponent__UBeginnerGuideComponent](EastRimWorld/System/Task/BeginnerGuideComponent__UBeginnerGuideComponent.md)
   - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
 
@@ -1524,6 +1666,8 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
 
 ## `EastRimWorld/Teams/EastRimWorldTeamSubsystem.h`
 
+- `struct` **`FEastRimWorldTeamTrackingInfo`** — [EastRimWorldTeamSubsystem__FEastRimWorldTeamTrackingInfo](EastRimWorld/Teams/EastRimWorldTeamSubsystem__FEastRimWorldTeamTrackingInfo.md)
+  - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
 - `class` **`UEastRimWorldTeamSubsystem`** — [EastRimWorldTeamSubsystem__UEastRimWorldTeamSubsystem](EastRimWorld/Teams/EastRimWorldTeamSubsystem__UEastRimWorldTeamSubsystem.md)
   - **Description:** A subsystem for easy access to team information for team-based actors (e.g., pawns or player states)
 
@@ -1561,6 +1705,8 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
 
 ## `EastRimWorld/UI/Common/RichTextBlockSHyperlinkDecorator.h`
 
+- `struct` **`FRichSHyperlinkRow`** — [RichTextBlockSHyperlinkDecorator__FRichSHyperlinkRow](EastRimWorld/UI/Common/RichTextBlockSHyperlinkDecorator__FRichSHyperlinkRow.md)
+  - **Description:** Simple struct for rich text styles
 - `struct` **`FWikiUIConfig`** — [RichTextBlockSHyperlinkDecorator__FWikiUIConfig](EastRimWorld/UI/Common/RichTextBlockSHyperlinkDecorator__FWikiUIConfig.md)
   - **Description:** wiki结构表
 - `class` **`URichTextBlockSHyperlinkDecorator`** — [RichTextBlockSHyperlinkDecorator__URichTextBlockSHyperlinkDecorator](EastRimWorld/UI/Common/RichTextBlockSHyperlinkDecorator__URichTextBlockSHyperlinkDecorator.md)
@@ -1753,6 +1899,20 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
 - `class` **`UWorldPlaceSpecialEffectSubsystem`** — [WorldPlaceSpecialEffectSubsystem__UWorldPlaceSpecialEffectSubsystem](EastRimWorld/WorldSystem/WorldPlaceSpecialEffectSubsystem__UWorldPlaceSpecialEffectSubsystem.md)
   - **Description:** 管理各地点的特殊效果（全局效果）：每个 AWorldPlace 独立数值，配置在 FWorldPlaceInfo，拥有效果存档、数值读档后重算。
 
+## `EastRimWorld/WorldSystem/WorldSectBattleSystem/WorldBattleRuntimeStruct.h`
+
+- `struct` **`FWorldBattleRuntimeInfo`** — [WorldBattleRuntimeStruct__FWorldBattleRuntimeInfo](EastRimWorld/WorldSystem/WorldSectBattleSystem/WorldBattleRuntimeStruct__FWorldBattleRuntimeInfo.md)
+  - **Description:** 一场门派战的最小运行数据。
+- `struct` **`FWorldBattleRuntimeJoinTeamInfo`** — [WorldBattleRuntimeStruct__FWorldBattleRuntimeJoinTeamInfo](EastRimWorld/WorldSystem/WorldSectBattleSystem/WorldBattleRuntimeStruct__FWorldBattleRuntimeJoinTeamInfo.md)
+  - **Description:** 蓝图加入战场时填写的数据。 势力 Guid 和 TeamID 不在这里填，JoinBattle 会从 WorldForce 自动读取。
+- `struct` **`FWorldBattleRuntimeTeam`** — [WorldBattleRuntimeStruct__FWorldBattleRuntimeTeam](EastRimWorld/WorldSystem/WorldSectBattleSystem/WorldBattleRuntimeStruct__FWorldBattleRuntimeTeam.md)
+  - **Description:** 门派战中的一支队伍。这里只记录身份数据，不记录点数、抽卡、小兵等玩法资源。
+
+## `EastRimWorld/WorldSystem/WorldSectBattleSystem/WorldSectBattleManager.h`
+
+- `class` **`AWorldSectBattleManager`** — [WorldSectBattleManager__AWorldSectBattleManager](EastRimWorld/WorldSystem/WorldSectBattleSystem/WorldSectBattleManager__AWorldSectBattleManager.md)
+  - **Description:** 门派战基础管理器。 这里只负责战场记录、队伍加入、进入地图状态和 Actor 登记，不写具体玩法。
+
 ## `EastRimWorld/WorldSystem/WorldStruct.h`
 
 - `struct` **`FAttackEarlyWarning`** — [WorldStruct__FAttackEarlyWarning](EastRimWorld/WorldSystem/WorldStruct__FAttackEarlyWarning.md)
@@ -1761,6 +1921,8 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
   - **Description:** 战斗buff集合
 - `struct` **`FCharacterWorldMoveInfo`** — [WorldStruct__FCharacterWorldMoveInfo](EastRimWorld/WorldSystem/WorldStruct__FCharacterWorldMoveInfo.md)
   - **Description:** 角色世界地图移动信息
+- `struct` **`FCharacterWorldMoveInfo2D`** — [WorldStruct__FCharacterWorldMoveInfo2D](EastRimWorld/WorldSystem/WorldStruct__FCharacterWorldMoveInfo2D.md)
+  - **Description:** (No type-level comment above `UCLASS`/`USTRUCT`; open the type page or source.)
 - `struct` **`FCharacterWorldPlaceData`** — [WorldStruct__FCharacterWorldPlaceData](EastRimWorld/WorldSystem/WorldStruct__FCharacterWorldPlaceData.md)
   - **Description:** 驻扎角色的城镇数据
 - `struct` **`FCommonTips`** — [WorldStruct__FCommonTips](EastRimWorld/WorldSystem/WorldStruct__FCommonTips.md)
@@ -1895,6 +2057,8 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
   - **Description:** 温度信息
 - `struct` **`FWorldPlaceWeatherInfo`** — [WorldStruct__FWorldPlaceWeatherInfo](EastRimWorld/WorldSystem/WorldStruct__FWorldPlaceWeatherInfo.md)
   - **Description:** 天气信息
+- `struct` **`FWorldPointSave2d`** — [WorldStruct__FWorldPointSave2d](EastRimWorld/WorldSystem/WorldStruct__FWorldPointSave2d.md)
+  - **Description:** 2d地图关键点的保存
 - `class` **`URaidConfigurationAsset`** — [WorldStruct__URaidConfigurationAsset](EastRimWorld/WorldSystem/WorldStruct__URaidConfigurationAsset.md)
   - **Description:** 袭击配置资产
 - `class` **`UWorldForceConfigurationAsset`** — [WorldStruct__UWorldForceConfigurationAsset](EastRimWorld/WorldSystem/WorldStruct__UWorldForceConfigurationAsset.md)

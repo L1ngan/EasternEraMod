@@ -14,7 +14,7 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<FName , FActionData>` |
+| C++ type | TMap<FName , [FActionData](GOAP_ManagerComponent__FActionData.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) TMap<FName , FActionData> NormalActions;` |
@@ -30,7 +30,7 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<FName , FItemActions>` |
+| C++ type | TMap<FName , [FItemActions](GOAP_ManagerComponent__FItemActions.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TMap<FName , FItemActions> ItemActions;` |
@@ -46,7 +46,7 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<FName , FBatchData>` |
+| C++ type | TMap<FName , [FBatchData](GOAP_ManagerComponent__FBatchData.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TMap<FName , FBatchData> BatchActions;` |
@@ -62,7 +62,7 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<[FUObjectData](../ERW_CommonTypes__FUObjectData.md) , FPreActionData> |
+| C++ type | TMap<[FUObjectData](../ERW_CommonTypes__FUObjectData.md) , [FPreActionData](GOAP_ManagerComponent__FPreActionData.md)> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FUObjectData , FPreActionData> PreActionData;` |
@@ -78,7 +78,7 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<int32 , FPreActionData>` |
+| C++ type | TMap<int32 , [FPreActionData](GOAP_ManagerComponent__FPreActionData.md)> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<int32 , FPreActionData> ConstructPreActionData;` |
@@ -110,7 +110,7 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<[FUObjectData](../ERW_CommonTypes__FUObjectData.md) , FGOAP_Actions> |
+| C++ type | TMap<[FUObjectData](../ERW_CommonTypes__FUObjectData.md) , [FGOAP_Actions](GOAP_ManagerComponent__FGOAP_Actions.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) TMap<FUObjectData , FGOAP_Actions> PracticeActions;` |

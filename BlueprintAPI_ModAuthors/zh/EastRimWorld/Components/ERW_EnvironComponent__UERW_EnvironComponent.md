@@ -310,7 +310,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EnvironSaveData` | `const FEnvironSaveData&` |
+| `EnvironSaveData` | const [FEnvironSaveData](ERW_EnvironComponent__FEnvironSaveData.md)& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void LoadData(const FEnvironSaveData& EnvironSaveData);`
 

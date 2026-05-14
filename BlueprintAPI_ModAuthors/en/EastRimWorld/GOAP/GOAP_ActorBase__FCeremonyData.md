@@ -136,3 +136,25 @@
 > 当前仪式的开始时间
 
 ---
+
+### Property `CeremonyStartTimerID`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 CeremonyStartTimerID { INDEX_NONE };` |
+
+---
+
+### Property `CeremonyWaitTimerID`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 CeremonyWaitTimerID { INDEX_NONE };` |
+
+---

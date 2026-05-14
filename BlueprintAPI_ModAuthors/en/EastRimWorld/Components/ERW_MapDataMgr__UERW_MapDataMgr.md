@@ -201,6 +201,21 @@
 
 ---
 
+### Property `SelectedFoundation`
+
+| Field | Details |
+|------|------|
+| C++ type | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) AGOAP_ActorBase* SelectedFoundation { nullptr };` |
+
+**Source comments:**
+
+> 选中的地基
+
+---
+
 ### Property `BuildObjectClass`
 
 | Field | Details |
@@ -216,7 +231,7 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<FName, FBuildingNum>` |
+| C++ type | TMap<FName, [FBuildingNum](ERW_MapDataMgr__FBuildingNum.md)> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<FName, FBuildingNum> UsedNumbers;` |
@@ -1142,14 +1157,55 @@
 | `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `HISMManager` | [UERW_HISMManager](ERW_HISMManager__UERW_HISMManager.md)* |
 | `IsBroken` | `bool` |
+| `IsBuildComplete` | `bool` |
 
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CheckRemoveRoomElement(AGOAP_ActorBase* BuildObject , UERW_HISMManager* HISMManager , bool IsBroken);`
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CheckRemoveRoomElement(AGOAP_ActorBase* BuildObject , UERW_HISMManager* HISMManager , bool IsBroken , bool IsBuildComplete);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
 **Source comments:**
 
 > 检查并移除房间要素
+
+---
+
+### Function `SetRoomUnitShowState`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `State` | `ERoomUnitShowState` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetRoomUnitShowState(ERoomUnitShowState State);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Source comments:**
+
+> 设置房间单元显示状态
+
+---
+
+### Function `UpdateRoomUnitShowState`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void UpdateRoomUnitShowState();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Source comments:**
+
+> 更新房间单元显示状态
 
 ---
 
@@ -1164,9 +1220,10 @@
 | Name | Type |
 |--------|------|
 | `HISMManager` | [UERW_HISMManager](ERW_HISMManager__UERW_HISMManager.md)* |
+| `EnvironComponent` | [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* |
 | `Show` | `bool` |
 
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void UpdateRoomUnitsShow(UERW_HISMManager* HISMManager , bool Show);`
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void UpdateRoomUnitsShow(UERW_HISMManager* HISMManager , UERW_EnvironComponent* EnvironComponent , bool Show);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 

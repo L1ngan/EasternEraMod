@@ -340,6 +340,21 @@
 
 ---
 
+### Property `ExecuteStateTips`
+
+| Field | Details |
+|------|------|
+| C++ type | `FText` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() FText ExecuteStateTips;` |
+
+**Source comments:**
+
+> 任务状态的tips
+
+---
+
 ### Property `TaskGrouping`
 
 | Field | Details |

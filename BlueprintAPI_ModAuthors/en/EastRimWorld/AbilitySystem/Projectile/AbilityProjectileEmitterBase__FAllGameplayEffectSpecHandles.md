@@ -19,6 +19,17 @@
 
 ---
 
+### Property `ControlEffect`
+
+| Field | Details |
+|------|------|
+| C++ type | `TArray<FControlEffectData>` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() TArray<FControlEffectData> ControlEffect;` |
+
+---
+
 ### Property `InstigatorActor`
 
 | Field | Details |

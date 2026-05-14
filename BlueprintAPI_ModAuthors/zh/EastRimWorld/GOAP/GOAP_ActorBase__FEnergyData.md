@@ -145,6 +145,21 @@
 
 ---
 
+### 属性 `EnergyGridGuid`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FGuid` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) FGuid EnergyGridGuid;` |
+
+**源码注释:**
+
+> 所属的能量网Guid
+
+---
+
 ### 属性 `bIsChangingPipelineGroup`
 
 | 项目 | 内容 |
@@ -157,6 +172,36 @@
 **源码注释:**
 
 > 是否正在更改管道
+
+---
+
+### 属性 `UpdateEnergyGenerateTimerID`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 UpdateEnergyGenerateTimerID = INDEX_NONE;` |
+
+**源码注释:**
+
+> 生产能源计算定时器
+
+---
+
+### 属性 `UpdateEnergyExpendTimerID`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 UpdateEnergyExpendTimerID = INDEX_NONE;` |
+
+**源码注释:**
+
+> 消耗能源计算定时器
 
 ---
 
@@ -322,5 +367,50 @@
 **源码注释:**
 
 > 修炼建筑状态
+
+---
+
+### 属性 `OverlockingDurationID`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 OverlockingDurationID = INDEX_NONE;` |
+
+**源码注释:**
+
+> 超频持续时间定时器
+
+---
+
+### 属性 `CurOverlockingTime`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 CurOverlockingTime = 0;` |
+
+**源码注释:**
+
+> 当前超频状态持续时间
+
+---
+
+### 属性 `OverlockingCoolingTimerID`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 OverlockingCoolingTimerID = INDEX_NONE;` |
+
+**源码注释:**
+
+> 超频冷却时间定时器
 
 ---

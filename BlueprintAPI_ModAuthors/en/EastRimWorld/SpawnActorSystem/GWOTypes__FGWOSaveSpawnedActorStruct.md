@@ -18,3 +18,14 @@
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Global World Optimization") UClass* actorClass = nullptr;` |
 
 ---
+
+### Property `uniqID`
+
+| Field | Details |
+|------|------|
+| C++ type | `int` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() int uniqID = -1;` |
+
+---

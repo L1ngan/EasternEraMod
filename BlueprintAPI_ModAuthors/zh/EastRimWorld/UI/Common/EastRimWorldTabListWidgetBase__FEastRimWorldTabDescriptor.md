@@ -99,3 +99,14 @@
 > TODO NDarnell - This should become a TSoftClassPtr<>, the underlying common tab list needs to be able to handle lazy tab content construction.
 
 ---
+
+### 属性 `CreatedTabContentWidget`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TObjectPtr<UWidget>` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
+| 原始声明（单行节选） | `UPROPERTY(Transient) TObjectPtr<UWidget> CreatedTabContentWidget;` |
+
+---

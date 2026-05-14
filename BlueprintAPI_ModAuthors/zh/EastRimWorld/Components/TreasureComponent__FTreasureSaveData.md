@@ -10,6 +10,43 @@
 
 ## 蓝图暴露变量
 
+### 属性 `TreasureItems`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TArray<[FTreasureItemSubData](TreasureComponent__FTreasureItemSubData.md)> |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) TArray<FTreasureItemSubData> TreasureItems;` |
+
+**源码注释:**
+
+> 商品信息
+
+---
+
+### 属性 `TreasureResource`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TMap<int32 , [FSaveItemArr](TreasureComponent__FSaveItemArr.md)> |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) TMap<int32 , FSaveItemArr> TreasureResource;` |
+
+---
+
+### 属性 `SaveStalls`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TMap<int32 , [FStallInfo](TreasureComponent__FStallInfo.md)> |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) TMap<int32 , FStallInfo> SaveStalls;` |
+
+---
+
 ### 属性 `AutomaticReplenishmentTime`
 
 | 项目 | 内容 |

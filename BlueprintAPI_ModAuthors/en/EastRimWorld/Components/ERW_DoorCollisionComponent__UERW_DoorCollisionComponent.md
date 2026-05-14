@@ -82,7 +82,7 @@
 
 | Name | Type |
 |--------|------|
-| `SaveData` | `const FDoorCollisionSaveData&` |
+| `SaveData` | const [FDoorCollisionSaveData](ERW_DoorCollisionComponent__FDoorCollisionSaveData.md)& |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void OnLoadData(const FDoorCollisionSaveData& SaveData);`
 

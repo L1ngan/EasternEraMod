@@ -10,6 +10,28 @@
 
 ## Blueprint-exposed variables
 
+### Property `Guid1`
+
+| Field | Details |
+|------|------|
+| C++ type | `FGuid` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid Guid1;` |
+
+---
+
+### Property `Guid2`
+
+| Field | Details |
+|------|------|
+| C++ type | `FGuid` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid Guid2;` |
+
+---
+
 ### Property `ForceFavorabilityType`
 
 | Field | Details |

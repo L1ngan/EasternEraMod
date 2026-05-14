@@ -10,6 +10,22 @@
 
 ## Blueprint-exposed variables
 
+### Property `LayerData`
+
+| Field | Details |
+|------|------|
+| C++ type | TMap<int32 , [FEnvironData](ERW_MapDataMgr__FEnvironData.md)> |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<int32 , FEnvironData> LayerData;` |
+
+**Source comments:**
+
+> 每层环境数据
+> TMap<层 , 环境数据>
+
+---
+
 ### Property `IsHeightSet`
 
 | Field | Details |

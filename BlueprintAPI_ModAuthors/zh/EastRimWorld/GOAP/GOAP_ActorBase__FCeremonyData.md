@@ -136,3 +136,25 @@
 > 当前仪式的开始时间
 
 ---
+
+### 属性 `CeremonyStartTimerID`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 CeremonyStartTimerID { INDEX_NONE };` |
+
+---
+
+### 属性 `CeremonyWaitTimerID`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 CeremonyWaitTimerID { INDEX_NONE };` |
+
+---

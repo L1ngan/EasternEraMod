@@ -29,7 +29,7 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `FGOAP_Actions` |
+| C++ type | [FGOAP_Actions](../GOAP/GOAP_ManagerComponent__FGOAP_Actions.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FGOAP_Actions Actions;` |

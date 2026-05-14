@@ -84,3 +84,18 @@
 > 燃料低于20%时是否自动为其添加燃料
 
 ---
+
+### Property `UpdateFuelTimerID`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 UpdateFuelTimerID { INDEX_NONE };` |
+
+**Source comments:**
+
+> 燃料消耗更新定时器
+
+---

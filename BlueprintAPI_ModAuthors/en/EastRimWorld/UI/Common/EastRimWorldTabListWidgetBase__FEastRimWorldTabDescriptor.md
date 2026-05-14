@@ -99,3 +99,14 @@
 > TODO NDarnell - This should become a TSoftClassPtr<>, the underlying common tab list needs to be able to handle lazy tab content construction.
 
 ---
+
+### Property `CreatedTabContentWidget`
+
+| Field | Details |
+|------|------|
+| C++ type | `TObjectPtr<UWidget>` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY(Transient) TObjectPtr<UWidget> CreatedTabContentWidget;` |
+
+---

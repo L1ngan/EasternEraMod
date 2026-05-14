@@ -14,7 +14,7 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EGOAP_ConditionType , FMemoryData>` |
+| C++ type | TMap<EGOAP_ConditionType , [FMemoryData](GOAP_MemoryComponent__FMemoryData.md)> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<EGOAP_ConditionType , FMemoryData> Memories;` |

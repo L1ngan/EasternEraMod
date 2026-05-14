@@ -44,32 +44,6 @@
 
 ---
 
-### Property `CameraArmLength`
-
-| Field | Details |
-|------|------|
-| C++ type | `float` |
-| Reflection specifiers | BlueprintReadWrite, Category="FightPawn|Camera" |
-| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
-| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightPawn|Camera") float CameraArmLength = 1400.f;` |
-
-**Source comments:**
-
-> === 相机参数 ===
-
----
-
-### Property `CameraSocketOffset`
-
-| Field | Details |
-|------|------|
-| C++ type | `FVector` |
-| Reflection specifiers | BlueprintReadWrite, Category="FightPawn|Camera" |
-| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
-| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightPawn|Camera") FVector CameraSocketOffset = FVector(0.f, -50.f, 0.f);` |
-
----
-
 ### Property `CameraZoomMax`
 
 | Field | Details |
@@ -79,16 +53,9 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightPawn|Camera") float CameraZoomMax = 1400.f;` |
 
----
+**Source comments:**
 
-### Property `CameraPitchFar`
-
-| Field | Details |
-|------|------|
-| C++ type | `float` |
-| Reflection specifiers | BlueprintReadWrite, Category="FightPawn|Camera" |
-| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
-| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightPawn|Camera") float CameraPitchFar = -50.f;` |
+> === 相机参数 ===
 
 ---
 
@@ -100,6 +67,17 @@
 | Reflection specifiers | BlueprintReadWrite, Category="FightPawn|Camera" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightPawn|Camera") float CameraZoomMin = 300.f;` |
+
+---
+
+### Property `CameraPitchFar`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | BlueprintReadWrite, Category="FightPawn|Camera" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightPawn|Camera") float CameraPitchFar = -40.f;` |
 
 ---
 
@@ -121,7 +99,7 @@
 | C++ type | `float` |
 | Reflection specifiers | BlueprintReadWrite, Category="FightPawn|Camera" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
-| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightPawn|Camera") float CameraLagSpeed = 10.f;` |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightPawn|Camera") float CameraLagSpeed = 18.f;` |
 
 ---
 

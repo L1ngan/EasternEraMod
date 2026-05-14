@@ -38,6 +38,37 @@
 
 ---
 
+### 属性 `CharacterWorldMoveInfos2D`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TArray<[FCharacterWorldMoveInfo2D](WorldStruct__FCharacterWorldMoveInfo2D.md)> |
+| 反射说明符 | BlueprintReadOnly, Category="World Map" |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame, BlueprintReadOnly, EditAnywhere, Category = "World Map") TArray<FCharacterWorldMoveInfo2D> CharacterWorldMoveInfos2D;` |
+
+**源码注释:**
+
+> 2d
+> 角色在世界中移动的信息
+
+---
+
+### 属性 `PointMap`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TMap<FName, [FWorldPointSave2d](WorldStruct__FWorldPointSave2d.md)> |
+| 反射说明符 | BlueprintReadOnly, Category="World Map" |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame, BlueprintReadOnly, Category = "World Map") TMap<FName, FWorldPointSave2d> PointMap;` |
+
+**源码注释:**
+
+> 城市和路点坐标点位
+
+---
+
 ### 属性 `bOnWorldMap`
 
 | 项目 | 内容 |
@@ -281,6 +312,28 @@
 | `DeltaTime` | `float` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdateWorldActorMoveState(float DeltaTime);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**源码注释:**
+
+> 更新世界actor的移动状态
+
+---
+
+### 函数 `UpdateWorldActorMoveState2D`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `DeltaTime` | `float` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdateWorldActorMoveState2D(float DeltaTime);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
@@ -605,5 +658,119 @@
 **源码注释:**
 
 > 关闭换装地图
+
+---
+
+### 函数 `CreateOneMove`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `MoveInfo` | [FCharacterWorldMoveInfo2D](WorldStruct__FCharacterWorldMoveInfo2D.md) |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void CreateOneMove(FCharacterWorldMoveInfo2D MoveInfo);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**源码注释:**
+
+> 2d
+
+---
+
+### 函数 `InitWorldPoint`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `LCityPoint` | TMap<FName, [FWorldPointSave2d](WorldStruct__FWorldPointSave2d.md)> |
+| `LRoadPointArr` | TMap<FName, [FWorldPointSave2d](WorldStruct__FWorldPointSave2d.md)> |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void InitWorldPoint(TMap<FName, FWorldPointSave2d> LCityPoint,TMap<FName, FWorldPointSave2d> LRoadPointArr);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**源码注释:**
+
+> 初始化世界点位
+
+---
+
+### 函数 `FindMoveLine`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `TArray<FName>` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `StartCity` | `FName` |
+| `TargetCity` | `FName` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) TArray<FName> FindMoveLine(FName StartCity, FName TargetCity);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**源码注释:**
+
+> 开始寻找两个相近城市的路点
+
+---
+
+### 函数 `FindOneLine`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `TArray<FName>` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `FindPointArr` | `TArray<FName>` |
+| `（匿名/仅类型）` | `TArray<FName>InFindPointArr` |
+| `EndCityWidget` | [FWorldPointSave2d](WorldStruct__FWorldPointSave2d.md) |
+| `CurrentPoint` | [FWorldPointSave2d](WorldStruct__FWorldPointSave2d.md) |
+| `FindLine` | `bool&` |
+| `RoadLen` | `float&` |
+| `ReslutArr` | `TArray<FName>&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) TArray<FName> FindOneLine(TArray<FName> FindPointArr, TArray<FName>InFindPointArr, FWorldPointSave2d EndCityWidget, FWorldPointSave2d CurrentPoint, bool& FindLine, float& RoadLen, TArray<FName>& ReslutArr);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**源码注释:**
+
+> 寻找路径 2d
+
+---
+
+### 函数 `CalculateLen`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `float` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `AllPointArr` | `TArray<FName>` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) float CalculateLen(TArray<FName> AllPointArr);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
 ---

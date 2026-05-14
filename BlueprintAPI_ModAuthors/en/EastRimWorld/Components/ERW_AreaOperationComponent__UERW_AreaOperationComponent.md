@@ -133,7 +133,7 @@
 | C++ type | `FIntPoint` |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FIntPoint RectActorSize;` |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FIntPoint RectActorSize = FIntPoint(1 , 1);` |
 
 **Source comments:**
 

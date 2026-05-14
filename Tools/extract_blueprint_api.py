@@ -469,9 +469,13 @@ def split_params(params_inner: str) -> list[tuple[str, str]]:
 
 
 def extract_blueprint_members(
-    lines: list[str], global_base: int
+    lines: list[str], global_base: int, *, for_struct: bool = False
 ) -> list[tuple[str, str, int, str]]:
-    """List of (kind, full_text, global_line_index, doc). kind is PROP or FUNC."""
+    """List of (kind, full_text, global_line_index, doc). kind is PROP or FUNC.
+
+    For USTRUCT bodies, every UPROPERTY is collected regardless of Blueprint*
+    specifiers; UFUNCTION entries still require Blueprint visibility (unchanged).
+    """
     members: list[tuple[str, str, int, str]] = []
     i = 0
     n = len(lines)
@@ -498,7 +502,10 @@ def extract_blueprint_members(
         )
         block_lines.extend(decl_lines)
         full = " ".join(x.strip() for x in block_lines if x.strip())
-        if "Blueprint" in full or "AllowPrivateAccess" in full:
+        blueprintish = "Blueprint" in full or "AllowPrivateAccess" in full
+        if macro_kind == "PROP" and for_struct:
+            members.append((macro_kind, full, gidx, doc))
+        elif blueprintish:
             members.append((macro_kind, full, gidx, doc))
         i = j_end + 1
     return members
@@ -565,7 +572,9 @@ def extract_uclasses_with_docs(
                     if depth == 0:
                         body_lines = lines[open_brace + 1 : k]
                         base = open_brace + 1
-                        mems = extract_blueprint_members(body_lines, base)
+                        mems = extract_blueprint_members(
+                            body_lines, base, for_struct=(kind == "struct")
+                        )
                         if mems:
                             results.append((kind, cls_name, type_doc, mems))
                         i = k + 1

@@ -10,6 +10,43 @@
 
 ## Blueprint-exposed variables
 
+### Property `TreasureItems`
+
+| Field | Details |
+|------|------|
+| C++ type | TArray<[FTreasureItemSubData](TreasureComponent__FTreasureItemSubData.md)> |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) TArray<FTreasureItemSubData> TreasureItems;` |
+
+**Source comments:**
+
+> 商品信息
+
+---
+
+### Property `TreasureResource`
+
+| Field | Details |
+|------|------|
+| C++ type | TMap<int32 , [FSaveItemArr](TreasureComponent__FSaveItemArr.md)> |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<int32 , FSaveItemArr> TreasureResource;` |
+
+---
+
+### Property `SaveStalls`
+
+| Field | Details |
+|------|------|
+| C++ type | TMap<int32 , [FStallInfo](TreasureComponent__FStallInfo.md)> |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<int32 , FStallInfo> SaveStalls;` |
+
+---
+
 ### Property `AutomaticReplenishmentTime`
 
 | Field | Details |

@@ -1349,6 +1349,24 @@
 
 ---
 
+### 函数 `CalcuMaxStationedCharacterNum`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void CalcuMaxStationedCharacterNum();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**源码注释:**
+
+> 计算并更新最大可驻扎角色数量
+
+---
+
 ### 函数 `SetPlaceLevel`
 
 | 项目 | 内容 |

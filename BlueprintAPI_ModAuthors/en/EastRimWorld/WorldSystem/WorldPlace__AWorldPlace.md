@@ -1349,6 +1349,24 @@
 
 ---
 
+### Function `CalcuMaxStationedCharacterNum`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CalcuMaxStationedCharacterNum();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Source comments:**
+
+> 计算并更新最大可驻扎角色数量
+
+---
+
 ### Function `SetPlaceLevel`
 
 | Field | Details |

@@ -44,32 +44,6 @@
 
 ---
 
-### 属性 `CameraArmLength`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | `float` |
-| 反射说明符 | BlueprintReadWrite, Category="FightPawn|Camera" |
-| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
-| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightPawn|Camera") float CameraArmLength = 1400.f;` |
-
-**源码注释:**
-
-> === 相机参数 ===
-
----
-
-### 属性 `CameraSocketOffset`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | `FVector` |
-| 反射说明符 | BlueprintReadWrite, Category="FightPawn|Camera" |
-| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
-| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightPawn|Camera") FVector CameraSocketOffset = FVector(0.f, -50.f, 0.f);` |
-
----
-
 ### 属性 `CameraZoomMax`
 
 | 项目 | 内容 |
@@ -79,16 +53,9 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightPawn|Camera") float CameraZoomMax = 1400.f;` |
 
----
+**源码注释:**
 
-### 属性 `CameraPitchFar`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | `float` |
-| 反射说明符 | BlueprintReadWrite, Category="FightPawn|Camera" |
-| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
-| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightPawn|Camera") float CameraPitchFar = -50.f;` |
+> === 相机参数 ===
 
 ---
 
@@ -100,6 +67,17 @@
 | 反射说明符 | BlueprintReadWrite, Category="FightPawn|Camera" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightPawn|Camera") float CameraZoomMin = 300.f;` |
+
+---
+
+### 属性 `CameraPitchFar`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadWrite, Category="FightPawn|Camera" |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightPawn|Camera") float CameraPitchFar = -40.f;` |
 
 ---
 
@@ -121,7 +99,7 @@
 | C++ 类型 | `float` |
 | 反射说明符 | BlueprintReadWrite, Category="FightPawn|Camera" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
-| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightPawn|Camera") float CameraLagSpeed = 10.f;` |
+| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightPawn|Camera") float CameraLagSpeed = 18.f;` |
 
 ---
 

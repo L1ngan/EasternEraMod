@@ -437,7 +437,7 @@
 
 | Name | Type |
 |--------|------|
-| `EnvironSaveData` | `FEnvironSaveData&` |
+| `EnvironSaveData` | [FEnvironSaveData](../Components/ERW_EnvironComponent__FEnvironSaveData.md)& |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool GetEnvironSaveData(FEnvironSaveData& EnvironSaveData);`
 
@@ -844,7 +844,7 @@
 
 | Name | Type |
 |--------|------|
-| `SaveData` | `const FDoorCollisionSaveData&` |
+| `SaveData` | const [FDoorCollisionSaveData](../Components/ERW_DoorCollisionComponent__FDoorCollisionSaveData.md)& |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent) void RecoverDoorCollision(const FDoorCollisionSaveData& SaveData);`
 
@@ -1519,5 +1519,23 @@
 **Source comments:**
 
 > 加入阶梯的模型
+
+---
+
+### Function `GetRoomUnitShowState`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintImplementableEvent |
+| Return type | `ERoomUnitShowState` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent) ERoomUnitShowState GetRoomUnitShowState();`
+
+**Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Source comments:**
+
+> 获得房间单元显示状态
 
 ---

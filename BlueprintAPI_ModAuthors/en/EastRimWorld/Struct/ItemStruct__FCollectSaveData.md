@@ -38,6 +38,36 @@
 
 ---
 
+### Property `Guid`
+
+| Field | Details |
+|------|------|
+| C++ type | `FGuid` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid Guid;` |
+
+**Source comments:**
+
+> Guid
+
+---
+
+### Property `SubstituteGuid`
+
+| Field | Details |
+|------|------|
+| C++ type | `FGuid` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid SubstituteGuid;` |
+
+**Source comments:**
+
+> 替身Actor的Guid
+
+---
+
 ### Property `ItemTransform`
 
 | Field | Details |
@@ -181,5 +211,61 @@
 **Source comments:**
 
 > 阶段生长时间
+
+---
+
+### Property `FellDurability`
+
+| Field | Details |
+|------|------|
+| C++ type | `int` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) int FellDurability { -1 };` |
+
+**Source comments:**
+
+> 砍伐耐久度
+
+---
+
+### Property `HarvestDurability`
+
+| Field | Details |
+|------|------|
+| C++ type | `int` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) int HarvestDurability { -1 };` |
+
+**Source comments:**
+
+> 收割耐久度
+
+---
+
+### Property `MiningDurability`
+
+| Field | Details |
+|------|------|
+| C++ type | `int` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) int MiningDurability { -1 };` |
+
+**Source comments:**
+
+> 开采耐久度
+
+---
+
+### Property `ExplorationTime`
+
+| Field | Details |
+|------|------|
+| C++ type | `int` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) int ExplorationTime { -1 };` |
 
 ---

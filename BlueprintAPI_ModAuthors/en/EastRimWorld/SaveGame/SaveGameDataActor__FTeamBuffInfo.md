@@ -22,3 +22,14 @@
 > 阵营ID
 
 ---
+
+### Property `TeamBuff`
+
+| Field | Details |
+|------|------|
+| C++ type | TArray<[FCommonBuff](../Struct/CommonStruct__FCommonBuff.md)> |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() TArray<FCommonBuff> TeamBuff;` |
+
+---

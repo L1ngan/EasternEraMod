@@ -38,6 +38,37 @@
 
 ---
 
+### Property `CharacterWorldMoveInfos2D`
+
+| Field | Details |
+|------|------|
+| C++ type | TArray<[FCharacterWorldMoveInfo2D](WorldStruct__FCharacterWorldMoveInfo2D.md)> |
+| Reflection specifiers | BlueprintReadOnly, Category="World Map" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame, BlueprintReadOnly, EditAnywhere, Category = "World Map") TArray<FCharacterWorldMoveInfo2D> CharacterWorldMoveInfos2D;` |
+
+**Source comments:**
+
+> 2d
+> 角色在世界中移动的信息
+
+---
+
+### Property `PointMap`
+
+| Field | Details |
+|------|------|
+| C++ type | TMap<FName, [FWorldPointSave2d](WorldStruct__FWorldPointSave2d.md)> |
+| Reflection specifiers | BlueprintReadOnly, Category="World Map" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame, BlueprintReadOnly, Category = "World Map") TMap<FName, FWorldPointSave2d> PointMap;` |
+
+**Source comments:**
+
+> 城市和路点坐标点位
+
+---
+
 ### Property `bOnWorldMap`
 
 | Field | Details |
@@ -281,6 +312,28 @@
 | `DeltaTime` | `float` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void UpdateWorldActorMoveState(float DeltaTime);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Source comments:**
+
+> 更新世界actor的移动状态
+
+---
+
+### Function `UpdateWorldActorMoveState2D`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `DeltaTime` | `float` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void UpdateWorldActorMoveState2D(float DeltaTime);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
@@ -605,5 +658,119 @@
 **Source comments:**
 
 > 关闭换装地图
+
+---
+
+### Function `CreateOneMove`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `MoveInfo` | [FCharacterWorldMoveInfo2D](WorldStruct__FCharacterWorldMoveInfo2D.md) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CreateOneMove(FCharacterWorldMoveInfo2D MoveInfo);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Source comments:**
+
+> 2d
+
+---
+
+### Function `InitWorldPoint`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `LCityPoint` | TMap<FName, [FWorldPointSave2d](WorldStruct__FWorldPointSave2d.md)> |
+| `LRoadPointArr` | TMap<FName, [FWorldPointSave2d](WorldStruct__FWorldPointSave2d.md)> |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void InitWorldPoint(TMap<FName, FWorldPointSave2d> LCityPoint,TMap<FName, FWorldPointSave2d> LRoadPointArr);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Source comments:**
+
+> 初始化世界点位
+
+---
+
+### Function `FindMoveLine`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `TArray<FName>` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `StartCity` | `FName` |
+| `TargetCity` | `FName` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<FName> FindMoveLine(FName StartCity, FName TargetCity);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Source comments:**
+
+> 开始寻找两个相近城市的路点
+
+---
+
+### Function `FindOneLine`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `TArray<FName>` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `FindPointArr` | `TArray<FName>` |
+| `(unnamed / type only)` | `TArray<FName>InFindPointArr` |
+| `EndCityWidget` | [FWorldPointSave2d](WorldStruct__FWorldPointSave2d.md) |
+| `CurrentPoint` | [FWorldPointSave2d](WorldStruct__FWorldPointSave2d.md) |
+| `FindLine` | `bool&` |
+| `RoadLen` | `float&` |
+| `ReslutArr` | `TArray<FName>&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<FName> FindOneLine(TArray<FName> FindPointArr, TArray<FName>InFindPointArr, FWorldPointSave2d EndCityWidget, FWorldPointSave2d CurrentPoint, bool& FindLine, float& RoadLen, TArray<FName>& ReslutArr);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Source comments:**
+
+> 寻找路径 2d
+
+---
+
+### Function `CalculateLen`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `float` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `AllPointArr` | `TArray<FName>` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) float CalculateLen(TArray<FName> AllPointArr);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
 ---

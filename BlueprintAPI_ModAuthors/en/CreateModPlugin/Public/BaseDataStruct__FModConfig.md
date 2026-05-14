@@ -40,6 +40,21 @@
 
 ---
 
+### Property `StructName`
+
+| Field | Details |
+|------|------|
+| C++ type | `FString` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() FString StructName;` |
+
+**Source comments:**
+
+> 结构名称
+
+---
+
 ### Property `bOverrideData`
 
 | Field | Details |

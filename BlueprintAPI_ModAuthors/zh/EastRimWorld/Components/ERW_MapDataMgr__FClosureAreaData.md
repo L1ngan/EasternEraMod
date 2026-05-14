@@ -10,6 +10,22 @@
 
 ## 蓝图暴露变量
 
+### 属性 `Points`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TMap<FIntPoint , bool>` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) TMap<FIntPoint , bool> Points;` |
+
+**源码注释:**
+
+> 墙经过的所有点
+> TMap<点 , 占位符>
+
+---
+
 ### 属性 `GridPoses`
 
 | 项目 | 内容 |
@@ -26,6 +42,22 @@
 
 ---
 
+### 属性 `RoomElementGuids`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TMap<EEnvironType , [FRoomElementGuids](ERW_MapDataMgr__FRoomElementGuids.md)> |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) TMap<EEnvironType , FRoomElementGuids> RoomElementGuids;` |
+
+**源码注释:**
+
+> 房间要素的Guid
+> TMap<环境类型 , 房间要素的Guid>
+
+---
+
 ### 属性 `FoundationNum`
 
 | 项目 | 内容 |
@@ -38,6 +70,66 @@
 **源码注释:**
 
 > 建造完成的地基数量
+
+---
+
+### 属性 `WallNum`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 WallNum { 0 };` |
+
+**源码注释:**
+
+> 建造完成的墙面数量
+
+---
+
+### 属性 `DoorNum`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 DoorNum { 0 };` |
+
+**源码注释:**
+
+> 建造完成的门数量
+
+---
+
+### 属性 `RoofNum`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 RoofNum { 0 };` |
+
+**源码注释:**
+
+> 建造完成的屋顶数量
+
+---
+
+### 属性 `IsRoom`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `bool` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) bool IsRoom { false };` |
+
+**源码注释:**
+
+> 是否形成房间
 
 ---
 

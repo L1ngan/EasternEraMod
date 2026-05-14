@@ -38,6 +38,36 @@
 
 ---
 
+### 属性 `Guid`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FGuid` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) FGuid Guid;` |
+
+**源码注释:**
+
+> Guid
+
+---
+
+### 属性 `SubstituteGuid`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FGuid` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) FGuid SubstituteGuid;` |
+
+**源码注释:**
+
+> 替身Actor的Guid
+
+---
+
 ### 属性 `ItemTransform`
 
 | 项目 | 内容 |
@@ -181,5 +211,61 @@
 **源码注释:**
 
 > 阶段生长时间
+
+---
+
+### 属性 `FellDurability`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) int FellDurability { -1 };` |
+
+**源码注释:**
+
+> 砍伐耐久度
+
+---
+
+### 属性 `HarvestDurability`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) int HarvestDurability { -1 };` |
+
+**源码注释:**
+
+> 收割耐久度
+
+---
+
+### 属性 `MiningDurability`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) int MiningDurability { -1 };` |
+
+**源码注释:**
+
+> 开采耐久度
+
+---
+
+### 属性 `ExplorationTime`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) int ExplorationTime { -1 };` |
 
 ---

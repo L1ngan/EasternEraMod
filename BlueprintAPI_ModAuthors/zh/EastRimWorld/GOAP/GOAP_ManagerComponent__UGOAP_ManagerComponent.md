@@ -14,7 +14,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , FActionData>` |
+| C++ 类型 | TMap<FName , [FActionData](GOAP_ManagerComponent__FActionData.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) TMap<FName , FActionData> NormalActions;` |
@@ -30,7 +30,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , FItemActions>` |
+| C++ 类型 | TMap<FName , [FItemActions](GOAP_ManagerComponent__FItemActions.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TMap<FName , FItemActions> ItemActions;` |
@@ -46,7 +46,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , FBatchData>` |
+| C++ 类型 | TMap<FName , [FBatchData](GOAP_ManagerComponent__FBatchData.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TMap<FName , FBatchData> BatchActions;` |
@@ -62,7 +62,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<[FUObjectData](../ERW_CommonTypes__FUObjectData.md) , FPreActionData> |
+| C++ 类型 | TMap<[FUObjectData](../ERW_CommonTypes__FUObjectData.md) , [FPreActionData](GOAP_ManagerComponent__FPreActionData.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FUObjectData , FPreActionData> PreActionData;` |
@@ -78,7 +78,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<int32 , FPreActionData>` |
+| C++ 类型 | TMap<int32 , [FPreActionData](GOAP_ManagerComponent__FPreActionData.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<int32 , FPreActionData> ConstructPreActionData;` |
@@ -110,7 +110,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<[FUObjectData](../ERW_CommonTypes__FUObjectData.md) , FGOAP_Actions> |
+| C++ 类型 | TMap<[FUObjectData](../ERW_CommonTypes__FUObjectData.md) , [FGOAP_Actions](GOAP_ManagerComponent__FGOAP_Actions.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) TMap<FUObjectData , FGOAP_Actions> PracticeActions;` |

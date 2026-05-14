@@ -510,3 +510,212 @@
 > 闲逛范围
 
 ---
+
+### 属性 `distanceToSpawnSquare`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
+| 原始声明（单行节选） | `UPROPERTY() float distanceToSpawnSquare = 0.f;` |
+
+---
+
+### 属性 `distanceToDestroySquare`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
+| 原始声明（单行节选） | `UPROPERTY() float distanceToDestroySquare = 0.f;` |
+
+---
+
+### 属性 `noSpawnDistanceSquare`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
+| 原始声明（单行节选） | `UPROPERTY() float noSpawnDistanceSquare = 0.f;` |
+
+---
+
+### 属性 `insertBackgroundTime`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `double` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
+| 原始声明（单行节选） | `UPROPERTY() double insertBackgroundTime = 0.f;` |
+
+---
+
+### 属性 `uniqID`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
+| 原始声明（单行节选） | `UPROPERTY() int uniqID = -1;` |
+
+---
+
+### 属性 `npcValue`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
+| 原始声明（单行节选） | `UPROPERTY() int npcValue = 0;` |
+
+---
+
+### 属性 `npcWithPoint`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
+| 原始声明（单行节选） | `UPROPERTY() int npcWithPoint = 0;` |
+
+---
+
+### 属性 `spawnLocation`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FVector` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
+| 原始声明（单行节选） | `UPROPERTY() FVector spawnLocation = FVector::ZeroVector;` |
+
+---
+
+### 属性 `spawnScale`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FVector` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
+| 原始声明（单行节选） | `UPROPERTY() FVector spawnScale = FVector::ZeroVector;` |
+
+---
+
+### 属性 `lastPositionBeforeDestroyedIfFar`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FVector` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
+| 原始声明（单行节选） | `UPROPERTY() FVector lastPositionBeforeDestroyedIfFar = FVector::ZeroVector;` |
+
+---
+
+### 属性 `timeKilled`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `double` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
+| 原始声明（单行节选） | `UPROPERTY() double timeKilled = 0.f;` |
+
+---
+
+### 属性 `bIsSpawned`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `bool` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
+| 原始声明（单行节选） | `UPROPERTY() bool bIsSpawned = false;` |
+
+---
+
+### 属性 `bIsKilled`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `bool` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
+| 原始声明（单行节选） | `UPROPERTY() bool bIsKilled = false;` |
+
+---
+
+### 属性 `killedTime`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `double` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
+| 原始声明（单行节选） | `UPROPERTY() double killedTime = 0.f;` |
+
+---
+
+### 属性 `bReadyToSpawn`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `bool` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
+| 原始声明（单行节选） | `UPROPERTY() bool bReadyToSpawn = false;` |
+
+---
+
+### 属性 `spawnedNpcRef`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `AActor*` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
+| 原始声明（单行节选） | `UPROPERTY() AActor* spawnedNpcRef = nullptr;` |
+
+---
+
+### 属性 `realTimeRespawn`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
+| 原始声明（单行节选） | `UPROPERTY() float realTimeRespawn = 0.f;` |
+
+---
+
+### 属性 `bGotChanceToSpawn`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `bool` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
+| 原始声明（单行节选） | `UPROPERTY() bool bGotChanceToSpawn = false;` |
+
+---
+
+### 属性 `realSpawnChance`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
+| 原始声明（单行节选） | `UPROPERTY() float realSpawnChance = 0.f;` |
+
+---

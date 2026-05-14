@@ -201,6 +201,21 @@
 
 ---
 
+### 属性 `SelectedFoundation`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) AGOAP_ActorBase* SelectedFoundation { nullptr };` |
+
+**源码注释:**
+
+> 选中的地基
+
+---
+
 ### 属性 `BuildObjectClass`
 
 | 项目 | 内容 |
@@ -216,7 +231,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName, FBuildingNum>` |
+| C++ 类型 | TMap<FName, [FBuildingNum](ERW_MapDataMgr__FBuildingNum.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<FName, FBuildingNum> UsedNumbers;` |
@@ -1142,14 +1157,55 @@
 | `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `HISMManager` | [UERW_HISMManager](ERW_HISMManager__UERW_HISMManager.md)* |
 | `IsBroken` | `bool` |
+| `IsBuildComplete` | `bool` |
 
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void CheckRemoveRoomElement(AGOAP_ActorBase* BuildObject , UERW_HISMManager* HISMManager , bool IsBroken);`
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void CheckRemoveRoomElement(AGOAP_ActorBase* BuildObject , UERW_HISMManager* HISMManager , bool IsBroken , bool IsBuildComplete);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
 **源码注释:**
 
 > 检查并移除房间要素
+
+---
+
+### 函数 `SetRoomUnitShowState`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `State` | `ERoomUnitShowState` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SetRoomUnitShowState(ERoomUnitShowState State);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**源码注释:**
+
+> 设置房间单元显示状态
+
+---
+
+### 函数 `UpdateRoomUnitShowState`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdateRoomUnitShowState();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**源码注释:**
+
+> 更新房间单元显示状态
 
 ---
 
@@ -1164,9 +1220,10 @@
 | 参数名 | 类型 |
 |--------|------|
 | `HISMManager` | [UERW_HISMManager](ERW_HISMManager__UERW_HISMManager.md)* |
+| `EnvironComponent` | [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* |
 | `Show` | `bool` |
 
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdateRoomUnitsShow(UERW_HISMManager* HISMManager , bool Show);`
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdateRoomUnitsShow(UERW_HISMManager* HISMManager , UERW_EnvironComponent* EnvironComponent , bool Show);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 

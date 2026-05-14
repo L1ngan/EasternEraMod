@@ -310,7 +310,7 @@
 
 | Name | Type |
 |--------|------|
-| `EnvironSaveData` | `const FEnvironSaveData&` |
+| `EnvironSaveData` | const [FEnvironSaveData](ERW_EnvironComponent__FEnvironSaveData.md)& |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void LoadData(const FEnvironSaveData& EnvironSaveData);`
 

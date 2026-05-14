@@ -82,7 +82,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `SaveData` | `const FDoorCollisionSaveData&` |
+| `SaveData` | const [FDoorCollisionSaveData](ERW_DoorCollisionComponent__FDoorCollisionSaveData.md)& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void OnLoadData(const FDoorCollisionSaveData& SaveData);`
 

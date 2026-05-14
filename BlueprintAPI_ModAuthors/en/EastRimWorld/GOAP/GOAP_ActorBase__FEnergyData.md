@@ -145,6 +145,21 @@
 
 ---
 
+### Property `EnergyGridGuid`
+
+| Field | Details |
+|------|------|
+| C++ type | `FGuid` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid EnergyGridGuid;` |
+
+**Source comments:**
+
+> 所属的能量网Guid
+
+---
+
 ### Property `bIsChangingPipelineGroup`
 
 | Field | Details |
@@ -157,6 +172,36 @@
 **Source comments:**
 
 > 是否正在更改管道
+
+---
+
+### Property `UpdateEnergyGenerateTimerID`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 UpdateEnergyGenerateTimerID = INDEX_NONE;` |
+
+**Source comments:**
+
+> 生产能源计算定时器
+
+---
+
+### Property `UpdateEnergyExpendTimerID`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 UpdateEnergyExpendTimerID = INDEX_NONE;` |
+
+**Source comments:**
+
+> 消耗能源计算定时器
 
 ---
 
@@ -322,5 +367,50 @@
 **Source comments:**
 
 > 修炼建筑状态
+
+---
+
+### Property `OverlockingDurationID`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 OverlockingDurationID = INDEX_NONE;` |
+
+**Source comments:**
+
+> 超频持续时间定时器
+
+---
+
+### Property `CurOverlockingTime`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 CurOverlockingTime = 0;` |
+
+**Source comments:**
+
+> 当前超频状态持续时间
+
+---
+
+### Property `OverlockingCoolingTimerID`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 OverlockingCoolingTimerID = INDEX_NONE;` |
+
+**Source comments:**
+
+> 超频冷却时间定时器
 
 ---

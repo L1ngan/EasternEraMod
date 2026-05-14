@@ -510,3 +510,212 @@
 > 闲逛范围
 
 ---
+
+### Property `distanceToSpawnSquare`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() float distanceToSpawnSquare = 0.f;` |
+
+---
+
+### Property `distanceToDestroySquare`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() float distanceToDestroySquare = 0.f;` |
+
+---
+
+### Property `noSpawnDistanceSquare`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() float noSpawnDistanceSquare = 0.f;` |
+
+---
+
+### Property `insertBackgroundTime`
+
+| Field | Details |
+|------|------|
+| C++ type | `double` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() double insertBackgroundTime = 0.f;` |
+
+---
+
+### Property `uniqID`
+
+| Field | Details |
+|------|------|
+| C++ type | `int` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() int uniqID = -1;` |
+
+---
+
+### Property `npcValue`
+
+| Field | Details |
+|------|------|
+| C++ type | `int` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() int npcValue = 0;` |
+
+---
+
+### Property `npcWithPoint`
+
+| Field | Details |
+|------|------|
+| C++ type | `int` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() int npcWithPoint = 0;` |
+
+---
+
+### Property `spawnLocation`
+
+| Field | Details |
+|------|------|
+| C++ type | `FVector` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() FVector spawnLocation = FVector::ZeroVector;` |
+
+---
+
+### Property `spawnScale`
+
+| Field | Details |
+|------|------|
+| C++ type | `FVector` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() FVector spawnScale = FVector::ZeroVector;` |
+
+---
+
+### Property `lastPositionBeforeDestroyedIfFar`
+
+| Field | Details |
+|------|------|
+| C++ type | `FVector` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() FVector lastPositionBeforeDestroyedIfFar = FVector::ZeroVector;` |
+
+---
+
+### Property `timeKilled`
+
+| Field | Details |
+|------|------|
+| C++ type | `double` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() double timeKilled = 0.f;` |
+
+---
+
+### Property `bIsSpawned`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() bool bIsSpawned = false;` |
+
+---
+
+### Property `bIsKilled`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() bool bIsKilled = false;` |
+
+---
+
+### Property `killedTime`
+
+| Field | Details |
+|------|------|
+| C++ type | `double` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() double killedTime = 0.f;` |
+
+---
+
+### Property `bReadyToSpawn`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() bool bReadyToSpawn = false;` |
+
+---
+
+### Property `spawnedNpcRef`
+
+| Field | Details |
+|------|------|
+| C++ type | `AActor*` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() AActor* spawnedNpcRef = nullptr;` |
+
+---
+
+### Property `realTimeRespawn`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() float realTimeRespawn = 0.f;` |
+
+---
+
+### Property `bGotChanceToSpawn`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() bool bGotChanceToSpawn = false;` |
+
+---
+
+### Property `realSpawnChance`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() float realSpawnChance = 0.f;` |
+
+---
