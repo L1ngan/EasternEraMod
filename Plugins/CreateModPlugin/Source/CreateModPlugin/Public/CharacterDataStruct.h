@@ -420,6 +420,12 @@ struct CREATEMODPLUGIN_API FModAnimalData:public FModDataBase
 	//观察前名称
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe")
 	FText BeforeObserveName;
+	//死亡后的掉落最大数量
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "DeathDrop")
+	int32 MaxDropNum{1};
+	//死亡后的掉落配置 配置ID -- 掉落权重
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "DeathDrop")
+	TMap<FName,float> DropItemConfig;
 };
 
 USTRUCT(BlueprintType)

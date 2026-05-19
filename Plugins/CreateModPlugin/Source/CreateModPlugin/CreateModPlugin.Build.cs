@@ -36,6 +36,8 @@ public class CreateModPlugin : ModuleRules
 				"LevelSequence",
 				"BinkMediaPlayer",
 				"GameplayAbilities",
+				"Json",
+				"JsonUtilities",
 			}
 		);
 		

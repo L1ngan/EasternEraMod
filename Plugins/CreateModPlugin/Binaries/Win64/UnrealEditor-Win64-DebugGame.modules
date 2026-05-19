@@ -1,0 +1,8 @@
+{
+	"BuildId": "43139311",
+	"Modules": 
+	{
+		"CreateModPlugin": "UnrealEditor-CreateModPlugin-Win64-DebugGame.dll",
+		"CreateModPluginEditor": "UnrealEditor-CreateModPluginEditor-Win64-DebugGame.dll"
+	}
+}

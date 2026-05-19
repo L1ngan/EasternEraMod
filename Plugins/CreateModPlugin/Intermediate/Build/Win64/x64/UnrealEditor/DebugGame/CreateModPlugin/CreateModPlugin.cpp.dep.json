@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\plugins\\createmodplugin\\source\\createmodplugin\\createmodplugin.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\plugins\\createmodplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\createmodplugin\\definitions.createmodplugin.h",
+            "h:\\project\\plugins\\createmodplugin\\source\\createmodplugin\\createmodplugin.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\gameplaytags\\classes\\gameplaytagsmanager.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\gameplaytags\\classes\\gameplaytagcontainer.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\core\\public\\misc\\comparisonutility.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplaytags\\uht\\gameplaytagcontainer.generated.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplaytags\\uht\\gameplaytagsmanager.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

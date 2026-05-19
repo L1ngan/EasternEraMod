@@ -5,6 +5,10 @@
 #include "UObject/ObjectSaveContext.h"
 
 #if WITH_EDITOR
+#include "ModConfigExporter.h"
+#endif
+
+#if WITH_EDITOR
 void UModInformationAsset::PreSave(FObjectPreSaveContext SaveContext)
 {
 	Super::PreSave(SaveContext);
@@ -41,6 +45,19 @@ void UModInformationAsset::PreSave(FObjectPreSaveContext SaveContext)
 					}
 				}
 			}
+		}
+	}
+
+	// 保存时同步导出 Mod/Config/*.json（与打包导出路径一致，Cook 保存时跳过）
+	if (!SaveContext.IsCooking())
+	{
+		const FString ModFolder = FModConfigExporter::GetModContentFolderFromAsset(this);
+		if (!ModFolder.IsEmpty())
+		{
+			FModConfigExportResult ExportResult;
+			FModConfigExporter::ExportFromModInformationAsset(this, ModFolder, ExportResult, true);
+			UE_LOG(LogTemp, Log, TEXT("DA_ModDataAsset: exported JSON to %s, synced ModInfo.json (%d table, %d asset entries)"),
+				*ExportResult.ConfigDirectoryAbs, ExportResult.DataTableConfigs.Num(), ExportResult.DataAssetConfigs.Num());
 		}
 	}
 }

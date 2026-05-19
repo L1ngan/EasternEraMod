@@ -73,7 +73,7 @@ struct FModAnimalData;
 // ********** End ScriptStruct FModAnimalData ******************************************************
 
 // ********** Begin ScriptStruct FModCharacterActionAbilityAnimSections ****************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h_428_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h_434_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModCharacterActionAbilityAnimSections_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -82,7 +82,7 @@ struct FModCharacterActionAbilityAnimSections;
 // ********** End ScriptStruct FModCharacterActionAbilityAnimSections ******************************
 
 // ********** Begin ScriptStruct FModAnimalActionAbility *******************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h_457_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h_463_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModAnimalActionAbility_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;

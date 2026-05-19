@@ -1895,6 +1895,26 @@ struct Z_Construct_UScriptStruct_FModAnimalData_Statics
 		{ "ToolTip", "\xe8\xa7\x82\xe5\xaf\x9f\xe5\x89\x8d\xe5\x90\x8d\xe7\xa7\xb0" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MaxDropNum_MetaData[] = {
+		{ "Category", "DeathDrop" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe6\xad\xbb\xe4\xba\xa1\xe5\x90\x8e\xe7\x9a\x84\xe6\x8e\x89\xe8\x90\xbd\xe6\x9c\x80\xe5\xa4\xa7\xe6\x95\xb0\xe9\x87\x8f\n" },
+#endif
+		{ "ModuleRelativePath", "Public/CharacterDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe6\xad\xbb\xe4\xba\xa1\xe5\x90\x8e\xe7\x9a\x84\xe6\x8e\x89\xe8\x90\xbd\xe6\x9c\x80\xe5\xa4\xa7\xe6\x95\xb0\xe9\x87\x8f" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DropItemConfig_MetaData[] = {
+		{ "Category", "DeathDrop" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe6\xad\xbb\xe4\xba\xa1\xe5\x90\x8e\xe7\x9a\x84\xe6\x8e\x89\xe8\x90\xbd\xe9\x85\x8d\xe7\xbd\xae \xe9\x85\x8d\xe7\xbd\xaeID -- \xe6\x8e\x89\xe8\x90\xbd\xe6\x9d\x83\xe9\x87\x8d\n" },
+#endif
+		{ "ModuleRelativePath", "Public/CharacterDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe6\xad\xbb\xe4\xba\xa1\xe5\x90\x8e\xe7\x9a\x84\xe6\x8e\x89\xe8\x90\xbd\xe9\x85\x8d\xe7\xbd\xae \xe9\x85\x8d\xe7\xbd\xaeID -- \xe6\x8e\x89\xe8\x90\xbd\xe6\x9d\x83\xe9\x87\x8d" },
+#endif
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FTextPropertyParams NewProp_CharacterName;
 	static const UECodeGen_Private::FTextPropertyParams NewProp_CharacterFirstName;
@@ -1983,6 +2003,10 @@ struct Z_Construct_UScriptStruct_FModAnimalData_Statics
 	static const UECodeGen_Private::FNamePropertyParams NewProp_InitGameplayAbilityByID_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_InitGameplayAbilityByID;
 	static const UECodeGen_Private::FTextPropertyParams NewProp_BeforeObserveName;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_MaxDropNum;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_DropItemConfig_ValueProp;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_DropItemConfig_Key_KeyProp;
+	static const UECodeGen_Private::FMapPropertyParams NewProp_DropItemConfig;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static void* NewStructOps()
 	{
@@ -2055,8 +2079,8 @@ const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FModAni
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_AnimalBlendSpace = { "AnimalBlendSpace", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModAnimalData, AnimalBlendSpace), Z_Construct_UScriptStruct_FSoftObjectPath, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AnimalBlendSpace_MetaData), NewProp_AnimalBlendSpace_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_EatItems_ValueProp = { "EatItems", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 1, Z_Construct_UScriptStruct_FModIDs, METADATA_PARAMS(0, nullptr) }; // 3192921264
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_EatItems_Key_KeyProp_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_EatItems_Key_KeyProp = { "EatItems_Key", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_CreateModPlugin_EModConfigType, METADATA_PARAMS(0, nullptr) }; // 3824916306
-const UECodeGen_Private::FMapPropertyParams Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_EatItems = { "EatItems", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModAnimalData, EatItems), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EatItems_MetaData), NewProp_EatItems_MetaData) }; // 3824916306 3192921264
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_EatItems_Key_KeyProp = { "EatItems_Key", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_CreateModPlugin_EModConfigType, METADATA_PARAMS(0, nullptr) }; // 191486423
+const UECodeGen_Private::FMapPropertyParams Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_EatItems = { "EatItems", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModAnimalData, EatItems), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EatItems_MetaData), NewProp_EatItems_MetaData) }; // 191486423 3192921264
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_NutritionTimer = { "NutritionTimer", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModAnimalData, NutritionTimer), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NutritionTimer_MetaData), NewProp_NutritionTimer_MetaData) };
 void Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_bCanTame_SetBit(void* Obj)
 {
@@ -2098,6 +2122,10 @@ const UECodeGen_Private::FMapPropertyParams Z_Construct_UScriptStruct_FModAnimal
 const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_InitGameplayAbilityByID_Inner = { "InitGameplayAbilityByID", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_InitGameplayAbilityByID = { "InitGameplayAbilityByID", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModAnimalData, InitGameplayAbilityByID), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InitGameplayAbilityByID_MetaData), NewProp_InitGameplayAbilityByID_MetaData) };
 const UECodeGen_Private::FTextPropertyParams Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_BeforeObserveName = { "BeforeObserveName", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModAnimalData, BeforeObserveName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BeforeObserveName_MetaData), NewProp_BeforeObserveName_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_MaxDropNum = { "MaxDropNum", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModAnimalData, MaxDropNum), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MaxDropNum_MetaData), NewProp_MaxDropNum_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_DropItemConfig_ValueProp = { "DropItemConfig", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 1, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_DropItemConfig_Key_KeyProp = { "DropItemConfig_Key", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FMapPropertyParams Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_DropItemConfig = { "DropItemConfig", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModAnimalData, DropItemConfig), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DropItemConfig_MetaData), NewProp_DropItemConfig_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FModAnimalData_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_CharacterName,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_CharacterFirstName,
@@ -2179,6 +2207,10 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FM
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_InitGameplayAbilityByID_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_InitGameplayAbilityByID,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_BeforeObserveName,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_MaxDropNum,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_DropItemConfig_ValueProp,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_DropItemConfig_Key_KeyProp,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModAnimalData_Statics::NewProp_DropItemConfig,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FModAnimalData_Statics::PropPointers) < 2048);
 const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FModAnimalData_Statics::StructParams = {
@@ -2485,12 +2517,12 @@ struct Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_Creat
 		{ FModOutputDatas::StaticStruct, Z_Construct_UScriptStruct_FModOutputDatas_Statics::NewStructOps, TEXT("ModOutputDatas"), &Z_Registration_Info_UScriptStruct_FModOutputDatas, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModOutputDatas), 2344238559U) },
 		{ FModIDs::StaticStruct, Z_Construct_UScriptStruct_FModIDs_Statics::NewStructOps, TEXT("ModIDs"), &Z_Registration_Info_UScriptStruct_FModIDs, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModIDs), 3192921264U) },
 		{ FModAllTypeItemDrop::StaticStruct, Z_Construct_UScriptStruct_FModAllTypeItemDrop_Statics::NewStructOps, TEXT("ModAllTypeItemDrop"), &Z_Registration_Info_UScriptStruct_FModAllTypeItemDrop, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModAllTypeItemDrop), 3703179762U) },
-		{ FModAnimalData::StaticStruct, Z_Construct_UScriptStruct_FModAnimalData_Statics::NewStructOps, TEXT("ModAnimalData"), &Z_Registration_Info_UScriptStruct_FModAnimalData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModAnimalData), 2631770426U) },
+		{ FModAnimalData::StaticStruct, Z_Construct_UScriptStruct_FModAnimalData_Statics::NewStructOps, TEXT("ModAnimalData"), &Z_Registration_Info_UScriptStruct_FModAnimalData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModAnimalData), 658422033U) },
 		{ FModCharacterActionAbilityAnimSections::StaticStruct, Z_Construct_UScriptStruct_FModCharacterActionAbilityAnimSections_Statics::NewStructOps, TEXT("ModCharacterActionAbilityAnimSections"), &Z_Registration_Info_UScriptStruct_FModCharacterActionAbilityAnimSections, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModCharacterActionAbilityAnimSections), 1480376237U) },
 		{ FModAnimalActionAbility::StaticStruct, Z_Construct_UScriptStruct_FModAnimalActionAbility_Statics::NewStructOps, TEXT("ModAnimalActionAbility"), &Z_Registration_Info_UScriptStruct_FModAnimalActionAbility, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModAnimalActionAbility), 1681739639U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h__Script_CreateModPlugin_4057896264(TEXT("/Script/CreateModPlugin"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h__Script_CreateModPlugin_3694427687(TEXT("/Script/CreateModPlugin"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h__Script_CreateModPlugin_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h__Script_CreateModPlugin_Statics::ScriptStructInfo),
 	Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h__Script_CreateModPlugin_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h__Script_CreateModPlugin_Statics::EnumInfo));

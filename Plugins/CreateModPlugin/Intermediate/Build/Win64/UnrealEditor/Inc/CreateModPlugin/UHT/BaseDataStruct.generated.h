@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FModConfig ********************************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_81_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_83_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModConfig_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -26,7 +26,7 @@ struct FModConfig;
 // ********** End ScriptStruct FModConfig **********************************************************
 
 // ********** Begin ScriptStruct FModAsset *********************************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_100_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_102_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModAsset_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -37,7 +37,7 @@ struct FModAsset;
 // ********** Begin Class UModInformationAsset *****************************************************
 CREATEMODPLUGIN_API UClass* Z_Construct_UClass_UModInformationAsset_NoRegister();
 
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_114_INCLASS_NO_PURE_DECLS \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_116_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUModInformationAsset(); \
 	friend struct Z_Construct_UClass_UModInformationAsset_Statics; \
@@ -48,7 +48,7 @@ public: \
 	DECLARE_SERIALIZER(UModInformationAsset)
 
 
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_114_ENHANCED_CONSTRUCTORS \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_116_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UModInformationAsset(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -60,12 +60,12 @@ public: \
 	NO_API virtual ~UModInformationAsset();
 
 
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_111_PROLOG
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_114_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_113_PROLOG
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_116_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_114_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_114_ENHANCED_CONSTRUCTORS \
+	FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_116_INCLASS_NO_PURE_DECLS \
+	FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_116_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -75,7 +75,7 @@ class UModInformationAsset;
 // ********** End Class UModInformationAsset *******************************************************
 
 // ********** Begin ScriptStruct FModDataBase ******************************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_132_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_134_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModDataBase_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -85,7 +85,7 @@ struct FModDataBase;
 // ********** End ScriptStruct FModDataBase ********************************************************
 
 // ********** Begin ScriptStruct FModGameplayEffectContainer ***************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_333_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_335_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModGameplayEffectContainer_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -94,7 +94,7 @@ struct FModGameplayEffectContainer;
 // ********** End ScriptStruct FModGameplayEffectContainer *****************************************
 
 // ********** Begin ScriptStruct FModFormatText ****************************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_352_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_354_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModFormatText_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -103,7 +103,7 @@ struct FModFormatText;
 // ********** End ScriptStruct FModFormatText ******************************************************
 
 // ********** Begin ScriptStruct FModDropItemInfo **************************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_385_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_387_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModDropItemInfo_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -112,7 +112,7 @@ struct FModDropItemInfo;
 // ********** End ScriptStruct FModDropItemInfo ****************************************************
 
 // ********** Begin ScriptStruct FModDropSetConfig *************************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_403_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_405_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModDropSetConfig_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;
@@ -153,7 +153,8 @@ struct FModDropSetConfig;
 	op(EModConfigType::CommonUI) \
 	op(EModConfigType::AnimalActionAbility) \
 	op(EModConfigType::EnemyAttackGenerationConfig) \
-	op(EModConfigType::MonsterGenerationConfig) 
+	op(EModConfigType::MonsterGenerationConfig) \
+	op(EModConfigType::ThreatPoolInfo) 
 
 enum class EModConfigType : uint8;
 template<> struct TIsUEnumClass<EModConfigType> { enum { Value = true }; };

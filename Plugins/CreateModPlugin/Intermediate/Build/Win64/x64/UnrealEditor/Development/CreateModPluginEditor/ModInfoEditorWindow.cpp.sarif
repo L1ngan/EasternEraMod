@@ -19,7 +19,7 @@
                                     "uri": "file:///G:/ModProject/Plugins/CreateModPlugin/Source/CreateModPluginEditor/Private/ModInfoEditorWindow.cpp"
                                 },
                                 "region": {
-                                    "startLine": 90,
+                                    "startLine": 91,
                                     "startColumn": 30,
                                     "snippet": {
                                         "text": "\t\t\t\t.TextStyle(FEditorStyle::Get(), \"ContentBrowser.TopBar.Font\")"

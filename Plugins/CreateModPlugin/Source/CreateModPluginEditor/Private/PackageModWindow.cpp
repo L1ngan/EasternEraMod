@@ -32,6 +32,7 @@
 #include "Serialization/JsonReader.h"
 #include "Serialization/JsonWriter.h"
 #include "ModToolVersion.h"
+#include "ModConfigExporter.h"
 
 namespace PackageModHelpers
 {
@@ -1305,6 +1306,10 @@ void SPackageModWindow::ContinuePackaging()
 			}
 		}
 	}
+
+	// 从 DA_ModDataAsset 导出配置表 JSON，并写入 ModInfo.json
+	FModConfigExportResult ModConfigExportResult;
+	FModConfigExporter::ExportFromModFolder(ModFolderPath, ModConfigExportResult);
 	
 	// 构建输出文件夹路径：项目根目录的 Mods/{ModId}
 	FString OutputDir = FPaths::ProjectDir() / TEXT("Mods") / ModId;
@@ -1802,8 +1807,9 @@ void SPackageModWindow::ContinuePackaging()
 		FString CapturedIconFilePath = IconFilePathFull;
 		const FString CapturedGameplayTagsSourcePath = GameplayTagsIniPathFull;
 		const FString CapturedModIdForTags = ModId;
+		const FModConfigExportResult CapturedModConfigExport = ModConfigExportResult;
 	
-	AsyncTask(ENamedThreads::AnyBackgroundThreadNormalTask, [ProcHandle, ReadPipe, WritePipe, CapturedSavePathFull, CapturedResponseFilePath, CapturedOutputDir, CapturedModInfoJsonPath, CapturedMainLuaFilePath, CapturedIconFilePath, CapturedGameplayTagsSourcePath, CapturedModIdForTags, WeakThisPtr]() mutable
+	AsyncTask(ENamedThreads::AnyBackgroundThreadNormalTask, [ProcHandle, ReadPipe, WritePipe, CapturedSavePathFull, CapturedResponseFilePath, CapturedOutputDir, CapturedModInfoJsonPath, CapturedMainLuaFilePath, CapturedIconFilePath, CapturedGameplayTagsSourcePath, CapturedModIdForTags, CapturedModConfigExport, WeakThisPtr]() mutable
 	{
 		// 等待进程完成，同时定期读取输出并更新进度
 	int32 ReturnCode = 0;
@@ -1885,7 +1891,7 @@ void SPackageModWindow::ContinuePackaging()
 		}
 
 		// 在主线程中处理结果
-		AsyncTask(ENamedThreads::GameThread, [ReturnCode, Output, CapturedSavePathFull, CapturedResponseFilePath, CapturedOutputDir, CapturedModInfoJsonPath, CapturedMainLuaFilePath, CapturedIconFilePath, CapturedGameplayTagsSourcePath, CapturedModIdForTags, WeakThisPtr]()
+		AsyncTask(ENamedThreads::GameThread, [ReturnCode, Output, CapturedSavePathFull, CapturedResponseFilePath, CapturedOutputDir, CapturedModInfoJsonPath, CapturedMainLuaFilePath, CapturedIconFilePath, CapturedGameplayTagsSourcePath, CapturedModIdForTags, CapturedModConfigExport, WeakThisPtr]()
 		{
 			IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
 			
@@ -1941,6 +1947,10 @@ void SPackageModWindow::ContinuePackaging()
 									// 更新 ModToolVersion 为当前工具版本号
 									FString CurrentModToolVersion = UModToolVersion::GetModToolVersion();
 									JsonObject->SetStringField(TEXT("ModToolVersion"), CurrentModToolVersion);
+									if (CapturedModConfigExport.bExportedAny)
+									{
+										FModConfigExporter::ApplyExportMetadataToModInfoJson(JsonObject, CapturedModConfigExport);
+									}
 									
 									// 保存更新后的 JSON
 									FString UpdatedJsonContent;
@@ -2025,6 +2035,8 @@ void SPackageModWindow::ContinuePackaging()
 								UE_LOG(LogTemp, Warning, TEXT("Failed to copy GameplayTags ini to: %s"), *DestTagsIni);
 							}
 						}
+
+						FModConfigExporter::CopyConfigFilesToOutput(CapturedModConfigExport, CapturedOutputDir);
 						
 						FNotificationInfo Info(LOCTEXT("PackageSuccessDetails", "Mod packaged successfully!"));
 		Info.ExpireDuration = 3.0f;
@@ -3200,6 +3212,10 @@ void SPackageModWindow::ContinuePackagingStandalone(const FString& ModPath, cons
 			}
 		}
 	}
+
+	// 从 DA_ModDataAsset 导出配置表 JSON，并写入 ModInfo.json
+	FModConfigExportResult ModConfigExportResult;
+	FModConfigExporter::ExportFromModFolder(ModFolderPath, ModConfigExportResult);
 	
 	// 构建输出文件夹路径：项目根目录的 Mods/{ModId}
 	FString OutputDir = FPaths::ProjectDir() / TEXT("Mods") / ModId;
@@ -3583,7 +3599,8 @@ void SPackageModWindow::ContinuePackagingStandalone(const FString& ModPath, cons
 		FString CapturedIconFilePath = IconFilePathFull;
 		const FString CapturedGameplayTagsSourcePath = GameplayTagsIniPathFullStandalone;
 		const FString CapturedModIdForTags = ModId;
-		AsyncTask(ENamedThreads::AnyBackgroundThreadNormalTask, [UnrealPakPath, UnrealPakCommandLine, SavePathFull, CapturedOutputDir, CapturedModInfoJsonPath, CapturedMainLuaFilePath, CapturedIconFilePath, CapturedGameplayTagsSourcePath, CapturedModIdForTags, PakNotification]() mutable
+		const FModConfigExportResult CapturedModConfigExport = ModConfigExportResult;
+		AsyncTask(ENamedThreads::AnyBackgroundThreadNormalTask, [UnrealPakPath, UnrealPakCommandLine, SavePathFull, CapturedOutputDir, CapturedModInfoJsonPath, CapturedMainLuaFilePath, CapturedIconFilePath, CapturedGameplayTagsSourcePath, CapturedModIdForTags, CapturedModConfigExport, PakNotification]() mutable
 		{
 			void* ReadPipe = nullptr;
 			void* WritePipe = nullptr;
@@ -3681,7 +3698,7 @@ void SPackageModWindow::ContinuePackagingStandalone(const FString& ModPath, cons
 				FPlatformProcess::CloseProc(ProcHandle);
 				FPlatformProcess::ClosePipe(ReadPipe, WritePipe);
 				
-				AsyncTask(ENamedThreads::GameThread, [ReturnCode, SavePathFull, CapturedOutputDir, CapturedModInfoJsonPath, CapturedMainLuaFilePath, CapturedIconFilePath, CapturedGameplayTagsSourcePath, CapturedModIdForTags, Output, PakNotification]()
+				AsyncTask(ENamedThreads::GameThread, [ReturnCode, SavePathFull, CapturedOutputDir, CapturedModInfoJsonPath, CapturedMainLuaFilePath, CapturedIconFilePath, CapturedGameplayTagsSourcePath, CapturedModIdForTags, CapturedModConfigExport, Output, PakNotification]()
 				{
 					// 更新并关闭进度通知
 					if (PakNotification.IsValid())
@@ -3764,6 +3781,8 @@ void SPackageModWindow::ContinuePackagingStandalone(const FString& ModPath, cons
 										UE_LOG(LogTemp, Warning, TEXT("ContinuePackagingStandalone - Failed to copy GameplayTags ini to: %s"), *DestTagsIni);
 									}
 								}
+
+								FModConfigExporter::CopyConfigFilesToOutput(CapturedModConfigExport, CapturedOutputDir);
 							}
 							
 							FNotificationInfo SuccessInfo(FText::Format(LOCTEXT("PackageSuccessDetails", "Mod packaged successfully! File: {0} ({1} MB)"), 

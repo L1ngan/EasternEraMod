@@ -1,5 +1,6 @@
 #include "ModInfoEditorWindow.h"
 #include "ModInfoEditorData.h"
+#include "ModConfigExporter.h"
 #include "Widgets/Input/SButton.h"
 #include "Widgets/Input/SEditableTextBox.h"
 #include "Widgets/Layout/SScrollBox.h"
@@ -452,10 +453,23 @@ bool SModInfoEditorWindow::SaveModInfoToFile(const FString& FilePath)
 		return false;
 	}
 
-	// 创建 JSON 对象
-	TSharedPtr<FJsonObject> JsonObject = MakeShareable(new FJsonObject);
-	
-	// 添加实际数据
+	// 在已有 ModInfo.json 上合并写入，保留 DataTableConfigs / DataAssetConfigs / ModToolVersion 等
+	TSharedPtr<FJsonObject> JsonObject;
+	FString ExistingJsonContent;
+	if (FFileHelper::LoadFileToString(ExistingJsonContent, *FilePath))
+	{
+		const TSharedRef<TJsonReader<>> ExistingReader = TJsonReaderFactory<>::Create(ExistingJsonContent);
+		TSharedPtr<FJsonObject> ExistingObject;
+		if (FJsonSerializer::Deserialize(ExistingReader, ExistingObject) && ExistingObject.IsValid())
+		{
+			JsonObject = ExistingObject;
+		}
+	}
+	if (!JsonObject.IsValid())
+	{
+		JsonObject = MakeShareable(new FJsonObject);
+	}
+
 	JsonObject->SetStringField(TEXT("ModId"), ModInfoData->ModId);
 	JsonObject->SetStringField(TEXT("ModName"), ModInfoData->ModName);
 	JsonObject->SetStringField(TEXT("Version"), ModInfoData->Version);
@@ -867,6 +881,19 @@ bool SModInfoEditorWindow::SaveModInfoToFile(const FString& FilePath)
 	if (!ModInfoData->PublishedFileId.IsEmpty())
 	{
 		JsonObject->SetStringField(TEXT("PublishedFileId"), ModInfoData->PublishedFileId);
+	}
+
+	if (!ModInfoData->ModFolderPath.IsEmpty())
+	{
+		FString ContentDirRestore = FPaths::ProjectContentDir();
+		FPaths::NormalizeDirectoryName(ContentDirRestore);
+		if (FPaths::IsRelative(ContentDirRestore))
+		{
+			ContentDirRestore = FPaths::ConvertRelativePathToFull(ContentDirRestore);
+			FPaths::NormalizeDirectoryName(ContentDirRestore);
+		}
+		const FString ModFullPathRestore = FPaths::ConvertRelativePathToFull(ContentDirRestore / ModInfoData->ModFolderPath);
+		FModConfigExporter::RestoreConfigMetadataFromDiskIfMissing(ModFullPathRestore, JsonObject);
 	}
 
 	// 序列化为 JSON 字符串

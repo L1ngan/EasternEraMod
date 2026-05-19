@@ -168,7 +168,8 @@
             "e:\\ue5.6\\ue_5.6\\engine\\source\\developer\\desktopplatform\\public\\desktopplatformmodule.h",
             "e:\\ue5.6\\ue_5.6\\engine\\source\\developer\\desktopplatform\\public\\idesktopplatform.h",
             "g:\\modproject\\plugins\\createmodplugin\\source\\createmodplugin\\public\\modtoolversion.h",
-            "g:\\modproject\\plugins\\createmodplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\createmodplugin\\uht\\modtoolversion.generated.h"
+            "g:\\modproject\\plugins\\createmodplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\createmodplugin\\uht\\modtoolversion.generated.h",
+            "g:\\modproject\\plugins\\createmodplugin\\source\\createmodplugin\\public\\modconfigexporter.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

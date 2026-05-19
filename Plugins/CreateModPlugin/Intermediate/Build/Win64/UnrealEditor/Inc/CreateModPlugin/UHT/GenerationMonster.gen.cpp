@@ -27,6 +27,7 @@ CREATEMODPLUGIN_API UScriptStruct* Z_Construct_UScriptStruct_FModGenerationSetDa
 CREATEMODPLUGIN_API UScriptStruct* Z_Construct_UScriptStruct_FModMonsterGenerationConfig();
 CREATEMODPLUGIN_API UScriptStruct* Z_Construct_UScriptStruct_FModNameIDArray();
 CREATEMODPLUGIN_API UScriptStruct* Z_Construct_UScriptStruct_FModThreatPoolInfo();
+ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTableRowBase();
 GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayEffect_NoRegister();
 UPackage* Z_Construct_UPackage__Script_CreateModPlugin();
 // ********** End Cross Module References **********************************************************
@@ -334,7 +335,7 @@ UScriptStruct* Z_Construct_UScriptStruct_FModThreatPoolInfo()
 // ********** End ScriptStruct FModThreatPoolInfo **************************************************
 
 // ********** Begin ScriptStruct FModGenerationData ************************************************
-static_assert(std::is_polymorphic<FModGenerationData>() == std::is_polymorphic<FModDataBase>(), "USTRUCT FModGenerationData cannot be polymorphic unless super FModDataBase is polymorphic");
+static_assert(std::is_polymorphic<FModGenerationData>() == std::is_polymorphic<FTableRowBase>(), "USTRUCT FModGenerationData cannot be polymorphic unless super FTableRowBase is polymorphic");
 static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FModGenerationData;
 class UScriptStruct* FModGenerationData::StaticStruct()
 {
@@ -421,6 +422,10 @@ struct Z_Construct_UScriptStruct_FModGenerationData_Statics
 		{ "ToolTip", "\xe9\x97\xb2\xe9\x80\x9b\xe6\x97\xb6\xe7\xa7\xbb\xe5\x8a\xa8\xe7\x9a\x84\xe8\x8c\x83\xe5\x9b\xb4 \xe4\xbb\xa5\xe5\x87\xba\xe7\x94\x9f\xe7\x82\xb9\xe4\xb8\xba\xe4\xb8\xad\xe5\xbf\x83" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ID_MetaData[] = {
+		{ "Category", "ModGenerationData" },
+		{ "ModuleRelativePath", "Public/GenerationMonster.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_GenerationPosition_ValueProp;
 	static const UECodeGen_Private::FNamePropertyParams NewProp_GenerationPosition_Key_KeyProp;
@@ -435,6 +440,7 @@ struct Z_Construct_UScriptStruct_FModGenerationData_Statics
 	static const UECodeGen_Private::FSoftClassPropertyParams NewProp_GameplayEffects_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_GameplayEffects;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_MovingRange;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_ID;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static void* NewStructOps()
 	{
@@ -455,6 +461,7 @@ const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModGene
 const UECodeGen_Private::FSoftClassPropertyParams Z_Construct_UScriptStruct_FModGenerationData_Statics::NewProp_GameplayEffects_Inner = { "GameplayEffects", nullptr, (EPropertyFlags)0x0004000000000000, UECodeGen_Private::EPropertyGenFlags::SoftClass, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UGameplayEffect_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModGenerationData_Statics::NewProp_GameplayEffects = { "GameplayEffects", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModGenerationData, GameplayEffects), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameplayEffects_MetaData), NewProp_GameplayEffects_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModGenerationData_Statics::NewProp_MovingRange = { "MovingRange", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModGenerationData, MovingRange), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MovingRange_MetaData), NewProp_MovingRange_MetaData) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FModGenerationData_Statics::NewProp_ID = { "ID", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModGenerationData, ID), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ID_MetaData), NewProp_ID_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FModGenerationData_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModGenerationData_Statics::NewProp_GenerationPosition_ValueProp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModGenerationData_Statics::NewProp_GenerationPosition_Key_KeyProp,
@@ -469,11 +476,12 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FM
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModGenerationData_Statics::NewProp_GameplayEffects_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModGenerationData_Statics::NewProp_GameplayEffects,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModGenerationData_Statics::NewProp_MovingRange,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModGenerationData_Statics::NewProp_ID,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FModGenerationData_Statics::PropPointers) < 2048);
 const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FModGenerationData_Statics::StructParams = {
 	(UObject* (*)())Z_Construct_UPackage__Script_CreateModPlugin,
-	Z_Construct_UScriptStruct_FModDataBase,
+	Z_Construct_UScriptStruct_FTableRowBase,
 	&NewStructOps,
 	"ModGenerationData",
 	Z_Construct_UScriptStruct_FModGenerationData_Statics::PropPointers,
@@ -561,8 +569,8 @@ struct Z_Construct_UScriptStruct_FModGenerationSetData_Statics
 	static const UECodeGen_Private::FStructParams StructParams;
 };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModGenerationSetData_Statics::NewProp_GenerationData_ValueProp = { "GenerationData", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 1, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FModGenerationSetData_Statics::NewProp_GenerationData_Key_KeyProp = { "GenerationData_Key", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FModGenerationData, METADATA_PARAMS(0, nullptr) }; // 3227261412
-const UECodeGen_Private::FMapPropertyParams Z_Construct_UScriptStruct_FModGenerationSetData_Statics::NewProp_GenerationData = { "GenerationData", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModGenerationSetData, GenerationData), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GenerationData_MetaData), NewProp_GenerationData_MetaData) }; // 3227261412
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FModGenerationSetData_Statics::NewProp_GenerationData_Key_KeyProp = { "GenerationData_Key", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FModGenerationData, METADATA_PARAMS(0, nullptr) }; // 1842200092
+const UECodeGen_Private::FMapPropertyParams Z_Construct_UScriptStruct_FModGenerationSetData_Statics::NewProp_GenerationData = { "GenerationData", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModGenerationSetData, GenerationData), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GenerationData_MetaData), NewProp_GenerationData_MetaData) }; // 1842200092
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModGenerationSetData_Statics::NewProp_GenerationNumber = { "GenerationNumber", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModGenerationSetData, GenerationNumber), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GenerationNumber_MetaData), NewProp_GenerationNumber_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModGenerationSetData_Statics::NewProp_TeamID = { "TeamID", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModGenerationSetData, TeamID), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TeamID_MetaData), NewProp_TeamID_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FModGenerationSetData_Statics::PropPointers[] = {
@@ -1155,8 +1163,8 @@ struct Z_Construct_UScriptStruct_FModMonsterGenerationConfig_Statics
 };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FModMonsterGenerationConfig_Statics::NewProp_ActivateCountDown = { "ActivateCountDown", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModMonsterGenerationConfig, ActivateCountDown), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActivateCountDown_MetaData), NewProp_ActivateCountDown_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModMonsterGenerationConfig_Statics::NewProp_GenerationDelay = { "GenerationDelay", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModMonsterGenerationConfig, GenerationDelay), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GenerationDelay_MetaData), NewProp_GenerationDelay_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FModMonsterGenerationConfig_Statics::NewProp_GenerationSetData_Inner = { "GenerationSetData", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FModGenerationSetData, METADATA_PARAMS(0, nullptr) }; // 663394941
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModMonsterGenerationConfig_Statics::NewProp_GenerationSetData = { "GenerationSetData", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModMonsterGenerationConfig, GenerationSetData), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GenerationSetData_MetaData), NewProp_GenerationSetData_MetaData) }; // 663394941
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FModMonsterGenerationConfig_Statics::NewProp_GenerationSetData_Inner = { "GenerationSetData", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FModGenerationSetData, METADATA_PARAMS(0, nullptr) }; // 1206196191
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModMonsterGenerationConfig_Statics::NewProp_GenerationSetData = { "GenerationSetData", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModMonsterGenerationConfig, GenerationSetData), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GenerationSetData_MetaData), NewProp_GenerationSetData_MetaData) }; // 1206196191
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModMonsterGenerationConfig_Statics::NewProp_GenerationTimes = { "GenerationTimes", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModMonsterGenerationConfig, GenerationTimes), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GenerationTimes_MetaData), NewProp_GenerationTimes_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModMonsterGenerationConfig_Statics::NewProp_GenerationInterval = { "GenerationInterval", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModMonsterGenerationConfig, GenerationInterval), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GenerationInterval_MetaData), NewProp_GenerationInterval_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModMonsterGenerationConfig_Statics::NewProp_GenerationMaxNumber = { "GenerationMaxNumber", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModMonsterGenerationConfig, GenerationMaxNumber), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GenerationMaxNumber_MetaData), NewProp_GenerationMaxNumber_MetaData) };
@@ -1219,14 +1227,14 @@ struct Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_Creat
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
 		{ FModNameIDArray::StaticStruct, Z_Construct_UScriptStruct_FModNameIDArray_Statics::NewStructOps, TEXT("ModNameIDArray"), &Z_Registration_Info_UScriptStruct_FModNameIDArray, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModNameIDArray), 1068728390U) },
 		{ FModThreatPoolInfo::StaticStruct, Z_Construct_UScriptStruct_FModThreatPoolInfo_Statics::NewStructOps, TEXT("ModThreatPoolInfo"), &Z_Registration_Info_UScriptStruct_FModThreatPoolInfo, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModThreatPoolInfo), 591459588U) },
-		{ FModGenerationData::StaticStruct, Z_Construct_UScriptStruct_FModGenerationData_Statics::NewStructOps, TEXT("ModGenerationData"), &Z_Registration_Info_UScriptStruct_FModGenerationData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModGenerationData), 3227261412U) },
-		{ FModGenerationSetData::StaticStruct, Z_Construct_UScriptStruct_FModGenerationSetData_Statics::NewStructOps, TEXT("ModGenerationSetData"), &Z_Registration_Info_UScriptStruct_FModGenerationSetData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModGenerationSetData), 663394941U) },
+		{ FModGenerationData::StaticStruct, Z_Construct_UScriptStruct_FModGenerationData_Statics::NewStructOps, TEXT("ModGenerationData"), &Z_Registration_Info_UScriptStruct_FModGenerationData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModGenerationData), 1842200092U) },
+		{ FModGenerationSetData::StaticStruct, Z_Construct_UScriptStruct_FModGenerationSetData_Statics::NewStructOps, TEXT("ModGenerationSetData"), &Z_Registration_Info_UScriptStruct_FModGenerationSetData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModGenerationSetData), 1206196191U) },
 		{ FModGenerationProbabilityInfluence::StaticStruct, Z_Construct_UScriptStruct_FModGenerationProbabilityInfluence_Statics::NewStructOps, TEXT("ModGenerationProbabilityInfluence"), &Z_Registration_Info_UScriptStruct_FModGenerationProbabilityInfluence, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModGenerationProbabilityInfluence), 3640847322U) },
 		{ FModGenerationRuleData::StaticStruct, Z_Construct_UScriptStruct_FModGenerationRuleData_Statics::NewStructOps, TEXT("ModGenerationRuleData"), &Z_Registration_Info_UScriptStruct_FModGenerationRuleData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModGenerationRuleData), 2819705291U) },
-		{ FModMonsterGenerationConfig::StaticStruct, Z_Construct_UScriptStruct_FModMonsterGenerationConfig_Statics::NewStructOps, TEXT("ModMonsterGenerationConfig"), &Z_Registration_Info_UScriptStruct_FModMonsterGenerationConfig, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModMonsterGenerationConfig), 3647954389U) },
+		{ FModMonsterGenerationConfig::StaticStruct, Z_Construct_UScriptStruct_FModMonsterGenerationConfig_Statics::NewStructOps, TEXT("ModMonsterGenerationConfig"), &Z_Registration_Info_UScriptStruct_FModMonsterGenerationConfig, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModMonsterGenerationConfig), 3011816981U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h__Script_CreateModPlugin_2844352688(TEXT("/Script/CreateModPlugin"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h__Script_CreateModPlugin_2345372420(TEXT("/Script/CreateModPlugin"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h__Script_CreateModPlugin_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h__Script_CreateModPlugin_Statics::ScriptStructInfo),
 	Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h__Script_CreateModPlugin_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h__Script_CreateModPlugin_Statics::EnumInfo));

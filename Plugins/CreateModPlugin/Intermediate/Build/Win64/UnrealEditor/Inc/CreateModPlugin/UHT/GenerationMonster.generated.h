@@ -39,14 +39,14 @@ struct FModThreatPoolInfo;
 #define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_73_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModGenerationData_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
-	typedef FModDataBase Super;
+	typedef FTableRowBase Super;
 
 
 struct FModGenerationData;
 // ********** End ScriptStruct FModGenerationData **************************************************
 
 // ********** Begin ScriptStruct FModGenerationSetData *********************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_109_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_112_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModGenerationSetData_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -55,7 +55,7 @@ struct FModGenerationSetData;
 // ********** End ScriptStruct FModGenerationSetData ***********************************************
 
 // ********** Begin ScriptStruct FModGenerationProbabilityInfluence ********************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_142_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_145_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModGenerationProbabilityInfluence_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -64,7 +64,7 @@ struct FModGenerationProbabilityInfluence;
 // ********** End ScriptStruct FModGenerationProbabilityInfluence **********************************
 
 // ********** Begin ScriptStruct FModGenerationRuleData ********************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_157_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_160_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModGenerationRuleData_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -73,7 +73,7 @@ struct FModGenerationRuleData;
 // ********** End ScriptStruct FModGenerationRuleData **********************************************
 
 // ********** Begin ScriptStruct FModMonsterGenerationConfig ***************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_192_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_195_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModMonsterGenerationConfig_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;

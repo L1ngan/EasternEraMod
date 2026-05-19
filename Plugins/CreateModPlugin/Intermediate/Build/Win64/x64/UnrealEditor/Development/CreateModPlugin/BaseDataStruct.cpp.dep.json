@@ -38,7 +38,8 @@
             "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\uobject\\objectsavecontext.h",
             "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\uobject\\cookenums.h",
             "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\uobject\\objectsaveoverride.h",
-            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\cooker\\cookdependency.h"
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\cooker\\cookdependency.h",
+            "g:\\modproject\\plugins\\createmodplugin\\source\\createmodplugin\\public\\modconfigexporter.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

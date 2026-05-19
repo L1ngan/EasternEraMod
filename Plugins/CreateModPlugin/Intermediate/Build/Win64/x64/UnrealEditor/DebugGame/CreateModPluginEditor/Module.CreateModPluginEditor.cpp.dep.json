@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\project\\plugins\\createmodplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\createmodplugineditor\\module.createmodplugineditor.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\project\\plugins\\createmodplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\createmodplugineditor\\definitions.createmodplugineditor.h",
+            "h:\\project\\plugins\\createmodplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\createmodplugineditor\\uht\\createmodplugineditor.init.gen.cpp",
+            "h:\\project\\plugins\\createmodplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\createmodplugineditor\\uht\\modinfoeditordata.gen.cpp",
+            "h:\\project\\plugins\\createmodplugin\\source\\createmodplugineditor\\public\\modinfoeditordata.h",
+            "h:\\project\\plugins\\createmodplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\createmodplugineditor\\uht\\modinfoeditordata.generated.h",
+            "h:\\project\\plugins\\createmodplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\createmodplugineditor\\permoduleinline.gen.cpp",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
