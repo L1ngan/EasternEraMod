@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 struct FLUniValue;
 
 // ********** Begin ScriptStruct FLUniValue ********************************************************
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_47_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_47_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FLUniValue_Statics; \
 	static class UScriptStruct* StaticStruct();
 
@@ -28,7 +28,7 @@ struct FLUniValue;
 // ********** End ScriptStruct FLUniValue **********************************************************
 
 // ********** Begin ScriptStruct FDataBase *********************************************************
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_72_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_72_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FDataBase_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -40,7 +40,7 @@ struct FDataBase;
 // ********** Begin Interface ULBaseInterface ******************************************************
 LQUICKFRAME_API UClass* Z_Construct_UClass_ULBaseInterface_NoRegister();
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_94_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_94_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	LQUICKFRAME_API ULBaseInterface(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -52,7 +52,7 @@ LQUICKFRAME_API UClass* Z_Construct_UClass_ULBaseInterface_NoRegister();
 	virtual ~ULBaseInterface() = default;
 
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_94_GENERATED_UINTERFACE_BODY() \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_94_GENERATED_UINTERFACE_BODY() \
 private: \
 	static void StaticRegisterNativesULBaseInterface(); \
 	friend struct Z_Construct_UClass_ULBaseInterface_Statics; \
@@ -63,15 +63,15 @@ public: \
 	DECLARE_SERIALIZER(ULBaseInterface)
 
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_94_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_94_GENERATED_BODY \
 	PRAGMA_DISABLE_DEPRECATION_WARNINGS \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_94_GENERATED_UINTERFACE_BODY() \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_94_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_94_GENERATED_UINTERFACE_BODY() \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_94_ENHANCED_CONSTRUCTORS \
 private: \
 	PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_94_INCLASS_IINTERFACE_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_94_INCLASS_IINTERFACE_NO_PURE_DECLS \
 protected: \
 	virtual ~ILBaseInterface() {} \
 public: \
@@ -80,11 +80,11 @@ public: \
 	virtual UObject* _getUObject() const { return nullptr; }
 
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_91_PROLOG
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_99_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_91_PROLOG
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_99_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_94_INCLASS_IINTERFACE_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_94_INCLASS_IINTERFACE_NO_PURE_DECLS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -94,14 +94,14 @@ class ULBaseInterface;
 // ********** End Interface ULBaseInterface ********************************************************
 
 // ********** Begin Class ULBaseLibrary ************************************************************
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_136_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_136_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execUniCompare); \
 	DECLARE_FUNCTION(execSetDebugFlag);
 
 
 LQUICKFRAME_API UClass* Z_Construct_UClass_ULBaseLibrary_NoRegister();
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_136_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_136_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesULBaseLibrary(); \
 	friend struct Z_Construct_UClass_ULBaseLibrary_Statics; \
@@ -112,7 +112,7 @@ public: \
 	DECLARE_SERIALIZER(ULBaseLibrary)
 
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_136_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_136_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ULBaseLibrary(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -124,13 +124,13 @@ public: \
 	NO_API virtual ~ULBaseLibrary();
 
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_133_PROLOG
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_136_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_133_PROLOG
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_136_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_136_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_136_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_136_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_136_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_136_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h_136_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -140,7 +140,7 @@ class ULBaseLibrary;
 // ********** End Class ULBaseLibrary **************************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h
 
 // ********** Begin Enum ELUniType *****************************************************************
 #define FOREACH_ENUM_ELUNITYPE(op) \

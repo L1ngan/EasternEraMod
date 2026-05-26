@@ -6,10 +6,7 @@
 /NAME:"UnrealEditor-GASFramework.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"G:/ModProject/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
-"G:/ModProject/Plugins/GASFramework/Intermediate/Build/Win64/x64/UnrealEditor/Development/GASFramework/Module.GASFramework.cpp.obj"
-"G:/ModProject/Plugins/GASFramework/Intermediate/Build/Win64/x64/UnrealEditor/Development/GASFramework/EastRimWorldAbilityTypes.cpp.obj"
-"G:/ModProject/Plugins/GASFramework/Intermediate/Build/Win64/x64/UnrealEditor/Development/GASFramework/EastRimWorldTargetType.cpp.obj"
-"G:/ModProject/Plugins/GASFramework/Intermediate/Build/Win64/x64/UnrealEditor/Development/GASFramework/GASFramework.cpp.obj"
-"G:/ModProject/Plugins/GASFramework/Intermediate/Build/Win64/x64/UnrealEditor/Development/GASFramework/Default.rc2.res"
-/OUT:"G:/ModProject/Plugins/GASFramework/Intermediate/Build/Win64/x64/UnrealEditor/Development/GASFramework/UnrealEditor-GASFramework.lib"
+"G:/EasternEraMod/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"G:/EasternEraMod/Plugins/GASFramework/Intermediate/Build/Win64/x64/UnrealEditor/Development/GASFramework/Module.GASFramework.cpp.obj"
+"G:/EasternEraMod/Plugins/GASFramework/Intermediate/Build/Win64/x64/UnrealEditor/Development/GASFramework/Default.rc2.res"
+/OUT:"G:/EasternEraMod/Plugins/GASFramework/Intermediate/Build/Win64/x64/UnrealEditor/Development/GASFramework/UnrealEditor-GASFramework.lib"

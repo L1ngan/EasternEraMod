@@ -1,12 +1,12 @@
-"G:/ModProject/Plugins/UnLua/Intermediate/Build/Win64/x64/UnrealEditor/Development/UnLua/Module.UnLua.cpp"
-@"G:/ModProject/Plugins/UnLua/Intermediate/Build/Win64/x64/UnrealEditor/Development/UnLua/UnLua.Shared.rsp"
-/FI"G:/ModProject/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.h"
-/FI"G:/ModProject/Plugins/UnLua/Intermediate/Build/Win64/x64/UnrealEditor/Development/UnLua/Definitions.UnLua.h"
-/Yu"G:/ModProject/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.h"
-/Fp"G:/ModProject/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.h.pch"
-/Fo"G:/ModProject/Plugins/UnLua/Intermediate/Build/Win64/x64/UnrealEditor/Development/UnLua/Module.UnLua.cpp.obj"
-/experimental:log "G:/ModProject/Plugins/UnLua/Intermediate/Build/Win64/x64/UnrealEditor/Development/UnLua/Module.UnLua.cpp.sarif"
-/sourceDependencies "G:/ModProject/Plugins/UnLua/Intermediate/Build/Win64/x64/UnrealEditor/Development/UnLua/Module.UnLua.cpp.dep.json"
+"G:/EasternEraMod/Plugins/UnLua/Intermediate/Build/Win64/x64/UnrealEditor/Development/UnLua/Module.UnLua.cpp"
+@"G:/EasternEraMod/Plugins/UnLua/Intermediate/Build/Win64/x64/UnrealEditor/Development/UnLua/UnLua.Shared.rsp"
+/FI"G:/EasternEraMod/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.h"
+/FI"G:/EasternEraMod/Plugins/UnLua/Intermediate/Build/Win64/x64/UnrealEditor/Development/UnLua/Definitions.UnLua.h"
+/Yu"G:/EasternEraMod/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.h"
+/Fp"G:/EasternEraMod/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.h.pch"
+/Fo"G:/EasternEraMod/Plugins/UnLua/Intermediate/Build/Win64/x64/UnrealEditor/Development/UnLua/Module.UnLua.cpp.obj"
+/experimental:log "G:/EasternEraMod/Plugins/UnLua/Intermediate/Build/Win64/x64/UnrealEditor/Development/UnLua/Module.UnLua.cpp.sarif"
+/sourceDependencies "G:/EasternEraMod/Plugins/UnLua/Intermediate/Build/Win64/x64/UnrealEditor/Development/UnLua/Module.UnLua.cpp.dep.json"
 /d2ssa-cfg-question-
 /Zc:inline
 /nologo

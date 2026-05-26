@@ -108,14 +108,14 @@ AModularAIController::~AModularAIController() {}
 // ********** End Class AModularAIController *******************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularAIController_h__Script_ModularGameplayActors_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularAIController_h__Script_ModularGameplayActors_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_AModularAIController, AModularAIController::StaticClass, TEXT("AModularAIController"), &Z_Registration_Info_UClass_AModularAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AModularAIController), 2205319422U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularAIController_h__Script_ModularGameplayActors_2682840358(TEXT("/Script/ModularGameplayActors"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularAIController_h__Script_ModularGameplayActors_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularAIController_h__Script_ModularGameplayActors_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularAIController_h__Script_ModularGameplayActors_2682840358(TEXT("/Script/ModularGameplayActors"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularAIController_h__Script_ModularGameplayActors_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularAIController_h__Script_ModularGameplayActors_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

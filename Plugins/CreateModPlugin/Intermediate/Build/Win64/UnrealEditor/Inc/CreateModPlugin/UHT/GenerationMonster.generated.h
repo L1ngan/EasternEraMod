@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FModNameIDArray ***************************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_41_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_41_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModNameIDArray_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -26,7 +26,7 @@ struct FModNameIDArray;
 // ********** End ScriptStruct FModNameIDArray *****************************************************
 
 // ********** Begin ScriptStruct FModThreatPoolInfo ************************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_50_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_50_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModThreatPoolInfo_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;
@@ -36,7 +36,7 @@ struct FModThreatPoolInfo;
 // ********** End ScriptStruct FModThreatPoolInfo **************************************************
 
 // ********** Begin ScriptStruct FModGenerationData ************************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_73_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_73_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModGenerationData_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -46,7 +46,7 @@ struct FModGenerationData;
 // ********** End ScriptStruct FModGenerationData **************************************************
 
 // ********** Begin ScriptStruct FModGenerationSetData *********************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_112_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_112_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModGenerationSetData_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -55,7 +55,7 @@ struct FModGenerationSetData;
 // ********** End ScriptStruct FModGenerationSetData ***********************************************
 
 // ********** Begin ScriptStruct FModGenerationProbabilityInfluence ********************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_145_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_145_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModGenerationProbabilityInfluence_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -64,7 +64,7 @@ struct FModGenerationProbabilityInfluence;
 // ********** End ScriptStruct FModGenerationProbabilityInfluence **********************************
 
 // ********** Begin ScriptStruct FModGenerationRuleData ********************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_160_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_160_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModGenerationRuleData_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -73,7 +73,7 @@ struct FModGenerationRuleData;
 // ********** End ScriptStruct FModGenerationRuleData **********************************************
 
 // ********** Begin ScriptStruct FModMonsterGenerationConfig ***************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_195_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h_195_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModMonsterGenerationConfig_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;
@@ -83,7 +83,7 @@ struct FModMonsterGenerationConfig;
 // ********** End ScriptStruct FModMonsterGenerationConfig *****************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h
 
 // ********** Begin Enum EModThreatType ************************************************************
 #define FOREACH_ENUM_EMODTHREATTYPE(op) \

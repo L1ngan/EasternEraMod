@@ -21,7 +21,7 @@ class APlayerController;
 class UObject;
 
 // ********** Begin Class URHS_BlueprintFunctionLibrary ********************************************
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_BlueprintFunctionLibrary_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_BlueprintFunctionLibrary_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execBoxOverlapMultiByProfile); \
 	DECLARE_FUNCTION(execCapsuleOverlapMultiByProfile); \
 	DECLARE_FUNCTION(execRotatorToQuaternion); \
@@ -32,7 +32,7 @@ class UObject;
 
 AURORADEVS_RHS_API UClass* Z_Construct_UClass_URHS_BlueprintFunctionLibrary_NoRegister();
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_BlueprintFunctionLibrary_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_BlueprintFunctionLibrary_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesURHS_BlueprintFunctionLibrary(); \
 	friend struct Z_Construct_UClass_URHS_BlueprintFunctionLibrary_Statics; \
@@ -43,7 +43,7 @@ public: \
 	DECLARE_SERIALIZER(URHS_BlueprintFunctionLibrary)
 
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_BlueprintFunctionLibrary_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_BlueprintFunctionLibrary_h_15_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API URHS_BlueprintFunctionLibrary(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -55,13 +55,13 @@ public: \
 	NO_API virtual ~URHS_BlueprintFunctionLibrary();
 
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_BlueprintFunctionLibrary_h_12_PROLOG
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_BlueprintFunctionLibrary_h_15_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_BlueprintFunctionLibrary_h_12_PROLOG
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_BlueprintFunctionLibrary_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_BlueprintFunctionLibrary_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_BlueprintFunctionLibrary_h_15_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_BlueprintFunctionLibrary_h_15_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_BlueprintFunctionLibrary_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_BlueprintFunctionLibrary_h_15_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_BlueprintFunctionLibrary_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -71,6 +71,6 @@ class URHS_BlueprintFunctionLibrary;
 // ********** End Class URHS_BlueprintFunctionLibrary **********************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_BlueprintFunctionLibrary_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_BlueprintFunctionLibrary_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

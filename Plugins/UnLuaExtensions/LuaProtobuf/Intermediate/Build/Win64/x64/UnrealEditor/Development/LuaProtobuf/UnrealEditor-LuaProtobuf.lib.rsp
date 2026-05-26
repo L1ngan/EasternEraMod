@@ -6,8 +6,8 @@
 /NAME:"UnrealEditor-LuaProtobuf.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/LuaProtobufModule.cpp.obj"
-"G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/pb.cpp.obj"
-"G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/PerModuleInline.gen.cpp.obj"
-"G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/Default.rc2.res"
-/OUT:"G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/UnrealEditor-LuaProtobuf.lib"
+"G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/LuaProtobufModule.cpp.obj"
+"G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/pb.cpp.obj"
+"G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/PerModuleInline.gen.cpp.obj"
+"G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/Default.rc2.res"
+/OUT:"G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/UnrealEditor-LuaProtobuf.lib"

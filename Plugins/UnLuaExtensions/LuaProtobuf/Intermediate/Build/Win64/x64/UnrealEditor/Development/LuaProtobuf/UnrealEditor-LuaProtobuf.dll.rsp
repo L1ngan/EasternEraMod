@@ -37,12 +37,12 @@
 /FUNCTIONPADMIN:6
 /NOIMPLIB
 /NOEXP
-"G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/LuaProtobufModule.cpp.obj"
-"G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/pb.cpp.obj"
-"G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/PerModuleInline.gen.cpp.obj"
-"G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/Default.rc2.res"
-"G:/ModProject/Plugins/UnLua/Source/ThirdParty/Lua/lua-5.4.3/lib-c/Win64/Release/Lua.lib"
-"G:/ModProject/Plugins/UnLua/Intermediate/Build/Win64/x64/UnrealEditor/Development/UnLua/UnrealEditor-UnLua.lib"
+"G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/LuaProtobufModule.cpp.obj"
+"G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/pb.cpp.obj"
+"G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/PerModuleInline.gen.cpp.obj"
+"G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/Default.rc2.res"
+"G:/EasternEraMod/Plugins/UnLua/Source/ThirdParty/Lua/lua-5.4.3/lib-c/Win64/Release/Lua.lib"
+"G:/EasternEraMod/Plugins/UnLua/Intermediate/Build/Win64/x64/UnrealEditor/Development/UnLua/UnrealEditor-UnLua.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/Core/UnrealEditor-Core.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/CoreUObject/UnrealEditor-CoreUObject.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/Engine/UnrealEditor-Engine.lib"
@@ -72,6 +72,6 @@
 "synchronization.lib"
 "dwmapi.lib"
 "imm32.lib"
-/OUT:"G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Binaries/Win64/UnrealEditor-LuaProtobuf.dll"
-/PDB:"G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Binaries/Win64/UnrealEditor-LuaProtobuf.pdb"
+/OUT:"G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Binaries/Win64/UnrealEditor-LuaProtobuf.dll"
+/PDB:"G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Binaries/Win64/UnrealEditor-LuaProtobuf.pdb"
 /ignore:4078

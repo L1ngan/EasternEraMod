@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FRootViewportLayoutInfo *******************************************
-#define FID_ModProject_Plugins_CommonGame_Source_Public_GameUIPolicy_h_33_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIPolicy_h_33_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FRootViewportLayoutInfo_Statics; \
 	COMMONGAME_API static class UScriptStruct* StaticStruct();
 
@@ -28,7 +28,7 @@ struct FRootViewportLayoutInfo;
 // ********** Begin Class UGameUIPolicy ************************************************************
 COMMONGAME_API UClass* Z_Construct_UClass_UGameUIPolicy_NoRegister();
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_GameUIPolicy_h_57_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIPolicy_h_57_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUGameUIPolicy(); \
 	friend struct Z_Construct_UClass_UGameUIPolicy_Statics; \
@@ -40,7 +40,7 @@ public: \
 	DECLARE_WITHIN(UGameUIManagerSubsystem)
 
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_GameUIPolicy_h_57_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIPolicy_h_57_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UGameUIPolicy(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -52,12 +52,12 @@ public: \
 	NO_API virtual ~UGameUIPolicy();
 
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_GameUIPolicy_h_54_PROLOG
-#define FID_ModProject_Plugins_CommonGame_Source_Public_GameUIPolicy_h_57_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIPolicy_h_54_PROLOG
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIPolicy_h_57_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_CommonGame_Source_Public_GameUIPolicy_h_57_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CommonGame_Source_Public_GameUIPolicy_h_57_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIPolicy_h_57_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIPolicy_h_57_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -67,7 +67,7 @@ class UGameUIPolicy;
 // ********** End Class UGameUIPolicy **************************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_CommonGame_Source_Public_GameUIPolicy_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIPolicy_h
 
 // ********** Begin Enum ELocalMultiplayerInteractionMode ******************************************
 #define FOREACH_ENUM_ELOCALMULTIPLAYERINTERACTIONMODE(op) \

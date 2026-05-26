@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class AModularGameModeBase *****************************************************
 MODULARGAMEPLAYACTORS_API UClass* Z_Construct_UClass_AModularGameModeBase_NoRegister();
 
-#define FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAModularGameModeBase(); \
 	friend struct Z_Construct_UClass_AModularGameModeBase_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(AModularGameModeBase)
 
 
-#define FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_15_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	AModularGameModeBase(AModularGameModeBase&&) = delete; \
 	AModularGameModeBase(const AModularGameModeBase&) = delete; \
@@ -40,12 +40,12 @@ public: \
 	NO_API virtual ~AModularGameModeBase();
 
 
-#define FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_12_PROLOG
-#define FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_15_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_12_PROLOG
+#define FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_15_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_15_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_15_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -57,7 +57,7 @@ class AModularGameModeBase;
 // ********** Begin Class AModularGameMode *********************************************************
 MODULARGAMEPLAYACTORS_API UClass* Z_Construct_UClass_AModularGameMode_NoRegister();
 
-#define FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_25_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_25_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAModularGameMode(); \
 	friend struct Z_Construct_UClass_AModularGameMode_Statics; \
@@ -68,7 +68,7 @@ public: \
 	DECLARE_SERIALIZER(AModularGameMode)
 
 
-#define FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_25_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_25_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	AModularGameMode(AModularGameMode&&) = delete; \
 	AModularGameMode(const AModularGameMode&) = delete; \
@@ -78,12 +78,12 @@ public: \
 	NO_API virtual ~AModularGameMode();
 
 
-#define FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_22_PROLOG
-#define FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_25_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_22_PROLOG
+#define FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_25_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_25_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_25_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_25_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h_25_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -93,6 +93,6 @@ class AModularGameMode;
 // ********** End Class AModularGameMode ***********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularGameMode_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

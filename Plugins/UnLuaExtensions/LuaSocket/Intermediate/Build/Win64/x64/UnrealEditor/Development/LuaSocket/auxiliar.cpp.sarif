@@ -10,13 +10,13 @@
                         "text": "'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details."
                     },
                     "analysisTarget": {
-                        "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/auxiliar.cpp"
+                        "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/auxiliar.cpp"
                     },
                     "locations": [
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/auxiliar.cpp"
+                                    "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/auxiliar.cpp"
                                 },
                                 "region": {
                                     "startLine": 54,
@@ -35,13 +35,13 @@
                         "text": "'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details."
                     },
                     "analysisTarget": {
-                        "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/auxiliar.cpp"
+                        "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/auxiliar.cpp"
                     },
                     "locations": [
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/auxiliar.cpp"
+                                    "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/auxiliar.cpp"
                                 },
                                 "region": {
                                     "startLine": 91,
@@ -60,13 +60,13 @@
                         "text": "'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details."
                     },
                     "analysisTarget": {
-                        "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/auxiliar.cpp"
+                        "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/auxiliar.cpp"
                     },
                     "locations": [
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/auxiliar.cpp"
+                                    "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/auxiliar.cpp"
                                 },
                                 "region": {
                                     "startLine": 105,

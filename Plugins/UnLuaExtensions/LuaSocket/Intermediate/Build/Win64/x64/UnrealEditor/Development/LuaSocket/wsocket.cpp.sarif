@@ -10,13 +10,13 @@
                         "text": "“gai_strerror”: 宏重定义"
                     },
                     "analysisTarget": {
-                        "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/wsocket.cpp"
+                        "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/wsocket.cpp"
                     },
                     "locations": [
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/wsocket.cpp"
+                                    "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/wsocket.cpp"
                                 },
                                 "region": {
                                     "startLine": 18,
@@ -55,13 +55,13 @@
                         "text": "'gethostbyaddr': Use getnameinfo() or GetNameInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings"
                     },
                     "analysisTarget": {
-                        "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/wsocket.cpp"
+                        "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/wsocket.cpp"
                     },
                     "locations": [
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/wsocket.cpp"
+                                    "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/wsocket.cpp"
                                 },
                                 "region": {
                                     "startLine": 325,
@@ -80,13 +80,13 @@
                         "text": "'gethostbyname': Use getaddrinfo() or GetAddrInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings"
                     },
                     "analysisTarget": {
-                        "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/wsocket.cpp"
+                        "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/wsocket.cpp"
                     },
                     "locations": [
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/wsocket.cpp"
+                                    "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/wsocket.cpp"
                                 },
                                 "region": {
                                     "startLine": 331,

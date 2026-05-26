@@ -516,14 +516,14 @@ ARHS_AdaptableCollisionActor::~ARHS_AdaptableCollisionActor() {}
 // ********** End Class ARHS_AdaptableCollisionActor ***********************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h__Script_AuroraDevs_RHS_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h__Script_AuroraDevs_RHS_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ARHS_AdaptableCollisionActor, ARHS_AdaptableCollisionActor::StaticClass, TEXT("ARHS_AdaptableCollisionActor"), &Z_Registration_Info_UClass_ARHS_AdaptableCollisionActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARHS_AdaptableCollisionActor), 1548844579U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h__Script_AuroraDevs_RHS_530934572(TEXT("/Script/AuroraDevs_RHS"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h__Script_AuroraDevs_RHS_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h__Script_AuroraDevs_RHS_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h__Script_AuroraDevs_RHS_530934572(TEXT("/Script/AuroraDevs_RHS"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h__Script_AuroraDevs_RHS_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h__Script_AuroraDevs_RHS_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

@@ -181,15 +181,15 @@ ULuaEnvLocator_ByGameInstance::~ULuaEnvLocator_ByGameInstance() {}
 // ********** End Class ULuaEnvLocator_ByGameInstance **********************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h__Script_UnLua_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h__Script_UnLua_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ULuaEnvLocator, ULuaEnvLocator::StaticClass, TEXT("ULuaEnvLocator"), &Z_Registration_Info_UClass_ULuaEnvLocator, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ULuaEnvLocator), 1407684135U) },
 		{ Z_Construct_UClass_ULuaEnvLocator_ByGameInstance, ULuaEnvLocator_ByGameInstance::StaticClass, TEXT("ULuaEnvLocator_ByGameInstance"), &Z_Registration_Info_UClass_ULuaEnvLocator_ByGameInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ULuaEnvLocator_ByGameInstance), 2594391234U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h__Script_UnLua_2887977341(TEXT("/Script/UnLua"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h__Script_UnLua_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h__Script_UnLua_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h__Script_UnLua_2887977341(TEXT("/Script/UnLua"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h__Script_UnLua_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h__Script_UnLua_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

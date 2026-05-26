@@ -22,7 +22,7 @@ struct FSoftClassPath;
 struct FSoftObjectPath;
 
 // ********** Begin Class ULFile *******************************************************************
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execLoadObjectPath); \
 	DECLARE_FUNCTION(execLoadClassPath); \
 	DECLARE_FUNCTION(execCaptureScreen); \
@@ -32,7 +32,7 @@ struct FSoftObjectPath;
 
 LQUICKFRAME_API UClass* Z_Construct_UClass_ULFile_NoRegister();
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_13_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesULFile(); \
 	friend struct Z_Construct_UClass_ULFile_Statics; \
@@ -43,7 +43,7 @@ public: \
 	DECLARE_SERIALIZER(ULFile)
 
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_13_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_13_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ULFile(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -55,13 +55,13 @@ public: \
 	NO_API virtual ~ULFile();
 
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_10_PROLOG
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_13_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_10_PROLOG
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_13_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_13_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_13_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -71,14 +71,14 @@ class ULFile;
 // ********** End Class ULFile *********************************************************************
 
 // ********** Begin Delegate FLLoadObjectCall ******************************************************
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_40_DELEGATE \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_40_DELEGATE \
 static void FLLoadObjectCall_DelegateWrapper(const FMulticastScriptDelegate& LLoadObjectCall, UObject* Out);
 
 
 // ********** End Delegate FLLoadObjectCall ********************************************************
 
 // ********** Begin Class ULAsyncFile **************************************************************
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_35_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_35_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execOnLoaded); \
 	DECLARE_FUNCTION(execAsyncLoadAndUnloadStreamings); \
 	DECLARE_FUNCTION(execAsyncLoadClass); \
@@ -87,7 +87,7 @@ static void FLLoadObjectCall_DelegateWrapper(const FMulticastScriptDelegate& LLo
 
 LQUICKFRAME_API UClass* Z_Construct_UClass_ULAsyncFile_NoRegister();
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_35_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_35_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesULAsyncFile(); \
 	friend struct Z_Construct_UClass_ULAsyncFile_Statics; \
@@ -98,7 +98,7 @@ public: \
 	DECLARE_SERIALIZER(ULAsyncFile)
 
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_35_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_35_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ULAsyncFile(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -110,13 +110,13 @@ public: \
 	NO_API virtual ~ULAsyncFile();
 
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_32_PROLOG
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_35_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_32_PROLOG
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_35_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_35_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_35_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_35_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_35_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_35_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h_35_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -126,6 +126,6 @@ class ULAsyncFile;
 // ********** End Class ULAsyncFile ****************************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LFile_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

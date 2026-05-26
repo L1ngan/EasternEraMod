@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class ULuaFunction *************************************************************
 UNLUA_API UClass* Z_Construct_UClass_ULuaFunction_NoRegister();
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaFunction_h_30_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaFunction_h_30_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesULuaFunction(); \
 	friend struct Z_Construct_UClass_ULuaFunction_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(ULuaFunction)
 
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaFunction_h_30_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaFunction_h_30_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ULuaFunction(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -42,12 +42,12 @@ public: \
 	NO_API virtual ~ULuaFunction();
 
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaFunction_h_27_PROLOG
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaFunction_h_30_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaFunction_h_27_PROLOG
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaFunction_h_30_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaFunction_h_30_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaFunction_h_30_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaFunction_h_30_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaFunction_h_30_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -57,6 +57,6 @@ class ULuaFunction;
 // ********** End Class ULuaFunction ***************************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaFunction_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaFunction_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

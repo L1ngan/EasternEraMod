@@ -6,13 +6,7 @@
 /NAME:"UnrealEditor-CommonUser.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"G:/ModProject/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/Module.CommonUser.cpp.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/AsyncAction_CommonUserInitialize.cpp.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/CommonSessionSubsystem.cpp.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/CommonUserBasicPresence.cpp.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/CommonUserModule.cpp.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/CommonUserSubsystem.cpp.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/CommonUserTypes.cpp.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/Default.rc2.res"
-/OUT:"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/UnrealEditor-CommonUser.lib"
+"G:/EasternEraMod/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"G:/EasternEraMod/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/Module.CommonUser.cpp.obj"
+"G:/EasternEraMod/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/Default.rc2.res"
+/OUT:"G:/EasternEraMod/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/UnrealEditor-CommonUser.lib"

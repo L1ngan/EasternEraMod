@@ -244,14 +244,14 @@ UAsyncAction_CreateWidgetAsync::~UAsyncAction_CreateWidgetAsync() {}
 // ********** End Class UAsyncAction_CreateWidgetAsync *********************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h__Script_CommonGame_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h__Script_CommonGame_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UAsyncAction_CreateWidgetAsync, UAsyncAction_CreateWidgetAsync::StaticClass, TEXT("UAsyncAction_CreateWidgetAsync"), &Z_Registration_Info_UClass_UAsyncAction_CreateWidgetAsync, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAsyncAction_CreateWidgetAsync), 3378321561U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h__Script_CommonGame_3544196200(TEXT("/Script/CommonGame"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h__Script_CommonGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h__Script_CommonGame_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h__Script_CommonGame_3544196200(TEXT("/Script/CommonGame"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h__Script_CommonGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h__Script_CommonGame_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

@@ -22,20 +22,20 @@ class UObject;
 class UUserWidget;
 
 // ********** Begin Delegate FCreateWidgetAsyncDelegate ********************************************
-#define FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h_17_DELEGATE \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h_17_DELEGATE \
 COMMONGAME_API void FCreateWidgetAsyncDelegate_DelegateWrapper(const FMulticastScriptDelegate& CreateWidgetAsyncDelegate, UUserWidget* UserWidget);
 
 
 // ********** End Delegate FCreateWidgetAsyncDelegate **********************************************
 
 // ********** Begin Class UAsyncAction_CreateWidgetAsync *******************************************
-#define FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h_25_RPC_WRAPPERS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h_25_RPC_WRAPPERS \
 	DECLARE_FUNCTION(execCreateWidgetAsync);
 
 
 COMMONGAME_API UClass* Z_Construct_UClass_UAsyncAction_CreateWidgetAsync_NoRegister();
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h_25_INCLASS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h_25_INCLASS \
 private: \
 	static void StaticRegisterNativesUAsyncAction_CreateWidgetAsync(); \
 	friend struct Z_Construct_UClass_UAsyncAction_CreateWidgetAsync_Statics; \
@@ -46,7 +46,7 @@ public: \
 	DECLARE_SERIALIZER(UAsyncAction_CreateWidgetAsync)
 
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h_25_STANDARD_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h_25_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UAsyncAction_CreateWidgetAsync(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UAsyncAction_CreateWidgetAsync) \
@@ -58,13 +58,13 @@ public: \
 	NO_API virtual ~UAsyncAction_CreateWidgetAsync();
 
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h_22_PROLOG
-#define FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h_25_GENERATED_BODY_LEGACY \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h_22_PROLOG
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h_25_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h_25_RPC_WRAPPERS \
-	FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h_25_INCLASS \
-	FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h_25_STANDARD_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h_25_RPC_WRAPPERS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h_25_INCLASS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h_25_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -74,6 +74,6 @@ class UAsyncAction_CreateWidgetAsync;
 // ********** End Class UAsyncAction_CreateWidgetAsync *********************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_CreateWidgetAsync_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

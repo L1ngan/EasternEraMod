@@ -99,14 +99,14 @@ UBinkMediaPlayerFactoryNew::~UBinkMediaPlayerFactoryNew() {}
 // ********** End Class UBinkMediaPlayerFactoryNew *************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaPlayerFactoryNew_h__Script_BinkMediaPlayerEditor_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaPlayerFactoryNew_h__Script_BinkMediaPlayerEditor_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UBinkMediaPlayerFactoryNew, UBinkMediaPlayerFactoryNew::StaticClass, TEXT("UBinkMediaPlayerFactoryNew"), &Z_Registration_Info_UClass_UBinkMediaPlayerFactoryNew, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBinkMediaPlayerFactoryNew), 4254958609U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaPlayerFactoryNew_h__Script_BinkMediaPlayerEditor_2165372761(TEXT("/Script/BinkMediaPlayerEditor"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaPlayerFactoryNew_h__Script_BinkMediaPlayerEditor_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaPlayerFactoryNew_h__Script_BinkMediaPlayerEditor_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaPlayerFactoryNew_h__Script_BinkMediaPlayerEditor_2165372761(TEXT("/Script/BinkMediaPlayerEditor"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaPlayerFactoryNew_h__Script_BinkMediaPlayerEditor_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaPlayerFactoryNew_h__Script_BinkMediaPlayerEditor_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

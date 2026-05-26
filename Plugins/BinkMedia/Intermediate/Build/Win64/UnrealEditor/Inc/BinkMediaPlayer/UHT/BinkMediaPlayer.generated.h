@@ -20,35 +20,35 @@ class UTexture;
 struct FTimespan;
 
 // ********** Begin Delegate FOnBinkMediaPlayerMediaClosed *****************************************
-#define FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_90_DELEGATE \
+#define FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_90_DELEGATE \
 BINKMEDIAPLAYER_API void FOnBinkMediaPlayerMediaClosed_DelegateWrapper(const FMulticastScriptDelegate& OnBinkMediaPlayerMediaClosed);
 
 
 // ********** End Delegate FOnBinkMediaPlayerMediaClosed *******************************************
 
 // ********** Begin Delegate FOnBinkMediaPlayerMediaOpened *****************************************
-#define FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_93_DELEGATE \
+#define FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_93_DELEGATE \
 BINKMEDIAPLAYER_API void FOnBinkMediaPlayerMediaOpened_DelegateWrapper(const FMulticastScriptDelegate& OnBinkMediaPlayerMediaOpened, const FString& OpenedUrl);
 
 
 // ********** End Delegate FOnBinkMediaPlayerMediaOpened *******************************************
 
 // ********** Begin Delegate FOnBinkMediaPlayerMediaReachedEnd *************************************
-#define FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_96_DELEGATE \
+#define FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_96_DELEGATE \
 BINKMEDIAPLAYER_API void FOnBinkMediaPlayerMediaReachedEnd_DelegateWrapper(const FMulticastScriptDelegate& OnBinkMediaPlayerMediaReachedEnd);
 
 
 // ********** End Delegate FOnBinkMediaPlayerMediaReachedEnd ***************************************
 
 // ********** Begin Delegate FOnBinkMediaPlayerMediaEvent ******************************************
-#define FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_99_DELEGATE \
+#define FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_99_DELEGATE \
 BINKMEDIAPLAYER_API void FOnBinkMediaPlayerMediaEvent_DelegateWrapper(const FMulticastScriptDelegate& OnBinkMediaPlayerMediaEvent);
 
 
 // ********** End Delegate FOnBinkMediaPlayerMediaEvent ********************************************
 
 // ********** Begin Class UBinkMediaPlayer *********************************************************
-#define FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_110_RPC_WRAPPERS \
+#define FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_110_RPC_WRAPPERS \
 	DECLARE_FUNCTION(execDraw); \
 	DECLARE_FUNCTION(execIsInitialized); \
 	DECLARE_FUNCTION(execSupportsSeeking); \
@@ -79,7 +79,7 @@ BINKMEDIAPLAYER_API void FOnBinkMediaPlayerMediaEvent_DelegateWrapper(const FMul
 
 BINKMEDIAPLAYER_API UClass* Z_Construct_UClass_UBinkMediaPlayer_NoRegister();
 
-#define FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_110_INCLASS \
+#define FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_110_INCLASS \
 private: \
 	static void StaticRegisterNativesUBinkMediaPlayer(); \
 	friend struct Z_Construct_UClass_UBinkMediaPlayer_Statics; \
@@ -90,7 +90,7 @@ public: \
 	DECLARE_SERIALIZER(UBinkMediaPlayer)
 
 
-#define FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_110_STANDARD_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_110_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UBinkMediaPlayer(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UBinkMediaPlayer) \
@@ -102,13 +102,13 @@ public: \
 	NO_API virtual ~UBinkMediaPlayer();
 
 
-#define FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_107_PROLOG
-#define FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_110_GENERATED_BODY_LEGACY \
+#define FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_107_PROLOG
+#define FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_110_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_110_RPC_WRAPPERS \
-	FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_110_INCLASS \
-	FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_110_STANDARD_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_110_RPC_WRAPPERS \
+	FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_110_INCLASS \
+	FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h_110_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -118,7 +118,7 @@ class UBinkMediaPlayer;
 // ********** End Class UBinkMediaPlayer ***********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h
 
 // ********** Begin Enum EBinkMediaPlayerBinkBufferModes *******************************************
 #define FOREACH_ENUM_EBINKMEDIAPLAYERBINKBUFFERMODES(op) \

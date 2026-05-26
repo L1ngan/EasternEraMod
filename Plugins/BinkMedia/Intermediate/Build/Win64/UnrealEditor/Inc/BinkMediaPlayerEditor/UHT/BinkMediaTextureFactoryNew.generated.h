@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class UBinkMediaTextureFactoryNew **********************************************
 BINKMEDIAPLAYEREDITOR_API UClass* Z_Construct_UClass_UBinkMediaTextureFactoryNew_NoRegister();
 
-#define FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaTextureFactoryNew_h_12_INCLASS \
+#define FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaTextureFactoryNew_h_12_INCLASS \
 private: \
 	static void StaticRegisterNativesUBinkMediaTextureFactoryNew(); \
 	friend struct Z_Construct_UClass_UBinkMediaTextureFactoryNew_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(UBinkMediaTextureFactoryNew)
 
 
-#define FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaTextureFactoryNew_h_12_STANDARD_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaTextureFactoryNew_h_12_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	BINKMEDIAPLAYEREDITOR_API UBinkMediaTextureFactoryNew(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UBinkMediaTextureFactoryNew) \
@@ -42,12 +42,12 @@ public: \
 	BINKMEDIAPLAYEREDITOR_API virtual ~UBinkMediaTextureFactoryNew();
 
 
-#define FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaTextureFactoryNew_h_9_PROLOG
-#define FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaTextureFactoryNew_h_12_GENERATED_BODY_LEGACY \
+#define FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaTextureFactoryNew_h_9_PROLOG
+#define FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaTextureFactoryNew_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaTextureFactoryNew_h_12_INCLASS \
-	FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaTextureFactoryNew_h_12_STANDARD_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaTextureFactoryNew_h_12_INCLASS \
+	FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaTextureFactoryNew_h_12_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -57,6 +57,6 @@ class UBinkMediaTextureFactoryNew;
 // ********** End Class UBinkMediaTextureFactoryNew ************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaTextureFactoryNew_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayerEditor_Private_Factories_BinkMediaTextureFactoryNew_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

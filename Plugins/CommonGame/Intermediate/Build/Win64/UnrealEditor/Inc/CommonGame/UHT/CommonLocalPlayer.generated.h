@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class UCommonLocalPlayer *******************************************************
 COMMONGAME_API UClass* Z_Construct_UClass_UCommonLocalPlayer_NoRegister();
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_CommonLocalPlayer_h_20_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonLocalPlayer_h_20_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCommonLocalPlayer(); \
 	friend struct Z_Construct_UClass_UCommonLocalPlayer_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(UCommonLocalPlayer)
 
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_CommonLocalPlayer_h_20_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonLocalPlayer_h_20_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UCommonLocalPlayer(UCommonLocalPlayer&&) = delete; \
 	UCommonLocalPlayer(const UCommonLocalPlayer&) = delete; \
@@ -40,12 +40,12 @@ public: \
 	NO_API virtual ~UCommonLocalPlayer();
 
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_CommonLocalPlayer_h_17_PROLOG
-#define FID_ModProject_Plugins_CommonGame_Source_Public_CommonLocalPlayer_h_20_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonLocalPlayer_h_17_PROLOG
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonLocalPlayer_h_20_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_CommonGame_Source_Public_CommonLocalPlayer_h_20_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CommonGame_Source_Public_CommonLocalPlayer_h_20_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonLocalPlayer_h_20_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonLocalPlayer_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -55,6 +55,6 @@ class UCommonLocalPlayer;
 // ********** End Class UCommonLocalPlayer *********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_CommonGame_Source_Public_CommonLocalPlayer_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonLocalPlayer_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

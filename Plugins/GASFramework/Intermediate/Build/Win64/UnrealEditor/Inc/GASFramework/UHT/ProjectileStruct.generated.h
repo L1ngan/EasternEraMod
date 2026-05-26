@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FGenerateSummonInfo ***********************************************
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h_127_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h_127_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FGenerateSummonInfo_Statics; \
 	static class UScriptStruct* StaticStruct();
 
@@ -26,7 +26,7 @@ struct FGenerateSummonInfo;
 // ********** End ScriptStruct FGenerateSummonInfo *************************************************
 
 // ********** Begin ScriptStruct FRootMotionConstantForce ******************************************
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h_148_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h_148_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FRootMotionConstantForce_Statics; \
 	GASFRAMEWORK_API static class UScriptStruct* StaticStruct();
 
@@ -35,7 +35,7 @@ struct FRootMotionConstantForce;
 // ********** End ScriptStruct FRootMotionConstantForce ********************************************
 
 // ********** Begin ScriptStruct FRootMotionRadialForce ********************************************
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h_197_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h_197_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FRootMotionRadialForce_Statics; \
 	GASFRAMEWORK_API static class UScriptStruct* StaticStruct();
 
@@ -44,7 +44,7 @@ struct FRootMotionRadialForce;
 // ********** End ScriptStruct FRootMotionRadialForce **********************************************
 
 // ********** Begin ScriptStruct FSpawnTypeSet *****************************************************
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h_244_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h_244_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FSpawnTypeSet_Statics; \
 	GASFRAMEWORK_API static class UScriptStruct* StaticStruct();
 
@@ -53,7 +53,7 @@ struct FSpawnTypeSet;
 // ********** End ScriptStruct FSpawnTypeSet *******************************************************
 
 // ********** Begin ScriptStruct FProjectileSpawnSetting *******************************************
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h_288_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h_288_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FProjectileSpawnSetting_Statics; \
 	GASFRAMEWORK_API static class UScriptStruct* StaticStruct();
 
@@ -62,7 +62,7 @@ struct FProjectileSpawnSetting;
 // ********** End ScriptStruct FProjectileSpawnSetting *********************************************
 
 // ********** Begin ScriptStruct FProjectileVFXConfig **********************************************
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h_385_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h_385_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FProjectileVFXConfig_Statics; \
 	GASFRAMEWORK_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -72,7 +72,7 @@ struct FProjectileVFXConfig;
 // ********** End ScriptStruct FProjectileVFXConfig ************************************************
 
 // ********** Begin ScriptStruct FProjectileStruct *************************************************
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h_443_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h_443_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FProjectileStruct_Statics; \
 	GASFRAMEWORK_API static class UScriptStruct* StaticStruct(); \
 	typedef FDataBase Super;
@@ -82,7 +82,7 @@ struct FProjectileStruct;
 // ********** End ScriptStruct FProjectileStruct ***************************************************
 
 // ********** Begin ScriptStruct FProjectileGEConfig ***********************************************
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h_504_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h_504_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FProjectileGEConfig_Statics; \
 	GASFRAMEWORK_API static class UScriptStruct* StaticStruct();
 
@@ -91,7 +91,7 @@ struct FProjectileGEConfig;
 // ********** End ScriptStruct FProjectileGEConfig *************************************************
 
 // ********** Begin ScriptStruct FAbilityProjectileStruct ******************************************
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h_520_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h_520_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FAbilityProjectileStruct_Statics; \
 	GASFRAMEWORK_API static class UScriptStruct* StaticStruct();
 
@@ -100,7 +100,7 @@ struct FAbilityProjectileStruct;
 // ********** End ScriptStruct FAbilityProjectileStruct ********************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h
 
 // ********** Begin Enum EProjectileMoveType *******************************************************
 #define FOREACH_ENUM_EPROJECTILEMOVETYPE(op) \

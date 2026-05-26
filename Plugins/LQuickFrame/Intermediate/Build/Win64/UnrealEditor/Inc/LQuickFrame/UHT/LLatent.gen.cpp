@@ -136,17 +136,17 @@ UEnum* Z_Construct_UEnum_LQuickFrame_ELatentRespTwo()
 // ********** End Enum ELatentRespTwo **************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLatent_h__Script_LQuickFrame_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLatent_h__Script_LQuickFrame_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ ELatentRespOne_StaticEnum, TEXT("ELatentRespOne"), &Z_Registration_Info_UEnum_ELatentRespOne, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3738547150U) },
 		{ ELatentRespTwo_StaticEnum, TEXT("ELatentRespTwo"), &Z_Registration_Info_UEnum_ELatentRespTwo, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1322766538U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLatent_h__Script_LQuickFrame_1312172413(TEXT("/Script/LQuickFrame"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLatent_h__Script_LQuickFrame_1312172413(TEXT("/Script/LQuickFrame"),
 	nullptr, 0,
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLatent_h__Script_LQuickFrame_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLatent_h__Script_LQuickFrame_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLatent_h__Script_LQuickFrame_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLatent_h__Script_LQuickFrame_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -22,7 +22,7 @@ struct FColor;
 struct FHitResult;
 
 // ********** Begin Class URHS_CollisionShape ******************************************************
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execSweepMultiByChannel); \
 	DECLARE_FUNCTION(execDrawDebugShape); \
 	DECLARE_FUNCTION(execGetShapeExtentVector);
@@ -30,7 +30,7 @@ struct FHitResult;
 
 AURORADEVS_RHS_API UClass* Z_Construct_UClass_URHS_CollisionShape_NoRegister();
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_16_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesURHS_CollisionShape(); \
 	friend struct Z_Construct_UClass_URHS_CollisionShape_Statics; \
@@ -41,7 +41,7 @@ public: \
 	DECLARE_SERIALIZER(URHS_CollisionShape)
 
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_16_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_16_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API URHS_CollisionShape(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -53,13 +53,13 @@ public: \
 	NO_API virtual ~URHS_CollisionShape();
 
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_13_PROLOG
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_16_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_13_PROLOG
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_16_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_16_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_16_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -71,7 +71,7 @@ class URHS_CollisionShape;
 // ********** Begin Class URHS_CollisionShape_Sphere ***********************************************
 AURORADEVS_RHS_API UClass* Z_Construct_UClass_URHS_CollisionShape_Sphere_NoRegister();
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_61_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_61_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesURHS_CollisionShape_Sphere(); \
 	friend struct Z_Construct_UClass_URHS_CollisionShape_Sphere_Statics; \
@@ -82,7 +82,7 @@ public: \
 	DECLARE_SERIALIZER(URHS_CollisionShape_Sphere)
 
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_61_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_61_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API URHS_CollisionShape_Sphere(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -94,12 +94,12 @@ public: \
 	NO_API virtual ~URHS_CollisionShape_Sphere();
 
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_58_PROLOG
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_61_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_58_PROLOG
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_61_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_61_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_61_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_61_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_61_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -111,7 +111,7 @@ class URHS_CollisionShape_Sphere;
 // ********** Begin Class URHS_CollisionShape_Box **************************************************
 AURORADEVS_RHS_API UClass* Z_Construct_UClass_URHS_CollisionShape_Box_NoRegister();
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_82_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_82_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesURHS_CollisionShape_Box(); \
 	friend struct Z_Construct_UClass_URHS_CollisionShape_Box_Statics; \
@@ -122,7 +122,7 @@ public: \
 	DECLARE_SERIALIZER(URHS_CollisionShape_Box)
 
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_82_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_82_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API URHS_CollisionShape_Box(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -134,12 +134,12 @@ public: \
 	NO_API virtual ~URHS_CollisionShape_Box();
 
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_79_PROLOG
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_82_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_79_PROLOG
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_82_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_82_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_82_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_82_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_82_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -151,7 +151,7 @@ class URHS_CollisionShape_Box;
 // ********** Begin Class URHS_CollisionShape_Capsule **********************************************
 AURORADEVS_RHS_API UClass* Z_Construct_UClass_URHS_CollisionShape_Capsule_NoRegister();
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_103_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_103_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesURHS_CollisionShape_Capsule(); \
 	friend struct Z_Construct_UClass_URHS_CollisionShape_Capsule_Statics; \
@@ -162,7 +162,7 @@ public: \
 	DECLARE_SERIALIZER(URHS_CollisionShape_Capsule)
 
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_103_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_103_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API URHS_CollisionShape_Capsule(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -174,12 +174,12 @@ public: \
 	NO_API virtual ~URHS_CollisionShape_Capsule();
 
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_100_PROLOG
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_103_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_100_PROLOG
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_103_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_103_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_103_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_103_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h_103_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -189,6 +189,6 @@ class URHS_CollisionShape_Capsule;
 // ********** End Class URHS_CollisionShape_Capsule ************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

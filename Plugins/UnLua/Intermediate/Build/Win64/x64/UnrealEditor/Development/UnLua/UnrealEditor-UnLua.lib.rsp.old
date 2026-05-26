@@ -6,7 +6,7 @@
 /NAME:"UnrealEditor-UnLua.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"G:/ModProject/Intermediate/Build/Win64/x64/EasternEraEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.h.obj"
+"G:/ModProject/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.h.obj"
 "G:/ModProject/Plugins/UnLua/Intermediate/Build/Win64/x64/UnrealEditor/Development/UnLua/Module.UnLua.cpp.obj"
 "G:/ModProject/Plugins/UnLua/Intermediate/Build/Win64/x64/UnrealEditor/Development/UnLua/Binding.cpp.obj"
 "G:/ModProject/Plugins/UnLua/Intermediate/Build/Win64/x64/UnrealEditor/Development/UnLua/CollisionHelper.cpp.obj"

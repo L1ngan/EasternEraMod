@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class ULLog ********************************************************************
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLog_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLog_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execLoggerError); \
 	DECLARE_FUNCTION(execLoggerWarning); \
 	DECLARE_FUNCTION(execLogger);
@@ -25,7 +25,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 LQUICKFRAME_API UClass* Z_Construct_UClass_ULLog_NoRegister();
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLog_h_10_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLog_h_10_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesULLog(); \
 	friend struct Z_Construct_UClass_ULLog_Statics; \
@@ -36,7 +36,7 @@ public: \
 	DECLARE_SERIALIZER(ULLog)
 
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLog_h_10_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLog_h_10_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ULLog(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -48,13 +48,13 @@ public: \
 	NO_API virtual ~ULLog();
 
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLog_h_7_PROLOG
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLog_h_10_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLog_h_7_PROLOG
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLog_h_10_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLog_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLog_h_10_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLog_h_10_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLog_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLog_h_10_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLog_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -64,6 +64,6 @@ class ULLog;
 // ********** End Class ULLog **********************************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLog_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLog_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

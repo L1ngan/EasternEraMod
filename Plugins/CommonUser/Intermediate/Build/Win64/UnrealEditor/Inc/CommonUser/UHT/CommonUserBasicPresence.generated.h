@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class UCommonUserBasicPresence *************************************************
 COMMONUSER_API UClass* Z_Construct_UClass_UCommonUserBasicPresence_NoRegister();
 
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserBasicPresence_h_21_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserBasicPresence_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCommonUserBasicPresence(); \
 	friend struct Z_Construct_UClass_UCommonUserBasicPresence_Statics; \
@@ -32,7 +32,7 @@ public: \
 
 
 
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserBasicPresence_h_21_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserBasicPresence_h_21_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UCommonUserBasicPresence(UCommonUserBasicPresence&&) = delete; \
 	UCommonUserBasicPresence(const UCommonUserBasicPresence&) = delete; \
@@ -42,12 +42,12 @@ public: \
 	NO_API virtual ~UCommonUserBasicPresence();
 
 
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserBasicPresence_h_18_PROLOG
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserBasicPresence_h_21_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserBasicPresence_h_18_PROLOG
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserBasicPresence_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserBasicPresence_h_21_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserBasicPresence_h_21_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserBasicPresence_h_21_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserBasicPresence_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -57,6 +57,6 @@ class UCommonUserBasicPresence;
 // ********** End Class UCommonUserBasicPresence ***************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserBasicPresence_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserBasicPresence_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

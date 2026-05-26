@@ -20,13 +20,13 @@ class UCommonActivatableWidgetContainerBase;
 struct FGameplayTag;
 
 // ********** Begin Class UPrimaryGameLayout *******************************************************
-#define FID_ModProject_Plugins_CommonGame_Source_Public_PrimaryGameLayout_h_38_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_PrimaryGameLayout_h_38_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execRegisterLayer);
 
 
 COMMONGAME_API UClass* Z_Construct_UClass_UPrimaryGameLayout_NoRegister();
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_PrimaryGameLayout_h_38_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_PrimaryGameLayout_h_38_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPrimaryGameLayout(); \
 	friend struct Z_Construct_UClass_UPrimaryGameLayout_Statics; \
@@ -37,7 +37,7 @@ public: \
 	DECLARE_SERIALIZER(UPrimaryGameLayout)
 
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_PrimaryGameLayout_h_38_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_PrimaryGameLayout_h_38_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UPrimaryGameLayout(UPrimaryGameLayout&&) = delete; \
 	UPrimaryGameLayout(const UPrimaryGameLayout&) = delete; \
@@ -47,13 +47,13 @@ public: \
 	NO_API virtual ~UPrimaryGameLayout();
 
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_PrimaryGameLayout_h_35_PROLOG
-#define FID_ModProject_Plugins_CommonGame_Source_Public_PrimaryGameLayout_h_38_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_PrimaryGameLayout_h_35_PROLOG
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_PrimaryGameLayout_h_38_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_CommonGame_Source_Public_PrimaryGameLayout_h_38_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CommonGame_Source_Public_PrimaryGameLayout_h_38_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CommonGame_Source_Public_PrimaryGameLayout_h_38_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_PrimaryGameLayout_h_38_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_PrimaryGameLayout_h_38_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_PrimaryGameLayout_h_38_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -63,6 +63,6 @@ class UPrimaryGameLayout;
 // ********** End Class UPrimaryGameLayout *********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_CommonGame_Source_Public_PrimaryGameLayout_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CommonGame_Source_Public_PrimaryGameLayout_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

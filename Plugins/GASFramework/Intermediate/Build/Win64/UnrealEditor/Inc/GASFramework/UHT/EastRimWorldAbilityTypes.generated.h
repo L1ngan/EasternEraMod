@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FGameplayEffect_SetByCaller ***************************************
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldAbilityTypes_h_50_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldAbilityTypes_h_50_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FGameplayEffect_SetByCaller_Statics; \
 	static class UScriptStruct* StaticStruct();
 
@@ -26,7 +26,7 @@ struct FGameplayEffect_SetByCaller;
 // ********** End ScriptStruct FGameplayEffect_SetByCaller *****************************************
 
 // ********** Begin ScriptStruct FAbilityInit ******************************************************
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldAbilityTypes_h_62_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldAbilityTypes_h_62_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FAbilityInit_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -36,7 +36,7 @@ struct FAbilityInit;
 // ********** End ScriptStruct FAbilityInit ********************************************************
 
 // ********** Begin ScriptStruct FEastRimWorldGameplayEffectContainer ******************************
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldAbilityTypes_h_74_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldAbilityTypes_h_74_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FEastRimWorldGameplayEffectContainer_Statics; \
 	static class UScriptStruct* StaticStruct();
 
@@ -45,7 +45,7 @@ struct FEastRimWorldGameplayEffectContainer;
 // ********** End ScriptStruct FEastRimWorldGameplayEffectContainer ********************************
 
 // ********** Begin ScriptStruct FEastRimWorldGameplayEffectContainerSpec **************************
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldAbilityTypes_h_95_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldAbilityTypes_h_95_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FEastRimWorldGameplayEffectContainerSpec_Statics; \
 	static class UScriptStruct* StaticStruct();
 
@@ -54,7 +54,7 @@ struct FEastRimWorldGameplayEffectContainerSpec;
 // ********** End ScriptStruct FEastRimWorldGameplayEffectContainerSpec ****************************
 
 // ********** Begin ScriptStruct FProjectileHitEventData *******************************************
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldAbilityTypes_h_125_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldAbilityTypes_h_125_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FProjectileHitEventData_Statics; \
 	static class UScriptStruct* StaticStruct();
 
@@ -63,7 +63,7 @@ struct FProjectileHitEventData;
 // ********** End ScriptStruct FProjectileHitEventData *********************************************
 
 // ********** Begin ScriptStruct FProjectileHitTargetData ******************************************
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldAbilityTypes_h_172_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldAbilityTypes_h_172_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FProjectileHitTargetData_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FGameplayAbilityTargetData Super;
@@ -73,7 +73,7 @@ struct FProjectileHitTargetData;
 // ********** End ScriptStruct FProjectileHitTargetData ********************************************
 
 // ********** Begin ScriptStruct FControlEffectData ************************************************
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldAbilityTypes_h_191_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldAbilityTypes_h_191_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FControlEffectData_Statics; \
 	static class UScriptStruct* StaticStruct();
 
@@ -82,7 +82,7 @@ struct FControlEffectData;
 // ********** End ScriptStruct FControlEffectData **************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldAbilityTypes_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldAbilityTypes_h
 
 // ********** Begin Enum EEastRimWorldTargetType ***************************************************
 #define FOREACH_ENUM_EEASTRIMWORLDTARGETTYPE(op) \

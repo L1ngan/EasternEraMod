@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class ALActor ******************************************************************
 LQUICKFRAME_API UClass* Z_Construct_UClass_ALActor_NoRegister();
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LActor_h_11_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LActor_h_11_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesALActor(); \
 	friend struct Z_Construct_UClass_ALActor_Statics; \
@@ -31,7 +31,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<ALActor*>(this); }
 
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LActor_h_11_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LActor_h_11_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ALActor(ALActor&&) = delete; \
 	ALActor(const ALActor&) = delete; \
@@ -41,12 +41,12 @@ public: \
 	NO_API virtual ~ALActor();
 
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LActor_h_8_PROLOG
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LActor_h_11_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LActor_h_8_PROLOG
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LActor_h_11_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LActor_h_11_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LActor_h_11_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LActor_h_11_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LActor_h_11_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -56,6 +56,6 @@ class ALActor;
 // ********** End Class ALActor ********************************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LActor_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LActor_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

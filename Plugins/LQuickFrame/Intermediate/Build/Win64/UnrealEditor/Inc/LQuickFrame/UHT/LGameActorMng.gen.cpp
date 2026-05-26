@@ -1410,14 +1410,14 @@ ULGameActorMng::~ULGameActorMng() {}
 // ********** End Class ULGameActorMng *************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameActorMng_h__Script_LQuickFrame_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameActorMng_h__Script_LQuickFrame_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ULGameActorMng, ULGameActorMng::StaticClass, TEXT("ULGameActorMng"), &Z_Registration_Info_UClass_ULGameActorMng, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ULGameActorMng), 1111198920U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameActorMng_h__Script_LQuickFrame_3503443543(TEXT("/Script/LQuickFrame"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameActorMng_h__Script_LQuickFrame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameActorMng_h__Script_LQuickFrame_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameActorMng_h__Script_LQuickFrame_3503443543(TEXT("/Script/LQuickFrame"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameActorMng_h__Script_LQuickFrame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameActorMng_h__Script_LQuickFrame_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

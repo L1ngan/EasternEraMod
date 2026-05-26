@@ -702,7 +702,7 @@ ULBaseLibrary::~ULBaseLibrary() {}
 // ********** End Class ULBaseLibrary **************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h__Script_LQuickFrame_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h__Script_LQuickFrame_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ ELUniType_StaticEnum, TEXT("ELUniType"), &Z_Registration_Info_UEnum_ELUniType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3233846492U) },
@@ -718,10 +718,10 @@ struct Z_CompiledInDeferFile_FID_ModProject_Plugins_LQuickFrame_Source_LQuickFra
 		{ Z_Construct_UClass_ULBaseLibrary, ULBaseLibrary::StaticClass, TEXT("ULBaseLibrary"), &Z_Registration_Info_UClass_ULBaseLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ULBaseLibrary), 810357290U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h__Script_LQuickFrame_2710077073(TEXT("/Script/LQuickFrame"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h__Script_LQuickFrame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h__Script_LQuickFrame_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h__Script_LQuickFrame_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h__Script_LQuickFrame_Statics::ScriptStructInfo),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h__Script_LQuickFrame_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h__Script_LQuickFrame_Statics::EnumInfo));
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h__Script_LQuickFrame_2710077073(TEXT("/Script/LQuickFrame"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h__Script_LQuickFrame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h__Script_LQuickFrame_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h__Script_LQuickFrame_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h__Script_LQuickFrame_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h__Script_LQuickFrame_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Base_LBaseValue_h__Script_LQuickFrame_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -1,9 +1,9 @@
-"G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/PerModuleInline.gen.cpp"
-@"G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/LuaProtobuf.Shared.rsp"
-/FI"G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/Definitions.h"
-/Fo"G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/PerModuleInline.gen.cpp.obj"
-/experimental:log "G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/PerModuleInline.gen.cpp.sarif"
-/sourceDependencies "G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/PerModuleInline.gen.cpp.dep.json"
+"G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/PerModuleInline.gen.cpp"
+@"G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/LuaProtobuf.Shared.rsp"
+/FI"G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/Definitions.h"
+/Fo"G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/PerModuleInline.gen.cpp.obj"
+/experimental:log "G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/PerModuleInline.gen.cpp.sarif"
+/sourceDependencies "G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaProtobuf/PerModuleInline.gen.cpp.dep.json"
 /d2ssa-cfg-question-
 /Zc:inline
 /nologo

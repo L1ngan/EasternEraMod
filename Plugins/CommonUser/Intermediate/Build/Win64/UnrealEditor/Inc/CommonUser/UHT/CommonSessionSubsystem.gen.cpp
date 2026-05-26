@@ -1788,7 +1788,7 @@ UCommonSessionSubsystem::~UCommonSessionSubsystem() {}
 // ********** End Class UCommonSessionSubsystem ****************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h__Script_CommonUser_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h__Script_CommonUser_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ ECommonSessionOnlineMode_StaticEnum, TEXT("ECommonSessionOnlineMode"), &Z_Registration_Info_UEnum_ECommonSessionOnlineMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 460294093U) },
@@ -1801,10 +1801,10 @@ struct Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonUser_Source_CommonUser
 		{ Z_Construct_UClass_UCommonSessionSubsystem, UCommonSessionSubsystem::StaticClass, TEXT("UCommonSessionSubsystem"), &Z_Registration_Info_UClass_UCommonSessionSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCommonSessionSubsystem), 2137460181U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h__Script_CommonUser_131112092(TEXT("/Script/CommonUser"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h__Script_CommonUser_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h__Script_CommonUser_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h__Script_CommonUser_131112092(TEXT("/Script/CommonUser"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h__Script_CommonUser_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h__Script_CommonUser_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h__Script_CommonUser_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h__Script_CommonUser_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h__Script_CommonUser_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h__Script_CommonUser_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

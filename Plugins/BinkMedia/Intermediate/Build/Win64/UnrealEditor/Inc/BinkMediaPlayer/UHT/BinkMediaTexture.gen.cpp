@@ -321,14 +321,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(UBinkMediaTexture);
 // ********** End Class UBinkMediaTexture **********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaTexture_h__Script_BinkMediaPlayer_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaTexture_h__Script_BinkMediaPlayer_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UBinkMediaTexture, UBinkMediaTexture::StaticClass, TEXT("UBinkMediaTexture"), &Z_Registration_Info_UClass_UBinkMediaTexture, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBinkMediaTexture), 2909037770U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaTexture_h__Script_BinkMediaPlayer_719958545(TEXT("/Script/BinkMediaPlayer"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaTexture_h__Script_BinkMediaPlayer_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaTexture_h__Script_BinkMediaPlayer_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaTexture_h__Script_BinkMediaPlayer_719958545(TEXT("/Script/BinkMediaPlayer"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaTexture_h__Script_BinkMediaPlayer_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaTexture_h__Script_BinkMediaPlayer_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

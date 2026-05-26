@@ -36,15 +36,9 @@
 /FUNCTIONPADMIN:6
 /NOIMPLIB
 /NOEXP
-"G:/ModProject/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/Module.CommonUser.cpp.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/AsyncAction_CommonUserInitialize.cpp.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/CommonSessionSubsystem.cpp.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/CommonUserBasicPresence.cpp.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/CommonUserModule.cpp.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/CommonUserSubsystem.cpp.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/CommonUserTypes.cpp.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/Default.rc2.res"
+"G:/EasternEraMod/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"G:/EasternEraMod/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/Module.CommonUser.cpp.obj"
+"G:/EasternEraMod/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonUser/Default.rc2.res"
 "../Plugins/Online/OnlineSubsystemUtils/Intermediate/Build/Win64/x64/UnrealEditor/Development/OnlineSubsystemUtils/UnrealEditor-OnlineSubsystemUtils.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/CoreOnline/UnrealEditor-CoreOnline.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/CoreUObject/UnrealEditor-CoreUObject.lib"
@@ -83,6 +77,6 @@
 "imm32.lib"
 "uiautomationcore.lib"
 "DXGI.lib"
-/OUT:"G:/ModProject/Plugins/CommonUser/Binaries/Win64/UnrealEditor-CommonUser.dll"
-/PDB:"G:/ModProject/Plugins/CommonUser/Binaries/Win64/UnrealEditor-CommonUser.pdb"
+/OUT:"G:/EasternEraMod/Plugins/CommonUser/Binaries/Win64/UnrealEditor-CommonUser.dll"
+/PDB:"G:/EasternEraMod/Plugins/CommonUser/Binaries/Win64/UnrealEditor-CommonUser.pdb"
 /ignore:4078

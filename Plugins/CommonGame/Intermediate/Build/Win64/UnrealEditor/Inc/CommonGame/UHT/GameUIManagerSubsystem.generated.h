@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class UGameUIManagerSubsystem **************************************************
 COMMONGAME_API UClass* Z_Construct_UClass_UGameUIManagerSubsystem_NoRegister();
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_GameUIManagerSubsystem_h_25_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIManagerSubsystem_h_25_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUGameUIManagerSubsystem(); \
 	friend struct Z_Construct_UClass_UGameUIManagerSubsystem_Statics; \
@@ -32,7 +32,7 @@ public: \
 
 
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_GameUIManagerSubsystem_h_25_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIManagerSubsystem_h_25_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UGameUIManagerSubsystem(UGameUIManagerSubsystem&&) = delete; \
 	UGameUIManagerSubsystem(const UGameUIManagerSubsystem&) = delete; \
@@ -42,12 +42,12 @@ public: \
 	NO_API virtual ~UGameUIManagerSubsystem();
 
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_GameUIManagerSubsystem_h_22_PROLOG
-#define FID_ModProject_Plugins_CommonGame_Source_Public_GameUIManagerSubsystem_h_25_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIManagerSubsystem_h_22_PROLOG
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIManagerSubsystem_h_25_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_CommonGame_Source_Public_GameUIManagerSubsystem_h_25_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CommonGame_Source_Public_GameUIManagerSubsystem_h_25_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIManagerSubsystem_h_25_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIManagerSubsystem_h_25_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -57,6 +57,6 @@ class UGameUIManagerSubsystem;
 // ********** End Class UGameUIManagerSubsystem ****************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_CommonGame_Source_Public_GameUIManagerSubsystem_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIManagerSubsystem_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

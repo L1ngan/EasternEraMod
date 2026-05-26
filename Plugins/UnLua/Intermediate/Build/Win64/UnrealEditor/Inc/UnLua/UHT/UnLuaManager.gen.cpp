@@ -742,14 +742,14 @@ UUnLuaManager::~UUnLuaManager() {}
 // ********** End Class UUnLuaManager **************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLua_Public_UnLuaManager_h__Script_UnLua_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_UnLuaManager_h__Script_UnLua_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UUnLuaManager, UUnLuaManager::StaticClass, TEXT("UUnLuaManager"), &Z_Registration_Info_UClass_UUnLuaManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UUnLuaManager), 3142309217U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLua_Public_UnLuaManager_h__Script_UnLua_2318833533(TEXT("/Script/UnLua"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLua_Public_UnLuaManager_h__Script_UnLua_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLua_Public_UnLuaManager_h__Script_UnLua_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_UnLuaManager_h__Script_UnLua_2318833533(TEXT("/Script/UnLua"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_UnLuaManager_h__Script_UnLua_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_UnLuaManager_h__Script_UnLua_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

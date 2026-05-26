@@ -108,14 +108,14 @@ AModularCharacter::~AModularCharacter() {}
 // ********** End Class AModularCharacter **********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularCharacter_h__Script_ModularGameplayActors_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularCharacter_h__Script_ModularGameplayActors_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_AModularCharacter, AModularCharacter::StaticClass, TEXT("AModularCharacter"), &Z_Registration_Info_UClass_AModularCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AModularCharacter), 257250382U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularCharacter_h__Script_ModularGameplayActors_1269947334(TEXT("/Script/ModularGameplayActors"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularCharacter_h__Script_ModularGameplayActors_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularCharacter_h__Script_ModularGameplayActors_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularCharacter_h__Script_ModularGameplayActors_1269947334(TEXT("/Script/ModularGameplayActors"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularCharacter_h__Script_ModularGameplayActors_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularCharacter_h__Script_ModularGameplayActors_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

@@ -489,7 +489,7 @@ UEastRimWorldTargetType_UseProjectile::~UEastRimWorldTargetType_UseProjectile() 
 // ********** End Class UEastRimWorldTargetType_UseProjectile **************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h__Script_GASFramework_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h__Script_GASFramework_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UEastRimWorldTargetType, UEastRimWorldTargetType::StaticClass, TEXT("UEastRimWorldTargetType"), &Z_Registration_Info_UClass_UEastRimWorldTargetType, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UEastRimWorldTargetType), 47564993U) },
@@ -498,8 +498,8 @@ struct Z_CompiledInDeferFile_FID_ModProject_Plugins_GASFramework_Source_GASFrame
 		{ Z_Construct_UClass_UEastRimWorldTargetType_UseProjectile, UEastRimWorldTargetType_UseProjectile::StaticClass, TEXT("UEastRimWorldTargetType_UseProjectile"), &Z_Registration_Info_UClass_UEastRimWorldTargetType_UseProjectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UEastRimWorldTargetType_UseProjectile), 1990348290U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h__Script_GASFramework_3285854567(TEXT("/Script/GASFramework"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h__Script_GASFramework_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h__Script_GASFramework_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h__Script_GASFramework_3285854567(TEXT("/Script/GASFramework"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h__Script_GASFramework_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h__Script_GASFramework_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

@@ -18,7 +18,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLatent_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Misc_LLatent_h
 
 // ********** Begin Enum ELatentRespOne ************************************************************
 #define FOREACH_ENUM_ELATENTRESPONE(op) \

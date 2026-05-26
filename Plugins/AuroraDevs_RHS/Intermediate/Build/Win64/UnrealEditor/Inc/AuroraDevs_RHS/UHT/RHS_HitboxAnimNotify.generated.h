@@ -21,7 +21,7 @@ class URHS_CollisionShape;
 class USkeletalMeshComponent;
 
 // ********** Begin Class URHS_HitboxAnimNotify ****************************************************
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual void SERVER_ApplyShapeHit_Implementation(USkeletalMeshComponent* MeshComp, URHS_CollisionShape* CollisionShape, FVector const& Location, FQuat const& Rotation) const; \
 	virtual void MULTICAST_DrawHitShapeDebug_Implementation(USkeletalMeshComponent* MeshComp, URHS_CollisionShape* CollisionShape, FVector const& Location, FQuat const& Rotation, const float FrameDeltaTime) const; \
 	virtual void SERVER_DrawHitShapeDebug_Implementation(USkeletalMeshComponent* MeshComp, URHS_CollisionShape* CollisionShape, FVector const& Location, FQuat const& Rotation, const float FrameDeltaTime) const; \
@@ -30,10 +30,10 @@ class USkeletalMeshComponent;
 	DECLARE_FUNCTION(execSERVER_DrawHitShapeDebug);
 
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h_17_CALLBACK_WRAPPERS
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h_17_CALLBACK_WRAPPERS
 AURORADEVS_RHS_API UClass* Z_Construct_UClass_URHS_HitboxAnimNotify_NoRegister();
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h_17_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesURHS_HitboxAnimNotify(); \
 	friend struct Z_Construct_UClass_URHS_HitboxAnimNotify_Statics; \
@@ -55,7 +55,7 @@ private: \
 public:
 
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h_17_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h_17_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API URHS_HitboxAnimNotify(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -67,14 +67,14 @@ public:
 	NO_API virtual ~URHS_HitboxAnimNotify();
 
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h_14_PROLOG
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h_17_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h_14_PROLOG
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h_17_CALLBACK_WRAPPERS \
-	FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h_17_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h_17_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h_17_CALLBACK_WRAPPERS \
+	FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h_17_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -84,6 +84,6 @@ class URHS_HitboxAnimNotify;
 // ********** End Class URHS_HitboxAnimNotify ******************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_HitboxAnimNotify_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

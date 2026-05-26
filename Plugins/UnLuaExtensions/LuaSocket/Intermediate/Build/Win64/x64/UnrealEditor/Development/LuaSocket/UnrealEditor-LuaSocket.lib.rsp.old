@@ -6,7 +6,7 @@
 /NAME:"UnrealEditor-LuaSocket.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"G:/ModProject/Intermediate/Build/Win64/x64/EasternEraEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"G:/ModProject/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
 "G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaSocket/LuaSocketModule.cpp.obj"
 "G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaSocket/auxiliar.cpp.obj"
 "G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaSocket/buffer.cpp.obj"

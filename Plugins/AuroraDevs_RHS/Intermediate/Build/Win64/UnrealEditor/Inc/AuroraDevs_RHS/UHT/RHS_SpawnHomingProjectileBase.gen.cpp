@@ -334,7 +334,7 @@ URHS_SpawnHomingProjectileBase::~URHS_SpawnHomingProjectileBase() {}
 // ********** End Class URHS_SpawnHomingProjectileBase *********************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_SpawnHomingProjectileBase_h__Script_AuroraDevs_RHS_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_SpawnHomingProjectileBase_h__Script_AuroraDevs_RHS_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ ERHSHomingProjectileSpawnType_StaticEnum, TEXT("ERHSHomingProjectileSpawnType"), &Z_Registration_Info_UEnum_ERHSHomingProjectileSpawnType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 309542429U) },
@@ -346,10 +346,10 @@ struct Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_Aurora
 		{ Z_Construct_UClass_URHS_SpawnHomingProjectileBase, URHS_SpawnHomingProjectileBase::StaticClass, TEXT("URHS_SpawnHomingProjectileBase"), &Z_Registration_Info_UClass_URHS_SpawnHomingProjectileBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(URHS_SpawnHomingProjectileBase), 3115566587U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_SpawnHomingProjectileBase_h__Script_AuroraDevs_RHS_1931794349(TEXT("/Script/AuroraDevs_RHS"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_SpawnHomingProjectileBase_h__Script_AuroraDevs_RHS_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_SpawnHomingProjectileBase_h__Script_AuroraDevs_RHS_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_SpawnHomingProjectileBase_h__Script_AuroraDevs_RHS_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_SpawnHomingProjectileBase_h__Script_AuroraDevs_RHS_Statics::ScriptStructInfo),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_SpawnHomingProjectileBase_h__Script_AuroraDevs_RHS_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_SpawnHomingProjectileBase_h__Script_AuroraDevs_RHS_Statics::EnumInfo));
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_SpawnHomingProjectileBase_h__Script_AuroraDevs_RHS_1931794349(TEXT("/Script/AuroraDevs_RHS"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_SpawnHomingProjectileBase_h__Script_AuroraDevs_RHS_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_SpawnHomingProjectileBase_h__Script_AuroraDevs_RHS_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_SpawnHomingProjectileBase_h__Script_AuroraDevs_RHS_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_SpawnHomingProjectileBase_h__Script_AuroraDevs_RHS_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_SpawnHomingProjectileBase_h__Script_AuroraDevs_RHS_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_SpawnHomingProjectileBase_h__Script_AuroraDevs_RHS_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

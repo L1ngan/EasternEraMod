@@ -24,7 +24,7 @@ enum class ECommonInputType : uint8;
 struct FGameplayTag;
 
 // ********** Begin Class UCommonUIExtensions ******************************************************
-#define FID_ModProject_Plugins_CommonGame_Source_Public_CommonUIExtensions_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonUIExtensions_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execResumeInputForPlayer); \
 	DECLARE_FUNCTION(execSuspendInputForPlayer); \
 	DECLARE_FUNCTION(execGetLocalPlayerFromController); \
@@ -38,7 +38,7 @@ struct FGameplayTag;
 
 COMMONGAME_API UClass* Z_Construct_UClass_UCommonUIExtensions_NoRegister();
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_CommonUIExtensions_h_24_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonUIExtensions_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCommonUIExtensions(); \
 	friend struct Z_Construct_UClass_UCommonUIExtensions_Statics; \
@@ -49,7 +49,7 @@ public: \
 	DECLARE_SERIALIZER(UCommonUIExtensions)
 
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_CommonUIExtensions_h_24_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonUIExtensions_h_24_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UCommonUIExtensions(UCommonUIExtensions&&) = delete; \
 	UCommonUIExtensions(const UCommonUIExtensions&) = delete; \
@@ -59,13 +59,13 @@ public: \
 	NO_API virtual ~UCommonUIExtensions();
 
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_CommonUIExtensions_h_21_PROLOG
-#define FID_ModProject_Plugins_CommonGame_Source_Public_CommonUIExtensions_h_24_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonUIExtensions_h_21_PROLOG
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonUIExtensions_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_CommonGame_Source_Public_CommonUIExtensions_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CommonGame_Source_Public_CommonUIExtensions_h_24_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CommonGame_Source_Public_CommonUIExtensions_h_24_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonUIExtensions_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonUIExtensions_h_24_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonUIExtensions_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -75,6 +75,6 @@ class UCommonUIExtensions;
 // ********** End Class UCommonUIExtensions ********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_CommonGame_Source_Public_CommonUIExtensions_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonUIExtensions_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

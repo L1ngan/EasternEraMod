@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class ULuaModuleLocator ********************************************************
 UNLUA_API UClass* Z_Construct_UClass_ULuaModuleLocator_NoRegister();
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_23_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_23_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesULuaModuleLocator(); \
 	friend struct Z_Construct_UClass_ULuaModuleLocator_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(ULuaModuleLocator)
 
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_23_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_23_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ULuaModuleLocator(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -42,12 +42,12 @@ public: \
 	NO_API virtual ~ULuaModuleLocator();
 
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_20_PROLOG
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_23_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_20_PROLOG
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_23_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_23_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_23_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_23_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -59,7 +59,7 @@ class ULuaModuleLocator;
 // ********** Begin Class ULuaModuleLocator_ByPackage **********************************************
 UNLUA_API UClass* Z_Construct_UClass_ULuaModuleLocator_ByPackage_NoRegister();
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_31_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_31_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesULuaModuleLocator_ByPackage(); \
 	friend struct Z_Construct_UClass_ULuaModuleLocator_ByPackage_Statics; \
@@ -70,7 +70,7 @@ public: \
 	DECLARE_SERIALIZER(ULuaModuleLocator_ByPackage)
 
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_31_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_31_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ULuaModuleLocator_ByPackage(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -82,12 +82,12 @@ public: \
 	NO_API virtual ~ULuaModuleLocator_ByPackage();
 
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_28_PROLOG
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_31_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_28_PROLOG
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_31_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_31_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_31_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_31_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h_31_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -97,6 +97,6 @@ class ULuaModuleLocator_ByPackage;
 // ********** End Class ULuaModuleLocator_ByPackage ************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

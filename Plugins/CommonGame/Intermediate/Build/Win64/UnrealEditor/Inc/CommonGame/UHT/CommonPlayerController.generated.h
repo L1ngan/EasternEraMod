@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class ACommonPlayerController **************************************************
 COMMONGAME_API UClass* Z_Construct_UClass_ACommonPlayerController_NoRegister();
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_CommonPlayerController_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonPlayerController_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACommonPlayerController(); \
 	friend struct Z_Construct_UClass_ACommonPlayerController_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(ACommonPlayerController)
 
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_CommonPlayerController_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonPlayerController_h_15_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACommonPlayerController(ACommonPlayerController&&) = delete; \
 	ACommonPlayerController(const ACommonPlayerController&) = delete; \
@@ -40,12 +40,12 @@ public: \
 	NO_API virtual ~ACommonPlayerController();
 
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_CommonPlayerController_h_12_PROLOG
-#define FID_ModProject_Plugins_CommonGame_Source_Public_CommonPlayerController_h_15_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonPlayerController_h_12_PROLOG
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonPlayerController_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_CommonGame_Source_Public_CommonPlayerController_h_15_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CommonGame_Source_Public_CommonPlayerController_h_15_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonPlayerController_h_15_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonPlayerController_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -55,6 +55,6 @@ class ACommonPlayerController;
 // ********** End Class ACommonPlayerController ****************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_CommonGame_Source_Public_CommonPlayerController_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonPlayerController_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

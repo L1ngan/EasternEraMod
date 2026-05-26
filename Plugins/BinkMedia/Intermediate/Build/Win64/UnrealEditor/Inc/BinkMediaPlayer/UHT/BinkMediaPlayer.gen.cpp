@@ -2186,7 +2186,7 @@ UBinkMediaPlayer::~UBinkMediaPlayer() {}
 // ********** End Class UBinkMediaPlayer ***********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h__Script_BinkMediaPlayer_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h__Script_BinkMediaPlayer_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EBinkMediaPlayerBinkBufferModes_StaticEnum, TEXT("EBinkMediaPlayerBinkBufferModes"), &Z_Registration_Info_UEnum_EBinkMediaPlayerBinkBufferModes, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3130091699U) },
@@ -2197,10 +2197,10 @@ struct Z_CompiledInDeferFile_FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPl
 		{ Z_Construct_UClass_UBinkMediaPlayer, UBinkMediaPlayer::StaticClass, TEXT("UBinkMediaPlayer"), &Z_Registration_Info_UClass_UBinkMediaPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBinkMediaPlayer), 1946299910U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h__Script_BinkMediaPlayer_63529803(TEXT("/Script/BinkMediaPlayer"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h__Script_BinkMediaPlayer_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h__Script_BinkMediaPlayer_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h__Script_BinkMediaPlayer_63529803(TEXT("/Script/BinkMediaPlayer"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h__Script_BinkMediaPlayer_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h__Script_BinkMediaPlayer_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h__Script_BinkMediaPlayer_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h__Script_BinkMediaPlayer_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h__Script_BinkMediaPlayer_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_BinkMedia_Source_BinkMediaPlayer_Public_BinkMediaPlayer_h__Script_BinkMediaPlayer_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

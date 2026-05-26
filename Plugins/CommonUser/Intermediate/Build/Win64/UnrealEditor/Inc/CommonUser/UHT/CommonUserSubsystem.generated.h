@@ -30,7 +30,7 @@ struct FPlatformUserId;
 struct FUniqueNetIdRepl;
 
 // ********** Begin Class UCommonUserInfo **********************************************************
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_49_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_49_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execGetDebugString); \
 	DECLARE_FUNCTION(execGetNickname); \
 	DECLARE_FUNCTION(execGetNetId); \
@@ -42,7 +42,7 @@ struct FUniqueNetIdRepl;
 
 COMMONUSER_API UClass* Z_Construct_UClass_UCommonUserInfo_NoRegister();
 
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_49_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_49_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCommonUserInfo(); \
 	friend struct Z_Construct_UClass_UCommonUserInfo_Statics; \
@@ -53,7 +53,7 @@ public: \
 	DECLARE_SERIALIZER(UCommonUserInfo)
 
 
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_49_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_49_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCommonUserInfo(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -65,13 +65,13 @@ public: \
 	NO_API virtual ~UCommonUserInfo();
 
 
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_46_PROLOG
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_49_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_46_PROLOG
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_49_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_49_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_49_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_49_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_49_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_49_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_49_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -81,35 +81,35 @@ class UCommonUserInfo;
 // ********** End Class UCommonUserInfo ************************************************************
 
 // ********** Begin Delegate FCommonUserOnInitializeCompleteMulticast ******************************
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_141_DELEGATE \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_141_DELEGATE \
 COMMONUSER_API void FCommonUserOnInitializeCompleteMulticast_DelegateWrapper(const FMulticastScriptDelegate& CommonUserOnInitializeCompleteMulticast, const UCommonUserInfo* UserInfo, bool bSuccess, const FText& Error, ECommonUserPrivilege RequestedPrivilege, ECommonUserOnlineContext OnlineContext);
 
 
 // ********** End Delegate FCommonUserOnInitializeCompleteMulticast ********************************
 
 // ********** Begin Delegate FCommonUserOnInitializeComplete ***************************************
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_142_DELEGATE \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_142_DELEGATE \
 COMMONUSER_API void FCommonUserOnInitializeComplete_DelegateWrapper(const FScriptDelegate& CommonUserOnInitializeComplete, const UCommonUserInfo* UserInfo, bool bSuccess, const FText& Error, ECommonUserPrivilege RequestedPrivilege, ECommonUserOnlineContext OnlineContext);
 
 
 // ********** End Delegate FCommonUserOnInitializeComplete *****************************************
 
 // ********** Begin Delegate FCommonUserHandleSystemMessageDelegate ********************************
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_145_DELEGATE \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_145_DELEGATE \
 COMMONUSER_API void FCommonUserHandleSystemMessageDelegate_DelegateWrapper(const FMulticastScriptDelegate& CommonUserHandleSystemMessageDelegate, FGameplayTag MessageType, const FText& TitleText, const FText& BodyText);
 
 
 // ********** End Delegate FCommonUserHandleSystemMessageDelegate **********************************
 
 // ********** Begin Delegate FCommonUserAvailabilityChangedDelegate ********************************
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_148_DELEGATE \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_148_DELEGATE \
 COMMONUSER_API void FCommonUserAvailabilityChangedDelegate_DelegateWrapper(const FMulticastScriptDelegate& CommonUserAvailabilityChangedDelegate, const UCommonUserInfo* UserInfo, ECommonUserPrivilege Privilege, ECommonUserAvailability OldAvailability, ECommonUserAvailability NewAvailability);
 
 
 // ********** End Delegate FCommonUserAvailabilityChangedDelegate **********************************
 
 // ********** Begin ScriptStruct FCommonUserInitializeParams ***************************************
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_155_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_155_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FCommonUserInitializeParams_Statics; \
 	static class UScriptStruct* StaticStruct();
 
@@ -118,7 +118,7 @@ struct FCommonUserInitializeParams;
 // ********** End ScriptStruct FCommonUserInitializeParams *****************************************
 
 // ********** Begin Class UCommonUserSubsystem *****************************************************
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_206_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_206_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execShouldWaitForStartInput); \
 	DECLARE_FUNCTION(execHasTraitTag); \
 	DECLARE_FUNCTION(execResetUserState); \
@@ -143,7 +143,7 @@ struct FCommonUserInitializeParams;
 
 COMMONUSER_API UClass* Z_Construct_UClass_UCommonUserSubsystem_NoRegister();
 
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_206_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_206_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCommonUserSubsystem(); \
 	friend struct Z_Construct_UClass_UCommonUserSubsystem_Statics; \
@@ -156,7 +156,7 @@ public: \
 
 
 
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_206_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_206_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UCommonUserSubsystem(UCommonUserSubsystem&&) = delete; \
 	UCommonUserSubsystem(const UCommonUserSubsystem&) = delete; \
@@ -166,13 +166,13 @@ public: \
 	NO_API virtual ~UCommonUserSubsystem();
 
 
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_203_PROLOG
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_206_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_203_PROLOG
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_206_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_206_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_206_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_206_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_206_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_206_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h_206_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -182,6 +182,6 @@ class UCommonUserSubsystem;
 // ********** End Class UCommonUserSubsystem *******************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserSubsystem_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

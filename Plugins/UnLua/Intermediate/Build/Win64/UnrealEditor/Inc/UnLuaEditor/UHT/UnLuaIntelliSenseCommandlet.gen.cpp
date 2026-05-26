@@ -98,14 +98,14 @@ UUnLuaIntelliSenseCommandlet::~UUnLuaIntelliSenseCommandlet() {}
 // ********** End Class UUnLuaIntelliSenseCommandlet ***********************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLuaEditor_Public_Commandlets_UnLuaIntelliSenseCommandlet_h__Script_UnLuaEditor_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLuaEditor_Public_Commandlets_UnLuaIntelliSenseCommandlet_h__Script_UnLuaEditor_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UUnLuaIntelliSenseCommandlet, UUnLuaIntelliSenseCommandlet::StaticClass, TEXT("UUnLuaIntelliSenseCommandlet"), &Z_Registration_Info_UClass_UUnLuaIntelliSenseCommandlet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UUnLuaIntelliSenseCommandlet), 3114661170U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLuaEditor_Public_Commandlets_UnLuaIntelliSenseCommandlet_h__Script_UnLuaEditor_2434146231(TEXT("/Script/UnLuaEditor"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLuaEditor_Public_Commandlets_UnLuaIntelliSenseCommandlet_h__Script_UnLuaEditor_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLuaEditor_Public_Commandlets_UnLuaIntelliSenseCommandlet_h__Script_UnLuaEditor_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLuaEditor_Public_Commandlets_UnLuaIntelliSenseCommandlet_h__Script_UnLuaEditor_2434146231(TEXT("/Script/UnLuaEditor"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLuaEditor_Public_Commandlets_UnLuaIntelliSenseCommandlet_h__Script_UnLuaEditor_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLuaEditor_Public_Commandlets_UnLuaIntelliSenseCommandlet_h__Script_UnLuaEditor_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

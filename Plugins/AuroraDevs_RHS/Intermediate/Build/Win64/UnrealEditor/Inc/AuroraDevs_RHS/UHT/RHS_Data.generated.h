@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FRHSDebugSettings *************************************************
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_Data_h_13_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_Data_h_13_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FRHSDebugSettings_Statics; \
 	AURORADEVS_RHS_API static class UScriptStruct* StaticStruct();
 
@@ -26,7 +26,7 @@ struct FRHSDebugSettings;
 // ********** End ScriptStruct FRHSDebugSettings ***************************************************
 
 // ********** Begin ScriptStruct FRHSProjectileBulkSpawnSetting ************************************
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_Data_h_41_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_Data_h_41_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FRHSProjectileBulkSpawnSetting_Statics; \
 	AURORADEVS_RHS_API static class UScriptStruct* StaticStruct();
 
@@ -35,6 +35,6 @@ struct FRHSProjectileBulkSpawnSetting;
 // ********** End ScriptStruct FRHSProjectileBulkSpawnSetting **************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_Data_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_Data_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

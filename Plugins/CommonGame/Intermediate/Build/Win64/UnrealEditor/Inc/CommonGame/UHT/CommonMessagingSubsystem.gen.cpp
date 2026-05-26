@@ -176,7 +176,7 @@ UCommonMessagingSubsystem::~UCommonMessagingSubsystem() {}
 // ********** End Class UCommonMessagingSubsystem **************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonMessagingSubsystem_h__Script_CommonGame_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonMessagingSubsystem_h__Script_CommonGame_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ ECommonMessagingResult_StaticEnum, TEXT("ECommonMessagingResult"), &Z_Registration_Info_UEnum_ECommonMessagingResult, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3451816972U) },
@@ -185,10 +185,10 @@ struct Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_Mes
 		{ Z_Construct_UClass_UCommonMessagingSubsystem, UCommonMessagingSubsystem::StaticClass, TEXT("UCommonMessagingSubsystem"), &Z_Registration_Info_UClass_UCommonMessagingSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCommonMessagingSubsystem), 3692049592U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonMessagingSubsystem_h__Script_CommonGame_857087570(TEXT("/Script/CommonGame"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonMessagingSubsystem_h__Script_CommonGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonMessagingSubsystem_h__Script_CommonGame_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonMessagingSubsystem_h__Script_CommonGame_857087570(TEXT("/Script/CommonGame"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonMessagingSubsystem_h__Script_CommonGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonMessagingSubsystem_h__Script_CommonGame_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonMessagingSubsystem_h__Script_CommonGame_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonMessagingSubsystem_h__Script_CommonGame_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonMessagingSubsystem_h__Script_CommonGame_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonMessagingSubsystem_h__Script_CommonGame_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

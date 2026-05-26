@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class UAsyncLoadingScreenLibrary ***********************************************
-#define FID_ModProject_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_AsyncLoadingScreenLibrary_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_AsyncLoadingScreenLibrary_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execRemovePreloadedBackgroundImages); \
 	DECLARE_FUNCTION(execPreloadBackgroundImages); \
 	DECLARE_FUNCTION(execPlayLoadingScreen); \
@@ -31,7 +31,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 ASYNCLOADINGSCREEN_API UClass* Z_Construct_UClass_UAsyncLoadingScreenLibrary_NoRegister();
 
-#define FID_ModProject_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_AsyncLoadingScreenLibrary_h_21_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_AsyncLoadingScreenLibrary_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUAsyncLoadingScreenLibrary(); \
 	friend struct Z_Construct_UClass_UAsyncLoadingScreenLibrary_Statics; \
@@ -42,7 +42,7 @@ public: \
 	DECLARE_SERIALIZER(UAsyncLoadingScreenLibrary)
 
 
-#define FID_ModProject_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_AsyncLoadingScreenLibrary_h_21_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_AsyncLoadingScreenLibrary_h_21_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UAsyncLoadingScreenLibrary(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -54,13 +54,13 @@ public: \
 	NO_API virtual ~UAsyncLoadingScreenLibrary();
 
 
-#define FID_ModProject_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_AsyncLoadingScreenLibrary_h_18_PROLOG
-#define FID_ModProject_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_AsyncLoadingScreenLibrary_h_21_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_AsyncLoadingScreenLibrary_h_18_PROLOG
+#define FID_EasternEraMod_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_AsyncLoadingScreenLibrary_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_AsyncLoadingScreenLibrary_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_AsyncLoadingScreenLibrary_h_21_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_AsyncLoadingScreenLibrary_h_21_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_AsyncLoadingScreenLibrary_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_AsyncLoadingScreenLibrary_h_21_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_AsyncLoadingScreenLibrary_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -70,6 +70,6 @@ class UAsyncLoadingScreenLibrary;
 // ********** End Class UAsyncLoadingScreenLibrary *************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_AsyncLoadingScreenLibrary_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_AsyncLoadingScreenLibrary_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

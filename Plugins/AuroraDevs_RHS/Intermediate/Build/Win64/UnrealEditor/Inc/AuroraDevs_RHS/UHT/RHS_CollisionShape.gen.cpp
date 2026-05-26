@@ -743,7 +743,7 @@ URHS_CollisionShape_Capsule::~URHS_CollisionShape_Capsule() {}
 // ********** End Class URHS_CollisionShape_Capsule ************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h__Script_AuroraDevs_RHS_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h__Script_AuroraDevs_RHS_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_URHS_CollisionShape, URHS_CollisionShape::StaticClass, TEXT("URHS_CollisionShape"), &Z_Registration_Info_UClass_URHS_CollisionShape, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(URHS_CollisionShape), 1803543895U) },
@@ -752,8 +752,8 @@ struct Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_Aurora
 		{ Z_Construct_UClass_URHS_CollisionShape_Capsule, URHS_CollisionShape_Capsule::StaticClass, TEXT("URHS_CollisionShape_Capsule"), &Z_Registration_Info_UClass_URHS_CollisionShape_Capsule, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(URHS_CollisionShape_Capsule), 1104264052U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h__Script_AuroraDevs_RHS_3411243076(TEXT("/Script/AuroraDevs_RHS"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h__Script_AuroraDevs_RHS_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h__Script_AuroraDevs_RHS_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h__Script_AuroraDevs_RHS_3411243076(TEXT("/Script/AuroraDevs_RHS"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h__Script_AuroraDevs_RHS_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_CollisionShape_h__Script_AuroraDevs_RHS_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

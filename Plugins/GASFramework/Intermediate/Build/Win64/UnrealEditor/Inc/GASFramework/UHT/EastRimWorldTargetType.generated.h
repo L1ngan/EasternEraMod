@@ -21,15 +21,15 @@ struct FGameplayEventData;
 struct FHitResult;
 
 // ********** Begin Class UEastRimWorldTargetType **************************************************
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual void GetTargets_Implementation(AActor* TargetingCharacter, AActor* TargetingActor, FGameplayEventData EventData, TArray<FHitResult>& OutHitResults, TArray<AActor*>& OutActors) const; \
 	DECLARE_FUNCTION(execGetTargets);
 
 
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_15_CALLBACK_WRAPPERS
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_15_CALLBACK_WRAPPERS
 GASFRAMEWORK_API UClass* Z_Construct_UClass_UEastRimWorldTargetType_NoRegister();
 
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUEastRimWorldTargetType(); \
 	friend struct Z_Construct_UClass_UEastRimWorldTargetType_Statics; \
@@ -40,7 +40,7 @@ public: \
 	DECLARE_SERIALIZER(UEastRimWorldTargetType)
 
 
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_15_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UEastRimWorldTargetType(UEastRimWorldTargetType&&) = delete; \
 	UEastRimWorldTargetType(const UEastRimWorldTargetType&) = delete; \
@@ -50,14 +50,14 @@ public: \
 	NO_API virtual ~UEastRimWorldTargetType();
 
 
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_12_PROLOG
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_15_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_12_PROLOG
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_15_CALLBACK_WRAPPERS \
-	FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_15_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_15_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_15_CALLBACK_WRAPPERS \
+	FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_15_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -69,7 +69,7 @@ class UEastRimWorldTargetType;
 // ********** Begin Class UEastRimWorldTargetType_UseOwner *****************************************
 GASFRAMEWORK_API UClass* Z_Construct_UClass_UEastRimWorldTargetType_UseOwner_NoRegister();
 
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_32_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_32_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUEastRimWorldTargetType_UseOwner(); \
 	friend struct Z_Construct_UClass_UEastRimWorldTargetType_UseOwner_Statics; \
@@ -80,7 +80,7 @@ public: \
 	DECLARE_SERIALIZER(UEastRimWorldTargetType_UseOwner)
 
 
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_32_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_32_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UEastRimWorldTargetType_UseOwner(UEastRimWorldTargetType_UseOwner&&) = delete; \
 	UEastRimWorldTargetType_UseOwner(const UEastRimWorldTargetType_UseOwner&) = delete; \
@@ -90,12 +90,12 @@ public: \
 	NO_API virtual ~UEastRimWorldTargetType_UseOwner();
 
 
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_29_PROLOG
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_32_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_29_PROLOG
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_32_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_32_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_32_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_32_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_32_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -107,7 +107,7 @@ class UEastRimWorldTargetType_UseOwner;
 // ********** Begin Class UEastRimWorldTargetType_UseEventData *************************************
 GASFRAMEWORK_API UClass* Z_Construct_UClass_UEastRimWorldTargetType_UseEventData_NoRegister();
 
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_46_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_46_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUEastRimWorldTargetType_UseEventData(); \
 	friend struct Z_Construct_UClass_UEastRimWorldTargetType_UseEventData_Statics; \
@@ -118,7 +118,7 @@ public: \
 	DECLARE_SERIALIZER(UEastRimWorldTargetType_UseEventData)
 
 
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_46_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_46_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UEastRimWorldTargetType_UseEventData(UEastRimWorldTargetType_UseEventData&&) = delete; \
 	UEastRimWorldTargetType_UseEventData(const UEastRimWorldTargetType_UseEventData&) = delete; \
@@ -128,12 +128,12 @@ public: \
 	NO_API virtual ~UEastRimWorldTargetType_UseEventData();
 
 
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_43_PROLOG
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_46_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_43_PROLOG
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_46_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_46_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_46_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_46_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_46_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -145,7 +145,7 @@ class UEastRimWorldTargetType_UseEventData;
 // ********** Begin Class UEastRimWorldTargetType_UseProjectile ************************************
 GASFRAMEWORK_API UClass* Z_Construct_UClass_UEastRimWorldTargetType_UseProjectile_NoRegister();
 
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_61_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_61_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUEastRimWorldTargetType_UseProjectile(); \
 	friend struct Z_Construct_UClass_UEastRimWorldTargetType_UseProjectile_Statics; \
@@ -156,7 +156,7 @@ public: \
 	DECLARE_SERIALIZER(UEastRimWorldTargetType_UseProjectile)
 
 
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_61_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_61_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UEastRimWorldTargetType_UseProjectile(UEastRimWorldTargetType_UseProjectile&&) = delete; \
 	UEastRimWorldTargetType_UseProjectile(const UEastRimWorldTargetType_UseProjectile&) = delete; \
@@ -166,12 +166,12 @@ public: \
 	NO_API virtual ~UEastRimWorldTargetType_UseProjectile();
 
 
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_58_PROLOG
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_61_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_58_PROLOG
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_61_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_61_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_61_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_61_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h_61_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -181,6 +181,6 @@ class UEastRimWorldTargetType_UseProjectile;
 // ********** End Class UEastRimWorldTargetType_UseProjectile **************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_EastRimWorldTargetType_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

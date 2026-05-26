@@ -36,12 +36,9 @@
 /FUNCTIONPADMIN:6
 /NOIMPLIB
 /NOEXP
-"G:/ModProject/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
-"G:/ModProject/Plugins/GASFramework/Intermediate/Build/Win64/x64/UnrealEditor/Development/GASFramework/Module.GASFramework.cpp.obj"
-"G:/ModProject/Plugins/GASFramework/Intermediate/Build/Win64/x64/UnrealEditor/Development/GASFramework/EastRimWorldAbilityTypes.cpp.obj"
-"G:/ModProject/Plugins/GASFramework/Intermediate/Build/Win64/x64/UnrealEditor/Development/GASFramework/EastRimWorldTargetType.cpp.obj"
-"G:/ModProject/Plugins/GASFramework/Intermediate/Build/Win64/x64/UnrealEditor/Development/GASFramework/GASFramework.cpp.obj"
-"G:/ModProject/Plugins/GASFramework/Intermediate/Build/Win64/x64/UnrealEditor/Development/GASFramework/Default.rc2.res"
+"G:/EasternEraMod/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"G:/EasternEraMod/Plugins/GASFramework/Intermediate/Build/Win64/x64/UnrealEditor/Development/GASFramework/Module.GASFramework.cpp.obj"
+"G:/EasternEraMod/Plugins/GASFramework/Intermediate/Build/Win64/x64/UnrealEditor/Development/GASFramework/Default.rc2.res"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/Slate/UnrealEditor-Slate.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/SlateCore/UnrealEditor-SlateCore.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/Core/UnrealEditor-Core.lib"
@@ -50,8 +47,8 @@
 "../Plugins/Runtime/GameplayAbilities/Intermediate/Build/Win64/x64/UnrealEditor/Development/GameplayAbilities/UnrealEditor-GameplayAbilities.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/GameplayTags/UnrealEditor-GameplayTags.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/GameplayTasks/UnrealEditor-GameplayTasks.lib"
-"G:/ModProject/Plugins/AuroraDevs_RHS/Intermediate/Build/Win64/x64/UnrealEditor/Development/AuroraDevs_RHS/UnrealEditor-AuroraDevs_RHS.lib"
-"G:/ModProject/Plugins/LQuickFrame/Intermediate/Build/Win64/x64/UnrealEditor/Development/LQuickFrame/UnrealEditor-LQuickFrame.lib"
+"G:/EasternEraMod/Plugins/AuroraDevs_RHS/Intermediate/Build/Win64/x64/UnrealEditor/Development/AuroraDevs_RHS/UnrealEditor-AuroraDevs_RHS.lib"
+"G:/EasternEraMod/Plugins/LQuickFrame/Intermediate/Build/Win64/x64/UnrealEditor/Development/LQuickFrame/UnrealEditor-LQuickFrame.lib"
 "delayimp.lib"
 "wininet.lib"
 "rpcrt4.lib"
@@ -77,6 +74,6 @@
 "synchronization.lib"
 "dwmapi.lib"
 "imm32.lib"
-/OUT:"G:/ModProject/Plugins/GASFramework/Binaries/Win64/UnrealEditor-GASFramework.dll"
-/PDB:"G:/ModProject/Plugins/GASFramework/Binaries/Win64/UnrealEditor-GASFramework.pdb"
+/OUT:"G:/EasternEraMod/Plugins/GASFramework/Binaries/Win64/UnrealEditor-GASFramework.dll"
+/PDB:"G:/EasternEraMod/Plugins/GASFramework/Binaries/Win64/UnrealEditor-GASFramework.pdb"
 /ignore:4078

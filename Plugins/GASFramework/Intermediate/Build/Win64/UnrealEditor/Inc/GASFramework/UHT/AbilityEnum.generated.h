@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FFormatText *******************************************************
-#define FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_AbilityEnum_h_58_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_AbilityEnum_h_58_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FFormatText_Statics; \
 	GASFRAMEWORK_API static class UScriptStruct* StaticStruct();
 
@@ -26,7 +26,7 @@ struct FFormatText;
 // ********** End ScriptStruct FFormatText *********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_AbilityEnum_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_AbilityEnum_h
 
 // ********** Begin Enum EItemQuality **************************************************************
 #define FOREACH_ENUM_EITEMQUALITY(op) \

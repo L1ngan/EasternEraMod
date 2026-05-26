@@ -1,12 +1,12 @@
-"G:/ModProject/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPlugin/Module.CreateModPlugin.2.cpp"
-@"G:/ModProject/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPlugin/CreateModPlugin.Shared.rsp"
-/FI"G:/ModProject/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
-/FI"G:/ModProject/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPlugin/Definitions.CreateModPlugin.h"
-/Yu"G:/ModProject/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
-/Fp"G:/ModProject/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.pch"
-/Fo"G:/ModProject/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPlugin/Module.CreateModPlugin.2.cpp.obj"
-/experimental:log "G:/ModProject/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPlugin/Module.CreateModPlugin.2.cpp.sarif"
-/sourceDependencies "G:/ModProject/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPlugin/Module.CreateModPlugin.2.cpp.dep.json"
+"G:/EasternEraMod/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPlugin/Module.CreateModPlugin.2.cpp"
+@"G:/EasternEraMod/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPlugin/CreateModPlugin.Shared.rsp"
+/FI"G:/EasternEraMod/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
+/FI"G:/EasternEraMod/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPlugin/Definitions.CreateModPlugin.h"
+/Yu"G:/EasternEraMod/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
+/Fp"G:/EasternEraMod/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.pch"
+/Fo"G:/EasternEraMod/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPlugin/Module.CreateModPlugin.2.cpp.obj"
+/experimental:log "G:/EasternEraMod/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPlugin/Module.CreateModPlugin.2.cpp.sarif"
+/sourceDependencies "G:/EasternEraMod/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPlugin/Module.CreateModPlugin.2.cpp.dep.json"
 /d2ssa-cfg-question-
 /Zc:inline
 /nologo

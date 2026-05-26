@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FOnlineResultInformation ******************************************
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserTypes_h_199_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserTypes_h_199_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FOnlineResultInformation_Statics; \
 	COMMONUSER_API static class UScriptStruct* StaticStruct();
 
@@ -26,7 +26,7 @@ struct FOnlineResultInformation;
 // ********** End ScriptStruct FOnlineResultInformation ********************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonUserTypes_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonUserTypes_h
 
 // ********** Begin Enum ECommonUserOnlineContext **************************************************
 #define FOREACH_ENUM_ECOMMONUSERONLINECONTEXT(op) \

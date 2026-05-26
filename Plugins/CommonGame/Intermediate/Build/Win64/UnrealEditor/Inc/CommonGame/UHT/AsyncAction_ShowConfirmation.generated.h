@@ -22,14 +22,14 @@ class UObject;
 enum class ECommonMessagingResult : uint8;
 
 // ********** Begin Delegate FCommonMessagingResultMCDelegate **************************************
-#define FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_ShowConfirmation_h_17_DELEGATE \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_ShowConfirmation_h_17_DELEGATE \
 COMMONGAME_API void FCommonMessagingResultMCDelegate_DelegateWrapper(const FMulticastScriptDelegate& CommonMessagingResultMCDelegate, ECommonMessagingResult Result);
 
 
 // ********** End Delegate FCommonMessagingResultMCDelegate ****************************************
 
 // ********** Begin Class UAsyncAction_ShowConfirmation ********************************************
-#define FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_ShowConfirmation_h_25_RPC_WRAPPERS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_ShowConfirmation_h_25_RPC_WRAPPERS \
 	DECLARE_FUNCTION(execShowConfirmationCustom); \
 	DECLARE_FUNCTION(execShowConfirmationOkCancelButtonLabel); \
 	DECLARE_FUNCTION(execShowConfirmationOkCancel); \
@@ -40,7 +40,7 @@ COMMONGAME_API void FCommonMessagingResultMCDelegate_DelegateWrapper(const FMult
 
 COMMONGAME_API UClass* Z_Construct_UClass_UAsyncAction_ShowConfirmation_NoRegister();
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_ShowConfirmation_h_25_INCLASS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_ShowConfirmation_h_25_INCLASS \
 private: \
 	static void StaticRegisterNativesUAsyncAction_ShowConfirmation(); \
 	friend struct Z_Construct_UClass_UAsyncAction_ShowConfirmation_Statics; \
@@ -51,7 +51,7 @@ public: \
 	DECLARE_SERIALIZER(UAsyncAction_ShowConfirmation)
 
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_ShowConfirmation_h_25_STANDARD_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_ShowConfirmation_h_25_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UAsyncAction_ShowConfirmation(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UAsyncAction_ShowConfirmation) \
@@ -63,13 +63,13 @@ public: \
 	NO_API virtual ~UAsyncAction_ShowConfirmation();
 
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_ShowConfirmation_h_22_PROLOG
-#define FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_ShowConfirmation_h_25_GENERATED_BODY_LEGACY \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_ShowConfirmation_h_22_PROLOG
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_ShowConfirmation_h_25_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_ShowConfirmation_h_25_RPC_WRAPPERS \
-	FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_ShowConfirmation_h_25_INCLASS \
-	FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_ShowConfirmation_h_25_STANDARD_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_ShowConfirmation_h_25_RPC_WRAPPERS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_ShowConfirmation_h_25_INCLASS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_ShowConfirmation_h_25_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -79,6 +79,6 @@ class UAsyncAction_ShowConfirmation;
 // ********** End Class UAsyncAction_ShowConfirmation **********************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_CommonGame_Source_Public_Actions_AsyncAction_ShowConfirmation_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CommonGame_Source_Public_Actions_AsyncAction_ShowConfirmation_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

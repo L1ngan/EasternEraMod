@@ -99,14 +99,14 @@ UUnLuaEditorFunctionLibrary::~UUnLuaEditorFunctionLibrary() {}
 // ********** End Class UUnLuaEditorFunctionLibrary ************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLuaEditor_Private_UnLuaEditorFunctionLibrary_h__Script_UnLuaEditor_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLuaEditor_Private_UnLuaEditorFunctionLibrary_h__Script_UnLuaEditor_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UUnLuaEditorFunctionLibrary, UUnLuaEditorFunctionLibrary::StaticClass, TEXT("UUnLuaEditorFunctionLibrary"), &Z_Registration_Info_UClass_UUnLuaEditorFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UUnLuaEditorFunctionLibrary), 1839531007U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLuaEditor_Private_UnLuaEditorFunctionLibrary_h__Script_UnLuaEditor_222330765(TEXT("/Script/UnLuaEditor"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLuaEditor_Private_UnLuaEditorFunctionLibrary_h__Script_UnLuaEditor_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLuaEditor_Private_UnLuaEditorFunctionLibrary_h__Script_UnLuaEditor_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLuaEditor_Private_UnLuaEditorFunctionLibrary_h__Script_UnLuaEditor_222330765(TEXT("/Script/UnLuaEditor"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLuaEditor_Private_UnLuaEditorFunctionLibrary_h__Script_UnLuaEditor_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLuaEditor_Private_UnLuaEditorFunctionLibrary_h__Script_UnLuaEditor_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

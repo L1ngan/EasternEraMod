@@ -262,7 +262,7 @@ UGameUIPolicy::~UGameUIPolicy() {}
 // ********** End Class UGameUIPolicy **************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_GameUIPolicy_h__Script_CommonGame_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIPolicy_h__Script_CommonGame_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ ELocalMultiplayerInteractionMode_StaticEnum, TEXT("ELocalMultiplayerInteractionMode"), &Z_Registration_Info_UEnum_ELocalMultiplayerInteractionMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2849029618U) },
@@ -274,10 +274,10 @@ struct Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_Gam
 		{ Z_Construct_UClass_UGameUIPolicy, UGameUIPolicy::StaticClass, TEXT("UGameUIPolicy"), &Z_Registration_Info_UClass_UGameUIPolicy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UGameUIPolicy), 3118880866U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_GameUIPolicy_h__Script_CommonGame_721913790(TEXT("/Script/CommonGame"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_GameUIPolicy_h__Script_CommonGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_GameUIPolicy_h__Script_CommonGame_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_GameUIPolicy_h__Script_CommonGame_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_GameUIPolicy_h__Script_CommonGame_Statics::ScriptStructInfo),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_GameUIPolicy_h__Script_CommonGame_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_GameUIPolicy_h__Script_CommonGame_Statics::EnumInfo));
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIPolicy_h__Script_CommonGame_721913790(TEXT("/Script/CommonGame"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIPolicy_h__Script_CommonGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIPolicy_h__Script_CommonGame_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIPolicy_h__Script_CommonGame_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIPolicy_h__Script_CommonGame_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIPolicy_h__Script_CommonGame_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_GameUIPolicy_h__Script_CommonGame_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

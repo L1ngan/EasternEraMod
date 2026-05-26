@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FModHumanData *****************************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h_48_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h_48_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModHumanData_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;
@@ -27,7 +27,7 @@ struct FModHumanData;
 // ********** End ScriptStruct FModHumanData *******************************************************
 
 // ********** Begin ScriptStruct FModOutputData ****************************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h_196_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h_196_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModOutputData_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -36,7 +36,7 @@ struct FModOutputData;
 // ********** End ScriptStruct FModOutputData ******************************************************
 
 // ********** Begin ScriptStruct FModOutputDatas ***************************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h_230_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h_230_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModOutputDatas_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -45,7 +45,7 @@ struct FModOutputDatas;
 // ********** End ScriptStruct FModOutputDatas *****************************************************
 
 // ********** Begin ScriptStruct FModIDs ***********************************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h_238_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h_238_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModIDs_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -54,7 +54,7 @@ struct FModIDs;
 // ********** End ScriptStruct FModIDs *************************************************************
 
 // ********** Begin ScriptStruct FModAllTypeItemDrop ***********************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h_247_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h_247_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModAllTypeItemDrop_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -63,7 +63,7 @@ struct FModAllTypeItemDrop;
 // ********** End ScriptStruct FModAllTypeItemDrop *************************************************
 
 // ********** Begin ScriptStruct FModAnimalData ****************************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h_268_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h_268_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModAnimalData_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;
@@ -73,7 +73,7 @@ struct FModAnimalData;
 // ********** End ScriptStruct FModAnimalData ******************************************************
 
 // ********** Begin ScriptStruct FModCharacterActionAbilityAnimSections ****************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h_434_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h_434_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModCharacterActionAbilityAnimSections_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -82,7 +82,7 @@ struct FModCharacterActionAbilityAnimSections;
 // ********** End ScriptStruct FModCharacterActionAbilityAnimSections ******************************
 
 // ********** Begin ScriptStruct FModAnimalActionAbility *******************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h_463_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h_463_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModAnimalActionAbility_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;
@@ -92,7 +92,7 @@ struct FModAnimalActionAbility;
 // ********** End ScriptStruct FModAnimalActionAbility *********************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h
 
 // ********** Begin Enum EModHitType ***************************************************************
 #define FOREACH_ENUM_EMODHITTYPE(op) \

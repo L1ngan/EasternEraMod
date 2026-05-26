@@ -100,14 +100,14 @@ ACommonPlayerController::~ACommonPlayerController() {}
 // ********** End Class ACommonPlayerController ****************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_CommonPlayerController_h__Script_CommonGame_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonPlayerController_h__Script_CommonGame_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ACommonPlayerController, ACommonPlayerController::StaticClass, TEXT("ACommonPlayerController"), &Z_Registration_Info_UClass_ACommonPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACommonPlayerController), 1716392428U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_CommonPlayerController_h__Script_CommonGame_2007751258(TEXT("/Script/CommonGame"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_CommonPlayerController_h__Script_CommonGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_CommonPlayerController_h__Script_CommonGame_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonPlayerController_h__Script_CommonGame_2007751258(TEXT("/Script/CommonGame"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonPlayerController_h__Script_CommonGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonPlayerController_h__Script_CommonGame_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

@@ -1133,7 +1133,7 @@ UCommonPlayerInputKey::~UCommonPlayerInputKey() {}
 // ********** End Class UCommonPlayerInputKey ******************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_CommonPlayerInputKey_h__Script_CommonGame_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonPlayerInputKey_h__Script_CommonGame_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ ECommonKeybindForcedHoldStatus_StaticEnum, TEXT("ECommonKeybindForcedHoldStatus"), &Z_Registration_Info_UEnum_ECommonKeybindForcedHoldStatus, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1810116694U) },
@@ -1145,10 +1145,10 @@ struct Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_Com
 		{ Z_Construct_UClass_UCommonPlayerInputKey, UCommonPlayerInputKey::StaticClass, TEXT("UCommonPlayerInputKey"), &Z_Registration_Info_UClass_UCommonPlayerInputKey, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCommonPlayerInputKey), 3986004704U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_CommonPlayerInputKey_h__Script_CommonGame_3635536819(TEXT("/Script/CommonGame"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_CommonPlayerInputKey_h__Script_CommonGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_CommonPlayerInputKey_h__Script_CommonGame_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_CommonPlayerInputKey_h__Script_CommonGame_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_CommonPlayerInputKey_h__Script_CommonGame_Statics::ScriptStructInfo),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_CommonPlayerInputKey_h__Script_CommonGame_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_CommonPlayerInputKey_h__Script_CommonGame_Statics::EnumInfo));
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonPlayerInputKey_h__Script_CommonGame_3635536819(TEXT("/Script/CommonGame"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonPlayerInputKey_h__Script_CommonGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonPlayerInputKey_h__Script_CommonGame_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonPlayerInputKey_h__Script_CommonGame_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonPlayerInputKey_h__Script_CommonGame_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonPlayerInputKey_h__Script_CommonGame_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_CommonPlayerInputKey_h__Script_CommonGame_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

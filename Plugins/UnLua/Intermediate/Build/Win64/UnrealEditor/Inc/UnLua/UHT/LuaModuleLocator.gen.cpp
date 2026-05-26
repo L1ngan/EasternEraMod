@@ -181,15 +181,15 @@ ULuaModuleLocator_ByPackage::~ULuaModuleLocator_ByPackage() {}
 // ********** End Class ULuaModuleLocator_ByPackage ************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h__Script_UnLua_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h__Script_UnLua_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ULuaModuleLocator, ULuaModuleLocator::StaticClass, TEXT("ULuaModuleLocator"), &Z_Registration_Info_UClass_ULuaModuleLocator, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ULuaModuleLocator), 1719721469U) },
 		{ Z_Construct_UClass_ULuaModuleLocator_ByPackage, ULuaModuleLocator_ByPackage::StaticClass, TEXT("ULuaModuleLocator_ByPackage"), &Z_Registration_Info_UClass_ULuaModuleLocator_ByPackage, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ULuaModuleLocator_ByPackage), 2120937090U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h__Script_UnLua_2851985751(TEXT("/Script/UnLua"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h__Script_UnLua_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h__Script_UnLua_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h__Script_UnLua_2851985751(TEXT("/Script/UnLua"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h__Script_UnLua_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaModuleLocator_h__Script_UnLua_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

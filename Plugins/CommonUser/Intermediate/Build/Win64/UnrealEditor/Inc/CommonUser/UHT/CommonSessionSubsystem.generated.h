@@ -27,7 +27,7 @@ struct FPlatformUserId;
 // ********** Begin Class UCommonSession_HostSessionRequest ****************************************
 COMMONUSER_API UClass* Z_Construct_UClass_UCommonSession_HostSessionRequest_NoRegister();
 
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_55_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_55_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCommonSession_HostSessionRequest(); \
 	friend struct Z_Construct_UClass_UCommonSession_HostSessionRequest_Statics; \
@@ -38,7 +38,7 @@ public: \
 	DECLARE_SERIALIZER(UCommonSession_HostSessionRequest)
 
 
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_55_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_55_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCommonSession_HostSessionRequest(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -50,12 +50,12 @@ public: \
 	NO_API virtual ~UCommonSession_HostSessionRequest();
 
 
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_52_PROLOG
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_55_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_52_PROLOG
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_55_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_55_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_55_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_55_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_55_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -65,7 +65,7 @@ class UCommonSession_HostSessionRequest;
 // ********** End Class UCommonSession_HostSessionRequest ******************************************
 
 // ********** Begin Class UCommonSession_SearchResult **********************************************
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_104_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_104_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execGetPingInMs); \
 	DECLARE_FUNCTION(execGetMaxPublicConnections); \
 	DECLARE_FUNCTION(execGetNumOpenPublicConnections); \
@@ -77,7 +77,7 @@ class UCommonSession_HostSessionRequest;
 
 COMMONUSER_API UClass* Z_Construct_UClass_UCommonSession_SearchResult_NoRegister();
 
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_104_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_104_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCommonSession_SearchResult(); \
 	friend struct Z_Construct_UClass_UCommonSession_SearchResult_Statics; \
@@ -88,7 +88,7 @@ public: \
 	DECLARE_SERIALIZER(UCommonSession_SearchResult)
 
 
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_104_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_104_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCommonSession_SearchResult(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -100,13 +100,13 @@ public: \
 	NO_API virtual ~UCommonSession_SearchResult();
 
 
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_101_PROLOG
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_104_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_101_PROLOG
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_104_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_104_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_104_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_104_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_104_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_104_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_104_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -116,7 +116,7 @@ class UCommonSession_SearchResult;
 // ********** End Class UCommonSession_SearchResult ************************************************
 
 // ********** Begin Delegate FCommonSession_FindSessionsFinishedDynamic ****************************
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_151_DELEGATE \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_151_DELEGATE \
 COMMONUSER_API void FCommonSession_FindSessionsFinishedDynamic_DelegateWrapper(const FMulticastScriptDelegate& CommonSession_FindSessionsFinishedDynamic, bool bSucceeded, const FText& ErrorMessage);
 
 
@@ -125,7 +125,7 @@ COMMONUSER_API void FCommonSession_FindSessionsFinishedDynamic_DelegateWrapper(c
 // ********** Begin Class UCommonSession_SearchSessionRequest **************************************
 COMMONUSER_API UClass* Z_Construct_UClass_UCommonSession_SearchSessionRequest_NoRegister();
 
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_157_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_157_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCommonSession_SearchSessionRequest(); \
 	friend struct Z_Construct_UClass_UCommonSession_SearchSessionRequest_Statics; \
@@ -136,7 +136,7 @@ public: \
 	DECLARE_SERIALIZER(UCommonSession_SearchSessionRequest)
 
 
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_157_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_157_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCommonSession_SearchSessionRequest(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -148,12 +148,12 @@ public: \
 	NO_API virtual ~UCommonSession_SearchSessionRequest();
 
 
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_154_PROLOG
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_157_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_154_PROLOG
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_157_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_157_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_157_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_157_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_157_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -163,35 +163,35 @@ class UCommonSession_SearchSessionRequest;
 // ********** End Class UCommonSession_SearchSessionRequest ****************************************
 
 // ********** Begin Delegate FCommonSessionOnUserRequestedSession_Dynamic **************************
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_196_DELEGATE \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_196_DELEGATE \
 COMMONUSER_API void FCommonSessionOnUserRequestedSession_Dynamic_DelegateWrapper(const FMulticastScriptDelegate& CommonSessionOnUserRequestedSession_Dynamic, FPlatformUserId const& LocalPlatformUserId, UCommonSession_SearchResult* RequestedSession, FOnlineResultInformation const& RequestedSessionResult);
 
 
 // ********** End Delegate FCommonSessionOnUserRequestedSession_Dynamic ****************************
 
 // ********** Begin Delegate FCommonSessionOnJoinSessionComplete_Dynamic ***************************
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_204_DELEGATE \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_204_DELEGATE \
 COMMONUSER_API void FCommonSessionOnJoinSessionComplete_Dynamic_DelegateWrapper(const FMulticastScriptDelegate& CommonSessionOnJoinSessionComplete_Dynamic, FOnlineResultInformation const& Result);
 
 
 // ********** End Delegate FCommonSessionOnJoinSessionComplete_Dynamic *****************************
 
 // ********** Begin Delegate FCommonSessionOnCreateSessionComplete_Dynamic *************************
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_212_DELEGATE \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_212_DELEGATE \
 COMMONUSER_API void FCommonSessionOnCreateSessionComplete_Dynamic_DelegateWrapper(const FMulticastScriptDelegate& CommonSessionOnCreateSessionComplete_Dynamic, FOnlineResultInformation const& Result);
 
 
 // ********** End Delegate FCommonSessionOnCreateSessionComplete_Dynamic ***************************
 
 // ********** Begin Delegate FCommonSessionOnSessionInformationChanged_Dynamic *********************
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_232_DELEGATE \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_232_DELEGATE \
 COMMONUSER_API void FCommonSessionOnSessionInformationChanged_Dynamic_DelegateWrapper(const FMulticastScriptDelegate& CommonSessionOnSessionInformationChanged_Dynamic, ECommonSessionInformationState SessionStatus, const FString& GameMode, const FString& MapName);
 
 
 // ********** End Delegate FCommonSessionOnSessionInformationChanged_Dynamic ***********************
 
 // ********** Begin Class UCommonSessionSubsystem **************************************************
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_245_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_245_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execCleanUpSessions); \
 	DECLARE_FUNCTION(execFindSessions); \
 	DECLARE_FUNCTION(execJoinSession); \
@@ -203,7 +203,7 @@ COMMONUSER_API void FCommonSessionOnSessionInformationChanged_Dynamic_DelegateWr
 
 COMMONUSER_API UClass* Z_Construct_UClass_UCommonSessionSubsystem_NoRegister();
 
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_245_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_245_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCommonSessionSubsystem(); \
 	friend struct Z_Construct_UClass_UCommonSessionSubsystem_Statics; \
@@ -216,7 +216,7 @@ public: \
 
 
 
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_245_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_245_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UCommonSessionSubsystem(UCommonSessionSubsystem&&) = delete; \
 	UCommonSessionSubsystem(const UCommonSessionSubsystem&) = delete; \
@@ -226,13 +226,13 @@ public: \
 	NO_API virtual ~UCommonSessionSubsystem();
 
 
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_242_PROLOG
-#define FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_245_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_242_PROLOG
+#define FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_245_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_245_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_245_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_245_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_245_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_245_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h_245_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -242,7 +242,7 @@ class UCommonSessionSubsystem;
 // ********** End Class UCommonSessionSubsystem ****************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CommonUser_Source_CommonUser_Public_CommonSessionSubsystem_h
 
 // ********** Begin Enum ECommonSessionOnlineMode **************************************************
 #define FOREACH_ENUM_ECOMMONSESSIONONLINEMODE(op) \

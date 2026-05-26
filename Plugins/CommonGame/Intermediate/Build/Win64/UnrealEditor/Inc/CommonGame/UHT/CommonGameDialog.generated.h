@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FConfirmationDialogAction *****************************************
-#define FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_13_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_13_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FConfirmationDialogAction_Statics; \
 	COMMONGAME_API static class UScriptStruct* StaticStruct();
 
@@ -28,7 +28,7 @@ struct FConfirmationDialogAction;
 // ********** Begin Class UCommonGameDialogDescriptor **********************************************
 COMMONGAME_API UClass* Z_Construct_UClass_UCommonGameDialogDescriptor_NoRegister();
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_34_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_34_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCommonGameDialogDescriptor(); \
 	friend struct Z_Construct_UClass_UCommonGameDialogDescriptor_Statics; \
@@ -39,7 +39,7 @@ public: \
 	DECLARE_SERIALIZER(UCommonGameDialogDescriptor)
 
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_34_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_34_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCommonGameDialogDescriptor(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -51,12 +51,12 @@ public: \
 	NO_API virtual ~UCommonGameDialogDescriptor();
 
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_31_PROLOG
-#define FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_34_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_31_PROLOG
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_34_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_34_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_34_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_34_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_34_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -68,7 +68,7 @@ class UCommonGameDialogDescriptor;
 // ********** Begin Class UCommonGameDialog ********************************************************
 COMMONGAME_API UClass* Z_Construct_UClass_UCommonGameDialog_NoRegister();
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_63_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_63_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCommonGameDialog(); \
 	friend struct Z_Construct_UClass_UCommonGameDialog_Statics; \
@@ -79,7 +79,7 @@ public: \
 	DECLARE_SERIALIZER(UCommonGameDialog)
 
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_63_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_63_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UCommonGameDialog(UCommonGameDialog&&) = delete; \
 	UCommonGameDialog(const UCommonGameDialog&) = delete; \
@@ -89,12 +89,12 @@ public: \
 	NO_API virtual ~UCommonGameDialog();
 
 
-#define FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_60_PROLOG
-#define FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_63_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_60_PROLOG
+#define FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_63_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_63_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_63_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_63_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h_63_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -104,6 +104,6 @@ class UCommonGameDialog;
 // ********** End Class UCommonGameDialog **********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

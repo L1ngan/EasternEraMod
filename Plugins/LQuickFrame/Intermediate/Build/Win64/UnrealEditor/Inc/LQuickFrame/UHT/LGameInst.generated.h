@@ -24,14 +24,14 @@ enum class EEnterGameMode : uint8;
 enum class ESpawnActorCollisionHandlingMethod : uint8;
 
 // ********** Begin Delegate FOnUpdateGamePlaySpeed ************************************************
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_10_DELEGATE \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_10_DELEGATE \
 LQUICKFRAME_API void FOnUpdateGamePlaySpeed_DelegateWrapper(const FMulticastScriptDelegate& OnUpdateGamePlaySpeed, float NewSpeed);
 
 
 // ********** End Delegate FOnUpdateGamePlaySpeed **************************************************
 
 // ********** Begin Class ULGameInst ***************************************************************
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execCheckLowerThanVersion); \
 	DECLARE_FUNCTION(execSetOpenLoadingState); \
 	DECLARE_FUNCTION(execGetCurLevel); \
@@ -54,10 +54,10 @@ LQUICKFRAME_API void FOnUpdateGamePlaySpeed_DelegateWrapper(const FMulticastScri
 	DECLARE_FUNCTION(execGetActor);
 
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_14_CALLBACK_WRAPPERS
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_14_CALLBACK_WRAPPERS
 LQUICKFRAME_API UClass* Z_Construct_UClass_ULGameInst_NoRegister();
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_14_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesULGameInst(); \
 	friend struct Z_Construct_UClass_ULGameInst_Statics; \
@@ -68,7 +68,7 @@ public: \
 	DECLARE_SERIALIZER(ULGameInst)
 
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_14_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_14_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ULGameInst(ULGameInst&&) = delete; \
 	ULGameInst(const ULGameInst&) = delete; \
@@ -78,14 +78,14 @@ public: \
 	NO_API virtual ~ULGameInst();
 
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_11_PROLOG
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_14_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_11_PROLOG
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_14_CALLBACK_WRAPPERS \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_14_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_14_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_14_CALLBACK_WRAPPERS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_14_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -95,6 +95,6 @@ class ULGameInst;
 // ********** End Class ULGameInst *****************************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameInst_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -21,7 +21,7 @@ class URHS_CollisionShape;
 struct FLinearColor;
 
 // ********** Begin Class ARHS_AdaptableCollisionActor *********************************************
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execSetCollisionOffset); \
 	DECLARE_FUNCTION(execSetCollisionShapeInfo); \
 	DECLARE_FUNCTION(execUpdateCollisionShapeInfo); \
@@ -31,7 +31,7 @@ struct FLinearColor;
 
 AURORADEVS_RHS_API UClass* Z_Construct_UClass_ARHS_AdaptableCollisionActor_NoRegister();
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h_19_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h_19_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesARHS_AdaptableCollisionActor(); \
 	friend struct Z_Construct_UClass_ARHS_AdaptableCollisionActor_Statics; \
@@ -42,7 +42,7 @@ public: \
 	DECLARE_SERIALIZER(ARHS_AdaptableCollisionActor)
 
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h_19_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h_19_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ARHS_AdaptableCollisionActor(ARHS_AdaptableCollisionActor&&) = delete; \
 	ARHS_AdaptableCollisionActor(const ARHS_AdaptableCollisionActor&) = delete; \
@@ -52,13 +52,13 @@ public: \
 	NO_API virtual ~ARHS_AdaptableCollisionActor();
 
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h_16_PROLOG
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h_19_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h_16_PROLOG
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h_19_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h_19_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h_19_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h_19_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h_19_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -68,6 +68,6 @@ class ARHS_AdaptableCollisionActor;
 // ********** End Class ARHS_AdaptableCollisionActor ***********************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AdaptableCollisionActor_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

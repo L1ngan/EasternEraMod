@@ -108,14 +108,14 @@ AModularPawn::~AModularPawn() {}
 // ********** End Class AModularPawn ***************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularPawn_h__Script_ModularGameplayActors_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularPawn_h__Script_ModularGameplayActors_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_AModularPawn, AModularPawn::StaticClass, TEXT("AModularPawn"), &Z_Registration_Info_UClass_AModularPawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AModularPawn), 3009244920U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularPawn_h__Script_ModularGameplayActors_3457656883(TEXT("/Script/ModularGameplayActors"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularPawn_h__Script_ModularGameplayActors_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularPawn_h__Script_ModularGameplayActors_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularPawn_h__Script_ModularGameplayActors_3457656883(TEXT("/Script/ModularGameplayActors"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularPawn_h__Script_ModularGameplayActors_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularPawn_h__Script_ModularGameplayActors_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

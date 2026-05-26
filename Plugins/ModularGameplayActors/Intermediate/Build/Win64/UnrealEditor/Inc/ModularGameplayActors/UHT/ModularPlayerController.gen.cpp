@@ -108,14 +108,14 @@ AModularPlayerController::~AModularPlayerController() {}
 // ********** End Class AModularPlayerController ***************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularPlayerController_h__Script_ModularGameplayActors_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularPlayerController_h__Script_ModularGameplayActors_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_AModularPlayerController, AModularPlayerController::StaticClass, TEXT("AModularPlayerController"), &Z_Registration_Info_UClass_AModularPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AModularPlayerController), 293873915U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularPlayerController_h__Script_ModularGameplayActors_1778219397(TEXT("/Script/ModularGameplayActors"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularPlayerController_h__Script_ModularGameplayActors_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularPlayerController_h__Script_ModularGameplayActors_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularPlayerController_h__Script_ModularGameplayActors_1778219397(TEXT("/Script/ModularGameplayActors"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularPlayerController_h__Script_ModularGameplayActors_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_ModularGameplayActors_Source_ModularGameplayActors_Public_ModularPlayerController_h__Script_ModularGameplayActors_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

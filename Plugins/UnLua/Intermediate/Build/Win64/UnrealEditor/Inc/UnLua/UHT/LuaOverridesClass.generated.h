@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class ULuaOverridesClass *******************************************************
 UNLUA_API UClass* Z_Construct_UClass_ULuaOverridesClass_NoRegister();
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaOverridesClass_h_24_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaOverridesClass_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesULuaOverridesClass(); \
 	friend struct Z_Construct_UClass_ULuaOverridesClass_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(ULuaOverridesClass)
 
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaOverridesClass_h_24_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaOverridesClass_h_24_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ULuaOverridesClass(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -42,12 +42,12 @@ public: \
 	NO_API virtual ~ULuaOverridesClass();
 
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaOverridesClass_h_21_PROLOG
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaOverridesClass_h_24_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaOverridesClass_h_21_PROLOG
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaOverridesClass_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaOverridesClass_h_24_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaOverridesClass_h_24_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaOverridesClass_h_24_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaOverridesClass_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -57,6 +57,6 @@ class ULuaOverridesClass;
 // ********** End Class ULuaOverridesClass *********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaOverridesClass_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaOverridesClass_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

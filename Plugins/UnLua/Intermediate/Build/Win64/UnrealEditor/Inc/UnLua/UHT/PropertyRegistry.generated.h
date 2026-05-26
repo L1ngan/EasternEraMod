@@ -17,6 +17,6 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_UnLua_Source_UnLua_Private_Registries_PropertyRegistry_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Private_Registries_PropertyRegistry_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

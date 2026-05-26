@@ -6,7 +6,7 @@
 /NAME:"UnrealEditor-LuaRapidjson.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"G:/ModProject/Intermediate/Build/Win64/x64/EasternEraEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"G:/ModProject/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
 "G:/ModProject/Plugins/UnLuaExtensions/LuaRapidjson/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaRapidjson/LuaRapidjsonModule.cpp.obj"
 "G:/ModProject/Plugins/UnLuaExtensions/LuaRapidjson/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaRapidjson/Document.cpp.obj"
 "G:/ModProject/Plugins/UnLuaExtensions/LuaRapidjson/Intermediate/Build/Win64/x64/UnrealEditor/Development/LuaRapidjson/rapidjson.cpp.obj"

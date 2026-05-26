@@ -17,13 +17,13 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class ULuaDelegateHandler ******************************************************
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaDelegateHandler_h_31_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaDelegateHandler_h_31_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execDummy);
 
 
 UNLUA_API UClass* Z_Construct_UClass_ULuaDelegateHandler_NoRegister();
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaDelegateHandler_h_31_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaDelegateHandler_h_31_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesULuaDelegateHandler(); \
 	friend struct Z_Construct_UClass_ULuaDelegateHandler_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(ULuaDelegateHandler)
 
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaDelegateHandler_h_31_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaDelegateHandler_h_31_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ULuaDelegateHandler(ULuaDelegateHandler&&) = delete; \
 	ULuaDelegateHandler(const ULuaDelegateHandler&) = delete; \
@@ -44,13 +44,13 @@ public: \
 	NO_API virtual ~ULuaDelegateHandler();
 
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaDelegateHandler_h_26_PROLOG
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaDelegateHandler_h_31_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaDelegateHandler_h_26_PROLOG
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaDelegateHandler_h_31_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaDelegateHandler_h_31_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaDelegateHandler_h_31_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaDelegateHandler_h_31_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaDelegateHandler_h_31_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaDelegateHandler_h_31_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaDelegateHandler_h_31_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -60,6 +60,6 @@ class ULuaDelegateHandler;
 // ********** End Class ULuaDelegateHandler ********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaDelegateHandler_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaDelegateHandler_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -20,14 +20,14 @@ class AController;
 struct FGuid;
 
 // ********** Begin Delegate FOnRegistedRoleChange *************************************************
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h_7_DELEGATE \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h_7_DELEGATE \
 LQUICKFRAME_API void FOnRegistedRoleChange_DelegateWrapper(const FMulticastScriptDelegate& OnRegistedRoleChange, FGuid Id, bool bRegist);
 
 
 // ********** End Delegate FOnRegistedRoleChange ***************************************************
 
 // ********** Begin Class ULGameRoleMng ************************************************************
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execGetAllRoles); \
 	DECLARE_FUNCTION(execFindRole); \
 	DECLARE_FUNCTION(execUnRegistRole); \
@@ -36,7 +36,7 @@ LQUICKFRAME_API void FOnRegistedRoleChange_DelegateWrapper(const FMulticastScrip
 
 LQUICKFRAME_API UClass* Z_Construct_UClass_ULGameRoleMng_NoRegister();
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h_13_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesULGameRoleMng(); \
 	friend struct Z_Construct_UClass_ULGameRoleMng_Statics; \
@@ -47,7 +47,7 @@ public: \
 	DECLARE_SERIALIZER(ULGameRoleMng)
 
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h_13_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h_13_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ULGameRoleMng(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -59,13 +59,13 @@ public: \
 	NO_API virtual ~ULGameRoleMng();
 
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h_10_PROLOG
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h_13_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h_10_PROLOG
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h_13_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h_13_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h_13_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -75,6 +75,6 @@ class ULGameRoleMng;
 // ********** End Class ULGameRoleMng **************************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

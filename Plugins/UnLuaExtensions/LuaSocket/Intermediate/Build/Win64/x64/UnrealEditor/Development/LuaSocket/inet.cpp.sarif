@@ -10,13 +10,13 @@
                         "text": "“gai_strerror”: 宏重定义"
                     },
                     "analysisTarget": {
-                        "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/inet.cpp"
+                        "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/inet.cpp"
                     },
                     "locations": [
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/inet.cpp"
+                                    "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/inet.cpp"
                                 },
                                 "region": {
                                     "startLine": 13,
@@ -55,13 +55,13 @@
                         "text": "'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings"
                     },
                     "analysisTarget": {
-                        "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/inet.cpp"
+                        "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/inet.cpp"
                     },
                     "locations": [
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/inet.cpp"
+                                    "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/inet.cpp"
                                 },
                                 "region": {
                                     "startLine": 139,
@@ -80,13 +80,13 @@
                         "text": "'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings"
                     },
                     "analysisTarget": {
-                        "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/inet.cpp"
+                        "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/inet.cpp"
                     },
                     "locations": [
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/inet.cpp"
+                                    "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/inet.cpp"
                                 },
                                 "region": {
                                     "startLine": 342,
@@ -105,13 +105,13 @@
                         "text": "'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details."
                     },
                     "analysisTarget": {
-                        "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/inet.cpp"
+                        "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/inet.cpp"
                     },
                     "locations": [
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/inet.cpp"
+                                    "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/inet.cpp"
                                 },
                                 "region": {
                                     "startLine": 503,

@@ -10,13 +10,13 @@
                         "text": "“gai_strerror”: 宏重定义"
                     },
                     "analysisTarget": {
-                        "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/udp.cpp"
+                        "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/udp.cpp"
                     },
                     "locations": [
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "file:///G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Source/src/udp.cpp"
+                                    "uri": "file:///G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Source/src/udp.cpp"
                                 },
                                 "region": {
                                     "startLine": 17,

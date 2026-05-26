@@ -1175,7 +1175,7 @@ UScriptStruct* Z_Construct_UScriptStruct_FGameAbilityStruct()
 // ********** End ScriptStruct FGameAbilityStruct **************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_AbilityStruct_h__Script_GASFramework_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_AbilityStruct_h__Script_GASFramework_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
 		{ FControlEffectAnimMontage::StaticStruct, Z_Construct_UScriptStruct_FControlEffectAnimMontage_Statics::NewStructOps, TEXT("ControlEffectAnimMontage"), &Z_Registration_Info_UScriptStruct_FControlEffectAnimMontage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FControlEffectAnimMontage), 4294510120U) },
@@ -1183,9 +1183,9 @@ struct Z_CompiledInDeferFile_FID_ModProject_Plugins_GASFramework_Source_GASFrame
 		{ FGameAbilityStruct::StaticStruct, Z_Construct_UScriptStruct_FGameAbilityStruct_Statics::NewStructOps, TEXT("GameAbilityStruct"), &Z_Registration_Info_UScriptStruct_FGameAbilityStruct, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGameAbilityStruct), 3615339417U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_AbilityStruct_h__Script_GASFramework_1089111083(TEXT("/Script/GASFramework"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_AbilityStruct_h__Script_GASFramework_1089111083(TEXT("/Script/GASFramework"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_AbilityStruct_h__Script_GASFramework_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_AbilityStruct_h__Script_GASFramework_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_AbilityStruct_h__Script_GASFramework_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_AbilityStruct_h__Script_GASFramework_Statics::ScriptStructInfo),
 	nullptr, 0);
 // ********** End Registration *********************************************************************
 

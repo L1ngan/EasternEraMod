@@ -2473,7 +2473,7 @@ UScriptStruct* Z_Construct_UScriptStruct_FAbilityProjectileStruct()
 // ********** End ScriptStruct FAbilityProjectileStruct ********************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h__Script_GASFramework_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h__Script_GASFramework_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EProjectileMoveType_StaticEnum, TEXT("EProjectileMoveType"), &Z_Registration_Info_UEnum_EProjectileMoveType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 692421392U) },
@@ -2497,10 +2497,10 @@ struct Z_CompiledInDeferFile_FID_ModProject_Plugins_GASFramework_Source_GASFrame
 		{ FAbilityProjectileStruct::StaticStruct, Z_Construct_UScriptStruct_FAbilityProjectileStruct_Statics::NewStructOps, TEXT("AbilityProjectileStruct"), &Z_Registration_Info_UScriptStruct_FAbilityProjectileStruct, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FAbilityProjectileStruct), 2403324607U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h__Script_GASFramework_3497088391(TEXT("/Script/GASFramework"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h__Script_GASFramework_3497088391(TEXT("/Script/GASFramework"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h__Script_GASFramework_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h__Script_GASFramework_Statics::ScriptStructInfo),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h__Script_GASFramework_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h__Script_GASFramework_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h__Script_GASFramework_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h__Script_GASFramework_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h__Script_GASFramework_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_GASFramework_Source_GASFramework_Public_ProjectileStruct_h__Script_GASFramework_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

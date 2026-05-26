@@ -309,7 +309,7 @@ UCommonGameDialog::~UCommonGameDialog() {}
 // ********** End Class UCommonGameDialog **********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h__Script_CommonGame_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h__Script_CommonGame_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
 		{ FConfirmationDialogAction::StaticStruct, Z_Construct_UScriptStruct_FConfirmationDialogAction_Statics::NewStructOps, TEXT("ConfirmationDialogAction"), &Z_Registration_Info_UScriptStruct_FConfirmationDialogAction, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FConfirmationDialogAction), 2998532954U) },
@@ -319,9 +319,9 @@ struct Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_Mes
 		{ Z_Construct_UClass_UCommonGameDialog, UCommonGameDialog::StaticClass, TEXT("UCommonGameDialog"), &Z_Registration_Info_UClass_UCommonGameDialog, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCommonGameDialog), 2272085943U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h__Script_CommonGame_4006618281(TEXT("/Script/CommonGame"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h__Script_CommonGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h__Script_CommonGame_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h__Script_CommonGame_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h__Script_CommonGame_Statics::ScriptStructInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h__Script_CommonGame_4006618281(TEXT("/Script/CommonGame"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h__Script_CommonGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h__Script_CommonGame_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h__Script_CommonGame_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CommonGame_Source_Public_Messaging_CommonGameDialog_h__Script_CommonGame_Statics::ScriptStructInfo),
 	nullptr, 0);
 // ********** End Registration *********************************************************************
 

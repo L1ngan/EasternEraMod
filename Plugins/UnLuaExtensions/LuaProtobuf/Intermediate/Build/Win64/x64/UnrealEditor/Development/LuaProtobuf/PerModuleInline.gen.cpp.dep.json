@@ -1,10 +1,10 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "g:\\modproject\\plugins\\unluaextensions\\luaprotobuf\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\luaprotobuf\\permoduleinline.gen.cpp",
+        "Source": "g:\\easterneramod\\plugins\\unluaextensions\\luaprotobuf\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\luaprotobuf\\permoduleinline.gen.cpp",
         "ProvidedModule": "",
         "Includes": [
-            "g:\\modproject\\plugins\\unluaextensions\\luaprotobuf\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\luaprotobuf\\definitions.h",
+            "g:\\easterneramod\\plugins\\unluaextensions\\luaprotobuf\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\luaprotobuf\\definitions.h",
             "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl",
             "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\core\\public\\coreglobals.h",
             "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\core\\public\\containers\\unrealstring.h",

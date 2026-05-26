@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class ARHS_ProjectileBase ******************************************************
 AURORADEVS_RHS_API UClass* Z_Construct_UClass_ARHS_ProjectileBase_NoRegister();
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_ProjectileBase_h_13_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_ProjectileBase_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesARHS_ProjectileBase(); \
 	friend struct Z_Construct_UClass_ARHS_ProjectileBase_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(ARHS_ProjectileBase)
 
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_ProjectileBase_h_13_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_ProjectileBase_h_13_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ARHS_ProjectileBase(ARHS_ProjectileBase&&) = delete; \
 	ARHS_ProjectileBase(const ARHS_ProjectileBase&) = delete; \
@@ -40,12 +40,12 @@ public: \
 	NO_API virtual ~ARHS_ProjectileBase();
 
 
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_ProjectileBase_h_10_PROLOG
-#define FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_ProjectileBase_h_13_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_ProjectileBase_h_10_PROLOG
+#define FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_ProjectileBase_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_ProjectileBase_h_13_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_ProjectileBase_h_13_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_ProjectileBase_h_13_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_ProjectileBase_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -55,6 +55,6 @@ class ARHS_ProjectileBase;
 // ********** End Class ARHS_ProjectileBase ********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_ProjectileBase_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_ProjectileBase_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -2921,7 +2921,7 @@ ULoadingScreenSettings::~ULoadingScreenSettings() {}
 // ********** End Class ULoadingScreenSettings *****************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_LoadingScreenSettings_h__Script_AsyncLoadingScreen_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_LoadingScreenSettings_h__Script_AsyncLoadingScreen_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EAsyncLoadingScreenLayout_StaticEnum, TEXT("EAsyncLoadingScreenLayout"), &Z_Registration_Info_UEnum_EAsyncLoadingScreenLayout, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2492976519U) },
@@ -2949,10 +2949,10 @@ struct Z_CompiledInDeferFile_FID_ModProject_Plugins_AsyncLoadingScreen_Source_As
 		{ Z_Construct_UClass_ULoadingScreenSettings, ULoadingScreenSettings::StaticClass, TEXT("ULoadingScreenSettings"), &Z_Registration_Info_UClass_ULoadingScreenSettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ULoadingScreenSettings), 2132084515U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_LoadingScreenSettings_h__Script_AsyncLoadingScreen_1182317732(TEXT("/Script/AsyncLoadingScreen"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_LoadingScreenSettings_h__Script_AsyncLoadingScreen_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_LoadingScreenSettings_h__Script_AsyncLoadingScreen_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_LoadingScreenSettings_h__Script_AsyncLoadingScreen_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_LoadingScreenSettings_h__Script_AsyncLoadingScreen_Statics::ScriptStructInfo),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_LoadingScreenSettings_h__Script_AsyncLoadingScreen_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_LoadingScreenSettings_h__Script_AsyncLoadingScreen_Statics::EnumInfo));
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_LoadingScreenSettings_h__Script_AsyncLoadingScreen_1182317732(TEXT("/Script/AsyncLoadingScreen"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_LoadingScreenSettings_h__Script_AsyncLoadingScreen_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_LoadingScreenSettings_h__Script_AsyncLoadingScreen_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_LoadingScreenSettings_h__Script_AsyncLoadingScreen_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_LoadingScreenSettings_h__Script_AsyncLoadingScreen_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_LoadingScreenSettings_h__Script_AsyncLoadingScreen_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AsyncLoadingScreen_Source_AsyncLoadingScreen_Public_LoadingScreenSettings_h__Script_AsyncLoadingScreen_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -1,12 +1,12 @@
-"G:/ModProject/Plugins/LQuickFrame/Intermediate/Build/Win64/x64/UnrealEditor/Development/LQuickFrame/Module.LQuickFrame.cpp"
-@"G:/ModProject/Plugins/LQuickFrame/Intermediate/Build/Win64/x64/UnrealEditor/Development/LQuickFrame/LQuickFrame.Shared.rsp"
-/FI"G:/ModProject/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
-/FI"G:/ModProject/Plugins/LQuickFrame/Intermediate/Build/Win64/x64/UnrealEditor/Development/LQuickFrame/Definitions.LQuickFrame.h"
-/Yu"G:/ModProject/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
-/Fp"G:/ModProject/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.pch"
-/Fo"G:/ModProject/Plugins/LQuickFrame/Intermediate/Build/Win64/x64/UnrealEditor/Development/LQuickFrame/Module.LQuickFrame.cpp.obj"
-/experimental:log "G:/ModProject/Plugins/LQuickFrame/Intermediate/Build/Win64/x64/UnrealEditor/Development/LQuickFrame/Module.LQuickFrame.cpp.sarif"
-/sourceDependencies "G:/ModProject/Plugins/LQuickFrame/Intermediate/Build/Win64/x64/UnrealEditor/Development/LQuickFrame/Module.LQuickFrame.cpp.dep.json"
+"G:/EasternEraMod/Plugins/LQuickFrame/Intermediate/Build/Win64/x64/UnrealEditor/Development/LQuickFrame/Module.LQuickFrame.cpp"
+@"G:/EasternEraMod/Plugins/LQuickFrame/Intermediate/Build/Win64/x64/UnrealEditor/Development/LQuickFrame/LQuickFrame.Shared.rsp"
+/FI"G:/EasternEraMod/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
+/FI"G:/EasternEraMod/Plugins/LQuickFrame/Intermediate/Build/Win64/x64/UnrealEditor/Development/LQuickFrame/Definitions.LQuickFrame.h"
+/Yu"G:/EasternEraMod/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
+/Fp"G:/EasternEraMod/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.pch"
+/Fo"G:/EasternEraMod/Plugins/LQuickFrame/Intermediate/Build/Win64/x64/UnrealEditor/Development/LQuickFrame/Module.LQuickFrame.cpp.obj"
+/experimental:log "G:/EasternEraMod/Plugins/LQuickFrame/Intermediate/Build/Win64/x64/UnrealEditor/Development/LQuickFrame/Module.LQuickFrame.cpp.sarif"
+/sourceDependencies "G:/EasternEraMod/Plugins/LQuickFrame/Intermediate/Build/Win64/x64/UnrealEditor/Development/LQuickFrame/Module.LQuickFrame.cpp.dep.json"
 /d2ssa-cfg-question-
 /Zc:inline
 /nologo

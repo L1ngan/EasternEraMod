@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class ULuaEnvLocator ***********************************************************
 UNLUA_API UClass* Z_Construct_UClass_ULuaEnvLocator_NoRegister();
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_25_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_25_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesULuaEnvLocator(); \
 	friend struct Z_Construct_UClass_ULuaEnvLocator_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(ULuaEnvLocator)
 
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_25_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_25_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ULuaEnvLocator(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -42,12 +42,12 @@ public: \
 	NO_API virtual ~ULuaEnvLocator();
 
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_22_PROLOG
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_25_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_22_PROLOG
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_25_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_25_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_25_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_25_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_25_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -59,7 +59,7 @@ class ULuaEnvLocator;
 // ********** Begin Class ULuaEnvLocator_ByGameInstance ********************************************
 UNLUA_API UClass* Z_Construct_UClass_ULuaEnvLocator_ByGameInstance_NoRegister();
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_39_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_39_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesULuaEnvLocator_ByGameInstance(); \
 	friend struct Z_Construct_UClass_ULuaEnvLocator_ByGameInstance_Statics; \
@@ -70,7 +70,7 @@ public: \
 	DECLARE_SERIALIZER(ULuaEnvLocator_ByGameInstance)
 
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_39_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_39_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ULuaEnvLocator_ByGameInstance(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -82,12 +82,12 @@ public: \
 	NO_API virtual ~ULuaEnvLocator_ByGameInstance();
 
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_36_PROLOG
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_39_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_36_PROLOG
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_39_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_39_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_39_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_39_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h_39_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -97,6 +97,6 @@ class ULuaEnvLocator_ByGameInstance;
 // ********** End Class ULuaEnvLocator_ByGameInstance **********************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_LuaEnvLocator_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

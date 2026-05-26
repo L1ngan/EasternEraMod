@@ -433,14 +433,14 @@ ULGameRoleMng::~ULGameRoleMng() {}
 // ********** End Class ULGameRoleMng **************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h__Script_LQuickFrame_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h__Script_LQuickFrame_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ULGameRoleMng, ULGameRoleMng::StaticClass, TEXT("ULGameRoleMng"), &Z_Registration_Info_UClass_ULGameRoleMng, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ULGameRoleMng), 2227430178U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h__Script_LQuickFrame_3897251995(TEXT("/Script/LQuickFrame"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h__Script_LQuickFrame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h__Script_LQuickFrame_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h__Script_LQuickFrame_3897251995(TEXT("/Script/LQuickFrame"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h__Script_LQuickFrame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameRoleMng_h__Script_LQuickFrame_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

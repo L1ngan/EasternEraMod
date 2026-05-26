@@ -36,16 +36,9 @@
 /FUNCTIONPADMIN:6
 /NOIMPLIB
 /NOEXP
-"G:/ModProject/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
-"G:/ModProject/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPluginEditor/Module.CreateModPluginEditor.cpp.obj"
-"G:/ModProject/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPluginEditor/CreateModPluginEditor.cpp.obj"
-"G:/ModProject/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPluginEditor/CreateModWindow.cpp.obj"
-"G:/ModProject/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPluginEditor/ModInfoDataCustomization.cpp.obj"
-"G:/ModProject/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPluginEditor/ModInfoEditorCommands.cpp.obj"
-"G:/ModProject/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPluginEditor/ModInfoEditorData.cpp.obj"
-"G:/ModProject/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPluginEditor/ModInfoEditorWindow.cpp.obj"
-"G:/ModProject/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPluginEditor/PackageModWindow.cpp.obj"
-"G:/ModProject/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPluginEditor/Default.rc2.res"
+"G:/EasternEraMod/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"G:/EasternEraMod/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPluginEditor/Module.CreateModPluginEditor.cpp.obj"
+"G:/EasternEraMod/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPluginEditor/Default.rc2.res"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/Slate/UnrealEditor-Slate.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/SlateCore/UnrealEditor-SlateCore.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/EditorWidgets/UnrealEditor-EditorWidgets.lib"
@@ -64,7 +57,7 @@
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/CoreUObject/UnrealEditor-CoreUObject.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/Engine/UnrealEditor-Engine.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/EditorStyle/UnrealEditor-EditorStyle.lib"
-"G:/ModProject/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPlugin/UnrealEditor-CreateModPlugin.lib"
+"G:/EasternEraMod/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPlugin/UnrealEditor-CreateModPlugin.lib"
 "delayimp.lib"
 "wininet.lib"
 "rpcrt4.lib"
@@ -90,6 +83,6 @@
 "synchronization.lib"
 "dwmapi.lib"
 "imm32.lib"
-/OUT:"G:/ModProject/Plugins/CreateModPlugin/Binaries/Win64/UnrealEditor-CreateModPluginEditor.dll"
-/PDB:"G:/ModProject/Plugins/CreateModPlugin/Binaries/Win64/UnrealEditor-CreateModPluginEditor.pdb"
+/OUT:"G:/EasternEraMod/Plugins/CreateModPlugin/Binaries/Win64/UnrealEditor-CreateModPluginEditor.dll"
+/PDB:"G:/EasternEraMod/Plugins/CreateModPlugin/Binaries/Win64/UnrealEditor-CreateModPluginEditor.pdb"
 /ignore:4078

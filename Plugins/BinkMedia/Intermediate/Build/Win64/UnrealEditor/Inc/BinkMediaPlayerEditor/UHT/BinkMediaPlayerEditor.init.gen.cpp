@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeBinkMediaPlayerEditor_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000040,
-				0x292C29A7,
+				0x1FFAA4FD,
 				0x35B49F71,
 				METADATA_PARAMS(0, nullptr)
 			};
@@ -25,5 +25,5 @@ void EmptyLinkFunctionForGeneratedCodeBinkMediaPlayerEditor_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_BinkMediaPlayerEditor.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_BinkMediaPlayerEditor(Z_Construct_UPackage__Script_BinkMediaPlayerEditor, TEXT("/Script/BinkMediaPlayerEditor"), Z_Registration_Info_UPackage__Script_BinkMediaPlayerEditor, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x292C29A7, 0x35B49F71));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_BinkMediaPlayerEditor(Z_Construct_UPackage__Script_BinkMediaPlayerEditor, TEXT("/Script/BinkMediaPlayerEditor"), Z_Registration_Info_UPackage__Script_BinkMediaPlayerEditor, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x1FFAA4FD, 0x35B49F71));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

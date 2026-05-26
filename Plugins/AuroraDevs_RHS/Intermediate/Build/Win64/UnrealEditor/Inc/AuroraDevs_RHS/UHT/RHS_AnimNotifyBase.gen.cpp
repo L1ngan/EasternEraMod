@@ -130,14 +130,14 @@ URHS_AnimNotifyBase::~URHS_AnimNotifyBase() {}
 // ********** End Class URHS_AnimNotifyBase ********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AnimNotifyBase_h__Script_AuroraDevs_RHS_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AnimNotifyBase_h__Script_AuroraDevs_RHS_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_URHS_AnimNotifyBase, URHS_AnimNotifyBase::StaticClass, TEXT("URHS_AnimNotifyBase"), &Z_Registration_Info_UClass_URHS_AnimNotifyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(URHS_AnimNotifyBase), 3554631225U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AnimNotifyBase_h__Script_AuroraDevs_RHS_1878069330(TEXT("/Script/AuroraDevs_RHS"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AnimNotifyBase_h__Script_AuroraDevs_RHS_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AnimNotifyBase_h__Script_AuroraDevs_RHS_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AnimNotifyBase_h__Script_AuroraDevs_RHS_1878069330(TEXT("/Script/AuroraDevs_RHS"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AnimNotifyBase_h__Script_AuroraDevs_RHS_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_AnimNotifyBase_h__Script_AuroraDevs_RHS_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

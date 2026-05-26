@@ -505,7 +505,7 @@ UUnLuaEditorSettings::~UUnLuaEditorSettings() {}
 // ********** End Class UUnLuaEditorSettings *******************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLuaEditor_Private_UnLuaEditorSettings_h__Script_UnLuaEditor_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLuaEditor_Private_UnLuaEditorSettings_h__Script_UnLuaEditor_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EUpdateMode_StaticEnum, TEXT("EUpdateMode"), &Z_Registration_Info_UEnum_EUpdateMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1465877920U) },
@@ -515,10 +515,10 @@ struct Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLuaEditor_Pri
 		{ Z_Construct_UClass_UUnLuaEditorSettings, UUnLuaEditorSettings::StaticClass, TEXT("UUnLuaEditorSettings"), &Z_Registration_Info_UClass_UUnLuaEditorSettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UUnLuaEditorSettings), 676574351U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLuaEditor_Private_UnLuaEditorSettings_h__Script_UnLuaEditor_2427539056(TEXT("/Script/UnLuaEditor"),
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLuaEditor_Private_UnLuaEditorSettings_h__Script_UnLuaEditor_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLuaEditor_Private_UnLuaEditorSettings_h__Script_UnLuaEditor_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLuaEditor_Private_UnLuaEditorSettings_h__Script_UnLuaEditor_2427539056(TEXT("/Script/UnLuaEditor"),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLuaEditor_Private_UnLuaEditorSettings_h__Script_UnLuaEditor_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLuaEditor_Private_UnLuaEditorSettings_h__Script_UnLuaEditor_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLuaEditor_Private_UnLuaEditorSettings_h__Script_UnLuaEditor_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_UnLua_Source_UnLuaEditor_Private_UnLuaEditorSettings_h__Script_UnLuaEditor_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLuaEditor_Private_UnLuaEditorSettings_h__Script_UnLuaEditor_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_UnLua_Source_UnLuaEditor_Private_UnLuaEditorSettings_h__Script_UnLuaEditor_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

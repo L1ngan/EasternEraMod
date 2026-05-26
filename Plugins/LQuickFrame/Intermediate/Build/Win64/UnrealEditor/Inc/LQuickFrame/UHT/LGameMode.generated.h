@@ -20,14 +20,14 @@ class UActorComponent;
 class UObject;
 
 // ********** Begin Class ALGameMode ***************************************************************
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameMode_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameMode_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execOnSubLevelLoaded); \
 	DECLARE_FUNCTION(execGetModeComp);
 
 
 LQUICKFRAME_API UClass* Z_Construct_UClass_ALGameMode_NoRegister();
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameMode_h_10_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameMode_h_10_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesALGameMode(); \
 	friend struct Z_Construct_UClass_ALGameMode_Statics; \
@@ -38,7 +38,7 @@ public: \
 	DECLARE_SERIALIZER(ALGameMode)
 
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameMode_h_10_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameMode_h_10_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ALGameMode(ALGameMode&&) = delete; \
 	ALGameMode(const ALGameMode&) = delete; \
@@ -48,13 +48,13 @@ public: \
 	NO_API virtual ~ALGameMode();
 
 
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameMode_h_7_PROLOG
-#define FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameMode_h_10_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameMode_h_7_PROLOG
+#define FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameMode_h_10_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameMode_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameMode_h_10_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameMode_h_10_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameMode_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameMode_h_10_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameMode_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -64,6 +64,6 @@ class ALGameMode;
 // ********** End Class ALGameMode *****************************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameMode_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_LQuickFrame_Source_LQuickFrame_Mode_LGameMode_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

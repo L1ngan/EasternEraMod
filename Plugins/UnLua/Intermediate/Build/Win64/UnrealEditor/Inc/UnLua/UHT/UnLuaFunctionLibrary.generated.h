@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class UUnLuaFunctionLibrary ****************************************************
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_UnLuaFunctionLibrary_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_UnLuaFunctionLibrary_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execHotReload); \
 	DECLARE_FUNCTION(execGetFileLastModifiedTimestamp); \
 	DECLARE_FUNCTION(execGetScriptRootPath);
@@ -25,7 +25,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 UNLUA_API UClass* Z_Construct_UClass_UUnLuaFunctionLibrary_NoRegister();
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_UnLuaFunctionLibrary_h_24_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_UnLuaFunctionLibrary_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUUnLuaFunctionLibrary(); \
 	friend struct Z_Construct_UClass_UUnLuaFunctionLibrary_Statics; \
@@ -36,7 +36,7 @@ public: \
 	DECLARE_SERIALIZER(UUnLuaFunctionLibrary)
 
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_UnLuaFunctionLibrary_h_24_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_UnLuaFunctionLibrary_h_24_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UUnLuaFunctionLibrary(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -48,13 +48,13 @@ public: \
 	NO_API virtual ~UUnLuaFunctionLibrary();
 
 
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_UnLuaFunctionLibrary_h_21_PROLOG
-#define FID_ModProject_Plugins_UnLua_Source_UnLua_Public_UnLuaFunctionLibrary_h_24_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_UnLuaFunctionLibrary_h_21_PROLOG
+#define FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_UnLuaFunctionLibrary_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_UnLua_Source_UnLua_Public_UnLuaFunctionLibrary_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_UnLua_Source_UnLua_Public_UnLuaFunctionLibrary_h_24_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_UnLua_Source_UnLua_Public_UnLuaFunctionLibrary_h_24_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_UnLuaFunctionLibrary_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_UnLuaFunctionLibrary_h_24_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_UnLuaFunctionLibrary_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -64,6 +64,6 @@ class UUnLuaFunctionLibrary;
 // ********** End Class UUnLuaFunctionLibrary ******************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_UnLua_Source_UnLua_Public_UnLuaFunctionLibrary_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_UnLua_Source_UnLua_Public_UnLuaFunctionLibrary_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -250,16 +250,16 @@ UScriptStruct* Z_Construct_UScriptStruct_FRHSProjectileBulkSpawnSetting()
 // ********** End ScriptStruct FRHSProjectileBulkSpawnSetting **************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_Data_h__Script_AuroraDevs_RHS_Statics
+struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_Data_h__Script_AuroraDevs_RHS_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
 		{ FRHSDebugSettings::StaticStruct, Z_Construct_UScriptStruct_FRHSDebugSettings_Statics::NewStructOps, TEXT("RHSDebugSettings"), &Z_Registration_Info_UScriptStruct_FRHSDebugSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FRHSDebugSettings), 4181635107U) },
 		{ FRHSProjectileBulkSpawnSetting::StaticStruct, Z_Construct_UScriptStruct_FRHSProjectileBulkSpawnSetting_Statics::NewStructOps, TEXT("RHSProjectileBulkSpawnSetting"), &Z_Registration_Info_UScriptStruct_FRHSProjectileBulkSpawnSetting, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FRHSProjectileBulkSpawnSetting), 1121798872U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_Data_h__Script_AuroraDevs_RHS_1623787060(TEXT("/Script/AuroraDevs_RHS"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_Data_h__Script_AuroraDevs_RHS_1623787060(TEXT("/Script/AuroraDevs_RHS"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_Data_h__Script_AuroraDevs_RHS_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_Data_h__Script_AuroraDevs_RHS_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_Data_h__Script_AuroraDevs_RHS_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_AuroraDevs_RHS_Source_AuroraDevs_RHS_Public_RHS_Data_h__Script_AuroraDevs_RHS_Statics::ScriptStructInfo),
 	nullptr, 0);
 // ********** End Registration *********************************************************************
 
