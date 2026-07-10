@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FName ForcePurposeID;` |
 
-**源码注释:**
+**说明:**
 
 > 门派宗旨ID
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int32 UnlockLevel = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 门派宗旨解锁等级
 
@@ -49,6 +49,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftObjectPtr<UTexture2D> ForcePurposeIcon;` |
 
+**说明:**
+
+> Force Purpose Icon 字段。
+
 ---
 
 ### 属性 `CostCoin`
@@ -60,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 CostCoin = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 启用消耗的金钱
 
@@ -75,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<FName , int32> CostItem;` |
 
-**源码注释:**
+**说明:**
 
 > 启用消耗的道具
 
@@ -90,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<FName> PurposeBuffID;` |
 
-**源码注释:**
+**说明:**
 
 > 门派宗旨BUFFID
 
@@ -105,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FText PurposeName;` |
 
-**源码注释:**
+**说明:**
 
 > 门派宗旨名称
 
@@ -120,7 +124,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FText PurposeDesc;` |
 
-**源码注释:**
+**说明:**
 
 > 门派宗旨描述
 

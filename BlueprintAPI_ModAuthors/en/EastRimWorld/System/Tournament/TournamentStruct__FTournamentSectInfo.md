@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid SectGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 势力guid
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 TeamId = 255;` |
 
-**Source comments:**
+**Notes:**
 
 > 团队id
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FGuid> CharacterGuids;` |
 
-**Source comments:**
+**Notes:**
 
 > 参赛的角色
 
@@ -59,12 +59,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ESectStatus` |
+| C++ type | [ESectStatus](TournamentStruct__ESectStatus.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ESectStatus SectStatus = ESectStatus::NotRegistered;` |
 
-**Source comments:**
+**Notes:**
 
 > 势力比武状态
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FOffFieldOperationInstance> OffFieldOperation;` |
 
-**Source comments:**
+**Notes:**
 
 > 场外操作信息
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 Rank = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 目前的排名
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float TotalCombatPower = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 战力总和
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float ReputationDelta = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 声望奖励
 

@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Farmland Plant Save Data data structure.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) FGuid BelongFarmlandId;` |
 
-**Source comments:**
+**Notes:**
 
 > 归属于哪个农田
 

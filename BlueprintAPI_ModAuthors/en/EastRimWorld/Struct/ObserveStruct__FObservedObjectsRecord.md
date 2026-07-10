@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Observed Objects Record data structure.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FGuid ObserverId;` |
 
-**Source comments:**
+**Notes:**
 
 > 完成观察的角色Guid
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") int32 ObservedDay = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 完成观察的时间点(改成了游戏时长)
 

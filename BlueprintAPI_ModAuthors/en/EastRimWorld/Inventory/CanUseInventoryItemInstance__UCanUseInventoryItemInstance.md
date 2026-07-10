@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float ResidueItemShelfLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 剩余物品的保质期
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<int> ItemOwnEffects;` |
 
-**Source comments:**
+**Notes:**
 
 > 此时物品自身生效的效果
 
@@ -44,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EItemUseState` |
+| C++ type | [EItemUseState](../Struct/ItemStruct__EItemUseState.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EItemUseState ItemUseState = EItemUseState::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品使用状态（穿戴中、搬运中等）
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int32 UsedNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品所处的环境
 > UPROPERTY(blueprintReadWrite,EditAnywhere)
@@ -82,7 +82,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float StorageSpaceEfficiency = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 环境效率
 
@@ -100,13 +100,13 @@
 
 | Name | Type |
 |--------|------|
-| `NewItemUseState` | `EItemUseState` |
+| `NewItemUseState` | [EItemUseState](../Struct/ItemStruct__EItemUseState.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetUseInventoryItemState(EItemUseState NewItemUseState);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置物品的使用状态
 
@@ -124,7 +124,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取物品信息
 
@@ -141,5 +141,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void ActivateItemToGenerateRobot();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Activates the item to generate a robot
 
 ---

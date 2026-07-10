@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MartialArtsLevel") TArray<int32> Score;` |
 
-**Source comments:**
+**Notes:**
 
 > 等级增加的评分
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MartialArtsLevel") TArray<int32> Experience;` |
 
-**Source comments:**
+**Notes:**
 
 > 等级所需的经验
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="MartialArtsLevel") TArray<int32> MovesSlotNumber;` |
 
-**Source comments:**
+**Notes:**
 
 > 招式插槽数量
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="MartialArtsLevel") TArray<int32> PassiveSlotNumber;` |
 
-**Source comments:**
+**Notes:**
 
 > 被动的插槽数量
 

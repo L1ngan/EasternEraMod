@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly) FName Name;` |
 
-**源码注释:**
+**说明:**
 
 > 武学名称
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly) int32 Level = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 武学等级
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly) FActiveGameplayEffectHandle SpecHandle;` |
 
-**源码注释:**
+**说明:**
 
 > GE句柄
 

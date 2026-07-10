@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FModCommonBuff ****************************************************
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuffDataStruct_h_46_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuffDataStruct_h_46_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModCommonBuff_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;
@@ -27,7 +27,7 @@ struct FModCommonBuff;
 // ********** End ScriptStruct FModCommonBuff ******************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuffDataStruct_h
+#define CURRENT_FILE_ID FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuffDataStruct_h
 
 // ********** Begin Enum EModBuffType **************************************************************
 #define FOREACH_ENUM_EMODBUFFTYPE(op) \

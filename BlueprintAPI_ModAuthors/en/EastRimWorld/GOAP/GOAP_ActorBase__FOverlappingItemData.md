@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FGuid , FName> ActionData;` |
 
-**Source comments:**
+**Notes:**
 
 > TMap<采集物替身的Guid , 对应Action的ID>
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TArray<FGuid> InstanceGuids;` |
 
-**Source comments:**
+**Notes:**
 
 > 覆盖采集物Instance的Guid
 

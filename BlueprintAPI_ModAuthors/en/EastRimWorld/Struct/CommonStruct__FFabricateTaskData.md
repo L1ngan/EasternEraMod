@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FGuid FabricateTaskGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前制造任务的GUID
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FFormulaData FormulaData;` |
 
-**Source comments:**
+**Notes:**
 
 > 制造的配方信息
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<FName,int> LackResource;` |
 
-**Source comments:**
+**Notes:**
 
 > 缺少的资源
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TArray<FGameplayTag> SelectableResourceTags;` |
 
-**Source comments:**
+**Notes:**
 
 > 选择的资源标签
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<FName,int> AlreadyHaveSelectableResource;` |
 
-**Source comments:**
+**Notes:**
 
 > 已经放入的可选资源
 
@@ -89,12 +89,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EFabricateState` |
+| C++ type | [EFabricateState](CommonStruct__EFabricateState.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") EFabricateState FabricateState = EFabricateState::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 制造状态
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") int TargetNumber = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 目标数量
 
@@ -119,12 +119,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EFabricateRule` |
+| C++ type | [EFabricateRule](CommonStruct__EFabricateRule.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") EFabricateRule FabricateRule = EFabricateRule::NumberOfTimes;` |
 
-**Source comments:**
+**Notes:**
 
 > 制造的规则
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") float CurWorkload = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前单次已经完成的工作量
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") float QualityValue = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 单次累加的品质值
 

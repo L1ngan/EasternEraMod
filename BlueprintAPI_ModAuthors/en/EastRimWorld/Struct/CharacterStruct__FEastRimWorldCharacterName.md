@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Character given-name data table row: name list and the sex it applies to
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") TArray<FText> Name;` |
 
-**Source comments:**
+**Notes:**
 
 > 名
 
@@ -27,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECharacterNameType` |
+| C++ type | [ECharacterNameType](CharacterStruct__ECharacterNameType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") ECharacterNameType Sex;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应性别
 

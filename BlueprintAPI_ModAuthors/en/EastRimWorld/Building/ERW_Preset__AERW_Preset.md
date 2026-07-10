@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) TArray<UERW_PresetComponent*> PresetComponents;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑预设组件
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) TMap<FName , FPresetMeshInfos> DoorOrWindowMeshInfos;` |
 
-**Source comments:**
+**Notes:**
 
 > 门或者窗户对应的预设组件数据
 > TMap<配置表ID , 预设模型数据集合>
@@ -50,7 +50,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) TMap<FName , FWallMeshInfos> WallMeshInfos;` |
 
-**Source comments:**
+**Notes:**
 
 > 墙的模型组件集合
 > TMap<墙的配置表ID , 预设模型集合>
@@ -66,7 +66,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) FName RowName;` |
 
-**Source comments:**
+**Notes:**
 
 > 配置表行名
 
@@ -81,7 +81,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) TMap<FName , FPresetInfos> PresetData;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑预设数据
 
@@ -96,7 +96,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) TMap<FName , FPresetInfos> WallPillarData;` |
 
-**Source comments:**
+**Notes:**
 
 > 墙接缝柱数据
 
@@ -121,7 +121,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加入建筑预设数据
 
@@ -144,7 +144,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加入墙接缝柱数据
 
@@ -167,7 +167,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 写入数据到配置表
 
@@ -185,7 +185,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新墙的模型信息
 

@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Collection of all GameplayEffect information carried by a projectile (effect spec handles, control effects, instigator, target, building damage, etc.).
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FGameplayEffectSpecHandle> GameplayEffectSpecHandles;` |
 
+**Notes:**
+
+> Array of GameplayEffect spec handles.
+
 ---
 
 ### Property `ControlEffect`
@@ -27,6 +33,10 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() TArray<FControlEffectData> ControlEffect;` |
+
+**Notes:**
+
+> Array of control effect data.
 
 ---
 
@@ -39,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TWeakObjectPtr<AActor> InstigatorActor = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 发起者
 
@@ -54,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float BuildingDamage = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑物伤害
 
@@ -69,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TWeakObjectPtr<AActor> Target = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 目标
 
@@ -84,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FGuid InstigatorGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 发起者GUID
 

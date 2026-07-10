@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) TArray<FTreasureItemSubData> TreasureItems;` |
 
-**源码注释:**
+**说明:**
 
 > 商品信息
 
@@ -34,6 +34,10 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) TMap<int32 , FSaveItemArr> TreasureResource;` |
 
+**说明:**
+
+> 存档的各货柜商品信息映射，key为货柜编号。
+
 ---
 
 ### 属性 `SaveStalls`
@@ -44,6 +48,10 @@
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) TMap<int32 , FStallInfo> SaveStalls;` |
+
+**说明:**
+
+> 存档的货架信息映射，key为货架编号。
 
 ---
 
@@ -56,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame,BlueprintReadOnly,VisibleAnywhere) float AutomaticReplenishmentTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 自动补货冷却时间
 
@@ -71,6 +79,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame,BlueprintReadOnly,VisibleAnywhere) TArray<FLogData> SaveLog;` |
 
+**说明:**
+
+> 存档的珍宝阁见闻日志记录列表。
+
 ---
 
 ### 属性 `TreasureCount`
@@ -82,6 +94,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame,BlueprintReadOnly,VisibleAnywhere) TArray<FTreasureStatisticsInfo> TreasureCount;` |
 
+**说明:**
+
+> 存档的商品当期兑换统计列表。
+
 ---
 
 ### 属性 `TotalTreasureCount`
@@ -92,5 +108,9 @@
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame,BlueprintReadOnly,VisibleAnywhere) TMap<FName , FTreasureStatisticsTotalInfo> TotalTreasureCount;` |
+
+**说明:**
+
+> 存档的商品总兑换统计映射，key为商品ID。
 
 ---

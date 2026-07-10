@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Entries") TArray<TSubclassOf<UGameplayEffect>> EffectiveAfterEquippingGameplayEffects;` |
 
-**Source comments:**
+**Notes:**
 
 > 装备时立即生效的GE
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Entries") TArray<FName> EffectiveAfterEquippingGameplayAttributes;` |
 
-**Source comments:**
+**Notes:**
 
 > 装备时增加的属性
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Entries") TArray<FAbilityTargetEntriesEffect> AbilityTargetEntriesEffects;` |
 
-**Source comments:**
+**Notes:**
 
 > 释放技能时触发的额外效果
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Entries") FGameplayTagContainer SelfGameplayTags;` |
 
-**Source comments:**
+**Notes:**
 
 > 装备时给予自己的标签
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Entries") TArray<FName> GiveAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 获得的技能 关联GameAbilityStruct
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Entries") TArray<FReduceCoolDownConfig> ReduceCooldown;` |
 
-**Source comments:**
+**Notes:**
 
 > 减少冷却时间的配置
 

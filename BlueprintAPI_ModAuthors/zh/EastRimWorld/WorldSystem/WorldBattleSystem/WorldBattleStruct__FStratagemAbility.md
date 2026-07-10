@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category ="Base") FText Name;` |
 
-**源码注释:**
+**说明:**
 
 > 名称
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowedClasses = "/Script/Engine.Texture2D"),Category ="Base") FSoftObjectPath Icon;` |
 
-**源码注释:**
+**说明:**
 
 > 图标
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category ="Base") FText Describe;` |
 
-**源码注释:**
+**说明:**
 
 > 描述
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category ="Base") FFormatText FormatDescribe;` |
 
-**源码注释:**
+**说明:**
 
 > 格式化的 描述
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category ="Base") float Consumption = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 使用消耗
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category ="Base") int32 ExtractWeights = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 抽取权重
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category ="Base") float TimeDuration = -1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 战略技能的持续时间 -1 为没有持续时间
 
@@ -119,12 +119,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EStratagemAbilityType` |
+| C++ 类型 | [EStratagemAbilityType](WorldBattleStruct__EStratagemAbilityType.md) |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category ="Base") EStratagemAbilityType StratagemAbilityType = EStratagemAbilityType::GlobalAbility;` |
 
-**源码注释:**
+**说明:**
 
 > 战略技能类型
 
@@ -134,12 +134,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EStratagemAbilityTargetType` |
+| C++ 类型 | [EStratagemAbilityTargetType](WorldBattleStruct__EStratagemAbilityTargetType.md) |
 | 反射说明符 | BlueprintReadWrite, Category="GlobalAbility" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,meta=(EditCondition = "StratagemAbilityType == EStratagemAbilityType::GlobalAbility",EditConditionHides),Category = "GlobalAbility") EStratagemAbilityTargetType StratagemAbilityTargetType = EStratagemAbilityTargetType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 作用对象
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,meta=(EditCondition = "StratagemAbilityType == EStratagemAbilityType::GlobalAbility",EditConditionHides,AllowedClasses = "GameplayEffect"),Category = "GlobalAbility") TArray<FSoftClassPath> ActivateGEs;` |
 
-**源码注释:**
+**说明:**
 
 > 全局技能施加的GE效果
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,meta=(EditCondition = "StratagemAbilityType == EStratagemAbilityType::RangeAbility || StratagemAbilityType == EStratagemAbilityType::RangeSummoningAbility",EditConditionHides),Category = "RangeAbility") float ReleaseRangeDiameter = 500.f;` |
 
-**源码注释:**
+**说明:**
 
 > 释放范围大小直径
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,meta=(EditCondition = "StratagemAbilityType == EStratagemAbilityType::RangeAbility || StratagemAbilityType == EStratagemAbilityType::RangeSummoningAbility || StratagemAbilityType == EStratagemAbilityType::StartLocationSummoningSkill",EditConditionHides),Category = "Ability") FGameplayTag AbilityTag;` |
 
-**源码注释:**
+**说明:**
 
 > 激活此技能的Tag
 
@@ -199,7 +199,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,meta=(EditCondition = "StratagemAbilityType == EStratagemAbilityType::RangeAbility || StratagemAbilityType == EStratagemAbilityType::RangeSummoningAbility || StratagemAbilityType == EStratagemAbilityType::StartLocationSummoningSkill",EditConditionHides),Category = "Ability") FName AbilityID;` |
 
-**源码注释:**
+**说明:**
 
 > 关联的能力ID 读取能力表
 
@@ -214,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,meta=(EditCondition = "StratagemAbilityType == EStratagemAbilityType::GlobalFunction",EditConditionHides),Category = "RangeAbility") TArray<FStratagemAbilityFunction> StratagemAbilityFunction;` |
 
-**源码注释:**
+**说明:**
 
 > 全局功能
 
@@ -224,12 +224,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EAutoTargetType` |
+| C++ 类型 | [EAutoTargetType](WorldBattleStruct__EAutoTargetType.md) |
 | 反射说明符 | BlueprintReadWrite, Category="RangeAbility" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,meta=(EditCondition = "StratagemAbilityType == EStratagemAbilityType::RangeAbility || StratagemAbilityType == EStratagemAbilityType::RangeSummoningAbility",EditConditionHides),Category = "RangeAbility") EAutoTargetType AutoTargetType = EAutoTargetType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 自动释放时作用对象
 
@@ -244,7 +244,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Runtime",meta=(EditConditionHides,EditCondition = "false")) FGuid Guid;` |
 
-**源码注释:**
+**说明:**
 
 > 生成GUID
 
@@ -259,7 +259,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Runtime",meta=(EditConditionHides,EditCondition = "false")) FTransform GenerateTransform;` |
 
-**源码注释:**
+**说明:**
 
 > 生成的位置
 
@@ -274,7 +274,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 Priority = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 优先级 同分组下的优先级 越大优先级越高 相同优先级 后添加的覆盖旧的
 
@@ -289,7 +289,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 Group = INDEX_NONE;` |
 
-**源码注释:**
+**说明:**
 
 > 分组 -1 为没有分组 不参与优先级
 

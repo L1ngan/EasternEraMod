@@ -19,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) AERW_GameModeBase* GameMode { nullptr };` |
 
+**Notes:**
+
+> Cached reference to the game mode
+
 ---
 
 ### Property `WorldPlace`
@@ -29,6 +33,10 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TObjectPtr<AWorldPlace> WorldPlace;` |
+
+**Notes:**
+
+> Reference to the world place this component belongs to
 
 ---
 
@@ -41,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<FGameplayTag , FItemUseState> ItemUseStates;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品使用状态
 > TMap<总标签 , 状态>
@@ -57,7 +65,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<FName , FGOAPScoreData> Goals;` |
 
-**Source comments:**
+**Notes:**
 
 > Agent当前拥有的GOAP目标
 > TMap<GOAP目标配置表ID , 分值数据>
@@ -73,7 +81,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<FName , bool> DisabledGoals;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前禁用的GOAP目标
 > TMap<GOAP目标配置表ID , 占位符>
@@ -89,7 +97,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<FName , int32> GoalPriorities;` |
 
-**Source comments:**
+**Notes:**
 
 > GOAP目标对应的工作优先级
 > TMap<GOAP目标 , 优先级>
@@ -105,7 +113,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) FName CurrentGoal;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前执行的GOAP目标
 
@@ -120,7 +128,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) TArray<FGOAP_Action> CurrentPlans;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前计划
 
@@ -135,7 +143,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnCurrentWorkScheduleChanged OnCurrentWorkScheduleChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前工作日程改变时
 
@@ -159,7 +167,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 在蓝图中FindPlans调用时，可能还未加载，手动调用
 
@@ -181,7 +189,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化物品使用状态
 
@@ -204,7 +212,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置物品使用状态
 
@@ -226,7 +234,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取物品使用状态
 
@@ -248,7 +256,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获得可用Tag数量
 
@@ -272,7 +280,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新GOAP目标
 
@@ -290,7 +298,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新GOAP目标
 
@@ -313,7 +321,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置GOAP目标是否启用
 
@@ -331,7 +339,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化工作日程检查计时器
 
@@ -354,7 +362,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化GOAP目标优先级
 
@@ -377,7 +385,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新GOAP目标优先级
 
@@ -399,7 +407,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 从其他角色复制非自定义工作优先级
 
@@ -421,7 +429,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 从其他角色复制自定义工作优先级
 
@@ -444,7 +452,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过当前拥有的GOAP目标寻找可执行的计划
 
@@ -466,7 +474,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 当寻找计划失败时
 
@@ -488,7 +496,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 当前执行的计划是不是批量处理的Action
 
@@ -510,7 +518,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获得当前工作进程ID
 
@@ -528,7 +536,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取当前第一个计划
 
@@ -546,7 +554,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取当前下一个计划
 
@@ -564,7 +572,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除第一个计划
 
@@ -582,7 +590,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 清理所有计划
 
@@ -604,7 +612,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取当前Goal的分值（通过工作加成后的分值）
 
@@ -626,7 +634,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否拥有目标
 
@@ -643,6 +651,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void ClearGoals();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Clears all GOAP goals
 
 ---
 
@@ -662,5 +674,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CreatePrisonerRecruitedAction(UGOAP_ManagerComponent* ManagerComponent,AEastRimWorldAIController* Agent);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Creates the corresponding GOAP action for a recruited prisoner
 
 ---

@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 驿站生产线配置表行（关联生成配置ID、刷新时间、插槽与生成/删除条件）
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FName ID;` |
 
-**源码注释:**
+**说明:**
 
 > 此配置ID
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<FName> PostStationGenerateIDs;` |
 
-**源码注释:**
+**说明:**
 
 > 关联DT_PostStationGenerateConfig表
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float FirstTimeSpawnDelay;` |
 
-**源码注释:**
+**说明:**
 
 > 第一次开始生成的延迟(无视生成配置的时间)
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FIntPoint SpawnTimeRange;` |
 
-**源码注释:**
+**说明:**
 
 > 刷新时间随机范围(基于生成配置的加值)
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<FName> Sockets;` |
 
-**源码注释:**
+**说明:**
 
 > NPC在驿站停留的位置(驿站的插槽)
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FName SpawnSocket;` |
 
-**源码注释:**
+**说明:**
 
 > NPC生成中心位置(驿站的插槽)
 
@@ -107,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float SpawnPointHalfRadius = 1000.f;` |
 
-**源码注释:**
+**说明:**
 
 > NPC生成范围半径
 
@@ -122,7 +124,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<FCommonTaskCondition> GenerateConditions;` |
 
-**源码注释:**
+**说明:**
 
 > 开始生成的条件
 
@@ -137,7 +139,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<FCommonTaskCondition> DestroyConditions;` |
 
-**源码注释:**
+**说明:**
 
 > 删除条件
 
@@ -152,7 +154,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float RetryGenerateInterval;` |
 
-**源码注释:**
+**说明:**
 
 > 生成阻塞后(比如位置不够)重新尝试生成的时间
 

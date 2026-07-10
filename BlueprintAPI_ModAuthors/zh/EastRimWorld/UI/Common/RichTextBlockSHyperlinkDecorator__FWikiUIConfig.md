@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Appearance) FText TitleText;` |
 
-**源码注释:**
+**说明:**
 
 > 标题
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Appearance) FText ClassifyText;` |
 
-**源码注释:**
+**说明:**
 
 > 分类
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Appearance) TArray<FText> ContentText;` |
 
-**源码注释:**
+**说明:**
 
 > 内容
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Appearance) TSoftObjectPtr<UObject> InfoIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 内容图标
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Appearance) FVector2D IconSize = FVector2D::ZeroVector;` |
 
-**源码注释:**
+**说明:**
 
 > 内容图标
 

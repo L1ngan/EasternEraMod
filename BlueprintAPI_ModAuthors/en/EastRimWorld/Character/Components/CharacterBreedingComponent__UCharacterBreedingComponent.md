@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Animal breeding component managing breeding demand, nearby-character checks, pregnancy interruption and baby spawning.
 
 ## Blueprint-exposed functions
 
@@ -20,6 +22,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Checks whether the character needs a breeding demand added.
+
 ---
 
 ### Function `CheckAndSetIsHadBreeding`
@@ -33,6 +39,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool CheckAndSetIsHadBreeding();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Checks and sets whether this animal has already bred, returning the result.
 
 ---
 
@@ -48,6 +58,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Checks for nearby characters (periodic check in the breeding flow).
+
 ---
 
 ### Function `CancelBreeding`
@@ -61,6 +75,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CancelBreeding();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Cancels the current breeding behavior.
 
 ---
 
@@ -76,6 +94,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Handles wrap-up logic when breeding finishes.
+
 ---
 
 ### Function `SpawnBaby`
@@ -89,6 +111,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SpawnBaby();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Spawns the baby.
 
 ---
 
@@ -107,5 +133,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CheckNeedAnimalStopPregnant(FCommonBuff CommonBuff);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Checks whether the animal needs to stop its pregnancy based on the given buff.
 
 ---

@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "WorkAttributeLevelConfig") FGameplayAttribute Attribute;` |
 
-**Source comments:**
+**Notes:**
 
 > 属性值
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "WorkAttributeLevelConfig") float BaseValue = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 属性等级关联的基础值
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "WorkAttributeLevelConfig") TMap<int,float> AdditionPercentage;` |
 
-**Source comments:**
+**Notes:**
 
 > 属性等级关联的百分比
 

@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> World Battle Manager actor type.
 
 ## Blueprint-exposed variables
 
@@ -17,20 +19,9 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<int32,FWorldBattleCharacterInfo> WorldBattleCharacterInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 各阵营战斗的存活（没有重伤）角色信息
-
----
-
-### Property `CommonLogComponent`
-
-| Field | Details |
-|------|------|
-| C++ type | TObjectPtr<[UCommonLogComponent](../../Components/CommonLogComponent__UCommonLogComponent.md)> |
-| Reflection specifiers | BlueprintReadWrite |
-| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TObjectPtr<UCommonLogComponent> CommonLogComponent;` |
 
 ---
 
@@ -43,7 +34,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnExtractStratagemDelegate OnExtractStratagemDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 抽取战略卡牌
 
@@ -58,7 +49,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnExtractCharacterCardDelegate OnExtractCharacterCardDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 抽取角色卡牌
 
@@ -73,6 +64,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUpdateExtractStratagemTimeDelegate OnUpdateExtractStratagemTimeDelegate;` |
 
+**Notes:**
+
+> On Update Extract Stratagem Time Delegate event or callback.
+
 ---
 
 ### Property `OnUpdateExtractCharacterTimeDelegate`
@@ -83,6 +78,10 @@
 | Reflection specifiers | BlueprintAssignable |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUpdateExtractCharacterTimeDelegate OnUpdateExtractCharacterTimeDelegate;` |
+
+**Notes:**
+
+> On Update Extract Character Time Delegate event or callback.
 
 ---
 
@@ -95,6 +94,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnBattleStateChange OnFOnBattleStateChangeDelegate;` |
 
+**Notes:**
+
+> On F On Battle State Change Delegate event or callback.
+
 ---
 
 ### Property `OnCancelBattlefieldDelegate`
@@ -105,6 +108,10 @@
 | Reflection specifiers | BlueprintAssignable |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnBattleStateChange OnCancelBattlefieldDelegate;` |
+
+**Notes:**
+
+> On Cancel Battlefield Delegate event or callback.
 
 ---
 
@@ -117,7 +124,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnGenerateDogfaceTimeDelegate OnGenerateDogfaceTimeDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 小兵的剩余生成时间
 
@@ -132,6 +139,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUpdateStrategyPointChangeDelegate OnUpdateStrategyPointChangeDelegate;` |
 
+**Notes:**
+
+> On Update Strategy Point Change Delegate event or callback.
+
 ---
 
 ### Property `OnUpdateResourcePointChangeDelegate`
@@ -142,6 +153,10 @@
 | Reflection specifiers | BlueprintAssignable |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUpdateResourcePointChangeDelegate OnUpdateResourcePointChangeDelegate;` |
+
+**Notes:**
+
+> On Update Resource Point Change Delegate event or callback.
 
 ---
 
@@ -154,6 +169,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUpdateTeamKillNumberDelegate OnUpdateTeamKillNumberDelegate;` |
 
+**Notes:**
+
+> On Update Team Kill Number Delegate event or callback.
+
 ---
 
 ### Property `OnTeamMultiKillDelegate`
@@ -165,20 +184,9 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnTeamMultiKillDelegate OnTeamMultiKillDelegate;` |
 
----
+**Notes:**
 
-### Property `OnNotificationDelegate`
-
-| Field | Details |
-|------|------|
-| C++ type | `FOnNotificationDelegate` |
-| Reflection specifiers | BlueprintAssignable |
-| Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnNotificationDelegate OnNotificationDelegate;` |
-
-**Source comments:**
-
-> 日志通知
+> On Team Multi Kill Delegate event or callback.
 
 ---
 
@@ -191,7 +199,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int32 MeanTimeToRecovery = 3;` |
 
-**Source comments:**
+**Notes:**
 
 > 资源量单位的恢复时间
 
@@ -206,7 +214,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float CurTimeToRecovery = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前恢复时间
 
@@ -226,6 +234,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Gets or queries Get World Battle Manager.
+
 ---
 
 ### Function `CreateBattlefield`
@@ -238,17 +250,48 @@
 
 | Name | Type |
 |--------|------|
-| `BattleType` | `EBattleType` |
+| `BattleType` | [EBattleType](../../Struct/CommonEnum__EBattleType.md) |
 | `BattlePlaceGuid` | `const FGuid &` |
 | `RelevancyPlaceGuid` | `const FGuid &` |
+| `(unnamed / type only)` | `FGuid FromPlaceGuid = FGuid()` |
 
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FBattlefieldInformation& CreateBattlefield(EBattleType BattleType,const FGuid & BattlePlaceGuid,const FGuid & RelevancyPlaceGuid);`
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FBattlefieldInformation& CreateBattlefield(EBattleType BattleType,const FGuid & BattlePlaceGuid,const FGuid & RelevancyPlaceGuid,FGuid FromPlaceGuid = FGuid());`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
-> 创建战场信息
+> 创建战场信息（FromPlaceGuid: 出征发起地点，默认无效时内部回退攻方 MainPlace，保旧蓝图/cpp 二进制兼容）
+
+---
+
+### Function `ResolvePlaceDisposal`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `WinnerForce` | [AWorldForce](../WorldForce__AWorldForce.md)* |
+| `TargetPlace` | [AWorldPlace](../WorldPlace__AWorldPlace.md)* |
+| `AttackerTeam` | const [FBattleTeamInfo](WorldBattleStruct__FBattleTeamInfo.md)& |
+| `Disposal` | [EPlaceDisposalType](../WorldStruct__EPlaceDisposalType.md) |
+| `true` | `bool bApplyAttackFavorability =` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void ResolvePlaceDisposal(AWorldForce* WinnerForce, AWorldPlace* TargetPlace, const FBattleTeamInfo& AttackerTeam, EPlaceDisposalType Disposal, bool bApplyAttackFavorability = true);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> [PR-11] 统一战利品三选一处置结算入口（占领/劫掠/摧毁 + 必然建筑损毁 + 物资/正邪值数值化）。
+> 文档 §7。AttackerTeam 仅作上下文（PR-7 离屏战无真实部队，传入用于校验/PR-8 战报）。
+> [迁移说明] 真正实现已整体迁至 AWorldBattleCoreManager::ResolvePlaceDisposal。
+> 本函数现仅为「BlueprintCallable 签名冻结兼容 + Core 缺失时的兜底转发壳」(内部转调 Core)。
+> 新代码请直接调 AWorldBattleCoreManager::ResolvePlaceDisposal，不要新增对本壳的依赖。
 
 ---
 
@@ -268,7 +311,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 取消战场不做结算
 
@@ -291,7 +334,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查找战场信息
 
@@ -315,7 +358,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加入战斗
 
@@ -338,7 +381,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否可以撤退
 
@@ -361,7 +404,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 战斗开始前撤退
 
@@ -383,8 +426,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
+> [PR-A] 战斗结算 BattleSettlement / EncounterSettlement / 筛选俘虏 FiltrateCaptureCharacter 已迁入 AWorldBattleCoreManager。
+> [PR-C] 旧 ForceFavorabilityChange 已删除（零调用的 PR-6 预留入口，详见 .cpp 收口注释）。
 > 移除战斗信息
 
 ---
@@ -406,7 +451,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 战斗投降
 
@@ -428,7 +473,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 进入战场
 
@@ -451,7 +496,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取角色当前的行进路线
 
@@ -469,7 +514,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取当前地点的战场信息
 
@@ -494,7 +539,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取行走的下一个路径点
 
@@ -519,7 +564,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取当前路径点的下一个路径点
 
@@ -536,13 +581,13 @@
 | Name | Type |
 |--------|------|
 | `TeamID` | `int32` |
-| `BattlefieldRolesType` | `EBattlefieldRolesType` |
+| `BattlefieldRolesType` | [EBattlefieldRolesType](../../Struct/CommonEnum__EBattlefieldRolesType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintPure) TArray<AEastRimWorldCharacter*> GetWorldBattleCharacters(int32 TeamID,EBattlefieldRolesType BattlefieldRolesType);`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取战斗中的角色
 
@@ -564,7 +609,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取存活的水晶
 
@@ -588,7 +633,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 释放战略技能
 
@@ -612,7 +657,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 释放范围技能
 
@@ -635,7 +680,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 释放全局技能
 
@@ -658,7 +703,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否可以释放战略技能
 
@@ -681,7 +726,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 抽取战略卡牌
 
@@ -704,7 +749,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 抽取角色卡牌
 
@@ -727,7 +772,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过阵营guid抽取战略卡牌
 
@@ -750,7 +795,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过角色guid抽取角色卡牌
 
@@ -772,7 +817,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取阵营信息
 
@@ -794,7 +839,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 开启抽取战略计时
 
@@ -816,7 +861,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否可以抽取战略
 
@@ -838,7 +883,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 开启抽取角色计时
 
@@ -860,7 +905,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否可以抽取角色
 
@@ -878,7 +923,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 清理定时器
 
@@ -896,7 +941,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 添加定时器
 
@@ -914,7 +959,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取玩家阵营信息
 
@@ -936,7 +981,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 或者通过战场信息获取玩家阵营信息
 
@@ -958,7 +1003,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 释放角色卡牌
 
@@ -981,7 +1026,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否可以释放角色卡牌
 
@@ -1004,7 +1049,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 改变战略点数
 
@@ -1027,7 +1072,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 改变资源点数
 
@@ -1049,7 +1094,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取战略点上限
 
@@ -1071,7 +1116,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取资源点上限
 
@@ -1093,7 +1138,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 统计战斗数据
 
@@ -1116,7 +1161,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新自动使用战略技能时间
 
@@ -1139,7 +1184,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 自动使用战略技能
 
@@ -1162,7 +1207,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新自动使用角色技能时间
 
@@ -1180,7 +1225,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 返回驻地
 
@@ -1197,15 +1242,17 @@
 | Name | Type |
 |--------|------|
 | `BattlefieldInformationGuid` | `const FGuid &` |
-| `PlaceDisposalType` | `EPlaceDisposalType` |
+| `PlaceDisposalType` | [EPlaceDisposalType](../WorldStruct__EPlaceDisposalType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool PlayerSelectDisposalPlace(const FGuid & BattlefieldInformationGuid,EPlaceDisposalType PlaceDisposalType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
-> 玩家胜利处置城市
+> [PR-A] 结算管线 StartSettleAccounts / EncounterSettleAccountsStart / EncounterSettleAccountsEnd
+> CheckHaveSettleAccounts / NextSettleAccounts 已迁入 AWorldBattleCoreManager。
+> 玩家胜利处置城市（[PR-A] 蓝图转发壳：实现迁 Core，本壳保 Target=BattleManager 兼容）
 
 ---
 
@@ -1220,15 +1267,15 @@
 | Name | Type |
 |--------|------|
 | `BattlefieldInformationGuid` | `const FGuid &` |
-| `PostwarCharacterDispose` | `const TMap<FGuid,ECaptureCharacterDisposalType> &` |
+| `PostwarCharacterDispose` | const TMap<FGuid,[ECaptureCharacterDisposalType](../WorldStruct__ECaptureCharacterDisposalType.md)> & |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void PlayerDisposalCaptureCharacter(const FGuid & BattlefieldInformationGuid,const TMap<FGuid,ECaptureCharacterDisposalType> & PostwarCharacterDispose);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
-> 玩家胜利处置俘虏的角色
+> 玩家胜利处置俘虏的角色（[PR-A] 蓝图转发壳）
 
 ---
 
@@ -1249,9 +1296,9 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
-> 选择留守的人
+> 选择留守的人（[PR-A] 蓝图转发壳）
 
 ---
 
@@ -1271,9 +1318,9 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
-> 结算完成
+> 结算完成（[PR-A] 蓝图转发壳）
 
 ---
 
@@ -1288,15 +1335,20 @@
 | Name | Type |
 |--------|------|
 | `BattlefieldGuid` | `const FGuid &` |
-| `(unnamed / type only)` | `ETransportationType TransportationType = ETransportationType::Walking` |
+| `(unnamed / type only)` | [ETransportationType](../../ERW_Enumerations__ETransportationType.md) TransportationType = [ETransportationType](../../ERW_Enumerations__ETransportationType.md)::Walking |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void AttackerStartMove(const FGuid & BattlefieldGuid,ETransportationType TransportationType = ETransportationType::Walking);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
-> 攻击方开始出发
+> ============================================================================
+> [废弃·移动逻辑已迁出] 大世界出征行军 / 抵达切换 已统一到 AWorldMapManage::UpdateWorldActorMoveState2D。
+> 以下移动相关接口均已不再被调用，保留代码不删(便于回溯/潜在复用)。
+> 例外：NpcMarchAttackerMovetoBattlePlace 不在此列——它现在是 NPC 围城"结算入口"，仍被 WorldMapManage 调用。
+> ============================================================================
+> 攻击方开始出发  [废弃] 出征行军改由 WorldForce::RequestAttack → WorldMapManage::CreateOneMove 创建，已无调用方
 
 ---
 
@@ -1316,9 +1368,9 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
-> 删除战斗移动提示
+> 删除战斗移动提示  [废弃] 旧战斗行军提示清理，移动迁出后已无 C++ 调用方
 
 ---
 
@@ -1333,13 +1385,13 @@
 | Name | Type |
 |--------|------|
 | `Character` | [AEastRimWorldCharacter](../../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md) * |
-| `CharacterCureState` | `ECharacterCureState` |
+| `CharacterCureState` | [ECharacterCureState](WorldBattleStruct__ECharacterCureState.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void UpdateSeriousInjuryCharacterState(AEastRimWorldCharacter * Character,ECharacterCureState CharacterCureState);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新重伤人员的状态
 
@@ -1361,7 +1413,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取一个可以放置伤员的位置
 
@@ -1383,7 +1435,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取治疗信息
 

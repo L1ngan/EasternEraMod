@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame,EditAnywhere) FGuid SGUID = FGuid();` |
 
-**源码注释:**
+**说明:**
 
 > ----------------------------- SaveGame -----------------------------
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AWorldPlace> WorldPlace;` |
 
-**源码注释:**
+**说明:**
 
 > ----------------------------- SaveGame -----------------------------
 
@@ -49,6 +49,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AERW_GameModeBase> GameMode;` |
 
+**说明:**
+
+> 缓存的游戏模式引用（AERW_GameModeBase）
+
 ---
 
 ### 属性 `SceneComponent`
@@ -60,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere , BlueprintReadOnly) USceneComponent* SceneComponent { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > 根组件
 
@@ -75,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) UERW_HISMManager* HISMManager { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > HISMManager
 
@@ -90,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) UERW_ConstructionComponent* ConstructionComponent { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > 建造组件
 
@@ -105,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) UGOAP_ActionComponent* GOAP_ActionComponent { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > GOAP行动组件
 
@@ -120,7 +124,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) UGOAP_MemoryComponent* GOAP_MemoryComponent { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > GOAP记忆组件
 
@@ -135,7 +139,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) UERW_DoorCollisionComponent* DoorCollisionComponent { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > 门碰撞管理组件
 
@@ -150,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) USmartObjectComponent* SmartObjectComponent { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > 智能对象组件
 
@@ -165,9 +169,24 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) FName ObjectID;` |
 
-**源码注释:**
+**说明:**
 
 > 物体的ID
+
+---
+
+### 属性 `OldObjectID`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FName` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) FName OldObjectID;` |
+
+**说明:**
+
+> 重建前的物体ID
 
 ---
 
@@ -180,7 +199,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) bool Selected { false };` |
 
-**源码注释:**
+**说明:**
 
 > 是否选中
 
@@ -195,7 +214,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) bool Hovered { false };` |
 
-**源码注释:**
+**说明:**
 
 > 是否被鼠标指中
 
@@ -210,7 +229,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) bool IsInMap { false };` |
 
-**源码注释:**
+**说明:**
 
 > 是否放置在地图中
 
@@ -225,7 +244,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) bool IsDestroyed { false };` |
 
-**源码注释:**
+**说明:**
 
 > 是否销毁
 
@@ -240,7 +259,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame) bool bBuildComplete = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否建造完成
 
@@ -255,7 +274,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) FSmartObjectSlotHandle SlotHandle;` |
 
-**源码注释:**
+**说明:**
 
 > 选中的智能对象插槽
 
@@ -265,12 +284,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<ECommonButtonType,bool>` |
+| C++ 类型 | TMap<[ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md),bool> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame,VisibleAnywhere) TMap<ECommonButtonType,bool> ButtonOperationState;` |
 
-**源码注释:**
+**说明:**
 
 > 相关按钮的状态 是否选中
 
@@ -285,7 +304,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<UInventoryManagerComponent> InventoryManagerComponent;` |
 
-**源码注释:**
+**说明:**
 
 > 库存组件 当此actor可以储存物品时生成
 
@@ -300,7 +319,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<UFabricateActorComponent> FabricateActorComponent;` |
 
-**源码注释:**
+**说明:**
 
 > 制造组件 当此actor可制造物品时生成
 
@@ -315,9 +334,24 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<UTreasureComponent> TreasureComponent;` |
 
-**源码注释:**
+**说明:**
 
 > 珍宝阁组件 当此actor是珍宝阁时生成
+
+---
+
+### 属性 `TradeAreaComponent`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TObjectPtr<[UTradeAreaComponent](../Components/TradeAreaComponent__UTradeAreaComponent.md)> |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<UTradeAreaComponent> TradeAreaComponent;` |
+
+**说明:**
+
+> 交易区组件
 
 ---
 
@@ -339,6 +373,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 获取燃料相关数据
+
 ---
 
 ### 函数 `GetEnergyData`
@@ -356,6 +394,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure) void GetEnergyData(FEnergyData& EnergyData) const;`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取能量相关数据
 
 ---
 
@@ -375,6 +417,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 获取仪式相关数据
+
 ---
 
 ### 函数 `GetPuppetData`
@@ -392,6 +438,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure) void GetPuppetData(FPuppetData& PuppetData) const;`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取傀儡相关数据
 
 ---
 
@@ -411,6 +461,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 获取设施归属数据列表
+
 ---
 
 ### 函数 `GetAutoOutputWorkloadTimerID`
@@ -424,6 +478,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure) int32 GetAutoOutputWorkloadTimerID() const;`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取自动输出工作量的计时器ID
 
 ---
 
@@ -443,6 +501,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取环境存档数据，存在时返回true
+
 ---
 
 ### 函数 `GetHeatSourceData`
@@ -461,6 +523,32 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 获取热源数据，存在时返回true
+
+---
+
+### 函数 `GetAreaData`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintPure |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `OutAreaData` | [FAreaBuildingData](../System/AreaControl/AreaControlTypes__FAreaBuildingData.md)& |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, BlueprintPure) bool GetAreaData(FAreaBuildingData& OutAreaData);`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取该建筑的区域数据（FAreaBuildingData），存在时返回true
+
 ---
 
 ### 函数 `NeedSaveObject`
@@ -474,6 +562,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintNativeEvent) bool NeedSaveObject() const;`
 
 **用法说明:** **BlueprintNativeEvent**：蓝图可重写；C++ 默认实现在 `xxx_Implementation`。
+
+**说明:**
+
+> 返回该对象是否需要存档
 
 ---
 
@@ -489,7 +581,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > ~IEastRimWorldTeamAgentInterface interface
 
@@ -511,6 +603,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 设置该Actor的通用队伍ID
+
 ---
 
 ### 函数 `OnLoadFinished`
@@ -525,7 +621,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 加载完成
 
@@ -543,7 +639,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 读档时重新更新填充模型
 
@@ -561,9 +657,27 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 设置HISMManager
+
+---
+
+### 函数 `IsRebuilt`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintPure |
+| 返回类型 | `bool` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintPure) bool IsRebuilt() const;`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 是否是重建建筑
 
 ---
 
@@ -577,7 +691,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `RotateOrientation` | `ERotateOrientation` |
+| `RotateOrientation` | [ERotateOrientation](../ERW_Enumerations__ERotateOrientation.md) |
 | `BuildID` | `const FName&` |
 | `TeamId` | `const FGenericTeamId&` |
 
@@ -585,7 +699,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 初始化建筑信息
 
@@ -603,7 +717,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建建造组件
 
@@ -621,7 +735,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 销毁建造组件
 
@@ -639,7 +753,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 **BlueprintNativeEvent**：蓝图可重写；C++ 默认实现在 `xxx_Implementation`。
 
-**源码注释:**
+**说明:**
 
 > 当Actor销毁时
 
@@ -662,7 +776,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置最近的智能对象槽位
 
@@ -684,7 +798,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 当有人来放置建造资源时
 
@@ -706,6 +820,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 获取该Actor对应的GOAP目标ID（蓝图实现）
+
 ---
 
 ### 函数 `InitInventoryManagerComponent`
@@ -718,13 +836,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `（匿名/仅类型）` | `EInventoryItemSetType InInventoryItemSetType = EInventoryItemSetType::Warehouse` |
+| `（匿名/仅类型）` | [EInventoryItemSetType](../Struct/ItemStruct__EInventoryItemSetType.md) InInventoryItemSetType = [EInventoryItemSetType](../Struct/ItemStruct__EInventoryItemSetType.md)::Warehouse |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void InitInventoryManagerComponent(EInventoryItemSetType InInventoryItemSetType = EInventoryItemSetType::Warehouse);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 当建筑物是仓库类型时初始化库存组件
 
@@ -742,7 +860,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 当建筑物为制造建筑物时初始化制造组件
 
@@ -760,9 +878,27 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 当建筑物为珍宝阁时初始化珍宝阁组件
+
+---
+
+### 函数 `InitTradeAreaComponent`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) virtual void InitTradeAreaComponent();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 初始化交易区组件
 
 ---
 
@@ -778,7 +914,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 获取建造物品点击后创建的界面id
 
@@ -796,7 +932,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取建造物品的名字
 
@@ -814,6 +950,10 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 获取建造物品的名字（蓝图实现）
+
 ---
 
 ### 函数 `CreateDoorCollisionComponent`
@@ -828,7 +968,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建门碰撞管理组件
 
@@ -850,7 +990,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 读档恢复门碰撞
 
@@ -868,7 +1008,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 获得门动画播放位置
 
@@ -890,7 +1030,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 建筑物建造成功
 
@@ -912,6 +1052,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 根据建造配置数据初始化建造状态
+
 ---
 
 ### 函数 `SetBuildObjectInstanceVisible`
@@ -930,7 +1074,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 隐藏建筑物模型
 
@@ -952,6 +1096,28 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 设置建筑物模型实例的显示或隐藏（蓝图实现）
+
+---
+
+### 函数 `CancelRebuild`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintImplementableEvent |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) void CancelRebuild();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 取消重建
+
 ---
 
 ### 函数 `DestoryBuilding`
@@ -966,7 +1132,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 拆除建筑
 
@@ -988,7 +1154,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 改变建筑物耐久度
 
@@ -1011,7 +1177,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 攻击建筑物
 
@@ -1027,13 +1193,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `RunState` | `EBuildingRunState` |
+| `RunState` | [EBuildingRunState](../ERW_Enumerations__EBuildingRunState.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) virtual void SetBuildingRunState(EBuildingRunState RunState);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置建筑物状态
 
@@ -1049,13 +1215,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EnabledState` | `EBuildingEnableState` |
+| `EnabledState` | [EBuildingEnableState](../ERW_Enumerations__EBuildingEnableState.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) virtual void SetBuildingEnabled(EBuildingEnableState EnabledState);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置建筑物开启或者关闭
 
@@ -1077,7 +1243,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 显示或隐藏描边
 
@@ -1100,7 +1266,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 能否使用射线检测结果
 
@@ -1122,7 +1288,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 初始化设施归属数据
 
@@ -1139,14 +1305,14 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Index` | `int32` |
-| `BelongState` | `EFacilityBelongState` |
+| `BelongState` | [EFacilityBelongState](../ERW_Enumerations__EFacilityBelongState.md) |
 | `Agent` | [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SetFacilityBelongData(int32 Index , EFacilityBelongState BelongState , AEastRimWorldAIController* Agent);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置设施归属数据
 
@@ -1168,7 +1334,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 弹出UI信息改变
 
@@ -1190,7 +1356,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置自动制造计时器ID
 
@@ -1208,7 +1374,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 注销自动制造计时器
 
@@ -1224,13 +1390,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `RoofPartType` | `ERoofPartType` |
+| `RoofPartType` | [ERoofPartType](../ERW_Enumerations__ERoofPartType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) void SetRoofPartType(ERoofPartType RoofPartType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 设置屋顶部位类型
 
@@ -1252,7 +1418,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 切换屋顶显示
 
@@ -1270,7 +1436,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 尝试添加搬运Action
 
@@ -1288,7 +1454,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 移除搬运Action
 
@@ -1310,7 +1476,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取行为在这个建筑物上的消耗变化
 
@@ -1332,7 +1498,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置新的优先级
 
@@ -1350,7 +1516,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 获得模型高度
 
@@ -1368,7 +1534,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 获得墙接缝柱配置参数
 
@@ -1384,13 +1550,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `DistributionTypes` | `const TArray<EGridDistributionType>&` |
+| `DistributionTypes` | const TArray<[EGridDistributionType](../ERW_Enumerations__EGridDistributionType.md)>& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent) void UpdateWallRotation(const TArray<EGridDistributionType>& DistributionTypes);`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 更新墙的旋转朝向
 
@@ -1408,7 +1574,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。 **BlueprintNativeEvent**：蓝图可重写；C++ 默认实现在 `xxx_Implementation`。
 
-**源码注释:**
+**说明:**
 
 > 获得真正的目标Actor
 
@@ -1426,7 +1592,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 创建新手引导指引箭头
 
@@ -1448,7 +1614,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 销毁新手引导指引箭头
 
@@ -1464,13 +1630,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ShowState` | `EEntranceArrowState` |
+| `ShowState` | [EEntranceArrowState](../ERW_Enumerations__EEntranceArrowState.md) |
+| `false` | `bool UpdateSlotEnabled =` |
 
-**原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) void UpdateEntranceArrow(EEntranceArrowState ShowState);`
+**原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) void UpdateEntranceArrow(EEntranceArrowState ShowState , bool UpdateSlotEnabled = false);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 更新建筑入口箭头
 
@@ -1492,7 +1659,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得建筑的格子
 
@@ -1516,7 +1683,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 加入阶梯的模型
 
@@ -1527,14 +1694,14 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintImplementableEvent |
-| 返回类型 | `ERoomUnitShowState` |
+| 返回类型 | [ERoomUnitShowState](../ERW_Enumerations__ERoomUnitShowState.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent) ERoomUnitShowState GetRoomUnitShowState();`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 获得房间单元显示状态
 

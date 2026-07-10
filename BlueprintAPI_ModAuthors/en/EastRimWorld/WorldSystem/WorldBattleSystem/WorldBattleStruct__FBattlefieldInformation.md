@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid Guid;` |
 
-**Source comments:**
+**Notes:**
 
 > 战场的Guid
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid BattlePlaceGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗地点GUID
 
@@ -49,9 +49,24 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid RelevancyPlaceGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗关联的地点
+
+---
+
+### Property `FromPlaceGuid`
+
+| Field | Details |
+|------|------|
+| C++ type | `FGuid` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame, BlueprintReadWrite, EditAnywhere) FGuid FromPlaceGuid;` |
+
+**Notes:**
+
+> [PR-6]出征发起地点(攻方从哪出发)。默认无效时回退攻方 MainPlace
 
 ---
 
@@ -64,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FBattleRuleset BattleRuleset;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗规则
 
@@ -79,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FGuid,FBattleTeamState> BattleTeamState;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗阵营状态
 
@@ -89,12 +104,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBattlefieldStateType` |
+| C++ type | [EBattlefieldStateType](WorldBattleStruct__EBattlefieldStateType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EBattlefieldStateType BattlefieldState = EBattlefieldStateType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗状态
 
@@ -109,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bPauseBattle = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否暂停
 
@@ -124,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float BattleTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗时间
 
@@ -139,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FBattlefieldResult BattlefieldResult;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗结果
 
@@ -154,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FBattlefieldAward BattlefieldAward;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗奖励
 
@@ -169,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bPlayerJoinBattle = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否有玩家参与
 

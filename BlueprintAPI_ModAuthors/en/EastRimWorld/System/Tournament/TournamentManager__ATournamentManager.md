@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, BlueprintReadOnly) float LastSoloTournamentTime = 0.0f;` |
 
-**Source comments:**
+**Notes:**
 
 > 上次单人比赛的时间
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, BlueprintReadOnly) float LastTeamTournamentTime = 0.0f;` |
 
-**Source comments:**
+**Notes:**
 
 > 上次多人比赛的时间
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float CurrentTournamentTime = 0.0f;` |
 
-**Source comments:**
+**Notes:**
 
 > //当前比赛时间（以进入场景时间为准 场景外使用倒计时计算）
 
@@ -64,6 +64,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TWeakObjectPtr<UTournamentConfigurationAsset> TournamentConfigurationAsset;` |
 
+**Notes:**
+
+> Tournament Configuration Asset field.
+
 ---
 
 ### Property `OnTournamentStateChanged`
@@ -75,7 +79,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnTournamentStateChanged OnTournamentStateChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 委托：比赛状态变化
 
@@ -90,7 +94,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUpdateTournamentBattleInfo OnSingleBattlePrepare;` |
 
-**Source comments:**
+**Notes:**
 
 > 单场比赛预备(连线动画)
 
@@ -105,7 +109,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUpdateTournamentBattleInfo OnSingleBattleStart;` |
 
-**Source comments:**
+**Notes:**
 
 > 单场比赛开始(战斗开始动画)
 
@@ -120,7 +124,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUpdateTournamentBattleInfo OnSingleBattleInProgress;` |
 
-**Source comments:**
+**Notes:**
 
 > 单场比赛开始(战斗开始动画)
 
@@ -135,7 +139,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUpdateTournamentBattleInfo OnSingleBattleEnd;` |
 
-**Source comments:**
+**Notes:**
 
 > 单场比赛结束(显示战斗结果)
 
@@ -150,7 +154,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUpdateTournamentBattleInfo OnSingleBattleSettle;` |
 
-**Source comments:**
+**Notes:**
 
 > 单场比赛结算(结果连线)
 
@@ -165,7 +169,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnTournamentNextRound OnTournamentNextRound;` |
 
-**Source comments:**
+**Notes:**
 
 > 下一回合
 
@@ -180,6 +184,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnTournamentEnd OnTournamentEnd;` |
 
+**Notes:**
+
+> On Tournament End event or callback.
+
 ---
 
 ### Property `OnSkipCurRoundSucceed`
@@ -191,7 +199,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnSkipCurRoundSucceed OnSkipCurRoundSucceed;` |
 
-**Source comments:**
+**Notes:**
 
 > 跳过当前回合成功
 
@@ -206,7 +214,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnRegistrationChange OnRegistrationChange;` |
 
-**Source comments:**
+**Notes:**
 
 > 报名状态切换
 
@@ -226,6 +234,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Gets or queries Get Tournament Manager.
+
 ---
 
 ### Function `GetCurrentTournamentInfo`
@@ -244,7 +256,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取当前比赛信息
 
@@ -266,7 +278,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取上一次比赛信息
 
@@ -284,7 +296,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否在报名期间
 
@@ -306,7 +318,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否已报名
 
@@ -324,7 +336,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 报名比赛
 
@@ -346,7 +358,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 指派角色
 
@@ -368,7 +380,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 取消角色参加比赛
 
@@ -386,7 +398,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 玩家不参加比赛
 
@@ -404,7 +416,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 玩家取消报名
 
@@ -427,7 +439,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取报名信息
 
@@ -451,7 +463,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 执行场外操作
 
@@ -475,7 +487,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 执行场外操作
 
@@ -493,7 +505,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 玩家所在分组开始比赛
 
@@ -511,7 +523,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 处理玩家分组比赛
 
@@ -529,7 +541,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通知比赛即将开始 除玩家阵营所在分组外直接计算结果
 
@@ -547,7 +559,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 结束比赛并结算
 
@@ -564,6 +576,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void TournamentSettle();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Tournament Settle field.
 
 ---
 
@@ -583,7 +599,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新比赛周期
 
@@ -601,7 +617,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取倒计时
 
@@ -619,7 +635,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否需要创建新比赛
 
@@ -635,13 +651,13 @@
 
 | Name | Type |
 |--------|------|
-| `TournamentType` | `ETournamentType` |
+| `TournamentType` | [ETournamentType](TournamentStruct__ETournamentType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CreateNewTournament(ETournamentType TournamentType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建新比赛
 
@@ -659,7 +675,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算比赛分组信息
 
@@ -677,7 +693,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算各门派战力
 
@@ -699,7 +715,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 跳过战斗（自动计算结果）
 
@@ -717,7 +733,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 跳过当前战斗
 
@@ -735,7 +751,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 进入门派比武
 
@@ -753,7 +769,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 离开门派比武
 
@@ -775,7 +791,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置跳过玩家战斗
 
@@ -797,7 +813,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置跳过NPC战斗
 
@@ -815,7 +831,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取跳过玩家战斗状态
 
@@ -833,7 +849,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取跳过NPC战斗状态
 
@@ -851,7 +867,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 跳过当前轮所有的比赛 并直接计算结果
 
@@ -873,7 +889,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 比武结束时设置排名信息
 

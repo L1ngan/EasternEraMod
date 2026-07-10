@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) TMap<FUObjectData , FName> ActionData;` |
 
-**源码注释:**
+**说明:**
 
 > TMap<Owner的数据 , GOAPAction的ID>
 

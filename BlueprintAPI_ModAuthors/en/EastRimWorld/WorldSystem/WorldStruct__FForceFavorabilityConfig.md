@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EForceFavorabilityType` |
+| C++ type | [EForceFavorabilityType](WorldStruct__EForceFavorabilityType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EForceFavorabilityType ForceFavorabilityType = EForceFavorabilityType::Bland;` |
 
-**Source comments:**
+**Notes:**
 
 > 好感度类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float FavorabilityMin = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 区间最小值
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float FavorabilityMax = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 区间最大值
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText FavoriteName;` |
 
-**Source comments:**
+**Notes:**
 
 > 好感名称
 

@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dependency") FString ModId;` |
 
-**Source comments:**
+**Notes:**
 
 > 依赖的 Mod ID
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dependency") FString MinVersion;` |
 
-**Source comments:**
+**Notes:**
 
 > 最小版本号（可选）
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dependency") bool bRequired = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否必需
 

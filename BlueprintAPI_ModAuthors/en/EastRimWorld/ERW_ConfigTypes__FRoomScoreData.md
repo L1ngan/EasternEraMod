@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Score-range data for a single room rating category, containing the score range and level name.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float MinScore = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 分数范围
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float MaxScore = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 分数范围
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FText LevelName;` |
 
-**Source comments:**
+**Notes:**
 
 > 名称
 

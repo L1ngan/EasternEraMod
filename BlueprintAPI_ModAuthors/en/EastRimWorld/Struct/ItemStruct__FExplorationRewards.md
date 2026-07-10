@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Exploration Rewards data structure.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) TArray<FExplorationReward> Rewards;` |
 
-**Source comments:**
+**Notes:**
 
 > 奖池
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) int32 Level = -1;` |
 
-**Source comments:**
+**Notes:**
 
 > 需要达到的境界
 

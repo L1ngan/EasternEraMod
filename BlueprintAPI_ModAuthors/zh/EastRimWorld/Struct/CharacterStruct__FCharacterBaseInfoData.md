@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() FName CharacterID;` |
 
-**源码注释:**
+**说明:**
 
 > 角色id
 
@@ -29,12 +29,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ECharacterType` |
+| C++ 类型 | [ECharacterType](CommonEnum__ECharacterType.md) |
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() ECharacterType CharacterType = ECharacterType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 角色类型
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() FGuid CharacterGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 角色Guid
 

@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Social attribute set: negotiation, bargaining, sociability, arresting, charm, taming and training abilities
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Social", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NegotiationAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 谈判能力
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Social", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BargainAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 议价能力
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Social", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Sociability;` |
 
-**Source comments:**
+**Notes:**
 
 > 社交能力
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Social", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ArrestingAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 拘捕能力
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Social", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Charm;` |
 
-**Source comments:**
+**Notes:**
 
 > 魅力
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Social", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TamingAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 驯服能力
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Social", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TrainingAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 训练能力
 

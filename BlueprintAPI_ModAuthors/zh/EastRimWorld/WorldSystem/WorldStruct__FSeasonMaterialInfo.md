@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EERWSeason` |
+| C++ 类型 | [EERWSeason](WorldStruct__EERWSeason.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EERWSeason Season = EERWSeason::Spring;` |
 
-**源码注释:**
+**说明:**
 
 > 季节
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float ParameterChangeTransitionTime = 20.f;` |
 
-**源码注释:**
+**说明:**
 
 > 参数过度时间(秒)
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float ParameterStartValue = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 参数开始值
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float ParameterEndValue = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 参数结束值
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName ParameterName;` |
 
-**源码注释:**
+**说明:**
 
 > 参数开始值
 

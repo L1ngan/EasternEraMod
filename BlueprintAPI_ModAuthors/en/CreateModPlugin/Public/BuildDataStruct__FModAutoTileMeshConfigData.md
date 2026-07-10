@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EModAutoTileType` |
+| C++ type | [EModAutoTileType](BuildDataStruct__EModAutoTileType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) EModAutoTileType AutoTileType { EModAutoTileType::Flat };` |
 
-**Source comments:**
+**Notes:**
 
 > 九宫格类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) UStaticMesh* StaticMesh { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > 静态模型
 

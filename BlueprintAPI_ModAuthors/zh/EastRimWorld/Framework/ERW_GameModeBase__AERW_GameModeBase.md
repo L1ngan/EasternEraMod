@@ -19,6 +19,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Configs", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UERW_GameConfigComponent> GameConfigComponent;` |
 
+**说明:**
+
+> 游戏配置组件，承载各类配置表与配置资产的读取
+
 ---
 
 ### 属性 `RoleMng`
@@ -29,6 +33,10 @@
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) TObjectPtr<ULGameRoleMng> RoleMng;` |
+
+**说明:**
+
+> 全局角色管理器（ULGameRoleMng）
 
 ---
 
@@ -41,6 +49,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) TObjectPtr<ULGameActorMng> AllActorMng;` |
 
+**说明:**
+
+> 全局 Actor 管理器（ULGameActorMng）
+
 ---
 
 ### 属性 `OnPlayerTeamCharacterDead`
@@ -52,7 +64,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnPlayerTeamCharacterDead OnPlayerTeamCharacterDead;` |
 
-**源码注释:**
+**说明:**
 
 > 当玩家阵营角色死亡时
 
@@ -67,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TMap<FName , FGoalBaseInfo> GoalBaseInfos;` |
 
-**源码注释:**
+**说明:**
 
 > GOAP目标的信息
 
@@ -82,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) bool BIsShowCharacTips = true;` |
 
-**源码注释:**
+**说明:**
 
 > 是否显示角色的经验值变化提示
 
@@ -97,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) bool BIsShowTemperatureRange = true;` |
 
-**源码注释:**
+**说明:**
 
 > 是否显示温度范围
 
@@ -112,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) bool BIsShowpowerRange = true;` |
 
-**源码注释:**
+**说明:**
 
 > 是否显示星能范围
 
@@ -127,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) bool BIsShowAttackRange = true;` |
 
-**源码注释:**
+**说明:**
 
 > 是否显示攻击范围
 
@@ -147,7 +159,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 生成SceneManager
 
@@ -165,7 +177,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 生成SceneManager
 
@@ -183,9 +195,31 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 获得SceneManager
+
+---
+
+### 函数 `PickRandomCustomizationProfile`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintImplementableEvent |
+| 返回类型 | `FString` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `bMale` | `bool` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent) FString PickRandomCustomizationProfile(bool bMale);`
+
+**用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 按性别随机抽取一个外观预设ID（蓝图实现：读 DT_PresetCustomizationProfiles_V10，筛 Gender==bMale 随机返回行名；C++ 无法访问该蓝图结构体表）
 
 ---
 
@@ -205,7 +239,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 属性变化是否需要提示
 
@@ -224,13 +258,13 @@
 | `GoalID` | `const FName&` |
 | `Score` | `float` |
 | `WorkSchedule` | `const FName&` |
-| `GoalCategory` | `EGOAPGoalCategory` |
+| `GoalCategory` | [EGOAPGoalCategory](../ERW_Enumerations__EGOAPGoalCategory.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void AddGoalBaseScore(const FName& GoalID , float Score , const FName& WorkSchedule , EGOAPGoalCategory GoalCategory) { GoalBaseInfos.Add(GoalID , FGoalBaseInfo(Score , WorkSchedule , GoalCategory)); }`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 记录GOAP目标基础分值
 
@@ -252,7 +286,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID（行命名）获取角色的具体动作能力
 
@@ -274,7 +308,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID（行命名）获取能力配置
 
@@ -296,7 +330,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过Tag获取buff图标
 
@@ -318,7 +352,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过标签（行命名）获取能力配置
 
@@ -340,7 +374,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID（行命名）获取投射物配置
 
@@ -358,9 +392,273 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取游戏的通用配置
+
+---
+
+### 函数 `GetApprenticeshipConfigAsset`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | [UApprenticeshipConfigAsset](../System/Apprenticeship/ApprenticeshipConfigAsset__UApprenticeshipConfigAsset.md) * |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) UApprenticeshipConfigAsset * GetApprenticeshipConfigAsset();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取弟子历练配置
+
+---
+
+### 函数 `GetEmergenceConfigAsset`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | class [UEmergenceConfigAsset](../System/Emergence/Data/EmergenceConfigAsset__UEmergenceConfigAsset.md) * |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) class UEmergenceConfigAsset * GetEmergenceConfigAsset();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取涌现系统调参配置
+
+---
+
+### 函数 `GetEmergenceEventTable`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `UDataTable *` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) UDataTable * GetEmergenceEventTable();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取涌现系统事件库表 DT_EmergentEvents(走 GameConfigComponent)
+
+---
+
+### 函数 `GetApprenticeshipEventTable`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `UDataTable *` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) UDataTable * GetApprenticeshipEventTable();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取弟子历练事件表(走 GameConfigComponent)
+
+---
+
+### 函数 `GetApprenticeshipRewardPoolTable`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `UDataTable *` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) UDataTable * GetApprenticeshipRewardPoolTable();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取弟子历练事件奖励池表 DT_RewardPool
+
+---
+
+### 函数 `GetApprenticeshipRewardTable`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `UDataTable *` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) UDataTable * GetApprenticeshipRewardTable();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取弟子历练单个奖励表 DT_ApprenticeshipReward
+
+---
+
+### 函数 `GetApprenticeshipRewardSetTable`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `UDataTable *` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) UDataTable * GetApprenticeshipRewardSetTable();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取弟子历练奖励集合表 DT_ApprenticeshipRewardSet
+
+---
+
+### 函数 `GetApprenticeshipConditionTable`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `UDataTable *` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) UDataTable * GetApprenticeshipConditionTable();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取弟子历练事件条件表 DT_ApprenticeshipCondition
+
+---
+
+### 函数 `GetConsumableConfigAsset`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | [UConsumableConfigAsset](../System/Consumable/ConsumableConfigAsset__UConsumableConfigAsset.md) * |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) UConsumableConfigAsset * GetConsumableConfigAsset();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取耗材配置资产
+
+---
+
+### 函数 `GetDominionConfigAsset`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | [UDominionConfigAsset](../System/Dominion/DominionConfigAsset__UDominionConfigAsset.md) * |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) UDominionConfigAsset * GetDominionConfigAsset();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取世界势力割据配置资产
+
+---
+
+### 函数 `GetSkillTestConfigAsset`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | class [USkillTestConfigAsset](../SkillTest/SkillTestConfigAsset__USkillTestConfigAsset.md) * |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) class USkillTestConfigAsset * GetSkillTestConfigAsset();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取技能/武学测试沙盒配置资产
+
+---
+
+### 函数 `GetConsumableDataByID`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | const [FConsumableData](../Struct/ConsumableStruct__FConsumableData.md) & |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `ID` | `const FName &` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) const FConsumableData & GetConsumableDataByID(const FName & ID) const;`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 通过ID获取耗材配置
+
+---
+
+### 函数 `GetConsumableEffectDataByID`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | const [FConsumableEffectData](../Struct/ConsumableStruct__FConsumableEffectData.md) & |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `ID` | `const FName &` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) const FConsumableEffectData & GetConsumableEffectDataByID(const FName & ID) const;`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 通过ID获取耗材效果配置
+
+---
+
+### 函数 `GetConsumableConditionByID`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | const [FConsumableCondition](../Struct/ConsumableStruct__FConsumableCondition.md) & |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `ID` | `const FName &` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) const FConsumableCondition & GetConsumableConditionByID(const FName & ID) const;`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 通过ID获取耗材条件配置
 
 ---
 
@@ -374,13 +672,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `SceneTextType` | `const ESceneTextType` |
+| `SceneTextType` | const [ESceneTextType](../AbilitySystem/SceneText/SceneTextStruct__ESceneTextType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) const FSceneTextInfo & GetSceneTextInfo(const ESceneTextType SceneTextType) const;`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过类型获取场景文字配置
 
@@ -402,7 +700,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID（行命名）获取模块UI配置
 
@@ -424,7 +722,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过物理材质SurfaceType获取地格属性
 
@@ -446,7 +744,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过模型名字获取采集物或者物品
 
@@ -468,7 +766,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID获取采集物表
 
@@ -490,7 +788,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID获取对应的物品配置
 
@@ -508,7 +806,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有珍宝阁商品ID
 
@@ -530,7 +828,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID获取对应的商品配置
 
@@ -552,7 +850,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID获取对应的武器配置
 
@@ -574,7 +872,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID获取工具配置
 
@@ -596,7 +894,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID获取建筑配置
 
@@ -618,7 +916,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID获取装备词条属性
 
@@ -640,7 +938,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID获取装备属性
 
@@ -662,7 +960,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID（行命名）获取UI配置
 
@@ -684,7 +982,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID（行命名）获取按钮配置
 
@@ -701,13 +999,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InItemID` | `const FName &` |
-| `GroundInventoryType` | `EGroundInventoryType` |
+| `GroundInventoryType` | [EGroundInventoryType](../Struct/CommonEnum__EGroundInventoryType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FInstancedStruct GetInventoryGeneralDataByItemID(const FName & InItemID,EGroundInventoryType GroundInventoryType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过id 物品类型查询配置
 
@@ -729,7 +1027,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID（行命名）获取势力数据
 
@@ -751,7 +1049,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有势力数据
 
@@ -773,7 +1071,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID（行命名）获取势力通关条件数据
 
@@ -795,7 +1093,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过属性集来获取详细的属性信息
 
@@ -817,7 +1115,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过属性ID来获取详细的属性信息
 
@@ -839,7 +1137,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有属性信息
 
@@ -861,7 +1159,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过属性镜子来获取详细的属性信息
 
@@ -883,7 +1181,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID获取装备的品质区间配置
 
@@ -905,7 +1203,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过id获取制造的装备池子
 
@@ -927,7 +1225,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID获取装备生成信息
 
@@ -949,7 +1247,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID获取制造配方
 
@@ -971,7 +1269,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过标签获取标签的信息
 
@@ -993,7 +1291,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有物品分类分类信息
 
@@ -1015,7 +1313,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取goap动作信息
 
@@ -1037,7 +1335,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查询符合目标的所有行动数据
 
@@ -1059,6 +1357,10 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 获取指定 GOAP 目标的基础分值（蓝图实现）
+
 ---
 
 ### 函数 `GetCommonButtonByType`
@@ -1071,13 +1373,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CommonButtonType` | `ECommonButtonType` |
+| `CommonButtonType` | [ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) const FCommonButton & GetCommonButtonByType(ECommonButtonType CommonButtonType) const;`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过按钮类型获取按钮配置
 
@@ -1094,13 +1396,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InCharacterID` | `FName` |
-| `InCharacterType` | `ECharacterType` |
+| `InCharacterType` | [ECharacterType](../Struct/CommonEnum__ECharacterType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FInstancedStruct GetCharacterInfoByID(FName InCharacterID,ECharacterType InCharacterType) const;`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过角色id和角色类型获取角色信息
 
@@ -1122,7 +1424,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通人类id获取人类信息
 
@@ -1140,7 +1442,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有人类id
 
@@ -1162,7 +1464,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通召唤物id获取召唤物信息
 
@@ -1184,7 +1486,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通动物id获取动物信息
 
@@ -1206,7 +1508,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID科技分类配置
 
@@ -1228,7 +1530,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID获取科技配置
 
@@ -1250,7 +1552,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID获取科技点转换配置
 
@@ -1266,14 +1568,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TechPointType` | `ETechPointType` |
+| `TechPointType` | [ETechPointType](../Struct/TechnologyStruct__ETechPointType.md) |
 | `Config` | [FTechPointConverConfigStruct](../Struct/TechnologyStruct__FTechPointConverConfigStruct.md)& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure) bool GetTechPointConvertConfigByType(ETechPointType TechPointType , FTechPointConverConfigStruct& Config) const;`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 通过科技点类型获得科技点转换配置
 
@@ -1296,7 +1598,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 通过建筑ID获得科技点转换配置
 
@@ -1318,7 +1620,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID获取科技解锁物品配置
 
@@ -1334,13 +1636,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `UnlockType` | `ETechUnlockItemType` |
+| `UnlockType` | [ETechUnlockItemType](../Struct/TechnologyStruct__ETechUnlockItemType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) TArray<FTechUnlockItemConigStruct> GetTechUnlockItemConigByType(ETechUnlockItemType UnlockType) const;`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查询某种类型的解锁包
 
@@ -1358,7 +1660,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有科技分类配置
 
@@ -1376,7 +1678,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有科技解锁物品配置
 
@@ -1398,7 +1700,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取属性值的等级配置
 
@@ -1416,7 +1718,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取新游戏的配置
 
@@ -1434,7 +1736,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有背景故事
 
@@ -1456,7 +1758,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过id获取背景故事选项
 
@@ -1479,7 +1781,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过type获取背景故事选项
 
@@ -1496,13 +1798,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `GameplayAttribute` | `FGameplayAttribute` |
-| `TargetSpecies` | `ESpeciesType` |
+| `TargetSpecies` | [ESpeciesType](../Struct/CommonEnum__ESpeciesType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) const FCharacterOrganConfig & GetCharacterOrganConfig(FGameplayAttribute GameplayAttribute , ESpeciesType TargetSpecies) const;`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取角色器官信息
 
@@ -1518,13 +1820,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TargetSpecies` | `ESpeciesType` |
+| `TargetSpecies` | [ESpeciesType](../Struct/CommonEnum__ESpeciesType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) TArray<FCharacterOrganConfig> GetAllCharacterOrganConfig(ESpeciesType TargetSpecies) const;`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有角色器官配置
 
@@ -1546,7 +1848,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 读取角色器官配置表
 
@@ -1562,13 +1864,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OType` | `EBodyOrganType` |
+| `OType` | [EBodyOrganType](../ERW_CommonTypes__EBodyOrganType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) const FCharacterOrganConfig& GetCharacterOrganConfigByOrganType(EBodyOrganType OType) const;`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过器官类型获取角色器官配置
 
@@ -1587,13 +1889,13 @@
 | `GameplayAttribute` | `FGameplayAttribute` |
 | `InCurrentValue` | `float` |
 | `InMaxValue` | `float` |
-| `Species` | `ESpeciesType` |
+| `Species` | [ESpeciesType](../Struct/CommonEnum__ESpeciesType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FOrganStatus GetCharacterOrganStatus(FGameplayAttribute GameplayAttribute,float InCurrentValue,float InMaxValue , ESpeciesType Species) const;`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取角色器官当前状态
 
@@ -1616,7 +1918,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取角色器官当前状态按ID
 
@@ -1634,7 +1936,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有角色器官UI配置
 
@@ -1652,7 +1954,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取角色主技能UI配置
 
@@ -1675,7 +1977,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过行名获取角色主技能UI配置
 
@@ -1697,7 +1999,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取角色属性等级升级配置
 
@@ -1719,7 +2021,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取动物的具体动作能力
 
@@ -1741,7 +2043,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID获取动物修炼配置
 
@@ -1763,7 +2065,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取武学书籍信息
 
@@ -1781,7 +2083,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有的境界信息
 
@@ -1803,7 +2105,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取境界等级信息
 
@@ -1825,7 +2127,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取武学词条信息
 
@@ -1847,9 +2149,53 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取技能词条配置（DT SkillEntryConfig）
+
+---
+
+### 函数 `GetSkillEntryPoolConfig`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `FSkillEntryPoolConfig &` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `PoolID` | `const FName &` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FSkillEntryPoolConfig & GetSkillEntryPoolConfig(const FName & PoolID) const;`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取技能词条池配置（DT SkillEntryPoolConfig）
+
+---
+
+### 函数 `GetSkillEntryCondition`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `FSkillEntryCondition &` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `ConditionID` | `const FName &` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FSkillEntryCondition & GetSkillEntryCondition(const FName & ConditionID) const;`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取技能词条条件配置（DT SkillEntryCondition）
 
 ---
 
@@ -1863,13 +2209,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Type` | `const ECharacterNameType&` |
+| `Type` | const [ECharacterNameType](../Struct/CharacterStruct__ECharacterNameType.md)& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) TArray<FText> GetAllCharacterNameConfigByType(const ECharacterNameType& Type);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有角色名字
 
@@ -1887,7 +2233,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有角色姓氏
 
@@ -1909,7 +2255,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取特性信息
 
@@ -1931,7 +2277,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有特性信息
 
@@ -1953,6 +2299,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取按品质分组的所有特性信息映射
+
 ---
 
 ### 函数 `GetCommonBuff`
@@ -1971,7 +2321,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取buff信息
 
@@ -1994,7 +2344,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获得崩溃值配置数据
 
@@ -2018,7 +2368,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过当前心情值获得崩溃值配置数据
 
@@ -2040,7 +2390,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获得工作优先级UI配置所有行数据
 
@@ -2062,7 +2412,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获得所有建筑配置行数据
 
@@ -2085,7 +2435,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获得建筑配置数据
 
@@ -2108,7 +2458,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查询所有建筑配置数据，有对应的GOAPAction
 
@@ -2125,13 +2475,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Datas` | TArray<[FBuildConfigData](../ERW_ConfigTypes__FBuildConfigData.md)>& |
-| `BType` | `EBuildingType` |
+| `BType` | [EBuildingType](../ERW_Enumerations__EBuildingType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void GetAllBuildConfigDataByBuildingType(TArray<FBuildConfigData>& Datas,EBuildingType BType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查询所有建筑配置数据，有对应的建筑类型
 
@@ -2148,13 +2498,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Datas` | TArray<[FBuildConfigData](../ERW_ConfigTypes__FBuildConfigData.md)>& |
-| `EType` | `EEnvironType` |
+| `EType` | [EEnvironType](../ERW_Enumerations__EEnvironType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void GetAllBuildConfigDataByEnvironType(TArray<FBuildConfigData>& Datas,EEnvironType EType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查询所有建筑配置数据，有对应的环境类型
 
@@ -2176,7 +2526,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 获取建筑物的二级分类
 
@@ -2194,7 +2544,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有武学分类配置
 
@@ -2216,7 +2566,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据数据名称，获取武学分类配置
 
@@ -2238,6 +2588,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 按地点 ID 获取世界地点信息
+
 ---
 
 ### 函数 `GetWorldForceInfo`
@@ -2255,6 +2609,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) const FWorldForceInfo & GetWorldForceInfo(const FName & WorldForceID);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 按势力 ID 获取世界势力信息
 
 ---
 
@@ -2274,6 +2632,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 按区域 ID 获取世界区域信息
+
 ---
 
 ### 函数 `GetWorldForceConfigurationAsset`
@@ -2288,6 +2650,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取世界势力配置资产
+
 ---
 
 ### 函数 `GetPlayerDiplomacyConfigAsset`
@@ -2301,6 +2667,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) class UPlayerDiplomacyConfigAsset* GetPlayerDiplomacyConfigAsset();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取玩家外交配置资产
 
 ---
 
@@ -2320,6 +2690,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 按 ID 获取世界势力目标（宗旨）配置信息
+
 ---
 
 ### 函数 `GetWorldPlaceWeatherInfo`
@@ -2332,13 +2706,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Weather` | `EERWWeather` |
+| `Weather` | [EERWWeather](../WorldSystem/WorldStruct__EERWWeather.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) const FWorldPlaceWeatherInfo & GetWorldPlaceWeatherInfo(EERWWeather Weather);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取天气信息
 
@@ -2360,7 +2734,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过天气ID获取天气信息
 
@@ -2382,7 +2756,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取伤势配置
 
@@ -2400,7 +2774,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取世界的配置资产
 
@@ -2418,7 +2792,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取疤痕配置信息
 
@@ -2434,13 +2808,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldMapMoveType` | `EWorldMapMoveType` |
+| `WorldMapMoveType` | [EWorldMapMoveType](../WorldSystem/WorldStruct__EWorldMapMoveType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) const FWorldMoveInfoPreset & GetWorldMoveInfoPreset(EWorldMapMoveType WorldMapMoveType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取世界地图移动预设
 
@@ -2456,11 +2830,15 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `FavorabilityType` | `const EForceFavorabilityType&` |
+| `FavorabilityType` | const [EForceFavorabilityType](../WorldSystem/WorldStruct__EForceFavorabilityType.md)& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) const FForceFavorabilityConfig & GetForceFavorabilityConfig(const EForceFavorabilityType& FavorabilityType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 按好感度类型获取势力好感度配置
 
 ---
 
@@ -2476,7 +2854,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取世界事件的配置资产
 
@@ -2492,13 +2870,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TipsType` | `const ETipsType&` |
+| `TipsType` | const [ETipsType](../WorldSystem/WorldStruct__ETipsType.md)& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FCommonTips GetTipsInfo(const ETipsType& TipsType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通用提示
 
@@ -2520,7 +2898,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取任务信息
 
@@ -2543,7 +2921,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获得新手引导对话
 
@@ -2566,7 +2944,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获得新手引导弹窗数据
 
@@ -2589,7 +2967,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获得新手引导Tips数据
 
@@ -2611,7 +2989,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取任务信息
 
@@ -2633,7 +3011,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取对话信息
 
@@ -2655,6 +3033,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取指定对话 ID 的对话信息
+
 ---
 
 ### 函数 `GetCommonDialogueOption`
@@ -2672,6 +3054,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) const FDialogueOption& GetCommonDialogueOption(const FName & OptionID);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取指定选项 ID 的对话选项配置
 
 ---
 
@@ -2692,6 +3078,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取指定 NPC ID 的全部对话选项
+
 ---
 
 ### 函数 `GetFarmlandConfigAsset`
@@ -2706,7 +3096,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取田地的配置
 
@@ -2722,13 +3112,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Type` | `const ECollectPlantType &` |
+| `Type` | const [ECollectPlantType](../Struct/ItemStruct__ECollectPlantType.md) & |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FPlantTypeTabInfo& GetPlantTypeTabInfo(const ECollectPlantType & Type);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取种植物分类数据
 
@@ -2750,7 +3140,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取势力等级信息
 
@@ -2772,7 +3162,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查询解锁包id对应的势力等级信息
 
@@ -2790,7 +3180,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查询所有势力等级信息
 
@@ -2808,7 +3198,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取配置的最大势力等级
 
@@ -2826,7 +3216,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有的门派宗旨
 
@@ -2848,7 +3238,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据ID获取门派宗旨配置
 
@@ -2865,13 +3255,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InPlaceLevel` | `const int32 &` |
-| `WorldPlaceType` | `EWorldPlaceType` |
+| `WorldPlaceType` | [EWorldPlaceType](../Struct/CommonEnum__EWorldPlaceType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) const FPlaceLevelInfo & GetPlaceLevelInfo(const int32 & InPlaceLevel,EWorldPlaceType WorldPlaceType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据等级和类型获取城市等级信息
 
@@ -2887,13 +3277,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WorldPlaceType` | `EWorldPlaceType` |
+| `WorldPlaceType` | [EWorldPlaceType](../Struct/CommonEnum__EWorldPlaceType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) const TArray<FPlaceLevelInfo> GetPlaceAllLevelInfo(EWorldPlaceType WorldPlaceType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据类型获取城市各等级信息
 
@@ -2909,14 +3299,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `SType` | `EERWSeason` |
+| `SType` | [EERWSeason](../WorldSystem/WorldStruct__EERWSeason.md) |
 | `LevelName` | `FName` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) TArray<FSeasonWeathersInfo> GetWeathersInfoBySeason(EERWSeason SType,FName LevelName) const;`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 按季节返回天气配置信息
 
@@ -2932,13 +3322,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BehaviorState` | `const ECharacterBehaviorState &` |
+| `BehaviorState` | const [ECharacterBehaviorState](../Struct/CommonEnum__ECharacterBehaviorState.md) & |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) const FGOAP_ActionIcon & GetGOAPActionIcon(const ECharacterBehaviorState & BehaviorState) const;`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取行为对应配置信息（图标）
 
@@ -2961,7 +3351,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过阵营ID获取阵营信息
 
@@ -2983,7 +3373,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建游戏时，可以选择的初始资源包列表
 
@@ -3005,6 +3395,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 按事件 ID 获取音效切换事件配置
+
 ---
 
 ### 函数 `GetAllStoryBackgroundStorys`
@@ -3023,7 +3417,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 返回全部新游戏剧本
 
@@ -3045,7 +3439,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取怪物生成配置
 
@@ -3067,7 +3461,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 敌对势力袭击配置
 
@@ -3089,7 +3483,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 返回所有成就配置
 
@@ -3111,7 +3505,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据id获取房间配置
 
@@ -3127,13 +3521,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `RoomType` | `const ERoomType&` |
+| `RoomType` | const [ERoomType](../ERW_Enumerations__ERoomType.md)& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) const FRoomConfigData& GetRoomConfigDataByType(const ERoomType& RoomType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据RoomType获取房间配置
 
@@ -3155,7 +3549,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有房间配置
 
@@ -3171,13 +3565,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `SeasonID` | `const EERWSeason&` |
+| `SeasonID` | const [EERWSeason](../WorldSystem/WorldStruct__EERWSeason.md)& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) const FSeasonMaterialInfo& GetSeasonMaterialInfo(const EERWSeason& SeasonID);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查询季节参数变化配置
 
@@ -3194,6 +3588,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) URoomConfigAsset* GetRoomConfigAsset();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取房间配置资产
 
 ---
 
@@ -3213,7 +3611,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过id获取组合建筑配置
 
@@ -3235,7 +3633,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有组合建筑配置
 
@@ -3253,7 +3651,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取聊天配置
 
@@ -3275,7 +3673,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID获取社交关系配置
 
@@ -3297,7 +3695,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过type获取社交关系配置
 > UFUNCTION(BlueprintCallable)
@@ -3322,7 +3720,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查询爱好配置
 
@@ -3338,13 +3736,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BattleType` | `EBattleType` |
+| `BattleType` | [EBattleType](../Struct/CommonEnum__EBattleType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FBattleRuleset GetBattleRuleset(EBattleType BattleType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取战斗规则
 
@@ -3366,7 +3764,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过预设id 获取预设信息
 
@@ -3388,9 +3786,76 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过NCP配置ID 获取配置
+
+---
+
+### 函数 `GetRandomDiscipleConfig`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | [FRandomDiscipleConfig](../WorldSystem/WorldStruct__FRandomDiscipleConfig.md) |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `InConfigID` | `FName` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FRandomDiscipleConfig GetRandomDiscipleConfig(FName InConfigID) const;`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 通过配置ID 获取随机弟子生成配置（DT_RandomDiscipleConfig）
+
+---
+
+### 函数 `GetCharacterAvatarConfig`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | [FCharacterAvatarConfig](../Struct/CharacterStruct__FCharacterAvatarConfig.md) |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `InConfigID` | `FName` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FCharacterAvatarConfig GetCharacterAvatarConfig(FName InConfigID) const;`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 通过配置ID 获取角色立绘配置（DT_CharacterAvatarConfig）
+
+---
+
+### 函数 `GetCharacterAvatar`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `TSoftObjectPtr<UTexture2D>` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `CharacterData` | const [FCharacterSaveData](../WorldSystem/WorldCharacterData__FCharacterSaveData.md)& |
+| `AvatarType` | [EDiscipleAvatarType](../Struct/CharacterStruct__EDiscipleAvatarType.md) |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) TSoftObjectPtr<UTexture2D> GetCharacterAvatar(const FCharacterSaveData& CharacterData, EDiscipleAvatarType AvatarType) const;`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 解析角色某用途的立绘软引用：优先弟子 AvatarConfigID 查表，未配/查不到则回退模板（DT_HumanData）对应立绘字段
 
 ---
 
@@ -3410,7 +3875,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取战略技能信息
 
@@ -3432,7 +3897,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取全部战略技能信息
 
@@ -3448,14 +3913,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `AutoUseCharacterType` | `EAutoUseCharacterType` |
-| `BattleType` | `EBattleType` |
+| `AutoUseCharacterType` | [EAutoUseCharacterType](../Struct/CommonEnum__EAutoUseCharacterType.md) |
+| `BattleType` | [EBattleType](../Struct/CommonEnum__EBattleType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FAutoUseCharacterRule GetAutoUseCharacterRule(EAutoUseCharacterType AutoUseCharacterType,EBattleType BattleType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取自动使用角色规则
 
@@ -3477,7 +3942,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取掉落集
 
@@ -3499,7 +3964,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取城镇建筑设施配置
 
@@ -3521,7 +3986,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取城镇效果配置
 
@@ -3543,7 +4008,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取地点特殊效果配置（全局效果）
 
@@ -3559,11 +4024,15 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `JobType` | `EPlaceJobType` |
+| `JobType` | [EPlaceJobType](../Struct/CommonEnum__EPlaceJobType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FWorldPlaceJobConfig GetPlaceJobConfigByType(EPlaceJobType JobType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 按职位类型获取城镇职位配置
 
 ---
 
@@ -3578,6 +4047,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) UCommonLogConfigurationAsset* GetCommonLogConfigurationAsset();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取通用日志配置资产
 
 ---
 
@@ -3597,7 +4070,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取交通工具的信息
 
@@ -3613,13 +4086,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TransportationType` | `ETransportationType` |
+| `TransportationType` | [ETransportationType](../ERW_Enumerations__ETransportationType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FTransportationInfo GetTransportationInfoByType(ETransportationType TransportationType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过类型获取交通工具的信息
 
@@ -3641,7 +4114,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有交通工具信息
 
@@ -3659,7 +4132,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取傀儡台配置
 
@@ -3681,6 +4154,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 按光照值获取地点光照影响信息
+
 ---
 
 ### 函数 `GetPlaceLightInfluenceInfoByID`
@@ -3699,6 +4176,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 按 ID 获取地点光照影响信息
+
 ---
 
 ### 函数 `GetTournamentRule`
@@ -3711,13 +4192,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TournamentType` | `ETournamentType` |
+| `TournamentType` | [ETournamentType](../System/Tournament/TournamentStruct__ETournamentType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FTournamentRule GetTournamentRule(ETournamentType TournamentType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 比武规则
 
@@ -3735,7 +4216,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取游戏的通用配置
 
@@ -3757,6 +4238,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 按 ID 获取场外操作配置信息（比武相关）
+
 ---
 
 ### 函数 `GetPostStationConfigAsset`
@@ -3771,7 +4256,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 驿站
 
@@ -3793,7 +4278,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 驿站生成
 
@@ -3816,6 +4301,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 按 ID 列表获取对应的驿站生成配置
+
 ---
 
 ### 函数 `GetAnnualRewardConfig`
@@ -3834,7 +4323,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取排名奖励
 
@@ -3852,7 +4341,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 突破配置
 
@@ -3868,13 +4357,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `FiveElementType` | `EFiveElementType` |
+| `FiveElementType` | [EFiveElementType](../Struct/CommonEnum__EFiveElementType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FTrainingRoomConfig GetTrainingRoomConfigByType(EFiveElementType FiveElementType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 按五行类型获取训练房间配置信息
 
@@ -3890,7 +4379,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `FiveElementType` | `EFiveElementType` |
+| `FiveElementType` | [EFiveElementType](../Struct/CommonEnum__EFiveElementType.md) |
 | `RoomLevel` | `int32` |
 | `CharacterPoints` | `int32` |
 | `OutLoopSections` | `TArray<FName> &` |
@@ -3900,7 +4389,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取指定类型和等级的技能池ID列表
 
@@ -3916,14 +4405,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `FiveElementType` | `EFiveElementType` |
+| `FiveElementType` | [EFiveElementType](../Struct/CommonEnum__EFiveElementType.md) |
 | `RoomLevel` | `int32` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) TMap<int32, FNameArr> GetTrainingRoomAllSkillIDs(EFiveElementType FiveElementType, int32 RoomLevel);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取指定类型和等级的技能池ID列表 不计算
 
@@ -3945,7 +4434,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取随机的技能配置
 
@@ -3967,7 +4456,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取突破技能配置
 
@@ -3989,7 +4478,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查询势力分堂服饰限制
 
@@ -4007,7 +4496,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取修炼配置
 
@@ -4029,7 +4518,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 商品配置
 
@@ -4047,7 +4536,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取默认的阵营信息
 
@@ -4069,7 +4558,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据ID获取切磋配置
 
@@ -4087,7 +4576,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取袭击配置资产
 
@@ -4105,7 +4594,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取监狱配置资产
 
@@ -4127,7 +4616,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据ID获取威胁池信息
 
@@ -4149,7 +4638,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据当前点数获取威胁池信息数组
 
@@ -4171,7 +4660,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据ID获取袭击规则
 
@@ -4193,7 +4682,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据ID获取角色忠诚度配置
 
@@ -4215,7 +4704,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据重要度获取角色忠诚度配置
 

@@ -12,6 +12,7 @@
 "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CreateModPlugin/Module.CreateModPlugin.3.cpp.obj"
 "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CreateModPlugin/CreateModPlugin.cpp.obj"
 "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CreateModPlugin/BaseDataStruct.cpp.obj"
+"H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CreateModPlugin/ModConfigExporter.cpp.obj"
 "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CreateModPlugin/TechnologyDataStruct.cpp.obj"
 "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CreateModPlugin/Default.rc2.res"
 /OUT:"H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CreateModPlugin/UnrealEditor-CreateModPlugin-Win64-DebugGame.lib"

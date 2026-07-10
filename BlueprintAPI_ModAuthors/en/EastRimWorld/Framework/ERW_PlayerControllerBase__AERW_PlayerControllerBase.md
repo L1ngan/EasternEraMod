@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Base PlayerController class handling inventory resource management, item spawning, team character queries and main UI
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Inventory", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UInventoryManagerComponent> InventoryManagerComponent;` |
 
+**Notes:**
+
+> Inventory manager component
+
 ---
 
 ### Property `OnInventoryItemInstanceDestroy`
@@ -28,7 +34,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnInventoryItemInstance OnInventoryItemInstanceDestroy;` |
 
-**Source comments:**
+**Notes:**
 
 > ~End of IInventoryInterface interface
 > 物品删除
@@ -44,7 +50,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnInventoryItemInstance OnInventoryItemInstanceAddition;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品添加
 
@@ -59,7 +65,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnInventoryItemInstance OnInventoryItemInstanceUpdate;` |
 
-**Source comments:**
+**Notes:**
 
 > 更新物品信息
 
@@ -74,7 +80,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnPopupInfoUIChange OnPopupInfoUIChange;` |
 
-**Source comments:**
+**Notes:**
 
 > 更新通用信息界面
 
@@ -89,7 +95,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnCreateRobotDelegate OnCreateRobotDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 创建机关人
 
@@ -104,7 +110,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnDestoryRobotDelegate OnDestoryRobotDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 销毁机关人
 
@@ -119,7 +125,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnItemUseStateChange OnItemUseStateChangeEvent;` |
 
-**Source comments:**
+**Notes:**
 
 > [自定义事件]当物品的使用状态改变
 
@@ -134,9 +140,24 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUnLockItem OnUnLockItemEvent;` |
 
-**Source comments:**
+**Notes:**
 
 > 解锁了物品(建筑菜单红点)
+
+---
+
+### Property `IsLeftShiftPressed`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool IsLeftShiftPressed { false };` |
+
+**Notes:**
+
+> 左Shift键是否按下
 
 ---
 
@@ -149,6 +170,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) int32 SelectedCharacterTabIndex = 0;` |
 
+**Notes:**
+
+> Index of the currently selected character tab
+
 ---
 
 ### Property `OnStartSettleAccountsDelegate`
@@ -160,7 +185,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnBattlefieldDelegate OnStartSettleAccountsDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 结算开始委托
 
@@ -175,7 +200,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnBattlefieldDelegate OnAttackerMoveToWorldPlaceDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 攻击方已经到达战场
 
@@ -190,7 +215,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnCharactersStartWanderDelegate OnCharactersStartWanderDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色开始游荡
 
@@ -210,6 +235,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Blueprint-implemented event for initializing the controller after entering the world
+
 ---
 
 ### Function `K2_InitPlayerControllerOnWorldPlace`
@@ -224,6 +253,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Blueprint-implemented event for initializing the controller after entering a world place
+
 ---
 
 ### Function `RemoveUnlockItemTip`
@@ -237,13 +270,13 @@
 | Name | Type |
 |--------|------|
 | `UnlockItemId` | `FName` |
-| `UnlockItemType` | `ETechUnlockItemType` |
+| `UnlockItemType` | [ETechUnlockItemType](../Struct/TechnologyStruct__ETechUnlockItemType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void RemoveUnlockItemTip(FName UnlockItemId, ETechUnlockItemType UnlockItemType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除解锁物品提示
 
@@ -260,13 +293,13 @@
 | Name | Type |
 |--------|------|
 | `UnlockItemId` | `FName` |
-| `UnlockItemType` | `ETechUnlockItemType` |
+| `UnlockItemType` | [ETechUnlockItemType](../Struct/TechnologyStruct__ETechUnlockItemType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool FindUnlockItemTip(FName UnlockItemId, ETechUnlockItemType UnlockItemType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查找解锁物品提示
 
@@ -288,7 +321,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 显示通知消息
 
@@ -304,7 +337,7 @@
 
 | Name | Type |
 |--------|------|
-| `GroundInventoryType` | `EGroundInventoryType` |
+| `GroundInventoryType` | [EGroundInventoryType](../Struct/CommonEnum__EGroundInventoryType.md) |
 | `InGameplayTag` | `FGameplayTag` |
 | `InResourceID` | `FName` |
 
@@ -312,7 +345,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取拥有的资源数量
 
@@ -334,6 +367,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets all currently owned resources with their quantities
+
 ---
 
 ### Function `GetAllOwendResourcesTagMapInfo`
@@ -352,7 +389,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取拥有的所有资源按照TMap<FGameplayTag,FInventoryGeneralData>的方式
 
@@ -374,7 +411,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取是否拥有这些资源
 
@@ -392,7 +429,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 是否拥有实物
 
@@ -415,7 +452,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > /获取当前可用于消耗的物资(排除正在使用和预留的物品)
 
@@ -437,7 +474,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查可消耗物资是否足够
 
@@ -460,7 +497,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > /消耗物资(例如城镇升级),返回失败不产生消耗(排除正在使用和预留的物品)
 > //// @param bEnoughConsume 是否物品足够才消耗,设为false即使不够也会把能消耗的都消耗掉
@@ -481,14 +518,14 @@
 | `InResourceNumber` | `int` |
 | `InSpawnTransform` | `FTransform` |
 | `CurLevel` | `ULevel *` |
-| `InventoryType` | `EGroundInventoryType` |
+| `InventoryType` | [EGroundInventoryType](../Struct/CommonEnum__EGroundInventoryType.md) |
 | `(unnamed / type only)` | `float InRadius = 500.f` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void GenerateAllTypeItemToWorldByID(FName InResourceID, int InResourceNumber, FTransform InSpawnTransform,ULevel * CurLevel, EGroundInventoryType InventoryType,float InRadius = 500.f);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据ID生成物品
 
@@ -514,7 +551,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据数据生成物品
 
@@ -540,7 +577,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据实例生成物品
 
@@ -566,7 +603,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 判断位置是否合适，不合适随机周边一个位置，并判断周围是否有相同的物品
 
@@ -592,7 +629,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 在半径内查找地面 SingleItem 中与 ItemID 相同的堆叠并尽量合并（用于 NormalItem）；返回剩余未能合并的数量。
 
@@ -612,11 +649,15 @@
 | `InResourceNumber` | `int` |
 | `InSpawnTransform` | `FTransform` |
 | `CurLevel` | `ULevel *` |
-| `InventoryType` | `EGroundInventoryType` |
+| `InventoryType` | [EGroundInventoryType](../Struct/CommonEnum__EGroundInventoryType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) AInventoryItemSet * GenerateIDItemToWorld(FName InResourceID,int InResourceNumber,FTransform InSpawnTransform,ULevel * CurLevel , EGroundInventoryType InventoryType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Spawns an item set into the world by resource ID and returns the created AInventoryItemSet
 
 ---
 
@@ -640,7 +681,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > void GenerateEquipmentData(const FEquipmentQualityRange & EquipmentQualityRang,FString CharacterName = "");
 > 根据配置生成一个物品到世界中
@@ -666,7 +707,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据装备信息生成一个物品丢到世界中
 
@@ -691,7 +732,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 调试绘制AI视野
 
@@ -715,7 +756,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据实例生成一个物品丢到世界中
 
@@ -740,7 +781,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据存档信息生成物品到世界中
 
@@ -763,7 +804,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 是否拥有包含这些标签的资源
 
@@ -785,7 +826,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有玩家队伍角色
 
@@ -807,7 +848,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过GUID获取玩家队伍中一个角色信息
 
@@ -830,7 +871,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过Guid查询角色（可以不限制玩家）
 
@@ -852,7 +893,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有玩家队伍机关人角色
 
@@ -874,7 +915,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有玩家队伍战斗机关人角色
 
@@ -896,7 +937,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有玩家队伍动物
 
@@ -918,7 +959,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有角色(包括人物 动物 召唤物)
 
@@ -940,6 +981,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets all characters (humans, animals, summons); alternate version of GetAllCharacter
+
 ---
 
 ### Function `GetGOAPAction`
@@ -960,7 +1005,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > /////////////临时做法 后续更改获取这个配置的方式*******///////////////////////////
 
@@ -982,6 +1027,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Finds an inventory item instance by its GUID
+
 ---
 
 ### Function `CreateMainUI`
@@ -1000,7 +1049,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 创建主界面UI
 
@@ -1022,7 +1071,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 设置所有ui隐藏
 
@@ -1039,6 +1088,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintPure) bool GetInputEnabled();`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Returns whether player input is currently enabled
 
 ---
 
@@ -1057,6 +1110,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent) void SetPlayMoviesMask(bool bShow);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Sets whether the movie-playing mask is shown (implemented in Blueprint)
 
 ---
 
@@ -1077,7 +1134,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 生成建筑物故障投射物
 
@@ -1100,6 +1157,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Shows a message box with the given title and message (implemented in Blueprint)
+
 ---
 
 ### Function `TestPrintCurrentCameraName`
@@ -1114,7 +1175,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 测试：在日志中输出 PlayerCameraManager、GetViewTarget、GetViewTargetPawn 名称
 
@@ -1137,7 +1198,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 征召目标变化：用于统一管理唯一显示的视野扇形（仅在被征召者上显示）
 
@@ -1155,7 +1216,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 批量征召开始：进入批量模式（期间不显示任何扇形）
 
@@ -1173,7 +1234,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 批量征召结束：根据人数决定显示（==1 显示；否则隐藏）
 
@@ -1191,8 +1252,31 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 选中状态变化后通知：立即按“征召+选中+唯一”规则重算显示
+
+---
+
+### Function `WM_TargetDump`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `(unnamed / type only)` | `); (BlueprintCallable` |
+| `InPlace` | Category="WM") void WM_SetSelectedPlace(class [AWorldPlace](../WorldSystem/WorldPlace__AWorldPlace.md)* |
+
+**Original declaration (excerpt):** `UFUNCTION(Exec) void WM_TargetDump(); UFUNCTION(BlueprintCallable, Category="WM") void WM_SetSelectedPlace(class AWorldPlace* InPlace);`
+
+**Usage:** See pins and category for this node in the Blueprint editor.
+
+**Notes:**
+
+> WM Target Dump field.
 
 ---

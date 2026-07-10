@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MainSkillUIConfig") FGameplayAttribute LevelAttribute;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应等级属性(等级)
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MainSkillUIConfig") FGameplayAttribute ExpAttribute;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应经验属性（经验）
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MainSkillUIConfig") FGameplayAttribute ExpBonusAttribute;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应经验加成属性（经验加成）
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MainSkillUIConfig") TArray<FGameplayAttribute> EffectAttributeArray;` |
 
-**Source comments:**
+**Notes:**
 
 > 影响的附加属性集
 

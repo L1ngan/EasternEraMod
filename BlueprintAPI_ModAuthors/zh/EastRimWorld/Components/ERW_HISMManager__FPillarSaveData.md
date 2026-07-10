@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FName ID;` |
 
-**源码注释:**
+**说明:**
 
 > 墙的配置表ID
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 LayerIndex { INDEX_NONE };` |
 
-**源码注释:**
+**说明:**
 
 > 模型所在层的索引
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FGridSeamPoint SeamPoint;` |
 
-**源码注释:**
+**说明:**
 
 > 所在接缝点
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FTransform Transform;` |
 
-**源码注释:**
+**说明:**
 
 > 模型的Transform
 
@@ -74,12 +74,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EISMType` |
+| C++ 类型 | [EISMType](../ERW_Enumerations__EISMType.md) |
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) EISMType VisibleISMType { EISMType::Normal };` |
 
-**源码注释:**
+**说明:**
 
 > 当前显示的ISM类型
 
@@ -89,12 +89,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EBuildObjectState` |
+| C++ 类型 | [EBuildObjectState](../ERW_Enumerations__EBuildObjectState.md) |
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) EBuildObjectState BuildObjectState { EBuildObjectState::NoResource };` |
 
-**源码注释:**
+**说明:**
 
 > 建造状态
 

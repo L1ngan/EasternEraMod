@@ -29,7 +29,7 @@
 void SModInfoEditorWindow::Construct(const FArguments& InArgs)
 {
 	// 创建 ModInfoData 对象
-	ModInfoData = NewObject<UModInfoData>(GetTransientPackage());
+	ModInfoData = TStrongObjectPtr<UModInfoData>(NewObject<UModInfoData>(GetTransientPackage()));
 	ModInfoData->ModFolderPath = InArgs._ModFolderPath;
 
 	// 创建属性详情视图
@@ -56,7 +56,7 @@ void SModInfoEditorWindow::Construct(const FArguments& InArgs)
 			return true;
 		})
 	);
-	DetailsView->SetObject(ModInfoData);
+	DetailsView->SetObject(ModInfoData.Get());
 
 	// 如果提供了文件夹路径，尝试加载现有的 ModInfo.json
 	if (!ModInfoData->ModFolderPath.IsEmpty())
@@ -443,7 +443,7 @@ void SModInfoEditorWindow::LoadModInfoFromFile(const FString& FilePath)
 	}
 
 	// 刷新详情视图
-	DetailsView->SetObject(ModInfoData, true);
+	DetailsView->SetObject(ModInfoData.Get(), true);
 }
 
 bool SModInfoEditorWindow::SaveModInfoToFile(const FString& FilePath)

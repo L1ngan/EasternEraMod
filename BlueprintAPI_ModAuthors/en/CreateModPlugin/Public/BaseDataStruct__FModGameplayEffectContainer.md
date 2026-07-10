@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Gameplay effect container defining how targeting happens (TargetType) and the list of gameplay effects to apply to the targets.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = GameplayEffectContainer) TSubclassOf<UEastRimWorldTargetType> TargetType;` |
 
-**Source comments:**
+**Notes:**
 
 > Sets the way that targeting happens
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = GameplayEffectContainer) TArray<TSubclassOf<UGameplayEffect>> TargetGameplayEffectClasses;` |
 
-**Source comments:**
+**Notes:**
 
 > List of gameplay effects to apply to the targets
 

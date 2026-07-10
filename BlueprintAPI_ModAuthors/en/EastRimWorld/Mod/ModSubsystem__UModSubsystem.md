@@ -20,7 +20,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Mod System") FOnModLoaded OnModLoaded;` |
 
-**Source comments:**
+**Notes:**
 
 > Mod加载事件
 
@@ -35,7 +35,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Mod System") FOnModUnloaded OnModUnloaded;` |
 
-**Source comments:**
+**Notes:**
 
 > Mod卸载事件
 
@@ -50,9 +50,24 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Mod System") FOnModLoadFailed OnModLoadFailed;` |
 
-**Source comments:**
+**Notes:**
 
 > Mod加载失败事件
+
+---
+
+### Property `OnSaveModCompatibilityIssues`
+
+| Field | Details |
+|------|------|
+| C++ type | `FOnSaveModCompatibilityIssues` |
+| Reflection specifiers | BlueprintAssignable, Category="Mod System" |
+| Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Mod System") FOnSaveModCompatibilityIssues OnSaveModCompatibilityIssues;` |
+
+**Notes:**
+
+> 读档发现 Mod 兼容问题时广播（缺失/未启用/版本不符），UI 绑定后向玩家弹确认提示
 
 ---
 
@@ -64,6 +79,10 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TMap<FName, FString> ModsIconPath;` |
+
+**Notes:**
+
+> Map of mod icon paths (Mod ID to icon file path)
 
 ---
 
@@ -85,7 +104,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取Mod子系统单例
 
@@ -103,7 +122,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 扫描并发现所有可用的Mod
 
@@ -126,7 +145,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加载指定Mod
 
@@ -148,7 +167,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 卸载指定Mod
 
@@ -171,7 +190,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 启用/禁用Mod
 
@@ -193,7 +212,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取Mod信息
 
@@ -211,7 +230,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取所有已加载的Mod
 
@@ -229,7 +248,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取所有发现的Mod（包括未加载的）
 
@@ -251,7 +270,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查Mod是否已加载
 
@@ -274,7 +293,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查Mod是否符合游戏版本要求
 
@@ -297,7 +316,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查Mod工具版本号是否兼容
 
@@ -315,7 +334,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取当前游戏的Mod工具版本号
 
@@ -338,7 +357,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查Mod依赖是否满足
 
@@ -360,7 +379,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 按依赖顺序加载所有启用的Mod 是否是加载新游戏mod
 
@@ -378,13 +397,13 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 卸载所有Mod
 
 ---
 
-### Function `LoadAndApplyModInformationAssetByPath`
+### Function `LoadAndApplyModConfigFromJson`
 
 | Field | Details |
 |------|------|
@@ -394,15 +413,74 @@
 
 | Name | Type |
 |--------|------|
-| `AssetPath` | `const FString&` |
+| `ModInfo` | [UModRuntimeInfo](ModInfo__UModRuntimeInfo.md)* |
 | `bNewGameLoad` | `bool` |
 
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Mod System") bool LoadAndApplyModInformationAssetByPath(const FString& AssetPath,bool bNewGameLoad);`
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Mod System") bool LoadAndApplyModConfigFromJson(UModRuntimeInfo* ModInfo, bool bNewGameLoad);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
-> 通过路径加载并应用UModInformationAsset（供Lua调用）
+> 从 ModInfo.json 记录的 JSON 配置加载并应用（不依赖 Cook 后的 DataTable/DataAsset）
+
+---
+
+### Function `GetLoadedModRecords`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure, Category="Mod System" |
+| Return type | TArray<[FModSaveRecord](ModInfo__FModSaveRecord.md)> |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Mod System") TArray<FModSaveRecord> GetLoadedModRecords() const;`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 获取当前已加载 Mod 的存档记录（存档时由 SaveGameDataActor 同步进档）
+
+---
+
+### Function `CheckSaveModCompatibility`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="Mod System" |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `SaveRecords` | const TArray<[FModSaveRecord](ModInfo__FModSaveRecord.md)>& |
+| `OutIssues` | TArray<[FModCompatibilityIssue](ModInfo__FModCompatibilityIssue.md)>& |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Mod System") bool CheckSaveModCompatibility(const TArray<FModSaveRecord>& SaveRecords, TArray<FModCompatibilityIssue>& OutIssues) const;`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 对比存档 Mod 记录与当前 Mod 环境，输出缺失/未启用/版本不符清单；返回 true 表示完全兼容
+
+---
+
+### Function `GetLastSaveModCompatibilityIssues`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure, Category="Mod System" |
+| Return type | TArray<[FModCompatibilityIssue](ModInfo__FModCompatibilityIssue.md)> |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Mod System") TArray<FModCompatibilityIssue> GetLastSaveModCompatibilityIssues() const { return LastSaveModCompatibilityIssues; }`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 最近一次读档兼容检查发现的问题（UI 可在绑定委托之外随时查询）
 
 ---

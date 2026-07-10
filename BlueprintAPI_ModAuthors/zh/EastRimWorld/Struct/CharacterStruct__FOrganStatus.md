@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "OrganStatus") FText StatusName;` |
 
-**源码注释:**
+**说明:**
 
 > 名称
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = 0.f,ClampMax = 1.0f),Category = "OrganStatus") float MinValue = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 区间最小值 百分比
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = 0.f,ClampMax = 1.0f), Category = "OrganStatus") float MaxValue = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 区间最大值
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "OrganStatus") FName TakeEffectBuffID;` |
 
-**源码注释:**
+**说明:**
 
 > 处在此区间时生效的buff
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "OrganStatus") float WorkAdditionPercentage = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 处在此区间时工作的加成
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "OrganStatus") int TextColorType = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 器官状态UI文字(-1 红色；0 灰色；1 绿色)
 

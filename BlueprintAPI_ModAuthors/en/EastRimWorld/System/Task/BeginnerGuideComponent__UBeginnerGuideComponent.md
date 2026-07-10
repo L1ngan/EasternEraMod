@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Beginner Guide Component UObject type.
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, Category = "Guide") class AERW_GameModeBase* GameModeBase = nullptr;` |
 
+**Notes:**
+
+> Game Mode Base field.
+
 ---
 
 ### Property `GameInstance`
@@ -27,6 +33,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Guide" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, Category = "Guide") class UERW_GameInstanceBase * GameInstance = nullptr;` |
+
+**Notes:**
+
+> Game Instance field.
 
 ---
 
@@ -39,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame, Category = "Guide") bool IsCompleteGuide = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否已经完成了新手引导
 
@@ -54,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame, Category = "Guide") TArray<FCommonTaskInstance> NoviceTaskInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 新手任务
 
@@ -69,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame, Category = "Guide") FCommonTaskInstance CurNoviceTaskInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前的新手引导任务
 
@@ -84,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame, Category = "Guide") int CountNoviceTaskNumber = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 总的新手引导任务数量
 
@@ -94,12 +104,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<FName , EBeginnerGuideUnlockType>` |
+| C++ type | TMap<FName , [EBeginnerGuideUnlockType](../../Struct/CommonTaskStruct__EBeginnerGuideUnlockType.md)> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FName , EBeginnerGuideUnlockType> UnlockIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 已解锁的ID
 > TMap<ID , 解锁类型>
@@ -115,7 +125,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool WaitingQueue { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是等待队列(UI动画播放中已完成的条件应该加入等待队列中)
 
@@ -130,7 +140,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) AGOAP_ActorBase* SelectActor = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 选中的Actor
 
@@ -145,7 +155,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) UInventoryItemInstance* SelectItemInstance { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > 选中的物品
 
@@ -160,6 +170,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) AERW_SceneManager* SceneManager { nullptr };` |
 
+**Notes:**
+
+> Scene Manager field.
+
 ---
 
 ### Property `DialogueIndex`
@@ -171,7 +185,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) int32 DialogueIndex { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 对话索引
 
@@ -186,7 +200,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) int32 TipsIndex { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > Tips索引
 
@@ -201,7 +215,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUpdateNextNoviceTask OnUpdateNextNoviceTask;` |
 
-**Source comments:**
+**Notes:**
 
 > 更新下个新手引导任务
 
@@ -216,7 +230,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnNextDialogue OnNextDialogue;` |
 
-**Source comments:**
+**Notes:**
 
 > 下一步新手引导对话通知
 
@@ -231,7 +245,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnNextCoverTips OnNextCoverTips;` |
 
-**Source comments:**
+**Notes:**
 
 > 遮罩Tips下一步通知
 
@@ -246,7 +260,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FShowCoverTips ShowCoverTips;` |
 
-**Source comments:**
+**Notes:**
 
 > 显示遮罩Tips通知
 
@@ -261,7 +275,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnAddWaitingQueue OnAddWaitingQueue;` |
 
-**Source comments:**
+**Notes:**
 
 > 加入等待队列通知
 
@@ -276,7 +290,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FBeginnerGuideDelegate OnBeginnerGuideDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 更新任务委托
 
@@ -291,7 +305,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FCompleteBeginnerGuideDelegate OnCompleteBeginnerGuideDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 更新任务委托
 
@@ -315,7 +329,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 领取奖励
 
@@ -333,7 +347,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 下一个新手任务
 
@@ -355,7 +369,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化新手引导
 
@@ -377,7 +391,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新任务
 
@@ -399,7 +413,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查当前任务
 
@@ -421,7 +435,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 调用委托
 
@@ -439,7 +453,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 完成所有新手引导任务
 
@@ -457,7 +471,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 调用委托
 
@@ -475,7 +489,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取下一个新手任务
 
@@ -493,7 +507,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新任务
 
@@ -515,6 +529,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets or queries Check Have Guide Task Complete.
+
 ---
 
 ### Function `AddShownCoverTips`
@@ -533,7 +551,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加入显示过遮罩Tips的条件
 
@@ -549,14 +567,14 @@
 
 | Name | Type |
 |--------|------|
-| `ConditionType` | `ECommonTaskConditionType` |
+| `ConditionType` | [ECommonTaskConditionType](../../Struct/CommonTaskStruct__ECommonTaskConditionType.md) |
 | `RequiredID` | `const FName&` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure) bool IsConditionFinished(ECommonTaskConditionType ConditionType , const FName& RequiredID) const;`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查条件是否完成
 
@@ -574,7 +592,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查当前任务是否完成
 
@@ -590,7 +608,7 @@
 
 | Name | Type |
 |--------|------|
-| `ConditionType` | `ECommonTaskConditionType` |
+| `ConditionType` | [ECommonTaskConditionType](../../Struct/CommonTaskStruct__ECommonTaskConditionType.md) |
 | `RequiredID` | `const FName&` |
 | `ConditionData` | [FCommonTaskCondition](../../Struct/CommonTaskStruct__FCommonTaskCondition.md)& |
 
@@ -598,7 +616,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获得条件数据
 
@@ -614,13 +632,13 @@
 
 | Name | Type |
 |--------|------|
-| `ConditionType` | `ECommonTaskConditionType` |
+| `ConditionType` | [ECommonTaskConditionType](../../Struct/CommonTaskStruct__ECommonTaskConditionType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure) bool HasCondition(ECommonTaskConditionType ConditionType) const;`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查当前新手引导是否有指定条件
 
@@ -636,14 +654,14 @@
 
 | Name | Type |
 |--------|------|
-| `ConditionType` | `ECommonTaskConditionType` |
+| `ConditionType` | [ECommonTaskConditionType](../../Struct/CommonTaskStruct__ECommonTaskConditionType.md) |
 | `RequiredID` | `const FName&` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure) bool IsConditionExist(ECommonTaskConditionType ConditionType , const FName& RequiredID) const;`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查指定条件是否存在
 
@@ -665,7 +683,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查当前新手引导是否有指定ID
 
@@ -676,7 +694,7 @@
 | Field | Details |
 |------|------|
 | Reflection specifiers | BlueprintPure |
-| Return type | `ECommonTaskConditionType` |
+| Return type | [ECommonTaskConditionType](../../Struct/CommonTaskStruct__ECommonTaskConditionType.md) |
 | Parameters | see table below |
 
 | Name | Type |
@@ -687,7 +705,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 通过指定ID获得条件类型
 
@@ -703,14 +721,14 @@
 
 | Name | Type |
 |--------|------|
-| `ConditionType` | `ECommonTaskConditionType` |
+| `ConditionType` | [ECommonTaskConditionType](../../Struct/CommonTaskStruct__ECommonTaskConditionType.md) |
 | `TaskCondition` | [FCommonTaskCondition](../../Struct/CommonTaskStruct__FCommonTaskCondition.md)& |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure) bool GetConditionByConditionType(ECommonTaskConditionType ConditionType , FCommonTaskCondition& TaskCondition) const;`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 通过条件类型获得条件数据
 
@@ -728,7 +746,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 下一步对话
 
@@ -746,7 +764,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 遮罩Tips下一步
 
@@ -764,7 +782,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 当前任务结束
 
@@ -786,7 +804,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 关闭新手引导
 
@@ -803,13 +821,13 @@
 | Name | Type |
 |--------|------|
 | `ID` | `const FName&` |
-| `UnlockType` | `EBeginnerGuideUnlockType` |
+| `UnlockType` | [EBeginnerGuideUnlockType](../../Struct/CommonTaskStruct__EBeginnerGuideUnlockType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void AddUnlockID(const FName& ID , EBeginnerGuideUnlockType UnlockType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加入已解锁ID
 
@@ -825,7 +843,7 @@
 
 | Name | Type |
 |--------|------|
-| `ConditionType` | `ECommonTaskConditionType` |
+| `ConditionType` | [ECommonTaskConditionType](../../Struct/CommonTaskStruct__ECommonTaskConditionType.md) |
 | `RequiredID` | `const FName&` |
 | `0` | `int32 ExtraParam1 =` |
 | `1` | `int32 Num =` |
@@ -835,7 +853,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新新手引导进度
 

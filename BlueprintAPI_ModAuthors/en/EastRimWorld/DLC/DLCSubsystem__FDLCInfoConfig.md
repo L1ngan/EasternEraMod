@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int DLCSteamID = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > DLCId 统一id dlc包中的id steam上id
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int DLCWeGameID = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > wegameID 统一id dlc包中的id steam上id
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText DLCName;` |
 
-**Source comments:**
+**Notes:**
 
 > DLC的名字
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSoftObjectPtr<UTexture2D> DLCIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > DLC图标
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) bool bPurchase = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 此DLC是否需要购买
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText DLCDescription;` |
 
-**Source comments:**
+**Notes:**
 
 > DLC的描述
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) bool bShowDLC = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否要展示
 

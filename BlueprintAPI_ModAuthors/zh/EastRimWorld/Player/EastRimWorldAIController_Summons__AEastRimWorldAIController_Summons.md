@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 召唤物 AI 控制器：由拥有者控制器驱动，处理召唤物的行为状态与战斗行为检查
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Summons", Meta = (AllowPrivateAccess = "true")) TObjectPtr<AEastRimWorldAIController> SelfController;` |
 
-**源码注释:**
+**说明:**
 
 > 召唤物的控制者
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) bool bUseOwnerCharacterBehavior = false;` |
 
-**源码注释:**
+**说明:**
 
 > 使用拥有者的行为
 
@@ -56,7 +58,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置召唤物的控制器（骑乘者）
 
@@ -74,6 +76,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取召唤物数据（FEastRimWorldSummonsData）
+
 ---
 
 ### 函数 `CheckCanRunBattleBehavior`
@@ -88,6 +94,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 检查召唤物当前是否可以执行战斗行为
+
 ---
 
 ### 函数 `GetOwnerCharacterLocation`
@@ -101,5 +111,9 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Summons") FVector GetOwnerCharacterLocation() const;`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取拥有者角色的当前位置
 
 ---

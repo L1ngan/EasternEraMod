@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float NumberSize = 10.f;` |
 
-**源码注释:**
+**说明:**
 
 > 数字大小
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FLinearColor TextColor = FLinearColor::White;` |
 
-**源码注释:**
+**说明:**
 
 > 字体颜色
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) UFont * Font = nullptr;` |
 
-**源码注释:**
+**说明:**
 
 > 字体
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float OutlineSize = 10.f;` |
 
-**源码注释:**
+**说明:**
 
 > 描边大小
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FLinearColor OutlineColor = FLinearColor::White;` |
 
-**源码注释:**
+**说明:**
 
 > 描边颜色
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float ShadowOffset = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 阴影偏移
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FLinearColor ShadowColor = FLinearColor::White;` |
 
-**源码注释:**
+**说明:**
 
 > 阴影颜色
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName FontTypeface;` |
 
-**源码注释:**
+**说明:**
 
 > 字体字形
 

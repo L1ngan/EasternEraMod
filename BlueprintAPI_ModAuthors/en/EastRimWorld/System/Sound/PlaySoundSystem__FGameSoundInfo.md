@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Game Sound Info data structure.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "Base") FGameplayTag SoundTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 音乐标签
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Base") FGameplayTag SoundGroupTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 音乐分组标签  用于控制数量和音量
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "Base") TMap<int32,TSoftObjectPtr<USoundBase>> SoundBase;` |
 
-**Source comments:**
+**Notes:**
 
 > 音频 key 游戏加速值 下标 （ 0 1 2 3 ）value 对应速度的音效
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "Base") float Volume = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 音量
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "Base") float PitchMultiplier = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 音调（即播放速率）
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Base") bool bLoop = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否循环
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "Base") bool bUISound = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否UI音效
 
@@ -122,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "Base") bool bAffectedByAcceleration = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否受到加速影响
 
@@ -137,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Fade") bool bFadeIn = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否淡入
 
@@ -152,6 +154,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,meta=(EditConditionHides,EditCondition = "bFadeIn == true")) EAudioFaderCurve FadeInCurve = EAudioFaderCurve::Linear;` |
 
+**Notes:**
+
+> Fade In Curve field.
+
 ---
 
 ### Property `FadeInDuration`
@@ -162,6 +168,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Fade" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Fade",meta=(EditConditionHides,EditCondition = "bFadeIn == true")) float FadeInDuration = 2.0;` |
+
+**Notes:**
+
+> Fade In Duration field.
 
 ---
 
@@ -174,6 +184,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Fade",meta=(EditConditionHides,EditCondition = "bFadeIn == true")) float FadeInVolumeLevel = 1.0f;` |
 
+**Notes:**
+
+> Fade In Volume Level field.
+
 ---
 
 ### Property `FadeInStartTime`
@@ -184,6 +198,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Fade" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Fade",meta=(EditConditionHides,EditCondition = "bFadeIn == true")) float FadeInStartTime = 0.0f;` |
+
+**Notes:**
+
+> Fade In Start Time field.
 
 ---
 
@@ -196,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Fade") bool bFadeOut = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否淡出
 
@@ -211,6 +229,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Fade",meta=(EditConditionHides,EditCondition = "bFadeOut == true")) EAudioFaderCurve FadeOutCurve = EAudioFaderCurve::Linear;` |
 
+**Notes:**
+
+> Fade Out Curve field.
+
 ---
 
 ### Property `FadeOutDuration`
@@ -221,6 +243,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Fade" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Fade",meta=(EditConditionHides,EditCondition = "bFadeOut == true")) float FadeOutDuration = 2.0;` |
+
+**Notes:**
+
+> Fade Out Duration field.
 
 ---
 
@@ -233,6 +259,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Fade",meta=(EditConditionHides,EditCondition = "bFadeOut == true")) float FadeOutVolumeLevel = 0.0f;` |
 
+**Notes:**
+
+> Fade Out Volume Level field.
+
 ---
 
 ### Property `bEnableAttenuate`
@@ -244,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Attenuate") bool bEnableAttenuate = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否启用衰减
 
@@ -259,7 +289,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Attenuate",meta=(EditConditionHides,EditCondition = "bEnableAttenuate == true")) float FalloffDistance = 1000.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 衰减距离
 
@@ -274,7 +304,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Attenuate",meta=(EditConditionHides,EditCondition = "bEnableAttenuate == true")) TEnumAsByte<EAttenuationShape::Type> AttenuationShape = EAttenuationShape::Sphere;` |
 
-**Source comments:**
+**Notes:**
 
 > 衰减形状
 
@@ -289,7 +319,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Attenuate",meta=(EditConditionHides,EditCondition = "bEnableAttenuate == true")) FVector AttenuationShapeExtents = FVector(600.f);` |
 
-**Source comments:**
+**Notes:**
 
 > 不衰减的范围
 

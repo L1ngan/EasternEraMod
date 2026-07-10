@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FGridPosition GridPosition;` |
 
-**Source comments:**
+**Notes:**
 
 > 坐标格
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int32 LayerNumber = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 层级索引
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int32 EmptySlotCount = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 该格该层空余小格数量（0~4），使用时若需判断是否可放 4 格物品可直接判断 EmptySlotCount == 4
 

@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECharacterTemperatureStateType` |
+| C++ type | [ECharacterTemperatureStateType](CharacterStruct__ECharacterTemperatureStateType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) ECharacterTemperatureStateType CharacterTemperatureStateType = ECharacterTemperatureStateType::Normal;` |
 
-**Source comments:**
+**Notes:**
 
 > 温度区间分类
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float MinTimeOfDuration = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 最小持续时间
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float MaxTimeOfDuration = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大持续时间
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FName> TemperatureBuff;` |
 
-**Source comments:**
+**Notes:**
 
 > 触发的buff
 
@@ -74,12 +74,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<FName,EBodyOrganType>` |
+| C++ type | TMap<FName,[EBodyOrganType](../ERW_CommonTypes__EBodyOrganType.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<FName,EBodyOrganType> TemperatureExamined;` |
 
-**Source comments:**
+**Notes:**
 
 > 触发的伤势 伤势ID， 伤势类型
 

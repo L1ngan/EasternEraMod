@@ -33,6 +33,8 @@
 #include "Serialization/JsonWriter.h"
 #include "ModToolVersion.h"
 #include "ModConfigExporter.h"
+#include "UObject/Class.h"
+#include "lua.hpp" // UnLua 插件 Lua 外部模块：打包前语法校验（只 load 不执行）
 
 namespace PackageModHelpers
 {
@@ -308,10 +310,171 @@ FText SPackageModWindow::GetStatusText() const
 	return FText::GetEmpty();
 }
 
+bool SPackageModWindow::ValidateModsForPackaging(TArray<FText>& OutErrors) const
+{
+	// 打包前静态校验：不改任何状态，逐 Mod 收集全部问题一次性展示
+	// StructName 解析逻辑与运行时 UModSubsystem::FindRowStructByTypeName 保持一致
+	auto FindStructByTypeName = [](const FString& StructTypeName) -> UScriptStruct*
+	{
+		if (StructTypeName.IsEmpty())
+		{
+			return nullptr;
+		}
+		UScriptStruct* Found = FindObject<UScriptStruct>(nullptr, *StructTypeName);
+		if (!Found)
+		{
+			Found = FindObject<UScriptStruct>(nullptr, *FString::Printf(TEXT("/Script/%s"), *StructTypeName));
+		}
+		if (!Found)
+		{
+			const int32 DotIndex = StructTypeName.Find(TEXT("."));
+			if (DotIndex != INDEX_NONE)
+			{
+				Found = FindObject<UScriptStruct>(nullptr, *FString::Printf(TEXT("/Script/%s.%s"), *StructTypeName.Left(DotIndex), *StructTypeName.Mid(DotIndex + 1)));
+			}
+		}
+		if (!Found && StructTypeName.StartsWith(TEXT("/")))
+		{
+			Found = LoadObject<UScriptStruct>(nullptr, *StructTypeName);
+		}
+		return Found;
+	};
+
+	for (const FString& ModPath : SelectedModPaths)
+	{
+		// SelectedModPaths 存的是纯目录名（见 RefreshModList），须按主打包路径同样的规则解析全路径
+		const FString ModFolderPath = FPaths::ProjectContentDir() / TEXT("Mods") / ModPath;
+		const FString ModDisplayName = ModPath;
+		const FString ModInfoPath = ModFolderPath / TEXT("ModInfo.json");
+
+		FString JsonContent;
+		if (!FFileHelper::LoadFileToString(JsonContent, *ModInfoPath))
+		{
+			OutErrors.Add(FText::Format(LOCTEXT("Validate_NoModInfo", "[{0}] 缺少 ModInfo.json"), FText::FromString(ModDisplayName)));
+			continue;
+		}
+		TSharedPtr<FJsonObject> JsonObject;
+		const TSharedRef<TJsonReader<>> Reader = TJsonReaderFactory<>::Create(JsonContent);
+		if (!FJsonSerializer::Deserialize(Reader, JsonObject) || !JsonObject.IsValid())
+		{
+			OutErrors.Add(FText::Format(LOCTEXT("Validate_BadJson", "[{0}] ModInfo.json 解析失败：{1}"), FText::FromString(ModDisplayName), FText::FromString(Reader->GetErrorMessage())));
+			continue;
+		}
+
+		FString ModId;
+		JsonObject->TryGetStringField(TEXT("ModId"), ModId);
+		if (ModId.IsEmpty())
+		{
+			OutErrors.Add(FText::Format(LOCTEXT("Validate_NoModId", "[{0}] ModInfo.json 缺少必填字段 ModId"), FText::FromString(ModDisplayName)));
+		}
+
+		// 主 Lua 语法检查（只 load 不执行）；纯内容 Mod 未显式声明 MainLuaFile 且文件不存在时跳过
+		FString MainLuaFile = TEXT("Main.lua");
+		const bool bMainLuaExplicit = JsonObject->TryGetStringField(TEXT("MainLuaFile"), MainLuaFile);
+		if (!MainLuaFile.IsEmpty())
+		{
+			const FString LuaPath = FPaths::IsRelative(MainLuaFile) ? ModFolderPath / MainLuaFile : MainLuaFile;
+			FString LuaSource;
+			const bool bLuaReadable = FFileHelper::LoadFileToString(LuaSource, *LuaPath);
+			if (!bLuaReadable && bMainLuaExplicit)
+			{
+				OutErrors.Add(FText::Format(LOCTEXT("Validate_NoLua", "[{0}] 主 Lua 文件不存在：{1}"), FText::FromString(ModDisplayName), FText::FromString(MainLuaFile)));
+			}
+			else if (bLuaReadable)
+			{
+				if (lua_State* L = luaL_newstate())
+				{
+					const FTCHARToUTF8 SourceUtf8(*LuaSource);
+					if (luaL_loadbuffer(L, SourceUtf8.Get(), SourceUtf8.Length(), TCHAR_TO_UTF8(*MainLuaFile)) != LUA_OK)
+					{
+						const char* LuaError = lua_tostring(L, -1);
+						OutErrors.Add(FText::Format(LOCTEXT("Validate_LuaSyntax", "[{0}] Lua 语法错误：{1}"), FText::FromString(ModDisplayName), FText::FromString(LuaError ? UTF8_TO_TCHAR(LuaError) : TEXT("unknown"))));
+					}
+					lua_close(L);
+				}
+			}
+		}
+
+		// 配置表/资产 JSON 存在性 + StructName 可解析
+		auto ValidateJsonConfigArray = [&OutErrors, &JsonObject, &ModFolderPath, &ModDisplayName, &FindStructByTypeName](const TCHAR* FieldName, bool bCheckStruct)
+		{
+			const TArray<TSharedPtr<FJsonValue>>* Configs = nullptr;
+			if (!JsonObject->TryGetArrayField(FieldName, Configs) || !Configs)
+			{
+				return;
+			}
+			for (const TSharedPtr<FJsonValue>& ConfigValue : *Configs)
+			{
+				const TSharedPtr<FJsonObject> ConfigObject = ConfigValue.IsValid() ? ConfigValue->AsObject() : nullptr;
+				if (!ConfigObject.IsValid())
+				{
+					continue;
+				}
+				FString JsonFile;
+				ConfigObject->TryGetStringField(TEXT("JsonFile"), JsonFile);
+				if (!JsonFile.IsEmpty() && !FPaths::FileExists(ModFolderPath / JsonFile))
+				{
+					OutErrors.Add(FText::Format(LOCTEXT("Validate_NoConfigJson", "[{0}] {1} 引用的 JSON 文件不存在：{2}"), FText::FromString(ModDisplayName), FText::FromString(FieldName), FText::FromString(JsonFile)));
+				}
+				if (bCheckStruct)
+				{
+					FString StructName;
+					ConfigObject->TryGetStringField(TEXT("StructName"), StructName);
+					if (!StructName.IsEmpty() && !FindStructByTypeName(StructName))
+					{
+						OutErrors.Add(FText::Format(LOCTEXT("Validate_BadStruct", "[{0}] StructName 无法解析：{1}（{2}）"), FText::FromString(ModDisplayName), FText::FromString(StructName), FText::FromString(JsonFile)));
+					}
+				}
+			}
+		};
+		ValidateJsonConfigArray(TEXT("DataTableConfigs"), true);
+		ValidateJsonConfigArray(TEXT("DataAssetConfigs"), false);
+
+		// 图标：声明了但找不到文件（Resolve 会尝试补常见图片后缀）
+		FString Icon;
+		if (JsonObject->TryGetStringField(TEXT("Icon"), Icon) && !Icon.IsEmpty())
+		{
+			const FString IconPath = PackageModHelpers::ResolveModIconSourcePath(ModFolderPath, Icon);
+			if (!FPaths::FileExists(IconPath))
+			{
+				OutErrors.Add(FText::Format(LOCTEXT("Validate_NoIcon", "[{0}] 图标文件不存在：{1}"), FText::FromString(ModDisplayName), FText::FromString(Icon)));
+			}
+		}
+
+		// GameplayTags ini：声明包含但文件缺失
+		bool bIncludeGameplayTags = false;
+		JsonObject->TryGetBoolField(TEXT("IncludeGameplayTags"), bIncludeGameplayTags);
+		if (bIncludeGameplayTags)
+		{
+			FString GameplayTagsIniFile;
+			JsonObject->TryGetStringField(TEXT("GameplayTagsIniFile"), GameplayTagsIniFile);
+			const FString IniPath = PackageModHelpers::ResolveGameplayTagsIniSourcePath(ModFolderPath, true, GameplayTagsIniFile, ModId);
+			if (!FPaths::FileExists(IniPath))
+			{
+				OutErrors.Add(FText::Format(LOCTEXT("Validate_NoTagsIni", "[{0}] 声明了 IncludeGameplayTags 但 ini 文件不存在：{1}"), FText::FromString(ModDisplayName), FText::FromString(IniPath)));
+			}
+		}
+	}
+	return OutErrors.Num() == 0;
+}
+
 FReply SPackageModWindow::OnPackageButtonClicked()
 {
 	if (SelectedModPaths.Num() == 0 || bIsPackaging)
 	{
+		return FReply::Handled();
+	}
+
+	// 打包前一键校验：不通过则中止并弹明细（此时未改任何打包状态，可直接返回）
+	TArray<FText> ValidationErrors;
+	if (!ValidateModsForPackaging(ValidationErrors))
+	{
+		FString ErrorLines;
+		for (const FText& ErrorText : ValidationErrors)
+		{
+			ErrorLines += ErrorText.ToString() + TEXT("\n");
+		}
+		FMessageDialog::Open(EAppMsgType::Ok, FText::Format(LOCTEXT("ValidateFailedDialog", "打包前校验未通过（{0} 项问题），已中止打包：\n\n{1}"), FText::AsNumber(ValidationErrors.Num()), FText::FromString(ErrorLines)));
 		return FReply::Handled();
 	}
 
@@ -422,9 +585,20 @@ void SPackageModWindow::ExecuteCookForAllMods()
 	
 	FString ProjectName = FApp::GetProjectName();
 	FString ProjectPath = FPaths::GetProjectFilePath();
-	
+
+	// 范围烘焙：把所选 Mod 的内容目录作为 -CookDir 显式传给 Cook commandlet。
+	// 只要显式指定了内容目录，cooker 就不再走"未指定包→烘焙全部内容"的回退，
+	// 只烘 Mod 目录内的包及其依赖，小 Mod 打包不再付全项目 Cook 的代价。
+	TArray<FString> ModCookDirs;
+	for (const FString& SelectedModPath : SelectedModPaths)
+	{
+		FString ModContentDir = FPaths::ConvertRelativePathToFull(FPaths::ProjectContentDir() / TEXT("Mods") / SelectedModPath);
+		FPaths::NormalizeDirectoryName(ModContentDir);
+		ModCookDirs.AddUnique(ModContentDir);
+	}
+
 	// 创建可更新的进度通知
-	FNotificationInfo Info(LOCTEXT("CookingAllAssets", "Cooking all project assets..."));
+	FNotificationInfo Info(LOCTEXT("CookingAllAssets", "Cooking selected mod assets..."));
 	Info.ExpireDuration = 0.0f;
 	Info.bFireAndForget = false;
 	Info.bUseLargeFont = false;
@@ -439,32 +613,31 @@ void SPackageModWindow::ExecuteCookForAllMods()
 	TWeakPtr<SPackageModWindow> WeakThisPtr = StaticCastSharedRef<SPackageModWindow>(AsShared());
 	
 	// 在后台线程中执行Cook
-	AsyncTask(ENamedThreads::AnyBackgroundThreadNormalTask, [WeakThisPtr, ProjectPath, ProjectName]()
+	AsyncTask(ENamedThreads::AnyBackgroundThreadNormalTask, [WeakThisPtr, ProjectPath, ProjectName, ModCookDirs]()
 	{
-		// 构建Cook输出目录
-		FString CookDir = FPaths::Combine(FPaths::ProjectSavedDir(), TEXT("Cooked"), ProjectName);
-		FPaths::NormalizeDirectoryName(CookDir);
-		
 		// 创建Cook日志文件路径（用于诊断）
 		FString CookLogPath = FPaths::Combine(FPaths::ProjectSavedDir(), TEXT("Logs"), FString::Printf(TEXT("Cook_%s.log"), *FDateTime::Now().ToString(TEXT("%Y%m%d_%H%M%S"))));
 		FPaths::NormalizeFilename(CookLogPath);
 		FString CookLogPathFull = FPaths::ConvertRelativePathToFull(CookLogPath);
-		
-		// Cook命令参数：Cook整个项目
-		// -TargetPlatform=Windows 指定目标平台（Windows平台）
-		// -stdout 确保输出到标准输出，避免输出缓冲问题
-		// -Unattended 非交互模式
-		// -NoLogTimes 不记录时间戳（减少输出量）
-		// -abslog 指定日志文件路径（用于诊断，使用绝对路径）
-		// 注意：Cook输出路径可能是 Saved/Cooked/Windows/... 或 Saved/Cooked/WindowsNoEditor/...
+
+		// Cook命令参数：范围烘焙所选 Mod 的内容目录
+		// -CookDir 的真实语义是"要烘焙的内容目录"（可多次传入），显式指定后 cooker 不再回退到全项目烘焙；
+		// Mod 资产引用的本体依赖会被一并烘焙，但打 pak 时只收 Mod 目录的产物，结果不受影响。
+		// -TargetPlatform=Windows 指定目标平台；-stdout/-Unattended/-NoLogTimes 输出与非交互控制；
+		// -abslog 指定诊断日志绝对路径。Cook 输出路径可能是 Saved/Cooked/Windows/... 或 WindowsNoEditor/...
+		FString CookDirArgs;
+		for (const FString& ModCookDir : ModCookDirs)
+		{
+			CookDirArgs += FString::Printf(TEXT(" -CookDir=\"%s\""), *ModCookDir);
+		}
 		FString CookCommandLine = FString::Printf(
-			TEXT("-run=Cook -TargetPlatform=Windows -CookDir=\"%s\" -Unversioned -Compressed -stdout -Unattended -NoLogTimes -abslog=\"%s\""),
-			*CookDir, *CookLogPathFull
+			TEXT("-run=Cook -TargetPlatform=Windows%s -Unversioned -Compressed -stdout -Unattended -NoLogTimes -abslog=\"%s\""),
+			*CookDirArgs, *CookLogPathFull
 		);
-		
+
 		UE_LOG(LogTemp, Log, TEXT("Cook log file will be written to: %s"), *CookLogPathFull);
-		
-		UE_LOG(LogTemp, Log, TEXT("Starting Cook for all assets with command line: %s"), *CookCommandLine);
+
+		UE_LOG(LogTemp, Log, TEXT("Starting scoped cook for %d mod dir(s) with command line: %s"), ModCookDirs.Num(), *CookCommandLine);
 		
 		// 使用 UnrealEditor-Cmd.exe 执行 CookCommandlet
 		FString EngineDir = FPaths::EngineDir();
@@ -813,8 +986,21 @@ void SPackageModWindow::ExecuteCookForAllMods()
 			}
 		}
 		
+		// Cook 成功判定放宽：commandlet 以"错误计数"作为退出码，编辑器实例占用 13579 端口导致
+		// Cook 子进程里 UnrealMCP 的 HttpListener 绑定报错等良性错误也会让退出码非零。
+		// 只要输出/日志出现 Cook 完成标记（Cook by the book total time），即认定烘焙成功继续打包。
+		bool bCookSucceeded = (ReturnCode == 0);
+		if (!bCookSucceeded)
+		{
+			if (Output.Contains(TEXT("Cook by the book total time")) || LogFileContent.Contains(TEXT("Cook by the book total time")))
+			{
+				bCookSucceeded = true;
+				UE_LOG(LogTemp, Warning, TEXT("Cook exited with code %d but completed successfully; benign errors (e.g. UnrealMCP port 13579 binding in the cook subprocess) were ignored. See log: %s"), ReturnCode, *CookLogPathFull);
+			}
+		}
+
 		// 在主线程中处理结果
-		AsyncTask(ENamedThreads::GameThread, [WeakThisPtr, ReturnCode, Output, CookLogPathFull]()
+		AsyncTask(ENamedThreads::GameThread, [WeakThisPtr, ReturnCode, bCookSucceeded, Output, CookLogPathFull]()
 		{
 			TSharedPtr<SPackageModWindow> PinnedThis = WeakThisPtr.Pin();
 			if (PinnedThis.IsValid())
@@ -830,7 +1016,7 @@ void SPackageModWindow::ExecuteCookForAllMods()
 				TSharedPtr<SNotificationItem> Notification = PinnedThis->CookProgressNotification.Pin();
 				if (Notification.IsValid())
 				{
-					if (ReturnCode == 0)
+					if (bCookSucceeded)
 					{
 						Notification->SetCompletionState(SNotificationItem::CS_Success);
 						Notification->SetText(LOCTEXT("CookSuccess", "Cook completed successfully!"));
@@ -844,7 +1030,7 @@ void SPackageModWindow::ExecuteCookForAllMods()
 					PinnedThis->CookProgressNotification.Reset();
 				}
 				
-				if (ReturnCode == 0)
+				if (bCookSucceeded)
 				{
 					FNotificationInfo SuccessInfo(LOCTEXT("CookSuccessPackaging", "Cook completed successfully! Starting packaging..."));
 					SuccessInfo.ExpireDuration = 3.0f;
@@ -1174,6 +1360,39 @@ void SPackageModWindow::PackageSingleMod(const FString& ModPath)
 	ContinuePackaging();
 }
 
+void SPackageModWindow::AbortPackagingBatch()
+{
+	bIsPackaging = false;
+	bIsCooking = false;
+	bIsCheckboxEnabled = true;
+	CurrentPackagingIndex = 0;
+	TotalPackagingCount = 0;
+	ModPackagingQueue.Empty();
+	if (StatusTextBlock.IsValid())
+	{
+		StatusTextBlock->SetText(GetStatusText());
+	}
+	if (PackageButton.IsValid())
+	{
+		PackageButton->SetEnabled(IsPackageEnabled());
+	}
+	if (ModListView.IsValid())
+	{
+		ModListView->RequestListRefresh();
+	}
+	// 收掉未完成的进度通知，避免永久悬挂
+	if (TSharedPtr<SNotificationItem> CookNotification = CookProgressNotification.Pin())
+	{
+		CookNotification->SetCompletionState(SNotificationItem::CS_Fail);
+		CookNotification->ExpireAndFadeout();
+	}
+	if (TSharedPtr<SNotificationItem> PakNotification = PakProgressNotification.Pin())
+	{
+		PakNotification->SetCompletionState(SNotificationItem::CS_Fail);
+		PakNotification->ExpireAndFadeout();
+	}
+}
+
 void SPackageModWindow::ContinuePackaging()
 {
 	// 直接使用保存的变量，避免与类成员变量冲突
@@ -1186,6 +1405,7 @@ void SPackageModWindow::ContinuePackaging()
 		Info.ExpireDuration = 5.0f;
 		Info.bFireAndForget = true;
 		FSlateNotificationManager::Get().AddNotification(Info);
+		AbortPackagingBatch();
 		return;
 	}
 	
@@ -1216,6 +1436,7 @@ void SPackageModWindow::ContinuePackaging()
 			Info.ExpireDuration = 5.0f;
 			Info.bFireAndForget = true;
 			FSlateNotificationManager::Get().AddNotification(Info);
+			AbortPackagingBatch();
 			return;
 		}
 		
@@ -1226,6 +1447,7 @@ void SPackageModWindow::ContinuePackaging()
 			Info.ExpireDuration = 5.0f;
 			Info.bFireAndForget = true;
 			FSlateNotificationManager::Get().AddNotification(Info);
+			AbortPackagingBatch();
 			return;
 		}
 		
@@ -1654,6 +1876,19 @@ void SPackageModWindow::ContinuePackaging()
 				FString ResponseLine = FString::Printf(TEXT("\"%s\" \"%s\""), *CookedAssetPath, *MountPath);
 			FilesToPackage.Add(ResponseLine);
 				UE_LOG(LogTemp, Log, TEXT("Added additional cooked asset: %s -> %s"), *CookedAssetPath, *MountPath);
+
+				// Cook 产物是成组的：.uasset/.umap 之外还有 .uexp/.ubulk/.uptnl，缺任何一个运行时加载都会失败
+				static const TCHAR* CookedSiblingExtensions[] = { TEXT("uexp"), TEXT("ubulk"), TEXT("uptnl") };
+				for (const TCHAR* SiblingExtension : CookedSiblingExtensions)
+				{
+					const FString SiblingCookedPath = FPaths::ChangeExtension(CookedAssetPath, SiblingExtension);
+					if (PlatformFile.FileExists(*SiblingCookedPath))
+					{
+						const FString SiblingMountPath = FPaths::ChangeExtension(MountPath, SiblingExtension);
+						FilesToPackage.Add(FString::Printf(TEXT("\"%s\" \"%s\""), *SiblingCookedPath, *SiblingMountPath));
+						UE_LOG(LogTemp, Log, TEXT("Added additional cooked sibling: %s -> %s"), *SiblingCookedPath, *SiblingMountPath);
+					}
+				}
 			}
 			else
 			{
@@ -1690,6 +1925,7 @@ void SPackageModWindow::ContinuePackaging()
 		Info.ExpireDuration = 5.0f;
 		Info.bFireAndForget = true;
 		FSlateNotificationManager::Get().AddNotification(Info);
+		AbortPackagingBatch();
 		return;
 	}
 	
@@ -1718,6 +1954,7 @@ void SPackageModWindow::ContinuePackaging()
 		Info.ExpireDuration = 3.0f;
 		Info.bFireAndForget = true;
 		FSlateNotificationManager::Get().AddNotification(Info);
+		AbortPackagingBatch();
 		return;
 	}
 
@@ -1782,9 +2019,10 @@ void SPackageModWindow::ContinuePackaging()
 		Info.ExpireDuration = 3.0f;
 		Info.bFireAndForget = true;
 		FSlateNotificationManager::Get().AddNotification(Info);
-		
+
 		// 清理临时文件
 		PlatformFile.DeleteFile(*ResponseFilePath);
+		AbortPackagingBatch();
 		return;
 	}
 
@@ -2399,1436 +2637,5 @@ float SPackageModWindow::ParsePakProgress(const FString& Output)
 	return -1.0f; // 无法解析进度
 }
 
-bool SPackageModWindow::ExecuteCook(const FString& InModPath, const FString& InModFolderPath, const FString& InCookedModPath,
-	const FString& InSavePath, const FString& InUnrealPakPath, const TArray<FString>& InNonAssetFiles, bool bInHasAssetFiles)
-{
-	FString ProjectName = FApp::GetProjectName();
-	FString ProjectPath = FPaths::GetProjectFilePath();
-	
-	// 创建可更新的进度通知
-	FNotificationInfo Info(LOCTEXT("CookingStarted", "Cooking project assets..."));
-	Info.ExpireDuration = 0.0f; // 不自动过期，手动控制
-	Info.bFireAndForget = false; // 需要手动管理
-	Info.bUseLargeFont = false;
-	Info.bUseSuccessFailIcons = false;
-	CookProgressNotification = FSlateNotificationManager::Get().AddNotification(Info);
-	if (CookProgressNotification.IsValid())
-	{
-		CookProgressNotification.Pin()->SetCompletionState(SNotificationItem::CS_Pending);
-	}
-	
-	// 在 lambda 中捕获所有需要的值，避免访问可能已失效的成员变量
-	FString CapturedModPath = InModPath;
-	FString CapturedModFolderPath = InModFolderPath;
-	FString CapturedCookedModPath = InCookedModPath;
-	FString CapturedSavePath = InSavePath;
-	FString CapturedUnrealPakPath = InUnrealPakPath;
-	TArray<FString> CapturedNonAssetFiles = InNonAssetFiles;
-	bool CapturedHasAssetFiles = bInHasAssetFiles;
-	
-	// 在主线程中获取 WeakPtr，避免在后台线程中调用 AsShared()
-	TWeakPtr<SPackageModWindow> WeakThisPtr = StaticCastSharedRef<SPackageModWindow>(AsShared());
-	
-	// 使用 CookCommandlet 来执行 Cook
-	// 在后台线程中执行，避免阻塞编辑器
-	AsyncTask(ENamedThreads::AnyBackgroundThreadNormalTask, [WeakThisPtr, ProjectPath, ProjectName, CapturedModPath, CapturedModFolderPath, CapturedCookedModPath, CapturedSavePath, CapturedUnrealPakPath, CapturedNonAssetFiles, CapturedHasAssetFiles]()
-	{
-		
-		// 注意：Unreal Engine的Cook命令不支持只Cook特定目录的资产
-		// Cook命令会Cook整个项目的所有资产，但我们可以只使用Cooked后的mod资产进行打包
-		// 构建Cook输出目录
-		FString CookDir = FPaths::Combine(FPaths::ProjectSavedDir(), TEXT("Cooked"), ProjectName);
-		FPaths::NormalizeDirectoryName(CookDir);
-		
-		// Cook命令参数说明：
-		// -run=Cook 执行Cook命令
-		// -TargetPlatform=Windows 指定目标平台（Windows平台）
-		// -CookDir 指定Cook输出目录（注意：这是输出目录，不是限制Cook范围）
-		// -Unversioned 不包含版本信息
-		// -Compressed 压缩资源
-		// 注意：Cook会处理整个项目，但后续打包时只会使用mod相关的Cooked资产
-		// 注意：Cook输出路径可能是 Saved/Cooked/Windows/... 或 Saved/Cooked/WindowsNoEditor/...
-		FString CookCommandLine = FString::Printf(
-			TEXT("-run=Cook -TargetPlatform=Windows -CookDir=\"%s\" -Unversioned -Compressed"),
-			*CookDir
-		);
-		
-		UE_LOG(LogTemp, Log, TEXT("Starting Cook with command line: %s"), *CookCommandLine);
-		
-		// 使用 UnrealEditor-Cmd.exe 执行 CookCommandlet
-		FString EngineDir = FPaths::EngineDir();
-		FString UnrealEditorCmdPath = EngineDir / TEXT("Binaries") / FPlatformProcess::GetBinariesSubdirectory() / TEXT("UnrealEditor-Cmd.exe");
-		
-		// 如果 UnrealEditor-Cmd.exe 不存在，尝试其他路径
-		if (!FPaths::FileExists(UnrealEditorCmdPath))
-		{
-			UnrealEditorCmdPath = EngineDir / TEXT("Binaries") / TEXT("Win64") / TEXT("UnrealEditor-Cmd.exe");
-		}
-		
-		if (!FPaths::FileExists(UnrealEditorCmdPath))
-		{
-			UE_LOG(LogTemp, Error, TEXT("UnrealEditor-Cmd.exe not found!"));
-			AsyncTask(ENamedThreads::GameThread, [WeakThisPtr, CapturedModPath, CapturedModFolderPath, CapturedCookedModPath, CapturedSavePath, CapturedUnrealPakPath, CapturedNonAssetFiles, CapturedHasAssetFiles]()
-			{
-				TSharedPtr<SPackageModWindow> PinnedThis = WeakThisPtr.Pin();
-				if (PinnedThis.IsValid())
-			{
-				FNotificationInfo ErrorInfo(LOCTEXT("UnrealEditorCmdNotFound", "UnrealEditor-Cmd.exe not found! Falling back to RunUAT method."));
-				ErrorInfo.ExpireDuration = 5.0f;
-				ErrorInfo.bFireAndForget = true;
-				FSlateNotificationManager::Get().AddNotification(ErrorInfo);
-				
-					// 回退到 RunUAT 方法，传递捕获的值
-					PinnedThis->ExecuteCookWithRunUAT(CapturedModPath, CapturedModFolderPath, CapturedCookedModPath, CapturedSavePath, CapturedUnrealPakPath, CapturedNonAssetFiles, CapturedHasAssetFiles);
-				}
-			});
-			return;
-		}
-		
-		// 构建完整命令行：项目路径 + Cook 参数
-		FString FullCommandLine = FString::Printf(TEXT("\"%s\" %s"), *ProjectPath, *CookCommandLine);
-		
-		// 创建输出管道
-		void* ReadPipe = nullptr;
-		void* WritePipe = nullptr;
-		FPlatformProcess::CreatePipe(ReadPipe, WritePipe);
-		
-		FString WorkingDirectory = FPaths::GetPath(UnrealEditorCmdPath);
-		FProcHandle ProcHandle = FPlatformProcess::CreateProc(
-			*UnrealEditorCmdPath,
-			*FullCommandLine,
-			true,
-			true,
-			true,
-			nullptr,
-			0,
-			*WorkingDirectory,
-			WritePipe,
-			ReadPipe,
-			nullptr
-		);
-		
-		if (!ProcHandle.IsValid())
-		{
-			FPlatformProcess::ClosePipe(ReadPipe, WritePipe);
-			UE_LOG(LogTemp, Error, TEXT("Failed to start Cook process!"));
-			
-			AsyncTask(ENamedThreads::GameThread, [WeakThisPtr, CapturedModPath, CapturedModFolderPath, CapturedCookedModPath, CapturedSavePath, CapturedUnrealPakPath, CapturedNonAssetFiles, CapturedHasAssetFiles]()
-			{
-				TSharedPtr<SPackageModWindow> PinnedThis = WeakThisPtr.Pin();
-				if (PinnedThis.IsValid())
-			{
-				FNotificationInfo ErrorInfo(LOCTEXT("CookStartFailed", "Failed to start cook process! Falling back to RunUAT method."));
-				ErrorInfo.ExpireDuration = 5.0f;
-				ErrorInfo.bFireAndForget = true;
-				FSlateNotificationManager::Get().AddNotification(ErrorInfo);
-				
-					// 回退到 RunUAT 方法，传递捕获的值
-					PinnedThis->ExecuteCookWithRunUAT(CapturedModPath, CapturedModFolderPath, CapturedCookedModPath, CapturedSavePath, CapturedUnrealPakPath, CapturedNonAssetFiles, CapturedHasAssetFiles);
-				}
-			});
-			return;
-		}
-		
-		// 等待 Cook 完成，同时定期读取输出并更新进度
-		int32 ReturnCode = 0;
-		FString AccumulatedOutput;
-		FDateTime StartTime = FDateTime::Now();
-		
-		// 定期检查进程状态并读取输出
-		while (FPlatformProcess::IsProcRunning(ProcHandle))
-		{
-			// 读取新的输出
-			if (ReadPipe)
-			{
-				FString NewOutput = FPlatformProcess::ReadPipe(ReadPipe);
-				if (!NewOutput.IsEmpty())
-				{
-					AccumulatedOutput += NewOutput;
-					UE_LOG(LogTemp, Verbose, TEXT("Cook output: %s"), *NewOutput);
-					
-					// 解析进度并更新通知
-					float Progress = SPackageModWindow::ParseCookProgress(AccumulatedOutput);
-					if (Progress >= 0.0f)
-					{
-						FText StatusText = FText::Format(LOCTEXT("CookingProgress", "Cooking project assets... {0}%"), FText::AsNumber(FMath::RoundToInt(Progress * 100.0f)));
-						AsyncTask(ENamedThreads::GameThread, [WeakThisPtr, Progress, StatusText]()
-						{
-							TSharedPtr<SPackageModWindow> PinnedThis = WeakThisPtr.Pin();
-							if (PinnedThis.IsValid())
-							{
-								PinnedThis->UpdateCookProgress(Progress, StatusText);
-							}
-						});
-					}
-					else
-					{
-						// 如果无法解析进度，显示已用时间
-						FTimespan Elapsed = FDateTime::Now() - StartTime;
-						FText StatusText = FText::Format(LOCTEXT("CookingTime", "Cooking project assets... ({0}m {1}s)"), 
-							FText::AsNumber(Elapsed.GetMinutes()), 
-							FText::AsNumber(Elapsed.GetSeconds() % 60));
-						AsyncTask(ENamedThreads::GameThread, [WeakThisPtr, StatusText]()
-						{
-							TSharedPtr<SPackageModWindow> PinnedThis = WeakThisPtr.Pin();
-							if (PinnedThis.IsValid())
-							{
-								PinnedThis->UpdateCookProgress(-1.0f, StatusText);
-							}
-						});
-					}
-				}
-			}
-			
-			// 等待一小段时间再检查
-			FPlatformProcess::Sleep(0.5f);
-		}
-		
-		// 进程已完成，获取返回码
-		FPlatformProcess::GetProcReturnCode(ProcHandle, &ReturnCode);
-		
-		// 读取剩余的输出
-		if (ReadPipe)
-		{
-			FString RemainingOutput = FPlatformProcess::ReadPipe(ReadPipe);
-			if (!RemainingOutput.IsEmpty())
-			{
-				AccumulatedOutput += RemainingOutput;
-			}
-		}
-		
-		FString Output = AccumulatedOutput;
-			if (!Output.IsEmpty())
-			{
-				UE_LOG(LogTemp, Log, TEXT("Cook process output:\n%s"), *Output);
-		}
-		
-		FPlatformProcess::CloseProc(ProcHandle);
-		FPlatformProcess::ClosePipe(ReadPipe, WritePipe);
-		
-		UE_LOG(LogTemp, Log, TEXT("Cook process completed with return code: %d"), ReturnCode);
-		
-		// 在主线程中处理结果
-		// 使用外层 lambda 捕获的值（从函数参数传入的 CapturedModPath 等）
-		// 注意：即使窗口已关闭，如果 Cook 成功，也应该继续执行打包
-		AsyncTask(ENamedThreads::GameThread, [WeakThisPtr, ReturnCode, ProjectName, Output, CapturedModPath, CapturedCookedModPath, CapturedSavePath, CapturedUnrealPakPath, CapturedNonAssetFiles, CapturedHasAssetFiles]()
-		{
-			TSharedPtr<SPackageModWindow> PinnedThis = WeakThisPtr.Pin();
-			if (PinnedThis.IsValid())
-			{
-				PinnedThis->HandleCookResult(ReturnCode, ProjectName, Output, CapturedModPath, CapturedCookedModPath, CapturedSavePath, CapturedUnrealPakPath, CapturedNonAssetFiles, CapturedHasAssetFiles);
-			}
-			else
-			{
-				// 窗口已关闭，但如果 Cook 成功，仍然继续执行打包
-				UE_LOG(LogTemp, Log, TEXT("SPackageModWindow object is no longer valid, but continuing packaging if cook succeeded"));
-				if (ReturnCode == 0)
-				{
-					// 直接调用静态打包函数，不依赖窗口对象
-					SPackageModWindow::HandleCookResultStandalone(ReturnCode, ProjectName, Output, CapturedModPath, CapturedCookedModPath, CapturedSavePath, CapturedUnrealPakPath, CapturedNonAssetFiles, CapturedHasAssetFiles);
-				}
-			}
-		});
-	});
-	
-	return true;
-}
-
-bool SPackageModWindow::ExecuteCookWithRunUAT(const FString& InModPath, const FString& InModFolderPath, const FString& InCookedModPath,
-	const FString& InSavePath, const FString& InUnrealPakPath, const TArray<FString>& InNonAssetFiles, bool bInHasAssetFiles)
-{
-	FString ProjectName = FApp::GetProjectName();
-	FString ProjectPath = FPaths::GetProjectFilePath();
-	FString EngineDir = FPaths::EngineDir();
-	FString BatchFilesDir = EngineDir / TEXT("Build") / TEXT("BatchFiles");
-	FString RunUATPath = BatchFilesDir / TEXT("RunUAT.bat");
-	
-	// 检查 RunUAT.bat 是否存在
-	if (!FPaths::FileExists(RunUATPath))
-	{
-		UE_LOG(LogTemp, Error, TEXT("RunUAT.bat not found at: %s"), *RunUATPath);
-		FNotificationInfo ErrorInfo(LOCTEXT("RunUATNotFound", "RunUAT.bat not found! Please ensure Unreal Engine is properly installed."));
-		ErrorInfo.ExpireDuration = 5.0f;
-		ErrorInfo.bFireAndForget = true;
-		FSlateNotificationManager::Get().AddNotification(ErrorInfo);
-		return false;
-	}
-	
-	// 如果还没有创建进度通知，创建一个
-	if (!CookProgressNotification.IsValid())
-	{
-		FNotificationInfo Info(LOCTEXT("CookingStarted", "Cooking project assets..."));
-		Info.ExpireDuration = 0.0f;
-		Info.bFireAndForget = false;
-		Info.bUseLargeFont = false;
-		Info.bUseSuccessFailIcons = false;
-		CookProgressNotification = FSlateNotificationManager::Get().AddNotification(Info);
-		if (CookProgressNotification.IsValid())
-		{
-			CookProgressNotification.Pin()->SetCompletionState(SNotificationItem::CS_Pending);
-		}
-	}
-	
-	// 在 lambda 中捕获所有需要的值
-	FString CapturedModPath = InModPath;
-	FString CapturedModFolderPath = InModFolderPath;
-	FString CapturedCookedModPath = InCookedModPath;
-	FString CapturedSavePath = InSavePath;
-	FString CapturedUnrealPakPath = InUnrealPakPath;
-	TArray<FString> CapturedNonAssetFiles = InNonAssetFiles;
-	bool CapturedHasAssetFiles = bInHasAssetFiles;
-	
-	// 注意：Unreal Engine的Cook命令不支持只Cook特定目录的资产
-	// Cook命令会Cook整个项目的所有资产，但我们可以只使用Cooked后的mod资产进行打包
-	// 构建 Cook 命令
-	// 注意：RunUAT的BuildCookRun会Cook整个项目，但后续打包时只会使用mod相关的Cooked资产
-	FString CookCommandLine = FString::Printf(
-		TEXT("-ScriptsForProject=\"%s\" BuildCookRun -project=\"%s\" -cook -platform=Win64 -targetplatform=Win64 -nocompileeditor -utf8output -ddc=InstalledDerivedDataBackendGraph -installed"),
-		*ProjectPath,
-		*ProjectPath
-	);
-	
-	UE_LOG(LogTemp, Log, TEXT("Starting Cook with RunUAT: %s %s"), *RunUATPath, *CookCommandLine);
-	
-	// 在主线程中获取 WeakPtr，避免在后台线程中调用 AsShared()
-	TWeakPtr<SPackageModWindow> WeakThisPtr = StaticCastSharedRef<SPackageModWindow>(AsShared());
-	
-	// 在后台线程中执行 Cook
-	AsyncTask(ENamedThreads::AnyBackgroundThreadNormalTask, [WeakThisPtr, RunUATPath, CookCommandLine, ProjectName, CapturedModPath, CapturedModFolderPath, CapturedCookedModPath, CapturedSavePath, CapturedUnrealPakPath, CapturedNonAssetFiles, CapturedHasAssetFiles]()
-	{
-		// 执行 Cook 命令
-		FString WorkingDirectory = FPaths::GetPath(RunUATPath);
-		
-		// 创建输出和错误管道来捕获日志
-		void* ReadPipe = nullptr;
-		void* WritePipe = nullptr;
-		FPlatformProcess::CreatePipe(ReadPipe, WritePipe);
-		
-		FProcHandle ProcHandle = FPlatformProcess::CreateProc(
-			*RunUATPath,
-			*CookCommandLine,
-			true,
-			true,
-			true,
-			nullptr,
-			0,
-			*WorkingDirectory,
-			WritePipe,
-			ReadPipe,
-			nullptr
-		);
-		
-		if (!ProcHandle.IsValid())
-		{
-			FPlatformProcess::ClosePipe(ReadPipe, WritePipe);
-			UE_LOG(LogTemp, Error, TEXT("Failed to start Cook process! RunUAT: %s, CommandLine: %s"), *RunUATPath, *CookCommandLine);
-			
-			AsyncTask(ENamedThreads::GameThread, [WeakThisPtr]()
-			{
-				TSharedPtr<SPackageModWindow> PinnedThis = WeakThisPtr.Pin();
-				if (PinnedThis.IsValid())
-			{
-				FNotificationInfo ErrorInfo(LOCTEXT("CookStartFailed", "Failed to start cook process! Check Output Log for details."));
-				ErrorInfo.ExpireDuration = 5.0f;
-				ErrorInfo.bFireAndForget = true;
-				FSlateNotificationManager::Get().AddNotification(ErrorInfo);
-				}
-			});
-			return;
-		}
-		
-		// 等待 Cook 完成，同时定期读取输出并更新进度
-		int32 ReturnCode = 0;
-		FString AccumulatedOutput;
-		FDateTime StartTime = FDateTime::Now();
-		
-		// 定期检查进程状态并读取输出
-		while (FPlatformProcess::IsProcRunning(ProcHandle))
-		{
-			// 读取新的输出
-			if (ReadPipe)
-			{
-				FString NewOutput = FPlatformProcess::ReadPipe(ReadPipe);
-				if (!NewOutput.IsEmpty())
-				{
-					AccumulatedOutput += NewOutput;
-					UE_LOG(LogTemp, Verbose, TEXT("Cook output: %s"), *NewOutput);
-					
-					// 解析进度并更新通知
-					float Progress = SPackageModWindow::ParseCookProgress(AccumulatedOutput);
-					if (Progress >= 0.0f)
-					{
-						FText StatusText = FText::Format(LOCTEXT("CookingProgress", "Cooking project assets... {0}%"), FText::AsNumber(FMath::RoundToInt(Progress * 100.0f)));
-						AsyncTask(ENamedThreads::GameThread, [WeakThisPtr, Progress, StatusText]()
-						{
-							TSharedPtr<SPackageModWindow> PinnedThis = WeakThisPtr.Pin();
-							if (PinnedThis.IsValid())
-							{
-								PinnedThis->UpdateCookProgress(Progress, StatusText);
-							}
-						});
-					}
-					else
-					{
-						// 如果无法解析进度，显示已用时间
-						FTimespan Elapsed = FDateTime::Now() - StartTime;
-						FText StatusText = FText::Format(LOCTEXT("CookingTime", "Cooking project assets... ({0}m {1}s)"), 
-							FText::AsNumber(Elapsed.GetMinutes()), 
-							FText::AsNumber(Elapsed.GetSeconds() % 60));
-						AsyncTask(ENamedThreads::GameThread, [WeakThisPtr, StatusText]()
-						{
-							TSharedPtr<SPackageModWindow> PinnedThis = WeakThisPtr.Pin();
-							if (PinnedThis.IsValid())
-							{
-								PinnedThis->UpdateCookProgress(-1.0f, StatusText);
-							}
-						});
-					}
-				}
-			}
-			
-			// 等待一小段时间再检查
-			FPlatformProcess::Sleep(0.5f);
-		}
-		
-		// 进程已完成，获取返回码
-		FPlatformProcess::GetProcReturnCode(ProcHandle, &ReturnCode);
-		
-		// 读取剩余的输出
-		if (ReadPipe)
-		{
-			FString RemainingOutput = FPlatformProcess::ReadPipe(ReadPipe);
-			if (!RemainingOutput.IsEmpty())
-			{
-				AccumulatedOutput += RemainingOutput;
-			}
-		}
-		
-		FString Output = AccumulatedOutput;
-			if (!Output.IsEmpty())
-			{
-				UE_LOG(LogTemp, Log, TEXT("Cook process output:\n%s"), *Output);
-		}
-		
-		FPlatformProcess::CloseProc(ProcHandle);
-		FPlatformProcess::ClosePipe(ReadPipe, WritePipe);
-		
-		UE_LOG(LogTemp, Log, TEXT("Cook process completed with return code: %d"), ReturnCode);
-		
-		// 在主线程中处理结果
-		// 使用外层 lambda 捕获的值（从函数参数传入的 CapturedModPath 等）
-		// 注意：即使窗口已关闭，如果 Cook 成功，也应该继续执行打包
-		AsyncTask(ENamedThreads::GameThread, [WeakThisPtr, ReturnCode, ProjectName, Output, CapturedModPath, CapturedCookedModPath, CapturedSavePath, CapturedUnrealPakPath, CapturedNonAssetFiles, CapturedHasAssetFiles]()
-		{
-			TSharedPtr<SPackageModWindow> PinnedThis = WeakThisPtr.Pin();
-			if (PinnedThis.IsValid())
-			{
-				PinnedThis->HandleCookResult(ReturnCode, ProjectName, Output, CapturedModPath, CapturedCookedModPath, CapturedSavePath, CapturedUnrealPakPath, CapturedNonAssetFiles, CapturedHasAssetFiles);
-			}
-			else
-			{
-				// 窗口已关闭，但如果 Cook 成功，仍然继续执行打包
-				UE_LOG(LogTemp, Log, TEXT("SPackageModWindow object is no longer valid, but continuing packaging if cook succeeded"));
-				if (ReturnCode == 0)
-				{
-					// 直接调用静态打包函数，不依赖窗口对象
-					SPackageModWindow::HandleCookResultStandalone(ReturnCode, ProjectName, Output, CapturedModPath, CapturedCookedModPath, CapturedSavePath, CapturedUnrealPakPath, CapturedNonAssetFiles, CapturedHasAssetFiles);
-				}
-			}
-		});
-	});
-	
-	return true;
-}
-
-void SPackageModWindow::HandleCookResult(int32 ReturnCode, const FString& ProjectName, const FString& Output, 
-	const FString& InModPath, const FString& InCookedModPath, const FString& InSavePath, 
-	const FString& InUnrealPakPath, const TArray<FString>& InNonAssetFiles, bool bInHasAssetFiles)
-{
-	// 更新并关闭进度通知
-	TSharedPtr<SNotificationItem> Notification = CookProgressNotification.Pin();
-	if (Notification.IsValid())
-	{
-		if (ReturnCode == 0)
-		{
-			Notification->SetCompletionState(SNotificationItem::CS_Success);
-			Notification->SetText(LOCTEXT("CookSuccess", "Cook completed successfully!"));
-		}
-		else
-		{
-			Notification->SetCompletionState(SNotificationItem::CS_Fail);
-			Notification->SetText(LOCTEXT("CookFailed", "Cook process failed!"));
-		}
-		Notification->ExpireAndFadeout();
-		CookProgressNotification.Reset();
-	}
-	
-	if (ReturnCode == 0)
-	{
-		// 检查 Cooked 目录是否存在
-		// Cook 输出路径格式可能是：
-		// 1. Saved/Cooked/Windows/ProjectName/Content/Mods/ModName（最常见）
-		// 2. Saved/Cooked/WindowsNoEditor/ProjectName/Content/Mods/ModName（某些配置）
-		// 3. Saved/Cooked/ProjectName/Content/Mods/ModName（旧格式，无平台目录）
-		// 使用传入的参数而不是成员变量，避免访问可能已失效的成员
-		FString NormalizedModPath = InModPath;
-		FPaths::NormalizeDirectoryName(NormalizedModPath);
-		
-		IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
-		FString CookedModPath;
-		
-		// 首先尝试 Windows 平台路径
-		CookedModPath = FPaths::ProjectSavedDir() / TEXT("Cooked") / TEXT("Windows") / ProjectName / TEXT("Content") / TEXT("Mods") / NormalizedModPath;
-		FPaths::NormalizeDirectoryName(CookedModPath);
-		
-		if (!PlatformFile.DirectoryExists(*CookedModPath))
-		{
-			// 尝试 WindowsNoEditor 平台路径
-			FString WindowsNoEditorPath = FPaths::ProjectSavedDir() / TEXT("Cooked") / TEXT("WindowsNoEditor") / ProjectName / TEXT("Content") / TEXT("Mods") / NormalizedModPath;
-			FPaths::NormalizeDirectoryName(WindowsNoEditorPath);
-			if (PlatformFile.DirectoryExists(*WindowsNoEditorPath))
-			{
-				CookedModPath = WindowsNoEditorPath;
-				UE_LOG(LogTemp, Log, TEXT("Using WindowsNoEditor cooked path: %s"), *CookedModPath);
-			}
-			else
-			{
-				// 尝试旧格式（无平台目录）
-				FString OldCookedModPath = FPaths::ProjectSavedDir() / TEXT("Cooked") / ProjectName / TEXT("Content") / TEXT("Mods") / NormalizedModPath;
-				FPaths::NormalizeDirectoryName(OldCookedModPath);
-				if (PlatformFile.DirectoryExists(*OldCookedModPath))
-				{
-					CookedModPath = OldCookedModPath;
-					UE_LOG(LogTemp, Warning, TEXT("Using old cooked path format (no platform directory): %s"), *CookedModPath);
-				}
-			}
-		}
-		
-		UE_LOG(LogTemp, Log, TEXT("Checking for cooked mod files at: %s"), *CookedModPath);
-		UE_LOG(LogTemp, Log, TEXT("InModPath: %s"), *InModPath);
-		UE_LOG(LogTemp, Log, TEXT("NormalizedModPath: %s"), *NormalizedModPath);
-		
-		if (PlatformFile.DirectoryExists(*CookedModPath))
-		{
-			// 检查目录中是否有文件
-			TArray<FString> CookedFiles;
-			PlatformFile.FindFilesRecursively(CookedFiles, *CookedModPath, nullptr);
-			
-			UE_LOG(LogTemp, Log, TEXT("Found %d cooked files in mod directory"), CookedFiles.Num());
-			
-			// 显示开始打包的通知
-			FNotificationInfo SuccessInfo(LOCTEXT("CookSuccessPackaging", "Cook completed successfully! Starting packaging..."));
-			SuccessInfo.ExpireDuration = 3.0f;
-			SuccessInfo.bFireAndForget = true;
-			SuccessInfo.bUseSuccessFailIcons = true;
-			FSlateNotificationManager::Get().AddNotification(SuccessInfo);
-			
-			// 更新成员变量并继续打包
-			SavedModPath = InModPath;
-			SavedCookedModPath = CookedModPath;
-			SavedSavePath = InSavePath;
-			SavedUnrealPakPath = InUnrealPakPath;
-			SavedNonAssetFiles = InNonAssetFiles;
-			bHasAssetFilesToCook = bInHasAssetFiles;
-			ContinuePackagingAfterCook();
-		}
-		else
-		{
-			// 检查整个 Cooked 目录结构
-			// Cook 输出路径格式可能是：Saved/Cooked/Windows/ProjectName/Content 或 Saved/Cooked/WindowsNoEditor/ProjectName/Content
-			FString CookedContentPath = FPaths::ProjectSavedDir() / TEXT("Cooked") / TEXT("Windows") / ProjectName / TEXT("Content");
-			FPaths::NormalizeDirectoryName(CookedContentPath);
-			if (!PlatformFile.DirectoryExists(*CookedContentPath))
-			{
-				CookedContentPath = FPaths::ProjectSavedDir() / TEXT("Cooked") / TEXT("WindowsNoEditor") / ProjectName / TEXT("Content");
-				FPaths::NormalizeDirectoryName(CookedContentPath);
-			}
-			
-			UE_LOG(LogTemp, Warning, TEXT("Cooked mod directory not found at: %s"), *CookedModPath);
-			UE_LOG(LogTemp, Warning, TEXT("Cooked content path: %s, exists: %d"), *CookedContentPath, PlatformFile.DirectoryExists(*CookedContentPath));
-			
-			FNotificationInfo WarningInfo(LOCTEXT("CookNoModFiles", "Cook completed but mod files not found in cooked directory. The mod may not have any assets to cook, or they were not included. Packaging non-asset files only."));
-			WarningInfo.ExpireDuration = 8.0f;
-			WarningInfo.bFireAndForget = true;
-			FSlateNotificationManager::Get().AddNotification(WarningInfo);
-			
-			// 即使没有 Cooked 的 Mod 文件，也继续打包非资产文件
-			// 更新成员变量
-			SavedModPath = InModPath;
-			SavedCookedModPath = InCookedModPath;
-			SavedSavePath = InSavePath;
-			SavedUnrealPakPath = InUnrealPakPath;
-			SavedNonAssetFiles = InNonAssetFiles;
-			bHasAssetFilesToCook = bInHasAssetFiles;
-			ContinuePackagingAfterCook();
-		}
-	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("Cook process failed with return code: %d"), ReturnCode);
-		if (!Output.IsEmpty())
-		{
-			UE_LOG(LogTemp, Error, TEXT("Cook output: %s"), *Output);
-		}
-		
-		// 错误信息已通过进度通知显示，这里只显示详细错误
-		FNotificationInfo ErrorInfo(LOCTEXT("CookFailedDetails", "Cook process failed! Check Output Log for details. You may need to cook manually from File -> Cook Content."));
-		ErrorInfo.ExpireDuration = 8.0f;
-		ErrorInfo.bFireAndForget = true;
-		FSlateNotificationManager::Get().AddNotification(ErrorInfo);
-		
-		// 处理下一个mod或清除打包状态
-		// 从队列中移除当前mod
-		if (ModPackagingQueue.Num() > 0)
-		{
-			ModPackagingQueue.RemoveAt(0);
-		}
-		
-		// 如果还有待处理的mod，继续打包下一个
-		if (ModPackagingQueue.Num() > 0)
-		{
-			PackageSingleMod(ModPackagingQueue[0]);
-		}
-		else
-		{
-			// 所有mod处理完成
-			bIsPackaging = false;
-			bIsCheckboxEnabled = true; // 重新启用复选框
-			if (StatusTextBlock.IsValid())
-			{
-				StatusTextBlock->SetText(GetStatusText());
-			}
-			if (PackageButton.IsValid())
-			{
-				PackageButton->SetEnabled(IsPackageEnabled());
-			}
-			// 刷新列表视图以更新复选框状态
-			if (ModListView.IsValid())
-			{
-				ModListView->RequestListRefresh();
-			}
-		}
-	}
-}
-
-void SPackageModWindow::ContinuePackagingAfterCook()
-{
-	// 重新检查 Cooked 目录（如果需要的话）
-	// 注意：ContinuePackaging() 函数内部会重新检查 Cooked 目录，所以这里不需要重复检查
-	// 但我们可以确保 SavedCookedModPath 已正确设置
-	if (SavedCookedModPath.IsEmpty())
-	{
-		UE_LOG(LogTemp, Warning, TEXT("SavedCookedModPath is empty in ContinuePackagingAfterCook!"));
-	}
-	
-	// 继续打包流程
-	ContinuePackaging();
-}
-
-void SPackageModWindow::HandleCookResultStandalone(int32 ReturnCode, const FString& ProjectName, const FString& Output,
-	const FString& InModPath, const FString& InCookedModPath, const FString& InSavePath,
-	const FString& InUnrealPakPath, const TArray<FString>& InNonAssetFiles, bool bInHasAssetFiles)
-{
-	// 独立于窗口对象的 Cook 结果处理函数
-	// 当窗口已关闭时，仍然可以继续执行打包
-	
-	if (ReturnCode == 0)
-	{
-		// 检查 Cooked 目录是否存在
-		// Cook 输出路径格式可能是：
-		// 1. Saved/Cooked/Windows/ProjectName/Content/Mods/ModName（最常见）
-		// 2. Saved/Cooked/WindowsNoEditor/ProjectName/Content/Mods/ModName（某些配置）
-		// 3. Saved/Cooked/ProjectName/Content/Mods/ModName（旧格式，无平台目录）
-		FString NormalizedModPath = InModPath;
-		FPaths::NormalizeDirectoryName(NormalizedModPath);
-		
-		IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
-		FString CookedModPath;
-		
-		// 首先尝试 Windows 平台路径
-		CookedModPath = FPaths::ProjectSavedDir() / TEXT("Cooked") / TEXT("Windows") / ProjectName / TEXT("Content") / TEXT("Mods") / NormalizedModPath;
-		FPaths::NormalizeDirectoryName(CookedModPath);
-		
-		if (!PlatformFile.DirectoryExists(*CookedModPath))
-		{
-			// 尝试 WindowsNoEditor 平台路径
-			FString WindowsNoEditorPath = FPaths::ProjectSavedDir() / TEXT("Cooked") / TEXT("WindowsNoEditor") / ProjectName / TEXT("Content") / TEXT("Mods") / NormalizedModPath;
-			FPaths::NormalizeDirectoryName(WindowsNoEditorPath);
-			if (PlatformFile.DirectoryExists(*WindowsNoEditorPath))
-			{
-				CookedModPath = WindowsNoEditorPath;
-				UE_LOG(LogTemp, Log, TEXT("Using WindowsNoEditor cooked path: %s"), *CookedModPath);
-			}
-			else
-			{
-				// 尝试旧格式（无平台目录）
-				FString OldCookedModPath = FPaths::ProjectSavedDir() / TEXT("Cooked") / ProjectName / TEXT("Content") / TEXT("Mods") / NormalizedModPath;
-				FPaths::NormalizeDirectoryName(OldCookedModPath);
-				if (PlatformFile.DirectoryExists(*OldCookedModPath))
-				{
-					CookedModPath = OldCookedModPath;
-					UE_LOG(LogTemp, Warning, TEXT("Using old cooked path format (no platform directory): %s"), *CookedModPath);
-				}
-			}
-		}
-		
-		UE_LOG(LogTemp, Log, TEXT("Checking for cooked mod files at: %s"), *CookedModPath);
-		
-		if (PlatformFile.DirectoryExists(*CookedModPath))
-		{
-			// 检查目录中是否有文件
-			TArray<FString> CookedFiles;
-			PlatformFile.FindFilesRecursively(CookedFiles, *CookedModPath, nullptr);
-			
-			UE_LOG(LogTemp, Log, TEXT("Found %d cooked files in mod directory"), CookedFiles.Num());
-			
-			// 显示开始打包的通知
-			FNotificationInfo SuccessInfo(LOCTEXT("CookSuccessPackaging", "Cook completed successfully! Starting packaging..."));
-			SuccessInfo.ExpireDuration = 3.0f;
-			SuccessInfo.bFireAndForget = true;
-			SuccessInfo.bUseSuccessFailIcons = true;
-			FSlateNotificationManager::Get().AddNotification(SuccessInfo);
-			
-			// 计算 ModFolderPath（从 ModPath 推断）
-			FString ModFolderPath = FPaths::ProjectContentDir() / TEXT("Mods") / NormalizedModPath;
-			FPaths::NormalizeDirectoryName(ModFolderPath);
-			
-			// 直接调用静态打包函数
-			ContinuePackagingStandalone(InModPath, ModFolderPath, CookedModPath, InSavePath, InUnrealPakPath, InNonAssetFiles, bInHasAssetFiles);
-		}
-		else
-		{
-			FNotificationInfo WarningInfo(LOCTEXT("CookNoModFiles", "Cook completed but mod files not found in cooked directory. The mod may not have any assets to cook, or they were not included. Packaging non-asset files only."));
-			WarningInfo.ExpireDuration = 8.0f;
-			WarningInfo.bFireAndForget = true;
-			FSlateNotificationManager::Get().AddNotification(WarningInfo);
-			
-			// 计算 ModFolderPath（从 ModPath 推断）
-			FString ModFolderPath = FPaths::ProjectContentDir() / TEXT("Mods") / NormalizedModPath;
-			FPaths::NormalizeDirectoryName(ModFolderPath);
-			
-			// 即使没有 Cooked 的 Mod 文件，也继续打包非资产文件
-			ContinuePackagingStandalone(InModPath, ModFolderPath, InCookedModPath, InSavePath, InUnrealPakPath, InNonAssetFiles, bInHasAssetFiles);
-		}
-	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("Cook process failed with return code: %d"), ReturnCode);
-		FNotificationInfo ErrorInfo(LOCTEXT("CookFailedDetails", "Cook process failed! Check Output Log for details."));
-		ErrorInfo.ExpireDuration = 8.0f;
-		ErrorInfo.bFireAndForget = true;
-		FSlateNotificationManager::Get().AddNotification(ErrorInfo);
-		
-		// HandleCookResultStandalone 是静态函数，不能访问成员变量
-		// 如果窗口已关闭，无法清除状态，这是正常的
-	}
-}
-
-void SPackageModWindow::ContinuePackagingStandalone(const FString& ModPath, const FString& ModFolderPath, const FString& CookedModPath,
-	const FString& SavePath, const FString& UnrealPakPath, const TArray<FString>& NonAssetFiles, bool bHasAssetFiles)
-{
-	// 独立于窗口对象的打包函数
-	// 这个函数与 ContinuePackaging() 类似，但不依赖成员变量
-	
-	// 验证关键变量
-	if (ModPath.IsEmpty())
-	{
-		UE_LOG(LogTemp, Error, TEXT("ModPath is empty! Cannot continue packaging."));
-		FNotificationInfo Info(LOCTEXT("InvalidModPath", "Invalid mod path! Cannot package mod."));
-		Info.ExpireDuration = 5.0f;
-		Info.bFireAndForget = true;
-		FSlateNotificationManager::Get().AddNotification(Info);
-		return;
-	}
-	
-	if (UnrealPakPath.IsEmpty() || !FPaths::FileExists(UnrealPakPath))
-	{
-		UE_LOG(LogTemp, Error, TEXT("Invalid UnrealPakPath: %s"), *UnrealPakPath);
-		FNotificationInfo Info(LOCTEXT("InvalidUnrealPakPath", "UnrealPak.exe path is invalid! Cannot package mod."));
-		Info.ExpireDuration = 5.0f;
-		Info.bFireAndForget = true;
-		FSlateNotificationManager::Get().AddNotification(Info);
-		return;
-	}
-	
-	IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
-	FString ProjectName = FApp::GetProjectName();
-	bool bHasCookedContent = PlatformFile.DirectoryExists(*CookedModPath);
-	
-	// 读取 ModInfo.json 获取 ModId、MainLuaFile、Icon 和 AdditionalAssets
-	FString ModInfoJsonPath = ModFolderPath / TEXT("ModInfo.json");
-	FString ModId = ModPath; // 默认使用 ModPath 作为 ModId
-	FString MainLuaFile;
-	FString Icon;
-	TArray<FString> AdditionalAssets;
-	bool bIncludeGameplayTags = false;
-	FString GameplayTagsIniFileField;
-	
-	if (FPaths::FileExists(ModInfoJsonPath))
-	{
-		FString JsonContent;
-		if (FFileHelper::LoadFileToString(JsonContent, *ModInfoJsonPath))
-		{
-			TSharedPtr<FJsonObject> JsonObject;
-			TSharedRef<TJsonReader<>> Reader = TJsonReaderFactory<>::Create(JsonContent);
-			
-			if (FJsonSerializer::Deserialize(Reader, JsonObject) && JsonObject.IsValid())
-			{
-				if (JsonObject->HasField(TEXT("ModId")))
-				{
-					ModId = JsonObject->GetStringField(TEXT("ModId"));
-				}
-				if (JsonObject->HasField(TEXT("MainLuaFile")))
-				{
-					MainLuaFile = JsonObject->GetStringField(TEXT("MainLuaFile"));
-				}
-				if (JsonObject->HasField(TEXT("Icon")))
-				{
-					Icon = JsonObject->GetStringField(TEXT("Icon"));
-				}
-				if (JsonObject->HasField(TEXT("IncludeGameplayTags")))
-				{
-					bIncludeGameplayTags = JsonObject->GetBoolField(TEXT("IncludeGameplayTags"));
-				}
-				if (JsonObject->HasField(TEXT("GameplayTagsIniFile")))
-				{
-					GameplayTagsIniFileField = JsonObject->GetStringField(TEXT("GameplayTagsIniFile"));
-				}
-				// 读取额外资产列表
-				if (JsonObject->HasField(TEXT("AdditionalAssets")))
-				{
-					const TArray<TSharedPtr<FJsonValue>>* AdditionalAssetsArray;
-					if (JsonObject->TryGetArrayField(TEXT("AdditionalAssets"), AdditionalAssetsArray))
-					{
-						for (const TSharedPtr<FJsonValue>& Value : *AdditionalAssetsArray)
-						{
-							if (Value.IsValid() && Value->Type == EJson::String)
-							{
-								AdditionalAssets.Add(Value->AsString());
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	// 从 DA_ModDataAsset 导出配置表 JSON，并写入 ModInfo.json
-	FModConfigExportResult ModConfigExportResult;
-	FModConfigExporter::ExportFromModFolder(ModFolderPath, ModConfigExportResult);
-	
-	// 构建输出文件夹路径：项目根目录的 Mods/{ModId}
-	FString OutputDir = FPaths::ProjectDir() / TEXT("Mods") / ModId;
-	FPaths::NormalizeDirectoryName(OutputDir);
-	
-	// 清理输出文件夹（如果存在），删除所有文件
-	if (PlatformFile.DirectoryExists(*OutputDir))
-	{
-		// 删除目录中的所有文件
-		TArray<FString> FilesToDelete;
-		PlatformFile.FindFiles(FilesToDelete, *OutputDir, nullptr);
-		for (const FString& File : FilesToDelete)
-		{
-			PlatformFile.DeleteFile(*File);
-		}
-		
-		// 删除目录中的所有子目录
-		PlatformFile.IterateDirectory(*OutputDir, [&](const TCHAR* Filename, bool bIsDirectory) -> bool
-		{
-			if (bIsDirectory)
-			{
-				FString DirPath = FString(Filename);
-				PlatformFile.DeleteDirectoryRecursively(*DirPath);
-			}
-			return true;
-		});
-	}
-	
-	// 重新创建输出文件夹
-	PlatformFile.CreateDirectoryTree(*OutputDir);
-	
-	// 修改 SavePath 为输出文件夹中的 pak 文件
-	FString NewSavePath = OutputDir / FString::Printf(TEXT("%s.pak"), *ModId);
-	FPaths::NormalizeFilename(NewSavePath);
-	
-	// 创建临时响应文件
-	FString ResponseFilePath = FPaths::CreateTempFilename(*FPaths::ProjectIntermediateDir(), TEXT("PakResponse"), TEXT(".txt"));
-	
-	// 收集所有需要打包的文件
-	TArray<FString> FilesToPackage;
-	
-	// 从 Cooked 目录收集资产文件（这部分逻辑与 ContinuePackaging 相同）
-	if (bHasCookedContent)
-	{
-		TFunction<void(const FString&)> CollectCookedFiles = [&](const FString& DirPath)
-		{
-			IPlatformFile& FileManager = FPlatformFileManager::Get().GetPlatformFile();
-			TFunction<void(const FString&)> IterateDir = [&](const FString& CurrentDir)
-			{
-				FileManager.IterateDirectory(*CurrentDir, [&](const TCHAR* Filename, bool bIsDirectory) -> bool
-				{
-					if (bIsDirectory)
-					{
-						IterateDir(FString(Filename));
-					}
-					else
-					{
-						FString FullPath = FString(Filename);
-						FPaths::NormalizeFilename(FullPath);
-						
-						FString Extension = FPaths::GetExtension(FullPath, true).ToLower();
-						if (Extension == TEXT(".uasset") || Extension == TEXT(".umap") || 
-						    Extension == TEXT(".uexp") || Extension == TEXT(".ubulk") || 
-						    Extension == TEXT(".uptnl"))
-						{
-							FString RelativePath = FullPath;
-							FString CookedModPathWithSlash = CookedModPath;
-							if (!CookedModPathWithSlash.EndsWith(TEXT("/")) && !CookedModPathWithSlash.EndsWith(TEXT("\\")))
-							{
-								CookedModPathWithSlash += TEXT("/");
-							}
-							
-							if (!FullPath.IsEmpty() && !CookedModPathWithSlash.IsEmpty() && 
-							    FullPath.Len() >= CookedModPathWithSlash.Len() &&
-							    FullPath.StartsWith(CookedModPathWithSlash))
-							{
-								int32 PrefixLen = CookedModPathWithSlash.Len();
-								if (PrefixLen < FullPath.Len())
-								{
-									RelativePath = FullPath.Mid(PrefixLen);
-								}
-								else
-								{
-									RelativePath = TEXT("");
-								}
-							}
-							RelativePath.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-							
-							// 挂载路径格式：../../../EasternEra/Content/Mods/{ModName}/...
-							// 挂载点是 ../../../EasternEra/Content/，文件相对于挂载点的路径是 Mods/{ModName}/...
-							FString MountPath = FString::Printf(TEXT("../../../%s/Content/Mods/%s/%s"), *ProjectName, *ModPath, *RelativePath);
-							MountPath.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-							
-							// 响应文件格式："Cook资源路径" "挂载路径"
-							// 第一列：Cook 输出的绝对路径
-							// 第二列：挂载路径（相对路径，格式为 ../../../EasternEra/Content/Mods/...）
-							FString ResponseLine = FString::Printf(TEXT("\"%s\" \"%s\""), *FullPath, *MountPath);
-							FilesToPackage.Add(ResponseLine);
-						}
-					}
-					return true;
-				});
-			};
-			IterateDir(DirPath);
-		};
-		
-		CollectCookedFiles(CookedModPath);
-	}
-	
-	// 从源目录收集非资产文件，但排除 MainLuaFile、ModInfo.json 和 Icon
-	FString ModInfoJsonPathFull = ModFolderPath / TEXT("ModInfo.json");
-	FPaths::NormalizeFilename(ModInfoJsonPathFull);
-	FString MainLuaFilePathFull;
-	if (!MainLuaFile.IsEmpty())
-	{
-		// MainLuaFile 可能是相对路径或绝对路径
-		if (FPaths::IsRelative(MainLuaFile))
-		{
-			MainLuaFilePathFull = ModFolderPath / MainLuaFile;
-		}
-		else
-		{
-			MainLuaFilePathFull = MainLuaFile;
-		}
-		FPaths::NormalizeFilename(MainLuaFilePathFull);
-	}
-	const FString IconFilePathFull = PackageModHelpers::ResolveModIconSourcePath(ModFolderPath, Icon);
-	const FString GameplayTagsIniPathFullStandalone = PackageModHelpers::ResolveGameplayTagsIniSourcePath(
-		ModFolderPath, bIncludeGameplayTags, GameplayTagsIniFileField, ModId);
-	
-	for (const FString& NonAssetFile : NonAssetFiles)
-	{
-		FString NormalizedNonAssetFile = NonAssetFile;
-		FPaths::NormalizeFilename(NormalizedNonAssetFile);
-		
-		// 排除 ModInfo.json、MainLuaFile、Icon 与 GameplayTags ini
-		if (NormalizedNonAssetFile.Equals(ModInfoJsonPathFull, ESearchCase::IgnoreCase) ||
-		    (!MainLuaFilePathFull.IsEmpty() && NormalizedNonAssetFile.Equals(MainLuaFilePathFull, ESearchCase::IgnoreCase)) ||
-		    (!IconFilePathFull.IsEmpty() && NormalizedNonAssetFile.Equals(IconFilePathFull, ESearchCase::IgnoreCase)) ||
-		    (!GameplayTagsIniPathFullStandalone.IsEmpty() && NormalizedNonAssetFile.Equals(GameplayTagsIniPathFullStandalone, ESearchCase::IgnoreCase)))
-		{
-			UE_LOG(LogTemp, Log, TEXT("ContinuePackagingStandalone - Skipping file (will be copied separately): %s"), *NonAssetFile);
-			continue;
-		}
-		
-		FString RelativePath = NonAssetFile;
-		FString ModPathWithSlash = ModFolderPath;
-		if (!ModPathWithSlash.EndsWith(TEXT("/")) && !ModPathWithSlash.EndsWith(TEXT("\\")))
-		{
-			ModPathWithSlash += TEXT("/");
-		}
-		
-		if (!NonAssetFile.IsEmpty() && !ModPathWithSlash.IsEmpty() && 
-		    NonAssetFile.Len() >= ModPathWithSlash.Len() &&
-		    NonAssetFile.StartsWith(ModPathWithSlash))
-		{
-			int32 PrefixLen = ModPathWithSlash.Len();
-			if (PrefixLen < NonAssetFile.Len())
-			{
-				RelativePath = NonAssetFile.Mid(PrefixLen);
-			}
-			else
-			{
-				RelativePath = TEXT("");
-			}
-		}
-		RelativePath.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-		
-		// 挂载路径格式：../../../EasternEra/Content/Mods/{ModName}/...
-		// 挂载点是 ../../../EasternEra/Content/，文件相对于挂载点的路径是 Mods/{ModName}/...
-		FString MountPath = FString::Printf(TEXT("../../../%s/Content/Mods/%s/%s"), *ProjectName, *ModPath, *RelativePath);
-		MountPath.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-		
-		// 响应文件格式："Cook资源路径" "挂载路径"
-		// 第一列：源文件路径（绝对路径）
-		// 第二列：挂载路径（相对路径，格式为 ../../../EasternEra/Content/Mods/...）
-		FString ResponseLine = FString::Printf(TEXT("\"%s\" \"%s\""), *NonAssetFile, *MountPath);
-		FilesToPackage.Add(ResponseLine);
-	}
-	
-	// 自动扫描 Content/Script/{ModId} 目录下的 lua 文件并加入打包列表
-	FString ScriptDir = FPaths::ProjectContentDir() / TEXT("Script") / ModId;
-	FPaths::NormalizeDirectoryName(ScriptDir);
-	
-	if (PlatformFile.DirectoryExists(*ScriptDir))
-	{
-		UE_LOG(LogTemp, Log, TEXT("ContinuePackagingStandalone - Scanning Script directory: %s"), *ScriptDir);
-		
-		// 递归扫描目录
-		TFunction<void(const FString&)> ScanScriptDir = [&](const FString& DirPath)
-		{
-			PlatformFile.IterateDirectory(*DirPath, [&](const TCHAR* Filename, bool bIsDirectory) -> bool
-			{
-				if (bIsDirectory)
-				{
-					// 递归扫描子目录
-					ScanScriptDir(FString(Filename));
-				}
-				else
-				{
-					FString FullPath = FString(Filename);
-					FPaths::NormalizeFilename(FullPath);
-					FString Extension = FPaths::GetExtension(FullPath, true).ToLower();
-					
-					// 只处理 lua 文件
-					if (Extension == TEXT(".lua"))
-					{
-						// 计算相对于 Script/{ModId} 的路径
-						FString RelativePath = FullPath;
-						FString ScriptDirWithSlash = ScriptDir;
-						if (!ScriptDirWithSlash.EndsWith(TEXT("/")) && !ScriptDirWithSlash.EndsWith(TEXT("\\")))
-						{
-							ScriptDirWithSlash += TEXT("/");
-						}
-						
-						if (FullPath.Len() >= ScriptDirWithSlash.Len() && FullPath.StartsWith(ScriptDirWithSlash))
-						{
-							int32 PrefixLen = ScriptDirWithSlash.Len();
-							if (PrefixLen < FullPath.Len())
-							{
-								RelativePath = FullPath.Mid(PrefixLen);
-							}
-						}
-						RelativePath.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-						
-						// 挂载路径格式：../../../EasternEra/Content/Script/{ModId}/...
-						// 挂载点是 ../../../EasternEra/Content/，文件相对于挂载点的路径是 Script/{ModId}/...
-						FString MountPath = FString::Printf(TEXT("../../../%s/Content/Script/%s/%s"), *ProjectName, *ModId, *RelativePath);
-						MountPath.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-						
-						// 响应文件格式："Cook资源路径" "挂载路径"
-						// 第一列：源文件路径（绝对路径）
-						// 第二列：挂载路径（相对路径，格式为 ../../../EasternEra/Content/Script/...）
-						FString ResponseLine = FString::Printf(TEXT("\"%s\" \"%s\""), *FullPath, *MountPath);
-						FilesToPackage.Add(ResponseLine);
-						
-						UE_LOG(LogTemp, Log, TEXT("ContinuePackagingStandalone - Added Script lua file: %s -> %s"), *FullPath, *MountPath);
-					}
-				}
-				return true;
-			});
-		};
-		
-		ScanScriptDir(ScriptDir);
-	}
-	else
-	{
-		UE_LOG(LogTemp, Log, TEXT("ContinuePackagingStandalone - Script directory does not exist: %s"), *ScriptDir);
-	}
-	
-	// 处理额外资产列表
-	FString ContentDir = FPaths::ProjectContentDir();
-	FPaths::NormalizeDirectoryName(ContentDir);
-	for (const FString& AdditionalAssetPath : AdditionalAssets)
-	{
-		if (AdditionalAssetPath.IsEmpty())
-		{
-			continue;
-		}
-		
-		// 构建完整路径（相对于Content目录）
-		FString FullAssetPath = ContentDir / AdditionalAssetPath;
-		FPaths::NormalizeFilename(FullAssetPath);
-		
-		// 检查文件是否存在
-		if (PlatformFile.FileExists(*FullAssetPath))
-		{
-			// 计算相对于Content目录的路径
-			FString RelativePath = AdditionalAssetPath;
-			RelativePath.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-			
-			// 挂载路径格式：../../../EasternEra/Content/...
-			FString MountPath = FString::Printf(TEXT("../../../%s/Content/%s"), *ProjectName, *RelativePath);
-			MountPath.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-			
-			// 检查是否是资产文件（需要从Cooked目录获取）
-			FString Extension = FPaths::GetExtension(FullAssetPath, true).ToLower();
-			if (Extension == TEXT(".uasset") || Extension == TEXT(".umap"))
-			{
-				// 资产文件需要从Cooked目录获取
-				// 构建Cooked路径
-				FString CookedAssetPath = FPaths::ProjectSavedDir() / TEXT("Cooked") / TEXT("Windows") / ProjectName / TEXT("Content") / RelativePath;
-				FPaths::NormalizeFilename(CookedAssetPath);
-				
-				// 检查Cooked路径是否存在，如果不存在尝试其他平台路径
-				if (!PlatformFile.FileExists(*CookedAssetPath))
-				{
-					FString WindowsNoEditorCookedPath = FPaths::ProjectSavedDir() / TEXT("Cooked") / TEXT("WindowsNoEditor") / ProjectName / TEXT("Content") / RelativePath;
-					FPaths::NormalizeFilename(WindowsNoEditorCookedPath);
-					if (PlatformFile.FileExists(*WindowsNoEditorCookedPath))
-					{
-						CookedAssetPath = WindowsNoEditorCookedPath;
-					}
-					else
-					{
-						// 尝试旧格式路径
-						FString LegacyCookedPath = FPaths::ProjectSavedDir() / TEXT("Cooked") / ProjectName / TEXT("Content") / RelativePath;
-						FPaths::NormalizeFilename(LegacyCookedPath);
-						if (PlatformFile.FileExists(*LegacyCookedPath))
-						{
-							CookedAssetPath = LegacyCookedPath;
-						}
-						else
-						{
-							UE_LOG(LogTemp, Warning, TEXT("ContinuePackagingStandalone - Additional asset cooked file not found: %s (tried: %s, %s, %s)"), *RelativePath, *CookedAssetPath, *WindowsNoEditorCookedPath, *LegacyCookedPath);
-							continue;
-						}
-					}
-				}
-				
-				// 使用Cooked路径
-				FString ResponseLine = FString::Printf(TEXT("\"%s\" \"%s\""), *CookedAssetPath, *MountPath);
-				FilesToPackage.Add(ResponseLine);
-				UE_LOG(LogTemp, Log, TEXT("ContinuePackagingStandalone - Added additional cooked asset: %s -> %s"), *CookedAssetPath, *MountPath);
-			}
-			else
-			{
-				// 非资产文件直接使用源路径
-				FString ResponseLine = FString::Printf(TEXT("\"%s\" \"%s\""), *FullAssetPath, *MountPath);
-				FilesToPackage.Add(ResponseLine);
-				UE_LOG(LogTemp, Log, TEXT("ContinuePackagingStandalone - Added additional non-asset file: %s -> %s"), *FullAssetPath, *MountPath);
-			}
-		}
-		else
-		{
-			UE_LOG(LogTemp, Warning, TEXT("ContinuePackagingStandalone - Additional asset file not found: %s (ContentDir: %s, RelativePath: %s)"), *FullAssetPath, *ContentDir, *AdditionalAssetPath);
-			// 尝试检查是否是绝对路径
-			if (FPaths::IsRelative(AdditionalAssetPath))
-			{
-				UE_LOG(LogTemp, Warning, TEXT("ContinuePackagingStandalone - Path is relative, but file not found. Make sure the path is correct relative to Content directory."));
-			}
-			else
-			{
-				UE_LOG(LogTemp, Warning, TEXT("ContinuePackagingStandalone - Path appears to be absolute. AdditionalAssets should be relative to Content directory."));
-			}
-		}
-	}
-	
-	UE_LOG(LogTemp, Log, TEXT("ContinuePackagingStandalone - Finished processing AdditionalAssets. Total files to package: %d"), FilesToPackage.Num());
-	
-	// 写入响应文件并执行 UnrealPak（这部分逻辑与 ContinuePackaging 相同）
-	if (FilesToPackage.Num() > 0)
-	{
-		// 构建响应文件内容（PakList.txt 格式）
-		// UnrealPak 响应文件格式：每行是 "Cook资源路径" "挂载路径"
-		//   - 第一列：Cook 输出的绝对路径
-		//   - 第二列：挂载路径（相对路径），格式为 ../../../EasternEra/Content/Mods/...
-		// 注意：不需要第一行的 MountPoint，每行直接是 "CookPath" "MountPath" 格式
-		FString ResponseFileContent = FString::Join(FilesToPackage, TEXT("\n"));
-		FFileHelper::SaveStringToFile(ResponseFileContent, *ResponseFilePath);
-		
-		UE_LOG(LogTemp, Log, TEXT("Created PakList.txt with %d files"), FilesToPackage.Num());
-		UE_LOG(LogTemp, Log, TEXT("Note: Format is \"CookPath\" \"MountPath\", where MountPath is ../../../%s/Content/Mods/..."), *ProjectName);
-		
-		// 执行 UnrealPak（使用新的 SavePath）
-		FString SavePathFull = FPaths::ConvertRelativePathToFull(NewSavePath);
-		FPaths::NormalizeFilename(SavePathFull);
-		FString ResponseFilePathFull = FPaths::ConvertRelativePathToFull(ResponseFilePath);
-		FPaths::NormalizeFilename(ResponseFilePathFull);
-		
-		// MountPoint 已经在响应文件的第一行指定，所以不需要 -MountPoint 参数
-		FString UnrealPakCommandLine = FString::Printf(
-			TEXT("\"%s\" -Create=\"%s\""),
-			*SavePathFull,
-			*ResponseFilePathFull
-		);
-		
-		UE_LOG(LogTemp, Log, TEXT("Executing UnrealPak: %s %s"), *UnrealPakPath, *UnrealPakCommandLine);
-		
-		// 创建 Pak 进度通知（独立于窗口对象）
-		FNotificationInfo PakProgressInfo(LOCTEXT("PackagingMod", "Packaging mod..."));
-		PakProgressInfo.bFireAndForget = false;
-		PakProgressInfo.bUseSuccessFailIcons = true;
-		PakProgressInfo.ExpireDuration = 0.0f;
-		TSharedPtr<SNotificationItem> PakNotification = FSlateNotificationManager::Get().AddNotification(PakProgressInfo);
-		
-		// 在后台线程中执行 UnrealPak
-		FString CapturedOutputDir = OutputDir;
-		FString CapturedModInfoJsonPath = ModInfoJsonPathFull;
-		FString CapturedMainLuaFilePath = MainLuaFilePathFull;
-		FString CapturedIconFilePath = IconFilePathFull;
-		const FString CapturedGameplayTagsSourcePath = GameplayTagsIniPathFullStandalone;
-		const FString CapturedModIdForTags = ModId;
-		const FModConfigExportResult CapturedModConfigExport = ModConfigExportResult;
-		AsyncTask(ENamedThreads::AnyBackgroundThreadNormalTask, [UnrealPakPath, UnrealPakCommandLine, SavePathFull, CapturedOutputDir, CapturedModInfoJsonPath, CapturedMainLuaFilePath, CapturedIconFilePath, CapturedGameplayTagsSourcePath, CapturedModIdForTags, CapturedModConfigExport, PakNotification]() mutable
-		{
-			void* ReadPipe = nullptr;
-			void* WritePipe = nullptr;
-			FPlatformProcess::CreatePipe(ReadPipe, WritePipe);
-			
-			FProcHandle ProcHandle = FPlatformProcess::CreateProc(
-				*UnrealPakPath,
-				*UnrealPakCommandLine,
-				true,
-				true,
-				true,
-				nullptr,
-				0,
-				nullptr,
-				WritePipe,
-				ReadPipe,
-				nullptr
-			);
-			
-			if (ProcHandle.IsValid())
-			{
-				// 等待进程完成，同时定期读取输出并更新进度
-				int32 ReturnCode = 0;
-				FString AccumulatedOutput;
-				FDateTime StartTime = FDateTime::Now();
-				
-				// 定期检查进程状态并读取输出
-				while (FPlatformProcess::IsProcRunning(ProcHandle))
-				{
-					// 读取新的输出
-					if (ReadPipe)
-					{
-						FString NewOutput = FPlatformProcess::ReadPipe(ReadPipe);
-						if (!NewOutput.IsEmpty())
-						{
-							AccumulatedOutput += NewOutput;
-							UE_LOG(LogTemp, Verbose, TEXT("UnrealPak output: %s"), *NewOutput);
-							
-							// 解析进度并更新通知
-							float Progress = SPackageModWindow::ParsePakProgress(AccumulatedOutput);
-							if (Progress >= 0.0f)
-							{
-								FText StatusText = FText::Format(LOCTEXT("PackagingProgress", "Packaging mod... {0}%"), FText::AsNumber(FMath::RoundToInt(Progress * 100.0f)));
-								AsyncTask(ENamedThreads::GameThread, [PakNotification, Progress, StatusText]()
-								{
-									if (PakNotification.IsValid())
-									{
-										PakNotification->SetText(StatusText);
-										if (Progress >= 0.0f && Progress <= 1.0f)
-										{
-											PakNotification->SetCompletionState(SNotificationItem::CS_Pending);
-											PakNotification->SetExpireDuration(0.0f);
-										}
-									}
-								});
-							}
-							else
-							{
-								// 如果无法解析进度，显示已用时间
-								FTimespan Elapsed = FDateTime::Now() - StartTime;
-								FText StatusText = FText::Format(LOCTEXT("PackagingTime", "Packaging mod... ({0}m {1}s)"), 
-									FText::AsNumber(Elapsed.GetMinutes()), 
-									FText::AsNumber(Elapsed.GetSeconds() % 60));
-								AsyncTask(ENamedThreads::GameThread, [PakNotification, StatusText]()
-								{
-									if (PakNotification.IsValid())
-									{
-										PakNotification->SetText(StatusText);
-										PakNotification->SetCompletionState(SNotificationItem::CS_Pending);
-										PakNotification->SetExpireDuration(0.0f);
-									}
-								});
-							}
-						}
-					}
-					
-					// 等待一小段时间再检查
-					FPlatformProcess::Sleep(0.5f);
-				}
-				
-				// 进程已完成，获取返回码
-				FPlatformProcess::GetProcReturnCode(ProcHandle, &ReturnCode);
-				
-				// 读取剩余的输出
-				FString Output = AccumulatedOutput;
-				if (ReadPipe)
-				{
-					FString RemainingOutput = FPlatformProcess::ReadPipe(ReadPipe);
-					if (!RemainingOutput.IsEmpty())
-					{
-						Output += RemainingOutput;
-					}
-				}
-				
-				FPlatformProcess::CloseProc(ProcHandle);
-				FPlatformProcess::ClosePipe(ReadPipe, WritePipe);
-				
-				AsyncTask(ENamedThreads::GameThread, [ReturnCode, SavePathFull, CapturedOutputDir, CapturedModInfoJsonPath, CapturedMainLuaFilePath, CapturedIconFilePath, CapturedGameplayTagsSourcePath, CapturedModIdForTags, CapturedModConfigExport, Output, PakNotification]()
-				{
-					// 更新并关闭进度通知
-					if (PakNotification.IsValid())
-					{
-						if (ReturnCode == 0)
-						{
-							PakNotification->SetCompletionState(SNotificationItem::CS_Success);
-							PakNotification->SetText(LOCTEXT("PackageSuccess", "Mod packaged successfully!"));
-						}
-						else
-						{
-							PakNotification->SetCompletionState(SNotificationItem::CS_Fail);
-							PakNotification->SetText(LOCTEXT("PackageFailed", "Mod packaging failed!"));
-						}
-						PakNotification->ExpireAndFadeout();
-					}
-					
-					if (ReturnCode == 0)
-					{
-						IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
-						
-						if (FPaths::FileExists(SavePathFull))
-						{
-							int64 FileSize = IFileManager::Get().FileSize(*SavePathFull);
-							
-							if (FileSize > 0)
-							{
-								// 拷贝 ModInfo.json 和 MainLuaFile 到输出文件夹
-								if (FPaths::FileExists(CapturedModInfoJsonPath))
-								{
-									FString DestModInfoJson = CapturedOutputDir / TEXT("ModInfo.json");
-									if (PlatformFile.CopyFile(*DestModInfoJson, *CapturedModInfoJsonPath))
-									{
-										UE_LOG(LogTemp, Log, TEXT("ContinuePackagingStandalone - Copied ModInfo.json to: %s"), *DestModInfoJson);
-									}
-									else
-									{
-										UE_LOG(LogTemp, Warning, TEXT("ContinuePackagingStandalone - Failed to copy ModInfo.json to: %s"), *DestModInfoJson);
-									}
-								}
-								
-								if (!CapturedMainLuaFilePath.IsEmpty() && FPaths::FileExists(CapturedMainLuaFilePath))
-								{
-									FString MainLuaFileName = FPaths::GetCleanFilename(CapturedMainLuaFilePath);
-									FString DestMainLuaFile = CapturedOutputDir / MainLuaFileName;
-									if (PlatformFile.CopyFile(*DestMainLuaFile, *CapturedMainLuaFilePath))
-									{
-										UE_LOG(LogTemp, Log, TEXT("ContinuePackagingStandalone - Copied MainLuaFile to: %s"), *DestMainLuaFile);
-									}
-									else
-									{
-										UE_LOG(LogTemp, Warning, TEXT("ContinuePackagingStandalone - Failed to copy MainLuaFile to: %s"), *DestMainLuaFile);
-									}
-								}
-								
-								// 拷贝 Icon 文件到输出文件夹
-								if (!CapturedIconFilePath.IsEmpty() && FPaths::FileExists(CapturedIconFilePath))
-								{
-									FString IconFileName = FPaths::GetCleanFilename(CapturedIconFilePath);
-									FString DestIconFile = CapturedOutputDir / IconFileName;
-									if (PlatformFile.CopyFile(*DestIconFile, *CapturedIconFilePath))
-									{
-										UE_LOG(LogTemp, Log, TEXT("ContinuePackagingStandalone - Copied Icon to: %s"), *DestIconFile);
-									}
-									else
-									{
-										UE_LOG(LogTemp, Warning, TEXT("ContinuePackagingStandalone - Failed to copy Icon to: %s"), *DestIconFile);
-									}
-								}
-								
-								if (!CapturedGameplayTagsSourcePath.IsEmpty() && FPaths::FileExists(CapturedGameplayTagsSourcePath) && !CapturedModIdForTags.IsEmpty())
-								{
-									const FString DestTagsIni = CapturedOutputDir / FPaths::GetCleanFilename(CapturedGameplayTagsSourcePath);
-									if (PlatformFile.CopyFile(*DestTagsIni, *CapturedGameplayTagsSourcePath))
-									{
-										UE_LOG(LogTemp, Log, TEXT("ContinuePackagingStandalone - Copied GameplayTags ini to: %s"), *DestTagsIni);
-									}
-									else
-									{
-										UE_LOG(LogTemp, Warning, TEXT("ContinuePackagingStandalone - Failed to copy GameplayTags ini to: %s"), *DestTagsIni);
-									}
-								}
-
-								FModConfigExporter::CopyConfigFilesToOutput(CapturedModConfigExport, CapturedOutputDir);
-							}
-							
-							FNotificationInfo SuccessInfo(FText::Format(LOCTEXT("PackageSuccessDetails", "Mod packaged successfully! File: {0} ({1} MB)"), 
-								FText::FromString(SavePathFull),
-								FText::AsNumber(FileSize / (1024 * 1024))));
-							SuccessInfo.ExpireDuration = 5.0f;
-							SuccessInfo.bFireAndForget = true;
-							SuccessInfo.bUseSuccessFailIcons = true;
-							FSlateNotificationManager::Get().AddNotification(SuccessInfo);
-						}
-					}
-					else
-					{
-						FNotificationInfo ErrorInfo(LOCTEXT("PackageFailedDetails", "Mod packaging failed! Check Output Log for details."));
-						ErrorInfo.ExpireDuration = 8.0f;
-						ErrorInfo.bFireAndForget = true;
-						FSlateNotificationManager::Get().AddNotification(ErrorInfo);
-						UE_LOG(LogTemp, Error, TEXT("UnrealPak failed with return code: %d"), ReturnCode);
-						if (!Output.IsEmpty())
-						{
-							UE_LOG(LogTemp, Error, TEXT("UnrealPak output: %s"), *Output);
-						}
-					}
-				});
-			}
-			else
-			{
-				FPlatformProcess::ClosePipe(ReadPipe, WritePipe);
-				AsyncTask(ENamedThreads::GameThread, []()
-				{
-					FNotificationInfo ErrorInfo(LOCTEXT("PackageStartFailed", "Failed to start UnrealPak process!"));
-					ErrorInfo.ExpireDuration = 5.0f;
-					ErrorInfo.bFireAndForget = true;
-					FSlateNotificationManager::Get().AddNotification(ErrorInfo);
-				});
-			}
-		});
-	}
-	else
-	{
-		FNotificationInfo WarningInfo(LOCTEXT("NoFilesToPackage", "No files to package!"));
-		WarningInfo.ExpireDuration = 5.0f;
-		WarningInfo.bFireAndForget = true;
-		FSlateNotificationManager::Get().AddNotification(WarningInfo);
-	}
-}
 
 #undef LOCTEXT_NAMESPACE
-

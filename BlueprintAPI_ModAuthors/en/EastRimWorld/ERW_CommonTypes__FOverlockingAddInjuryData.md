@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Injury data that may be inflicted during overclocking, containing the injury name, weight and affected body organ.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FName InjuryName;` |
 
-**Source comments:**
+**Notes:**
 
 > 伤势名字
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 InjuryWeight = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 伤势权重
 
@@ -42,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBodyOrganType` |
+| C++ type | [EBodyOrganType](ERW_CommonTypes__EBodyOrganType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) EBodyOrganType InjuryOrganID = EBodyOrganType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 伤势部位
 

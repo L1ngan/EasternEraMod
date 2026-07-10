@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FText OptionText;` |
 
-**源码注释:**
+**说明:**
 
 > 选项的文字
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FName NextDialogueID = NAME_None;` |
 
-**源码注释:**
+**说明:**
 
 > 点击后进行的下一个对话 如果为None则结束当前对话
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName TriggeredTaskID = NAME_None;` |
 
-**源码注释:**
+**说明:**
 
 > 触发的世界任务ID
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName TriggeredStationTaskID = NAME_None;` |
 
-**源码注释:**
+**说明:**
 
 > 触发的驻地任务ID
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName TriggeredEvent = NAME_None;` |
 
-**源码注释:**
+**说明:**
 
 > 触发的世界事件
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FCommonTaskCondition> Conditions;` |
 
-**源码注释:**
+**说明:**
 
 > 解锁此选项的条件
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FCommonTaskCondition> ClickConditions;` |
 
-**源码注释:**
+**说明:**
 
 > 点击时检查的条件
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FDialogueTriggerFunctionData> TriggerFunctions;` |
 
-**源码注释:**
+**说明:**
 
 > 成功点击时触发的功能
 
@@ -134,12 +134,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EDialogueOptionType` |
+| C++ 类型 | [EDialogueOptionType](DialogueStruct__EDialogueOptionType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) EDialogueOptionType DialogueOptionType = EDialogueOptionType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 选项类型
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FName SubmitItemToTask;` |
 
-**源码注释:**
+**说明:**
 
 > 提交物品到任务
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FName TaskNPCId;` |
 
-**源码注释:**
+**说明:**
 
 > 用来将可触发的任务关联到某个NPC,做NPC头顶任务提示用
 

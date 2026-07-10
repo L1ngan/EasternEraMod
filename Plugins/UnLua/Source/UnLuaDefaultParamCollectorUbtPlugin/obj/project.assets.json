@@ -129,7 +129,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -156,7 +157,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "E:\\UE5.6\\UE_5.6\\Engine\\Binaries\\ThirdParty\\DotNet\\8.0.300\\win-x64\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Data table row for a character action ability (anim montages/sections, duration, looping, the associated GameplayAbility, clothing display, etc.)
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Animation") TMap<int32, TSoftObjectPtr<UAnimMontage>> BehaviorStartAnimMontage;` |
 
-**Source comments:**
+**Notes:**
 
 > 动画蒙太奇
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Animation") TMap<int32,FCharacterActionAbilityAnimSections> BehaviorAnimSections;` |
 
-**Source comments:**
+**Notes:**
 
 > 动画蒙太奇片段
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Animation") bool bTimeOfDuration = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否有持续时间
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Animation") bool bLoopPlayMontage = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否循环动画
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Animation",meta=(EditCondition = "bTimeOfDuration")) float TimeOfDuration = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 持续时间
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities") TSoftClassPtr<UEastRimWorldGameplayAbility> ActionGameplayAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 此动作使用的能力
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Display") bool bClothingDisplay = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否显示衣服
 

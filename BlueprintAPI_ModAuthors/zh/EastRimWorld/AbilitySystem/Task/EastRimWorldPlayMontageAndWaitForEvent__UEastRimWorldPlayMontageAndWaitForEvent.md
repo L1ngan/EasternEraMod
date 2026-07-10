@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 技能任务：播放蒙太奇并等待其结束或匹配的Gameplay事件，提供完成、混出、打断、取消与事件接收回调
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FEastRimWorldPlayMontageAndWaitForEventDelegate OnCompleted;` |
 
-**源码注释:**
+**说明:**
 
 > The montage completely finished playing
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FEastRimWorldPlayMontageAndWaitForEventDelegate OnBlendOut;` |
 
-**源码注释:**
+**说明:**
 
 > The montage started blending out
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FEastRimWorldPlayMontageAndWaitForEventDelegate OnInterrupted;` |
 
-**源码注释:**
+**说明:**
 
 > The montage was interrupted
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FEastRimWorldPlayMontageAndWaitForEventDelegate OnCancelled;` |
 
-**源码注释:**
+**说明:**
 
 > The ability task was explicitly cancelled by another ability
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FEastRimWorldPlayMontageAndWaitForEventDelegate EventReceived;` |
 
-**源码注释:**
+**说明:**
 
 > One of the triggering gameplay events happened
 
@@ -109,7 +111,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > Play a montage and wait for it end. If a gameplay event happens that matches EventTags (or EventTags is empty), the EventReceived delegate will fire with a tag and event data.
 > If StopWhenAbilityEnds is true, this montage will be aborted if the ability ends normally. It is always stopped when the ability is explicitly cancelled.

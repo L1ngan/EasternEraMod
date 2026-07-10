@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> World Area Info 数据结构。
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FGuid AreaGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 区域guid
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText AreaName;` |
 
-**源码注释:**
+**说明:**
 
 > 区域名字
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText AreaDesc;` |
 
-**源码注释:**
+**说明:**
 
 > 区域描述
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftObjectPtr<UTexture2D> AreaIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 区域图标
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> WorldPlaces;` |
 
-**源码注释:**
+**说明:**
 
 > 包含的地点
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float MaxExplorationDegree = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 最大探索度
 
@@ -107,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float ExplorationDegree = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 探索度
 
@@ -122,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FVector2D> MapFogSize;` |
 
-**源码注释:**
+**说明:**
 
 > 解锁的迷雾范围
 
@@ -137,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftObjectPtr<UMaterialInterface> MaterialInterface;` |
 
-**源码注释:**
+**说明:**
 
 > 迷雾区域贴图
 
@@ -152,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FTransform WorldMapPosition = FTransform::Identity;` |
 
-**源码注释:**
+**说明:**
 
 > 处于世界地图的位置
 

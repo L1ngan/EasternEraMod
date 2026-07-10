@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Play Sound System Set Up UObject type.
 
 ## Blueprint-exposed variables
 
@@ -12,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<ESoundChangeEvent,FName>` |
+| C++ type | TMap<[ESoundChangeEvent](PlaySoundSystem__ESoundChangeEvent.md),FName> |
 | Reflection specifiers | BlueprintReadWrite, Category="Sound" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="Sound") TMap<ESoundChangeEvent,FName> SoundChangeEventPreset;` |
 
-**Source comments:**
+**Notes:**
 
 > 预设音效切换事件 Key 事件类型  Value 事件操作 读取SoundChangeEventConfig 配置表
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="Sound") TMap<FGameplayTag, int32> ConcurrenceSetup;` |
 
-**Source comments:**
+**Notes:**
 
 > 并发设置  Key 分组标签  Value 数量
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="Sound") TMap<FVector,FName> EnvironmentalSound;` |
 
-**Source comments:**
+**Notes:**
 
 > 环境音效 key 播放的位置 value 播放的音乐 读取GameSoundInfo 配置表
 
@@ -57,12 +59,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<ESoundChangeEvent,FName>` |
+| C++ type | TMap<[ESoundChangeEvent](PlaySoundSystem__ESoundChangeEvent.md),FName> |
 | Reflection specifiers | BlueprintReadWrite, Category="AkAudioSound" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="AkAudioSound") TMap<ESoundChangeEvent,FName> AkAudioSoundChangeEventPreset;` |
 
-**Source comments:**
+**Notes:**
 
 > AK音效切换预设
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "AkAudioSound") class UAkAudioEvent * EnvironmentalSoundStartEvent = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 环境音开始
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "AkAudioSound") class UAkAudioEvent * EnvironmentalSoundEndEvent = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 环境音结束
 
@@ -102,12 +104,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EERWSeason,class UAkAudioEvent*>` |
+| C++ type | TMap<[EERWSeason](../../WorldSystem/WorldStruct__EERWSeason.md),class UAkAudioEvent*> |
 | Reflection specifiers | BlueprintReadWrite, Category="AkAudioSound" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "AkAudioSound") TMap<EERWSeason,class UAkAudioEvent*> SeasonalTransitionEvent;` |
 
-**Source comments:**
+**Notes:**
 
 > 季节切换的事件
 
@@ -122,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "AkAudioSound") UAkRtpc * TimeHourRTP = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 设置当前小时
 
@@ -137,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "AkAudioSound") UAkRtpc * PlayerCameraHeightRTP = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 设置玩家相机高度百分比
 
@@ -152,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "AkAudioSound") class UAkAudioEvent * ChooseMapAkAudioEvent = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 地图切换事件
 
@@ -167,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "AkAudioSound") TArray<class UAkAudioEvent*> OtherAkAudioEvent;` |
 
-**Source comments:**
+**Notes:**
 
 > 地图中其他额外的事件 例如门派比武中 预览对决界面切换到战斗界面
 

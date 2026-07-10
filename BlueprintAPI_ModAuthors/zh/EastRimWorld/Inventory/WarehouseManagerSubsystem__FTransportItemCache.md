@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FUObjectData ObjectData;` |
 
-**源码注释:**
+**说明:**
 
 > 对应的ItemAction
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FGOAP_Actions Actions;` |
 
-**源码注释:**
+**说明:**
 
 > ActionData
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TArray<FGOAP_Action> Plans;` |
 
-**源码注释:**
+**说明:**
 
 > 执行的计划链
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) float ActionCost = 99999;` |
 
-**源码注释:**
+**说明:**
 
 > 消耗
 

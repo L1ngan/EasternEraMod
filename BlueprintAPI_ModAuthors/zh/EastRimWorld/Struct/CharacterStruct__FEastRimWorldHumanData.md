@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 人类角色配置数据（继承角色数据）：捏人数据、身高体重、背景故事、NPC/商人、囚犯等配置
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterCustomization") FString CustomizationId;` |
 
-**源码注释:**
+**说明:**
 
 > 捏人数据的id
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterCustomization") int32 Height = 180;` |
 
-**源码注释:**
+**说明:**
 
 > 身高
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterCustomization") int32 Weight = 120;` |
 
-**源码注释:**
+**说明:**
 
 > 体重
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterCustomization") FText BackgroundStory;` |
 
-**源码注释:**
+**说明:**
 
 > 背景故事
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") TArray<FName> InitCharacteristicIds;` |
 
-**源码注释:**
+**说明:**
 
 > 初始特性
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterCustomization") FText RefuseText;` |
 
-**源码注释:**
+**说明:**
 
 > 投靠时拒绝文本
 
@@ -107,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterCustomization") FText AcceptText;` |
 
-**源码注释:**
+**说明:**
 
 > 投靠时接受文本
 
@@ -122,6 +124,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterCustomization") FText JoinText;` |
 
+**说明:**
+
+> 投靠加入时显示的文本
+
 ---
 
 ### 属性 `bTraveler`
@@ -133,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") bool bTraveler = false;` |
 
-**源码注释:**
+**说明:**
 
 > NPC标识
 
@@ -148,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") FName DialogueGroupID;` |
 
-**源码注释:**
+**说明:**
 
 > 对话组ID
 
@@ -163,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") FText TravelerTitle;` |
 
-**源码注释:**
+**说明:**
 
 > 称号
 
@@ -178,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") FSoftObjectPath TravelerHeadIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 头顶图标
 
@@ -193,7 +199,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") TArray<FText> TravelerSpeechBubble;` |
 
-**源码注释:**
+**说明:**
 
 > 场景喊话
 
@@ -208,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") FSoftObjectPath TravelerIdleMontage;` |
 
-**源码注释:**
+**说明:**
 
 > NPC待机
 
@@ -223,7 +229,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") FIntPoint TravelerMoney = FIntPoint::ZeroValue;` |
 
-**源码注释:**
+**说明:**
 
 > 商人初始金钱
 
@@ -238,7 +244,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") FIntPoint TravelerGoodsNum = FIntPoint::ZeroValue;` |
 
-**源码注释:**
+**说明:**
 
 > 商人商品数量
 
@@ -253,7 +259,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") FName TravelerGoodsId;` |
 
-**源码注释:**
+**说明:**
 
 > 商品ID(DT_FTravelerGoodsConfig表ID)
 
@@ -268,7 +274,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") FName TravelerForceID;` |
 
-**源码注释:**
+**说明:**
 
 > NPC所属势力ID(获取势力好感度计算商品价格)
 
@@ -283,7 +289,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") FName ExchangeMartialArtsID;` |
 
-**源码注释:**
+**说明:**
 
 > 切磋ID
 
@@ -298,7 +304,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") FName NPCInformationWidget;` |
 
-**源码注释:**
+**说明:**
 
 > NPC信息界面ID(非玩家队伍角色信息界面)
 
@@ -313,7 +319,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Prisoner") int32 PrisonerImportance = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 囚犯重要程度
 

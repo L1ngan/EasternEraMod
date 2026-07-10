@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 伤势Buff组件：管理角色各部位伤势的添加/激活/治疗/疤痕及对应GameplayEffect的施加与移除。
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FRemoveInjuryBuffDelegate OnRemoveInjuryDelegate;` |
 
-**源码注释:**
+**说明:**
 
 > 伤势恢复的事件（治愈了）（包括疤痕移除）
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FAddInjuryBuffDelegate OnAddInjuryDelegate;` |
 
-**源码注释:**
+**说明:**
 
 > 增加伤势的事件
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FUpdateInjuryBuffDelegate OnUpdateInjuryDelegate;` |
 
-**源码注释:**
+**说明:**
 
 > 更新伤势的事件
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FStartTreatDelegate OnStartTreatDelegate;` |
 
-**源码注释:**
+**说明:**
 
 > 开始治疗事件
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FFinishTreatDelegate OnFinishTreatDelegate;` |
 
-**源码注释:**
+**说明:**
 
 > 结束治疗事件
 
@@ -92,6 +94,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FName,int32> CurTreatNeedMedicines;` |
 
+**说明:**
+
+> 当前治疗所需的药品（TMap<药品ID, 数量>）。
+
 ---
 
 ### 属性 `TreatGoapActions`
@@ -103,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) TMap<FName,FGOAP_Action> TreatGoapActions;` |
 
-**源码注释:**
+**说明:**
 
 > 治疗行为(伤势id,Action)
 
@@ -118,7 +124,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FName CurrentTreatInjuryId;` |
 
-**源码注释:**
+**说明:**
 
 > 在治疗时检查
 
@@ -133,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite) TArray<FInjuryEffectInstance> CurInjuryEffectArr;` |
 
-**源码注释:**
+**说明:**
 
 > 当前激活的伤势列表
 
@@ -153,13 +159,13 @@
 |--------|------|
 | `AddInjuryConfig` | const [FInjuryEffectConfig](../../Struct/CharacterStruct__FInjuryEffectConfig.md) & |
 | `OrganID` | `FName` |
-| `OrganType` | `EBodyOrganType` |
+| `OrganType` | [EBodyOrganType](../../ERW_CommonTypes__EBodyOrganType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool AddInjury(const FInjuryEffectConfig & AddInjuryConfig,FName OrganID,EBodyOrganType OrganType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > / 添加buff
 > / @param AddInjuryConfig 需要添加的buff
@@ -179,11 +185,15 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InjuryID` | `FName` |
-| `OrganType` | `EBodyOrganType` |
+| `OrganType` | [EBodyOrganType](../../ERW_CommonTypes__EBodyOrganType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool AddInjuryByOrganType(FName InjuryID, EBodyOrganType OrganType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 按部位类型添加指定ID的伤势，返回是否成功。
 
 ---
 
@@ -203,6 +213,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 激活指定的伤势效果实例。
+
 ---
 
 ### 函数 `InjuryCanAdd`
@@ -216,11 +230,15 @@
 | 参数名 | 类型 |
 |--------|------|
 | `AddInjuryConfig` | const [FInjuryEffectConfig](../../Struct/CharacterStruct__FInjuryEffectConfig.md) & |
-| `OrganType` | `EBodyOrganType` |
+| `OrganType` | [EBodyOrganType](../../ERW_CommonTypes__EBodyOrganType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool InjuryCanAdd(const FInjuryEffectConfig & AddInjuryConfig ,EBodyOrganType OrganType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 检查指定伤势配置能否添加到该部位类型，返回是否可添加。
 
 ---
 
@@ -236,7 +254,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > //检查buff是否能激活
 > UFUNCTION()
@@ -260,7 +278,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 返回恢复或恶化时间(秒)
 
@@ -282,7 +300,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 返回恢复或恶化百分比
 
@@ -304,7 +322,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取治疗速度
 
@@ -326,7 +344,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据伤势实例ID获取伤势效果实例
 
@@ -342,13 +360,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OrganType` | `const EBodyOrganType` |
+| `OrganType` | const [EBodyOrganType](../../ERW_CommonTypes__EBodyOrganType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) TArray<FInjuryEffectInstance> GetInjuryEffectInstanceByOrganType(const EBodyOrganType OrganType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查询部位对应的伤势效果实例
 
@@ -370,7 +388,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查询部位对应的伤势效果实例
 
@@ -392,7 +410,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查询所有伤势（查询疤痕，还是普通的伤势）
 
@@ -414,7 +432,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 治疗伤势
 
@@ -436,7 +454,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除疤痕
 
@@ -459,7 +477,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 使用药品消除疤痕
 
@@ -475,14 +493,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `OrganType` | `const EBodyOrganType` |
+| `OrganType` | const [EBodyOrganType](../../ERW_CommonTypes__EBodyOrganType.md) |
 | `Attributes` | `TMap<FGameplayAttribute,float> &` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void CalculateDamagePercentage(const EBodyOrganType OrganType,TMap<FGameplayAttribute,float> & Attributes);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据命中部位计算扣除的部位百分比
 
@@ -500,7 +518,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查还没有有未治疗的伤势
 
@@ -521,5 +539,9 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) TArray<FInjuryEffectInstance> GetCurInjurysByBuff(FString BufName);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取与指定Buff名称对应的当前伤势效果实例列表。
 
 ---

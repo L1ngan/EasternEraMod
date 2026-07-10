@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FText Name;` |
 
-**源码注释:**
+**说明:**
 
 > 名称
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FText Desc;` |
 
-**源码注释:**
+**说明:**
 
 > 描述
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSoftObjectPtr<UTexture2D> ActiveIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 效果图标(激活)
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSoftObjectPtr<UTexture2D> DeactiveIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 效果图标(未激活)
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float AddProsperityProportion = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 增加繁荣比例
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float AddPopulationProportion = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 增加人口比例
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int32 AddTradeRouteNum = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 增加贸易路线数量
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float AddTradeMoveSpeed = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 增加贸易商队速度
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float AddTradeProportion = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 增加贸易获得比例
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int32 AddBuildNum = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 建造设施上限
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int32 AddCharacterNum = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 角色容量
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float AddBuildConsumeProportion = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 建造消耗比例
 
@@ -199,7 +199,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TMap<FName,FItemSimpleData> OutputResource;` |
 
-**源码注释:**
+**说明:**
 
 > 产出物品
 
@@ -214,7 +214,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int32 AddCoin = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 增加钱币
 
@@ -229,7 +229,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float AddWorldPlaceOutput = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 增加城镇物品产出比例
 
@@ -244,7 +244,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<FName> ActiveConditions;` |
 
-**源码注释:**
+**说明:**
 
 > 激活条件 DT_CommonTaskCondition
 

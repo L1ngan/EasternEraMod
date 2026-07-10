@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Compare Condition data structure.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly) TEnumAsByte<ELUniQuery> Query = ELUniQuery::IsEqualTo;` |
 
-**Source comments:**
+**Notes:**
 
 > 比较类型
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly) FLUniValue UniValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 数值
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly) FText ConditionDescribe;` |
 
-**Source comments:**
+**Notes:**
 
 > 条件描述
 

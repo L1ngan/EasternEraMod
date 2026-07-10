@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FText DialogueText;` |
 
-**Source comments:**
+**Notes:**
 
 > 对话文本
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FName> DialogueOptions;` |
 
-**Source comments:**
+**Notes:**
 
 > 对话选项
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FDialogueRandOptions> RandOptions;` |
 
-**Source comments:**
+**Notes:**
 
 > 随机选项
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) bool bClickSpacePass;` |
 
-**Source comments:**
+**Notes:**
 
 > 点击空白处跳过
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,meta=(EditCondition="bClickSpacePass")) FName NextDialogueID;` |
 
-**Source comments:**
+**Notes:**
 
 > 空白处跳过的下一个对话
 
@@ -89,12 +89,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EDialogueCharacterInfoType` |
+| C++ type | [EDialogueCharacterInfoType](DialogueStruct__EDialogueCharacterInfoType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) EDialogueCharacterInfoType DialogueCharacterInfoType = EDialogueCharacterInfoType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否显示角色信息类型
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FSoftObjectPath OverrideAvatar;` |
 
-**Source comments:**
+**Notes:**
 
 > 强制使用此立绘
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FText OverrideFirstName;` |
 
-**Source comments:**
+**Notes:**
 
 > 强制使用此名字
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FText OverrideName;` |
 
-**Source comments:**
+**Notes:**
 
 > 强制使用此名字
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FText OverrideTitle;` |
 
-**Source comments:**
+**Notes:**
 
 > /强制使用此称号
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FName MaleVoiceID;` |
 
-**Source comments:**
+**Notes:**
 
 > 语音id 读取 GameSoundInfo 配置表
 
@@ -183,5 +183,39 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FName FemaleVoiceID;` |
+
+**Notes:**
+
+> Female Voice ID field.
+
+---
+
+### Property `ForceCommonRandOptions`
+
+| Field | Details |
+|------|------|
+| C++ type | [FDialogueRandOptions](DialogueStruct__FDialogueRandOptions.md) |
+| Reflection specifiers | BlueprintReadWrite, Category="WorldForce" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="WorldForce") FDialogueRandOptions ForceCommonRandOptions;` |
+
+**Notes:**
+
+> 通用势力选项(对话目标为势力时使用与特殊势力选项ForceSpecialRandOptions组合随机一个)
+
+---
+
+### Property `ForceSpecialRandOptions`
+
+| Field | Details |
+|------|------|
+| C++ type | TMap<FName,[FDialogueRandOptions](DialogueStruct__FDialogueRandOptions.md)> |
+| Reflection specifiers | BlueprintReadWrite, Category="WorldForce" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="WorldForce") TMap<FName,FDialogueRandOptions> ForceSpecialRandOptions;` |
+
+**Notes:**
+
+> 特殊势力选项(对话目标为势力时使用，与通用势力选项ForceCommonRandOptions组合随机一个)
 
 ---

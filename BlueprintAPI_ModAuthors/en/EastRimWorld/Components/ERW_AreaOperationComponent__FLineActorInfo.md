@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FVector Location = FVector::ZeroVector;` |
 
-**Source comments:**
+**Notes:**
 
 > 世界坐标位置
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<[FGridPosition](../ERW_CommonTypes__FGridPosition.md) , EGridDistributionType> |
+| C++ type | TMap<[FGridPosition](../ERW_CommonTypes__FGridPosition.md) , [EGridDistributionType](../ERW_Enumerations__EGridDistributionType.md)> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FGridPosition , EGridDistributionType> DistributionInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > Actor所占格子分布信息
 > TMap<所占格子 , 分布类型>

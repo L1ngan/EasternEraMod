@@ -19,6 +19,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool TakeEffect = false;` |
 
+**说明:**
+
+> Take Effect 字段。
+
 ---
 
 ### 属性 `SourceForceGuid`
@@ -30,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid SourceForceGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 攻击来源
 
@@ -45,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid TargetForceGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 攻击目标
 
@@ -60,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid AttackWorldPlaceGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 攻击的城市
 
@@ -75,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float TimeRemaining;` |
 
-**源码注释:**
+**说明:**
 
 > 攻击剩余时间
 
@@ -90,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float StartTime;` |
 
-**源码注释:**
+**说明:**
 
 > 开始时间
 
@@ -105,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bPopupWarning = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否已经弹出过警告
 

@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FText RoomName;` |
 
-**Source comments:**
+**Notes:**
 
 > 房间名称
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ERoomType` |
+| C++ type | [ERoomType](ERW_Enumerations__ERoomType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) ERoomType RoomType = ERoomType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 房间类型
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FText RoomDesc;` |
 
-**Source comments:**
+**Notes:**
 
 > 房间描述
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TSoftObjectPtr<UTexture2D> RoomIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 房间图标
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 Priority = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 优先级
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 DemandForArea = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 面积需求(大于等于)
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FFacilityNeed> FacilityNeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 设施需求
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 FacilityNeedNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 设施需求数量
 
@@ -134,12 +134,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<ERoomScoreType,float>` |
+| C++ type | TMap<[ERoomScoreType](ERW_Enumerations__ERoomScoreType.md),float> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<ERoomScoreType,float> ScoreTypeRate;` |
 
-**Source comments:**
+**Notes:**
 
 > 评级系数
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<int32,FRoomLevel> RoomLevels;` |
 
-**Source comments:**
+**Notes:**
 
 > 房间等级以及效果
 
@@ -164,12 +164,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EFiveElementType` |
+| C++ type | [EFiveElementType](Struct/CommonEnum__EFiveElementType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) EFiveElementType FiveElementType = EFiveElementType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 五行类型
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 FiveElementValue = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 五行属性值
 

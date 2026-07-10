@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Ability task that plays a montage and waits for it to end or for matching gameplay events, providing OnCompleted, OnBlendOut, OnInterrupted, OnCancelled and EventReceived callbacks.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FEastRimWorldPlayMontageAndWaitForEventDelegate OnCompleted;` |
 
-**Source comments:**
+**Notes:**
 
 > The montage completely finished playing
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FEastRimWorldPlayMontageAndWaitForEventDelegate OnBlendOut;` |
 
-**Source comments:**
+**Notes:**
 
 > The montage started blending out
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FEastRimWorldPlayMontageAndWaitForEventDelegate OnInterrupted;` |
 
-**Source comments:**
+**Notes:**
 
 > The montage was interrupted
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FEastRimWorldPlayMontageAndWaitForEventDelegate OnCancelled;` |
 
-**Source comments:**
+**Notes:**
 
 > The ability task was explicitly cancelled by another ability
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FEastRimWorldPlayMontageAndWaitForEventDelegate EventReceived;` |
 
-**Source comments:**
+**Notes:**
 
 > One of the triggering gameplay events happened
 
@@ -109,7 +111,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > Play a montage and wait for it end. If a gameplay event happens that matches EventTags (or EventTags is empty), the EventReceived delegate will fire with a tag and event data.
 > If StopWhenAbilityEnds is true, this montage will be aborted if the ability ends normally. It is always stopped when the ability is explicitly cancelled.

@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 显卡信息（品牌、适配器名称、厂商与设备ID）
 
 ## 蓝图暴露变量
 
@@ -17,6 +19,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category="GPU") FString GPUBrand;` |
 
+**说明:**
+
+> 显卡品牌字符串
+
 ---
 
 ### 属性 `AdapterName`
@@ -27,6 +33,10 @@
 | 反射说明符 | BlueprintReadOnly, Category="GPU" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category="GPU") FString AdapterName;` |
+
+**说明:**
+
+> 显卡适配器名称
 
 ---
 
@@ -39,6 +49,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category="GPU") int32 VendorId = 0;` |
 
+**说明:**
+
+> 显卡厂商ID
+
 ---
 
 ### 属性 `DeviceId`
@@ -50,6 +64,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category="GPU") int32 DeviceId = 0;` |
 
+**说明:**
+
+> 显卡设备ID
+
 ---
 
 ### 属性 `VendorName`
@@ -60,5 +78,9 @@
 | 反射说明符 | BlueprintReadOnly, Category="GPU" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category="GPU") FString VendorName;` |
+
+**说明:**
+
+> 显卡厂商名称
 
 ---

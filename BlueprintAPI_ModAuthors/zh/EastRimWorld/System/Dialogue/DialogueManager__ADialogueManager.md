@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> Dialogue Manager Actor 类型。
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<FGuid,FDialogueSpec> UnderWayDialogueInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 已经进行中的对话被中断的对话
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<FGuid,FDialogueSpec> QueueDialogueInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 队列中即将开始的对话
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<FName,int> DialogueTriggerCount;` |
 
-**源码注释:**
+**说明:**
 
 > 对话已经触发的次数
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) FDialogueSpec CurDialogueInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 当前的对话信息
 
@@ -82,6 +84,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 获取或查询 Get Dialogue Manager。
+
 ---
 
 ### 函数 `TriggerDialogueByID`
@@ -97,12 +103,14 @@
 | `DialogueID` | `FName` |
 | `nullptr` | `AActor * Initiator =` |
 | `nullptr` | `AActor * Target =` |
+| `（匿名/仅类型）` | [EDialogueActorType](DialogueStruct__EDialogueActorType.md) InitiatorType = [EDialogueActorType](DialogueStruct__EDialogueActorType.md)::None |
+| `（匿名/仅类型）` | [EDialogueActorType](DialogueStruct__EDialogueActorType.md) TargetType = [EDialogueActorType](DialogueStruct__EDialogueActorType.md)::None |
 
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool TriggerDialogueByID(FName DialogueID,AActor * Initiator = nullptr,AActor * Target = nullptr);`
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool TriggerDialogueByID(FName DialogueID,AActor * Initiator = nullptr,AActor * Target = nullptr,EDialogueActorType InitiatorType = EDialogueActorType::None,EDialogueActorType TargetType = EDialogueActorType::None);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID 触发一个对话
 
@@ -121,14 +129,38 @@
 | `InDialogueInfo` | const [FDialogueGroup](DialogueStruct__FDialogueGroup.md) & |
 | `nullptr` | `AActor * Initiator =` |
 | `nullptr` | `AActor * Target =` |
+| `（匿名/仅类型）` | [EDialogueActorType](DialogueStruct__EDialogueActorType.md) InitiatorType = [EDialogueActorType](DialogueStruct__EDialogueActorType.md)::None |
+| `（匿名/仅类型）` | [EDialogueActorType](DialogueStruct__EDialogueActorType.md) TargetType = [EDialogueActorType](DialogueStruct__EDialogueActorType.md)::None |
 
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool TriggerDialogue(const FDialogueGroup & InDialogueInfo,AActor * Initiator = nullptr,AActor * Target = nullptr);`
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool TriggerDialogue(const FDialogueGroup & InDialogueInfo,AActor * Initiator = nullptr,AActor * Target = nullptr,EDialogueActorType InitiatorType = EDialogueActorType::None,EDialogueActorType TargetType = EDialogueActorType::None);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过信息触发对话
+
+---
+
+### 函数 `IsActorInDialogue`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintPure |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `InActorGuid` | `const FGuid&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintPure) bool IsActorInDialogue(const FGuid& InActorGuid) const;`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 查询: 某角色(按Guid)当前是否为 进行中/排队/被中断 对话的参与者(发起者或目标)。供外部延迟销毁对话对象(如涌现宿敌NPC等胜负对话结束再销毁)
 
 ---
 
@@ -148,7 +180,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除队列中的对话
 
@@ -166,7 +198,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 开始下一个对话分组
 
@@ -184,7 +216,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 暂停当前对话分组
 
@@ -206,7 +238,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 继续对话对话分组
 
@@ -224,7 +256,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 取消当前对话分组
 
@@ -242,7 +274,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 结束当前对话分组
 
@@ -260,7 +292,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取当前对话实例
 
@@ -283,7 +315,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 选择对话选项
 
@@ -305,7 +337,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 开始对话下一个句
 
@@ -328,7 +360,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查对话选项点击条件
 
@@ -350,7 +382,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 触发对话选项功能
 
@@ -367,6 +399,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) AActor* FindPlayerDialogueInitiator();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取或查询 Find Player Dialogue Initiator。
 
 ---
 
@@ -387,5 +423,33 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintPure) void GetRandOptions(const FDialogueInfo& InDialogueInfo,TArray<FDialogueOption>& OutOptionIDs,class AEastRimWorldCharacter* InCharacter);`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取或查询 Get Rand Options。
+
+---
+
+### 函数 `GetForceRandOptions`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintPure |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `InDialogueInfo` | const [FDialogueInfo](DialogueStruct__FDialogueInfo.md)& |
+| `OutOption` | [FDialogueOption](DialogueStruct__FDialogueOption.md)& |
+| `InWorldForce` | class [AWorldForce](../../WorldSystem/WorldForce__AWorldForce.md)* |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintPure) void GetForceRandOptions(const FDialogueInfo& InDialogueInfo,FDialogueOption& OutOption,class AWorldForce* InWorldForce);`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取或查询 Get Force Rand Options。
 
 ---

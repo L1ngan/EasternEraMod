@@ -20,6 +20,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) FText OrganName;` |
 
+**Notes:**
+
+> Organ name recorded during death handling (saved with the save game).
+
 ---
 
 ### Property `OnHealthChanged`
@@ -31,7 +35,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_AttributeChanged OnHealthChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > Delegate fired when the health value has changed. This is called on the client but the instigator may not be valid
 
@@ -46,7 +50,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_AttributeChanged OnCurMaxHealthChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > Delegate fired when the max health value has changed. This is called on the client but the instigator may not be valid
 
@@ -61,6 +65,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_AttributeChanged OnMaxHealthChanged;` |
 
+**Notes:**
+
+> Event fired when the max health value changes.
+
 ---
 
 ### Property `OnDamageShieldChanged`
@@ -72,7 +80,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_AttributeChanged OnDamageShieldChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 罡气值改变
 
@@ -87,7 +95,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_AttributeChanged OnMaxDamageShieldChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 罡气值最大值改变
 
@@ -102,7 +110,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_AttributeChanged OnInspirationChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 感悟值改变
 
@@ -117,7 +125,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_AttributeChanged OnRobotEnergyMaxValueChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 机关人能源最大值改变
 
@@ -132,7 +140,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_AttributeChanged OnRobotEnergyCurValueChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 机关人当前能源改变
 
@@ -147,7 +155,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_DeathEvent OnDeathStarted;` |
 
-**Source comments:**
+**Notes:**
 
 > Delegate fired when the death sequence has started.
 
@@ -162,7 +170,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_DeathEvent OnDeathFinished;` |
 
-**Source comments:**
+**Notes:**
 
 > Delegate fired when the death sequence has finished.
 
@@ -177,7 +185,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_KnockDown OnKnockDown;` |
 
-**Source comments:**
+**Notes:**
 
 > 被击倒
 
@@ -192,6 +200,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_KnockDown OnKnockDownFinished;` |
 
+**Notes:**
+
+> Event fired when the knock-down finishes.
+
 ---
 
 ### Property `OnGOAPAttributeChanged`
@@ -203,7 +215,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnGOAPAttributeChanged OnGOAPAttributeChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 当GOAP相关属性值改变时
 
@@ -218,7 +230,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FCharacterTemperatureChanged OnCharacterTemperatureChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 温度变化
 
@@ -233,7 +245,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnNutritionValueChanged OnNutritionValueChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 营养值改变
 
@@ -257,7 +269,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > Returns the health component if one exists on the specified actor.
 
@@ -275,7 +287,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > Returns the current health value.
 
@@ -293,7 +305,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > Returns the current maximum health value.
 
@@ -311,7 +323,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 当前生命值的百分比（以最大健康值为基础） Returns the current health in the range [0.0, 1.0].
 
@@ -329,7 +341,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 当前最大生命值的百分比（以最大健康值为基础）
 
@@ -347,7 +359,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 剩余可携带重量（通过 HealthSet 获取）
 
@@ -365,7 +377,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 当前营养值（通过 HealthSet 获取）
 
@@ -383,7 +395,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 营养值上限（通过 HealthSet 获取）
 
@@ -401,7 +413,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 当前感悟值（通过 HealthSet 获取）
 
@@ -419,7 +431,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 当前罡气值
 
@@ -437,7 +449,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 最大罡气值
 
@@ -455,7 +467,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 罡气值百分比（相比最大生命值）
 
@@ -473,9 +485,27 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > Begins the death sequence for the owner.
+
+---
+
+### Function `ResetDeath`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void ResetDeath();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 复活：清死亡/击倒相关 loose tag，把角色从死亡态拨回存活（FightPawn 门派战原地复活用）。
 
 ---
 
@@ -490,5 +520,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) float GetMoodValue();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns the character's mood value.
 
 ---

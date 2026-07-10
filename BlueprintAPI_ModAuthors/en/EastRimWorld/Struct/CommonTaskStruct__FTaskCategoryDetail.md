@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ETaskCategory` |
+| C++ type | [ETaskCategory](CommonTaskStruct__ETaskCategory.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) ETaskCategory TaskCategory = ETaskCategory::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务类型枚举
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText Title;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务名称
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText Desc;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务说明
 

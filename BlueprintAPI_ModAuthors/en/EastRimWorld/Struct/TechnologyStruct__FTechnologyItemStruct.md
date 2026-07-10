@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ETechPrograssState` |
+| C++ type | [ETechPrograssState](TechnologyStruct__ETechPrograssState.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") ETechPrograssState PrograssState { ETechPrograssState::IsLock };` |
 
-**Source comments:**
+**Notes:**
 
 > 科技项目状态
 

@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Technology manager component handling research states of all tech items, item unlocking, tech purchasing and save/load
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame) TArray<FTechnologyItemStruct> MyAllTechnologysArray;` |
 
+**Notes:**
+
+> List of all my technology items
+
 ---
 
 ### Property `OnTechDevItemStateFinish`
@@ -28,7 +34,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnTechDevItemChange OnTechDevItemStateFinish;` |
 
-**Source comments:**
+**Notes:**
 
 > [自定义事件]项科技状态：->完成（删除研究中）
 
@@ -43,7 +49,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnTechDevItemChange OnTechDevItemStateDeveloping;` |
 
-**Source comments:**
+**Notes:**
 
 > [自定义事件]项科技状态：>研究中（新增研究中）
 
@@ -58,6 +64,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnTechDevItemChange OnTechDevItemStateDevelopingToUI;` |
 
+**Notes:**
+
+> Event broadcast to the UI when a tech item enters the developing state
+
 ---
 
 ### Property `OnTechDevItemStateUnlock`
@@ -69,7 +79,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnTechDevItemChange OnTechDevItemStateUnlock;` |
 
-**Source comments:**
+**Notes:**
 
 > [自定义事件]项科技状态：>可研究（解锁状态）
 
@@ -84,7 +94,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUnlockId OnUnlockItemEvent;` |
 
-**Source comments:**
+**Notes:**
 
 > [自定义事件]解锁物品
 
@@ -99,7 +109,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnStopProduceTpoint OnStopProduceTpointEvent;` |
 
-**Source comments:**
+**Notes:**
 
 > [自定义事件]停止产出某种科技点（已废弃）//todo:需要解绑蓝图
 
@@ -114,7 +124,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnTechCellClick OnTechListClickEvent;` |
 
-**Source comments:**
+**Notes:**
 
 > [自定义事件]科技列表某个科技被点击了
 
@@ -132,7 +142,7 @@
 
 | Name | Type |
 |--------|------|
-| `TpType` | `ETechPointType` |
+| `TpType` | [ETechPointType](../Struct/TechnologyStruct__ETechPointType.md) |
 | `Value` | `int32` |
 | `BuildingTransform` | `FTransform` |
 | `0` | `float BuildingRadius =` |
@@ -140,6 +150,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void AddWorkloadFromBuilding(ETechPointType TpType, int32 Value, FTransform BuildingTransform, float BuildingRadius = 0){};`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Converts added workload into tech points from a building; deprecated with an empty implementation, blueprint bindings pending removal
 
 ---
 
@@ -153,14 +167,14 @@
 
 | Name | Type |
 |--------|------|
-| `TpType` | `ETechPointType` |
+| `TpType` | [ETechPointType](../Struct/TechnologyStruct__ETechPointType.md) |
 | `Value` | `int32` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void AddWorkload(ETechPointType TpType,int32 Value){};`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > / 增加工作量（已废弃）//todo:需要解绑蓝图
 
@@ -176,13 +190,13 @@
 
 | Name | Type |
 |--------|------|
-| `Type` | `ETechPointType` |
+| `Type` | [ETechPointType](../Struct/TechnologyStruct__ETechPointType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) float GetCurTechPointSchedule(ETechPointType Type){return 0.f;};`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > / 获取当前科技点数进度（已废弃）//todo:需要解绑蓝图
 
@@ -200,7 +214,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > / 获取第一个可以研究的科技
 
@@ -224,7 +238,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > / 查询是否满足搜索条件
 
@@ -247,7 +261,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > / 查询是否包含搜索词
 
@@ -269,7 +283,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 该科技是否有下一个科技
 
@@ -287,7 +301,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > / 返回所有科技的研究状态
 
@@ -309,7 +323,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 左边列表点击了某哦个科技
 
@@ -331,7 +345,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查科技是否解锁
 
@@ -353,7 +367,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 是否显示科技购买按钮
 
@@ -375,7 +389,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查是否可以购买科技
 
@@ -397,7 +411,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > / 购买科技
 
@@ -415,7 +429,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 判断科技是否全部解锁
 

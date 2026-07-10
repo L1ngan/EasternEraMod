@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) int32 Layer { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 所在层
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EEnvironType` |
+| C++ type | [EEnvironType](../ERW_Enumerations__EEnvironType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) EEnvironType EnvironType = EEnvironType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 环境类型
 
@@ -44,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ERoofPartType` |
+| C++ type | [ERoofPartType](../ERW_Enumerations__ERoofPartType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) ERoofPartType RoofPartType { ERoofPartType::None };` |
 
-**Source comments:**
+**Notes:**
 
 > 屋顶部位类型
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) int32 Durability { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 耐久度
 
@@ -74,12 +74,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ERotateOrientation` |
+| C++ type | [ERotateOrientation](../ERW_Enumerations__ERotateOrientation.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) ERotateOrientation RotateOrientation = ERotateOrientation::Default;` |
 
-**Source comments:**
+**Notes:**
 
 > 旋转朝向
 
@@ -89,12 +89,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EGenerateMode` |
+| C++ type | [EGenerateMode](../ERW_Enumerations__EGenerateMode.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) EGenerateMode GenerateMode { EGenerateMode::Solo };` |
 
-**Source comments:**
+**Notes:**
 
 > 创建方式
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) TArray<FRelativeGridPoses> EntranceGridPoses;` |
 
-**Source comments:**
+**Notes:**
 
 > 入口格子坐标
 
@@ -119,12 +119,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EEnvironType , [FExtraInfos](../ERW_ConfigTypes__FExtraInfos.md)> |
+| C++ type | TMap<[EEnvironType](../ERW_Enumerations__EEnvironType.md) , [FExtraInfos](../ERW_ConfigTypes__FExtraInfos.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) TMap<EEnvironType , FExtraInfos> ExtraEnvironInfos;` |
 
-**Source comments:**
+**Notes:**
 
 > 额外占位信息
 
@@ -134,12 +134,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EPositionType , bool>` |
+| C++ type | TMap<[EPositionType](../ERW_Enumerations__EPositionType.md) , bool> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) TMap<EPositionType , bool> EntranceValidInfos;` |
 
-**Source comments:**
+**Notes:**
 
 > 每个方位对应的建筑入口是否有效
 > TMap<方位 , 是否有效>
@@ -150,12 +150,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<[FGridPosition](../ERW_CommonTypes__FGridPosition.md) , EGridDistributionType> |
+| C++ type | TMap<[FGridPosition](../ERW_CommonTypes__FGridPosition.md) , [EGridDistributionType](../ERW_Enumerations__EGridDistributionType.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) TMap<FGridPosition , EGridDistributionType> DistributionInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 所占格子分布信息
 > TMap<格子坐标 , 分布类型>
@@ -171,7 +171,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) bool IsBuildComplete = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否建造完成
 
@@ -186,7 +186,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) FIntVector Size = FIntVector::ZeroValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 占格子尺寸
 
@@ -201,7 +201,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) int32 ZIndex { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 所处高度
 
@@ -216,7 +216,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) FGridPosition MinGridPos;` |
 
-**Source comments:**
+**Notes:**
 
 > 占格子最小坐标
 
@@ -231,7 +231,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) FGridPosition MaxGridPos;` |
 
-**Source comments:**
+**Notes:**
 
 > 占格子最大坐标
 
@@ -246,7 +246,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) FIntPoint ExtraCoverage = FIntPoint::ZeroValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 额外支撑范围
 
@@ -256,12 +256,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EEnvironType , [FSupportingObjects](ERW_EnvironComponent__FSupportingObjects.md)> |
+| C++ type | TMap<[EEnvironType](../ERW_Enumerations__EEnvironType.md) , [FSupportingObjects](ERW_EnvironComponent__FSupportingObjects.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) TMap<EEnvironType , FSupportingObjects> SupportingObjects;` |
 
-**Source comments:**
+**Notes:**
 
 > 配套物体
 > TMap<环境类型 , 配套物体数据>
@@ -277,7 +277,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) float HeightDifference { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 格子的高低差
 
@@ -292,7 +292,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) bool CanPutDown { true };` |
 
-**Source comments:**
+**Notes:**
 
 > 能否放下
 
@@ -316,6 +316,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Loads and restores the component state from the given environment save data
+
 ---
 
 ### Function `ReviseGridPosesData`
@@ -334,7 +338,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 读档修正格子坐标相关数据
 
@@ -356,7 +360,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 重置阶梯格子分布信息
 
@@ -378,9 +382,31 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置环境信息数据
+
+---
+
+### Function `OnTransferDone`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `EnvironComponent` | const [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* const |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void OnTransferDone(const UERW_EnvironComponent* const EnvironComponent);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 移动建筑完成更新环境信息数据
 
 ---
 
@@ -394,13 +420,13 @@
 
 | Name | Type |
 |--------|------|
-| `SupportingGrids` | const TMap<EEnvironType , [FRelativeGridPoses](../ERW_ConfigTypes__FRelativeGridPoses.md)>& |
+| `SupportingGrids` | const TMap<[EEnvironType](../ERW_Enumerations__EEnvironType.md) , [FRelativeGridPoses](../ERW_ConfigTypes__FRelativeGridPoses.md)>& |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void InitSupportingObjects(const TMap<EEnvironType , FRelativeGridPoses>& SupportingGrids);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化配套物品
 
@@ -423,7 +449,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新预设建筑占格子信息
 
@@ -441,7 +467,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过格子分布信息计算最小最大格子坐标
 
@@ -463,7 +489,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算占格子最小和最大坐标
 
@@ -481,7 +507,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过最小最大格子坐标设置格子分布信息
 
@@ -503,7 +529,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 根据旋转朝向交换尺寸
 
@@ -526,7 +552,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 根据最大最小点计算物体位置
 
@@ -545,13 +571,13 @@
 | `MapDataMgr` | [UERW_MapDataMgr](ERW_MapDataMgr__UERW_MapDataMgr.md)* |
 | `Objects` | `TArray<AActor*>&` |
 | `MainObjects` | `TArray<AActor*>&` |
-| `MainObjectTypes` | `TArray< EEnvironType>&` |
+| `MainObjectTypes` | TArray< [EEnvironType](../ERW_Enumerations__EEnvironType.md)>& |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CollectSupportingObjects(UERW_MapDataMgr* MapDataMgr , TArray<AActor*>& Objects,TArray<AActor*>& MainObjects,TArray< EEnvironType>& MainObjectTypes);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 收集配套物体
 
@@ -574,7 +600,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新无效的额外信息
 
@@ -596,7 +622,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获得建筑范围的四个点
 
@@ -618,8 +644,30 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获得矩形区域建筑周围的格子坐标
+
+---
+
+### Function `GetGridMinHeight`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintPure |
+| Return type | `float` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `MapDataMgr` | [UERW_MapDataMgr](ERW_MapDataMgr__UERW_MapDataMgr.md)* |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintPure) float GetGridMinHeight(UERW_MapDataMgr* MapDataMgr) const;`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 获得所占格子的最低高度
 
 ---

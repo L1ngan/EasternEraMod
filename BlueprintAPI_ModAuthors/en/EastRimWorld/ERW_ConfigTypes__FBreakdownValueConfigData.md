@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FVector2D Range = FVector2D::ZeroVector;` |
 
-**Source comments:**
+**Notes:**
 
 > 范围
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FText Desc;` |
 
-**Source comments:**
+**Notes:**
 
 > 描述
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float Probability { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 崩溃概率
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 CheckInterval { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 检测间隔(秒)
 

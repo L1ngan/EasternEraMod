@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> East Rim World Button Base UObject type.
 
 ## Blueprint-exposed functions
 
@@ -24,6 +26,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Set Button Text operation.
+
 ---
 
 ### Function `UpdateButtonText`
@@ -42,6 +48,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Executes the Update Button Text operation.
+
 ---
 
 ### Function `UpdateButtonStyle`
@@ -55,6 +65,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent) void UpdateButtonStyle();`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Executes the Update Button Style operation.
 
 ---
 
@@ -70,7 +84,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 更新按钮的状态
 

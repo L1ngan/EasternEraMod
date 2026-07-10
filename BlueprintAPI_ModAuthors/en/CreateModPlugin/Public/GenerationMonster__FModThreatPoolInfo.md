@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EModThreatType` |
+| C++ type | [EModThreatType](GenerationMonster__EModThreatType.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) EModThreatType ThreatPoolType = EModThreatType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 威胁类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int32 RaidPoints = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 袭击点数(必须为整数，随机有用)
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float CooldownTime = 9600.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 冷却时间(秒)
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TMap<FName,FModNameIDArray> GenerationIDsMap;` |
 
-**Source comments:**
+**Notes:**
 
 > 创建生成的配置ID<地图名称,生成配置ID数组>创建怪物IDs(调用 DT_MonsterGenerationConfig ) /敌对势力袭击IDs （调用 DT_EnemyAttackGenerationConfig）
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) bool SetModEnabled = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否启用此威胁
 

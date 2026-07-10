@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FText FacilityNeedText;` |
 
-**Source comments:**
+**Notes:**
 
 > 此项文本
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FName> BuildingTabId;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑分类ID(BuildTabConfig)
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FName> BuildingIds;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑ids(与BuildingTabId满足其一)
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 MinNeedNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 最小需求数量
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 MaxNeedNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大需求数量
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) bool bIsCoreNeed = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是房间的核心建筑(决定房间的拥有者)
 

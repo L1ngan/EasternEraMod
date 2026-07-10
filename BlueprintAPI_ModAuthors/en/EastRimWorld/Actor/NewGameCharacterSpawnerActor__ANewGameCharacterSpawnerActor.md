@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> New-game character spawner actor that marks the initial character spawn location and provides static query functions.
 
 ## Blueprint-exposed variables
 
@@ -16,6 +18,10 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadWrite) TObjectPtr<UBoxComponent> BoxComponent;` |
+
+**Notes:**
+
+> Box component marking the spawn area.
 
 ---
 
@@ -37,7 +43,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 当前关卡中首个本类 Actor（同 GetActorOfClass）
 
@@ -60,7 +66,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 写入 Spawner 世界坐标；成功返回 true，失败时 OutLocation 置零并返回 false
 

@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Inventory substitute selection system (singleton actor) managing item instance selection/hover highlighting and the info UI
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Delegate") FOnSelectedChange OnSelectedChange;` |
 
-**Source comments:**
+**Notes:**
 
 > 选中变更时的事件
 
@@ -41,6 +43,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Returns the singleton instance of the inventory substitute selection system
+
 ---
 
 ### Function `SelectMultipleObjects`
@@ -60,9 +66,31 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 选择多个对象
+
+---
+
+### Function `ToggleObjectInMultipleSelect`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `InObject` | `UObject*` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void ToggleObjectInMultipleSelect(UObject* InObject);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 切换一个对象在现有多选列表中的选中状态
 
 ---
 
@@ -78,7 +106,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 清除所有实例
 
@@ -100,7 +128,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 选择一个实例
 
@@ -122,7 +150,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 悬浮实例
 
@@ -140,7 +168,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 清除悬浮实例
 
@@ -162,7 +190,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建实例信息的界面
 
@@ -180,7 +208,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 清除选中的ui
 
@@ -198,7 +226,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取选择操作的实例
 
@@ -220,7 +248,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 选择出相同id的物品
 
@@ -242,7 +270,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新多选的数量
 
@@ -260,7 +288,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取多选对象的侧边按钮组
 
@@ -278,7 +306,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 取消选中对象的所有已经设置的可以批量取消的命令
 
@@ -296,6 +324,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Returns the cached list of previously selected objects
+
 ---
 
 ### Function `GetSelectObjects`
@@ -310,7 +342,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 返回当前选择的对象
 

@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> East Rim World Scene Text Widget UObject type.
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable,BlueprintCallable) FTextAnimationComplete TextAnimationComplete;` |
 
+**Notes:**
+
+> Text Animation Complete field.
+
 ---
 
 ### Property `TextAnimations`
@@ -28,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FString,UWidgetAnimation*> TextAnimations;` |
 
-**Source comments:**
+**Notes:**
 
 > 界面中包含的所有动画
 
@@ -54,6 +60,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
+**Notes:**
+
+> Executes the Init Scene Text Widget operation.
+
 ---
 
 ### Function `InitAllWidgetAnimations`
@@ -67,5 +77,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void InitAllWidgetAnimations();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Executes the Init All Widget Animations operation.
 
 ---

@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Replace-mesh rule data table row (mesh, shadow casting, collision type)
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Replace Mesh Rule") class UStaticMesh* staticMesh = nullptr;` |
 
+**Notes:**
+
+> Static mesh asset this rule applies to
+
 ---
 
 ### Property `bCastShadow`
@@ -28,6 +34,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Replace Mesh Rule") bool bCastShadow = true;` |
 
+**Notes:**
+
+> Whether the replacement mesh instance casts shadows
+
 ---
 
 ### Property `collisionType`
@@ -38,5 +48,9 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Replace Mesh Rule" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Replace Mesh Rule") TEnumAsByte<ECollisionEnabled::Type> collisionType = ECollisionEnabled::NoCollision;` |
+
+**Notes:**
+
+> Collision enabled type of the replacement mesh instance (defaults to no collision)
 
 ---

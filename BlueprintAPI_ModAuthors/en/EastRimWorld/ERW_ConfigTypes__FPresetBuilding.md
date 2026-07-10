@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName BuildingID;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑物ID
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FTransform BuildingTransform;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑物坐标
 

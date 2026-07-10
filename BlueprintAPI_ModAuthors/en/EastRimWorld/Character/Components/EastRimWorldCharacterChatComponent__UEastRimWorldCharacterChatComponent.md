@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Character chat/social component: finds chat partners, starts/ends chats, and maintains social relationship and favorability data persisted in the save game.
 
 ## Blueprint-exposed variables
 
@@ -16,6 +18,10 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<FGuid,FSocialRelationshipData> RelationshipDataMap;` |
+
+**Notes:**
+
+> Social relationship data map (TMap<character GUID, social relationship data>, saved with the save game).
 
 ---
 
@@ -33,6 +39,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Starts the timer for finding a chat partner.
+
 ---
 
 ### Function `StopFindChatPartnerTimer`
@@ -46,6 +56,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void StopFindChatPartnerTimer();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Stops the timer for finding a chat partner.
 
 ---
 
@@ -65,6 +79,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Tries to start a chat with the initiator, returning whether it succeeded.
+
 ---
 
 ### Function `EndChatting`
@@ -83,6 +101,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Ends the current chat; IsAbort indicates whether it ends by abort.
+
 ---
 
 ### Function `GetChatState`
@@ -90,12 +112,16 @@
 | Field | Details |
 |------|------|
 | Reflection specifiers | BlueprintPure |
-| Return type | `const EChatState&` |
+| Return type | const [EChatState](EastRimWorldCharacterChatComponent__EChatState.md)& |
 | Parameters | (none) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure) const EChatState& GetChatState() const;`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Returns the current chat state.
 
 ---
 
@@ -111,6 +137,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Returns the transform of the target location to walk to for chatting.
+
 ---
 
 ### Function `GetChatTargetComponent`
@@ -124,6 +154,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure) UEastRimWorldCharacterChatComponent* GetChatTargetComponent();`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Returns the chat component of the chat partner.
 
 ---
 
@@ -144,7 +178,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 根据角色的guid查找关系数据
 
@@ -167,6 +201,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Handles ceremony completion, updating the relationship with the specified character to the new relationship ID.
+
 ---
 
 ### Function `GetAllCanDevelopingRelationship`
@@ -186,7 +224,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获得所有当前可发展的非自动升级的新关系
 

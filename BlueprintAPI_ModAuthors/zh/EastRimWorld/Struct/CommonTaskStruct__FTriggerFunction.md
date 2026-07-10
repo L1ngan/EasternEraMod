@@ -19,6 +19,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName OriginTaskID;` |
 
+**说明:**
+
+> Origin Task ID 字段。
+
 ---
 
 ### 属性 `OriginTaskGUID`
@@ -30,18 +34,22 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid OriginTaskGUID;` |
 
+**说明:**
+
+> Origin Task GUID 字段。
+
 ---
 
 ### 属性 `TriggerFunctionType`
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ETriggerFunctionType` |
+| C++ 类型 | [ETriggerFunctionType](CommonTaskStruct__ETriggerFunctionType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ETriggerFunctionType TriggerFunctionType = ETriggerFunctionType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 触发额外功能的类型
 
@@ -51,12 +59,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ETriggerTimingType` |
+| C++ 类型 | [ETriggerTimingType](CommonTaskStruct__ETriggerTimingType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ETriggerTimingType TriggerTimingType = ETriggerTimingType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 触发的时机
 
@@ -71,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float DelayTime;` |
 
-**源码注释:**
+**说明:**
 
 > 延迟触发时间 配置-1则代表立即
 
@@ -86,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FIntPoint TriggerPeriod;` |
 
-**源码注释:**
+**说明:**
 
 > 触发时段范围值(0-23)可以配置跨天(例(22~4))
 
@@ -101,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> NameParams;` |
 
-**源码注释:**
+**说明:**
 
 > FName类型参数列表 （看TriggerFunctionType的注释）
 
@@ -115,5 +123,9 @@
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<int32> IntParams;` |
+
+**说明:**
+
+> Int Params 字段。
 
 ---

@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EEquipmentType` |
+| C++ type | [EEquipmentType](CommonEnum__EEquipmentType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") EEquipmentType EquipmentType = EEquipmentType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 此池子产出的装备类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FText EquipmentName;` |
 
-**Source comments:**
+**Notes:**
 
 > 装备名字
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") FName EquipmentID;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应的装备ID 根据具体的装备类型 查询相应的装备表
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") TArray<FName> MainAttributes;` |
 
-**Source comments:**
+**Notes:**
 
 > 此装备的主属性(EquipmentAttribute表）
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") TArray<FName> SubAttributes;` |
 
-**Source comments:**
+**Notes:**
 
 > 此装备的次属性(EquipmentAttribute表）
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") TArray<FName> EquipmentAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 此装备自带的技能
 

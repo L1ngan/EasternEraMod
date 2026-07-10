@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Achievement") FString AchievementName;` |
 
-**源码注释:**
+**说明:**
 
 > 成就名称（API名称）
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Achievement") FString DisplayName;` |
 
-**源码注释:**
+**说明:**
 
 > 成就显示名称
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Achievement") FString Description;` |
 
-**源码注释:**
+**说明:**
 
 > 成就描述
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Achievement") bool bUnlocked = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否已解锁
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Achievement") int32 UnlockTime = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 解锁时间戳（Unix时间戳，如果未解锁则为0）
 

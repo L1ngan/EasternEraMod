@@ -19,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FBuildConfigData BuildConfigData;` |
 
+**Notes:**
+
+> Configuration data of the corresponding building.
+
 ---
 
 ### Property `UserNum`
@@ -29,5 +33,9 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 UserNum = 0;` |
+
+**Notes:**
+
+> Number of buildings of this type owned by the player.
 
 ---

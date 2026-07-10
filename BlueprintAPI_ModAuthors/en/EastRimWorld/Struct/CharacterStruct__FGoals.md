@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "GOAP") TArray<FName> GOAPGoals;` |
 
-**Source comments:**
+**Notes:**
 
 > Goal集合
 

@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid VictimGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 受害者的Guid
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 VictimTeamID = 255;` |
 
-**Source comments:**
+**Notes:**
 
 > 被伤害者阵营
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid AttackerGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 攻击者guid
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 AttackerTeamID = 255;` |
 
-**Source comments:**
+**Notes:**
 
 > 阵营
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 DamageValue = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 伤害
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 CurativeValue = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 恢复值
 
@@ -104,12 +104,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBattlefieldRolesType` |
+| C++ type | [EBattlefieldRolesType](CommonEnum__EBattlefieldRolesType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EBattlefieldRolesType AttackerType = EBattlefieldRolesType::Hero;` |
 
-**Source comments:**
+**Notes:**
 
 > 攻击者类型
 
@@ -119,12 +119,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBattlefieldRolesType` |
+| C++ type | [EBattlefieldRolesType](CommonEnum__EBattlefieldRolesType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EBattlefieldRolesType VictimType = EBattlefieldRolesType::Hero;` |
 
-**Source comments:**
+**Notes:**
 
 > 受害者类型
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float AttackTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 攻击时间
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName AbilityID = NAME_None;` |
 
-**Source comments:**
+**Notes:**
 
 > 技能ID
 

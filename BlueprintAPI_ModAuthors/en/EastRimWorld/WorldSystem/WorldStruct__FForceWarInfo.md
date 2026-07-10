@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FGuid WorldPlaceGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 地点GUID
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FGuid AttackForceGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 势力GUID
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FGuid TargetForceGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 目标势力GUID
 

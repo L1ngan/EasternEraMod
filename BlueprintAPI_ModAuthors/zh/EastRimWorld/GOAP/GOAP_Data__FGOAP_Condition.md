@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EGOAP_ConditionType` |
+| C++ 类型 | [EGOAP_ConditionType](GOAP_Enumerations__EGOAP_ConditionType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) EGOAP_ConditionType ConditionType { EGOAP_ConditionType::None };` |
 
-**源码注释:**
+**说明:**
 
 > 前置条件类型
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) FName ID;` |
 
-**源码注释:**
+**说明:**
 
 > 前置条件类型对应的具体事物的ID
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) FGuid Guid;` |
 
-**源码注释:**
+**说明:**
 
 > 前置条件类型对应的具体事物的ID
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) FGameplayAttribute Attribute;` |
 
-**源码注释:**
+**说明:**
 
 > 前置条件类型对应的属性
 
@@ -74,12 +74,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EGOAP_ConditionTargetType` |
+| C++ 类型 | [EGOAP_ConditionTargetType](GOAP_Enumerations__EGOAP_ConditionTargetType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) EGOAP_ConditionTargetType TargetType { EGOAP_ConditionTargetType::Agent };` |
 
-**源码注释:**
+**说明:**
 
 > 前置条件检测对象
 
@@ -89,12 +89,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EGOAP_ConditionValueType` |
+| C++ 类型 | [EGOAP_ConditionValueType](GOAP_Enumerations__EGOAP_ConditionValueType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) EGOAP_ConditionValueType ValueType { EGOAP_ConditionValueType::Bool };` |
 
-**源码注释:**
+**说明:**
 
 > 前置条件检测值类型
 
@@ -104,12 +104,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EConditionQuery` |
+| C++ 类型 | [EConditionQuery](../ERW_Enumerations__EConditionQuery.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) EConditionQuery Query { EConditionQuery::IsEqualTo };` |
 
-**源码注释:**
+**说明:**
 
 > 前置条件判断规则
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) FGOAP_Value GOAPValue;` |
 
-**源码注释:**
+**说明:**
 
 > GOAP值
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) TMap<FName , FPathGoalData> PathGoals;` |
 
-**源码注释:**
+**说明:**
 
 > 条件不满足时的达成路径GOAP目标
 > TMap<GOAP目标ID , 目标对应具体事物的ID>

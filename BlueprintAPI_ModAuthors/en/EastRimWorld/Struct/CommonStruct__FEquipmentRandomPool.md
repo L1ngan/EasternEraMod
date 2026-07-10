@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<FName,int> RequiredResources;` |
 
-**Source comments:**
+**Notes:**
 
 > 此随机池的材料需求
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TArray<FName> EquipmentQualityRange;` |
 
-**Source comments:**
+**Notes:**
 
 > 品质对应的生成装备 (DT_EquipmentQualityRange)
 

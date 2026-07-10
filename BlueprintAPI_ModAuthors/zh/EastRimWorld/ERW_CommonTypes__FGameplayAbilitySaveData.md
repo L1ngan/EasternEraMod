@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EAbilityUseState` |
+| C++ 类型 | [EAbilityUseState](ERW_Enumerations__EAbilityUseState.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) EAbilityUseState AbilityUseState = EAbilityUseState::Inactive;` |
 
-**源码注释:**
+**说明:**
 
 > 能力当前状态
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) FGuid ItemGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 对应物品的Guid
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) float CurActionTime { 0.f };` |
 
-**源码注释:**
+**说明:**
 
 > 当前Action执行时间
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) float TotalActionTime { 0.f };` |
 
-**源码注释:**
+**说明:**
 
 > Action执行总时间
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) float CurWorkload { 0.f };` |
 
-**源码注释:**
+**说明:**
 
 > 当前工作量
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) float TotalWorkload { 0.f };` |
 
-**源码注释:**
+**说明:**
 
 > 总工作量
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) float TimeOfDuration { 0.f };` |
 
-**源码注释:**
+**说明:**
 
 > 剩余持续时间
 
@@ -123,5 +123,9 @@
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) bool FinishLoop = false;` |
+
+**说明:**
+
+> 是否已结束循环执行的标记。
 
 ---

@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FGuid Guid;` |
 
-**源码注释:**
+**说明:**
 
 > 制造组件的Guid
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) TArray<FFabricateTaskData> FabricateTaskQueue;` |
 
-**源码注释:**
+**说明:**
 
 > 制造队列数据
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FGuid CurFabricateTaskGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 当前制造任务的Guid
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) TMap<FName , FGOAP_Action> ResourceActions;` |
 
-**源码注释:**
+**说明:**
 
 > 制造资源对应的GOAPAction
 > TMap<资源ID , GOAPAction>
@@ -80,7 +80,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) TMap<FGameplayTag , FGOAP_Action> SelectableResourceAction;` |
 
-**源码注释:**
+**说明:**
 
 > 可选资源对应的GOAPAction
 > TMap<Tag , GOAPAction>
@@ -96,7 +96,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FGOAP_Action FabricateAction;` |
 
-**源码注释:**
+**说明:**
 
 > 制造GOAPAction
 
@@ -111,7 +111,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) bool WaitingGenerateItem { false };` |
 
-**源码注释:**
+**说明:**
 
 > 是否在等待生成制造物品
 

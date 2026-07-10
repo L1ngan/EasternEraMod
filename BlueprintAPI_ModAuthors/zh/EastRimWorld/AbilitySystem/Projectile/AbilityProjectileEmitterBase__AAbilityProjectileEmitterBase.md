@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,meta=(ExposeOnSpawn = true)) FProjectileStruct ProjectileStruct;` |
 
-**源码注释:**
+**说明:**
 
 > 发射器的配置
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,meta=(ExposeOnSpawn = true)) TMap<ETargetClassType,FAllGameplayEffectSpecHandles> ProjectileSpecHandles;` |
 
-**源码注释:**
+**说明:**
 
 > 投射物的效果
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AActor> MainAttackTarget;` |
 
-**源码注释:**
+**说明:**
 
 > 主要的攻击目标
 
@@ -73,7 +73,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取多个目标
 
@@ -91,6 +91,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 结束发射器的本次工作并触发蓝图端的结束事件
+
 ---
 
 ### 函数 `K2_AbilityProjectileEmitterEnd`
@@ -104,6 +108,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent,meta=(DisplayName="AbilityProjectileEmitterEnd")) void K2_AbilityProjectileEmitterEnd();`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「AbilityProjectileEmitterEnd」。
+
+**说明:**
+
+> 蓝图可实现事件：发射器结束时调用
 
 ---
 
@@ -126,7 +134,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 初始化发射器
 
@@ -144,6 +152,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 开始发射，触发蓝图端的开始发射事件
+
 ---
 
 ### 函数 `K2_EmitterStartLaunch`
@@ -157,5 +169,9 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent,meta=(DisplayName="EmitterStartLaunch")) void K2_EmitterStartLaunch();`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「EmitterStartLaunch」。
+
+**说明:**
+
+> 蓝图可实现事件：发射器开始发射时调用
 
 ---

@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FName ProtagonistPresetDataID;` |
 
-**Source comments:**
+**Notes:**
 
 > 主角预设信息ID
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TSoftObjectPtr<UTexture2D>> ProtagonistFemaleAvatar;` |
 
-**Source comments:**
+**Notes:**
 
 > 女性主角头像
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TSoftObjectPtr<UTexture2D>> Half_ProtagonistFemaleAvatar;` |
 
-**Source comments:**
+**Notes:**
 
 > 女性主角半身立绘
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TSoftObjectPtr<UTexture2D>> Half_TourFemaleAvatar;` |
 
-**Source comments:**
+**Notes:**
 
 > 女性比武半身立绘
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TSoftObjectPtr<UTexture2D>> Small_TourFemaleAvatar;` |
 
-**Source comments:**
+**Notes:**
 
 > 女性比武小立绘
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TSoftObjectPtr<UTexture2D>> Half_ProtagonistFemaleCenterAvatar;` |
 
-**Source comments:**
+**Notes:**
 
 > 女性主角中心半身立绘
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TSoftObjectPtr<UTexture2D>> ProtagonistMaleAvatar;` |
 
-**Source comments:**
+**Notes:**
 
 > 男性主角头像
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TSoftObjectPtr<UTexture2D>> Half_ProtagonistMaleAvatar;` |
 
-**Source comments:**
+**Notes:**
 
 > 男性主角半身立绘
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TSoftObjectPtr<UTexture2D>> Half_TourMaleAvatar;` |
 
-**Source comments:**
+**Notes:**
 
 > 男性比武半身立绘
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TSoftObjectPtr<UTexture2D>> Small_TourMaleAvatar;` |
 
-**Source comments:**
+**Notes:**
 
 > 男性比武小立绘
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TSoftObjectPtr<UTexture2D>> Half_ProtagonistMaleCenterAvatar;` |
 
-**Source comments:**
+**Notes:**
 
 > 男性主角中心半身立绘
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 ProtagonistSkillPoint = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 主角技能点数
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 ProtagonistFirePoint = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 主角兴趣点数
 
@@ -214,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 PerSkillMaxFirePoint = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 每个技能最大添加的兴趣点
 
@@ -229,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 ProtagonistCharacteristicNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 随机生成主角可选特性的总数
 
@@ -244,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 InitNewGameTeamMemberNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始同行成员数量
 
@@ -259,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FName> UnLockBuildingId;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始解锁的建筑id(在列表中是否可见)
 
@@ -274,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FName> UnlockFormulaId;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始解锁的配方id
 
@@ -289,7 +289,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FName> UnlockPlantId;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始解锁的种植物id
 
@@ -304,7 +304,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) TArray<FName> UnlockGameFunction;` |
 
-**Source comments:**
+**Notes:**
 
 > 新游戏功能ID
 
@@ -319,7 +319,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 InitNewGameResourceCoinNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始资源积分数量
 
@@ -334,7 +334,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 InitNewGameStoryCoinNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始剧本积分
 
@@ -344,12 +344,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EModItemQuality, [FModCharacteristicNumWeight](ModNewGameStruct__FModCharacteristicNumWeight.md)> |
+| C++ type | TMap<[EModItemQuality](ItemDataStruct__EModItemQuality.md), [FModCharacteristicNumWeight](ModNewGameStruct__FModCharacteristicNumWeight.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<EModItemQuality, FModCharacteristicNumWeight> ProtagonistCharacteristicRand;` |
 
-**Source comments:**
+**Notes:**
 
 > 主角特性随机
 

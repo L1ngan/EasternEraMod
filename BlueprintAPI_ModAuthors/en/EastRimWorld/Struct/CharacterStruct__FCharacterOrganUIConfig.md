@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<ESpeciesType,FText>` |
+| C++ type | TMap<[ESpeciesType](CommonEnum__ESpeciesType.md),FText> |
 | Reflection specifiers | BlueprintReadWrite, Category="FCharacterOrganUIConfig" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FCharacterOrganUIConfig") TMap<ESpeciesType,FText> OrganName;` |
 
-**Source comments:**
+**Notes:**
 
 > 显示总器官名称
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FCharacterOrganUIConfig") TMap<FName,float> OrganIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 包含哪些器官 key 部位id  value 部位占比
 
@@ -44,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<ESpeciesType,FText>` |
+| C++ type | TMap<[ESpeciesType](CommonEnum__ESpeciesType.md),FText> |
 | Reflection specifiers | BlueprintReadWrite, Category="FCharacterOrganUIConfig" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FCharacterOrganUIConfig") TMap<ESpeciesType,FText> OrganDesc;` |
 
-**Source comments:**
+**Notes:**
 
 > 显示总器官描述(左右眼，左右耳，左右手，左右腿 这些都合并在一起显示的)
 

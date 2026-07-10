@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> Steam 创意工坊 GameInstance 子系统，接收 Steam 回调并通过委托广播上传/下载/订阅/查询/成就统计等结果
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopItemCreated OnWorkshopItemCreated;` |
 
-**源码注释:**
+**说明:**
 
 > 委托
 
@@ -32,6 +34,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopItemUpdateSubmitted OnWorkshopItemUpdateSubmitted;` |
 
+**说明:**
+
+> Workshop 项目更新提交结果广播（结果码、是否需接受法律协议）
+
 ---
 
 ### 属性 `OnWorkshopItemInstalled`
@@ -42,6 +48,10 @@
 | 反射说明符 | BlueprintAssignable, Category="Steam Workshop" |
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopItemInstalled OnWorkshopItemInstalled;` |
+
+**说明:**
+
+> Workshop 项目安装完成时广播
 
 ---
 
@@ -54,6 +64,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopQueryCompleted OnWorkshopQueryCompleted;` |
 
+**说明:**
+
+> Workshop 查询完成时广播（结果码、本次返回数量、总匹配数量）
+
 ---
 
 ### 属性 `OnWorkshopItemSubscribed`
@@ -64,6 +78,10 @@
 | 反射说明符 | BlueprintAssignable, Category="Steam Workshop" |
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopItemSubscribed OnWorkshopItemSubscribed;` |
+
+**说明:**
+
+> Workshop 项目订阅结果广播（结果码、项目 ID）
 
 ---
 
@@ -76,6 +94,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopItemUnsubscribed OnWorkshopItemUnsubscribed;` |
 
+**说明:**
+
+> Workshop 项目取消订阅结果广播（结果码、项目 ID）
+
 ---
 
 ### 属性 `OnWorkshopItemDeleted`
@@ -86,6 +108,10 @@
 | 反射说明符 | BlueprintAssignable, Category="Steam Workshop" |
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopItemDeleted OnWorkshopItemDeleted;` |
+
+**说明:**
+
+> Workshop 项目删除结果广播（结果码、项目 ID）
 
 ---
 
@@ -98,6 +124,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopPlaytimeTrackingStarted OnWorkshopPlaytimeTrackingStarted;` |
 
+**说明:**
+
+> Workshop 项目游戏时间追踪开始的结果广播
+
 ---
 
 ### 属性 `OnWorkshopPlaytimeTrackingStopped`
@@ -108,6 +138,10 @@
 | 反射说明符 | BlueprintAssignable, Category="Steam Workshop" |
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopPlaytimeTrackingStopped OnWorkshopPlaytimeTrackingStopped;` |
+
+**说明:**
+
+> Workshop 项目游戏时间追踪停止的结果广播
 
 ---
 
@@ -120,6 +154,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopItemUpdateProgress OnWorkshopItemUpdateProgress;` |
 
+**说明:**
+
+> Workshop 项目上传（更新）进度广播（项目 ID、已处理/总字节数、进度百分比）
+
 ---
 
 ### 属性 `OnWorkshopItemDownloadProgress`
@@ -130,6 +168,10 @@
 | 反射说明符 | BlueprintAssignable, Category="Steam Workshop" |
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopItemDownloadProgress OnWorkshopItemDownloadProgress;` |
+
+**说明:**
+
+> Workshop 项目下载进度广播（项目 ID、已下载/总字节数、进度百分比）
 
 ---
 
@@ -142,6 +184,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopItemDetailsQueryCompleted OnWorkshopItemDetailsQueryCompleted;` |
 
+**说明:**
+
+> Workshop 项目详细信息查询完成时广播（结果码、详情数组、查询类型）
+
 ---
 
 ### 属性 `OnUserStatsStored`
@@ -152,6 +198,10 @@
 | 反射说明符 | BlueprintAssignable, Category="Steam Achievement" |
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category = "Steam Achievement") FOnUserStatsStored OnUserStatsStored;` |
+
+**说明:**
+
+> Steam 统计数据存储完成时广播
 
 ---
 
@@ -164,6 +214,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category = "Steam Achievement") FOnUserAchievementStored OnUserAchievementStored;` |
 
+**说明:**
+
+> Steam 成就存储完成时广播
+
 ---
 
 ### 属性 `OnUserStatsReceived`
@@ -174,6 +228,10 @@
 | 反射说明符 | BlueprintAssignable, Category="Steam Achievement" |
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category = "Steam Achievement") FOnUserStatsReceived OnUserStatsReceived;` |
+
+**说明:**
+
+> Steam 统计数据接收完成时广播（RequestCurrentStats 完成时触发）
 
 ---
 
@@ -186,6 +244,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnSetUserItemVote OnSetUserItemVote;` |
 
+**说明:**
+
+> 设置用户对 Workshop 项目的评价（点赞/点踩）完成时广播
+
 ---
 
 ### 属性 `OnGetUserItemVote`
@@ -196,6 +258,10 @@
 | 反射说明符 | BlueprintAssignable, Category="Steam Workshop" |
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnGetUserItemVote OnGetUserItemVote;` |
+
+**说明:**
+
+> 获取用户对 Workshop 项目的评价结果时广播（项目 ID、是否点赞、是否点踩）
 
 ---
 
@@ -217,7 +283,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 开始监听指定 Workshop 项目的下载进度
 > @param PublishedFileId Workshop 项目 ID
@@ -240,7 +306,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 停止监听指定 Workshop 项目的下载进度
 > @param PublishedFileId Workshop 项目 ID
@@ -259,7 +325,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 停止监听所有 Workshop 项目的下载进度
 
@@ -277,7 +343,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取下载列表长度
 
@@ -295,7 +361,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取是否有下载
 

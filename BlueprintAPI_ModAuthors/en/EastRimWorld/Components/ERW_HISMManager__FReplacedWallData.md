@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) AGOAP_ActorBase* Actor { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > 墙体Actor
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) FName ID;` |
 
-**Source comments:**
+**Notes:**
 
 > ID
 

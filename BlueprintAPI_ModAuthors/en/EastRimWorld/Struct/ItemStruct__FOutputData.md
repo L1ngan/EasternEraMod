@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) FName ID;` |
 
-**Source comments:**
+**Notes:**
 
 > 产出物品ID(对应DT_InventoryItem表行名)
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EGroundInventoryType` |
+| C++ type | [EGroundInventoryType](CommonEnum__EGroundInventoryType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) EGroundInventoryType ItemType = EGroundInventoryType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 产出物品类型
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) int32 Num { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 产出数量
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) TArray<FName> Actions;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应角色行为,只有这些行为能产出此项物品(对应GOAP_Action_Data表行名)
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) int32 WeightValue = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 权重值
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) int32 ExpendCredits = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 获取一次消耗的积分
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) int32 MaxValue = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大可采集的次数
 

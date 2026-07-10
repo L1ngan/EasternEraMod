@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EAbilityFunctionType` |
+| C++ type | [EAbilityFunctionType](WorldBattleStruct__EAbilityFunctionType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) EAbilityFunctionType AbilityFunctionType = EAbilityFunctionType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 战略技能功能
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float Parameter = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 参数 根据不同功能类型填不同值
 

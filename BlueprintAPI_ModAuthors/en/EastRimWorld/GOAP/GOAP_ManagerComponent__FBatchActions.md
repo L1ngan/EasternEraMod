@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FName , FBatchActionData> ResourceActions;` |
 
-**Source comments:**
+**Notes:**
 
 > TMap<资源ID , 资源Action数据>
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FBatchActionData ConstructActions;` |
 
-**Source comments:**
+**Notes:**
 
 > 建造Action
 

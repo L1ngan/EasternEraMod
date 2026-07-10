@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) bool EnableViewMask { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否开启视野方向屏蔽
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) bool SeeBack { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 后方是否可见
 

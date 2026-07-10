@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> East Rim World Tab List Widget Base UObject type.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Tab List") FOnTabContentCreated OnTabContentCreated;` |
 
-**Source comments:**
+**Notes:**
 
 > Broadcasts when a new tab is created.
 
@@ -42,6 +44,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Gets or queries Get Preregistered Tab Info.
+
 ---
 
 ### Function `SetTabHiddenState`
@@ -61,7 +67,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > Toggles whether or not a specified tab is hidden, can only be called before the switcher is associated
 
@@ -83,6 +89,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Register Dynamic Tab operation.
+
 ---
 
 ### Function `IsFirstTabActive`
@@ -97,6 +107,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets or queries Is First Tab Active.
+
 ---
 
 ### Function `IsLastTabActive`
@@ -110,6 +124,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Tab List") bool IsLastTabActive() const;`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Gets or queries Is Last Tab Active.
 
 ---
 
@@ -129,6 +147,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Gets or queries Is Tab Visible.
+
 ---
 
 ### Function `GetVisibleTabCount`
@@ -142,5 +164,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Tab List") int32 GetVisibleTabCount();`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Gets or queries Get Visible Tab Count.
 
 ---

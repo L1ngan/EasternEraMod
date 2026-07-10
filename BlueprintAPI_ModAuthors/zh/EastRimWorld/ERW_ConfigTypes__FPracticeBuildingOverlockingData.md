@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 练功建筑超频配置数据，包含超频优先级、概率、比例、消耗、时长、冷却、耐久损耗、修炼Buff概率、可能附加的伤势及显示图标。
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 OverlockingLevel = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 超频优先级
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float OverlockingProbability = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 超频概率
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float OverlockingProportion = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 超频比例
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 OverlockingExpend = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 超频消耗
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float OverlockingTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 超频时长
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float OverlockingCD = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 冷却时长
 
@@ -107,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float PracticeReduceDurability = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 超频每次修炼减少的耐久度（负数）
 
@@ -122,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float CharacterPracticeGetBuffProbability = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 当前超频时角色修炼获得BUFF的概率
 
@@ -137,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FOverlockingAddInjuryData> PracticeBuildingWhenOverlockingCharacterAddInjury;` |
 
-**源码注释:**
+**说明:**
 
 > 当前超频可能使修炼的角色获得的伤势数组
 
@@ -152,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TSoftObjectPtr<UTexture2D> OverlockingIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 显示图标
 

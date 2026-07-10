@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 物品集合Actor，通过实例化静态网格体组件批量管理与显示物品实例（含PCG植被生成）
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) bool bSelectState;` |
 
-**源码注释:**
+**说明:**
 
 > 是否是选中状态
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) bool bHoveringState;` |
 
-**源码注释:**
+**说明:**
 
 > 是否是悬浮状态
 
@@ -42,12 +44,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EInventoryItemSetType` |
+| C++ 类型 | [EInventoryItemSetType](../Struct/ItemStruct__EInventoryItemSetType.md) |
 | 反射说明符 | BlueprintReadWrite, Category="InventoryItemSet|Inventory" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InventoryItemSet|Inventory",SaveGame) EInventoryItemSetType InventoryItemSetType = EInventoryItemSetType::PCGActor;` |
 
-**源码注释:**
+**说明:**
 
 > 此集合的类型
 
@@ -62,6 +64,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "InventoryItemSet|Inventory", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UBoxComponent> BoxComponent;` |
 
+**说明:**
+
+> 盒体碰撞组件
+
 ---
 
 ### 属性 `NiagaraComponent`
@@ -72,6 +78,10 @@
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="InventoryItemSet|Inventory" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "InventoryItemSet|Inventory", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UNiagaraComponent> NiagaraComponent;` |
+
+**说明:**
+
+> Niagara特效组件
 
 ---
 
@@ -84,6 +94,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly) TMap<FName,TObjectPtr<UInstancedStaticMeshComponent>> InstancedStaticMeshComponents;` |
 
+**说明:**
+
+> 物品ID对应的实例化静态网格体组件映射表
+
 ---
 
 ### 属性 `InventoryItemWidget`
@@ -94,6 +108,10 @@
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AInventoryItemWidgetActor> InventoryItemWidget;` |
+
+**说明:**
+
+> 物品UI显示Actor
 
 ---
 
@@ -117,7 +135,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得指定范围内的实例
 
@@ -139,7 +157,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。 **BlueprintNativeEvent**：蓝图可重写；C++ 默认实现在 `xxx_Implementation`。
 
-**源码注释:**
+**说明:**
 
 > 获取在框中的道具实例
 
@@ -161,7 +179,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取在实例对象
 
@@ -179,7 +197,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置所有组件碰撞
 
@@ -197,7 +215,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 播放动画
 
@@ -215,7 +233,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > PCG生成植被
 
@@ -233,6 +251,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 通知PCG植被生成完成
+
 ---
 
 ### 函数 `ClearPCG`
@@ -247,7 +269,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 清除pcg
 
@@ -265,7 +287,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 清除pcg完成
 
@@ -289,7 +311,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 添加实例，通过ISM组件显示
 
@@ -306,7 +328,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InItemID` | `const FName &` |
-| `InventoryType` | `EGroundInventoryType` |
+| `InventoryType` | [EGroundInventoryType](../Struct/CommonEnum__EGroundInventoryType.md) |
 | `1` | `int AddItemNumber =` |
 | `true` | `bool bUnlockInfo =` |
 
@@ -314,7 +336,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 初始化创建物品 并显示静态模型及 ui显示
 
@@ -338,7 +360,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 初始化创建装备 并显示静态模型及 ui显示
 
@@ -356,7 +378,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 集合销毁
 
@@ -374,7 +396,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 初始化完成
 
@@ -396,7 +418,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置 Actor 世界坐标，并将相同位移同步到集合内所有物品实例的 ItemTransform（用于整体挪动物品堆等）
 
@@ -419,7 +441,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过物品实例初始化物品信息
 
@@ -442,7 +464,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过物品实例初始化物资包
 
@@ -464,7 +486,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过简单的物品信息初始化
 
@@ -487,7 +509,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 在给定位置生成一个种植物实例
 
@@ -505,7 +527,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 加入获取抄录书籍Action
 
@@ -523,7 +545,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 移除获取抄录书籍Action
 
@@ -545,6 +567,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 设置物品集合的选中状态（蓝图实现）
+
 ---
 
 ### 函数 `K2_SetHoveringItemSetState`
@@ -562,5 +588,9 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent,BlueprintCallable,DisplayName= "SetHoveringEntityActorState") void K2_SetHoveringItemSetState(bool bHovering);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 设置物品集合的悬浮状态（蓝图实现）
 
 ---

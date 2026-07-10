@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 单条演员生成配置及其运行时状态（类、数量、几率、距离、重生、替换网格等）
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters") TSoftClassPtr<AActor> actorClass;` |
 
-**源码注释:**
+**说明:**
 
 > 添加生成演员类。
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters") FVector spawnOffset = FVector::ZeroVector;` |
 
-**源码注释:**
+**说明:**
 
 > **spawnOffset** - 从生成点的偏移量。
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters", meta=(ClampMin="0.001")) float spawnScaleMin = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > - 演员的随机比例范围最小值
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters", meta=(ClampMin="0.001")) float spawnScaleMax = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > - 演员的随机比例范围最大值。
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters") bool bRandRotateYaw = true;` |
 
-**源码注释:**
+**说明:**
 
 > - 沿轴的随机旋转。
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters") bool bRandRotatePitch = false;` |
 
-**源码注释:**
+**说明:**
 
 > 沿轴的随机旋转。
 
@@ -107,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters") bool bRandRotateRoll = false;` |
 
-**源码注释:**
+**说明:**
 
 > 沿轴的随机旋转。
 
@@ -122,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters", meta=(ClampMin="0")) int actorsCountForSpawn = 10;` |
 
-**源码注释:**
+**说明:**
 
 > 生成的演员数量。
 
@@ -137,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters", meta=(ClampMin="0")) int actorsCountSpawnOffset = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 生成数量的偏移量。
 
@@ -152,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters") bool bUseSpawnTime = false;` |
 
-**源码注释:**
+**说明:**
 
 > 使用曲线根据时间决定生成几率。
 
@@ -167,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters", meta=(ClampMin="0", ClampMax="100"), meta=(EditCondition="!bUseSpawnTime", EditConditionHides)) float spawnChance = 100.f;` |
 
-**源码注释:**
+**说明:**
 
 > 生成几率。每次加载生成列表或重新启动生成器时计算。
 
@@ -182,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters", meta=(EditCondition="bUseSpawnTime", EditConditionHides)) UCurveFloat* spawnCurve = nullptr;` |
 
-**源码注释:**
+**说明:**
 
 > 生成几率曲线。如果选择了根据时间决定生成几率，则使用此曲线。
 
@@ -197,7 +199,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters", meta=(ClampMin="0", ClampMax="100"), meta=(EditCondition="!bUseSpawnTime", EditConditionHides)) float increaseChanceSpawnAfterFailure = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > Increases the chance of spawn every time the NPC was not spawned due to a small chance of spawn. After spawn, the real value of the chance of spawn is reset to the original ones. Not work with bUseSpawnTime.
 > 在下一次尝试中应增加的生成几率值。这样生成几率会不断增加，直到演员生成为止。
@@ -213,7 +215,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters", meta=(ClampMin="0")) int dontSpawnIfSpawnedInWorld = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 如果值大于 0，则如果此类演员已经在世界中生成，它们将不会再生成，即使它们被冻结。
 
@@ -228,7 +230,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters", meta=(ClampMin="0")) int dontSpawnIfActiveInWorld = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 如果值大于 0，则如果此类演员已经在世界中处于活动状态，它们将不会再生成。
 
@@ -243,7 +245,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters") bool bIsCanBeRespawn = true;` |
 
-**源码注释:**
+**说明:**
 
 > 如果希望演员在被销毁后重新生成，请设置此选项。
 
@@ -258,7 +260,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Actor Spawn Parameters") float timeToRespawn = 1800.f;` |
 
-**源码注释:**
+**说明:**
 
 > 重新生成时间。
 
@@ -273,7 +275,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Actor Spawn Parameters") float timeToRespawnOffset = 5.f;` |
 
-**源码注释:**
+**说明:**
 
 > 重新生成时间的偏移量。
 
@@ -288,7 +290,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters") ESpawnActorCollisionHandlingMethod actorCollisionHandlingMethod = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;` |
 
-**源码注释:**
+**说明:**
 
 > UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters")
 > bool bCheckFloorForSpawn = true;
@@ -306,7 +308,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters") bool bOverwriteSpawnAndDestroyDistances = true;` |
 
-**源码注释:**
+**说明:**
 
 > 根据列表，重写演员组件中的生成和冻结距离。
 
@@ -321,7 +323,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Actor Spawn Parameters", meta=(ClampMin="100")) float distanceToSpawn = 6000.f;` |
 
-**源码注释:**
+**说明:**
 
 > 生成发生的距离。
 
@@ -336,7 +338,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Actor Spawn Parameters", meta=(ClampMin="100")) float distanceDestroyOffset = 500.f;` |
 
-**源码注释:**
+**说明:**
 
 > 冻结演员的距离偏移量。
 
@@ -346,12 +348,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EGWOAxes` |
+| C++ 类型 | [EGWOAxes](GWOTypes__EGWOAxes.md) |
 | 反射说明符 | BlueprintReadWrite, Category="Actor Spawn Parameters" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters") EGWOAxes distanceCheckType = EGWOAxes::XYZ;` |
 
-**源码注释:**
+**说明:**
 
 > 用于距离测量的轴数。
 
@@ -366,7 +368,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters") float noSpawnDistance = 1000.f;` |
 
-**源码注释:**
+**说明:**
 
 > 生成不会发生的距离。例如，您的角色在非常接近某类演员的地方生成，为避免演员在如此近的地方生成，可以调整此距离。
 
@@ -381,7 +383,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters") float lifeTimeInBackground = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 演员的冻结生命时间；在此时间后，关于演员的信息将被销毁。
 
@@ -396,7 +398,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters") bool bReplaceStaticMesh = false;` |
 
-**源码注释:**
+**说明:**
 
 > 如果您希望将演员替换为静态网格实例，请启用此选项。
 
@@ -411,7 +413,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters", meta=(EditCondition="bReplaceStaticMesh", EditConditionHides)) FGWOActorReplaceParameters replaceParameters;` |
 
-**源码注释:**
+**说明:**
 
 > 选择用于替换演员的静态网格。
 
@@ -426,7 +428,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters") bool bSpawnOnRun = false;` |
 
-**源码注释:**
+**说明:**
 
 > UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters", meta=(EditCondition="bReplaceStaticMesh", EditConditionHides))
 > class UStaticMesh* replaceableStaticMesh = nullptr;
@@ -443,7 +445,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "Actor Spawn Parameters") TArray<FName> ActorInfoIDs;` |
 
-**源码注释:**
+**说明:**
 
 > UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor Spawn Parameters")
 > bool bDontSpawnActorAddInstance = false;
@@ -460,7 +462,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "Actor Spawn Parameters") uint8 ActorType = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 生成的actorType 1 人类 2 召唤物 3 动物
 
@@ -475,7 +477,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "Actor Spawn Parameters") uint8 TeamID = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 队伍id
 
@@ -490,7 +492,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "Actor Spawn Parameters") FVector BoxLocation = FVector::ZeroVector;` |
 
-**源码注释:**
+**说明:**
 
 > 所在盒子位置
 
@@ -505,7 +507,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "Actor Spawn Parameters") int32 IdleRange { 6000 };` |
 
-**源码注释:**
+**说明:**
 
 > 闲逛范围
 
@@ -520,6 +522,10 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() float distanceToSpawnSquare = 0.f;` |
 
+**说明:**
+
+> 生成距离的平方缓存值，用于加速距离比较
+
 ---
 
 ### 属性 `distanceToDestroySquare`
@@ -530,6 +536,10 @@
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() float distanceToDestroySquare = 0.f;` |
+
+**说明:**
+
+> 销毁/冻结距离的平方缓存值，用于加速距离比较
 
 ---
 
@@ -542,6 +552,10 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() float noSpawnDistanceSquare = 0.f;` |
 
+**说明:**
+
+> 禁止生成距离的平方缓存值
+
 ---
 
 ### 属性 `insertBackgroundTime`
@@ -552,6 +566,10 @@
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() double insertBackgroundTime = 0.f;` |
+
+**说明:**
+
+> 演员转入后台（冻结）时记录的时间戳
 
 ---
 
@@ -564,6 +582,10 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() int uniqID = -1;` |
 
+**说明:**
+
+> 该生成条目的唯一ID（-1表示未分配）
+
 ---
 
 ### 属性 `npcValue`
@@ -574,6 +596,10 @@
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() int npcValue = 0;` |
+
+**说明:**
+
+> 运行时NPC计数/统计值
 
 ---
 
@@ -586,6 +612,10 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() int npcWithPoint = 0;` |
 
+**说明:**
+
+> 运行时记录的与生成点关联的NPC计数
+
 ---
 
 ### 属性 `spawnLocation`
@@ -596,6 +626,10 @@
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() FVector spawnLocation = FVector::ZeroVector;` |
+
+**说明:**
+
+> 运行时记录的实际生成位置
 
 ---
 
@@ -608,6 +642,10 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() FVector spawnScale = FVector::ZeroVector;` |
 
+**说明:**
+
+> 运行时记录的实际生成缩放
+
 ---
 
 ### 属性 `lastPositionBeforeDestroyedIfFar`
@@ -618,6 +656,10 @@
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() FVector lastPositionBeforeDestroyedIfFar = FVector::ZeroVector;` |
+
+**说明:**
+
+> 演员因距离过远被销毁前的最后位置
 
 ---
 
@@ -630,6 +672,10 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() double timeKilled = 0.f;` |
 
+**说明:**
+
+> 演员被击杀的时间点，用于计算重生倒计时
+
 ---
 
 ### 属性 `bIsSpawned`
@@ -640,6 +686,10 @@
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() bool bIsSpawned = false;` |
+
+**说明:**
+
+> 运行时标记：该演员当前是否已生成
 
 ---
 
@@ -652,6 +702,10 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() bool bIsKilled = false;` |
 
+**说明:**
+
+> 运行时标记：该演员是否已被击杀
+
 ---
 
 ### 属性 `killedTime`
@@ -662,6 +716,10 @@
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() double killedTime = 0.f;` |
+
+**说明:**
+
+> 演员被击杀时记录的时间戳
 
 ---
 
@@ -674,6 +732,10 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() bool bReadyToSpawn = false;` |
 
+**说明:**
+
+> 运行时标记：该演员是否已准备好生成
+
 ---
 
 ### 属性 `spawnedNpcRef`
@@ -683,7 +745,11 @@
 | C++ 类型 | `AActor*` |
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
-| 原始声明（单行节选） | `UPROPERTY() AActor* spawnedNpcRef = nullptr;` |
+| 原始声明（单行节选） | `UPROPERTY(Transient) AActor* spawnedNpcRef = nullptr;` |
+
+**说明:**
+
+> 运行时生成的 NPC 实例（运行时缓存；标 Transient 避免被存档序列化为悬空指针致崩，身份靠 ActorInfoIDs/uniqID）
 
 ---
 
@@ -696,6 +762,10 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() float realTimeRespawn = 0.f;` |
 
+**说明:**
+
+> 本次计算得到的实际重生时间
+
 ---
 
 ### 属性 `bGotChanceToSpawn`
@@ -707,6 +777,10 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() bool bGotChanceToSpawn = false;` |
 
+**说明:**
+
+> 运行时标记：本次几率判定是否通过、获得生成资格
+
 ---
 
 ### 属性 `realSpawnChance`
@@ -717,5 +791,9 @@
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() float realSpawnChance = 0.f;` |
+
+**说明:**
+
+> 当前实际生成几率（失败后可按配置递增，生成后重置）
 
 ---

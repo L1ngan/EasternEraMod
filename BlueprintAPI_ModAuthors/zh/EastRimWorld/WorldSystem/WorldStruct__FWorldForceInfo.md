@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EForceType` |
+| C++ 类型 | [EForceType](WorldStruct__EForceType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EForceType ForceType = EForceType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 势力类型
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FGenericTeamId TeamId = FGenericTeamId();` |
 
-**源码注释:**
+**说明:**
 
 > 势力阵营ID
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FGuid ForceGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 势力GUID
 
@@ -64,9 +64,39 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText ForceName;` |
 
-**源码注释:**
+**说明:**
 
 > 势力名称
+
+---
+
+### 属性 `ForceManMoveGifid`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TMap<[EWorldMapMoveType](WorldStruct__EWorldMapMoveType.md),FName> |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<EWorldMapMoveType,FName> ForceManMoveGifid;` |
+
+**说明:**
+
+> 势力移动动画Id
+
+---
+
+### 属性 `ForceWomanMoveGifid`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TMap<[EWorldMapMoveType](WorldStruct__EWorldMapMoveType.md), FName> |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<EWorldMapMoveType, FName> ForceWomanMoveGifid;` |
+
+**说明:**
+
+> Force Woman Move Gifid 字段。
 
 ---
 
@@ -79,9 +109,24 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> WorldPlaceIDs;` |
 
-**源码注释:**
+**说明:**
 
 > 势力初始拥有的地点ID
+
+---
+
+### 属性 `WorldForceColor`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FSlateColor` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FSlateColor WorldForceColor;` |
+
+**说明:**
+
+> 势力颜色
 
 ---
 
@@ -94,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText ForceDesc;` |
 
-**源码注释:**
+**说明:**
 
 > 势力描述
 
@@ -109,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText ForceFeature;` |
 
-**源码注释:**
+**说明:**
 
 > 势力特色
 
@@ -124,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftObjectPtr<UTexture2D> ForceIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 势力图标
 
@@ -134,12 +179,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EWorldForceWeaponType` |
+| C++ 类型 | [EWorldForceWeaponType](WorldStruct__EWorldForceWeaponType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EWorldForceWeaponType ForceWeaponType = EWorldForceWeaponType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 势力武器类型
 
@@ -154,7 +199,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bPlayerForce = false;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家势力
 
@@ -169,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName ForceAimID;` |
 
-**源码注释:**
+**说明:**
 
 > 势力宗旨
 
@@ -184,9 +229,9 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float EnhanceAttackStateTime = 0.0f;` |
 
-**源码注释:**
+**说明:**
 
-> 增强攻击状态时间
+> 增强攻击状态时间(废弃)
 
 ---
 
@@ -199,7 +244,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int ForceLevel = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 势力等级
 
@@ -214,7 +259,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,meta=(EditCondition ="bPlayerForce == false",EditConditionHides)) FName NPCForceConfigID;` |
 
-**源码注释:**
+**说明:**
 
 > 势力的初始属性 包含拥有的角色 机关人等
 
@@ -229,7 +274,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float ForceJusticeValue = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 势力初始正邪值
 
@@ -244,9 +289,25 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName MainConstructionID;` |
 
-**源码注释:**
+**说明:**
 
 > 势力主城ID(只能新游戏初始化使用)
+
+---
+
+### 属性 `WorldAttachPlaceIDs`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FName` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName WorldAttachPlaceIDs;` |
+
+**说明:**
+
+> [势力割据]势力初始依附驻扎地点(开局以附属门派身份进驻该城市;只能依附1个地点,只能新游戏初始化使用)
+> 配置了 WorldAttachPlaceIDs 就不可再配置 WorldPlaceIDs & MainConstructionID,两者互冲;失误同时配置时只认 WorldAttachPlaceIDs
 
 ---
 
@@ -259,7 +320,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FGarrisonRatio> GarrisonRatio;` |
 
-**源码注释:**
+**说明:**
 
 > NPC势力派人驻守的比例
 
@@ -274,7 +335,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> InitDogfaceIDs;` |
 
-**源码注释:**
+**说明:**
 
 > 小兵
 
@@ -289,7 +350,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> InitStrategicAbility;` |
 
-**源码注释:**
+**说明:**
 
 > 战略技能
 
@@ -304,7 +365,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName InitCrystal;` |
 
-**源码注释:**
+**说明:**
 
 > 水晶
 
@@ -319,7 +380,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> InitTowerDefense;` |
 
-**源码注释:**
+**说明:**
 
 > 防御塔
 
@@ -334,7 +395,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 InitReputation = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 初始化声望
 
@@ -349,8 +410,68 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> ForceKongfu;` |
 
-**源码注释:**
+**说明:**
 
 > 势力镇派武学
+
+---
+
+### 属性 `DiscipleRealmMin`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | BlueprintReadWrite, Category="RandomDisciple" |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "RandomDisciple") int32 DiscipleRealmMin = 0;` |
+
+**说明:**
+
+> 随机弟子境界范围下限（含）；用于随机弟子生成，两者均为0时按 ForceLevel 估算
+
+---
+
+### 属性 `DiscipleRealmMax`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | BlueprintReadWrite, Category="RandomDisciple" |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "RandomDisciple") int32 DiscipleRealmMax = 0;` |
+
+**说明:**
+
+> 随机弟子境界范围上限（含）
+
+---
+
+### 属性 `ForceRegion`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FName` |
+| 反射说明符 | BlueprintReadWrite, Category="ForceMeta" |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "ForceMeta") FName ForceRegion = NAME_None;` |
+
+**说明:**
+
+> Agent 工作流 B1 加: 势力所在地区 (跟 DT_ForceAffiliation.csv Region 字段对接)
+
+---
+
+### 属性 `ForceAlignment`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FName` |
+| 反射说明符 | BlueprintReadWrite, Category="ForceMeta" |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "ForceMeta") FName ForceAlignment = NAME_None;` |
+
+**说明:**
+
+> Agent 工作流 B1 加: 正邪阵营 (正派/邪派/中立, 跟 ForceJusticeValue 数值并存)
 
 ---

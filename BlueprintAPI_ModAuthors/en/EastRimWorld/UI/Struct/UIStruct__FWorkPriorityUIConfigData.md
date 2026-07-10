@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FText Name;` |
 
-**Source comments:**
+**Notes:**
 
 > 显示名称
 > !!!Warning!!! 该表的配置顺序决定了UI的显示顺序
@@ -35,7 +35,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FName> Goals;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应的GOAP目标
 
@@ -50,7 +50,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FName> Actions;` |
 
-**Source comments:**
+**Notes:**
 
 > 包含的GOAP Action
 
@@ -65,7 +65,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) bool CanSort { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 能否排序
 
@@ -80,7 +80,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FName RelativeRowName;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应DT_CharacterMainSkillUIConfig表的行名
 
@@ -95,7 +95,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FText Tips;` |
 
-**Source comments:**
+**Notes:**
 
 > 显示的Tips
 
@@ -110,7 +110,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 SubClassType = 2;` |
 
-**Source comments:**
+**Notes:**
 
 > 内门0，外门1，内外门通用2
 

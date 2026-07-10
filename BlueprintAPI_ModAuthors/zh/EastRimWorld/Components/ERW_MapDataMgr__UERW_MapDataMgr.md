@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) ALandscape* Landscape { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > 地形
 
@@ -34,6 +34,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) AERW_PlayerPawn* PlayerPawn { nullptr };` |
 
+**说明:**
+
+> 玩家Pawn的引用
+
 ---
 
 ### 属性 `AreaCurves`
@@ -45,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TArray<AERW_AreaCurve*> AreaCurves;` |
 
-**源码注释:**
+**说明:**
 
 > 区域曲线
 
@@ -60,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) float GridLength { 100.f };` |
 
-**源码注释:**
+**说明:**
 
 > 格子边长(单位厘米)
 
@@ -75,7 +79,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) float FoundationModelHeight { 10.f };` |
 
-**源码注释:**
+**说明:**
 
 > 地基模型高度(一半在地上一半在地下)
 
@@ -90,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) FIntPoint LandscapeGridSize;` |
 
-**源码注释:**
+**说明:**
 
 > 地形格子尺寸
 
@@ -105,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) FVector LandscapeOrigin { FVector::ZeroVector };` |
 
-**源码注释:**
+**说明:**
 
 > 地形原点
 
@@ -120,7 +124,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) int32 HighestFloor { 0 };` |
 
-**源码注释:**
+**说明:**
 
 > 当前拥有的最高楼层
 
@@ -135,7 +139,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) int32 CurrentFloor { 0 };` |
 
-**源码注释:**
+**说明:**
 
 > 当前所在楼层
 
@@ -150,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) float MaxHeightDifference { 0.f };` |
 
-**源码注释:**
+**说明:**
 
 > 建造允许的最大高低差
 
@@ -165,7 +169,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnbuilded OnBuildingComplateEvent;` |
 
-**源码注释:**
+**说明:**
 
 > [自定义事件]建筑完成事件
 
@@ -180,7 +184,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnbuilded OnBuildingRemoveEvent;` |
 
-**源码注释:**
+**说明:**
 
 > [自定义事件]建筑拆除事件
 
@@ -190,12 +194,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ERoomUnitShowState` |
+| C++ 类型 | [ERoomUnitShowState](../ERW_Enumerations__ERoomUnitShowState.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) ERoomUnitShowState RoomUnitShowState { ERoomUnitShowState::Hidden };` |
 
-**源码注释:**
+**说明:**
 
 > 房间单元显示状态
 
@@ -210,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) AGOAP_ActorBase* SelectedFoundation { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > 选中的地基
 
@@ -225,6 +229,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TSubclassOf<class AActor> BuildObjectClass;` |
 
+**说明:**
+
+> 建造物体使用的Actor类
+
 ---
 
 ### 属性 `UsedNumbers`
@@ -236,7 +244,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<FName, FBuildingNum> UsedNumbers;` |
 
-**源码注释:**
+**说明:**
 
 > 每种设备已使用编号
 
@@ -251,7 +259,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<FName, int32> MaxNumbers;` |
 
-**源码注释:**
+**说明:**
 
 > 每种类型Actor的最大编号
 
@@ -266,9 +274,39 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) float AgentStepHeight { 0.f };` |
 
-**源码注释:**
+**说明:**
 
 > 角色垂直跨越高度
+
+---
+
+### 属性 `ReceiveGoodsAreaBuildGuid`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FGuid` |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) FGuid ReceiveGoodsAreaBuildGuid = FGuid();` |
+
+**说明:**
+
+> 玩家自建收货区建筑GUID
+
+---
+
+### 属性 `TradeAreaBuildGuid`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FGuid` |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) FGuid TradeAreaBuildGuid = FGuid();` |
+
+**说明:**
+
+> 玩家自建码货建筑GUID
 
 ---
 
@@ -280,6 +318,10 @@
 | 反射说明符 | BlueprintAssignable |
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnMapDataMgrLoadSlotSucceed OnMapDataMgrLoadSlotSucceed;` |
+
+**说明:**
+
+> [事件]地图数据管理器读档成功后广播的委托
 
 ---
 
@@ -297,6 +339,54 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取地图中的建筑数据数组
+
+---
+
+### 函数 `GetMapBuildingNum`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintPure, Category="Build" |
+| 返回类型 | `int32` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `BuildID` | `const FName&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintPure, Category = "Build") int32 GetMapBuildingNum(const FName& BuildID) const;`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取指定配置ID建筑当前在地图上的数量
+
+---
+
+### 函数 `IsBuildingReachLimit`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintPure, Category="Build" |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `BuildID` | `const FName&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintPure, Category = "Build") bool IsBuildingReachLimit(const FName& BuildID) const;`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 检查指定配置ID的建筑是否已经达到数量上限
+
 ---
 
 ### 函数 `GetMapFabricateData`
@@ -304,12 +394,16 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | TMap<EFabricateType, [FGuidArr](../Struct/CommonStruct__FGuidArr.md)>& |
+| 返回类型 | TMap<[EFabricateType](../Struct/CommonEnum__EFabricateType.md), [FGuidArr](../Struct/CommonStruct__FGuidArr.md)>& |
 | 参数 | （无） |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) TMap<EFabricateType, FGuidArr>& GetMapFabricateData();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取地图中的设备数据(设备类型→建筑Guid数组)
 
 ---
 
@@ -323,12 +417,16 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `FabricateType` | `EFabricateType` |
+| `FabricateType` | [EFabricateType](../Struct/CommonEnum__EFabricateType.md) |
 | `BuildingGuid` | `FGuid` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void AddFabricate(EFabricateType FabricateType , FGuid BuildingGuid);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 将设备建筑的Guid按设备类型加入地图设备数据
 
 ---
 
@@ -349,6 +447,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 从给定的房间格子集合中获取一个随机位置
+
 ---
 
 ### 函数 `FindObject`
@@ -367,7 +469,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 找到Guid对应的Actor
 
@@ -385,7 +487,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 存档前清理数据
 
@@ -409,7 +511,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入建造资源
 
@@ -431,7 +533,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除建造资源
 
@@ -449,7 +551,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查建造资源缺少情况
 
@@ -472,7 +574,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 初始化地形相关信息
 
@@ -494,7 +596,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查位置是否是有效的线性位置
 
@@ -516,7 +618,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置区域曲线显示或隐藏
 
@@ -539,7 +641,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得指定格子数据
 
@@ -561,7 +663,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得格子顶部高度
 
@@ -579,14 +681,14 @@
 |--------|------|
 | `Layer` | `int32` |
 | `GridPos` | const [FGridPosition](../ERW_CommonTypes__FGridPosition.md)& |
-| `EnvironType` | `EEnvironType` |
-| `DistributionType` | `EGridDistributionType` |
+| `EnvironType` | [EEnvironType](../ERW_Enumerations__EEnvironType.md) |
+| `DistributionType` | [EGridDistributionType](../ERW_Enumerations__EGridDistributionType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure) AGOAP_ActorBase* FindActor(int32 Layer , const FGridPosition& GridPos , EEnvironType EnvironType , EGridDistributionType DistributionType) const;`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得格子中的Actor
 
@@ -604,13 +706,13 @@
 |--------|------|
 | `Layer` | `int32` |
 | `GridPos` | const [FGridPosition](../ERW_CommonTypes__FGridPosition.md)& |
-| `EnvironType` | `EEnvironType` |
+| `EnvironType` | [EEnvironType](../ERW_Enumerations__EEnvironType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure) bool IsEnvironTypeExist(int32 Layer , const FGridPosition& GridPos , EEnvironType EnvironType) const;`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查格子是否存在某种环境类型
 
@@ -632,6 +734,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 检查指定格子上是否已存在其他物体
+
 ---
 
 ### 函数 `CollectSurroundingFillerBuildings`
@@ -644,7 +750,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EnvironType` | `EEnvironType` |
+| `EnvironType` | [EEnvironType](../ERW_Enumerations__EEnvironType.md) |
 | `GridPoses` | const TArray<[FGridPosition](../ERW_CommonTypes__FGridPosition.md)>& |
 | `RemovedObjects` | `const TArray<UObject*>&` |
 | `BuildObjects` | TArray<[AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)*>& |
@@ -653,7 +759,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 收集周围有填充模型的建筑
 
@@ -681,7 +787,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获得阶梯的格子信息
 
@@ -704,7 +810,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查并更新周围墙的接缝柱
 
@@ -727,7 +833,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算建筑所占格子的高低差
 
@@ -750,7 +856,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获得相邻的组装建筑
 
@@ -773,7 +879,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查并获得组装建筑需要放柱子的接缝点
 
@@ -796,7 +902,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查并更新组装建筑柱子
 
@@ -821,7 +927,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入地图环境数据
 
@@ -838,12 +944,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Actor` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `false` | `bool OnlyRemoveEnvironData =` |
 
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RemoveEnvironData(AGOAP_ActorBase* Actor);`
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RemoveEnvironData(AGOAP_ActorBase* Actor , bool OnlyRemoveEnvironData = false);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 从地图环境数据中移除
 
@@ -866,7 +973,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查并处理上方建筑
 
@@ -889,7 +996,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入额外信息
 
@@ -911,7 +1018,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除无效的额外信息
 
@@ -934,7 +1041,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查询建筑数据数组
 
@@ -958,7 +1065,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 将建筑加入到地图建筑数据中
 
@@ -980,7 +1087,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过建筑GUID查找建筑配置ID
 
@@ -1003,7 +1110,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 将建筑从地图建筑数据中移除
 
@@ -1019,13 +1126,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BType` | `EBuildingType` |
+| `BType` | [EBuildingType](../ERW_Enumerations__EBuildingType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) TArray<FGuid> GetBuildingsByBuildingType(EBuildingType BType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取指定类型的建筑
 
@@ -1047,7 +1154,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取指定建筑状态的建筑
 
@@ -1069,7 +1176,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 读档时收集不在任何区域内的墙
 
@@ -1093,7 +1200,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新闭合区域信息
 
@@ -1110,13 +1217,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Wall` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
-| `DisplayType` | `EWallDisplayType` |
+| `DisplayType` | [EWallDisplayType](../ERW_Enumerations__EWallDisplayType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RecordWallDisplayType(AGOAP_ActorBase* Wall , EWallDisplayType DisplayType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 记录墙的显示类型
 
@@ -1138,7 +1245,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除墙的显示类型
 
@@ -1163,7 +1270,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查并移除房间要素
 
@@ -1179,13 +1286,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `State` | `ERoomUnitShowState` |
+| `State` | [ERoomUnitShowState](../ERW_Enumerations__ERoomUnitShowState.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SetRoomUnitShowState(ERoomUnitShowState State);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置房间单元显示状态
 
@@ -1203,7 +1310,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新房间单元显示状态
 
@@ -1227,7 +1334,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新房间单元显示
 
@@ -1250,7 +1357,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 根据格子位置和高度获取所在层
 
@@ -1272,6 +1379,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 根据世界坐标获取所在层索引
+
 ---
 
 ### 函数 `CheckPositionInRoom`
@@ -1290,7 +1401,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查坐标是否在房间内
 
@@ -1313,6 +1424,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 检查指定格子坐标与高度是否位于房间内
+
 ---
 
 ### 函数 `GetRoomAreaDataByWorldLocation`
@@ -1332,7 +1447,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过世界坐标获取房间数据
 
@@ -1343,7 +1458,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintPure |
-| 返回类型 | `EStorageSpace` |
+| 返回类型 | [EStorageSpace](../ERW_Enumerations__EStorageSpace.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1354,7 +1469,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 通过世界坐标获取空间类型
 
@@ -1378,7 +1493,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取房间内所有修建完成的建筑物
 
@@ -1400,7 +1515,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新处于房间内时施加给角色的buff(大门重叠事件时调用)
 
@@ -1424,7 +1539,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查房间所需的设施
 
@@ -1449,6 +1564,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 检查建筑ID数量与建筑分类数量是否满足指定的设施需求列表及需求数量
+
 ---
 
 ### 函数 `CheckFiveElementNeed`
@@ -1461,14 +1580,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InFiveElement` | `const TMap<EFiveElementType,float> &` |
+| `InFiveElement` | const TMap<[EFiveElementType](../Struct/CommonEnum__EFiveElementType.md),float> & |
 | `InRoomConfig` | const [FRoomConfigData](../ERW_ConfigTypes__FRoomConfigData.md)& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool CheckFiveElementNeed(const TMap<EFiveElementType,float> & InFiveElement,const FRoomConfigData& InRoomConfig);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 是否满足五行需求
 
@@ -1491,7 +1610,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置房间类型是否为玩家指定
 
@@ -1513,7 +1632,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 玩家指定房间类型
 
@@ -1536,7 +1655,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取形成房间类型缺少的建筑数量 TMap<配置中FacilityNeed序号,缺少数量>& OutRoomLack
 
@@ -1558,7 +1677,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取房间温度
 
@@ -1580,6 +1699,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取房间内建筑提供的温度
+
 ---
 
 ### 函数 `GetRoomLight`
@@ -1598,7 +1721,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取房间亮度
 
@@ -1621,7 +1744,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有能覆盖此组件范围的组合范围
 
@@ -1644,7 +1767,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有由此组件构成的组合范围
 
@@ -1667,7 +1790,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取指定格子温度(不包含环境温度)
 
@@ -1689,6 +1812,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 根据世界坐标获取该位置的温度(不包含环境温度)
+
 ---
 
 ### 函数 `GetAllPlayerRoomS`
@@ -1703,7 +1830,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取玩家所有房间数据
 
@@ -1719,14 +1846,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InRoomType` | `ERoomType` |
+| `InRoomType` | [ERoomType](../ERW_Enumerations__ERoomType.md) |
 | `OutRooms` | TArray<[FClosureAreaData](ERW_MapDataMgr__FClosureAreaData.md)>& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void GetAllRoomsByType(ERoomType InRoomType, TArray<FClosureAreaData>& OutRooms);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有指定类型的房间
 
@@ -1742,14 +1869,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InRoomType` | `ERoomType` |
+| `InRoomType` | [ERoomType](../ERW_Enumerations__ERoomType.md) |
 | `OutBuildings` | TArray<[AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)*>& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void GetEmptyCoreFacilityBuildingsByRoomType(ERoomType InRoomType, TArray<AGOAP_ActorBase*>& OutBuildings);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据房间类型获取所有核心设施需求为空的核心设施建筑
 
@@ -1771,7 +1898,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取特定类型Actor的下一个可用编号
 
@@ -1794,7 +1921,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 回收编号（当Actor被销毁时调用）
 

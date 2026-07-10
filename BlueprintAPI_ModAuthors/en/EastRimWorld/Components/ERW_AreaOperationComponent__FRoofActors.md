@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<AActor* , bool> VisibleActors;` |
 
-**Source comments:**
+**Notes:**
 
 > 显示的Actor
 > TMap<Actor , 占位符>
@@ -35,7 +35,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<AActor* , bool> HideActors;` |
 
-**Source comments:**
+**Notes:**
 
 > 隐藏的Actor
 > TMap<Actor , 占位符>

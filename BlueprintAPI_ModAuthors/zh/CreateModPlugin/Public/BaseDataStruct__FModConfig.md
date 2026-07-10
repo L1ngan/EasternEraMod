@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EModConfigType` |
+| C++ 类型 | [EModConfigType](BaseDataStruct__EModConfigType.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) EModConfigType ModConfigType = EModConfigType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 配置类型
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSoftObjectPtr<UDataTable> DataTable;` |
 
-**源码注释:**
+**说明:**
 
 > 配置表
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() FString StructName;` |
 
-**源码注释:**
+**说明:**
 
 > 结构名称
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) bool bOverrideData = false;` |
 
-**源码注释:**
+**说明:**
 
 > 勾选后Map或Array则直接覆盖原来的数据，不勾选则在原有的基础增加。其他类型的属性如果是默认值则不生效
 

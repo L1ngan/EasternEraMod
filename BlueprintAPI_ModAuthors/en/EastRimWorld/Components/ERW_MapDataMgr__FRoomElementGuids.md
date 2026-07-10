@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FGuid , bool> Guids;` |
 
-**Source comments:**
+**Notes:**
 
 > TMap<Guid , 占位符>
 

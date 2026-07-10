@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Common Log Data data structure.
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid LogGuid;` |
 
+**Notes:**
+
+> Log Guid field.
+
 ---
 
 ### Property `LogContent`
@@ -28,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FString LogContent;` |
 
-**Source comments:**
+**Notes:**
 
 > 日志内容
 
@@ -43,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float Time = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成的游戏时间
 
@@ -53,10 +59,14 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECommonLogGroup` |
+| C++ type | [ECommonLogGroup](CommonLogStruct__ECommonLogGroup.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ECommonLogGroup LogGroup = ECommonLogGroup::None;` |
+
+**Notes:**
+
+> Log Group field.
 
 ---
 
@@ -69,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FString FilterString;` |
 
-**Source comments:**
+**Notes:**
 
 > 用来查询此条目的字符串
 

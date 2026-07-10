@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData GlobalExperienceBonus;` |
 
-**Source comments:**
+**Notes:**
 
 > 全局经验加成
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CombatLevel;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗等级
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CombatExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗经验
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CombatExperienceBonus;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗经验加成
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ConstructionLevel;` |
 
-**Source comments:**
+**Notes:**
 
 > 建造等级
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ConstructionExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 建造经验
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ConstructionExperienceBonus;` |
 
-**Source comments:**
+**Notes:**
 
 > 建造经验加成
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MiningLevel;` |
 
-**Source comments:**
+**Notes:**
 
 > 采矿等级
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MiningExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 采矿经验
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MiningExperienceBonus;` |
 
-**Source comments:**
+**Notes:**
 
 > 采矿经验加成
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CookingLevel;` |
 
-**Source comments:**
+**Notes:**
 
 > 烹饪等级
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CookingExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 烹饪经验
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CookingExperienceBonus;` |
 
-**Source comments:**
+**Notes:**
 
 > 烹饪经验加成
 
@@ -214,7 +214,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData FarmingLevel;` |
 
-**Source comments:**
+**Notes:**
 
 > 农业等级
 
@@ -229,7 +229,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData FarmingExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 农业经验
 
@@ -244,7 +244,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData FarmingExperienceBonus;` |
 
-**Source comments:**
+**Notes:**
 
 > 农业经验加成
 
@@ -259,7 +259,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalLevel;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物相关等级
 
@@ -274,7 +274,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalTamingSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 驯服动物的能力（驯服每次增加的进度）
 
@@ -289,7 +289,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物相关经验
 
@@ -304,7 +304,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalExperienceBonus;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物相关经验加成
 
@@ -319,7 +319,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalTrainingExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物训练经验
 
@@ -334,7 +334,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalTrainingLevel;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物训练等级
 
@@ -349,7 +349,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalTrainingBonus;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物训练经验加成
 
@@ -364,7 +364,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MakeLevel;` |
 
-**Source comments:**
+**Notes:**
 
 > 制作等级
 
@@ -379,7 +379,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MakeExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 制作经验
 
@@ -394,7 +394,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MakeExperienceBonus;` |
 
-**Source comments:**
+**Notes:**
 
 > 制作经验加成
 
@@ -409,7 +409,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ArtLevel;` |
 
-**Source comments:**
+**Notes:**
 
 > 艺术等级
 
@@ -424,7 +424,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ArtExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 艺术经验
 
@@ -439,7 +439,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ArtExperienceBonus;` |
 
-**Source comments:**
+**Notes:**
 
 > 艺术经验加成
 
@@ -454,7 +454,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CureLevel;` |
 
-**Source comments:**
+**Notes:**
 
 > 治疗等级
 
@@ -469,7 +469,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CureExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 治疗经验
 
@@ -484,7 +484,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CureExperienceBonus;` |
 
-**Source comments:**
+**Notes:**
 
 > 治疗经验加成
 
@@ -499,7 +499,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SocialContactLevel;` |
 
-**Source comments:**
+**Notes:**
 
 > 社交等级
 
@@ -514,7 +514,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SocialContactExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 社交经验
 
@@ -529,7 +529,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SocialContactExperienceBonus;` |
 
-**Source comments:**
+**Notes:**
 
 > 社交经验加成
 
@@ -544,7 +544,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData IntelligenceLevel;` |
 
-**Source comments:**
+**Notes:**
 
 > 智力等级
 
@@ -559,7 +559,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData IntelligenceExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 智力经验
 
@@ -574,7 +574,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData IntelligenceExperienceBonus;` |
 
-**Source comments:**
+**Notes:**
 
 > 智力经验加成
 
@@ -589,7 +589,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DanTianExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 丹田经验值
 
@@ -604,7 +604,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DanTianExperienceBonus;` |
 
-**Source comments:**
+**Notes:**
 
 > 丹田经验加成
 
@@ -619,7 +619,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData YinExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 阴性
 
@@ -634,6 +634,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData YinExperienceBonus;` |
 
+**Notes:**
+
+> Yin internal energy experience bonus
+
 ---
 
 ### Property `NeutralExperience`
@@ -645,7 +649,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NeutralExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 中正
 
@@ -660,6 +664,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NeutralExperienceBonus;` |
 
+**Notes:**
+
+> Neutral internal energy experience bonus
+
 ---
 
 ### Property `PositiveExperience`
@@ -671,7 +679,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PositiveExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 阳性
 
@@ -686,6 +694,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PositiveExperienceBonus;` |
 
+**Notes:**
+
+> Positive (yang) internal energy experience bonus
+
 ---
 
 ### Property `LightSkillExperience`
@@ -697,7 +709,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LightSkillExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 轻功
 
@@ -712,6 +724,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LightSkillExperienceBonus;` |
 
+**Notes:**
+
+> Light skill (qinggong) experience bonus
+
 ---
 
 ### Property `HardSkillExperience`
@@ -723,7 +739,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HardSkillExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 硬功
 
@@ -738,6 +754,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HardSkillExperienceBonus;` |
 
+**Notes:**
+
+> Hard skill (external conditioning) experience bonus
+
 ---
 
 ### Property `InternalStrengthExperience`
@@ -749,7 +769,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData InternalStrengthExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 内劲
 
@@ -764,6 +784,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData InternalStrengthExperienceBonus;` |
 
+**Notes:**
+
+> Internal strength experience bonus
+
 ---
 
 ### Property `BladeStabsExperience`
@@ -775,7 +799,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BladeStabsExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 刃刺
 
@@ -790,6 +814,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BladeStabsExperienceBonus;` |
 
+**Notes:**
+
+> Blade stab martial arts experience bonus
+
 ---
 
 ### Property `SpearAndHalberdExperience`
@@ -801,7 +829,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SpearAndHalberdExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 枪戟
 
@@ -816,6 +844,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SpearAndHalberdExperienceBonus;` |
 
+**Notes:**
+
+> Spear and halberd martial arts experience bonus
+
 ---
 
 ### Property `SwordsExperience`
@@ -827,7 +859,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SwordsExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 刀剑
 
@@ -842,6 +874,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SwordsExperienceBonus;` |
 
+**Notes:**
+
+> Sword and blade martial arts experience bonus
+
 ---
 
 ### Property `AxeClubsExperience`
@@ -853,7 +889,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AxeClubsExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 斧棒
 
@@ -868,6 +904,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AxeClubsExperienceBonus;` |
 
+**Notes:**
+
+> Axe and club martial arts experience bonus
+
 ---
 
 ### Property `FistsAndPalmsExperience`
@@ -879,7 +919,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData FistsAndPalmsExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 拳掌
 
@@ -894,6 +934,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData FistsAndPalmsExperienceBonus;` |
 
+**Notes:**
+
+> Fists and palms martial arts experience bonus
+
 ---
 
 ### Property `HammersAndMacesExperience`
@@ -905,7 +949,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HammersAndMacesExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 锤锏
 
@@ -920,6 +964,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HammersAndMacesExperienceBonus;` |
 
+**Notes:**
+
+> Hammers and maces martial arts experience bonus
+
 ---
 
 ### Property `HiddenWeaponsExperience`
@@ -931,7 +979,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HiddenWeaponsExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 暗器
 
@@ -946,6 +994,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HiddenWeaponsExperienceBonus;` |
 
+**Notes:**
+
+> Hidden weapons experience bonus
+
 ---
 
 ### Property `LongRangeExperience`
@@ -957,7 +1009,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LongRangeExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 远程
 
@@ -972,6 +1024,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LongRangeExperienceBonus;` |
 
+**Notes:**
+
+> Long range martial arts experience bonus
+
 ---
 
 ### Property `Comprehension`
@@ -983,7 +1039,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Comprehension;` |
 
-**Source comments:**
+**Notes:**
 
 > 悟性
 
@@ -998,7 +1054,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Aptitude;` |
 
-**Source comments:**
+**Notes:**
 
 > 资质
 
@@ -1013,7 +1069,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData InternalEnergyCirculation;` |
 
-**Source comments:**
+**Notes:**
 
 > 内功循环
 

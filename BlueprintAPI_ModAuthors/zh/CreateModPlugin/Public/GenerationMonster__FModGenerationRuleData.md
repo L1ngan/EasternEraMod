@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EModGenerationRuleType` |
+| C++ 类型 | [EModGenerationRuleType](GenerationMonster__EModGenerationRuleType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EModGenerationRuleType GenerationRule = EModGenerationRuleType::Fixed;` |
 
-**源码注释:**
+**说明:**
 
 > 生成规则类型
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,meta=(EditConditionHides,EditCondition = "GenerationRule == EModGenerationRuleType::Probability")) float BaseProbability = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 基础概率
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,meta=(EditConditionHides,EditCondition = "GenerationRule == EModGenerationRuleType::Probability")) TArray<FModGenerationProbabilityInfluence> ProbabilityInfluence;` |
 
-**源码注释:**
+**说明:**
 
 > 概率的影响配置
 

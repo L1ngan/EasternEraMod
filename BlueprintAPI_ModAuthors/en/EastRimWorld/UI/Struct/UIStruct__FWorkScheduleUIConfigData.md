@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EWorkScheduleType` |
+| C++ type | [EWorkScheduleType](UIStruct__EWorkScheduleType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) EWorkScheduleType WorkScheduleType { EWorkScheduleType::None };` |
 
-**Source comments:**
+**Notes:**
 
 > 工作日程类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 ScheduleScore { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 工作日程对应的分值
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FText Name;` |
 
-**Source comments:**
+**Notes:**
 
 > 显示名称
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TSoftObjectPtr<UTexture2D> BgTexture;` |
 
-**Source comments:**
+**Notes:**
 
 > 背景图片
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TSoftObjectPtr<UTexture2D> SelectedBgTexture;` |
 
-**Source comments:**
+**Notes:**
 
 > 选中的背景图片
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TSoftObjectPtr<UTexture2D> BlockTexture;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应的方块图片
 

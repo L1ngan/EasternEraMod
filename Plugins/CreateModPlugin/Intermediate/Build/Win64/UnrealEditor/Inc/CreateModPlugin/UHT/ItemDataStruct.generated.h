@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FModStackModel ****************************************************
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ItemDataStruct_h_37_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ItemDataStruct_h_37_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModStackModel_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -26,7 +26,7 @@ struct FModStackModel;
 // ********** End ScriptStruct FModStackModel ******************************************************
 
 // ********** Begin ScriptStruct FModEfficiencyByTemperature ***************************************
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ItemDataStruct_h_76_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ItemDataStruct_h_76_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModEfficiencyByTemperature_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -35,7 +35,7 @@ struct FModEfficiencyByTemperature;
 // ********** End ScriptStruct FModEfficiencyByTemperature *****************************************
 
 // ********** Begin ScriptStruct FModGroupCorrespondingAnim ****************************************
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ItemDataStruct_h_100_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ItemDataStruct_h_100_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModGroupCorrespondingAnim_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -44,7 +44,7 @@ struct FModGroupCorrespondingAnim;
 // ********** End ScriptStruct FModGroupCorrespondingAnim ******************************************
 
 // ********** Begin ScriptStruct FModInventoryGeneralData ******************************************
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ItemDataStruct_h_110_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ItemDataStruct_h_110_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModInventoryGeneralData_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;
@@ -54,7 +54,7 @@ struct FModInventoryGeneralData;
 // ********** End ScriptStruct FModInventoryGeneralData ********************************************
 
 // ********** Begin ScriptStruct FModInventoryItem *************************************************
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ItemDataStruct_h_264_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ItemDataStruct_h_264_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModInventoryItem_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModInventoryGeneralData Super;
@@ -64,7 +64,7 @@ struct FModInventoryItem;
 // ********** End ScriptStruct FModInventoryItem ***************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ItemDataStruct_h
+#define CURRENT_FILE_ID FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ItemDataStruct_h
 
 // ********** Begin Enum EModItemQuality ***********************************************************
 #define FOREACH_ENUM_EMODITEMQUALITY(op) \

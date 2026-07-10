@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "UObject/StrongObjectPtr.h"
 #include "Widgets/SCompoundWidget.h"
 #include "ModInfoEditorData.h"
 
@@ -21,9 +22,8 @@ private:
 	TSharedPtr<class IDetailsView> DetailsView;
 	TSharedPtr<class SButton> CreateButton;
 
-	// 数据
-	UPROPERTY()
-	TObjectPtr<UModInfoData> ModInfoData;
+	// 数据（Slate 类不参与反射，UPROPERTY 不生效；用 TStrongObjectPtr 防止编辑器 GC 回收后悬空）
+	TStrongObjectPtr<UModInfoData> ModInfoData;
 
 	// 回调函数
 	FReply OnCreateButtonClicked();

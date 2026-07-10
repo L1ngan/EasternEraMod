@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FGuid MoveInfoGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 移动信息的guid
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FGuid> CharacterGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色GUID
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FGuid StartPlaceGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 起始地点GUID
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FVector StartPosition = FVector::ZeroVector;` |
 
-**Source comments:**
+**Notes:**
 
 > 起始地点GUID
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FGuid EndPlaceGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 结束地点
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FVector EndPosition = FVector::ZeroVector;` |
 
-**Source comments:**
+**Notes:**
 
 > 结束位置
 
@@ -104,12 +104,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EWorldMoveState` |
+| C++ type | [EWorldMoveState](WorldStruct__EWorldMoveState.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EWorldMoveState WorldMoveState = EWorldMoveState::GoToPlace;` |
 
-**Source comments:**
+**Notes:**
 
 > 行走状态
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float TotalDistance = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 总距离
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FVector CurrentPosition = FVector::ZeroVector;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前位置
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FVector> MovePath;` |
 
-**Source comments:**
+**Notes:**
 
 > 移动的路径
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float CurMoveTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前单程移动时间
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int CurrentPathIndex = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前移动路径中的下标
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bStaying = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否正在停留
 
@@ -214,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float TotalNeedTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 总共需要的时间
 
@@ -229,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float TotalCostTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 总共耗费时间
 
@@ -244,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float CurSingleMovePathTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前单个点之间的移动时间
 
@@ -259,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FGuid EnterPlaceGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 进入地点
 
@@ -274,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bInitNavigationDone = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否初始化导航结束
 
@@ -289,7 +289,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<FName,FItemSimpleData> CarryingResources;` |
 
-**Source comments:**
+**Notes:**
 
 > 携带的物资
 
@@ -304,7 +304,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FGuid ParameterGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 携带的参数 根据不同的类型提供不同的参数类型
 
@@ -319,7 +319,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 TeamID = 255;` |
 
-**Source comments:**
+**Notes:**
 
 > TeamID
 
@@ -334,9 +334,24 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FWorldMoveInfoPreset WorldMoveInfoPreset;` |
 
-**Source comments:**
+**Notes:**
 
 > 移动的预设信息
+
+---
+
+### Property `bShowOnWorldMap`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bShowOnWorldMap = true;` |
+
+**Notes:**
+
+> 是否在大地图中显示(false=不绘制图标/不生成可见 move actor; 涌现论剑大会参赛弟子用)
 
 ---
 
@@ -349,7 +364,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bCompleteMoveTarget = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否完成了移动目标
 
@@ -359,12 +374,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ETransportationType` |
+| C++ type | [ETransportationType](../ERW_Enumerations__ETransportationType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) ETransportationType TransportationType = ETransportationType::Walking;` |
 
-**Source comments:**
+**Notes:**
 
 > 使用的交通工具类型
 
@@ -379,7 +394,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FGuid TransportationBuildingGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 交通工具建筑GUID（如果使用交通工具）
 
@@ -394,7 +409,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 TransportationSlotIndex = INDEX_NONE;` |
 
-**Source comments:**
+**Notes:**
 
 > 交通工具的下标索引（如果使用交通工具）
 

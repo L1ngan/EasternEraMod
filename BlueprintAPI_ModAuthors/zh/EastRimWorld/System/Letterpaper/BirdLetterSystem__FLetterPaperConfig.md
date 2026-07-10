@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName DialogueId;` |
 
-**源码注释:**
+**说明:**
 
 > id
 
@@ -29,12 +29,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ELetterDialogueType` |
+| C++ 类型 | [ELetterDialogueType](BirdLetterSystem__ELetterDialogueType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ELetterDialogueType DialogueType = ELetterDialogueType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 类型
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText DialogueTitle;` |
 
-**源码注释:**
+**说明:**
 
 > 信笺标题
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "LetterBase") TArray<UDialogue*> Dialogue;` |
 
-**源码注释:**
+**说明:**
 
 > 对应对话
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "LetterBase") int32 Probability = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 概率
 

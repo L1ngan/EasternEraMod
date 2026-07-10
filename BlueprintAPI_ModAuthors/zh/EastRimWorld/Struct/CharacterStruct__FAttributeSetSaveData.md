@@ -19,6 +19,10 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) float BaseValue = 0.f;` |
 
+**说明:**
+
+> 属性的基础值（存档用）
+
 ---
 
 ### 属性 `CurrentValue`
@@ -29,5 +33,9 @@
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) float CurrentValue = 0.f;` |
+
+**说明:**
+
+> 属性的当前值（存档用）
 
 ---

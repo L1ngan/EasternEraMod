@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Base character class integrating GAS ability system, team, GOAP, smart object and Savior save interfaces; common parent of human, animal and summons characters
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnDrugUseChanged OnDrugUseChanged;` |
 
+**Notes:**
+
+> Delegate broadcast when the character's drug use changes (passes the drug ID)
+
 ---
 
 ### Property `OnCharacterTemaChanged`
@@ -27,6 +33,10 @@
 | Reflection specifiers | BlueprintAssignable |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FCharacterTemaChanged OnCharacterTemaChanged;` |
+
+**Notes:**
+
+> Delegate broadcast when the character's team changes
 
 ---
 
@@ -39,6 +49,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FCharacterNameChange OnCharacterNameChange;` |
 
+**Notes:**
+
+> Delegate broadcast when the character's name changes (passes name and first name)
+
 ---
 
 ### Property `PickInventoryItem`
@@ -49,6 +63,10 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) UInventoryItemInstance * PickInventoryItem = nullptr;` |
+
+**Notes:**
+
+> The inventory item instance currently picked up or carried
 
 ---
 
@@ -61,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool bSelectState = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是选中状态
 
@@ -76,9 +94,24 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool bHoveringState = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是悬浮状态
+
+---
+
+### Property `bIsTestActor`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(Transient,BlueprintReadOnly) bool bIsTestActor = false;` |
+
+**Notes:**
+
+> 技能/武学测试沙盒生成的临时角色标记：瞬态，不存档。置真时 IsSaveObject 直接返回 false，且不注册世界。
 
 ---
 
@@ -91,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) bool bRegisterWorld = false;` |
 
-**Source comments:**
+**Notes:**
 
 > *********************************SaveGame Start*******************************
 > 是否注册到世界中
@@ -107,7 +140,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) FCharacterSaveData CharacterSaveData;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色存储的信息 不是最新 如需取值使用其他方式
 
@@ -122,7 +155,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) FName CharacterID;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色的信息ID
 
@@ -137,7 +170,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame) FText FirstName;` |
 
-**Source comments:**
+**Notes:**
 
 > 姓
 
@@ -152,7 +185,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame) FText Name;` |
 
-**Source comments:**
+**Notes:**
 
 > 名字
 
@@ -167,7 +200,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) FGuid MonsterNestGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 当为怪物时属于哪个怪物巢穴
 
@@ -182,7 +215,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float MovingRange = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 移动范围
 
@@ -192,12 +225,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EStorageSpace` |
+| C++ type | [EStorageSpace](../ERW_Enumerations__EStorageSpace.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) EStorageSpace WorldSpaceType;` |
 
-**Source comments:**
+**Notes:**
 
 > *********************************SaveGame End*******************************
 > 室内室外屋檐下
@@ -208,12 +241,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<ECommonButtonType,bool>` |
+| C++ type | TMap<[ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md),bool> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<ECommonButtonType,bool> ButtonOperationState;` |
 
-**Source comments:**
+**Notes:**
 
 > 按钮相关的功能
 
@@ -228,7 +261,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) bool bOpenDanTian = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否开启丹田
 
@@ -243,7 +276,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool bCanOpenDanTian = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否可以开启
 
@@ -258,7 +291,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FName,FCarryWeaponsInfo> CarryWeapons;` |
 
-**Source comments:**
+**Notes:**
 
 > 拿在手上的武器
 
@@ -273,7 +306,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,Category = "CharacterData") FInstancedStruct EastRimWorldCharacterData;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色信息
 
@@ -288,7 +321,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnCurrentMoodValueChanged OnCurrentMoodChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前心情值变化时
 
@@ -303,7 +336,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnMoodTargetValueChanged OnMoodTargetValueChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 目标心情值变化时
 
@@ -318,6 +351,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnCharacterGrowUp OnCharacterGrowUp;` |
 
+**Notes:**
+
+> Delegate broadcast when the character grows up (evolves/respawns)
+
 ---
 
 ### Property `OnSuffixChanged`
@@ -328,6 +365,10 @@
 | Reflection specifiers | BlueprintAssignable |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnSuffixChanged OnSuffixChanged;` |
+
+**Notes:**
+
+> Delegate broadcast when the name suffix changes (passes the suffix text)
 
 ---
 
@@ -340,7 +381,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TArray<FName> CharacteristicInfos;` |
 
-**Source comments:**
+**Notes:**
 
 > 拥有的特性
 
@@ -355,9 +396,24 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame) TMap<FName,int32> ItemDrugUsed;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色使用过的药品记录（用于计算耐药性）
+
+---
+
+### Property `ConsumablePermanentEffects`
+
+| Field | Details |
+|------|------|
+| C++ type | `TMap<FName,int32>` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TMap<FName,int32> ConsumablePermanentEffects;` |
+
+**Notes:**
+
+> 耗材永久属性效果获得记录（key=耗材效果ID value=已获得次数 相同id的永久属性效果有获取上限 经FCharacterSaveData存档 无需SaveGame）
 
 ---
 
@@ -370,7 +426,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) FGuid ReadingBookGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 正在阅读的书籍ID
 
@@ -385,7 +441,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) FGuid EatFoodGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 正在吃的食物ID
 
@@ -400,6 +456,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) AERW_GameModeBase* GameModeBase { nullptr };` |
 
+**Notes:**
+
+> Cached reference to the game mode (AERW_GameModeBase)
+
 ---
 
 ### Property `WorldPlace`
@@ -410,6 +470,10 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AWorldPlace> WorldPlace;` |
+
+**Notes:**
+
+> Reference to the world place (AWorldPlace) the character belongs to
 
 ---
 
@@ -422,6 +486,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TObjectPtr<UERW_GameInstanceBase> GameInstance;` |
 
+**Notes:**
+
+> Cached reference to the game instance (UERW_GameInstanceBase)
+
 ---
 
 ### Property `CurrentTemperatureIntervalTime`
@@ -433,7 +501,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) float CurrentTemperatureIntervalTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前处于温度区间时间
 
@@ -443,12 +511,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECharacterTemperatureStateType` |
+| C++ type | [ECharacterTemperatureStateType](../Struct/CharacterStruct__ECharacterTemperatureStateType.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) ECharacterTemperatureStateType CharacterTemperatureStateType = ECharacterTemperatureStateType::Normal;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前的角色温度状态
 
@@ -463,7 +531,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) float TemperatureStateUpdateInterval = 40.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 温度更新间隔
 
@@ -478,7 +546,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) float CharacterHungryStateUpdateInterval = 5.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 饥饿状态更新间隔
 
@@ -493,7 +561,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FTimerHandle CharacterHungry0TimerHandle;` |
 
-**Source comments:**
+**Notes:**
 
 > 饥饿度为0的计时器
 
@@ -508,7 +576,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) float CurrentHungryIntervalTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前处于饥饿状态的时间
 
@@ -523,7 +591,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FName CurHungryId;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前饥饿状态
 
@@ -538,7 +606,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool ProhibitTreatSelf = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否禁止治疗自己
 
@@ -553,7 +621,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool bCanSelect = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否可以被选中
 
@@ -568,7 +636,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FVector SpawnPoint;` |
 
-**Source comments:**
+**Notes:**
 
 > 出生点位置
 
@@ -583,18 +651,22 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool NutritionTriggerFlag;` |
 
+**Notes:**
+
+> Flag indicating whether the nutrition state has been triggered
+
 ---
 
 ### Property `BattlefieldRolesType`
 
 | Field | Details |
 |------|------|
-| C++ type | `EBattlefieldRolesType` |
+| C++ type | [EBattlefieldRolesType](../Struct/CommonEnum__EBattlefieldRolesType.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) EBattlefieldRolesType BattlefieldRolesType = EBattlefieldRolesType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 战场英雄类型
 
@@ -609,7 +681,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "ERW|UI") bool bHideStateBarName = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 状态条UI是否隐藏名字（仅隐藏名字，不影响血条）
 
@@ -624,6 +696,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) bool bIsDeath = false;` |
 
+**Notes:**
+
+> Whether the character is dead
+
 ---
 
 ### Property `HealthComponent`
@@ -634,6 +710,10 @@
 | Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Character" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Character", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UEastRimWorldHealthComponent> HealthComponent;` |
+
+**Notes:**
+
+> Character health component
 
 ---
 
@@ -646,6 +726,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Character", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UEastRimWorldCombatComponent> CombatComponent;` |
 
+**Notes:**
+
+> Character combat component
+
 ---
 
 ### Property `GrowUpComponent`
@@ -656,6 +740,25 @@
 | Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Character" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Character", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UEastRimWorldGrowUpComponent> GrowUpComponent;` |
+
+**Notes:**
+
+> Character grow-up (growth) component
+
+---
+
+### Property `AreaAssignmentComponent`
+
+| Field | Details |
+|------|------|
+| C++ type | TObjectPtr<[UERW_AreaAssignmentComponent](../System/AreaControl/ERW_AreaAssignmentComponent__UERW_AreaAssignmentComponent.md)> |
+| Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Area" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Area", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UERW_AreaAssignmentComponent> AreaAssignmentComponent;` |
+
+**Notes:**
+
+> 区域控制：弟子归属组件（记录所属区/构建地理过滤器/饥饿越区状态机）
 
 ---
 
@@ -668,6 +771,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Character", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UCommonBuffComponent> CommonBuffComponent;` |
 
+**Notes:**
+
+> Common buff component
+
 ---
 
 ### Property `InjuryBuffComponent`
@@ -678,6 +785,10 @@
 | Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Character" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Character", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UInjuryBuffComponent> InjuryBuffComponent;` |
+
+**Notes:**
+
+> Injury buff component
 
 ---
 
@@ -690,6 +801,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Character") TObjectPtr<USmartObjectComponent> SmartObjectComponent;` |
 
+**Notes:**
+
+> Smart object component
+
 ---
 
 ### Property `CharacterSpringArm`
@@ -700,6 +815,10 @@
 | Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Character" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Character", Meta = (AllowPrivateAccess = "true")) TObjectPtr<USpringArmComponent> CharacterSpringArm;` |
+
+**Notes:**
+
+> Spring arm component for the character camera
 
 ---
 
@@ -712,6 +831,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Character", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UCameraComponent> CharacterCamera;` |
 
+**Notes:**
+
+> Character camera component
+
 ---
 
 ### Property `AIPerceptionStimuliSource`
@@ -722,6 +845,10 @@
 | Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|AI" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|AI", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UAIPerceptionStimuliSourceComponent> AIPerceptionStimuliSource;` |
+
+**Notes:**
+
+> AI perception stimuli source component that makes the character detectable by the AI perception system
 
 ---
 
@@ -734,7 +861,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) float ButcherWorkLoad = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前屠宰工作量
 
@@ -749,7 +876,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame) FCharacterDeathInformation CharacterDamageInformation;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色最后受到英雄伤害信息
 
@@ -764,7 +891,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame) FCharacterDeathInformation AnyDamageInformation;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色最后受到伤害的信息
 
@@ -779,7 +906,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) FGuid CarryActorGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 正在搬运的对象
 
@@ -794,7 +921,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) AActor * CarryActor = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 正在搬运的actor
 
@@ -809,7 +936,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite) TArray<FVector> PatrolLocations;` |
 
-**Source comments:**
+**Notes:**
 
 > 巡逻动物的巡逻点集合
 
@@ -824,7 +951,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TArray<FVector> CurPatrolLocations;` |
 
-**Source comments:**
+**Notes:**
 
 > 巡逻动物当前正在添加的巡逻点集合
 
@@ -839,7 +966,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TArray<AActor*> PatrolPointActors;` |
 
-**Source comments:**
+**Notes:**
 
 > 临时创建的用于显示巡逻点的Actor（在巡逻点选取结束后删除）
 
@@ -854,7 +981,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) FGuid ProtectTargetGuid = FGuid();` |
 
-**Source comments:**
+**Notes:**
 
 > 守护机关人的守护目标de GUID
 
@@ -869,7 +996,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) AEastRimWorldCharacter* ProtectTarget;` |
 
-**Source comments:**
+**Notes:**
 
 > 守护机关人的守护目标
 
@@ -884,7 +1011,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) TArray<FName> CantKnockDownOrgan;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗中不会导致晕倒的部位
 
@@ -899,7 +1026,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadWrite,SaveGame) FGenericTeamId PrisonerBeforeTeamID;` |
 
-**Source comments:**
+**Notes:**
 
 > 囚犯之前的TeamID
 
@@ -914,7 +1041,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadWrite,SaveGame) FGuid PrisonBuildingGuid = FGuid();` |
 
-**Source comments:**
+**Notes:**
 
 > 囚犯所属监狱设施Guid
 
@@ -929,7 +1056,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) FGuid PrisonerArrestedByGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前被谁押送
 
@@ -944,7 +1071,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) AEastRimWorldCharacter* PrisonerArrestedBy;` |
 
-**Source comments:**
+**Notes:**
 
 > 押解此囚犯的角色
 
@@ -959,7 +1086,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) float TortureColdDown = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 拷打CD
 
@@ -974,6 +1101,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) FTimerHandle TortureTimerHandle;` |
 
+**Notes:**
+
+> Timer handle for the torture cooldown
+
 ---
 
 ### Property `RecruitColdDown`
@@ -985,7 +1116,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) float RecruitColdDown = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 招募CD
 
@@ -1000,6 +1131,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) FTimerHandle RecruitTimerHandle;` |
 
+**Notes:**
+
+> Timer handle for the recruit cooldown
+
 ---
 
 ### Property `LoyaltyValue`
@@ -1011,7 +1146,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) float LoyaltyValue = 100.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 忠诚度
 
@@ -1026,7 +1161,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnLoyaltyChanged OnLoyaltyChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 忠诚度变化委托
 
@@ -1041,7 +1176,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) bool IsRedemption = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否被赎回
 
@@ -1056,7 +1191,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) float RedeemValue = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 赎回价值
 
@@ -1071,7 +1206,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) bool bSendFoodAction = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否已经创建送饭行为
 
@@ -1086,7 +1221,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) float SendPrisonerFoodColdDown = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 送饭CD
 
@@ -1101,6 +1236,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) FTimerHandle SendPrisonerFoodTimerHandle;` |
 
+**Notes:**
+
+> Timer handle for the prisoner food-delivery cooldown
+
 ---
 
 ### Property `DialogueRandOptionRecords`
@@ -1112,9 +1251,24 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame,VisibleAnywhere) TMap<FName,FNameIDArray> DialogueRandOptionRecords;` |
 
-**Source comments:**
+**Notes:**
 
 > 对话随机选项记录<InDialogueInfoID,OptionIDs>
+
+---
+
+### Property `CharacterRelationLedger`
+
+| Field | Details |
+|------|------|
+| C++ type | [FRelationLedger](../WorldSystem/RelationLedgerTypes__FRelationLedger.md) |
+| Reflection specifiers | BlueprintReadWrite, Category="RelationLedger" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, SaveGame, EditAnywhere, Category = "RelationLedger") FRelationLedger CharacterRelationLedger;` |
+
+**Notes:**
+
+> Agent 工作流 PR-003: 关系账本 (恩/仇/情 三轴 + Tags)
 
 ---
 
@@ -1131,6 +1285,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "ERW|Character") UEastRimWorldAbilitySystemComponent* GetEastRimWorldAbilitySystemComponent();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns the character's ability system component (UEastRimWorldAbilitySystemComponent)
 
 ---
 
@@ -1150,7 +1308,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过标签取消能力
 
@@ -1168,9 +1326,28 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取阵营
+
+---
+
+### Function `IsNeutralBattleTeam`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintPure, Category="Team" |
+| Return type | `bool` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintPure, Category = "Team") bool IsNeutralBattleTeam() const { return GetGenericTeamId().GetId() == 255; }`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> [中立方名字白色] 是否为占旗战「中立」阵营(TeamID==255=AWorldSectBattleManager::SectBattleNeutralTeamID)。
+> 供头顶名 Widget(WBP_CharacterStateBar) Branch：中立→名字白色；与战斗态度解耦(中立仍对攻守双方 Hostile，两边都打)。
 
 ---
 
@@ -1185,6 +1362,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) virtual FGameplayTeamInfo GetTeamInfo() override;`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns the character's team info (FGameplayTeamInfo)
 
 ---
 
@@ -1205,6 +1386,37 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Sets the character's first name and name and broadcasts the name change event
+
+---
+
+### Function `MulticastNameChangeAndPersist`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `InFirstName` | `FText` |
+| `InName` | `FText` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void MulticastNameChangeAndPersist(FText InFirstName, FText InName);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 持久化改名：在 MulticastNameChange(改运行时 EastRimWorldCharacterData + 广播,保头顶显示)基础上，
+> 额外把名字写入本角色 CharacterSaveData.CharacterFirstName/Name。
+> 用途：门派战旗子刷出的怪(“{门派}外门弟子”/“江湖人士”)在复活重建(SpawnCharacterForBattleTeam →
+> InitializeCharacterBySaveData → LoadWorldCharacterData 会用存档名回填运行时)后仍能取到正确名字，
+> 避免击杀/被击杀/复活 feed 里名字为空。不改 MulticastNameChange 的全局语义。
+
 ---
 
 ### Function `GetGameModeBase`
@@ -1218,6 +1430,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) AERW_GameModeBase * GetGameModeBase();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns the game mode (AERW_GameModeBase)
 
 ---
 
@@ -1237,7 +1453,7 @@
 
 **Usage:** **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 设置角色碰撞通道
 
@@ -1259,7 +1475,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > Begins the death sequence for the character (disables collision, disables movement, etc...)
 
@@ -1281,7 +1497,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 应用服饰外观（仅改变外观，不改变服饰装备和效果）
 
@@ -1303,7 +1519,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 被击倒
 
@@ -1325,6 +1541,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Handles the end of the character's knock-down state
+
 ---
 
 ### Function `StationDeathFinished`
@@ -1339,7 +1559,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 驻地死亡完成
 
@@ -1357,7 +1577,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "OnDeathFinished".
 
-**Source comments:**
+**Notes:**
 
 > Called when the death sequence for the character has completed
 
@@ -1374,6 +1594,32 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure, Category = "ERW|Character") bool GetSelectState() const { return bSelectState; }`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Returns whether the character is currently selected
+
+---
+
+### Function `SetTestActor`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `bInIsTestActor` | `bool` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetTestActor(bool bInIsTestActor) { bIsTestActor = bInIsTestActor; if (bInIsTestActor) { bRegisterWorld = false; } }`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 标记为测试临时角色（同时关闭世界注册）。测试沙盒生成的所有角色/召唤物/木桩都应调用
 
 ---
 
@@ -1393,6 +1639,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Slaughters this character and returns dropped items of all types based on the slaughter value
+
 ---
 
 ### Function `GetCharacterData`
@@ -1407,7 +1657,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > ~ ICharacterInterface
 > 获取角色信息
@@ -1430,6 +1680,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Sets the character data (character info as FInstancedStruct)
+
 ---
 
 ### Function `SetCanSelect`
@@ -1448,7 +1702,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置能否选中
 
@@ -1470,7 +1724,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 弹出UI信息改变
 
@@ -1492,7 +1746,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获得当前工作日程名称
 
@@ -1514,7 +1768,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算屠宰工作量
 
@@ -1532,7 +1786,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 搜索尸体完成
 
@@ -1550,6 +1804,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Handles hunt completion and returns whether it succeeded
+
 ---
 
 ### Function `PickItem`
@@ -1563,13 +1821,13 @@
 | Name | Type |
 |--------|------|
 | `InventoryItemInfo` | `FInstancedStruct` |
-| `CharacterBehaviorState` | `ECharacterBehaviorState` |
+| `CharacterBehaviorState` | [ECharacterBehaviorState](../Struct/CommonEnum__ECharacterBehaviorState.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent,BlueprintCallable) void PickItem(FInstancedStruct InventoryItemInfo,ECharacterBehaviorState CharacterBehaviorState);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 抱或拿起一个道具
 
@@ -1586,13 +1844,13 @@
 | Name | Type |
 |--------|------|
 | `InventoryItemInfo` | `FInstancedStruct` |
-| `CharacterBehaviorState` | `ECharacterBehaviorState` |
+| `CharacterBehaviorState` | [ECharacterBehaviorState](../Struct/CommonEnum__ECharacterBehaviorState.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent,BlueprintCallable) void PlayAnimItem(FInstancedStruct InventoryItemInfo,ECharacterBehaviorState CharacterBehaviorState);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 播放物品对应的动画
 
@@ -1610,7 +1868,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 移除抱或拿起的道具
 
@@ -1628,7 +1886,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 停止当前的蒙太奇
 
@@ -1646,7 +1904,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 冻结当前动画
 
@@ -1664,7 +1922,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 解除动画冻结
 
@@ -1687,7 +1945,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过技能id获得能力
 
@@ -1709,7 +1967,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除对应技能id的能力
 
@@ -1731,7 +1989,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获得新的武器
 
@@ -1753,7 +2011,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除武器
 
@@ -1775,7 +2033,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 手持武器
 
@@ -1797,7 +2055,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 收起武器
 
@@ -1815,7 +2073,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 初始化角色行为状态栏
 
@@ -1837,7 +2095,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 刷新状态条名字显示（蓝图里只处理名字控件可见性，不影响血条）
 
@@ -1861,7 +2119,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 重置角色血条颜色
 
@@ -1879,7 +2137,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化友方GWO组件
 
@@ -1897,7 +2155,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除友方GWO组件
 
@@ -1914,14 +2172,14 @@
 | Name | Type |
 |--------|------|
 | `InCharacterID` | `const FName &` |
-| `InCharacterType` | `ECharacterType` |
+| `InCharacterType` | [ECharacterType](../Struct/CommonEnum__ECharacterType.md) |
 | `TeamID` | `uint8` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void InitializeCharacterByID(const FName & InCharacterID,ECharacterType InCharacterType,uint8 TeamID);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 动态生成时通过id初始化角色
 
@@ -1945,7 +2203,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 生成角色
 > 
@@ -1953,6 +2211,64 @@
 > / @param InCharacterType 角色的类型
 > / @param TeamID 角色的阵营
 > / @param bRegisterWorld 是否需要注册到世界中 用于跨关卡
+
+---
+
+### Function `K2_InitializeCharacterBySaveData`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `InCharacterSaveData` | const [FCharacterSaveData](../WorldSystem/WorldCharacterData__FCharacterSaveData.md)& |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,DisplayName="InitializeCharacterBySaveData") void K2_InitializeCharacterBySaveData(const FCharacterSaveData& InCharacterSaveData);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Initializes the character from character save data (Blueprint-callable version)
+
+---
+
+### Function `RefreshCharacterSaveData`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void RefreshCharacterSaveData();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 刷新角色存档数据(从当前角色状态更新CharacterSaveData,含UI显示临时属性)
+
+---
+
+### Function `RefreshUIDisplayAttributes`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void RefreshUIDisplayAttributes();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 只刷新UI需要显示的临时属性(只更新CharacterSaveData.UIDisplayAttributes)
 
 ---
 
@@ -1973,7 +2289,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 动态生成时通过角色信息初始化
 
@@ -1995,7 +2311,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 重新生成角色时初始化（目前用于进化）
 
@@ -2017,7 +2333,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获得出生所在的盒子位置
 
@@ -2035,7 +2351,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获得闲逛范围
 
@@ -2053,7 +2369,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 身体已经腐烂
 
@@ -2075,7 +2391,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 添加新的特性
 
@@ -2097,7 +2413,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除特性
 
@@ -2115,7 +2431,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 开启丹田
 
@@ -2133,7 +2449,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 注册actor
 
@@ -2151,7 +2467,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 注销actor
 
@@ -2173,7 +2489,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算角色的温度状态
 
@@ -2195,7 +2511,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算角色的饥饿状态
 
@@ -2212,13 +2528,13 @@
 | Name | Type |
 |--------|------|
 | `TipsText` | `const FText &` |
-| `(unnamed / type only)` | `ECharacterHeadTipType TipType = ECharacterHeadTipType::Type1` |
+| `(unnamed / type only)` | [ECharacterHeadTipType](../ERW_Enumerations__ECharacterHeadTipType.md) TipType = [ECharacterHeadTipType](../ERW_Enumerations__ECharacterHeadTipType.md)::Type1 |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void ShowTipsInCharacterHead(const FText & TipsText,ECharacterHeadTipType TipType = ECharacterHeadTipType::Type1);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 显示提示在角色头上
 
@@ -2235,13 +2551,13 @@
 | Name | Type |
 |--------|------|
 | `TipsText` | `const FText &` |
-| `(unnamed / type only)` | `ECharacterHeadTipType TipType= ECharacterHeadTipType::Type1` |
+| `(unnamed / type only)` | [ECharacterHeadTipType](../ERW_Enumerations__ECharacterHeadTipType.md) TipType= [ECharacterHeadTipType](../ERW_Enumerations__ECharacterHeadTipType.md)::Type1 |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent,DisplayName="ShowTipsInCharacterHead") void k2_ShowTipsInCharacterHead(const FText & TipsText,ECharacterHeadTipType TipType= ECharacterHeadTipType::Type1);`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 显示提示在角色头上
 
@@ -2259,7 +2575,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 角色死亡删除 如果注册到世界中 则世界数据也删除
 
@@ -2281,7 +2597,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 转化为玩家阵营
 
@@ -2303,7 +2619,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 添加喊话组件
 
@@ -2321,7 +2637,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 移除喊话组件
 
@@ -2339,7 +2655,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 是否是玩家阵营
 
@@ -2357,7 +2673,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 是否死亡
 
@@ -2368,12 +2684,16 @@
 | Field | Details |
 |------|------|
 | Reflection specifiers | BlueprintCallable |
-| Return type | `ECharacterType` |
+| Return type | [ECharacterType](../Struct/CommonEnum__ECharacterType.md) |
 | Parameters | (none) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) ECharacterType GetCharacterType();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns the character type (ECharacterType)
 
 ---
 
@@ -2393,7 +2713,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置控制的角色和物品进行交互
 
@@ -2411,31 +2731,9 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 敌人获取出生点
-
----
-
-### Function `GetControlEffectAnimMontageByTag`
-
-| Field | Details |
-|------|------|
-| Reflection specifiers | BlueprintCallable |
-| Return type | `UAnimMontage *` |
-| Parameters | see table below |
-
-| Name | Type |
-|--------|------|
-| `AnimTag` | `const FGameplayTag &` |
-
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) UAnimMontage * GetControlEffectAnimMontageByTag(const FGameplayTag & AnimTag);`
-
-**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
-
-**Source comments:**
-
-> 通过标签获取蒙太奇
 
 ---
 
@@ -2451,7 +2749,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有的药物抗性
 
@@ -2473,7 +2771,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询某种药物的耐药性
 
@@ -2496,7 +2794,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 吃东西后，扣除物品数量，并出发药品的属性增加效果
 
@@ -2514,6 +2812,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Returns the character chat component (null in the base class; overridden by subclasses)
+
 ---
 
 ### Function `IsCharacterChatting`
@@ -2528,7 +2830,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 角色是否正在闲聊
 
@@ -2544,13 +2846,13 @@
 
 | Name | Type |
 |--------|------|
-| `InWorldSpaceType` | `const EStorageSpace&` |
+| `InWorldSpaceType` | const [EStorageSpace](../ERW_Enumerations__EStorageSpace.md)& |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetWorldSpaceType(const EStorageSpace& InWorldSpaceType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置角色所处的空间类型
 
@@ -2568,7 +2870,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 是否是强力角色
 
@@ -2585,13 +2887,13 @@
 | Name | Type |
 |--------|------|
 | `NewCharacterID` | `FName` |
-| `CharacterType` | `ECharacterType` |
+| `CharacterType` | [ECharacterType](../Struct/CommonEnum__ECharacterType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CharacterGrowUp(FName NewCharacterID , ECharacterType CharacterType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 角色进化后重新初始化
 
@@ -2613,7 +2915,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置上一次伤害的人
 
@@ -2635,7 +2937,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置上一次伤害的来源
 
@@ -2657,7 +2959,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 播放开门动画
 
@@ -2674,6 +2976,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent, meta=(DisplayName="PlayPutdownAnimation")) void K2_PlayPutdownAnimation();`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "PlayPutdownAnimation".
+
+**Notes:**
+
+> Blueprint event: plays the put-down animation
 
 ---
 
@@ -2693,7 +2999,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置角色停止所有动作
 
@@ -2716,7 +3022,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置正在搬运的对象
 
@@ -2734,7 +3040,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 动物巡逻点选点结束
 
@@ -2757,7 +3063,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 动物添加巡逻点
 
@@ -2775,7 +3081,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 动物清空巡逻点
 
@@ -2793,7 +3099,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 动物巡逻点选点结束
 
@@ -2815,7 +3121,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置守卫对象
 
@@ -2837,7 +3143,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获得属性值的百分比
 
@@ -2855,7 +3161,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取角色当前环境修炼的额外值
 
@@ -2878,7 +3184,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取角色当前心情修炼的额外值
 
@@ -2896,7 +3202,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取角色资质修炼转换效率
 
@@ -2919,7 +3225,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取角色当前五行修炼的额外值
 
@@ -2937,7 +3243,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取总共的修炼额外数值
 
@@ -2960,9 +3266,33 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取指定技能的冷却时间
+
+---
+
+### Function `GetAbilityCooldownFromPrecomputedBase`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="Ability" |
+| Return type | `float` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `BaseCooldownSeconds` | `float` |
+| `CooldownTags` | `const FGameplayTagContainer&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Ability") float GetAbilityCooldownFromPrecomputedBase(float BaseCooldownSeconds, const FGameplayTagContainer& CooldownTags);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 在已确定的「表基础+武学词条」冷却秒数上，仅叠加装备武学 ReduceCooldown 等减 CD。
+> 用于与 ChangeAbilityParam 冷却词条衔接；一般蓝图仍可用 GetAbilityCooldown。
 
 ---
 
@@ -2983,7 +3313,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取指定技能的冷却时间
 
@@ -3006,7 +3336,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建替身
 
@@ -3024,7 +3354,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 销毁
 
@@ -3042,7 +3372,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取替身
 
@@ -3064,7 +3394,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置名字后缀
 
@@ -3082,7 +3412,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > ------------------囚犯------------------------------------------
 
@@ -3100,6 +3430,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Creates and returns a specified arrest (escort) GOAP action
+
 ---
 
 ### Function `RemoveArrestAction`
@@ -3114,7 +3448,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除押解行为
 
@@ -3136,7 +3470,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置拘捕到的囚犯
 
@@ -3154,7 +3488,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建被押解行为
 
@@ -3172,7 +3506,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除被押解行为
 
@@ -3194,7 +3528,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置囚犯被谁押送
 
@@ -3212,7 +3546,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 囚犯被关押
 
@@ -3230,7 +3564,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 囚犯被处决
 
@@ -3252,7 +3586,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 囚犯被拷打
 
@@ -3274,7 +3608,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 囚犯被招募
 
@@ -3296,7 +3630,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建招募囚犯的行为
 
@@ -3314,7 +3648,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除招募囚犯的行为
 
@@ -3332,6 +3666,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Handles the prisoner's death
+
 ---
 
 ### Function `ClearPrisonerBuildingBelong`
@@ -3345,6 +3683,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void ClearPrisonerBuildingBelong();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Clears the prisoner's association with its owning prison building
 
 ---
 
@@ -3360,7 +3702,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 拷打CD
 
@@ -3378,6 +3720,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Registers the cooldown timer for sending food to the prisoner
+
 ---
 
 ### Function `RemoveSendPrisonerFoodAction`
@@ -3391,6 +3737,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void RemoveSendPrisonerFoodAction();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Removes the GOAP action for sending food to the prisoner
 
 ---
 
@@ -3410,6 +3760,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Returns whether the character can use an item with the given gameplay tag
+
 ---
 
 ### Function `AcceptNPCTask`
@@ -3427,6 +3781,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void AcceptNPCTask(const FCommonTaskInfo& InTaskInfo);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Accepts an NPC task with the given task info
 
 ---
 
@@ -3447,6 +3805,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Adds a dialogue random option record (dialogue info ID to option ID)
+
 ---
 
 ### Function `RestCharacterRandomLocation`
@@ -3461,7 +3823,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 重置角色到随机位置
 
@@ -3483,6 +3845,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Sets the building the character idles around (e.g. feeding trough or charging post)
+
 ---
 
 ### Function `GetIdleAroundBuildingLocation`
@@ -3501,8 +3867,26 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 食槽或充能桩等
+
+---
+
+### Function `GetFullName`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintPure |
+| Return type | `FText` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintPure) FText GetFullName();`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Returns the character's full name (first name combined with given name)
 
 ---

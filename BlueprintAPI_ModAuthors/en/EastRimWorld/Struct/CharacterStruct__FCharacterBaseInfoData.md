@@ -19,7 +19,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() FName CharacterID;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色id
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECharacterType` |
+| C++ type | [ECharacterType](CommonEnum__ECharacterType.md) |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() ECharacterType CharacterType = ECharacterType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色类型
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() FGuid CharacterGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色Guid
 

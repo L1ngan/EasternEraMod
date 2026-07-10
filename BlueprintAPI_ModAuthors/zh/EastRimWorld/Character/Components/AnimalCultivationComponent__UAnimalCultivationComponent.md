@@ -21,7 +21,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnCultivationExperienceChanged OnCultivationExperienceChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 修炼经验变化事件
 
@@ -36,7 +36,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnCultivationLevelChanged OnCultivationLevelChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 修炼等级变化事件
 
@@ -51,7 +51,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) int32 CultivationLevel = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 当前修炼等级
 
@@ -66,7 +66,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) float CurrentExperience = 0.0f;` |
 
-**源码注释:**
+**说明:**
 
 > 当前修炼经验
 
@@ -81,7 +81,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) float RequiredExperienceForNextLevel = 0.0f;` |
 
-**源码注释:**
+**说明:**
 
 > 当前等级所需经验（从等级表获取）
 
@@ -96,7 +96,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FName CultivationConfigID;` |
 
-**源码注释:**
+**说明:**
 
 > 修炼配置ID（关联FAnimalCultivationConfig配置表）
 
@@ -111,7 +111,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) int32 MaxCultivationLevel = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 最大修炼等级（从配置获取）
 
@@ -135,7 +135,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > Returns the AnimalCultivation component if one exists on the specified actor.
 
@@ -157,7 +157,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 添加修炼经验
 
@@ -179,7 +179,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置修炼配置ID（初始化时调用）
 
@@ -201,7 +201,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取当前等级所需经验
 
@@ -219,7 +219,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查是否可以升级
 

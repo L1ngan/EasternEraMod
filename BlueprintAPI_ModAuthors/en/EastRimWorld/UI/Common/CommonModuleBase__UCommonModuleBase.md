@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Common Module Base UObject type.
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FInstancedStruct InputModuleInfo;` |
 
+**Notes:**
+
+> Input Module Info field.
+
 ---
 
 ### Property `InputObject`
@@ -27,6 +33,10 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<UObject> InputObject;` |
+
+**Notes:**
+
+> Input Object field.
 
 ---
 
@@ -48,7 +58,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 初始化模块信息
 
@@ -70,7 +80,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 初始化模块通过object
 
@@ -88,7 +98,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 更新模块信息
 

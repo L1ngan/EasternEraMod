@@ -20,7 +20,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=PhysicalProperties) FGameplayTagContainer Tags;` |
 
-**Source comments:**
+**Notes:**
 
 > A container of gameplay tags that game code can use to reason about this physical material
 

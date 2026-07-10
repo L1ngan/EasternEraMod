@@ -27,7 +27,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取路径查找子系统
 
@@ -53,7 +53,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 简单的路径查找（使用优化的A*算法）
 
@@ -72,14 +72,14 @@
 | `WorldContextObject` | `UObject*` |
 | `StartPosition` | `const FVector&` |
 | `EndPosition` | `const FVector&` |
-| `（匿名/仅类型）` | `EFindPathType Algorithm = EFindPathType::AStar` |
+| `（匿名/仅类型）` | [EFindPathType](WorldMapPathSubsystem__EFindPathType.md) Algorithm = [EFindPathType](WorldMapPathSubsystem__EFindPathType.md)::AStar |
 | `2` | `int32 SmoothingLevel =` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Pathfinding") static FPathfindingResult FindPathAdvanced(UObject* WorldContextObject, const FVector& StartPosition, const FVector& EndPosition, EFindPathType Algorithm = EFindPathType::AStar, int32 SmoothingLevel = 2);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 高级路径查找（可选择算法）
 
@@ -102,7 +102,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查找最近的路径点
 
@@ -126,7 +126,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取随机路径点
 
@@ -145,13 +145,13 @@
 | `WorldContextObject` | `UObject*` |
 | `StartPositions` | `const TArray<FVector>&` |
 | `EndPositions` | `const TArray<FVector>&` |
-| `（匿名/仅类型）` | `EFindPathType Algorithm = EFindPathType::AStar` |
+| `（匿名/仅类型）` | [EFindPathType](WorldMapPathSubsystem__EFindPathType.md) Algorithm = [EFindPathType](WorldMapPathSubsystem__EFindPathType.md)::AStar |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Pathfinding") static TArray<FPathfindingResult> FindMultiplePaths(UObject* WorldContextObject, const TArray<FVector>& StartPositions, const TArray<FVector>& EndPositions, EFindPathType Algorithm = EFindPathType::AStar);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 批量路径查找
 
@@ -173,7 +173,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取路径查找性能统计
 
@@ -195,7 +195,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 重置性能统计
 
@@ -217,7 +217,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 清理路径缓存
 
@@ -239,7 +239,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查路径是否有效
 
@@ -261,7 +261,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 计算路径总长度
 
@@ -284,7 +284,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 平滑路径
 
@@ -300,13 +300,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Error` | `EPathfindingError` |
+| `Error` | [EPathfindingError](WorldMapPathSubsystem__EPathfindingError.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure, Category = "Pathfinding") static FString GetPathfindingErrorString(EPathfindingError Error);`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 路径查找错误转换为字符串
 
@@ -328,7 +328,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查路径查找子系统是否可用
 
@@ -350,7 +350,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取路径查找配置
 
@@ -373,7 +373,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置路径查找配置
 

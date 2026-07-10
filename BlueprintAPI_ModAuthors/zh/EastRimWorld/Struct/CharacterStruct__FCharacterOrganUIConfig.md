@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<ESpeciesType,FText>` |
+| C++ 类型 | TMap<[ESpeciesType](CommonEnum__ESpeciesType.md),FText> |
 | 反射说明符 | BlueprintReadWrite, Category="FCharacterOrganUIConfig" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FCharacterOrganUIConfig") TMap<ESpeciesType,FText> OrganName;` |
 
-**源码注释:**
+**说明:**
 
 > 显示总器官名称
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FCharacterOrganUIConfig") TMap<FName,float> OrganIDs;` |
 
-**源码注释:**
+**说明:**
 
 > 包含哪些器官 key 部位id  value 部位占比
 
@@ -44,12 +44,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<ESpeciesType,FText>` |
+| C++ 类型 | TMap<[ESpeciesType](CommonEnum__ESpeciesType.md),FText> |
 | 反射说明符 | BlueprintReadWrite, Category="FCharacterOrganUIConfig" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FCharacterOrganUIConfig") TMap<ESpeciesType,FText> OrganDesc;` |
 
-**源码注释:**
+**说明:**
 
 > 显示总器官描述(左右眼，左右耳，左右手，左右腿 这些都合并在一起显示的)
 

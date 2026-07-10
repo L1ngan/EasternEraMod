@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EModEquipmentType` |
+| C++ type | [EModEquipmentType](EquipmentDataStruct__EModEquipmentType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Equipment Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment Base") EModEquipmentType EquipmentType = EModEquipmentType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 装备的类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment Base") TArray<FName> MainAttributes;` |
 
-**Source comments:**
+**Notes:**
 
 > 此装备的主属性(EquipmentAttribute表）
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment Base") TArray<FName> SubAttributes;` |
 
-**Source comments:**
+**Notes:**
 
 > 此装备的次属性(EquipmentAttribute表）
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment Base") TArray<FName> EquipmentAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 此装备自带的技能
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Puppet Equipment") float RefitDurability = 500.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 傀儡改装耐久度
 

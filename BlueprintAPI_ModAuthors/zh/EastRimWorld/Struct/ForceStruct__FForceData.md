@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FText ForceName;` |
 
-**源码注释:**
+**说明:**
 
 > 势力名称
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TArray<FForceSkillData> SkillDatas;` |
 
-**源码注释:**
+**说明:**
 
 > 主角技能
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TArray<FItemSimpleData> Resource;` |
 
-**源码注释:**
+**说明:**
 
 > 物资
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TArray<FName> PassGameConditionIds;` |
 
-**源码注释:**
+**说明:**
 
 > 通关条件
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UI") TSoftObjectPtr<UTexture2D> ForceTitleIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 势力名称图标
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UI") TSoftObjectPtr<UTexture2D> ForceNormalIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 势力图标Normal
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UI") TSoftObjectPtr<UTexture2D> ForceHoverIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 势力图标Hover
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UI") TSoftObjectPtr<UTexture2D> ForcePressIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 势力图标Press
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UI") FText TipTitle;` |
 
-**源码注释:**
+**说明:**
 
 > 势力tip
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UI") FText TipContent;` |
 
-**源码注释:**
+**说明:**
 
 > 势力tip
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UI") TArray<FText> PlayDescription;` |
 
-**源码注释:**
+**说明:**
 
 > 玩法特色
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UI") bool bIsOpen = true;` |
 
-**源码注释:**
+**说明:**
 
 > 是否开放（未开放的势力不能被用户选择）
 

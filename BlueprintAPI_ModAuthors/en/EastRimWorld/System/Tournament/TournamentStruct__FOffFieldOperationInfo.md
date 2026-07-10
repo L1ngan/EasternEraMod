@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EOffFieldOperationType` |
+| C++ type | [EOffFieldOperationType](TournamentStruct__EOffFieldOperationType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EOffFieldOperationType OperationType = EOffFieldOperationType::HideIdentity;` |
 
-**Source comments:**
+**Notes:**
 
 > 操作类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText OperationTitle;` |
 
-**Source comments:**
+**Notes:**
 
 > 操作标题
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText OperationDesc;` |
 
-**Source comments:**
+**Notes:**
 
 > 操作描述
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TSoftObjectPtr<UTexture2D> OperationIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 操作图标
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TSoftObjectPtr<UTexture2D> OperationHoverIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 操作指示图标
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 Consumption = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 消耗的货币数量
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> BuffEffect;` |
 
-**Source comments:**
+**Notes:**
 
 > Buff效果列表
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float ChangeInCombatPower = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 更改的战力百分比 额外的百分比
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 TakeEffectRound = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 生效的回合数
 

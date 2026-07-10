@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EAutoUseCharacterType` |
+| C++ type | [EAutoUseCharacterType](../../Struct/CommonEnum__EAutoUseCharacterType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EAutoUseCharacterType AutoUseCharacterType = EAutoUseCharacterType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 自动使用的类型
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBattleType` |
+| C++ type | [EBattleType](../../Struct/CommonEnum__EBattleType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EBattleType BattleType = EBattleType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 战场类型
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float UseIntervalMinTime = 10.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 使用的最小间隔时间
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float UseIntervalMaxTime = 10.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 使用的最大间隔时间
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,meta=(EditCondition = "AutoUseCharacterType == EAutoUseCharacterType::ResourcePriority",EditConditionHides)) int32 NeedResourcePoint = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 资源优先时资源需达到的值
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,meta=(EditCondition = "AutoUseCharacterType == EAutoUseCharacterType::LevelPriority",EditConditionHides)) float DetectionIntervalTime = 3.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 检测间隔时间
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,meta=(EditCondition = "AutoUseCharacterType == EAutoUseCharacterType::ResourcePriority",EditConditionHides)) float WaitTime = 10.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 等待时间
 

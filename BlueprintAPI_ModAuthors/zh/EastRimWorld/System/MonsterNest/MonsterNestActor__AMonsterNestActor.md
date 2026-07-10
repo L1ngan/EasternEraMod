@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> Monster Nest Actor Actor 类型。
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly) TObjectPtr<UEventGenerateCharacterComponent> GenerateCharacterComponent;` |
 
-**源码注释:**
+**说明:**
 
 > 事件生成角色组件
 
@@ -32,6 +34,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<USceneComponent> SceneComponent;` |
 
+**说明:**
+
+> Scene Component 字段。
+
 ---
 
 ### 属性 `AllMonsters`
@@ -42,6 +48,10 @@
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FGuid,AEastRimWorldCharacter*> AllMonsters;` |
+
+**说明:**
+
+> All Monsters 字段。
 
 ---
 
@@ -54,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FMonsterNestInfo MonsterNestInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 怪物巢穴信息
 
@@ -69,7 +79,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FGuid> AllWaitAttackMonsters;` |
 
-**源码注释:**
+**说明:**
 
 > 所有生成的怪物且没有发动攻击的怪物
 
@@ -84,6 +94,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) bool bMonsterNestInit = false;` |
 
+**说明:**
+
+> 是否 Monster Nest Init 的布尔标记。
+
 ---
 
 ### 属性 `AllAttackMonsters`
@@ -95,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FGuid> AllAttackMonsters;` |
 
-**源码注释:**
+**说明:**
 
 > 已经发动攻击的怪物
 
@@ -115,7 +129,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > ~IEastRimWorldTeamAgentInterface interface
 
@@ -137,6 +151,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 执行 Set Generic Team Id 操作。
+
 ---
 
 ### 函数 `RemoveGenerationActor`
@@ -155,7 +173,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除生成记录的单位
 

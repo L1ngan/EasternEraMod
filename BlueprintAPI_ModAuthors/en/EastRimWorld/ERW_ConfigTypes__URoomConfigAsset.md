@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<ERoomScoreType,[FRoomScoreDataArray](ERW_ConfigTypes__FRoomScoreDataArray.md)> |
+| C++ type | TMap<[ERoomScoreType](ERW_Enumerations__ERoomScoreType.md),[FRoomScoreDataArray](ERW_ConfigTypes__FRoomScoreDataArray.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<ERoomScoreType,FRoomScoreDataArray> RoomScoreTypeData;` |
 
-**Source comments:**
+**Notes:**
 
 > 房间各类型评分分数段信息
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FRoomTemperatureScoreData> RoomTemperatureScoreData;` |
 
-**Source comments:**
+**Notes:**
 
 > 房间温度区间分数
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FRoomSizeTemperatureRate> RoomSizeTemperatureRates;` |
 
-**Source comments:**
+**Notes:**
 
 > 房间大小对应的温度系数(结算房间温度时乘以这个)
 

@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> World event data asset holding world event config tables, event grouping, pause slot settings and the enable switch
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) UDataTable* WorldEventDetailTable = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 世界事件详细信息配置表
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) UDataTable* WorldEventInfoTable = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 世界事件信息配置表
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) UDataTable* WorldEventSpawnConfig = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 世界事件生成配置表
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) UDataTable* UnlockedPauseSlotInfo = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 解锁固化槽的信息
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<int,int> WorldEventGroup;` |
 
-**Source comments:**
+**Notes:**
 
 > 世界事件分组 0 为无限制
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bOpenWorldEvent = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否开启世界事件
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int MaxPauseSlotNumber = 3;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大的固化槽数量
 

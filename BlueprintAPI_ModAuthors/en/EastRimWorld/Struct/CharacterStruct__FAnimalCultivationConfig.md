@@ -20,7 +20,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cultivation") int32 MaxCultivationLevel = 10;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大修炼等级
 
@@ -35,7 +35,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cultivation") TMap<int32, float> ExperienceTable;` |
 
-**Source comments:**
+**Notes:**
 
 > 经验值表（等级 -> 所需经验）
 > 如果LevelUpgradeConfigs中对应等级的RequiredExperience为0，则使用此表中的经验值
@@ -51,7 +51,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cultivation") TMap<int32, FAnimalCultivationLevelUpgrade> LevelUpgradeConfigs;` |
 
-**Source comments:**
+**Notes:**
 
 > 等级升级功能配置表（等级 -> 升级功能配置）
 > 用于配置到达每个等级时增加的功能（经验值、行为树、Goals、能力、Buff、属性、掉落组、模型等）

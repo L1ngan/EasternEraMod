@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ETechCategory` |
+| C++ type | [ETechCategory](TechnologyStruct__ETechCategory.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") ETechCategory Category = ETechCategory::Food;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FText CategoryName;` |
 
-**Source comments:**
+**Notes:**
 
 > 分类显示的名字
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TSoftObjectPtr<UTexture2D> CategoryIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 分类在UI上显示的图标
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") int32 CategoryUIHeight { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 分类在UI上占用格子
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TSoftObjectPtr<UTexture2D> CategoryBG;` |
 
-**Source comments:**
+**Notes:**
 
 > 分类在UI上背景
 

@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> World Director Actor 类型。
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) TObjectPtr<UCommonTaskComponent> CommonTaskComponent;` |
 
-**源码注释:**
+**说明:**
 
 > 通用任务组件
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame) float GameTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 游戏时长
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame) int32 GameDay = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 游戏天数
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) int32 GameYear = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 游戏年份
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) int32 GameMonth = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 游戏月份
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) int32 GameDate = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 日期
 
@@ -107,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) int32 GameHour = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 小时
 
@@ -122,7 +124,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FForceFavorabilityInfo> AllForceFavorability;` |
 
-**源码注释:**
+**说明:**
 
 > 所有势力的好感度
 
@@ -137,7 +139,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) FGuid PlayerForceGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家势力Guid
 
@@ -152,7 +154,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) bool bPlayerForceCreated = false;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家是否创建门派
 
@@ -167,7 +169,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float PlayerForceCreatedTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家创建门派的时间（创建时的游戏时长）
 
@@ -182,7 +184,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<int32,FApplyTeamBuffData> TeamBuffData;` |
 
-**源码注释:**
+**说明:**
 
 > 团队buff
 
@@ -197,7 +199,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<FWorldAgreement,bool> WorldAgreements;` |
 
-**源码注释:**
+**说明:**
 
 > 势力间签署的协议<协议数据,是否签署成功>
 
@@ -212,7 +214,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) int32 GameDaySeconds = 24*40;` |
 
-**源码注释:**
+**说明:**
 
 > 游戏一天的秒数
 
@@ -227,7 +229,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float WeatheringTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 天气已经持续的时间
 
@@ -242,7 +244,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float WeatherMaxTime = 10.f;` |
 
-**源码注释:**
+**说明:**
 
 > 天气最大时间
 
@@ -257,7 +259,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) bool bIsWeatherLock = false;` |
 
-**源码注释:**
+**说明:**
 
 > 天气锁定
 
@@ -272,7 +274,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float PlayerWealthPoints = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家财富点(临时缓存)
 
@@ -287,7 +289,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float LastCalculateTime_PlayerWealthPoints = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 最近一次计算玩家财富点数的时间
 
@@ -302,7 +304,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float CalculateInterval_PlayerWealthPoints = 2.f;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家财富点数计算间隔
 
@@ -317,7 +319,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float PlayerUnitsPoints = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家单位点数(临时缓存)
 
@@ -332,7 +334,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float LastCalculateTime_PlayerUnitsPoints = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 最近一次计算玩家单位点数的时间
 
@@ -347,7 +349,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float CalculateInterval_PlayerUnitsPoints = 2.f;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家单位点数计算间隔
 
@@ -362,7 +364,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<AWorldPlace> CurWorldPlace;` |
 
-**源码注释:**
+**说明:**
 
 > 当前所在的位置
 
@@ -372,12 +374,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EERWSeason` |
+| C++ 类型 | [EERWSeason](WorldStruct__EERWSeason.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame) EERWSeason CurrentSeason = EERWSeason::Spring;` |
 
-**源码注释:**
+**说明:**
 
 > 当前季节
 
@@ -392,7 +394,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame) int CurrentHour = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 当前小时
 
@@ -402,12 +404,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EERWWeather` |
+| C++ 类型 | [EERWWeather](WorldStruct__EERWWeather.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame) EERWWeather CurrentWeather = EERWWeather::None;` |
 
-**源码注释:**
+**说明:**
 
 > 当前天气类型
 
@@ -422,7 +424,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FWorldPlaceWeatherInfo CurrentWorldPlaceWeatherInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 当前天气信息
 
@@ -437,7 +439,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FWorldPlaceWeatherInfo CurrentActualWeatherInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 当前实际天气变化包含过渡天气
 
@@ -452,7 +454,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnUpdateWorldPlaceTemperature OnUpdateWorldPlaceTemperature;` |
 
-**源码注释:**
+**说明:**
 
 > 更新当前地点的实际温度
 
@@ -467,7 +469,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnUpdateTemperatureChange OnUpdateTemperatureChange;` |
 
-**源码注释:**
+**说明:**
 
 > 更新当前气象相关的变化温度
 
@@ -482,7 +484,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnUpdateTimeChange OnUpdateTimeChange;` |
 
-**源码注释:**
+**说明:**
 
 > 更新时间广播
 
@@ -497,7 +499,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnWeatherChange OnWeatherChange;` |
 
-**源码注释:**
+**说明:**
 
 > 配置生成最终的天气变化
 
@@ -512,7 +514,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable,BlueprintCallable) FOnUDWWeatherChange OnUDWWeatherChange;` |
 
-**源码注释:**
+**说明:**
 
 > 配置生成最终的天气变化
 
@@ -522,12 +524,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EERWWeather,float>` |
+| C++ 类型 | TMap<[EERWWeather](WorldStruct__EERWWeather.md),float> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<EERWWeather,float> WeatherPlantEfficiency;` |
 
-**源码注释:**
+**说明:**
 
 > 天气对植物的影响效率
 
@@ -542,7 +544,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float WeatherPregnantEfficiency = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 天气对孕育效率的影响
 
@@ -557,7 +559,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) TArray<TObjectPtr<AWorldLightActor>> WorldLightActors;` |
 
-**源码注释:**
+**说明:**
 
 > 世界中的光照Actor
 
@@ -572,7 +574,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnGameDayChanged OnGameDayChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 游戏天数改变
 
@@ -587,7 +589,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnGameSeasonChanged OnGameSeasonChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 游戏季节改变
 
@@ -602,7 +604,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnGameYearChanged OnGameYearChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 游戏年份改变
 
@@ -617,7 +619,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnInitCurWorldPlaced OnInitCurWorldPlaced;` |
 
-**源码注释:**
+**说明:**
 
 > 初始化
 
@@ -632,7 +634,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnUnlockWorldPlace OnUnlockWorldPlace;` |
 
-**源码注释:**
+**说明:**
 
 > 解锁新的地点
 
@@ -647,7 +649,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) bool bWorldSuspend = false;` |
 
-**源码注释:**
+**说明:**
 
 > 世界是否暂停
 
@@ -662,6 +664,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnUpdateTipsDelegate OnUpdateTipsDelegate;` |
 
+**说明:**
+
+> On Update Tips Delegate 事件或回调。
+
 ---
 
 ### 属性 `PlayerWorldForce`
@@ -673,7 +679,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<class AWorldForce> PlayerWorldForce;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家势力
 
@@ -688,7 +694,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FGenericTeamId PlayerTeam;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家队id
 
@@ -703,6 +709,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnCreatePopWidget OnCreatePopWidget;` |
 
+**说明:**
+
+> On Create Pop Widget 事件或回调。
+
 ---
 
 ### 属性 `OnFinishCreateForce`
@@ -714,7 +724,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnCreatePopWidget OnFinishCreateForce;` |
 
-**源码注释:**
+**说明:**
 
 > 创建势力完成事件
 
@@ -729,6 +739,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnCreatePopWidget OnForceMasterDeath;` |
 
+**说明:**
+
+> On Force Master Death 事件或回调。
+
 ---
 
 ### 属性 `OnCreateWindowWidget`
@@ -739,6 +753,10 @@
 | 反射说明符 | BlueprintAssignable |
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnCreateWindowWidget OnCreateWindowWidget;` |
+
+**说明:**
+
+> On Create Window Widget 事件或回调。
 
 ---
 
@@ -751,6 +769,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnChangeSceneWidgetVisibility OnChangeSceneWidgetVisibility;` |
 
+**说明:**
+
+> On Change Scene Widget Visibility 事件或回调。
+
 ---
 
 ### 属性 `OnChangePlayerTotalReputation`
@@ -762,7 +784,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnChangePlayerTotalReputation OnChangePlayerTotalReputation;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家总声望值改变
 
@@ -777,7 +799,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) bool bAllInitializationComplete = false;` |
 
-**源码注释:**
+**说明:**
 
 > 所有的初始化完成
 
@@ -792,7 +814,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnAllInitializationCompleteDelegate OnAllInitializationCompleteDelegate;` |
 
-**源码注释:**
+**说明:**
 
 > 当前世界所有初始化完成
 
@@ -807,7 +829,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnRecoverFinished OnRecoverFinished;` |
 
-**源码注释:**
+**说明:**
 
 > WorldPlace恢复完成
 
@@ -822,7 +844,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) bool bNeedSeasonChange = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否需要切换季节函数
 
@@ -837,7 +859,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) float TotaledSeasonChangeTime = 5.f;` |
 
-**源码注释:**
+**说明:**
 
 > 过渡总时间
 
@@ -852,7 +874,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) float SeasonChangeStartValue = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 初始值
 
@@ -867,7 +889,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) float SeasonChangeEndValue = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 结束值
 
@@ -882,7 +904,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) FName SeasonParmName = FName(TEXT("Autumn"));` |
 
-**源码注释:**
+**说明:**
 
 > 参数名称
 
@@ -897,7 +919,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) TObjectPtr<AActor> CurPlaceDynamicSkyActor;` |
 
-**源码注释:**
+**说明:**
 
 > 当前地点天空actor
 
@@ -912,7 +934,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) TObjectPtr<AActor> CurPlaceDynamicWeatherActor;` |
 
-**源码注释:**
+**说明:**
 
 > 当前地点天气actor
 
@@ -927,7 +949,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FGuid,TObjectPtr<class AWorldForce>> WorldForces;` |
 
-**源码注释:**
+**说明:**
 
 > /世界势力 Start****************************/
 
@@ -942,6 +964,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FGuid,TObjectPtr<class AWorldArea>> WorldAreas;` |
 
+**说明:**
+
+> World Areas 字段。
+
 ---
 
 ### 属性 `WorldPlaces`
@@ -952,6 +978,25 @@
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FGuid,TObjectPtr<class AWorldPlace>> WorldPlaces;` |
+
+**说明:**
+
+> World Places 字段。
+
+---
+
+### 属性 `PlaceAttackRegistry`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TMap<FGuid, [FGuidArr](../Struct/CommonStruct__FGuidArr.md)> |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FGuid, FGuidArr> PlaceAttackRegistry;` |
+
+**说明:**
+
+> ——进攻登记表:哪些势力正在攻打哪些城市(进行中的持续战;瞬时结算不登记)。运行期,不入档。key=被攻据点Guid,value=攻方势力Guid数组——
 
 ---
 
@@ -969,6 +1014,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 获取或查询 Get World Director。
+
 ---
 
 ### 函数 `CreateAllWorldForce`
@@ -982,6 +1031,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void CreateAllWorldForce();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 执行 Create All World Force 操作。
 
 ---
 
@@ -997,6 +1050,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 执行 Create All World Area 操作。
+
 ---
 
 ### 函数 `GetPlayerTeamID`
@@ -1011,7 +1068,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取玩家队伍ID
 
@@ -1033,7 +1090,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取地点内所有的角色
 
@@ -1051,7 +1108,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取当前所在地点
 
@@ -1073,6 +1130,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 获取或查询 Get World Place By Level Name。
+
 ---
 
 ### 函数 `GetWorldPlaceByID`
@@ -1091,7 +1152,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 通过ID获取世界地点
 
@@ -1114,9 +1175,27 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建世界地点
+
+---
+
+### 函数 `GetWorldPlaceCanAutoSaveGame`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintPure |
+| 返回类型 | `bool` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintPure) bool GetWorldPlaceCanAutoSaveGame();`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 检查当前地点是否自动存档
 
 ---
 
@@ -1136,7 +1215,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移动到此区域
 
@@ -1158,7 +1237,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移动到此区域
 
@@ -1180,7 +1259,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移动到此区域
 
@@ -1198,7 +1277,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 生成当前地点需要生成的角色
 
@@ -1220,7 +1299,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过GUID获取当前世界地点的角色
 
@@ -1242,7 +1321,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 重生在当前的世界地点中
 
@@ -1264,7 +1343,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 销毁在当前的世界地点中
 
@@ -1280,14 +1359,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Season` | `EERWSeason` |
+| `Season` | [EERWSeason](WorldStruct__EERWSeason.md) |
 | `Time` | `int` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FWorldPlaceTemperatureInfo GetPlaceTemperatureInfoByTime(EERWSeason Season,int Time);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查询具体季节时间的温度变化
 
@@ -1303,12 +1382,16 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Season` | `EERWSeason` |
+| `Season` | [EERWSeason](WorldStruct__EERWSeason.md) |
 | `Time` | `int` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FWorldPlaceLightInfo GetPlaceLightInfoByTime(EERWSeason Season,int Time);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取或查询 Get Place Light Info By Time。
 
 ---
 
@@ -1324,7 +1407,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取当前时间的温度变化值
 
@@ -1346,7 +1429,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取当前的温度变化
 
@@ -1368,7 +1451,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 切换光照
 
@@ -1390,7 +1473,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置日期为当天的时段
 
@@ -1408,7 +1491,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置初始日期数据
 
@@ -1426,6 +1509,10 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「OnDayChange」。
 
+**说明:**
+
+> On Day Change 字段。
+
 ---
 
 ### 函数 `GetCharacterWorldMoveInfo`
@@ -1441,7 +1528,7 @@
 | `CharacterGuid` | `const TArray<FGuid> &` |
 | `InStartPlaceGuid` | `const FGuid &` |
 | `InTargetPlaceGuid` | `const FGuid &` |
-| `WorldMapMoveType` | `EWorldMapMoveType` |
+| `WorldMapMoveType` | [EWorldMapMoveType](WorldStruct__EWorldMapMoveType.md) |
 | `Resource` | const TMap<FName,[FItemSimpleData](../Struct/CommonStruct__FItemSimpleData.md)>& |
 | `（匿名/仅类型）` | `FVector EnterPlacePosition = FVector::ZeroVector` |
 
@@ -1449,7 +1536,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取移动预设信息
 
@@ -1466,13 +1553,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `CharacterWorldMoveInfo` | UPARAM(ref) [FCharacterWorldMoveInfo](WorldStruct__FCharacterWorldMoveInfo.md) & |
-| `（匿名/仅类型）` | `ETransportationType TransportationType = ETransportationType::Walking` |
+| `（匿名/仅类型）` | [ETransportationType](../ERW_Enumerations__ETransportationType.md) TransportationType = [ETransportationType](../ERW_Enumerations__ETransportationType.md)::Walking |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool CharacterMoveToPlaceByGuid(UPARAM(ref) FCharacterWorldMoveInfo & CharacterWorldMoveInfo , ETransportationType TransportationType = ETransportationType::Walking);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 角色移动到这个地点
 
@@ -1490,13 +1577,13 @@
 |--------|------|
 | `CharacterGuid` | `const TArray<FGuid> &` |
 | `InStartPlaceGuid` | `const FGuid &` |
-| `WorldMapMoveType` | `EWorldMapMoveType` |
+| `WorldMapMoveType` | [EWorldMapMoveType](WorldStruct__EWorldMapMoveType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void CharacterWanderOnWorldMap(const TArray<FGuid> & CharacterGuid,const FGuid & InStartPlaceGuid,EWorldMapMoveType WorldMapMoveType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 角色游荡于世界地图
 
@@ -1516,17 +1603,45 @@
 | `InStartPlaceGuid` | `const FGuid&` |
 | `StartPosition` | `const FVector &` |
 | `InTargetPlaceGuid` | `const FGuid &` |
-| `WorldMapMoveType` | `EWorldMapMoveType` |
+| `WorldMapMoveType` | [EWorldMapMoveType](WorldStruct__EWorldMapMoveType.md) |
 | `InBattlefieldGuid` | `const FGuid &` |
-| `（匿名/仅类型）` | `ETransportationType TransportationType = ETransportationType::Walking` |
+| `（匿名/仅类型）` | [ETransportationType](../ERW_Enumerations__ETransportationType.md) TransportationType = [ETransportationType](../ERW_Enumerations__ETransportationType.md)::Walking |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FCharacterWorldMoveInfo CharacterMoveToBattlefield(const TArray<FGuid> & CharacterGuid,const FGuid& InStartPlaceGuid,const FVector & StartPosition,const FGuid & InTargetPlaceGuid,EWorldMapMoveType WorldMapMoveType,const FGuid & InBattlefieldGuid,ETransportationType TransportationType = ETransportationType::Walking);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 角色移动到战场
+
+---
+
+### 函数 `CharacterMoveToBattlefield2D`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | [FCharacterWorldMoveInfo2D](WorldStruct__FCharacterWorldMoveInfo2D.md) |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `CharacterGuid` | `const TArray<FGuid>&` |
+| `ForceSGUID` | `const FGuid&` |
+| `InStartPlaceGuid` | `const FGuid&` |
+| `InTargetPlaceGuid` | `const FGuid&` |
+| `WorldMapMoveType` | [EWorldMapMoveType](WorldStruct__EWorldMapMoveType.md) |
+| `InBattlefieldGuid` | `const FGuid&` |
+| `（匿名/仅类型）` | [ETransportationType](../ERW_Enumerations__ETransportationType.md) TransportationType = [ETransportationType](../ERW_Enumerations__ETransportationType.md)::Walking |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FCharacterWorldMoveInfo2D CharacterMoveToBattlefield2D(const TArray<FGuid>& CharacterGuid, const FGuid& ForceSGUID,const FGuid& InStartPlaceGuid, const FGuid& InTargetPlaceGuid, EWorldMapMoveType WorldMapMoveType, const FGuid& InBattlefieldGuid, ETransportationType TransportationType = ETransportationType::Walking);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 角色移动到战场 2D
 
 ---
 
@@ -1542,7 +1657,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 生成当前地点的Pawn
 
@@ -1560,7 +1675,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 生成世界地图Pawn
 
@@ -1583,6 +1698,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 执行 Broadcast Update Tips 操作。
+
 ---
 
 ### 函数 `InitGlobalTeamBuff`
@@ -1597,7 +1716,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 初始化全局阵营buff
 
@@ -1615,7 +1734,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 清除全局阵营buff
 
@@ -1637,6 +1756,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> Broad Cast Set Scene Widget Visibility 字段。
+
 ---
 
 ### 函数 `GetWorldPlaceType`
@@ -1644,14 +1767,14 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `EWorldPlaceType` |
+| 返回类型 | [EWorldPlaceType](../Struct/CommonEnum__EWorldPlaceType.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) EWorldPlaceType GetWorldPlaceType();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取当前地点模式
 
@@ -1669,7 +1792,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取玩家的主要建造基地
 
@@ -1691,7 +1814,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 注册世界光照actor
 
@@ -1713,7 +1836,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 注销世界光照actor
 
@@ -1729,13 +1852,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `LightType` | `EWorldLightType` |
+| `LightType` | [EWorldLightType](WorldLightActor__EWorldLightType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, BlueprintPure) TArray<AWorldLightActor*> GetWorldLightActorsByType(EWorldLightType LightType) const;`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 根据类型获取世界灯光Actor
 
@@ -1757,7 +1880,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置所有灯光的开关状态
 
@@ -1773,14 +1896,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `LightType` | `EWorldLightType` |
+| `LightType` | [EWorldLightType](WorldLightActor__EWorldLightType.md) |
 | `bEnable` | `bool` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SetWorldLightsEnabledByType(EWorldLightType LightType, bool bEnable);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据类型设置灯光的开关状态
 
@@ -1803,7 +1926,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 获取当前地点的天空组件和天气组件
 
@@ -1820,6 +1943,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent,meta = (DisplayName = "InitCurWorldPlaceDynamicSkyAndWeather")) void K2_InitCurWorldPlaceDynamicSkyAndWeather();`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「InitCurWorldPlaceDynamicSkyAndWeather」。
+
+**说明:**
+
+> Init Cur World Place Dynamic Sky And Weather 字段。
 
 ---
 
@@ -1839,9 +1966,27 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 回收物资
+
+---
+
+### 函数 `InitWorldPlaceDistance`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void InitWorldPlaceDistance();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 初始化地点到各地点的距离
 
 ---
 
@@ -1861,7 +2006,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查找对应的势力
 
@@ -1883,6 +2028,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取或查询 Find World Force By Team ID。
+
 ---
 
 ### 函数 `FindWorldForceByID`
@@ -1901,6 +2050,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取或查询 Find World Force By ID。
+
 ---
 
 ### 函数 `GetForceFavorabilityType`
@@ -1908,7 +2061,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `EForceFavorabilityType` |
+| 返回类型 | [EForceFavorabilityType](WorldStruct__EForceFavorabilityType.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1920,7 +2073,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取两个势力的关系
 
@@ -1943,7 +2096,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取两个势力的关系
 
@@ -1967,7 +2120,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 改变势力之间的好感度
 
@@ -1990,7 +2143,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 攻打城市好感度变化
 
@@ -2008,7 +2161,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取玩家势力
 
@@ -2030,7 +2183,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 玩家势力改名
 
@@ -2048,7 +2201,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查玩家势力是否创建
 
@@ -2066,7 +2219,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取玩家势力等级
 
@@ -2083,14 +2236,14 @@
 | 参数名 | 类型 |
 |--------|------|
 | `NewForceName` | `FText` |
-| `NewForceType` | `EForceType` |
+| `NewForceType` | [EForceType](WorldStruct__EForceType.md) |
 | `Leader` | `FGuid` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool CreatePlayerWorldForce(FText NewForceName, EForceType NewForceType, FGuid Leader);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建玩家势力(势力已经在地图上了，只是没有激活)
 
@@ -2113,6 +2266,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取或查询 Find Character Save Datas。
+
 ---
 
 ### 函数 `SortCharacterSaveDatasByCombatScore`
@@ -2130,6 +2287,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SortCharacterSaveDatasByCombatScore(UPARAM(ref) TArray<FCharacterSaveData>& InCharacterDatas);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> Sort Character Save Datas By Combat Score 字段。
 
 ---
 
@@ -2150,7 +2311,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 从CharacterSaveData中获取角色穿戴的外观装备
 
@@ -2173,6 +2334,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 执行 Add Team Buff By ID 操作。
+
 ---
 
 ### 函数 `GetTeamBuffInfoByTeamId`
@@ -2191,7 +2356,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过teamId查询团队buff信息
 
@@ -2209,7 +2374,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取玩家势力的buff信息
 
@@ -2232,6 +2397,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 执行 Add Team Buff By Info 操作。
+
 ---
 
 ### 函数 `RemoveTeamBuffByGuid`
@@ -2250,6 +2419,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RemoveTeamBuffByGuid(int32 TeamId,const FGuid & BuffGuid);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 执行 Remove Team Buff By Guid 操作。
 
 ---
 
@@ -2270,6 +2443,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 执行 Remove Team Buff By Origin Guid 操作。
+
 ---
 
 ### 函数 `CheckCanSignWorldAgreement`
@@ -2288,7 +2465,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查能否签署传入的协议
 
@@ -2311,7 +2488,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 势力签署协议
 
@@ -2333,7 +2510,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取势力名字
 
@@ -2355,9 +2532,122 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查找对应的区域
+
+---
+
+### 函数 `FindWorldAreaByID`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | [AWorldArea](WorldArea__AWorldArea.md) * |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `ID` | `FName` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) AWorldArea * FindWorldAreaByID(FName ID);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取或查询 Find World Area By ID。
+
+---
+
+### 函数 `RegisterPlaceAttack`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `AttackerForceGuid` | `const FGuid&` |
+| `TargetPlaceGuid` | `const FGuid&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RegisterPlaceAttack(const FGuid& AttackerForceGuid, const FGuid& TargetPlaceGuid);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 登记一次进攻(发起持续战时调; 重复攻方不叠加)
+
+---
+
+### 函数 `UnregisterPlaceAttack`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `AttackerForceGuid` | `const FGuid&` |
+| `TargetPlaceGuid` | `const FGuid&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UnregisterPlaceAttack(const FGuid& AttackerForceGuid, const FGuid& TargetPlaceGuid);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 注销某攻方对某据点的进攻(战斗结算/瞬时结算结束时按攻方注销)
+
+---
+
+### 函数 `IsPlaceUnderAttack`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintPure |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `TargetPlaceGuid` | `const FGuid&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, BlueprintPure) bool IsPlaceUnderAttack(const FGuid& TargetPlaceGuid) const;`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 某据点当前是否正被攻打
+
+---
+
+### 函数 `GetPlaceAttackers`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `TargetPlaceGuid` | `const FGuid&` |
+| `OutAttackers` | `TArray<FGuid>&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void GetPlaceAttackers(const FGuid& TargetPlaceGuid, TArray<FGuid>& OutAttackers) const;`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 取正在攻打某据点的势力列表
 
 ---
 
@@ -2377,7 +2667,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查找对应的地点
 
@@ -2399,6 +2689,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取或查询 Find World Place By ID。
+
 ---
 
 ### 函数 `FindWorldPlaceByIDs`
@@ -2418,9 +2712,31 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID数组查找地点
+
+---
+
+### 函数 `GetPlayerDeployableCities`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="World|Battle" |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `OutCities` | TArray<[FDeployableCityOption](WorldDirector__FDeployableCityOption.md)>& |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "World|Battle") void GetPlayerDeployableCities(TArray<FDeployableCityOption>& OutCities);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取玩家可作为出兵起点的城(玩家拥有 ∩ 在 PointMap 内)，喂出征界面「出发地点」下拉
 
 ---
 
@@ -2440,6 +2756,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> On Hour Change Event 事件或回调。
+
 ---
 
 ### 函数 `OnSeasonChangeEvent`
@@ -2452,11 +2772,15 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `SeasonId` | `EERWSeason` |
+| `SeasonId` | [EERWSeason](WorldStruct__EERWSeason.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void OnSeasonChangeEvent(EERWSeason SeasonId);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> On Season Change Event 事件或回调。
 
 ---
 
@@ -2477,7 +2801,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 季节切换过渡参数设置
 
@@ -2493,13 +2817,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WeatherId` | `EERWWeather` |
+| `WeatherId` | [EERWWeather](WorldStruct__EERWWeather.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void OnWeatherChangeEvent(EERWWeather WeatherId);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 天气切换（不包括过渡天气状态，相同天气不会触发）
 
@@ -2515,13 +2839,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WeatherId` | `EERWWeather` |
+| `WeatherId` | [EERWWeather](WorldStruct__EERWWeather.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void OnAllWeatherChangeEvent(EERWWeather WeatherId);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 天气切换(包含过渡天气)
 
@@ -2543,7 +2867,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > C++设置游戏时间来设置UDS的时间
 
@@ -2559,13 +2883,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `WeatherId` | `EERWWeather` |
+| `WeatherId` | [EERWWeather](WorldStruct__EERWWeather.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent) void SetGameWeatherToUDW(EERWWeather WeatherId);`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > C++设置游戏天气来设置UDW的天气
 
@@ -2587,7 +2911,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > /任务 Start****************************/
 
@@ -2609,6 +2933,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> Trigger Task 字段。
+
 ---
 
 ### 函数 `TriggerTaskByInstance`
@@ -2626,6 +2954,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FGuid TriggerTaskByInstance(const FCommonTaskInstance& TaskInstance);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> Trigger Task By Instance 字段。
 
 ---
 
@@ -2645,6 +2977,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> Complete Task By ID 字段。
+
 ---
 
 ### 函数 `GetGoapActionBuildings`
@@ -2663,7 +2999,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查询GoapAction对应的建筑物数组
 
@@ -2686,7 +3022,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查建筑类型是否有对应的GOAP功能
 
@@ -2704,7 +3040,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查是否需要床位
 
@@ -2722,7 +3058,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查玩家是否缺少衣服
 
@@ -2745,7 +3081,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID改变天气
 
@@ -2763,7 +3099,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 随机改变天气
 
@@ -2785,6 +3121,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> Bind Or Unbind Camera Move Event 字段。
+
 ---
 
 ### 函数 `CheckAllBuildNeedMaterial`
@@ -2799,7 +3139,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查所有在建建筑是否有足够的材料
 
@@ -2817,7 +3157,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查是否有建设完成的研究建筑物
 
@@ -2833,13 +3173,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BuildType` | `EBuildingType` |
+| `BuildType` | [EBuildingType](../ERW_Enumerations__EBuildingType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool CheckHaveBuildingByType(EBuildingType BuildType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查是否有传入类型建筑物
 
@@ -2862,7 +3202,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 计算角色战力
 
@@ -2885,6 +3225,33 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> Calcu Character Fighting Score 字段。
+
+---
+
+### 函数 `CalcuUIDisplayAttributesByData`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintPure |
+| 返回类型 | `TMap<FString,float>` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `InGameMode` | [AERW_GameModeBase](../Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
+| `InCharacterData` | const [FCharacterSaveData](WorldCharacterData__FCharacterSaveData.md)& |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintPure) static TMap<FString,float> CalcuUIDisplayAttributesByData(AERW_GameModeBase* InGameMode,const FCharacterSaveData& InCharacterData);`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 根据存档数据中的角色ID查表基础属性+装备词条属性+势力培养属性,计算UI需要显示的临时属性(配置见UGamePlayConfigurationAsset::UIDisplayTempAttributes),npc培养时调用刷新UIDisplayAttributes
+
 ---
 
 ### 函数 `GetFocreJobName`
@@ -2897,13 +3264,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `JobType` | `const EForceJobType` |
+| `JobType` | const [EForceJobType](WorldStruct__EForceJobType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FText GetFocreJobName(const EForceJobType JobType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取职位名称
 
@@ -2926,7 +3293,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 按弟子数量排序
 
@@ -2949,7 +3316,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 按战力排序
 
@@ -2972,7 +3339,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 按好感度排序
 
@@ -2995,7 +3362,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 按worldplacetype度排序
 
@@ -3018,7 +3385,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 按势力声望度排序
 
@@ -3041,7 +3408,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 按势力战力排序
 
@@ -3064,7 +3431,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 按领地数量排序
 
@@ -3087,9 +3454,54 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 按势力弟子数量排序
+
+---
+
+### 函数 `SortByFavorWithPlayer`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | TArray<[AWorldForce](WorldForce__AWorldForce.md)*> |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `WorldPlaceArray` | const TArray<[AWorldForce](WorldForce__AWorldForce.md)*> & |
+| `bIsAsc` | `bool` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) TArray<AWorldForce*> SortByFavorWithPlayer(const TArray<AWorldForce*> & WorldPlaceArray , bool bIsAsc);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 按势力对玩家好感排序
+
+---
+
+### 函数 `AddItemBySimpleData`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `InItem` | const [FItemSimpleData](../Struct/CommonStruct__FItemSimpleData.md)& |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void AddItemBySimpleData(const FItemSimpleData& InItem);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 添加物品到玩家自建或驿站物品存放区
 
 ---
 
@@ -3109,9 +3521,9 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
-> 添加物品到驿站物品存放区
+> 添加物品到玩家自建或驿站物品存放区
 
 ---
 
@@ -3131,9 +3543,9 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
-> 添加物品到驿站物品存放区
+> 添加物品到玩家自建或驿站物品存放区
 
 ---
 
@@ -3153,7 +3565,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取敌对势力
 
@@ -3177,7 +3589,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 插槽敌对势力和好感度
 
@@ -3195,7 +3607,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算玩家的财富点数
 
@@ -3213,7 +3625,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取玩家单位点数
 

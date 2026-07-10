@@ -19,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "Base") FGenericTeamId SourceTeamId;` |
 
+**Notes:**
+
+> Source team ID of the relationship change
+
 ---
 
 ### Property `TargetTeamId`
@@ -30,6 +34,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "Base") FGenericTeamId TargetTeamId;` |
 
+**Notes:**
+
+> Target team ID of the relationship change
+
 ---
 
 ### Property `TeamRelationship`
@@ -40,5 +48,9 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "Base") TEnumAsByte<ETeamAttitude::Type> TeamRelationship = ETeamAttitude::Type::Friendly;` |
+
+**Notes:**
+
+> Attitude between the two teams (ETeamAttitude, defaults to Friendly)
 
 ---

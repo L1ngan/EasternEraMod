@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EModDataAssetType` |
+| C++ 类型 | [EModDataAssetType](BaseDataStruct__EModDataAssetType.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) EModDataAssetType ModDataAssetType = EModDataAssetType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 配置类型
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSoftObjectPtr<UDataAsset> DataAsset;` |
 
-**源码注释:**
+**说明:**
 
 > 配置表
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) bool bOverrideData = false;` |
 
-**源码注释:**
+**说明:**
 
 > 勾选后Map或Array则直接覆盖原来的数据，不勾选则在原有的基础增加。其他类型的属性如果是默认值则不生效
 

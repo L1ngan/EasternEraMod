@@ -19,4 +19,8 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "GAS") TObjectPtr<UEastRimWorldAbilitySystemComponent> AbilitySystemComponent;` |
 
+**Notes:**
+
+> GAS ability system component (UEastRimWorldAbilitySystemComponent) owned by the player state.
+
 ---

@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) UStaticMeshComponent* StaticMeshComponent { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > 静态模型组件
 
@@ -29,12 +29,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EEnvironType` |
+| C++ 类型 | [EEnvironType](../ERW_Enumerations__EEnvironType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) EEnvironType EnvironType { EEnvironType::None };` |
 
-**源码注释:**
+**说明:**
 
 > 环境类型
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) bool IsWide { false };` |
 
-**源码注释:**
+**说明:**
 
 > 是否是宽的门或窗
 

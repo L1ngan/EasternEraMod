@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 驿站生成配置表行（势力ID、权重、生成配置ID、销毁条件与存续时间）
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName WorldForceID;` |
 
-**源码注释:**
+**说明:**
 
 > 势力ID
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 BaseWeight;` |
 
-**源码注释:**
+**说明:**
 
 > 基础权重（最终权重=BaseWeight+好感度*FavorabilityWeightRate）
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float FavorabilityWeightRate;` |
 
-**源码注释:**
+**说明:**
 
 > 势力好感度权重系数
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> GenerateConfigIDs;` |
 
-**源码注释:**
+**说明:**
 
 > 生成配置ID(DT_MonsterGenerationConfig表ID)
 
@@ -77,6 +79,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FCommonTaskCondition> DestroyCondition;` |
 
+**说明:**
+
+> 该生成的销毁条件列表
+
 ---
 
 ### 属性 `DestroyRemoveTaskRecord`
@@ -88,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> DestroyRemoveTaskRecord;` |
 
-**源码注释:**
+**说明:**
 
 > NPC销毁清除任务记录
 
@@ -103,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 ExistTime;` |
 
-**源码注释:**
+**说明:**
 
 > 生成对象的存续时间(-1无限制)
 

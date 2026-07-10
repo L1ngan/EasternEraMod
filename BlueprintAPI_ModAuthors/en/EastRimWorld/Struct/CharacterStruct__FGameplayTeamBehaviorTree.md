@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Team behavior tree config: the behavior tree a team uses for a given place type and battle type
 
 ## Blueprint-exposed variables
 
@@ -12,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EWorldPlaceType` |
+| C++ type | [EWorldPlaceType](CommonEnum__EWorldPlaceType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) EWorldPlaceType WorldPlaceType = EWorldPlaceType::Station;` |
 
-**Source comments:**
+**Notes:**
 
 > 关卡类型
 
@@ -27,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBattleType` |
+| C++ type | [EBattleType](CommonEnum__EBattleType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) EBattleType BattleType = EBattleType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗类型
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TSoftObjectPtr<UBehaviorTree> BehaviorTree;` |
 
-**Source comments:**
+**Notes:**
 
 > 阵营对应的行为树
 

@@ -20,7 +20,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FModMetadata Metadata;` |
 
-**Source comments:**
+**Notes:**
 
 > Mod元数据
 
@@ -30,12 +30,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EModLoadState` |
+| C++ type | [EModLoadState](ModInfo__EModLoadState.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) EModLoadState LoadState = EModLoadState::NotLoaded;` |
 
-**Source comments:**
+**Notes:**
 
 > Mod加载状态
 
@@ -50,7 +50,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FString ModRootPath;` |
 
-**Source comments:**
+**Notes:**
 
 > Mod根目录路径
 
@@ -65,7 +65,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FString LuaEnvironmentName;` |
 
-**Source comments:**
+**Notes:**
 
 > Mod的Lua环境（如果使用Lua）
 
@@ -80,9 +80,24 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FDateTime LoadTime;` |
 
-**Source comments:**
+**Notes:**
 
 > 加载时间戳
+
+---
+
+### Property `LoadDurationSeconds`
+
+| Field | Details |
+|------|------|
+| C++ type | `double` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) double LoadDurationSeconds = 0.0;` |
+
+**Notes:**
+
+> 本次加载耗时（秒，Mod.Status 调试命令展示用）
 
 ---
 
@@ -95,7 +110,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FString ErrorMessage;` |
 
-**Source comments:**
+**Notes:**
 
 > 错误信息（如果加载失败）
 
@@ -110,7 +125,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TArray<FString> MountedPakFiles;` |
 
-**Source comments:**
+**Notes:**
 
 > 已挂载的Pak中的文件
 
@@ -125,8 +140,23 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TArray<FString> MountedPaks;` |
 
-**Source comments:**
+**Notes:**
 
 > 已挂载的Pak
+
+---
+
+### Property `RegisteredMountPaths`
+
+| Field | Details |
+|------|------|
+| C++ type | `TArray<FString>` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TArray<FString> RegisteredMountPaths;` |
+
+**Notes:**
+
+> 挂载时注册进 /Game/ 的内容路径（卸载时用于 UnRegisterMountPoint 撤销）
 
 ---

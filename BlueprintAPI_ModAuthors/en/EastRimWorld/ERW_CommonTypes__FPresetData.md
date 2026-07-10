@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FTransform Transform;` |
 
-**Source comments:**
+**Notes:**
 
 > 相对坐标
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EEmbeddedWallType` |
+| C++ type | [EEmbeddedWallType](ERW_Enumerations__EEmbeddedWallType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) EEmbeddedWallType EmbeddedWallType { EEmbeddedWallType::None };` |
 
-**Source comments:**
+**Notes:**
 
 > 嵌入式墙体类型
 
@@ -44,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ERoofPartType` |
+| C++ type | [ERoofPartType](ERW_Enumerations__ERoofPartType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) ERoofPartType RoofPartType { ERoofPartType::None };` |
 
-**Source comments:**
+**Notes:**
 
 > 屋顶部位类型
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) bool IsWide { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是宽的门或窗
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) AActor* Actor { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > 对应的建筑
 

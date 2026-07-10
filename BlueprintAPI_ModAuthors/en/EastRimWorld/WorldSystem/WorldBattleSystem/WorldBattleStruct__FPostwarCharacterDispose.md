@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FCharacterSaveData> CaptureCharacter;` |
 
-**Source comments:**
+**Notes:**
 
 > 俘虏的角色
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FCharacterSaveData> LoseCharacter;` |
 
-**Source comments:**
+**Notes:**
 
 > 被俘虏的角色
 
@@ -44,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<FGuid,ECaptureCharacterDisposalType>` |
+| C++ type | TMap<FGuid,[ECaptureCharacterDisposalType](../WorldStruct__ECaptureCharacterDisposalType.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FGuid,ECaptureCharacterDisposalType> DisposalCaptureCharacter;` |
 
-**Source comments:**
+**Notes:**
 
 > 俘虏的角色处置
 
@@ -59,12 +59,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<FGuid,ECaptureCharacterDisposalType>` |
+| C++ type | TMap<FGuid,[ECaptureCharacterDisposalType](../WorldStruct__ECaptureCharacterDisposalType.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FGuid,ECaptureCharacterDisposalType> DisposalLoseCharacter;` |
 
-**Source comments:**
+**Notes:**
 
 > 被俘虏的角色处置
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FGuid> BackBaseCharacter;` |
 
-**Source comments:**
+**Notes:**
 
 > 返回的人
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FGuid> GarrisonCharacter;` |
 
-**Source comments:**
+**Notes:**
 
 > 驻守的人
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FGuid> WanderCharacter;` |
 
-**Source comments:**
+**Notes:**
 
 > 游荡的人
 

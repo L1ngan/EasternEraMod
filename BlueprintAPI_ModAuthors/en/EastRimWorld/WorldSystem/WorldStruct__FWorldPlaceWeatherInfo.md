@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EERWWeather` |
+| C++ type | [EERWWeather](WorldStruct__EERWWeather.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EERWWeather Weather = EERWWeather::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 天气
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int TemperatureMaxChange = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 温度最大变化
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int TemperatureMinChange = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 温度最小变化
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> WeatherDuringBuff;` |
 
-**Source comments:**
+**Notes:**
 
 > 天气过程中获得的buff (固定改为永久时长)
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> WeatherEndBuff;` |
 
-**Source comments:**
+**Notes:**
 
 > 天气结束后获得的buff（固定改为固定时长)
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText WeatherName;` |
 
-**Source comments:**
+**Notes:**
 
 > 天气名称
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int MiniTime = 30;` |
 
-**Source comments:**
+**Notes:**
 
 > 持续时间（秒）最小值（现实时间）
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int MaxTime = 100;` |
 
-**Source comments:**
+**Notes:**
 
 > 持续时间（秒）最大值（现实时间）
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bShowTip = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否显示天气提示
 
@@ -149,12 +149,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ETipsType` |
+| C++ type | [ETipsType](WorldStruct__ETipsType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) ETipsType TipType= ETipsType::WeatherChange;` |
 
-**Source comments:**
+**Notes:**
 
 > 提示类型
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText WeatherDesc;` |
 
-**Source comments:**
+**Notes:**
 
 > 天气描述信息
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftObjectPtr<UPrimaryDataAsset> WeatherData;` |
 
-**Source comments:**
+**Notes:**
 
 > 天气对应的数据文件的软引用
 
@@ -199,6 +199,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftObjectPtr<UTexture2D> WeatherIcon;` |
 
+**Notes:**
+
+> Weather Icon field.
+
 ---
 
 ### Property `WeatherStartChangeEvent`
@@ -210,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName WeatherStartChangeEvent;` |
 
-**Source comments:**
+**Notes:**
 
 > 天气开始时对音效的操作 读取SoundChangeEventConfig 配置表
 
@@ -225,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName WeatherEndChangeEvent;` |
 
-**Source comments:**
+**Notes:**
 
 > 天气结束时对音效的操作 读取SoundChangeEventConfig 配置表
 
@@ -240,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bEffectPlant = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否影响植物生长效果
 
@@ -255,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,meta=(EditCondition = "bEffectPlant")) float PlantEfficiency = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 天气对植物的生长效果（随机天气效果时不会生效，仅对指定天气时有效）
 
@@ -270,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bEffectAnimalPregnant = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否影响动物怀孕
 
@@ -285,7 +289,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,meta=(EditCondition = "bEffectAnimalPregnant")) float PregnantEfficiency = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 天气对动物怀孕时间的影响（随机天气效果时不会生效，仅对指定天气时有效）
 

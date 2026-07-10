@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FModTabInfo *******************************************************
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CommonUIStruct_h_12_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CommonUIStruct_h_12_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModTabInfo_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -27,7 +27,7 @@ struct FModTabInfo;
 // ********** End ScriptStruct FModTabInfo *********************************************************
 
 // ********** Begin ScriptStruct FModCommonUIConfig ************************************************
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CommonUIStruct_h_62_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CommonUIStruct_h_62_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModCommonUIConfig_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;
@@ -37,7 +37,7 @@ struct FModCommonUIConfig;
 // ********** End ScriptStruct FModCommonUIConfig **************************************************
 
 // ********** Begin ScriptStruct FModModuleUIConfig ************************************************
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CommonUIStruct_h_95_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CommonUIStruct_h_95_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModModuleUIConfig_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -47,7 +47,7 @@ struct FModModuleUIConfig;
 // ********** End ScriptStruct FModModuleUIConfig **************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CommonUIStruct_h
+#define CURRENT_FILE_ID FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CommonUIStruct_h
 
 // ********** Begin Enum EModTitleTypeEnum *********************************************************
 #define FOREACH_ENUM_EMODTITLETYPEENUM(op) \

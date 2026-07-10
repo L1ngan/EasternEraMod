@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 农田Actor：管理农田格子数据、种植与收获、设计预览及GOAP种植行为的GOAP对象
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) FGuid FarmlandGuid = FGuid();` |
 
-**源码注释:**
+**说明:**
 
 > ~ Save
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame) FName CollectItemId;` |
 
-**源码注释:**
+**说明:**
 
 > 作物的id
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) FCollectItem CollectItemData;` |
 
-**源码注释:**
+**说明:**
 
 > 作物的数据
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<FGridPosition,TObjectPtr<UDecalComponent>> DecalComponents;` |
 
-**源码注释:**
+**说明:**
 
 > 贴花组件
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<FGridPosition,TObjectPtr<UStaticMeshComponent>> CubeComponents;` |
 
-**源码注释:**
+**说明:**
 
 > 盒子组件(除草)
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, VisibleAnywhere,BlueprintReadOnly) TArray<FVector> PlantActionsPosition;` |
 
-**源码注释:**
+**说明:**
 
 > 种植的Action
 
@@ -107,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) bool IsPreDesignActor;` |
 
-**源码注释:**
+**说明:**
 
 > 是否直接从UI上创建出来的
 
@@ -122,6 +124,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TObjectPtr<UDecalComponent>> SelectedDecalComponents;` |
 
+**说明:**
+
+> 选中农田时显示的贴花组件数组
+
 ---
 
 ### 属性 `MountISMCompent`
@@ -133,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TObjectPtr<UInstancedStaticMeshComponent> MountISMCompent;` |
 
-**源码注释:**
+**说明:**
 
 > 小土包
 
@@ -148,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TObjectPtr<UStaticMeshComponent>> LabelCylinderComponents;` |
 
-**源码注释:**
+**说明:**
 
 > 四角标牌立柱
 
@@ -163,6 +169,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) UERW_EnvironComponent* EnvironComponent;` |
 
+**说明:**
+
+> 农田的环境信息组件
+
 ---
 
 ### 属性 `bSelectState`
@@ -174,7 +184,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) bool bSelectState = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否是选中状态
 
@@ -189,6 +199,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FGridPosition DesigningSize;` |
 
+**说明:**
+
+> 设计中的农田格子尺寸
+
 ---
 
 ### 属性 `MountTransforms`
@@ -200,7 +214,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) TArray<FTransform> MountTransforms;` |
 
-**源码注释:**
+**说明:**
 
 > 小土包位置
 
@@ -215,7 +229,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) TMap<FGuid,FVector> FarmerPlantLocation;` |
 
-**源码注释:**
+**说明:**
 
 > 角色对应的种植位置(存来给GA确定种植点,种植完成后移除，种植被打断时用这个来查找位置放回PlantActionsPosition)
 
@@ -230,7 +244,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) FGridPosition OriginGirdPosition;` |
 
-**源码注释:**
+**说明:**
 
 > 保存此农田创建时的起始格子坐标和世界坐标
 
@@ -245,6 +259,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) FVector OriginLocation;` |
 
+**说明:**
+
+> 此农田创建时的起始世界坐标
+
 ---
 
 ### 属性 `PreviewStartGrid`
@@ -256,7 +274,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess)) FGridPosition PreviewStartGrid;` |
 
-**源码注释:**
+**说明:**
 
 > 预览开始格子
 
@@ -271,7 +289,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess),SaveGame) TMap<FGridPosition,int32> FarmlandEdgeGrids;` |
 
-**源码注释:**
+**说明:**
 
 > 农田的边界格子位置,边缘类型
 
@@ -286,7 +304,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess),SaveGame) TMap<FGridPosition,FFarmlandData> AllFarmlandGrid;` |
 
-**源码注释:**
+**说明:**
 
 > 田的格子数据
 
@@ -301,7 +319,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess)) TArray<UFarmlandPlantInstance*> AllFarmlandPlants;` |
 
-**源码注释:**
+**说明:**
 
 > 田里的植物
 
@@ -316,7 +334,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess),SaveGame) bool bProhibitPlant;` |
 
-**源码注释:**
+**说明:**
 
 > 是否禁止种植
 
@@ -331,7 +349,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess),SaveGame) bool bAutoHarvestPlant;` |
 
-**源码注释:**
+**说明:**
 
 > 是否自动收获植物
 
@@ -346,7 +364,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess),SaveGame) TMap<FName,int32> AutoHarvestPlantLimit;` |
 
-**源码注释:**
+**说明:**
 
 > 自动收获植物数量限制(当仓库有n个植物后不再自动收获 <0表示一直收)
 
@@ -371,6 +389,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 用格子数据和作物ID初始化农田
+
 ---
 
 ### 函数 `CheckBeginnerGuideProgress`
@@ -384,6 +406,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent) void CheckBeginnerGuideProgress();`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 检查新手引导进度（蓝图实现事件）
 
 ---
 
@@ -403,6 +429,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void ResizeFarmland(const TSet<FDesignFarmlandGridData>& GridDatas,bool bAdd);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 按格子数据调整农田大小（bAdd为true时扩建，否则缩减）
 
 ---
 
@@ -424,7 +454,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取输入网格能种植的点
 
@@ -446,7 +476,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 种植物
 
@@ -468,7 +498,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更换种植物
 
@@ -490,7 +520,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检测、移除田内的其他采集物
 
@@ -512,7 +542,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检测、移除田的采集物 种植Action位置
 
@@ -529,6 +559,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintPure) const TArray<UFarmlandPlantInstance*>& GetAllFarmlandPlants();`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取田里所有植物实例
 
 ---
 
@@ -549,7 +583,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 修改自动收获植物的上限
 
@@ -567,7 +601,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 测试函数：显示农田边界
 
@@ -585,6 +619,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 销毁本农田
+
 ---
 
 ### 函数 `UpdateFarmlandEdge`
@@ -599,7 +637,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新农田边界
 
@@ -623,7 +661,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 过滤掉不能放置农田的格子
 
@@ -645,7 +683,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > ------------------预览-------------
 > 预览开始
@@ -668,6 +706,10 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 预览开始（蓝图实现事件，IsAddPreview表示是否为扩建预览）
+
 ---
 
 ### 函数 `CancelPreview`
@@ -682,6 +724,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 取消农田预览
+
 ---
 
 ### 函数 `K2_CancelPreview`
@@ -695,6 +741,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent) void K2_CancelPreview();`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 取消预览（蓝图实现事件）
 
 ---
 
@@ -714,7 +764,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 开始设计田地
 
@@ -736,6 +786,10 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 开始设计田地（蓝图实现事件，传入起始位置）
+
 ---
 
 ### 函数 `CancelDesigningFarmland`
@@ -750,7 +804,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 取消设计田地
 
@@ -767,6 +821,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent) void K2_CancelDesigningFarmland();`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 取消设计田地（蓝图实现事件）
 
 ---
 
@@ -786,6 +844,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 在指定结束位置结束农田设计
+
 ---
 
 ### 函数 `K2_EndDesigningFarmland`
@@ -804,6 +866,10 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 结束设计田地（蓝图实现事件，传入结束位置）
+
 ---
 
 ### 函数 `UpdatePreview`
@@ -818,7 +884,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新田地预览
 
@@ -836,6 +902,10 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 更新田地预览（蓝图实现事件）
+
 ---
 
 ### 函数 `UpdateDesigning`
@@ -849,6 +919,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdateDesigning();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 更新设计中的田地
 
 ---
 
@@ -869,6 +943,10 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 更新设计中的田地（蓝图实现事件，传入行、列格子数）
+
 ---
 
 ### 函数 `GetPreviewType`
@@ -876,12 +954,16 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `EFarmlandPreviewType` |
+| 返回类型 | [EFarmlandPreviewType](EastRimWorldFarmlandActor__EFarmlandPreviewType.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintPure) EFarmlandPreviewType GetPreviewType(){return PreviewType;}`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取当前农田预览类型
 
 ---
 
@@ -901,7 +983,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据角色id取对应的种植点
 
@@ -923,7 +1005,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 种植行为被取消时放回未完成的种植点
 
@@ -945,6 +1027,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 种植行为被取消时按Agent的Guid放回未完成的种植点
+
 ---
 
 ### 函数 `RemoveFarmerPlantLocation`
@@ -963,6 +1049,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 移除指定角色Guid对应的种植位置记录
+
 ---
 
 ### 函数 `GetPlaceGridSize`
@@ -977,7 +1067,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取农田大小
 
@@ -1000,7 +1090,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算种植位置会占据的格子
 

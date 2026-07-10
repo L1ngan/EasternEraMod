@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, meta = (ClampMin = "0.0")) float AverageFindTime;` |
 
-**源码注释:**
+**说明:**
 
 > 路径查找时间
 
@@ -34,6 +34,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, meta = (ClampMin = "0.0")) float MaxFindTime;` |
 
+**说明:**
+
+> Max Find Time 字段。
+
 ---
 
 ### 属性 `CacheHitRate`
@@ -45,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, meta = (ClampMin = "0.0", ClampMax = "1.0")) float CacheHitRate;` |
 
-**源码注释:**
+**说明:**
 
 > 缓存命中率
 
@@ -60,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, meta = (ClampMin = "0")) int32 TotalPathRequests;` |
 
-**源码注释:**
+**说明:**
 
 > 路径查找次数
 
@@ -74,5 +78,9 @@
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, meta = (ClampMin = "0")) int32 SuccessfulPaths;` |
+
+**说明:**
+
+> Successful Paths 字段。
 
 ---

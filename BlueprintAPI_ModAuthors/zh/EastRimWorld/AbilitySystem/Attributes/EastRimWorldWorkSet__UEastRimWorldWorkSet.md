@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 工作属性集：各类工作的速度、成功率与额外产出（采矿/建造/治疗/烹饪/种植/研究/手术等）
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData GlobalWorkAddition;` |
 
-**源码注释:**
+**说明:**
 
 > 全局工作加成 包含各种属性途径增加
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData OrdinaryWorkingSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 普通工作速度
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MiningExtraOutput;` |
 
-**源码注释:**
+**说明:**
 
 > 采矿额外产生倍率
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MiningSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 采矿速度
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData QualityOfTreatment;` |
 
-**源码注释:**
+**说明:**
 
 > 治疗质量
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SpeedOfTreatment;` |
 
-**源码注释:**
+**说明:**
 
 > 治疗速度
 
@@ -107,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RateOfConstruction;` |
 
-**源码注释:**
+**说明:**
 
 > 建造速度
 
@@ -122,7 +124,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SuccessRateOfConstruction;` |
 
-**源码注释:**
+**说明:**
 
 > 建造成功率
 
@@ -137,7 +139,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SuccessRateOfRepair;` |
 
-**源码注释:**
+**说明:**
 
 > 修理成功率
 
@@ -152,7 +154,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ReadingSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 阅读速度
 
@@ -167,7 +169,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PlantsHarvestExtraYield;` |
 
-**源码注释:**
+**说明:**
 
 > 植物的收获额外产量
 
@@ -182,7 +184,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PlantingSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 种植速度
 
@@ -197,7 +199,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CookingSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 烹饪速度
 
@@ -212,7 +214,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CookingToxicityProbability;` |
 
-**源码注释:**
+**说明:**
 
 > 烹饪有毒率
 
@@ -227,7 +229,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SlaughterSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 屠宰速度
 
@@ -242,7 +244,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ExtraSlaughterYield;` |
 
-**源码注释:**
+**说明:**
 
 > 屠宰额外产量
 
@@ -257,7 +259,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DrugMakingSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 制药速度
 
@@ -272,7 +274,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BrewingSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 酿酒速度
 
@@ -287,7 +289,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalCollectionSuppliesExtraOutput;` |
 
-**源码注释:**
+**说明:**
 
 > 动物收集物资额外产出
 
@@ -302,7 +304,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalCollectionSuppliesSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 动物收集物资速度
 
@@ -317,7 +319,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MeltingSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 熔炼速度
 
@@ -332,7 +334,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HuntingCover;` |
 
-**源码注释:**
+**说明:**
 
 > 狩猎隐蔽率
 
@@ -347,7 +349,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ResearchRate;` |
 
-**源码注释:**
+**说明:**
 
 > 研究速度
 
@@ -362,7 +364,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SurgerySpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 手术速度
 
@@ -377,7 +379,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SurgerySuccessRate;` |
 
-**源码注释:**
+**说明:**
 
 > 手术成功率
 
@@ -392,7 +394,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData FarmingExtraOutput;` |
 
-**源码注释:**
+**说明:**
 
 > 务农额外产出
 
@@ -407,7 +409,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData FarmingSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 务农速度
 
@@ -422,7 +424,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CollectionSuccessRate;` |
 
-**源码注释:**
+**说明:**
 
 > 采集成功率
 
@@ -437,7 +439,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TamingProbability;` |
 
-**源码注释:**
+**说明:**
 
 > 驯服几率
 
@@ -452,7 +454,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TrainingProbability;` |
 
-**源码注释:**
+**说明:**
 
 > 训练几率
 
@@ -467,7 +469,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ArtProductionSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 艺术制造速度
 
@@ -482,7 +484,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ManufacturingSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 制造速度
 
@@ -497,7 +499,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SpeedOfMaintain;` |
 
-**源码注释:**
+**说明:**
 
 > 维修速度
 
@@ -512,7 +514,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DisassemblySpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 拆解速度
 
@@ -527,7 +529,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DisassemblyIncome;` |
 
-**源码注释:**
+**说明:**
 
 > 拆解收益
 
@@ -542,7 +544,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ObserveSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 观察速度
 
@@ -557,7 +559,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ObserveEfficiency;` |
 
-**源码注释:**
+**说明:**
 
 > 观察效率
 

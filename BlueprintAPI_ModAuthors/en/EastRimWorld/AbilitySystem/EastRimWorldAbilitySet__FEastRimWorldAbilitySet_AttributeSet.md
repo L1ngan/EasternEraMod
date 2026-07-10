@@ -20,7 +20,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY(EditDefaultsOnly) TSubclassOf<UAttributeSet> AttributeSet;` |
 
-**Source comments:**
+**Notes:**
 
 > Gameplay effect to grant.
 

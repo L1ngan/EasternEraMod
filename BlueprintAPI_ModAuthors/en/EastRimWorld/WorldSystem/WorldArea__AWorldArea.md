@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> World Area actor type.
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<USceneComponent> SceneComponent;` |
 
+**Notes:**
+
+> Scene Component field.
+
 ---
 
 ### Property `WorldAreaInfo`
@@ -28,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, VisibleAnywhere) FWorldAreaInfo WorldAreaInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 区域信息
 
@@ -43,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame, VisibleAnywhere) TArray<FGuid> WorldPlaces;` |
 
-**Source comments:**
+**Notes:**
 
 > 所在区域的地点
 
@@ -58,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame, VisibleAnywhere) bool bRevealFog = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否已经消除迷雾
 
@@ -73,20 +79,9 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, SaveGame) FName AreaID;` |
 
-**Source comments:**
+**Notes:**
 
 > 区域ID
-
----
-
-### Property `VaFogAgentCharWorld`
-
-| Field | Details |
-|------|------|
-| C++ type | `TObjectPtr<UVaFogAgentComponent>` |
-| Reflection specifiers | BlueprintReadOnly |
-| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
-| Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly) TObjectPtr<UVaFogAgentComponent> VaFogAgentCharWorld;` |
 
 ---
 
@@ -103,6 +98,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void UnlockAreaFog();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Unlock Area Fog field.
 
 ---
 
@@ -122,7 +121,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 增加区域探索度
 
@@ -140,7 +139,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 消除区域迷雾
 

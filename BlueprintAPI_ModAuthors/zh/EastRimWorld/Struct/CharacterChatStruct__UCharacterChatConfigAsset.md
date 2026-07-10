@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float ChatInterval;` |
 
-**源码注释:**
+**说明:**
 
 > 聊天间隔
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float ChatDuration;` |
 
-**源码注释:**
+**说明:**
 
 > 一次持续时间
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float FindChatPartnerInterval;` |
 
-**源码注释:**
+**说明:**
 
 > 查找聊天对象的间隔
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float FindChatPartnerRadius;` |
 
-**源码注释:**
+**说明:**
 
 > 查找半径
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) bool ShowFindChatPartnerRadiusDebug;` |
 
-**源码注释:**
+**说明:**
 
 > 显示查找Debug
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float ChatDistance;` |
 
-**源码注释:**
+**说明:**
 
 > 角色聊天时保持的距离
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float UpdateChattingInterval;` |
 
-**源码注释:**
+**说明:**
 
 > 聊天中更新间隔
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TSoftObjectPtr<UCurveFloat> ChatWidgetVisibleScaleCurve;` |
 
-**源码注释:**
+**说明:**
 
 > 聊天表情框显示距离缩放曲线
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FName ChatActionID;` |
 
-**源码注释:**
+**说明:**
 
 > 社交行为id
 
@@ -149,12 +149,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<EChatType,[FChatTypeData](CharacterChatStruct__FChatTypeData.md)> |
+| C++ 类型 | TMap<[EChatType](CharacterChatStruct__EChatType.md),[FChatTypeData](CharacterChatStruct__FChatTypeData.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<EChatType,FChatTypeData> ChatType;` |
 
-**源码注释:**
+**说明:**
 
 > 社交类型
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float ChatReplyProbability;` |
 
-**源码注释:**
+**说明:**
 
 > 闲聊回复概率(0~1)
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 MinGoodOpinion=-999;` |
 
-**源码注释:**
+**说明:**
 
 > 好感度下限
 
@@ -199,7 +199,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 MaxGoodOpinion=999;` |
 
-**源码注释:**
+**说明:**
 
 > 好感度上限
 
@@ -214,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<FName,FName> CeremonyBuildingAction;` |
 
-**源码注释:**
+**说明:**
 
 > 仪式建筑主要人员的goap行为
 
@@ -229,7 +229,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<FName,FName> SpectateCeremonyBuildingAction;` |
 
-**源码注释:**
+**说明:**
 
 > 仪式建筑旁观者的goap行为(不能与CeremonyBuildingAction重复)
 
@@ -244,7 +244,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float CeremonyWaitTime;` |
 
-**源码注释:**
+**说明:**
 
 > 仪式最长等待时间(单位秒)
 
@@ -259,7 +259,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 CeremonySpectateMaxNum;` |
 
-**源码注释:**
+**说明:**
 
 > 参与仪式的旁观者最大数量
 
@@ -274,7 +274,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Ceremony") TMap<FName,FName> BuildingRelationshipIDs;` |
 
-**源码注释:**
+**说明:**
 
 > 建筑为哪种关系举办仪式(建筑id,关系表id)
 

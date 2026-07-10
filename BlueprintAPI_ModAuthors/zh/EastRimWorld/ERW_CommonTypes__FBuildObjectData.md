@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 Floor { 0 };` |
 
-**源码注释:**
+**说明:**
 
 > 建筑所在层
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 Index { INDEX_NONE };` |
 
-**源码注释:**
+**说明:**
 
 > 模型在ISM中的索引
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 VariantIndex { INDEX_NONE };` |
 
-**源码注释:**
+**说明:**
 
 > 变体索引
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 ZIndex { 0 };` |
 
-**源码注释:**
+**说明:**
 
 > Z坐标偏移
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FTransform Transform;` |
 
-**源码注释:**
+**说明:**
 
 > 模型的Transform
 
@@ -89,12 +89,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EBuildObjectState` |
+| C++ 类型 | [EBuildObjectState](ERW_Enumerations__EBuildObjectState.md) |
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) EBuildObjectState BuildObjectState { EBuildObjectState::NoResource };` |
 
-**源码注释:**
+**说明:**
 
 > 建造物体状态
 
@@ -104,12 +104,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EISMType` |
+| C++ 类型 | [EISMType](ERW_Enumerations__EISMType.md) |
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) EISMType VisibleISMType { EISMType::Normal };` |
 
-**源码注释:**
+**说明:**
 
 > 当前显示的ISM类型
 
@@ -119,12 +119,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EEmbeddedWallType` |
+| C++ 类型 | [EEmbeddedWallType](ERW_Enumerations__EEmbeddedWallType.md) |
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) EEmbeddedWallType EmbeddedWallType { EEmbeddedWallType::None };` |
 
-**源码注释:**
+**说明:**
 
 > 嵌入式墙体类型
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) TArray<FGuid> EmbeddedWallGuids;` |
 
-**源码注释:**
+**说明:**
 
 > 门或窗占据的嵌入式墙体的Guid
 
@@ -149,12 +149,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ERoofPartType` |
+| C++ 类型 | [ERoofPartType](ERW_Enumerations__ERoofPartType.md) |
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) ERoofPartType RoofPartType { ERoofPartType::None };` |
 
-**源码注释:**
+**说明:**
 
 > 屋顶部位类型
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) bool Visible { false };` |
 
-**源码注释:**
+**说明:**
 
 > 是否显示
 
@@ -179,12 +179,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EWallDisplayType` |
+| C++ 类型 | [EWallDisplayType](ERW_Enumerations__EWallDisplayType.md) |
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) EWallDisplayType WallDisplayType { EWallDisplayType::Normal };` |
 
-**源码注释:**
+**说明:**
 
 > 墙显示类型
 
@@ -199,7 +199,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) TArray<FAssemblePartInfo> AssemblePartInfos;` |
 
-**源码注释:**
+**说明:**
 
 > 组装建筑部位信息
 

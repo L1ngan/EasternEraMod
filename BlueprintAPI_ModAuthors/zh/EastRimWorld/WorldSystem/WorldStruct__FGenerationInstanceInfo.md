@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid GenerationGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 生成队列中的唯一GUID
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FInstanceGenerationActorInfo> InstanceGenerationActorInfos;` |
 
-**源码注释:**
+**说明:**
 
 > 生成的实例
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int GenerationNumber = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 生成的数量
 

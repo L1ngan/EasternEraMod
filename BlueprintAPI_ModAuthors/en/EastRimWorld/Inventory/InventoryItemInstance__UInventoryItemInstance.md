@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Base inventory item instance managing item data, world representation (mesh/substitute/UI) and GOAP interactions
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FGuid ItemGuid;` |
 
+**Notes:**
+
+> Unique GUID of the item instance
+
 ---
 
 ### Property `ItemTransform`
@@ -28,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FTransform ItemTransform;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品在世界中的位置
 
@@ -43,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int32 InstanceIndex = -1;` |
 
-**Source comments:**
+**Notes:**
 
 > 在持有者上的索引 例如ISM组件上的实例索引-1时无效 通常为不可靠 只有在PCGActor上可靠
 
@@ -58,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<FWarehouseSmallGrid> SmallGrids;` |
 
-**Source comments:**
+**Notes:**
 
 > 此物品占用的小格子信息
 
@@ -68,12 +74,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EGroundSoilType` |
+| C++ type | [EGroundSoilType](../ERW_Enumerations__EGroundSoilType.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) EGroundSoilType GroundSoilType = EGroundSoilType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品所在的地面类型
 
@@ -88,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float GroundRichPercent = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品所在的地面肥沃度
 
@@ -103,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSoftObjectPtr<UStaticMesh> CurStaticMesh;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前显示的模型
 
@@ -118,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) bool bOperationMark = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否被操作标记
 
@@ -133,7 +139,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) bool bSelectState = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是选中状态
 
@@ -148,7 +154,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) bool bHoveringState = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是悬浮状态
 
@@ -158,12 +164,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<ECommonButtonType,bool>` |
+| C++ type | TMap<[ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md),bool> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) TMap<ECommonButtonType,bool> ButtonOperationState;` |
 
-**Source comments:**
+**Notes:**
 
 > 相关按钮的状态 是否选中
 
@@ -178,7 +184,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TObjectPtr<UInventoryManagerComponent> InventoryManagerComponent = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 他是谁在管理(目前仅指管理器) ,不可为空
 
@@ -193,7 +199,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AInventoryEntityActor> SubstituteActor = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 此实例的替身actor
 
@@ -208,7 +214,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AInventoryItemWidgetActor> InventoryItemWidgetActor = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 此实例的ui显示actor
 
@@ -223,6 +229,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnItemDestory OnItemDestory;` |
 
+**Notes:**
+
+> Delegate broadcast when the item is destroyed
+
 ---
 
 ### Property `CurDurability`
@@ -234,7 +244,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) float CurDurability = -1;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前耐久度
 
@@ -249,7 +259,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) float CopyedTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 复制时间（已经进行复制的时间）
 
@@ -264,7 +274,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int CopyNum= 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 已经复制的次数
 
@@ -279,7 +289,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int CurAirDryingDegree = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前风干度
 
@@ -294,6 +304,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AWorldPlace> WorldPlace;` |
 
+**Notes:**
+
+> Reference to the world place this item belongs to
+
 ---
 
 ### Property `InventoryItemInfo`
@@ -305,7 +319,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,Category= "ItemaInfo") FInstancedStruct InventoryItemInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 道具的信息
 
@@ -315,12 +329,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EInventoryItemStateType` |
+| C++ type | [EInventoryItemStateType](../Struct/ItemStruct__EInventoryItemStateType.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) EInventoryItemStateType InventoryItemStateType = EInventoryItemStateType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品状态
 
@@ -340,7 +354,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查物品数量是否足够
 
@@ -358,7 +372,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除预留物品列表
 
@@ -376,7 +390,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 销毁
 
@@ -394,7 +408,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 当所属的InventoryManagerComponent销毁/EndPlay时调用。
 > 注意：不要在这里再去回调管理器的Add/Remove接口（管理器可能已不可用）。
@@ -420,7 +434,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > ~End IEastRimWorldCommonInterface
 > 设置新拥有者 管理器与拥有者时深度绑定 在管理器或持有者变动时理应一起变动
@@ -443,7 +457,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置替身actor
 
@@ -461,7 +475,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建替身
 
@@ -479,7 +493,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 释放替身
 
@@ -497,7 +511,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 释放数量actor
 
@@ -515,7 +529,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取可以操作此物品的实体 如果是ISM组件的实例则创建替身操作
 
@@ -539,7 +553,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 存放到仓库中
 
@@ -565,6 +579,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Deposits the item into the specified small grids of a trade area, optionally showing its mesh and UI
+
 ---
 
 ### Function `CheckSameType`
@@ -583,7 +601,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否是相同的物品
 
@@ -605,7 +623,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否是相同的物品
 
@@ -628,7 +646,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 增加物品的数量 返回当前的数量
 
@@ -650,7 +668,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 物品是否已经堆叠到上限
 
@@ -668,7 +686,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取物品的数量
 
@@ -686,7 +704,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新静态网格体的样式
 
@@ -708,7 +726,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 基于actor 创建静态网格体组件
 
@@ -731,7 +749,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建显示的ui
 
@@ -753,7 +771,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置新的位置旋转
 
@@ -775,7 +793,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置新的ui显示
 
@@ -793,7 +811,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 广播更新物品信息
 
@@ -811,7 +829,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取物品的基础信息
 
@@ -833,7 +851,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取搬运物品的数量
 
@@ -851,7 +869,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新物品所在的温度
 
@@ -869,7 +887,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 更新温度
 
@@ -887,7 +905,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取物品所在位置的温度
 
@@ -911,7 +929,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过action ID食用物品
 
@@ -922,14 +940,14 @@
 | Field | Details |
 |------|------|
 | Reflection specifiers | BlueprintCallable, BlueprintPure |
-| Return type | `EStorageSpace` |
+| Return type | [EStorageSpace](../ERW_Enumerations__EStorageSpace.md) |
 | Parameters | (none) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintPure) virtual EStorageSpace GetStorageSpace(){return EStorageSpace::OutDoor;}`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取当前的环境
 
@@ -947,7 +965,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取当前的环境效率
 
@@ -965,7 +983,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 抄录书籍
 
@@ -983,7 +1001,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 物品改变或者销毁时处理action
 

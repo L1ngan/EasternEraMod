@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere, BlueprintReadWrite) TArray<FName> AddedPuppetIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑物中已添加的傀儡ID列表（相同的傀儡只能添加一次）
 
@@ -34,6 +34,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly , SaveGame) FGameplayTag CurrentRefit;` |
 
+**Notes:**
+
+> Gameplay tag of the currently active refit
+
 ---
 
 ### Property `RefitMap`
@@ -44,6 +48,10 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly , SaveGame) TMap<FGameplayTag,FName> RefitMap;` |
+
+**Notes:**
+
+> Map from refit gameplay tags to their corresponding config IDs
 
 ---
 
@@ -56,6 +64,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly , SaveGame) FUseItemSaveData RefitItemSaveData;` |
 
+**Notes:**
+
+> Save data of the item used for the refit
+
 ---
 
 ### Property `RefitCarrayReourceActionID`
@@ -66,5 +78,9 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly , SaveGame) FName RefitCarrayReourceActionID;` |
+
+**Notes:**
+
+> Action ID for carrying resources for the refit
 
 ---

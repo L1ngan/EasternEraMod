@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FName ProtagonistPresetDataID;` |
 
-**源码注释:**
+**说明:**
 
 > 主角预设信息ID
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TSoftObjectPtr<UTexture2D>> ProtagonistFemaleAvatar;` |
 
-**源码注释:**
+**说明:**
 
 > 女性主角头像
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TSoftObjectPtr<UTexture2D>> Half_ProtagonistFemaleAvatar;` |
 
-**源码注释:**
+**说明:**
 
 > 女性主角半身立绘
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TSoftObjectPtr<UTexture2D>> Half_TourFemaleAvatar;` |
 
-**源码注释:**
+**说明:**
 
 > 女性比武半身立绘
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TSoftObjectPtr<UTexture2D>> Small_TourFemaleAvatar;` |
 
-**源码注释:**
+**说明:**
 
 > 女性比武小立绘
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TSoftObjectPtr<UTexture2D>> Half_ProtagonistFemaleCenterAvatar;` |
 
-**源码注释:**
+**说明:**
 
 > 女性主角中心半身立绘
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TSoftObjectPtr<UTexture2D>> ProtagonistMaleAvatar;` |
 
-**源码注释:**
+**说明:**
 
 > 男性主角头像
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TSoftObjectPtr<UTexture2D>> Half_ProtagonistMaleAvatar;` |
 
-**源码注释:**
+**说明:**
 
 > 男性主角半身立绘
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TSoftObjectPtr<UTexture2D>> Half_TourMaleAvatar;` |
 
-**源码注释:**
+**说明:**
 
 > 男性比武半身立绘
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TSoftObjectPtr<UTexture2D>> Small_TourMaleAvatar;` |
 
-**源码注释:**
+**说明:**
 
 > 男性比武小立绘
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TSoftObjectPtr<UTexture2D>> Half_ProtagonistMaleCenterAvatar;` |
 
-**源码注释:**
+**说明:**
 
 > 男性主角中心半身立绘
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 ProtagonistSkillPoint = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 主角技能点数
 
@@ -199,7 +199,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 ProtagonistFirePoint = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 主角兴趣点数
 
@@ -214,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 PerSkillMaxFirePoint = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 每个技能最大添加的兴趣点
 
@@ -229,7 +229,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 ProtagonistCharacteristicNum = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 随机生成主角可选特性的总数
 
@@ -244,7 +244,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 InitNewGameTeamMemberNum = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 初始同行成员数量
 
@@ -259,7 +259,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FName> UnLockBuildingId;` |
 
-**源码注释:**
+**说明:**
 
 > 初始解锁的建筑id(在列表中是否可见)
 
@@ -274,7 +274,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FName> UnlockFormulaId;` |
 
-**源码注释:**
+**说明:**
 
 > 初始解锁的配方id
 
@@ -289,7 +289,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FName> UnlockPlantId;` |
 
-**源码注释:**
+**说明:**
 
 > 初始解锁的种植物id
 
@@ -304,7 +304,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite) TArray<FName> UnlockGameFunction;` |
 
-**源码注释:**
+**说明:**
 
 > 新游戏功能ID
 
@@ -319,7 +319,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 InitNewGameResourceCoinNum = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 初始资源积分数量
 
@@ -334,7 +334,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 InitNewGameStoryCoinNum = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 初始剧本积分
 
@@ -344,12 +344,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<EModItemQuality, [FModCharacteristicNumWeight](ModNewGameStruct__FModCharacteristicNumWeight.md)> |
+| C++ 类型 | TMap<[EModItemQuality](ItemDataStruct__EModItemQuality.md), [FModCharacteristicNumWeight](ModNewGameStruct__FModCharacteristicNumWeight.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<EModItemQuality, FModCharacteristicNumWeight> ProtagonistCharacteristicRand;` |
 
-**源码注释:**
+**说明:**
 
 > 主角特性随机
 

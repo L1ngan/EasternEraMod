@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) float TotalScore { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 总分
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) float BaseScore { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 基础分值
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) float WorkPriorityScore { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 工作优先级分值
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) float WorkScheduleScore { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 工作日程分值
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) float AttributeScore { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 属性分值
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) float BuildingScore { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 设备优先级
 

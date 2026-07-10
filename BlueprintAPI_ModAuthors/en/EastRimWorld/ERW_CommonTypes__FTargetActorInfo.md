@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EActorType` |
+| C++ type | [EActorType](ERW_Enumerations__EActorType.md) |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) EActorType ActorType { EActorType::None };` |
 
-**Source comments:**
+**Notes:**
 
 > Actor的类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid Guid;` |
 
-**Source comments:**
+**Notes:**
 
 > Actor的Guid
 

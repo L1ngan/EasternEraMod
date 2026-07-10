@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Characteristic") FText CharacteristicName;` |
 
-**源码注释:**
+**说明:**
 
 > 特性名称
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Characteristic") TSoftObjectPtr<UTexture2D> Icon;` |
 
-**源码注释:**
+**说明:**
 
 > 特性图标
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Characteristic") FLinearColor TextColor = FLinearColor::Black;` |
 
-**源码注释:**
+**说明:**
 
 > 特性文字颜色
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Characteristic") FText Describe;` |
 
-**源码注释:**
+**说明:**
 
 > 特性描述
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Characteristic") FFormatText FormatDescription;` |
 
-**源码注释:**
+**说明:**
 
 > 格式化后的描述
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Characteristic") TArray<FName> BuffID;` |
 
-**源码注释:**
+**说明:**
 
 > 效果ID 关联DT_CommonBuff
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Characteristic") bool IsShowBuffText = true;` |
 
-**源码注释:**
+**说明:**
 
 > 是否在展示时显示buff相关内容·
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame,BlueprintReadWrite, EditAnywhere, Category = "Characteristic") int Priority;` |
 
-**源码注释:**
+**说明:**
 
 > 特性的优先级
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame,BlueprintReadWrite, EditAnywhere, Category = "Characteristic") EItemQuality Quality = EItemQuality::None;` |
 
-**源码注释:**
+**说明:**
 
 > 品质
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame,BlueprintReadWrite, EditAnywhere,Category= "Characteristic") TArray<FName> ConflictCharacteristicID;` |
 
-**源码注释:**
+**说明:**
 
 > 冲突的特性 ID
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere, Category = "Characteristic") int Weight;` |
 
-**源码注释:**
+**说明:**
 
 > 权重 用于随机时的权重
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Characteristic") TArray<FName> CharacteristicAbility;` |
 
-**源码注释:**
+**说明:**
 
 > 特性中包含的能力
 
@@ -194,12 +194,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ETalentType` |
+| C++ 类型 | [ETalentType](CommonStruct__ETalentType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ETalentType TalentType = ETalentType::PropertyTalent;` |
 
-**源码注释:**
+**说明:**
 
 > 天赋的类型(仅天赋表时需要，特性不需要读这个字段)
 

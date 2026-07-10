@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame,EditAnywhere) FGuid SGUID = FGuid();` |
 
-**Source comments:**
+**Notes:**
 
 > ----------------------------- SaveGame -----------------------------
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AWorldPlace> WorldPlace;` |
 
-**Source comments:**
+**Notes:**
 
 > ----------------------------- SaveGame -----------------------------
 
@@ -49,6 +49,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AERW_GameModeBase> GameMode;` |
 
+**Notes:**
+
+> Cached reference to the game mode (AERW_GameModeBase)
+
 ---
 
 ### Property `SceneComponent`
@@ -60,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere , BlueprintReadOnly) USceneComponent* SceneComponent { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > 根组件
 
@@ -75,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) UERW_HISMManager* HISMManager { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > HISMManager
 
@@ -90,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) UERW_ConstructionComponent* ConstructionComponent { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > 建造组件
 
@@ -105,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) UGOAP_ActionComponent* GOAP_ActionComponent { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > GOAP行动组件
 
@@ -120,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) UGOAP_MemoryComponent* GOAP_MemoryComponent { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > GOAP记忆组件
 
@@ -135,7 +139,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) UERW_DoorCollisionComponent* DoorCollisionComponent { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > 门碰撞管理组件
 
@@ -150,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) USmartObjectComponent* SmartObjectComponent { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > 智能对象组件
 
@@ -165,9 +169,24 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) FName ObjectID;` |
 
-**Source comments:**
+**Notes:**
 
 > 物体的ID
+
+---
+
+### Property `OldObjectID`
+
+| Field | Details |
+|------|------|
+| C++ type | `FName` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) FName OldObjectID;` |
+
+**Notes:**
+
+> 重建前的物体ID
 
 ---
 
@@ -180,7 +199,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool Selected { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否选中
 
@@ -195,7 +214,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool Hovered { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否被鼠标指中
 
@@ -210,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) bool IsInMap { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否放置在地图中
 
@@ -225,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) bool IsDestroyed { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否销毁
 
@@ -240,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame) bool bBuildComplete = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否建造完成
 
@@ -255,7 +274,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) FSmartObjectSlotHandle SlotHandle;` |
 
-**Source comments:**
+**Notes:**
 
 > 选中的智能对象插槽
 
@@ -265,12 +284,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<ECommonButtonType,bool>` |
+| C++ type | TMap<[ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md),bool> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame,VisibleAnywhere) TMap<ECommonButtonType,bool> ButtonOperationState;` |
 
-**Source comments:**
+**Notes:**
 
 > 相关按钮的状态 是否选中
 
@@ -285,7 +304,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<UInventoryManagerComponent> InventoryManagerComponent;` |
 
-**Source comments:**
+**Notes:**
 
 > 库存组件 当此actor可以储存物品时生成
 
@@ -300,7 +319,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<UFabricateActorComponent> FabricateActorComponent;` |
 
-**Source comments:**
+**Notes:**
 
 > 制造组件 当此actor可制造物品时生成
 
@@ -315,9 +334,24 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<UTreasureComponent> TreasureComponent;` |
 
-**Source comments:**
+**Notes:**
 
 > 珍宝阁组件 当此actor是珍宝阁时生成
+
+---
+
+### Property `TradeAreaComponent`
+
+| Field | Details |
+|------|------|
+| C++ type | TObjectPtr<[UTradeAreaComponent](../Components/TradeAreaComponent__UTradeAreaComponent.md)> |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<UTradeAreaComponent> TradeAreaComponent;` |
+
+**Notes:**
+
+> Trade area component
 
 ---
 
@@ -339,6 +373,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Gets the fuel-related data
+
 ---
 
 ### Function `GetEnergyData`
@@ -356,6 +394,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure) void GetEnergyData(FEnergyData& EnergyData) const;`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Gets the energy-related data
 
 ---
 
@@ -375,6 +417,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Gets the ceremony-related data
+
 ---
 
 ### Function `GetPuppetData`
@@ -392,6 +438,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure) void GetPuppetData(FPuppetData& PuppetData) const;`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Gets the puppet-related data
 
 ---
 
@@ -411,6 +461,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Gets the list of facility ownership data
+
 ---
 
 ### Function `GetAutoOutputWorkloadTimerID`
@@ -424,6 +478,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure) int32 GetAutoOutputWorkloadTimerID() const;`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Returns the timer ID used for automatic workload output
 
 ---
 
@@ -443,6 +501,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets the environment save data; returns true if present
+
 ---
 
 ### Function `GetHeatSourceData`
@@ -461,6 +523,32 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Gets the heat source data; returns true if present
+
+---
+
+### Function `GetAreaData`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `OutAreaData` | [FAreaBuildingData](../System/AreaControl/AreaControlTypes__FAreaBuildingData.md)& |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure) bool GetAreaData(FAreaBuildingData& OutAreaData);`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Gets the building's area data (FAreaBuildingData); returns true if present
+
 ---
 
 ### Function `NeedSaveObject`
@@ -474,6 +562,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintNativeEvent) bool NeedSaveObject() const;`
 
 **Usage:** **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
+
+**Notes:**
+
+> Returns whether this object needs to be saved
 
 ---
 
@@ -489,7 +581,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > ~IEastRimWorldTeamAgentInterface interface
 
@@ -511,6 +603,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Sets the actor's generic team ID
+
 ---
 
 ### Function `OnLoadFinished`
@@ -525,7 +621,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 加载完成
 
@@ -543,7 +639,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 读档时重新更新填充模型
 
@@ -561,9 +657,27 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 设置HISMManager
+
+---
+
+### Function `IsRebuilt`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintPure |
+| Return type | `bool` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintPure) bool IsRebuilt() const;`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 是否是重建建筑
 
 ---
 
@@ -577,7 +691,7 @@
 
 | Name | Type |
 |--------|------|
-| `RotateOrientation` | `ERotateOrientation` |
+| `RotateOrientation` | [ERotateOrientation](../ERW_Enumerations__ERotateOrientation.md) |
 | `BuildID` | `const FName&` |
 | `TeamId` | `const FGenericTeamId&` |
 
@@ -585,7 +699,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 初始化建筑信息
 
@@ -603,7 +717,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建建造组件
 
@@ -621,7 +735,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 销毁建造组件
 
@@ -639,7 +753,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 当Actor销毁时
 
@@ -662,7 +776,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置最近的智能对象槽位
 
@@ -684,7 +798,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 当有人来放置建造资源时
 
@@ -706,6 +820,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters. Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Gets the GOAP goal ID associated with this actor (Blueprint-implemented)
+
 ---
 
 ### Function `InitInventoryManagerComponent`
@@ -718,13 +836,13 @@
 
 | Name | Type |
 |--------|------|
-| `(unnamed / type only)` | `EInventoryItemSetType InInventoryItemSetType = EInventoryItemSetType::Warehouse` |
+| `(unnamed / type only)` | [EInventoryItemSetType](../Struct/ItemStruct__EInventoryItemSetType.md) InInventoryItemSetType = [EInventoryItemSetType](../Struct/ItemStruct__EInventoryItemSetType.md)::Warehouse |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void InitInventoryManagerComponent(EInventoryItemSetType InInventoryItemSetType = EInventoryItemSetType::Warehouse);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 当建筑物是仓库类型时初始化库存组件
 
@@ -742,7 +860,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 当建筑物为制造建筑物时初始化制造组件
 
@@ -760,9 +878,27 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 当建筑物为珍宝阁时初始化珍宝阁组件
+
+---
+
+### Function `InitTradeAreaComponent`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) virtual void InitTradeAreaComponent();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Initializes the trade area component
 
 ---
 
@@ -778,7 +914,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters. Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 获取建造物品点击后创建的界面id
 
@@ -796,7 +932,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取建造物品的名字
 
@@ -814,6 +950,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Gets the building's display name (Blueprint-implemented)
+
 ---
 
 ### Function `CreateDoorCollisionComponent`
@@ -828,7 +968,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建门碰撞管理组件
 
@@ -850,7 +990,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 读档恢复门碰撞
 
@@ -868,7 +1008,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 获得门动画播放位置
 
@@ -890,7 +1030,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 建筑物建造成功
 
@@ -912,6 +1052,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Initializes the construction state from the given build config data
+
 ---
 
 ### Function `SetBuildObjectInstanceVisible`
@@ -930,7 +1074,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 隐藏建筑物模型
 
@@ -952,6 +1096,28 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Sets the building's mesh instance visible or hidden (Blueprint-implemented)
+
+---
+
+### Function `CancelRebuild`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintImplementableEvent |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) void CancelRebuild();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> 取消重建
+
 ---
 
 ### Function `DestoryBuilding`
@@ -966,7 +1132,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 拆除建筑
 
@@ -988,7 +1154,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 改变建筑物耐久度
 
@@ -1011,7 +1177,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 攻击建筑物
 
@@ -1027,13 +1193,13 @@
 
 | Name | Type |
 |--------|------|
-| `RunState` | `EBuildingRunState` |
+| `RunState` | [EBuildingRunState](../ERW_Enumerations__EBuildingRunState.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) virtual void SetBuildingRunState(EBuildingRunState RunState);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置建筑物状态
 
@@ -1049,13 +1215,13 @@
 
 | Name | Type |
 |--------|------|
-| `EnabledState` | `EBuildingEnableState` |
+| `EnabledState` | [EBuildingEnableState](../ERW_Enumerations__EBuildingEnableState.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) virtual void SetBuildingEnabled(EBuildingEnableState EnabledState);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置建筑物开启或者关闭
 
@@ -1077,7 +1243,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 显示或隐藏描边
 
@@ -1100,7 +1266,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 能否使用射线检测结果
 
@@ -1122,7 +1288,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化设施归属数据
 
@@ -1139,14 +1305,14 @@
 | Name | Type |
 |--------|------|
 | `Index` | `int32` |
-| `BelongState` | `EFacilityBelongState` |
+| `BelongState` | [EFacilityBelongState](../ERW_Enumerations__EFacilityBelongState.md) |
 | `Agent` | [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetFacilityBelongData(int32 Index , EFacilityBelongState BelongState , AEastRimWorldAIController* Agent);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置设施归属数据
 
@@ -1168,7 +1334,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 弹出UI信息改变
 
@@ -1190,7 +1356,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置自动制造计时器ID
 
@@ -1208,7 +1374,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 注销自动制造计时器
 
@@ -1224,13 +1390,13 @@
 
 | Name | Type |
 |--------|------|
-| `RoofPartType` | `ERoofPartType` |
+| `RoofPartType` | [ERoofPartType](../ERW_Enumerations__ERoofPartType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) void SetRoofPartType(ERoofPartType RoofPartType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 设置屋顶部位类型
 
@@ -1252,7 +1418,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 切换屋顶显示
 
@@ -1270,7 +1436,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 尝试添加搬运Action
 
@@ -1288,7 +1454,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 移除搬运Action
 
@@ -1310,7 +1476,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取行为在这个建筑物上的消耗变化
 
@@ -1332,7 +1498,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置新的优先级
 
@@ -1350,7 +1516,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 获得模型高度
 
@@ -1368,7 +1534,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 获得墙接缝柱配置参数
 
@@ -1384,13 +1550,13 @@
 
 | Name | Type |
 |--------|------|
-| `DistributionTypes` | `const TArray<EGridDistributionType>&` |
+| `DistributionTypes` | const TArray<[EGridDistributionType](../ERW_Enumerations__EGridDistributionType.md)>& |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent) void UpdateWallRotation(const TArray<EGridDistributionType>& DistributionTypes);`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 更新墙的旋转朝向
 
@@ -1408,7 +1574,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters. **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 获得真正的目标Actor
 
@@ -1426,7 +1592,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 创建新手引导指引箭头
 
@@ -1448,7 +1614,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 销毁新手引导指引箭头
 
@@ -1464,13 +1630,14 @@
 
 | Name | Type |
 |--------|------|
-| `ShowState` | `EEntranceArrowState` |
+| `ShowState` | [EEntranceArrowState](../ERW_Enumerations__EEntranceArrowState.md) |
+| `false` | `bool UpdateSlotEnabled =` |
 
-**Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) void UpdateEntranceArrow(EEntranceArrowState ShowState);`
+**Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) void UpdateEntranceArrow(EEntranceArrowState ShowState , bool UpdateSlotEnabled = false);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 更新建筑入口箭头
 
@@ -1492,7 +1659,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获得建筑的格子
 
@@ -1516,7 +1683,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 加入阶梯的模型
 
@@ -1527,14 +1694,14 @@
 | Field | Details |
 |------|------|
 | Reflection specifiers | BlueprintImplementableEvent |
-| Return type | `ERoomUnitShowState` |
+| Return type | [ERoomUnitShowState](../ERW_Enumerations__ERoomUnitShowState.md) |
 | Parameters | (none) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent) ERoomUnitShowState GetRoomUnitShowState();`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 获得房间单元显示状态
 

@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Item set actor that manages and displays item instances in bulk via instanced static mesh components (including PCG vegetation generation)
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool bSelectState;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是选中状态
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool bHoveringState;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是悬浮状态
 
@@ -42,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EInventoryItemSetType` |
+| C++ type | [EInventoryItemSetType](../Struct/ItemStruct__EInventoryItemSetType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="InventoryItemSet|Inventory" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InventoryItemSet|Inventory",SaveGame) EInventoryItemSetType InventoryItemSetType = EInventoryItemSetType::PCGActor;` |
 
-**Source comments:**
+**Notes:**
 
 > 此集合的类型
 
@@ -62,6 +64,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "InventoryItemSet|Inventory", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UBoxComponent> BoxComponent;` |
 
+**Notes:**
+
+> Box collision component
+
 ---
 
 ### Property `NiagaraComponent`
@@ -72,6 +78,10 @@
 | Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="InventoryItemSet|Inventory" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "InventoryItemSet|Inventory", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UNiagaraComponent> NiagaraComponent;` |
+
+**Notes:**
+
+> Niagara effect component
 
 ---
 
@@ -84,6 +94,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly) TMap<FName,TObjectPtr<UInstancedStaticMeshComponent>> InstancedStaticMeshComponents;` |
 
+**Notes:**
+
+> Map from item IDs to their instanced static mesh components
+
 ---
 
 ### Property `InventoryItemWidget`
@@ -94,6 +108,10 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AInventoryItemWidgetActor> InventoryItemWidget;` |
+
+**Notes:**
+
+> Actor displaying the item's UI
 
 ---
 
@@ -117,7 +135,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获得指定范围内的实例
 
@@ -139,7 +157,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters. **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 获取在框中的道具实例
 
@@ -161,7 +179,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取在实例对象
 
@@ -179,7 +197,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置所有组件碰撞
 
@@ -197,7 +215,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 播放动画
 
@@ -215,7 +233,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > PCG生成植被
 
@@ -233,6 +251,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Notifies that PCG vegetation generation has completed
+
 ---
 
 ### Function `ClearPCG`
@@ -247,7 +269,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 清除pcg
 
@@ -265,7 +287,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 清除pcg完成
 
@@ -289,7 +311,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 添加实例，通过ISM组件显示
 
@@ -306,7 +328,7 @@
 | Name | Type |
 |--------|------|
 | `InItemID` | `const FName &` |
-| `InventoryType` | `EGroundInventoryType` |
+| `InventoryType` | [EGroundInventoryType](../Struct/CommonEnum__EGroundInventoryType.md) |
 | `1` | `int AddItemNumber =` |
 | `true` | `bool bUnlockInfo =` |
 
@@ -314,7 +336,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化创建物品 并显示静态模型及 ui显示
 
@@ -338,7 +360,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化创建装备 并显示静态模型及 ui显示
 
@@ -356,7 +378,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 集合销毁
 
@@ -374,7 +396,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化完成
 
@@ -396,7 +418,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置 Actor 世界坐标，并将相同位移同步到集合内所有物品实例的 ItemTransform（用于整体挪动物品堆等）
 
@@ -419,7 +441,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过物品实例初始化物品信息
 
@@ -442,7 +464,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过物品实例初始化物资包
 
@@ -464,7 +486,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过简单的物品信息初始化
 
@@ -487,7 +509,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 在给定位置生成一个种植物实例
 
@@ -505,7 +527,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 加入获取抄录书籍Action
 
@@ -523,7 +545,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 移除获取抄录书籍Action
 
@@ -545,6 +567,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Sets the item set's selected state (Blueprint-implemented)
+
 ---
 
 ### Function `K2_SetHoveringItemSetState`
@@ -562,5 +588,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent,BlueprintCallable,DisplayName= "SetHoveringEntityActorState") void K2_SetHoveringItemSetState(bool bHovering);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Sets the item set's hovering state (Blueprint-implemented)
 
 ---

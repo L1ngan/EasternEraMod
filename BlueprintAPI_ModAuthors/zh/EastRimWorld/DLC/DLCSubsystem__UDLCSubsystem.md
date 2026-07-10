@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> DLC子系统，负责挂载DLC的Pak包、读取DLC信息资产、查询DLC安装与激活状态以及打开Steam商店页面。
 
 ## 蓝图暴露函数
 
@@ -20,6 +22,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 挂载所有DLC的Pak文件，返回是否成功。
+
 ---
 
 ### 函数 `GetAllDLCInformationAsset`
@@ -33,6 +39,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) TArray<UDLCInformationAsset*> GetAllDLCInformationAsset();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取所有已挂载DLC包中的DLC信息资产列表。
 
 ---
 
@@ -52,7 +62,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > Dlc是否拥有且安装
 
@@ -74,7 +84,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 打开商店
 
@@ -96,6 +106,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 通过Steam打开指定URL的网页。
+
 ---
 
 ### 函数 `OpenSteamStore`
@@ -110,6 +124,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 打开Steam商店页面。
+
 ---
 
 ### 函数 `CheckCanLoadSaveGame`
@@ -123,11 +141,15 @@
 | 参数名 | 类型 |
 |--------|------|
 | `NeedDLCId` | `TArray<int>` |
-| `OutNeedDLCId` | `TMap<int,EDLCActiveState> &` |
+| `OutNeedDLCId` | TMap<int,[EDLCActiveState](DLCSubsystem__EDLCActiveState.md)> & |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool CheckCanLoadSaveGame(TArray<int> NeedDLCId,TMap<int,EDLCActiveState> & OutNeedDLCId);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 检查存档所需的DLC是否全部可用，输出不满足的DLC ID及其激活状态，返回是否可以加载该存档。
 
 ---
 
@@ -136,7 +158,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `EDLCActiveState` |
+| 返回类型 | [EDLCActiveState](DLCSubsystem__EDLCActiveState.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -147,7 +169,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取dlc的状态
 
@@ -170,7 +192,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取dlc的下载进度
 
@@ -192,7 +214,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 安装dlc
 
@@ -214,7 +236,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 卸载dlc
 

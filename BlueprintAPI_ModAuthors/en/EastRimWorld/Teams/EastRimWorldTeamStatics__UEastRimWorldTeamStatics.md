@@ -28,7 +28,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > Returns the team this object belongs to, or INDEX_NONE if it is not part of a team
 

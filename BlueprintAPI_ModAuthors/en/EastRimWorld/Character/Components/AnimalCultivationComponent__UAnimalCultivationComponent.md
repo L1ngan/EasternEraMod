@@ -21,7 +21,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnCultivationExperienceChanged OnCultivationExperienceChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 修炼经验变化事件
 
@@ -36,7 +36,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnCultivationLevelChanged OnCultivationLevelChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 修炼等级变化事件
 
@@ -51,7 +51,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int32 CultivationLevel = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前修炼等级
 
@@ -66,7 +66,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) float CurrentExperience = 0.0f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前修炼经验
 
@@ -81,7 +81,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) float RequiredExperienceForNextLevel = 0.0f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前等级所需经验（从等级表获取）
 
@@ -96,7 +96,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FName CultivationConfigID;` |
 
-**Source comments:**
+**Notes:**
 
 > 修炼配置ID（关联FAnimalCultivationConfig配置表）
 
@@ -111,7 +111,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int32 MaxCultivationLevel = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大修炼等级（从配置获取）
 
@@ -135,7 +135,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > Returns the AnimalCultivation component if one exists on the specified actor.
 
@@ -157,7 +157,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 添加修炼经验
 
@@ -179,7 +179,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置修炼配置ID（初始化时调用）
 
@@ -201,7 +201,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取当前等级所需经验
 
@@ -219,7 +219,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否可以升级
 

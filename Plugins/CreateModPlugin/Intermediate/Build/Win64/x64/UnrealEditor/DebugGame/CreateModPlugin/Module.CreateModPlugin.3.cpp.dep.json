@@ -50,7 +50,22 @@
             "h:\\project\\plugins\\createmodplugin\\source\\createmodplugin\\public\\worlddatastruct.h",
             "h:\\project\\plugins\\createmodplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\createmodplugin\\uht\\worlddatastruct.generated.h",
             "h:\\project\\plugins\\createmodplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\createmodplugin\\permoduleinline.gen.cpp",
-            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl"
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl",
+            "h:\\project\\plugins\\createmodplugin\\source\\createmodplugin\\createmodplugin.cpp",
+            "h:\\project\\plugins\\createmodplugin\\source\\createmodplugin\\createmodplugin.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\gameplaytags\\classes\\gameplaytagsmanager.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplaytags\\uht\\gameplaytagsmanager.generated.h",
+            "h:\\project\\plugins\\createmodplugin\\source\\createmodplugin\\private\\basedatastruct.cpp",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\uobject\\objectsavecontext.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\uobject\\cookenums.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\uobject\\objectsaveoverride.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\cooker\\cookdependency.h",
+            "h:\\project\\plugins\\createmodplugin\\source\\createmodplugin\\public\\modconfigexporter.h",
+            "h:\\project\\plugins\\createmodplugin\\source\\createmodplugin\\private\\modconfigexporter.cpp",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\jsonutilities\\public\\jsonobjectconverter.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\jsonutilities\\public\\jsonobjectwrapper.h",
+            "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\jsonutilities\\uht\\jsonobjectwrapper.generated.h",
+            "h:\\project\\plugins\\createmodplugin\\source\\createmodplugin\\public\\technologydatastruct.cpp"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 物品实例的替身实体Actor，提供碰撞、模型显示与选中/悬浮/采集等交互
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) bool IsHarvest { false };` |
 
-**源码注释:**
+**说明:**
 
 > 是否是收割
 
@@ -32,6 +34,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|InventoryEntity", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UBoxComponent> BoxComponent;` |
 
+**说明:**
+
+> 盒体碰撞组件
+
 ---
 
 ### 属性 `StaticMeshComponent`
@@ -42,6 +48,10 @@
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|InventoryEntity" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|InventoryEntity", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UStaticMeshComponent> StaticMeshComponent;` |
+
+**说明:**
+
+> 静态网格体组件
 
 ---
 
@@ -54,6 +64,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|InventoryEntity", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UInventoryItemInstance> InventoryItemInstance;` |
 
+**说明:**
+
+> 该实体对应的物品实例
+
 ---
 
 ### 属性 `bSelectState`
@@ -65,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) bool bSelectState;` |
 
-**源码注释:**
+**说明:**
 
 > 是否是选中状态
 
@@ -80,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) bool bHoveringState = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否是悬浮状态
 
@@ -95,6 +109,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly) TObjectPtr<AERW_PlayerControllerBase> PlayerControllerBase;` |
 
+**说明:**
+
+> 缓存的玩家控制器引用
+
 ---
 
 ### 属性 `bAllowCPUAccess`
@@ -106,6 +124,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) bool bAllowCPUAccess = false;` |
 
+**说明:**
+
+> 网格数据是否允许CPU访问
+
 ---
 
 ### 属性 `CustomDepthStencilValue`
@@ -116,6 +138,10 @@
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) int32 CustomDepthStencilValue { 0 };` |
+
+**说明:**
+
+> 自定义深度模板值
 
 ---
 
@@ -133,7 +159,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 当存档时
 
@@ -151,7 +177,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 当读档时
 
@@ -168,6 +194,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void EntityActorDestroy();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 销毁该物品实体Actor
 
 ---
 
@@ -187,7 +217,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 初始化数据
 
@@ -205,7 +235,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 初始化actor
 
@@ -227,7 +257,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 播放操作动画
 
@@ -244,14 +274,14 @@
 | 参数名 | 类型 |
 |--------|------|
 | `CollectActor` | `AActor *` |
-| `NextGorGrowStage` | `EGrowStageType` |
+| `NextGorGrowStage` | [EGrowStageType](../Struct/ItemStruct__EGrowStageType.md) |
 | `bDestroyCollect` | `bool` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent,BlueprintCallable,DisplayName= "PlayDeathEntityAnimation") void K2_PlayDeathEntityAnimation(AActor * CollectActor,EGrowStageType NextGorGrowStage,bool bDestroyCollect);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 播放销毁的动画
 
@@ -273,6 +303,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 更新实体Actor的缩放（蓝图实现）
+
 ---
 
 ### 函数 `K2_UpdateEntityStage`
@@ -285,11 +319,15 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InGrowStage` | `EGrowStageType` |
+| `InGrowStage` | [EGrowStageType](../Struct/ItemStruct__EGrowStageType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent,BlueprintCallable,DisplayName= "UpdateEntityStage") void K2_UpdateEntityStage(EGrowStageType InGrowStage);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 更新实体的生长阶段表现（蓝图实现）
 
 ---
 
@@ -309,6 +347,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 设置实体Actor的选中状态（蓝图实现）
+
 ---
 
 ### 函数 `K2_SetHoveringEntityActorState`
@@ -327,6 +369,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 设置实体Actor的悬浮状态（蓝图实现）
+
 ---
 
 ### 函数 `InitSmartObject`
@@ -341,7 +387,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 初始化智能对象
 
@@ -364,7 +410,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 采集动作完成一次
 
@@ -388,7 +434,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 采集完成
 
@@ -404,14 +450,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CommonButtonType` | `ECommonButtonType` |
+| `CommonButtonType` | [ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md) |
 | `ActionID` | `FName&` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void GetGOAPActionID(ECommonButtonType CommonButtonType,FName& ActionID);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取GOAP Action ID
 
@@ -434,7 +480,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入GOAP Action
 
@@ -458,7 +504,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除GOAP Action
 
@@ -480,7 +526,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置操作状态
 
@@ -503,7 +549,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ActionID移除GOAP Action
 

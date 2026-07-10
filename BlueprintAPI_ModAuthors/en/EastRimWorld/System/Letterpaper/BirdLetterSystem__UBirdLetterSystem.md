@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Bird Letter System UObject type.
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUpdateLetterData FOnUpdateLetterData;` |
 
+**Notes:**
+
+> On Update Letter Data field.
+
 ---
 
 ### Property `CharacterLetterMap`
@@ -28,6 +34,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TMap<FGuid, FCharacterLetterData> CharacterLetterMap;` |
 
+**Notes:**
+
+> Character Letter Map field.
+
 ---
 
 ### Property `AvtiveTime`
@@ -38,6 +48,10 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) int32 AvtiveTime = -10000;` |
+
+**Notes:**
+
+> Avtive Time field.
 
 ---
 
@@ -53,7 +67,7 @@
 
 | Name | Type |
 |--------|------|
-| `LetterType` | `ELetterDialogueType` |
+| `LetterType` | [ELetterDialogueType](BirdLetterSystem__ELetterDialogueType.md) |
 | `Character` | [AEastRimWorldCharacter_Human](../../Character/EastRimWorldCharacter_Human__AEastRimWorldCharacter_Human.md)* |
 | `AddTime` | `int32` |
 | `Mandatory` | `bool` |
@@ -61,6 +75,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Dialogue Events") bool AddNewLetter(ELetterDialogueType LetterType, AEastRimWorldCharacter_Human* Character,int32 AddTime,bool Mandatory);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Executes the Add New Letter operation.
 
 ---
 
@@ -75,6 +93,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Dialogue Events") void InitCharacterLetterMap();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Executes the Init Character Letter Map operation.
 
 ---
 
@@ -96,7 +118,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 掌门回话对话
 
@@ -118,7 +140,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 结束对话
 
@@ -141,7 +163,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 角色希望获得装备
 
@@ -164,7 +186,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 角色Debuff状态
 
@@ -186,7 +208,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除对话
 
@@ -208,7 +230,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 判断是否可以主动发起信笺
 

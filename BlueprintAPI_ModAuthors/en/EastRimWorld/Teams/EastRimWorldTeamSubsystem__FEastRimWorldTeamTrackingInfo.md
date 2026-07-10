@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> East Rim World Team Tracking Info data structure.
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() TArray<TScriptInterface<IEastRimWorldTeamAgentInterface>> TeamAgents;` |
 
+**Notes:**
+
+> Team Agents field.
+
 ---
 
 ### Property `GameplayTeamInfo`
@@ -28,6 +34,10 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() FGameplayTeamInfo GameplayTeamInfo;` |
 
+**Notes:**
+
+> Gameplay Team Info field.
+
 ---
 
 ### Property `TeamBuff`
@@ -38,5 +48,9 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() TArray<FCommonBuff> TeamBuff;` |
+
+**Notes:**
+
+> Team Buff field.
 
 ---

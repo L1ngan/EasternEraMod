@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EFacilityBelongState` |
+| C++ 类型 | [EFacilityBelongState](../ERW_Enumerations__EFacilityBelongState.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) EFacilityBelongState BelongState { EFacilityBelongState::Share };` |
 
-**源码注释:**
+**说明:**
 
 > 设置归属状态
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) FUObjectData OwnerData;` |
 
-**源码注释:**
+**说明:**
 
 > 拥有者的数据(用AIController的Guid)
 

@@ -19,6 +19,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "Base") FGenericTeamId SourceTeamId;` |
 
+**说明:**
+
+> 关系变更的源阵营ID
+
 ---
 
 ### 属性 `TargetTeamId`
@@ -30,6 +34,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "Base") FGenericTeamId TargetTeamId;` |
 
+**说明:**
+
+> 关系变更的目标阵营ID
+
 ---
 
 ### 属性 `TeamRelationship`
@@ -40,5 +48,9 @@
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "Base") TEnumAsByte<ETeamAttitude::Type> TeamRelationship = ETeamAttitude::Type::Friendly;` |
+
+**说明:**
+
+> 两个阵营之间的关系态度（ETeamAttitude，默认友好）
 
 ---

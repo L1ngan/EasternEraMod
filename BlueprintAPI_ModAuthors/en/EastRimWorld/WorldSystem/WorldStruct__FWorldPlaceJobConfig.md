@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EPlaceJobType` |
+| C++ type | [EPlaceJobType](../Struct/CommonEnum__EPlaceJobType.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) EPlaceJobType JobType = EPlaceJobType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 职位类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FText JobName;` |
 
-**Source comments:**
+**Notes:**
 
 > 职位名称
 

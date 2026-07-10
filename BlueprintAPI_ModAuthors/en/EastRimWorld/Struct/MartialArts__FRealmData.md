@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MartialArtsLevel") FText LevelName;` |
 
-**Source comments:**
+**Notes:**
 
 > 等级名字
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="Realm") int MartialArtsScore = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 所需的武学分数
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="Realm") int RealmLevel = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 境界等级
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="Realm") TArray<FName> Characteristic;` |
 
-**Source comments:**
+**Notes:**
 
 > 包含的特性
 
@@ -74,12 +74,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EMartialArtsMajorCategories,int>` |
+| C++ type | TMap<[EMartialArtsMajorCategories](MartialArts__EMartialArtsMajorCategories.md),int> |
 | Reflection specifiers | BlueprintReadWrite, Category="Realm" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="Realm") TMap<EMartialArtsMajorCategories,int> SlotNumber;` |
 
-**Source comments:**
+**Notes:**
 
 > 携带的插槽数量
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="Force") float AddReputation = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 增加所属势力声望
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="Force") float AddGrowScore = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 提供给NPC势力的成长积分
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="Force") bool bBreakThrough = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否需要突破
 

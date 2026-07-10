@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") FGameplayAttribute Attribute;` |
 
-**Source comments:**
+**Notes:**
 
 > 器官对应的血量属性值
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ESpeciesType` |
+| C++ type | [ESpeciesType](CommonEnum__ESpeciesType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="CharacterOrganConfig" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") ESpeciesType OwnedSpecies = ESpeciesType::Human;` |
 
-**Source comments:**
+**Notes:**
 
 > 拥有此器官类型的种族
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") FText OrganName;` |
 
-**Source comments:**
+**Notes:**
 
 > 器官名称
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") TArray<FOrganStatus> OrganStatus;` |
 
-**Source comments:**
+**Notes:**
 
 > 器官所处在区间的状态信息
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") FGameplayAttribute MaxLifeAttribute;` |
 
-**Source comments:**
+**Notes:**
 
 > 器官对应的最大血量属性
 
@@ -89,12 +89,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EBodyStateType,float>` |
+| C++ type | TMap<[EBodyStateType](CharacterStruct__EBodyStateType.md),float> |
 | Reflection specifiers | BlueprintReadWrite, Category="CharacterOrganConfig" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") TMap<EBodyStateType,float> ForBodyStates;` |
 
-**Source comments:**
+**Notes:**
 
 > 器官关联的身体状态的百分比（0-1）
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") int AttackedWeight = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 器官的被攻击到的权重
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") float AttackedSharePercent = 0.0f;` |
 
-**Source comments:**
+**Notes:**
 
 > 器官的被攻击到的分摊几率(0-1)(<=0 不分摊; >=1 必分摊)
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") TArray<FOrganAttackedShareConfig> AttackedShareConfigs;` |
 
-**Source comments:**
+**Notes:**
 
 > 器官的被攻击到的分摊伤害的配置
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") bool DestoryDie = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 器官损毁是否导致死亡
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") float AttackedOverPercent = 0.75f;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大损毁过量比例
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") float MinAttackedOverPercent = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 最小损毁过量比例
 
@@ -199,6 +199,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") bool KnockDown = false;` |
 
+**Notes:**
+
+> Whether damage to this organ can trigger a knock-down
+
 ---
 
 ### Property `KnockDownPrecent`
@@ -209,6 +213,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="CharacterOrganConfig" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") float KnockDownPrecent = 0.f;` |
+
+**Notes:**
+
+> Percentage threshold at which the knock-down is triggered
 
 ---
 
@@ -221,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") TArray<FInjuryConfig> InjuryConfigs;` |
 
-**Source comments:**
+**Notes:**
 
 > 部位伤势配置
 
@@ -236,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") float ScarPercent = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 部位形成疤痕概率
 
@@ -246,12 +254,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBodyOrganType` |
+| C++ type | [EBodyOrganType](../ERW_CommonTypes__EBodyOrganType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="CharacterOrganConfig" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") EBodyOrganType OrganType = EBodyOrganType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 身体部位类型枚举
 

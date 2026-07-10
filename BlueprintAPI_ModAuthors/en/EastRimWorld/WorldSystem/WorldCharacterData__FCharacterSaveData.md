@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Character Save Data data structure.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") FGuid CharacterSGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色的存档GUID 可能为空
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") FGuid CharacterAISGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色的AI 存档GUID 可能为空
 
@@ -47,9 +49,54 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") FGuid CharacterGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色的唯一GUID
+
+---
+
+### Property `AreaCurrentAreaId`
+
+| Field | Details |
+|------|------|
+| C++ type | `FGuid` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid AreaCurrentAreaId;` |
+
+**Notes:**
+
+> —— 区域控制：弟子区域归属（随存档持久化；HungerState 读档可重新派生，不存）——
+
+---
+
+### Property `AreaHungerZeroAccumSeconds`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) float AreaHungerZeroAccumSeconds = 0.f;` |
+
+**Notes:**
+
+> Area Hunger Zero Accum Seconds field.
+
+---
+
+### Property `AreaFrozenByCaptured`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) bool AreaFrozenByCaptured = false;` |
+
+**Notes:**
+
+> Area Frozen By Captured field.
 
 ---
 
@@ -62,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) FName CharacterID;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色ID
 
@@ -77,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") FText CharacterName;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色名字
 
@@ -92,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") FText CharacterFirstName;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色姓氏
 
@@ -102,14 +149,59 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECharacterType` |
+| C++ type | [ECharacterType](../Struct/CommonEnum__ECharacterType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) ECharacterType CharacterType;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色类型
+
+---
+
+### Property `Sex`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | BlueprintReadWrite, Category="Base" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") bool Sex = false;` |
+
+**Notes:**
+
+> Sex field.
+
+---
+
+### Property `bSexOverride`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | BlueprintReadWrite, Category="Base" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") bool bSexOverride = false;` |
+
+**Notes:**
+
+> Sex 是否为权威值（仅随机生成的弟子置 true；其余角色性别仍由模板决定，避免读档时错误覆盖）
+
+---
+
+### Property `CustomizationId`
+
+| Field | Details |
+|------|------|
+| C++ type | `FString` |
+| Reflection specifiers | BlueprintReadWrite, Category="Base" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame, Category = "Base") FString CustomizationId;` |
+
+**Notes:**
+
+> 个体捏脸ID（指向 DT_PresetCustomizationProfiles_V10；空=用模板默认捏脸，随机弟子按性别抽取后填入）
 
 ---
 
@@ -122,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") FGenericTeamId MyTeamID;` |
 
-**Source comments:**
+**Notes:**
 
 > 阵营ID
 
@@ -137,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) bool bOpenDanTian = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否开启丹田
 
@@ -152,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) bool bCanOpenDanTian = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否可以开启
 
@@ -167,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) TArray<FName> CharacteristicInfos;` |
 
-**Source comments:**
+**Notes:**
 
 > 拥有的特性
 
@@ -182,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") FGuid BeInPlaceGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前所在的地点GUID
 
@@ -197,7 +289,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") FGuid BelongToPlaceGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 所属的城镇
 
@@ -212,9 +304,24 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") FName BeInLevelName;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前所在的关卡名字
+
+---
+
+### Property `CurrentWorkScheduleName`
+
+| Field | Details |
+|------|------|
+| C++ type | `FString` |
+| Reflection specifiers | BlueprintReadWrite, Category="Runtime" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") FString CurrentWorkScheduleName;` |
+
+**Notes:**
+
+> 当前工作日程名称（Agents 改 Transient 后，角色读档/重建时据此回注到工作日程）
 
 ---
 
@@ -227,7 +334,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") bool bActive = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前激活状态
 
@@ -237,12 +344,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EOnWorldState` |
+| C++ type | [EOnWorldState](../Struct/CommonEnum__EOnWorldState.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Runtime" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") EOnWorldState OnWorldState = EOnWorldState::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色在世界中的状态
 
@@ -257,7 +364,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") FVector CharacterWorldMapLocation = FVector::ZeroVector;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色在世界中的位置信息
 
@@ -272,7 +379,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") FTransform CharacterWorldPlaceTransform = FTransform::Identity;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色在地点中的位置
 
@@ -287,7 +394,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") bool NutritionTriggerFlag;` |
 
-**Source comments:**
+**Notes:**
 
 > 饥饿触发标记
 
@@ -297,12 +404,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<ECommonButtonType,bool>` |
+| C++ type | TMap<[ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md),bool> |
 | Reflection specifiers | BlueprintReadWrite, Category="Runtime" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") TMap<ECommonButtonType,bool> ButtonOperationState;` |
 
-**Source comments:**
+**Notes:**
 
 > 按钮相关的功能
 
@@ -317,7 +424,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") TMap<FGuid,FSocialRelationshipData> CharacterRelationshipData;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色的社交关系
 
@@ -332,9 +439,39 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) TMap<FName,int32> ItemDrugUsed;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色使用过的药品记录（用于计算耐药性）
+
+---
+
+### Property `ConsumablePermanentEffects`
+
+| Field | Details |
+|------|------|
+| C++ type | `TMap<FName,int32>` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) TMap<FName,int32> ConsumablePermanentEffects;` |
+
+**Notes:**
+
+> 耗材永久属性效果获得记录（key=耗材效果ID value=已获得次数）
+
+---
+
+### Property `LastConsumableUseTime`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) float LastConsumableUseTime = -1.f;` |
+
+**Notes:**
+
+> 上次使用耗材的时间（AWorldDirector::GameTime 秒 小于0=从未使用 用于耗材公共CD）
 
 ---
 
@@ -347,7 +484,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") float CurrentHungryIntervalTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前处于饥饿状态的时间
 
@@ -362,7 +499,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") FName CurHungryId;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前饥饿状态
 
@@ -377,7 +514,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) bool ProhibitTreatSelf = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否禁止治疗自己
 
@@ -392,7 +529,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) bool bCanSelect = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否可以被选中
 
@@ -407,7 +544,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") FVector SpawnPoint;` |
 
-**Source comments:**
+**Notes:**
 
 > 出生点位置
 
@@ -422,7 +559,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) TMap<FString,float> Attributes;` |
 
-**Source comments:**
+**Notes:**
 
 > 存储的属性
 
@@ -437,9 +574,24 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) TMap<FString,float> CalcuOnyAttributes;` |
 
-**Source comments:**
+**Notes:**
 
 > 存储用于在大世界中计算数据的属性,不用来复原角色数据
+
+---
+
+### Property `UIDisplayAttributes`
+
+| Field | Details |
+|------|------|
+| C++ type | `TMap<FString,float>` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) TMap<FString,float> UIDisplayAttributes;` |
+
+**Notes:**
+
+> 存储UI需要显示的临时属性(配置见UGamePlayConfigurationAsset::UIDisplayTempAttributes),不用来复原角色数据
 
 ---
 
@@ -452,7 +604,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<FString,float> CultivateAttributes;` |
 
-**Source comments:**
+**Notes:**
 
 > 存储的培养属性(势力自动培养给的)
 
@@ -467,7 +619,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) TArray<FCommonBuff> BuffArray;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色身上的buff
 
@@ -482,7 +634,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame) TArray<FInjuryEffectInstance> CurInjuryEffectArr;` |
 
-**Source comments:**
+**Notes:**
 
 > 伤势
 
@@ -497,7 +649,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame,Category= "Runtime") FName CurrentTreatInjuryId;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前在治疗的伤势
 
@@ -512,7 +664,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) TMap<FName,FMartialArtsLearnData> MartialArtsLearnData;` |
 
-**Source comments:**
+**Notes:**
 
 > 已经学习的武学
 
@@ -527,7 +679,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) TMap<int,FName> CarryingMoves;` |
 
-**Source comments:**
+**Notes:**
 
 > 携带的招式
 
@@ -542,7 +694,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) TMap<int,FName> CarryingPassive;` |
 
-**Source comments:**
+**Notes:**
 
 > 携带的被动
 
@@ -557,7 +709,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) FName CarryingInternalStrength;` |
 
-**Source comments:**
+**Notes:**
 
 > 携带的内功
 
@@ -572,7 +724,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) int MovesSlotCount = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 招式槽位数量
 
@@ -587,7 +739,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) int PassiveSlotCount = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 被动槽位数量
 
@@ -602,7 +754,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) int RealmLevel = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前的境界等级
 
@@ -617,7 +769,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere) int CurMartialArtsScore = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前的武学积分
 
@@ -632,7 +784,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") TMap<FName,float> BooksReadTime;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前阅读的书籍时间
 
@@ -647,7 +799,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") TMap<FName,int32> BooksReadCount;` |
 
-**Source comments:**
+**Notes:**
 
 > 书籍阅读完次数
 
@@ -662,7 +814,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") FName CurReadMartialArts;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前阅读的武学书籍
 
@@ -677,7 +829,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame,EditAnywhere,Category= "Runtime") TArray<FBreakThroughHarvest> BreakThroughHarvest;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前角色已经突破后选择的技能等
 
@@ -692,7 +844,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame) TArray<FUseItemSaveData> UseItemSaveData;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色身上的物品 只会在跨世界时读取
 
@@ -707,7 +859,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame) float CombatScore =0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 战力
 
@@ -722,7 +874,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame) bool bRegisterWorld = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否需要注册到世界势力中
 
@@ -732,14 +884,29 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EArmorType,FName>` |
+| C++ type | TMap<[EArmorType](../Struct/CommonEnum__EArmorType.md),FName> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame) TMap<EArmorType,FName>CustomApparels;` |
 
-**Source comments:**
+**Notes:**
 
 > 定制服饰外观
+
+---
+
+### Property `AvatarConfigID`
+
+| Field | Details |
+|------|------|
+| C++ type | `FName` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame) FName AvatarConfigID;` |
+
+**Notes:**
+
+> 立绘配置ID（关联 DT_CharacterAvatarConfig）；None = 用模板默认立绘
 
 ---
 
@@ -752,7 +919,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame) bool bUseCustomApparels = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否应用服饰外观
 
@@ -762,12 +929,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EMartialArtsMajorCategories` |
+| C++ type | [EMartialArtsMajorCategories](../Struct/MartialArts__EMartialArtsMajorCategories.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame) EMartialArtsMajorCategories CurMartialArtsMajorCategory;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前的修炼倾向
 
@@ -782,7 +949,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int32 BreakthroughNumber = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 突破次数
 
@@ -797,7 +964,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int32 RealmLevelHistoricHigh = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 历史最高境界
 
@@ -812,7 +979,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int32 ReachableRealmLevel = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前可以突破到的境界
 
@@ -827,7 +994,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,Category= "Animal") int32 CultivationLevel = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物修炼等级
 
@@ -842,7 +1009,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,Category= "Animal") float CurrentExperience = 0.0f;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物修炼经验
 
@@ -856,5 +1023,9 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool bUseProtagonistAppearance = false;` |
+
+**Notes:**
+
+> Boolean flag indicating whether Use Protagonist Appearance is enabled or true.
 
 ---

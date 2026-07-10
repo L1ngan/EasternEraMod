@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 动画通知状态：技能播放期间使角色持续朝向目标旋转并限制向目标移动的最大距离。
 
 ## 蓝图暴露变量
 
@@ -17,6 +19,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float MoveMaxDistance = 0.f;` |
 
+**说明:**
+
+> 向目标移动的最大距离（厘米），默认0。
+
 ---
 
 ### 属性 `RotationSpeed`
@@ -27,5 +33,9 @@
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float RotationSpeed = 0.f;` |
+
+**说明:**
+
+> 朝向目标的旋转速度，默认0。
 
 ---

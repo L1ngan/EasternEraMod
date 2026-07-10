@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) int32 LayerNum { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 填充模型层数
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) float Height { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 阶梯高度
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool IsFlat { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是平台
 

@@ -17,11 +17,11 @@
 | C++ type | `UObject*` |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) UObject* Object { nullptr };` |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , Transient) UObject* Object { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
-> Object
+> Object（运行时缓存指针；身份靠下方 Guid，标记 Transient 避免被序列化导致悬空指针崩溃）
 
 ---
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) FGuid Guid;` |
 
-**Source comments:**
+**Notes:**
 
 > Object对应的Guid
 
@@ -44,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EActorType` |
+| C++ type | [EActorType](ERW_Enumerations__EActorType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) EActorType OwnerType { EActorType::None };` |
 
-**Source comments:**
+**Notes:**
 
 > Owner的类型
 

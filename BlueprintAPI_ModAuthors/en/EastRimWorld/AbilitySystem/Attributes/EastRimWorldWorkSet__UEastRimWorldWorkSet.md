@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Work attribute set: speeds, success rates and extra outputs for various jobs (mining, construction, treatment, cooking, planting, research, surgery, etc.)
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData GlobalWorkAddition;` |
 
-**Source comments:**
+**Notes:**
 
 > 全局工作加成 包含各种属性途径增加
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData OrdinaryWorkingSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 普通工作速度
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MiningExtraOutput;` |
 
-**Source comments:**
+**Notes:**
 
 > 采矿额外产生倍率
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MiningSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 采矿速度
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData QualityOfTreatment;` |
 
-**Source comments:**
+**Notes:**
 
 > 治疗质量
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SpeedOfTreatment;` |
 
-**Source comments:**
+**Notes:**
 
 > 治疗速度
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RateOfConstruction;` |
 
-**Source comments:**
+**Notes:**
 
 > 建造速度
 
@@ -122,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SuccessRateOfConstruction;` |
 
-**Source comments:**
+**Notes:**
 
 > 建造成功率
 
@@ -137,7 +139,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SuccessRateOfRepair;` |
 
-**Source comments:**
+**Notes:**
 
 > 修理成功率
 
@@ -152,7 +154,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ReadingSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 阅读速度
 
@@ -167,7 +169,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PlantsHarvestExtraYield;` |
 
-**Source comments:**
+**Notes:**
 
 > 植物的收获额外产量
 
@@ -182,7 +184,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PlantingSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 种植速度
 
@@ -197,7 +199,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CookingSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 烹饪速度
 
@@ -212,7 +214,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CookingToxicityProbability;` |
 
-**Source comments:**
+**Notes:**
 
 > 烹饪有毒率
 
@@ -227,7 +229,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SlaughterSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 屠宰速度
 
@@ -242,7 +244,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ExtraSlaughterYield;` |
 
-**Source comments:**
+**Notes:**
 
 > 屠宰额外产量
 
@@ -257,7 +259,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DrugMakingSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 制药速度
 
@@ -272,7 +274,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BrewingSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 酿酒速度
 
@@ -287,7 +289,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalCollectionSuppliesExtraOutput;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物收集物资额外产出
 
@@ -302,7 +304,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalCollectionSuppliesSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物收集物资速度
 
@@ -317,7 +319,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MeltingSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 熔炼速度
 
@@ -332,7 +334,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HuntingCover;` |
 
-**Source comments:**
+**Notes:**
 
 > 狩猎隐蔽率
 
@@ -347,7 +349,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ResearchRate;` |
 
-**Source comments:**
+**Notes:**
 
 > 研究速度
 
@@ -362,7 +364,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SurgerySpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 手术速度
 
@@ -377,7 +379,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SurgerySuccessRate;` |
 
-**Source comments:**
+**Notes:**
 
 > 手术成功率
 
@@ -392,7 +394,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData FarmingExtraOutput;` |
 
-**Source comments:**
+**Notes:**
 
 > 务农额外产出
 
@@ -407,7 +409,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData FarmingSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 务农速度
 
@@ -422,7 +424,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CollectionSuccessRate;` |
 
-**Source comments:**
+**Notes:**
 
 > 采集成功率
 
@@ -437,7 +439,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TamingProbability;` |
 
-**Source comments:**
+**Notes:**
 
 > 驯服几率
 
@@ -452,7 +454,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TrainingProbability;` |
 
-**Source comments:**
+**Notes:**
 
 > 训练几率
 
@@ -467,7 +469,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ArtProductionSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 艺术制造速度
 
@@ -482,7 +484,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ManufacturingSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 制造速度
 
@@ -497,7 +499,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SpeedOfMaintain;` |
 
-**Source comments:**
+**Notes:**
 
 > 维修速度
 
@@ -512,7 +514,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DisassemblySpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 拆解速度
 
@@ -527,7 +529,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DisassemblyIncome;` |
 
-**Source comments:**
+**Notes:**
 
 > 拆解收益
 
@@ -542,7 +544,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ObserveSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 观察速度
 
@@ -557,7 +559,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Work", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ObserveEfficiency;` |
 
-**Source comments:**
+**Notes:**
 
 > 观察效率
 

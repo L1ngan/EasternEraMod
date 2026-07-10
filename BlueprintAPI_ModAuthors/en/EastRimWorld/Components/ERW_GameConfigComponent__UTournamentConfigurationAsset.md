@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float SingleBattlePrepareTime = 5.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 每场战斗的准备时间(连线时间)
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float SingleBattleStartTime = 5.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 每场战斗的开始时间
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float SingleBattleInProgressTime = 5.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 每场战斗的战斗中时间
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float SingleBattleEndTime = 5.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 每场战斗的结束展示
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float SingleBattleSettleTime = 5.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 每场战斗的结算展示(连线时间)
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float NextRoundIntervalTime = 5.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 每轮的间隔时间
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float SkipCurRoundIntervalTime = 5.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 跳过本轮战斗时间隔时间
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TSoftObjectPtr<class UBehaviorTree> DefaultBehaviorTree;` |
 
-**Source comments:**
+**Notes:**
 
 > 武林大会默认行为树
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 SoloTournamentIntervalTime = 19200;` |
 
-**Source comments:**
+**Notes:**
 
 > 单人比赛的时间间隔
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 SoloTournamentFirstDelayTime = 10;` |
 
-**Source comments:**
+**Notes:**
 
 > 单人比赛的首次的时间延迟 注意 不会与游戏初始时间相加
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 TeamTournamentIntervalTime = 38400;` |
 
-**Source comments:**
+**Notes:**
 
 > 多人比赛的时间间隔
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 TeamTournamentFirstDelayTime = 10;` |
 
-**Source comments:**
+**Notes:**
 
 > 多人比赛的首次的时间延迟 注意 不会与游戏初始时间相加
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 RankRewardIntervalTime = 38400;` |
 
-**Source comments:**
+**Notes:**
 
 > 门派排名奖励发放间隔
 
@@ -214,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float SlowTime = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 时停的时间下的展示时间
 
@@ -229,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float TimeSpeedMultiplier = 0.1;` |
 
-**Source comments:**
+**Notes:**
 
 > 时停的时间倍数
 
@@ -244,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float BattleEndIntervalTime = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗结束后显示界面的间隔时间
 

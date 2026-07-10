@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ETechPointType` |
+| C++ type | [ETechPointType](TechnologyStruct__ETechPointType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") ETechPointType TPointType = ETechPointType::BasTechPoint;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") int32 RecoverValue { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 单个物品恢复值
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite , Category="Base") TArray<FName> BuildIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 可以产生当前类型科技点的建筑
 

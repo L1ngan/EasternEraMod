@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Chat condition weight: random weight and the good-opinion (favorability) change it applies
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) int32 Weight = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 权重
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) int32 GoodOpinionValue = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 好感度影响
 

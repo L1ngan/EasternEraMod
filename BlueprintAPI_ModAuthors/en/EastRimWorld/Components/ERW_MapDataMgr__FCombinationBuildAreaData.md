@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Combination building area data: combination-satisfied flag, GUID, config ID, core building grid range and member building counts
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly) bool IsEnoughCombination;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否满足组合
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly) FGuid CombinationGuid = FGuid();` |
 
-**Source comments:**
+**Notes:**
 
 > guid
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly) FName CombinationID;` |
 
-**Source comments:**
+**Notes:**
 
 > 配置id
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly) FGridPosition MinGridPos;` |
 
-**Source comments:**
+**Notes:**
 
 > 核心建筑位置范围
 
@@ -77,6 +79,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly) FGridPosition MaxGridPos;` |
 
+**Notes:**
+
+> Maximum grid position of the core building's location range
+
 ---
 
 ### Property `BuildIdNum`
@@ -88,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly) TMap<FName,int32> BuildIdNum;` |
 
-**Source comments:**
+**Notes:**
 
 > 组合内各建筑id数量
 
@@ -103,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly) TMap<FName,int32> BuildTabNum;` |
 
-**Source comments:**
+**Notes:**
 
 > 组合内各建筑分类的数量
 

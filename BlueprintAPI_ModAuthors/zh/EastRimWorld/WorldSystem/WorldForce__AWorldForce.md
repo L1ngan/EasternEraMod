@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> World Force Actor 类型。
 
 ## 蓝图暴露变量
 
@@ -17,6 +19,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, BlueprintReadOnly) FGuid SGUID;` |
 
+**说明:**
+
+> GUID。
+
 ---
 
 ### 属性 `ForceAimInfo`
@@ -28,24 +34,9 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame,BlueprintReadOnly) FForceAimInfo ForceAimInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 势力宗旨
-
----
-
-### 属性 `ForceFavorability`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | `TMap<FGuid,float>` |
-| 反射说明符 | BlueprintReadOnly |
-| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
-| 原始声明（单行节选） | `UPROPERTY(SaveGame,BlueprintReadOnly) TMap<FGuid,float> ForceFavorability;` |
-
-**源码注释:**
-
-> 势力之间的好感度
 
 ---
 
@@ -58,8 +49,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame,BlueprintReadOnly) int32 OwnedStationNum = 0;` |
 
-**源码注释:**
+**说明:**
 
+> 注: 势力之间的好感度权威源是 AWorldDirector::AllForceFavorability,
+> 经 AWorldDirector::GetForceFavorabilityInfo(A,B) 读取。原本势力上的 TMap 从无写入, 已删除。
 > 拥有驻地数量
 
 ---
@@ -73,7 +66,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame,BlueprintReadOnly) int32 OwnedCenterCityNum = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 拥有城镇数量
 
@@ -88,7 +81,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame,BlueprintReadOnly) int32 OwnedResourcePointNum = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 拥有资源点数量
 
@@ -98,12 +91,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EForceState` |
+| C++ 类型 | [EForceState](WorldStruct__EForceState.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame,BlueprintReadOnly) EForceState ForceState = EForceState::Normal;` |
 
-**源码注释:**
+**说明:**
 
 > 势力的状态
 
@@ -118,9 +111,39 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame,BlueprintReadWrite,EditAnywhere) float ForceStateTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 状态时间
+
+---
+
+### 属性 `WanderingDays`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 WanderingDays = 0;` |
+
+**说明:**
+
+> [PR-12] 流窜已持续天数（Wandering态每日+1，复活后归零）
+
+---
+
+### 属性 `bExtinct`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `bool` |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) bool bExtinct = false;` |
+
+**说明:**
+
+> [PR-12] 势力是否已覆灭（覆灭后Actor保留，标记无效）
 
 ---
 
@@ -133,7 +156,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) float AvoidBattleTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 避战时间
 
@@ -148,7 +171,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float TotalCombat = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 战力总和
 
@@ -163,7 +186,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) float AttackColdDown = 999999.f;` |
 
-**源码注释:**
+**说明:**
 
 > 攻击间隔时间
 
@@ -178,7 +201,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float TotalProsperity = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 总繁荣度
 
@@ -193,7 +216,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) FName WorldForceID;` |
 
-**源码注释:**
+**说明:**
 
 > 势力id
 
@@ -208,7 +231,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) FWorldForceInfo WorldForceInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 势力信息
 
@@ -223,7 +246,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float TotalReputation = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 总声望值
 
@@ -238,7 +261,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) FText ForceName;` |
 
-**源码注释:**
+**说明:**
 
 > 当前势力名称
 
@@ -253,7 +276,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) int32 ForceLevel;` |
 
-**源码注释:**
+**说明:**
 
 > 势力等级
 
@@ -268,24 +291,9 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) int32 LevelUpPlaceInterval;` |
 
-**源码注释:**
+**说明:**
 
 > 势力升级地点间隔
-
----
-
-### 属性 `ForceCharacterDataPool`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | `TArray<FName>` |
-| 反射说明符 | BlueprintReadOnly |
-| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FName> ForceCharacterDataPool;` |
-
-**源码注释:**
-
-> 势力角色随机池
 
 ---
 
@@ -298,7 +306,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TArray<FGuid> OccupiedPlace;` |
 
-**源码注释:**
+**说明:**
 
 > 占领过的地点
 
@@ -313,7 +321,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TArray<FName> OwnStratagemAbility;` |
 
-**源码注释:**
+**说明:**
 
 > 拥有的战略技能
 
@@ -328,7 +336,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TArray<FName> OwnSummonRobot;` |
 
-**源码注释:**
+**说明:**
 
 > 拥有的机关人
 
@@ -343,7 +351,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TArray<FName> OwnTower;` |
 
-**源码注释:**
+**说明:**
 
 > 拥有的防御塔
 
@@ -358,7 +366,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TMap<FName, FPuppetModificationInfo> PuppetEquipmentData;` |
 
-**源码注释:**
+**说明:**
 
 > 傀儡装备数据存储（傀儡ID -> 装备数据）
 
@@ -373,7 +381,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) FVector OnWorldMapLocation;` |
 
-**源码注释:**
+**说明:**
 
 > 当前势力在世界地图的位置
 
@@ -388,7 +396,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TArray<FCommonTaskCondition> LevelUpConditions;` |
 
-**源码注释:**
+**说明:**
 
 > 升级条件
 
@@ -403,7 +411,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnFocreLevelChange OnFocreLevelChange;` |
 
-**源码注释:**
+**说明:**
 
 > 升级通知
 
@@ -418,7 +426,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnRefleshFocrePeople OnRefleshFocrePeople;` |
 
-**源码注释:**
+**说明:**
 
 > 人员被踢提示
 
@@ -433,6 +441,25 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnOwnedWorldPlaceChange OnOwnedWorldPlaceChange;` |
 
+**说明:**
+
+> On Owned World Place Change 事件或回调。
+
+---
+
+### 属性 `OnForceMainPlaceChanged`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FOnForceMainPlaceChanged` |
+| 反射说明符 | BlueprintAssignable |
+| 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnForceMainPlaceChanged OnForceMainPlaceChanged;` |
+
+**说明:**
+
+> [PR-12] 主城变更通知（UI/剧情链挂此事件；nullptr=进入流窜）
+
 ---
 
 ### 属性 `MainConstructionID`
@@ -444,9 +471,9 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) FName MainConstructionID;` |
 
-**源码注释:**
+**说明:**
 
-> 当前势力ID
+> 当前势力的主城ID
 
 ---
 
@@ -459,7 +486,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FForceLevelInfo ForceLevelInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 势力等级信息
 
@@ -474,7 +501,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame) TMap<FGuid,FCharacterSaveData> WorldCharacterData;` |
 
-**源码注释:**
+**说明:**
 
 > 所在势力的角色信息
 
@@ -489,7 +516,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame) TMap<FGuid,FCharacterSaveData> CacheFixRemovedCharacterData;` |
 
-**源码注释:**
+**说明:**
 
 > ----补丁 4.15 22:03 暂时保留一下修复存档被移除的数据----
 
@@ -504,7 +531,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TArray<FForceSubClassInfo> SubClassArr;` |
 
-**源码注释:**
+**说明:**
 
 > ------------------------------------------------
 > 分堂信息(索引从1开始,0为堂主预留)
@@ -520,7 +547,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) FForceSubClassInfo LeaderSubClassInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 掌门的堂口信息（目前仅用于门规管理，其中只有堂口Index和门规有效）(仅玩家势力使用)
 
@@ -535,7 +562,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TArray<FForceMemberJobInfo> ForceMemberJob;` |
 
-**源码注释:**
+**说明:**
 
 > 人员职位信息
 
@@ -550,7 +577,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) int32 MasterGeneration = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 第N代掌门
 
@@ -565,7 +592,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) FGuid LeaderGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 掌门GUID
 
@@ -580,7 +607,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FWorldNPCForceConfig WorldNPCForceConfig;` |
 
-**源码注释:**
+**说明:**
 
 > NCP配置信息
 
@@ -595,7 +622,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TArray<FName>UnlockForceApparel;` |
 
-**源码注释:**
+**说明:**
 
 > 已经解锁的门派服饰
 
@@ -610,7 +637,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame) float ForceMoney=0;` |
 
-**源码注释:**
+**说明:**
 
 > 势力拥有的金钱
 
@@ -625,7 +652,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame) TMap<FName , FFGuidArr> ActivePurpose;` |
 
-**源码注释:**
+**说明:**
 
 > 当前激活的宗旨ID
 
@@ -640,7 +667,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FGuid> BefriendedForceGuids;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家外交：已结交的门派GUID列表
 
@@ -653,15 +680,108 @@
 | C++ 类型 | `float` |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float LastBreakOffDiplomacyTime = 0.f;` |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float LastBreakOffDiplomacyTime = -1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家外交：上次断交操作的游戏时间（用于冷却判定，所有门派共享）
 
 ---
 
+### 属性 `LastRequireTaskTime`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float LastRequireTaskTime = -1.f;` |
+
+**说明:**
+
+> 玩家外交：上次请求任务操作的游戏时间（用于冷却判定，所有门派共享）
+
+---
+
+### 属性 `LastRequireHelpTime`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float LastRequireHelpTime = -1.f;` |
+
+**说明:**
+
+> 玩家外交：上次请求援助操作的游戏时间（用于冷却判定，所有门派共享）
+
+---
+
+### 属性 `OnPlayerBefriendWithOther`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FOnPlayerBefriendWithOther` |
+| 反射说明符 | BlueprintAssignable |
+| 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnPlayerBefriendWithOther OnPlayerBefriendWithOther;` |
+
+**说明:**
+
+> On Player Befriend With Other 事件或回调。
+
+---
+
+### 属性 `OnPlayerBreakOffWithOther`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FOnPlayerBreakOffWithOther` |
+| 反射说明符 | BlueprintAssignable |
+| 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnPlayerBreakOffWithOther OnPlayerBreakOffWithOther ;` |
+
+**说明:**
+
+> On Player Break Off With Other 事件或回调。
+
+---
+
+### 属性 `ForceRelationLedgers`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TMap<FName, [FRelationLedger](RelationLedgerTypes__FRelationLedger.md)> |
+| 反射说明符 | BlueprintReadWrite, Category="RelationLedger" |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, SaveGame, EditAnywhere, Category = "RelationLedger") TMap<FName, FRelationLedger> ForceRelationLedgers;` |
+
+**说明:**
+
+> Agent 工作流 PR-003: 势力关系账本 (跟其他势力的恩仇), Key: 另一势力 ID
+
+---
+
 ## 蓝图暴露函数
+
+### 函数 `AITimeToAttackOtherWorldPlace`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void AITimeToAttackOtherWorldPlace();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> AI势力攻击其他地点
+
+---
 
 ### 函数 `CheckCanAttack`
 
@@ -675,31 +795,9 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查是否可以攻击
-
----
-
-### 函数 `PreAttackWorldPlace`
-
-| 项目 | 内容 |
-|------|------|
-| 反射说明符 | BlueprintCallable |
-| 返回类型 | `void` |
-| 参数 | 见下表 |
-
-| 参数名 | 类型 |
-|--------|------|
-| `PlaceGuid` | `const FGuid &` |
-
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void PreAttackWorldPlace(const FGuid & PlaceGuid);`
-
-**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
-
-**源码注释:**
-
-> 战前准备
 
 ---
 
@@ -711,11 +809,11 @@
 | 返回类型 | `float` |
 | 参数 | （无） |
 
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) float CalculateTotalDefense();`
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) float CalculateTotalDefense() const;`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算城防
 
@@ -737,7 +835,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 攻击地点成功(战斗结束后调用)
 
@@ -759,7 +857,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 攻击地点失败(战斗结束后调用)
 
@@ -781,7 +879,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 地点距离我的城市最短距离
 
@@ -797,13 +895,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TargetPoint` | `const FVector &` |
+| `TargetPoint` | `const FVector2D&` |
 
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) float PointWithSelfDistance(const FVector & TargetPoint);`
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) float PointWithSelfDistance(const FVector2D& TargetPoint);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 我距离点最近的城市的距离
 
@@ -821,7 +919,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算总战力
 
@@ -839,7 +937,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算总繁荣
 
@@ -857,7 +955,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查能否升级势力
 
@@ -875,7 +973,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 升级势力(先调用CheckCanLevelUpForce检查升级条件)
 
@@ -892,14 +990,14 @@
 | 参数名 | 类型 |
 |--------|------|
 | `MemberId` | `const FGuid&` |
-| `JobType` | `const EForceJobType` |
+| `JobType` | const [EForceJobType](WorldStruct__EForceJobType.md) |
 | `SubClassIndex` | `const int32` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SetMemberJob(const FGuid& MemberId, const EForceJobType JobType, const int32 SubClassIndex);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置成员的职位
 
@@ -921,7 +1019,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查询分堂的成员的职位
 
@@ -937,13 +1035,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `JobType` | `EForceJobType` |
+| `JobType` | [EForceJobType](WorldStruct__EForceJobType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) TArray<FForceMemberJobInfo> GetMembersJobByType(EForceJobType JobType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查询某个职位的成员
 
@@ -966,6 +1064,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> Find Member Job Info 字段。
+
 ---
 
 ### 函数 `CheckMemberIsInnerSect`
@@ -984,7 +1086,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查某人是否内门
 
@@ -1006,7 +1108,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查某人是否掌门
 
@@ -1024,7 +1126,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查能否招募到主城
 
@@ -1048,7 +1150,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新分堂设置
 
@@ -1070,7 +1172,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取分堂信息
 
@@ -1094,7 +1196,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置分堂所有成员使用统一的服装
 
@@ -1116,7 +1218,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 给角色应用他所在该分堂的服饰（如果分堂为设置使用统一服装，就还是使用）
 
@@ -1127,7 +1229,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | TMap<EArmorType,[FNameIDArray](../Struct/CommonStruct__FNameIDArray.md)> |
+| 返回类型 | TMap<[EArmorType](../Struct/CommonEnum__EArmorType.md),[FNameIDArray](../Struct/CommonStruct__FNameIDArray.md)> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1138,7 +1240,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查询分堂可以使用的服饰列表
 
@@ -1160,7 +1262,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查询势力服装对应的解锁势力等级
 
@@ -1171,7 +1273,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `TMap<EArmorType,FName>` |
+| 返回类型 | TMap<[EArmorType](../Struct/CommonEnum__EArmorType.md),FName> |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -1183,7 +1285,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取分堂服饰数据
 
@@ -1204,6 +1306,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) TMap<bool,FCustomApparelsSkin> GetSubClassApparelData2(const int32 SubClassIndex);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取或查询 Get Sub Class Apparel Data 2。
 
 ---
 
@@ -1226,7 +1332,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置物品使用状态
 
@@ -1251,7 +1357,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置行为可执行状态
 
@@ -1276,7 +1382,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置货柜可使用状态
 
@@ -1294,7 +1400,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 初始化门规管理状态
 
@@ -1318,7 +1424,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取行为可执行状态
 
@@ -1342,7 +1448,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取可购买的货柜
 
@@ -1365,7 +1471,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得可用Tag数量
 
@@ -1382,14 +1488,14 @@
 | 参数名 | 类型 |
 |--------|------|
 | `SubClassIndex` | `const int32` |
-| `NewForceApparels` | `TMap<EArmorType,FName>` |
+| `NewForceApparels` | TMap<[EArmorType](../Struct/CommonEnum__EArmorType.md),FName> |
 | `CharSex` | `bool` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool SaveSubClassApparel(const int32 SubClassIndex,TMap<EArmorType,FName> NewForceApparels,bool CharSex);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 保存势力服饰配置
 
@@ -1411,7 +1517,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 增加势力声望
 
@@ -1433,7 +1539,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 激活门派宗旨
 
@@ -1455,7 +1561,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 取消门派宗旨
 
@@ -1472,11 +1578,15 @@
 | 参数名 | 类型 |
 |--------|------|
 | `PlaceGuid` | `const FGuid &` |
-| `WorldPlaceType` | `const EWorldPlaceType&` |
+| `WorldPlaceType` | const [EWorldPlaceType](../Struct/CommonEnum__EWorldPlaceType.md)& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure) bool CheckCanOccupyPlace(const FGuid & PlaceGuid,const EWorldPlaceType& WorldPlaceType) const;`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取或查询 Check Can Occupy Place。
 
 ---
 
@@ -1492,7 +1602,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取拥有的所有地点GUID
 
@@ -1514,7 +1624,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 放弃城市
 
@@ -1536,7 +1646,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查找角色信息
 
@@ -1559,6 +1669,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取或查询 Get Character Data By Guid Ptr。
+
 ---
 
 ### 函数 `FindCharacterData`
@@ -1577,7 +1691,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取角色信息
 
@@ -1594,6 +1708,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) const TMap<FGuid,FCharacterSaveData>& GetAllForceCharacterData();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取或查询 Get All Force Character Data。
 
 ---
 
@@ -1613,7 +1731,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取角色信息的引用
 
@@ -1635,7 +1753,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 将弟子从势力中踢出
 
@@ -1657,7 +1775,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新世界中角色信息
 
@@ -1680,6 +1798,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 执行 Set Character In Place 操作。
+
 ---
 
 ### 函数 `GetStationCeiling`
@@ -1694,7 +1816,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取驻地上限
 
@@ -1712,7 +1834,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取资源点上限
 
@@ -1730,7 +1852,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取城镇上限
 
@@ -1752,7 +1874,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 尝试签署协议
 
@@ -1770,7 +1892,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 是否是正派
 
@@ -1787,6 +1909,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure) FORCEINLINE float GetJusticeForce() const {return ForceJusticeValue;}`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取或查询 Get Justice Force。
 
 ---
 
@@ -1806,7 +1932,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 增加正邪值
 
@@ -1828,7 +1954,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 增加NPC势力成长积分
 
@@ -1846,7 +1972,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取当前成长积分
 
@@ -1868,7 +1994,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查是否占领过这个地点
 
@@ -1892,7 +2018,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入势力
 
@@ -1914,7 +2040,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 离开势力
 
@@ -1932,7 +2058,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取势力主城
 
@@ -1954,7 +2080,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取战斗可招募的数量
 
@@ -1972,7 +2098,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有可用的小兵
 
@@ -1990,7 +2116,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有可使用的战略技能
 
@@ -2008,7 +2134,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有可使用的防御塔
 
@@ -2026,7 +2152,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有可上阵的傀儡
 
@@ -2044,7 +2170,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取战斗中的buff组
 
@@ -2061,14 +2187,14 @@
 | 参数名 | 类型 |
 |--------|------|
 | `PuppetID` | `const FName&` |
-| `EquipmentType` | `EEquipmentType` |
-| `（匿名/仅类型）` | `EArmorType ArmorType = EArmorType::None` |
+| `EquipmentType` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
+| `（匿名/仅类型）` | [EArmorType](../Struct/CommonEnum__EArmorType.md) ArmorType = [EArmorType](../Struct/CommonEnum__EArmorType.md)::None |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool CanPuppetEquipEquipmentType(const FName& PuppetID, EEquipmentType EquipmentType, EArmorType ArmorType = EArmorType::None);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查傀儡是否可以装备指定类型的装备
 
@@ -2085,14 +2211,14 @@
 | 参数名 | 类型 |
 |--------|------|
 | `PuppetID` | `const FName&` |
-| `EquipmentType` | `EEquipmentType` |
-| `（匿名/仅类型）` | `EArmorType ArmorType = EArmorType::None` |
+| `EquipmentType` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
+| `（匿名/仅类型）` | [EArmorType](../Struct/CommonEnum__EArmorType.md) ArmorType = [EArmorType](../Struct/CommonEnum__EArmorType.md)::None |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FUseItemSaveData GetPuppetEquippedItem(const FName& PuppetID, EEquipmentType EquipmentType, EArmorType ArmorType = EArmorType::None);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取傀儡的装备数据（使用现有装备系统）
 
@@ -2109,15 +2235,15 @@
 | 参数名 | 类型 |
 |--------|------|
 | `PuppetID` | `const FName&` |
-| `EquipmentType` | `EEquipmentType` |
+| `EquipmentType` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
 | `ItemData` | const [FUseItemSaveData](../Struct/ItemStruct__FUseItemSaveData.md)& |
-| `（匿名/仅类型）` | `EArmorType ArmorType = EArmorType::None` |
+| `（匿名/仅类型）` | [EArmorType](../Struct/CommonEnum__EArmorType.md) ArmorType = [EArmorType](../Struct/CommonEnum__EArmorType.md)::None |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool SetPuppetEquippedItem(const FName& PuppetID, EEquipmentType EquipmentType, const FUseItemSaveData& ItemData, EArmorType ArmorType = EArmorType::None);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置傀儡的装备数据
 
@@ -2134,14 +2260,14 @@
 | 参数名 | 类型 |
 |--------|------|
 | `PuppetID` | `const FName&` |
-| `EquipmentType` | `EEquipmentType` |
-| `（匿名/仅类型）` | `EArmorType ArmorType = EArmorType::None` |
+| `EquipmentType` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
+| `（匿名/仅类型）` | [EArmorType](../Struct/CommonEnum__EArmorType.md) ArmorType = [EArmorType](../Struct/CommonEnum__EArmorType.md)::None |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool RemovePuppetEquippedItem(const FName& PuppetID, EEquipmentType EquipmentType, EArmorType ArmorType = EArmorType::None);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除傀儡的装备数据
 
@@ -2158,14 +2284,14 @@
 | 参数名 | 类型 |
 |--------|------|
 | `PuppetID` | `const FName&` |
-| `EquipmentType` | `EEquipmentType` |
-| `（匿名/仅类型）` | `EArmorType ArmorType = EArmorType::None` |
+| `EquipmentType` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
+| `（匿名/仅类型）` | [EArmorType](../Struct/CommonEnum__EArmorType.md) ArmorType = [EArmorType](../Struct/CommonEnum__EArmorType.md)::None |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool IsPuppetEquippedWithItem(const FName& PuppetID, EEquipmentType EquipmentType, EArmorType ArmorType = EArmorType::None);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查傀儡是否已装备指定类型的装备
 
@@ -2187,7 +2313,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取傀儡的完整装备信息
 
@@ -2210,7 +2336,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 建筑物添加傀儡
 
@@ -2233,7 +2359,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 建筑物移除傀儡
 
@@ -2255,7 +2381,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 增加或减少势力金钱
 
@@ -2273,9 +2399,157 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 年份更新
+
+---
+
+### 函数 `CanLaunchActiveAttack`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `bool` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool CanLaunchActiveAttack();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 是否允许主动发起进攻（驻地有效驻防≥1即可，NPC/玩家统一口径）供UI灰显及AI决策使用
+
+---
+
+### 函数 `CanPlayerLaunchActiveAttack`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="WorldForce|PlayerAttack" |
+| 返回类型 | `bool` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "WorldForce|PlayerAttack") bool CanPlayerLaunchActiveAttack();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> [玩家占旗-C1] 玩家是否可发起主动攻城（薄封装 CanLaunchActiveAttack）。
+> 供 W_BattlePrepare 的 Button_Start 灰显 / OpenPlaceAttack 入口拦截。
+
+---
+
+### 函数 `GetPlayerEligibleAttackPool`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="WorldForce|PlayerAttack" |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `OutPool` | TArray<[FCharacterSaveData](WorldCharacterData__FCharacterSaveData.md)>& |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "WorldForce|PlayerAttack") void GetPlayerEligibleAttackPool(TArray<FCharacterSaveData>& OutPool);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> [玩家占旗-C2] 返回玩家主城 D9 可选出征弟子池（复用 BuildEligiblePool 的排除：
+> 非物理驻留主城/游荡流亡/闭关突破）。供 W_BattlePrepare 选人列表作数据源。
+> 返回值数组拷贝(FCharacterSaveData 为 BlueprintType)，BP 直接绑列表。
+
+---
+
+### 函数 `RequestPlayerAttack`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="WorldForce|PlayerAttack" |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `TargetPlaceGuid` | `const FGuid&` |
+| `PlayerSelected` | const [FBattleTeamInfo](WorldBattleSystem/WorldBattleStruct__FBattleTeamInfo.md)& |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "WorldForce|PlayerAttack") bool RequestPlayerAttack(const FGuid& TargetPlaceGuid, const FBattleTeamInfo& PlayerSelected);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> [玩家占旗-C3] 玩家主动攻城入口：用玩家手选弟子组队，走占旗实战分流(RequestAttack 玩家相关路径)。
+> 内部先 CanLaunchActiveAttack 拦截；PlayerSelected.Characters 应来自 GetPlayerEligibleAttackPool。
+> 返回是否成功发起(拦截/目标无效则 false)。供 W_BattlePrepare 的 Button_Start 调用。
+
+---
+
+### 函数 `EnterWandering`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `nullptr` | class [AWorldPlace](WorldPlace__AWorldPlace.md)* LastLostPlace = |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void EnterWandering(class AWorldPlace* LastLostPlace = nullptr);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> [PR-12] 进入流窜态：状态机切换 + 委托广播 + [流浪势力]用最后失去的据点作起点在地图上创建流浪队伍条目
+
+---
+
+### 函数 `ReviveFromWandering`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `NewBase` | class [AWorldPlace](WorldPlace__AWorldPlace.md)* |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void ReviveFromWandering(class AWorldPlace* NewBase);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> [PR-12] 从流窜态复活：设新主城 + 状态还原
+
+---
+
+### 函数 `HasWanderingMembers`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintPure |
+| 返回类型 | `bool` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, BlueprintPure) bool HasWanderingMembers() const;`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> [流窜求存] 本势力是否有处于世界地图流浪态(OnWorldMapWander)的弟子——供攻城胜利时"无城/有流浪弟子则强制占领"判断
 
 ---
 
@@ -2291,7 +2565,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 势力添加发放例银定时器
 
@@ -2309,7 +2583,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查是否开始发放例银
 
@@ -2331,7 +2605,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 增加从珍宝阁获得的声望
 
@@ -2349,7 +2623,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 重置每年从珍宝阁获得的声望
 
@@ -2359,7 +2633,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| 反射说明符 | BlueprintCallable |
+| 反射说明符 | BlueprintCallable, BlueprintPure |
 | 返回类型 | `bool` |
 | 参数 | 见下表 |
 
@@ -2367,11 +2641,11 @@
 |--------|------|
 | `TargetForceGuid` | `const FGuid&` |
 
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool CheckCanBefriendForce(const FGuid& TargetForceGuid) const;`
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, BlueprintPure) bool CheckCanBefriendForce(const FGuid& TargetForceGuid) const;`
 
-**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 结交其他门派：检查是否可结交（数量限制、金钱、目标关系等）
 
@@ -2393,7 +2667,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 结交其他门派：执行结交，成功后增加好感度并扣除金钱
 
@@ -2403,7 +2677,7 @@
 
 | 项目 | 内容 |
 |------|------|
-| 反射说明符 | BlueprintCallable |
+| 反射说明符 | BlueprintCallable, BlueprintPure |
 | 返回类型 | `bool` |
 | 参数 | 见下表 |
 
@@ -2411,11 +2685,11 @@
 |--------|------|
 | `TargetForceGuid` | `const FGuid&` |
 
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool CheckCanBreakOffForce(const FGuid& TargetForceGuid) const;`
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, BlueprintPure) bool CheckCanBreakOffForce(const FGuid& TargetForceGuid) const;`
 
-**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 断交：检查是否可断交（冷却时间、当前是否已结交等）
 
@@ -2437,7 +2711,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 断交：执行断交，扣除好感度
 
@@ -2455,7 +2729,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取当前结交的门派数量
 
@@ -2477,8 +2751,140 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查是否已与某门派结交
+
+---
+
+### 函数 `TriggerRequireTaskDialogue`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `TargetForce` | [AWorldForce](WorldForce__AWorldForce.md)* |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void TriggerRequireTaskDialogue(AWorldForce* TargetForce);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 发起向其他门派请求任务的对话
+
+---
+
+### 函数 `TriggerRequireHelpDialogue`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `TargetForce` | [AWorldForce](WorldForce__AWorldForce.md)* |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void TriggerRequireHelpDialogue(AWorldForce* TargetForce);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 发起向其他门派请求援助的对话
+
+---
+
+### 函数 `CheckCanRequireTask`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintPure |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `TargetForce` | [AWorldForce](WorldForce__AWorldForce.md)* |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, BlueprintPure) bool CheckCanRequireTask(AWorldForce* TargetForce);`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取或查询 Check Can Require Task。
+
+---
+
+### 函数 `CheckCanRequireHelp`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintPure |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `TargetForce` | [AWorldForce](WorldForce__AWorldForce.md)* |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, BlueprintPure) bool CheckCanRequireHelp(AWorldForce* TargetForce);`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取或查询 Check Can Require Help。
+
+---
+
+### 函数 `TriggerGivePresentsDialogue`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `TargetForce` | [AWorldForce](WorldForce__AWorldForce.md)* |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void TriggerGivePresentsDialogue(AWorldForce* TargetForce);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 发起向其他门派上供的对话
+
+---
+
+### 函数 `TriggerTauntDialogue`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `TargetForce` | [AWorldForce](WorldForce__AWorldForce.md)* |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void TriggerTauntDialogue(AWorldForce* TargetForce);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 发起嘲讽其他门派的对话
 
 ---

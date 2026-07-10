@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText EventName;` |
 
-**源码注释:**
+**说明:**
 
 > 事件名称
 
@@ -29,12 +29,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EWorldEventType` |
+| C++ 类型 | [EWorldEventType](WorldEventManagerActor__EWorldEventType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EWorldEventType WorldEventType = EWorldEventType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 事件类型
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bNeedExplore = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否需要探索
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int RecommendLevel = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 等级推荐 0 无推荐
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int RestrictLevel = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 等级限制 0 无限制
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FTransform> EventMapPosition;` |
 
-**源码注释:**
+**说明:**
 
 > 事件坐标
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float RebirthTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 重生时间 0 为不可重生
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float Lifespan = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 存在时间 0 无限制
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int EnterDiscipleMaxNumber = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 进入的最大人数包含掌门
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName ParameterID;` |
 
-**源码注释:**
+**说明:**
 
 > 事件的参数
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int DifficultyLevel;` |
 
-**源码注释:**
+**说明:**
 
 > 难度等级
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName DetailID;` |
 
-**源码注释:**
+**说明:**
 
 > 详细信息
 
@@ -199,7 +199,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int GroupID;` |
 
-**源码注释:**
+**说明:**
 
 > 分组id 0 没有分组 代表没有限制
 
@@ -209,12 +209,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EWorldEventStateType` |
+| C++ 类型 | [EWorldEventStateType](WorldEventManagerActor__EWorldEventStateType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EWorldEventStateType WorldEventStateType = EWorldEventStateType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 世界事件状态
 
@@ -229,7 +229,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float StateTimeOfDuration = 0.0f;` |
 
-**源码注释:**
+**说明:**
 
 > 世界事件状态持续时间
 
@@ -244,7 +244,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bAfterCompletionOfClose = true;` |
 
-**源码注释:**
+**说明:**
 
 > 完成后关闭或重生
 
@@ -259,7 +259,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bAfterEnterOfClose = true;` |
 
-**源码注释:**
+**说明:**
 
 > 进入后关闭或重生
 
@@ -274,7 +274,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bAfterDefeatedOfClose = true;` |
 
-**源码注释:**
+**说明:**
 
 > 失败后关闭或重生
 
@@ -289,7 +289,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bAfterTriggerOfClose = true;` |
 
-**源码注释:**
+**说明:**
 
 > 触发后关闭或重生
 
@@ -304,6 +304,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FGuid EventGuid = FGuid();` |
 
+**说明:**
+
+> Event Guid 字段。
+
 ---
 
 ### 属性 `SpawnMapPosition`
@@ -314,6 +318,10 @@
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FTransform SpawnMapPosition = FTransform::Identity;` |
+
+**说明:**
+
+> Spawn Map Position 字段。
 
 ---
 
@@ -326,7 +334,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bSpawnOrRebirthNotification = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否出现或重生时生成通知
 
@@ -341,7 +349,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bCloseNotification = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否关闭时生成通知
 
@@ -356,7 +364,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bCanPauseEvent = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否可以暂停事件
 
@@ -371,7 +379,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int PauseSlotIndex = INDEX_NONE;` |
 
-**源码注释:**
+**说明:**
 
 > 暂停的槽位
 
@@ -386,7 +394,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bSpawnOrRebirthTrigger = true;` |
 
-**源码注释:**
+**说明:**
 
 > 是否在生成或重生时触发这个事件
 

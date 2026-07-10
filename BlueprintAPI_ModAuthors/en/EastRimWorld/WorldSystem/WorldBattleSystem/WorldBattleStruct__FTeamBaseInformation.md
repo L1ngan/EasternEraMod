@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 TeamID = INDEX_NONE;` |
 
-**Source comments:**
+**Notes:**
 
 > 阵营ID 如果指定那么固定阵营会使用这个基地 不指定则随机
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FTeamBasePoint> TeamBasePoint;` |
 
-**Source comments:**
+**Notes:**
 
 > 此基地的出生点和移动路径
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FTransform> GunTurretPoint;` |
 
-**Source comments:**
+**Notes:**
 
 > 此基地的炮塔位置坐标
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FTransform CrystalPoint;` |
 
-**Source comments:**
+**Notes:**
 
 > 此基地的水晶坐标
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FTransform> MedicalCenter;` |
 
-**Source comments:**
+**Notes:**
 
 > 此基地的医疗点位置
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FTransform> MedicalAwait;` |
 
-**Source comments:**
+**Notes:**
 
 > 此基地的医师待机位置
 

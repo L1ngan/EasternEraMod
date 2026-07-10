@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FUObjectData , FName> ActionData;` |
 
-**Source comments:**
+**Notes:**
 
 > TMap<Owner的数据 , GOAPAction的ID>
 

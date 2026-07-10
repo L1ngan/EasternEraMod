@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Animation group struct: mapping from group index to anim montage, used for behavior-related animation configs
 
 ## Blueprint-exposed variables
 
@@ -16,5 +18,9 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<int32, TSoftObjectPtr<UAnimMontage>> AnimGroup;` |
+
+**Notes:**
+
+> Animation group map; key is the group index, value is the corresponding anim montage (soft reference)
 
 ---

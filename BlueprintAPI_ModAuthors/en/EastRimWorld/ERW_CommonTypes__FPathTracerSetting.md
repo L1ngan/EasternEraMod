@@ -19,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main|Corners") float CornerSize = 0.f;` |
 
+**Notes:**
+
+> Size of the path corners.
+
 ---
 
 ### Property `TangentsLength`
@@ -29,6 +33,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Main|Corners" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main|Corners") float TangentsLength = 0.f;` |
+
+**Notes:**
+
+> Length of the spline tangents.
 
 ---
 
@@ -41,6 +49,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main|Dots") float DistanceBetweenDots = 0.f;` |
 
+**Notes:**
+
+> Distance between adjacent dots along the path.
+
 ---
 
 ### Property `DotsRotation`
@@ -51,6 +63,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Main|Dots" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main|Dots") float DotsRotation = 0.f;` |
+
+**Notes:**
+
+> Rotation angle of the path dots.
 
 ---
 
@@ -63,6 +79,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main|Dots") float DotsScaleVertical = 0.f;` |
 
+**Notes:**
+
+> Vertical scale of the path dots.
+
 ---
 
 ### Property `CornerDotsScale`
@@ -73,6 +93,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Main|Dots" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main|Dots") float CornerDotsScale = 0.f;` |
+
+**Notes:**
+
+> Scale factor of the dots at corners.
 
 ---
 
@@ -85,6 +109,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main|Dashed Line") bool DashedLine = false;` |
 
+**Notes:**
+
+> Whether the path is displayed as a dashed line.
+
 ---
 
 ### Property `DashedLineFrequency`
@@ -95,6 +123,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Main|Dashed Line" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main|Dashed Line") float DashedLineFrequency = 0.f;` |
+
+**Notes:**
+
+> Frequency (density) of the dashed line segments.
 
 ---
 
@@ -107,6 +139,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main|Dashed Line") float DashedLineGapSize = 0.f;` |
 
+**Notes:**
+
+> Gap size between dashed line segments.
+
 ---
 
 ### Property `DashedLineAnimSpeed`
@@ -117,6 +153,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Main|Dashed Line" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main|Dashed Line") float DashedLineAnimSpeed = 0.f;` |
+
+**Notes:**
+
+> Animation speed of the dashed line.
 
 ---
 
@@ -129,6 +169,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main|Mesh") TSoftObjectPtr<UStaticMesh> MainMesh;` |
 
+**Notes:**
+
+> Main static mesh of the path (soft reference).
+
 ---
 
 ### Property `AdditionalMesh`
@@ -139,6 +183,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Main|Mesh" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main|Mesh") TSoftObjectPtr<UStaticMesh> AdditionalMesh;` |
+
+**Notes:**
+
+> Additional static mesh for the path (soft reference).
 
 ---
 
@@ -151,6 +199,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main") bool ManualEditMode = false;` |
 
+**Notes:**
+
+> Whether manual edit mode is enabled.
+
 ---
 
 ### Property `ExactFollowingSplineMode`
@@ -161,6 +213,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Main" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main") bool ExactFollowingSplineMode = false;` |
+
+**Notes:**
+
+> Whether to enable exact spline-following mode.
 
 ---
 
@@ -173,16 +229,24 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main") bool ClosedLoop = false;` |
 
+**Notes:**
+
+> Whether the path forms a closed loop.
+
 ---
 
 ### Property `PathType`
 
 | Field | Details |
 |------|------|
-| C++ type | `EPathTracerType` |
+| C++ type | [EPathTracerType](ERW_Enumerations__EPathTracerType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Main" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main") EPathTracerType PathType = EPathTracerType::Default;` |
+
+**Notes:**
+
+> Type of the path (EPathTracerType).
 
 ---
 
@@ -195,6 +259,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main") FVector2D PathScale = FVector2D::ZeroVector;` |
 
+**Notes:**
+
+> 2D scale of the path.
+
 ---
 
 ### Property `GroundOffset`
@@ -205,6 +273,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Main" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main") float GroundOffset = 0.f;` |
+
+**Notes:**
+
+> Height offset of the path above the ground.
 
 ---
 
@@ -217,6 +289,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main") bool LimitPath = false;` |
 
+**Notes:**
+
+> Whether to limit the path length.
+
 ---
 
 ### Property `PathLimitLength`
@@ -227,6 +303,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Main" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main") float PathLimitLength = 0.f;` |
+
+**Notes:**
+
+> Maximum path length (effective when the limit is enabled).
 
 ---
 
@@ -239,6 +319,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main") FVector CenterOffset = FVector::ZeroVector;` |
 
+**Notes:**
+
+> Offset vector of the path center.
+
 ---
 
 ### Property `ExpandedPath`
@@ -249,6 +333,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Main" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main") bool ExpandedPath = false;` |
+
+**Notes:**
+
+> Whether the path is expanded.
 
 ---
 
@@ -261,6 +349,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main") float ExpandValue = 0.f;` |
 
+**Notes:**
+
+> Expansion amount of the path.
+
 ---
 
 ### Property `ExpandDirection`
@@ -271,6 +363,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Main" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Main") bool ExpandDirection = false;` |
+
+**Notes:**
+
+> Toggle for the direction of path expansion.
 
 ---
 
@@ -283,6 +379,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Material") FLinearColor PathColor = FLinearColor::White;` |
 
+**Notes:**
+
+> Display color of the path.
+
 ---
 
 ### Property `PathOpacity`
@@ -293,6 +393,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Material" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Material") float PathOpacity = 1.f;` |
+
+**Notes:**
+
+> Opacity of the path (0-1).
 
 ---
 
@@ -305,6 +409,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Material") bool SetPathColorForMarks = false;` |
 
+**Notes:**
+
+> Whether to also apply the path color to the start/end markers.
+
 ---
 
 ### Property `TranslucentStartAndEnd`
@@ -315,6 +423,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Material" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Material") bool TranslucentStartAndEnd = false;` |
+
+**Notes:**
+
+> Whether the start and end of the path use a translucent fade.
 
 ---
 
@@ -327,6 +439,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Material") bool VisibleThroughObjects = false;` |
 
+**Notes:**
+
+> Whether the path is visible through occluding objects.
+
 ---
 
 ### Property `ShadedVisibleThroughObjects`
@@ -337,6 +453,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Material" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Material") bool ShadedVisibleThroughObjects = false;` |
+
+**Notes:**
+
+> Whether to use shaded rendering when the path is visible through occluding objects.
 
 ---
 
@@ -349,6 +469,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Material") bool EnableTranslucent = false;` |
 
+**Notes:**
+
+> Whether to enable the translucent effect.
+
 ---
 
 ### Property `TranslucentStartSize`
@@ -359,6 +483,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Material" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Material") float TranslucentStartSize = 0.f;` |
+
+**Notes:**
+
+> Size of the translucent fade region at the start of the path.
 
 ---
 
@@ -371,6 +499,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Material") float TranslucentEndSize = 0.f;` |
 
+**Notes:**
+
+> Size of the translucent fade region at the end of the path.
+
 ---
 
 ### Property `VisibleThroughObjectsShaderType`
@@ -381,6 +513,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Material" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Material") int32 VisibleThroughObjectsShaderType = 0;` |
+
+**Notes:**
+
+> Shader type index used when the path is rendered through occluding objects.
 
 ---
 
@@ -393,6 +529,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Material") bool EnableCustomMaterial = false;` |
 
+**Notes:**
+
+> Whether to enable the custom material.
+
 ---
 
 ### Property `CustomMaterial`
@@ -403,6 +543,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Material" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Material") UMaterialInterface* CustomMaterial = nullptr;` |
+
+**Notes:**
+
+> Custom material used by the path.
 
 ---
 
@@ -415,6 +559,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Markers") TSoftClassPtr<AActor> PathMarkStartClass;` |
 
+**Notes:**
+
+> Actor class for the path start marker (soft class reference).
+
 ---
 
 ### Property `PathMarkEndClass`
@@ -425,6 +573,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Markers" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Markers") TSoftClassPtr<AActor> PathMarkEndClass;` |
+
+**Notes:**
+
+> Actor class for the path end marker (soft class reference).
 
 ---
 
@@ -437,6 +589,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Markers") float StartMarkRotation = 0.f;` |
 
+**Notes:**
+
+> Rotation angle of the start marker.
+
 ---
 
 ### Property `EndMarkRotation`
@@ -447,6 +603,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Markers" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Markers") float EndMarkRotation = 0.f;` |
+
+**Notes:**
+
+> Rotation angle of the end marker.
 
 ---
 
@@ -459,6 +619,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Markers") float StartMarkScale = 0.f;` |
 
+**Notes:**
+
+> Scale factor of the start marker.
+
 ---
 
 ### Property `EndMarkScale`
@@ -469,6 +633,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Markers" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Markers") float EndMarkScale = 0.f;` |
+
+**Notes:**
+
+> Scale factor of the end marker.
 
 ---
 
@@ -481,6 +649,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Markers") bool StartMarkFollowDirection = false;` |
 
+**Notes:**
+
+> Whether the start marker follows the path direction.
+
 ---
 
 ### Property `EndMarkFollowDirection`
@@ -491,6 +663,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Markers" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Markers") bool EndMarkFollowDirection = false;` |
+
+**Notes:**
+
+> Whether the end marker follows the path direction.
 
 ---
 
@@ -503,6 +679,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Markers") float StartPathIndent = 0.f;` |
 
+**Notes:**
+
+> Indent distance at the start of the path.
+
 ---
 
 ### Property `EndPathIndent`
@@ -513,5 +693,9 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Settings|Markers" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite,Category="Settings|Markers") float EndPathIndent = 0.f;` |
+
+**Notes:**
+
+> Indent distance at the end of the path.
 
 ---

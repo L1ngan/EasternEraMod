@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 动物角色类：支持驯服、繁育、修炼、成长与产出
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Animal", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UCharacterBreedingComponent> BreedingComponent;` |
 
-**源码注释:**
+**说明:**
 
 > 繁育组件
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Animal", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UAnimalCultivationComponent> CultivationComponent;` |
 
-**源码注释:**
+**说明:**
 
 > 修炼组件
 
@@ -47,6 +49,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) int32 CurrentTameCD = 0;` |
 
+**说明:**
+
+> 当前驯服冷却时间
+
 ---
 
 ### 属性 `CurAnimalGrowthValue`
@@ -58,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) float CurAnimalGrowthValue;` |
 
-**源码注释:**
+**说明:**
 
 > 动物当前成长值
 
@@ -73,6 +79,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) UParticleSystemComponent* LoopingPSC;` |
 
+**说明:**
+
+> 循环播放的粒子系统组件
+
 ---
 
 ### 属性 `CurAnimalOutputRemainingTime`
@@ -84,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) float CurAnimalOutputRemainingTime;` |
 
-**源码注释:**
+**说明:**
 
 > 动物产出间隔剩余时间
 
@@ -99,6 +109,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame , BlueprintReadWrite) bool bHadBreeding;` |
 
+**说明:**
+
+> 是否已经繁育过
+
 ---
 
 ### 属性 `bPregnant`
@@ -109,6 +123,10 @@
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame , BlueprintReadWrite) bool bPregnant;` |
+
+**说明:**
+
+> 是否处于怀孕状态
 
 ---
 
@@ -121,6 +139,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame , BlueprintReadWrite) FText CurAnimalName;` |
 
+**说明:**
+
+> 动物当前的名字
+
 ---
 
 ### 属性 `OnAnimalRename`
@@ -131,6 +153,10 @@
 | 反射说明符 | BlueprintAssignable |
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FAnimalRename OnAnimalRename;` |
+
+**说明:**
+
+> 动物改名时广播的委托（参数为新名字）
 
 ---
 
@@ -148,7 +174,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取动物的信息
 
@@ -166,6 +192,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 开始进入驯服冷却计时
+
 ---
 
 ### 函数 `CalculationGrowBonus`
@@ -179,6 +209,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) float CalculationGrowBonus();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 计算并返回动物的成长加成值
 
 ---
 
@@ -198,7 +232,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算驯服是否成功
 
@@ -216,7 +250,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 驯服成功
 
@@ -234,7 +268,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 驯服失败
 
@@ -256,7 +290,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建驯服行为
 
@@ -274,7 +308,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查动物是否需要进化
 
@@ -292,7 +326,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 取消驯服行为
 
@@ -310,6 +344,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 动物训练完成时的处理
+
 ---
 
 ### 函数 `CreateAnimalOutputAction`
@@ -324,6 +362,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 创建动物产出的GOAP行为
+
 ---
 
 ### 函数 `CancelAnimalOutputAction`
@@ -337,6 +379,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void CancelAnimalOutputAction();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 取消动物产出的GOAP行为
 
 ---
 
@@ -355,5 +401,9 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SetAnimalName(FText NewName);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 设置动物的名字
 
 ---

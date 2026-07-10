@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) FGameplayTag GameplayTag;` |
 
-**源码注释:**
+**说明:**
 
 > 标签
 
@@ -29,12 +29,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EManageType` |
+| C++ 类型 | [EManageType](../Struct/CommonEnum__EManageType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) EManageType ManageType = EManageType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 类型
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) float Cost { 0 };` |
 
-**源码注释:**
+**说明:**
 
 > 消耗
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) FText Desc;` |
 
-**源码注释:**
+**说明:**
 
 > 描述
 

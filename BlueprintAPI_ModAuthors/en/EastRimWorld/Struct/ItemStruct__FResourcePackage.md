@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="ResourcePackage") FName ResourceName;` |
 
-**Source comments:**
+**Notes:**
 
 > 资源名称
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="ResourcePackage") int32 ResourcePrice = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 资源价格
 
@@ -44,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EResourceCategories` |
+| C++ type | [EResourceCategories](ItemStruct__EResourceCategories.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="ResourcePackage" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="ResourcePackage") EResourceCategories EResourceCategories = EResourceCategories::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 资源UI显示分类
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="ResourcePackage") FName ResourceId;` |
 
-**Source comments:**
+**Notes:**
 
 > 资源ID
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="ResourcePackage") int32 ResourceNum = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 资源数量
 
@@ -89,12 +89,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EGroundInventoryType` |
+| C++ type | [EGroundInventoryType](CommonEnum__EGroundInventoryType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="ResourcePackage" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="ResourcePackage") EGroundInventoryType ItemType = EGroundInventoryType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 资源分类
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="ResourcePackage") bool ResourceEnable = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否启用
 

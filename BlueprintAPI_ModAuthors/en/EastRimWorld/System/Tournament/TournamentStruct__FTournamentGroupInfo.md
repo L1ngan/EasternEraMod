@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 GroupIndex = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 分组索引（1-32, 33-64等）
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 StartRank = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 该分组包含的门派ID范围
 
@@ -49,6 +49,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 EndRank = 32;` |
 
+**Notes:**
+
+> End Rank field.
+
 ---
 
 ### Property `SectInfos`
@@ -60,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FTournamentSectInfo> SectInfos;` |
 
-**Source comments:**
+**Notes:**
 
 > 该分组中的门派ID列表
 

@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Sound Actor actor type.
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, VisibleAnywhere) UAudioComponent* AudioComponent = nullptr;` |
 
+**Notes:**
+
+> Audio Component field.
+
 ---
 
 ### Property `PlaySoundGuid`
@@ -27,6 +33,10 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, VisibleAnywhere) FGuid PlaySoundGuid;` |
+
+**Notes:**
+
+> Executes the Play Sound Guid operation.
 
 ---
 
@@ -43,6 +53,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void PlaySoundEnd();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Executes the Play Sound End operation.
 
 ---
 
@@ -62,6 +76,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Play Sound operation.
+
 ---
 
 ### Function `StopSound`
@@ -75,6 +93,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void StopSound();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Executes the Stop Sound operation.
 
 ---
 
@@ -93,6 +115,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void PauseSound(bool bPause);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Executes the Pause Sound operation.
 
 ---
 
@@ -113,7 +139,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化音效Actor
 
@@ -135,6 +161,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> On Sound Change Event event or callback.
+
 ---
 
 ### Function `SetPlaySoundSpeed`
@@ -153,7 +183,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置播放的速度
 

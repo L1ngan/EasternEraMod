@@ -19,7 +19,7 @@
                                     "uri": "file:///H:/Project/Plugins/CreateModPlugin/Source/CreateModPluginEditor/Private/PackageModWindow.cpp"
                                 },
                                 "region": {
-                                    "startLine": 164,
+                                    "startLine": 166,
                                     "startColumn": 6,
                                     "snippet": {
                                         "text": "\t\t\t\t\t.ItemHeight(20.0f)"

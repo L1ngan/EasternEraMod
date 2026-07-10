@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> East Rim World UI Manager Subsystem UObject type.
 
 ## Blueprint-exposed functions
 
@@ -20,6 +22,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets or queries Get Primary Game Layout.
+
 ---
 
 ### Function `GetGameMainUI`
@@ -34,7 +40,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取游戏主UI
 
@@ -51,6 +57,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void ClearGameMainUI();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Executes the Clear Game Main UI operation.
 
 ---
 
@@ -70,7 +80,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过标签获取当前激活的UI
 
@@ -93,6 +103,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Add UI To Layout operation.
+
 ---
 
 ### Function `ClearAllLayUI`
@@ -106,5 +120,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void ClearAllLayUI();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Executes the Clear All Lay UI operation.
 
 ---

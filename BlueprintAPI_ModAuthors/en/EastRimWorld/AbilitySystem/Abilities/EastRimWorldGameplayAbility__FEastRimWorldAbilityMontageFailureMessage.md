@@ -19,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TObjectPtr<APlayerController> PlayerController = nullptr;` |
 
+**Notes:**
+
+> Player controller associated with the failure message
+
 ---
 
 ### Property `FailureTags`
@@ -30,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) FGameplayTagContainer FailureTags;` |
 
-**Source comments:**
+**Notes:**
 
 > All the reasons why this ability has failed
 
@@ -44,5 +48,9 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TObjectPtr<UAnimMontage> FailureMontage = nullptr;` |
+
+**Notes:**
+
+> Anim montage to play when the ability fails to activate
 
 ---

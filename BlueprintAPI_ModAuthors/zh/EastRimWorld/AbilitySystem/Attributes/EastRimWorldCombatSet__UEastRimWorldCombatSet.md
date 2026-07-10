@@ -21,7 +21,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MinAttack;` |
 
-**源码注释:**
+**说明:**
 
 > 最小攻击
 
@@ -36,7 +36,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MaxAttack;` |
 
-**源码注释:**
+**说明:**
 
 > 最大攻击
 
@@ -51,7 +51,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CharacterAttackFrequency;` |
 
-**源码注释:**
+**说明:**
 
 > 角色攻击频率
 
@@ -66,7 +66,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData WeaponAttackFrequency;` |
 
-**源码注释:**
+**说明:**
 
 > 武器攻击频率
 
@@ -81,7 +81,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AttackRange;` |
 
-**源码注释:**
+**说明:**
 
 > 攻击射程
 
@@ -96,7 +96,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AttackAccuracy;` |
 
-**源码注释:**
+**说明:**
 
 > 角色攻击命中
 
@@ -111,7 +111,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PierceIncrease;` |
 
-**源码注释:**
+**说明:**
 
 > 穿刺增幅
 
@@ -126,7 +126,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SlashIncrease;` |
 
-**源码注释:**
+**说明:**
 
 > 切割增幅
 
@@ -141,7 +141,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BluntIncrease;` |
 
-**源码注释:**
+**说明:**
 
 > 钝器增幅
 
@@ -156,7 +156,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PoisonIncrease;` |
 
-**源码注释:**
+**说明:**
 
 > 毒气增幅
 
@@ -171,7 +171,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TrueQiIncrease;` |
 
-**源码注释:**
+**说明:**
 
 > 真气增幅
 
@@ -186,7 +186,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PierceCritical;` |
 
-**源码注释:**
+**说明:**
 
 > 穿刺暴击
 
@@ -201,7 +201,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SlashCritical;` |
 
-**源码注释:**
+**说明:**
 
 > 切割暴击
 
@@ -216,7 +216,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BluntCritical;` |
 
-**源码注释:**
+**说明:**
 
 > 钝器暴击
 
@@ -231,7 +231,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SubjoinPoisonAttack;` |
 
-**源码注释:**
+**说明:**
 
 > 附加毒气攻击力
 
@@ -246,7 +246,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SubjoinTrueQiAttack;` |
 
-**源码注释:**
+**说明:**
 
 > 附加真气攻击力
 
@@ -261,7 +261,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DamageShieldEnhanceDamage;` |
 
-**源码注释:**
+**说明:**
 
 > 罡气增伤 对方有罡气 我方伤害增强
 
@@ -276,7 +276,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PierceResistance;` |
 
-**源码注释:**
+**说明:**
 
 > 穿刺抗性
 
@@ -291,7 +291,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SlashResistance;` |
 
-**源码注释:**
+**说明:**
 
 > 切割抗性
 
@@ -306,7 +306,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BluntResistance;` |
 
-**源码注释:**
+**说明:**
 
 > 钝器抗性
 
@@ -321,7 +321,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PoisonResistance;` |
 
-**源码注释:**
+**说明:**
 
 > 毒气抗性
 
@@ -336,7 +336,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TrueQiResistance;` |
 
-**源码注释:**
+**说明:**
 
 > 真气抗性
 
@@ -351,7 +351,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Recharging;` |
 
-**源码注释:**
+**说明:**
 
 > 回气
 
@@ -366,7 +366,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData InternalStrength;` |
 
-**源码注释:**
+**说明:**
 
 > 内力
 
@@ -381,7 +381,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData KnockBack;` |
 
-**源码注释:**
+**说明:**
 
 > 硬直点数
 > UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true))
@@ -399,7 +399,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData KnockDown;` |
 
-**源码注释:**
+**说明:**
 
 > 倒地点数
 
@@ -414,7 +414,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData KnockUp;` |
 
-**源码注释:**
+**说明:**
 
 > 击飞点数
 
@@ -429,7 +429,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Dodge;` |
 
-**源码注释:**
+**说明:**
 
 > 闪避
 
@@ -444,7 +444,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData KnockBackResistance;` |
 
-**源码注释:**
+**说明:**
 
 > 硬直抗性
 > UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true))
@@ -462,7 +462,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData KnockDownResistance;` |
 
-**源码注释:**
+**说明:**
 
 > 倒地抗性
 
@@ -477,7 +477,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData KnockUpResistance;` |
 
-**源码注释:**
+**说明:**
 
 > 击飞抗性
 
@@ -492,9 +492,9 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CriticalStrikeMinValue;` |
 
-**源码注释:**
+**说明:**
 
-> 暴击影响数值最小值
+> 暴击影响数值最小值 废弃
 
 ---
 
@@ -507,9 +507,9 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CriticalStrikeMaxValue;` |
 
-**源码注释:**
+**说明:**
 
-> 暴击影响数值最大值
+> 暴击影响数值最大值 废弃
 
 ---
 
@@ -522,7 +522,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DamageType;` |
 
-**源码注释:**
+**说明:**
 
 > 伤害类型
 
@@ -537,7 +537,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ResistanceSupplement;` |
 
-**源码注释:**
+**说明:**
 
 > 伤害计算时抗性补正
 
@@ -552,7 +552,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AttackIntensity;` |
 
-**源码注释:**
+**说明:**
 
 > 攻击强度点数
 
@@ -567,7 +567,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NeiGongEffect;` |
 
-**源码注释:**
+**说明:**
 
 > 内功效果
 
@@ -582,7 +582,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData QingGongEffect;` |
 
-**源码注释:**
+**说明:**
 
 > 轻功效果
 
@@ -597,7 +597,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData YingGongEffect;` |
 
-**源码注释:**
+**说明:**
 
 > 硬功效果
 
@@ -612,7 +612,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NeiJinEffect;` |
 
-**源码注释:**
+**说明:**
 
 > 内劲效果
 
@@ -627,7 +627,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData YuanChenEffect;` |
 
-**源码注释:**
+**说明:**
 
 > 远程效果
 
@@ -642,7 +642,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData JinZhanEffect;` |
 
-**源码注释:**
+**说明:**
 
 > 近战效果
 
@@ -657,7 +657,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BuildingDamage;` |
 
-**源码注释:**
+**说明:**
 
 > 建筑物伤害
 
@@ -672,7 +672,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PierceFixedAttack;` |
 
-**源码注释:**
+**说明:**
 
 > 穿刺增加的固定攻击力
 
@@ -687,7 +687,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SlashFixedAttack;` |
 
-**源码注释:**
+**说明:**
 
 > 切割增加的固定攻击力
 
@@ -702,7 +702,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BluntFixedAttack;` |
 
-**源码注释:**
+**说明:**
 
 > 钝器增加的固定攻击力
 
@@ -717,7 +717,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PoisonFixedAttack;` |
 
-**源码注释:**
+**说明:**
 
 > 毒气增加的固定攻击力
 
@@ -732,7 +732,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TrueQiFixedAttack;` |
 
-**源码注释:**
+**说明:**
 
 > 真气增加的固定攻击力
 
@@ -747,7 +747,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CriticalIncreasedInjury;` |
 
-**源码注释:**
+**说明:**
 
 > 增加的暴击伤害百分比
 
@@ -762,7 +762,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData FinalDamageIncrease;` |
 
-**源码注释:**
+**说明:**
 
 > 最终伤害增幅
 
@@ -777,7 +777,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Defense;` |
 
-**源码注释:**
+**说明:**
 
 > 防御
 
@@ -792,7 +792,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DefenseSupplement;` |
 
-**源码注释:**
+**说明:**
 
 > 防御修正
 
@@ -807,7 +807,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BaseCritical;` |
 
-**源码注释:**
+**说明:**
 
 > 基础暴击
 
@@ -822,8 +822,68 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BaseCriticalResistance;` |
 
-**源码注释:**
+**说明:**
 
 > 基础暴击抵抗
+
+---
+
+### 属性 `IgnoreDefense`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FGameplayAttributeData` |
+| 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Combat" |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData IgnoreDefense;` |
+
+**说明:**
+
+> 无视防御
+
+---
+
+### 属性 `RemoteIncrease`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FGameplayAttributeData` |
+| 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Combat" |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RemoteIncrease;` |
+
+**说明:**
+
+> 远程增幅（独立，不再复用挥砍）
+
+---
+
+### 属性 `RemoteResistance`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FGameplayAttributeData` |
+| 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Combat" |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RemoteResistance;` |
+
+**说明:**
+
+> 远程抗性
+
+---
+
+### 属性 `RemoteFixedAttack`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FGameplayAttributeData` |
+| 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Combat" |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RemoteFixedAttack;` |
+
+**说明:**
+
+> 远程增加的固定攻击力
 
 ---

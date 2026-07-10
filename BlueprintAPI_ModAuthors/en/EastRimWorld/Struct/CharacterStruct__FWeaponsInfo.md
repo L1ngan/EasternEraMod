@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Weapon socket/mesh info: weapon static mesh component, hand-held socket name and carry socket name
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) TObjectPtr<UStaticMeshComponent> WeaponStaticMesh;` |
 
-**Source comments:**
+**Notes:**
 
 > 携带的武器插槽对应的网格组件
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly) FName HandParentSocket = NAME_None;` |
 
-**Source comments:**
+**Notes:**
 
 > 手持武器的插槽
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) FName CarryParentSocket = NAME_None;` |
 
-**Source comments:**
+**Notes:**
 
 > 携带武器的插槽
 

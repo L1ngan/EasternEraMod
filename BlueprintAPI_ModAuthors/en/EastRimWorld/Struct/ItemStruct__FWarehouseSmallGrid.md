@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) FGridPosition GridPosition;` |
 
-**Source comments:**
+**Notes:**
 
 > 所处的地格坐标
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) FVector WorldPosition = FVector::Zero();` |
 
-**Source comments:**
+**Notes:**
 
 > 世界坐标
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) FVector LocalCoordinate = FVector::Zero();` |
 
-**Source comments:**
+**Notes:**
 
 > 局部坐标
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) int LayerNumber = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 所处的层级
 
@@ -77,9 +77,9 @@
 | C++ type | class [UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md) * |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
-| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) class UInventoryItemInstance * PlaceInstance = nullptr;` |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Transient) class UInventoryItemInstance * PlaceInstance = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 放置的实例信息
 

@@ -1,0 +1,19 @@
+# `enum` `ECollectLifeState`
+
+**Source header:** `EastRimWorld/Struct/ItemStruct.h`
+
+---
+
+## Functional description (from header comments)
+
+> 采集物生命状态
+
+## Enumerators
+
+| Value | Display name | Description |
+|------|------|------|
+| `CanGrow` |  | 可生长状态  0<=采集物生长进度=100%时，并且不处于死亡状态时，为可生长状态。 处于可生长状态的采集物，会缩小一定比例模型。缩小比例需要填写。 |
+| `GrowFinished` |  | 生长完毕状态  当采集物生长进度=100%时，并且不处于死亡状态时，为生长完毕状态。 |
+| `HarvestGrow` |  | 收成生长状态  当0<=采集物收成进度=100%时，并且不处于死亡状态时，为收成生长状态。 |
+| `HarvestFinished` |  | 收成生长完毕状态 当采集物收成进度=100%时，，并且不处于死亡状态时，为收成生长完毕状态。 |
+| `Death` |  | 死亡状态  当采集物健康值<=0时，为死亡状态 |

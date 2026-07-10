@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Heat source area data: the heat source building GUID and its temperature effect value
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FGuid BuildGuid;` |
 
+**Notes:**
+
+> GUID of the heat source building
+
 ---
 
 ### Property `TemperatureEffect`
@@ -27,5 +33,9 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int32 TemperatureEffect;` |
+
+**Notes:**
+
+> Temperature effect value of the heat source
 
 ---

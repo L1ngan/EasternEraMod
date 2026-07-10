@@ -19,4 +19,8 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) TArray<FUObjectData> Agents;` |
 
+**Notes:**
+
+> Array of GOAP user (agent) object data (FUObjectData, saveable).
+
 ---

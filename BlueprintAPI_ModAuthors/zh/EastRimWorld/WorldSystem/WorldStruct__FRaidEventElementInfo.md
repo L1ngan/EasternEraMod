@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FThreatPoolInfo ThreatPool;` |
 
-**源码注释:**
+**说明:**
 
 > 袭击信息
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float EventTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 事件时间（倒计时时间） 或 袭击执行的剩余时间
 

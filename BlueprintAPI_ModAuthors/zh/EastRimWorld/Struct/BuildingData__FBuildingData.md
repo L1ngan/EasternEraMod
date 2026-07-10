@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 建筑配置数据表行：包含类别、模型、蓝图类、座位数、服务时长/动画、GOAP动作与世界状态等建筑定义信息
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly) int32 BuildingType = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 类别
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (AllowedClasses = "StaticMesh")) FSoftObjectPath MeshPath;` |
 
-**源码注释:**
+**说明:**
 
 > 模型
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (MetaClass = "BuildingBase")) FSoftClassPath BpClass;` |
 
-**源码注释:**
+**说明:**
 
 > 蓝图
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly) int32 SeatNum = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 座位数
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly) float ServiceTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 服务时长
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (AllowedClasses = "AnimationAsset")) TArray<FSoftObjectPath> AnimPaths;` |
 
-**源码注释:**
+**说明:**
 
 > 服务动画
 
@@ -107,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (AllowedClasses = "AnimationAsset")) TArray<FTransform> AnimTans;` |
 
-**源码注释:**
+**说明:**
 
 > 动画坐标
 
@@ -122,7 +124,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly) TArray<FName> Actions;` |
 
-**源码注释:**
+**说明:**
 
 > goap动作
 
@@ -137,7 +139,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly) TMap<FName, FLUniValue> GoapWorldStates;` |
 
-**源码注释:**
+**说明:**
 
 > goap世界状态
 

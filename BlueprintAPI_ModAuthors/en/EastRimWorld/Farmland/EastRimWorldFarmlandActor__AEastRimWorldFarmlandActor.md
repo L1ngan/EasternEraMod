@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Farmland actor (GOAP object) that manages farmland grid data, planting and harvesting, design preview, and planting GOAP actions
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) FGuid FarmlandGuid = FGuid();` |
 
-**Source comments:**
+**Notes:**
 
 > ~ Save
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame) FName CollectItemId;` |
 
-**Source comments:**
+**Notes:**
 
 > 作物的id
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) FCollectItem CollectItemData;` |
 
-**Source comments:**
+**Notes:**
 
 > 作物的数据
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<FGridPosition,TObjectPtr<UDecalComponent>> DecalComponents;` |
 
-**Source comments:**
+**Notes:**
 
 > 贴花组件
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<FGridPosition,TObjectPtr<UStaticMeshComponent>> CubeComponents;` |
 
-**Source comments:**
+**Notes:**
 
 > 盒子组件(除草)
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, VisibleAnywhere,BlueprintReadOnly) TArray<FVector> PlantActionsPosition;` |
 
-**Source comments:**
+**Notes:**
 
 > 种植的Action
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool IsPreDesignActor;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否直接从UI上创建出来的
 
@@ -122,6 +124,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TObjectPtr<UDecalComponent>> SelectedDecalComponents;` |
 
+**Notes:**
+
+> Decal components displayed when the farmland is selected
+
 ---
 
 ### Property `MountISMCompent`
@@ -133,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TObjectPtr<UInstancedStaticMeshComponent> MountISMCompent;` |
 
-**Source comments:**
+**Notes:**
 
 > 小土包
 
@@ -148,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TObjectPtr<UStaticMeshComponent>> LabelCylinderComponents;` |
 
-**Source comments:**
+**Notes:**
 
 > 四角标牌立柱
 
@@ -163,6 +169,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) UERW_EnvironComponent* EnvironComponent;` |
 
+**Notes:**
+
+> Environment info component of the farmland
+
 ---
 
 ### Property `bSelectState`
@@ -174,7 +184,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool bSelectState = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是选中状态
 
@@ -189,6 +199,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FGridPosition DesigningSize;` |
 
+**Notes:**
+
+> Grid size of the farmland currently being designed
+
 ---
 
 ### Property `MountTransforms`
@@ -200,7 +214,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) TArray<FTransform> MountTransforms;` |
 
-**Source comments:**
+**Notes:**
 
 > 小土包位置
 
@@ -215,7 +229,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) TMap<FGuid,FVector> FarmerPlantLocation;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色对应的种植位置(存来给GA确定种植点,种植完成后移除，种植被打断时用这个来查找位置放回PlantActionsPosition)
 
@@ -230,7 +244,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) FGridPosition OriginGirdPosition;` |
 
-**Source comments:**
+**Notes:**
 
 > 保存此农田创建时的起始格子坐标和世界坐标
 
@@ -245,6 +259,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) FVector OriginLocation;` |
 
+**Notes:**
+
+> World location of the farmland's origin recorded at creation
+
 ---
 
 ### Property `PreviewStartGrid`
@@ -256,7 +274,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess)) FGridPosition PreviewStartGrid;` |
 
-**Source comments:**
+**Notes:**
 
 > 预览开始格子
 
@@ -271,7 +289,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess),SaveGame) TMap<FGridPosition,int32> FarmlandEdgeGrids;` |
 
-**Source comments:**
+**Notes:**
 
 > 农田的边界格子位置,边缘类型
 
@@ -286,7 +304,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess),SaveGame) TMap<FGridPosition,FFarmlandData> AllFarmlandGrid;` |
 
-**Source comments:**
+**Notes:**
 
 > 田的格子数据
 
@@ -301,7 +319,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess)) TArray<UFarmlandPlantInstance*> AllFarmlandPlants;` |
 
-**Source comments:**
+**Notes:**
 
 > 田里的植物
 
@@ -316,7 +334,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess),SaveGame) bool bProhibitPlant;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否禁止种植
 
@@ -331,7 +349,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess),SaveGame) bool bAutoHarvestPlant;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否自动收获植物
 
@@ -346,7 +364,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,meta=(AllowPrivateAccess),SaveGame) TMap<FName,int32> AutoHarvestPlantLimit;` |
 
-**Source comments:**
+**Notes:**
 
 > 自动收获植物数量限制(当仓库有n个植物后不再自动收获 <0表示一直收)
 
@@ -371,6 +389,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Initializes the farmland with grid data and the crop item ID
+
 ---
 
 ### Function `CheckBeginnerGuideProgress`
@@ -384,6 +406,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent) void CheckBeginnerGuideProgress();`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Checks the beginner guide progress (Blueprint implementable event)
 
 ---
 
@@ -403,6 +429,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void ResizeFarmland(const TSet<FDesignFarmlandGridData>& GridDatas,bool bAdd);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Resizes the farmland with the given grid data, adding cells when bAdd is true or removing them otherwise
 
 ---
 
@@ -424,7 +454,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取输入网格能种植的点
 
@@ -446,7 +476,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 种植物
 
@@ -468,7 +498,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更换种植物
 
@@ -490,7 +520,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检测、移除田内的其他采集物
 
@@ -512,7 +542,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检测、移除田的采集物 种植Action位置
 
@@ -529,6 +559,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintPure) const TArray<UFarmlandPlantInstance*>& GetAllFarmlandPlants();`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Returns all plant instances in the farmland
 
 ---
 
@@ -549,7 +583,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 修改自动收获植物的上限
 
@@ -567,7 +601,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 测试函数：显示农田边界
 
@@ -585,6 +619,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Destroys this farmland
+
 ---
 
 ### Function `UpdateFarmlandEdge`
@@ -599,7 +637,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新农田边界
 
@@ -623,7 +661,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 过滤掉不能放置农田的格子
 
@@ -645,7 +683,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > ------------------预览-------------
 > 预览开始
@@ -668,6 +706,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Starts the preview (Blueprint implementable event; IsAddPreview indicates an add-to-existing preview)
+
 ---
 
 ### Function `CancelPreview`
@@ -682,6 +724,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Cancels the farmland preview
+
 ---
 
 ### Function `K2_CancelPreview`
@@ -695,6 +741,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent) void K2_CancelPreview();`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Cancels the preview (Blueprint implementable event)
 
 ---
 
@@ -714,7 +764,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 开始设计田地
 
@@ -736,6 +786,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Starts farmland designing at the given start location (Blueprint implementable event)
+
 ---
 
 ### Function `CancelDesigningFarmland`
@@ -750,7 +804,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 取消设计田地
 
@@ -767,6 +821,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent) void K2_CancelDesigningFarmland();`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Cancels farmland designing (Blueprint implementable event)
 
 ---
 
@@ -786,6 +844,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Ends designing the farmland at the given end location
+
 ---
 
 ### Function `K2_EndDesigningFarmland`
@@ -804,6 +866,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Ends farmland designing at the given end location (Blueprint implementable event)
+
 ---
 
 ### Function `UpdatePreview`
@@ -818,7 +884,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新田地预览
 
@@ -836,6 +902,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Updates the farmland preview (Blueprint implementable event)
+
 ---
 
 ### Function `UpdateDesigning`
@@ -849,6 +919,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void UpdateDesigning();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Updates the farmland currently being designed
 
 ---
 
@@ -869,6 +943,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Updates the farmland being designed with the row and column grid counts (Blueprint implementable event)
+
 ---
 
 ### Function `GetPreviewType`
@@ -876,12 +954,16 @@
 | Field | Details |
 |------|------|
 | Reflection specifiers | BlueprintCallable, BlueprintPure |
-| Return type | `EFarmlandPreviewType` |
+| Return type | [EFarmlandPreviewType](EastRimWorldFarmlandActor__EFarmlandPreviewType.md) |
 | Parameters | (none) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintPure) EFarmlandPreviewType GetPreviewType(){return PreviewType;}`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Returns the current farmland preview type
 
 ---
 
@@ -901,7 +983,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据角色id取对应的种植点
 
@@ -923,7 +1005,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 种植行为被取消时放回未完成的种植点
 
@@ -945,6 +1027,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Puts back the unfinished planting position looked up by the agent's GUID when a planting action is canceled
+
 ---
 
 ### Function `RemoveFarmerPlantLocation`
@@ -963,6 +1049,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Removes the planting location record for the given character GUID
+
 ---
 
 ### Function `GetPlaceGridSize`
@@ -977,7 +1067,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取农田大小
 
@@ -1000,7 +1090,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算种植位置会占据的格子
 

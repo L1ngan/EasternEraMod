@@ -19,6 +19,10 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) float BaseValue = 0.f;` |
 
+**Notes:**
+
+> Base value of the attribute (for save data)
+
 ---
 
 ### Property `CurrentValue`
@@ -29,5 +33,9 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) float CurrentValue = 0.f;` |
+
+**Notes:**
+
+> Current value of the attribute (for save data)
 
 ---

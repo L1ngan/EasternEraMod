@@ -19,7 +19,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnBreakThroughStateChanged OnBreakThroughStateChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 委托：突破状态变化
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnBreakThroughProgressUpdated OnBreakThroughProgressUpdated;` |
 
-**源码注释:**
+**说明:**
 
 > 委托：突破进度更新
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnBreakThroughCompleted OnBreakThroughCompleted;` |
 
-**源码注释:**
+**说明:**
 
 > 委托：突破完成
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnBreakThroughInterrupted OnBreakThroughInterrupted;` |
 
-**源码注释:**
+**说明:**
 
 > 委托：突破中断
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOpenSelectBreakThroughUI OpenSelectBreakThroughUI_Delegate;` |
 
-**源码注释:**
+**说明:**
 
 > 打开右侧择地突破的UI
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnCheckBreakThroughRoom OnCheckBreakThroughRoom;` |
 
-**源码注释:**
+**说明:**
 
 > 检查突破房间信息委托
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FGuid SelectingLocationCharacterGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 当前正在选择地点的角色Guid
 
@@ -129,6 +129,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 获取或查询 Get Break Through Manager。
+
 ---
 
 ### 函数 `StartSelectLocation`
@@ -147,7 +151,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 开始择地突破（进入选择地点模式）
 
@@ -169,7 +173,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查位置是否可以突破
 
@@ -191,7 +195,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取突破地点的房间信息
 
@@ -213,7 +217,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 确认突破地点并开始突破
 
@@ -231,7 +235,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 取消择地突破
 
@@ -253,7 +257,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 突破中取消
 
@@ -275,7 +279,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 突破完成
 
@@ -298,7 +302,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 确认突破结果
 
@@ -321,7 +325,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取角色的突破信息
 
@@ -343,7 +347,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查角色是否正在突破
 
@@ -362,13 +366,13 @@
 | `InCharacter` | [AEastRimWorldCharacter](../../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md) * |
 | `TrainingRoomLevel` | `int32` |
 | `ElementValue` | `float` |
-| `ElementType` | `const EFiveElementType` |
+| `ElementType` | const [EFiveElementType](../../Struct/CommonEnum__EFiveElementType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) float CalculateBreakThroughBonus(AEastRimWorldCharacter * InCharacter, int32 TrainingRoomLevel, float ElementValue,const EFiveElementType ElementType) const;`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算突破点数加成
 
@@ -386,14 +390,14 @@
 |--------|------|
 | `Location` | `const FVector&` |
 | `OutRoomInfo` | [FRoomInfo](../../ERW_ConfigTypes__FRoomInfo.md) & |
-| `OutElementType` | `EFiveElementType&` |
+| `OutElementType` | [EFiveElementType](../../Struct/CommonEnum__EFiveElementType.md)& |
 | `OutLevel` | `int32&` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool IsTrainingRoom(const FVector& Location,FRoomInfo & OutRoomInfo, EFiveElementType& OutElementType, int32& OutLevel) const;`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查房间是否为指定类型的练功房
 
@@ -415,7 +419,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 处理角色到达目标点
 
@@ -433,7 +437,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 处理角色到达目标点
 

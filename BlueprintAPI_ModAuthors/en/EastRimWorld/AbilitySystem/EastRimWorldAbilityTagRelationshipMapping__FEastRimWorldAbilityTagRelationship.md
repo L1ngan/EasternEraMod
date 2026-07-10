@@ -19,7 +19,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, Category = Ability, meta = (Categories = "Gameplay.Action")) FGameplayTag AbilityTag;` |
 
-**Source comments:**
+**Notes:**
 
 > The tag that this container relationship is about. Single tag, but abilities can have multiple of these
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, Category = Ability) FGameplayTagContainer AbilityTagsToBlock;` |
 
-**Source comments:**
+**Notes:**
 
 > The other ability tags that will be blocked by any ability using this tag
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, Category = Ability) FGameplayTagContainer AbilityTagsToCancel;` |
 
-**Source comments:**
+**Notes:**
 
 > The other ability tags that will be canceled by any ability using this tag
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, Category = Ability) FGameplayTagContainer ActivationRequiredTags;` |
 
-**Source comments:**
+**Notes:**
 
 > If an ability has the tag, this is implicitly added to the activation required tags of the ability
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, Category = Ability) FGameplayTagContainer ActivationBlockedTags;` |
 
-**Source comments:**
+**Notes:**
 
 > If an ability has the tag, this is implicitly added to the activation blocked tags of the ability
 

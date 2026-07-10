@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere ,SaveGame) FName ID;` |
 
-**Source comments:**
+**Notes:**
 
 > 商品ID(和对应物品表的ID一致，比如装备就要和装备表ID一致，Item就要和Item的ID一致)
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EGroundInventoryType` |
+| C++ type | [EGroundInventoryType](../Struct/CommonEnum__EGroundInventoryType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere ,SaveGame) EGroundInventoryType GroundInventoryType = EGroundInventoryType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 商品类型
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere ,SaveGame) int32 Stall = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 货架
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere ,SaveGame) int32 SoldNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 已售数量（当期和总共的区分开）
 

@@ -20,6 +20,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) FText OrganName;` |
 
+**说明:**
+
+> 器官名称（死亡结算时记录，随存档保存）。
+
 ---
 
 ### 属性 `OnHealthChanged`
@@ -31,7 +35,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_AttributeChanged OnHealthChanged;` |
 
-**源码注释:**
+**说明:**
 
 > Delegate fired when the health value has changed. This is called on the client but the instigator may not be valid
 
@@ -46,7 +50,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_AttributeChanged OnCurMaxHealthChanged;` |
 
-**源码注释:**
+**说明:**
 
 > Delegate fired when the max health value has changed. This is called on the client but the instigator may not be valid
 
@@ -61,6 +65,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_AttributeChanged OnMaxHealthChanged;` |
 
+**说明:**
+
+> 最大血量变化事件。
+
 ---
 
 ### 属性 `OnDamageShieldChanged`
@@ -72,7 +80,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_AttributeChanged OnDamageShieldChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 罡气值改变
 
@@ -87,7 +95,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_AttributeChanged OnMaxDamageShieldChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 罡气值最大值改变
 
@@ -102,7 +110,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_AttributeChanged OnInspirationChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 感悟值改变
 
@@ -117,7 +125,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_AttributeChanged OnRobotEnergyMaxValueChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 机关人能源最大值改变
 
@@ -132,7 +140,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_AttributeChanged OnRobotEnergyCurValueChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 机关人当前能源改变
 
@@ -147,7 +155,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_DeathEvent OnDeathStarted;` |
 
-**源码注释:**
+**说明:**
 
 > Delegate fired when the death sequence has started.
 
@@ -162,7 +170,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_DeathEvent OnDeathFinished;` |
 
-**源码注释:**
+**说明:**
 
 > Delegate fired when the death sequence has finished.
 
@@ -177,7 +185,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_KnockDown OnKnockDown;` |
 
-**源码注释:**
+**说明:**
 
 > 被击倒
 
@@ -192,6 +200,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FEastRimWorldHealth_KnockDown OnKnockDownFinished;` |
 
+**说明:**
+
+> 击倒结束事件。
+
 ---
 
 ### 属性 `OnGOAPAttributeChanged`
@@ -203,7 +215,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnGOAPAttributeChanged OnGOAPAttributeChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 当GOAP相关属性值改变时
 
@@ -218,7 +230,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FCharacterTemperatureChanged OnCharacterTemperatureChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 温度变化
 
@@ -233,7 +245,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnNutritionValueChanged OnNutritionValueChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 营养值改变
 
@@ -257,7 +269,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > Returns the health component if one exists on the specified actor.
 
@@ -275,7 +287,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > Returns the current health value.
 
@@ -293,7 +305,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > Returns the current maximum health value.
 
@@ -311,7 +323,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 当前生命值的百分比（以最大健康值为基础） Returns the current health in the range [0.0, 1.0].
 
@@ -329,7 +341,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 当前最大生命值的百分比（以最大健康值为基础）
 
@@ -347,7 +359,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 剩余可携带重量（通过 HealthSet 获取）
 
@@ -365,7 +377,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 当前营养值（通过 HealthSet 获取）
 
@@ -383,7 +395,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 营养值上限（通过 HealthSet 获取）
 
@@ -401,7 +413,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 当前感悟值（通过 HealthSet 获取）
 
@@ -419,7 +431,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 当前罡气值
 
@@ -437,7 +449,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 最大罡气值
 
@@ -455,7 +467,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 罡气值百分比（相比最大生命值）
 
@@ -473,9 +485,27 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > Begins the death sequence for the owner.
+
+---
+
+### 函数 `ResetDeath`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void ResetDeath();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 复活：清死亡/击倒相关 loose tag，把角色从死亡态拨回存活（FightPawn 门派战原地复活用）。
 
 ---
 
@@ -490,5 +520,9 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) float GetMoodValue();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取角色的心情值。
 
 ---

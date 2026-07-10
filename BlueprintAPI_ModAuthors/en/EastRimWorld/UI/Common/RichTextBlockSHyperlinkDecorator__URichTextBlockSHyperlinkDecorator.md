@@ -30,4 +30,8 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Notice Rich Inline S Hyperlink field.
+
 ---

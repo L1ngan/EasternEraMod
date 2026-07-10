@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FGridPosition GridPos;` |
 
-**Source comments:**
+**Notes:**
 
 > 格子坐标
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 LayerIndex { INDEX_NONE };` |
 
-**Source comments:**
+**Notes:**
 
 > 所在层的索引
 
@@ -44,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EPositionPartType` |
+| C++ type | [EPositionPartType](ERW_Enumerations__EPositionPartType.md) |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) EPositionPartType PartType { EPositionPartType::COUNT };` |
 
-**Source comments:**
+**Notes:**
 
 > 九宫格部分类型
 
@@ -59,12 +59,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EAutoTileType` |
+| C++ type | [EAutoTileType](ERW_Enumerations__EAutoTileType.md) |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) EAutoTileType AutoTileType { EAutoTileType::Flat };` |
 
-**Source comments:**
+**Notes:**
 
 > 九宫格类型
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FTransform Transform;` |
 
-**Source comments:**
+**Notes:**
 
 > 填充模型的Transform
 

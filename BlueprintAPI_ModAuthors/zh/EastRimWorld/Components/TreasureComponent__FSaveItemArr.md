@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) TArray<FUseItemSaveData> TreasureSaveItems;` |
 
-**源码注释:**
+**说明:**
 
 > 商品信息
 

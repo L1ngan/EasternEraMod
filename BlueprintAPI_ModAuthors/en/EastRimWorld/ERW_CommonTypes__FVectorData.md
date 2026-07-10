@@ -19,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) float X { 0.f };` |
 
+**Notes:**
+
+> X-axis component (savable).
+
 ---
 
 ### Property `Y`
@@ -30,6 +34,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) float Y { 0.f };` |
 
+**Notes:**
+
+> Y-axis component (savable).
+
 ---
 
 ### Property `Z`
@@ -40,5 +48,9 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) float Z { 0.f };` |
+
+**Notes:**
+
+> Z-axis component (savable).
 
 ---

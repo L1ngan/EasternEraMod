@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) float CurEnergyStorageValue = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 当前的能源储量
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) TArray<FGuid> ConnectBuildings;` |
 
-**源码注释:**
+**说明:**
 
 > 连接的建筑物
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) TArray<FGuid> TemporaryConnectBuildings;` |
 
-**源码注释:**
+**说明:**
 
 > 即将连接的建筑物（放置后未建造完成）
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) int32 CurPipelineGroup = -1;` |
 
-**源码注释:**
+**说明:**
 
 > 当前建筑物管道分组
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) int32 UpcomingChangePipelineGroup = INDEX_NONE;` |
 
-**源码注释:**
+**说明:**
 
 > 即将变更管道分组
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) int32 EnableWhenClosedPipelineGroup = INDEX_NONE;` |
 
-**源码注释:**
+**说明:**
 
 > 当建筑物是控制建筑物时 关闭状态启用的管道
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) int32 EnableWhenOnPipelineGroup = INDEX_NONE;` |
 
-**源码注释:**
+**说明:**
 
 > 当建筑物是控制建筑物时 开启状态启用的管道
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) int32 UpcomingChangeEnableWhenClosedPipelineGroup = INDEX_NONE;` |
 
-**源码注释:**
+**说明:**
 
 > 当建筑物是控制建筑物时 关闭状态启用即将变更的管道
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) int32 UpcomingChangeEnableWhenOnPipelineGroup = INDEX_NONE;` |
 
-**源码注释:**
+**说明:**
 
 > 当建筑物是控制建筑物时 开启状态启用即将变更的管道
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FGuid EnergyGridGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 所属的能量网Guid
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) bool bIsChangingPipelineGroup = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否正在更改管道
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 UpdateEnergyGenerateTimerID = INDEX_NONE;` |
 
-**源码注释:**
+**说明:**
 
 > 生产能源计算定时器
 
@@ -199,7 +199,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 UpdateEnergyExpendTimerID = INDEX_NONE;` |
 
-**源码注释:**
+**说明:**
 
 > 消耗能源计算定时器
 
@@ -214,7 +214,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) int32 CurrentLowerLimitTime = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 当前下限时间
 
@@ -229,7 +229,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) int32 CurrentUpperLimitTime = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 当前上限时间
 
@@ -244,7 +244,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) int32 CurrentLowerLimitTemperature = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 当前下限温度
 
@@ -259,7 +259,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) int32 CurrentUpperLimitTemperature = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 当前上限温度
 
@@ -274,7 +274,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) float CurrentLowerLimitEnergy = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 当前下限能量
 
@@ -289,7 +289,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) float CurrentUpperLimitEnergy = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 当前上限能量
 
@@ -304,7 +304,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) TArray<float> GenerateTwentyFourHourEnergyArray;` |
 
-**源码注释:**
+**说明:**
 
 > 计算的24小时产能数组
 
@@ -319,7 +319,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) float GenerateTwentyFourHourEnergy { 0.f };` |
 
-**源码注释:**
+**说明:**
 
 > 计算的24小时产能总和
 
@@ -334,7 +334,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) TArray<float> ExpendTwentyFourHourEnergyArray;` |
 
-**源码注释:**
+**说明:**
 
 > 计算的24小时耗能数组
 
@@ -349,7 +349,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) float ExpendTwentyFourHourEnergy { 0.f };` |
 
-**源码注释:**
+**说明:**
 
 > 计算的24小时耗能总和
 
@@ -359,12 +359,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EOverlockingType` |
+| C++ 类型 | [EOverlockingType](../ERW_Enumerations__EOverlockingType.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame,EditAnywhere,BlueprintReadOnly) EOverlockingType PracticeBuildingOverlockingState = EOverlockingType::Normal;` |
 
-**源码注释:**
+**说明:**
 
 > 修炼建筑状态
 
@@ -379,7 +379,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 OverlockingDurationID = INDEX_NONE;` |
 
-**源码注释:**
+**说明:**
 
 > 超频持续时间定时器
 
@@ -394,7 +394,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 CurOverlockingTime = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 当前超频状态持续时间
 
@@ -409,7 +409,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 OverlockingCoolingTimerID = INDEX_NONE;` |
 
-**源码注释:**
+**说明:**
 
 > 超频冷却时间定时器
 

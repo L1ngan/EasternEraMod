@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Project base class for gameplay cue notify actors; extracts the EastRimWorld effect context and context parameter from cue parameters
 
 ## Blueprint-exposed functions
 
@@ -24,7 +26,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取上下文参数
 

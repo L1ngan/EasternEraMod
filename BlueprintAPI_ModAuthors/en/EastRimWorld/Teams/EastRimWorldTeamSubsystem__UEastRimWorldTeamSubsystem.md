@@ -19,6 +19,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnPerceiveActorDeath OnPerceiveActorDeath;` |
 
+**Notes:**
+
+> On Perceive Actor Death event or callback.
+
 ---
 
 ### Property `OnPerceiveActorSeriousInjury`
@@ -30,7 +34,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnPerceiveActorDeath OnPerceiveActorSeriousInjury;` |
 
-**Source comments:**
+**Notes:**
 
 > 重伤(门派战中的死亡)
 
@@ -45,7 +49,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnPerceiveActorDeath OnPerceiveActorKnockDown;` |
 
-**Source comments:**
+**Notes:**
 
 > 驻地战斗中被击倒
 
@@ -60,6 +64,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnTeamBuffChange OnTeamBuffChange;` |
 
+**Notes:**
+
+> On Team Buff Change event or callback.
+
 ---
 
 ### Property `AllTeamActors`
@@ -71,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TArray<AActor*> AllTeamActors;` |
 
-**Source comments:**
+**Notes:**
 
 > 所有的阵营actor
 
@@ -95,7 +103,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 是否为玩家阵营（玩家阵营ID固定为1）
 
@@ -118,6 +126,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets or queries Get Team Relation.
+
 ---
 
 ### Function `FindShortestDistanceTarget`
@@ -137,7 +149,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 寻找距离位置最短的目标
 
@@ -154,15 +166,38 @@
 | Name | Type |
 |--------|------|
 | `TeamId` | `int32` |
-| `CharacterType` | `ECharacterType` |
+| `CharacterType` | [ECharacterType](../Struct/CommonEnum__ECharacterType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<AActor*> GetAllTeamActorByCharacterType(int32 TeamId,ECharacterType CharacterType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有阵营actor 根据类型
+
+---
+
+### Function `GetHostileActorsInRadius`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `TArray<AActor*>` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `Target` | `const AActor*` |
+| `Radius` | `float` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<AActor*> GetHostileActorsInRadius(const AActor* Target, float Radius);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 获取以 Target 为中心、半径内、对 Target 持敌对态度的所有 Actor（范围内敌人死亡被动触发用）
 
 ---
 
@@ -182,6 +217,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets or queries Get All Team Buff.
+
 ---
 
 ### Function `PlayBattleMusic`
@@ -200,8 +239,26 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 播放战斗音乐
+
+---
+
+### Function `IsOnBattlePlayer`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `bool` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool IsOnBattlePlayer();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Gets or queries Is On Battle Player.
 
 ---

@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FText Name;` |
 
-**源码注释:**
+**说明:**
 
 > 名称
 
@@ -29,12 +29,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EBreakdownType` |
+| C++ 类型 | [EBreakdownType](ERW_Enumerations__EBreakdownType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) EBreakdownType BreakdownType = EBreakdownType::Depression;` |
 
-**源码注释:**
+**说明:**
 
 > 崩溃类型
 
@@ -44,12 +44,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EBreakdownExistType , int32>` |
+| C++ 类型 | TMap<[EBreakdownExistType](ERW_Enumerations__EBreakdownExistType.md) , int32> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<EBreakdownExistType , int32> Exist;` |
 
-**源码注释:**
+**说明:**
 
 > 崩溃存在类型
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FName RecoverBuffID;` |
 
-**源码注释:**
+**说明:**
 
 > 崩溃结束后触发的恢复BUFF
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 NoBreakdownTime { 0 };` |
 
-**源码注释:**
+**说明:**
 
 > 恢复期间不会崩溃持续时间(秒)
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FText> Desc;` |
 
-**源码注释:**
+**说明:**
 
 > 描述
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 Weight { 0 };` |
 
-**源码注释:**
+**说明:**
 
 > 权重
 
@@ -119,12 +119,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<ECommonConditionType , [FConditions](ERW_CommonTypes__FConditions.md)> |
+| C++ 类型 | TMap<[ECommonConditionType](ERW_Enumerations__ECommonConditionType.md) , [FConditions](ERW_CommonTypes__FConditions.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<ECommonConditionType , FConditions> Conditions;` |
 
-**源码注释:**
+**说明:**
 
 > 满足条件
 > TMap<条件类型 , 条件>

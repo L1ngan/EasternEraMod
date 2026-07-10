@@ -19,4 +19,8 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category= "Base") TMap<FName,FItemSimpleData> LevelOutPut;` |
 
+**说明:**
+
+> Level Out Put 字段。
+
 ---

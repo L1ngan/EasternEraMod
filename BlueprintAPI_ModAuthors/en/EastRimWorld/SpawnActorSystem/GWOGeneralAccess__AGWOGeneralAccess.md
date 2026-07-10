@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> GWO general access actor: central registry for players, GWO components and spawners, and maintains the GWO world time.
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, VisibleDefaultsOnly, Category = "Sectors") class AGWOSectorsDirector *sectorsDirector = nullptr;` |
 
+**Notes:**
+
+> Reference to the sectors director (AGWOSectorsDirector).
+
 ---
 
 ### Property `playersArr`
@@ -28,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "Global World Optimization | Variables") TArray<AActor*> playersArr;` |
 
-**Source comments:**
+**Notes:**
 
 > 检测的对象
 
@@ -43,6 +49,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "Global World Optimization | Variables") TArray<class UGWOActorComponent*> actorsCompArr;` |
 
+**Notes:**
+
+> Array of registered GWO actor components.
+
 ---
 
 ### Property `spawnersArr`
@@ -54,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "Global World Optimization | Variables") TArray<class AGWOSpawner*> spawnersArr;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成器
 
@@ -78,5 +88,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Spawner Parameters") void UpdateTime(int setHours, int setMinutes);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Sets the GWO world time (hours and minutes).
 
 ---

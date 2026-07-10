@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FGridPosition GridPos;` |
 
-**Source comments:**
+**Notes:**
 
 > 相对格子坐标
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TArray<EGridDistributionType>` |
+| C++ type | TArray<[EGridDistributionType](ERW_Enumerations__EGridDistributionType.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<EGridDistributionType> DistributionTypes;` |
 
-**Source comments:**
+**Notes:**
 
 > 格子分布类型
 
@@ -44,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TArray<EGridDistributionType>` |
+| C++ type | TArray<[EGridDistributionType](ERW_Enumerations__EGridDistributionType.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<EGridDistributionType> InvalidTypes;` |
 
-**Source comments:**
+**Notes:**
 
 > 无效的分布类型
 

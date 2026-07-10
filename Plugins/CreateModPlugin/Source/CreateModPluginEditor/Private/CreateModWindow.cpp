@@ -30,7 +30,7 @@
 void SCreateModWindow::Construct(const FArguments& InArgs)
 {
 	// 创建 ModInfoData 对象（每次都创建新的，确保数据是干净的）
-	ModInfoData = NewObject<UModInfoData>(GetTransientPackage());
+	ModInfoData = TStrongObjectPtr<UModInfoData>(NewObject<UModInfoData>(GetTransientPackage()));
 	
 	// 确保 ModInfoData 使用默认值
 	ModInfoData->ModId = TEXT("");
@@ -85,7 +85,7 @@ void SCreateModWindow::Construct(const FArguments& InArgs)
 	DetailsView->SetObjects(TArray<UObject*>());
 	
 	// 设置新的对象
-	DetailsView->SetObject(ModInfoData);
+	DetailsView->SetObject(ModInfoData.Get());
 	
 	// 强制刷新以确保属性显示
 	DetailsView->ForceRefresh();

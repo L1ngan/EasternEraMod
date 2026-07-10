@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Door navigation link actor derived from ANavLinkProxy; the nav link's start/end positions and traversal direction can be updated at runtime.
 
 ## Blueprint-exposed functions
 
@@ -26,7 +28,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新导航链接
 

@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) FGameplayTag GameplayTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 标签
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EManageType` |
+| C++ type | [EManageType](../Struct/CommonEnum__EManageType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) EManageType ManageType = EManageType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 类型
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) float Cost { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 消耗
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) FText Desc;` |
 
-**Source comments:**
+**Notes:**
 
 > 描述
 

@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData GlobalExperienceBonus;` |
 
-**源码注释:**
+**说明:**
 
 > 全局经验加成
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CombatLevel;` |
 
-**源码注释:**
+**说明:**
 
 > 战斗等级
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CombatExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 战斗经验
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CombatExperienceBonus;` |
 
-**源码注释:**
+**说明:**
 
 > 战斗经验加成
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ConstructionLevel;` |
 
-**源码注释:**
+**说明:**
 
 > 建造等级
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ConstructionExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 建造经验
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ConstructionExperienceBonus;` |
 
-**源码注释:**
+**说明:**
 
 > 建造经验加成
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MiningLevel;` |
 
-**源码注释:**
+**说明:**
 
 > 采矿等级
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MiningExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 采矿经验
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MiningExperienceBonus;` |
 
-**源码注释:**
+**说明:**
 
 > 采矿经验加成
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CookingLevel;` |
 
-**源码注释:**
+**说明:**
 
 > 烹饪等级
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CookingExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 烹饪经验
 
@@ -199,7 +199,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CookingExperienceBonus;` |
 
-**源码注释:**
+**说明:**
 
 > 烹饪经验加成
 
@@ -214,7 +214,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData FarmingLevel;` |
 
-**源码注释:**
+**说明:**
 
 > 农业等级
 
@@ -229,7 +229,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData FarmingExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 农业经验
 
@@ -244,7 +244,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData FarmingExperienceBonus;` |
 
-**源码注释:**
+**说明:**
 
 > 农业经验加成
 
@@ -259,7 +259,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalLevel;` |
 
-**源码注释:**
+**说明:**
 
 > 动物相关等级
 
@@ -274,7 +274,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalTamingSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 驯服动物的能力（驯服每次增加的进度）
 
@@ -289,7 +289,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 动物相关经验
 
@@ -304,7 +304,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalExperienceBonus;` |
 
-**源码注释:**
+**说明:**
 
 > 动物相关经验加成
 
@@ -319,7 +319,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalTrainingExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 动物训练经验
 
@@ -334,7 +334,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalTrainingLevel;` |
 
-**源码注释:**
+**说明:**
 
 > 动物训练等级
 
@@ -349,7 +349,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalTrainingBonus;` |
 
-**源码注释:**
+**说明:**
 
 > 动物训练经验加成
 
@@ -364,7 +364,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MakeLevel;` |
 
-**源码注释:**
+**说明:**
 
 > 制作等级
 
@@ -379,7 +379,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MakeExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 制作经验
 
@@ -394,7 +394,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MakeExperienceBonus;` |
 
-**源码注释:**
+**说明:**
 
 > 制作经验加成
 
@@ -409,7 +409,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ArtLevel;` |
 
-**源码注释:**
+**说明:**
 
 > 艺术等级
 
@@ -424,7 +424,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ArtExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 艺术经验
 
@@ -439,7 +439,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ArtExperienceBonus;` |
 
-**源码注释:**
+**说明:**
 
 > 艺术经验加成
 
@@ -454,7 +454,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CureLevel;` |
 
-**源码注释:**
+**说明:**
 
 > 治疗等级
 
@@ -469,7 +469,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CureExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 治疗经验
 
@@ -484,7 +484,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CureExperienceBonus;` |
 
-**源码注释:**
+**说明:**
 
 > 治疗经验加成
 
@@ -499,7 +499,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SocialContactLevel;` |
 
-**源码注释:**
+**说明:**
 
 > 社交等级
 
@@ -514,7 +514,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SocialContactExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 社交经验
 
@@ -529,7 +529,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SocialContactExperienceBonus;` |
 
-**源码注释:**
+**说明:**
 
 > 社交经验加成
 
@@ -544,7 +544,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData IntelligenceLevel;` |
 
-**源码注释:**
+**说明:**
 
 > 智力等级
 
@@ -559,7 +559,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData IntelligenceExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 智力经验
 
@@ -574,7 +574,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData IntelligenceExperienceBonus;` |
 
-**源码注释:**
+**说明:**
 
 > 智力经验加成
 
@@ -589,7 +589,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DanTianExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 丹田经验值
 
@@ -604,7 +604,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DanTianExperienceBonus;` |
 
-**源码注释:**
+**说明:**
 
 > 丹田经验加成
 
@@ -619,7 +619,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData YinExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 阴性
 
@@ -634,6 +634,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData YinExperienceBonus;` |
 
+**说明:**
+
+> 阴性内功经验加成
+
 ---
 
 ### 属性 `NeutralExperience`
@@ -645,7 +649,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NeutralExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 中正
 
@@ -660,6 +664,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NeutralExperienceBonus;` |
 
+**说明:**
+
+> 中正内功经验加成
+
 ---
 
 ### 属性 `PositiveExperience`
@@ -671,7 +679,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PositiveExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 阳性
 
@@ -686,6 +694,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PositiveExperienceBonus;` |
 
+**说明:**
+
+> 阳性内功经验加成
+
 ---
 
 ### 属性 `LightSkillExperience`
@@ -697,7 +709,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LightSkillExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 轻功
 
@@ -712,6 +724,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LightSkillExperienceBonus;` |
 
+**说明:**
+
+> 轻功经验加成
+
 ---
 
 ### 属性 `HardSkillExperience`
@@ -723,7 +739,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HardSkillExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 硬功
 
@@ -738,6 +754,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HardSkillExperienceBonus;` |
 
+**说明:**
+
+> 硬功经验加成
+
 ---
 
 ### 属性 `InternalStrengthExperience`
@@ -749,7 +769,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData InternalStrengthExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 内劲
 
@@ -764,6 +784,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData InternalStrengthExperienceBonus;` |
 
+**说明:**
+
+> 内劲经验加成
+
 ---
 
 ### 属性 `BladeStabsExperience`
@@ -775,7 +799,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BladeStabsExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 刃刺
 
@@ -790,6 +814,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BladeStabsExperienceBonus;` |
 
+**说明:**
+
+> 刃刺武学经验加成
+
 ---
 
 ### 属性 `SpearAndHalberdExperience`
@@ -801,7 +829,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SpearAndHalberdExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 枪戟
 
@@ -816,6 +844,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SpearAndHalberdExperienceBonus;` |
 
+**说明:**
+
+> 枪戟武学经验加成
+
 ---
 
 ### 属性 `SwordsExperience`
@@ -827,7 +859,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SwordsExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 刀剑
 
@@ -842,6 +874,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SwordsExperienceBonus;` |
 
+**说明:**
+
+> 刀剑武学经验加成
+
 ---
 
 ### 属性 `AxeClubsExperience`
@@ -853,7 +889,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AxeClubsExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 斧棒
 
@@ -868,6 +904,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AxeClubsExperienceBonus;` |
 
+**说明:**
+
+> 斧棒武学经验加成
+
 ---
 
 ### 属性 `FistsAndPalmsExperience`
@@ -879,7 +919,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData FistsAndPalmsExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 拳掌
 
@@ -894,6 +934,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData FistsAndPalmsExperienceBonus;` |
 
+**说明:**
+
+> 拳掌武学经验加成
+
 ---
 
 ### 属性 `HammersAndMacesExperience`
@@ -905,7 +949,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HammersAndMacesExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 锤锏
 
@@ -920,6 +964,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HammersAndMacesExperienceBonus;` |
 
+**说明:**
+
+> 锤锏武学经验加成
+
 ---
 
 ### 属性 `HiddenWeaponsExperience`
@@ -931,7 +979,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HiddenWeaponsExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 暗器
 
@@ -946,6 +994,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HiddenWeaponsExperienceBonus;` |
 
+**说明:**
+
+> 暗器经验加成
+
 ---
 
 ### 属性 `LongRangeExperience`
@@ -957,7 +1009,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LongRangeExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 远程
 
@@ -972,6 +1024,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LongRangeExperienceBonus;` |
 
+**说明:**
+
+> 远程武学经验加成
+
 ---
 
 ### 属性 `Comprehension`
@@ -983,7 +1039,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Comprehension;` |
 
-**源码注释:**
+**说明:**
 
 > 悟性
 
@@ -998,7 +1054,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Aptitude;` |
 
-**源码注释:**
+**说明:**
 
 > 资质
 
@@ -1013,7 +1069,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|GrowUp", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData InternalEnergyCirculation;` |
 
-**源码注释:**
+**说明:**
 
 > 内功循环
 

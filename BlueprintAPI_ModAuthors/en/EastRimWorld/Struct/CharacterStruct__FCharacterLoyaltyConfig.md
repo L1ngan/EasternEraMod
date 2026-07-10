@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Loyalty") int32 Importance = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 重要度
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Loyalty") float InitLoyalty = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始忠诚
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Loyalty") float LoyaltyChangeCoefficient = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 忠诚度变化系数
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Loyalty") float ForceFavorabilityChangeCoefficient = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 门派好感度变化系数
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Loyalty", meta = (ClampMin = 0.f, ClampMax = 1.f)) float InviteSuccessRate = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 邀请成功率
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Loyalty", meta = (ClampMin = 0.f, ClampMax = 1.f)) float RedeemProbability = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 赎回概率
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Loyalty") FVector2D RedeemValueRange = FVector2D::ZeroVector;` |
 
-**Source comments:**
+**Notes:**
 
 > 赎回价值
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Loyalty", meta = (ClampMin = 0.f, ClampMax = 1.f)) float RecruitSuccessRate = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 招募成功率
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Execution") float AddReputation = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 增加声望
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Execution") float ReduceFavorability = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 减少好感度
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Execution") float ReduceJustice = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 减少正邪值
 

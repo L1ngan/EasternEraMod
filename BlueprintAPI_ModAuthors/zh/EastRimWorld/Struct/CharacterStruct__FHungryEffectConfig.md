@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FHungryEffectConfig") FText HungryEffectName;` |
 
-**源码注释:**
+**说明:**
 
 > 饥饿阶段名称
 
@@ -29,12 +29,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EHungryDegree` |
+| C++ 类型 | [EHungryDegree](CommonEnum__EHungryDegree.md) |
 | 反射说明符 | BlueprintReadWrite, Category="FHungryEffectConfig" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FHungryEffectConfig") EHungryDegree HungryDegree = EHungryDegree::None;` |
 
-**源码注释:**
+**说明:**
 
 > 饥饿阶段程度
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FHungryEffectConfig") float HungryMiniTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 饥饿阶段最少时间
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FHungryEffectConfig") float HungryMaxTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 饥饿阶段最大时间
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FHungryEffectConfig") TArray<FName> ActiveMoodIds;` |
 
-**源码注释:**
+**说明:**
 
 > 激活心情
 
@@ -89,12 +89,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName,EBodyOrganType>` |
+| C++ 类型 | TMap<FName,[EBodyOrganType](../ERW_CommonTypes__EBodyOrganType.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="FHungryEffectConfig" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FHungryEffectConfig") TMap<FName,EBodyOrganType> ActiveInjuryIds;` |
 
-**源码注释:**
+**说明:**
 
 > 激活伤势
 

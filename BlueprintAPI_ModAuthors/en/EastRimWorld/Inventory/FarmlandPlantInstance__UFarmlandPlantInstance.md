@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Farmland plant instance, a collectible belonging to a specific farmland
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool bAutoOperator;` |
 
-**Source comments:**
+**Notes:**
 
 > 区分是自动操作还是玩家手动操作
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleInstanceOnly,meta=(AllowPrivateAccess)) FGuid BelongFarmlandId;` |
 
-**Source comments:**
+**Notes:**
 
 > 归属田地的guid
 
@@ -51,5 +53,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure) const FGuid& GetBelongFarmlandId() const;`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Returns the GUID of the farmland this plant belongs to
 
 ---

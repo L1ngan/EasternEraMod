@@ -20,6 +20,10 @@
 		{
 			"Name": "SmartObjects",
 			"Enabled": true
+		},
+		{
+			"Name": "UnLua",
+			"Enabled": true
 		}
 	],
 	"Modules": [

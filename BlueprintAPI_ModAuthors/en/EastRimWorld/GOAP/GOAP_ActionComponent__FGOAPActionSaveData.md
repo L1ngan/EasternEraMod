@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid Guid;` |
 
-**Source comments:**
+**Notes:**
 
 > 组件的Guid
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FName , FGOAP_Users> Users;` |
 
-**Source comments:**
+**Notes:**
 
 > GOAP的用户
 > TMap<GOAP Action的ID , 用户的数组>
@@ -50,7 +50,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FName , bool> ActionForbiddenStates;` |
 
-**Source comments:**
+**Notes:**
 
 > GOAP Action的禁用状态
 > TMap<GOAP Action的ID , 是否禁用>
@@ -66,7 +66,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FGuid , FUserReserveData> ReservedUsers;` |
 
-**Source comments:**
+**Notes:**
 
 > 用户预留物品数据
 > TMap<角色的Guid , 预留的物品数据>
@@ -82,7 +82,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FName , int32> ReservedList;` |
 
-**Source comments:**
+**Notes:**
 
 > 预留物品列表
 > TMap<物品ID , 数量>

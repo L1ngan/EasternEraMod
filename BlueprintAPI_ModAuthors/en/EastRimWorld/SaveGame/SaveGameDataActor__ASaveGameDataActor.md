@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Global save data actor that centrally holds unlock records, observation progress, team info, achievement counters, comprehension points, difficulty coefficients and force logs.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) UERW_TechnologyMgr* TechnologyMgr { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > 科技管理组件
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) UCommonTaskComponent* CommonTaskComponent { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > 新手引导任务组件
 
@@ -47,9 +49,24 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere,SaveGame) TObjectPtr<UCommonLogComponent> LogComponent;` |
 
-**Source comments:**
+**Notes:**
 
 > 日志组件
+
+---
+
+### Property `EmergenceLogComponent`
+
+| Field | Details |
+|------|------|
+| C++ type | TObjectPtr<[UEmergenceLogComponent](../System/Emergence/Log/EmergenceLogComponent__UEmergenceLogComponent.md)> |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere,SaveGame) TObjectPtr<UEmergenceLogComponent> EmergenceLogComponent;` |
+
+**Notes:**
+
+> 涌现系统专有日志组件(时间/来源事件反查/关联演员/玩家相关性)
 
 ---
 
@@ -62,7 +79,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnObserveScheduleChange OnObserveScheduleChange;` |
 
-**Source comments:**
+**Notes:**
 
 > 当观察进度改变时
 
@@ -77,7 +94,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnObserveScheduleChange OnObserveComplete;` |
 
-**Source comments:**
+**Notes:**
 
 > 当观察完成时
 
@@ -92,6 +109,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnFunctionChange OnGameFunctionChange;` |
 
+**Notes:**
+
+> Broadcast when a game function's unlock state changes (function ID, unlocked or not).
+
 ---
 
 ### Property `OnNewBuildChange`
@@ -103,7 +124,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnBuildUnlockChange OnNewBuildChange;` |
 
-**Source comments:**
+**Notes:**
 
 > 新出现的建筑
 
@@ -118,7 +139,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FUnlockItemTag OnUnlockItemTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 当物品解锁时
 
@@ -133,7 +154,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnPlayerTeamBuffChange OnPlayerTeamBuffChange;` |
 
-**Source comments:**
+**Notes:**
 
 > 当玩家方buff状态改变时
 
@@ -148,6 +169,40 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnBuildingConstructionNumChange OnBuildingConstructionNumChange;` |
 
+**Notes:**
+
+> Broadcast when a building's constructed count changes (building ID, new count, old count).
+
+---
+
+### Property `OnComprehendPointsChanged`
+
+| Field | Details |
+|------|------|
+| C++ type | `FOnComprehendPointsChanged` |
+| Reflection specifiers | BlueprintAssignable |
+| Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnComprehendPointsChanged OnComprehendPointsChanged;` |
+
+**Notes:**
+
+> 参悟历练/回溯点数变化（全局）
+
+---
+
+### Property `OnMartialFragmentChanged`
+
+| Field | Details |
+|------|------|
+| C++ type | `FOnMartialFragmentChanged` |
+| Reflection specifiers | BlueprintAssignable |
+| Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnMartialFragmentChanged OnMartialFragmentChanged;` |
+
+**Notes:**
+
+> 武学残卷数量变化（全局，参数为变化的品质与该品质当前数量）
+
 ---
 
 ### Property `UnlockFormula`
@@ -159,7 +214,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) TArray<FName> UnlockFormula;` |
 
-**Source comments:**
+**Notes:**
 
 > 解锁的配方ID
 
@@ -174,7 +229,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) TArray<FName> UnlockBuilding;` |
 
-**Source comments:**
+**Notes:**
 
 > 解锁的建筑ID（建造列表中可见）
 
@@ -189,7 +244,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) TArray<FName> UnlockPlant;` |
 
-**Source comments:**
+**Notes:**
 
 > 解锁的种植物id
 
@@ -204,7 +259,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) TArray<FName> UnlockGameFunction;` |
 
-**Source comments:**
+**Notes:**
 
 > 解锁的功能ID
 
@@ -219,9 +274,24 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) TArray<FName> EnteredSubLevels;` |
 
-**Source comments:**
+**Notes:**
 
 > 进入过的关卡
+
+---
+
+### Property `EnabledModRecords`
+
+| Field | Details |
+|------|------|
+| C++ type | TArray<[FModSaveRecord](../Mod/ModInfo__FModSaveRecord.md)> |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FModSaveRecord> EnabledModRecords;` |
+
+**Notes:**
+
+> 本存档启用的 Mod 及版本（OnPrepareToSave 同步；读档时用于 Mod 兼容检查）
 
 ---
 
@@ -234,7 +304,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame) bool IsCustomWorkPriority { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 工作优先级UI是否是自定义优先级
 
@@ -249,7 +319,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FName> UnlockItem;` |
 
-**Source comments:**
+**Notes:**
 
 > 已经解锁的物品列表
 
@@ -264,7 +334,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FName> UnlockCollect;` |
 
-**Source comments:**
+**Notes:**
 
 > 已经解锁的采集物
 
@@ -279,18 +349,22 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) FGameplayTagContainer UnlockItemTagContainer;` |
 
+**Notes:**
+
+> Container of unlocked item type gameplay tags (saved).
+
 ---
 
 ### Property `ObservedObjectRecordMap`
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EObserveObjectType,[FObserveObjectsRecordMap](../Struct/ObserveStruct__FObserveObjectsRecordMap.md)> |
+| C++ type | TMap<[EObserveObjectType](../Struct/ObserveStruct__EObserveObjectType.md),[FObserveObjectsRecordMap](../Struct/ObserveStruct__FObserveObjectsRecordMap.md)> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<EObserveObjectType,FObserveObjectsRecordMap> ObservedObjectRecordMap;` |
 
-**Source comments:**
+**Notes:**
 
 > 已经观察完成的对象记录
 
@@ -300,12 +374,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EObserveObjectType,[FObserveProgressesMap](../Struct/ObserveStruct__FObserveProgressesMap.md)> |
+| C++ type | TMap<[EObserveObjectType](../Struct/ObserveStruct__EObserveObjectType.md),[FObserveProgressesMap](../Struct/ObserveStruct__FObserveProgressesMap.md)> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<EObserveObjectType,FObserveProgressesMap> ObservingObjectProgress;` |
 
-**Source comments:**
+**Notes:**
 
 > 观察进度
 
@@ -320,7 +394,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FGenericTeamId,FGameplayTeamInfo> TeamInfos;` |
 
-**Source comments:**
+**Notes:**
 
 > 所有的阵营记录的阵营信息
 
@@ -335,7 +409,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FTeamChangeInformationInfo> TeamChangeInformationInfos;` |
 
-**Source comments:**
+**Notes:**
 
 > 存储两个阵营关系变动
 
@@ -350,7 +424,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FCommonBuff> GlobalBuffs;` |
 
-**Source comments:**
+**Notes:**
 
 > 存档的全局buff信息 不区分阵营 不区分地点
 
@@ -365,7 +439,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<FName,int32> BuildingConstructionNum;` |
 
-**Source comments:**
+**Notes:**
 
 > 修建过的建筑物数量
 
@@ -380,7 +454,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame) TArray<FName> UnlockItemTipArr;` |
 
-**Source comments:**
+**Notes:**
 
 > 刚解锁物品的红点提示提
 
@@ -395,7 +469,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, SaveGame) TArray<FString> UnlockResourTab;` |
 
-**Source comments:**
+**Notes:**
 
 > 资源栏已经解锁的标签栏位 用图片资源路径作为标记
 
@@ -410,7 +484,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, SaveGame) TMap<FGuid, FCharacterLetterData> CharacterLetterMap;` |
 
-**Source comments:**
+**Notes:**
 
 > 信笺数据
 
@@ -425,7 +499,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame ) int32 CurRobotNum;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前已激活的机关人数量
 
@@ -440,7 +514,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame ) TMap<int32 , FStallInfo> Stalls;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前保存的珍宝阁货架信息
 
@@ -455,7 +529,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame ) int32 UnlockStallSlots;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前已解锁的货架槽位
 
@@ -470,7 +544,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 DeathNum;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家角色死亡计数 用于解锁成就
 
@@ -485,7 +559,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 PurpleMakeNum;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家紫色装备制造计数 用于解锁成就
 
@@ -500,7 +574,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 GoldGeteNum;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家金色装备获取计数 用于解锁成就
 
@@ -515,7 +589,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 GoldWriteCopyNum;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家金色书籍抄录计数 用于解锁成就
 
@@ -530,7 +604,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) TMap<FName,int32> AnimalTame;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家驯服动物类型数组 用于解锁成就
 
@@ -545,7 +619,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 MartialArtsWinNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家累计切磋胜利计数 用于解锁成就
 
@@ -560,7 +634,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 MartialArtsFaileNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家累计切磋失败计数 用于解锁成就
 
@@ -575,7 +649,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) TArray<FGuid> continuityWin;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家连续切磋失败数组 用于解锁成就
 
@@ -590,7 +664,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) TArray<FGuid> continuityFaile;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家连续切磋成功数组 用于解锁成就
 
@@ -605,7 +679,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 TradeGetGoodNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家交易累计获得商品数量 用于解锁成就
 
@@ -620,7 +694,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 TradeSaleGoodNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家交易累计出售商品数量 用于解锁成就
 
@@ -635,7 +709,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 TradeGetmoney = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家交易累计获得铜币数量 用于解锁成就
 
@@ -650,9 +724,69 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 TameAnimal = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家交易累计驯服动物数量 用于解锁成就
+
+---
+
+### Property `TrainingPoints`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) int32 TrainingPoints = 0;` |
+
+**Notes:**
+
+> 参悟·历练点数（全局，参悟消耗，通过行为/任务获得）
+
+---
+
+### Property `RetracePoints`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) int32 RetracePoints = 0;` |
+
+**Notes:**
+
+> 参悟·回溯点数（全局，参悟回溯词条消耗，通过行为/任务获得）
+
+---
+
+### Property `CharacterPracticePointCD`
+
+| Field | Details |
+|------|------|
+| C++ type | TMap<FGuid,[FPracticePointCD](SaveGameDataActor__FPracticePointCD.md)> |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<FGuid,FPracticePointCD> CharacterPracticePointCD;` |
+
+**Notes:**
+
+> 参悟·角色获得历练点数\回溯点数CD
+
+---
+
+### Property `MartialFragments`
+
+| Field | Details |
+|------|------|
+| C++ type | `TMap<EItemQuality,int32>` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<EItemQuality,int32> MartialFragments;` |
+
+**Notes:**
+
+> 武学残卷（全局，纯数值道具，按品质分别计数：品质→数量）
 
 ---
 
@@ -665,7 +799,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) FString Version = TEXT("0.1");` |
 
-**Source comments:**
+**Notes:**
 
 > 版本号
 
@@ -680,7 +814,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame) TMap<FName , int32> ManageResource;` |
 
-**Source comments:**
+**Notes:**
 
 > 资源管理界面资源及其数量
 
@@ -695,7 +829,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame) TMap<FName , FBuildingNumData> BuildingNumData;` |
 
-**Source comments:**
+**Notes:**
 
 > 资源管理界面资源及其数量
 
@@ -705,12 +839,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EDifficultyOption` |
+| C++ type | [EDifficultyOption](../Struct/CommonEnum__EDifficultyOption.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) EDifficultyOption CurGameDifficultyOption = EDifficultyOption::Normal;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前难度类型
 
@@ -725,7 +859,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) float CurGameDifficultyCoefficient = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前难度系数
 
@@ -740,7 +874,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) float CurEnemyRaidFrequencyCoefficient = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 敌人进攻频率系数
 
@@ -755,9 +889,54 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) FName CurRaidRulesetId;` |
 
-**Source comments:**
+**Notes:**
 
 > 袭击规则配置
+
+---
+
+### Property `SelectDifficultyId`
+
+| Field | Details |
+|------|------|
+| C++ type | `FName` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) FName SelectDifficultyId;` |
+
+**Notes:**
+
+> 选择的难度对应的配置表ID
+
+---
+
+### Property `IsEnableBeginnerGuide`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) bool IsEnableBeginnerGuide { true };` |
+
+**Notes:**
+
+> 是否开启新手引导
+
+---
+
+### Property `DifficultyData`
+
+| Field | Details |
+|------|------|
+| C++ type | [FDifficultyRuntimeSaveData](SaveGameDataActor__FDifficultyRuntimeSaveData.md) |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) FDifficultyRuntimeSaveData DifficultyData;` |
+
+**Notes:**
+
+> 当前难度运行时系数（存档）
 
 ---
 
@@ -770,7 +949,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) FEastRimWorldHumanData ProtagonistData;` |
 
-**Source comments:**
+**Notes:**
 
 > 主角的角色信息
 
@@ -785,13 +964,31 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FSoftObjectPath PlayerInitialPlace;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家的初始地点
 
 ---
 
 ## Blueprint-exposed functions
+
+### Function `GetDifficultyData`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure |
+| Return type | const [FDifficultyRuntimeSaveData](SaveGameDataActor__FDifficultyRuntimeSaveData.md)& |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable , BlueprintPure) static const FDifficultyRuntimeSaveData& GetDifficultyData();`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 获取当前难度运行时系数（静态访问，实例为空时返回默认值并警告）
+
+---
 
 ### Function `GetSaveGameDataActor`
 
@@ -804,6 +1001,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintPure) static ASaveGameDataActor * GetSaveGameDataActor();`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Returns the global save game data actor instance.
 
 ---
 
@@ -818,6 +1019,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void InitSaveGameDataActor();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Initializes the save game data actor (writes initial data such as difficulty runtime coefficients on new game).
 
 ---
 
@@ -837,7 +1042,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 解锁新配方
 
@@ -859,7 +1064,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 是否是可以使用的配方
 
@@ -881,7 +1086,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 解锁新的建筑（在建造列表中可见，但不一定能建造）
 
@@ -903,7 +1108,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 科技添加添加货架
 
@@ -925,7 +1130,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 科技增加货架槽位
 
@@ -947,7 +1152,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 判断是否是可以建造的建筑（满足初次解锁的条件）
 
@@ -969,7 +1174,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 判断是否是可以建造的建筑分类
 
@@ -991,7 +1196,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 返回解锁的建筑或植物提示的ID数组
 
@@ -1013,7 +1218,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 解锁新的种植物
 
@@ -1035,7 +1240,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 解锁新的功能
 
@@ -1057,7 +1262,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 是否进入过
 
@@ -1079,7 +1284,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 添加进入过的子关卡
 
@@ -1101,7 +1306,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除进入记录
 
@@ -1123,7 +1328,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 解锁新物品
 
@@ -1145,7 +1350,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 解锁新的采集物
 
@@ -1167,7 +1372,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 是否解锁对应的物品
 
@@ -1189,7 +1394,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 是否解锁对应的采集物
 
@@ -1211,7 +1416,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 解锁物品类型tag
 
@@ -1233,7 +1438,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 是否已经解锁了对应的Tag
 
@@ -1255,7 +1460,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 是否已经解锁了对应的Tag
 
@@ -1271,7 +1476,7 @@
 
 | Name | Type |
 |--------|------|
-| `ObserveType` | `const EObserveObjectType&` |
+| `ObserveType` | const [EObserveObjectType](../Struct/ObserveStruct__EObserveObjectType.md)& |
 | `ObjectId` | `const FName&` |
 | `ObserveDurability` | `const int32&` |
 | `InWorkload` | `const float&` |
@@ -1281,7 +1486,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 添加观察进度(需要注意采集物输入的id应该是其GamePlayTag的Name)
 
@@ -1297,14 +1502,14 @@
 
 | Name | Type |
 |--------|------|
-| `ObserveType` | `const EObserveObjectType&` |
+| `ObserveType` | const [EObserveObjectType](../Struct/ObserveStruct__EObserveObjectType.md)& |
 | `ObjectId` | `const FName&` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool CheckIsObserved(const EObserveObjectType& ObserveType,const FName& ObjectId);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否已经完成观察(需要注意采集物输入的id应该是其GamePlayTag的Name)
 
@@ -1320,14 +1525,14 @@
 
 | Name | Type |
 |--------|------|
-| `ObserveType` | `const EObserveObjectType&` |
+| `ObserveType` | const [EObserveObjectType](../Struct/ObserveStruct__EObserveObjectType.md)& |
 | `ObjectId` | `const FName&` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintPure) float GetCurObserveSchedule(const EObserveObjectType& ObserveType,const FName& ObjectId);`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取当前观察进度量(如果已经完成了观察返回-1)
 
@@ -1349,7 +1554,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查找对应的阵营信息
 
@@ -1371,7 +1576,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取对应的存档TeamBuff
 
@@ -1395,7 +1600,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 改变阵营关系
 
@@ -1413,7 +1618,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取主角信息
 
@@ -1436,9 +1641,167 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 增加已建造建筑数量
+
+---
+
+### Function `AddTrainingPointsByPractice`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `InCharacterGuid` | `const FGuid&` |
+| `Delta` | `int32` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void AddTrainingPointsByPractice(const FGuid& InCharacterGuid,int32 Delta);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 通过修炼行为增加的历练点数
+
+---
+
+### Function `AddTrainingPoints`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `Delta` | `int32` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void AddTrainingPoints(int32 Delta);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 增减历练点数（参悟消耗，结果钳制>=0，广播 OnComprehendPointsChanged；供任务/行为系统发放）
+
+---
+
+### Function `AddRetracePointsByPractice`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `InCharacterGuid` | `const FGuid&` |
+| `Delta` | `int32` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void AddRetracePointsByPractice(const FGuid& InCharacterGuid,int32 Delta);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 通过修炼行为增加的回溯点数
+
+---
+
+### Function `AddRetracePoints`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `Delta` | `int32` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void AddRetracePoints(int32 Delta);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 增减回溯点数（参悟回溯消耗，结果钳制>=0，广播 OnComprehendPointsChanged；供任务/行为系统发放）
+
+---
+
+### Function `AddMartialFragment`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `Quality` | `EItemQuality` |
+| `Num` | `int32` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void AddMartialFragment(EItemQuality Quality, int32 Num);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 增加指定品质的武学残卷（Num<=0 或品质为 None 忽略，广播 OnMartialFragmentChanged）
+
+---
+
+### Function `ConsumeMartialFragment`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `Quality` | `EItemQuality` |
+| `Num` | `int32` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool ConsumeMartialFragment(EItemQuality Quality, int32 Num);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 扣除指定品质的武学残卷（数量不足则不扣并返回 false，成功扣除广播 OnMartialFragmentChanged）
+
+---
+
+### Function `GetMartialFragmentNum`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure |
+| Return type | `int32` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `Quality` | `EItemQuality` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintPure) int32 GetMartialFragmentNum(EItemQuality Quality) const;`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 获取指定品质的武学残卷数量
 
 ---
 
@@ -1459,7 +1822,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 通过势力guid获取对应的所有日志
 
@@ -1481,7 +1844,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取对所有势力日志
 
@@ -1503,7 +1866,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取所有非玩家势力日志
 
@@ -1521,7 +1884,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取所有势力新日志的数量
 
@@ -1543,31 +1906,9 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取所有大地图日志
-
----
-
-### Function `GetAllPlayerLog`
-
-| Field | Details |
-|------|------|
-| Reflection specifiers | BlueprintPure |
-| Return type | `void` |
-| Parameters | see table below |
-
-| Name | Type |
-|--------|------|
-| `OutLogs` | TArray<[FCommonLogData](../Struct/CommonLogStruct__FCommonLogData.md)>& |
-
-**Original declaration (excerpt):** `UFUNCTION(BlueprintPure) void GetAllPlayerLog(TArray<FCommonLogData>& OutLogs) const;`
-
-**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
-
-**Source comments:**
-
-> 获取所有玩家日志
 
 ---
 
@@ -1583,7 +1924,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 任意势力是否有新日志
 
@@ -1605,7 +1946,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 指定势力是否有新日志
 
@@ -1623,7 +1964,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 非玩家势力是否有新日志
 
@@ -1641,9 +1982,29 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 存储主角的初始外观
+
+---
+
+### Function `EnsureProtagonistHair`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintImplementableEvent |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent,BlueprintCallable) void EnsureProtagonistHair();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> [老存档头发迁移] 读档时兜底：若主角捏脸 profile 的 Hairstyle 发型槽为空(老存档建号早于捏脸存发功能→掌门 3D 秃)，
+> 按性别塞一个默认发型资产并写回全局 ProtagonistCustomizationProfile，再刷新活体掌门外观。
+> 纯蓝图实现(FCustomizationProfile_V10/Hairstyle 是蓝图 struct，C++ 建不了)。幂等：非空则 no-op，新存档无副作用。
 
 ---
 
@@ -1667,7 +2028,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 势力进攻日志
 

@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 MinScore = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 分数范围
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 MaxScore = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 分数范围
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 MinFiveElementScore = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 五行需求最小值
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 MaxFiveElementScore = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 五行需求最大值
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FText LevelName;` |
 
-**Source comments:**
+**Notes:**
 
 > 等级名称
 
@@ -89,12 +89,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<ERoomEffectAppendType,[FRoomBuffIds](ERW_ConfigTypes__FRoomBuffIds.md)> |
+| C++ type | TMap<[ERoomEffectAppendType](ERW_Enumerations__ERoomEffectAppendType.md),[FRoomBuffIds](ERW_ConfigTypes__FRoomBuffIds.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<ERoomEffectAppendType,FRoomBuffIds> BuffIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 附加buff
 
@@ -104,12 +104,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<ERoomEffectAppendType,FGameplayTagContainer>` |
+| C++ type | TMap<[ERoomEffectAppendType](ERW_Enumerations__ERoomEffectAppendType.md),FGameplayTagContainer> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<ERoomEffectAppendType,FGameplayTagContainer> AddTags;` |
 
-**Source comments:**
+**Notes:**
 
 > 附加tag
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float RoomPoints = 100.0f;` |
 
-**Source comments:**
+**Notes:**
 
 > 房间等级对应财富点数
 

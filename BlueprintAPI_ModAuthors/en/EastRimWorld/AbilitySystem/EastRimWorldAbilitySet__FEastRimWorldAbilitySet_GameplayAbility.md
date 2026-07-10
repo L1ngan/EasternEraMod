@@ -20,7 +20,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY(EditDefaultsOnly) TSubclassOf<UEastRimWorldGameplayAbility> Ability = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > Gameplay ability to grant.
 
@@ -35,7 +35,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY(EditDefaultsOnly) int32 AbilityLevel = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > Level of ability to grant.
 
@@ -50,7 +50,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY(EditDefaultsOnly, Meta = (Categories = "InputTag")) FGameplayTag InputTag;` |
 
-**Source comments:**
+**Notes:**
 
 > Tag used to process input for the ability.
 

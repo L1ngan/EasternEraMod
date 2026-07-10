@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) TSubclassOf<class UPointLightComponent> LightType;` |
 
-**Source comments:**
+**Notes:**
 
 > 光源类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) ELightUnits IntensityUnits { ELightUnits::Lumens };` |
 
-**Source comments:**
+**Notes:**
 
 > 强度单位
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) FVector OffsetPosition = FVector::ZeroVector;` |
 
-**Source comments:**
+**Notes:**
 
 > 光源偏移位置
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) FRotator Rotation = FRotator::ZeroRotator;` |
 
-**Source comments:**
+**Notes:**
 
 > 光源旋转
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) float Intensity { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 光源强度
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) float AttenuationRadius { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 衰减半径
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) float InnerConeAngle { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 内锥体角度
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) float OuterConeAngle { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 外锥体角度
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) FColor LightColor = FColor::White;` |
 
-**Source comments:**
+**Notes:**
 
 > 光源颜色
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) float Radius { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 光照半径
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) bool CastShadow { true };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否投影
 

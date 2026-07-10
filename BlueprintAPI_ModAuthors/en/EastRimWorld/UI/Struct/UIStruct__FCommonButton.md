@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Common Button data structure.
 
 ## Blueprint-exposed variables
 
@@ -12,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECommonButtonType` |
+| C++ type | [ECommonButtonType](UIStruct__ECommonButtonType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ECommonButtonType CommonButtonType = ECommonButtonType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 按钮类型
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText ButtonText;` |
 
-**Source comments:**
+**Notes:**
 
 > 按钮内容
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FVector2D ButtonSize;` |
 
-**Source comments:**
+**Notes:**
 
 > 按钮大小
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText TipsTitle;` |
 
-**Source comments:**
+**Notes:**
 
 > 按钮提示标题
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText TipsContent;` |
 
-**Source comments:**
+**Notes:**
 
 > 按钮提示标题
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FFormatText FormatTipsContent;` |
 
-**Source comments:**
+**Notes:**
 
 > 格式化提示内容
 
@@ -102,12 +104,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECommonBtnTipType` |
+| C++ type | [ECommonBtnTipType](UIStruct__ECommonBtnTipType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ECommonBtnTipType TipsType;` |
 
-**Source comments:**
+**Notes:**
 
 > 按钮提示类型
 
@@ -122,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TSoftClassPtr<UUserWidget> TipsClass;` |
 
-**Source comments:**
+**Notes:**
 
 > 按钮提示框类型
 
@@ -137,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(InlineEditConditionToggle)) bool bTipsHaveOperator;` |
 
-**Source comments:**
+**Notes:**
 
 > 按钮提示框是否有快捷键提示
 
@@ -152,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=( editcondition="bTipsHaveOperator" )) TSoftObjectPtr<UTexture2D> TipsOperatorIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 提示框快捷键Icon
 
@@ -167,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=( editcondition="bTipsHaveOperator" )) FText TipsOpratorText;` |
 
-**Source comments:**
+**Notes:**
 
 > 提示框快捷键文本
 
@@ -182,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TSoftObjectPtr<UTexture2D> NormalIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 普通按钮状态
 
@@ -197,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TSoftObjectPtr<UTexture2D> HoveredIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 普通按钮悬浮
 
@@ -212,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TSoftObjectPtr<UTexture2D> PressedIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 普通按钮按下
 
@@ -227,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(InlineEditConditionToggle)) bool bCanSelect;` |
 
-**Source comments:**
+**Notes:**
 
 > 按钮能否选中
 
@@ -242,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=( editcondition="bCanSelect" )) TSoftObjectPtr<UTexture2D> SelectIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 普通按钮选中
 
@@ -257,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=( editcondition="bCanSelect" )) TSoftObjectPtr<UTexture2D> RightTopSelectedIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 按钮选中右上角的图片
 
@@ -272,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=( editcondition="bCanSelect" )) TSoftObjectPtr<UTexture2D> RightTopDeselectedIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 按钮未选中右上角的图片
 
@@ -287,7 +289,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TSoftObjectPtr<UTexture2D> DisabledIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 不可点击
 
@@ -302,7 +304,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TSoftClassPtr<UCommonButtonStyle> ButtonStyle;` |
 
-**Source comments:**
+**Notes:**
 
 > button样式
 
@@ -317,7 +319,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TSoftClassPtr<UEastRimWorldButtonBase> ButtonWidget;` |
 
-**Source comments:**
+**Notes:**
 
 > 主要界面
 
@@ -327,12 +329,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TArray<ECommonButtonType>` |
+| C++ type | TArray<[ECommonButtonType](UIStruct__ECommonButtonType.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<ECommonButtonType>ConflictButtonType;` |
 
-**Source comments:**
+**Notes:**
 
 > 冲突的按钮
 
@@ -347,7 +349,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bOnMultipleSelectShow = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 多选时是否显示
 
@@ -362,7 +364,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName ActionID = NAME_None;` |
 
-**Source comments:**
+**Notes:**
 
 > 按钮会执行的的ActionID 如果有
 

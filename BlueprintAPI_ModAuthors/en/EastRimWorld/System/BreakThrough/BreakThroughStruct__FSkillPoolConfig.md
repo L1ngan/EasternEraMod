@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> SkillIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 技能ID列表
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 RandomSkillNumber = 2;` |
 
-**Source comments:**
+**Notes:**
 
 > 随机的技能数量
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 RequiredBreakThroughPoints = 100;` |
 
-**Source comments:**
+**Notes:**
 
 > 所需突破点数（大于）
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> BehaviorLoopSections;` |
 
-**Source comments:**
+**Notes:**
 
 > 突破循环动画蒙太奇片段名称
 

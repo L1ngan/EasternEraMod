@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadWrite) FGuid DialogueGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 对话的唯一GUID
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadWrite) TArray<FName> CompleteDialogue;` |
 
-**源码注释:**
+**说明:**
 
 > 完成的对话ID
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadWrite) FName DialogueGroupID;` |
 
-**源码注释:**
+**说明:**
 
 > 所属的对话分组表ID
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadWrite) FDialogueGroupItem DialogueGroupItem;` |
 
-**源码注释:**
+**说明:**
 
 > 实际触发的对话组
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadWrite) FGuid DialogueInitiator;` |
 
-**源码注释:**
+**说明:**
 
 > 对话发起者
 
@@ -94,8 +94,38 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadWrite) FGuid DialogueTarget;` |
 
-**源码注释:**
+**说明:**
 
 > 对话目标
+
+---
+
+### 属性 `DialogueInitiatorType`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | [EDialogueActorType](DialogueStruct__EDialogueActorType.md) |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadWrite) EDialogueActorType DialogueInitiatorType = EDialogueActorType::None;` |
+
+**说明:**
+
+> 对话发起者类型
+
+---
+
+### 属性 `DialogueTargetType`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | [EDialogueActorType](DialogueStruct__EDialogueActorType.md) |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadWrite) EDialogueActorType DialogueTargetType = EDialogueActorType::None;` |
+
+**说明:**
+
+> 对话目标类型
 
 ---

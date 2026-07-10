@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FName , FGOAP_Users> GOAP_Users = {};` |
 
-**源码注释:**
+**说明:**
 
 > GOAP的用户
 > TMap<GOAP Action的ID , 用户的数组>
@@ -35,7 +35,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FName , FGOAP_Action> GOAP_Actions = {};` |
 
-**源码注释:**
+**说明:**
 
 > 已注册的GOAP Action
 > TMap<GOAP Action的ID , GOAP Action>
@@ -51,7 +51,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FName , bool> ActionForbiddenStates;` |
 
-**源码注释:**
+**说明:**
 
 > GOAP Action的禁用状态
 > TMap<GOAP Action的ID , 是否禁用>
@@ -67,7 +67,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FName , int32> ReservedList = {};` |
 
-**源码注释:**
+**说明:**
 
 > 预留物品列表
 > TMap<物品ID , 数量>
@@ -93,7 +93,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 **BlueprintNativeEvent**：蓝图可重写；C++ 默认实现在 `xxx_Implementation`。
 
-**源码注释:**
+**说明:**
 
 > 注册GOAP用户
 
@@ -116,7 +116,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 **BlueprintNativeEvent**：蓝图可重写；C++ 默认实现在 `xxx_Implementation`。
 
-**源码注释:**
+**说明:**
 
 > 注销GOAP用户
 
@@ -138,7 +138,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 **BlueprintNativeEvent**：蓝图可重写；C++ 默认实现在 `xxx_Implementation`。
 
-**源码注释:**
+**说明:**
 
 > 注册GOAP Action
 
@@ -161,7 +161,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 **BlueprintNativeEvent**：蓝图可重写；C++ 默认实现在 `xxx_Implementation`。
 
-**源码注释:**
+**说明:**
 
 > 注销GOAP Action
 
@@ -184,7 +184,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得Action的用户
 
@@ -207,7 +207,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查并更新Action的状态(是否活跃)
 
@@ -230,7 +230,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查执行人数以设置Action是否活跃
 
@@ -254,7 +254,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入预留物品的用户
 
@@ -276,7 +276,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除预留物品的用户
 
@@ -299,7 +299,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入物品预留列表
 
@@ -322,7 +322,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除物品预留列表
 
@@ -346,7 +346,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据预留物品修正GOAP记忆值
 
@@ -368,9 +368,49 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据ActionID 获取ActionData
+
+---
+
+### 函数 `GetActionIDByGoalID`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintPure, Category="GOAP" |
+| 返回类型 | `FName` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `GoalID` | `const FName&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintPure, Category = "GOAP") FName GetActionIDByGoalID(const FName& GoalID) const;`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 按 GoalID 在已注册的 GOAP_Actions 中查找对应 ActionID
+
+---
+
+### 函数 `GetActionIDByPracticeGoal`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintPure, Category="GOAP" |
+| 返回类型 | `FName` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintPure, Category = "GOAP") FName GetActionIDByPracticeGoal() const;`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 按修炼 GoalID 模糊匹配（"Practice" 或 "Practice_" 前缀）查找 ActionID
 
 ---
 
@@ -386,7 +426,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 注销当前Actor所有的GOAP并且打断其他人的执行
 
@@ -404,6 +444,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 提升本Actor在配置表CanImprovePriorityActions中GOAP行为的优先级（按ActionReduceCostValue降低其Cost）。
+
 ---
 
 ### 函数 `CancelImproveActionPriority`
@@ -417,5 +461,9 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void CancelImproveActionPriority();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 取消对本Actor可提权GOAP行为的优先级提升（把之前减少的行为Cost加回）。
 
 ---

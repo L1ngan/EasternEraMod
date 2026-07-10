@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FText TechName;` |
 
-**源码注释:**
+**说明:**
 
 > 科技名称
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TSoftObjectPtr<UTexture2D> Icon;` |
 
-**源码注释:**
+**说明:**
 
 > UI上显示的图标
 
@@ -44,12 +44,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EModTechCategory` |
+| C++ 类型 | [EModTechCategory](TechnologyDataStruct__EModTechCategory.md) |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") EModTechCategory Category = EModTechCategory::Food;` |
 
-**源码注释:**
+**说明:**
 
 > 科技分类
 
@@ -59,12 +59,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EModTechLevel` |
+| C++ 类型 | [EModTechLevel](TechnologyDataStruct__EModTechLevel.md) |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") EModTechLevel DifficultyLevel = EModTechLevel::Beginner;` |
 
-**源码注释:**
+**说明:**
 
 > 科技等级
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TArray<FName> PrevTechIds;` |
 
-**源码注释:**
+**说明:**
 
 > 前置科技ID
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TArray<FName> UnlockItemIds;` |
 
-**源码注释:**
+**说明:**
 
 > 解锁物品
 
@@ -104,12 +104,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EModTechPointType,int32>` |
+| C++ 类型 | TMap<[EModTechPointType](TechnologyDataStruct__EModTechPointType.md),int32> |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<EModTechPointType,int32> NeedTechPoints;` |
 
-**源码注释:**
+**说明:**
 
 > 需要的科技点数
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<FName,int32> NeedResources;` |
 
-**源码注释:**
+**说明:**
 
 > 研究需要消耗的资源
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") int32 NeedForceLevel = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 需要的势力等级
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") int32 UIX { 0 };` |
 
-**源码注释:**
+**说明:**
 
 > 科技元素在UI上的位置X
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") int32 UIY { 0 };` |
 
-**源码注释:**
+**说明:**
 
 > 科技元素在UI上的位置Y
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FText TechDesc;` |
 
-**源码注释:**
+**说明:**
 
 > 科技的描述文字（逐渐停用）
 
@@ -199,7 +199,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FModFormatText FormatItemTechDesc;` |
 
-**源码注释:**
+**说明:**
 
 > 科技的描述文字(格式化)
 
@@ -214,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") bool Enable = true;` |
 
-**源码注释:**
+**说明:**
 
 > 科技的是否开放可用
 

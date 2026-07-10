@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Base GameInstance class handling save/load, level loading, returning to main menu, game speed, new-game and platform configuration
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<int,UAkAudioEvent*> GamePlaySpeedAkAudioEvent;` |
 
+**Notes:**
+
+> Map of Wwise audio events per game play speed (speed index to AkAudioEvent)
+
 ---
 
 ### Property `RecoverAkAudioEvent`
@@ -28,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) UAkAudioEvent * RecoverAkAudioEvent = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 恢复
 
@@ -38,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ERunGameMode` |
+| C++ type | [ERunGameMode](ERW_GameInstanceBase__ERunGameMode.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="DebugGameMode" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="DebugGameMode") ERunGameMode RunGameMode = ERunGameMode::Debug;` |
 
-**Source comments:**
+**Notes:**
 
 > 运行模式
 
@@ -53,12 +59,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ERunGamePlatform` |
+| C++ type | [ERunGamePlatform](ERW_GameInstanceBase__ERunGamePlatform.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="RunGamePlatform" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="RunGamePlatform") ERunGamePlatform RunGamePlatform = ERunGamePlatform::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 运行的平台
 
@@ -73,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="DLC") TArray<UDLCInformationAsset*> DLCInformationAsset;` |
 
-**Source comments:**
+**Notes:**
 
 > DlC信息资产 测试时使用
 
@@ -88,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) int32 NewGameTeamMemberNumLimit;` |
 
-**Source comments:**
+**Notes:**
 
 > -------------------新游戏 Start------------------------
 
@@ -103,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TMap<FName,bool> NewGameCharacterIdMap;` |
 
-**Source comments:**
+**Notes:**
 
 > 新游戏同伴数据id,是否固定携带
 
@@ -118,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) FEastRimWorldHumanData NewGameProtagonist;` |
 
-**Source comments:**
+**Notes:**
 
 > 新游戏主角数据
 
@@ -133,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TArray<FName> NewGameProtagonistBuffIds;` |
 
-**Source comments:**
+**Notes:**
 
 > 新游戏主角初始buff
 
@@ -148,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TArray<FTeamBuffData> NewGameTeamBuffs;` |
 
-**Source comments:**
+**Notes:**
 
 > 新游戏时，选择剧本带来的团队的全局buff
 
@@ -163,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) int32 StoryProtagonistSkillPoint;` |
 
-**Source comments:**
+**Notes:**
 
 > 新游戏时，选择剧本带来的主角技能点数
 
@@ -178,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) int32 StoryProtagonistFirePoint;` |
 
-**Source comments:**
+**Notes:**
 
 > 新游戏时，选择剧本带来的主角兴趣点数
 
@@ -193,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) FName NewGameForceId;` |
 
-**Source comments:**
+**Notes:**
 
 > 新游戏势力类型
 
@@ -208,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TArray<FItemSimpleData> NewGameResources;` |
 
-**Source comments:**
+**Notes:**
 
 > 新游戏初始物资
 
@@ -223,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TMap<FName,int32> NewGameAnimals;` |
 
-**Source comments:**
+**Notes:**
 
 > 新游戏动物id,数量
 
@@ -238,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TArray<FName> StoryBackgroundAnswerIds;` |
 
-**Source comments:**
+**Notes:**
 
 > 选择的故事背景选项id(StoryBackgroundAnswer)
 
@@ -248,12 +254,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EStandpointType` |
+| C++ type | [EStandpointType](../Struct/CharacterStruct__EStandpointType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) EStandpointType StandpointType;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家立场观点
 
@@ -268,7 +274,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) TArray<FName> NewGameUnlockFormula;` |
 
-**Source comments:**
+**Notes:**
 
 > 新游戏解锁的配方ID
 
@@ -283,7 +289,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) TArray<FName> NewGameUnlockBuilding;` |
 
-**Source comments:**
+**Notes:**
 
 > 新游戏解锁的建筑ID（建造列表中可见）
 
@@ -298,7 +304,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) TArray<FName> NewGameUnlockPlant;` |
 
-**Source comments:**
+**Notes:**
 
 > 新游戏解锁的种植物ID
 
@@ -313,7 +319,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) FName CurGameSpeedName = FName("Running");` |
 
-**Source comments:**
+**Notes:**
 
 > 当前游戏速度名称
 
@@ -328,7 +334,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadOnly) int32 SpeedIndex { 1 };` |
 
-**Source comments:**
+**Notes:**
 
 > 当前游戏倍速
 
@@ -343,7 +349,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) FName NewGameSelectedStationPlace;` |
 
-**Source comments:**
+**Notes:**
 
 > 新游戏选择的玩家驻地
 
@@ -353,10 +359,14 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EGameDataAssetType,UDataAsset*>` |
+| C++ type | TMap<[EGameDataAssetType](../Components/ERW_GameConfigComponent__EGameDataAssetType.md),UDataAsset*> |
 | Reflection specifiers | BlueprintReadWrite, Category="Asset" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category = "Asset") TMap<EGameDataAssetType,UDataAsset*> GameDataAsset;` |
+
+**Notes:**
+
+> Map of game data assets indexed by type (EGameDataAssetType to DataAsset)
 
 ---
 
@@ -369,9 +379,144 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) TArray<FName> NewGameUnlockFunction;` |
 
-**Source comments:**
+**Notes:**
 
 > 新游戏功能ID
+
+---
+
+### Property `EnableBeginnerGuide`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool EnableBeginnerGuide { true };` |
+
+**Notes:**
+
+> 是否开启新手引导
+
+---
+
+### Property `AttributeChangeSpeedRow`
+
+| Field | Details |
+|------|------|
+| C++ type | `FName` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) FName AttributeChangeSpeedRow;` |
+
+**Notes:**
+
+> 角色属性变化速度行名（GE DataTable 行）
+
+---
+
+### Property `MartialArtsExperienceBonusRow`
+
+| Field | Details |
+|------|------|
+| C++ type | `FName` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) FName MartialArtsExperienceBonusRow;` |
+
+**Notes:**
+
+> 武学经验加成行名（GE DataTable 行）
+
+---
+
+### Property `EnemyStrengthRow`
+
+| Field | Details |
+|------|------|
+| C++ type | `FName` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) FName EnemyStrengthRow;` |
+
+**Notes:**
+
+> 敌人强度行名（GE DataTable 行）
+
+---
+
+### Property `DifficultyData`
+
+| Field | Details |
+|------|------|
+| C++ type | [FLevelConfigData](../ERW_ConfigTypes__FLevelConfigData.md) |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) FLevelConfigData DifficultyData;` |
+
+**Notes:**
+
+> 难度选择数据
+
+---
+
+### Property `DifficultyId`
+
+| Field | Details |
+|------|------|
+| C++ type | `FName` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) FName DifficultyId;` |
+
+**Notes:**
+
+> 选择的难度对应的配置表ID
+
+---
+
+### Property `ResetResourceSelection`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool ResetResourceSelection { false };` |
+
+**Notes:**
+
+> 是否重置资源选项
+
+---
+
+### Property `ResetStorySelection`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool ResetStorySelection { false };` |
+
+**Notes:**
+
+> 是否重置剧本选项
+
+---
+
+### Property `ResetFeatureSelection`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool ResetFeatureSelection { false };` |
+
+**Notes:**
+
+> 是否重置特性选项
 
 ---
 
@@ -379,12 +524,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EDifficultyOption` |
+| C++ type | [EDifficultyOption](../Struct/CommonEnum__EDifficultyOption.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="DifficultyOption" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "DifficultyOption") EDifficultyOption NewGameDifficultyOption = EDifficultyOption::Normal;` |
 
-**Source comments:**
+**Notes:**
 
 > 新游戏难度类型
 
@@ -399,7 +544,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "DifficultyOption") float NewGameDifficultyCoefficient = 1.0f;` |
 
-**Source comments:**
+**Notes:**
 
 > 新游戏难度系数
 
@@ -414,7 +559,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "DifficultyOption") float NewGameEnemyRaidFrequencyCoefficient = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 新游戏敌人进攻频率系数
 
@@ -429,7 +574,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "DifficultyOption") FName NewRaidRulesetId;` |
 
-**Source comments:**
+**Notes:**
 
 > 新游戏袭击生成规则
 
@@ -444,7 +589,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnLoadGameWorldSucceed OnLoadGameWorldSucceed;` |
 
-**Source comments:**
+**Notes:**
 
 > -------------------新游戏 End------------------------
 
@@ -459,6 +604,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnLoadSubLevelSucceed OnLoadSubLevelSucceed;` |
 
+**Notes:**
+
+> Delegate broadcast when a sub-level is loaded successfully (carries the level name)
+
 ---
 
 ### Property `OnCloseSubLevelSucceed`
@@ -469,6 +618,10 @@
 | Reflection specifiers | BlueprintAssignable |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnCloseSubLevelSucceed OnCloseSubLevelSucceed;` |
+
+**Notes:**
+
+> Delegate broadcast when a sub-level is closed successfully (carries the level name)
 
 ---
 
@@ -481,6 +634,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnSaveGameFinish OnSaveGameFinish;` |
 
+**Notes:**
+
+> Delegate broadcast when saving finishes (success flag and slot ID)
+
 ---
 
 ### Property `OnSettingChangeDelegate`
@@ -491,6 +648,10 @@
 | Reflection specifiers | BlueprintCallable, BlueprintAssignable |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable,BlueprintCallable) FOnSettingChangeDelegate OnSettingChangeDelegate;` |
+
+**Notes:**
+
+> Delegate broadcast when a game setting changes
 
 ---
 
@@ -503,6 +664,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnReturnMainMenu OnReturnMainMenu;` |
 
+**Notes:**
+
+> Delegate broadcast when returning to the main menu
+
 ---
 
 ### Property `DefaultSaviorSlot`
@@ -514,7 +679,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) USavior * DefaultSaviorSlot;` |
 
-**Source comments:**
+**Notes:**
 
 > 默认的存档实例
 
@@ -529,7 +694,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) USaveGlobalGameData * DefaultCurrencySaveData;` |
 
-**Source comments:**
+**Notes:**
 
 > 积分存档
 
@@ -544,7 +709,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) FString CurrencySaveSlotName = "CurrencySaveSlot";` |
 
-**Source comments:**
+**Notes:**
 
 > 积分存档名称
 
@@ -559,9 +724,70 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnOpenWorldMapDelegate OnOpenWorldMapDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 开启地图广播
+
+---
+
+### Property `BuildingLightRadiusLevelValues`
+
+| Field | Details |
+|------|------|
+| C++ type | `TArray<float>` |
+| Reflection specifiers | BlueprintReadOnly, Category="BuildingLight" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "BuildingLight") TArray<float> BuildingLightRadiusLevelValues { 4000.f, 8000.f, 12000.f };` |
+
+**Notes:**
+
+> -------------------建筑夜景灯光设置 Start------------------------
+> 建筑夜景灯光启用半径三档值（0=小 1=中 2=大），初始值可在 BP_GameInstance 类默认值中调整
+
+---
+
+### Property `BuildingLightCountLevelValues`
+
+| Field | Details |
+|------|------|
+| C++ type | `TArray<int32>` |
+| Reflection specifiers | BlueprintReadOnly, Category="BuildingLight" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "BuildingLight") TArray<int32> BuildingLightCountLevelValues { 10, 20, 30 };` |
+
+**Notes:**
+
+> 建筑夜景灯光同时点亮数量三档值（0=小 1=中 2=大）
+
+---
+
+### Property `BuildingLightRadiusLevel`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | BlueprintReadOnly, Category="BuildingLight" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "BuildingLight") int32 BuildingLightRadiusLevel = 1;` |
+
+**Notes:**
+
+> 当前启用半径等级（进程内缓存，持久化由 BP_Save_GameSetting 负责）
+
+---
+
+### Property `BuildingLightCountLevel`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | BlueprintReadOnly, Category="BuildingLight" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "BuildingLight") int32 BuildingLightCountLevel = 1;` |
+
+**Notes:**
+
+> 当前点亮数量等级（进程内缓存，持久化由 BP_Save_GameSetting 负责）
 
 ---
 
@@ -579,7 +805,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 获取激活的dlc
 
@@ -602,6 +828,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Broadcasts the save-game-finished event with success flag and slot ID
+
 ---
 
 ### Function `SetDefaultSaviorSlot`
@@ -620,7 +850,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置新的存档实例
 
@@ -638,6 +868,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters. Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Returns the default Savior save slot instance (implemented in Blueprint)
+
 ---
 
 ### Function `IsSaveSlotVersionLowerThanGameVersion`
@@ -652,7 +886,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 当前 DefaultSaviorSlot 的存档版本是否低于 GameVersion（无有效槽或版本格式无效时为 false）
 
@@ -670,7 +904,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加载成功
 
@@ -692,7 +926,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加载子关卡成功
 
@@ -714,7 +948,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 关闭子关卡成功
 
@@ -732,7 +966,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 新游戏
 
@@ -755,7 +989,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加载永久关卡数据 不包含子关卡
 
@@ -777,6 +1011,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent,DisplayName="LoadGameWorld") void K2_LoadGameWorld(USavior *Slot,bool bReadSlotFile);`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Blueprint-implemented event for loading persistent level data (excluding sub-levels)
 
 ---
 
@@ -800,7 +1038,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 保存游戏
 
@@ -826,6 +1064,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Blueprint-implemented event for saving the game world
+
 ---
 
 ### Function `RemoveSubLevelDataRecordByGUID`
@@ -845,7 +1087,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除子关卡中的actor数据
 
@@ -867,7 +1109,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除子关卡所有的数据
 
@@ -885,7 +1127,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 返回主菜单
 
@@ -903,6 +1145,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Blueprint-implemented event for returning to the main menu
+
 ---
 
 ### Function `GetSaveCurrencyObject`
@@ -917,7 +1163,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取积分存档
 
@@ -935,7 +1181,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 保存积分存档
 
@@ -953,7 +1199,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters. Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 是否开启新手引导
 
@@ -976,7 +1222,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 解锁成就
 
@@ -1000,7 +1246,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 成就计数 结果只作为ui展示
 
@@ -1017,5 +1263,125 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool TestTag();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Debug function for testing tag functionality
+
+---
+
+### Function `SetBuildingLightRadiusLevel`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="BuildingLight" |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `InLevel` | `int32` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "BuildingLight") void SetBuildingLightRadiusLevel(int32 InLevel);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 设置启用半径等级并即时应用到 AWorldBuildingLightManager（若已生成）
+
+---
+
+### Function `SetBuildingLightCountLevel`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="BuildingLight" |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `InLevel` | `int32` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "BuildingLight") void SetBuildingLightCountLevel(int32 InLevel);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 设置点亮数量等级并即时应用到 AWorldBuildingLightManager（若已生成）
+
+---
+
+### Function `GetBuildingLightRadiusLevel`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure, Category="BuildingLight" |
+| Return type | `int32` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintPure, Category = "BuildingLight") int32 GetBuildingLightRadiusLevel() const { return BuildingLightRadiusLevel; }`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Returns the current building night-light activation radius level (0=low, 1=medium, 2=high)
+
+---
+
+### Function `GetBuildingLightCountLevel`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure, Category="BuildingLight" |
+| Return type | `int32` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintPure, Category = "BuildingLight") int32 GetBuildingLightCountLevel() const { return BuildingLightCountLevel; }`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Returns the current building night-light concurrent count level (0=low, 1=medium, 2=high)
+
+---
+
+### Function `GetBuildingLightActivateRadius`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintPure, Category="BuildingLight" |
+| Return type | `float` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintPure, Category = "BuildingLight") float GetBuildingLightActivateRadius() const;`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 当前半径等级对应的启用半径值（供 AWorldBuildingLightManager 读取）
+
+---
+
+### Function `GetBuildingLightMaxPooledLights`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintPure, Category="BuildingLight" |
+| Return type | `int32` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintPure, Category = "BuildingLight") int32 GetBuildingLightMaxPooledLights() const;`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 当前数量等级对应的灯光池上限值（供 AWorldBuildingLightManager 读取）
 
 ---

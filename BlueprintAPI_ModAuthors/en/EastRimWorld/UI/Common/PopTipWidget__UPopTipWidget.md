@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Pop Tip Widget UObject type.
 
 ## Blueprint-exposed functions
 
@@ -24,6 +26,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Pop Tips field.
+
 ---
 
 ### Function `ClearTips`
@@ -37,5 +43,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void ClearTips();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Executes the Clear Tips operation.
 
 ---

@@ -19,6 +19,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) ARecastNavMesh* RecastNavMesh { nullptr };` |
 
+**说明:**
+
+> Recast寻路网格引用
+
 ---
 
 ### 属性 `NavigationSystem`
@@ -29,6 +33,10 @@
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) UNavigationSystemV1* NavigationSystem { nullptr };` |
+
+**说明:**
+
+> 导航系统实例引用
 
 ---
 
@@ -46,7 +54,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 创建ISM组件
 
@@ -69,6 +77,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 记录建筑与其影响范围显示Actor的对应关系
+
 ---
 
 ### 函数 `RemoveBUildingEffectRangeAtor`
@@ -86,6 +98,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RemoveBUildingEffectRangeAtor(ABuildingActorBase* InBuilding);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 移除指定建筑对应的影响范围显示Actor记录
 
 ---
 
@@ -105,6 +121,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 查找指定建筑对应的影响范围显示Actor
+
 ---
 
 ### 函数 `ShowAllBuildingEffectRangeActor`
@@ -122,6 +142,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void ShowAllBuildingEffectRangeActor(bool bIsShow);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 显示或隐藏所有建筑的影响范围Actor
 
 ---
 
@@ -142,6 +166,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 显示或隐藏单个建筑的影响范围Actor
+
 ---
 
 ### 函数 `K2_InitSceneManager`
@@ -156,6 +184,10 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 初始化场景管理器（蓝图实现事件）
+
 ---
 
 ### 函数 `K2_ClearSceneManager`
@@ -169,6 +201,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent,DisplayName="ClearSceneManager") void K2_ClearSceneManager();`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 清理场景管理器（蓝图实现事件）
 
 ---
 
@@ -188,7 +224,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新寻路网格
 
@@ -210,7 +246,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 位置是否在寻路范围内
 
@@ -228,7 +264,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得垂直跨越高度
 
@@ -250,7 +286,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 创建新手引导箭头
 
@@ -272,7 +308,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 销毁新手引导指引箭头
 

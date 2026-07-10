@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FName,FPuppetPlatformMeshConfig> PuppetPlatformMeshes;` |
 
-**Source comments:**
+**Notes:**
 
 > 傀儡台模型配置(key对应召唤物id)
 

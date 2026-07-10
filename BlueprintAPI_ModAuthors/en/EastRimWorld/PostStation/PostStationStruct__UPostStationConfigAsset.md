@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Post station config data asset: generate line configs, trade area, sparring and prison-related parameters.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FIntPoint PostStationGridSize;` |
 
-**Source comments:**
+**Notes:**
 
 > 驿站格子大小
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float GenerateFavorabilityWeightRate;` |
 
-**Source comments:**
+**Notes:**
 
 > 势力好感度转权重系数
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<FPostStationGenerateLineConfig> GenerateLineConfigs;` |
 
-**Source comments:**
+**Notes:**
 
 > 所有的生产线配置
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<FName> NPCBuffIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 给生成出的NPC加buff
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="TradeArea") FName WaitTradeAreaStartSocket;` |
 
-**Source comments:**
+**Notes:**
 
 > 待售区起始点坐标(待售区模型插槽)
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="TradeArea") FName WaitTradeAreaEndSocket;` |
 
-**Source comments:**
+**Notes:**
 
 > 待售区列终止点坐标(待售区模型插槽)
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="TradeArea") FName WaitTradeAreaThirdPointSocket;` |
 
-**Source comments:**
+**Notes:**
 
 > 待售区列终止点坐标(待售区模型插槽)
 
@@ -122,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="TradeArea") int32 WaitTradeAreaCapacity;` |
 
-**Source comments:**
+**Notes:**
 
 > 待售区容量
 
@@ -137,7 +139,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="TradeArea") TSoftClassPtr<AActor> TradeAreaClass;` |
 
-**Source comments:**
+**Notes:**
 
 > 待售区类类型
 
@@ -152,7 +154,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="TradeArea") TSoftClassPtr<UCommonActivatableWidget> WaitTradeAreaWidget;` |
 
-**Source comments:**
+**Notes:**
 
 > 待售区UI类型
 
@@ -167,7 +169,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="TradeArea") TSoftObjectPtr<UStaticMesh> WaitTradeAreaMesh;` |
 
-**Source comments:**
+**Notes:**
 
 > 待售区模型
 
@@ -182,7 +184,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="TradeArea") FName WaitTradeAreaMeshSocket;` |
 
-**Source comments:**
+**Notes:**
 
 > 待售区模型插槽位置(驿站模型上的插槽名称)
 
@@ -197,7 +199,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="TradeArea") FName TradeAreaStartSocket;` |
 
-**Source comments:**
+**Notes:**
 
 > 已售区起始点坐标(待售区模型插槽)
 
@@ -212,7 +214,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="TradeArea") FName TradeAreaEndSocket;` |
 
-**Source comments:**
+**Notes:**
 
 > 已售区列终止点坐标(待售区模型插槽)
 
@@ -227,7 +229,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="TradeArea") FName TradeAreaThirdPointSocket;` |
 
-**Source comments:**
+**Notes:**
 
 > 已售区列终止点坐标(待售区模型插槽)
 
@@ -242,7 +244,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="TradeArea") TSoftObjectPtr<UStaticMesh> TradeAreaMesh;` |
 
-**Source comments:**
+**Notes:**
 
 > 已售区模型
 
@@ -257,7 +259,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="TradeArea") FName TradeAreaMeshSocket;` |
 
-**Source comments:**
+**Notes:**
 
 > 已售区模型插槽位置(驿站模型上的插槽名称)
 
@@ -272,7 +274,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="TradeArea") TSoftClassPtr<UCommonActivatableWidget> TradeWidget;` |
 
-**Source comments:**
+**Notes:**
 
 > 交易UI类型
 
@@ -287,7 +289,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="TradeArea") float GoodsPriceInterval = 999.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 商人商品价格浮动周期
 
@@ -302,7 +304,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="ExchangeMartialArts") TArray<FName> PlayerBattleSocket;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家参加切磋位置插槽
 
@@ -317,7 +319,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="ExchangeMartialArts") FName NPCBattleSocket;` |
 
-**Source comments:**
+**Notes:**
 
 > NPC参加切磋位置插槽
 
@@ -332,7 +334,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="ExchangeMartialArts") TSoftObjectPtr<UStaticMesh> AirWall;` |
 
-**Source comments:**
+**Notes:**
 
 > 空气墙
 
@@ -347,7 +349,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="ExchangeMartialArts") FName AirWallSocket;` |
 
-**Source comments:**
+**Notes:**
 
 > 空气墙位置
 
@@ -362,7 +364,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="ExchangeMartialArts") float ExchangeMartialArtsTimeLimit = 120.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 切磋打架时间限制
 
@@ -377,7 +379,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="ExchangeMartialArts") float ExchangeMartialArtsStartTimeLimit = 960.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 如果超出这个时间还没开始切磋,就取消当前切磋
 
@@ -392,7 +394,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FGenericTeamId NPCTeamID;` |
 
-**Source comments:**
+**Notes:**
 
 > NPC队伍ID
 
@@ -407,7 +409,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="Prison") FName PostStationDoor;` |
 
-**Source comments:**
+**Notes:**
 
 > 驿站大门位置插槽
 
@@ -422,7 +424,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="Prison") FName PostStationLeaveSocket;` |
 
-**Source comments:**
+**Notes:**
 
 > 离开点位置插槽
 
@@ -437,7 +439,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TMap<FName,FNameArr> NPCDestroyRemoveTaskRecord;` |
 
-**Source comments:**
+**Notes:**
 
 > NPC被销毁时移除任务完成记录
 

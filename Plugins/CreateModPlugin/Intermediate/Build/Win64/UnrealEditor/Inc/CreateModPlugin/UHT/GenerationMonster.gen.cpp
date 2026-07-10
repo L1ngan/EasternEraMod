@@ -1216,7 +1216,7 @@ UScriptStruct* Z_Construct_UScriptStruct_FModMonsterGenerationConfig()
 // ********** End ScriptStruct FModMonsterGenerationConfig *****************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h__Script_CreateModPlugin_Statics
+struct Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h__Script_CreateModPlugin_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EModThreatType_StaticEnum, TEXT("EModThreatType"), &Z_Registration_Info_UEnum_EModThreatType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 365326407U) },
@@ -1234,10 +1234,10 @@ struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_Cr
 		{ FModMonsterGenerationConfig::StaticStruct, Z_Construct_UScriptStruct_FModMonsterGenerationConfig_Statics::NewStructOps, TEXT("ModMonsterGenerationConfig"), &Z_Registration_Info_UScriptStruct_FModMonsterGenerationConfig, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModMonsterGenerationConfig), 3011816981U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h__Script_CreateModPlugin_2345372420(TEXT("/Script/CreateModPlugin"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h__Script_CreateModPlugin_2345372420(TEXT("/Script/CreateModPlugin"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h__Script_CreateModPlugin_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h__Script_CreateModPlugin_Statics::ScriptStructInfo),
-	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h__Script_CreateModPlugin_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h__Script_CreateModPlugin_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h__Script_CreateModPlugin_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h__Script_CreateModPlugin_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h__Script_CreateModPlugin_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_GenerationMonster_h__Script_CreateModPlugin_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

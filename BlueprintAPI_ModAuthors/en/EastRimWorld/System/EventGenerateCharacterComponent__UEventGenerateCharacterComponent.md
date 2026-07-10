@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Event Generate Character Component UObject type.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool bInitComponent = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否初始化完成
 
@@ -30,9 +32,9 @@
 | C++ type | TArray<[FMonsterGenerationInfo](../WorldSystem/WorldStruct__FMonsterGenerationInfo.md)> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) TArray<FMonsterGenerationInfo> MonsterGenerationInfoQueue;` |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame,VisibleAnywhere) TArray<FMonsterGenerationInfo> MonsterGenerationInfoQueue;` |
 
-**Source comments:**
+**Notes:**
 
 > 队列中的信息
 
@@ -45,9 +47,9 @@
 | C++ type | TMap<FGuid,[FGenerationInstanceInfo](../WorldSystem/WorldStruct__FGenerationInstanceInfo.md)> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) TMap<FGuid,FGenerationInstanceInfo> GenerationInstanceInfos;` |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame,VisibleAnywhere) TMap<FGuid,FGenerationInstanceInfo> GenerationInstanceInfos;` |
 
-**Source comments:**
+**Notes:**
 
 > 已经生成的信息
 
@@ -60,9 +62,9 @@
 | C++ type | TArray<[FMonsterGenerationInfo](../WorldSystem/WorldStruct__FMonsterGenerationInfo.md)> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FMonsterGenerationInfo> MonsterDissatisfyGenerationInfo;` |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame,VisibleAnywhere) TArray<FMonsterGenerationInfo> MonsterDissatisfyGenerationInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 不满足条件的信息
 
@@ -75,9 +77,9 @@
 | C++ type | TArray<[FEnemyForceAttackGenerationInfo](../WorldSystem/WorldStruct__FEnemyForceAttackGenerationInfo.md)> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) TArray<FEnemyForceAttackGenerationInfo> EnemyForceAttackGenerationInfoQueue;` |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame,VisibleAnywhere) TArray<FEnemyForceAttackGenerationInfo> EnemyForceAttackGenerationInfoQueue;` |
 
-**Source comments:**
+**Notes:**
 
 > 敌对势力袭击生成队列
 
@@ -90,9 +92,9 @@
 | C++ type | `TArray<FName>` |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) TArray<FName> NotGenerationID;` |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame,VisibleAnywhere) TArray<FName> NotGenerationID;` |
 
-**Source comments:**
+**Notes:**
 
 > 不再生成的配置
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnGenerateCharacterDelegate OnGenerateCharacterDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成角色
 
@@ -122,6 +124,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUpdateGenerateTimeDelegate OnUpdateGenerateTimeDelegate;` |
 
+**Notes:**
+
+> On Update Generate Time Delegate event or callback.
+
 ---
 
 ### Property `OnGenerateAllFinish`
@@ -133,18 +139,22 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnGenerateAllFinish OnGenerateAllFinish;` |
 
+**Notes:**
+
+> On Generate All Finish event or callback.
+
 ---
 
 ### Property `GenerateCharacterSourceType`
 
 | Field | Details |
 |------|------|
-| C++ type | `EGenerateCharacterSourceType` |
+| C++ type | [EGenerateCharacterSourceType](../WorldSystem/WorldStruct__EGenerateCharacterSourceType.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) EGenerateCharacterSourceType GenerateCharacterSourceType = EGenerateCharacterSourceType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 此组件生成的对象
 
@@ -168,7 +178,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过GUID获取对应的生成怪物信息实例信息
 
@@ -190,7 +200,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过GUID获取对应的生成队列中的信息
 
@@ -212,7 +222,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除生成记录的单位
 
@@ -234,6 +244,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Remove Generation Actor By Guid operation.
+
 ---
 
 ### Function `ExcludeCharacter`
@@ -253,7 +267,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 生成中排除角色
 
@@ -275,7 +289,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 归类怪物
 
@@ -297,7 +311,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过GUID获取所有生成的角色
 
@@ -319,7 +333,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID 创建生成信息
 
@@ -342,7 +356,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID 创建生成信息附加延迟时间
 

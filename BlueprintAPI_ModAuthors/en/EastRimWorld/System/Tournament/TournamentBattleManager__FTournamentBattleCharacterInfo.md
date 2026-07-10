@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 TeamID = 255;` |
 
-**Source comments:**
+**Notes:**
 
 > TeamID
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<AEastRimWorldCharacter*> BattleCharacters;` |
 
-**Source comments:**
+**Notes:**
 
 > 正在战斗的角色
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<AEastRimWorldCharacter*> SeriousInjuryCharacters;` |
 
-**Source comments:**
+**Notes:**
 
 > 重伤的弟子
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FGuid,FCharacterBattleInfo> CharacterBattleInfos;` |
 
-**Source comments:**
+**Notes:**
 
 > 伤害统计
 

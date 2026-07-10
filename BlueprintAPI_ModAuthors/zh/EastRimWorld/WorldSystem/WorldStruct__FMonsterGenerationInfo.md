@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FMonsterGenerationConfig MonsterGenerationConfig;` |
 
-**源码注释:**
+**说明:**
 
 > 生成的配置ID
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid GenerationGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 生成信息Guid
 
@@ -44,12 +44,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EGenerationStateType` |
+| C++ 类型 | [EGenerationStateType](WorldStruct__EGenerationStateType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EGenerationStateType GenerationState = EGenerationStateType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 生成的状态
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FGuid> GenerationMonster;` |
 
-**源码注释:**
+**说明:**
 
 > 生成的怪物
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float StateTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 当前状态时间
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 TeamID = 255;` |
 
-**源码注释:**
+**说明:**
 
 > TeamID
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bUpdateGenerationTime = false;` |
 
-**源码注释:**
+**说明:**
 
 > 广播生成事件
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FGenerationSetData> NeeGenerateSetData;` |
 
-**源码注释:**
+**说明:**
 
 > 需要生成的实例
 

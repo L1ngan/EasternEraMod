@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName ImprisonActionID;` |
 
-**Source comments:**
+**Notes:**
 
 > 囚禁行为(在监狱的核心建筑上创建)
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> ImprisonedBuffes;` |
 
-**Source comments:**
+**Notes:**
 
 > 囚犯被囚禁时施加的buff
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName ExecutePrisonerActionID;` |
 
-**Source comments:**
+**Notes:**
 
 > 处决囚犯行为
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName PrisonerExecutedActionID;` |
 
-**Source comments:**
+**Notes:**
 
 > 囚犯被处决行为
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName PrisonerTorturedActionID;` |
 
-**Source comments:**
+**Notes:**
 
 > 囚犯被处决行为
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FGenericTeamId PrisonTeamID;` |
 
-**Source comments:**
+**Notes:**
 
 > 囚犯队伍ID
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName PrisonerInfoWidget;` |
 
-**Source comments:**
+**Notes:**
 
 > 囚犯界面
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float MaxTortureColdDown;` |
 
-**Source comments:**
+**Notes:**
 
 > 拷打CD
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float TortureLoyaltyBaseValue = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 拷打导致的忠诚度变化基础值
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float RecruitLoyaltyValue = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 可发起招募的忠诚度
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FText> CanRecruitShoutTexts;` |
 
-**Source comments:**
+**Notes:**
 
 > 可招募时NPC喊话文本
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float RecruitLoyaltyRate = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 每10点忠诚度提供的
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float MaxRecruitColdDown;` |
 
-**Source comments:**
+**Notes:**
 
 > 招募CD
 
@@ -214,6 +214,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float MaxRecruitWorkload;` |
 
+**Notes:**
+
+> Maximum workload required for recruiting a prisoner (default 300)
+
 ---
 
 ### Property `RedemptionTexts`
@@ -225,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FRedemptionTextData> RedemptionTexts;` |
 
-**Source comments:**
+**Notes:**
 
 > 赎回文本
 
@@ -240,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftClassPtr<UCommonGameDialog> RedemptionWidget;` |
 
-**Source comments:**
+**Notes:**
 
 > 赎回界面
 
@@ -255,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftClassPtr<UCommonGameDialog> RecruitSuccessWidget;` |
 
-**Source comments:**
+**Notes:**
 
 > 招募成功分配堂口界面
 
@@ -270,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float MaxSendFoodColdDown;` |
 
-**Source comments:**
+**Notes:**
 
 > 送饭CD
 
@@ -280,12 +284,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<ECanManageTagType , [FGameplayTagArr](ERW_GameConfigComponent__FGameplayTagArr.md)> |
+| C++ type | TMap<[ECanManageTagType](ERW_GameConfigComponent__ECanManageTagType.md) , [FGameplayTagArr](ERW_GameConfigComponent__FGameplayTagArr.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<ECanManageTagType , FGameplayTagArr> CanManageItemTags;` |
 
-**Source comments:**
+**Notes:**
 
 > 可以管理的物品Tag
 

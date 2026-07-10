@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 游戏角色基类：集成GAS技能系统、阵营、GOAP、智能对象与Savior存档等接口，是人类/动物/召唤物角色的共同父类
 
 ## 蓝图暴露变量
 
@@ -17,6 +19,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnDrugUseChanged OnDrugUseChanged;` |
 
+**说明:**
+
+> 角色使用药品变化时广播的委托（参数为药品ID）
+
 ---
 
 ### 属性 `OnCharacterTemaChanged`
@@ -27,6 +33,10 @@
 | 反射说明符 | BlueprintAssignable |
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FCharacterTemaChanged OnCharacterTemaChanged;` |
+
+**说明:**
+
+> 角色阵营（Team）变化时广播的委托
 
 ---
 
@@ -39,6 +49,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FCharacterNameChange OnCharacterNameChange;` |
 
+**说明:**
+
+> 角色姓名变化时广播的委托（参数为名与姓）
+
 ---
 
 ### 属性 `PickInventoryItem`
@@ -49,6 +63,10 @@
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) UInventoryItemInstance * PickInventoryItem = nullptr;` |
+
+**说明:**
+
+> 当前抱起/拿起的物品实例
 
 ---
 
@@ -61,7 +79,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) bool bSelectState = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否是选中状态
 
@@ -76,9 +94,24 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) bool bHoveringState = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否是悬浮状态
+
+---
+
+### 属性 `bIsTestActor`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `bool` |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(Transient,BlueprintReadOnly) bool bIsTestActor = false;` |
+
+**说明:**
+
+> 技能/武学测试沙盒生成的临时角色标记：瞬态，不存档。置真时 IsSaveObject 直接返回 false，且不注册世界。
 
 ---
 
@@ -91,7 +124,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) bool bRegisterWorld = false;` |
 
-**源码注释:**
+**说明:**
 
 > *********************************SaveGame Start*******************************
 > 是否注册到世界中
@@ -107,7 +140,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) FCharacterSaveData CharacterSaveData;` |
 
-**源码注释:**
+**说明:**
 
 > 角色存储的信息 不是最新 如需取值使用其他方式
 
@@ -122,7 +155,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) FName CharacterID;` |
 
-**源码注释:**
+**说明:**
 
 > 角色的信息ID
 
@@ -137,7 +170,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame) FText FirstName;` |
 
-**源码注释:**
+**说明:**
 
 > 姓
 
@@ -152,7 +185,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame) FText Name;` |
 
-**源码注释:**
+**说明:**
 
 > 名字
 
@@ -167,7 +200,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) FGuid MonsterNestGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 当为怪物时属于哪个怪物巢穴
 
@@ -182,7 +215,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float MovingRange = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 移动范围
 
@@ -192,12 +225,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EStorageSpace` |
+| C++ 类型 | [EStorageSpace](../ERW_Enumerations__EStorageSpace.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) EStorageSpace WorldSpaceType;` |
 
-**源码注释:**
+**说明:**
 
 > *********************************SaveGame End*******************************
 > 室内室外屋檐下
@@ -208,12 +241,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<ECommonButtonType,bool>` |
+| C++ 类型 | TMap<[ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md),bool> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<ECommonButtonType,bool> ButtonOperationState;` |
 
-**源码注释:**
+**说明:**
 
 > 按钮相关的功能
 
@@ -228,7 +261,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) bool bOpenDanTian = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否开启丹田
 
@@ -243,7 +276,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) bool bCanOpenDanTian = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否可以开启
 
@@ -258,7 +291,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FName,FCarryWeaponsInfo> CarryWeapons;` |
 
-**源码注释:**
+**说明:**
 
 > 拿在手上的武器
 
@@ -273,7 +306,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,Category = "CharacterData") FInstancedStruct EastRimWorldCharacterData;` |
 
-**源码注释:**
+**说明:**
 
 > 角色信息
 
@@ -288,7 +321,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnCurrentMoodValueChanged OnCurrentMoodChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 当前心情值变化时
 
@@ -303,7 +336,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnMoodTargetValueChanged OnMoodTargetValueChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 目标心情值变化时
 
@@ -318,6 +351,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnCharacterGrowUp OnCharacterGrowUp;` |
 
+**说明:**
+
+> 角色重生（进化）时广播的委托
+
 ---
 
 ### 属性 `OnSuffixChanged`
@@ -328,6 +365,10 @@
 | 反射说明符 | BlueprintAssignable |
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnSuffixChanged OnSuffixChanged;` |
+
+**说明:**
+
+> 名字后缀改变时广播的委托（参数为后缀文本）
 
 ---
 
@@ -340,7 +381,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TArray<FName> CharacteristicInfos;` |
 
-**源码注释:**
+**说明:**
 
 > 拥有的特性
 
@@ -355,9 +396,24 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame) TMap<FName,int32> ItemDrugUsed;` |
 
-**源码注释:**
+**说明:**
 
 > 角色使用过的药品记录（用于计算耐药性）
+
+---
+
+### 属性 `ConsumablePermanentEffects`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TMap<FName,int32>` |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TMap<FName,int32> ConsumablePermanentEffects;` |
+
+**说明:**
+
+> 耗材永久属性效果获得记录（key=耗材效果ID value=已获得次数 相同id的永久属性效果有获取上限 经FCharacterSaveData存档 无需SaveGame）
 
 ---
 
@@ -370,7 +426,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) FGuid ReadingBookGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 正在阅读的书籍ID
 
@@ -385,7 +441,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) FGuid EatFoodGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 正在吃的食物ID
 
@@ -400,6 +456,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) AERW_GameModeBase* GameModeBase { nullptr };` |
 
+**说明:**
+
+> 缓存的游戏模式（AERW_GameModeBase）引用
+
 ---
 
 ### 属性 `WorldPlace`
@@ -410,6 +470,10 @@
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AWorldPlace> WorldPlace;` |
+
+**说明:**
+
+> 角色当前所属的世界地点（AWorldPlace）引用
 
 ---
 
@@ -422,6 +486,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<UERW_GameInstanceBase> GameInstance;` |
 
+**说明:**
+
+> 缓存的游戏实例（UERW_GameInstanceBase）引用
+
 ---
 
 ### 属性 `CurrentTemperatureIntervalTime`
@@ -433,7 +501,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) float CurrentTemperatureIntervalTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 当前处于温度区间时间
 
@@ -443,12 +511,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ECharacterTemperatureStateType` |
+| C++ 类型 | [ECharacterTemperatureStateType](../Struct/CharacterStruct__ECharacterTemperatureStateType.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) ECharacterTemperatureStateType CharacterTemperatureStateType = ECharacterTemperatureStateType::Normal;` |
 
-**源码注释:**
+**说明:**
 
 > 当前的角色温度状态
 
@@ -463,7 +531,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) float TemperatureStateUpdateInterval = 40.f;` |
 
-**源码注释:**
+**说明:**
 
 > 温度更新间隔
 
@@ -478,7 +546,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) float CharacterHungryStateUpdateInterval = 5.f;` |
 
-**源码注释:**
+**说明:**
 
 > 饥饿状态更新间隔
 
@@ -493,7 +561,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FTimerHandle CharacterHungry0TimerHandle;` |
 
-**源码注释:**
+**说明:**
 
 > 饥饿度为0的计时器
 
@@ -508,7 +576,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) float CurrentHungryIntervalTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 当前处于饥饿状态的时间
 
@@ -523,7 +591,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FName CurHungryId;` |
 
-**源码注释:**
+**说明:**
 
 > 当前饥饿状态
 
@@ -538,7 +606,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) bool ProhibitTreatSelf = true;` |
 
-**源码注释:**
+**说明:**
 
 > 是否禁止治疗自己
 
@@ -553,7 +621,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) bool bCanSelect = true;` |
 
-**源码注释:**
+**说明:**
 
 > 是否可以被选中
 
@@ -568,7 +636,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FVector SpawnPoint;` |
 
-**源码注释:**
+**说明:**
 
 > 出生点位置
 
@@ -583,18 +651,22 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) bool NutritionTriggerFlag;` |
 
+**说明:**
+
+> 营养状态触发标记
+
 ---
 
 ### 属性 `BattlefieldRolesType`
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EBattlefieldRolesType` |
+| C++ 类型 | [EBattlefieldRolesType](../Struct/CommonEnum__EBattlefieldRolesType.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) EBattlefieldRolesType BattlefieldRolesType = EBattlefieldRolesType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 战场英雄类型
 
@@ -609,7 +681,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "ERW|UI") bool bHideStateBarName = false;` |
 
-**源码注释:**
+**说明:**
 
 > 状态条UI是否隐藏名字（仅隐藏名字，不影响血条）
 
@@ -624,6 +696,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) bool bIsDeath = false;` |
 
+**说明:**
+
+> 角色是否已死亡
+
 ---
 
 ### 属性 `HealthComponent`
@@ -634,6 +710,10 @@
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Character" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Character", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UEastRimWorldHealthComponent> HealthComponent;` |
+
+**说明:**
+
+> 角色生命组件
 
 ---
 
@@ -646,6 +726,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Character", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UEastRimWorldCombatComponent> CombatComponent;` |
 
+**说明:**
+
+> 角色战斗组件
+
 ---
 
 ### 属性 `GrowUpComponent`
@@ -656,6 +740,25 @@
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Character" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Character", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UEastRimWorldGrowUpComponent> GrowUpComponent;` |
+
+**说明:**
+
+> 角色成长组件
+
+---
+
+### 属性 `AreaAssignmentComponent`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TObjectPtr<[UERW_AreaAssignmentComponent](../System/AreaControl/ERW_AreaAssignmentComponent__UERW_AreaAssignmentComponent.md)> |
+| 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Area" |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Area", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UERW_AreaAssignmentComponent> AreaAssignmentComponent;` |
+
+**说明:**
+
+> 区域控制：弟子归属组件（记录所属区/构建地理过滤器/饥饿越区状态机）
 
 ---
 
@@ -668,6 +771,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Character", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UCommonBuffComponent> CommonBuffComponent;` |
 
+**说明:**
+
+> 通用Buff组件
+
 ---
 
 ### 属性 `InjuryBuffComponent`
@@ -678,6 +785,10 @@
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Character" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Character", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UInjuryBuffComponent> InjuryBuffComponent;` |
+
+**说明:**
+
+> 受伤Buff组件
 
 ---
 
@@ -690,6 +801,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Character") TObjectPtr<USmartObjectComponent> SmartObjectComponent;` |
 
+**说明:**
+
+> 智能对象（SmartObject）组件
+
 ---
 
 ### 属性 `CharacterSpringArm`
@@ -700,6 +815,10 @@
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Character" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Character", Meta = (AllowPrivateAccess = "true")) TObjectPtr<USpringArmComponent> CharacterSpringArm;` |
+
+**说明:**
+
+> 角色相机弹簧臂组件
 
 ---
 
@@ -712,6 +831,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Character", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UCameraComponent> CharacterCamera;` |
 
+**说明:**
+
+> 角色相机组件
+
 ---
 
 ### 属性 `AIPerceptionStimuliSource`
@@ -722,6 +845,10 @@
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|AI" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|AI", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UAIPerceptionStimuliSourceComponent> AIPerceptionStimuliSource;` |
+
+**说明:**
+
+> AI感知刺激源组件，使角色可被AI感知系统探测
 
 ---
 
@@ -734,7 +861,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) float ButcherWorkLoad = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 当前屠宰工作量
 
@@ -749,7 +876,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame) FCharacterDeathInformation CharacterDamageInformation;` |
 
-**源码注释:**
+**说明:**
 
 > 角色最后受到英雄伤害信息
 
@@ -764,7 +891,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame) FCharacterDeathInformation AnyDamageInformation;` |
 
-**源码注释:**
+**说明:**
 
 > 角色最后受到伤害的信息
 
@@ -779,7 +906,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) FGuid CarryActorGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 正在搬运的对象
 
@@ -794,7 +921,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) AActor * CarryActor = nullptr;` |
 
-**源码注释:**
+**说明:**
 
 > 正在搬运的actor
 
@@ -809,7 +936,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame,BlueprintReadWrite) TArray<FVector> PatrolLocations;` |
 
-**源码注释:**
+**说明:**
 
 > 巡逻动物的巡逻点集合
 
@@ -824,7 +951,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TArray<FVector> CurPatrolLocations;` |
 
-**源码注释:**
+**说明:**
 
 > 巡逻动物当前正在添加的巡逻点集合
 
@@ -839,7 +966,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TArray<AActor*> PatrolPointActors;` |
 
-**源码注释:**
+**说明:**
 
 > 临时创建的用于显示巡逻点的Actor（在巡逻点选取结束后删除）
 
@@ -854,7 +981,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) FGuid ProtectTargetGuid = FGuid();` |
 
-**源码注释:**
+**说明:**
 
 > 守护机关人的守护目标de GUID
 
@@ -869,7 +996,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) AEastRimWorldCharacter* ProtectTarget;` |
 
-**源码注释:**
+**说明:**
 
 > 守护机关人的守护目标
 
@@ -884,7 +1011,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) TArray<FName> CantKnockDownOrgan;` |
 
-**源码注释:**
+**说明:**
 
 > 战斗中不会导致晕倒的部位
 
@@ -899,7 +1026,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadWrite,SaveGame) FGenericTeamId PrisonerBeforeTeamID;` |
 
-**源码注释:**
+**说明:**
 
 > 囚犯之前的TeamID
 
@@ -914,7 +1041,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadWrite,SaveGame) FGuid PrisonBuildingGuid = FGuid();` |
 
-**源码注释:**
+**说明:**
 
 > 囚犯所属监狱设施Guid
 
@@ -929,7 +1056,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) FGuid PrisonerArrestedByGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 当前被谁押送
 
@@ -944,7 +1071,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) AEastRimWorldCharacter* PrisonerArrestedBy;` |
 
-**源码注释:**
+**说明:**
 
 > 押解此囚犯的角色
 
@@ -959,7 +1086,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) float TortureColdDown = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 拷打CD
 
@@ -974,6 +1101,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) FTimerHandle TortureTimerHandle;` |
 
+**说明:**
+
+> 拷打冷却定时器句柄
+
 ---
 
 ### 属性 `RecruitColdDown`
@@ -985,7 +1116,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) float RecruitColdDown = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 招募CD
 
@@ -1000,6 +1131,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) FTimerHandle RecruitTimerHandle;` |
 
+**说明:**
+
+> 招募冷却定时器句柄
+
 ---
 
 ### 属性 `LoyaltyValue`
@@ -1011,7 +1146,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) float LoyaltyValue = 100.f;` |
 
-**源码注释:**
+**说明:**
 
 > 忠诚度
 
@@ -1026,7 +1161,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnLoyaltyChanged OnLoyaltyChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 忠诚度变化委托
 
@@ -1041,7 +1176,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) bool IsRedemption = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否被赎回
 
@@ -1056,7 +1191,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) float RedeemValue = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 赎回价值
 
@@ -1071,7 +1206,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) bool bSendFoodAction = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否已经创建送饭行为
 
@@ -1086,7 +1221,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) float SendPrisonerFoodColdDown = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 送饭CD
 
@@ -1101,6 +1236,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) FTimerHandle SendPrisonerFoodTimerHandle;` |
 
+**说明:**
+
+> 囚犯送饭冷却定时器句柄
+
 ---
 
 ### 属性 `DialogueRandOptionRecords`
@@ -1112,9 +1251,24 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame,VisibleAnywhere) TMap<FName,FNameIDArray> DialogueRandOptionRecords;` |
 
-**源码注释:**
+**说明:**
 
 > 对话随机选项记录<InDialogueInfoID,OptionIDs>
+
+---
+
+### 属性 `CharacterRelationLedger`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | [FRelationLedger](../WorldSystem/RelationLedgerTypes__FRelationLedger.md) |
+| 反射说明符 | BlueprintReadWrite, Category="RelationLedger" |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, SaveGame, EditAnywhere, Category = "RelationLedger") FRelationLedger CharacterRelationLedger;` |
+
+**说明:**
+
+> Agent 工作流 PR-003: 关系账本 (恩/仇/情 三轴 + Tags)
 
 ---
 
@@ -1131,6 +1285,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "ERW|Character") UEastRimWorldAbilitySystemComponent* GetEastRimWorldAbilitySystemComponent();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取角色的技能系统组件（UEastRimWorldAbilitySystemComponent）
 
 ---
 
@@ -1150,7 +1308,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过标签取消能力
 
@@ -1168,9 +1326,28 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取阵营
+
+---
+
+### 函数 `IsNeutralBattleTeam`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintPure, Category="Team" |
+| 返回类型 | `bool` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintPure, Category = "Team") bool IsNeutralBattleTeam() const { return GetGenericTeamId().GetId() == 255; }`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> [中立方名字白色] 是否为占旗战「中立」阵营(TeamID==255=AWorldSectBattleManager::SectBattleNeutralTeamID)。
+> 供头顶名 Widget(WBP_CharacterStateBar) Branch：中立→名字白色；与战斗态度解耦(中立仍对攻守双方 Hostile，两边都打)。
 
 ---
 
@@ -1185,6 +1362,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) virtual FGameplayTeamInfo GetTeamInfo() override;`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取角色的阵营信息（FGameplayTeamInfo）
 
 ---
 
@@ -1205,6 +1386,37 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 设置角色的姓与名并广播姓名变化事件
+
+---
+
+### 函数 `MulticastNameChangeAndPersist`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `InFirstName` | `FText` |
+| `InName` | `FText` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void MulticastNameChangeAndPersist(FText InFirstName, FText InName);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 持久化改名：在 MulticastNameChange(改运行时 EastRimWorldCharacterData + 广播,保头顶显示)基础上，
+> 额外把名字写入本角色 CharacterSaveData.CharacterFirstName/Name。
+> 用途：门派战旗子刷出的怪(“{门派}外门弟子”/“江湖人士”)在复活重建(SpawnCharacterForBattleTeam →
+> InitializeCharacterBySaveData → LoadWorldCharacterData 会用存档名回填运行时)后仍能取到正确名字，
+> 避免击杀/被击杀/复活 feed 里名字为空。不改 MulticastNameChange 的全局语义。
+
 ---
 
 ### 函数 `GetGameModeBase`
@@ -1218,6 +1430,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) AERW_GameModeBase * GetGameModeBase();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取游戏模式（AERW_GameModeBase）
 
 ---
 
@@ -1237,7 +1453,7 @@
 
 **用法说明:** **BlueprintNativeEvent**：蓝图可重写；C++ 默认实现在 `xxx_Implementation`。
 
-**源码注释:**
+**说明:**
 
 > 设置角色碰撞通道
 
@@ -1259,7 +1475,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > Begins the death sequence for the character (disables collision, disables movement, etc...)
 
@@ -1281,7 +1497,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 应用服饰外观（仅改变外观，不改变服饰装备和效果）
 
@@ -1303,7 +1519,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 被击倒
 
@@ -1325,6 +1541,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 击倒状态结束时的处理
+
 ---
 
 ### 函数 `StationDeathFinished`
@@ -1339,7 +1559,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 驻地死亡完成
 
@@ -1357,7 +1577,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「OnDeathFinished」。
 
-**源码注释:**
+**说明:**
 
 > Called when the death sequence for the character has completed
 
@@ -1374,6 +1594,32 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure, Category = "ERW|Character") bool GetSelectState() const { return bSelectState; }`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取角色当前是否处于选中状态
+
+---
+
+### 函数 `SetTestActor`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `bInIsTestActor` | `bool` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SetTestActor(bool bInIsTestActor) { bIsTestActor = bInIsTestActor; if (bInIsTestActor) { bRegisterWorld = false; } }`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 标记为测试临时角色（同时关闭世界注册）。测试沙盒生成的所有角色/召唤物/木桩都应调用
 
 ---
 
@@ -1393,6 +1639,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 屠宰该角色，按屠宰值计算并返回各类型掉落物品
+
 ---
 
 ### 函数 `GetCharacterData`
@@ -1407,7 +1657,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > ~ ICharacterInterface
 > 获取角色信息
@@ -1430,6 +1680,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 设置角色数据（FInstancedStruct形式的角色信息）
+
 ---
 
 ### 函数 `SetCanSelect`
@@ -1448,7 +1702,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置能否选中
 
@@ -1470,7 +1724,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 弹出UI信息改变
 
@@ -1492,7 +1746,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获得当前工作日程名称
 
@@ -1514,7 +1768,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算屠宰工作量
 
@@ -1532,7 +1786,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 搜索尸体完成
 
@@ -1550,6 +1804,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 狩猎完成时的处理，返回是否成功
+
 ---
 
 ### 函数 `PickItem`
@@ -1563,13 +1821,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InventoryItemInfo` | `FInstancedStruct` |
-| `CharacterBehaviorState` | `ECharacterBehaviorState` |
+| `CharacterBehaviorState` | [ECharacterBehaviorState](../Struct/CommonEnum__ECharacterBehaviorState.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent,BlueprintCallable) void PickItem(FInstancedStruct InventoryItemInfo,ECharacterBehaviorState CharacterBehaviorState);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 抱或拿起一个道具
 
@@ -1586,13 +1844,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InventoryItemInfo` | `FInstancedStruct` |
-| `CharacterBehaviorState` | `ECharacterBehaviorState` |
+| `CharacterBehaviorState` | [ECharacterBehaviorState](../Struct/CommonEnum__ECharacterBehaviorState.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent,BlueprintCallable) void PlayAnimItem(FInstancedStruct InventoryItemInfo,ECharacterBehaviorState CharacterBehaviorState);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 播放物品对应的动画
 
@@ -1610,7 +1868,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 移除抱或拿起的道具
 
@@ -1628,7 +1886,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 停止当前的蒙太奇
 
@@ -1646,7 +1904,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 冻结当前动画
 
@@ -1664,7 +1922,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 解除动画冻结
 
@@ -1687,7 +1945,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过技能id获得能力
 
@@ -1709,7 +1967,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除对应技能id的能力
 
@@ -1731,7 +1989,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获得新的武器
 
@@ -1753,7 +2011,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除武器
 
@@ -1775,7 +2033,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 手持武器
 
@@ -1797,7 +2055,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 收起武器
 
@@ -1815,7 +2073,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 初始化角色行为状态栏
 
@@ -1837,7 +2095,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 刷新状态条名字显示（蓝图里只处理名字控件可见性，不影响血条）
 
@@ -1861,7 +2119,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 重置角色血条颜色
 
@@ -1879,7 +2137,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 初始化友方GWO组件
 
@@ -1897,7 +2155,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除友方GWO组件
 
@@ -1914,14 +2172,14 @@
 | 参数名 | 类型 |
 |--------|------|
 | `InCharacterID` | `const FName &` |
-| `InCharacterType` | `ECharacterType` |
+| `InCharacterType` | [ECharacterType](../Struct/CommonEnum__ECharacterType.md) |
 | `TeamID` | `uint8` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void InitializeCharacterByID(const FName & InCharacterID,ECharacterType InCharacterType,uint8 TeamID);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 动态生成时通过id初始化角色
 
@@ -1945,7 +2203,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 生成角色
 > 
@@ -1953,6 +2211,64 @@
 > / @param InCharacterType 角色的类型
 > / @param TeamID 角色的阵营
 > / @param bRegisterWorld 是否需要注册到世界中 用于跨关卡
+
+---
+
+### 函数 `K2_InitializeCharacterBySaveData`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `InCharacterSaveData` | const [FCharacterSaveData](../WorldSystem/WorldCharacterData__FCharacterSaveData.md)& |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,DisplayName="InitializeCharacterBySaveData") void K2_InitializeCharacterBySaveData(const FCharacterSaveData& InCharacterSaveData);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 通过角色存档数据初始化角色（蓝图可调用版本）
+
+---
+
+### 函数 `RefreshCharacterSaveData`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RefreshCharacterSaveData();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 刷新角色存档数据(从当前角色状态更新CharacterSaveData,含UI显示临时属性)
+
+---
+
+### 函数 `RefreshUIDisplayAttributes`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RefreshUIDisplayAttributes();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 只刷新UI需要显示的临时属性(只更新CharacterSaveData.UIDisplayAttributes)
 
 ---
 
@@ -1973,7 +2289,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 动态生成时通过角色信息初始化
 
@@ -1995,7 +2311,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 重新生成角色时初始化（目前用于进化）
 
@@ -2017,7 +2333,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得出生所在的盒子位置
 
@@ -2035,7 +2351,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得闲逛范围
 
@@ -2053,7 +2369,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 身体已经腐烂
 
@@ -2075,7 +2391,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 添加新的特性
 
@@ -2097,7 +2413,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除特性
 
@@ -2115,7 +2431,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 开启丹田
 
@@ -2133,7 +2449,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 注册actor
 
@@ -2151,7 +2467,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 注销actor
 
@@ -2173,7 +2489,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算角色的温度状态
 
@@ -2195,7 +2511,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算角色的饥饿状态
 
@@ -2212,13 +2528,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `TipsText` | `const FText &` |
-| `（匿名/仅类型）` | `ECharacterHeadTipType TipType = ECharacterHeadTipType::Type1` |
+| `（匿名/仅类型）` | [ECharacterHeadTipType](../ERW_Enumerations__ECharacterHeadTipType.md) TipType = [ECharacterHeadTipType](../ERW_Enumerations__ECharacterHeadTipType.md)::Type1 |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void ShowTipsInCharacterHead(const FText & TipsText,ECharacterHeadTipType TipType = ECharacterHeadTipType::Type1);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 显示提示在角色头上
 
@@ -2235,13 +2551,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `TipsText` | `const FText &` |
-| `（匿名/仅类型）` | `ECharacterHeadTipType TipType= ECharacterHeadTipType::Type1` |
+| `（匿名/仅类型）` | [ECharacterHeadTipType](../ERW_Enumerations__ECharacterHeadTipType.md) TipType= [ECharacterHeadTipType](../ERW_Enumerations__ECharacterHeadTipType.md)::Type1 |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent,DisplayName="ShowTipsInCharacterHead") void k2_ShowTipsInCharacterHead(const FText & TipsText,ECharacterHeadTipType TipType= ECharacterHeadTipType::Type1);`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 显示提示在角色头上
 
@@ -2259,7 +2575,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 角色死亡删除 如果注册到世界中 则世界数据也删除
 
@@ -2281,7 +2597,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 转化为玩家阵营
 
@@ -2303,7 +2619,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 添加喊话组件
 
@@ -2321,7 +2637,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 移除喊话组件
 
@@ -2339,7 +2655,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 是否是玩家阵营
 
@@ -2357,7 +2673,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 是否死亡
 
@@ -2368,12 +2684,16 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `ECharacterType` |
+| 返回类型 | [ECharacterType](../Struct/CommonEnum__ECharacterType.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) ECharacterType GetCharacterType();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取角色类型（ECharacterType）
 
 ---
 
@@ -2393,7 +2713,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置控制的角色和物品进行交互
 
@@ -2411,31 +2731,9 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 敌人获取出生点
-
----
-
-### 函数 `GetControlEffectAnimMontageByTag`
-
-| 项目 | 内容 |
-|------|------|
-| 反射说明符 | BlueprintCallable |
-| 返回类型 | `UAnimMontage *` |
-| 参数 | 见下表 |
-
-| 参数名 | 类型 |
-|--------|------|
-| `AnimTag` | `const FGameplayTag &` |
-
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) UAnimMontage * GetControlEffectAnimMontageByTag(const FGameplayTag & AnimTag);`
-
-**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
-
-**源码注释:**
-
-> 通过标签获取蒙太奇
 
 ---
 
@@ -2451,7 +2749,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有的药物抗性
 
@@ -2473,7 +2771,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查询某种药物的耐药性
 
@@ -2496,7 +2794,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 吃东西后，扣除物品数量，并出发药品的属性增加效果
 
@@ -2514,6 +2812,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 获取角色闲聊组件（基类默认返回空，由子类实现）
+
 ---
 
 ### 函数 `IsCharacterChatting`
@@ -2528,7 +2830,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 角色是否正在闲聊
 
@@ -2544,13 +2846,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InWorldSpaceType` | `const EStorageSpace&` |
+| `InWorldSpaceType` | const [EStorageSpace](../ERW_Enumerations__EStorageSpace.md)& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SetWorldSpaceType(const EStorageSpace& InWorldSpaceType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置角色所处的空间类型
 
@@ -2568,7 +2870,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 是否是强力角色
 
@@ -2585,13 +2887,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `NewCharacterID` | `FName` |
-| `CharacterType` | `ECharacterType` |
+| `CharacterType` | [ECharacterType](../Struct/CommonEnum__ECharacterType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void CharacterGrowUp(FName NewCharacterID , ECharacterType CharacterType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 角色进化后重新初始化
 
@@ -2613,7 +2915,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置上一次伤害的人
 
@@ -2635,7 +2937,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置上一次伤害的来源
 
@@ -2657,7 +2959,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 播放开门动画
 
@@ -2674,6 +2976,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent, meta=(DisplayName="PlayPutdownAnimation")) void K2_PlayPutdownAnimation();`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「PlayPutdownAnimation」。
+
+**说明:**
+
+> 蓝图事件：播放放下（物品）动画
 
 ---
 
@@ -2693,7 +2999,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置角色停止所有动作
 
@@ -2716,7 +3022,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置正在搬运的对象
 
@@ -2734,7 +3040,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 动物巡逻点选点结束
 
@@ -2757,7 +3063,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 动物添加巡逻点
 
@@ -2775,7 +3081,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 动物清空巡逻点
 
@@ -2793,7 +3099,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 动物巡逻点选点结束
 
@@ -2815,7 +3121,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置守卫对象
 
@@ -2837,7 +3143,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得属性值的百分比
 
@@ -2855,7 +3161,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取角色当前环境修炼的额外值
 
@@ -2878,7 +3184,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取角色当前心情修炼的额外值
 
@@ -2896,7 +3202,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取角色资质修炼转换效率
 
@@ -2919,7 +3225,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取角色当前五行修炼的额外值
 
@@ -2937,7 +3243,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取总共的修炼额外数值
 
@@ -2960,9 +3266,33 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取指定技能的冷却时间
+
+---
+
+### 函数 `GetAbilityCooldownFromPrecomputedBase`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="Ability" |
+| 返回类型 | `float` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `BaseCooldownSeconds` | `float` |
+| `CooldownTags` | `const FGameplayTagContainer&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Ability") float GetAbilityCooldownFromPrecomputedBase(float BaseCooldownSeconds, const FGameplayTagContainer& CooldownTags);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 在已确定的「表基础+武学词条」冷却秒数上，仅叠加装备武学 ReduceCooldown 等减 CD。
+> 用于与 ChangeAbilityParam 冷却词条衔接；一般蓝图仍可用 GetAbilityCooldown。
 
 ---
 
@@ -2983,7 +3313,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取指定技能的冷却时间
 
@@ -3006,7 +3336,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建替身
 
@@ -3024,7 +3354,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 销毁
 
@@ -3042,7 +3372,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取替身
 
@@ -3064,7 +3394,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置名字后缀
 
@@ -3082,7 +3412,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > ------------------囚犯------------------------------------------
 
@@ -3100,6 +3430,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 创建指定目标的押解（拘捕）GOAP行为并返回
+
 ---
 
 ### 函数 `RemoveArrestAction`
@@ -3114,7 +3448,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除押解行为
 
@@ -3136,7 +3470,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置拘捕到的囚犯
 
@@ -3154,7 +3488,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建被押解行为
 
@@ -3172,7 +3506,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除被押解行为
 
@@ -3194,7 +3528,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置囚犯被谁押送
 
@@ -3212,7 +3546,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 囚犯被关押
 
@@ -3230,7 +3564,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 囚犯被处决
 
@@ -3252,7 +3586,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 囚犯被拷打
 
@@ -3274,7 +3608,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 囚犯被招募
 
@@ -3296,7 +3630,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建招募囚犯的行为
 
@@ -3314,7 +3648,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除招募囚犯的行为
 
@@ -3332,6 +3666,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 囚犯死亡时的处理
+
 ---
 
 ### 函数 `ClearPrisonerBuildingBelong`
@@ -3345,6 +3683,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void ClearPrisonerBuildingBelong();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 清除囚犯与所属监狱建筑的归属关联
 
 ---
 
@@ -3360,7 +3702,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 拷打CD
 
@@ -3378,6 +3720,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 注册给囚犯送饭的冷却计时器
+
 ---
 
 ### 函数 `RemoveSendPrisonerFoodAction`
@@ -3391,6 +3737,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RemoveSendPrisonerFoodAction();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 移除给囚犯送饭的GOAP行为
 
 ---
 
@@ -3410,6 +3760,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 检查角色能否使用带有指定GameplayTag的物品
+
 ---
 
 ### 函数 `AcceptNPCTask`
@@ -3427,6 +3781,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void AcceptNPCTask(const FCommonTaskInfo& InTaskInfo);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 接受一个NPC任务（传入任务信息）
 
 ---
 
@@ -3447,6 +3805,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 添加一条对话随机选项记录（对话信息ID→选项ID）
+
 ---
 
 ### 函数 `RestCharacterRandomLocation`
@@ -3461,7 +3823,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 重置角色到随机位置
 
@@ -3483,6 +3845,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 设置角色闲逛所围绕的建筑（如食槽、充能桩）
+
 ---
 
 ### 函数 `GetIdleAroundBuildingLocation`
@@ -3501,8 +3867,26 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 食槽或充能桩等
+
+---
+
+### 函数 `GetFullName`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintPure |
+| 返回类型 | `FText` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintPure) FText GetFullName();`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取角色的完整姓名（姓+名组合）
 
 ---

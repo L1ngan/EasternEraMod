@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Global ability system (world subsystem) that applies/removes abilities, gameplay effects and global buffs uniformly across all registered ASCs
 
 ## Blueprint-exposed functions
 
@@ -24,7 +26,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > /无特殊情况不使用这些方法，统一通过buff系统施加效果 属性*****************/
 
@@ -46,6 +48,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Applies the given gameplay effect to all registered ASCs (prefer the buff system unless there is a special case)
+
 ---
 
 ### Function `RemoveAbilityFromAll`
@@ -64,6 +70,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Removes the given ability from all registered ASCs
+
 ---
 
 ### Function `RemoveEffectFromAll`
@@ -81,6 +91,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly, Category = "EastRimWorld") void RemoveEffectFromAll(TSubclassOf<UGameplayEffect> Effect);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Removes the given gameplay effect from all registered ASCs
 
 ---
 
@@ -101,7 +115,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 此方法只会在增加临时属性时使用 不支持存档 如需要存档 则使用Buff系统增加属性
 
@@ -124,6 +138,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Applies a buff by buff ID to all registered targets; bTemporary distinguishes temporary from persistent
+
 ---
 
 ### Function `ApplyBuffFromAll`
@@ -143,6 +161,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Applies the given common buff to all registered targets; bTemporary distinguishes temporary (not saved) from persistent
+
 ---
 
 ### Function `RemoveBuffFromAll`
@@ -161,5 +183,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly, Category = "EastRimWorld") void RemoveBuffFromAll(const FName & CommonID,bool bTemporary);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Removes the buff with the given ID from all registered targets; bTemporary distinguishes temporary from persistent
 
 ---

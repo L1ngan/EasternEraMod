@@ -47,23 +47,11 @@ private:
 	// 获取状态文本
 	FText GetStatusText() const;
 	
-	// Cook 相关函数
-	bool ExecuteCook(const FString& InModPath, const FString& InModFolderPath, const FString& InCookedModPath,
-		const FString& InSavePath, const FString& InUnrealPakPath, const TArray<FString>& InNonAssetFiles, bool bInHasAssetFiles);
-	bool ExecuteCookWithRunUAT(const FString& InModPath, const FString& InModFolderPath, const FString& InCookedModPath,
-		const FString& InSavePath, const FString& InUnrealPakPath, const TArray<FString>& InNonAssetFiles, bool bInHasAssetFiles);
-	void HandleCookResult(int32 ReturnCode, const FString& ProjectName, const FString& Output,
-		const FString& InModPath, const FString& InCookedModPath, const FString& InSavePath,
-		const FString& InUnrealPakPath, const TArray<FString>& InNonAssetFiles, bool bInHasAssetFiles);
-	// 独立于窗口对象的打包处理函数（当窗口已关闭时使用）
-	static void HandleCookResultStandalone(int32 ReturnCode, const FString& ProjectName, const FString& Output,
-		const FString& InModPath, const FString& InCookedModPath, const FString& InSavePath,
-		const FString& InUnrealPakPath, const TArray<FString>& InNonAssetFiles, bool bInHasAssetFiles);
-	// 独立于窗口对象的打包函数（当窗口已关闭时使用）
-	static void ContinuePackagingStandalone(const FString& ModPath, const FString& ModFolderPath, const FString& CookedModPath,
-		const FString& SavePath, const FString& UnrealPakPath, const TArray<FString>& NonAssetFiles, bool bHasAssetFiles);
+	// 打包主流程（旧的逐Mod Cook与Standalone旁路已删除：不可达且与主路径漂移）
 	void ContinuePackaging();
-	void ContinuePackagingAfterCook();
+
+	// 打包批次出错时的统一收尾：重置全部批次状态并收掉进度通知，避免窗口卡死/通知悬挂
+	void AbortPackagingBatch();
 	
 	// 保存打包所需的变量，以便在 Cook 完成后继续
 	FString SavedModPath;
@@ -78,6 +66,10 @@ private:
 	// 批量打包队列
 	TArray<FString> ModPackagingQueue;
 	
+	// 打包前校验：ModInfo.json 必填字段 / Main.lua 语法 / 配置 JSON 与 StructName / 图标与 GameplayTags ini 存在性
+	// 返回 false 时 OutErrors 携带逐条问题明细（供弹窗展示）
+	bool ValidateModsForPackaging(TArray<FText>& OutErrors) const;
+
 	// 检查是否需要Cook（是否有任何mod包含资产文件）
 	bool CheckIfNeedCook();
 	

@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Actor that displays item UI (such as item count) via a widget component
 
 ## Blueprint-exposed variables
 
@@ -16,6 +18,10 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TObjectPtr<UWidgetComponent> WidgetComponent;` |
+
+**Notes:**
+
+> Widget component
 
 ---
 
@@ -33,6 +39,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "OnInitData".
 
+**Notes:**
+
+> Blueprint event called when data is initialized
+
 ---
 
 ### Function `ReceiveOnClearData`
@@ -47,6 +57,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "OnClearData".
 
+**Notes:**
+
+> Blueprint event called when data is cleared
+
 ---
 
 ### Function `ItemWidgetActorDestroy`
@@ -60,6 +74,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void ItemWidgetActorDestroy();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Destroys this item widget actor
 
 ---
 
@@ -79,7 +97,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 初始化物品ui
 
@@ -101,7 +119,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 更新物品数量
 

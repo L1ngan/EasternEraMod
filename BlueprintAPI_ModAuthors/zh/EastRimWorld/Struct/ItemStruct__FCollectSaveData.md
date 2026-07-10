@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> Collect Save Data 数据结构。
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = "Common") FName InventoryID;` |
 
-**源码注释:**
+**说明:**
 
 > 采集物id
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float CurHealth = 0.0f;` |
 
-**源码注释:**
+**说明:**
 
 > 当前健康值
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FGuid Guid;` |
 
-**源码注释:**
+**说明:**
 
 > Guid
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FGuid SubstituteGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 替身Actor的Guid
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame,Category = "Common") FTransform ItemTransform;` |
 
-**源码注释:**
+**说明:**
 
 > 物品在世界中的位置
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame, Category = "Common") bool bOperationMark = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否被操作标记
 
@@ -107,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame, Category = "Common") bool bSelectState = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否是选中状态
 
@@ -117,12 +119,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<ECommonButtonType,bool>` |
+| C++ 类型 | TMap<[ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md),bool> |
 | 反射说明符 | BlueprintReadOnly, Category="Common" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame, Category = "Common") TMap<ECommonButtonType,bool> ButtonOperationState;` |
 
-**源码注释:**
+**说明:**
 
 > 相关按钮的状态 是否选中
 
@@ -132,12 +134,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EInventoryItemStateType` |
+| C++ 类型 | [EInventoryItemStateType](ItemStruct__EInventoryItemStateType.md) |
 | 反射说明符 | BlueprintReadOnly, Category="Common" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame, Category = "Common") EInventoryItemStateType InventoryItemStateType = EInventoryItemStateType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 物品状态
 
@@ -152,7 +154,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) bool bSuspendGrow = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否暂停生长
 
@@ -162,12 +164,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EGrowStageType` |
+| C++ 类型 | [EGrowStageType](ItemStruct__EGrowStageType.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) EGrowStageType CurGrowStage = EGrowStageType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 当前的阶段
 
@@ -182,6 +184,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float CurGrowTime = {0.f};` |
 
+**说明:**
+
+> Cur Grow Time 字段。
+
 ---
 
 ### 属性 `CurHarvestTime`
@@ -193,7 +199,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float CurHarvestTime = {0.f};` |
 
-**源码注释:**
+**说明:**
 
 > 总收成时间 如果会结果
 
@@ -208,7 +214,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float CurStageGrowTime = {0.f};` |
 
-**源码注释:**
+**说明:**
 
 > 阶段生长时间
 
@@ -223,7 +229,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int FellDurability { -1 };` |
 
-**源码注释:**
+**说明:**
 
 > 砍伐耐久度
 
@@ -238,7 +244,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int HarvestDurability { -1 };` |
 
-**源码注释:**
+**说明:**
 
 > 收割耐久度
 
@@ -253,7 +259,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int MiningDurability { -1 };` |
 
-**源码注释:**
+**说明:**
 
 > 开采耐久度
 
@@ -267,5 +273,9 @@
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int ExplorationTime { -1 };` |
+
+**说明:**
+
+> Exploration Time 字段。
 
 ---

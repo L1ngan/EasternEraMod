@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Pathfinding") FPathfindingConfig Config;` |
 
-**源码注释:**
+**说明:**
 
 > 性能配置
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Pathfinding") FPathfindingStats Stats;` |
 
-**源码注释:**
+**说明:**
 
 > 性能统计
 
@@ -60,7 +60,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 广度优先查找路径
 
@@ -84,7 +84,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 迪杰斯特拉算法查找路径
 
@@ -108,7 +108,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > A* 最短路径
 
@@ -132,7 +132,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 优化的A*算法
 
@@ -154,7 +154,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查找距离位置的最近路径点
 
@@ -176,7 +176,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 优化的最近路径点查找
 
@@ -196,14 +196,14 @@
 | `EndPosition` | `const FVector &` |
 | `OutPath` | `TArray<FVector> &` |
 | `PathLength` | `float &` |
-| `（匿名/仅类型）` | `EFindPathType FindPathType = EFindPathType::AStar` |
+| `（匿名/仅类型）` | [EFindPathType](WorldMapPathSubsystem__EFindPathType.md) FindPathType = [EFindPathType](WorldMapPathSubsystem__EFindPathType.md)::AStar |
 | `2` | `int NumSubdivisionsPerSegment =` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool SearchPath(const FVector & StartPosition,const FVector & EndPosition,TArray<FVector> & OutPath,float & PathLength,EFindPathType FindPathType = EFindPathType::AStar,int NumSubdivisionsPerSegment = 2);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查找路径
 
@@ -221,14 +221,14 @@
 |--------|------|
 | `StartPosition` | `const FVector&` |
 | `EndPosition` | `const FVector&` |
-| `（匿名/仅类型）` | `EFindPathType FindPathType = EFindPathType::AStar` |
+| `（匿名/仅类型）` | [EFindPathType](WorldMapPathSubsystem__EFindPathType.md) FindPathType = [EFindPathType](WorldMapPathSubsystem__EFindPathType.md)::AStar |
 | `2` | `int32 NumSubdivisionsPerSegment =` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FPathfindingResult SearchPath_Optimized(const FVector& StartPosition, const FVector& EndPosition, EFindPathType FindPathType = EFindPathType::AStar, int32 NumSubdivisionsPerSegment = 2);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 优化的路径查找
 
@@ -246,7 +246,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取性能统计
 
@@ -264,7 +264,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 重置性能统计
 
@@ -282,7 +282,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 清理缓存
 

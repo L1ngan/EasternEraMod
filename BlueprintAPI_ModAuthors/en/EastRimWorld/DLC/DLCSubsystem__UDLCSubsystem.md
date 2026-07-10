@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> DLC subsystem responsible for mounting DLC pak files, reading DLC information assets, querying DLC install/activation states and opening the Steam store page.
 
 ## Blueprint-exposed functions
 
@@ -20,6 +22,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Mounts all DLC pak files and returns whether it succeeded.
+
 ---
 
 ### Function `GetAllDLCInformationAsset`
@@ -33,6 +39,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<UDLCInformationAsset*> GetAllDLCInformationAsset();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns the list of DLC information assets from all mounted DLC paks.
 
 ---
 
@@ -52,7 +62,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > Dlc是否拥有且安装
 
@@ -74,7 +84,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 打开商店
 
@@ -96,6 +106,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Opens the specified URL web page via Steam.
+
 ---
 
 ### Function `OpenSteamStore`
@@ -110,6 +124,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Opens the Steam store page.
+
 ---
 
 ### Function `CheckCanLoadSaveGame`
@@ -123,11 +141,15 @@
 | Name | Type |
 |--------|------|
 | `NeedDLCId` | `TArray<int>` |
-| `OutNeedDLCId` | `TMap<int,EDLCActiveState> &` |
+| `OutNeedDLCId` | TMap<int,[EDLCActiveState](DLCSubsystem__EDLCActiveState.md)> & |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool CheckCanLoadSaveGame(TArray<int> NeedDLCId,TMap<int,EDLCActiveState> & OutNeedDLCId);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Checks whether all DLCs required by a save game are available, outputs the unsatisfied DLC IDs with their activation states, and returns whether the save can be loaded.
 
 ---
 
@@ -136,7 +158,7 @@
 | Field | Details |
 |------|------|
 | Reflection specifiers | BlueprintCallable |
-| Return type | `EDLCActiveState` |
+| Return type | [EDLCActiveState](DLCSubsystem__EDLCActiveState.md) |
 | Parameters | see table below |
 
 | Name | Type |
@@ -147,7 +169,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取dlc的状态
 
@@ -170,7 +192,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取dlc的下载进度
 
@@ -192,7 +214,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 安装dlc
 
@@ -214,7 +236,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 卸载dlc
 

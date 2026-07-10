@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> World map move actor: a selectable entity representing a character moving or staying on the world map
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<USceneComponent> SceneComponent;` |
 
+**Notes:**
+
+> Root scene component
+
 ---
 
 ### Property `StaticMesh`
@@ -27,6 +33,10 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly) TObjectPtr<UStaticMeshComponent> StaticMesh;` |
+
+**Notes:**
+
+> Static mesh component
 
 ---
 
@@ -39,6 +49,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly) FCharacterWorldMoveInfo CharacterWorldMoveInfo;` |
 
+**Notes:**
+
+> The character's world map movement info
+
 ---
 
 ### Property `OnMOveStateChangeDelegate`
@@ -50,6 +64,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnMOveStateChangeDelegate OnMOveStateChangeDelegate;` |
 
+**Notes:**
+
+> Delegate broadcast when the movement state changes
+
 ---
 
 ### Property `bIsSelect`
@@ -60,6 +78,10 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool bIsSelect = false;` |
+
+**Notes:**
+
+> Whether the actor is currently selected
 
 ---
 
@@ -81,6 +103,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Blueprint event: called when the world map actor is initialized with movement info
+
 ---
 
 ### Function `K2_DeinitializeWorldMapActor`
@@ -94,6 +120,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent,DisplayName="DeinitializeWorldMapActor") void K2_DeinitializeWorldMapActor();`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Blueprint event: called when the world map actor is deinitialized
 
 ---
 
@@ -109,6 +139,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Blueprint event: called when the map actor is destroyed
+
 ---
 
 ### Function `K2_OnMapActorBeginStay`
@@ -123,6 +157,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Blueprint event: called when the map actor begins staying
+
 ---
 
 ### Function `K2_OnMapActorEndStay`
@@ -136,6 +174,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent,DisplayName="OnMapActorEndStay") void K2_OnMapActorEndStay();`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Blueprint event: called when the map actor ends staying
 
 ---
 
@@ -155,7 +197,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 更新移动路径
 
@@ -176,5 +218,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetMoveActorTipUI(UUserWidget * WidgetObject);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Sets the tip UI widget for the move actor
 
 ---

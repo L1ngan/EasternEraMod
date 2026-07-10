@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText HeadLine;` |
 
-**Source comments:**
+**Notes:**
 
 > 标题
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText Describe;` |
 
-**Source comments:**
+**Notes:**
 
 > 描述
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FCommonTaskCondition> TriggerCondition;` |
 
-**Source comments:**
+**Notes:**
 
 > 接受任务条件
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> ConditionID;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务条件
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> RepelTask;` |
 
-**Source comments:**
+**Notes:**
 
 > 阻断任务(当配置在此字段的任务被玩家已完成时，当前任务不可被接受或可见)
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> PreTask;` |
 
-**Source comments:**
+**Notes:**
 
 > 前置任务(需完成全部任务后才可接受当前任务)
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> PostTask;` |
 
-**Source comments:**
+**Notes:**
 
 > 后置任务(完成当前任务后，将后置任务添加到”已接”列表(玩家不可见)，以此作为判断接受其他任务的条件；当玩家达到接受后置任务的条件时，接取此任务后，将此任务在”已接”列表显现(玩家可见))
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> WorldPlaceIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务对应的地点ID
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bAutoComplete;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务完成条件满足时是否自动完成该任务(用来区别需要手动点击完成的任务)
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FName,int> TaskAward;` |
 
-**Source comments:**
+**Notes:**
 
 > 奖励(废弃.....)
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FItemSimpleData> TaskAwards;` |
 
-**Source comments:**
+**Notes:**
 
 > 奖励
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,meta=(EditCondition="!bAutoComplete")) TArray<FTaskSelectableAward> SelectableAwards;` |
 
-**Source comments:**
+**Notes:**
 
 > 可选奖励
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,meta=(EditCondition="!bAutoComplete")) int32 MaxCanSelectAwardNum = 999;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大可选几个奖励
 
@@ -214,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 MaxRandAwardSetNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大随机奖励集个数
 
@@ -229,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FName,float> RandAwardSetsWeight;` |
 
-**Source comments:**
+**Notes:**
 
 > 随机奖励权重(DT_DropItemConfig ID,权重)
 
@@ -244,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName DialogueID;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应的对话配置表ID
 
@@ -259,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName PopupID;` |
 
-**Source comments:**
+**Notes:**
 
 > 弹窗配置表ID
 
@@ -274,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName PopupTipsID;` |
 
-**Source comments:**
+**Notes:**
 
 > 弹出Tips配置表ID
 
@@ -284,12 +284,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<FName , EBeginnerGuideUnlockType>` |
+| C++ type | TMap<FName , [EBeginnerGuideUnlockType](CommonTaskStruct__EBeginnerGuideUnlockType.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FName , EBeginnerGuideUnlockType> UnlockIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前步骤解锁的ID
 
@@ -299,12 +299,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECommonTaskType` |
+| C++ type | [ECommonTaskType](CommonTaskStruct__ECommonTaskType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) ECommonTaskType TaskType = ECommonTaskType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务类型
 
@@ -314,12 +314,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EBeginnerGuideEventType, FName>` |
+| C++ type | TMap<[EBeginnerGuideEventType](CommonTaskStruct__EBeginnerGuideEventType.md), FName> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<EBeginnerGuideEventType, FName> TaskBeingEvent;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务开始事件
 
@@ -334,7 +334,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float DelayTime = 0.0f;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务的延迟时间
 
@@ -349,7 +349,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() FText ExecuteStateTips;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务状态的tips
 
@@ -364,7 +364,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int TaskGrouping;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务的分组 相同组的任务会相互覆盖 不覆盖填0
 
@@ -379,7 +379,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool bRepetition = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否重复发布
 
@@ -394,7 +394,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int Priority;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务列表排序优先级
 
@@ -409,7 +409,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int Parameter;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务跳转的百科页签
 
@@ -424,7 +424,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,meta = (AllowedClasses = "Texture2D")) FSoftObjectPath TaskIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务显示的图片
 
@@ -439,7 +439,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bRemoveAfterCompletion = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否完成后从组件中移除
 
@@ -454,7 +454,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int TaskTimeOut = INDEX_NONE;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务时效 -1为没有时间限制
 
@@ -469,7 +469,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bCanGiveUp = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否可以放弃
 
@@ -484,7 +484,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FTriggerFunction> TriggerFunction;` |
 
-**Source comments:**
+**Notes:**
 
 > 可以触发的功能
 
@@ -494,12 +494,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EPublisherType` |
+| C++ type | [EPublisherType](CommonTaskStruct__EPublisherType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EPublisherType PublisherType = EPublisherType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务发布者类型
 
@@ -514,7 +514,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Runtime") TArray<FCommonTaskCondition> Condition;` |
 
-**Source comments:**
+**Notes:**
 
 > 包含的条件
 
@@ -529,7 +529,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FItemSimpleData> SubmitItems;` |
 
-**Source comments:**
+**Notes:**
 
 > 需要提交的物品
 
@@ -544,7 +544,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 TaskPlaceTimeLimit;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务地点时间限制(-1无限)
 

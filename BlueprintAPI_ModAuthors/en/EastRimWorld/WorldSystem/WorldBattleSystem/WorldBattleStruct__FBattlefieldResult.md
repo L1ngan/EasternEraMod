@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid Guid;` |
 
-**Source comments:**
+**Notes:**
 
 > 胜利方势力
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 TeamID = 255;` |
 
-**Source comments:**
+**Notes:**
 
 > 胜利方势力
 
@@ -44,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EPlayerBattleResult` |
+| C++ type | [EPlayerBattleResult](WorldBattleStruct__EPlayerBattleResult.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EPlayerBattleResult PlayerBattleResult = EPlayerBattleResult::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家方战斗结果
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid MVPCharacterGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > MVP角色GUID
 

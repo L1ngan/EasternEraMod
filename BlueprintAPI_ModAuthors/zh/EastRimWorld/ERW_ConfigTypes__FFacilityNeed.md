@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FText FacilityNeedText;` |
 
-**源码注释:**
+**说明:**
 
 > 此项文本
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FName> BuildingTabId;` |
 
-**源码注释:**
+**说明:**
 
 > 建筑分类ID(BuildTabConfig)
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FName> BuildingIds;` |
 
-**源码注释:**
+**说明:**
 
 > 建筑ids(与BuildingTabId满足其一)
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 MinNeedNum = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 最小需求数量
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 MaxNeedNum = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 最大需求数量
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) bool bIsCoreNeed = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否是房间的核心建筑(决定房间的拥有者)
 

@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float WealthPointsMax = 4200.f;` |
 
-**源码注释:**
+**说明:**
 
 > 财富点数最大值
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float OneFarmlandPoints = 13.f;` |
 
-**源码注释:**
+**说明:**
 
 > 单位田地对应的财富价值
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float UnitsPointsMax = 4000.f;` |
 
-**源码注释:**
+**说明:**
 
 > 单位点数最大值
 
@@ -59,12 +59,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EDifficultyOption,float>` |
+| C++ 类型 | TMap<[EDifficultyOption](../Struct/CommonEnum__EDifficultyOption.md),float> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<EDifficultyOption,float> DifficultyCoefficientMap;` |
 
-**源码注释:**
+**说明:**
 
 > 难度系数配置
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float AdaptiveCoefficientMax = 1.5f;` |
 
-**源码注释:**
+**说明:**
 
 > 适应性系数最大值（标记作废！！！稍后删除）
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float AdaptiveCoefficientMini = 0.3f;` |
 
-**源码注释:**
+**说明:**
 
 > 适应性系数最小值（标记作废！！！稍后删除）
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 MaxDrawCount = 2;` |
 
-**源码注释:**
+**说明:**
 
 > 最大抽取次数，默认2
 
@@ -119,12 +119,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<ETeamUnitType,float>` |
+| C++ 类型 | TMap<[ETeamUnitType](WorldStruct__ETeamUnitType.md),float> |
 | 反射说明符 | BlueprintReadWrite, Category="CombatScore" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="CombatScore") TMap<ETeamUnitType,float> UnitCoefficientMap;` |
 
-**源码注释:**
+**说明:**
 
 > 单位点数折算系数
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="CombatScore") TMap<int32,float> RealmLevelUnitsPointMap;` |
 
-**源码注释:**
+**说明:**
 
 > 弟子境界等级对应的单位点数
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="CombatScore") TMap<FName,float> BuildingCombatScoreMap;` |
 
-**源码注释:**
+**说明:**
 
 > 需要统计战力的机关弩等战斗建筑的战力值
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LifeCoefficient") float LifeCoefficientBase = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 生存系数基数
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LifeCoefficient") float LifeCoefficientPerDay = 0.1f;` |
 
-**源码注释:**
+**说明:**
 
 > 生存天数影响系数
 
@@ -199,7 +199,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LifeCoefficient") float ChaDeathCoefficient = -0.3f;` |
 
-**源码注释:**
+**说明:**
 
 > 每个弟子死亡影响系数
 
@@ -214,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LifeCoefficient") float LifeCoefficientMini = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 生存系数最小值
 
@@ -229,7 +229,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LifeCoefficient") float LifeCoefficientMax = 3.f;` |
 
-**源码注释:**
+**说明:**
 
 > 生存系数最大值
 

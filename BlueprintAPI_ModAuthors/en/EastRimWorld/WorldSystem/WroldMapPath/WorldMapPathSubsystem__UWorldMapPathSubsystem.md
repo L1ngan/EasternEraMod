@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Pathfinding") FPathfindingConfig Config;` |
 
-**Source comments:**
+**Notes:**
 
 > 性能配置
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "Pathfinding") FPathfindingStats Stats;` |
 
-**Source comments:**
+**Notes:**
 
 > 性能统计
 
@@ -60,7 +60,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 广度优先查找路径
 
@@ -84,7 +84,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 迪杰斯特拉算法查找路径
 
@@ -108,7 +108,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > A* 最短路径
 
@@ -132,7 +132,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 优化的A*算法
 
@@ -154,7 +154,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查找距离位置的最近路径点
 
@@ -176,7 +176,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 优化的最近路径点查找
 
@@ -196,14 +196,14 @@
 | `EndPosition` | `const FVector &` |
 | `OutPath` | `TArray<FVector> &` |
 | `PathLength` | `float &` |
-| `(unnamed / type only)` | `EFindPathType FindPathType = EFindPathType::AStar` |
+| `(unnamed / type only)` | [EFindPathType](WorldMapPathSubsystem__EFindPathType.md) FindPathType = [EFindPathType](WorldMapPathSubsystem__EFindPathType.md)::AStar |
 | `2` | `int NumSubdivisionsPerSegment =` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool SearchPath(const FVector & StartPosition,const FVector & EndPosition,TArray<FVector> & OutPath,float & PathLength,EFindPathType FindPathType = EFindPathType::AStar,int NumSubdivisionsPerSegment = 2);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查找路径
 
@@ -221,14 +221,14 @@
 |--------|------|
 | `StartPosition` | `const FVector&` |
 | `EndPosition` | `const FVector&` |
-| `(unnamed / type only)` | `EFindPathType FindPathType = EFindPathType::AStar` |
+| `(unnamed / type only)` | [EFindPathType](WorldMapPathSubsystem__EFindPathType.md) FindPathType = [EFindPathType](WorldMapPathSubsystem__EFindPathType.md)::AStar |
 | `2` | `int32 NumSubdivisionsPerSegment =` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FPathfindingResult SearchPath_Optimized(const FVector& StartPosition, const FVector& EndPosition, EFindPathType FindPathType = EFindPathType::AStar, int32 NumSubdivisionsPerSegment = 2);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 优化的路径查找
 
@@ -246,7 +246,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取性能统计
 
@@ -264,7 +264,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 重置性能统计
 
@@ -282,7 +282,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 清理缓存
 

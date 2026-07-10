@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Tips UI Content data structure.
 
 ## Blueprint-exposed variables
 
@@ -12,10 +14,14 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ETipItemTypeEnum` |
+| C++ type | [ETipItemTypeEnum](UIStruct__ETipItemTypeEnum.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ETipItemTypeEnum Type;` |
+
+**Notes:**
+
+> Type field.
 
 ---
 
@@ -27,5 +33,9 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FText> Params;` |
+
+**Notes:**
+
+> Params field.
 
 ---

@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> ParameterArray;` |
 
-**Source comments:**
+**Notes:**
 
 > 参数列表 随机一个或多个
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> UnlockConditionArray;` |
 
-**Source comments:**
+**Notes:**
 
 > 解锁条件id
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int SpawnMaxNumber = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 一次生成的最大数量
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int SpawnMinNumber = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 一次生成的最小数量
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> ConflictEventID;` |
 
-**Source comments:**
+**Notes:**
 
 > 冲突的事件id 与同时存在的数量相关联
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float RefreshTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 刷新时间
 
@@ -109,6 +109,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FGuid SpawnGuid = FGuid();` |
 
+**Notes:**
+
+> Spawn Guid field.
+
 ---
 
 ### Property `LimitOfTimes`
@@ -120,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int LimitOfTimes = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 事件生成器的限定次数 0 是无限制
 

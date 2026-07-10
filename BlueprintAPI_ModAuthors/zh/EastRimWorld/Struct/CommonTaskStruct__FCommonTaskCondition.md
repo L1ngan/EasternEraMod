@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText Describe;` |
 
-**源码注释:**
+**说明:**
 
 > 条件描述
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FText> SubDescribes;` |
 
-**源码注释:**
+**说明:**
 
 > 次级描述
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> SubConditionIDs;` |
 
-**源码注释:**
+**说明:**
 
 > 次级条件ID
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName CoverTipsID;` |
 
-**源码注释:**
+**说明:**
 
 > 遮罩Tips配置表ID
 
@@ -74,12 +74,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ECommonTaskConditionType` |
+| C++ 类型 | [ECommonTaskConditionType](CommonTaskStruct__ECommonTaskConditionType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ECommonTaskConditionType CommonTaskConditionType = ECommonTaskConditionType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 条件类型
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName RequiredID;` |
 
-**源码注释:**
+**说明:**
 
 > 所需类型ID 例如 资源id  建筑id 没有则不填
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int RequiredValue;` |
 
-**源码注释:**
+**说明:**
 
 > 所需值
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float CurrentValue;` |
 
-**源码注释:**
+**说明:**
 
 > 当前值
 
@@ -134,12 +134,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EConditionValueUpdateType` |
+| C++ 类型 | [EConditionValueUpdateType](CommonTaskStruct__EConditionValueUpdateType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EConditionValueUpdateType ConditionValueUpdateType = EConditionValueUpdateType::Addition;` |
 
-**源码注释:**
+**说明:**
 
 > 更新类型
 
@@ -149,12 +149,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EConditionValueCompareType` |
+| C++ 类型 | [EConditionValueCompareType](CommonTaskStruct__EConditionValueCompareType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EConditionValueCompareType ConditionValueCompareType = EConditionValueCompareType::GreatThanOrEqualTo;` |
 
-**源码注释:**
+**说明:**
 
 > 条件数值的比较类型
 
@@ -164,12 +164,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ECompleteState` |
+| C++ 类型 | [ECompleteState](CommonTaskStruct__ECompleteState.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) ECompleteState ConditionState = ECompleteState::Unfinished;` |
 
-**源码注释:**
+**说明:**
 
 > 条件状态
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float ConditionSchedule;` |
 
-**源码注释:**
+**说明:**
 
 > 条件进度
 
@@ -199,7 +199,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int BuildingType;` |
 
-**源码注释:**
+**说明:**
 
 > 任务关联的建筑物类型
 
@@ -214,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int FiltrateTypeID;` |
 
-**源码注释:**
+**说明:**
 
 > 相同建筑物的不同类型
 
@@ -229,7 +229,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bDynamicCondition = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否会更加实际数值改变条件状态
 
@@ -244,7 +244,7 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() FText ExecuteStateTips;` |
 
-**源码注释:**
+**说明:**
 
 > 执行状态tips
 
@@ -259,7 +259,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 ExtraParam1 = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 额外参数1
 
@@ -274,7 +274,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText FailedTipText;` |
 
-**源码注释:**
+**说明:**
 
 > 条件检查不通过时的提示文本
 

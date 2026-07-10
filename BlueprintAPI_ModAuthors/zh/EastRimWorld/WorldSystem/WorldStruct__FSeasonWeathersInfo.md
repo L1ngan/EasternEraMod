@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EERWSeason` |
+| C++ 类型 | [EERWSeason](WorldStruct__EERWSeason.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EERWSeason Season = EERWSeason::Spring;` |
 
-**源码注释:**
+**说明:**
 
 > 季节
 
@@ -29,12 +29,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EERWWeather` |
+| C++ 类型 | [EERWWeather](WorldStruct__EERWWeather.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EERWWeather WeatherType = EERWWeather::None;` |
 
-**源码注释:**
+**说明:**
 
 > 天气配置
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int WeatherWeight = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 天气权重（小于等于0，不参与随机）
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName LevelName = NAME_None;` |
 
-**源码注释:**
+**说明:**
 
 > 对应地图名称（名称为None或""表示通用配置）
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float WeatherChangeTransitionTime = 20.f;` |
 
-**源码注释:**
+**说明:**
 
 > 天气过度时间(秒)
 

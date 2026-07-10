@@ -27,7 +27,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取Mod子系统
 
@@ -50,7 +50,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查Mod是否已加载
 
@@ -73,7 +73,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取Mod信息
 
@@ -97,7 +97,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 日志输出
 
@@ -121,13 +121,13 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
-> 注册控制台命令（供Lua调用）
+> 注册控制台命令（旧接口：无回调只打日志，保留兼容；Lua 侧请改用 RegisterModConsoleCommand）
 
 ---
 
-### Function `LoadAndApplyModInformationAssetByPath`
+### Function `LoadAndApplyModConfigFromJson`
 
 | Field | Details |
 |------|------|
@@ -137,15 +137,16 @@
 
 | Name | Type |
 |--------|------|
-| `AssetPath` | `const FString&` |
+| `WorldContextObject` | `const UObject*` |
+| `ModId` | `const FName&` |
 | `bNewGameLoad` | `bool` |
 
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Mod System") static bool LoadAndApplyModInformationAssetByPath(const FString& AssetPath,bool bNewGameLoad);`
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Mod System") static bool LoadAndApplyModConfigFromJson(const UObject* WorldContextObject, const FName& ModId, bool bNewGameLoad);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
-> 通过路径加载并应用UModInformationAsset配置
+> 从 Mod 目录 JSON 配置加载并应用（ModInfo.json 中 DataTableConfigs / DataAssetConfigs）
 
 ---

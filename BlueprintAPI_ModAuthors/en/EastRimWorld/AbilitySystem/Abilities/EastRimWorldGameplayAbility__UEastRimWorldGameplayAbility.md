@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> The base gameplay ability class used by this project: activation groups, action flow events, effect containers, projectile/summon spawning and control-effect parameters
 
 ## Blueprint-exposed variables
 
@@ -17,18 +19,22 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnActivateAbilityStateDelegate OnActivateAbilityStateDelegate;` |
 
+**Notes:**
+
+> Assignable delegate broadcast on ability activation state changes
+
 ---
 
 ### Property `ActivationGroup`
 
 | Field | Details |
 |------|------|
-| C++ type | `EEastRimWorldAbilityActivationGroup` |
+| C++ type | [EEastRimWorldAbilityActivationGroup](EastRimWorldGameplayAbility__EEastRimWorldAbilityActivationGroup.md) |
 | Reflection specifiers | BlueprintReadOnly, Category="EastRimWorld|Ability Activation" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "EastRimWorld|Ability Activation") EEastRimWorldAbilityActivationGroup ActivationGroup;` |
 
-**Source comments:**
+**Notes:**
 
 > Defines the relationship between this ability activating and other abilities activating.
 
@@ -43,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "EastRimWorld|Ability Activation") EEastRimWorldAbilityType AbilityType;` |
 
-**Source comments:**
+**Notes:**
 
 > Defines the relationship between this ability activating and other abilities activating.
 
@@ -53,10 +59,14 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EAbilityUseState` |
+| C++ type | [EAbilityUseState](../../ERW_Enumerations__EAbilityUseState.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="EastRimWorld|Ability Activation" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, Category = "EastRimWorld|Ability Activation") EAbilityUseState AbilityUseState = EAbilityUseState::Inactive;` |
+
+**Notes:**
+
+> Current use state of the ability (defaults to Inactive)
 
 ---
 
@@ -69,6 +79,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, Category = "EastRimWorld|Ability Activation") float AbilityUseStateTime = 0.0f;` |
 
+**Notes:**
+
+> Timer value of the ability use state, in seconds
+
 ---
 
 ### Property `bCancelAbility`
@@ -79,6 +93,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="EastRimWorld|Ability Activation" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "EastRimWorld|Ability Activation") bool bCancelAbility = false;` |
+
+**Notes:**
+
+> Flag indicating whether to cancel the ability
 
 ---
 
@@ -91,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = GameplayEffects) TMap<FGameplayTag, FEastRimWorldGameplayEffectContainer> EffectContainerMap;` |
 
-**Source comments:**
+**Notes:**
 
 > Map of gameplay tags to gameplay effect containers
 
@@ -106,6 +124,40 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,Category="AbilityStruct") FGameAbilityStruct GameAbilityStruct;` |
 
+**Notes:**
+
+> Config data struct of this ability (initialized from configuration)
+
+---
+
+### Property `MartialArtsSkillEntryCooldownValueDelta`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | BlueprintReadOnly, Category="AbilityStruct|SkillEntry" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(Transient, BlueprintReadOnly, Category = "AbilityStruct|SkillEntry") float MartialArtsSkillEntryCooldownValueDelta = 0.f;` |
+
+**Notes:**
+
+> 武学技能词条 ChangeAbilityParam：冷却实数增量之和，参与 (表基础秒数 + 本值) * MartialArtsSkillEntryCooldownPercentMultiplier。
+
+---
+
+### Property `MartialArtsSkillEntryCooldownPercentMultiplier`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | BlueprintReadOnly, Category="AbilityStruct|SkillEntry" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(Transient, BlueprintReadOnly, Category = "AbilityStruct|SkillEntry") float MartialArtsSkillEntryCooldownPercentMultiplier = 1.f;` |
+
+**Notes:**
+
+> 武学技能词条：各 CD 百分比增量累乘 Π(1+小数百分比)。
+
 ---
 
 ### Property `IsAbort`
@@ -117,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool IsAbort { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否被打断
 
@@ -132,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TObjectPtr<AActor> Activator;` |
 
-**Source comments:**
+**Notes:**
 
 > 激活者
 
@@ -147,7 +199,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FProjectileHitEventData ProjectileHitEventData;` |
 
-**Source comments:**
+**Notes:**
 
 > 投射物命中信息
 
@@ -162,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "ContrlEffect") float BaseValue = 0.1f;` |
 
-**Source comments:**
+**Notes:**
 
 > 基础值
 
@@ -177,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "ContrlEffect") float Coefficient = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 系数
 
@@ -192,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "ContrlEffect") float FixedValue = 25.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 固定值
 
@@ -207,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "ContrlEffect") float FlyKnockAwayCoefficient = 5.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 固定值
 
@@ -227,6 +279,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Returns the EastRimWorld ability system component from the actor info
+
 ---
 
 ### Function `GetEastRimWorldCharacterFromActorInfo`
@@ -241,6 +297,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Returns the EastRimWorld character from the actor info
+
 ---
 
 ### Function `CanChangeActivationGroup`
@@ -253,13 +313,13 @@
 
 | Name | Type |
 |--------|------|
-| `NewGroup` | `EEastRimWorldAbilityActivationGroup` |
+| `NewGroup` | [EEastRimWorldAbilityActivationGroup](EastRimWorldGameplayAbility__EEastRimWorldAbilityActivationGroup.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "EastRimWorld|Ability", Meta = (ExpandBoolAsExecs = "ReturnValue")) bool CanChangeActivationGroup(EEastRimWorldAbilityActivationGroup NewGroup) const;`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > Returns true if the requested activation group is a valid transition.
 
@@ -275,13 +335,13 @@
 
 | Name | Type |
 |--------|------|
-| `NewGroup` | `EEastRimWorldAbilityActivationGroup` |
+| `NewGroup` | [EEastRimWorldAbilityActivationGroup](EastRimWorldGameplayAbility__EEastRimWorldAbilityActivationGroup.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "EastRimWorld|Ability", Meta = (ExpandBoolAsExecs = "ReturnValue")) bool ChangeActivationGroup(EEastRimWorldAbilityActivationGroup NewGroup);`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > Tries to change the activation group.  Returns true if it successfully changed.
 
@@ -303,7 +363,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > Called when the ability fails to activate
 
@@ -321,7 +381,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > Called when this ability is granted to the ability system component.
 
@@ -339,7 +399,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > Called when this ability is removed from the ability system component.
 
@@ -357,7 +417,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > Called when the ability system is initialized with a pawn avatar.
 
@@ -375,6 +435,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Blueprint event: called when the ability is canceled
+
 ---
 
 ### Function `K2_OnActionBegin`
@@ -388,6 +452,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent, Category = Ability, DisplayName = "OnActionBegin") void K2_OnActionBegin();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Blueprint event: called at the begin phase of the action
 
 ---
 
@@ -403,6 +471,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Blueprint event: called during the loop phase of the action
+
 ---
 
 ### Function `K2_OnActionEnd`
@@ -416,6 +488,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent, Category = Ability, DisplayName = "OnActionEnd") void K2_OnActionEnd();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Blueprint event: called at the end phase of the action
 
 ---
 
@@ -437,7 +513,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > Make gameplay effect container spec to be applied later, using the passed in container
 
@@ -461,7 +537,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > Search for and make a gameplay effect container spec to be applied later, from the EffectContainerMap
 
@@ -484,6 +560,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Builds and applies an effect container by container tag using the passed-in dynamic attribute map; returns the active gameplay effect handles
+
 ---
 
 ### Function `ApplyEffectContainerSpec`
@@ -502,7 +582,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > Applies a gameplay effect container spec that was previously created
 
@@ -526,7 +606,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > Applies a gameplay effect container, by creating and then applying the spec
 
@@ -550,7 +630,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 应用额外的效果
 
@@ -572,7 +652,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取此技能的实例
 
@@ -595,7 +675,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 生成递给投射物的实例  Class->Spec
 
@@ -617,7 +697,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 动态的增加此能力的效果
 
@@ -635,7 +715,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取技能结构
 
@@ -657,7 +737,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建召唤物
 
@@ -679,7 +759,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建投射物
 
@@ -695,14 +775,14 @@
 
 | Name | Type |
 |--------|------|
-| `AbilityProjectile` | `const FAbilityProjectileStruct &` |
-| `TargetActor` | `AActor *` |
+| `AbilityProjectile` | `const FAbilityProjectileStruct&` |
+| `TargetActor` | `AActor*` |
 
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,Category="Porjectile") void SpawnProjectile(const FAbilityProjectileStruct & AbilityProjectile,AActor * TargetActor);`
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,Category="Porjectile") void SpawnProjectile(const FAbilityProjectileStruct& AbilityProjectile, AActor* TargetActor);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 生成投射物
 
@@ -720,7 +800,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 生成召唤物
 
@@ -744,7 +824,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 生成召唤物
 
@@ -767,7 +847,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过事件标签触发生成投射物
 
@@ -785,7 +865,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置动作能力完成
 
@@ -803,6 +883,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Blueprint event: triggered when the action ability is set to finished
+
 ---
 
 ### Function `AbortAction`
@@ -817,7 +901,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 中断能力
 
@@ -835,7 +919,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 检查能否打断此能力
 
@@ -853,6 +937,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Removes the work warp target
+
 ---
 
 ### Function `K2_RemoveWorkWarpTarget`
@@ -866,6 +954,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent,Category = "Action",DisplayName= "RemoveWorkWarpTarget") void K2_RemoveWorkWarpTarget();`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Blueprint event: removes the work warp target; blueprint-side callback of RemoveWorkWarpTarget
 
 ---
 
@@ -881,7 +973,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取击退时间
 
@@ -899,7 +991,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取击倒时间
 
@@ -917,7 +1009,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取击飞的时间
 
@@ -935,7 +1027,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取击飞后倒地时间
 
@@ -953,7 +1045,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取击飞的距离
 
@@ -971,7 +1063,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取击飞的高度
 
@@ -988,6 +1080,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent,DisplayName="ContinuePlayAbilityAnimation") void K2_ContinuePlayAbilityAnimation();`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Blueprint event: continue playing the ability animation
 
 ---
 
@@ -1007,7 +1103,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 存储GA数据
 

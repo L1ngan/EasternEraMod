@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Loyalty") int32 Importance = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 重要度
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Loyalty") float InitLoyalty = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 初始忠诚
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Loyalty") float LoyaltyChangeCoefficient = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 忠诚度变化系数
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Loyalty") float ForceFavorabilityChangeCoefficient = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 门派好感度变化系数
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Loyalty", meta = (ClampMin = 0.f, ClampMax = 1.f)) float InviteSuccessRate = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 邀请成功率
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Loyalty", meta = (ClampMin = 0.f, ClampMax = 1.f)) float RedeemProbability = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 赎回概率
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Loyalty") FVector2D RedeemValueRange = FVector2D::ZeroVector;` |
 
-**源码注释:**
+**说明:**
 
 > 赎回价值
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Loyalty", meta = (ClampMin = 0.f, ClampMax = 1.f)) float RecruitSuccessRate = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 招募成功率
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Execution") float AddReputation = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 增加声望
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Execution") float ReduceFavorability = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 减少好感度
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Execution") float ReduceJustice = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 减少正邪值
 

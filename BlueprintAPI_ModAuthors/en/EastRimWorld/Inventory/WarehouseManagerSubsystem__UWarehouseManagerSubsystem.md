@@ -28,7 +28,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取仓库是否已满仓。若被标记为需要更新，会先更新再返回缓存值。
 
@@ -51,7 +51,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取仓库缓存状态（空位、满仓等）。若需要更新会先更新。
 > @param WarehouseComponent
@@ -76,7 +76,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过仓库缓存判断指定物品实例还能放入多少数量（返回 0 表示无法放入或缓存无效）。
 > 仅根据缓存中的堆叠剩余空间与空余小格做近似判断，不会触发重新扫描仓库格子。
@@ -100,7 +100,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 判断指定物品数据是否可以放入指定仓库中。
 > 不判断具体可放数量，只判断占格是否足够，或仓库中是否已有同 ID 且无堆叠上限的物品堆。
@@ -119,8 +119,32 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有已注册的仓库组件（用于遍历，如按优先级找空位）
+
+---
+
+### Function `TryReserveWarehouseFromTransportPlans`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `Agent` | [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
+| `Plans` | const TArray<struct [FGOAP_Action](../GOAP/GOAP_Data__FGOAP_Action.md)>& |
+| `InCarryNum` | `int32` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool TryReserveWarehouseFromTransportPlans(AEastRimWorldAIController* Agent, const TArray<struct FGOAP_Action>& Plans, int32 InCarryNum);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 从 CurrentPlans 解析搬运目标并尝试预约仓库容量；失败时返回 false
 
 ---

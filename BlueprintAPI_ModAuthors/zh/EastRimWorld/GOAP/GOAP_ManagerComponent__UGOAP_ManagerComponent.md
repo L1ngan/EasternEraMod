@@ -19,10 +19,26 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) TMap<FName , FActionData> NormalActions;` |
 
-**源码注释:**
+**说明:**
 
 > 普通Action
 > TMap<GOAP目标配置表ID , ActionData>
+
+---
+
+### 属性 `TransBuildingOwnerData`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TMap<[FUObjectData](../ERW_CommonTypes__FUObjectData.md) , [FUObjectData](../ERW_CommonTypes__FUObjectData.md)> |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) TMap<FUObjectData , FUObjectData> TransBuildingOwnerData;` |
+
+**说明:**
+
+> 移动建筑Action的OwnerData关联数据
+> TMap<获得建筑Action的OwnerData , 移动建筑Action的OwnerData>
 
 ---
 
@@ -35,7 +51,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TMap<FName , FItemActions> ItemActions;` |
 
-**源码注释:**
+**说明:**
 
 > 物品相关的Action
 > TMap<物品相关GOAP目标 , 物品对应的Action>
@@ -51,10 +67,26 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TMap<FName , FBatchData> BatchActions;` |
 
-**源码注释:**
+**说明:**
 
 > 批量处理的Action
 > TMap<GOAP目标配置表ID , 批量处理的数据>
+
+---
+
+### 属性 `PrioriBatchActions`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TMap<FName , [FPrioriActionData](GOAP_ManagerComponent__FPrioriActionData.md)> |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FName , FPrioriActionData> PrioriBatchActions;` |
+
+**说明:**
+
+> 优先考虑的批量Action
+> TMap<GOAP目标配置表ID , 优先批量处理的数据>
 
 ---
 
@@ -67,7 +99,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FUObjectData , FPreActionData> PreActionData;` |
 
-**源码注释:**
+**说明:**
 
 > 前置Action
 > TMap<当前物体的数据 , 前置Action数据>
@@ -83,7 +115,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<int32 , FPreActionData> ConstructPreActionData;` |
 
-**源码注释:**
+**说明:**
 
 > 建造Action相关的前置Action
 > TMap<建造批次 , 前置Action数据>
@@ -94,12 +126,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<[FUObjectData](../ERW_CommonTypes__FUObjectData.md) , FOccupyObject> |
+| C++ 类型 | TMap<[FUObjectData](../ERW_CommonTypes__FUObjectData.md) , [FOccupyObject](GOAP_ManagerComponent__FOccupyObject.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FUObjectData , FOccupyObject> SuspendGrowItems;` |
 
-**源码注释:**
+**说明:**
 
 > 暂停生长的采集物
 > TMap<采集物的数据 , 占据采集物的建筑数据>
@@ -115,7 +147,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) TMap<FUObjectData , FGOAP_Actions> PracticeActions;` |
 
-**源码注释:**
+**说明:**
 
 > 修炼相关的Action
 
@@ -130,7 +162,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) TArray<FName> RemovedAfterCompleteGoals;` |
 
-**源码注释:**
+**说明:**
 
 > 完成后可以被移除的GOAP目标
 
@@ -145,6 +177,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AWorldPlace> WorldPlace;` |
 
+**说明:**
+
+> 所属的世界地点引用
+
 ---
 
 ### 属性 `OnActionAdded`
@@ -156,7 +192,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable,BlueprintReadWrite) FOnActionAdded OnActionAdded;` |
 
-**源码注释:**
+**说明:**
 
 > 当Action添加后广播
 
@@ -181,7 +217,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 读档后恢复大数量用户的Action
 
@@ -205,7 +241,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入指定物品Action
 
@@ -229,7 +265,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除指定物品Action
 
@@ -251,9 +287,77 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除指定物品所有相关的Action
+
+---
+
+### 函数 `AddTransBuildingOwnerData`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `FromOwnerData` | const [FUObjectData](../ERW_CommonTypes__FUObjectData.md)& |
+| `ToOwnerData` | const [FUObjectData](../ERW_CommonTypes__FUObjectData.md)& |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void AddTransBuildingOwnerData(const FUObjectData& FromOwnerData , const FUObjectData& ToOwnerData);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 加入移动建筑OwnerData
+
+---
+
+### 函数 `RemoveTransBuildingOwnerData`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `FromOwnerData` | const [FUObjectData](../ERW_CommonTypes__FUObjectData.md)& |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RemoveTransBuildingOwnerData(const FUObjectData& FromOwnerData);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 移除移动建筑OwnerData
+
+---
+
+### 函数 `GetTransBuildingOwnerData`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `FromOwnerData` | const [FUObjectData](../ERW_CommonTypes__FUObjectData.md)& |
+| `ToOwnerData` | [FUObjectData](../ERW_CommonTypes__FUObjectData.md)& |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void GetTransBuildingOwnerData(const FUObjectData& FromOwnerData , FUObjectData& ToOwnerData);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获得移动建筑OwnerData
 
 ---
 
@@ -273,7 +377,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 添加Action
 
@@ -295,7 +399,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除Action
 
@@ -317,7 +421,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得批次
 
@@ -339,7 +443,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入新节点到R树中
 
@@ -361,7 +465,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 从R树中删除节点
 
@@ -383,7 +487,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除暂停生长的采集物
 
@@ -406,7 +510,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新Action是否活跃
 
@@ -428,7 +532,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除已完成的Action
 
@@ -457,7 +561,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查条件是否满足
 
@@ -479,6 +583,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 判断指定的GOAP目标是否为修炼类目标
+
 ---
 
 ### 函数 `CheckSpecifiedItemAction`
@@ -497,7 +605,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查指定物品Action是否存在
 
@@ -514,14 +622,14 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Agent` | [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
-| `EquipmentType` | `EEquipmentType` |
-| `ArmorType` | `EArmorType` |
+| `EquipmentType` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
+| `ArmorType` | [EArmorType](../Struct/CommonEnum__EArmorType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool CheckHaveCharacterGetEquipment(AEastRimWorldAIController* Agent , EEquipmentType EquipmentType , EArmorType ArmorType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查是否正在获取某个部位的装备
 
@@ -538,14 +646,14 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Agent` | [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
-| `EquipmentType` | `EEquipmentType` |
-| `ArmorType` | `EArmorType` |
+| `EquipmentType` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
+| `ArmorType` | [EArmorType](../Struct/CommonEnum__EArmorType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) UInventoryItemInstance* GetIsGettingEquipment(AEastRimWorldAIController* Agent , EEquipmentType EquipmentType , EArmorType ArmorType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取正在获取的某个装备
 

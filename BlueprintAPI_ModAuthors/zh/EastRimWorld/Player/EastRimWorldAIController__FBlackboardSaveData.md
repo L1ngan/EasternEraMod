@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) bool IsDataValid { false };` |
 
-**源码注释:**
+**说明:**
 
 > 存档数据是否有效
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FVectorData MoveGoal;` |
 
-**源码注释:**
+**说明:**
 
 > 移动目标位置
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FName GoalID;` |
 
-**源码注释:**
+**说明:**
 
 > GOAP目标ID
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FName ActionID;` |
 
-**源码注释:**
+**说明:**
 
 > GOAP行为ID
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FName ItemID;` |
 
-**源码注释:**
+**说明:**
 
 > 物品ID
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 ItemNum { 0 };` |
 
-**源码注释:**
+**说明:**
 
 > 物品数量
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FTargetActorInfo TargetActorInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 目标Actor的信息
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FGuid ItemGuid = FGuid();` |
 
-**源码注释:**
+**说明:**
 
 > InventoryItemInstance的Guid
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 BranchingIndex = -1;` |
 
-**源码注释:**
+**说明:**
 
 > 战斗中的路径分支
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 SlotIndex = -1;` |
 
-**源码注释:**
+**说明:**
 
 > 对应的slotIndex
 
@@ -164,12 +164,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ECharacterBehaviorState` |
+| C++ 类型 | [ECharacterBehaviorState](../Struct/CommonEnum__ECharacterBehaviorState.md) |
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) ECharacterBehaviorState CharacterBehaviorState = ECharacterBehaviorState::None;` |
 
-**源码注释:**
+**说明:**
 
 > 角色当前状态
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FSoftObjectPath BehaviorTree;` |
 
-**源码注释:**
+**说明:**
 
 > 角色当前是用的行为树
 

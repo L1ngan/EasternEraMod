@@ -2501,7 +2501,7 @@ UScriptStruct* Z_Construct_UScriptStruct_FModAnimalActionAbility()
 // ********** End ScriptStruct FModAnimalActionAbility *********************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h__Script_CreateModPlugin_Statics
+struct Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h__Script_CreateModPlugin_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EModHitType_StaticEnum, TEXT("EModHitType"), &Z_Registration_Info_UEnum_EModHitType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4179007693U) },
@@ -2522,10 +2522,10 @@ struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_Cr
 		{ FModAnimalActionAbility::StaticStruct, Z_Construct_UScriptStruct_FModAnimalActionAbility_Statics::NewStructOps, TEXT("ModAnimalActionAbility"), &Z_Registration_Info_UScriptStruct_FModAnimalActionAbility, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModAnimalActionAbility), 1681739639U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h__Script_CreateModPlugin_3694427687(TEXT("/Script/CreateModPlugin"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h__Script_CreateModPlugin_3694427687(TEXT("/Script/CreateModPlugin"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h__Script_CreateModPlugin_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h__Script_CreateModPlugin_Statics::ScriptStructInfo),
-	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h__Script_CreateModPlugin_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h__Script_CreateModPlugin_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h__Script_CreateModPlugin_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h__Script_CreateModPlugin_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h__Script_CreateModPlugin_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_CharacterDataStruct_h__Script_CreateModPlugin_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FName , FGOAP_Users> GOAP_Users = {};` |
 
-**Source comments:**
+**Notes:**
 
 > GOAP的用户
 > TMap<GOAP Action的ID , 用户的数组>
@@ -35,7 +35,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FName , FGOAP_Action> GOAP_Actions = {};` |
 
-**Source comments:**
+**Notes:**
 
 > 已注册的GOAP Action
 > TMap<GOAP Action的ID , GOAP Action>
@@ -51,7 +51,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FName , bool> ActionForbiddenStates;` |
 
-**Source comments:**
+**Notes:**
 
 > GOAP Action的禁用状态
 > TMap<GOAP Action的ID , 是否禁用>
@@ -67,7 +67,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FName , int32> ReservedList = {};` |
 
-**Source comments:**
+**Notes:**
 
 > 预留物品列表
 > TMap<物品ID , 数量>
@@ -93,7 +93,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 注册GOAP用户
 
@@ -116,7 +116,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 注销GOAP用户
 
@@ -138,7 +138,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 注册GOAP Action
 
@@ -161,7 +161,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 注销GOAP Action
 
@@ -184,7 +184,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获得Action的用户
 
@@ -207,7 +207,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查并更新Action的状态(是否活跃)
 
@@ -230,7 +230,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查执行人数以设置Action是否活跃
 
@@ -254,7 +254,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加入预留物品的用户
 
@@ -276,7 +276,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除预留物品的用户
 
@@ -299,7 +299,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加入物品预留列表
 
@@ -322,7 +322,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除物品预留列表
 
@@ -346,7 +346,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据预留物品修正GOAP记忆值
 
@@ -368,9 +368,49 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据ActionID 获取ActionData
+
+---
+
+### Function `GetActionIDByGoalID`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintPure, Category="GOAP" |
+| Return type | `FName` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `GoalID` | `const FName&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintPure, Category = "GOAP") FName GetActionIDByGoalID(const FName& GoalID) const;`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 按 GoalID 在已注册的 GOAP_Actions 中查找对应 ActionID
+
+---
+
+### Function `GetActionIDByPracticeGoal`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintPure, Category="GOAP" |
+| Return type | `FName` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintPure, Category = "GOAP") FName GetActionIDByPracticeGoal() const;`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 按修炼 GoalID 模糊匹配（"Practice" 或 "Practice_" 前缀）查找 ActionID
 
 ---
 
@@ -386,7 +426,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 注销当前Actor所有的GOAP并且打断其他人的执行
 
@@ -404,6 +444,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Boosts the priority of this actor's GOAP actions listed in the CanImprovePriorityActions config (lowers their cost by ActionReduceCostValue).
+
 ---
 
 ### Function `CancelImproveActionPriority`
@@ -417,5 +461,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CancelImproveActionPriority();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Cancels the priority boost of this actor's boostable GOAP actions (adds back the previously subtracted action cost).
 
 ---

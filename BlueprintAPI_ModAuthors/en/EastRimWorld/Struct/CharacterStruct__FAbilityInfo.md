@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Runtime ability info: ability class, active flag, remaining cooldown and ability level
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() TSubclassOf<UGameplayAbility> Ability;` |
 
+**Notes:**
+
+> GameplayAbility class of this ability
+
 ---
 
 ### Property `bIsActive`
@@ -27,6 +33,10 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() bool bIsActive = false;` |
+
+**Notes:**
+
+> Whether the ability is currently active
 
 ---
 
@@ -39,6 +49,10 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() float CooldownTimeRemaining = 0.f;` |
 
+**Notes:**
+
+> Remaining cooldown time of the ability, in seconds
+
 ---
 
 ### Property `AbilityLevel`
@@ -49,5 +63,9 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() int32 AbilityLevel = 1;` |
+
+**Notes:**
+
+> Ability level
 
 ---

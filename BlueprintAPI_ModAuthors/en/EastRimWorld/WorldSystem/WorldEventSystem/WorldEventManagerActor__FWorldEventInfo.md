@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText EventName;` |
 
-**Source comments:**
+**Notes:**
 
 > 事件名称
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EWorldEventType` |
+| C++ type | [EWorldEventType](WorldEventManagerActor__EWorldEventType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EWorldEventType WorldEventType = EWorldEventType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 事件类型
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bNeedExplore = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否需要探索
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int RecommendLevel = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 等级推荐 0 无推荐
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int RestrictLevel = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 等级限制 0 无限制
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FTransform> EventMapPosition;` |
 
-**Source comments:**
+**Notes:**
 
 > 事件坐标
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float RebirthTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 重生时间 0 为不可重生
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float Lifespan = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 存在时间 0 无限制
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int EnterDiscipleMaxNumber = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 进入的最大人数包含掌门
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName ParameterID;` |
 
-**Source comments:**
+**Notes:**
 
 > 事件的参数
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int DifficultyLevel;` |
 
-**Source comments:**
+**Notes:**
 
 > 难度等级
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName DetailID;` |
 
-**Source comments:**
+**Notes:**
 
 > 详细信息
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int GroupID;` |
 
-**Source comments:**
+**Notes:**
 
 > 分组id 0 没有分组 代表没有限制
 
@@ -209,12 +209,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EWorldEventStateType` |
+| C++ type | [EWorldEventStateType](WorldEventManagerActor__EWorldEventStateType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EWorldEventStateType WorldEventStateType = EWorldEventStateType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 世界事件状态
 
@@ -229,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float StateTimeOfDuration = 0.0f;` |
 
-**Source comments:**
+**Notes:**
 
 > 世界事件状态持续时间
 
@@ -244,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bAfterCompletionOfClose = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 完成后关闭或重生
 
@@ -259,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bAfterEnterOfClose = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 进入后关闭或重生
 
@@ -274,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bAfterDefeatedOfClose = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 失败后关闭或重生
 
@@ -289,7 +289,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bAfterTriggerOfClose = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 触发后关闭或重生
 
@@ -304,6 +304,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FGuid EventGuid = FGuid();` |
 
+**Notes:**
+
+> Event Guid field.
+
 ---
 
 ### Property `SpawnMapPosition`
@@ -314,6 +318,10 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FTransform SpawnMapPosition = FTransform::Identity;` |
+
+**Notes:**
+
+> Spawn Map Position field.
 
 ---
 
@@ -326,7 +334,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bSpawnOrRebirthNotification = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否出现或重生时生成通知
 
@@ -341,7 +349,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bCloseNotification = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否关闭时生成通知
 
@@ -356,7 +364,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bCanPauseEvent = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否可以暂停事件
 
@@ -371,7 +379,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int PauseSlotIndex = INDEX_NONE;` |
 
-**Source comments:**
+**Notes:**
 
 > 暂停的槽位
 
@@ -386,7 +394,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bSpawnOrRebirthTrigger = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否在生成或重生时触发这个事件
 

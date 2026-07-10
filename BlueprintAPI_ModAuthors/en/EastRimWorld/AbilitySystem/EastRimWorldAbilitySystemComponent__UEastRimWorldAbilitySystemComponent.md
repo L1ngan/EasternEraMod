@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Project-specific ability system component: ability activation groups, gameplay effect/buff construction and application, cooldown operations, and runtime ability config injection
 
 ## Blueprint-exposed functions
 
@@ -25,7 +27,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 返回所属
 
@@ -48,7 +50,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 构建生成升级ge 并施加给自身
 
@@ -70,6 +72,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Generates gameplay effect spec handles to pass to projectiles, building the configured effect classes into a per-target-type spec handle map
+
 ---
 
 ### Function `MakeCounterattackDamageGameplayEffectSpec`
@@ -90,32 +96,33 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 构建反伤GE
 
 ---
 
-### Function `SetDamageExecutionMultiplierOnSpec`
+### Function `MergeMartialArtsSkillEntryDamageExecutionToSpec`
 
 | Field | Details |
 |------|------|
-| Reflection specifiers | BlueprintCallable, Category="GameplayEffect|Damage" |
-| Return type | `FGameplayEffectSpecHandle` |
+| Reflection specifiers | BlueprintCallable, Category="SkillEntry|MartialArts" |
+| Return type | `void` |
 | Parameters | see table below |
 
 | Name | Type |
 |--------|------|
-| `SpecHandle` | `FGameplayEffectSpecHandle` |
-| `Multiplier` | `float` |
+| `GameMode` | [AERW_GameModeBase](../Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
+| `LearnData` | const [FMartialArtsLearnData](../Struct/MartialArts__FMartialArtsLearnData.md)& |
+| `SpecHandle` | `UPARAM(ref) FGameplayEffectSpecHandle&` |
 
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "GameplayEffect|Damage") static FGameplayEffectSpecHandle SetDamageExecutionMultiplierOnSpec(FGameplayEffectSpecHandle SpecHandle, float Multiplier);`
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "SkillEntry|MartialArts") static void MergeMartialArtsSkillEntryDamageExecutionToSpec( AERW_GameModeBase* GameMode, const FMartialArtsLearnData& LearnData, UPARAM(ref) FGameplayEffectSpecHandle& SpecHandle);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
-> 为即将施加的伤害 GE Spec 设置单次 Execution 乘数（不影响属性捕获；仅 UEastRimWorldDamageExecution 读取）。小于 0 按 0 处理。
+> 将武学已解锁等级上的技能词条 ChangeDamageExecutionParam 合并进即将施加的伤害/治疗 GE Spec（需在 Apply 前调用）。
 
 ---
 
@@ -135,6 +142,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Blueprint callable: executes (applies) the given gameplay effect spec
+
 ---
 
 ### Function `GetCanActivateAbilityByUsageScenario`
@@ -152,6 +163,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<FGameplayAbilitySpec> GetCanActivateAbilityByUsageScenario(EAbilityUsageScenario AbilityUsageScenario);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns the list of ability specs currently activatable for the given usage scenario
 
 ---
 
@@ -172,7 +187,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 煽动者尝试通过标签激活技能
 
@@ -194,7 +209,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过Handle获得能力
 
@@ -219,7 +234,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过tag调用目标能力
 
@@ -242,7 +257,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 减少指定冷却标签的剩余时间
 
@@ -265,7 +280,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 减少多个标签的冷却
 
@@ -287,7 +302,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取指定冷却标签的剩余冷却时间
 
@@ -309,7 +324,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取指定技能标签的剩余冷却时间
 
@@ -327,9 +342,27 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新丹药增加的属性值
+
+---
+
+### Function `UpdateConsumablePermanentAttribute`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void UpdateConsumablePermanentAttribute();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 更新耗材永久属性效果增加的属性值（按角色已获得的耗材永久效果记录重新构建GE施加给自身 仿丹药做法）
 
 ---
 
@@ -350,7 +383,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 取消指定技能
 

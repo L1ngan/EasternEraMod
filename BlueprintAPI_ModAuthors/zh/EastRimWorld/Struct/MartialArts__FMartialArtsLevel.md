@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MartialArtsLevel") int Level = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 等级
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MartialArtsLevel") TArray<FName> MartialArtsEntries;` |
 
-**源码注释:**
+**说明:**
 
 > 词条属性 关联MartialArtsEntries 配置
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MartialArtsLevel") FText EntriesDescribe;` |
 
-**源码注释:**
+**说明:**
 
 > 词条属性描述
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MartialArtsLevel") FFormatText FormatEntriesDescribe;` |
 
-**源码注释:**
+**说明:**
 
 > 词条属性描述（格式化文本）
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MartialArtsLevel") FText LevelName;` |
 
-**源码注释:**
+**说明:**
 
 > 等级名字
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MartialArtsLevel") TArray<FGameplayTag> DescribeTag;` |
 
-**源码注释:**
+**说明:**
 
 > 描述中的详细标签 顺序取值
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MartialArtsLevel") TArray<float> DescribeValue;` |
 
-**源码注释:**
+**说明:**
 
 > 描述中的详细数值 顺序取值
 

@@ -14,10 +14,14 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EToolType` |
+| C++ 类型 | [EToolType](ItemStruct__EToolType.md) |
 | 反射说明符 | BlueprintReadWrite, Category="Tool" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tool") EToolType ToolType = EToolType::None;` |
+
+**说明:**
+
+> Tool Type 字段。
 
 ---
 
@@ -30,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon") float CollectLossDurability = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 采集掉耐久
 

@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FText DisplayName;` |
 
-**Source comments:**
+**Notes:**
 
 > 显示物品
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FText Desc;` |
 
-**Source comments:**
+**Notes:**
 
 > 描述（逐渐停用）
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FFormatText FormatItemDesc;` |
 
-**Source comments:**
+**Notes:**
 
 > 描述(格式化)
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TSoftObjectPtr<UTexture2D> Icon;` |
 
-**Source comments:**
+**Notes:**
 
 > 显示的图标
 
@@ -74,12 +74,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ETechUnlockItemType` |
+| C++ type | [ETechUnlockItemType](TechnologyStruct__ETechUnlockItemType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") ETechUnlockItemType UnlockType = ETechUnlockItemType::Building;` |
 
-**Source comments:**
+**Notes:**
 
 > 解锁物品类型
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TArray<FName> UnlockItemsIds;` |
 
-**Source comments:**
+**Notes:**
 
 > 解锁物品Ids
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TArray<int32> UnlockItemsNums;` |
 
-**Source comments:**
+**Notes:**
 
 > 解锁物品数量(he )
 

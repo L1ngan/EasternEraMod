@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) UBoxComponent* DoorCollision { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > 门的碰撞体
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EDoorState` |
+| C++ type | [EDoorState](../ERW_Enumerations__EDoorState.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) EDoorState DoorState { EDoorState::Closed };` |
 
-**Source comments:**
+**Notes:**
 
 > 门的开关状态
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int32 OverlappingCharacterNum { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 碰撞体碰到的角色数量
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) float AnimPosition { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 门动画播放位置
 
@@ -88,7 +88,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 读取数据
 
@@ -113,7 +113,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化碰撞体
 
@@ -135,7 +135,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新碰到的角色数量
 
@@ -151,13 +151,13 @@
 
 | Name | Type |
 |--------|------|
-| `State` | `EDoorState` |
+| `State` | [EDoorState](../ERW_Enumerations__EDoorState.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetDoorState(EDoorState State);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置门的开光状态
 
@@ -179,7 +179,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置门动画播放位置
 

@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 游戏配置组件,按类型集中管理并提供配置表(DataTable)与配置资产(DataAsset)的获取,支持Mod用的运行时副本
 
 ## 蓝图暴露函数
 
@@ -18,11 +20,15 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `GameConfigType` | `const EGameConfigType &` |
+| `GameConfigType` | const [EGameConfigType](ERW_GameConfigComponent__EGameConfigType.md) & |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) UDataTable * GetGameConfigByType(const EGameConfigType & GameConfigType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取指定配置类型对应的DataTable配置表
 
 ---
 
@@ -36,10 +42,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `GameDataAssetType` | `const EGameDataAssetType &` |
+| `GameDataAssetType` | const [EGameDataAssetType](ERW_GameConfigComponent__EGameDataAssetType.md) & |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) UDataAsset * GetGameDataAssetByType(const EGameDataAssetType & GameDataAssetType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取指定资产类型对应的DataAsset配置资产
 
 ---

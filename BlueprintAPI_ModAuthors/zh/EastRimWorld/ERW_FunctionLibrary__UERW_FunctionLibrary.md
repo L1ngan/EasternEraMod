@@ -26,7 +26,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置GameMode
 
@@ -48,7 +48,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置当前关卡
 
@@ -71,7 +71,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置组件是否影响寻路
 
@@ -87,15 +87,15 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `PartType` | `EAssemblePartType` |
+| `PartType` | [EAssemblePartType](ERW_Enumerations__EAssemblePartType.md) |
 | `StaticMeshComponent` | `UStaticMeshComponent*` |
-| `AssembleCollisions` | UPARAM(Ref) TMap<EAssemblePartType , [FStaticMeshComponents](ERW_CommonTypes__FStaticMeshComponents.md)>& |
+| `AssembleCollisions` | UPARAM(Ref) TMap<[EAssemblePartType](ERW_Enumerations__EAssemblePartType.md) , [FStaticMeshComponents](ERW_CommonTypes__FStaticMeshComponents.md)>& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) static void AddAssembleCollision(EAssemblePartType PartType , UStaticMeshComponent* StaticMeshComponent , UPARAM(Ref) TMap<EAssemblePartType , FStaticMeshComponents>& AssembleCollisions);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 记录组装建筑碰撞组件
 
@@ -118,9 +118,32 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置贴花尺寸
+
+---
+
+### 函数 `SetProgressBarFillTexture`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="UI" |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `Bar` | `UProgressBar*` |
+| `Texture` | `UTexture2D*` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "UI") static void SetProgressBarFillTexture(UProgressBar* Bar , UTexture2D* Texture);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 动态修改进度条的填充图(只换贴图,保留 DrawAs/Margin;实时刷新)
 
 ---
 
@@ -135,14 +158,14 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Size` | `const FIntVector&` |
-| `RotateOrientation` | `ERotateOrientation` |
+| `RotateOrientation` | [ERotateOrientation](ERW_Enumerations__ERotateOrientation.md) |
 | `NewSize` | `FIntVector&` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure) static void SwapSize(const FIntVector& Size , ERotateOrientation RotateOrientation , FIntVector& NewSize);`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 根据旋转朝向交换尺寸
 
@@ -164,7 +187,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > ActiveGameplayEffectHandle是否有效
 
@@ -187,7 +210,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过角色能力进行排序
 
@@ -212,7 +235,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得范围内最小最大点
 
@@ -229,14 +252,14 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Location` | `const FVector&` |
-| `GridPositionType` | `EGridPositionType` |
+| `GridPositionType` | [EGridPositionType](ERW_Enumerations__EGridPositionType.md) |
 | `GridPos` | [FGridPosition](ERW_CommonTypes__FGridPosition.md)& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure) static void GetGridPosition(const FVector& Location , EGridPositionType GridPositionType , FGridPosition& GridPos);`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 将世界位置转换成格子坐标位置
 
@@ -253,14 +276,14 @@
 | 参数名 | 类型 |
 |--------|------|
 | `GridPos` | const [FGridPosition](ERW_CommonTypes__FGridPosition.md)& |
-| `GridPositionType` | `EGridPositionType` |
+| `GridPositionType` | [EGridPositionType](ERW_Enumerations__EGridPositionType.md) |
 | `WorldPos` | `FVector&` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure) static void GetGridWorldPosition(const FGridPosition& GridPos , EGridPositionType GridPositionType , FVector& WorldPos);`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 将格子坐标位置转换成世界位置
 
@@ -280,14 +303,14 @@
 | `GridPos` | const [FGridPosition](ERW_CommonTypes__FGridPosition.md)& |
 | `GridWorldPos` | `const FVector&` |
 | `SideWorldPos` | `FVector&` |
-| `RotateOrientation` | `ERotateOrientation&` |
-| `DistributionType` | `EGridDistributionType&` |
+| `RotateOrientation` | [ERotateOrientation](ERW_Enumerations__ERotateOrientation.md)& |
+| `DistributionType` | [EGridDistributionType](ERW_Enumerations__EGridDistributionType.md)& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure) static void GetGridSideWorldPosition(const FVector& Pos , const FGridPosition& GridPos , const FVector& GridWorldPos , FVector& SideWorldPos , ERotateOrientation& RotateOrientation , EGridDistributionType& DistributionType);`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得网格边线中心的世界位置
 > 
@@ -305,19 +328,19 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintPure |
-| 返回类型 | `EGridPositionType` |
+| 返回类型 | [EGridPositionType](ERW_Enumerations__EGridPositionType.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `EnvironType` | `EEnvironType` |
+| `EnvironType` | [EEnvironType](ERW_Enumerations__EEnvironType.md) |
 | `Size` | `const FIntPoint&` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure) static EGridPositionType GetGridPositionType(EEnvironType EnvironType , const FIntPoint& Size);`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 通过环境类型获得格子位置类型
 
@@ -340,7 +363,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置样条曲线采样间隔
 
@@ -365,7 +388,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得样条曲线的信息
 
@@ -389,7 +412,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 判断点是否在多边形内
 
@@ -412,7 +435,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 判断是否有点在多边形内, 有一个点在多边形内就返还true
 
@@ -435,7 +458,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得指定位置地形高度
 
@@ -462,7 +485,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检测地面高度：先在 Location 处沿垂直方向做线检测（ECC_GameTraceChannel16），
 > 若未命中则回退为 GetLandscapeHeightAtLocation。
@@ -491,6 +514,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 节点显示名可能为「Get Ground Height At Location」。
 
+**说明:**
+
+> 检测指定位置地面高度（带WorldContext的蓝图版本）：先沿垂直方向做线检测，未命中则回退地形高度查询
+
 ---
 
 ### 函数 `CompareGOAPCondition`
@@ -510,7 +537,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 比较GOAP条件是否满足
 
@@ -533,7 +560,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 比较通用条件是否满足
 
@@ -558,7 +585,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获得从角色当前位置到目标要经过的位置
 
@@ -582,7 +609,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 从角色当前位置到目标位置是否能寻路到
 
@@ -606,7 +633,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 路径点是否穿过门
 
@@ -628,6 +655,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 按权重随机抽取Map中的一个键（权重越大越易被抽中）
+
 ---
 
 ### 函数 `RandomWeight`
@@ -648,6 +679,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 按权重从Map中随机抽取Num个不重复的键
+
 ---
 
 ### 函数 `RandomWeightPercent`
@@ -666,7 +701,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > / 按几率随机抽中
 > / @param SelectPercent （0-1百分比,大于1必中）
@@ -692,6 +727,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 按掉落配置随机掉落物品（最多MaxDropNum个），结果写入奖励Map
+
 ---
 
 ### 函数 `SortBuildingByBuildingScore`
@@ -709,6 +748,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) static TArray<ABuildingActorBase*> SortBuildingByBuildingScore(const TArray<ABuildingActorBase*> Buildings);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 按建筑评分对建筑数组排序并返回
 
 ---
 
@@ -730,7 +773,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算携带物品的数量
 
@@ -753,7 +796,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 计算GOAP目标优先级
 
@@ -775,7 +818,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 物品按照品质从高到低排序
 
@@ -799,7 +842,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据类别加入BuildName
 
@@ -810,7 +853,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `EItemType` |
+| 返回类型 | [EItemType](Struct/CommonEnum__EItemType.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -821,7 +864,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 转换类型
 
@@ -845,6 +888,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 根据半径、角度（度）和旋转计算圆周上一点的位置
+
 ---
 
 ### 函数 `RotateDirectionVector`
@@ -863,6 +910,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintPure) static FVector RotateDirectionVector(const FVector& DirectionVector, const FRotator& Rotation) { FMatrix RotationMatrix = FRotationMatrix(Rotation); return RotationMatrix.TransformVector(DirectionVector); }`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 用给定旋转量旋转方向向量并返回结果
 
 ---
 
@@ -884,7 +935,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新智能对象的位置
 
@@ -907,7 +958,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取智能对象插槽的位置
 
@@ -930,7 +981,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > FName转标签
 
@@ -953,7 +1004,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 拼接两个Key为GameplayAttribut，Value为float的TMap
 
@@ -976,7 +1027,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 注册一个智能物体到子系统
 
@@ -998,6 +1049,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) static bool UnregisterSmartObject(const UObject* Context,class USmartObjectComponent* SmartObjectComponent);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 从智能对象子系统注销一个智能对象组件
 
 ---
 
@@ -1021,6 +1076,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 按GameplayTag在指定位置的半径范围内查找智能对象
+
 ---
 
 ### 函数 `GetFacilityDefinitionData`
@@ -1041,6 +1100,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 通过智能对象插槽句柄获取设施定义数据
+
 ---
 
 ### 函数 `StopGameplayBehavior`
@@ -1060,6 +1123,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) static bool StopGameplayBehavior(const UObject* Context,AActor* Avatar, TSubclassOf<UGameplayBehavior> BehaviorToStop);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 停止Avatar身上指定类型的GameplayBehavior
 
 ---
 
@@ -1084,6 +1151,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取智能对象上距Agent最近且满足UserTag的插槽变换与句柄
+
 ---
 
 ### 函数 `GetSlotTransformAndSlotHandleByIndex`
@@ -1105,6 +1176,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) static bool GetSlotTransformAndSlotHandleByIndex(AEastRimWorldAIController* Agent ,USmartObjectComponent* SmartObjectComponent,int32 SlotIndex,FSmartObjectSlotHandle& OutSlotHandle,FTransform& OutTransform);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 按索引获取智能对象插槽的变换和句柄
 
 ---
 
@@ -1128,7 +1203,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获得能寻路到的距离最近的槽位的位置
 
@@ -1152,7 +1227,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获得槽位的Handle
 
@@ -1179,7 +1254,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > -----------游戏时间 Start-----------
 > 根据输入游戏时长获取对应游戏时间(不包含游戏开始时间)
@@ -1207,7 +1282,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据输入游戏时长获取对应游戏时间
 
@@ -1233,7 +1308,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据输入游戏时长获取对应游戏时间
 
@@ -1260,6 +1335,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 根据输入的时长获取满足一些需要计算剩余时间的需求（输出年/月/天/小时）
+
 ---
 
 ### 函数 `GetGameRemainingTimeByInputSecondDecHour`
@@ -1283,7 +1362,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据输入的时长获取满足一些需要计算剩余时间的需求
 
@@ -1308,6 +1387,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 根据输入游戏时长换算对应的游戏年数和天数
+
 ---
 
 ### 函数 `GetGameSeasonByInputSecond`
@@ -1328,7 +1411,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据输入游戏时长获取对应游戏中的季节
 
@@ -1351,6 +1434,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 计算输入游戏时长在一年中所占的百分比
+
 ---
 
 ### 函数 `ConvertToDays`
@@ -1370,7 +1457,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 秒数转换为天数
 
@@ -1393,7 +1480,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取游戏当前时间(游戏进行时间+游戏开始时间)转换成UltraDynamicSky的时间
 
@@ -1416,7 +1503,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 计算白天的对应的分钟数
 
@@ -1439,7 +1526,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 计算晚上的对应的分钟数
 
@@ -1462,7 +1549,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取黎明时间
 
@@ -1485,7 +1572,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取黄昏时间
 
@@ -1508,7 +1595,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 转换天数为文本X年X天
 
@@ -1531,7 +1618,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 转换秒数为文本X年X天
 
@@ -1554,7 +1641,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 显示倒计时的时间文本（大于年显示年，大于天显示天，大于小时仅显示小时，小雨小时显示秒）
 
@@ -1577,7 +1664,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 显示为游戏时间：XX天XX小时，小时显示小数点后1位
 
@@ -1600,7 +1687,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 显示倒计时的时间文本（显示x天x时x秒）
 
@@ -1623,7 +1710,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 使用浮点数组替换字符串中的占位符
 
@@ -1646,7 +1733,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 使用字符串数组替换字符串中的占位符
 
@@ -1669,7 +1756,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 替换字符占位符，通过占位符索引数组中的数据
 
@@ -1692,7 +1779,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 替换字符占位符，通过占位符索引数组中的数据(字符串数组)
 
@@ -1715,7 +1802,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 是否在多边型内部
 
@@ -1739,7 +1826,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 在屏幕上起点到终点构成的框到地面的坐标
 
@@ -1764,7 +1851,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取四个点构成的面的方向
 
@@ -1790,7 +1877,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 判断是否在四边形内部
 
@@ -1808,7 +1895,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检测鼠标是否在UI上
 
@@ -1833,7 +1920,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 从范围中随机n个不同的数
 
@@ -1860,7 +1947,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > --------------拍照 Start--------------------
 
@@ -1882,7 +1969,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 将png转为texture2d
 
@@ -1904,7 +1991,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置高分辨率截图遮罩开启
 
@@ -1927,6 +2014,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 裁剪角色全身照图片文件并返回Texture2D（输出目标尺寸）
+
 ---
 
 ### 函数 `CaptureCharacter`
@@ -1945,6 +2036,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) static bool CaptureCharacter(const FString& FullPath,ACharacter* Character);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 捕获角色全身像并保存到指定路径
 
 ---
 
@@ -1965,7 +2060,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取标签最下层的所有子标签
 
@@ -1987,7 +2082,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取标签的所有子标签不包含下一层
 
@@ -2009,7 +2104,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取上一级标签
 
@@ -2031,7 +2126,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 是否有子标签
 
@@ -2054,7 +2149,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取队伍中最大属性值map,传入的TeamMaxAttributes要包含一个的角色属性数据
 
@@ -2076,6 +2171,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取指定类的所有UObject实例
+
 ---
 
 ### 函数 `AppendItemSimpleDataArray`
@@ -2095,6 +2194,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 将源物品简易数据数组追加到目标数组
+
 ---
 
 ### 函数 `GetAptitudeAttributeString`
@@ -2113,7 +2216,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 1-资质
 
@@ -2135,7 +2238,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 2-悟性
 
@@ -2157,7 +2260,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 3-移动速度
 
@@ -2179,7 +2282,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 4-温度耐受(适宜温度范围)
 
@@ -2201,7 +2304,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 5-攻击属性值
 
@@ -2223,6 +2326,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 从角色存档数据获取攻击属性值的字符串描述
+
 ---
 
 ### 函数 `GetResistanceAttributeString`
@@ -2241,7 +2348,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 6-抗性属性值
 
@@ -2263,6 +2370,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 从角色存档数据获取抗性属性值的字符串描述
+
 ---
 
 ### 函数 `GetCriticalAttributeString`
@@ -2281,7 +2392,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 7-暴击属性值
 
@@ -2303,6 +2414,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 从角色存档数据获取暴击属性值的字符串描述
+
 ---
 
 ### 函数 `GetSubjoinAttackAttributeString`
@@ -2321,7 +2436,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 8-附伤
 
@@ -2343,6 +2458,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 从角色存档数据获取附伤属性值的字符串描述
+
 ---
 
 ### 函数 `Sort`
@@ -2362,7 +2481,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > Object数组排序
 
@@ -2384,6 +2503,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 将GameplayAttribute到浮点值的Map按值降序排序
+
 ---
 
 ### 函数 `GetLevelName`
@@ -2401,6 +2524,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintPure) static FName GetLevelName(const TSoftObjectPtr<UWorld> & Level);`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取关卡软引用对应的关卡名
 
 ---
 
@@ -2420,7 +2547,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取actor所在的关卡名字
 
@@ -2442,6 +2569,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 按给定概率进行一次随机判定，返回是否命中
+
 ---
 
 ### 函数 `CreateDecalComponentAtLocation`
@@ -2462,7 +2593,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 在指定位置创建一个贴花组件
 
@@ -2487,7 +2618,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 数值合法化
 
@@ -2510,9 +2641,31 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取一个StringTable中的文本
+
+---
+
+### 函数 `GetMartialClassText`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintPure, Category="UI" |
+| 返回类型 | `FText` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `InClass` | [EMartialArtsAttributeClassification](Struct/CommonEnum__EMartialArtsAttributeClassification.md) |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintPure, Category="UI") static FText GetMartialClassText(EMartialArtsAttributeClassification InClass);`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 武学分类枚举 → 中文文本(查 UI_StringTable, key=MartialClass_<枚举名>;策划在 UI_StringTable 改文案)
 
 ---
 
@@ -2532,7 +2685,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算文本的字符长度
 
@@ -2555,7 +2708,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 限制文本长度（英文和半角符号算一个长度，中文等双字节算两个长度）
 
@@ -2577,7 +2730,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 格式化替换文本
 
@@ -2601,6 +2754,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 计算药物抗性值（由基础抗药性、使用次数和单次抗性增量计算）
+
 ---
 
 ### 函数 `CalDrugResistanceBySaveData`
@@ -2618,6 +2775,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) static TMap<FName, float> CalDrugResistanceBySaveData(const FCharacterSaveData & CharacterSaveData);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 根据角色存档数据计算各药物的抗性值Map
 
 ---
 
@@ -2637,9 +2798,73 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 格式化显示秒数为MM:SS格式
+
+---
+
+### 函数 `SetWidgetAtPlayerHeadPosition`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `WorldContextObject` | `const UObject*` |
+| `Widget` | `class UUserWidget*` |
+| `OutAnchorWorldLocation` | `FVector&` |
+| `（匿名/仅类型）` | `float HeadZOffset = 100.f` |
+| `（匿名/仅类型）` | `FVector2D Alignment = FVector2D(0.5f` |
+| `（匿名/仅类型）` | `0.5f)` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject", AdvancedDisplay="HeadZOffset,Alignment")) static bool SetWidgetAtPlayerHeadPosition(const UObject* WorldContextObject, class UUserWidget* Widget, FVector& OutAnchorWorldLocation, float HeadZOffset = 100.f, FVector2D Alignment = FVector2D(0.5f, 0.5f));`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 取玩家头顶的屏幕坐标，把已创建的 Widget 一次性定位到该处（调用后不跟随，可原地播动画）。
+> @param Widget                已 CreateWidget 出来的控件（本函数内部会确保其加到 viewport）
+> @param HeadZOffset           头顶相对角色原点的高度偏移（cm）
+> @param Alignment             控件对齐锚点，(0.5,0.5)=控件中心对齐到该点
+> @param OutAnchorWorldLocation 输出：本次用到的头顶世界坐标。存下来后每帧传给 SetWidgetAtWorldPosition，
+> 即可让弹窗钉在“生成时那一点”而非跟随玩家（追尾相机下必须这样才不粘玩家）。
+> @return                      头顶在屏幕内、定位成功返回 true；在屏幕外返回 false（不改位置）
+
+---
+
+### 函数 `SetWidgetAtWorldPosition`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `WorldContextObject` | `const UObject*` |
+| `Widget` | `class UUserWidget*` |
+| `WorldLocation` | `FVector` |
+| `（匿名/仅类型）` | `FVector2D Alignment = FVector2D(0.5f` |
+| `（匿名/仅类型）` | `0.5f)` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject", AdvancedDisplay="Alignment")) static bool SetWidgetAtWorldPosition(const UObject* WorldContextObject, class UUserWidget* Widget, FVector WorldLocation, FVector2D Alignment = FVector2D(0.5f, 0.5f));`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 把已创建的 Widget 一次性定位到某个固定世界坐标对应的屏幕位置。放到 Widget 的 Tick 里每帧调用，
+> 就能让它“钉在世界那一点”，玩家走动/相机移动时不跟随玩家（在追尾相机里这才是真正的‘不跟随’）。
+> @param Widget         已加到 viewport 的控件
+> @param WorldLocation  要钉住的固定世界坐标（一般来自 SetWidgetAtPlayerHeadPosition 的输出，生成时存一次）
+> @param Alignment      控件对齐锚点，(0.5,0.5)=控件中心对齐到该点
+> @return               该点在屏幕内、定位成功返回 true；在屏幕外返回 false（不改位置）
 
 ---
 
@@ -2660,6 +2885,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 拼接角色的姓与名生成字符串名字
+
 ---
 
 ### 函数 `CastResourceToGrowScore`
@@ -2679,7 +2908,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 把物资转为NPC势力成长积分
 
@@ -2695,13 +2924,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `AttributeClassification` | `EMartialArtsAttributeClassification` |
+| `AttributeClassification` | [EMartialArtsAttributeClassification](Struct/CommonEnum__EMartialArtsAttributeClassification.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) static FGameplayAttribute GetMartialArtsExperienceBonusByMaType(EMartialArtsAttributeClassification AttributeClassification);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过武术属性分类获取对应的武术经验加成属性
 
@@ -2725,7 +2954,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 添加一个标记性的Tag
 
@@ -2749,7 +2978,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除一个标记性的Tag
 
@@ -2772,6 +3001,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 计算并规整起始与结束格子坐标（引用参数原地修改）
+
 ---
 
 ### 函数 `LimitDesignSize`
@@ -2793,7 +3026,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 限制区域拖拽大小(返回限制后大小)
 
@@ -2815,7 +3048,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取下载图片大小
 
@@ -2838,7 +3071,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据动物体型获取食槽位置
 
@@ -2866,7 +3099,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 从点A到点B，寻找目标点周围最近且可导航的点。
 > @param WorldContextObject - 一般传 GetWorld()
@@ -2895,6 +3128,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 设置指定控制台变量的值
+
 ---
 
 ### 函数 `GetGEAttributeValue`
@@ -2915,8 +3152,79 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 读取GameplayEffect中指定属性的值
+
+---
+
+### 函数 `RemoveGuidFromArray`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintPure, Category="Array|Filter" |
+| 返回类型 | `TArray<FGuid>` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `InArray` | `const TArray<FGuid>&` |
+| `ToRemove` | `FGuid` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintPure, Category="Array|Filter") static TArray<FGuid> RemoveGuidFromArray(const TArray<FGuid>& InArray, FGuid ToRemove);`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> —— 出征互斥辅助：UnrealMCP 接不了数组函数的 wildcard 定型，故用纯函数返回过滤后的新数组 ——
+> 从 GUID 数组中移除指定 GUID（返回新数组）
+
+---
+
+### 函数 `FilterCharactersExcludingGuid`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintPure, Category="Array|Filter" |
+| 返回类型 | TArray<[FCharacterSaveData](WorldSystem/WorldCharacterData__FCharacterSaveData.md)> |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `InArray` | const TArray<[FCharacterSaveData](WorldSystem/WorldCharacterData__FCharacterSaveData.md)>& |
+| `ExcludeGuid` | `FGuid` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintPure, Category="Array|Filter") static TArray<FCharacterSaveData> FilterCharactersExcludingGuid(const TArray<FCharacterSaveData>& InArray, FGuid ExcludeGuid);`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 从角色存档数组中剔除 CharacterGuid == ExcludeGuid 的项（返回新数组）
+
+---
+
+### 函数 `MakeSelectedCountText`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintPure, Category="Array|Filter" |
+| 返回类型 | `FText` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `Selected` | `const TArray<FGuid>&` |
+| `Total` | `int32` |
+| `bHasCommander` | `bool` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintPure, Category="Array|Filter") static FText MakeSelectedCountText(const TArray<FGuid>& Selected, int32 Total, bool bHasCommander);`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 生成"已选数/总数"文本（已选 = 弟子数 + 指挥官(bHasCommander 时 +1)；MCP 无法求数组长度，故用 C++）
 
 ---

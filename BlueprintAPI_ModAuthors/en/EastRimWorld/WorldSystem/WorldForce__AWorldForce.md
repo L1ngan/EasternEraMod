@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> World Force actor type.
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, BlueprintReadOnly) FGuid SGUID;` |
 
+**Notes:**
+
+> GUID.
+
 ---
 
 ### Property `ForceAimInfo`
@@ -28,24 +34,9 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly) FForceAimInfo ForceAimInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 势力宗旨
-
----
-
-### Property `ForceFavorability`
-
-| Field | Details |
-|------|------|
-| C++ type | `TMap<FGuid,float>` |
-| Reflection specifiers | BlueprintReadOnly |
-| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
-| Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly) TMap<FGuid,float> ForceFavorability;` |
-
-**Source comments:**
-
-> 势力之间的好感度
 
 ---
 
@@ -58,8 +49,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly) int32 OwnedStationNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
+> 注: 势力之间的好感度权威源是 AWorldDirector::AllForceFavorability,
+> 经 AWorldDirector::GetForceFavorabilityInfo(A,B) 读取。原本势力上的 TMap 从无写入, 已删除。
 > 拥有驻地数量
 
 ---
@@ -73,7 +66,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly) int32 OwnedCenterCityNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 拥有城镇数量
 
@@ -88,7 +81,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly) int32 OwnedResourcePointNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 拥有资源点数量
 
@@ -98,12 +91,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EForceState` |
+| C++ type | [EForceState](WorldStruct__EForceState.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly) EForceState ForceState = EForceState::Normal;` |
 
-**Source comments:**
+**Notes:**
 
 > 势力的状态
 
@@ -118,9 +111,39 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite,EditAnywhere) float ForceStateTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 状态时间
+
+---
+
+### Property `WanderingDays`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 WanderingDays = 0;` |
+
+**Notes:**
+
+> [PR-12] 流窜已持续天数（Wandering态每日+1，复活后归零）
+
+---
+
+### Property `bExtinct`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) bool bExtinct = false;` |
+
+**Notes:**
+
+> [PR-12] 势力是否已覆灭（覆灭后Actor保留，标记无效）
 
 ---
 
@@ -133,7 +156,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) float AvoidBattleTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 避战时间
 
@@ -148,7 +171,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float TotalCombat = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 战力总和
 
@@ -163,7 +186,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) float AttackColdDown = 999999.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 攻击间隔时间
 
@@ -178,7 +201,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float TotalProsperity = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 总繁荣度
 
@@ -193,7 +216,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) FName WorldForceID;` |
 
-**Source comments:**
+**Notes:**
 
 > 势力id
 
@@ -208,7 +231,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) FWorldForceInfo WorldForceInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 势力信息
 
@@ -223,7 +246,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float TotalReputation = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 总声望值
 
@@ -238,7 +261,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) FText ForceName;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前势力名称
 
@@ -253,7 +276,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) int32 ForceLevel;` |
 
-**Source comments:**
+**Notes:**
 
 > 势力等级
 
@@ -268,24 +291,9 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) int32 LevelUpPlaceInterval;` |
 
-**Source comments:**
+**Notes:**
 
 > 势力升级地点间隔
-
----
-
-### Property `ForceCharacterDataPool`
-
-| Field | Details |
-|------|------|
-| C++ type | `TArray<FName>` |
-| Reflection specifiers | BlueprintReadOnly |
-| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FName> ForceCharacterDataPool;` |
-
-**Source comments:**
-
-> 势力角色随机池
 
 ---
 
@@ -298,7 +306,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TArray<FGuid> OccupiedPlace;` |
 
-**Source comments:**
+**Notes:**
 
 > 占领过的地点
 
@@ -313,7 +321,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TArray<FName> OwnStratagemAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 拥有的战略技能
 
@@ -328,7 +336,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TArray<FName> OwnSummonRobot;` |
 
-**Source comments:**
+**Notes:**
 
 > 拥有的机关人
 
@@ -343,7 +351,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TArray<FName> OwnTower;` |
 
-**Source comments:**
+**Notes:**
 
 > 拥有的防御塔
 
@@ -358,7 +366,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TMap<FName, FPuppetModificationInfo> PuppetEquipmentData;` |
 
-**Source comments:**
+**Notes:**
 
 > 傀儡装备数据存储（傀儡ID -> 装备数据）
 
@@ -373,7 +381,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) FVector OnWorldMapLocation;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前势力在世界地图的位置
 
@@ -388,7 +396,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TArray<FCommonTaskCondition> LevelUpConditions;` |
 
-**Source comments:**
+**Notes:**
 
 > 升级条件
 
@@ -403,7 +411,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnFocreLevelChange OnFocreLevelChange;` |
 
-**Source comments:**
+**Notes:**
 
 > 升级通知
 
@@ -418,7 +426,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnRefleshFocrePeople OnRefleshFocrePeople;` |
 
-**Source comments:**
+**Notes:**
 
 > 人员被踢提示
 
@@ -433,6 +441,25 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnOwnedWorldPlaceChange OnOwnedWorldPlaceChange;` |
 
+**Notes:**
+
+> On Owned World Place Change event or callback.
+
+---
+
+### Property `OnForceMainPlaceChanged`
+
+| Field | Details |
+|------|------|
+| C++ type | `FOnForceMainPlaceChanged` |
+| Reflection specifiers | BlueprintAssignable |
+| Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnForceMainPlaceChanged OnForceMainPlaceChanged;` |
+
+**Notes:**
+
+> [PR-12] 主城变更通知（UI/剧情链挂此事件；nullptr=进入流窜）
+
 ---
 
 ### Property `MainConstructionID`
@@ -444,9 +471,9 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) FName MainConstructionID;` |
 
-**Source comments:**
+**Notes:**
 
-> 当前势力ID
+> 当前势力的主城ID
 
 ---
 
@@ -459,7 +486,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FForceLevelInfo ForceLevelInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 势力等级信息
 
@@ -474,7 +501,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame) TMap<FGuid,FCharacterSaveData> WorldCharacterData;` |
 
-**Source comments:**
+**Notes:**
 
 > 所在势力的角色信息
 
@@ -489,7 +516,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame) TMap<FGuid,FCharacterSaveData> CacheFixRemovedCharacterData;` |
 
-**Source comments:**
+**Notes:**
 
 > ----补丁 4.15 22:03 暂时保留一下修复存档被移除的数据----
 
@@ -504,7 +531,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TArray<FForceSubClassInfo> SubClassArr;` |
 
-**Source comments:**
+**Notes:**
 
 > ------------------------------------------------
 > 分堂信息(索引从1开始,0为堂主预留)
@@ -520,7 +547,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) FForceSubClassInfo LeaderSubClassInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 掌门的堂口信息（目前仅用于门规管理，其中只有堂口Index和门规有效）(仅玩家势力使用)
 
@@ -535,7 +562,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TArray<FForceMemberJobInfo> ForceMemberJob;` |
 
-**Source comments:**
+**Notes:**
 
 > 人员职位信息
 
@@ -550,7 +577,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) int32 MasterGeneration = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 第N代掌门
 
@@ -565,7 +592,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) FGuid LeaderGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 掌门GUID
 
@@ -580,7 +607,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FWorldNPCForceConfig WorldNPCForceConfig;` |
 
-**Source comments:**
+**Notes:**
 
 > NCP配置信息
 
@@ -595,7 +622,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,SaveGame) TArray<FName>UnlockForceApparel;` |
 
-**Source comments:**
+**Notes:**
 
 > 已经解锁的门派服饰
 
@@ -610,7 +637,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame) float ForceMoney=0;` |
 
-**Source comments:**
+**Notes:**
 
 > 势力拥有的金钱
 
@@ -625,7 +652,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame) TMap<FName , FFGuidArr> ActivePurpose;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前激活的宗旨ID
 
@@ -640,7 +667,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FGuid> BefriendedForceGuids;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家外交：已结交的门派GUID列表
 
@@ -653,15 +680,108 @@
 | C++ type | `float` |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float LastBreakOffDiplomacyTime = 0.f;` |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float LastBreakOffDiplomacyTime = -1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家外交：上次断交操作的游戏时间（用于冷却判定，所有门派共享）
 
 ---
 
+### Property `LastRequireTaskTime`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float LastRequireTaskTime = -1.f;` |
+
+**Notes:**
+
+> 玩家外交：上次请求任务操作的游戏时间（用于冷却判定，所有门派共享）
+
+---
+
+### Property `LastRequireHelpTime`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float LastRequireHelpTime = -1.f;` |
+
+**Notes:**
+
+> 玩家外交：上次请求援助操作的游戏时间（用于冷却判定，所有门派共享）
+
+---
+
+### Property `OnPlayerBefriendWithOther`
+
+| Field | Details |
+|------|------|
+| C++ type | `FOnPlayerBefriendWithOther` |
+| Reflection specifiers | BlueprintAssignable |
+| Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnPlayerBefriendWithOther OnPlayerBefriendWithOther;` |
+
+**Notes:**
+
+> On Player Befriend With Other event or callback.
+
+---
+
+### Property `OnPlayerBreakOffWithOther`
+
+| Field | Details |
+|------|------|
+| C++ type | `FOnPlayerBreakOffWithOther` |
+| Reflection specifiers | BlueprintAssignable |
+| Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnPlayerBreakOffWithOther OnPlayerBreakOffWithOther ;` |
+
+**Notes:**
+
+> On Player Break Off With Other event or callback.
+
+---
+
+### Property `ForceRelationLedgers`
+
+| Field | Details |
+|------|------|
+| C++ type | TMap<FName, [FRelationLedger](RelationLedgerTypes__FRelationLedger.md)> |
+| Reflection specifiers | BlueprintReadWrite, Category="RelationLedger" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, SaveGame, EditAnywhere, Category = "RelationLedger") TMap<FName, FRelationLedger> ForceRelationLedgers;` |
+
+**Notes:**
+
+> Agent 工作流 PR-003: 势力关系账本 (跟其他势力的恩仇), Key: 另一势力 ID
+
+---
+
 ## Blueprint-exposed functions
+
+### Function `AITimeToAttackOtherWorldPlace`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void AITimeToAttackOtherWorldPlace();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> AI势力攻击其他地点
+
+---
 
 ### Function `CheckCanAttack`
 
@@ -675,31 +795,9 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否可以攻击
-
----
-
-### Function `PreAttackWorldPlace`
-
-| Field | Details |
-|------|------|
-| Reflection specifiers | BlueprintCallable |
-| Return type | `void` |
-| Parameters | see table below |
-
-| Name | Type |
-|--------|------|
-| `PlaceGuid` | `const FGuid &` |
-
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void PreAttackWorldPlace(const FGuid & PlaceGuid);`
-
-**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
-
-**Source comments:**
-
-> 战前准备
 
 ---
 
@@ -711,11 +809,11 @@
 | Return type | `float` |
 | Parameters | (none) |
 
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) float CalculateTotalDefense();`
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) float CalculateTotalDefense() const;`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算城防
 
@@ -737,7 +835,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 攻击地点成功(战斗结束后调用)
 
@@ -759,7 +857,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 攻击地点失败(战斗结束后调用)
 
@@ -781,7 +879,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 地点距离我的城市最短距离
 
@@ -797,13 +895,13 @@
 
 | Name | Type |
 |--------|------|
-| `TargetPoint` | `const FVector &` |
+| `TargetPoint` | `const FVector2D&` |
 
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) float PointWithSelfDistance(const FVector & TargetPoint);`
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) float PointWithSelfDistance(const FVector2D& TargetPoint);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 我距离点最近的城市的距离
 
@@ -821,7 +919,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算总战力
 
@@ -839,7 +937,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算总繁荣
 
@@ -857,7 +955,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查能否升级势力
 
@@ -875,7 +973,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 升级势力(先调用CheckCanLevelUpForce检查升级条件)
 
@@ -892,14 +990,14 @@
 | Name | Type |
 |--------|------|
 | `MemberId` | `const FGuid&` |
-| `JobType` | `const EForceJobType` |
+| `JobType` | const [EForceJobType](WorldStruct__EForceJobType.md) |
 | `SubClassIndex` | `const int32` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetMemberJob(const FGuid& MemberId, const EForceJobType JobType, const int32 SubClassIndex);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置成员的职位
 
@@ -921,7 +1019,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询分堂的成员的职位
 
@@ -937,13 +1035,13 @@
 
 | Name | Type |
 |--------|------|
-| `JobType` | `EForceJobType` |
+| `JobType` | [EForceJobType](WorldStruct__EForceJobType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<FForceMemberJobInfo> GetMembersJobByType(EForceJobType JobType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询某个职位的成员
 
@@ -966,6 +1064,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Find Member Job Info field.
+
 ---
 
 ### Function `CheckMemberIsInnerSect`
@@ -984,7 +1086,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查某人是否内门
 
@@ -1006,7 +1108,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查某人是否掌门
 
@@ -1024,7 +1126,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查能否招募到主城
 
@@ -1048,7 +1150,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新分堂设置
 
@@ -1070,7 +1172,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取分堂信息
 
@@ -1094,7 +1196,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置分堂所有成员使用统一的服装
 
@@ -1116,7 +1218,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 给角色应用他所在该分堂的服饰（如果分堂为设置使用统一服装，就还是使用）
 
@@ -1127,7 +1229,7 @@
 | Field | Details |
 |------|------|
 | Reflection specifiers | BlueprintCallable |
-| Return type | TMap<EArmorType,[FNameIDArray](../Struct/CommonStruct__FNameIDArray.md)> |
+| Return type | TMap<[EArmorType](../Struct/CommonEnum__EArmorType.md),[FNameIDArray](../Struct/CommonStruct__FNameIDArray.md)> |
 | Parameters | see table below |
 
 | Name | Type |
@@ -1138,7 +1240,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询分堂可以使用的服饰列表
 
@@ -1160,7 +1262,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询势力服装对应的解锁势力等级
 
@@ -1171,7 +1273,7 @@
 | Field | Details |
 |------|------|
 | Reflection specifiers | BlueprintCallable |
-| Return type | `TMap<EArmorType,FName>` |
+| Return type | TMap<[EArmorType](../Struct/CommonEnum__EArmorType.md),FName> |
 | Parameters | see table below |
 
 | Name | Type |
@@ -1183,7 +1285,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取分堂服饰数据
 
@@ -1204,6 +1306,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TMap<bool,FCustomApparelsSkin> GetSubClassApparelData2(const int32 SubClassIndex);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Gets or queries Get Sub Class Apparel Data 2.
 
 ---
 
@@ -1226,7 +1332,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置物品使用状态
 
@@ -1251,7 +1357,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置行为可执行状态
 
@@ -1276,7 +1382,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置货柜可使用状态
 
@@ -1294,7 +1400,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化门规管理状态
 
@@ -1318,7 +1424,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取行为可执行状态
 
@@ -1342,7 +1448,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取可购买的货柜
 
@@ -1365,7 +1471,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获得可用Tag数量
 
@@ -1382,14 +1488,14 @@
 | Name | Type |
 |--------|------|
 | `SubClassIndex` | `const int32` |
-| `NewForceApparels` | `TMap<EArmorType,FName>` |
+| `NewForceApparels` | TMap<[EArmorType](../Struct/CommonEnum__EArmorType.md),FName> |
 | `CharSex` | `bool` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool SaveSubClassApparel(const int32 SubClassIndex,TMap<EArmorType,FName> NewForceApparels,bool CharSex);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 保存势力服饰配置
 
@@ -1411,7 +1517,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 增加势力声望
 
@@ -1433,7 +1539,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 激活门派宗旨
 
@@ -1455,7 +1561,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 取消门派宗旨
 
@@ -1472,11 +1578,15 @@
 | Name | Type |
 |--------|------|
 | `PlaceGuid` | `const FGuid &` |
-| `WorldPlaceType` | `const EWorldPlaceType&` |
+| `WorldPlaceType` | const [EWorldPlaceType](../Struct/CommonEnum__EWorldPlaceType.md)& |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure) bool CheckCanOccupyPlace(const FGuid & PlaceGuid,const EWorldPlaceType& WorldPlaceType) const;`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Gets or queries Check Can Occupy Place.
 
 ---
 
@@ -1492,7 +1602,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取拥有的所有地点GUID
 
@@ -1514,7 +1624,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 放弃城市
 
@@ -1536,7 +1646,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查找角色信息
 
@@ -1559,6 +1669,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets or queries Get Character Data By Guid Ptr.
+
 ---
 
 ### Function `FindCharacterData`
@@ -1577,7 +1691,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取角色信息
 
@@ -1594,6 +1708,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) const TMap<FGuid,FCharacterSaveData>& GetAllForceCharacterData();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Gets or queries Get All Force Character Data.
 
 ---
 
@@ -1613,7 +1731,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取角色信息的引用
 
@@ -1635,7 +1753,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 将弟子从势力中踢出
 
@@ -1657,7 +1775,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新世界中角色信息
 
@@ -1680,6 +1798,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Set Character In Place operation.
+
 ---
 
 ### Function `GetStationCeiling`
@@ -1694,7 +1816,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取驻地上限
 
@@ -1712,7 +1834,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取资源点上限
 
@@ -1730,7 +1852,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取城镇上限
 
@@ -1752,7 +1874,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 尝试签署协议
 
@@ -1770,7 +1892,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 是否是正派
 
@@ -1787,6 +1909,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure) FORCEINLINE float GetJusticeForce() const {return ForceJusticeValue;}`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Gets or queries Get Justice Force.
 
 ---
 
@@ -1806,7 +1932,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 增加正邪值
 
@@ -1828,7 +1954,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 增加NPC势力成长积分
 
@@ -1846,7 +1972,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取当前成长积分
 
@@ -1868,7 +1994,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否占领过这个地点
 
@@ -1892,7 +2018,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加入势力
 
@@ -1914,7 +2040,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 离开势力
 
@@ -1932,7 +2058,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取势力主城
 
@@ -1954,7 +2080,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取战斗可招募的数量
 
@@ -1972,7 +2098,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有可用的小兵
 
@@ -1990,7 +2116,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有可使用的战略技能
 
@@ -2008,7 +2134,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有可使用的防御塔
 
@@ -2026,7 +2152,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有可上阵的傀儡
 
@@ -2044,7 +2170,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取战斗中的buff组
 
@@ -2061,14 +2187,14 @@
 | Name | Type |
 |--------|------|
 | `PuppetID` | `const FName&` |
-| `EquipmentType` | `EEquipmentType` |
-| `(unnamed / type only)` | `EArmorType ArmorType = EArmorType::None` |
+| `EquipmentType` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
+| `(unnamed / type only)` | [EArmorType](../Struct/CommonEnum__EArmorType.md) ArmorType = [EArmorType](../Struct/CommonEnum__EArmorType.md)::None |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool CanPuppetEquipEquipmentType(const FName& PuppetID, EEquipmentType EquipmentType, EArmorType ArmorType = EArmorType::None);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查傀儡是否可以装备指定类型的装备
 
@@ -2085,14 +2211,14 @@
 | Name | Type |
 |--------|------|
 | `PuppetID` | `const FName&` |
-| `EquipmentType` | `EEquipmentType` |
-| `(unnamed / type only)` | `EArmorType ArmorType = EArmorType::None` |
+| `EquipmentType` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
+| `(unnamed / type only)` | [EArmorType](../Struct/CommonEnum__EArmorType.md) ArmorType = [EArmorType](../Struct/CommonEnum__EArmorType.md)::None |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FUseItemSaveData GetPuppetEquippedItem(const FName& PuppetID, EEquipmentType EquipmentType, EArmorType ArmorType = EArmorType::None);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取傀儡的装备数据（使用现有装备系统）
 
@@ -2109,15 +2235,15 @@
 | Name | Type |
 |--------|------|
 | `PuppetID` | `const FName&` |
-| `EquipmentType` | `EEquipmentType` |
+| `EquipmentType` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
 | `ItemData` | const [FUseItemSaveData](../Struct/ItemStruct__FUseItemSaveData.md)& |
-| `(unnamed / type only)` | `EArmorType ArmorType = EArmorType::None` |
+| `(unnamed / type only)` | [EArmorType](../Struct/CommonEnum__EArmorType.md) ArmorType = [EArmorType](../Struct/CommonEnum__EArmorType.md)::None |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool SetPuppetEquippedItem(const FName& PuppetID, EEquipmentType EquipmentType, const FUseItemSaveData& ItemData, EArmorType ArmorType = EArmorType::None);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置傀儡的装备数据
 
@@ -2134,14 +2260,14 @@
 | Name | Type |
 |--------|------|
 | `PuppetID` | `const FName&` |
-| `EquipmentType` | `EEquipmentType` |
-| `(unnamed / type only)` | `EArmorType ArmorType = EArmorType::None` |
+| `EquipmentType` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
+| `(unnamed / type only)` | [EArmorType](../Struct/CommonEnum__EArmorType.md) ArmorType = [EArmorType](../Struct/CommonEnum__EArmorType.md)::None |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool RemovePuppetEquippedItem(const FName& PuppetID, EEquipmentType EquipmentType, EArmorType ArmorType = EArmorType::None);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除傀儡的装备数据
 
@@ -2158,14 +2284,14 @@
 | Name | Type |
 |--------|------|
 | `PuppetID` | `const FName&` |
-| `EquipmentType` | `EEquipmentType` |
-| `(unnamed / type only)` | `EArmorType ArmorType = EArmorType::None` |
+| `EquipmentType` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
+| `(unnamed / type only)` | [EArmorType](../Struct/CommonEnum__EArmorType.md) ArmorType = [EArmorType](../Struct/CommonEnum__EArmorType.md)::None |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool IsPuppetEquippedWithItem(const FName& PuppetID, EEquipmentType EquipmentType, EArmorType ArmorType = EArmorType::None);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查傀儡是否已装备指定类型的装备
 
@@ -2187,7 +2313,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取傀儡的完整装备信息
 
@@ -2210,7 +2336,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 建筑物添加傀儡
 
@@ -2233,7 +2359,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 建筑物移除傀儡
 
@@ -2255,7 +2381,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 增加或减少势力金钱
 
@@ -2273,9 +2399,157 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 年份更新
+
+---
+
+### Function `CanLaunchActiveAttack`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `bool` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool CanLaunchActiveAttack();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 是否允许主动发起进攻（驻地有效驻防≥1即可，NPC/玩家统一口径）供UI灰显及AI决策使用
+
+---
+
+### Function `CanPlayerLaunchActiveAttack`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="WorldForce|PlayerAttack" |
+| Return type | `bool` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "WorldForce|PlayerAttack") bool CanPlayerLaunchActiveAttack();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> [玩家占旗-C1] 玩家是否可发起主动攻城（薄封装 CanLaunchActiveAttack）。
+> 供 W_BattlePrepare 的 Button_Start 灰显 / OpenPlaceAttack 入口拦截。
+
+---
+
+### Function `GetPlayerEligibleAttackPool`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="WorldForce|PlayerAttack" |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `OutPool` | TArray<[FCharacterSaveData](WorldCharacterData__FCharacterSaveData.md)>& |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "WorldForce|PlayerAttack") void GetPlayerEligibleAttackPool(TArray<FCharacterSaveData>& OutPool);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> [玩家占旗-C2] 返回玩家主城 D9 可选出征弟子池（复用 BuildEligiblePool 的排除：
+> 非物理驻留主城/游荡流亡/闭关突破）。供 W_BattlePrepare 选人列表作数据源。
+> 返回值数组拷贝(FCharacterSaveData 为 BlueprintType)，BP 直接绑列表。
+
+---
+
+### Function `RequestPlayerAttack`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="WorldForce|PlayerAttack" |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `TargetPlaceGuid` | `const FGuid&` |
+| `PlayerSelected` | const [FBattleTeamInfo](WorldBattleSystem/WorldBattleStruct__FBattleTeamInfo.md)& |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "WorldForce|PlayerAttack") bool RequestPlayerAttack(const FGuid& TargetPlaceGuid, const FBattleTeamInfo& PlayerSelected);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> [玩家占旗-C3] 玩家主动攻城入口：用玩家手选弟子组队，走占旗实战分流(RequestAttack 玩家相关路径)。
+> 内部先 CanLaunchActiveAttack 拦截；PlayerSelected.Characters 应来自 GetPlayerEligibleAttackPool。
+> 返回是否成功发起(拦截/目标无效则 false)。供 W_BattlePrepare 的 Button_Start 调用。
+
+---
+
+### Function `EnterWandering`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `nullptr` | class [AWorldPlace](WorldPlace__AWorldPlace.md)* LastLostPlace = |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void EnterWandering(class AWorldPlace* LastLostPlace = nullptr);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> [PR-12] 进入流窜态：状态机切换 + 委托广播 + [流浪势力]用最后失去的据点作起点在地图上创建流浪队伍条目
+
+---
+
+### Function `ReviveFromWandering`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `NewBase` | class [AWorldPlace](WorldPlace__AWorldPlace.md)* |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void ReviveFromWandering(class AWorldPlace* NewBase);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> [PR-12] 从流窜态复活：设新主城 + 状态还原
+
+---
+
+### Function `HasWanderingMembers`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure |
+| Return type | `bool` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure) bool HasWanderingMembers() const;`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> [流窜求存] 本势力是否有处于世界地图流浪态(OnWorldMapWander)的弟子——供攻城胜利时"无城/有流浪弟子则强制占领"判断
 
 ---
 
@@ -2291,7 +2565,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 势力添加发放例银定时器
 
@@ -2309,7 +2583,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否开始发放例银
 
@@ -2331,7 +2605,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 增加从珍宝阁获得的声望
 
@@ -2349,7 +2623,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 重置每年从珍宝阁获得的声望
 
@@ -2359,7 +2633,7 @@
 
 | Field | Details |
 |------|------|
-| Reflection specifiers | BlueprintCallable |
+| Reflection specifiers | BlueprintCallable, BlueprintPure |
 | Return type | `bool` |
 | Parameters | see table below |
 
@@ -2367,11 +2641,11 @@
 |--------|------|
 | `TargetForceGuid` | `const FGuid&` |
 
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool CheckCanBefriendForce(const FGuid& TargetForceGuid) const;`
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure) bool CheckCanBefriendForce(const FGuid& TargetForceGuid) const;`
 
-**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 结交其他门派：检查是否可结交（数量限制、金钱、目标关系等）
 
@@ -2393,7 +2667,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 结交其他门派：执行结交，成功后增加好感度并扣除金钱
 
@@ -2403,7 +2677,7 @@
 
 | Field | Details |
 |------|------|
-| Reflection specifiers | BlueprintCallable |
+| Reflection specifiers | BlueprintCallable, BlueprintPure |
 | Return type | `bool` |
 | Parameters | see table below |
 
@@ -2411,11 +2685,11 @@
 |--------|------|
 | `TargetForceGuid` | `const FGuid&` |
 
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool CheckCanBreakOffForce(const FGuid& TargetForceGuid) const;`
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure) bool CheckCanBreakOffForce(const FGuid& TargetForceGuid) const;`
 
-**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 断交：检查是否可断交（冷却时间、当前是否已结交等）
 
@@ -2437,7 +2711,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 断交：执行断交，扣除好感度
 
@@ -2455,7 +2729,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取当前结交的门派数量
 
@@ -2477,8 +2751,140 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查是否已与某门派结交
+
+---
+
+### Function `TriggerRequireTaskDialogue`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `TargetForce` | [AWorldForce](WorldForce__AWorldForce.md)* |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void TriggerRequireTaskDialogue(AWorldForce* TargetForce);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 发起向其他门派请求任务的对话
+
+---
+
+### Function `TriggerRequireHelpDialogue`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `TargetForce` | [AWorldForce](WorldForce__AWorldForce.md)* |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void TriggerRequireHelpDialogue(AWorldForce* TargetForce);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 发起向其他门派请求援助的对话
+
+---
+
+### Function `CheckCanRequireTask`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `TargetForce` | [AWorldForce](WorldForce__AWorldForce.md)* |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure) bool CheckCanRequireTask(AWorldForce* TargetForce);`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Gets or queries Check Can Require Task.
+
+---
+
+### Function `CheckCanRequireHelp`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `TargetForce` | [AWorldForce](WorldForce__AWorldForce.md)* |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure) bool CheckCanRequireHelp(AWorldForce* TargetForce);`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Gets or queries Check Can Require Help.
+
+---
+
+### Function `TriggerGivePresentsDialogue`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `TargetForce` | [AWorldForce](WorldForce__AWorldForce.md)* |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void TriggerGivePresentsDialogue(AWorldForce* TargetForce);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 发起向其他门派上供的对话
+
+---
+
+### Function `TriggerTauntDialogue`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `TargetForce` | [AWorldForce](WorldForce__AWorldForce.md)* |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void TriggerTauntDialogue(AWorldForce* TargetForce);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 发起嘲讽其他门派的对话
 
 ---

@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryEffectInstance") FName ID;` |
 
-**源码注释:**
+**说明:**
 
 > ID（伤势配置的ID,和InjuryConfig里的ID相同）
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryEffectInstance") FGuid InjuryID;` |
 
-**源码注释:**
+**说明:**
 
 > 伤势ID（唯一值）
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryEffectInstance") FName OrganID;` |
 
-**源码注释:**
+**说明:**
 
 > 部位ID
 
@@ -59,12 +59,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EBodyOrganType` |
+| C++ 类型 | [EBodyOrganType](../ERW_CommonTypes__EBodyOrganType.md) |
 | 反射说明符 | BlueprintReadWrite, Category="FInjuryEffectInstance" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryEffectInstance") EBodyOrganType OrganType = EBodyOrganType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 部位类型
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryEffectInstance") float RestHurtValue = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 当前剩余损伤程度（减小到0就治愈了）
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryEffectInstance") float TreatValue = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 当前治疗值(如果>0则正在治疗)
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryEffectInstance") float TreatRemainTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 剩余治疗时间
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryEffectInstance") FInjuryEffectConfig InjuryConfig;` |
 
-**源码注释:**
+**说明:**
 
 > 伤势配置
 

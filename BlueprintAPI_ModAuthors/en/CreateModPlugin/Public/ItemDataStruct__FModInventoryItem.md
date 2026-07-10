@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Item") FName RobotID;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品为激活机关人相关时，对应创建的机关人ID
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Item") bool bSaveDrugEffect = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否记录角色对该药品使用过的数量（和耐药性有关）
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Item") float DrugResistance = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 耐药性
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Item") TMap<FGameplayAttribute,float> AddAttribute;` |
 
-**Source comments:**
+**Notes:**
 
 > 增加属性
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Item") float FuelConversionRatio = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 可作为燃料时的转化比
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Item") TArray<FName> AddBuffByID;` |
 
-**Source comments:**
+**Notes:**
 
 > 使用这个物品后会添加的buff
 
@@ -104,12 +104,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EModItemType` |
+| C++ type | [EModItemType](ItemDataStruct__EModItemType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Item" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Item") EModItemType ItemType = EModItemType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品类型用于筛选和游戏中的互动
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Item") FText UseDescribte;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品使用效果描述
 
@@ -134,12 +134,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EModFoodType` |
+| C++ type | [EModFoodType](ItemDataStruct__EModFoodType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Item" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Item", meta=( editcondition="ItemType == EModItemType::Food" )) EModFoodType FoodType = EModFoodType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 食物类型
 

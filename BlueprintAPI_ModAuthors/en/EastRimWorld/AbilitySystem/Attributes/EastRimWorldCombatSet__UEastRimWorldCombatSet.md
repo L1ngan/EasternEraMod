@@ -21,7 +21,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MinAttack;` |
 
-**Source comments:**
+**Notes:**
 
 > 最小攻击
 
@@ -36,7 +36,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MaxAttack;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大攻击
 
@@ -51,7 +51,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CharacterAttackFrequency;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色攻击频率
 
@@ -66,7 +66,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData WeaponAttackFrequency;` |
 
-**Source comments:**
+**Notes:**
 
 > 武器攻击频率
 
@@ -81,7 +81,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AttackRange;` |
 
-**Source comments:**
+**Notes:**
 
 > 攻击射程
 
@@ -96,7 +96,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AttackAccuracy;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色攻击命中
 
@@ -111,7 +111,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PierceIncrease;` |
 
-**Source comments:**
+**Notes:**
 
 > 穿刺增幅
 
@@ -126,7 +126,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SlashIncrease;` |
 
-**Source comments:**
+**Notes:**
 
 > 切割增幅
 
@@ -141,7 +141,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BluntIncrease;` |
 
-**Source comments:**
+**Notes:**
 
 > 钝器增幅
 
@@ -156,7 +156,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PoisonIncrease;` |
 
-**Source comments:**
+**Notes:**
 
 > 毒气增幅
 
@@ -171,7 +171,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TrueQiIncrease;` |
 
-**Source comments:**
+**Notes:**
 
 > 真气增幅
 
@@ -186,7 +186,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PierceCritical;` |
 
-**Source comments:**
+**Notes:**
 
 > 穿刺暴击
 
@@ -201,7 +201,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SlashCritical;` |
 
-**Source comments:**
+**Notes:**
 
 > 切割暴击
 
@@ -216,7 +216,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BluntCritical;` |
 
-**Source comments:**
+**Notes:**
 
 > 钝器暴击
 
@@ -231,7 +231,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SubjoinPoisonAttack;` |
 
-**Source comments:**
+**Notes:**
 
 > 附加毒气攻击力
 
@@ -246,7 +246,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SubjoinTrueQiAttack;` |
 
-**Source comments:**
+**Notes:**
 
 > 附加真气攻击力
 
@@ -261,7 +261,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DamageShieldEnhanceDamage;` |
 
-**Source comments:**
+**Notes:**
 
 > 罡气增伤 对方有罡气 我方伤害增强
 
@@ -276,7 +276,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PierceResistance;` |
 
-**Source comments:**
+**Notes:**
 
 > 穿刺抗性
 
@@ -291,7 +291,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SlashResistance;` |
 
-**Source comments:**
+**Notes:**
 
 > 切割抗性
 
@@ -306,7 +306,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BluntResistance;` |
 
-**Source comments:**
+**Notes:**
 
 > 钝器抗性
 
@@ -321,7 +321,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PoisonResistance;` |
 
-**Source comments:**
+**Notes:**
 
 > 毒气抗性
 
@@ -336,7 +336,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TrueQiResistance;` |
 
-**Source comments:**
+**Notes:**
 
 > 真气抗性
 
@@ -351,7 +351,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Recharging;` |
 
-**Source comments:**
+**Notes:**
 
 > 回气
 
@@ -366,7 +366,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData InternalStrength;` |
 
-**Source comments:**
+**Notes:**
 
 > 内力
 
@@ -381,7 +381,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData KnockBack;` |
 
-**Source comments:**
+**Notes:**
 
 > 硬直点数
 > UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true))
@@ -399,7 +399,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData KnockDown;` |
 
-**Source comments:**
+**Notes:**
 
 > 倒地点数
 
@@ -414,7 +414,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData KnockUp;` |
 
-**Source comments:**
+**Notes:**
 
 > 击飞点数
 
@@ -429,7 +429,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Dodge;` |
 
-**Source comments:**
+**Notes:**
 
 > 闪避
 
@@ -444,7 +444,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData KnockBackResistance;` |
 
-**Source comments:**
+**Notes:**
 
 > 硬直抗性
 > UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true))
@@ -462,7 +462,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData KnockDownResistance;` |
 
-**Source comments:**
+**Notes:**
 
 > 倒地抗性
 
@@ -477,7 +477,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData KnockUpResistance;` |
 
-**Source comments:**
+**Notes:**
 
 > 击飞抗性
 
@@ -492,9 +492,9 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CriticalStrikeMinValue;` |
 
-**Source comments:**
+**Notes:**
 
-> 暴击影响数值最小值
+> 暴击影响数值最小值 废弃
 
 ---
 
@@ -507,9 +507,9 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CriticalStrikeMaxValue;` |
 
-**Source comments:**
+**Notes:**
 
-> 暴击影响数值最大值
+> 暴击影响数值最大值 废弃
 
 ---
 
@@ -522,7 +522,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DamageType;` |
 
-**Source comments:**
+**Notes:**
 
 > 伤害类型
 
@@ -537,7 +537,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ResistanceSupplement;` |
 
-**Source comments:**
+**Notes:**
 
 > 伤害计算时抗性补正
 
@@ -552,7 +552,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AttackIntensity;` |
 
-**Source comments:**
+**Notes:**
 
 > 攻击强度点数
 
@@ -567,7 +567,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NeiGongEffect;` |
 
-**Source comments:**
+**Notes:**
 
 > 内功效果
 
@@ -582,7 +582,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData QingGongEffect;` |
 
-**Source comments:**
+**Notes:**
 
 > 轻功效果
 
@@ -597,7 +597,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData YingGongEffect;` |
 
-**Source comments:**
+**Notes:**
 
 > 硬功效果
 
@@ -612,7 +612,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NeiJinEffect;` |
 
-**Source comments:**
+**Notes:**
 
 > 内劲效果
 
@@ -627,7 +627,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData YuanChenEffect;` |
 
-**Source comments:**
+**Notes:**
 
 > 远程效果
 
@@ -642,7 +642,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData JinZhanEffect;` |
 
-**Source comments:**
+**Notes:**
 
 > 近战效果
 
@@ -657,7 +657,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BuildingDamage;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑物伤害
 
@@ -672,7 +672,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PierceFixedAttack;` |
 
-**Source comments:**
+**Notes:**
 
 > 穿刺增加的固定攻击力
 
@@ -687,7 +687,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SlashFixedAttack;` |
 
-**Source comments:**
+**Notes:**
 
 > 切割增加的固定攻击力
 
@@ -702,7 +702,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BluntFixedAttack;` |
 
-**Source comments:**
+**Notes:**
 
 > 钝器增加的固定攻击力
 
@@ -717,7 +717,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PoisonFixedAttack;` |
 
-**Source comments:**
+**Notes:**
 
 > 毒气增加的固定攻击力
 
@@ -732,7 +732,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TrueQiFixedAttack;` |
 
-**Source comments:**
+**Notes:**
 
 > 真气增加的固定攻击力
 
@@ -747,7 +747,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CriticalIncreasedInjury;` |
 
-**Source comments:**
+**Notes:**
 
 > 增加的暴击伤害百分比
 
@@ -762,7 +762,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData FinalDamageIncrease;` |
 
-**Source comments:**
+**Notes:**
 
 > 最终伤害增幅
 
@@ -777,7 +777,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Defense;` |
 
-**Source comments:**
+**Notes:**
 
 > 防御
 
@@ -792,7 +792,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DefenseSupplement;` |
 
-**Source comments:**
+**Notes:**
 
 > 防御修正
 
@@ -807,7 +807,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BaseCritical;` |
 
-**Source comments:**
+**Notes:**
 
 > 基础暴击
 
@@ -822,8 +822,68 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BaseCriticalResistance;` |
 
-**Source comments:**
+**Notes:**
 
 > 基础暴击抵抗
+
+---
+
+### Property `IgnoreDefense`
+
+| Field | Details |
+|------|------|
+| C++ type | `FGameplayAttributeData` |
+| Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Combat" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData IgnoreDefense;` |
+
+**Notes:**
+
+> 无视防御
+
+---
+
+### Property `RemoteIncrease`
+
+| Field | Details |
+|------|------|
+| C++ type | `FGameplayAttributeData` |
+| Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Combat" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RemoteIncrease;` |
+
+**Notes:**
+
+> 远程增幅（独立，不再复用挥砍）
+
+---
+
+### Property `RemoteResistance`
+
+| Field | Details |
+|------|------|
+| C++ type | `FGameplayAttributeData` |
+| Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Combat" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RemoteResistance;` |
+
+**Notes:**
+
+> 远程抗性
+
+---
+
+### Property `RemoteFixedAttack`
+
+| Field | Details |
+|------|------|
+| C++ type | `FGameplayAttributeData` |
+| Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Combat" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RemoteFixedAttack;` |
+
+**Notes:**
+
+> 远程增加的固定攻击力
 
 ---

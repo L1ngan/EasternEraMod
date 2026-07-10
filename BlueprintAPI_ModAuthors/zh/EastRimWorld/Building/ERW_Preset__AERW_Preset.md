@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) TArray<UERW_PresetComponent*> PresetComponents;` |
 
-**源码注释:**
+**说明:**
 
 > 建筑预设组件
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) TMap<FName , FPresetMeshInfos> DoorOrWindowMeshInfos;` |
 
-**源码注释:**
+**说明:**
 
 > 门或者窗户对应的预设组件数据
 > TMap<配置表ID , 预设模型数据集合>
@@ -50,7 +50,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) TMap<FName , FWallMeshInfos> WallMeshInfos;` |
 
-**源码注释:**
+**说明:**
 
 > 墙的模型组件集合
 > TMap<墙的配置表ID , 预设模型集合>
@@ -66,7 +66,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) FName RowName;` |
 
-**源码注释:**
+**说明:**
 
 > 配置表行名
 
@@ -81,7 +81,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) TMap<FName , FPresetInfos> PresetData;` |
 
-**源码注释:**
+**说明:**
 
 > 建筑预设数据
 
@@ -96,7 +96,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) TMap<FName , FPresetInfos> WallPillarData;` |
 
-**源码注释:**
+**说明:**
 
 > 墙接缝柱数据
 
@@ -121,7 +121,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入建筑预设数据
 
@@ -144,7 +144,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入墙接缝柱数据
 
@@ -167,7 +167,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 写入数据到配置表
 
@@ -185,7 +185,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新墙的模型信息
 

@@ -420,7 +420,6 @@ bool FModConfigExporter::ExportFromModFolder(const FString& ModFolderPath, FModC
 
 	if (!JsonObject->HasField(TEXT("ModInformationAssetPath")))
 	{
-		UE_LOG(LogTemp, Log, TEXT("ModConfigExporter: No ModInformationAssetPath in ModInfo.json"));
 		return false;
 	}
 
@@ -433,7 +432,6 @@ bool FModConfigExporter::ExportFromModFolder(const FString& ModFolderPath, FModC
 	UModInformationAsset* ModInfoAsset = Cast<UModInformationAsset>(FSoftObjectPath(ModInformationAssetPath).TryLoad());
 	if (!ModInfoAsset)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("ModConfigExporter: Failed to load ModInformationAsset: %s"), *ModInformationAssetPath);
 		return false;
 	}
 

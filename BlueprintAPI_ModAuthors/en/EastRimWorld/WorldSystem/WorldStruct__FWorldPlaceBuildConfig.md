@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> World Place Build Config data structure.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FText Name;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑名称
 
@@ -27,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EWorldPlaceBuildType` |
+| C++ type | [EWorldPlaceBuildType](WorldStruct__EWorldPlaceBuildType.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) EWorldPlaceBuildType BuildType = EWorldPlaceBuildType::Produce;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑类型(用于势力建造倾向)
 
@@ -42,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EPlaceBuildFuncType` |
+| C++ type | [EPlaceBuildFuncType](WorldStruct__EPlaceBuildFuncType.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) EPlaceBuildFuncType FuncType = EPlaceBuildFuncType::PlaceAttribute;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑功能类型
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FText Desc;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑描述
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSoftObjectPtr<UTexture2D> Icon;` |
 
-**Source comments:**
+**Notes:**
 
 > 图标
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int32 PriorityBase = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑的基础建造优先级(数值越大越优先)
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TMap<int32,FPlaceBuildLevelInfo> LevelInfos;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑设施等级信息(从1开始)
 

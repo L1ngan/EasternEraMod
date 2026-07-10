@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBookClassificationType` |
+| C++ type | [EBookClassificationType](MartialArts__EBookClassificationType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="BookInfo" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="BookInfo") EBookClassificationType BookClassificationType = EBookClassificationType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 书籍分类
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="BookInfo") TMap<FGameplayAttribute,float> Attributes;` |
 
-**Source comments:**
+**Notes:**
 
 > 需要的属性值
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="BookInfo") bool bCanReadRepeatedly = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否可以反复阅读(阅读完后是否可以再次阅读，阅读完以阅读时间为准)
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="BookInfo") int RealmLevel = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 阅读需要的境界等级(最小境界)
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="BookInfo") float ReadingTime = 60.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 阅读时间
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="BookInfo") TMap<FGameplayAttribute,float> ReadAddExpAttribute;` |
 
-**Source comments:**
+**Notes:**
 
 > 阅读后增加属性值
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="BookInfo") float CopyTime = 60.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 单次抄录完需要的时间
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="BookInfo") int MaxCopyNum = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大可复制(抄录)次数
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="BookInfo") FName UnlockFormulaID;` |
 
-**Source comments:**
+**Notes:**
 
 > 解锁的配方 DT_FormulaData ID 字段
 

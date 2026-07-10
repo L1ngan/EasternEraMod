@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere ,SaveGame) FName ID;` |
 
-**Source comments:**
+**Notes:**
 
 > 商品ID
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EGroundInventoryType` |
+| C++ type | [EGroundInventoryType](../Struct/CommonEnum__EGroundInventoryType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere ,SaveGame) EGroundInventoryType GroundInventoryType = EGroundInventoryType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 商品类型
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere ,SaveGame) int32 InventoryNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 库存数量
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere ,SaveGame) int32 CurSoldNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 当期已售数量
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere ,SaveGame) int32 TotalSoldNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 总共已售数量
 
@@ -93,5 +93,9 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere ,SaveGame) int32 MonasticReputation = 0;` |
+
+**Notes:**
+
+> Monastic reputation (sect belief) value of the item, used for sorting by monastic belief.
 
 ---

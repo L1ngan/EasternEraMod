@@ -47,6 +47,9 @@ public class CreateModPluginEditor : ModuleRules
 				"JsonUtilities",
 				"DesktopPlatform",
 				"InputCore", "EditorScriptingUtilities",
+				"Lua",   // UnLua 插件的 Lua 外部模块：提供 Lua 库链接（打包前校验用 luaL_loadbuffer 做语法检查）
+				"UnLua", // lua.hpp 位于 UnLua 模块 Public 目录
+
 			}
 		);
 		

@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid SectGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 势力guid
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 TeamId = 255;` |
 
-**源码注释:**
+**说明:**
 
 > 团队id
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FGuid> CharacterGuids;` |
 
-**源码注释:**
+**说明:**
 
 > 参赛的角色
 
@@ -59,12 +59,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ESectStatus` |
+| C++ 类型 | [ESectStatus](TournamentStruct__ESectStatus.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ESectStatus SectStatus = ESectStatus::NotRegistered;` |
 
-**源码注释:**
+**说明:**
 
 > 势力比武状态
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FOffFieldOperationInstance> OffFieldOperation;` |
 
-**源码注释:**
+**说明:**
 
 > 场外操作信息
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 Rank = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 目前的排名
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float TotalCombatPower = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 战力总和
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float ReputationDelta = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 声望奖励
 

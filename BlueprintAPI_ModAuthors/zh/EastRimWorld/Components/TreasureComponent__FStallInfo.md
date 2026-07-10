@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) FText StallDesc;` |
 
-**源码注释:**
+**说明:**
 
 > 货架描述
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) int32 StallSlots = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 当前已解锁栏位数量
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) int32 TotalStallSlots = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 栏位数量上限
 

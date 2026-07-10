@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) TArray<FFacilityBelongData> FacilityBelongData;` |
 
-**Source comments:**
+**Notes:**
 
 > 设施归属数据
 

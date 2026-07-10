@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> Play Sound System UObject 类型。
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category = "PlaySoundSystem") FOnVoicePlayCompleteDelegate OnVoicePlayComplete;` |
 
-**源码注释:**
+**说明:**
 
 > 语音播放完成时广播，可在蓝图中绑定事件
 
@@ -36,6 +38,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure, Category = "PlaySoundSystem") static UPlaySoundSystem* GetInstance();`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取或查询 Get Instance。
 
 ---
 
@@ -57,7 +63,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 播放音效
 
@@ -81,6 +87,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 执行 Play Sound By ID 操作。
+
 ---
 
 ### 函数 `PlaySound2DByID`
@@ -99,7 +109,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 播放UI音乐
 
@@ -121,6 +131,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 执行 Play Sound 2 D By Tag 操作。
+
 ---
 
 ### 函数 `PlaySoundEvent`
@@ -133,7 +147,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Event` | `ESoundChangeEvent` |
+| `Event` | [ESoundChangeEvent](PlaySoundSystem__ESoundChangeEvent.md) |
 | `InEventActor` | `AActor *` |
 | `InTransform` | `FTransform` |
 
@@ -141,7 +155,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过事件改变音效组
 
@@ -165,6 +179,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 执行 Play Sound Event By ID 操作。
+
 ---
 
 ### 函数 `PlayAkAudioSoundByTag`
@@ -184,7 +202,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 播放AK音效
 
@@ -207,6 +225,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 执行 Play Ak Audio Sound By ID 操作。
+
 ---
 
 ### 函数 `PlayAkAudioSound2DByID`
@@ -225,7 +247,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 播放UIAk音效
 
@@ -247,6 +269,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 执行 Play Ak Audio Sound 2 D By Tag 操作。
+
 ---
 
 ### 函数 `PlayAkAudioSoundEvent`
@@ -259,14 +285,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Event` | `ESoundChangeEvent` |
+| `Event` | [ESoundChangeEvent](PlaySoundSystem__ESoundChangeEvent.md) |
 | `InEventActor` | `AActor *` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,Category="PlaySoundSystem") void PlayAkAudioSoundEvent(ESoundChangeEvent Event,AActor * InEventActor);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过事件改变AK音效组
 
@@ -289,6 +315,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 执行 Play Ak Audio Sound Event By ID 操作。
+
 ---
 
 ### 函数 `PostAkAudioSoundEvent`
@@ -308,6 +338,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> Post Ak Audio Sound Event 字段。
+
 ---
 
 ### 函数 `RemoveAllSoundActorByAttachActor`
@@ -326,7 +360,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除所有附加到此Actor上的音效
 
@@ -348,7 +382,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置所有音效暂停
 
@@ -372,7 +406,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置音效播放参数
 
@@ -394,7 +428,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 停止播放对应ID的音效
 
@@ -418,6 +452,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 执行 Play Voice By ID 操作。
+
 ---
 
 ### 函数 `StopVoiceByID`
@@ -437,7 +475,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 停止播放对应ID的音效
 

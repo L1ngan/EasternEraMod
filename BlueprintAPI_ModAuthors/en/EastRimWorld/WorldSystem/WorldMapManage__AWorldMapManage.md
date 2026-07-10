@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> World Map Manage actor type.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly,EditAnywhere,Category="World Map") TMap<FGuid,FCharacterWorldMoveInfo> CharacterWorldMoveInfos;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色在世界中移动的信息
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="World Map") TMap<FGuid,TObjectPtr<AWorldMapMoveActor>> CharacterWorldMoveActors;` |
 
-**Source comments:**
+**Notes:**
 
 > 世界中移动对应的Actor
 
@@ -42,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TArray<[FCharacterWorldMoveInfo2D](WorldStruct__FCharacterWorldMoveInfo2D.md)> |
+| C++ type | TMap<FGuid, [FCharacterWorldMoveInfo2D](WorldStruct__FCharacterWorldMoveInfo2D.md)> |
 | Reflection specifiers | BlueprintReadOnly, Category="World Map" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
-| Original declaration (excerpt) | `UPROPERTY(SaveGame, BlueprintReadOnly, EditAnywhere, Category = "World Map") TArray<FCharacterWorldMoveInfo2D> CharacterWorldMoveInfos2D;` |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame, BlueprintReadOnly, EditAnywhere, Category = "World Map") TMap<FGuid, FCharacterWorldMoveInfo2D> CharacterWorldMoveInfos2D;` |
 
-**Source comments:**
+**Notes:**
 
 > 2d
 > 角色在世界中移动的信息
@@ -63,9 +65,54 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, BlueprintReadOnly, Category = "World Map") TMap<FName, FWorldPointSave2d> PointMap;` |
 
-**Source comments:**
+**Notes:**
 
 > 城市和路点坐标点位
+
+---
+
+### Property `CityLayoutTable`
+
+| Field | Details |
+|------|------|
+| C++ type | `TSoftObjectPtr<UDataTable>` |
+| Reflection specifiers | BlueprintReadWrite, Category="World Map" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "World Map") TSoftObjectPtr<UDataTable> CityLayoutTable;` |
+
+**Notes:**
+
+> 城市布局配置表(DT_WorldMapItemLayout)，BeginPlay 时据此填充 PointMap 的城市点坐标。构造里默认指向该表，可在蓝图覆盖
+
+---
+
+### Property `RoadConfigTable`
+
+| Field | Details |
+|------|------|
+| C++ type | `TSoftObjectPtr<UDataTable>` |
+| Reflection specifiers | BlueprintReadWrite, Category="World Map" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "World Map") TSoftObjectPtr<UDataTable> RoadConfigTable;` |
+
+**Notes:**
+
+> 曲线路配置表(DT_WorldMapRoadConfig)，BeginPlay 时据此填充 RoadLenMap(城市对→真实曲线路长)，用于按真实路长算移动时间。可在蓝图覆盖
+
+---
+
+### Property `MaxCityFindLen`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | BlueprintReadOnly, Category="World Map" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame, BlueprintReadOnly, Category = "World Map") int32 MaxCityFindLen = 12;` |
+
+**Notes:**
+
+> 城市寻路最大路径长度 避免递归过深
 
 ---
 
@@ -78,7 +125,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool bOnWorldMap = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否在世界地图中
 
@@ -93,7 +140,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) float MapWanderRadius = 1000;` |
 
-**Source comments:**
+**Notes:**
 
 > 游荡的范围
 
@@ -108,7 +155,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TSubclassOf<UNavigationQueryFilter> FilterClass;` |
 
-**Source comments:**
+**Notes:**
 
 > 导航筛选
 
@@ -123,6 +170,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnArrivedEndPlace OnArrivedEndPlace;` |
 
+**Notes:**
+
+> On Arrived End Place event or callback.
+
 ---
 
 ### Property `WorldMapPawn`
@@ -134,6 +185,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AERW_PlayerPawn> WorldMapPawn;` |
 
+**Notes:**
+
+> World Map Pawn field.
+
 ---
 
 ### Property `OtherWorldPawn`
@@ -144,6 +199,10 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AERW_PlayerPawn> OtherWorldPawn;` |
+
+**Notes:**
+
+> Other World Pawn field.
 
 ---
 
@@ -160,6 +219,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintPure) static AWorldMapManage * GetWorldMapManage();`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Gets or queries Get World Map Manage.
 
 ---
 
@@ -179,7 +242,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 取消世界移动
 
@@ -202,7 +265,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 切换pawn
 
@@ -218,14 +281,14 @@
 
 | Name | Type |
 |--------|------|
-| `PlayerPawnType` | `EPlayerPawnType` |
+| `PlayerPawnType` | [EPlayerPawnType](../Struct/CommonStruct__EPlayerPawnType.md) |
 | `PlayerPawn` | [AERW_PlayerPawn](../Framework/ERW_PlayerPawn__AERW_PlayerPawn.md) * |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void RegisterPlayerPawn(EPlayerPawnType PlayerPawnType,AERW_PlayerPawn * PlayerPawn);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 注册玩家Pawn
 
@@ -241,13 +304,13 @@
 
 | Name | Type |
 |--------|------|
-| `PlayerPawnType` | `EPlayerPawnType` |
+| `PlayerPawnType` | [EPlayerPawnType](../Struct/CommonStruct__EPlayerPawnType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void UnregisterPlayerPawn(EPlayerPawnType PlayerPawnType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 反注册玩家Pawn
 
@@ -269,9 +332,31 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 角色离开世界地图进入地点中
+
+---
+
+### Function `CharacterLeaveWorldMap2D`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `CharacterWorldMoveInfo` | const [FCharacterWorldMoveInfo2D](WorldStruct__FCharacterWorldMoveInfo2D.md)& |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CharacterLeaveWorldMap2D(const FCharacterWorldMoveInfo2D& CharacterWorldMoveInfo);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 角色离开世界地图进入地点中 2d
 
 ---
 
@@ -291,7 +376,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算当前的位置
 > / @param CharacterWorldMoveInfo
@@ -315,7 +400,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新世界actor的移动状态
 
@@ -337,9 +422,76 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新世界actor的移动状态
+
+---
+
+### Function `IsCityUnderSiege`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `CityName` | `const FName&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure) bool IsCityUnderSiege(const FName& CityName) const;`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> [围城] 判断某城当前是否仍被围攻(存在 MoveType==Besieging 且目标为该城的移动条目即为真，支持多支部队围同一城)
+
+---
+
+### Function `GetCityShortestSiegeRemainTime`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure |
+| Return type | `float` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `CityName` | `const FName&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure) float GetCityShortestSiegeRemainTime(const FName& CityName) const;`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> [围城] 取某城最短剩余围城时间(真实秒, 多支部队围同城时取最近结算的一支); 未被围攻返回 -1
+
+---
+
+### Function `CanPlayerAttackPlace`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `TargetPlace` | [AWorldPlace](WorldPlace__AWorldPlace.md)* |
+| `OutRefuseReason` | `FText&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool CanPlayerAttackPlace(AWorldPlace* TargetPlace, FText& OutRefuseReason);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> [玩家进攻校验] 供蓝图【进攻】按钮点击前调用: 目标城处于围城时禁止进攻, 通过 OutRefuseReason 返回拒绝原因。
 
 ---
 
@@ -359,7 +511,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算导航路径
 
@@ -382,7 +534,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取两个点之间的导航距离
 
@@ -400,7 +552,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 打开世界地图
 
@@ -418,7 +570,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 关闭世界地图
 
@@ -442,7 +594,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取地图上以坐标为中心，半径范围内的随机位置
 
@@ -464,7 +616,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过角色Guid获取对应的MoveActor的Guid
 
@@ -486,7 +638,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过MoveInfoGuid获取对应的MoveActor
 
@@ -508,7 +660,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询剩余移动时间（秒）
 
@@ -524,13 +676,13 @@
 
 | Name | Type |
 |--------|------|
-| `(unnamed / type only)` | `ETransportationType TransportationType = ETransportationType::Walking` |
+| `(unnamed / type only)` | [ETransportationType](../ERW_Enumerations__ETransportationType.md) TransportationType = [ETransportationType](../ERW_Enumerations__ETransportationType.md)::Walking |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Transportation") TArray<ABuildingActorBase*> GetAvailableTransportationBuildings(ETransportationType TransportationType = ETransportationType::Walking);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取可用的交通工具建筑
 
@@ -547,13 +699,13 @@
 | Name | Type |
 |--------|------|
 | `MoveInfo` | [FCharacterWorldMoveInfo](WorldStruct__FCharacterWorldMoveInfo.md)& |
-| `TransportationType` | `ETransportationType` |
+| `TransportationType` | [ETransportationType](../ERW_Enumerations__ETransportationType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Transportation") bool AssignTransportationToMoveInfo(FCharacterWorldMoveInfo& MoveInfo , ETransportationType TransportationType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 为移动信息分配交通工具
 
@@ -575,7 +727,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 释放交通工具
 
@@ -591,15 +743,128 @@
 
 | Name | Type |
 |--------|------|
-| `TransportationType` | `ETransportationType` |
+| `TransportationType` | [ETransportationType](../ERW_Enumerations__ETransportationType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Transportation") bool IsTransportationAvailable(ETransportationType TransportationType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查交通工具是否可用
+
+---
+
+### Function `IsTransportationUnlocked`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="Transportation" |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `TransportationType` | [ETransportationType](../ERW_Enumerations__ETransportationType.md) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Transportation") bool IsTransportationUnlocked(ETransportationType TransportationType);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 检查交通工具是否已解锁(玩家在当前据点建有对应类型的交通建筑)。步行恒解锁。
+> 与 IsTransportationAvailable 区分:解锁只看"是否拥有该建筑",不看空闲载具/占用,不依赖已废弃的载具占用循环。供出征界面交通工具选择器置灰/加锁用。
+
+---
+
+### Function `CalcTransportationCoinCost`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="Transportation" |
+| Return type | `int32` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `TransportationType` | [ETransportationType](../ERW_Enumerations__ETransportationType.md) |
+| `StartCityName` | `FName` |
+| `TargetCityName` | `FName` |
+| `PeopleNum` | `int32` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Transportation") int32 CalcTransportationCoinCost(ETransportationType TransportationType, FName StartCityName, FName TargetCityName, int32 PeopleNum);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 出征交通工具铜币消耗(供出征界面 C_6 显示 与 Button_Go 实扣共用同一公式,保证显示=实扣)。
+> 公式:(BasicSum + 移动天数 * StageSum) * PeopleNum * 2(往返)。移动天数(单程)=向上取整(路长/速度)。扣的是玩家势力 ForceMoney(铜币)。
+
+---
+
+### Function `PredictGoOutBattleDays`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="Transportation" |
+| Return type | `int32` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `TransportationType` | [ETransportationType](../ERW_Enumerations__ETransportationType.md) |
+| `StartCityName` | `FName` |
+| `TargetCityName` | `FName` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Transportation") int32 PredictGoOutBattleDays(ETransportationType TransportationType, FName StartCityName, FName TargetCityName);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 出征移动天数(往返)= 向上取整(路长/速度) * 2。供出征界面 C_3 显示。
+
+---
+
+### Function `GetPlayerCoin`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="Transportation" |
+| Return type | `int32` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Transportation") int32 GetPlayerCoin() const;`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 玩家当前铜币(玩家势力 ForceMoney,向下取整)。供出征界面 C_7 显示。
+
+---
+
+### Function `SpendPlayerCoin`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="Transportation" |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `Amount` | `int32` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Transportation") bool SpendPlayerCoin(int32 Amount);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 出征扣铜币:够则扣(AddForceMoney(-Amount))返回 true;不够返回 false 不扣。供 Button_Go 出征确认调用。
 
 ---
 
@@ -615,13 +880,17 @@
 |--------|------|
 | `StartPlaceLocation` | `const FVector &` |
 | `EndPlaceLocation` | `const FVector &` |
-| `TransportationType` | `ETransportationType` |
-| `WorldMapMoveType` | `EWorldMapMoveType` |
+| `TransportationType` | [ETransportationType](../ERW_Enumerations__ETransportationType.md) |
+| `WorldMapMoveType` | [EWorldMapMoveType](WorldStruct__EWorldMapMoveType.md) |
 | `CharacterSaveData` | const TArray<[FCharacterSaveData](WorldCharacterData__FCharacterSaveData.md)> & |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FPlaceDistanceTimeAndSpeed WorldMoveCalculateDistanceAndTime(const FVector & StartPlaceLocation , const FVector & EndPlaceLocation , ETransportationType TransportationType , EWorldMapMoveType WorldMapMoveType , const TArray<FCharacterSaveData> & CharacterSaveData);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> World Move Calculate Distance And Time field.
 
 ---
 
@@ -637,7 +906,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加载换装地图
 
@@ -655,9 +924,51 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 关闭换装地图
+
+---
+
+### Function `OpenSkillTestMap`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `InMainCharacterData` | const [FCharacterSaveData](WorldCharacterData__FCharacterSaveData.md) & |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void OpenSkillTestMap(const FCharacterSaveData & InMainCharacterData);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> ============= 技能/武学测试沙盒子关卡(与换装同样的流式加载,主关卡不卸载) =============
+> 加载测试沙盒子关卡,并传入主测试角色的存档信息:进入子关卡后自动按此信息生成主测试角色(不由Player占有)。
+> InMainCharacterData.CharacterID 为空则不自动生成主角色。
+
+---
+
+### Function `CloseSkillTestMap`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CloseSkillTestMap();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 关闭测试沙盒子关卡
 
 ---
 
@@ -677,7 +988,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 2d
 
@@ -700,9 +1011,108 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化世界点位
+
+---
+
+### Function `InitWorldPointFromConfig`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void InitWorldPointFromConfig();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 从城市配置表(CityLayoutTable)读取坐标/参数填充 PointMap 的城市点(CityType=City)。BeginPlay 自动调用
+
+---
+
+### Function `InitRoadLenFromConfig`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void InitRoadLenFromConfig();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 从曲线路配置表(RoadConfigTable)读取每条路的真实曲线长度填充 RoadLenMap(城市对→路长)。BeginPlay 自动调用
+
+---
+
+### Function `CalculateRealRoadLen`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `float` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `CityLine` | `const TArray<FName>&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) float CalculateRealRoadLen(const TArray<FName>& CityLine);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 按城市线逐段查真实曲线路长求和(查不到对应路则该段回退直线距离)。供算 NeedTotalTime 用
+
+---
+
+### Function `GetPlayerHomeCityId`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `FName` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FName GetPlayerHomeCityId() const;`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 玩家主城据点 id(取玩家势力主建筑)。拿不到返回 NAME_None
+
+---
+
+### Function `FindCityLine`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `TArray<FName>` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `StartCity` | `FName` |
+| `TargetCity` | `FName` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<FName> FindCityLine(FName StartCity, FName TargetCity);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 开始寻找两个城市的最短城市路径
 
 ---
 
@@ -723,9 +1133,60 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 开始寻找两个相近城市的路点
+
+---
+
+### Function `FindMoveByTowCity`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `TArray<FName>` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `StartCity` | `FName` |
+| `TargetCity` | `FName` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<FName> FindMoveByTowCity(FName StartCity, FName TargetCity);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 按照两个城市开始寻路
+
+---
+
+### Function `FindOneCityLine`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `TArray<FName>` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `FindPointArr` | `TArray<FName>` |
+| `(unnamed / type only)` | `TArray<FName>InFindPointArr` |
+| `EndCityWidget` | [FWorldPointSave2d](WorldStruct__FWorldPointSave2d.md) |
+| `CurrentPoint` | [FWorldPointSave2d](WorldStruct__FWorldPointSave2d.md) |
+| `FindLine` | `bool&` |
+| `RoadLen` | `float&` |
+| `ReslutArr` | `TArray<FName>&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<FName> FindOneCityLine(TArray<FName> FindPointArr, TArray<FName>InFindPointArr, FWorldPointSave2d EndCityWidget, FWorldPointSave2d CurrentPoint, bool& FindLine, float& RoadLen, TArray<FName>& ReslutArr);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 寻找城市路径 2d
 
 ---
 
@@ -751,9 +1212,9 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
-> 寻找路径 2d
+> 寻找路点路径 2d
 
 ---
 
@@ -772,5 +1233,191 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) float CalculateLen(TArray<FName> AllPointArr);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 计算长度
+
+---
+
+### Function `CalculateLenCityWithPoint`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `float` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `Pointname` | `FName` |
+| `pointPos` | `FVector2D` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) float CalculateLenCityWithPoint(FName Pointname,FVector2D pointPos);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 计算城市到点的长度
+
+---
+
+### Function `CalculateLenTwoPoint`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `float` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `pointPos1` | `FVector2D` |
+| `pointPos2` | `FVector2D` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) float CalculateLenTwoPoint(FVector2D pointPos1, FVector2D pointPos2);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 计算点到点的长度
+
+---
+
+### Function `GetPointDataByNameArr`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | TMap<FName,[FWorldPointSave2d](WorldStruct__FWorldPointSave2d.md)> |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `PointNames` | `TArray<FName>` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TMap<FName,FWorldPointSave2d> GetPointDataByNameArr(TArray<FName> PointNames);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 获取点位信息
+
+---
+
+### Function `SetMoveBack`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `Moveguid` | `FGuid` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetMoveBack(FGuid Moveguid);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 队伍返回出发城市
+
+---
+
+### Function `SetMoveBackByRoute`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `MoveGuid` | `FGuid` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetMoveBackByRoute(FGuid MoveGuid);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 队伍按真实路程返回出发城: 交换首尾, FindCityLine 重建路径并按距离重算 NeedTotalTime
+> (区别于 SetMoveBack: 后者沿用旧 NeedTotalTime, 围城态返程会固定 SiegeDuration 秒)。
+> 逻辑镜像 UpdateWorldActorMoveState2D 非占领返程分支, 改返程公式需同步两处。
+
+---
+
+### Function `SetApprenticeshipMoveBack`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `MoveGuid` | `FGuid` |
+| `HomeCityName` | `FName` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetApprenticeshipMoveBack(FGuid MoveGuid, FName HomeCityName);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 弟子历练专用回程 2d (保留 Apprenticeship 类型, 反转 2D 路径, 置 bReturning)
+
+---
+
+### Function `SetApprenticeshipMoveToNextCity`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `MoveGuid` | `FGuid` |
+| `NewTargetCityName` | `FName` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetApprenticeshipMoveToNextCity(FGuid MoveGuid, FName NewTargetCityName);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 弟子历练转城: 当前城→新城, 重置移动(保留 Apprenticeship 类型, 重算路径), 抵达后继续历练
+
+---
+
+### Function `GetNearCitysBy`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `TArray<FName>` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `WorldPlaceName` | `FName` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<FName> GetNearCitysBy(FName WorldPlaceName);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 获取一个城市的临近城市
 
 ---

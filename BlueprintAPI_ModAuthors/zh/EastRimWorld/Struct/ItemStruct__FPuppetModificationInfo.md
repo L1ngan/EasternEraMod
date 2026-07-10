@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName PuppetID;` |
 
-**源码注释:**
+**说明:**
 
 > 傀儡ID
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid BuildingGUID;` |
 
-**源码注释:**
+**说明:**
 
 > 建筑物Guid
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FUseItemSaveData EquippedWeapon;` |
 
-**源码注释:**
+**说明:**
 
 > 已装备的武器
 
@@ -59,12 +59,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<EArmorType, [FUseItemSaveData](ItemStruct__FUseItemSaveData.md)> |
+| C++ 类型 | TMap<[EArmorType](CommonEnum__EArmorType.md), [FUseItemSaveData](ItemStruct__FUseItemSaveData.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<EArmorType, FUseItemSaveData> EquippedArmors;` |
 
-**源码注释:**
+**说明:**
 
 > 已装备的防具数据
 

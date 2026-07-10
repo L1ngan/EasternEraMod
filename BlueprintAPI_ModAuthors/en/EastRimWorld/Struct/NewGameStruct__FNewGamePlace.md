@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> New Game Place data structure.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FName WorldPlaceID;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应WorldPlaceInfo表
 
@@ -32,6 +34,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FText Title;` |
 
+**Notes:**
+
+> Title field.
+
 ---
 
 ### Property `IsLocked`
@@ -43,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) bool IsLocked = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否锁定
 
@@ -58,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UI") TSoftObjectPtr<UTexture2D> PlaceIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 图标Normal
 
@@ -73,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UI") TSoftObjectPtr<UTexture2D> LockPlaceIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 图标Lock
 
@@ -88,6 +94,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FItemSimpleData> Items;` |
 
+**Notes:**
+
+> Items field.
+
 ---
 
 ### Property `TipTitle`
@@ -99,6 +109,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FText TipTitle;` |
 
+**Notes:**
+
+> Tip Title field.
+
 ---
 
 ### Property `TicContent`
@@ -109,5 +123,9 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FText TicContent;` |
+
+**Notes:**
+
+> Tic Content field.
 
 ---

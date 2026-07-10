@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText HeadLine;` |
 
-**源码注释:**
+**说明:**
 
 > 标题
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText Describe;` |
 
-**源码注释:**
+**说明:**
 
 > 描述
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FCommonTaskCondition> TriggerCondition;` |
 
-**源码注释:**
+**说明:**
 
 > 接受任务条件
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> ConditionID;` |
 
-**源码注释:**
+**说明:**
 
 > 任务条件
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> RepelTask;` |
 
-**源码注释:**
+**说明:**
 
 > 阻断任务(当配置在此字段的任务被玩家已完成时，当前任务不可被接受或可见)
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> PreTask;` |
 
-**源码注释:**
+**说明:**
 
 > 前置任务(需完成全部任务后才可接受当前任务)
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> PostTask;` |
 
-**源码注释:**
+**说明:**
 
 > 后置任务(完成当前任务后，将后置任务添加到”已接”列表(玩家不可见)，以此作为判断接受其他任务的条件；当玩家达到接受后置任务的条件时，接取此任务后，将此任务在”已接”列表显现(玩家可见))
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> WorldPlaceIDs;` |
 
-**源码注释:**
+**说明:**
 
 > 任务对应的地点ID
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bAutoComplete;` |
 
-**源码注释:**
+**说明:**
 
 > 任务完成条件满足时是否自动完成该任务(用来区别需要手动点击完成的任务)
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FName,int> TaskAward;` |
 
-**源码注释:**
+**说明:**
 
 > 奖励(废弃.....)
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FItemSimpleData> TaskAwards;` |
 
-**源码注释:**
+**说明:**
 
 > 奖励
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,meta=(EditCondition="!bAutoComplete")) TArray<FTaskSelectableAward> SelectableAwards;` |
 
-**源码注释:**
+**说明:**
 
 > 可选奖励
 
@@ -199,7 +199,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,meta=(EditCondition="!bAutoComplete")) int32 MaxCanSelectAwardNum = 999;` |
 
-**源码注释:**
+**说明:**
 
 > 最大可选几个奖励
 
@@ -214,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 MaxRandAwardSetNum = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 最大随机奖励集个数
 
@@ -229,7 +229,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FName,float> RandAwardSetsWeight;` |
 
-**源码注释:**
+**说明:**
 
 > 随机奖励权重(DT_DropItemConfig ID,权重)
 
@@ -244,7 +244,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName DialogueID;` |
 
-**源码注释:**
+**说明:**
 
 > 对应的对话配置表ID
 
@@ -259,7 +259,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName PopupID;` |
 
-**源码注释:**
+**说明:**
 
 > 弹窗配置表ID
 
@@ -274,7 +274,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName PopupTipsID;` |
 
-**源码注释:**
+**说明:**
 
 > 弹出Tips配置表ID
 
@@ -284,12 +284,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , EBeginnerGuideUnlockType>` |
+| C++ 类型 | TMap<FName , [EBeginnerGuideUnlockType](CommonTaskStruct__EBeginnerGuideUnlockType.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FName , EBeginnerGuideUnlockType> UnlockIDs;` |
 
-**源码注释:**
+**说明:**
 
 > 当前步骤解锁的ID
 
@@ -299,12 +299,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ECommonTaskType` |
+| C++ 类型 | [ECommonTaskType](CommonTaskStruct__ECommonTaskType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) ECommonTaskType TaskType = ECommonTaskType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 任务类型
 
@@ -314,12 +314,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EBeginnerGuideEventType, FName>` |
+| C++ 类型 | TMap<[EBeginnerGuideEventType](CommonTaskStruct__EBeginnerGuideEventType.md), FName> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<EBeginnerGuideEventType, FName> TaskBeingEvent;` |
 
-**源码注释:**
+**说明:**
 
 > 任务开始事件
 
@@ -334,7 +334,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float DelayTime = 0.0f;` |
 
-**源码注释:**
+**说明:**
 
 > 任务的延迟时间
 
@@ -349,7 +349,7 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY() FText ExecuteStateTips;` |
 
-**源码注释:**
+**说明:**
 
 > 任务状态的tips
 
@@ -364,7 +364,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int TaskGrouping;` |
 
-**源码注释:**
+**说明:**
 
 > 任务的分组 相同组的任务会相互覆盖 不覆盖填0
 
@@ -379,7 +379,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) bool bRepetition = true;` |
 
-**源码注释:**
+**说明:**
 
 > 是否重复发布
 
@@ -394,7 +394,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int Priority;` |
 
-**源码注释:**
+**说明:**
 
 > 任务列表排序优先级
 
@@ -409,7 +409,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int Parameter;` |
 
-**源码注释:**
+**说明:**
 
 > 任务跳转的百科页签
 
@@ -424,7 +424,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,meta = (AllowedClasses = "Texture2D")) FSoftObjectPath TaskIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 任务显示的图片
 
@@ -439,7 +439,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bRemoveAfterCompletion = true;` |
 
-**源码注释:**
+**说明:**
 
 > 是否完成后从组件中移除
 
@@ -454,7 +454,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int TaskTimeOut = INDEX_NONE;` |
 
-**源码注释:**
+**说明:**
 
 > 任务时效 -1为没有时间限制
 
@@ -469,7 +469,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bCanGiveUp = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否可以放弃
 
@@ -484,7 +484,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FTriggerFunction> TriggerFunction;` |
 
-**源码注释:**
+**说明:**
 
 > 可以触发的功能
 
@@ -494,12 +494,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EPublisherType` |
+| C++ 类型 | [EPublisherType](CommonTaskStruct__EPublisherType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EPublisherType PublisherType = EPublisherType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 任务发布者类型
 
@@ -514,7 +514,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Runtime") TArray<FCommonTaskCondition> Condition;` |
 
-**源码注释:**
+**说明:**
 
 > 包含的条件
 
@@ -529,7 +529,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FItemSimpleData> SubmitItems;` |
 
-**源码注释:**
+**说明:**
 
 > 需要提交的物品
 
@@ -544,7 +544,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 TaskPlaceTimeLimit;` |
 
-**源码注释:**
+**说明:**
 
 > 任务地点时间限制(-1无限)
 

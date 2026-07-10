@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> Enemy Force Attack Generation Info 数据结构。
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FEnemyAttackGenerationConfig GenerationConfig;` |
 
-**源码注释:**
+**说明:**
 
 > 生成的配置ID
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid GenerationInstanceGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 生成队列激活的实例Guid
 
@@ -42,12 +44,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EEnemyAttackStateType` |
+| C++ 类型 | [EEnemyAttackStateType](WorldStruct__EEnemyAttackStateType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EEnemyAttackStateType AttackState = EEnemyAttackStateType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 当前状态
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float StateTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 当前状态时间
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FVector RetreatPosition = FVector::ZeroVector;` |
 
-**源码注释:**
+**说明:**
 
 > 撤退位置
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName ForceId;` |
 
-**源码注释:**
+**说明:**
 
 > 势力ID
 
@@ -107,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText ForceName;` |
 
-**源码注释:**
+**说明:**
 
 > 势力名称
 

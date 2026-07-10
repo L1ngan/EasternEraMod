@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FUObjectData ObjectData;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应的ItemAction
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FGOAP_Actions Actions;` |
 
-**Source comments:**
+**Notes:**
 
 > ActionData
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TArray<FGOAP_Action> Plans;` |
 
-**Source comments:**
+**Notes:**
 
 > 执行的计划链
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) float ActionCost = 99999;` |
 
-**Source comments:**
+**Notes:**
 
 > 消耗
 

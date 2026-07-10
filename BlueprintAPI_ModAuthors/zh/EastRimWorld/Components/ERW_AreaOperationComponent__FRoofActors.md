@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<AActor* , bool> VisibleActors;` |
 
-**源码注释:**
+**说明:**
 
 > 显示的Actor
 > TMap<Actor , 占位符>
@@ -35,7 +35,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<AActor* , bool> HideActors;` |
 
-**源码注释:**
+**说明:**
 
 > 隐藏的Actor
 > TMap<Actor , 占位符>

@@ -20,7 +20,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cultivation") int32 Level = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 等级（到达此等级时应用以下配置）
 
@@ -35,7 +35,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Behavior", meta = (AllowedClasses = "/Script/AIModule.BehaviorTree")) FSoftObjectPath BehaviorTree;` |
 
-**Source comments:**
+**Notes:**
 
 > 更换的行为树（如果为空则不更换，保留之前的行为树）
 
@@ -50,7 +50,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Behavior") TArray<FName> AddGoals;` |
 
-**Source comments:**
+**Notes:**
 
 > 添加的Goals列表（到达此等级时添加这些Goals）
 
@@ -65,7 +65,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Behavior") TArray<FName> RemoveGoals;` |
 
-**Source comments:**
+**Notes:**
 
 > 移除的Goals列表（到达此等级时移除这些Goals）
 
@@ -80,7 +80,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities") TArray<FName> AbilityIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 添加的能力ID列表（GameplayAbility），到达此等级时获得这些能力
 
@@ -95,7 +95,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities") TArray<FName> BuffIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 添加的Buff ID列表（GameplayEffect），到达此等级时获得这些Buff
 
@@ -110,7 +110,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes", meta = (AllowedClasses = "/Script/GameplayAbilities.GameplayEffect")) FSoftClassPath AttributeBonusGameplayEffect;` |
 
-**Source comments:**
+**Notes:**
 
 > 属性提升GameplayEffect，到达此等级时应用此GE来提升属性
 > 通过GE来修改属性，而不是直接配置属性值
@@ -126,7 +126,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Loot") TMap<FName, float> OverrideDropItemConfig;` |
 
-**Source comments:**
+**Notes:**
 
 > 覆盖的掉落组配置（掉落组ID -> 权重），如果为空则不覆盖，保留之前的掉落组
 > 到达此等级时，使用此配置覆盖原有的掉落组配置
@@ -142,7 +142,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Appearance", meta = (AllowedClasses = "/Script/Engine.SkeletalMesh")) FSoftObjectPath MeshPath;` |
 
-**Source comments:**
+**Notes:**
 
 > 更换的模型路径（如果为空则不更换，保留之前的模型）
 > 到达此等级时更换为此模型
@@ -158,7 +158,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Appearance") FVector MeshScale = FVector(1.0f, 1.0f, 1.0f);` |
 
-**Source comments:**
+**Notes:**
 
 > 模型缩放比例（可选，用于调整模型大小）
 

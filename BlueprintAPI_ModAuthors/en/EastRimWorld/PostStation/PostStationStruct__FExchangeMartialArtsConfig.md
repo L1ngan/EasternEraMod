@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Sparring config row: win/lose awards, dialogues, player join limit, NPC generation IDs and both team IDs.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FItemSimpleData> Awards;` |
 
-**Source comments:**
+**Notes:**
 
 > 胜利奖励
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FItemSimpleData> FailedAwards;` |
 
-**Source comments:**
+**Notes:**
 
 > 失败奖励
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName WinDialogueID;` |
 
-**Source comments:**
+**Notes:**
 
 > 胜利对话(DT_DialogueGroup表ID)
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName FailedDialogueID;` |
 
-**Source comments:**
+**Notes:**
 
 > 失败对话(DT_DialogueGroup表ID)
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 PlayerJoinNum;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家参战人数限制
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> NPCGenerateIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > NPC参战生成配置
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGenericTeamId PlayerTeam;` |
 
-**Source comments:**
+**Notes:**
 
 > 队伍ID1
 
@@ -122,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGenericTeamId NPCTeam;` |
 
-**Source comments:**
+**Notes:**
 
 > 队伍ID2
 

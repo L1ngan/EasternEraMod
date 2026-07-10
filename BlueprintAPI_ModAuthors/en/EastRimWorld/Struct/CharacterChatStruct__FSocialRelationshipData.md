@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) FText CharacterName;` |
 
-**Source comments:**
+**Notes:**
 
 > 关系对象名称
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) int32 CurGoodOpinion;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前好感度
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) FName CurRelationship;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前关系
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) TMap<FName,int32> NextRelationshipApplyTimes;` |
 
-**Source comments:**
+**Notes:**
 
 > 下一段关系申请次数
 

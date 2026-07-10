@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) FName BuildID;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑表ID
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ERoofPartType` |
+| C++ type | [ERoofPartType](../ERW_Enumerations__ERoofPartType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) ERoofPartType RoofPartType;` |
 
-**Source comments:**
+**Notes:**
 
 > 屋顶部位类型
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) FName WallPillarID;` |
 
-**Source comments:**
+**Notes:**
 
 > 接缝柱对应的墙的ID
 
@@ -75,7 +75,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 计算地基中心位置
 

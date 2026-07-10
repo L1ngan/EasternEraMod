@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid GenerationGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成队列中的唯一GUID
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FInstanceGenerationActorInfo> InstanceGenerationActorInfos;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成的实例
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int GenerationNumber = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成的数量
 

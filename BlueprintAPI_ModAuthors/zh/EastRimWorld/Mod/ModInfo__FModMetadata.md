@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName ModId;` |
 
-**源码注释:**
+**说明:**
 
 > Mod唯一标识符
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText ModName;` |
 
-**源码注释:**
+**说明:**
 
 > Mod名称
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FString Version;` |
 
-**源码注释:**
+**说明:**
 
 > Mod版本号
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FString Author;` |
 
-**源码注释:**
+**说明:**
 
 > Mod作者
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText Description;` |
 
-**源码注释:**
+**说明:**
 
 > Mod描述
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FString Icon;` |
 
-**源码注释:**
+**说明:**
 
 > Mod图标
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FModDependency> Dependencies;` |
 
-**源码注释:**
+**说明:**
 
 > 依赖的Mod列表
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FString MinGameVersion;` |
 
-**源码注释:**
+**说明:**
 
 > 支持的游戏最小版本（可选）
 
@@ -139,24 +139,9 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FString MainLuaFile = TEXT("Main.lua");` |
 
-**源码注释:**
+**说明:**
 
 > 主Lua入口文件路径（相对于Mod根目录）
-
----
-
-### 属性 `ModInformationAssetPath`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | `FString` |
-| 反射说明符 | BlueprintReadWrite |
-| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FString ModInformationAssetPath;` |
-
-**源码注释:**
-
-> ModInformationAsset路径（可选，如果未指定则尝试自动发现）
 
 ---
 
@@ -169,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bNewGameLoad = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否在新游戏时加载
 
@@ -184,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FString ModToolVersion;` |
 
-**源码注释:**
+**说明:**
 
 > Mod工具版本号（用于检查Mod是否与当前游戏版本兼容）
 
@@ -199,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bIncludeGameplayTags = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否包含 GameplayTag 配置
 
@@ -214,8 +199,38 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FString PublishedFileId;` |
 
-**源码注释:**
+**说明:**
 
 > Steam 发布的文件 ID（上传到 Steam 后自动填充）
+
+---
+
+### 属性 `DataTableConfigs`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TArray<[FModDataTableJsonConfig](ModInfo__FModDataTableJsonConfig.md)> |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FModDataTableJsonConfig> DataTableConfigs;` |
+
+**说明:**
+
+> 打包导出的配置表 JSON 列表（存在时运行时优先从此加载，不依赖 Cook 资产）
+
+---
+
+### 属性 `DataAssetConfigs`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TArray<[FModDataAssetJsonConfig](ModInfo__FModDataAssetJsonConfig.md)> |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FModDataAssetJsonConfig> DataAssetConfigs;` |
+
+**说明:**
+
+> 打包导出的数据资产 JSON 列表
 
 ---

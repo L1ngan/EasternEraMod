@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 Floor { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑所在层
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 Index { INDEX_NONE };` |
 
-**Source comments:**
+**Notes:**
 
 > 模型在ISM中的索引
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 VariantIndex { INDEX_NONE };` |
 
-**Source comments:**
+**Notes:**
 
 > 变体索引
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 ZIndex { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > Z坐标偏移
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FTransform Transform;` |
 
-**Source comments:**
+**Notes:**
 
 > 模型的Transform
 
@@ -89,12 +89,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBuildObjectState` |
+| C++ type | [EBuildObjectState](ERW_Enumerations__EBuildObjectState.md) |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) EBuildObjectState BuildObjectState { EBuildObjectState::NoResource };` |
 
-**Source comments:**
+**Notes:**
 
 > 建造物体状态
 
@@ -104,12 +104,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EISMType` |
+| C++ type | [EISMType](ERW_Enumerations__EISMType.md) |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) EISMType VisibleISMType { EISMType::Normal };` |
 
-**Source comments:**
+**Notes:**
 
 > 当前显示的ISM类型
 
@@ -119,12 +119,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EEmbeddedWallType` |
+| C++ type | [EEmbeddedWallType](ERW_Enumerations__EEmbeddedWallType.md) |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) EEmbeddedWallType EmbeddedWallType { EEmbeddedWallType::None };` |
 
-**Source comments:**
+**Notes:**
 
 > 嵌入式墙体类型
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TArray<FGuid> EmbeddedWallGuids;` |
 
-**Source comments:**
+**Notes:**
 
 > 门或窗占据的嵌入式墙体的Guid
 
@@ -149,12 +149,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ERoofPartType` |
+| C++ type | [ERoofPartType](ERW_Enumerations__ERoofPartType.md) |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) ERoofPartType RoofPartType { ERoofPartType::None };` |
 
-**Source comments:**
+**Notes:**
 
 > 屋顶部位类型
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) bool Visible { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否显示
 
@@ -179,12 +179,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EWallDisplayType` |
+| C++ type | [EWallDisplayType](ERW_Enumerations__EWallDisplayType.md) |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) EWallDisplayType WallDisplayType { EWallDisplayType::Normal };` |
 
-**Source comments:**
+**Notes:**
 
 > 墙显示类型
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TArray<FAssemblePartInfo> AssemblePartInfos;` |
 
-**Source comments:**
+**Notes:**
 
 > 组装建筑部位信息
 

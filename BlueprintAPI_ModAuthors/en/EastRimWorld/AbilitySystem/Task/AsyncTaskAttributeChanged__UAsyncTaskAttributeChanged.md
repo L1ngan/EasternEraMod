@@ -20,6 +20,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnAttributeChanged OnAttributeChanged;` |
 
+**Notes:**
+
+> Delegate broadcast when an attribute changes (attribute, new value, old value).
+
 ---
 
 ## Blueprint-exposed functions
@@ -41,7 +45,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > Listens for an attribute changing.
 
@@ -64,7 +68,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > Listens for an attribute changing.
 > Version that takes in an array of Attributes. Check the Attribute output for which Attribute changed.
@@ -83,7 +87,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > You must call this function manually when you want the AsyncTask to end.
 > For UMG Widgets, you would call it in the Widget's Destruct event.

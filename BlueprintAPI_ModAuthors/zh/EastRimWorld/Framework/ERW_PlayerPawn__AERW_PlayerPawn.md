@@ -19,18 +19,22 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TObjectPtr<UGWOPlayerComponent> GWOPlayerComponent;` |
 
+**说明:**
+
+> 生成Actor系统(GWO)的玩家端组件，负责把玩家注册到GWO扇区导演以驱动世界对象生成。
+
 ---
 
 ### 属性 `PlayerPawnType`
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EPlayerPawnType` |
+| C++ 类型 | [EPlayerPawnType](../Struct/CommonStruct__EPlayerPawnType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) EPlayerPawnType PlayerPawnType = EPlayerPawnType::BasePawn;` |
 
-**源码注释:**
+**说明:**
 
 > 控制的Pawn类型
 
@@ -45,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) UCameraConfigAsset * CameraConfigAsset;` |
 
-**源码注释:**
+**说明:**
 
 > 相机配置
 
@@ -60,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) TObjectPtr<class AWorldPlace> CurWorldPlace;` |
 
-**源码注释:**
+**说明:**
 
 > 所在的地点
 
@@ -75,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FVector HitLocation { FVector::ZeroVector };` |
 
-**源码注释:**
+**说明:**
 
 > 鼠标击中的位置
 
@@ -90,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) AEastRimWorldCharacter* CurSummon;` |
 
-**源码注释:**
+**说明:**
 
 > 当前编辑巡逻点的机关角色
 
@@ -104,6 +108,10 @@
 | 反射说明符 | BlueprintAssignable |
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnCameraPositionChange OnCameraPositionChange;` |
+
+**说明:**
+
+> 相机位置变化事件，参数为新的相机位置。
 
 ---
 
@@ -121,7 +129,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 设置玩家Pawn的信息
 
@@ -143,6 +151,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 广播相机位置变化事件（OnCameraPositionChange），通知监听者新的相机位置。
+
 ---
 
 ### 函数 `SetMouseMode`
@@ -155,11 +167,15 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InMouseMode` | `EMouseMode` |
+| `InMouseMode` | [EMouseMode](ERW_PlayerPawn__EMouseMode.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent) void SetMouseMode(EMouseMode InMouseMode);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 设置鼠标操作模式（EMouseMode：普通/相机旋转/移动建筑/划区/设计农田/巡逻选点/突破选点等）。
 
 ---
 
@@ -178,6 +194,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent) void SetPreviewFarmlandActor(AEastRimWorldFarmlandActor* FarmlandActor);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 设置当前预览中的农田Actor（设计农田时使用，蓝图实现事件）。
 
 ---
 
@@ -198,7 +218,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 设置相机的位置
 
@@ -221,7 +241,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 生成建筑物在预设位置
 
@@ -244,6 +264,10 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 按预设建筑信息与队伍ID生成建筑（SpawnBuildingByPresetInfo的蓝图实现版本），返回生成的建筑Actor。
+
 ---
 
 ### 函数 `GetPlayerPawnCamera`
@@ -257,6 +281,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintNativeEvent) UCameraComponent* GetPlayerPawnCamera();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 **BlueprintNativeEvent**：蓝图可重写；C++ 默认实现在 `xxx_Implementation`。
+
+**说明:**
+
+> 获取玩家Pawn当前使用的相机组件。
 
 ---
 
@@ -272,7 +300,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 存档前清理数据
 
@@ -289,6 +317,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent) void ResetInitPosition();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 重置玩家Pawn到初始位置（蓝图实现事件）。
 
 ---
 
@@ -308,7 +340,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 开始追踪
 
@@ -326,7 +358,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 停止追踪
 
@@ -344,7 +376,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 获取存档信息
 
@@ -366,7 +398,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 设置存档信息
 

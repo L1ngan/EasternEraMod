@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FGuid WorldPlaceGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 地点GUID
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FGuid AttackForceGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 势力GUID
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FGuid TargetForceGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 目标势力GUID
 

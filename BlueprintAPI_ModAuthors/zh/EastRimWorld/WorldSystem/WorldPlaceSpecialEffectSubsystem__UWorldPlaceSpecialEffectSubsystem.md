@@ -26,6 +26,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 获取或查询 Get Instance。
+
 ---
 
 ### 函数 `RecalculatePlaceEffects`
@@ -44,7 +48,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 进入地点时调用（AWorldPlace::EnterWorldPlace），将当前拥有效果全部应用到缓存并施加 Buff
 
@@ -66,7 +70,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 退出地点时调用（AWorldPlace::ExitWorldPlace），清空该地点的效果数值缓存
 
@@ -89,7 +93,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 应用单个效果：将该效果的贡献加入缓存；在给地点增加效果时调用。若效果已在列表中则只更新缓存。
 
@@ -112,7 +116,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除单个效果：从缓存减去该效果贡献，并从拥有效果列表中移除
 
@@ -129,13 +133,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `WorldPlace` | [AWorldPlace](WorldPlace__AWorldPlace.md)* |
-| `EffectType` | `EWorldPlaceSpecialEffectType` |
+| `EffectType` | [EWorldPlaceSpecialEffectType](WorldStruct__EWorldPlaceSpecialEffectType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "WorldPlaceSpecialEffect") float GetEffectValue(AWorldPlace* WorldPlace, EWorldPlaceSpecialEffectType EffectType) const;`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取指定地点、指定效果类型的当前汇总数值
 
@@ -158,7 +162,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取该地点「添加阵营全局 Buff」类型效果配置的 Buff ID 列表（用于实际施加 Buff）
 

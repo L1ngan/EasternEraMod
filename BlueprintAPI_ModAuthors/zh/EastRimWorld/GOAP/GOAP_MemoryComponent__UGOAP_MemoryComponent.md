@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<EGOAP_ConditionType , [FMemoryData](GOAP_MemoryComponent__FMemoryData.md)> |
+| C++ 类型 | TMap<[EGOAP_ConditionType](GOAP_Enumerations__EGOAP_ConditionType.md) , [FMemoryData](GOAP_MemoryComponent__FMemoryData.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<EGOAP_ConditionType , FMemoryData> Memories;` |
 
-**源码注释:**
+**说明:**
 
 > GOAP前置条件类型对应的记忆值
 > TMap<GOAP前置条件类型 , 记忆数据>
@@ -35,7 +35,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnMemoryUpdated OnMemoryUpdated;` |
 
-**源码注释:**
+**说明:**
 
 > 当GOAP记忆更新时
 
@@ -53,7 +53,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ConditionType` | `EGOAP_ConditionType` |
+| `ConditionType` | [EGOAP_ConditionType](GOAP_Enumerations__EGOAP_ConditionType.md) |
 | `ID` | `const FName&` |
 | `GOAPValue` | [FGOAP_Value](GOAP_Data__FGOAP_Value.md)& |
 
@@ -61,7 +61,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取记忆值
 
@@ -78,7 +78,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Delete` | `bool` |
-| `ConditionType` | `EGOAP_ConditionType` |
+| `ConditionType` | [EGOAP_ConditionType](GOAP_Enumerations__EGOAP_ConditionType.md) |
 | `ID` | `const FName&` |
 | `GOAPValue` | const [FGOAP_Value](GOAP_Data__FGOAP_Value.md)& |
 
@@ -86,7 +86,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新记忆
 
@@ -103,7 +103,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Delete` | `bool` |
-| `ConditionType` | `EGOAP_ConditionType` |
+| `ConditionType` | [EGOAP_ConditionType](GOAP_Enumerations__EGOAP_ConditionType.md) |
 | `ID` | `const FName&` |
 | `GOAPValue` | const [FGOAP_Value](GOAP_Data__FGOAP_Value.md)& |
 
@@ -111,7 +111,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查记忆值是否不同
 

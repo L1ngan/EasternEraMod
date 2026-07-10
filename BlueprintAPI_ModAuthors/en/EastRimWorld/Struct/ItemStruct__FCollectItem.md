@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECollectItemType` |
+| C++ type | [ECollectItemType](ItemStruct__ECollectItemType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Collect" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") ECollectItemType CollectItemType = ECollectItemType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 采集物类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") bool bCanGrow = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否可以生长
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") TArray<FGrowStage> GrowStage;` |
 
-**Source comments:**
+**Notes:**
 
 > 分为多少个阶段 每个阶段持续多长时间 必须存在一个阶段 不可生长为 None 阶段
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") float GrowingTimeConsuming = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 生长耗时 秒（界面信息显示）
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") float GrownRipeningTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 成熟耗时 秒（界面信息显示）
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") float GrownInterval = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 成熟间隔 秒（界面信息显示） 0 为没有
 
@@ -104,12 +104,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EGroundSoilType,float>` |
+| C++ type | TMap<[EGroundSoilType](../ERW_Enumerations__EGroundSoilType.md),float> |
 | Reflection specifiers | BlueprintReadWrite, Category="Collect" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") TMap<EGroundSoilType,float> GrowEfficiencyBySoil;` |
 
-**Source comments:**
+**Notes:**
 
 > 土质对应的生长效率 加值 todo....废弃
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") float MinGroundRichPercent;` |
 
-**Source comments:**
+**Notes:**
 
 > 最低土壤肥沃度
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") bool bOutPutFruit = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否会结出果实
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") bool bCutOrDig = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否可以砍伐或者挖掘
 
@@ -164,12 +164,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EGrowStageType,[FCollectedGroup](ItemStruct__FCollectedGroup.md)> |
+| C++ type | TMap<[EGrowStageType](ItemStruct__EGrowStageType.md),[FCollectedGroup](ItemStruct__FCollectedGroup.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="Collect" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") TMap<EGrowStageType,FCollectedGroup> OutputByStage;` |
 
-**Source comments:**
+**Notes:**
 
 > 每个阶段对应的产出数据
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") bool CutOrDigOutPutPick = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 砍伐或者挖掘时是否会产出采摘的果实
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") TSoftObjectPtr<USmartObjectDefinition> InteractDefinition;` |
 
-**Source comments:**
+**Notes:**
 
 > 采集交互定义
 
@@ -214,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") bool bCanBeDestroy{false};` |
 
-**Source comments:**
+**Notes:**
 
 > 收割生长物品是/否破坏 (疑似没有在用)
 
@@ -229,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") int Health {-1};` |
 
-**Source comments:**
+**Notes:**
 
 > 健康值  填写“-1”的时候，为无限健康值，该采集物不会受到伤害。
 
@@ -244,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") float DamageLoss = 0.5;` |
 
-**Source comments:**
+**Notes:**
 
 > 被破坏后产出的资源百分比
 
@@ -259,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") FVector2D GirdSize{0,0};` |
 
-**Source comments:**
+**Notes:**
 
 > 种植采集物地格 rxc
 
@@ -269,12 +269,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECollectPlantType` |
+| C++ type | [ECollectPlantType](ItemStruct__ECollectPlantType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Collect" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") ECollectPlantType PlantType = ECollectPlantType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 种植分类
 
@@ -289,7 +289,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") TMap<FGameplayAttribute,float> PlantNeedAttribute;` |
 
-**Source comments:**
+**Notes:**
 
 > 种植该植物对角色属性的需求
 
@@ -304,7 +304,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") TSoftObjectPtr<USmartObjectDefinition> PlantDefinition;` |
 
-**Source comments:**
+**Notes:**
 
 > 种植交互定义
 
@@ -319,7 +319,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") int PlantDurability{-1};` |
 
-**Source comments:**
+**Notes:**
 
 > 种植耐久度
 
@@ -334,7 +334,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") int FellDurability{-1};` |
 
-**Source comments:**
+**Notes:**
 
 > 砍伐耐久度
 
@@ -349,7 +349,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") int HarvestDurability{-1};` |
 
-**Source comments:**
+**Notes:**
 
 > 收割耐久度
 
@@ -364,7 +364,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") int MiningDurability{-1};` |
 
-**Source comments:**
+**Notes:**
 
 > 开采耐久度
 
@@ -379,7 +379,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") float LowestGrowTemperature = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 最低生长温度
 
@@ -394,7 +394,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") TMap<FGameplayAttribute,float> Attributes;` |
 
-**Source comments:**
+**Notes:**
 
 > 需要的属性值 例如务农属性等级 才能采集或者砍伐
 
@@ -409,7 +409,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") bool bCuttingAnimation = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否播放砍伐动画
 
@@ -424,7 +424,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") TArray<FName> DestroyedActionID;` |
 
-**Source comments:**
+**Notes:**
 
 > 销毁采集物的行为id
 
@@ -439,7 +439,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") TArray<FName> RemovedActionID;` |
 
-**Source comments:**
+**Notes:**
 
 > 移除采集物的行为id
 
@@ -454,7 +454,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") FName PlantActionID;` |
 
-**Source comments:**
+**Notes:**
 
 > 种植采集物的行为id
 
@@ -464,12 +464,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EGrowStageType` |
+| C++ type | [EGrowStageType](ItemStruct__EGrowStageType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Collect" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") EGrowStageType AutoHarvestStage;` |
 
-**Source comments:**
+**Notes:**
 
 > 种植采集物自动收获的阶段
 
@@ -479,12 +479,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECommonButtonType` |
+| C++ type | [ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Collect" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") ECommonButtonType AutoHarvestButtonType;` |
 
-**Source comments:**
+**Notes:**
 
 > 种植采集物自动收获的按钮操作（关联ButtonActions）
 
@@ -499,7 +499,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") FTemperatureRange ToleranceTemperatureRange;` |
 
-**Source comments:**
+**Notes:**
 
 > 温度耐受范围（界面信息显示）
 
@@ -509,12 +509,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EERWWeather,float>` |
+| C++ type | TMap<[EERWWeather](../WorldSystem/WorldStruct__EERWWeather.md),float> |
 | Reflection specifiers | BlueprintReadWrite, Category="Collect" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") TMap<EERWWeather,float> WeatherEfficiency;` |
 
-**Source comments:**
+**Notes:**
 
 > 天气对生长效率的影响(天气,百分比)
 
@@ -524,12 +524,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EERWSeason,TObjectPtr<UCurveFloat>>` |
+| C++ type | TMap<[EERWSeason](../WorldSystem/WorldStruct__EERWSeason.md),TObjectPtr<UCurveFloat>> |
 | Reflection specifiers | BlueprintReadWrite, Category="Collect" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") TMap<EERWSeason,TObjectPtr<UCurveFloat>> LightEfficiency;` |
 
-**Source comments:**
+**Notes:**
 
 > 光照对生长效率的影响(天气,百分比)
 
@@ -544,7 +544,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") FText FarmingGradeProbabilityDescribe;` |
 
-**Source comments:**
+**Notes:**
 
 > 务农等级最低概率 富文本（界面信息显示）
 
@@ -559,7 +559,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") FText NotFailFarmingGradeProbabilityDescribe;` |
 
-**Source comments:**
+**Notes:**
 
 > 无失败务农等级 富文本（界面信息显示）
 
@@ -574,7 +574,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") TArray<FOutputInformation> AllPutInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 总产出（界面信息显示）
 
@@ -584,12 +584,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EGrowStageType,[FOutputInformations](ItemStruct__FOutputInformations.md)> |
+| C++ type | TMap<[EGrowStageType](ItemStruct__EGrowStageType.md),[FOutputInformations](ItemStruct__FOutputInformations.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="Collect" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") TMap<EGrowStageType,FOutputInformations> StagePutInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 阶段产出（界面信息显示）
 
@@ -604,7 +604,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") int32 ExplorationTimes = -1;` |
 
-**Source comments:**
+**Notes:**
 
 > 可被探索的次数,-1为无限次
 
@@ -619,7 +619,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") TMap<int32,FExplorationRewards> ExplorationInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应探索次数的奖池及需要达到的境界
 
@@ -634,7 +634,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Collect") TSoftObjectPtr<UStaticMesh> CollectStaticMesh;` |
 
-**Source comments:**
+**Notes:**
 
 > 采集操作是替换的模型
 
@@ -649,7 +649,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") int ObserveDurability{-1};` |
 
-**Source comments:**
+**Notes:**
 
 > 观察耐久度
 
@@ -659,12 +659,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<ETechUnlockItemType,[FIDs](../ERW_CommonTypes__FIDs.md)> |
+| C++ type | TMap<[ETechUnlockItemType](TechnologyStruct__ETechUnlockItemType.md),[FIDs](../ERW_CommonTypes__FIDs.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="Observe" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") TMap<ETechUnlockItemType,FIDs> ObserveUnlock;` |
 
-**Source comments:**
+**Notes:**
 
 > 观察解锁
 
@@ -679,7 +679,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Observe") FText Desc;` |
 
-**Source comments:**
+**Notes:**
 
 > 描述(观察完成后tip显示)
 
@@ -694,7 +694,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") TArray<FObserveUnlockInfo> ObserveUnlockInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 观察解锁文本(界面信息显示)
 
@@ -709,7 +709,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") FText BeforeObserveName;` |
 
-**Source comments:**
+**Notes:**
 
 > 观察前名称
 
@@ -724,7 +724,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") FText BeforeObserveDescription;` |
 
-**Source comments:**
+**Notes:**
 
 > 观察前详情描述
 
@@ -739,7 +739,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") FText ObserveRecordDescription;` |
 
-**Source comments:**
+**Notes:**
 
 > 观察记录描述(富文本)
 
@@ -754,7 +754,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") TSoftObjectPtr<UTexture2D> NewDiscoverTexture2D;` |
 
-**Source comments:**
+**Notes:**
 
 > 新发现图片
 
@@ -769,7 +769,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Sound") TMap<FName,FName> CollectSound;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品相关的音效 key ActionID value 音效的id  读取GameSoundInfo
 

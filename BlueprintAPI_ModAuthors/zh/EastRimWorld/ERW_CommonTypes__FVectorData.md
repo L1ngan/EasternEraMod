@@ -19,6 +19,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) float X { 0.f };` |
 
+**说明:**
+
+> X轴分量（可存档）。
+
 ---
 
 ### 属性 `Y`
@@ -30,6 +34,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) float Y { 0.f };` |
 
+**说明:**
+
+> Y轴分量（可存档）。
+
 ---
 
 ### 属性 `Z`
@@ -40,5 +48,9 @@
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) float Z { 0.f };` |
+
+**说明:**
+
+> Z轴分量（可存档）。
 
 ---

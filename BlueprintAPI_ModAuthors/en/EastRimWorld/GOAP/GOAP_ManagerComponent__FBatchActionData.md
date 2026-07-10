@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FActionData ActionData;` |
 
-**Source comments:**
+**Notes:**
 
 > Action数据
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FGuid , bool> ActiveOwnerGuids;` |
 
-**Source comments:**
+**Notes:**
 
 > 活跃Action的Owner的Guid
 > TMap<Owner的Guid , 占位符>

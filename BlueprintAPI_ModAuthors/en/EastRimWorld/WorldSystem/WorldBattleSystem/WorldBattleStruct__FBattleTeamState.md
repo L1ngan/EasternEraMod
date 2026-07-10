@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid Guid;` |
 
-**Source comments:**
+**Notes:**
 
 > 势力GUID
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 Score = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 获得的积分
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 KillCount = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 击杀数
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FGuid, FCharacterBattleInfo> CharacterBattleInfos;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色战斗信息
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 TeamID = 255;` |
 
-**Source comments:**
+**Notes:**
 
 > 阵营ID
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FTeamBaseInformation TeamBaseInformation;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前分配到的营地
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FBattleTeamInfo BattleTeamInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗阵营信息
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FStratagemAbility> HandStratagemAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 手中的战略卡牌信息
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FStratagemAbility> PoolStratagemAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 池子中的战略卡牌信息
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FCharacterSaveData> HandCharacterCard;` |
 
-**Source comments:**
+**Notes:**
 
 > 手中的角色卡牌信息
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FCharacterSaveData> PoolCharacterCard;` |
 
-**Source comments:**
+**Notes:**
 
 > 池子中的的角色卡牌信息
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FStratagemAbility> ApplyStratagemAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 应用中的战略技能 只有全局且拥有持续时间的战略技能
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FCharacterSaveData> AliveCharacterCard;` |
 
-**Source comments:**
+**Notes:**
 
 > 存在场上的角色 包含重伤
 
@@ -214,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 StrategyPoint = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 战略值
 
@@ -229,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 ResourcePoint = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 资源点
 
@@ -244,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float ExtractionStratagemTimerRemaining = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 抽取战略剩余时间
 
@@ -259,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float ExtractionCharacterTimerRemaining = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 抽取角色剩余时间
 
@@ -274,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FStratagemAbility NextUseStratagemAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 要使用的战略技能
 
@@ -289,7 +289,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float StrategyDetectionIntervalTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 持有牌时无法使用检测间隔时间
 
@@ -304,7 +304,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float StrategyWaitTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 释放条件不满足时同一张牌等待时间
 
@@ -319,7 +319,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float StrategyUseIntervalTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 使用技能的最小间隔时间
 
@@ -334,7 +334,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bAutoReleaseStrategy = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否自动释放战略技能
 
@@ -349,7 +349,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bAutoUseCharacter = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否自动使用角色
 
@@ -364,7 +364,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FAutoUseCharacterRule AutoUseCharacterRule;` |
 
-**Source comments:**
+**Notes:**
 
 > 自动使用角色的规则
 
@@ -379,7 +379,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FCharacterSaveData NextCharacterSaveData;` |
 
-**Source comments:**
+**Notes:**
 
 > 下次使用的弟子信息
 
@@ -394,7 +394,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float CharacterUseIntervalTime = 10.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 使用的间隔时间
 
@@ -409,7 +409,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float CharacterDetectionIntervalTime = 3.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 检测间隔时间
 
@@ -424,7 +424,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bHaveResourceUseCharacter = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否资源满足持续使用角色
 
@@ -439,7 +439,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FBattleBuffGroup> BattleBuffGroup;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗buff组
 
@@ -454,7 +454,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<FGuid,FCharacterCureInfo> CharacterCureInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 受伤人员的
 
@@ -469,7 +469,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<int32> OccupiedCureIndex;` |
 
-**Source comments:**
+**Notes:**
 
 > 治疗点占用的索引
 
@@ -484,7 +484,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<int32> OccupiedAwaitIndex;` |
 
-**Source comments:**
+**Notes:**
 
 > 医师等待占用的索引
 

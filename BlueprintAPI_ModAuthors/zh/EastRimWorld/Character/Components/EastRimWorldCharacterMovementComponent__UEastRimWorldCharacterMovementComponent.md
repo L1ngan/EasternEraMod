@@ -23,7 +23,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > Returns the current ground info.  Calling this will update the ground info if it's out of date.
 

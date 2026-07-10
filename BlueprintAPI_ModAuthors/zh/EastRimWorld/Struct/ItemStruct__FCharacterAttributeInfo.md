@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterAttributeInfo") FText AttributeName;` |
 
-**源码注释:**
+**说明:**
 
 > 属性名字
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterAttributeInfo") TSoftObjectPtr<UTexture2D> AttributeIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 属性图标
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterAttributeInfo") FGameplayAttribute GameplayAttribute;` |
 
-**源码注释:**
+**说明:**
 
 > 此属性类型
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterAttributeInfo",meta = (Categories = "SetByCaller")) FGameplayTag AttributeGameplayTag;` |
 
-**源码注释:**
+**说明:**
 
 > 此属性标签
 
@@ -74,12 +74,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ECharacterAttributeCategoryType` |
+| C++ 类型 | [ECharacterAttributeCategoryType](ItemStruct__ECharacterAttributeCategoryType.md) |
 | 反射说明符 | BlueprintReadWrite, Category="CharacterAttributeInfo" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterAttributeInfo") ECharacterAttributeCategoryType AttributeCategory = ECharacterAttributeCategoryType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 属性的分类
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterAttributeInfo") bool bIsUIShow = true;` |
 
-**源码注释:**
+**说明:**
 
 > 是否在UI上显示
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterAttributeInfo") bool bIsUIShowPercent = true;` |
 
-**源码注释:**
+**说明:**
 
 > UI显示百分比形式显示
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterAttributeInfo") int bIsUIMinFractionalDigits = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 最小小数点后显示的位数
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterAttributeInfo") int bIsUIMaxFractionalDigits = 2;` |
 
-**源码注释:**
+**说明:**
 
 > 最大小数点后显示的位数
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterAttributeInfo") FText AttributeDescribe;` |
 
-**源码注释:**
+**说明:**
 
 > 属性的描述
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterAttributeInfo") bool bShowChangeTipsToHead = false;` |
 
-**源码注释:**
+**说明:**
 
 > 属性变动时是否要显示在头上
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(EditConditionHides,EditCondition = "bShowChangeTipsToHead",Category = "CharacterAttributeInfo")) FText AttributePromoteTips = FText::GetEmpty();` |
 
-**源码注释:**
+**说明:**
 
 > 属性提升提示
 
@@ -199,7 +199,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(EditConditionHides,EditCondition = "bShowChangeTipsToHead",Category = "CharacterAttributeInfo")) FText AttributeReduceTips = FText::GetEmpty();` |
 
-**源码注释:**
+**说明:**
 
 > 属性降低提示
 
@@ -214,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterAttributeInfo") TSoftClassPtr<UCommonTextStyle> TextStyleA;` |
 
-**源码注释:**
+**说明:**
 
 > 属性在UI上显示的文字样式（大于0时）
 
@@ -229,7 +229,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterAttributeInfo") TSoftClassPtr<UCommonTextStyle> TextStyleB;` |
 
-**源码注释:**
+**说明:**
 
 > 属性在UI上显示的文字样式（小于等于0时）
 

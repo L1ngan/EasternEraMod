@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 本项目使用的GameplayAbility基类：激活分组、动作流程事件、效果容器、投射物/召唤物生成与控制效果参数等
 
 ## 蓝图暴露变量
 
@@ -17,18 +19,22 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnActivateAbilityStateDelegate OnActivateAbilityStateDelegate;` |
 
+**说明:**
+
+> 技能激活状态变化的可绑定委托
+
 ---
 
 ### 属性 `ActivationGroup`
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EEastRimWorldAbilityActivationGroup` |
+| C++ 类型 | [EEastRimWorldAbilityActivationGroup](EastRimWorldGameplayAbility__EEastRimWorldAbilityActivationGroup.md) |
 | 反射说明符 | BlueprintReadOnly, Category="EastRimWorld|Ability Activation" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "EastRimWorld|Ability Activation") EEastRimWorldAbilityActivationGroup ActivationGroup;` |
 
-**源码注释:**
+**说明:**
 
 > Defines the relationship between this ability activating and other abilities activating.
 
@@ -43,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "EastRimWorld|Ability Activation") EEastRimWorldAbilityType AbilityType;` |
 
-**源码注释:**
+**说明:**
 
 > Defines the relationship between this ability activating and other abilities activating.
 
@@ -53,10 +59,14 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EAbilityUseState` |
+| C++ 类型 | [EAbilityUseState](../../ERW_Enumerations__EAbilityUseState.md) |
 | 反射说明符 | BlueprintReadWrite, Category="EastRimWorld|Ability Activation" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, Category = "EastRimWorld|Ability Activation") EAbilityUseState AbilityUseState = EAbilityUseState::Inactive;` |
+
+**说明:**
+
+> 技能当前的使用状态（默认Inactive）
 
 ---
 
@@ -69,6 +79,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, Category = "EastRimWorld|Ability Activation") float AbilityUseStateTime = 0.0f;` |
 
+**说明:**
+
+> 技能使用状态的计时值（秒）
+
 ---
 
 ### 属性 `bCancelAbility`
@@ -79,6 +93,10 @@
 | 反射说明符 | BlueprintReadWrite, Category="EastRimWorld|Ability Activation" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "EastRimWorld|Ability Activation") bool bCancelAbility = false;` |
+
+**说明:**
+
+> 是否取消技能的标记
 
 ---
 
@@ -91,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = GameplayEffects) TMap<FGameplayTag, FEastRimWorldGameplayEffectContainer> EffectContainerMap;` |
 
-**源码注释:**
+**说明:**
 
 > Map of gameplay tags to gameplay effect containers
 
@@ -106,6 +124,40 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,Category="AbilityStruct") FGameAbilityStruct GameAbilityStruct;` |
 
+**说明:**
+
+> 技能的配置数据结构（来自配置初始化）
+
+---
+
+### 属性 `MartialArtsSkillEntryCooldownValueDelta`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadOnly, Category="AbilityStruct|SkillEntry" |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(Transient, BlueprintReadOnly, Category = "AbilityStruct|SkillEntry") float MartialArtsSkillEntryCooldownValueDelta = 0.f;` |
+
+**说明:**
+
+> 武学技能词条 ChangeAbilityParam：冷却实数增量之和，参与 (表基础秒数 + 本值) * MartialArtsSkillEntryCooldownPercentMultiplier。
+
+---
+
+### 属性 `MartialArtsSkillEntryCooldownPercentMultiplier`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadOnly, Category="AbilityStruct|SkillEntry" |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(Transient, BlueprintReadOnly, Category = "AbilityStruct|SkillEntry") float MartialArtsSkillEntryCooldownPercentMultiplier = 1.f;` |
+
+**说明:**
+
+> 武学技能词条：各 CD 百分比增量累乘 Π(1+小数百分比)。
+
 ---
 
 ### 属性 `IsAbort`
@@ -117,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) bool IsAbort { false };` |
 
-**源码注释:**
+**说明:**
 
 > 是否被打断
 
@@ -132,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TObjectPtr<AActor> Activator;` |
 
-**源码注释:**
+**说明:**
 
 > 激活者
 
@@ -147,7 +199,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FProjectileHitEventData ProjectileHitEventData;` |
 
-**源码注释:**
+**说明:**
 
 > 投射物命中信息
 
@@ -162,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "ContrlEffect") float BaseValue = 0.1f;` |
 
-**源码注释:**
+**说明:**
 
 > 基础值
 
@@ -177,7 +229,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "ContrlEffect") float Coefficient = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 系数
 
@@ -192,7 +244,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "ContrlEffect") float FixedValue = 25.f;` |
 
-**源码注释:**
+**说明:**
 
 > 固定值
 
@@ -207,7 +259,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "ContrlEffect") float FlyKnockAwayCoefficient = 5.f;` |
 
-**源码注释:**
+**说明:**
 
 > 固定值
 
@@ -227,6 +279,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取ActorInfo中的EastRimWorld技能系统组件
+
 ---
 
 ### 函数 `GetEastRimWorldCharacterFromActorInfo`
@@ -241,6 +297,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取ActorInfo对应的EastRimWorld角色
+
 ---
 
 ### 函数 `CanChangeActivationGroup`
@@ -253,13 +313,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `NewGroup` | `EEastRimWorldAbilityActivationGroup` |
+| `NewGroup` | [EEastRimWorldAbilityActivationGroup](EastRimWorldGameplayAbility__EEastRimWorldAbilityActivationGroup.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "EastRimWorld|Ability", Meta = (ExpandBoolAsExecs = "ReturnValue")) bool CanChangeActivationGroup(EEastRimWorldAbilityActivationGroup NewGroup) const;`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > Returns true if the requested activation group is a valid transition.
 
@@ -275,13 +335,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `NewGroup` | `EEastRimWorldAbilityActivationGroup` |
+| `NewGroup` | [EEastRimWorldAbilityActivationGroup](EastRimWorldGameplayAbility__EEastRimWorldAbilityActivationGroup.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "EastRimWorld|Ability", Meta = (ExpandBoolAsExecs = "ReturnValue")) bool ChangeActivationGroup(EEastRimWorldAbilityActivationGroup NewGroup);`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > Tries to change the activation group.  Returns true if it successfully changed.
 
@@ -303,7 +363,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > Called when the ability fails to activate
 
@@ -321,7 +381,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > Called when this ability is granted to the ability system component.
 
@@ -339,7 +399,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > Called when this ability is removed from the ability system component.
 
@@ -357,7 +417,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > Called when the ability system is initialized with a pawn avatar.
 
@@ -375,6 +435,10 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 蓝图事件：技能被取消时调用
+
 ---
 
 ### 函数 `K2_OnActionBegin`
@@ -388,6 +452,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent, Category = Ability, DisplayName = "OnActionBegin") void K2_OnActionBegin();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 蓝图事件：动作开始阶段时调用
 
 ---
 
@@ -403,6 +471,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 蓝图事件：动作循环阶段时调用
+
 ---
 
 ### 函数 `K2_OnActionEnd`
@@ -416,6 +488,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent, Category = Ability, DisplayName = "OnActionEnd") void K2_OnActionEnd();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 蓝图事件：动作结束阶段时调用
 
 ---
 
@@ -437,7 +513,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > Make gameplay effect container spec to be applied later, using the passed in container
 
@@ -461,7 +537,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > Search for and make a gameplay effect container spec to be applied later, from the EffectContainerMap
 
@@ -484,6 +560,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 按容器标签并结合传入的动态属性表构建并应用效果容器，返回激活的GE句柄数组
+
 ---
 
 ### 函数 `ApplyEffectContainerSpec`
@@ -502,7 +582,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > Applies a gameplay effect container spec that was previously created
 
@@ -526,7 +606,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > Applies a gameplay effect container, by creating and then applying the spec
 
@@ -550,7 +630,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 应用额外的效果
 
@@ -572,7 +652,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取此技能的实例
 
@@ -595,7 +675,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 生成递给投射物的实例  Class->Spec
 
@@ -617,7 +697,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 动态的增加此能力的效果
 
@@ -635,7 +715,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取技能结构
 
@@ -657,7 +737,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建召唤物
 
@@ -679,7 +759,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建投射物
 
@@ -695,14 +775,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `AbilityProjectile` | `const FAbilityProjectileStruct &` |
-| `TargetActor` | `AActor *` |
+| `AbilityProjectile` | `const FAbilityProjectileStruct&` |
+| `TargetActor` | `AActor*` |
 
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,Category="Porjectile") void SpawnProjectile(const FAbilityProjectileStruct & AbilityProjectile,AActor * TargetActor);`
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,Category="Porjectile") void SpawnProjectile(const FAbilityProjectileStruct& AbilityProjectile, AActor* TargetActor);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 生成投射物
 
@@ -720,7 +800,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 **BlueprintNativeEvent**：蓝图可重写；C++ 默认实现在 `xxx_Implementation`。
 
-**源码注释:**
+**说明:**
 
 > 生成召唤物
 
@@ -744,7 +824,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 **BlueprintNativeEvent**：蓝图可重写；C++ 默认实现在 `xxx_Implementation`。
 
-**源码注释:**
+**说明:**
 
 > 生成召唤物
 
@@ -767,7 +847,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过事件标签触发生成投射物
 
@@ -785,7 +865,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置动作能力完成
 
@@ -803,6 +883,10 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 蓝图事件：设置动作能力完成时触发
+
 ---
 
 ### 函数 `AbortAction`
@@ -817,7 +901,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 中断能力
 
@@ -835,7 +919,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 **BlueprintNativeEvent**：蓝图可重写；C++ 默认实现在 `xxx_Implementation`。
 
-**源码注释:**
+**说明:**
 
 > 检查能否打断此能力
 
@@ -853,6 +937,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 移除工作的运动扭曲（Warp）目标
+
 ---
 
 ### 函数 `K2_RemoveWorkWarpTarget`
@@ -866,6 +954,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent,Category = "Action",DisplayName= "RemoveWorkWarpTarget") void K2_RemoveWorkWarpTarget();`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 蓝图事件：移除工作的运动扭曲（Warp）目标，RemoveWorkWarpTarget的蓝图侧回调
 
 ---
 
@@ -881,7 +973,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取击退时间
 
@@ -899,7 +991,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取击倒时间
 
@@ -917,7 +1009,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取击飞的时间
 
@@ -935,7 +1027,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取击飞后倒地时间
 
@@ -953,7 +1045,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取击飞的距离
 
@@ -971,7 +1063,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取击飞的高度
 
@@ -988,6 +1080,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent,DisplayName="ContinuePlayAbilityAnimation") void K2_ContinuePlayAbilityAnimation();`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 蓝图事件：继续播放能力动画
 
 ---
 
@@ -1007,7 +1103,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 存储GA数据
 

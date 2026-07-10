@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ETournamentType` |
+| C++ type | [ETournamentType](TournamentStruct__ETournamentType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ETournamentType TournamentType = ETournamentType::Solo;` |
 
-**Source comments:**
+**Notes:**
 
 > 比赛类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FTournamentSpawnPoint> SpawnPoint;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色生成的起始位置
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float BattleTime = 300.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗时长
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 NumberOfPeople = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 参赛人数
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSoftObjectPtr<ULevelSequence> StartBattleLevelSequence;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗开始播放的关卡序列
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 GroupSectNumber = 16;` |
 
-**Source comments:**
+**Notes:**
 
 > 一个分组中有多少个门派
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<int32,FTournamentRankReputation> RankReputation;` |
 
-**Source comments:**
+**Notes:**
 
 > 排名所获得的声望 key 所在的分组
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName WorldPlaceID;` |
 
-**Source comments:**
+**Notes:**
 
 > 世界地点的id  WorldPlace
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 RegistrationTime = 3000;` |
 
-**Source comments:**
+**Notes:**
 
 > 报名时间
 

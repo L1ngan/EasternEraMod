@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Heat source related data
 
 ## Blueprint-exposed variables
 
@@ -16,5 +18,9 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) float HeatSourceTemperature = 0.f;` |
+
+**Notes:**
+
+> Temperature of the heat source
 
 ---

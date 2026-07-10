@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EERWSeason` |
+| C++ type | [EERWSeason](WorldStruct__EERWSeason.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EERWSeason Season = EERWSeason::Spring;` |
 
-**Source comments:**
+**Notes:**
 
 > 季节
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float ParameterChangeTransitionTime = 20.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 参数过度时间(秒)
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float ParameterStartValue = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 参数开始值
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float ParameterEndValue = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 参数结束值
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName ParameterName;` |
 
-**Source comments:**
+**Notes:**
 
 > 参数开始值
 

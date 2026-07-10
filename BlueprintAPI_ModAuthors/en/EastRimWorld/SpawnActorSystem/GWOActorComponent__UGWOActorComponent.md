@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Global World Optimization (GWO) component: freezes actors, replaces static meshes and throttles tick intervals based on camera/player distance (savable).
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FBeforeFreezingEvent OnBeforeFreezingEvent;` |
 
-**Source comments:**
+**Notes:**
 
 > Delegates
 
@@ -32,6 +34,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FAfterDefrosting OnAfterDefrosting;` |
 
+**Notes:**
+
+> Delegate broadcast after the actor is defrosted.
+
 ---
 
 ### Property `OnOutCameraFOV`
@@ -42,6 +48,10 @@
 | Reflection specifiers | BlueprintAssignable |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOutCameraFOV OnOutCameraFOV;` |
+
+**Notes:**
+
+> Delegate broadcast when the actor leaves the camera FOV.
 
 ---
 
@@ -54,6 +64,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FInCameraFOV OnInCameraFOV;` |
 
+**Notes:**
+
+> Delegate broadcast when the actor enters the camera FOV.
+
 ---
 
 ### Property `bShowErrorMessages`
@@ -64,6 +78,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Global World Optimization | Debug" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Global World Optimization | Debug") bool bShowErrorMessages = false;` |
+
+**Notes:**
+
+> Whether to show debug error messages.
 
 ---
 
@@ -76,6 +94,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Global World Optimization | Parameters", meta =(ClampMin = 100.f),SaveGame) float distanceCamera = 1000.f;` |
 
+**Notes:**
+
+> Camera distance threshold for optimization (in cm, minimum 100).
+
 ---
 
 ### Property `bIsActivate`
@@ -87,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Global World Optimization | Parameters",SaveGame) bool bIsActivate = true;` |
 
-**Source comments:**
+**Notes:**
 
 > Set Enable Global World Optimization Component.
 
@@ -102,6 +124,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Global World Optimization | Parameters",SaveGame) bool bIsOptimizeAllActorComponentsTickInterval = true;` |
 
+**Notes:**
+
+> Whether to optimize the tick interval of all the actor's components.
+
 ---
 
 ### Property `bIsDisableTickIfBehindCameraFOV`
@@ -112,6 +138,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Global World Optimization | Parameters" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Global World Optimization | Parameters",SaveGame) bool bIsDisableTickIfBehindCameraFOV = false;` |
+
+**Notes:**
+
+> Whether to disable ticking when outside the camera FOV.
 
 ---
 
@@ -124,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Global World Optimization | Parameters", meta=(ClampMin="100"),SaveGame); float spawnDistance = 2000.f;` |
 
-**Source comments:**
+**Notes:**
 
 > Will be overwritten if spawned from a spawner.
 
@@ -139,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Global World Optimization | Parameters", meta=(ClampMin="100"),SaveGame); float distanceDestroyOffset = 500.f;` |
 
-**Source comments:**
+**Notes:**
 
 > Will be overwritten if spawned from a spawner.
 
@@ -154,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Global World Optimization | Parameters", meta=(ClampMin="0"),SaveGame) float noSpawnDistance = 500.f;` |
 
-**Source comments:**
+**Notes:**
 
 > Will be overwritten if spawned from a spawner.
 
@@ -180,18 +210,22 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Global World Optimization | Parameters",SaveGame) int uniqID = -1;` |
 
+**Notes:**
+
+> Unique ID assigned by GWO (-1 means unassigned).
+
 ---
 
 ### Property `distanceCheckType`
 
 | Field | Details |
 |------|------|
-| C++ type | `EGWOAxes` |
+| C++ type | [EGWOAxes](GWOTypes__EGWOAxes.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Global World Optimization | Parameters" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Global World Optimization | Parameters",SaveGame) EGWOAxes distanceCheckType = EGWOAxes::XYZ;` |
 
-**Source comments:**
+**Notes:**
 
 > Will be overwritten if spawned from a spawner.
 
@@ -206,6 +240,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Global World Optimization | Parameters",SaveGame) bool bReplaceStaticMesh = false;` |
 
+**Notes:**
+
+> Whether to enable static mesh replacement optimization (works with replaceParameters).
+
 ---
 
 ### Property `replaceParameters`
@@ -216,6 +254,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Global World Optimization | Parameters" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Global World Optimization | Parameters", meta=(EditCondition="bReplaceStaticMesh", EditConditionHides),SaveGame) FGWOActorReplaceParameters replaceParameters;` |
+
+**Notes:**
+
+> Static mesh replacement parameters (effective when bReplaceStaticMesh is true).
 
 ---
 
@@ -228,7 +270,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "Global World Optimization",SaveGame) FName ActorInfoID;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成的actor信息
 
@@ -243,7 +285,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "Global World Optimization",SaveGame) uint8 ActorType;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成的actorType
 
@@ -258,7 +300,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "Global World Optimization",SaveGame) uint8 TeamID;` |
 
-**Source comments:**
+**Notes:**
 
 > 团队id
 
@@ -273,6 +315,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame) bool bGWOSpawn = false;` |
 
+**Notes:**
+
+> Whether this actor was spawned by a GWO spawner.
+
 ---
 
 ### Property `ConfigID`
@@ -284,7 +330,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame) FName ConfigID;` |
 
-**Source comments:**
+**Notes:**
 
 > configID 用于标识是哪个配置生成
 
@@ -304,6 +350,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Returns the time of the last freeze.
+
 ---
 
 ### Function `RegisterActorInGWO`
@@ -317,6 +367,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Global World Optimization") void RegisterActorInGWO();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Registers this actor with the GWO general access manager.
 
 ---
 
@@ -332,6 +386,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Unregisters this actor from the GWO general access manager.
+
 ---
 
 ### Function `InitializeActor`
@@ -346,6 +404,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Initializes the actor's GWO optimization parameters.
+
 ---
 
 ### Function `OnOwnerDeathStart`
@@ -359,5 +421,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void OnOwnerDeathStart();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Handles GWO logic when the owning actor starts dying.
 
 ---

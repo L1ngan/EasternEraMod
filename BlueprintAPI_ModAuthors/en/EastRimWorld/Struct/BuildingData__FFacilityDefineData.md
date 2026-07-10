@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Facility smart object definition data: contains the interaction anim montage and the facility interaction anim montage
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditDefaultsOnly, Category = "Animation") TSoftObjectPtr<UAnimMontage> AnimMontage;` |
 
-**Source comments:**
+**Notes:**
 
 > 交互动画
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditDefaultsOnly, Category = "Animation") TSoftObjectPtr<UAnimMontage> FacilityAnimMontage;` |
 
-**Source comments:**
+**Notes:**
 
 > 设施交互动画
 

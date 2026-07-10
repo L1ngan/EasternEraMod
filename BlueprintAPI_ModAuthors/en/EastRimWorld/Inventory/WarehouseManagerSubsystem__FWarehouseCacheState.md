@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool bIsFull = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否已满仓
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool bIsKeepClear = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否保持清空
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TArray<FWarehouseCellLayerEmptyState> CellLayerEmptyStates;` |
 
-**Source comments:**
+**Notes:**
 
 > 每个坐标格对应层数的空余状态列表（无嵌套 TMap，按格+层一条条存储）
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FName, int32> ItemIDToRemainingStackCapacity;` |
 
-**Source comments:**
+**Notes:**
 
 > 每种物品在仓库中还能堆叠的总数（ItemID -> 剩余可堆叠个数，由各堆 MaxStackSize - CurrentCount 汇总）
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FName,FTransportToWarehouseCache> TransportToWarehouseCache;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品缓存状态
 

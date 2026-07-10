@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> Common Log Info 数据结构。
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,meta=(MultiLine)) FText TipsText;` |
 
-**源码注释:**
+**说明:**
 
 > 提示文字 文本中包含对应的参数 参数中用占位符替换 例如 七杀门堂主孟星魂进入战场。 配置为 [1][3][2]进入战场。 数字代表ECommonLogParameterType的枚举值
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float CoolingTime;` |
 
-**源码注释:**
+**说明:**
 
 > 同id的日志内置CD
 
@@ -42,12 +44,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ECommonLogType` |
+| C++ 类型 | [ECommonLogType](CommonLogStruct__ECommonLogType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ECommonLogType CommonLogType = ECommonLogType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 日志的类型(相同类型可以有多个,生成时通过条件判断取一个,如果没有条件限制则随机取一个)
 
@@ -57,12 +59,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<ECommonLogGenerateCondition,float>` |
+| C++ 类型 | TMap<[ECommonLogGenerateCondition](CommonLogStruct__ECommonLogGenerateCondition.md),float> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<ECommonLogGenerateCondition,float> GenerateCondition;` |
 
-**源码注释:**
+**说明:**
 
 > 生成日志的条件 key为条件类型 value 为条件值
 
@@ -72,12 +74,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ECommonLogGroup` |
+| C++ 类型 | [ECommonLogGroup](CommonLogStruct__ECommonLogGroup.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ECommonLogGroup LogGroup = ECommonLogGroup::None;` |
 
-**源码注释:**
+**说明:**
 
 > 日志的分组
 

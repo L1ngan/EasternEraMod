@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName PuppetID;` |
 
-**Source comments:**
+**Notes:**
 
 > 傀儡ID
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid BuildingGUID;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑物Guid
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FUseItemSaveData EquippedWeapon;` |
 
-**Source comments:**
+**Notes:**
 
 > 已装备的武器
 
@@ -59,12 +59,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EArmorType, [FUseItemSaveData](ItemStruct__FUseItemSaveData.md)> |
+| C++ type | TMap<[EArmorType](CommonEnum__EArmorType.md), [FUseItemSaveData](ItemStruct__FUseItemSaveData.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<EArmorType, FUseItemSaveData> EquippedArmors;` |
 
-**Source comments:**
+**Notes:**
 
 > 已装备的防具数据
 

@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "OrganStatus") FText StatusName;` |
 
-**Source comments:**
+**Notes:**
 
 > 名称
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = 0.f,ClampMax = 1.0f),Category = "OrganStatus") float MinValue = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 区间最小值 百分比
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = 0.f,ClampMax = 1.0f), Category = "OrganStatus") float MaxValue = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 区间最大值
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "OrganStatus") FName TakeEffectBuffID;` |
 
-**Source comments:**
+**Notes:**
 
 > 处在此区间时生效的buff
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "OrganStatus") float WorkAdditionPercentage = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 处在此区间时工作的加成
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "OrganStatus") int TextColorType = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 器官状态UI文字(-1 红色；0 灰色；1 绿色)
 

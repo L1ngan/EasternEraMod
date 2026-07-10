@@ -20,6 +20,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnAttributeChanged OnAttributeChanged;` |
 
+**说明:**
+
+> 属性变化时广播的委托（属性、新值、旧值）
+
 ---
 
 ## 蓝图暴露函数
@@ -41,7 +45,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > Listens for an attribute changing.
 
@@ -64,7 +68,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > Listens for an attribute changing.
 > Version that takes in an array of Attributes. Check the Attribute output for which Attribute changed.
@@ -83,7 +87,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > You must call this function manually when you want the AsyncTask to end.
 > For UMG Widgets, you would call it in the Widget's Destruct event.

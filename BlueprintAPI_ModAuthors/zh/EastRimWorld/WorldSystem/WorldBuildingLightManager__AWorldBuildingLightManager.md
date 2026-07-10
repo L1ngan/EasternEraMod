@@ -20,9 +20,9 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "World|BuildingLight", meta = (ClampMin = "100.0")) float CameraActivateRadius = 8000.f;` |
 
-**源码注释:**
+**说明:**
 
-> 相对玩家 Pawn 位置启用灯光候选的最大距离
+> 相对玩家 Pawn 位置启用灯光候选的最大距离（由 GameInstance 的半径设置项驱动）
 
 ---
 
@@ -35,7 +35,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "World|BuildingLight", meta = (ClampMin = "0.0")) float PawnLocationChangeTolerance = 10.f;` |
 
-**源码注释:**
+**说明:**
 
 > 与上次记录的 Pawn 位置距离小于等于此值（UU）则视为未移动，跳过本帧灯光更新
 
@@ -50,9 +50,9 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "World|BuildingLight") int32 MaxPooledLights = 20;` |
 
-**源码注释:**
+**说明:**
 
-> 同时「正在使用」的灯光数量上限（新建时仅与此比较；空闲池数量不参与）
+> 同时「正在使用」的灯光数量上限（新建时仅与此比较；空闲池数量不参与；由 GameInstance 的数量设置项驱动）
 
 ---
 
@@ -65,7 +65,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "World|BuildingLight", meta = (ClampMin = "0.1")) float UpdateInterval = 0.5f;` |
 
-**源码注释:**
+**说明:**
 
 > 开启更新后，按「未受时间膨胀影响」的秒数计时的刷新间隔
 
@@ -80,7 +80,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "World|BuildingLight", meta = (ClampMin = "0")) int32 BuildingLightMaterialCustomDataIndex = 3;` |
 
-**源码注释:**
+**说明:**
 
 > 传给 UERW_HISMManager::SetBuildISMMaterialParameters 的 CustomData
 
@@ -94,6 +94,10 @@
 | 反射说明符 | BlueprintReadOnly, Category="World|BuildingLight" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "World|BuildingLight") TObjectPtr<USceneComponent> SceneRoot;` |
+
+**说明:**
+
+> Scene Root 字段。
 
 ---
 
@@ -110,6 +114,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "World|BuildingLight") static AWorldBuildingLightManager* GetWorldBuildingLightManager();`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取或查询 Get World Building Light Manager。
 
 ---
 
@@ -129,7 +137,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > Instance 或 UWorldManagerSystem 弱引用（需已通过 FindOrCreateWorldManageActors 生成）
 
@@ -151,7 +159,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 注册灯具建筑：需 BuildData.BuildingType == Light，灯具数据使用 BuildData.LightParams
 
@@ -173,6 +181,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 执行 Unregister Building 操作。
+
 ---
 
 ### 函数 `NotifyBuildingRuntimeStateChanged`
@@ -191,7 +203,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 建筑运行/启用状态等变化后调用：强制重算灯光与粒子（需 Normal 且 Enable 才可开灯/开粒子）
 
@@ -209,7 +221,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 开启定时更新（按 UpdateInterval）并绑定世界时间变化；需主动调用后才会刷新灯光
 
@@ -227,7 +239,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 停止更新：清除定时器、解绑时间委托、隐藏池内全部灯光
 
@@ -245,7 +257,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 切换/关闭子关卡前调用：停止更新、复位材质、清空注册列表；灯光池保留复用（应在 CurWorldPlace 仍有效时调用）
 
@@ -262,5 +274,27 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure, Category = "World|BuildingLight") bool IsBuildingLightUpdatesEnabled() const { return bBuildingLightUpdatesEnabled; }`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取或查询 Is Building Light Updates Enabled。
+
+---
+
+### 函数 `ApplyBuildingLightSettingsFromGameInstance`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="World|BuildingLight" |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "World|BuildingLight") void ApplyBuildingLightSettingsFromGameInstance();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 从 GameInstance 读取半径/数量两个设置项的当前值写入 CameraActivateRadius 与 MaxPooledLights，并强制下次刷新重算；BeginPlay 自动调用，设置变更时由 UERW_GameInstanceBase::SetBuildingLightRadiusLevel / SetBuildingLightCountLevel 触发
 
 ---

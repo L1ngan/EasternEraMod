@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EEmbeddedWallType` |
+| C++ type | [EEmbeddedWallType](../ERW_Enumerations__EEmbeddedWallType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) EEmbeddedWallType EmbeddedWallType { EEmbeddedWallType::None };` |
 
-**Source comments:**
+**Notes:**
 
 > 嵌入式墙体类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) float Yaw { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 旋转朝向
 

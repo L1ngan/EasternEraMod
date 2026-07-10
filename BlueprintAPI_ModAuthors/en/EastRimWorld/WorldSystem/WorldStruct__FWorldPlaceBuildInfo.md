@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> World Place Build Info data structure.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FName ID;` |
 
-**Source comments:**
+**Notes:**
 
 > 表ID
 
@@ -27,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EWorldPlaceBuildRunState` |
+| C++ type | [EWorldPlaceBuildRunState](WorldStruct__EWorldPlaceBuildRunState.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) EWorldPlaceBuildRunState RunState = EWorldPlaceBuildRunState::Normal;` |
 
-**Source comments:**
+**Notes:**
 
 > 运行状态
 
@@ -47,8 +49,23 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int32 BuildLevel = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前等级
+
+---
+
+### Property `RemainBuildTime`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float RemainBuildTime = 999.f;` |
+
+**Notes:**
+
+> 剩余建成时间
 
 ---

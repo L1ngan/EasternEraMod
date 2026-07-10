@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Energy system setup asset configuring energy connection cable material, segments, range, calculation interval and related parameters
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category ="Connection") TSoftObjectPtr<UMaterialInterface> LineMaterial;` |
 
+**Notes:**
+
+> Material used for the energy connection line
+
 ---
 
 ### Property `CableLength`
@@ -28,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category ="Connection") float CableLength = 200.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 缆索静止时的长度
 
@@ -43,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category ="Connection") FName AttachEndSocketName = NAME_None;` |
 
-**Source comments:**
+**Notes:**
 
 > 插槽名字
 
@@ -58,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category ="Connection",meta=(ClampMin = 1,ClampMax = 20)) int NumSegments = 6;` |
 
-**Source comments:**
+**Notes:**
 
 > 缆索静止时的长度
 
@@ -73,6 +79,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category ="Connection",meta=(ClampMin = 1,ClampMax = 16)) int SolverIterations = 3;` |
 
+**Notes:**
+
+> Cable solver iteration count (1-16)
+
 ---
 
 ### Property `CableWidth`
@@ -84,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category ="Connection",meta=(ClampMin = 1,ClampMax = 50)) float CableWidth = 3;` |
 
-**Source comments:**
+**Notes:**
 
 > 宽度
 
@@ -99,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category ="Connection",meta=(ClampMin = 1,ClampMax = 16)) int NumSides = 3;` |
 
-**Source comments:**
+**Notes:**
 
 > 几何体的面数
 
@@ -114,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category ="Connection",meta=(ClampMin = 1,ClampMax = 8)) float TileMaterial = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 方向的重复次数
 
@@ -129,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Connection") int32 EnergyRange = 1000;` |
 
-**Source comments:**
+**Notes:**
 
 > 能源相关的范围（连接范围，传输范围等）
 
@@ -144,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Connection") int32 CalculationInterval = 40;` |
 
-**Source comments:**
+**Notes:**
 
 > 计算间隔
 
@@ -159,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category ="Connection") TSoftClassPtr<AEnergySplineActor> EnergySplineActor;` |
 
-**Source comments:**
+**Notes:**
 
 > 连线actor
 
@@ -174,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Connection") bool bShowDebugBox = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否显示范围
 

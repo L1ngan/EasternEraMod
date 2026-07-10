@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Plant Type Tab Info data structure.
 
 ## Blueprint-exposed variables
 
@@ -12,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECollectPlantType` |
+| C++ type | [ECollectPlantType](ItemStruct__ECollectPlantType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") ECollectPlantType Type = ECollectPlantType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 种植物类型
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FText TypeName;` |
 
-**Source comments:**
+**Notes:**
 
 > 种植物类型名称
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") int32 Sort = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 种植物类型UI排序
 

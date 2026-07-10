@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> East Rim World Tab Descriptor data structure.
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly) FName TabId;` |
 
+**Notes:**
+
+> Tab Id field.
+
 ---
 
 ### Property `TabText`
@@ -27,6 +33,10 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FText TabText;` |
+
+**Notes:**
+
+> Tab Text field.
 
 ---
 
@@ -39,6 +49,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FSlateBrush IconBrush;` |
 
+**Notes:**
+
+> Icon Brush field.
+
 ---
 
 ### Property `IconHorverBrush`
@@ -49,6 +63,10 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FSlateBrush IconHorverBrush;` |
+
+**Notes:**
+
+> Icon Horver Brush field.
 
 ---
 
@@ -61,6 +79,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FSlateBrush IconSelectedBrush;` |
 
+**Notes:**
+
+> Icon Selected Brush field.
+
 ---
 
 ### Property `bHidden`
@@ -71,6 +93,10 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly) bool bHidden;` |
+
+**Notes:**
+
+> Boolean flag indicating whether Hidden is enabled or true.
 
 ---
 
@@ -83,6 +109,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly) TSubclassOf<UCommonButtonBase> TabButtonType;` |
 
+**Notes:**
+
+> Tab Button Type field.
+
 ---
 
 ### Property `TabContentType`
@@ -94,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly) TSubclassOf<UCommonUserWidget> TabContentType;` |
 
-**Source comments:**
+**Notes:**
 
 > TODO NDarnell - This should become a TSoftClassPtr<>, the underlying common tab list needs to be able to handle lazy tab content construction.
 
@@ -108,5 +138,9 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY(Transient) TObjectPtr<UWidget> CreatedTabContentWidget;` |
+
+**Notes:**
+
+> Executes the Created Tab Content Widget operation.
 
 ---

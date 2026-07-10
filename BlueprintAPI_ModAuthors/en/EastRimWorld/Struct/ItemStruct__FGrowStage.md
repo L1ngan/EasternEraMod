@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EGrowStageType` |
+| C++ type | [EGrowStageType](ItemStruct__EGrowStageType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Stage" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") EGrowStageType CurGrowStage = EGrowStageType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前阶段
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") FText StageName;` |
 
-**Source comments:**
+**Notes:**
 
 > 阶段名称
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") FText StageDescription;` |
 
-**Source comments:**
+**Notes:**
 
 > 阶段描述
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") float GrowStageTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 阶段持续时间 -1时 不会随时间结束此阶段 也不会发生变化
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") float MinScale = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 此阶段的最小缩放(如果是种植物的第一阶段,MinScale不能被其他阶段缩放范围包含)
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") float MaxScale = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 此阶段的最大缩放
 
@@ -104,12 +104,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EGrowStageType` |
+| C++ type | [EGrowStageType](ItemStruct__EGrowStageType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Stage" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") EGrowStageType AutoNextGrowStage = EGrowStageType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 此阶段过后的下一个阶段
 
@@ -119,12 +119,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<FName,EGrowStageType>` |
+| C++ type | TMap<FName,[EGrowStageType](ItemStruct__EGrowStageType.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="Stage" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") TMap<FName,EGrowStageType> AfterActionStage;` |
 
-**Source comments:**
+**Notes:**
 
 > 此阶段行为之后的阶段
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") float CuttingFractureHeightPercentage = 0.2;` |
 
-**Source comments:**
+**Notes:**
 
 > 砍伐的断裂高度百分比
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") TSoftObjectPtr<UStaticMesh> StageStaticMesh;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前阶段的模型
 
@@ -164,12 +164,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TArray<ECommonButtonType>` |
+| C++ type | TArray<[ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="Stage" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") TArray<ECommonButtonType> CommonButtons;` |
 
-**Source comments:**
+**Notes:**
 
 > 此阶段可以操作的按钮
 

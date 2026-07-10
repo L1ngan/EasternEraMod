@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FVector> RelativePoses;` |
 
-**Source comments:**
+**Notes:**
 
 > 控点的相对位置
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FVector> WorldPoses;` |
 
-**Source comments:**
+**Notes:**
 
 > 控点的世界位置
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FVector> Tangents;` |
 
-**Source comments:**
+**Notes:**
 
 > 控点的正切值
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 SampleInterval { 4 };` |
 
-**Source comments:**
+**Notes:**
 
 > 曲线采样间隔
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) bool IsRestrictArea { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是限制区域(建筑必须放在非限制区域内, 但不能触碰到限制区域)
 

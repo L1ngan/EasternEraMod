@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FGuid GridGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 能源网唯一ID
 
@@ -32,9 +32,9 @@
 | C++ type | TArray<[ABuildingActorBase](Building/BuildingActorBase__ABuildingActorBase.md)*> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<ABuildingActorBase*> TransmissionBuildings;` |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , Transient) TArray<ABuildingActorBase*> TransmissionBuildings;` |
 
-**Source comments:**
+**Notes:**
 
 > 传输建筑物
 
@@ -47,9 +47,9 @@
 | C++ type | TArray<[ABuildingActorBase](Building/BuildingActorBase__ABuildingActorBase.md)*> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<ABuildingActorBase*> EnergyStorageBuildings;` |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , Transient) TArray<ABuildingActorBase*> EnergyStorageBuildings;` |
 
-**Source comments:**
+**Notes:**
 
 > 储能建筑物
 
@@ -62,9 +62,9 @@
 | C++ type | TArray<[ABuildingActorBase](Building/BuildingActorBase__ABuildingActorBase.md)*> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<ABuildingActorBase*> ConsumeBuildings;` |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , Transient) TArray<ABuildingActorBase*> ConsumeBuildings;` |
 
-**Source comments:**
+**Notes:**
 
 > 消耗建筑物
 
@@ -77,9 +77,9 @@
 | C++ type | TArray<[ABuildingActorBase](Building/BuildingActorBase__ABuildingActorBase.md)*> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<ABuildingActorBase*> ControlBuildings;` |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , Transient) TArray<ABuildingActorBase*> ControlBuildings;` |
 
-**Source comments:**
+**Notes:**
 
 > 控制建筑物
 
@@ -92,9 +92,9 @@
 | C++ type | TArray<[ABuildingActorBase](Building/BuildingActorBase__ABuildingActorBase.md)*> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<ABuildingActorBase*> GenerateEnergyBuildings;` |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , Transient) TArray<ABuildingActorBase*> GenerateEnergyBuildings;` |
 
-**Source comments:**
+**Notes:**
 
 > 产生能源建筑物
 
@@ -104,12 +104,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EEnergyGridState` |
+| C++ type | [EEnergyGridState](ERW_Enumerations__EEnergyGridState.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) EEnergyGridState EnergyGridState = EEnergyGridState::Ununited;` |
 
-**Source comments:**
+**Notes:**
 
 > 能源网的状态
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float MaxEnergyStorage = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 能源网的总储能
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float CurEnergyStorage = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 能源网的当前储能
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float GenerateEnergy = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 生产能源
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float ConsumeEnergy = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 消耗能源
 

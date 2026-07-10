@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) TMap<int32 , FEnvironData> LayerData;` |
 
-**源码注释:**
+**说明:**
 
 > 每层环境数据
 > TMap<层 , 环境数据>
@@ -35,7 +35,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) bool IsHeightSet { false };` |
 
-**源码注释:**
+**说明:**
 
 > 高度是否设置
 
@@ -50,7 +50,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) float FoundationHeight { 0.f };` |
 
-**源码注释:**
+**说明:**
 
 > 地基(或水池, 阶梯)高度
 
@@ -65,7 +65,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) float MinHeight { 0.f };` |
 
-**源码注释:**
+**说明:**
 
 > 格子最低高度
 
@@ -80,7 +80,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) float MaxHeight { 0.f };` |
 
-**源码注释:**
+**说明:**
 
 > 格子最大高度
 
@@ -95,7 +95,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) float CenterHeight { 0.f };` |
 
-**源码注释:**
+**说明:**
 
 > 格子中心高度
 
@@ -110,7 +110,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) float Slope { 0.f };` |
 
-**源码注释:**
+**说明:**
 
 > 格子的斜率
 
@@ -120,12 +120,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EGroundSoilType` |
+| C++ 类型 | [EGroundSoilType](../ERW_Enumerations__EGroundSoilType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,SaveGame) EGroundSoilType GroundSoilType = EGroundSoilType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 地形材质对应的土地类型 todo...废弃
 
@@ -140,7 +140,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float GroundRichPercent = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 土地肥沃度
 

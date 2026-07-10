@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float NumberSize = 10.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 数字大小
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FLinearColor TextColor = FLinearColor::White;` |
 
-**Source comments:**
+**Notes:**
 
 > 字体颜色
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) UFont * Font = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 字体
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float OutlineSize = 10.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 描边大小
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FLinearColor OutlineColor = FLinearColor::White;` |
 
-**Source comments:**
+**Notes:**
 
 > 描边颜色
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float ShadowOffset = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 阴影偏移
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FLinearColor ShadowColor = FLinearColor::White;` |
 
-**Source comments:**
+**Notes:**
 
 > 阴影颜色
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName FontTypeface;` |
 
-**Source comments:**
+**Notes:**
 
 > 字体字形
 

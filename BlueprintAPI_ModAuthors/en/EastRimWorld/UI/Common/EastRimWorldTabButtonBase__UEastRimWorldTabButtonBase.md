@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> East Rim World Tab Button Base UObject type.
 
 ## Blueprint-exposed variables
 
@@ -16,6 +18,10 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,meta = (BindWidgetOptional)) TObjectPtr<UCommonLazyImage> LazyImage_Icon;` |
+
+**Notes:**
+
+> Lazy Image Icon field.
 
 ---
 
@@ -36,5 +42,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetIconBrush(const FSlateBrush& Brush);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Executes the Set Icon Brush operation.
 
 ---

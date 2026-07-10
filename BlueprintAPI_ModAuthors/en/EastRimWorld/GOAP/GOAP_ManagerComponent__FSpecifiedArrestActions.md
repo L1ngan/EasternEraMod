@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Action set data for specified arrest targets
 
 ## Blueprint-exposed variables
 
@@ -16,5 +18,9 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FUObjectData ,FGOAP_Actions> Actions;` |
+
+**Notes:**
+
+> Map of arrest actions grouped by target object data
 
 ---

@@ -19,7 +19,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() TMap<int32 , FBatchActions> BatchData;` |
 
-**Source comments:**
+**Notes:**
 
 > TMap<批次 , 批量处理的Action的数据>
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() int32 BatchIndex { INDEX_NONE };` |
 
-**Source comments:**
+**Notes:**
 
 > 批次索引
 

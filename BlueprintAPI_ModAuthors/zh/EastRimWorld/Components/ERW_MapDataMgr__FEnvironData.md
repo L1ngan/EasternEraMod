@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<EEnvironType , [FActorData](ERW_MapDataMgr__FActorData.md)> |
+| C++ 类型 | TMap<[EEnvironType](../ERW_Enumerations__EEnvironType.md) , [FActorData](ERW_MapDataMgr__FActorData.md)> |
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) TMap<EEnvironType , FActorData> EnvironData;` |
 
-**源码注释:**
+**说明:**
 
 > TMap<环境类型 , 每个朝向对应的Actor数据>
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) float TopHeight { 0.f };` |
 
-**源码注释:**
+**说明:**
 
 > 顶部高度
 

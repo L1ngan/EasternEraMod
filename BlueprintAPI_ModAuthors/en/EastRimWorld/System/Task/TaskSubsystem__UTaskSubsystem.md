@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Task Subsystem UObject type.
 
 ## Blueprint-exposed functions
 
@@ -19,6 +21,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure, Category = "TaskSubsystem") static UTaskSubsystem * GetInstance();`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Gets or queries Get Instance.
 
 ---
 
@@ -38,7 +44,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新任务条件
 
@@ -60,7 +66,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查条件是否满足
 
@@ -82,7 +88,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查条件是否满足
 
@@ -104,7 +110,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查条件数组是否都满足
 

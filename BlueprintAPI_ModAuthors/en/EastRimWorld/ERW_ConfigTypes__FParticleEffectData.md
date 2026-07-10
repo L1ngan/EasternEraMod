@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) bool UseNiagara { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否使用Niagara粒子
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , meta=(EditConditionHides , EditCondition="UseNiagara")) TSoftObjectPtr<class UNiagaraSystem> NiagaraSystem;` |
 
-**Source comments:**
+**Notes:**
 
 > Niagara粒子效果
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , meta=(EditConditionHides , EditCondition="!UseNiagara")) TSoftObjectPtr<class UParticleSystem> ParticleSystem;` |
 
-**Source comments:**
+**Notes:**
 
 > 粒子效果
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FTransform Transform;` |
 
-**Source comments:**
+**Notes:**
 
 > 粒子效果的Transform
 

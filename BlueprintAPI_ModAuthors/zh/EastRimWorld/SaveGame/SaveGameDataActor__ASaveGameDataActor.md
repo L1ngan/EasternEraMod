@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 全局存档数据Actor，集中保存解锁记录、观察进度、阵营信息、成就计数、参悟点数、难度系数与势力日志等全局数据
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) UERW_TechnologyMgr* TechnologyMgr { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > 科技管理组件
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) UCommonTaskComponent* CommonTaskComponent { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > 新手引导任务组件
 
@@ -47,9 +49,24 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere,SaveGame) TObjectPtr<UCommonLogComponent> LogComponent;` |
 
-**源码注释:**
+**说明:**
 
 > 日志组件
+
+---
+
+### 属性 `EmergenceLogComponent`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TObjectPtr<[UEmergenceLogComponent](../System/Emergence/Log/EmergenceLogComponent__UEmergenceLogComponent.md)> |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere,SaveGame) TObjectPtr<UEmergenceLogComponent> EmergenceLogComponent;` |
+
+**说明:**
+
+> 涌现系统专有日志组件(时间/来源事件反查/关联演员/玩家相关性)
 
 ---
 
@@ -62,7 +79,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnObserveScheduleChange OnObserveScheduleChange;` |
 
-**源码注释:**
+**说明:**
 
 > 当观察进度改变时
 
@@ -77,7 +94,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnObserveScheduleChange OnObserveComplete;` |
 
-**源码注释:**
+**说明:**
 
 > 当观察完成时
 
@@ -92,6 +109,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnFunctionChange OnGameFunctionChange;` |
 
+**说明:**
+
+> 游戏功能解锁状态变化时广播（功能ID、是否解锁）
+
 ---
 
 ### 属性 `OnNewBuildChange`
@@ -103,7 +124,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnBuildUnlockChange OnNewBuildChange;` |
 
-**源码注释:**
+**说明:**
 
 > 新出现的建筑
 
@@ -118,7 +139,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FUnlockItemTag OnUnlockItemTag;` |
 
-**源码注释:**
+**说明:**
 
 > 当物品解锁时
 
@@ -133,7 +154,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnPlayerTeamBuffChange OnPlayerTeamBuffChange;` |
 
-**源码注释:**
+**说明:**
 
 > 当玩家方buff状态改变时
 
@@ -148,6 +169,40 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnBuildingConstructionNumChange OnBuildingConstructionNumChange;` |
 
+**说明:**
+
+> 已建造建筑数量变化时广播（建筑ID、新数量、旧数量）
+
+---
+
+### 属性 `OnComprehendPointsChanged`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FOnComprehendPointsChanged` |
+| 反射说明符 | BlueprintAssignable |
+| 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnComprehendPointsChanged OnComprehendPointsChanged;` |
+
+**说明:**
+
+> 参悟历练/回溯点数变化（全局）
+
+---
+
+### 属性 `OnMartialFragmentChanged`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FOnMartialFragmentChanged` |
+| 反射说明符 | BlueprintAssignable |
+| 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnMartialFragmentChanged OnMartialFragmentChanged;` |
+
+**说明:**
+
+> 武学残卷数量变化（全局，参数为变化的品质与该品质当前数量）
+
 ---
 
 ### 属性 `UnlockFormula`
@@ -159,7 +214,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) TArray<FName> UnlockFormula;` |
 
-**源码注释:**
+**说明:**
 
 > 解锁的配方ID
 
@@ -174,7 +229,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) TArray<FName> UnlockBuilding;` |
 
-**源码注释:**
+**说明:**
 
 > 解锁的建筑ID（建造列表中可见）
 
@@ -189,7 +244,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) TArray<FName> UnlockPlant;` |
 
-**源码注释:**
+**说明:**
 
 > 解锁的种植物id
 
@@ -204,7 +259,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) TArray<FName> UnlockGameFunction;` |
 
-**源码注释:**
+**说明:**
 
 > 解锁的功能ID
 
@@ -219,9 +274,24 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) TArray<FName> EnteredSubLevels;` |
 
-**源码注释:**
+**说明:**
 
 > 进入过的关卡
+
+---
+
+### 属性 `EnabledModRecords`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TArray<[FModSaveRecord](../Mod/ModInfo__FModSaveRecord.md)> |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FModSaveRecord> EnabledModRecords;` |
+
+**说明:**
+
+> 本存档启用的 Mod 及版本（OnPrepareToSave 同步；读档时用于 Mod 兼容检查）
 
 ---
 
@@ -234,7 +304,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame) bool IsCustomWorkPriority { false };` |
 
-**源码注释:**
+**说明:**
 
 > 工作优先级UI是否是自定义优先级
 
@@ -249,7 +319,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FName> UnlockItem;` |
 
-**源码注释:**
+**说明:**
 
 > 已经解锁的物品列表
 
@@ -264,7 +334,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FName> UnlockCollect;` |
 
-**源码注释:**
+**说明:**
 
 > 已经解锁的采集物
 
@@ -279,18 +349,22 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) FGameplayTagContainer UnlockItemTagContainer;` |
 
+**说明:**
+
+> 已解锁物品类型Tag的容器（随存档保存）
+
 ---
 
 ### 属性 `ObservedObjectRecordMap`
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<EObserveObjectType,[FObserveObjectsRecordMap](../Struct/ObserveStruct__FObserveObjectsRecordMap.md)> |
+| C++ 类型 | TMap<[EObserveObjectType](../Struct/ObserveStruct__EObserveObjectType.md),[FObserveObjectsRecordMap](../Struct/ObserveStruct__FObserveObjectsRecordMap.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<EObserveObjectType,FObserveObjectsRecordMap> ObservedObjectRecordMap;` |
 
-**源码注释:**
+**说明:**
 
 > 已经观察完成的对象记录
 
@@ -300,12 +374,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<EObserveObjectType,[FObserveProgressesMap](../Struct/ObserveStruct__FObserveProgressesMap.md)> |
+| C++ 类型 | TMap<[EObserveObjectType](../Struct/ObserveStruct__EObserveObjectType.md),[FObserveProgressesMap](../Struct/ObserveStruct__FObserveProgressesMap.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<EObserveObjectType,FObserveProgressesMap> ObservingObjectProgress;` |
 
-**源码注释:**
+**说明:**
 
 > 观察进度
 
@@ -320,7 +394,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FGenericTeamId,FGameplayTeamInfo> TeamInfos;` |
 
-**源码注释:**
+**说明:**
 
 > 所有的阵营记录的阵营信息
 
@@ -335,7 +409,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FTeamChangeInformationInfo> TeamChangeInformationInfos;` |
 
-**源码注释:**
+**说明:**
 
 > 存储两个阵营关系变动
 
@@ -350,7 +424,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FCommonBuff> GlobalBuffs;` |
 
-**源码注释:**
+**说明:**
 
 > 存档的全局buff信息 不区分阵营 不区分地点
 
@@ -365,7 +439,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<FName,int32> BuildingConstructionNum;` |
 
-**源码注释:**
+**说明:**
 
 > 修建过的建筑物数量
 
@@ -380,7 +454,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame) TArray<FName> UnlockItemTipArr;` |
 
-**源码注释:**
+**说明:**
 
 > 刚解锁物品的红点提示提
 
@@ -395,7 +469,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, SaveGame) TArray<FString> UnlockResourTab;` |
 
-**源码注释:**
+**说明:**
 
 > 资源栏已经解锁的标签栏位 用图片资源路径作为标记
 
@@ -410,7 +484,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, SaveGame) TMap<FGuid, FCharacterLetterData> CharacterLetterMap;` |
 
-**源码注释:**
+**说明:**
 
 > 信笺数据
 
@@ -425,7 +499,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame ) int32 CurRobotNum;` |
 
-**源码注释:**
+**说明:**
 
 > 当前已激活的机关人数量
 
@@ -440,7 +514,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame ) TMap<int32 , FStallInfo> Stalls;` |
 
-**源码注释:**
+**说明:**
 
 > 当前保存的珍宝阁货架信息
 
@@ -455,7 +529,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame ) int32 UnlockStallSlots;` |
 
-**源码注释:**
+**说明:**
 
 > 当前已解锁的货架槽位
 
@@ -470,7 +544,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 DeathNum;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家角色死亡计数 用于解锁成就
 
@@ -485,7 +559,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 PurpleMakeNum;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家紫色装备制造计数 用于解锁成就
 
@@ -500,7 +574,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 GoldGeteNum;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家金色装备获取计数 用于解锁成就
 
@@ -515,7 +589,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 GoldWriteCopyNum;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家金色书籍抄录计数 用于解锁成就
 
@@ -530,7 +604,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) TMap<FName,int32> AnimalTame;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家驯服动物类型数组 用于解锁成就
 
@@ -545,7 +619,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 MartialArtsWinNum = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家累计切磋胜利计数 用于解锁成就
 
@@ -560,7 +634,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 MartialArtsFaileNum = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家累计切磋失败计数 用于解锁成就
 
@@ -575,7 +649,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) TArray<FGuid> continuityWin;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家连续切磋失败数组 用于解锁成就
 
@@ -590,7 +664,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) TArray<FGuid> continuityFaile;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家连续切磋成功数组 用于解锁成就
 
@@ -605,7 +679,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 TradeGetGoodNum = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家交易累计获得商品数量 用于解锁成就
 
@@ -620,7 +694,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 TradeSaleGoodNum = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家交易累计出售商品数量 用于解锁成就
 
@@ -635,7 +709,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 TradeGetmoney = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家交易累计获得铜币数量 用于解锁成就
 
@@ -650,9 +724,69 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) int32 TameAnimal = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家交易累计驯服动物数量 用于解锁成就
+
+---
+
+### 属性 `TrainingPoints`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) int32 TrainingPoints = 0;` |
+
+**说明:**
+
+> 参悟·历练点数（全局，参悟消耗，通过行为/任务获得）
+
+---
+
+### 属性 `RetracePoints`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) int32 RetracePoints = 0;` |
+
+**说明:**
+
+> 参悟·回溯点数（全局，参悟回溯词条消耗，通过行为/任务获得）
+
+---
+
+### 属性 `CharacterPracticePointCD`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TMap<FGuid,[FPracticePointCD](SaveGameDataActor__FPracticePointCD.md)> |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<FGuid,FPracticePointCD> CharacterPracticePointCD;` |
+
+**说明:**
+
+> 参悟·角色获得历练点数\回溯点数CD
+
+---
+
+### 属性 `MartialFragments`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TMap<EItemQuality,int32>` |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<EItemQuality,int32> MartialFragments;` |
+
+**说明:**
+
+> 武学残卷（全局，纯数值道具，按品质分别计数：品质→数量）
 
 ---
 
@@ -665,7 +799,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) FString Version = TEXT("0.1");` |
 
-**源码注释:**
+**说明:**
 
 > 版本号
 
@@ -680,7 +814,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame) TMap<FName , int32> ManageResource;` |
 
-**源码注释:**
+**说明:**
 
 > 资源管理界面资源及其数量
 
@@ -695,7 +829,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame) TMap<FName , FBuildingNumData> BuildingNumData;` |
 
-**源码注释:**
+**说明:**
 
 > 资源管理界面资源及其数量
 
@@ -705,12 +839,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EDifficultyOption` |
+| C++ 类型 | [EDifficultyOption](../Struct/CommonEnum__EDifficultyOption.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) EDifficultyOption CurGameDifficultyOption = EDifficultyOption::Normal;` |
 
-**源码注释:**
+**说明:**
 
 > 当前难度类型
 
@@ -725,7 +859,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) float CurGameDifficultyCoefficient = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 当前难度系数
 
@@ -740,7 +874,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) float CurEnemyRaidFrequencyCoefficient = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 敌人进攻频率系数
 
@@ -755,9 +889,54 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) FName CurRaidRulesetId;` |
 
-**源码注释:**
+**说明:**
 
 > 袭击规则配置
+
+---
+
+### 属性 `SelectDifficultyId`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FName` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) FName SelectDifficultyId;` |
+
+**说明:**
+
+> 选择的难度对应的配置表ID
+
+---
+
+### 属性 `IsEnableBeginnerGuide`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `bool` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) bool IsEnableBeginnerGuide { true };` |
+
+**说明:**
+
+> 是否开启新手引导
+
+---
+
+### 属性 `DifficultyData`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | [FDifficultyRuntimeSaveData](SaveGameDataActor__FDifficultyRuntimeSaveData.md) |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) FDifficultyRuntimeSaveData DifficultyData;` |
+
+**说明:**
+
+> 当前难度运行时系数（存档）
 
 ---
 
@@ -770,7 +949,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) FEastRimWorldHumanData ProtagonistData;` |
 
-**源码注释:**
+**说明:**
 
 > 主角的角色信息
 
@@ -785,13 +964,31 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FSoftObjectPath PlayerInitialPlace;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家的初始地点
 
 ---
 
 ## 蓝图暴露函数
+
+### 函数 `GetDifficultyData`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintPure |
+| 返回类型 | const [FDifficultyRuntimeSaveData](SaveGameDataActor__FDifficultyRuntimeSaveData.md)& |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable , BlueprintPure) static const FDifficultyRuntimeSaveData& GetDifficultyData();`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取当前难度运行时系数（静态访问，实例为空时返回默认值并警告）
+
+---
 
 ### 函数 `GetSaveGameDataActor`
 
@@ -804,6 +1001,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintPure) static ASaveGameDataActor * GetSaveGameDataActor();`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取全局唯一的存档数据Actor实例
 
 ---
 
@@ -818,6 +1019,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void InitSaveGameDataActor();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 初始化存档数据Actor（新游戏时写入难度运行时系数等初始数据）
 
 ---
 
@@ -837,7 +1042,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 解锁新配方
 
@@ -859,7 +1064,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 是否是可以使用的配方
 
@@ -881,7 +1086,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 解锁新的建筑（在建造列表中可见，但不一定能建造）
 
@@ -903,7 +1108,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 科技添加添加货架
 
@@ -925,7 +1130,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 科技增加货架槽位
 
@@ -947,7 +1152,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 判断是否是可以建造的建筑（满足初次解锁的条件）
 
@@ -969,7 +1174,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 判断是否是可以建造的建筑分类
 
@@ -991,7 +1196,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 返回解锁的建筑或植物提示的ID数组
 
@@ -1013,7 +1218,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 解锁新的种植物
 
@@ -1035,7 +1240,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 解锁新的功能
 
@@ -1057,7 +1262,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 是否进入过
 
@@ -1079,7 +1284,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 添加进入过的子关卡
 
@@ -1101,7 +1306,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除进入记录
 
@@ -1123,7 +1328,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 解锁新物品
 
@@ -1145,7 +1350,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 解锁新的采集物
 
@@ -1167,7 +1372,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 是否解锁对应的物品
 
@@ -1189,7 +1394,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 是否解锁对应的采集物
 
@@ -1211,7 +1416,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 解锁物品类型tag
 
@@ -1233,7 +1438,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 是否已经解锁了对应的Tag
 
@@ -1255,7 +1460,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 是否已经解锁了对应的Tag
 
@@ -1271,7 +1476,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ObserveType` | `const EObserveObjectType&` |
+| `ObserveType` | const [EObserveObjectType](../Struct/ObserveStruct__EObserveObjectType.md)& |
 | `ObjectId` | `const FName&` |
 | `ObserveDurability` | `const int32&` |
 | `InWorkload` | `const float&` |
@@ -1281,7 +1486,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 添加观察进度(需要注意采集物输入的id应该是其GamePlayTag的Name)
 
@@ -1297,14 +1502,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ObserveType` | `const EObserveObjectType&` |
+| `ObserveType` | const [EObserveObjectType](../Struct/ObserveStruct__EObserveObjectType.md)& |
 | `ObjectId` | `const FName&` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool CheckIsObserved(const EObserveObjectType& ObserveType,const FName& ObjectId);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查是否已经完成观察(需要注意采集物输入的id应该是其GamePlayTag的Name)
 
@@ -1320,14 +1525,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ObserveType` | `const EObserveObjectType&` |
+| `ObserveType` | const [EObserveObjectType](../Struct/ObserveStruct__EObserveObjectType.md)& |
 | `ObjectId` | `const FName&` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintPure) float GetCurObserveSchedule(const EObserveObjectType& ObserveType,const FName& ObjectId);`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取当前观察进度量(如果已经完成了观察返回-1)
 
@@ -1349,7 +1554,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查找对应的阵营信息
 
@@ -1371,7 +1576,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取对应的存档TeamBuff
 
@@ -1395,7 +1600,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 改变阵营关系
 
@@ -1413,7 +1618,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取主角信息
 
@@ -1436,9 +1641,167 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 增加已建造建筑数量
+
+---
+
+### 函数 `AddTrainingPointsByPractice`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `InCharacterGuid` | `const FGuid&` |
+| `Delta` | `int32` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void AddTrainingPointsByPractice(const FGuid& InCharacterGuid,int32 Delta);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 通过修炼行为增加的历练点数
+
+---
+
+### 函数 `AddTrainingPoints`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `Delta` | `int32` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void AddTrainingPoints(int32 Delta);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 增减历练点数（参悟消耗，结果钳制>=0，广播 OnComprehendPointsChanged；供任务/行为系统发放）
+
+---
+
+### 函数 `AddRetracePointsByPractice`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `InCharacterGuid` | `const FGuid&` |
+| `Delta` | `int32` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void AddRetracePointsByPractice(const FGuid& InCharacterGuid,int32 Delta);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 通过修炼行为增加的回溯点数
+
+---
+
+### 函数 `AddRetracePoints`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `Delta` | `int32` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void AddRetracePoints(int32 Delta);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 增减回溯点数（参悟回溯消耗，结果钳制>=0，广播 OnComprehendPointsChanged；供任务/行为系统发放）
+
+---
+
+### 函数 `AddMartialFragment`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `Quality` | `EItemQuality` |
+| `Num` | `int32` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void AddMartialFragment(EItemQuality Quality, int32 Num);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 增加指定品质的武学残卷（Num<=0 或品质为 None 忽略，广播 OnMartialFragmentChanged）
+
+---
+
+### 函数 `ConsumeMartialFragment`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `Quality` | `EItemQuality` |
+| `Num` | `int32` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool ConsumeMartialFragment(EItemQuality Quality, int32 Num);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 扣除指定品质的武学残卷（数量不足则不扣并返回 false，成功扣除广播 OnMartialFragmentChanged）
+
+---
+
+### 函数 `GetMartialFragmentNum`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintPure |
+| 返回类型 | `int32` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `Quality` | `EItemQuality` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintPure) int32 GetMartialFragmentNum(EItemQuality Quality) const;`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取指定品质的武学残卷数量
 
 ---
 
@@ -1459,7 +1822,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 通过势力guid获取对应的所有日志
 
@@ -1481,7 +1844,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取对所有势力日志
 
@@ -1503,7 +1866,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取所有非玩家势力日志
 
@@ -1521,7 +1884,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取所有势力新日志的数量
 
@@ -1543,31 +1906,9 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取所有大地图日志
-
----
-
-### 函数 `GetAllPlayerLog`
-
-| 项目 | 内容 |
-|------|------|
-| 反射说明符 | BlueprintPure |
-| 返回类型 | `void` |
-| 参数 | 见下表 |
-
-| 参数名 | 类型 |
-|--------|------|
-| `OutLogs` | TArray<[FCommonLogData](../Struct/CommonLogStruct__FCommonLogData.md)>& |
-
-**原始声明（单行节选）:** `UFUNCTION(BlueprintPure) void GetAllPlayerLog(TArray<FCommonLogData>& OutLogs) const;`
-
-**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
-
-**源码注释:**
-
-> 获取所有玩家日志
 
 ---
 
@@ -1583,7 +1924,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 任意势力是否有新日志
 
@@ -1605,7 +1946,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 指定势力是否有新日志
 
@@ -1623,7 +1964,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 非玩家势力是否有新日志
 
@@ -1641,9 +1982,29 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 存储主角的初始外观
+
+---
+
+### 函数 `EnsureProtagonistHair`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintImplementableEvent |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent,BlueprintCallable) void EnsureProtagonistHair();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> [老存档头发迁移] 读档时兜底：若主角捏脸 profile 的 Hairstyle 发型槽为空(老存档建号早于捏脸存发功能→掌门 3D 秃)，
+> 按性别塞一个默认发型资产并写回全局 ProtagonistCustomizationProfile，再刷新活体掌门外观。
+> 纯蓝图实现(FCustomizationProfile_V10/Hairstyle 是蓝图 struct，C++ 建不了)。幂等：非空则 no-op，新存档无副作用。
 
 ---
 
@@ -1667,7 +2028,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 势力进攻日志
 

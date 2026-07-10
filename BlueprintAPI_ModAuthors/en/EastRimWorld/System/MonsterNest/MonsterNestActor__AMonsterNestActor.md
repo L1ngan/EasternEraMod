@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Monster Nest Actor actor type.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly) TObjectPtr<UEventGenerateCharacterComponent> GenerateCharacterComponent;` |
 
-**Source comments:**
+**Notes:**
 
 > 事件生成角色组件
 
@@ -32,6 +34,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<USceneComponent> SceneComponent;` |
 
+**Notes:**
+
+> Scene Component field.
+
 ---
 
 ### Property `AllMonsters`
@@ -42,6 +48,10 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FGuid,AEastRimWorldCharacter*> AllMonsters;` |
+
+**Notes:**
+
+> All Monsters field.
 
 ---
 
@@ -54,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FMonsterNestInfo MonsterNestInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 怪物巢穴信息
 
@@ -69,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FGuid> AllWaitAttackMonsters;` |
 
-**Source comments:**
+**Notes:**
 
 > 所有生成的怪物且没有发动攻击的怪物
 
@@ -84,6 +94,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool bMonsterNestInit = false;` |
 
+**Notes:**
+
+> Boolean flag indicating whether Monster Nest Init is enabled or true.
+
 ---
 
 ### Property `AllAttackMonsters`
@@ -95,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FGuid> AllAttackMonsters;` |
 
-**Source comments:**
+**Notes:**
 
 > 已经发动攻击的怪物
 
@@ -115,7 +129,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > ~IEastRimWorldTeamAgentInterface interface
 
@@ -137,6 +151,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Set Generic Team Id operation.
+
 ---
 
 ### Function `RemoveGenerationActor`
@@ -155,7 +173,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除生成记录的单位
 

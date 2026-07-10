@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) float BaseScore { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 基础分值
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) FName WorkSchedule;` |
 
-**Source comments:**
+**Notes:**
 
 > 工作日程
 
@@ -44,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EGOAPGoalCategory` |
+| C++ type | [EGOAPGoalCategory](../ERW_Enumerations__EGOAPGoalCategory.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) EGOAPGoalCategory GoalCategory = EGOAPGoalCategory::Work;` |
 
-**Source comments:**
+**Notes:**
 
 > GOAP目标分类
 

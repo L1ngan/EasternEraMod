@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Energy System UObject type.
 
 ## Blueprint-exposed variables
 
@@ -16,6 +18,10 @@
 | Reflection specifiers | BlueprintAssignable |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUpdateEnergyGridDataDelegate OnUpdateEnergyGridData;` |
+
+**Notes:**
+
+> On Update Energy Grid Data event or callback.
 
 ---
 
@@ -33,6 +39,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Gets or queries Get Instance.
+
 ---
 
 ### Function `SelectAllConsistentBuilding`
@@ -46,13 +56,13 @@
 | Name | Type |
 |--------|------|
 | `EnergyGridGuid` | `FGuid` |
-| `EnergyType` | `EEnergyType` |
+| `EnergyType` | [EEnergyType](../../ERW_Enumerations__EEnergyType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SelectAllConsistentBuilding(FGuid EnergyGridGuid , EEnergyType EnergyType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据传入类型选中能量网中所有对应建筑
 
@@ -75,5 +85,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void FindConnectedTransmissionBuilding(ABuildingActorBase * InBuilding,ABuildingActorBase * IgnoreBuilding,TArray<ABuildingActorBase*> & OutBuildings);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Gets or queries Find Connected Transmission Building.
 
 ---

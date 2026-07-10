@@ -20,7 +20,7 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY(EditDefaultsOnly, Category = "GameplayTags") FGameplayTagBlueprintPropertyMap GameplayTagPropertyMap;` |
 
-**源码注释:**
+**说明:**
 
 > Gameplay tags that can be mapped to blueprint variables. The variables will automatically update as the tags are added or removed.
 > These should be used instead of manually querying for the gameplay tags.
@@ -35,6 +35,10 @@
 | 反射说明符 | BlueprintReadOnly, Category="Character State Data" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Character State Data") float GroundDistance = -1.0f;` |
+
+**说明:**
+
+> 角色到地面的距离，-1表示无效/未检测
 
 ---
 
@@ -56,7 +60,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 更新战斗的武器
 
@@ -78,7 +82,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 设置召唤物的待机行走混合空间
 
@@ -94,13 +98,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `CharacterBehaviorState` | `ECharacterBehaviorState` |
+| `CharacterBehaviorState` | [ECharacterBehaviorState](../Struct/CommonEnum__ECharacterBehaviorState.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent) void UpdateCharacterBehaviorState(ECharacterBehaviorState CharacterBehaviorState);`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 设置角色的行为状态
 
@@ -123,7 +127,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 设置角色的骑乘的动画
 

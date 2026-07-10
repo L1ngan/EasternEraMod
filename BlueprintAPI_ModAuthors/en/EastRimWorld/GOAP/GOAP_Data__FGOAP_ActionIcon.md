@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame) TSoftObjectPtr<UTexture2D> ActionIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 行为图标
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TArray<ECharacterBehaviorState>` |
+| C++ type | TArray<[ECharacterBehaviorState](../Struct/CommonEnum__ECharacterBehaviorState.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame) TArray<ECharacterBehaviorState> CharacterBehaviorStates;` |
 
-**Source comments:**
+**Notes:**
 
 > 行为的类型数组
 

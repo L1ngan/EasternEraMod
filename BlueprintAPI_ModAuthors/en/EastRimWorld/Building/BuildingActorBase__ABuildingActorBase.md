@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Base building actor class derived from AGOAP_ActorBase, covering construction, durability, energy grid, pipelines, ceremonies, puppet refitting, transportation, prison and trade area features.
 
 ## Blueprint-exposed variables
 
@@ -12,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBuildingRunState` |
+| C++ type | [EBuildingRunState](../ERW_Enumerations__EBuildingRunState.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) EBuildingRunState BuildingRunState = EBuildingRunState::Stop;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑物状态
 
@@ -27,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBuildingEnableState` |
+| C++ type | [EBuildingEnableState](../ERW_Enumerations__EBuildingEnableState.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,EditAnywhere,BlueprintReadOnly) EBuildingEnableState BuildingEnableState = EBuildingEnableState::Enable;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑物的启用状态
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float CurDurability = 0.0f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前耐久度
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) FBuildConfigData BuildData;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑物信息
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) int32 BuildingNum;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑的编号
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) TArray<AActor*> CurTemporaryConnectionBuildings;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前临时连接的建筑物
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) TArray<ABuildingActorBase*> ConnectBuildingActors;` |
 
-**Source comments:**
+**Notes:**
 
 > 连接的建筑物
 
@@ -122,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 EnergyRange = 1000;` |
 
-**Source comments:**
+**Notes:**
 
 > 连接范围
 
@@ -137,7 +139,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnChangeEnergyGridDelegate OnChangeEnergyGrid;` |
 
-**Source comments:**
+**Notes:**
 
 > 更改能源网络
 
@@ -152,7 +154,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnBuildDataChangedDelegate OnBuildDataChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑物数据发生变化
 
@@ -167,7 +169,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnBuildStorgeEnergyChangedDelegate OnBuildStorgeEnergyChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 储能建筑存储能量发生变化
 
@@ -182,7 +184,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUpdateTips OnUpdateTips;` |
 
-**Source comments:**
+**Notes:**
 
 > 更新建筑物提示
 
@@ -197,7 +199,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnChangeEnable OnChangeEnable;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑物开启或关闭状态变化
 
@@ -212,7 +214,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnChangePipelineGroup OnChangePipelineGroup;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前设备管道分配发生变化
 
@@ -227,7 +229,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnChangeWhenClosedOrOnPipelineGroup OnChangeWhenClosedOrOnPipelineGroup;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前控制设备关闭或关闭时控制的管道发生变化
 
@@ -242,7 +244,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnBuildDurabilityChangedDelegate OnBuildDurabilityChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 耐久度变化
 
@@ -257,6 +259,25 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnBuildingFuelChanged OnBuildingFuelChanged;` |
 
+**Notes:**
+
+> Event fired when the building's fuel changes; the parameter is the current fuel amount.
+
+---
+
+### Property `FromBuildingGuid`
+
+| Field | Details |
+|------|------|
+| C++ type | `FGuid` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) FGuid FromBuildingGuid;` |
+
+**Notes:**
+
+> 移动建筑源建筑的Guid
+
 ---
 
 ### Property `BuildingEffectRangeComponent`
@@ -268,7 +289,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TObjectPtr<UBoxComponent> BuildingEffectRangeComponent;` |
 
-**Source comments:**
+**Notes:**
 
 > 用于产生对角色的重叠事件
 
@@ -283,7 +304,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float BuildHeight = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑物的高度
 
@@ -298,7 +319,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AEastRimWorldCharacter_Summons> SummonCharacter;` |
 
-**Source comments:**
+**Notes:**
 
 > 当建筑物为哨塔时生成的角色Actor
 
@@ -313,7 +334,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnCeremonyStart OnCeremonyStart;` |
 
-**Source comments:**
+**Notes:**
 
 > 仪式开始事件
 
@@ -328,7 +349,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnCeremonyEnd OnCeremonyEnd;` |
 
-**Source comments:**
+**Notes:**
 
 > 仪式结束事件
 
@@ -343,7 +364,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnPracticeOverlockingStateChange OnPracticeOverlockingStateChange;` |
 
-**Source comments:**
+**Notes:**
 
 > 修炼建筑超频状态改变
 
@@ -358,6 +379,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnRefitPuppetComplete OnRefitPuppetComplete;` |
 
+**Notes:**
+
+> Event fired when puppet refitting completes.
+
 ---
 
 ### Property `TransportationInfo`
@@ -369,7 +394,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Transportation") FTransportationInfo TransportationInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 交通工具信息
 
@@ -384,7 +409,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Transportation") TMap<int32,ATransportationActor*> TransportationActors;` |
 
-**Source comments:**
+**Notes:**
 
 > 交通工具显示actor
 
@@ -399,7 +424,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Transportation") FOnTransportationStateChanged OnTransportationStateChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 交通工具状态改变事件
 
@@ -414,7 +439,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly , SaveGame) UBoxComponent* BoxCollision;` |
 
-**Source comments:**
+**Notes:**
 
 > 球形碰撞组件（不一定在构造函数创建）
 
@@ -428,6 +453,25 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) int32 CurBuildingScore = 0;` |
+
+**Notes:**
+
+> Current building score (saved with the save game).
+
+---
+
+### Property `BuildingWidgetBar`
+
+| Field | Details |
+|------|------|
+| C++ type | `TObjectPtr<UWidgetComponent>` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TObjectPtr<UWidgetComponent> BuildingWidgetBar;` |
+
+**Notes:**
+
+> Widget component for the building's UI bar display.
 
 ---
 
@@ -445,6 +489,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Cancels construction of this building.
+
 ---
 
 ### Function `GetRoomName`
@@ -459,6 +507,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Returns the name of the room the building is located in.
+
 ---
 
 ### Function `GetCombinatioBuildName`
@@ -472,6 +524,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) virtual FText GetCombinatioBuildName();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns the name of the combination building this building belongs to.
 
 ---
 
@@ -491,7 +547,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 选中状态发生变化
 
@@ -509,9 +565,152 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 当建筑损坏时
+
+---
+
+### Function `GetBuildResources`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `ExtraResourceRate` | `float` |
+| `Resources` | `TMap<FName , int32>&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void GetBuildResources(float ExtraResourceRate , TMap<FName , int32>& Resources);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 获得建造资源
+
+---
+
+### Function `Rebuilt`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintImplementableEvent |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `NewID` | `const FName&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) void Rebuilt(const FName& NewID);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> 重建建筑
+
+---
+
+### Function `TransBuildingAbortUsers`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintImplementableEvent |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) void TransBuildingAbortUsers();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> 移动建筑打断建筑的用户
+
+---
+
+### Function `OnTransBuildingFinished`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintImplementableEvent |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) void OnTransBuildingFinished();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> 移动建筑完成
+
+---
+
+### Function `UpdateConfigData`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `BuildConfigData` | const [FBuildConfigData](../ERW_ConfigTypes__FBuildConfigData.md)& |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void UpdateConfigData(const FBuildConfigData& BuildConfigData);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 更新配置相关数据
+
+---
+
+### Function `OnRebuildComplete`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintNativeEvent |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `BuildConfigData` | const [FBuildConfigData](../ERW_ConfigTypes__FBuildConfigData.md)& |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintNativeEvent , BlueprintCallable) void OnRebuildComplete(const FBuildConfigData& BuildConfigData);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
+
+**Notes:**
+
+> 重建完成
+
+---
+
+### Function `RefreshBuildingUI`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void RefreshBuildingUI();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 刷新建筑UI显示
 
 ---
 
@@ -531,7 +730,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 返还当前建造材料
 
@@ -549,7 +748,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 读档时绑定研究相关事件
 
@@ -567,7 +766,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 添加燃料后尝试恢复自动制造
 
@@ -590,6 +789,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Adds fuel of the given ID and amount to the building.
+
 ---
 
 ### Function `ChangePipelineGroup`
@@ -608,7 +811,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 变更管道
 
@@ -626,7 +829,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取能量消耗
 
@@ -644,7 +847,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取能产出
 
@@ -662,7 +865,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取最大能量储能
 
@@ -680,7 +883,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取当前能量储能
 
@@ -698,7 +901,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取可储存值
 
@@ -720,7 +923,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 能源储量变化
 
@@ -736,14 +939,14 @@
 
 | Name | Type |
 |--------|------|
-| `NewEnergyGridState` | `EEnergyGridState` |
+| `NewEnergyGridState` | [EEnergyGridState](../ERW_Enumerations__EEnergyGridState.md) |
 | `false` | `bool bIsBuildingRunStateChange =` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Building") void UpdateEnergyGridState(EEnergyGridState NewEnergyGridState , bool bIsBuildingRunStateChange = false);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新能量网状态
 
@@ -761,7 +964,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取相连的建筑物
 
@@ -779,7 +982,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取管道分组
 
@@ -797,7 +1000,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取能量网信息
 
@@ -815,7 +1018,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取当前能源建筑物信息
 
@@ -833,7 +1036,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新修建中的连接状态
 
@@ -855,6 +1058,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Blueprint implementable event invoked when temporarily connecting to the given buildings (DisplayName: TemporaryConnectionBuilding).
+
 ---
 
 ### Function `k2_CancelTemporaryConnectionBuilding`
@@ -872,6 +1079,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent, Category = "Building",DisplayName = "CancelTemporaryConnectionBuilding") void k2_CancelTemporaryConnectionBuilding(const TArray<AActor*> & BuildingActors);`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Blueprint implementable event invoked when temporary connections to the given buildings are cancelled (DisplayName: CancelTemporaryConnectionBuilding).
 
 ---
 
@@ -891,6 +1102,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Blueprint implementable event invoked when connecting to the given buildings (DisplayName: ConnectionBuilding).
+
 ---
 
 ### Function `k2_CancelConnectionBuilding`
@@ -909,6 +1124,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Blueprint implementable event invoked when a connection to the given building is cancelled (DisplayName: CancelConnectionBuilding).
+
 ---
 
 ### Function `HideConnectionLine`
@@ -922,6 +1141,32 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void HideConnectionLine();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Hides the connection lines between buildings.
+
+---
+
+### Function `ReconnectAfterTransfer`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `ToBuilding` | [ABuildingActorBase](BuildingActorBase__ABuildingActorBase.md)* |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void ReconnectAfterTransfer(ABuildingActorBase* ToBuilding);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 移动建筑后重新连接
 
 ---
 
@@ -937,6 +1182,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Clears all temporary connections of this building.
+
 ---
 
 ### Function `GetEnergyGridGuid`
@@ -950,6 +1199,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintPure,Category="Building") FGuid GetEnergyGridGuid();`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Returns the GUID of the energy grid this building belongs to.
 
 ---
 
@@ -969,7 +1222,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置关闭状态开启的管道分组
 
@@ -991,7 +1244,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置开启状态开启的管道分组
 
@@ -1009,7 +1262,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置开启或关闭状态的管道完成
 
@@ -1031,7 +1284,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置管道分组
 
@@ -1049,7 +1302,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置管道分组完成
 
@@ -1067,7 +1320,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取控制开启的管道线路
 
@@ -1085,7 +1338,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取控制关闭的管道线路
 
@@ -1103,7 +1356,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算24小时能源产出
 
@@ -1121,7 +1374,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算24小时能源消耗
 
@@ -1139,7 +1392,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 建筑是否可以正常运行（抛开能量网）
 
@@ -1161,7 +1414,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 修炼一次随机是否触发超频
 
@@ -1178,6 +1431,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CallOnBuildTipChanged();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Triggers the broadcast that the building's tip info has changed.
 
 ---
 
@@ -1197,7 +1454,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据goalID移除Action
 
@@ -1220,7 +1477,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建添加燃料GOAP
 
@@ -1242,6 +1499,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Sets the temperature of this heat-source building.
+
 ---
 
 ### Function `ApplyCeremony`
@@ -1262,7 +1523,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 申请仪式 InCharacterGuids主要仪式人 InSpectatorGuids观众
 
@@ -1284,7 +1545,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 参与仪式签到
 
@@ -1306,7 +1567,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 结束仪式
 
@@ -1324,7 +1585,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 打断仪式
 
@@ -1346,7 +1607,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 参与仪式签退
 
@@ -1368,7 +1629,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建并立即执行囚犯被处决行为
 
@@ -1385,6 +1646,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void RemovePrisonerExecutedAction();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Removes the prisoner-execution GOAP action.
 
 ---
 
@@ -1405,7 +1670,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 处刑人签到
 
@@ -1427,7 +1692,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 囚犯签到
 
@@ -1450,7 +1715,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 拷打人签到
 
@@ -1472,7 +1737,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建并立即执行囚犯被拷打行为
 
@@ -1489,6 +1754,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void RemovePrisonerTorturedAction();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Removes the prisoner-torture GOAP action.
 
 ---
 
@@ -1508,7 +1777,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 傀儡改造相关方法
 > 添加傀儡到建筑物中（相同的傀儡只能添加一次）
@@ -1531,7 +1800,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 从建筑物中移除傀儡
 
@@ -1553,7 +1822,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查傀儡是否已添加到建筑物中
 
@@ -1571,7 +1840,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取建筑物中所有傀儡ID
 
@@ -1589,7 +1858,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取建筑物中傀儡数量
 
@@ -1607,7 +1876,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 清空建筑物中的所有傀儡
 
@@ -1629,7 +1898,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建改装傀儡搬运GOAP
 
@@ -1651,6 +1920,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Starts refitting the puppet with the given usable inventory item instance.
+
 ---
 
 ### Function `EndRefitPuppet`
@@ -1665,7 +1938,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 完成当前改装
 
@@ -1687,7 +1960,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 终止对应的改装行为
 
@@ -1705,7 +1978,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 清空所有待改装打断当前改装行为
 
@@ -1727,7 +2000,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 添加资源
 
@@ -1745,7 +2018,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查是否为交通工具建筑
 
@@ -1756,14 +2029,14 @@
 | Field | Details |
 |------|------|
 | Reflection specifiers | BlueprintCallable, BlueprintPure, Category="Transportation" |
-| Return type | `ETransportationType` |
+| Return type | [ETransportationType](../ERW_Enumerations__ETransportationType.md) |
 | Parameters | (none) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Transportation") ETransportationType GetTransportationType() const;`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取交通工具类型
 
@@ -1781,7 +2054,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查交通工具是否有空余
 
@@ -1799,7 +2072,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取交通工具占有的队伍
 
@@ -1821,7 +2094,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 占用交通工具
 
@@ -1843,7 +2116,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 释放交通工具
 
@@ -1865,6 +2138,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Creates and returns the transportation display actor at the specified slot index.
+
 ---
 
 ### Function `GetTransportationActor`
@@ -1883,7 +2160,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取插槽上的actor
 
@@ -1905,7 +2182,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除掉交通工具的显示
 
@@ -1923,7 +2200,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取交通工具移动速度倍数
 
@@ -1941,7 +2218,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化交通工具组件
 
@@ -1959,7 +2236,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加载交通工具
 
@@ -1981,7 +2258,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置交通工具信息
 
@@ -1999,7 +2276,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取交通工具信息
 
@@ -2017,7 +2294,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查空位
 
@@ -2039,7 +2316,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建将囚犯关押回监狱行为
 
@@ -2057,7 +2334,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除将囚犯关押回监狱行为
 
@@ -2079,6 +2356,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Calculates the building score for the given building index and updates CurBuildingScore.
+
 ---
 
 ### Function `GetBuildingStaticMesh`
@@ -2092,6 +2373,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Building") UStaticMesh* GetBuildingStaticMesh();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Returns the building's static mesh (Blueprint implementable event).
 
 ---
 
@@ -2107,7 +2392,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 全选储存tag
 
@@ -2129,8 +2414,44 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 全取消储存tag
+
+---
+
+### Function `InitBuildingWidgetBar`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintImplementableEvent |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent,BlueprintCallable) void InitBuildingWidgetBar();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Initializes the building's UI widget bar (Blueprint implementable event).
+
+---
+
+### Function `GetAreaName`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure |
+| Return type | `FText` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintPure) FText GetAreaName();`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Returns the name of the area the building is located in.
 
 ---

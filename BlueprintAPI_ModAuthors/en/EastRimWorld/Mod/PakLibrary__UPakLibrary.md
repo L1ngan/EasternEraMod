@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Blueprint function library for Pak file operations (mount/unmount Paks, register mount points, load classes from Paks)
 
 ## Blueprint-exposed functions
 
@@ -23,6 +25,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "PAK") static bool MountAndRegisterPak(FString PakFilePath);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Mounts a Pak file and registers its mount point; returns whether it succeeded
 
 ---
 
@@ -43,6 +49,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Mounts a Pak file at the specified mount point; returns whether it succeeded
+
 ---
 
 ### Function `UnmountPakFile`
@@ -60,6 +70,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "PAK") static bool UnmountPakFile(const FString& PakFilePath);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Unmounts the specified Pak file; returns whether it succeeded
 
 ---
 
@@ -80,6 +94,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Registers a mount point (maps a root path to a content path)
+
 ---
 
 ### Function `UnRegisterMountPoint`
@@ -99,6 +117,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Unregisters a mount point (the root path to content path mapping)
+
 ---
 
 ### Function `GetPakMountPoint`
@@ -116,6 +138,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintPure, Category = "PAK") static FString const GetPakMountPoint(const FString& PakFilePath);`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Returns the mount point of a Pak file
 
 ---
 
@@ -136,6 +162,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Returns the list of file paths inside a Pak file (optionally only cooked assets)
+
 ---
 
 ### Function `GetPakMountContentPath`
@@ -153,6 +183,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintPure, Category = "PAK") static FString GetPakMountContentPath(const FString& PakFilePath);`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Returns the mounted content path of a Pak file
 
 ---
 
@@ -172,6 +206,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Loads an object class reference (UClass) from a Pak content path
+
 ---
 
 ### Function `LoadPakFileClass`
@@ -189,6 +227,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "PAK") static UClass* LoadPakFileClass(const FString& FileName);`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Loads a class (UClass) from a Pak by file name
 
 ---
 
@@ -208,5 +250,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "PAK") static FString Conv_PakContentPathToReferenceString(const FString PakContentPath, const FString PakMountPath);`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Converts a Pak content path to an asset reference string using the given mount path
 
 ---

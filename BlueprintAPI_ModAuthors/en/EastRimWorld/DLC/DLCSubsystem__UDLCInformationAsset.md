@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int DLCId = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > DLCId 需与steam 主包中配置 id 统一
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int DLCWeGameID = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > wegameID 统一id dlc包中的id steam上id
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FText DLCName;` |
 
-**Source comments:**
+**Notes:**
 
 > 此DLC的名字
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSoftObjectPtr<UTexture2D> DLCIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > DLC图标
 
@@ -74,12 +74,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EDLCConfigType,TSoftObjectPtr<UDataTable>>` |
+| C++ type | TMap<[EDLCConfigType](DLCSubsystem__EDLCConfigType.md),TSoftObjectPtr<UDataTable>> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TMap<EDLCConfigType,TSoftObjectPtr<UDataTable>> AddDataTable;` |
 
-**Source comments:**
+**Notes:**
 
 > 此Dlc增加的配置项
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) bool bPurchase = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 此DLC是否需要购买
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText DLCDescription;` |
 
-**Source comments:**
+**Notes:**
 
 > DLC的描述
 

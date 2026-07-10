@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category ="Base") FText Name;` |
 
-**Source comments:**
+**Notes:**
 
 > 名称
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowedClasses = "/Script/Engine.Texture2D"),Category ="Base") FSoftObjectPath Icon;` |
 
-**Source comments:**
+**Notes:**
 
 > 图标
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category ="Base") FText Describe;` |
 
-**Source comments:**
+**Notes:**
 
 > 描述
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category ="Base") FFormatText FormatDescribe;` |
 
-**Source comments:**
+**Notes:**
 
 > 格式化的 描述
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category ="Base") float Consumption = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 使用消耗
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category ="Base") int32 ExtractWeights = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 抽取权重
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category ="Base") float TimeDuration = -1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 战略技能的持续时间 -1 为没有持续时间
 
@@ -119,12 +119,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EStratagemAbilityType` |
+| C++ type | [EStratagemAbilityType](WorldBattleStruct__EStratagemAbilityType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category ="Base") EStratagemAbilityType StratagemAbilityType = EStratagemAbilityType::GlobalAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 战略技能类型
 
@@ -134,12 +134,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EStratagemAbilityTargetType` |
+| C++ type | [EStratagemAbilityTargetType](WorldBattleStruct__EStratagemAbilityTargetType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="GlobalAbility" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,meta=(EditCondition = "StratagemAbilityType == EStratagemAbilityType::GlobalAbility",EditConditionHides),Category = "GlobalAbility") EStratagemAbilityTargetType StratagemAbilityTargetType = EStratagemAbilityTargetType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 作用对象
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,meta=(EditCondition = "StratagemAbilityType == EStratagemAbilityType::GlobalAbility",EditConditionHides,AllowedClasses = "GameplayEffect"),Category = "GlobalAbility") TArray<FSoftClassPath> ActivateGEs;` |
 
-**Source comments:**
+**Notes:**
 
 > 全局技能施加的GE效果
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,meta=(EditCondition = "StratagemAbilityType == EStratagemAbilityType::RangeAbility || StratagemAbilityType == EStratagemAbilityType::RangeSummoningAbility",EditConditionHides),Category = "RangeAbility") float ReleaseRangeDiameter = 500.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 释放范围大小直径
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,meta=(EditCondition = "StratagemAbilityType == EStratagemAbilityType::RangeAbility || StratagemAbilityType == EStratagemAbilityType::RangeSummoningAbility || StratagemAbilityType == EStratagemAbilityType::StartLocationSummoningSkill",EditConditionHides),Category = "Ability") FGameplayTag AbilityTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 激活此技能的Tag
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,meta=(EditCondition = "StratagemAbilityType == EStratagemAbilityType::RangeAbility || StratagemAbilityType == EStratagemAbilityType::RangeSummoningAbility || StratagemAbilityType == EStratagemAbilityType::StartLocationSummoningSkill",EditConditionHides),Category = "Ability") FName AbilityID;` |
 
-**Source comments:**
+**Notes:**
 
 > 关联的能力ID 读取能力表
 
@@ -214,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,meta=(EditCondition = "StratagemAbilityType == EStratagemAbilityType::GlobalFunction",EditConditionHides),Category = "RangeAbility") TArray<FStratagemAbilityFunction> StratagemAbilityFunction;` |
 
-**Source comments:**
+**Notes:**
 
 > 全局功能
 
@@ -224,12 +224,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EAutoTargetType` |
+| C++ type | [EAutoTargetType](WorldBattleStruct__EAutoTargetType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="RangeAbility" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,meta=(EditCondition = "StratagemAbilityType == EStratagemAbilityType::RangeAbility || StratagemAbilityType == EStratagemAbilityType::RangeSummoningAbility",EditConditionHides),Category = "RangeAbility") EAutoTargetType AutoTargetType = EAutoTargetType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 自动释放时作用对象
 
@@ -244,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Runtime",meta=(EditConditionHides,EditCondition = "false")) FGuid Guid;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成GUID
 
@@ -259,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Runtime",meta=(EditConditionHides,EditCondition = "false")) FTransform GenerateTransform;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成的位置
 
@@ -274,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 Priority = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 优先级 同分组下的优先级 越大优先级越高 相同优先级 后添加的覆盖旧的
 
@@ -289,7 +289,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 Group = INDEX_NONE;` |
 
-**Source comments:**
+**Notes:**
 
 > 分组 -1 为没有分组 不参与优先级
 

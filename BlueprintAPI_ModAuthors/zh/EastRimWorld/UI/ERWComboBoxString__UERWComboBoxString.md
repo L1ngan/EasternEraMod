@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Getter, Setter, Category=Style, meta=( DisplayName="Style" )) FComboBoxStyle WidgetStyle;` |
 
-**源码注释:**
+**说明:**
 
 > The style.
 
@@ -34,6 +34,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, Category=Style) FComboBoxStyle ComboBoxStyle;` |
 
+**说明:**
+
+> Combo Box Style 字段。
+
 ---
 
 ### 属性 `bOpenButtonStyle`
@@ -44,6 +48,10 @@
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Style) bool bOpenButtonStyle;` |
+
+**说明:**
+
+> 是否 Open Button Style 的布尔标记。
 
 ---
 
@@ -56,6 +64,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Style, meta=( EditCondition="bOpenButtonStyle" )) FComboBoxStyle OpenComboBoxStyle;` |
 
+**说明:**
+
+> 执行 Open Combo Box Style 操作。
+
 ---
 
 ### 属性 `ItemStyle`
@@ -67,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Getter, Setter, Category=Style) FTableRowStyle ItemStyle;` |
 
-**源码注释:**
+**说明:**
 
 > The item row style.
 
@@ -82,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Getter, Category="Style") FScrollBarStyle ScrollBarStyle;` |
 
-**源码注释:**
+**说明:**
 
 > The scroll bar style.
 
@@ -97,6 +109,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Getter, Setter, Category=Content) FMargin ContentPadding;` |
 
+**说明:**
+
+> Content Padding 字段。
+
 ---
 
 ### 属性 `MaxListHeight`
@@ -108,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Getter, Setter, Category=Content, AdvancedDisplay) float MaxListHeight;` |
 
-**源码注释:**
+**说明:**
 
 > The max height of the combobox list that opens
 
@@ -123,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Getter = "IsHasDownArrow", Setter = "SetHasDownArrow", Category = Content, AdvancedDisplay) bool HasDownArrow;` |
 
-**源码注释:**
+**说明:**
 
 > When false, the down arrow is not generated and it is up to the API consumer
 > to make their own visual hint that this is a drop down.
@@ -139,7 +155,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Getter = "IsEnableGamepadNavigationMode", Setter = "SetEnableGamepadNavigationMode", Category = Content, AdvancedDisplay) bool EnableGamepadNavigationMode;` |
 
-**源码注释:**
+**说明:**
 
 > When false, directional keys will change the selection. When true, ComboBox 
 > must be activated and will only capture arrow input while activated.
@@ -155,7 +171,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Getter, Category=Style) FSlateFontInfo Font;` |
 
-**源码注释:**
+**说明:**
 
 > The default font to use in the combobox, only applies if you're not implementing OnGenerateWidgetEvent
 > to factory each new entry.
@@ -171,7 +187,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Getter, Category=Style, meta=(DesignerRebuild)) FSlateColor ForegroundColor;` |
 
-**源码注释:**
+**说明:**
 
 > The foreground color to pass through the hierarchy.
 
@@ -186,6 +202,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Style, meta=(DesignerRebuild)) FSlateColor TextColor;` |
 
+**说明:**
+
+> Text Color 字段。
+
 ---
 
 ### 属性 `OpenTextColor`
@@ -196,6 +216,10 @@
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Style, meta=(DesignerRebuild)) FSlateColor OpenTextColor;` |
+
+**说明:**
+
+> 执行 Open Text Color 操作。
 
 ---
 
@@ -208,6 +232,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Getter= "IsFocusable", Category=Interaction) bool bIsFocusable;` |
 
+**说明:**
+
+> 是否 Is Focusable 的布尔标记。
+
 ---
 
 ### 属性 `OnSelectionChanged`
@@ -219,7 +247,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category=Events) FOnSelectionChangedEvent OnSelectionChanged;` |
 
-**源码注释:**
+**说明:**
 
 > Called when a new item is selected in the combobox.
 
@@ -234,7 +262,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category=Events) FOnOpeningEvent OnOpening;` |
 
-**源码注释:**
+**说明:**
 
 > Called when the combobox is opening
 
@@ -258,6 +286,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 执行 Add Option 操作。
+
 ---
 
 ### 函数 `RemoveOption`
@@ -275,6 +307,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category="ComboBox") EASTRIMWORLD_API bool RemoveOption(const FString& Option);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 执行 Remove Option 操作。
 
 ---
 
@@ -294,6 +330,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取或查询 Find Option Index。
+
 ---
 
 ### 函数 `GetOptionAtIndex`
@@ -312,6 +352,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取或查询 Get Option At Index。
+
 ---
 
 ### 函数 `ClearOptions`
@@ -325,6 +369,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category="ComboBox") EASTRIMWORLD_API void ClearOptions();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 执行 Clear Options 操作。
 
 ---
 
@@ -340,6 +388,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 执行 Clear Selection 操作。
+
 ---
 
 ### 函数 `RefreshOptions`
@@ -354,7 +406,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > Refreshes the list of options.  If you added new ones, and want to update the list even if it's
 > currently being displayed use this.
@@ -377,6 +429,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 执行 Set Selected Option 操作。
+
 ---
 
 ### 函数 `SetSelectedIndex`
@@ -395,6 +451,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 执行 Set Selected Index 操作。
+
 ---
 
 ### 函数 `GetSelectedOption`
@@ -408,6 +468,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category="ComboBox") EASTRIMWORLD_API FString GetSelectedOption() const;`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取或查询 Get Selected Option。
 
 ---
 
@@ -423,6 +487,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取或查询 Get Selected Index。
+
 ---
 
 ### 函数 `GetOptionCount`
@@ -437,7 +505,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > Returns the number of options
 
@@ -454,5 +522,9 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category="ComboBox", Meta = (ReturnDisplayName = "bOpen")) EASTRIMWORLD_API bool IsOpen() const;`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取或查询 Is Open。
 
 ---

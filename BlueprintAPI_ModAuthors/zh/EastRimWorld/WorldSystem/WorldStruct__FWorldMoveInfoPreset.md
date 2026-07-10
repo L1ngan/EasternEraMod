@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EWorldMapMoveType` |
+| C++ 类型 | [EWorldMapMoveType](WorldStruct__EWorldMapMoveType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EWorldMapMoveType WorldMapMoveType = EWorldMapMoveType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 移动类型
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float StayTotalTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 停留的时间
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float MoveSpeed = 100.f;` |
 
-**源码注释:**
+**说明:**
 
 > 基础移动速度
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bBackPlace = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否返回
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bEnterPlace = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否进入地点
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bFixedEnterPosition = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否固定位置进入
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,meta=(EditConditionHides,EditCondition="bFixedEnterPosition")) FVector EnterPlacePosition = FVector::ZeroVector;` |
 
-**源码注释:**
+**说明:**
 
 > 进入地点的坐标
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,meta = (AllowedClasses = "/Script/Engine.StaticMesh")) FSoftObjectPath MoveActorStaticMesh;` |
 
-**源码注释:**
+**说明:**
 
 > 模型
 
@@ -134,12 +134,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<ETransportationType,FSoftClassPath>` |
+| C++ 类型 | TMap<[ETransportationType](../ERW_Enumerations__ETransportationType.md),FSoftClassPath> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere, meta = (AllowedClasses = "/Script/EastRimWorld.WorldMapMoveActor")) TMap<ETransportationType,FSoftClassPath> TransportationMoveActorClass;` |
 
-**源码注释:**
+**说明:**
 
 > 不同的交通工具在地图中显示的actor
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FSoftClassPath WorldMapMoveActorWidget;` |
 
-**源码注释:**
+**说明:**
 
 > Actor使用的Tip
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName WidgetID;` |
 
-**源码注释:**
+**说明:**
 
 > 点击展开的UI  ID
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FSoftClassPath WorldMapMovePath;` |
 
-**源码注释:**
+**说明:**
 
 > 移动路径样条线蓝图
 
@@ -199,7 +199,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FLinearColor PlayerTeamPathColor = FLinearColor::White;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家队伍样条线颜色
 
@@ -214,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FLinearColor OtherTeamPathColor = FLinearColor::White;` |
 
-**源码注释:**
+**说明:**
 
 > 其他队伍样条线颜色
 
@@ -229,7 +229,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FVector MoveActorScale = FVector::OneVector;` |
 
-**源码注释:**
+**说明:**
 
 > 世界中移动的actor缩放
 
@@ -244,7 +244,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float MaxCostTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 耗时的最大时间
 

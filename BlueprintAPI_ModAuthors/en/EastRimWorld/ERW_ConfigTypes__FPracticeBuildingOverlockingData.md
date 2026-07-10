@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Overclocking configuration data for practice buildings, including priority, probability, proportion, cost, duration, cooldown, durability loss, practice buff probability, possible inflicted injuries and display icon.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 OverlockingLevel = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 超频优先级
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float OverlockingProbability = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 超频概率
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float OverlockingProportion = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 超频比例
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 OverlockingExpend = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 超频消耗
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float OverlockingTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 超频时长
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float OverlockingCD = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 冷却时长
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float PracticeReduceDurability = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 超频每次修炼减少的耐久度（负数）
 
@@ -122,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float CharacterPracticeGetBuffProbability = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前超频时角色修炼获得BUFF的概率
 
@@ -137,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FOverlockingAddInjuryData> PracticeBuildingWhenOverlockingCharacterAddInjury;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前超频可能使修炼的角色获得的伤势数组
 
@@ -152,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TSoftObjectPtr<UTexture2D> OverlockingIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 显示图标
 

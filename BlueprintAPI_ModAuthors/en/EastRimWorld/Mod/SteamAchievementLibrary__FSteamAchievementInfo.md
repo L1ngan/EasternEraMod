@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "Steam Achievement") FString AchievementName;` |
 
-**Source comments:**
+**Notes:**
 
 > 成就名称（API名称）
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "Steam Achievement") FString DisplayName;` |
 
-**Source comments:**
+**Notes:**
 
 > 成就显示名称
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "Steam Achievement") FString Description;` |
 
-**Source comments:**
+**Notes:**
 
 > 成就描述
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "Steam Achievement") bool bUnlocked = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否已解锁
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "Steam Achievement") int32 UnlockTime = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 解锁时间戳（Unix时间戳，如果未解锁则为0）
 

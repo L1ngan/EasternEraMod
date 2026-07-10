@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Material") FName PlantWidgetId;` |
 
-**Source comments:**
+**Notes:**
 
 > 农田种植物信息界面id
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Material") TSoftObjectPtr<UMaterialInterface> DecalMaterial;` |
 
-**Source comments:**
+**Notes:**
 
 > 农田材质
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Material") TSoftObjectPtr<UMaterialInterface> PreviewMaterial;` |
 
-**Source comments:**
+**Notes:**
 
 > 预览农田材质(跟随鼠标的预览田)
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Material") TSoftObjectPtr<UMaterialInstance> ExpandMaterial;` |
 
-**Source comments:**
+**Notes:**
 
 > 扩大农田材质
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Material") TSoftObjectPtr<UMaterialInstance> ReduceMaterial;` |
 
-**Source comments:**
+**Notes:**
 
 > 缩减农田材质
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Material") TSoftObjectPtr<UMaterialInstance> EdgeMaterial;` |
 
-**Source comments:**
+**Notes:**
 
 > 农田边线材质
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Material") TSoftObjectPtr<UMaterialInstance> SelectedMaterial;` |
 
-**Source comments:**
+**Notes:**
 
 > 选中农田材质
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Material") TSoftObjectPtr<UMaterialInterface> MaskGrassMaterial;` |
 
-**Source comments:**
+**Notes:**
 
 > 除草材质
 
@@ -139,6 +139,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Material") TSoftObjectPtr<URuntimeVirtualTexture> MaskGrassVirtualTexture;` |
 
+**Notes:**
+
+> Mask Grass Virtual Texture field.
+
 ---
 
 ### Property `InformationWidget`
@@ -149,6 +153,10 @@
 | Reflection specifiers | BlueprintReadWrite, Category="UI" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="UI") FName InformationWidget;` |
+
+**Notes:**
+
+> Information Widget field.
 
 ---
 
@@ -161,6 +169,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="UI") TSubclassOf<UUserWidget> ChangePlantListUI;` |
 
+**Notes:**
+
+> Change Plant List UI field.
+
 ---
 
 ### Property `FarmlandMaterialParamName`
@@ -172,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="MaterialParam") FName FarmlandMaterialParamName;` |
 
-**Source comments:**
+**Notes:**
 
 > 农田材质边缘淡化参数名称
 
@@ -187,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="MaterialParam") FName FarmlandMaterialCornerParamName;` |
 
-**Source comments:**
+**Notes:**
 
 > 农田材质内角淡化参数名称
 
@@ -202,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Mount") TSoftObjectPtr<UStaticMesh> MountMesh;` |
 
-**Source comments:**
+**Notes:**
 
 > 农田土包模型
 
@@ -217,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Mount") float MountOffset;` |
 
-**Source comments:**
+**Notes:**
 
 > 农田土包偏移
 
@@ -232,6 +244,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TSoftClassPtr<AEastRimWorldFarmlandActor> FarmlandActorClass;` |
 
+**Notes:**
+
+> Farmland Actor Class field.
+
 ---
 
 ### Property `FarmlandMaxHeightDiff`
@@ -243,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float FarmlandMaxHeightDiff;` |
 
-**Source comments:**
+**Notes:**
 
 > 农田最大高差限制
 
@@ -258,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="LabelCylinder") TSoftObjectPtr<UMaterialInterface> LabelCylinderMaterial;` |
 
-**Source comments:**
+**Notes:**
 
 > 四角标牌立柱材质
 
@@ -273,7 +289,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="LabelCylinder") TSoftObjectPtr<UStaticMesh> LabelCylinderMesh;` |
 
-**Source comments:**
+**Notes:**
 
 > 四角标牌立柱模型
 
@@ -288,7 +304,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="LabelCylinder") FVector LabelCylinderSize;` |
 
-**Source comments:**
+**Notes:**
 
 > 四角标牌立柱模型大小缩放
 
@@ -303,7 +319,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FVector2D MaxPlantSize;` |
 
-**Source comments:**
+**Notes:**
 
 > 一次能拉出的农田大小限制
 
@@ -318,7 +334,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FName ClickSoundId;` |
 
-**Source comments:**
+**Notes:**
 
 > 农田点击音效id
 

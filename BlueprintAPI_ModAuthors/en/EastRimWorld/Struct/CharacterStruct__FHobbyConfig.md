@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EHobbyType` |
+| C++ type | [EHobbyType](CharacterStruct__EHobbyType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="FHobbyConfig" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FHobbyConfig") EHobbyType HobbyType = EHobbyType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 爱好类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="FHobbyConfig") TSoftObjectPtr<UTexture2D> HobbyIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 爱好图标
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FHobbyConfig") FText HobbyName;` |
 
-**Source comments:**
+**Notes:**
 
 > 爱好名称
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="FHobbyConfig") FFormatText FormatEffectDesc;` |
 
-**Source comments:**
+**Notes:**
 
 > 格式化后的爱好效果描述文字
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "FHobbyConfig") TMap<FGameplayAttribute,float> EffectAttributes;` |
 
-**Source comments:**
+**Notes:**
 
 > 爱好效果属性
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FHobbyConfig") TArray<FName> ActiveMoodIds;` |
 
-**Source comments:**
+**Notes:**
 
 > 完成对应行为后，获得心情词条
 

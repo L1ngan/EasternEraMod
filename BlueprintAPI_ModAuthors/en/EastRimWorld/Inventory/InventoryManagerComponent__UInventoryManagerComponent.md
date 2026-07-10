@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Inventory manager component handling item instance add/remove, stacking, saving, and warehouse/trade area grid slots
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) TArray<FUseItemSaveData> UseItemSaveData;` |
 
-**Source comments:**
+**Notes:**
 
 > 存档时临时复制 存档结束后删除
 
@@ -32,6 +34,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) TMap<FName,FCollectSaveDataList> CollectSaveDataMap;` |
 
+**Notes:**
+
+> Map of collectible save data (item ID to save data list)
+
 ---
 
 ### Property `FarmlandPlantSaveDataMap`
@@ -42,6 +48,10 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) TMap<FName,FFarmlandPlantSaveDataList> FarmlandPlantSaveDataMap;` |
+
+**Notes:**
+
+> Map of farmland plant save data (item ID to save data list)
 
 ---
 
@@ -54,6 +64,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly,SaveGame) int InventoryItemNumber = 0;` |
 
+**Notes:**
+
+> Item count (saved field)
+
 ---
 
 ### Property `CharacterBackpackSlotNum`
@@ -64,6 +78,10 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere , Blueprintable) int32 CharacterBackpackSlotNum;` |
+
+**Notes:**
+
+> Number of character backpack slots
 
 ---
 
@@ -76,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FGuid , UInventoryItemInstance*> ItemData;` |
 
-**Source comments:**
+**Notes:**
 
 > Guid对应的物品实例
 
@@ -86,12 +104,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EInventoryItemSetType` |
+| C++ type | [EInventoryItemSetType](../Struct/ItemStruct__EInventoryItemSetType.md) |
 | Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="InventoryManagerComponent|Inventory" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "InventoryManagerComponent|Inventory", Meta = (AllowPrivateAccess = "true"),SaveGame) EInventoryItemSetType InventoryItemSetType = EInventoryItemSetType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 此组件的拥有者的库存类型
 
@@ -106,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) FGameplayTagContainer NotPutInItemTagContainer;` |
 
-**Source comments:**
+**Notes:**
 
 > 不可放入的类型
 
@@ -121,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadWrite,SaveGame) int32 StoragePriority;` |
 
-**Source comments:**
+**Notes:**
 
 > 仓库存储优先级
 
@@ -136,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadWrite,SaveGame) FGridPosition TradeAreaEndGridPos;` |
 
-**Source comments:**
+**Notes:**
 
 > UPROPERTY(VisibleAnywhere,BlueprintReadWrite,SaveGame)
 > FGridPosition TradeAreaStartGridPos;
@@ -152,6 +170,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadWrite,SaveGame) FVector TradeAreaStartPos;` |
 
+**Notes:**
+
+> World position of the trade area's start point
+
 ---
 
 ### Property `TradeAreaEndPos`
@@ -162,6 +184,10 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadWrite,SaveGame) FVector TradeAreaEndPos;` |
+
+**Notes:**
+
+> World position of the trade area's end point
 
 ---
 
@@ -174,6 +200,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadWrite,SaveGame) FVector TradeAreaThirdPos;` |
 
+**Notes:**
+
+> World position of the trade area's third point
+
 ---
 
 ### Property `TradeAreaCurGridPos`
@@ -184,6 +214,10 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadWrite,SaveGame) FGridPosition TradeAreaCurGridPos;` |
+
+**Notes:**
+
+> Current grid position of the trade area
 
 ---
 
@@ -196,7 +230,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) TMap<UInventoryItemInstance* , UGOAP_ActionComponent*> ItemActions;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品对应的GOAP Action
 > TMap<物品数据 , GOAP Action组件>
@@ -212,7 +246,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) TMap<UInventoryItemInstance* , UGOAP_MemoryComponent*> ItemMemories;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品对应的GOAP记忆
 > TMap<物品数据 , GOAP记忆组件>
@@ -239,7 +273,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 添加实例
 
@@ -261,7 +295,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 查询物品的数量(不是总数，找到的第一堆物品的数量)
 
@@ -283,7 +317,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 查询玩家拥有的某个物品的总数量
 
@@ -305,7 +339,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 查询物品的数量(排除装备在身上的)
 
@@ -322,13 +356,13 @@
 | Name | Type |
 |--------|------|
 | `ItemId` | `FName` |
-| `InUseState` | `EItemUseState` |
+| `InUseState` | [EItemUseState](../Struct/ItemStruct__EItemUseState.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure) int32 GetItemNumByItemState(FName ItemId,EItemUseState InUseState);`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取对应状态的物品数量
 
@@ -350,7 +384,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取对应id的物品实例
 
@@ -370,7 +404,7 @@
 | `InCollectItem` | `const FInstancedStruct&` |
 | `InItemTransform` | `const FTransform &` |
 | `InItemCount` | `const int32` |
-| `(unnamed / type only)` | `EInventoryItemStateType InInventoryItemStateType = EInventoryItemStateType::Collected` |
+| `(unnamed / type only)` | [EInventoryItemStateType](../Struct/ItemStruct__EInventoryItemStateType.md) InInventoryItemStateType = [EInventoryItemStateType](../Struct/ItemStruct__EInventoryItemStateType.md)::Collected |
 | `nullptr` | `UObject * InManifestationObject =` |
 | `(unnamed / type only)` | `const int32 InInstanceIndex = -1` |
 
@@ -378,7 +412,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > ~End of IInventoryInterface interface
 > 创建一个物品实例到指定管理器
@@ -401,6 +435,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Gets simple data of all usable items (item ID to simple data)
+
 ---
 
 ### Function `GetAllItemsData`
@@ -419,7 +457,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取所有物品的简单数据（不区分使用状态）
 
@@ -436,11 +474,15 @@
 | Name | Type |
 |--------|------|
 | `OutData` | TMap<FName,[FTravelerGoodsInfo](../Struct/ItemStruct__FTravelerGoodsInfo.md)>& |
-| `InUseState` | `EItemUseState` |
+| `InUseState` | [EItemUseState](../Struct/ItemStruct__EItemUseState.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure) void GetAllTradeGoodData(TMap<FName,FTravelerGoodsInfo>& OutData,EItemUseState InUseState);`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Gets all trade goods data filtered by item use state
 
 ---
 
@@ -461,7 +503,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID拿指定数量的物品
 
@@ -479,7 +521,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取此组件管理的所有实例
 
@@ -495,13 +537,13 @@
 
 | Name | Type |
 |--------|------|
-| `InInventoryItemSetType` | `EInventoryItemSetType` |
+| `InInventoryItemSetType` | [EInventoryItemSetType](../Struct/ItemStruct__EInventoryItemSetType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void InitInventoryData(EInventoryItemSetType InInventoryItemSetType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化数据
 
@@ -523,7 +565,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否可以放置下此实例的数量
 
@@ -541,13 +583,13 @@
 |--------|------|
 | `InItemID` | `FName` |
 | `InNumber` | `int` |
-| `GroundInventoryType` | `EGroundInventoryType` |
+| `GroundInventoryType` | [EGroundInventoryType](../Struct/CommonEnum__EGroundInventoryType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) int GetCanPlaceItemNumberByItemID(FName InItemID,int InNumber,EGroundInventoryType GroundInventoryType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否可以放置下此ID物品的数量
 
@@ -564,6 +606,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BLueprintCallable,BlueprintPure) int32 GetCanUseGridNum();`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Returns the number of usable grid slots
 
 ---
 
@@ -584,7 +630,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取对应数量的物品实例 取用仓库物品使用 InventoryItemInstanceTransferToOtherManager方法 (注意此时，物品仍然在原管理组件中，需操作返回的实例对象重新添加到另外的管理组件)
 
@@ -607,6 +653,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Takes out the given count from the specified item instance (the item remains in the original manager; the returned instance must be added to another manager manually)
+
 ---
 
 ### Function `InventoryItemInstanceTransferToOtherManager`
@@ -627,7 +677,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 转移对应数量的物品放入到另一个管理组件中 返回实际转移的实例 如果没有则为空
 
@@ -650,7 +700,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除对应数量的物品
 
@@ -673,7 +723,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > /消耗物品
 > / @param bEnoughConsume 是否物品足够才消耗
@@ -690,13 +740,13 @@
 
 | Name | Type |
 |--------|------|
-| `ItemType` | `EGroundInventoryType` |
+| `ItemType` | [EGroundInventoryType](../Struct/CommonEnum__EGroundInventoryType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<UInventoryItemInstance*> GetInventoryItemByType(EGroundInventoryType ItemType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > / 按类型获取装备数组
 > / @param ItemType 物品类型
@@ -714,13 +764,13 @@
 
 | Name | Type |
 |--------|------|
-| `MajorCate` | `EMartialArtsMajorCategories` |
+| `MajorCate` | [EMartialArtsMajorCategories](../Struct/MartialArts__EMartialArtsMajorCategories.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<UInventoryItemInstance*> GetMartialArtsBookInstancesItemByType(EMartialArtsMajorCategories MajorCate);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > / 按类型获取武学书籍数组
 > / @param MajorCate 武学大类（None表示查询全部）
@@ -738,13 +788,13 @@
 
 | Name | Type |
 |--------|------|
-| `BookType` | `EBookClassificationType` |
+| `BookType` | [EBookClassificationType](../Struct/MartialArts__EBookClassificationType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<UInventoryItemInstance*> GetBookInfoDataByBookType(EBookClassificationType BookType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > / 按书籍类型查询书籍信息
 > / @param BookType
@@ -768,9 +818,32 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 按类型获取食物数据
+
+---
+
+### Function `CanUseItemForControlBehavior`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure, Category="InventoryManagerComponent" |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `TargetObject` | `UObject*` |
+| `GroundInventoryType` | [EGroundInventoryType](../Struct/CommonEnum__EGroundInventoryType.md) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "InventoryManagerComponent") bool CanUseItemForControlBehavior(UObject* TargetObject, EGroundInventoryType GroundInventoryType) const;`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 目标为指定地面物品类型、ItemUseState 为 None（食物校验 Food/Drug，装备需有 EquipmentType）
 
 ---
 
@@ -784,15 +857,15 @@
 
 | Name | Type |
 |--------|------|
-| `ItemType1` | `EEquipmentType` |
-| `ArmorType2` | `EArmorType` |
-| `UseState` | `EItemUseState` |
+| `ItemType1` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
+| `ArmorType2` | [EArmorType](../Struct/CommonEnum__EArmorType.md) |
+| `UseState` | [EItemUseState](../Struct/ItemStruct__EItemUseState.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<UInventoryItemInstance*> GetEquItemInstancesItemByType(EEquipmentType ItemType1,EArmorType ArmorType2,EItemUseState UseState);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > / 按类型获取装备和武器数组
 > / @param ItemType 物品类型
@@ -810,15 +883,15 @@
 
 | Name | Type |
 |--------|------|
-| `ItemType1` | `EEquipmentType` |
-| `ArmorType2` | `EArmorType` |
+| `ItemType1` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
+| `ArmorType2` | [EArmorType](../Struct/CommonEnum__EArmorType.md) |
 | `CharInventoryManagerComponent` | [UInventoryManagerComponent](InventoryManagerComponent__UInventoryManagerComponent.md)* |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<UInventoryItemInstance*> GetEquItemInstancesItemByType2(EEquipmentType ItemType1,EArmorType ArmorType2,UInventoryManagerComponent* CharInventoryManagerComponent);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > / 查询未使用的装备和自己的装备
 > / @param ItemType1 大类型
@@ -838,14 +911,14 @@
 
 | Name | Type |
 |--------|------|
-| `EquipType` | `EEquipmentType` |
-| `ArmorType` | `EArmorType` |
+| `EquipType` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
+| `ArmorType` | [EArmorType](../Struct/CommonEnum__EArmorType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<UInventoryItemInstance*> GetPuppetEquipmentInstancesByType(EEquipmentType EquipType,EArmorType ArmorType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询傀儡装备
 
@@ -862,6 +935,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) const TArray<FWarehouseSmallGrid>& GetAllSmallGrid();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns all warehouse small grid entries
 
 ---
 
@@ -881,7 +958,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 添加物品通过简单的信息
 

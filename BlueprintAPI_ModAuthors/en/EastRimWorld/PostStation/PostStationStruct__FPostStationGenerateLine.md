@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Runtime data of one post station generate line: line config, per-slot generation infos, generate state and socket pools.
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FPostStationGenerateLineConfig GenerateLineConfig;` |
 
+**Notes:**
+
+> Configuration of this generate line (FPostStationGenerateLineConfig).
+
 ---
 
 ### Property `GenerateInfos`
@@ -28,18 +34,22 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FPostStationGenerateInfo> GenerateInfos;` |
 
+**Notes:**
+
+> Generation infos of each slot on this line.
+
 ---
 
 ### Property `GenerateState`
 
 | Field | Details |
 |------|------|
-| C++ type | `EPostStationGenerateState` |
+| C++ type | [EPostStationGenerateState](PostStationStruct__EPostStationGenerateState.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EPostStationGenerateState GenerateState;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前的生成状态
 
@@ -54,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FCommonTaskCondition> GenerateConditions;` |
 
-**Source comments:**
+**Notes:**
 
 > 开始生成的条件
 
@@ -69,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bCanStartGenerate;` |
 
-**Source comments:**
+**Notes:**
 
 > 能否开始生成
 
@@ -84,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float RetryGenerateInterval;` |
 
-**Source comments:**
+**Notes:**
 
 > 重新尝试生成的间隔
 
@@ -99,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> OccupySockets;` |
 
-**Source comments:**
+**Notes:**
 
 > 旧版每线独立池；运行时由 AEasternEraPostStationActor 的 NPCStation* 统一维护，读档后会清空并迁移
 
@@ -114,6 +124,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> EmptySockets;` |
 
+**Notes:**
+
+> Legacy per-line empty socket pool; at runtime maintained by the unified NPCStation pool on the post station actor and cleared/migrated after load.
+
 ---
 
 ### Property `SpawnTimesCount`
@@ -125,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 SpawnTimesCount;` |
 
-**Source comments:**
+**Notes:**
 
 > 总计生成过多少次
 

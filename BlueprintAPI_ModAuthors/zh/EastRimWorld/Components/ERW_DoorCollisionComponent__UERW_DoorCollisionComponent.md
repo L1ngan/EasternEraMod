@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) UBoxComponent* DoorCollision { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > 门的碰撞体
 
@@ -29,12 +29,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EDoorState` |
+| C++ 类型 | [EDoorState](../ERW_Enumerations__EDoorState.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) EDoorState DoorState { EDoorState::Closed };` |
 
-**源码注释:**
+**说明:**
 
 > 门的开关状态
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) int32 OverlappingCharacterNum { 0 };` |
 
-**源码注释:**
+**说明:**
 
 > 碰撞体碰到的角色数量
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) float AnimPosition { 0.f };` |
 
-**源码注释:**
+**说明:**
 
 > 门动画播放位置
 
@@ -88,7 +88,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 读取数据
 
@@ -113,7 +113,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 初始化碰撞体
 
@@ -135,7 +135,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新碰到的角色数量
 
@@ -151,13 +151,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `State` | `EDoorState` |
+| `State` | [EDoorState](../ERW_Enumerations__EDoorState.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SetDoorState(EDoorState State);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置门的开光状态
 
@@ -179,7 +179,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置门动画播放位置
 

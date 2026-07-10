@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Ability object cache pool world subsystem that caches and reuses projectiles, projectile emitters and scene text actors to avoid frequent spawn/destroy.
 
 ## Blueprint-exposed functions
 
@@ -25,6 +27,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets a vacant ability projectile emitter from the cache pool, optionally by emitter class, and assigns its owner.
+
 ---
 
 ### Function `RecycleAbilityProjectileEmitter`
@@ -42,6 +48,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool RecycleAbilityProjectileEmitter(AAbilityProjectileEmitterBase * AbilityProjectileEmitter);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Recycles a finished ability projectile emitter back into the cache pool; returns whether recycling succeeded.
 
 ---
 
@@ -62,6 +72,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets a vacant ability projectile from the cache pool, optionally by projectile class, and assigns its owner.
+
 ---
 
 ### Function `RecycleAbilityProjectile`
@@ -79,6 +93,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "AbilityCachePoolSystem") bool RecycleAbilityProjectile(AEastRimWorldProjectileBase* AbilityProjectile);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Recycles a finished ability projectile back into the cache pool; returns whether recycling succeeded.
 
 ---
 
@@ -98,6 +116,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets a vacant scene text actor from the cache pool, optionally by actor class.
+
 ---
 
 ### Function `RecycleSceneTextActor`
@@ -116,6 +138,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Recycles a finished scene text actor back into the cache pool; returns whether recycling succeeded.
+
 ---
 
 ### Function `RecycleAllUseActor`
@@ -130,7 +156,7 @@
 
 **Usage:** See pins and category for this node in the Blueprint editor.
 
-**Source comments:**
+**Notes:**
 
 > 回收所有使用中的Actor
 

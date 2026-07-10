@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Generation Data data structure.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FName,FVector> GenerationPosition;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成的位置 如果是战场小兵模板则不填
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FRotator GenerationRotation = FRotator::ZeroRotator;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成的方向 如果是战场小兵模板则不填
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> CharacterIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成的ID 最终生成的数量是 配置的ID * Number 字段(如果GenerationActorType配置为SpawnPostStationChivalrousByPresetID这里填预设角色表id)
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bGenerationRemove = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成后是否移除
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 Number = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成的数量
 
@@ -87,12 +89,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECharacterType` |
+| C++ type | [ECharacterType](../Struct/CommonEnum__ECharacterType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ECharacterType CharacterType = ECharacterType::Human;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色类型
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Team", meta = (AllowedClasses = "/Script/AIModule.BehaviorTree")) FSoftObjectPath BehaviorTree;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应的行为树 不配置则使用默认阵营行为树
 
@@ -122,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FName> AddGoals;` |
 
-**Source comments:**
+**Notes:**
 
 > 新增的Goals
 
@@ -137,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FName> RemoveGoals;` |
 
-**Source comments:**
+**Notes:**
 
 > 移除的Goals
 
@@ -152,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 BranchingIndex = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 分路战场中的分路 从0开始 (例如 战场中3条路  填0 1 2）
 
@@ -162,12 +164,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBattlefieldRolesType` |
+| C++ type | [EBattlefieldRolesType](../Struct/CommonEnum__EBattlefieldRolesType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EBattlefieldRolesType BattlefieldRolesType = EBattlefieldRolesType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 战场中生成后的类型 用于区分不同功能
 
@@ -182,9 +184,24 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<TSoftClassPtr<UGameplayEffect>> GameplayEffects;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成时应用的GE
+
+---
+
+### Property `LevelGameplayEffects`
+
+| Field | Details |
+|------|------|
+| C++ type | TMap<TSoftClassPtr<UGameplayEffect>, [FEffectLevelData](WorldStruct__FEffectLevelData.md)> |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<TSoftClassPtr<UGameplayEffect>, FEffectLevelData> LevelGameplayEffects;` |
+
+**Notes:**
+
+> 生成时应用的带等级GE Key为GE类 Value为等级信息(等级来源+额外等级)
 
 ---
 
@@ -197,8 +214,24 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 MovingRange = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 闲逛时移动的范围 以出生点为中心
+
+---
+
+### Property `RandomDiscipleConfigID`
+
+| Field | Details |
+|------|------|
+| C++ type | `FName` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FName RandomDiscipleConfigID;` |
+
+**Notes:**
+
+> 随机弟子生成配置ID（DT_RandomDiscipleConfig 表行；仅当所在 FMonsterGenerationConfig.GenerationActorType == SpawnRandomDisciple 时生效）
+> CharacterIDs 字段在 SpawnRandomDisciple 类型下留空即可，不参与生成逻辑
 
 ---

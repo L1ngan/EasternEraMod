@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float PitchInit { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 俯视角初始值
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float PitchMin { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 俯视角最小值
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float PitchMax { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 俯视角最大值
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float HeightInit { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 高度初始值
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float HeightMin { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 高度最小值
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float HeightMax { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 高度最大值
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float RotationLagSpeed { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 旋转滞后速度
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float RotationSpeed { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 旋转速度
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float LagSpeed { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 移动滞后速度
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float MoveSpeedBase { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 基础移动速度
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float MoveSpeedAddition { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 附加移动速度
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float PitchSpeed { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 俯仰速度
 

@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryConfig") EDamageType DamageType = EDamageType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 伤害攻击类型
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EHurtLevel` |
+| C++ type | [EHurtLevel](CharacterStruct__EHurtLevel.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="FInjuryConfig" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryConfig") EHurtLevel HurtLevel = EHurtLevel::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 受伤害等级
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryConfig") FName InjuryId;` |
 
-**Source comments:**
+**Notes:**
 
 > 伤势类型ID
 

@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EForceAttackType` |
+| C++ 类型 | [EForceAttackType](WorldStruct__EForceAttackType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EForceAttackType ForceAttackType = EForceAttackType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 攻击类型
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float SectFavorabilityChange = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 好感度变化 增加为正值 减少为负值
 

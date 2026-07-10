@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 全局技能系统（WorldSubsystem）：向所有已注册ASC统一施加/移除技能、GameplayEffect与全局Buff
 
 ## 蓝图暴露函数
 
@@ -24,7 +26,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > /无特殊情况不使用这些方法，统一通过buff系统施加效果 属性*****************/
 
@@ -46,6 +48,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 向所有已注册ASC施加指定GameplayEffect（无特殊情况建议统一走Buff系统）
+
 ---
 
 ### 函数 `RemoveAbilityFromAll`
@@ -64,6 +70,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 从所有已注册ASC移除指定技能
+
 ---
 
 ### 函数 `RemoveEffectFromAll`
@@ -81,6 +91,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly, Category = "EastRimWorld") void RemoveEffectFromAll(TSubclassOf<UGameplayEffect> Effect);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 从所有已注册ASC移除指定GameplayEffect
 
 ---
 
@@ -101,7 +115,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 此方法只会在增加临时属性时使用 不支持存档 如需要存档 则使用Buff系统增加属性
 
@@ -124,6 +138,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 按BuffID向所有已注册对象施加Buff，bTemporary区分临时与持久
+
 ---
 
 ### 函数 `ApplyBuffFromAll`
@@ -143,6 +161,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 向所有已注册对象施加指定的公共Buff，bTemporary区分临时（不入档）与持久
+
 ---
 
 ### 函数 `RemoveBuffFromAll`
@@ -161,5 +183,9 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly, Category = "EastRimWorld") void RemoveBuffFromAll(const FName & CommonID,bool bTemporary);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 按ID从所有已注册对象移除Buff，bTemporary区分临时与持久
 
 ---

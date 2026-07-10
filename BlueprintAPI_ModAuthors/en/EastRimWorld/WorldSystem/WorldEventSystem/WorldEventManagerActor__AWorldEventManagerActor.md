@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> World Event Manager Actor actor type.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame) TArray<FWorldEventSpawnConfig> WorldEventSpawnConfigs;` |
 
-**Source comments:**
+**Notes:**
 
 > 需要倒计时的生成事件配置
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame) TArray<FWorldEventInfo> WorldEventInfos;` |
 
-**Source comments:**
+**Notes:**
 
 > 已经生成的事件
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame) FWorldEventInfo UnderWayWorldEventInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 正在进行的事件
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame) TMap<int,FWorldEventInfo> PauseWorldEventInfos;` |
 
-**Source comments:**
+**Notes:**
 
 > 固化的世界事件
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,SaveGame,BlueprintReadOnly, meta = (AllowPrivateAccess = "true")) UCommonTaskComponent* TaskComponent;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务组件
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable,BlueprintCallable) FWorldEventDelegate OnActivateWorldEventDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 激活世界事件
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable,BlueprintCallable) FWorldEventDelegate OnRemoveActivateWorldEventDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 移除世界事件
 
@@ -122,7 +124,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable,BlueprintCallable) FWorldEventDelegate OnUpdateWorldEventDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 更新世界事件
 
@@ -137,7 +139,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable,BlueprintCallable) FWorldEventDelegate OnUpdateWorldEventTimeDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 更新世界事件时间
 
@@ -152,7 +154,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable,BlueprintCallable) FUpdateWorldTaskDelegate OnUpdateWorldTaskDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 更新世界任务
 
@@ -167,6 +169,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable,BlueprintCallable) FAddWorldTaskDelegate OnAddWorldTaskDelegate;` |
 
+**Notes:**
+
+> On Add World Task Delegate event or callback.
+
 ---
 
 ### Property `OnUpdatePauseSlot`
@@ -178,7 +184,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable,BlueprintCallable) FUpdatePauseSlotDelegate OnUpdatePauseSlot;` |
 
-**Source comments:**
+**Notes:**
 
 > 更新暂停槽
 
@@ -198,6 +204,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Gets or queries Get World Event Manager.
+
 ---
 
 ### Function `CheckHaveWorldEventConfigCanSpawn`
@@ -212,7 +222,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否有世界事件可以生成
 
@@ -234,7 +244,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否此世界事件已经生成
 
@@ -256,7 +266,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查找世界事件
 
@@ -279,7 +289,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置事件的探索状态
 
@@ -296,13 +306,13 @@
 | Name | Type |
 |--------|------|
 | `WorldEventGuid` | `const FGuid &` |
-| `WorldEventChangeStateType` | `EWorldEventChangeStateType` |
+| `WorldEventChangeStateType` | [EWorldEventChangeStateType](WorldEventManagerActor__EWorldEventChangeStateType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetWorldEventBattleState(const FGuid & WorldEventGuid,EWorldEventChangeStateType WorldEventChangeStateType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置事件的战斗状态
 
@@ -320,7 +330,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 异常关闭游戏处理事件状态
 
@@ -342,6 +352,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets or queries Find World Event Detail.
+
 ---
 
 ### Function `ActivateWorldEventByID`
@@ -360,7 +374,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 激活一个世界事件
 
@@ -382,7 +396,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过GUID触发一个世界事件
 
@@ -404,7 +418,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 触发一个世界事件
 
@@ -422,7 +436,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取一个空缺的固化槽
 
@@ -444,7 +458,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查槽位是否解锁
 
@@ -466,7 +480,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查找解锁的槽位信息
 
@@ -488,7 +502,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取槽位上的世界事件
 
@@ -510,7 +524,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 世界事件到槽位
 
@@ -532,7 +546,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 从槽位中移除世界事件
 
@@ -550,7 +564,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查所有暂停槽的信息是否发生改变
 
@@ -572,7 +586,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新任务
 
@@ -594,7 +608,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 触发一个世界任务
 
@@ -616,7 +630,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取任务奖励
 
@@ -638,7 +652,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新任务条件
 
@@ -661,7 +675,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 添加任务
 
@@ -679,7 +693,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否有新的任务
 
@@ -702,7 +716,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置任务状态
 

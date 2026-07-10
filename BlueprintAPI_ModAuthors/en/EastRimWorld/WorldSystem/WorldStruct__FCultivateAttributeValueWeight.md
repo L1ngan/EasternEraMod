@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<int32,int32> AddValueWeight;` |
 
-**Source comments:**
+**Notes:**
 
 > <属性加值，权重>
 

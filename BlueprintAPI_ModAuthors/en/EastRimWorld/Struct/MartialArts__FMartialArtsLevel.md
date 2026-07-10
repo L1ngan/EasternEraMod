@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MartialArtsLevel") int Level = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 等级
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MartialArtsLevel") TArray<FName> MartialArtsEntries;` |
 
-**Source comments:**
+**Notes:**
 
 > 词条属性 关联MartialArtsEntries 配置
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MartialArtsLevel") FText EntriesDescribe;` |
 
-**Source comments:**
+**Notes:**
 
 > 词条属性描述
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MartialArtsLevel") FFormatText FormatEntriesDescribe;` |
 
-**Source comments:**
+**Notes:**
 
 > 词条属性描述（格式化文本）
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MartialArtsLevel") FText LevelName;` |
 
-**Source comments:**
+**Notes:**
 
 > 等级名字
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MartialArtsLevel") TArray<FGameplayTag> DescribeTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 描述中的详细标签 顺序取值
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MartialArtsLevel") TArray<float> DescribeValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 描述中的详细数值 顺序取值
 

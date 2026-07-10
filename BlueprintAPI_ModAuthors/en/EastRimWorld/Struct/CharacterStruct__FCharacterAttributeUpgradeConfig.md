@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterAttributeLevelConfig") FText LevelName;` |
 
-**Source comments:**
+**Notes:**
 
 > 等级名称
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterAttributeLevelConfig") float NextExp = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 升级所需要的经验
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterAttributeLevelConfig") int Level = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 等级
 

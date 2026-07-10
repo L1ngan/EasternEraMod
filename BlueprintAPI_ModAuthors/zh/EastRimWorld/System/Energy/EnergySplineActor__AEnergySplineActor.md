@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> Energy Spline Actor Actor 类型。
 
 ## 蓝图暴露函数
 
@@ -19,6 +21,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent) void InitSplineActor();`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 执行 Init Spline Actor 操作。
 
 ---
 
@@ -39,7 +45,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 更新联系的位置
 

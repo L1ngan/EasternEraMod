@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FGridPosition GridPos;` |
 
-**源码注释:**
+**说明:**
 
 > 相对格子坐标
 
@@ -29,12 +29,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<EGridDistributionType>` |
+| C++ 类型 | TArray<[EGridDistributionType](ERW_Enumerations__EGridDistributionType.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<EGridDistributionType> DistributionTypes;` |
 
-**源码注释:**
+**说明:**
 
 > 格子分布类型
 
@@ -44,12 +44,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<EGridDistributionType>` |
+| C++ 类型 | TArray<[EGridDistributionType](ERW_Enumerations__EGridDistributionType.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<EGridDistributionType> InvalidTypes;` |
 
-**源码注释:**
+**说明:**
 
 > 无效的分布类型
 

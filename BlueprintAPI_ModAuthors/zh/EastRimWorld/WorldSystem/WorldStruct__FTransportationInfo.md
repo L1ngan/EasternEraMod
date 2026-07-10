@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ETransportationType` |
+| C++ 类型 | [ETransportationType](../ERW_Enumerations__ETransportationType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ETransportationType TransportationType = ETransportationType::Walking;` |
 
-**源码注释:**
+**说明:**
 
 > 交通工具类型
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,meta=(EditConditionHides)) FGuid TransportationBuildingGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 交通工具建筑GUID
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<FName,FTransportationResourceInfo> TimeVehicleCosts;` |
 
-**源码注释:**
+**说明:**
 
 > 交通工具单位时间消耗
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 VehicleNumber = -1;` |
 
-**源码注释:**
+**说明:**
 
 > 交通工具数量 -1 为无限制
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 Speed = 200;` |
 
-**源码注释:**
+**说明:**
 
 > 交通工具移动
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TSoftClassPtr<class ATransportationActor> TransportationActorClass;` |
 
-**源码注释:**
+**说明:**
 
 > 交通工具Actor类
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<int32,FTransform> AttachTransforms;` |
 
-**源码注释:**
+**说明:**
 
 > 停靠在建筑物的相对位置
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftObjectPtr<UTexture2D> UnSelectIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 未选中时图标
 
@@ -139,8 +139,23 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftObjectPtr<UTexture2D> SelectedIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 未选中时图标
+
+---
+
+### 属性 `PeopleCostCurve`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TObjectPtr<UCurveFloat>` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TObjectPtr<UCurveFloat> PeopleCostCurve = nullptr;` |
+
+**说明:**
+
+> 人数消耗倍率曲线(X=出征人数, Y=整份消耗的倍率)。实际人数超过曲线最大X时取最大X处的值;留空则按人数线性
 
 ---

@@ -23,7 +23,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > Returns the current ground info.  Calling this will update the ground info if it's out of date.
 

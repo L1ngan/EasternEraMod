@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MartialArtsLevel") FText LevelName;` |
 
-**源码注释:**
+**说明:**
 
 > 等级名字
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="Realm") int MartialArtsScore = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 所需的武学分数
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="Realm") int RealmLevel = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 境界等级
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="Realm") TArray<FName> Characteristic;` |
 
-**源码注释:**
+**说明:**
 
 > 包含的特性
 
@@ -74,12 +74,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EMartialArtsMajorCategories,int>` |
+| C++ 类型 | TMap<[EMartialArtsMajorCategories](MartialArts__EMartialArtsMajorCategories.md),int> |
 | 反射说明符 | BlueprintReadWrite, Category="Realm" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="Realm") TMap<EMartialArtsMajorCategories,int> SlotNumber;` |
 
-**源码注释:**
+**说明:**
 
 > 携带的插槽数量
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="Force") float AddReputation = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 增加所属势力声望
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="Force") float AddGrowScore = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 提供给NPC势力的成长积分
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="Force") bool bBreakThrough = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否需要突破
 

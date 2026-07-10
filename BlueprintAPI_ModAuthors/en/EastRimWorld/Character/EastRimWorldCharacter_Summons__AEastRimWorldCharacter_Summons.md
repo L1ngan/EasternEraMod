@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Summons (robot/automaton) character class supporting attach actors, energy management, puppet platforms and survival countdown
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly) FGuid OwnerGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 拥有此召唤物的对象GUID
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame , VisibleAnywhere, BlueprintReadOnly, Category = "Summons", Meta = (AllowPrivateAccess = "true")) TObjectPtr<AActor> SelfAttachActor;` |
 
-**Source comments:**
+**Notes:**
 
 > 召唤物的附加者
 
@@ -47,6 +49,25 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Human", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UEastRimWorldWorkComponent> WorkComponent;` |
 
+**Notes:**
+
+> Work component
+
+---
+
+### Property `bIsBuildingAttachSummons`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bIsBuildingAttachSummons = false;` |
+
+**Notes:**
+
+> 是否是建筑物附加的召唤物
+
 ---
 
 ### Property `CurRobotName`
@@ -58,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) FText CurRobotName;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前机关人的名字
 
@@ -73,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) bool bAutoTreat = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 受伤时是否需要自动维修（治疗）
 
@@ -88,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) bool bIsFindingRepairBuildings = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否正在主动寻找充能
 
@@ -103,18 +124,22 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float ResidueLifeTime = -1.f;` |
 
+**Notes:**
+
+> Remaining lifetime of the summons; -1 means unlimited
+
 ---
 
 ### Property `ActiveType`
 
 | Field | Details |
 |------|------|
-| C++ type | `ERobotActiveType` |
+| C++ type | [ERobotActiveType](../Struct/CommonEnum__ERobotActiveType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) ERobotActiveType ActiveType = ERobotActiveType::Normal;` |
 
-**Source comments:**
+**Notes:**
 
 > 机关人的状态
 
@@ -129,7 +154,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) FVector UsePuppetPlatformSlotLocation = FVector::ZeroVector;` |
 
-**Source comments:**
+**Notes:**
 
 > 记录使用的傀儡台位置
 
@@ -144,7 +169,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) FUObjectData UsePuppetPlatform;` |
 
-**Source comments:**
+**Notes:**
 
 > 记录使用的傀儡台
 
@@ -158,6 +183,10 @@
 | Reflection specifiers | BlueprintAssignable |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FSummonsRename OnSummonsRename;` |
+
+**Notes:**
+
+> Delegate broadcast when the summons is renamed (passes the new name)
 
 ---
 
@@ -175,6 +204,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Returns whether the standby action can be removed
+
 ---
 
 ### Function `RemoveStandbyAction`
@@ -188,6 +221,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void RemoveStandbyAction();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Removes the standby action
 
 ---
 
@@ -207,7 +244,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置机关人受伤是否自动维修
 
@@ -229,7 +266,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置生物休眠
 
@@ -253,7 +290,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置召唤物的控制器（骑乘者）
 
@@ -271,7 +308,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 更新召唤物的名字条
 
@@ -289,7 +326,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取召唤物的信息
 
@@ -312,7 +349,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置使用的傀儡台
 
@@ -330,7 +367,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 是否有傀儡台
 
@@ -351,5 +388,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetSummonsName(FText NewName);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Sets the summons' name
 
 ---

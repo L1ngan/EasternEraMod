@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float Distance = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 两地之间距离
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float Time = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 两地之间需要的事件
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float Speed = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 两地之间确定的移动速度
 

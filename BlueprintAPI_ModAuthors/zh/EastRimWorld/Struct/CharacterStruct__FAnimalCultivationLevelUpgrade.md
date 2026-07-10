@@ -20,7 +20,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cultivation") int32 Level = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 等级（到达此等级时应用以下配置）
 
@@ -35,7 +35,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Behavior", meta = (AllowedClasses = "/Script/AIModule.BehaviorTree")) FSoftObjectPath BehaviorTree;` |
 
-**源码注释:**
+**说明:**
 
 > 更换的行为树（如果为空则不更换，保留之前的行为树）
 
@@ -50,7 +50,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Behavior") TArray<FName> AddGoals;` |
 
-**源码注释:**
+**说明:**
 
 > 添加的Goals列表（到达此等级时添加这些Goals）
 
@@ -65,7 +65,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Behavior") TArray<FName> RemoveGoals;` |
 
-**源码注释:**
+**说明:**
 
 > 移除的Goals列表（到达此等级时移除这些Goals）
 
@@ -80,7 +80,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities") TArray<FName> AbilityIDs;` |
 
-**源码注释:**
+**说明:**
 
 > 添加的能力ID列表（GameplayAbility），到达此等级时获得这些能力
 
@@ -95,7 +95,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities") TArray<FName> BuffIDs;` |
 
-**源码注释:**
+**说明:**
 
 > 添加的Buff ID列表（GameplayEffect），到达此等级时获得这些Buff
 
@@ -110,7 +110,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes", meta = (AllowedClasses = "/Script/GameplayAbilities.GameplayEffect")) FSoftClassPath AttributeBonusGameplayEffect;` |
 
-**源码注释:**
+**说明:**
 
 > 属性提升GameplayEffect，到达此等级时应用此GE来提升属性
 > 通过GE来修改属性，而不是直接配置属性值
@@ -126,7 +126,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Loot") TMap<FName, float> OverrideDropItemConfig;` |
 
-**源码注释:**
+**说明:**
 
 > 覆盖的掉落组配置（掉落组ID -> 权重），如果为空则不覆盖，保留之前的掉落组
 > 到达此等级时，使用此配置覆盖原有的掉落组配置
@@ -142,7 +142,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Appearance", meta = (AllowedClasses = "/Script/Engine.SkeletalMesh")) FSoftObjectPath MeshPath;` |
 
-**源码注释:**
+**说明:**
 
 > 更换的模型路径（如果为空则不更换，保留之前的模型）
 > 到达此等级时更换为此模型
@@ -158,7 +158,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Appearance") FVector MeshScale = FVector(1.0f, 1.0f, 1.0f);` |
 
-**源码注释:**
+**说明:**
 
 > 模型缩放比例（可选，用于调整模型大小）
 

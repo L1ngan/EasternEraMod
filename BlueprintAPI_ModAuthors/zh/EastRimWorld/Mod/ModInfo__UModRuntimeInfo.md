@@ -20,7 +20,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FModMetadata Metadata;` |
 
-**源码注释:**
+**说明:**
 
 > Mod元数据
 
@@ -30,12 +30,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EModLoadState` |
+| C++ 类型 | [EModLoadState](ModInfo__EModLoadState.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) EModLoadState LoadState = EModLoadState::NotLoaded;` |
 
-**源码注释:**
+**说明:**
 
 > Mod加载状态
 
@@ -50,7 +50,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FString ModRootPath;` |
 
-**源码注释:**
+**说明:**
 
 > Mod根目录路径
 
@@ -65,7 +65,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FString LuaEnvironmentName;` |
 
-**源码注释:**
+**说明:**
 
 > Mod的Lua环境（如果使用Lua）
 
@@ -80,9 +80,24 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FDateTime LoadTime;` |
 
-**源码注释:**
+**说明:**
 
 > 加载时间戳
+
+---
+
+### 属性 `LoadDurationSeconds`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `double` |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) double LoadDurationSeconds = 0.0;` |
+
+**说明:**
+
+> 本次加载耗时（秒，Mod.Status 调试命令展示用）
 
 ---
 
@@ -95,7 +110,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FString ErrorMessage;` |
 
-**源码注释:**
+**说明:**
 
 > 错误信息（如果加载失败）
 
@@ -110,7 +125,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TArray<FString> MountedPakFiles;` |
 
-**源码注释:**
+**说明:**
 
 > 已挂载的Pak中的文件
 
@@ -125,8 +140,23 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TArray<FString> MountedPaks;` |
 
-**源码注释:**
+**说明:**
 
 > 已挂载的Pak
+
+---
+
+### 属性 `RegisteredMountPaths`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TArray<FString>` |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TArray<FString> RegisteredMountPaths;` |
+
+**说明:**
+
+> 挂载时注册进 /Game/ 的内容路径（卸载时用于 UnRegisterMountPoint 撤销）
 
 ---

@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FName,FPuppetPlatformMeshConfig> PuppetPlatformMeshes;` |
 
-**源码注释:**
+**说明:**
 
 > 傀儡台模型配置(key对应召唤物id)
 

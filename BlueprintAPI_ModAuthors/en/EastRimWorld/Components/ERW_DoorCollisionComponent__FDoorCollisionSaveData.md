@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid Guid = FGuid();` |
 
-**Source comments:**
+**Notes:**
 
 > Guid
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EDoorState` |
+| C++ type | [EDoorState](../ERW_Enumerations__EDoorState.md) |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) EDoorState DoorState { EDoorState::Closed };` |
 
-**Source comments:**
+**Notes:**
 
 > 门的开关状态
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 OverlappingCharacterNum { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 碰撞体碰到的角色数量
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) float AnimPosition { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 门动画播放位置
 

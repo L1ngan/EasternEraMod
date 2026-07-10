@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Medicine info required to treat an injury: amount, treat addition and visibility flag
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 Num = 0;` |
 
+**Notes:**
+
+> Required amount of the medicine
+
 ---
 
 ### Property `TreatAddition`
@@ -28,6 +34,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float TreatAddition = 0.f;` |
 
+**Notes:**
+
+> Treatment bonus provided by this medicine
+
 ---
 
 ### Property `bShow`
@@ -38,5 +48,9 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) bool bShow = false;` |
+
+**Notes:**
+
+> Whether this medicine entry is shown
 
 ---

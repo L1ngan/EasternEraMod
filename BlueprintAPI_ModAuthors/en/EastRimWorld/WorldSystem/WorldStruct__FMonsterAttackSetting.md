@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float WaitingTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 攻击的等待时间
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float IntervalTime = 100.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 间隔时间
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<FName> MonsterID;` |
 
-**Source comments:**
+**Notes:**
 
 > 发起攻击时的指定怪物ID 不为空时 只有包含的怪物才会攻击
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int32 AttackNumber = INDEX_NONE;` |
 
-**Source comments:**
+**Notes:**
 
 > 发起攻击时的指定数量 -1为当前营地所有怪物 会受到指定怪物id限制
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int32 RunNumber = INDEX_NONE;` |
 
-**Source comments:**
+**Notes:**
 
 > 此设置运行的次数 -1 为无限次
 
@@ -89,12 +89,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EMonsterAttackState` |
+| C++ type | [EMonsterAttackState](WorldStruct__EMonsterAttackState.md) |
 | Reflection specifiers | BlueprintReadOnly, Category="Runtime" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category = "Runtime") EMonsterAttackState MonsterAttackState = EMonsterAttackState::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 状态 不配置
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category = "Runtime") float StateTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前状态时间 不配置
 

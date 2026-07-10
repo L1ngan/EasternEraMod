@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Human character config data (extends character data): customization ID, height/weight, background story, traveler/merchant and prisoner settings
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterCustomization") FString CustomizationId;` |
 
-**Source comments:**
+**Notes:**
 
 > 捏人数据的id
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterCustomization") int32 Height = 180;` |
 
-**Source comments:**
+**Notes:**
 
 > 身高
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterCustomization") int32 Weight = 120;` |
 
-**Source comments:**
+**Notes:**
 
 > 体重
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterCustomization") FText BackgroundStory;` |
 
-**Source comments:**
+**Notes:**
 
 > 背景故事
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") TArray<FName> InitCharacteristicIds;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始特性
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterCustomization") FText RefuseText;` |
 
-**Source comments:**
+**Notes:**
 
 > 投靠时拒绝文本
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterCustomization") FText AcceptText;` |
 
-**Source comments:**
+**Notes:**
 
 > 投靠时接受文本
 
@@ -122,6 +124,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterCustomization") FText JoinText;` |
 
+**Notes:**
+
+> Text shown when the character joins after seeking refuge
+
 ---
 
 ### Property `bTraveler`
@@ -133,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") bool bTraveler = false;` |
 
-**Source comments:**
+**Notes:**
 
 > NPC标识
 
@@ -148,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") FName DialogueGroupID;` |
 
-**Source comments:**
+**Notes:**
 
 > 对话组ID
 
@@ -163,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") FText TravelerTitle;` |
 
-**Source comments:**
+**Notes:**
 
 > 称号
 
@@ -178,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") FSoftObjectPath TravelerHeadIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 头顶图标
 
@@ -193,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") TArray<FText> TravelerSpeechBubble;` |
 
-**Source comments:**
+**Notes:**
 
 > 场景喊话
 
@@ -208,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") FSoftObjectPath TravelerIdleMontage;` |
 
-**Source comments:**
+**Notes:**
 
 > NPC待机
 
@@ -223,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") FIntPoint TravelerMoney = FIntPoint::ZeroValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 商人初始金钱
 
@@ -238,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") FIntPoint TravelerGoodsNum = FIntPoint::ZeroValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 商人商品数量
 
@@ -253,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") FName TravelerGoodsId;` |
 
-**Source comments:**
+**Notes:**
 
 > 商品ID(DT_FTravelerGoodsConfig表ID)
 
@@ -268,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") FName TravelerForceID;` |
 
-**Source comments:**
+**Notes:**
 
 > NPC所属势力ID(获取势力好感度计算商品价格)
 
@@ -283,7 +289,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Traveler") FName ExchangeMartialArtsID;` |
 
-**Source comments:**
+**Notes:**
 
 > 切磋ID
 
@@ -298,7 +304,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") FName NPCInformationWidget;` |
 
-**Source comments:**
+**Notes:**
 
 > NPC信息界面ID(非玩家队伍角色信息界面)
 
@@ -313,7 +319,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Prisoner") int32 PrisonerImportance = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 囚犯重要程度
 

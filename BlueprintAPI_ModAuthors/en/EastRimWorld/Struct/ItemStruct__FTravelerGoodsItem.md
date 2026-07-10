@@ -19,9 +19,9 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FItemSimpleData ItemData;` |
 
-**Source comments:**
+**Notes:**
 
-> 商品信息
+> 商品信息(当bTechnology为true时，使用这里的ID作为科技ID)
 
 ---
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FVector2D PriceRate;` |
 
-**Source comments:**
+**Notes:**
 
 > 价格浮动系数范围
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float UnlockFavorability;` |
 
-**Source comments:**
+**Notes:**
 
 > 解锁需要好感度
 
@@ -64,8 +64,38 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 Weight;` |
 
-**Source comments:**
+**Notes:**
 
 > 权重(-1必出)
+
+---
+
+### Property `NeedReputation`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float NeedReputation;` |
+
+**Notes:**
+
+> 声望单价(> 0 时，这个商品被视为声望商品)
+
+---
+
+### Property `bTechnology`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bTechnology;` |
+
+**Notes:**
+
+> 是否是解锁科技商品(为true时，使用ItemData里的ID作为科技ID)
 
 ---

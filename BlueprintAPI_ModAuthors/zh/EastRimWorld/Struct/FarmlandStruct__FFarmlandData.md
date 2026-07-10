@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> Farmland Data 数据结构。
 
 ## 蓝图暴露变量
 
@@ -17,6 +19,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FGridPosition GridPosition;` |
 
+**说明:**
+
+> Grid Position 字段。
+
 ---
 
 ### 属性 `bPlanted`
@@ -28,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) bool bPlanted;` |
 
-**源码注释:**
+**说明:**
 
 > 是否创建了种植goap
 
@@ -43,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) bool bAlreadyPlanted;` |
 
-**源码注释:**
+**说明:**
 
 > 是否完成了种植
 
@@ -58,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 LandEdgeType;` |
 
-**源码注释:**
+**说明:**
 
 > 农田边缘淡化参数
 
@@ -73,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 LandCornerType;` |
 
-**源码注释:**
+**说明:**
 
 > 农田内角淡化参数
 

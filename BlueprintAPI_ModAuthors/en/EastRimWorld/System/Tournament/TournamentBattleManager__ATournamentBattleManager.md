@@ -20,7 +20,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FGuid, FTournamentBattleCharacterInfo> TournamentBattleCharacterInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 各门派战斗的存活角色信息（按门派Guid索引）
 
@@ -35,6 +35,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) int32 BattleSpeed = 1;` |
 
+**Notes:**
+
+> Battle Speed field.
+
 ---
 
 ### Property `OnTournamentBattleStateChanged`
@@ -46,7 +50,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnTournamentBattleStateChanged OnTournamentBattleStateChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗状态变化委托
 
@@ -61,7 +65,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnCharacterSeriousInjury OnCharacterSeriousInjury;` |
 
-**Source comments:**
+**Notes:**
 
 > 弟子重伤广播
 
@@ -76,7 +80,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnPlayLevelSequenceFinished OnPlayLevelSequenceFinished;` |
 
-**Source comments:**
+**Notes:**
 
 > 关卡动画播放完成
 
@@ -96,6 +100,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Gets or queries Get Tournament Battle Manager.
+
 ---
 
 ### Function `CreateBattle`
@@ -109,13 +117,13 @@
 | Name | Type |
 |--------|------|
 | `TournamentBattleInfo` | const [FTournamentBattleInfo](TournamentStruct__FTournamentBattleInfo.md) & |
-| `TournamentType` | `ETournamentType` |
+| `TournamentType` | [ETournamentType](TournamentStruct__ETournamentType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CreateBattle(const FTournamentBattleInfo & TournamentBattleInfo,ETournamentType TournamentType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建战斗信息
 
@@ -133,7 +141,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 开始战斗
 
@@ -155,7 +163,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 结束战斗并结算
 
@@ -173,7 +181,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查战斗是否结束
 
@@ -191,7 +199,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取当前战斗信息
 
@@ -213,7 +221,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取门派战斗角色
 
@@ -231,7 +239,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否可以开始战斗
 
@@ -249,7 +257,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 清理所有战斗信息
 
@@ -267,7 +275,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 跳过当前这场战斗
 
@@ -285,7 +293,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 清理定时器
 
@@ -303,7 +311,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 添加定时器
 
@@ -319,13 +327,13 @@
 
 | Name | Type |
 |--------|------|
-| `TournamentType` | `ETournamentType` |
+| `TournamentType` | [ETournamentType](TournamentStruct__ETournamentType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void ContinueBattle(ETournamentType TournamentType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 继续之前的战斗
 
@@ -343,7 +351,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取当前战斗剩余时间
 
@@ -365,7 +373,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取当前战斗对应势力的所有弟子
 
@@ -387,7 +395,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 统计战斗数据
 

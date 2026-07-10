@@ -19,18 +19,22 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TObjectPtr<UGWOPlayerComponent> GWOPlayerComponent;` |
 
+**Notes:**
+
+> Player-side component of the GWO spawn actor system; registers the player with the GWO sectors director to drive world object spawning.
+
 ---
 
 ### Property `PlayerPawnType`
 
 | Field | Details |
 |------|------|
-| C++ type | `EPlayerPawnType` |
+| C++ type | [EPlayerPawnType](../Struct/CommonStruct__EPlayerPawnType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) EPlayerPawnType PlayerPawnType = EPlayerPawnType::BasePawn;` |
 
-**Source comments:**
+**Notes:**
 
 > 控制的Pawn类型
 
@@ -45,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) UCameraConfigAsset * CameraConfigAsset;` |
 
-**Source comments:**
+**Notes:**
 
 > 相机配置
 
@@ -60,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) TObjectPtr<class AWorldPlace> CurWorldPlace;` |
 
-**Source comments:**
+**Notes:**
 
 > 所在的地点
 
@@ -75,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FVector HitLocation { FVector::ZeroVector };` |
 
-**Source comments:**
+**Notes:**
 
 > 鼠标击中的位置
 
@@ -90,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) AEastRimWorldCharacter* CurSummon;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前编辑巡逻点的机关角色
 
@@ -104,6 +108,10 @@
 | Reflection specifiers | BlueprintAssignable |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnCameraPositionChange OnCameraPositionChange;` |
+
+**Notes:**
+
+> Event fired when the camera position changes; parameter is the new camera position.
 
 ---
 
@@ -121,7 +129,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 设置玩家Pawn的信息
 
@@ -143,6 +151,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Broadcasts the camera position change event (OnCameraPositionChange), notifying listeners of the new camera position.
+
 ---
 
 ### Function `SetMouseMode`
@@ -155,11 +167,15 @@
 
 | Name | Type |
 |--------|------|
-| `InMouseMode` | `EMouseMode` |
+| `InMouseMode` | [EMouseMode](ERW_PlayerPawn__EMouseMode.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent) void SetMouseMode(EMouseMode InMouseMode);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Sets the mouse operation mode (EMouseMode: normal, camera rotation, move building, area selection, farmland design, patrol point picking, breakthrough point picking, etc.).
 
 ---
 
@@ -178,6 +194,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent) void SetPreviewFarmlandActor(AEastRimWorldFarmlandActor* FarmlandActor);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Sets the farmland actor currently being previewed (used during farmland design; Blueprint-implemented event).
 
 ---
 
@@ -198,7 +218,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 设置相机的位置
 
@@ -221,7 +241,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 生成建筑物在预设位置
 
@@ -244,6 +264,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Spawns a building from preset building info and team ID (Blueprint-implemented version of SpawnBuildingByPresetInfo); returns the spawned building actor.
+
 ---
 
 ### Function `GetPlayerPawnCamera`
@@ -257,6 +281,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintNativeEvent) UCameraComponent* GetPlayerPawnCamera();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
+
+**Notes:**
+
+> Gets the camera component currently used by the player pawn.
 
 ---
 
@@ -272,7 +300,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 存档前清理数据
 
@@ -289,6 +317,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent) void ResetInitPosition();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Resets the player pawn to its initial position (Blueprint-implemented event).
 
 ---
 
@@ -308,7 +340,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 开始追踪
 
@@ -326,7 +358,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 停止追踪
 
@@ -344,7 +376,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 获取存档信息
 
@@ -366,7 +398,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 设置存档信息
 

@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName ImprisonActionID;` |
 
-**源码注释:**
+**说明:**
 
 > 囚禁行为(在监狱的核心建筑上创建)
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> ImprisonedBuffes;` |
 
-**源码注释:**
+**说明:**
 
 > 囚犯被囚禁时施加的buff
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName ExecutePrisonerActionID;` |
 
-**源码注释:**
+**说明:**
 
 > 处决囚犯行为
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName PrisonerExecutedActionID;` |
 
-**源码注释:**
+**说明:**
 
 > 囚犯被处决行为
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName PrisonerTorturedActionID;` |
 
-**源码注释:**
+**说明:**
 
 > 囚犯被处决行为
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FGenericTeamId PrisonTeamID;` |
 
-**源码注释:**
+**说明:**
 
 > 囚犯队伍ID
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName PrisonerInfoWidget;` |
 
-**源码注释:**
+**说明:**
 
 > 囚犯界面
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float MaxTortureColdDown;` |
 
-**源码注释:**
+**说明:**
 
 > 拷打CD
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float TortureLoyaltyBaseValue = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 拷打导致的忠诚度变化基础值
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float RecruitLoyaltyValue = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 可发起招募的忠诚度
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FText> CanRecruitShoutTexts;` |
 
-**源码注释:**
+**说明:**
 
 > 可招募时NPC喊话文本
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float RecruitLoyaltyRate = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 每10点忠诚度提供的
 
@@ -199,7 +199,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float MaxRecruitColdDown;` |
 
-**源码注释:**
+**说明:**
 
 > 招募CD
 
@@ -214,6 +214,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float MaxRecruitWorkload;` |
 
+**说明:**
+
+> 招募囚犯所需的最大工作量(默认300)
+
 ---
 
 ### 属性 `RedemptionTexts`
@@ -225,7 +229,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FRedemptionTextData> RedemptionTexts;` |
 
-**源码注释:**
+**说明:**
 
 > 赎回文本
 
@@ -240,7 +244,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftClassPtr<UCommonGameDialog> RedemptionWidget;` |
 
-**源码注释:**
+**说明:**
 
 > 赎回界面
 
@@ -255,7 +259,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftClassPtr<UCommonGameDialog> RecruitSuccessWidget;` |
 
-**源码注释:**
+**说明:**
 
 > 招募成功分配堂口界面
 
@@ -270,7 +274,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float MaxSendFoodColdDown;` |
 
-**源码注释:**
+**说明:**
 
 > 送饭CD
 
@@ -280,12 +284,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<ECanManageTagType , [FGameplayTagArr](ERW_GameConfigComponent__FGameplayTagArr.md)> |
+| C++ 类型 | TMap<[ECanManageTagType](ERW_GameConfigComponent__ECanManageTagType.md) , [FGameplayTagArr](ERW_GameConfigComponent__FGameplayTagArr.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<ECanManageTagType , FGameplayTagArr> CanManageItemTags;` |
 
-**源码注释:**
+**说明:**
 
 > 可以管理的物品Tag
 

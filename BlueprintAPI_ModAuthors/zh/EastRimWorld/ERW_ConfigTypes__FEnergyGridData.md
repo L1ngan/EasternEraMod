@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FGuid GridGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 能源网唯一ID
 
@@ -32,9 +32,9 @@
 | C++ 类型 | TArray<[ABuildingActorBase](Building/BuildingActorBase__ABuildingActorBase.md)*> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<ABuildingActorBase*> TransmissionBuildings;` |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere , Transient) TArray<ABuildingActorBase*> TransmissionBuildings;` |
 
-**源码注释:**
+**说明:**
 
 > 传输建筑物
 
@@ -47,9 +47,9 @@
 | C++ 类型 | TArray<[ABuildingActorBase](Building/BuildingActorBase__ABuildingActorBase.md)*> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<ABuildingActorBase*> EnergyStorageBuildings;` |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere , Transient) TArray<ABuildingActorBase*> EnergyStorageBuildings;` |
 
-**源码注释:**
+**说明:**
 
 > 储能建筑物
 
@@ -62,9 +62,9 @@
 | C++ 类型 | TArray<[ABuildingActorBase](Building/BuildingActorBase__ABuildingActorBase.md)*> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<ABuildingActorBase*> ConsumeBuildings;` |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere , Transient) TArray<ABuildingActorBase*> ConsumeBuildings;` |
 
-**源码注释:**
+**说明:**
 
 > 消耗建筑物
 
@@ -77,9 +77,9 @@
 | C++ 类型 | TArray<[ABuildingActorBase](Building/BuildingActorBase__ABuildingActorBase.md)*> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<ABuildingActorBase*> ControlBuildings;` |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere , Transient) TArray<ABuildingActorBase*> ControlBuildings;` |
 
-**源码注释:**
+**说明:**
 
 > 控制建筑物
 
@@ -92,9 +92,9 @@
 | C++ 类型 | TArray<[ABuildingActorBase](Building/BuildingActorBase__ABuildingActorBase.md)*> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<ABuildingActorBase*> GenerateEnergyBuildings;` |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere , Transient) TArray<ABuildingActorBase*> GenerateEnergyBuildings;` |
 
-**源码注释:**
+**说明:**
 
 > 产生能源建筑物
 
@@ -104,12 +104,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EEnergyGridState` |
+| C++ 类型 | [EEnergyGridState](ERW_Enumerations__EEnergyGridState.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) EEnergyGridState EnergyGridState = EEnergyGridState::Ununited;` |
 
-**源码注释:**
+**说明:**
 
 > 能源网的状态
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float MaxEnergyStorage = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 能源网的总储能
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float CurEnergyStorage = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 能源网的当前储能
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float GenerateEnergy = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 生产能源
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float ConsumeEnergy = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 消耗能源
 

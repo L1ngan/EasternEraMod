@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> Beginner Guide Component UObject 类型。
 
 ## 蓝图暴露变量
 
@@ -17,6 +19,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, Category = "Guide") class AERW_GameModeBase* GameModeBase = nullptr;` |
 
+**说明:**
+
+> Game Mode Base 字段。
+
 ---
 
 ### 属性 `GameInstance`
@@ -27,6 +33,10 @@
 | 反射说明符 | BlueprintReadWrite, Category="Guide" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, Category = "Guide") class UERW_GameInstanceBase * GameInstance = nullptr;` |
+
+**说明:**
+
+> Game Instance 字段。
 
 ---
 
@@ -39,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame, Category = "Guide") bool IsCompleteGuide = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否已经完成了新手引导
 
@@ -54,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame, Category = "Guide") TArray<FCommonTaskInstance> NoviceTaskInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 新手任务
 
@@ -69,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame, Category = "Guide") FCommonTaskInstance CurNoviceTaskInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 当前的新手引导任务
 
@@ -84,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame, Category = "Guide") int CountNoviceTaskNumber = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 总的新手引导任务数量
 
@@ -94,12 +104,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName , EBeginnerGuideUnlockType>` |
+| C++ 类型 | TMap<FName , [EBeginnerGuideUnlockType](../../Struct/CommonTaskStruct__EBeginnerGuideUnlockType.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FName , EBeginnerGuideUnlockType> UnlockIDs;` |
 
-**源码注释:**
+**说明:**
 
 > 已解锁的ID
 > TMap<ID , 解锁类型>
@@ -115,7 +125,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) bool WaitingQueue { false };` |
 
-**源码注释:**
+**说明:**
 
 > 是否是等待队列(UI动画播放中已完成的条件应该加入等待队列中)
 
@@ -130,7 +140,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) AGOAP_ActorBase* SelectActor = nullptr;` |
 
-**源码注释:**
+**说明:**
 
 > 选中的Actor
 
@@ -145,7 +155,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) UInventoryItemInstance* SelectItemInstance { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > 选中的物品
 
@@ -160,6 +170,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) AERW_SceneManager* SceneManager { nullptr };` |
 
+**说明:**
+
+> Scene Manager 字段。
+
 ---
 
 ### 属性 `DialogueIndex`
@@ -171,7 +185,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) int32 DialogueIndex { 0 };` |
 
-**源码注释:**
+**说明:**
 
 > 对话索引
 
@@ -186,7 +200,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) int32 TipsIndex { 0 };` |
 
-**源码注释:**
+**说明:**
 
 > Tips索引
 
@@ -201,7 +215,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnUpdateNextNoviceTask OnUpdateNextNoviceTask;` |
 
-**源码注释:**
+**说明:**
 
 > 更新下个新手引导任务
 
@@ -216,7 +230,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnNextDialogue OnNextDialogue;` |
 
-**源码注释:**
+**说明:**
 
 > 下一步新手引导对话通知
 
@@ -231,7 +245,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnNextCoverTips OnNextCoverTips;` |
 
-**源码注释:**
+**说明:**
 
 > 遮罩Tips下一步通知
 
@@ -246,7 +260,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FShowCoverTips ShowCoverTips;` |
 
-**源码注释:**
+**说明:**
 
 > 显示遮罩Tips通知
 
@@ -261,7 +275,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnAddWaitingQueue OnAddWaitingQueue;` |
 
-**源码注释:**
+**说明:**
 
 > 加入等待队列通知
 
@@ -276,7 +290,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FBeginnerGuideDelegate OnBeginnerGuideDelegate;` |
 
-**源码注释:**
+**说明:**
 
 > 更新任务委托
 
@@ -291,7 +305,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FCompleteBeginnerGuideDelegate OnCompleteBeginnerGuideDelegate;` |
 
-**源码注释:**
+**说明:**
 
 > 更新任务委托
 
@@ -315,7 +329,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 领取奖励
 
@@ -333,7 +347,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 下一个新手任务
 
@@ -355,7 +369,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 初始化新手引导
 
@@ -377,7 +391,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新任务
 
@@ -399,7 +413,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查当前任务
 
@@ -421,7 +435,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 调用委托
 
@@ -439,7 +453,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 完成所有新手引导任务
 
@@ -457,7 +471,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 调用委托
 
@@ -475,7 +489,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取下一个新手任务
 
@@ -493,7 +507,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新任务
 
@@ -515,6 +529,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取或查询 Check Have Guide Task Complete。
+
 ---
 
 ### 函数 `AddShownCoverTips`
@@ -533,7 +551,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入显示过遮罩Tips的条件
 
@@ -549,14 +567,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ConditionType` | `ECommonTaskConditionType` |
+| `ConditionType` | [ECommonTaskConditionType](../../Struct/CommonTaskStruct__ECommonTaskConditionType.md) |
 | `RequiredID` | `const FName&` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure) bool IsConditionFinished(ECommonTaskConditionType ConditionType , const FName& RequiredID) const;`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查条件是否完成
 
@@ -574,7 +592,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查当前任务是否完成
 
@@ -590,7 +608,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ConditionType` | `ECommonTaskConditionType` |
+| `ConditionType` | [ECommonTaskConditionType](../../Struct/CommonTaskStruct__ECommonTaskConditionType.md) |
 | `RequiredID` | `const FName&` |
 | `ConditionData` | [FCommonTaskCondition](../../Struct/CommonTaskStruct__FCommonTaskCondition.md)& |
 
@@ -598,7 +616,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得条件数据
 
@@ -614,13 +632,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ConditionType` | `ECommonTaskConditionType` |
+| `ConditionType` | [ECommonTaskConditionType](../../Struct/CommonTaskStruct__ECommonTaskConditionType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure) bool HasCondition(ECommonTaskConditionType ConditionType) const;`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查当前新手引导是否有指定条件
 
@@ -636,14 +654,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ConditionType` | `ECommonTaskConditionType` |
+| `ConditionType` | [ECommonTaskConditionType](../../Struct/CommonTaskStruct__ECommonTaskConditionType.md) |
 | `RequiredID` | `const FName&` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure) bool IsConditionExist(ECommonTaskConditionType ConditionType , const FName& RequiredID) const;`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查指定条件是否存在
 
@@ -665,7 +683,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查当前新手引导是否有指定ID
 
@@ -676,7 +694,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintPure |
-| 返回类型 | `ECommonTaskConditionType` |
+| 返回类型 | [ECommonTaskConditionType](../../Struct/CommonTaskStruct__ECommonTaskConditionType.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -687,7 +705,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 通过指定ID获得条件类型
 
@@ -703,14 +721,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ConditionType` | `ECommonTaskConditionType` |
+| `ConditionType` | [ECommonTaskConditionType](../../Struct/CommonTaskStruct__ECommonTaskConditionType.md) |
 | `TaskCondition` | [FCommonTaskCondition](../../Struct/CommonTaskStruct__FCommonTaskCondition.md)& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure) bool GetConditionByConditionType(ECommonTaskConditionType ConditionType , FCommonTaskCondition& TaskCondition) const;`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 通过条件类型获得条件数据
 
@@ -728,7 +746,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 下一步对话
 
@@ -746,7 +764,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 遮罩Tips下一步
 
@@ -764,7 +782,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 当前任务结束
 
@@ -786,7 +804,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 关闭新手引导
 
@@ -803,13 +821,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `ID` | `const FName&` |
-| `UnlockType` | `EBeginnerGuideUnlockType` |
+| `UnlockType` | [EBeginnerGuideUnlockType](../../Struct/CommonTaskStruct__EBeginnerGuideUnlockType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void AddUnlockID(const FName& ID , EBeginnerGuideUnlockType UnlockType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入已解锁ID
 
@@ -825,7 +843,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ConditionType` | `ECommonTaskConditionType` |
+| `ConditionType` | [ECommonTaskConditionType](../../Struct/CommonTaskStruct__ECommonTaskConditionType.md) |
 | `RequiredID` | `const FName&` |
 | `0` | `int32 ExtraParam1 =` |
 | `1` | `int32 Num =` |
@@ -835,7 +853,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新新手引导进度
 

@@ -19,6 +19,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnPerceiveActorDeath OnPerceiveActorDeath;` |
 
+**说明:**
+
+> On Perceive Actor Death 事件或回调。
+
 ---
 
 ### 属性 `OnPerceiveActorSeriousInjury`
@@ -30,7 +34,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnPerceiveActorDeath OnPerceiveActorSeriousInjury;` |
 
-**源码注释:**
+**说明:**
 
 > 重伤(门派战中的死亡)
 
@@ -45,7 +49,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnPerceiveActorDeath OnPerceiveActorKnockDown;` |
 
-**源码注释:**
+**说明:**
 
 > 驻地战斗中被击倒
 
@@ -60,6 +64,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnTeamBuffChange OnTeamBuffChange;` |
 
+**说明:**
+
+> On Team Buff Change 事件或回调。
+
 ---
 
 ### 属性 `AllTeamActors`
@@ -71,7 +79,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TArray<AActor*> AllTeamActors;` |
 
-**源码注释:**
+**说明:**
 
 > 所有的阵营actor
 
@@ -95,7 +103,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 是否为玩家阵营（玩家阵营ID固定为1）
 
@@ -118,6 +126,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取或查询 Get Team Relation。
+
 ---
 
 ### 函数 `FindShortestDistanceTarget`
@@ -137,7 +149,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 寻找距离位置最短的目标
 
@@ -154,15 +166,38 @@
 | 参数名 | 类型 |
 |--------|------|
 | `TeamId` | `int32` |
-| `CharacterType` | `ECharacterType` |
+| `CharacterType` | [ECharacterType](../Struct/CommonEnum__ECharacterType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) TArray<AActor*> GetAllTeamActorByCharacterType(int32 TeamId,ECharacterType CharacterType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有阵营actor 根据类型
+
+---
+
+### 函数 `GetHostileActorsInRadius`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `TArray<AActor*>` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `Target` | `const AActor*` |
+| `Radius` | `float` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) TArray<AActor*> GetHostileActorsInRadius(const AActor* Target, float Radius);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取以 Target 为中心、半径内、对 Target 持敌对态度的所有 Actor（范围内敌人死亡被动触发用）
 
 ---
 
@@ -182,6 +217,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取或查询 Get All Team Buff。
+
 ---
 
 ### 函数 `PlayBattleMusic`
@@ -200,8 +239,26 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 播放战斗音乐
+
+---
+
+### 函数 `IsOnBattlePlayer`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `bool` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool IsOnBattlePlayer();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取或查询 Is On Battle Player。
 
 ---

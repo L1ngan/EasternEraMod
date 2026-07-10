@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Play Sound System UObject type.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "PlaySoundSystem") FOnVoicePlayCompleteDelegate OnVoicePlayComplete;` |
 
-**Source comments:**
+**Notes:**
 
 > 语音播放完成时广播，可在蓝图中绑定事件
 
@@ -36,6 +38,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure, Category = "PlaySoundSystem") static UPlaySoundSystem* GetInstance();`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Gets or queries Get Instance.
 
 ---
 
@@ -57,7 +63,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 播放音效
 
@@ -81,6 +87,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Play Sound By ID operation.
+
 ---
 
 ### Function `PlaySound2DByID`
@@ -99,7 +109,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 播放UI音乐
 
@@ -121,6 +131,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Play Sound 2 D By Tag operation.
+
 ---
 
 ### Function `PlaySoundEvent`
@@ -133,7 +147,7 @@
 
 | Name | Type |
 |--------|------|
-| `Event` | `ESoundChangeEvent` |
+| `Event` | [ESoundChangeEvent](PlaySoundSystem__ESoundChangeEvent.md) |
 | `InEventActor` | `AActor *` |
 | `InTransform` | `FTransform` |
 
@@ -141,7 +155,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过事件改变音效组
 
@@ -165,6 +179,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Play Sound Event By ID operation.
+
 ---
 
 ### Function `PlayAkAudioSoundByTag`
@@ -184,7 +202,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 播放AK音效
 
@@ -207,6 +225,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Play Ak Audio Sound By ID operation.
+
 ---
 
 ### Function `PlayAkAudioSound2DByID`
@@ -225,7 +247,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 播放UIAk音效
 
@@ -247,6 +269,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Play Ak Audio Sound 2 D By Tag operation.
+
 ---
 
 ### Function `PlayAkAudioSoundEvent`
@@ -259,14 +285,14 @@
 
 | Name | Type |
 |--------|------|
-| `Event` | `ESoundChangeEvent` |
+| `Event` | [ESoundChangeEvent](PlaySoundSystem__ESoundChangeEvent.md) |
 | `InEventActor` | `AActor *` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,Category="PlaySoundSystem") void PlayAkAudioSoundEvent(ESoundChangeEvent Event,AActor * InEventActor);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过事件改变AK音效组
 
@@ -289,6 +315,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Play Ak Audio Sound Event By ID operation.
+
 ---
 
 ### Function `PostAkAudioSoundEvent`
@@ -308,6 +338,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Post Ak Audio Sound Event field.
+
 ---
 
 ### Function `RemoveAllSoundActorByAttachActor`
@@ -326,7 +360,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除所有附加到此Actor上的音效
 
@@ -348,7 +382,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置所有音效暂停
 
@@ -372,7 +406,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置音效播放参数
 
@@ -394,7 +428,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 停止播放对应ID的音效
 
@@ -418,6 +452,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Play Voice By ID operation.
+
 ---
 
 ### Function `StopVoiceByID`
@@ -437,7 +475,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 停止播放对应ID的音效
 

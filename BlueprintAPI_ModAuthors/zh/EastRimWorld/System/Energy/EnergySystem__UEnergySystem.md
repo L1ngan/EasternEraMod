@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> Energy System UObject 类型。
 
 ## 蓝图暴露变量
 
@@ -16,6 +18,10 @@
 | 反射说明符 | BlueprintAssignable |
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnUpdateEnergyGridDataDelegate OnUpdateEnergyGridData;` |
+
+**说明:**
+
+> On Update Energy Grid Data 事件或回调。
 
 ---
 
@@ -33,6 +39,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 获取或查询 Get Instance。
+
 ---
 
 ### 函数 `SelectAllConsistentBuilding`
@@ -46,13 +56,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `EnergyGridGuid` | `FGuid` |
-| `EnergyType` | `EEnergyType` |
+| `EnergyType` | [EEnergyType](../../ERW_Enumerations__EEnergyType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SelectAllConsistentBuilding(FGuid EnergyGridGuid , EEnergyType EnergyType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据传入类型选中能量网中所有对应建筑
 
@@ -75,5 +85,9 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void FindConnectedTransmissionBuilding(ABuildingActorBase * InBuilding,ABuildingActorBase * IgnoreBuilding,TArray<ABuildingActorBase*> & OutBuildings);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取或查询 Find Connected Transmission Building。
 
 ---

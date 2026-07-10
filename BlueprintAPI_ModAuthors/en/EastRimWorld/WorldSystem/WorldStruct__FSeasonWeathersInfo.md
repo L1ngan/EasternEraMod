@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EERWSeason` |
+| C++ type | [EERWSeason](WorldStruct__EERWSeason.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EERWSeason Season = EERWSeason::Spring;` |
 
-**Source comments:**
+**Notes:**
 
 > 季节
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EERWWeather` |
+| C++ type | [EERWWeather](WorldStruct__EERWWeather.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EERWWeather WeatherType = EERWWeather::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 天气配置
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int WeatherWeight = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 天气权重（小于等于0，不参与随机）
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName LevelName = NAME_None;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应地图名称（名称为None或""表示通用配置）
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float WeatherChangeTransitionTime = 20.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 天气过度时间(秒)
 

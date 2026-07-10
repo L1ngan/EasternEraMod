@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText Describe;` |
 
-**Source comments:**
+**Notes:**
 
 > 条件描述
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FText> SubDescribes;` |
 
-**Source comments:**
+**Notes:**
 
 > 次级描述
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> SubConditionIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 次级条件ID
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName CoverTipsID;` |
 
-**Source comments:**
+**Notes:**
 
 > 遮罩Tips配置表ID
 
@@ -74,12 +74,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECommonTaskConditionType` |
+| C++ type | [ECommonTaskConditionType](CommonTaskStruct__ECommonTaskConditionType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ECommonTaskConditionType CommonTaskConditionType = ECommonTaskConditionType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 条件类型
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName RequiredID;` |
 
-**Source comments:**
+**Notes:**
 
 > 所需类型ID 例如 资源id  建筑id 没有则不填
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int RequiredValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 所需值
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float CurrentValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前值
 
@@ -134,12 +134,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EConditionValueUpdateType` |
+| C++ type | [EConditionValueUpdateType](CommonTaskStruct__EConditionValueUpdateType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EConditionValueUpdateType ConditionValueUpdateType = EConditionValueUpdateType::Addition;` |
 
-**Source comments:**
+**Notes:**
 
 > 更新类型
 
@@ -149,12 +149,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EConditionValueCompareType` |
+| C++ type | [EConditionValueCompareType](CommonTaskStruct__EConditionValueCompareType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EConditionValueCompareType ConditionValueCompareType = EConditionValueCompareType::GreatThanOrEqualTo;` |
 
-**Source comments:**
+**Notes:**
 
 > 条件数值的比较类型
 
@@ -164,12 +164,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECompleteState` |
+| C++ type | [ECompleteState](CommonTaskStruct__ECompleteState.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) ECompleteState ConditionState = ECompleteState::Unfinished;` |
 
-**Source comments:**
+**Notes:**
 
 > 条件状态
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float ConditionSchedule;` |
 
-**Source comments:**
+**Notes:**
 
 > 条件进度
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int BuildingType;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务关联的建筑物类型
 
@@ -214,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int FiltrateTypeID;` |
 
-**Source comments:**
+**Notes:**
 
 > 相同建筑物的不同类型
 
@@ -229,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bDynamicCondition = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否会更加实际数值改变条件状态
 
@@ -244,7 +244,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() FText ExecuteStateTips;` |
 
-**Source comments:**
+**Notes:**
 
 > 执行状态tips
 
@@ -259,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 ExtraParam1 = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 额外参数1
 
@@ -274,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText FailedTipText;` |
 
-**Source comments:**
+**Notes:**
 
 > 条件检查不通过时的提示文本
 

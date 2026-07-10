@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EGOAP_ConditionType , [FMemoryData](GOAP_MemoryComponent__FMemoryData.md)> |
+| C++ type | TMap<[EGOAP_ConditionType](GOAP_Enumerations__EGOAP_ConditionType.md) , [FMemoryData](GOAP_MemoryComponent__FMemoryData.md)> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<EGOAP_ConditionType , FMemoryData> Memories;` |
 
-**Source comments:**
+**Notes:**
 
 > GOAP前置条件类型对应的记忆值
 > TMap<GOAP前置条件类型 , 记忆数据>
@@ -35,7 +35,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnMemoryUpdated OnMemoryUpdated;` |
 
-**Source comments:**
+**Notes:**
 
 > 当GOAP记忆更新时
 
@@ -53,7 +53,7 @@
 
 | Name | Type |
 |--------|------|
-| `ConditionType` | `EGOAP_ConditionType` |
+| `ConditionType` | [EGOAP_ConditionType](GOAP_Enumerations__EGOAP_ConditionType.md) |
 | `ID` | `const FName&` |
 | `GOAPValue` | [FGOAP_Value](GOAP_Data__FGOAP_Value.md)& |
 
@@ -61,7 +61,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取记忆值
 
@@ -78,7 +78,7 @@
 | Name | Type |
 |--------|------|
 | `Delete` | `bool` |
-| `ConditionType` | `EGOAP_ConditionType` |
+| `ConditionType` | [EGOAP_ConditionType](GOAP_Enumerations__EGOAP_ConditionType.md) |
 | `ID` | `const FName&` |
 | `GOAPValue` | const [FGOAP_Value](GOAP_Data__FGOAP_Value.md)& |
 
@@ -86,7 +86,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新记忆
 
@@ -103,7 +103,7 @@
 | Name | Type |
 |--------|------|
 | `Delete` | `bool` |
-| `ConditionType` | `EGOAP_ConditionType` |
+| `ConditionType` | [EGOAP_ConditionType](GOAP_Enumerations__EGOAP_ConditionType.md) |
 | `ID` | `const FName&` |
 | `GOAPValue` | const [FGOAP_Value](GOAP_Data__FGOAP_Value.md)& |
 
@@ -111,7 +111,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查记忆值是否不同
 

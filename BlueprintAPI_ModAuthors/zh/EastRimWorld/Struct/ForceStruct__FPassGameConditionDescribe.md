@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FText PassGameName;` |
 
-**源码注释:**
+**说明:**
 
 > 通关条件名称
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TSoftObjectPtr<UTexture2D> Icon;` |
 
-**源码注释:**
+**说明:**
 
 > 图标
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FText Describe;` |
 
-**源码注释:**
+**说明:**
 
 > 通关条件描述
 
@@ -59,12 +59,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<ECondType,[FCompareCondition](ConditionStruct__FCompareCondition.md)> |
+| C++ 类型 | TMap<[ECondType](ConditionStruct__ECondType.md),[FCompareCondition](ConditionStruct__FCompareCondition.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<ECondType,FCompareCondition> OpenConditions;` |
 
-**源码注释:**
+**说明:**
 
 > 开启条件
 
@@ -74,12 +74,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<ECondType,[FCompareCondition](ConditionStruct__FCompareCondition.md)> |
+| C++ 类型 | TMap<[ECondType](ConditionStruct__ECondType.md),[FCompareCondition](ConditionStruct__FCompareCondition.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<ECondType,FCompareCondition> PassConditions;` |
 
-**源码注释:**
+**说明:**
 
 > 通关条件
 

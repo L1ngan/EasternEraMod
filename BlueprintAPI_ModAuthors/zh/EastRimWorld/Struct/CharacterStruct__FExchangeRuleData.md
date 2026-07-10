@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 切磋（交流武学）规则数据：是否随机、是否允许及子类型开关映射
 
 ## 蓝图暴露变量
 
@@ -17,6 +19,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) bool bIsRandom = true;` |
 
+**说明:**
+
+> 是否随机选择
+
 ---
 
 ### 属性 `bIsAllow`
@@ -28,6 +34,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) bool bIsAllow = true;` |
 
+**说明:**
+
+> 是否允许该规则
+
 ---
 
 ### 属性 `SubTypeData`
@@ -38,5 +48,9 @@
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<int32 , bool> SubTypeData;` |
+
+**说明:**
+
+> 子类型开关映射（子类型编号 -> 是否允许）
 
 ---

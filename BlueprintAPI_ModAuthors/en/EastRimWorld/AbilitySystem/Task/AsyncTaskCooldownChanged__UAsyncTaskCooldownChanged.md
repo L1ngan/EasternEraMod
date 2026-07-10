@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Blueprint async task that listens for GameplayEffects with the given cooldown tags being applied and ending, broadcasting the cooldown tag, time remaining and duration.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnCooldownChanged OnCooldownBegin;` |
 
-**Source comments:**
+**Notes:**
 
 > 当监听的效果被施加时
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnCooldownChanged OnCooldownEnd;` |
 
-**Source comments:**
+**Notes:**
 
 > 当监听的效果结束时
 
@@ -57,7 +59,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 指定监听（谁、带有什么标签的GE）
 
@@ -81,7 +83,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 得到该GE的总时间 剩余时间信息
 
@@ -99,7 +101,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 结束任务，UI调用的话即可在Destruct事件中结束它，否则不会被回收
 

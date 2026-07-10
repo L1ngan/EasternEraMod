@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Common log component that generates, records and filters in-game logs and persists them with the save game
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TObjectPtr<class AERW_GameModeBase> GameMode;` |
 
-**Source comments:**
+**Notes:**
 
 > 全局世界指针  游戏模式
 
@@ -31,6 +33,10 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TObjectPtr<class UERW_GameInstanceBase> GameInstance;` |
+
+**Notes:**
+
+> Cached reference to the game instance (UERW_GameInstanceBase)
 
 ---
 
@@ -54,6 +60,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FLogStringDelegate OnLogStringDelegate;` |
 
+**Notes:**
+
+> Delegate broadcast when a new log string is generated (with log text, group and type)
+
 ---
 
 ## Blueprint-exposed functions
@@ -68,8 +78,8 @@
 
 | Name | Type |
 |--------|------|
-| `CommonLogType` | `ECommonLogType` |
-| `LogParameterMap` | `const TMap<ECommonLogParameterType,FString> &` |
+| `CommonLogType` | [ECommonLogType](../Struct/CommonLogStruct__ECommonLogType.md) |
+| `LogParameterMap` | const TMap<[ECommonLogParameterType](../Struct/CommonLogStruct__ECommonLogParameterType.md),FString> & |
 | `255` | `int32 TeamID =` |
 | `(unnamed / type only)` | `const FString& FilterString = ""` |
 
@@ -77,7 +87,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 生成日志
 
@@ -99,6 +109,35 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Gets all log data
+
+---
+
+### Function `AddEventLog`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="Log" |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `Text` | `const FText&` |
+| `(unnamed / type only)` | `const FString& FilterString = TEXT("")` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Log") static void AddEventLog(const FText& Text, const FString& FilterString = TEXT(""));`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 便捷静态口: 写一条"江湖事件"日志(Event 分组)到全局日志组件(ASaveGameDataActor::LogComponent)。
+> 涌现 / StoryArc / 历练 / 据点 等系统的江湖事件统一走此口。
+> 组件或 WorldDirector 未就绪时静默跳过(防早期空指针)。
+
 ---
 
 ### Function `FindAllLogStringByFilterString`
@@ -118,7 +157,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查找所有包含InFilterString的日志
 
@@ -140,5 +179,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void FindAllLogNotInclueFilterString(const FString& InFilterString,TArray<FCommonLogData>& OutLogString);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Finds all logs that do not contain the given filter string
 
 ---

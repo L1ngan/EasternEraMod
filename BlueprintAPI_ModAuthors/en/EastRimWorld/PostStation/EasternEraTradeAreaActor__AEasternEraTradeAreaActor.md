@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Trade area actor of the post station, managing goods transport GOAP actions and the required goods list.
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) TObjectPtr<UStaticMeshComponent> StaticMeshComponent;` |
 
+**Notes:**
+
+> Static mesh component of the trade area.
+
 ---
 
 ### Property `TransportGoodsActions`
@@ -27,6 +33,10 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere,SaveGame) TMap<FName,FGOAP_Action> TransportGoodsActions;` |
+
+**Notes:**
+
+> GOAP transport actions keyed by item ID (saved).
 
 ---
 
@@ -39,6 +49,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere,SaveGame) TMap<FName,int32> NeedGoods;` |
 
+**Notes:**
+
+> Required goods list mapping item ID to count (saved).
+
 ---
 
 ### Property `WaitGoodsQueue`
@@ -50,89 +64,13 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere,SaveGame) TMap<FName,int32> WaitGoodsQueue;` |
 
-**Source comments:**
+**Notes:**
 
 > 等待创建的搬运
 
 ---
 
 ## Blueprint-exposed functions
-
-### Function `CreateTransportAction`
-
-| Field | Details |
-|------|------|
-| Reflection specifiers | BlueprintCallable |
-| Return type | `void` |
-| Parameters | see table below |
-
-| Name | Type |
-|--------|------|
-| `InGoodsInfos` | const TMap<FName,[FTravelerGoodsInfo](../Struct/ItemStruct__FTravelerGoodsInfo.md)>& |
-
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CreateTransportAction(const TMap<FName,FTravelerGoodsInfo>& InGoodsInfos);`
-
-**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
-
----
-
-### Function `AddTradeGoods`
-
-| Field | Details |
-|------|------|
-| Reflection specifiers | BlueprintCallable |
-| Return type | `void` |
-| Parameters | see table below |
-
-| Name | Type |
-|--------|------|
-| `InItems` | const TArray<[UInventoryItemInstance](../Inventory/InventoryItemInstance__UInventoryItemInstance.md)*>& |
-
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void AddTradeGoods(const TArray<UInventoryItemInstance*>& InItems);`
-
-**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
-
----
-
-### Function `CancelTransportGoods`
-
-| Field | Details |
-|------|------|
-| Reflection specifiers | BlueprintCallable |
-| Return type | `void` |
-| Parameters | see table below |
-
-| Name | Type |
-|--------|------|
-| `InGoodsInfoIds` | `const TArray<FName>&` |
-
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CancelTransportGoods(const TArray<FName>& InGoodsInfoIds);`
-
-**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
-
-**Source comments:**
-
-> 取消搬运货物
-
----
-
-### Function `PopTradeGoods`
-
-| Field | Details |
-|------|------|
-| Reflection specifiers | BlueprintCallable |
-| Return type | `void` |
-| Parameters | see table below |
-
-| Name | Type |
-|--------|------|
-| `InGoodsInfos` | const TMap<FName,[FTravelerGoodsInfo](../Struct/ItemStruct__FTravelerGoodsInfo.md)>& |
-
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void PopTradeGoods(const TMap<FName,FTravelerGoodsInfo>& InGoodsInfos);`
-
-**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
-
----
 
 ### Function `GetSaleGoodsPriceFavorabilityRate`
 
@@ -150,18 +88,8 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
----
+**Notes:**
 
-### Function `TestPutItemToTradeArea`
-
-| Field | Details |
-|------|------|
-| Reflection specifiers | BlueprintCallable |
-| Return type | `void` |
-| Parameters | (none) |
-
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void TestPutItemToTradeArea();`
-
-**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+> Returns the sale goods price rate based on favorability with the given force.
 
 ---

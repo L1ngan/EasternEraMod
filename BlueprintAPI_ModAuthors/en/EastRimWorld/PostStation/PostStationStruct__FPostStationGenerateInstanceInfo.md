@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Instance info of one generated post station NPC: generation GUID, occupied socket, elapsed lifetime and NPC state.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid ComponentGenerateGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成组件中的Guid
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName OccupySocket;` |
 
-**Source comments:**
+**Notes:**
 
 > 占用的插槽
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float AlreadyExistTime;` |
 
-**Source comments:**
+**Notes:**
 
 > 已经存续的时间
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bIsAlreadyGenerate;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否已经生成
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid CharacterGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成的角色Guid
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName CharacterID;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成的角色配置ID
 
@@ -102,9 +104,13 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EPostStationNPCState` |
+| C++ type | [EPostStationNPCState](PostStationStruct__EPostStationNPCState.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EPostStationNPCState NPCState;` |
+
+**Notes:**
+
+> Current state of this NPC (idle or sparring).
 
 ---

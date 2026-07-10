@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 制造组件,管理建筑的制造任务队列、制造资源GOAP行为与制造物品生成
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TArray<FFabricateTaskData> FabricateTaskQueue;` |
 
-**源码注释:**
+**说明:**
 
 > 当前任务的制造队列
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FGuid CurFabricateTaskGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 当前制造任务信息
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FName CorrelationID;` |
 
-**源码注释:**
+**说明:**
 
 > 此组件相关联的数据ID 例如建筑物ID
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnFabricateTaskQueueChange OnAddFabricateTaskQueue;` |
 
-**源码注释:**
+**说明:**
 
 > 添加制造队列委托
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnFabricateTaskQueueChange OnRemoveFabricateTaskQueue;` |
 
-**源码注释:**
+**说明:**
 
 > 移除制造队列委托
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnFabricateTaskQueueChange OnUpdateFabricateTask;` |
 
-**源码注释:**
+**说明:**
 
 > 制造任务更新
 
@@ -107,7 +109,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnUpdateAllFabricateTask OnUpdateAllFabricateTask;` |
 
-**源码注释:**
+**说明:**
 
 > 刷新整个任务
 
@@ -122,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) ABuildingActorBase * Owner { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > Owner
 
@@ -137,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) UGOAP_ManagerComponent* GOAPManagerComponent { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > GOAP管理组件
 
@@ -152,7 +154,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FName , FGOAP_Action> ResourceActions;` |
 
-**源码注释:**
+**说明:**
 
 > 制造资源对应的GOAPAction
 > TMap<资源ID , GOAPAction>
@@ -168,7 +170,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FGameplayTag , FGOAP_Action> SelectableResourceAction;` |
 
-**源码注释:**
+**说明:**
 
 > 可选资源对应的GOAPAction
 > TMap<Tag , GOAPAction>
@@ -184,7 +186,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FGOAP_Action FabricateAction;` |
 
-**源码注释:**
+**说明:**
 
 > 制造GOAPAction
 
@@ -199,7 +201,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) bool WaitingGenerateItem { false };` |
 
-**源码注释:**
+**说明:**
 
 > 是否在等待生成制造物品
 
@@ -214,7 +216,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) bool bAutoFabricate = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否是自动制造
 
@@ -239,7 +241,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 初始化制造组件
 
@@ -257,14 +259,14 @@
 |--------|------|
 | `InFormulaData` | const [FFormulaData](../Struct/CommonStruct__FFormulaData.md)& |
 | `InSelectableConsumingResourceTag` | `const TArray<FGameplayTag> &` |
-| `InFabricateRule` | `EFabricateRule` |
+| `InFabricateRule` | [EFabricateRule](../Struct/CommonStruct__EFabricateRule.md) |
 | `InTargetNumber` | `int` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool AddFabricateToQueue(const FFormulaData& InFormulaData, const TArray<FGameplayTag> & InSelectableConsumingResourceTag,EFabricateRule InFabricateRule, int InTargetNumber);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 添加制造任务
 
@@ -286,7 +288,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除一个制造任务
 
@@ -304,7 +306,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除所有的订单
 
@@ -327,7 +329,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置制造任务的优先级
 
@@ -345,7 +347,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取当前执行的任务
 
@@ -368,7 +370,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 增加任务的工作量
 
@@ -390,7 +392,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查当前制造任务是否完成
 
@@ -412,7 +414,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 尝试生成制造物品
 
@@ -428,13 +430,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `NewFabricateState` | `EFabricateState` |
+| `NewFabricateState` | [EFabricateState](../Struct/CommonStruct__EFabricateState.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SetCurFabricateTaskState(EFabricateState NewFabricateState);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置当前任务的状态
 
@@ -450,13 +452,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ButtonType` | `ECommonButtonType` |
+| `ButtonType` | [ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) TArray<FFormulaData> GetAllFabricates(ECommonButtonType ButtonType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有相关联已经解锁的配方
 
@@ -479,7 +481,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 生成配方物品
 
@@ -497,7 +499,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 人物进入开始制造
 
@@ -515,7 +517,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 人物中断制造
 
@@ -533,7 +535,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 人物制造完成
 
@@ -556,7 +558,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 添加资源
 
@@ -578,7 +580,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置任务新的信息
 
@@ -600,7 +602,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 提高制造任务的顺序
 
@@ -622,7 +624,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 降低制造任务的顺序
 
@@ -644,7 +646,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查找制造队列中的任务
 
@@ -666,6 +668,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 更新制造任务的状态
+
 ---
 
 ### 函数 `AddFabricateGOAPAction`
@@ -684,7 +690,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入制造GOAP Action
 
@@ -702,7 +708,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除制造GOAP Action
 
@@ -724,7 +730,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 停止制造并移除action
 
@@ -742,7 +748,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取已经添加进来的物资
 
@@ -765,7 +771,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入自动制造GOAP Action
 
@@ -783,7 +789,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 自动制造开启完成
 
@@ -801,7 +807,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 自动制造工作完成
 

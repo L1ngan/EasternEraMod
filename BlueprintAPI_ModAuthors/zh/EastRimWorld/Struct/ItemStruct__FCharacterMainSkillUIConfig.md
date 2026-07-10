@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MainSkillUIConfig") FGameplayAttribute LevelAttribute;` |
 
-**源码注释:**
+**说明:**
 
 > 对应等级属性(等级)
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MainSkillUIConfig") FGameplayAttribute ExpAttribute;` |
 
-**源码注释:**
+**说明:**
 
 > 对应经验属性（经验）
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MainSkillUIConfig") FGameplayAttribute ExpBonusAttribute;` |
 
-**源码注释:**
+**说明:**
 
 > 对应经验加成属性（经验加成）
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MainSkillUIConfig") TArray<FGameplayAttribute> EffectAttributeArray;` |
 
-**源码注释:**
+**说明:**
 
 > 影响的附加属性集
 

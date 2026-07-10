@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EAssemblePartType` |
+| C++ 类型 | [EAssemblePartType](ERW_Enumerations__EAssemblePartType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) EAssemblePartType AssemblePartType = EAssemblePartType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 组装部位类型
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FTransform Transform;` |
 
-**源码注释:**
+**说明:**
 
 > 相对坐标
 

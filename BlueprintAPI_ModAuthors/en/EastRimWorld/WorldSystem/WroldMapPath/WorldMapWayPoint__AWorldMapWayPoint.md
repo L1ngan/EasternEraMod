@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> World Map Way Point actor type.
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY( BlueprintReadWrite, Category="Waypoint") TObjectPtr<USceneComponent> SceneComponent;` |
 
+**Notes:**
+
+> Scene Component field.
+
 ---
 
 ### Property `SelectLinkWaypoints`
@@ -28,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Waypoint") TArray<AWorldMapWayPoint*> SelectLinkWaypoints;` |
 
-**Source comments:**
+**Notes:**
 
 > 选择的点位
 
@@ -43,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category="Waypoint") TArray<AWorldMapWayPoint*> LinkWaypoints;` |
 
-**Source comments:**
+**Notes:**
 
 > 可以到达的下一个路点
 
@@ -63,7 +69,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 仅在编辑器模式下更新样条线
 
@@ -81,7 +87,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 仅在编辑器模式下更新样条线
 

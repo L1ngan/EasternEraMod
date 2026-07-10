@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid Guid;` |
 
-**Source comments:**
+**Notes:**
 
 > 组件的Guid
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 Batch { INDEX_NONE };` |
 
-**Source comments:**
+**Notes:**
 
 > Action所在批次
 
@@ -49,9 +49,54 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) bool IsPullDown { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是拆除建筑
+
+---
+
+### Property `IsPriori`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) bool IsPriori { false };` |
+
+**Notes:**
+
+> 是否加入优先执行
+
+---
+
+### Property `TransBuildingType`
+
+| Field | Details |
+|------|------|
+| C++ type | [ETransBuildingType](../ERW_Enumerations__ETransBuildingType.md) |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) ETransBuildingType TransBuildingType { ETransBuildingType::None };` |
+
+**Notes:**
+
+> 移动建筑类型
+
+---
+
+### Property `WorkType`
+
+| Field | Details |
+|------|------|
+| C++ type | [EConstructionWorkType](ERW_ConstructionComponent__EConstructionWorkType.md) |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) EConstructionWorkType WorkType { EConstructionWorkType::Construction };` |
+
+**Notes:**
+
+> Type of this construction work (construction or building repair)
 
 ---
 
@@ -64,7 +109,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FName , int32> NeedResources;` |
 
-**Source comments:**
+**Notes:**
 
 > 建造所需资源
 > TMap<资源ID , 数量>
@@ -80,7 +125,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FName , int32> CurrentResources;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前拥有资源
 > TMap<资源ID , 数量>
@@ -96,7 +141,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 MaxWorkload { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 完成建造需要工作量
 
@@ -111,7 +156,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 CurrentWorkload { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 当前接收工作量
 
@@ -126,7 +171,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FUObjectData OwnerData;` |
 
-**Source comments:**
+**Notes:**
 
 > Owner的数据
 

@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FTravelerGoodsItem> GoodsItems;` |
 
-**Source comments:**
+**Notes:**
 
 > 商品项列表
 

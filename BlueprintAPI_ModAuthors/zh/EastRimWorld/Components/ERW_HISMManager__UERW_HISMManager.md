@@ -23,7 +23,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) AERW_SceneManager* SceneManager { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > 场景管理器类
 
@@ -38,6 +38,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) UERW_MapDataMgr* MapDataMgr { nullptr };` |
 
+**说明:**
+
+> 地图数据管理器组件引用
+
 ---
 
 ### 属性 `TransparentMaterial`
@@ -49,7 +53,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) UMaterialInstance* TransparentMaterial { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > 透明材质
 
@@ -64,7 +68,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) UMaterialInstance* PlumbBobMaterial { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > 铅锤材质
 
@@ -79,7 +83,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) UMaterialInstance* RoomUnitMaterial { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > 房间单元材质
 
@@ -94,7 +98,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) UMaterialInstance* EntranceArrowMaterial { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > 建筑入口箭头材质
 
@@ -109,7 +113,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) FLinearColor EntranceArrowLightColor;` |
 
-**源码注释:**
+**说明:**
 
 > 建筑入口箭头高亮显示颜色
 
@@ -124,7 +128,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) FLinearColor EntranceArrowNormalColor;` |
 
-**源码注释:**
+**说明:**
 
 > 建筑入口箭头普通颜色
 
@@ -139,7 +143,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) FLinearColor EntranceArrowDisableColor;` |
 
-**源码注释:**
+**说明:**
 
 > 建筑入口箭头不可用颜色
 
@@ -154,7 +158,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,SaveGame) bool HideRoof { false };` |
 
-**源码注释:**
+**说明:**
 
 > 是否需要隐藏屋顶(通过UI按钮进行的隐藏)
 
@@ -169,7 +173,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) float StairFlatHeight { 0.f };` |
 
-**源码注释:**
+**说明:**
 
 > 阶梯平台模型高度
 
@@ -184,7 +188,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TObjectPtr<URuntimeVirtualTexture> RuntimeVirtualTexture;` |
 
-**源码注释:**
+**说明:**
 
 > 动态虚拟纹理 用于消除草
 
@@ -199,7 +203,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) bool PlumbBobExist { false };` |
 
-**源码注释:**
+**说明:**
 
 > 铅锤是否存在
 
@@ -219,7 +223,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 清空ISM相关数据
 
@@ -242,7 +246,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 通过ISM组件和索引找到对应的Actor
 
@@ -260,9 +264,32 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 清空本次操作的物体
+
+---
+
+### 函数 `GetBuildObjectTransform`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `Transform` | `FTransform&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void GetBuildObjectTransform(AGOAP_ActorBase* BuildObject , FTransform& Transform);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获得建筑的Transform
 
 ---
 
@@ -271,7 +298,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintPure |
-| 返回类型 | `EEmbeddedWallType` |
+| 返回类型 | [EEmbeddedWallType](../ERW_Enumerations__EEmbeddedWallType.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -282,7 +309,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得嵌入式墙体类型
 
@@ -307,7 +334,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 初始化铅锤ISM
 
@@ -325,7 +352,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入铅锤模型Instance
 
@@ -343,7 +370,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 清空铅锤模型Instance
 
@@ -367,7 +394,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新铅锤模型Instance的Transform
 
@@ -392,7 +419,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 初始化房间单元ISM
 
@@ -415,7 +442,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入房间单元Instance
 
@@ -437,7 +464,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除房间单元Instance
 
@@ -462,7 +489,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 初始化建筑入口箭头ISM
 
@@ -480,13 +507,13 @@
 |--------|------|
 | `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `EnvironComponent` | const [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* const |
-| `（匿名/仅类型）` | `EEntranceArrowState ShowState = EEntranceArrowState::Highlight` |
+| `（匿名/仅类型）` | [EEntranceArrowState](../ERW_Enumerations__EEntranceArrowState.md) ShowState = [EEntranceArrowState](../ERW_Enumerations__EEntranceArrowState.md)::Highlight |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void AddEntranceArrowInstances(AGOAP_ActorBase* BuildObject , const UERW_EnvironComponent* const EnvironComponent , EEntranceArrowState ShowState = EEntranceArrowState::Highlight);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入入口箭头Instance
 
@@ -508,7 +535,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除入口箭头Instance
 
@@ -526,15 +553,39 @@
 |--------|------|
 | `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `EnvironComponent` | const [UERW_EnvironComponent](ERW_EnvironComponent__UERW_EnvironComponent.md)* const |
-| `（匿名/仅类型）` | `EEntranceArrowState ShowState = EEntranceArrowState::Highlight` |
+| `（匿名/仅类型）` | [EEntranceArrowState](../ERW_Enumerations__EEntranceArrowState.md) ShowState = [EEntranceArrowState](../ERW_Enumerations__EEntranceArrowState.md)::Highlight |
+| `false` | `bool UpdateSlotEnabled =` |
 
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdateEntranceArrowInstances(AGOAP_ActorBase* BuildObject , const UERW_EnvironComponent* const EnvironComponent , EEntranceArrowState ShowState = EEntranceArrowState::Highlight);`
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdateEntranceArrowInstances(AGOAP_ActorBase* BuildObject , const UERW_EnvironComponent* const EnvironComponent , EEntranceArrowState ShowState = EEntranceArrowState::Highlight , bool UpdateSlotEnabled = false);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新入口箭头的Transform和显示
+
+---
+
+### 函数 `UpdateEntranceArrowFromOtherBuilding`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `OtherBuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdateEntranceArrowFromOtherBuilding(AGOAP_ActorBase* BuildObject , AGOAP_ActorBase* OtherBuildObject);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 根据另一个建筑的入口更新入口箭头
 
 ---
 
@@ -554,7 +605,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新入口箭头是否显示
 
@@ -576,7 +627,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 当入口箭头加入地图时, 将颜色设置为普通颜色
 
@@ -599,7 +650,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 读档后恢复入口箭头
 
@@ -628,7 +679,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入建造物体ISM
 
@@ -655,9 +706,55 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入建造物体ISM
+
+---
+
+### 函数 `SwitchBuildObjectInstance`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `VariantIndex` | `int32` |
+| `ToRebuiltInstance` | `bool` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SwitchBuildObjectInstance(AGOAP_ActorBase* BuildObject , int32 VariantIndex , bool ToRebuiltInstance);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 切换到原模型或重建后的模型
+
+---
+
+### 函数 `RemoveOldBuildObjectInfo`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RemoveOldBuildObjectInfo(AGOAP_ActorBase* BuildObject);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 移除重建前的建筑信息
 
 ---
 
@@ -680,7 +777,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入建造物体模型Instance
 
@@ -706,7 +803,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入阶梯平台模型Instance
 
@@ -733,7 +830,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入阶梯模型Instance
 
@@ -756,7 +853,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置建造物体模型Instance是否可见
 
@@ -779,7 +876,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 临时设置物体模型Instance是否可见(不改变存储数据)
 
@@ -802,7 +899,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新建造物体模型Instance的Transform
 
@@ -825,7 +922,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新阶梯模型的Transform
 
@@ -848,7 +945,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 读档恢复丢失的阶梯模型
 
@@ -871,7 +968,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据能够放置更新建筑颜色
 
@@ -894,7 +991,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置填充模型颜色
 
@@ -917,7 +1014,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置屋顶模型颜色
 
@@ -934,13 +1031,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
-| `ShowType` | `EISMType` |
+| `ShowType` | [EISMType](../ERW_Enumerations__EISMType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SwitchBuildObjectInstanceShow(AGOAP_ActorBase* BuildObject , EISMType ShowType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 切换建造物体模型Instance显示
 
@@ -957,13 +1054,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
-| `State` | `EBuildObjectState` |
+| `State` | [EBuildObjectState](../ERW_Enumerations__EBuildObjectState.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdateBuildObjectState(AGOAP_ActorBase* BuildObject , EBuildObjectState State);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新建造物体的显示状态
 
@@ -986,7 +1083,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新建造物体描边显示
 
@@ -1010,7 +1107,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置视野方向屏蔽参数
 
@@ -1027,14 +1124,14 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Wall` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
-| `WallType` | `EEmbeddedWallType` |
-| `DistributionType` | `EGridDistributionType` |
+| `WallType` | [EEmbeddedWallType](../ERW_Enumerations__EEmbeddedWallType.md) |
+| `DistributionType` | [EGridDistributionType](../ERW_Enumerations__EGridDistributionType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure) bool CheckWallChangeRotateOrientaion(AGOAP_ActorBase* Wall , EEmbeddedWallType WallType , EGridDistributionType DistributionType) const;`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查墙是否需要改变朝向
 
@@ -1056,6 +1153,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 获取墙体模型的旋转角度(Yaw)
+
 ---
 
 ### 函数 `UpdateWallInstanceRotation`
@@ -1075,7 +1176,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新墙的旋转朝向
 
@@ -1097,7 +1198,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新墙显示效果
 
@@ -1114,13 +1215,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Wall` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
-| `DisplayType` | `EWallDisplayType` |
+| `DisplayType` | [EWallDisplayType](../ERW_Enumerations__EWallDisplayType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SetWallDisplayType(AGOAP_ActorBase* Wall , EWallDisplayType DisplayType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置墙显示类型
 
@@ -1143,7 +1244,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置使用顶点动画模型的建造物体暂停
 
@@ -1162,12 +1263,13 @@
 | `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `OnlyRemoveInstance` | `bool` |
 | `SwitchEmbeddedWall` | `bool` |
+| `UseOldID` | `bool` |
 
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RemoveBuildObjectInstance(AGOAP_ActorBase* BuildObject , bool OnlyRemoveInstance , bool SwitchEmbeddedWall);`
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RemoveBuildObjectInstance(AGOAP_ActorBase* BuildObject , bool OnlyRemoveInstance , bool SwitchEmbeddedWall , bool UseOldID);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除建造物体模型Instance及相关建筑信息
 
@@ -1189,7 +1291,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除阶梯的模型
 
@@ -1212,7 +1314,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获得阶梯位置信息
 
@@ -1235,7 +1337,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获得阶梯的格子坐标
 
@@ -1257,7 +1359,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得阶梯Actor所在的高度
 
@@ -1279,7 +1381,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 判断是否是嵌入式墙体
 
@@ -1296,7 +1398,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `ID` | `const FName&` |
-| `AutoTileType` | `EAutoTileType` |
+| `AutoTileType` | [EAutoTileType](../ERW_Enumerations__EAutoTileType.md) |
 | `StartCullDistance` | `int32` |
 | `EndCullDistance` | `int32` |
 | `StaticMesh` | `UStaticMesh*` |
@@ -1306,7 +1408,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入九宫格物体的ISM
 
@@ -1329,7 +1431,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 计算填充模型高度
 
@@ -1351,9 +1453,31 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得填充模型高度
+
+---
+
+### 函数 `GetFillerCountLayer`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintPure |
+| 返回类型 | `int32` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintPure) int32 GetFillerCountLayer(AGOAP_ActorBase* BuildObject) const;`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获得填充模型参与消耗计算的层数
 
 ---
 
@@ -1368,13 +1492,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
-| `DistributionInfo` | const TMap<[FGridPosition](../ERW_CommonTypes__FGridPosition.md) , EGridDistributionType>& |
+| `DistributionInfo` | const TMap<[FGridPosition](../ERW_CommonTypes__FGridPosition.md) , [EGridDistributionType](../ERW_Enumerations__EGridDistributionType.md)>& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void HideFillers(AGOAP_ActorBase* BuildObject , const TMap<FGridPosition , EGridDistributionType>& DistributionInfo);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 隐藏填充模型
 
@@ -1392,14 +1516,14 @@
 |--------|------|
 | `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `AreaOperationComponent` | [UERW_AreaOperationComponent](ERW_AreaOperationComponent__UERW_AreaOperationComponent.md)* |
-| `EnvironType` | `EEnvironType` |
+| `EnvironType` | [EEnvironType](../ERW_Enumerations__EEnvironType.md) |
 | `GridPos` | const [FGridPosition](../ERW_CommonTypes__FGridPosition.md)& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdateSurroundingFillers(AGOAP_ActorBase* BuildObject , UERW_AreaOperationComponent* AreaOperationComponent , EEnvironType EnvironType , const FGridPosition& GridPos);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新本次操作周边的填充模型
 
@@ -1417,18 +1541,19 @@
 |--------|------|
 | `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `AreaOperationComponent` | [UERW_AreaOperationComponent](ERW_AreaOperationComponent__UERW_AreaOperationComponent.md)* |
-| `EnvironType` | `EEnvironType` |
-| `DistributionInfo` | const TMap<[FGridPosition](../ERW_CommonTypes__FGridPosition.md) , EGridDistributionType>& |
+| `EnvironType` | [EEnvironType](../ERW_Enumerations__EEnvironType.md) |
+| `DistributionInfo` | const TMap<[FGridPosition](../ERW_CommonTypes__FGridPosition.md) , [EGridDistributionType](../ERW_Enumerations__EGridDistributionType.md)>& |
 | `GridMinHeight` | `float` |
 | `false` | `bool UpdateSurrounding =` |
 | `false` | `bool CheckSurroundingHeight =` |
 | `false` | `bool RemoveRedundantLayers =` |
+| `false` | `bool IgnoreVisibleActors =` |
 
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdateFiller(AGOAP_ActorBase* BuildObject , UERW_AreaOperationComponent* AreaOperationComponent , EEnvironType EnvironType , const TMap<FGridPosition , EGridDistributionType>& DistributionInfo , float GridMinHeight , bool UpdateSurrounding = false , bool CheckSurroundingHeight = false , bool RemoveRedundantLayers = false);`
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdateFiller(AGOAP_ActorBase* BuildObject , UERW_AreaOperationComponent* AreaOperationComponent , EEnvironType EnvironType , const TMap<FGridPosition , EGridDistributionType>& DistributionInfo , float GridMinHeight , bool UpdateSurrounding = false , bool CheckSurroundingHeight = false , bool RemoveRedundantLayers = false , bool IgnoreVisibleActors = false);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新填充模型
 
@@ -1446,14 +1571,14 @@
 |--------|------|
 | `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `AreaOperationComponent` | [UERW_AreaOperationComponent](ERW_AreaOperationComponent__UERW_AreaOperationComponent.md)* |
-| `EnvironType` | `EEnvironType` |
+| `EnvironType` | [EEnvironType](../ERW_Enumerations__EEnvironType.md) |
 | `GridPos` | const [FGridPosition](../ERW_CommonTypes__FGridPosition.md)& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdateFillerPreview(AGOAP_ActorBase* BuildObject , UERW_AreaOperationComponent* AreaOperationComponent , EEnvironType EnvironType , const FGridPosition& GridPos);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新填充模型预览显示
 
@@ -1473,14 +1598,39 @@
 | `GridPoses` | const TArray<[FGridPosition](../ERW_CommonTypes__FGridPosition.md)>& |
 | `OnlyRemoveHideInstance` | `bool` |
 | `RemoveData` | `bool` |
+| `UseOldID` | `bool` |
+| `IsDestroy` | `bool` |
 
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RemoveFillerInstance(AGOAP_ActorBase* BuildObject , const TArray<FGridPosition>& GridPoses , bool OnlyRemoveHideInstance , bool RemoveData);`
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RemoveFillerInstance(AGOAP_ActorBase* BuildObject , const TArray<FGridPosition>& GridPoses , bool OnlyRemoveHideInstance , bool RemoveData , bool UseOldID , bool IsDestroy);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除填充模型Instance
+
+---
+
+### 函数 `AddFillerInstances`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `UseOldID` | `bool` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void AddFillerInstances(AGOAP_ActorBase* BuildObject , bool UseOldID);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 加入填充模型Instance
 
 ---
 
@@ -1501,7 +1651,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得填充模型格子坐标
 
@@ -1518,13 +1668,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
-| `State` | `EBuildObjectState` |
+| `State` | [EBuildObjectState](../ERW_Enumerations__EBuildObjectState.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdateFillerState(AGOAP_ActorBase* BuildObject , EBuildObjectState State);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新填充模型的显示状态
 
@@ -1550,7 +1700,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入建筑柱子模型的ISM
 
@@ -1568,7 +1718,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 读档恢复建筑柱子
 
@@ -1592,7 +1742,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建建筑柱子模型Instance
 
@@ -1615,7 +1765,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除建筑柱子模型Instance
 
@@ -1632,13 +1782,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `GridSeamPoint` | const [FGridSeamPoint](../ERW_CommonTypes__FGridSeamPoint.md)& |
-| `ShowType` | `EISMType` |
+| `ShowType` | [EISMType](../ERW_Enumerations__EISMType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SwitchPillarInstanceShow(const FGridSeamPoint& GridSeamPoint , EISMType ShowType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 切换建筑柱子模型Instance显示
 
@@ -1660,7 +1810,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 当建筑建造完成时
 
@@ -1677,13 +1827,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
-| `State` | `EBuildObjectState` |
+| `State` | [EBuildObjectState](../ERW_Enumerations__EBuildObjectState.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdatePillarState(AGOAP_ActorBase* BuildObject , EBuildObjectState State);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新建筑柱子的显示状态
 
@@ -1706,7 +1856,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 将柱子设置为在地图中
 
@@ -1723,7 +1873,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `ID` | `const FName&` |
-| `WallType` | `EEmbeddedWallType` |
+| `WallType` | [EEmbeddedWallType](../ERW_Enumerations__EEmbeddedWallType.md) |
 | `StartCullDistance` | `int32` |
 | `EndCullDistance` | `int32` |
 | `StaticMesh` | `UStaticMesh*` |
@@ -1733,9 +1883,31 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入嵌入式墙体模型的ISM
+
+---
+
+### 函数 `ExistEmbeddedWall`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintPure |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `ID` | `const FName&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintPure) bool ExistEmbeddedWall(const FName& ID) const;`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 是否存在嵌入式墙体
 
 ---
 
@@ -1749,13 +1921,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Walls` | const TMap<EEmbeddedWallType , [FReplacedWallData](ERW_HISMManager__FReplacedWallData.md)>& |
+| `Walls` | const TMap<[EEmbeddedWallType](../ERW_Enumerations__EEmbeddedWallType.md) , [FReplacedWallData](ERW_HISMManager__FReplacedWallData.md)>& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdateEmbeddedWallInfo(const TMap<EEmbeddedWallType , FReplacedWallData>& Walls);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新嵌入式墙体信息
 
@@ -1777,7 +1949,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 切换嵌入式墙体模型(左右模型切换)
 
@@ -1799,7 +1971,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除本次操作的嵌入式墙体模型Instance
 
@@ -1821,7 +1993,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 用嵌入式墙体替换普通墙体
 
@@ -1838,7 +2010,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `ID` | `const FName&` |
-| `RoofPartType` | `ERoofPartType` |
+| `RoofPartType` | [ERoofPartType](../ERW_Enumerations__ERoofPartType.md) |
 | `StartCullDistance` | `int32` |
 | `EndCullDistance` | `int32` |
 | `StaticMesh` | `UStaticMesh*` |
@@ -1847,7 +2019,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入屋顶模型的ISM
 
@@ -1864,14 +2036,14 @@
 | 参数名 | 类型 |
 |--------|------|
 | `ID` | `const FName&` |
-| `RoofPartType` | `ERoofPartType` |
+| `RoofPartType` | [ERoofPartType](../ERW_Enumerations__ERoofPartType.md) |
 | `Roof` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void AddRoofInstance(const FName& ID , ERoofPartType RoofPartType , AGOAP_ActorBase* Roof);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建单个屋顶模型Instance
 
@@ -1888,14 +2060,14 @@
 | 参数名 | 类型 |
 |--------|------|
 | `ID` | `const FName&` |
-| `RoofPartType` | `ERoofPartType` |
+| `RoofPartType` | [ERoofPartType](../ERW_Enumerations__ERoofPartType.md) |
 | `Roofs` | const TArray<[AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)*>& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void AddRoofInstances(const FName& ID , ERoofPartType RoofPartType , const TArray<AGOAP_ActorBase*>& Roofs);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建屋顶模型Instance
 
@@ -1911,7 +2083,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `RoofPartType` | `ERoofPartType` |
+| `RoofPartType` | [ERoofPartType](../ERW_Enumerations__ERoofPartType.md) |
 | `Roof` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
 | `Transform` | `const FTransform&` |
 
@@ -1919,7 +2091,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新屋顶模型Instance的Transform
 
@@ -1941,7 +2113,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除屋顶模型Instance
 
@@ -1959,7 +2131,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 将屋顶信息加入到建造物体信息中
 
@@ -1977,7 +2149,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 清空屋顶信息
 
@@ -1994,13 +2166,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Roof` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
-| `State` | `EBuildObjectState` |
+| `State` | [EBuildObjectState](../ERW_Enumerations__EBuildObjectState.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdateRoofState(AGOAP_ActorBase* Roof , EBuildObjectState State);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新屋顶的显示状态
 
@@ -2018,7 +2190,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 切换屋顶显示或隐藏
 
@@ -2035,7 +2207,7 @@
 | 参数名 | 类型 |
 |--------|------|
 | `ID` | `const FName&` |
-| `AssemblePartType` | `EAssemblePartType` |
+| `AssemblePartType` | [EAssemblePartType](../ERW_Enumerations__EAssemblePartType.md) |
 | `StartCullDistance` | `int32` |
 | `EndCullDistance` | `int32` |
 | `StaticMesh` | `UStaticMesh*` |
@@ -2044,7 +2216,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入组装建筑模型的ISM
 
@@ -2067,7 +2239,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入组装建筑模型实例
 
@@ -2084,13 +2256,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `AssembleActor` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
-| `RotateOrientation` | `ERotateOrientation` |
+| `RotateOrientation` | [ERotateOrientation](../ERW_Enumerations__ERotateOrientation.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdateAssembleInstanceTransforms(AGOAP_ActorBase* AssembleActor , ERotateOrientation RotateOrientation);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新组装建筑模型的Transform
 
@@ -2112,7 +2284,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入组装建筑的部位模型
 
@@ -2134,7 +2306,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除组装建筑模型
 
@@ -2157,7 +2329,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除组装建筑部位模型
 
@@ -2181,7 +2353,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 显示或隐藏组装建筑部位模型
 
@@ -2204,7 +2376,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获得组装建筑的部位信息
 

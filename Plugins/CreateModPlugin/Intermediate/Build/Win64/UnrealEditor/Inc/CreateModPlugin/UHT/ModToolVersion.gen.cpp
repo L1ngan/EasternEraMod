@@ -105,14 +105,14 @@ UModToolVersion::~UModToolVersion() {}
 // ********** End Class UModToolVersion ************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h__Script_CreateModPlugin_Statics
+struct Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h__Script_CreateModPlugin_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UModToolVersion, UModToolVersion::StaticClass, TEXT("UModToolVersion"), &Z_Registration_Info_UClass_UModToolVersion, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UModToolVersion), 3238146817U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h__Script_CreateModPlugin_2826709228(TEXT("/Script/CreateModPlugin"),
-	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h__Script_CreateModPlugin_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h__Script_CreateModPlugin_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h__Script_CreateModPlugin_2826709228(TEXT("/Script/CreateModPlugin"),
+	Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h__Script_CreateModPlugin_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h__Script_CreateModPlugin_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

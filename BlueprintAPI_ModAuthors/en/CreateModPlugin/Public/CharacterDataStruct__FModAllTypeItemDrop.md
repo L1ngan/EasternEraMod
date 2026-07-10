@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Generic item drop entry recording the drop item type and quantity.
 
 ## Blueprint-exposed variables
 
@@ -12,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EModGroundInventoryType` |
+| C++ type | [EModGroundInventoryType](BaseDataStruct__EModGroundInventoryType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) EModGroundInventoryType ItemType = EModGroundInventoryType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 掉落物的类型
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) int32 DropNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 掉落物的数量
 

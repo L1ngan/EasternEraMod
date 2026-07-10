@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TMap<AActor* , bool> BuildObjects;` |
 
-**Source comments:**
+**Notes:**
 
 > TMap<建造物体Actor , 占位符>
 

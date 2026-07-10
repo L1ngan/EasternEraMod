@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FInstancedStruct ItemInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 物品ID
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FUObjectData,FTransportItemCache> ItemCaches;` |
 
-**源码注释:**
+**说明:**
 
 > 物品action 对应的缓存
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) bool bCanPlaceItem = true;` |
 
-**源码注释:**
+**说明:**
 
 > 是否可以放置这个id的物品 初步计算是否堆叠上限 空格等
 

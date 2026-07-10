@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 建筑Actor基类：继承AGOAP_ActorBase，涵盖建造/耐久/能源网络/管道/仪式/傀儡改造/交通工具/监狱/交易区等建筑功能。
 
 ## 蓝图暴露变量
 
@@ -12,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EBuildingRunState` |
+| C++ 类型 | [EBuildingRunState](../ERW_Enumerations__EBuildingRunState.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) EBuildingRunState BuildingRunState = EBuildingRunState::Stop;` |
 
-**源码注释:**
+**说明:**
 
 > 建筑物状态
 
@@ -27,12 +29,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EBuildingEnableState` |
+| C++ 类型 | [EBuildingEnableState](../ERW_Enumerations__EBuildingEnableState.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame,EditAnywhere,BlueprintReadOnly) EBuildingEnableState BuildingEnableState = EBuildingEnableState::Enable;` |
 
-**源码注释:**
+**说明:**
 
 > 建筑物的启用状态
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float CurDurability = 0.0f;` |
 
-**源码注释:**
+**说明:**
 
 > 当前耐久度
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) FBuildConfigData BuildData;` |
 
-**源码注释:**
+**说明:**
 
 > 建筑物信息
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) int32 BuildingNum;` |
 
-**源码注释:**
+**说明:**
 
 > 建筑的编号
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) TArray<AActor*> CurTemporaryConnectionBuildings;` |
 
-**源码注释:**
+**说明:**
 
 > 当前临时连接的建筑物
 
@@ -107,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) TArray<ABuildingActorBase*> ConnectBuildingActors;` |
 
-**源码注释:**
+**说明:**
 
 > 连接的建筑物
 
@@ -122,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 EnergyRange = 1000;` |
 
-**源码注释:**
+**说明:**
 
 > 连接范围
 
@@ -137,7 +139,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnChangeEnergyGridDelegate OnChangeEnergyGrid;` |
 
-**源码注释:**
+**说明:**
 
 > 更改能源网络
 
@@ -152,7 +154,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnBuildDataChangedDelegate OnBuildDataChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 建筑物数据发生变化
 
@@ -167,7 +169,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnBuildStorgeEnergyChangedDelegate OnBuildStorgeEnergyChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 储能建筑存储能量发生变化
 
@@ -182,7 +184,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnUpdateTips OnUpdateTips;` |
 
-**源码注释:**
+**说明:**
 
 > 更新建筑物提示
 
@@ -197,7 +199,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnChangeEnable OnChangeEnable;` |
 
-**源码注释:**
+**说明:**
 
 > 建筑物开启或关闭状态变化
 
@@ -212,7 +214,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnChangePipelineGroup OnChangePipelineGroup;` |
 
-**源码注释:**
+**说明:**
 
 > 当前设备管道分配发生变化
 
@@ -227,7 +229,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnChangeWhenClosedOrOnPipelineGroup OnChangeWhenClosedOrOnPipelineGroup;` |
 
-**源码注释:**
+**说明:**
 
 > 当前控制设备关闭或关闭时控制的管道发生变化
 
@@ -242,7 +244,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnBuildDurabilityChangedDelegate OnBuildDurabilityChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 耐久度变化
 
@@ -257,6 +259,25 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnBuildingFuelChanged OnBuildingFuelChanged;` |
 
+**说明:**
+
+> 建筑燃料变化事件，参数为当前燃料量。
+
+---
+
+### 属性 `FromBuildingGuid`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FGuid` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) FGuid FromBuildingGuid;` |
+
+**说明:**
+
+> 移动建筑源建筑的Guid
+
 ---
 
 ### 属性 `BuildingEffectRangeComponent`
@@ -268,7 +289,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<UBoxComponent> BuildingEffectRangeComponent;` |
 
-**源码注释:**
+**说明:**
 
 > 用于产生对角色的重叠事件
 
@@ -283,7 +304,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float BuildHeight = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 建筑物的高度
 
@@ -298,7 +319,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AEastRimWorldCharacter_Summons> SummonCharacter;` |
 
-**源码注释:**
+**说明:**
 
 > 当建筑物为哨塔时生成的角色Actor
 
@@ -313,7 +334,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnCeremonyStart OnCeremonyStart;` |
 
-**源码注释:**
+**说明:**
 
 > 仪式开始事件
 
@@ -328,7 +349,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnCeremonyEnd OnCeremonyEnd;` |
 
-**源码注释:**
+**说明:**
 
 > 仪式结束事件
 
@@ -343,7 +364,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnPracticeOverlockingStateChange OnPracticeOverlockingStateChange;` |
 
-**源码注释:**
+**说明:**
 
 > 修炼建筑超频状态改变
 
@@ -358,6 +379,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnRefitPuppetComplete OnRefitPuppetComplete;` |
 
+**说明:**
+
+> 傀儡改装完成事件。
+
 ---
 
 ### 属性 `TransportationInfo`
@@ -369,7 +394,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Transportation") FTransportationInfo TransportationInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 交通工具信息
 
@@ -384,7 +409,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Transportation") TMap<int32,ATransportationActor*> TransportationActors;` |
 
-**源码注释:**
+**说明:**
 
 > 交通工具显示actor
 
@@ -399,7 +424,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category = "Transportation") FOnTransportationStateChanged OnTransportationStateChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 交通工具状态改变事件
 
@@ -414,7 +439,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly , SaveGame) UBoxComponent* BoxCollision;` |
 
-**源码注释:**
+**说明:**
 
 > 球形碰撞组件（不一定在构造函数创建）
 
@@ -428,6 +453,25 @@
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) int32 CurBuildingScore = 0;` |
+
+**说明:**
+
+> 当前建筑评分（随存档保存）。
+
+---
+
+### 属性 `BuildingWidgetBar`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TObjectPtr<UWidgetComponent>` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TObjectPtr<UWidgetComponent> BuildingWidgetBar;` |
+
+**说明:**
+
+> 建筑UI控件条组件（WidgetComponent），用于显示建筑相关的界面。
 
 ---
 
@@ -445,6 +489,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 取消当前建筑的建造。
+
 ---
 
 ### 函数 `GetRoomName`
@@ -459,6 +507,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取建筑所在房间的名称。
+
 ---
 
 ### 函数 `GetCombinatioBuildName`
@@ -472,6 +524,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) virtual FText GetCombinatioBuildName();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取建筑所属组合建筑的名称。
 
 ---
 
@@ -491,7 +547,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 选中状态发生变化
 
@@ -509,9 +565,152 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 当建筑损坏时
+
+---
+
+### 函数 `GetBuildResources`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `ExtraResourceRate` | `float` |
+| `Resources` | `TMap<FName , int32>&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void GetBuildResources(float ExtraResourceRate , TMap<FName , int32>& Resources);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获得建造资源
+
+---
+
+### 函数 `Rebuilt`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintImplementableEvent |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `NewID` | `const FName&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) void Rebuilt(const FName& NewID);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 重建建筑
+
+---
+
+### 函数 `TransBuildingAbortUsers`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintImplementableEvent |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) void TransBuildingAbortUsers();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 移动建筑打断建筑的用户
+
+---
+
+### 函数 `OnTransBuildingFinished`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintImplementableEvent |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) void OnTransBuildingFinished();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 移动建筑完成
+
+---
+
+### 函数 `UpdateConfigData`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `BuildConfigData` | const [FBuildConfigData](../ERW_ConfigTypes__FBuildConfigData.md)& |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdateConfigData(const FBuildConfigData& BuildConfigData);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 更新配置相关数据
+
+---
+
+### 函数 `OnRebuildComplete`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintNativeEvent |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `BuildConfigData` | const [FBuildConfigData](../ERW_ConfigTypes__FBuildConfigData.md)& |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintNativeEvent , BlueprintCallable) void OnRebuildComplete(const FBuildConfigData& BuildConfigData);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 **BlueprintNativeEvent**：蓝图可重写；C++ 默认实现在 `xxx_Implementation`。
+
+**说明:**
+
+> 重建完成
+
+---
+
+### 函数 `RefreshBuildingUI`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RefreshBuildingUI();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 刷新建筑UI显示
 
 ---
 
@@ -531,7 +730,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 返还当前建造材料
 
@@ -549,7 +748,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 读档时绑定研究相关事件
 
@@ -567,7 +766,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 添加燃料后尝试恢复自动制造
 
@@ -590,6 +789,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 向建筑添加指定ID与数量的燃料。
+
 ---
 
 ### 函数 `ChangePipelineGroup`
@@ -608,7 +811,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 变更管道
 
@@ -626,7 +829,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取能量消耗
 
@@ -644,7 +847,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取能产出
 
@@ -662,7 +865,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取最大能量储能
 
@@ -680,7 +883,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取当前能量储能
 
@@ -698,7 +901,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取可储存值
 
@@ -720,7 +923,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 能源储量变化
 
@@ -736,14 +939,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `NewEnergyGridState` | `EEnergyGridState` |
+| `NewEnergyGridState` | [EEnergyGridState](../ERW_Enumerations__EEnergyGridState.md) |
 | `false` | `bool bIsBuildingRunStateChange =` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Building") void UpdateEnergyGridState(EEnergyGridState NewEnergyGridState , bool bIsBuildingRunStateChange = false);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新能量网状态
 
@@ -761,7 +964,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取相连的建筑物
 
@@ -779,7 +982,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取管道分组
 
@@ -797,7 +1000,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取能量网信息
 
@@ -815,7 +1018,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取当前能源建筑物信息
 
@@ -833,7 +1036,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新修建中的连接状态
 
@@ -855,6 +1058,10 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 临时连接建筑物时的蓝图实现事件（DisplayName: TemporaryConnectionBuilding）。
+
 ---
 
 ### 函数 `k2_CancelTemporaryConnectionBuilding`
@@ -872,6 +1079,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent, Category = "Building",DisplayName = "CancelTemporaryConnectionBuilding") void k2_CancelTemporaryConnectionBuilding(const TArray<AActor*> & BuildingActors);`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 取消临时连接建筑物时的蓝图实现事件（DisplayName: CancelTemporaryConnectionBuilding）。
 
 ---
 
@@ -891,6 +1102,10 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 连接建筑物时的蓝图实现事件（DisplayName: ConnectionBuilding）。
+
 ---
 
 ### 函数 `k2_CancelConnectionBuilding`
@@ -909,6 +1124,10 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 取消与指定建筑连接时的蓝图实现事件（DisplayName: CancelConnectionBuilding）。
+
 ---
 
 ### 函数 `HideConnectionLine`
@@ -922,6 +1141,32 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void HideConnectionLine();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 隐藏建筑之间的连接线。
+
+---
+
+### 函数 `ReconnectAfterTransfer`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `ToBuilding` | [ABuildingActorBase](BuildingActorBase__ABuildingActorBase.md)* |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void ReconnectAfterTransfer(ABuildingActorBase* ToBuilding);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 移动建筑后重新连接
 
 ---
 
@@ -937,6 +1182,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 清除该建筑当前的全部临时连接。
+
 ---
 
 ### 函数 `GetEnergyGridGuid`
@@ -950,6 +1199,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintPure,Category="Building") FGuid GetEnergyGridGuid();`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取建筑所属能源网的Guid。
 
 ---
 
@@ -969,7 +1222,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置关闭状态开启的管道分组
 
@@ -991,7 +1244,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置开启状态开启的管道分组
 
@@ -1009,7 +1262,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置开启或关闭状态的管道完成
 
@@ -1031,7 +1284,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置管道分组
 
@@ -1049,7 +1302,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置管道分组完成
 
@@ -1067,7 +1320,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取控制开启的管道线路
 
@@ -1085,7 +1338,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取控制关闭的管道线路
 
@@ -1103,7 +1356,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算24小时能源产出
 
@@ -1121,7 +1374,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算24小时能源消耗
 
@@ -1139,7 +1392,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 建筑是否可以正常运行（抛开能量网）
 
@@ -1161,7 +1414,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 修炼一次随机是否触发超频
 
@@ -1178,6 +1431,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void CallOnBuildTipChanged();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 触发建筑提示变化的更新广播。
 
 ---
 
@@ -1197,7 +1454,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据goalID移除Action
 
@@ -1220,7 +1477,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建添加燃料GOAP
 
@@ -1242,6 +1499,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 设置热源建筑的温度。
+
 ---
 
 ### 函数 `ApplyCeremony`
@@ -1262,7 +1523,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 申请仪式 InCharacterGuids主要仪式人 InSpectatorGuids观众
 
@@ -1284,7 +1545,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 参与仪式签到
 
@@ -1306,7 +1567,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 结束仪式
 
@@ -1324,7 +1585,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 打断仪式
 
@@ -1346,7 +1607,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 参与仪式签退
 
@@ -1368,7 +1629,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建并立即执行囚犯被处决行为
 
@@ -1385,6 +1646,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RemovePrisonerExecutedAction();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 移除囚犯被处决的行为（GOAP Action）。
 
 ---
 
@@ -1405,7 +1670,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 处刑人签到
 
@@ -1427,7 +1692,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 囚犯签到
 
@@ -1450,7 +1715,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 拷打人签到
 
@@ -1472,7 +1737,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建并立即执行囚犯被拷打行为
 
@@ -1489,6 +1754,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RemovePrisonerTorturedAction();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 移除囚犯被拷打的行为（GOAP Action）。
 
 ---
 
@@ -1508,7 +1777,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 傀儡改造相关方法
 > 添加傀儡到建筑物中（相同的傀儡只能添加一次）
@@ -1531,7 +1800,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 从建筑物中移除傀儡
 
@@ -1553,7 +1822,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查傀儡是否已添加到建筑物中
 
@@ -1571,7 +1840,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取建筑物中所有傀儡ID
 
@@ -1589,7 +1858,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取建筑物中傀儡数量
 
@@ -1607,7 +1876,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 清空建筑物中的所有傀儡
 
@@ -1629,7 +1898,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建改装傀儡搬运GOAP
 
@@ -1651,6 +1920,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 开始使用指定物品实例进行傀儡改装。
+
 ---
 
 ### 函数 `EndRefitPuppet`
@@ -1665,7 +1938,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 完成当前改装
 
@@ -1687,7 +1960,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 终止对应的改装行为
 
@@ -1705,7 +1978,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 清空所有待改装打断当前改装行为
 
@@ -1727,7 +2000,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 添加资源
 
@@ -1745,7 +2018,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查是否为交通工具建筑
 
@@ -1756,14 +2029,14 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure, Category="Transportation" |
-| 返回类型 | `ETransportationType` |
+| 返回类型 | [ETransportationType](../ERW_Enumerations__ETransportationType.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Transportation") ETransportationType GetTransportationType() const;`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取交通工具类型
 
@@ -1781,7 +2054,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查交通工具是否有空余
 
@@ -1799,7 +2072,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取交通工具占有的队伍
 
@@ -1821,7 +2094,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 占用交通工具
 
@@ -1843,7 +2116,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 释放交通工具
 
@@ -1865,6 +2138,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 在指定插槽创建交通工具显示Actor并返回。
+
 ---
 
 ### 函数 `GetTransportationActor`
@@ -1883,7 +2160,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取插槽上的actor
 
@@ -1905,7 +2182,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除掉交通工具的显示
 
@@ -1923,7 +2200,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取交通工具移动速度倍数
 
@@ -1941,7 +2218,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 初始化交通工具组件
 
@@ -1959,7 +2236,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加载交通工具
 
@@ -1981,7 +2258,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置交通工具信息
 
@@ -1999,7 +2276,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取交通工具信息
 
@@ -2017,7 +2294,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查空位
 
@@ -2039,7 +2316,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建将囚犯关押回监狱行为
 
@@ -2057,7 +2334,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除将囚犯关押回监狱行为
 
@@ -2079,6 +2356,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 根据建筑索引计算建筑评分并更新CurBuildingScore。
+
 ---
 
 ### 函数 `GetBuildingStaticMesh`
@@ -2092,6 +2373,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Building") UStaticMesh* GetBuildingStaticMesh();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 获取建筑的静态网格体（蓝图实现事件）。
 
 ---
 
@@ -2107,7 +2392,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 全选储存tag
 
@@ -2129,8 +2414,44 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 全取消储存tag
+
+---
+
+### 函数 `InitBuildingWidgetBar`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintImplementableEvent |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent,BlueprintCallable) void InitBuildingWidgetBar();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 初始化建筑UI控件条（蓝图实现事件）。
+
+---
+
+### 函数 `GetAreaName`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintPure |
+| 返回类型 | `FText` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintPure) FText GetAreaName();`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取建筑所在区域的名称。
 
 ---

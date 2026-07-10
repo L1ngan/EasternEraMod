@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EModInfluenceType` |
+| C++ type | [EModInfluenceType](GenerationMonster__EModInfluenceType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EModInfluenceType InfluenceType = EModInfluenceType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 影响的类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float Probability = 0.1f;` |
 
-**Source comments:**
+**Notes:**
 
 > 概率变化
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,meta=(EditConditionHides,EditCondition = "InfluenceType == EModInfluenceType::LackCharacterNumber")) int32 MaxCharacterNumber = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大人数
 

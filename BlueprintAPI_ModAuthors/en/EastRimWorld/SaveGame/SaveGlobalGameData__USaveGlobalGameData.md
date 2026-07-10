@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, SaveGame) int32 ResourceCoin = 100;` |
 
-**Source comments:**
+**Notes:**
 
 > 物资积分
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, SaveGame) int32 StoryCoin = 100;` |
 
-**Source comments:**
+**Notes:**
 
 > 剧情积分
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, SaveGame) FString SaveSlotName;` |
 
-**Source comments:**
+**Notes:**
 
 > 存档名称
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, SaveGame) TArray<FName> EnabledModIds;` |
 
-**Source comments:**
+**Notes:**
 
 > 启用的MOD
 
@@ -89,7 +89,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 启用/禁用Mod
 

@@ -20,6 +20,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FHitResult GroundHitResult;` |
 
+**Notes:**
+
+> Hit result of the ground trace.
+
 ---
 
 ### Property `GroundDistance`
@@ -30,5 +34,9 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) float GroundDistance;` |
+
+**Notes:**
+
+> Distance from the character to the ground (in centimeters).
 
 ---

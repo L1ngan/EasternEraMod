@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FIntPoint Min;` |
 
-**源码注释:**
+**说明:**
 
 > 闭合区域的最小点
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FIntPoint Max;` |
 
-**源码注释:**
+**说明:**
 
 > 闭合区域的最大点
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 Area { 0 };` |
 
-**源码注释:**
+**说明:**
 
 > 闭合区域的面积
 

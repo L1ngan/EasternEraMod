@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EGenerationRuleType` |
+| C++ type | [EGenerationRuleType](WorldStruct__EGenerationRuleType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EGenerationRuleType GenerationRule = EGenerationRuleType::Fixed;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成规则类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,meta=(EditConditionHides,EditCondition = "GenerationRule == EGenerationRuleType::Probability")) float BaseProbability = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 基础概率
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,meta=(EditConditionHides,EditCondition = "GenerationRule == EGenerationRuleType::Probability")) TArray<FGenerationProbabilityInfluence> ProbabilityInfluence;` |
 
-**Source comments:**
+**Notes:**
 
 > 概率的影响配置
 

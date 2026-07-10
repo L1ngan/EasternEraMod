@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 动物配置数据（继承角色数据）：体型、食性、成长阶段、驯服、产出、交配与修炼等配置
 
 ## 蓝图暴露变量
 
@@ -12,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EAnimalBodyType` |
+| C++ 类型 | [EAnimalBodyType](../ERW_Enumerations__EAnimalBodyType.md) |
 | 反射说明符 | BlueprintReadWrite, Category="AnimalBase" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") EAnimalBodyType AnimalBodyType = EAnimalBodyType::Normal;` |
 
-**源码注释:**
+**说明:**
 
 > 动物体型（体型大小）
 
@@ -27,12 +29,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EAnimalFoodType` |
+| C++ 类型 | [EAnimalFoodType](CharacterStruct__EAnimalFoodType.md) |
 | 反射说明符 | BlueprintReadWrite, Category="AnimalBase" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") EAnimalFoodType AnimalFoodType = EAnimalFoodType::Unknown;` |
 
-**源码注释:**
+**说明:**
 
 > 饮食习惯（吃肉吃草）
 
@@ -42,12 +44,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EAnimalAgeStage` |
+| C++ 类型 | [EAnimalAgeStage](CharacterStruct__EAnimalAgeStage.md) |
 | 反射说明符 | BlueprintReadWrite, Category="AnimalBase" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") EAnimalAgeStage AnimalAgeStage = EAnimalAgeStage::None;` |
 
-**源码注释:**
+**说明:**
 
 > 当前阶段
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") float InitGrowth = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 初始成长值
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") float MaxGrowth = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 最大成长值
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") float MustDieGrowth = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 必须死亡的成长值
 
@@ -107,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") float AddGrowthValueEveryHour = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 每小时增加的成长值
 
@@ -122,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") FName AnimalVarietyID;` |
 
-**源码注释:**
+**说明:**
 
 > 动物的种类ID
 
@@ -132,12 +134,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<EAnimalAgeStage , [FGrowthInfo](CharacterStruct__FGrowthInfo.md)> |
+| C++ 类型 | TMap<[EAnimalAgeStage](CharacterStruct__EAnimalAgeStage.md) , [FGrowthInfo](CharacterStruct__FGrowthInfo.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="AnimalBase" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") TMap<EAnimalAgeStage , FGrowthInfo> AnimalGrowthInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 成长到各个阶段所需的成长值及其会变化的目标ID
 
@@ -147,12 +149,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EAnimalActionType` |
+| C++ 类型 | [EAnimalActionType](CharacterStruct__EAnimalActionType.md) |
 | 反射说明符 | BlueprintReadWrite, Category="AnimalBase" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") EAnimalActionType ActionType = EAnimalActionType::ActiveAttack;` |
 
-**源码注释:**
+**说明:**
 
 > 习性(是否主动攻击人类，被攻击后是否反击，是否逃跑)
 
@@ -167,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") FName AfterTamingUI;` |
 
-**源码注释:**
+**说明:**
 
 > 驯服后的UI
 
@@ -182,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Mesh",meta = (AllowedClasses = "SkeletalMesh")) FSoftObjectPath AnimalMesh;` |
 
-**源码注释:**
+**说明:**
 
 > 动物模型
 
@@ -197,7 +199,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Capsule") FVector2D CapsuleSize = FVector2D(40,90);` |
 
-**源码注释:**
+**说明:**
 
 > 胶囊体 x 为半径 y 为 高度
 
@@ -212,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Mesh") FVector MeshScale = FVector::One();` |
 
-**源码注释:**
+**说明:**
 
 > 模型大小
 
@@ -227,7 +229,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Mesh") FVector MeshLocationOffset = FVector::Zero();` |
 
-**源码注释:**
+**说明:**
 
 > 模型偏移
 
@@ -242,7 +244,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Animation",meta = (AllowedClasses = "BlendSpace1D")) FSoftObjectPath AnimalBlendSpace;` |
 
-**源码注释:**
+**说明:**
 
 > 动物行走混合空间1d
 
@@ -257,7 +259,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities",meta = (AllowedClasses = "GameplayEffect")) FSoftClassPath SleepFloorGameplayEffect;` |
 
-**源码注释:**
+**说明:**
 
 > 在地上睡觉GE
 
@@ -267,12 +269,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<EGameConfigType , [FIDs](../ERW_CommonTypes__FIDs.md)> |
+| C++ 类型 | TMap<[EGameConfigType](../Components/ERW_GameConfigComponent__EGameConfigType.md) , [FIDs](../ERW_CommonTypes__FIDs.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Abilities" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities") TMap<EGameConfigType , FIDs> EatItems;` |
 
-**源码注释:**
+**说明:**
 
 > 能吃的对象ID
 > TMap<配置表类型 , 对应的ID>
@@ -288,7 +290,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities") float NutritionTimer { 0.f };` |
 
-**源码注释:**
+**说明:**
 
 > 进食时间(秒)
 
@@ -303,7 +305,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") FName BeforeObserveInformationWidget;` |
 
-**源码注释:**
+**说明:**
 
 > 观察前点击物品实例后显示的界面ID 关联DT_CommonUIConfig表
 
@@ -318,7 +320,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") FText BeforeObserveDescription;` |
 
-**源码注释:**
+**说明:**
 
 > 观察前详情描述
 
@@ -333,7 +335,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") FText BeforeObserveName;` |
 
-**源码注释:**
+**说明:**
 
 > 观察前名称
 
@@ -348,7 +350,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Observe") FText Desc;` |
 
-**源码注释:**
+**说明:**
 
 > 描述(观察完成后tip显示)
 
@@ -363,7 +365,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") int ObserveDurability{-1};` |
 
-**源码注释:**
+**说明:**
 
 > 观察耐久度
 
@@ -373,12 +375,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<ETechUnlockItemType,[FIDs](../ERW_CommonTypes__FIDs.md)> |
+| C++ 类型 | TMap<[ETechUnlockItemType](TechnologyStruct__ETechUnlockItemType.md),[FIDs](../ERW_CommonTypes__FIDs.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Observe" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") TMap<ETechUnlockItemType,FIDs> ObserveUnlock;` |
 
-**源码注释:**
+**说明:**
 
 > 观察解锁
 
@@ -393,7 +395,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") TArray<FObserveUnlockInfo> ObserveUnlockInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 观察解锁文本(界面信息显示)
 
@@ -408,7 +410,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") FText ObserveRecordDescription;` |
 
-**源码注释:**
+**说明:**
 
 > 观察记录描述(富文本)
 
@@ -423,7 +425,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe",meta = (AllowedClasses = "Texture2D")) FSoftObjectPath NewDiscoverTexture2D;` |
 
-**源码注释:**
+**说明:**
 
 > 新发现图片
 
@@ -438,7 +440,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Taming") bool bCanTame = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否可以驯服
 
@@ -453,7 +455,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Taming", Meta = (EditCondition = "bCanTame")) float TameRate = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 基础驯服机率
 
@@ -468,7 +470,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Taming", Meta = (EditCondition = "bCanTame")) float TameCD = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 驯服动物失败后多久不能再次驯服：单位秒
 
@@ -483,7 +485,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Taming", Meta = (EditCondition = "bCanTame")) float TameSchedule = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 驯服的工作量
 
@@ -498,7 +500,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Taming", Meta = (EditCondition = "bCanTame")) int32 TameLevel = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 驯服需要的等级d
 
@@ -513,7 +515,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Taming", Meta = (EditCondition = "bCanTame")) bool bCanTraining = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否可以训练
 
@@ -528,7 +530,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Taming", meta = (EditConditionHides = "bCanTraining")) float TrainingCD = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 训练的CD
 
@@ -543,7 +545,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Taming") bool bHaveOutput = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否有产出
 
@@ -558,7 +560,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Taming", meta = (EditConditionHides = "bHaveOutput")) float OutPutPeriod = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 产出副产品周期
 
@@ -573,7 +575,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Taming", meta = (EditConditionHides = "bHaveOutput")) TMap<FName , float> NutritionInfluenceOutPeriod;` |
 
-**源码注释:**
+**说明:**
 
 > 饥饿度影响产出副产品周期
 
@@ -588,7 +590,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Taming", meta = (EditConditionHides = "bHaveOutput")) TMap<FName , FAllTypeItemDrop>OutputProducts;` |
 
-**源码注释:**
+**说明:**
 
 > 产出的副产品
 
@@ -603,7 +605,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Taming", meta = (EditConditionHides = "bCanTame")) TMap<float , float> MoodInfluenceOutPut;` |
 
-**源码注释:**
+**说明:**
 
 > 心情影响产出
 
@@ -613,12 +615,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<int32 , EAnimalFunc>` |
+| C++ 类型 | TMap<int32 , [EAnimalFunc](CharacterStruct__EAnimalFunc.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Taming" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Taming", meta = (EditConditionHides = "bCanTame")) TMap<int32 , EAnimalFunc> GetFuncWhenReachLevel;` |
 
-**源码注释:**
+**说明:**
 
 > 达到多少级可以获得的功能
 
@@ -633,7 +635,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Taming", meta = (EditConditionHides = "bCanTame")) TMap<int32 , FName> GetAbilityWhenReachLevel;` |
 
-**源码注释:**
+**说明:**
 
 > 达到多少级可以获得的技能(关联技能表)
 
@@ -648,7 +650,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Mating") TArray<FName> CanMateAnimalID;` |
 
-**源码注释:**
+**说明:**
 
 > 可以交配的动物ID
 
@@ -658,12 +660,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<EERWSeason>` |
+| C++ 类型 | TArray<[EERWSeason](../WorldSystem/WorldStruct__EERWSeason.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Mating" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Mating") TArray<EERWSeason> CanMateSeason;` |
 
-**源码注释:**
+**说明:**
 
 > 可以交配的季节
 
@@ -678,7 +680,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Mating") TArray<FName> CanBornAnimal;` |
 
-**源码注释:**
+**说明:**
 
 > 可以生出的动物ID
 
@@ -693,7 +695,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Mating") float PregnantTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 怀孕时间（秒）
 
@@ -708,7 +710,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cultivation") FName CultivationConfigID = NAME_None;` |
 
-**源码注释:**
+**说明:**
 
 > 修炼配置ID（关联FAnimalCultivationConfig配置表）
 
@@ -723,7 +725,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cultivation") float EveryTimeCultivationExp = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 每次修炼增加的经验
 
@@ -738,7 +740,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cultivation") float CultivationProb = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 修炼概率
 
@@ -753,7 +755,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cultivation") float CultivationDurationTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 修炼持续时长
 

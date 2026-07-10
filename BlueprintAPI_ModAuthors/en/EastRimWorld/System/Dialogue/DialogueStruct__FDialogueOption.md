@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FText OptionText;` |
 
-**Source comments:**
+**Notes:**
 
 > 选项的文字
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FName NextDialogueID = NAME_None;` |
 
-**Source comments:**
+**Notes:**
 
 > 点击后进行的下一个对话 如果为None则结束当前对话
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName TriggeredTaskID = NAME_None;` |
 
-**Source comments:**
+**Notes:**
 
 > 触发的世界任务ID
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName TriggeredStationTaskID = NAME_None;` |
 
-**Source comments:**
+**Notes:**
 
 > 触发的驻地任务ID
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName TriggeredEvent = NAME_None;` |
 
-**Source comments:**
+**Notes:**
 
 > 触发的世界事件
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FCommonTaskCondition> Conditions;` |
 
-**Source comments:**
+**Notes:**
 
 > 解锁此选项的条件
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FCommonTaskCondition> ClickConditions;` |
 
-**Source comments:**
+**Notes:**
 
 > 点击时检查的条件
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FDialogueTriggerFunctionData> TriggerFunctions;` |
 
-**Source comments:**
+**Notes:**
 
 > 成功点击时触发的功能
 
@@ -134,12 +134,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EDialogueOptionType` |
+| C++ type | [EDialogueOptionType](DialogueStruct__EDialogueOptionType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) EDialogueOptionType DialogueOptionType = EDialogueOptionType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 选项类型
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FName SubmitItemToTask;` |
 
-**Source comments:**
+**Notes:**
 
 > 提交物品到任务
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FName TaskNPCId;` |
 
-**Source comments:**
+**Notes:**
 
 > 用来将可触发的任务关联到某个NPC,做NPC头顶任务提示用
 

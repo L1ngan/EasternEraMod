@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FText Name;` |
 
-**Source comments:**
+**Notes:**
 
 > 名称
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBreakdownType` |
+| C++ type | [EBreakdownType](ERW_Enumerations__EBreakdownType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) EBreakdownType BreakdownType = EBreakdownType::Depression;` |
 
-**Source comments:**
+**Notes:**
 
 > 崩溃类型
 
@@ -44,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EBreakdownExistType , int32>` |
+| C++ type | TMap<[EBreakdownExistType](ERW_Enumerations__EBreakdownExistType.md) , int32> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<EBreakdownExistType , int32> Exist;` |
 
-**Source comments:**
+**Notes:**
 
 > 崩溃存在类型
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FName RecoverBuffID;` |
 
-**Source comments:**
+**Notes:**
 
 > 崩溃结束后触发的恢复BUFF
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 NoBreakdownTime { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 恢复期间不会崩溃持续时间(秒)
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FText> Desc;` |
 
-**Source comments:**
+**Notes:**
 
 > 描述
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 Weight { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 权重
 
@@ -119,12 +119,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<ECommonConditionType , [FConditions](ERW_CommonTypes__FConditions.md)> |
+| C++ type | TMap<[ECommonConditionType](ERW_Enumerations__ECommonConditionType.md) , [FConditions](ERW_CommonTypes__FConditions.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<ECommonConditionType , FConditions> Conditions;` |
 
-**Source comments:**
+**Notes:**
 
 > 满足条件
 > TMap<条件类型 , 条件>

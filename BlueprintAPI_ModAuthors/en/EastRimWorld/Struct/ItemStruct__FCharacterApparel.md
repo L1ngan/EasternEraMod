@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EArmorType` |
+| C++ type | [EArmorType](CommonEnum__EArmorType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Apparel" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Apparel") EArmorType ArmorType = EArmorType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 防具类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Apparel") TSoftObjectPtr<UPrimaryDataAsset> ApparelMaleDataAsset;` |
 
-**Source comments:**
+**Notes:**
 
 > 男外观数据资产引用
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Apparel") TSoftObjectPtr<UPrimaryDataAsset> ApparelFemaleDataAsset;` |
 
-**Source comments:**
+**Notes:**
 
 > 女外观数据资产引用
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Apparel") int MaterialVariantsIndex;` |
 
-**Source comments:**
+**Notes:**
 
 > 数据资产里外观材质的索引
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Apparel") TMap<FName,FLinearColor> MaterialColor;` |
 
-**Source comments:**
+**Notes:**
 
 > 外观材质的颜色
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Apparel") float BeAttakedLossDurability;` |
 
-**Source comments:**
+**Notes:**
 
 > 被攻击时减少的耐久度
 

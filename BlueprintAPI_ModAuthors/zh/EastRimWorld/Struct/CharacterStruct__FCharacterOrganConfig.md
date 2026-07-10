@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") FGameplayAttribute Attribute;` |
 
-**源码注释:**
+**说明:**
 
 > 器官对应的血量属性值
 
@@ -29,12 +29,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ESpeciesType` |
+| C++ 类型 | [ESpeciesType](CommonEnum__ESpeciesType.md) |
 | 反射说明符 | BlueprintReadWrite, Category="CharacterOrganConfig" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") ESpeciesType OwnedSpecies = ESpeciesType::Human;` |
 
-**源码注释:**
+**说明:**
 
 > 拥有此器官类型的种族
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") FText OrganName;` |
 
-**源码注释:**
+**说明:**
 
 > 器官名称
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") TArray<FOrganStatus> OrganStatus;` |
 
-**源码注释:**
+**说明:**
 
 > 器官所处在区间的状态信息
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") FGameplayAttribute MaxLifeAttribute;` |
 
-**源码注释:**
+**说明:**
 
 > 器官对应的最大血量属性
 
@@ -89,12 +89,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EBodyStateType,float>` |
+| C++ 类型 | TMap<[EBodyStateType](CharacterStruct__EBodyStateType.md),float> |
 | 反射说明符 | BlueprintReadWrite, Category="CharacterOrganConfig" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") TMap<EBodyStateType,float> ForBodyStates;` |
 
-**源码注释:**
+**说明:**
 
 > 器官关联的身体状态的百分比（0-1）
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") int AttackedWeight = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 器官的被攻击到的权重
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") float AttackedSharePercent = 0.0f;` |
 
-**源码注释:**
+**说明:**
 
 > 器官的被攻击到的分摊几率(0-1)(<=0 不分摊; >=1 必分摊)
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") TArray<FOrganAttackedShareConfig> AttackedShareConfigs;` |
 
-**源码注释:**
+**说明:**
 
 > 器官的被攻击到的分摊伤害的配置
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") bool DestoryDie = false;` |
 
-**源码注释:**
+**说明:**
 
 > 器官损毁是否导致死亡
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") float AttackedOverPercent = 0.75f;` |
 
-**源码注释:**
+**说明:**
 
 > 最大损毁过量比例
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") float MinAttackedOverPercent = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 最小损毁过量比例
 
@@ -199,6 +199,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") bool KnockDown = false;` |
 
+**说明:**
+
+> 该器官受损是否会触发击倒
+
 ---
 
 ### 属性 `KnockDownPrecent`
@@ -209,6 +213,10 @@
 | 反射说明符 | BlueprintReadWrite, Category="CharacterOrganConfig" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") float KnockDownPrecent = 0.f;` |
+
+**说明:**
+
+> 触发击倒的百分比阈值
 
 ---
 
@@ -221,7 +229,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") TArray<FInjuryConfig> InjuryConfigs;` |
 
-**源码注释:**
+**说明:**
 
 > 部位伤势配置
 
@@ -236,7 +244,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") float ScarPercent = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 部位形成疤痕概率
 
@@ -246,12 +254,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EBodyOrganType` |
+| C++ 类型 | [EBodyOrganType](../ERW_CommonTypes__EBodyOrganType.md) |
 | 反射说明符 | BlueprintReadWrite, Category="CharacterOrganConfig" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterOrganConfig") EBodyOrganType OrganType = EBodyOrganType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 身体部位类型枚举
 

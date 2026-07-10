@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FName ID;` |
 
-**Source comments:**
+**Notes:**
 
 > 墙的配置表ID
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 LayerIndex { INDEX_NONE };` |
 
-**Source comments:**
+**Notes:**
 
 > 模型所在层的索引
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FGridSeamPoint SeamPoint;` |
 
-**Source comments:**
+**Notes:**
 
 > 所在接缝点
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FTransform Transform;` |
 
-**Source comments:**
+**Notes:**
 
 > 模型的Transform
 
@@ -74,12 +74,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EISMType` |
+| C++ type | [EISMType](../ERW_Enumerations__EISMType.md) |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) EISMType VisibleISMType { EISMType::Normal };` |
 
-**Source comments:**
+**Notes:**
 
 > 当前显示的ISM类型
 
@@ -89,12 +89,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBuildObjectState` |
+| C++ type | [EBuildObjectState](../ERW_Enumerations__EBuildObjectState.md) |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) EBuildObjectState BuildObjectState { EBuildObjectState::NoResource };` |
 
-**Source comments:**
+**Notes:**
 
 > 建造状态
 

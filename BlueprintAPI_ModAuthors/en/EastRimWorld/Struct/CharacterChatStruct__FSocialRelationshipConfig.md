@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) FText Name;` |
 
-**Source comments:**
+**Notes:**
 
 > 关系名称
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) int32 MinGoodOpinion = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 好感度
 
@@ -49,6 +49,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) int32 MaxGoodOpinion = 0;` |
 
+**Notes:**
+
+> Upper bound of good opinion (favorability) for this relationship
+
 ---
 
 ### Property `OnlyOppositeSex`
@@ -60,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) bool OnlyOppositeSex = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 仅异性?
 
@@ -75,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) FText MaleDesc;` |
 
-**Source comments:**
+**Notes:**
 
 > 关系中对男性的描述(例如丈夫)
 
@@ -90,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) FText FemaleDesc;` |
 
-**Source comments:**
+**Notes:**
 
 > 关系中对女性的描述(例如妻子)
 
@@ -100,12 +104,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ERelationshipLevelUpType` |
+| C++ type | [ERelationshipLevelUpType](CharacterChatStruct__ERelationshipLevelUpType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) ERelationshipLevelUpType LevelUpType = ERelationshipLevelUpType::Auto;` |
 
-**Source comments:**
+**Notes:**
 
 > 达成此关系的方式
 
@@ -120,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) TArray<FName> LevelUpBuilding;` |
 
-**Source comments:**
+**Notes:**
 
 > 非自动升级时所需仪式建筑ID
 
@@ -135,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) int32 ApplyTimes = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 申请次数
 
@@ -150,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) TArray<FName> ChatBuffs;` |
 
-**Source comments:**
+**Notes:**
 
 > 对话buff
 
@@ -165,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) TArray<FName> DeathBuffs;` |
 
-**Source comments:**
+**Notes:**
 
 > 关系人死亡触发buff
 
@@ -180,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) TArray<FName> ConflictRelationID;` |
 
-**Source comments:**
+**Notes:**
 
 > 冲突关系(当与其他人存在以下关系时不能发展为此关系)
 
@@ -195,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) int32 UIOrder = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > UI显示上的排序
 

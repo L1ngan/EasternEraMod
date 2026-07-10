@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EMartialArtsMajorCategories` |
+| C++ type | [EMartialArtsMajorCategories](MartialArts__EMartialArtsMajorCategories.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="MartialArts" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="MartialArts") EMartialArtsMajorCategories MajorCategories = EMartialArtsMajorCategories::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 武学大类
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EMartialArtsAttributeClassification` |
+| C++ type | [EMartialArtsAttributeClassification](CommonEnum__EMartialArtsAttributeClassification.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="MartialArts" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MartialArts") EMartialArtsAttributeClassification AttributeClassification = EMartialArtsAttributeClassification::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 武学属性分类
 
@@ -44,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EMartialArtsMajorUsageType` |
+| C++ type | [EMartialArtsMajorUsageType](MartialArts__EMartialArtsMajorUsageType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="MartialArts" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MartialArts") EMartialArtsMajorUsageType UsageType = EMartialArtsMajorUsageType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 使用方式
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "MartialArts") TArray<EWeaponType> NeedWeaponTypes;` |
 
-**Source comments:**
+**Notes:**
 
 > 此武学使用需要的武器类型
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "MartialArts") TMap<int,FMartialArtsLevel> MartialArtsLevels;` |
 
-**Source comments:**
+**Notes:**
 
 > 包含的武学等级
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "MartialArtsLevel",meta = (RowType = "/Script/EastRimWorld.MartialArtsLevelConfig")) FDataTableRowHandle LevelConfig;` |
 
-**Source comments:**
+**Notes:**
 
 > 等级经验配置
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "MartialArts") float CoolDownTime = 36.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 冷却时间
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "MartialArts") FGameplayTagContainer CoolDownTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 冷却标签
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="MartialArts") FText SkillEntryTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 技能词条标签
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="MartialArts") FFormatText FormatSkillEntryTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 技能词条标签（格式化文本）
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="MartialArts") TSoftObjectPtr<UTexture2D> MartialArtsIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 武学图标
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="MartialArts") TSubclassOf<UGameplayEffect> LevelGameplayEffect;` |
 
-**Source comments:**
+**Notes:**
 
 > 等级属性GE
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Entries") TArray<FName> GiveAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 获得得技能
 
@@ -214,8 +214,54 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Entries") FName BaseAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 关联的基础技能
+
+---
+
+### Property `LevelSkillEntry`
+
+| Field | Details |
+|------|------|
+| C++ type | `TMap<int,FLevelSkillEntry>` |
+| Reflection specifiers | BlueprintReadWrite, Category="MartialArts" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "MartialArts") TMap<int,FLevelSkillEntry> LevelSkillEntry;` |
+
+**Notes:**
+
+> 包含的词条池子
+
+---
+
+### Property `ComprehendCost`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | BlueprintReadWrite, Category="MartialArts|参悟" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MartialArts|参悟") int32 ComprehendCost = 0;` |
+
+**Notes:**
+
+> 参悟（重洗全部已生效词条槽）消耗的历练点数
+
+---
+
+### Property `ExchangeFragmentCost`
+
+| Field | Details |
+|------|------|
+| C++ type | `TMap<EItemQuality,int32>` |
+| Reflection specifiers | BlueprintReadWrite, Category="MartialArts|兑换" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MartialArts|兑换") TMap<EItemQuality,int32> ExchangeFragmentCost;` |
+
+**Notes:**
+
+> 兑换本武学所需残卷（品质→数量）。残卷来源 = ASaveGameDataActor::MartialFragments（按品质计数的全局武学残卷）；
+> 玩家在每个所列品质上的残卷数 ≥ 对应数量，即可兑换本武学。
 
 ---

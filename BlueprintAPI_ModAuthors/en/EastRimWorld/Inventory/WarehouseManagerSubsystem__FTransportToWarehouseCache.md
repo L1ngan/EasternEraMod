@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FInstancedStruct ItemInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品ID
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FUObjectData,FTransportItemCache> ItemCaches;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品action 对应的缓存
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool bCanPlaceItem = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否可以放置这个id的物品 初步计算是否堆叠上限 空格等
 

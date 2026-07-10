@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Getter, Setter, Category=Style, meta=( DisplayName="Style" )) FComboBoxStyle WidgetStyle;` |
 
-**Source comments:**
+**Notes:**
 
 > The style.
 
@@ -34,6 +34,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, Category=Style) FComboBoxStyle ComboBoxStyle;` |
 
+**Notes:**
+
+> Combo Box Style field.
+
 ---
 
 ### Property `bOpenButtonStyle`
@@ -44,6 +48,10 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Style) bool bOpenButtonStyle;` |
+
+**Notes:**
+
+> Boolean flag indicating whether Open Button Style is enabled or true.
 
 ---
 
@@ -56,6 +64,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Style, meta=( EditCondition="bOpenButtonStyle" )) FComboBoxStyle OpenComboBoxStyle;` |
 
+**Notes:**
+
+> Executes the Open Combo Box Style operation.
+
 ---
 
 ### Property `ItemStyle`
@@ -67,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Getter, Setter, Category=Style) FTableRowStyle ItemStyle;` |
 
-**Source comments:**
+**Notes:**
 
 > The item row style.
 
@@ -82,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Getter, Category="Style") FScrollBarStyle ScrollBarStyle;` |
 
-**Source comments:**
+**Notes:**
 
 > The scroll bar style.
 
@@ -97,6 +109,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Getter, Setter, Category=Content) FMargin ContentPadding;` |
 
+**Notes:**
+
+> Content Padding field.
+
 ---
 
 ### Property `MaxListHeight`
@@ -108,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Getter, Setter, Category=Content, AdvancedDisplay) float MaxListHeight;` |
 
-**Source comments:**
+**Notes:**
 
 > The max height of the combobox list that opens
 
@@ -123,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Getter = "IsHasDownArrow", Setter = "SetHasDownArrow", Category = Content, AdvancedDisplay) bool HasDownArrow;` |
 
-**Source comments:**
+**Notes:**
 
 > When false, the down arrow is not generated and it is up to the API consumer
 > to make their own visual hint that this is a drop down.
@@ -139,7 +155,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Getter = "IsEnableGamepadNavigationMode", Setter = "SetEnableGamepadNavigationMode", Category = Content, AdvancedDisplay) bool EnableGamepadNavigationMode;` |
 
-**Source comments:**
+**Notes:**
 
 > When false, directional keys will change the selection. When true, ComboBox 
 > must be activated and will only capture arrow input while activated.
@@ -155,7 +171,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Getter, Category=Style) FSlateFontInfo Font;` |
 
-**Source comments:**
+**Notes:**
 
 > The default font to use in the combobox, only applies if you're not implementing OnGenerateWidgetEvent
 > to factory each new entry.
@@ -171,7 +187,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Getter, Category=Style, meta=(DesignerRebuild)) FSlateColor ForegroundColor;` |
 
-**Source comments:**
+**Notes:**
 
 > The foreground color to pass through the hierarchy.
 
@@ -186,6 +202,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Style, meta=(DesignerRebuild)) FSlateColor TextColor;` |
 
+**Notes:**
+
+> Text Color field.
+
 ---
 
 ### Property `OpenTextColor`
@@ -196,6 +216,10 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Style, meta=(DesignerRebuild)) FSlateColor OpenTextColor;` |
+
+**Notes:**
+
+> Executes the Open Text Color operation.
 
 ---
 
@@ -208,6 +232,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Getter= "IsFocusable", Category=Interaction) bool bIsFocusable;` |
 
+**Notes:**
+
+> Boolean flag indicating whether Is Focusable is enabled or true.
+
 ---
 
 ### Property `OnSelectionChanged`
@@ -219,7 +247,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category=Events) FOnSelectionChangedEvent OnSelectionChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > Called when a new item is selected in the combobox.
 
@@ -234,7 +262,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category=Events) FOnOpeningEvent OnOpening;` |
 
-**Source comments:**
+**Notes:**
 
 > Called when the combobox is opening
 
@@ -258,6 +286,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Add Option operation.
+
 ---
 
 ### Function `RemoveOption`
@@ -275,6 +307,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category="ComboBox") EASTRIMWORLD_API bool RemoveOption(const FString& Option);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Executes the Remove Option operation.
 
 ---
 
@@ -294,6 +330,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets or queries Find Option Index.
+
 ---
 
 ### Function `GetOptionAtIndex`
@@ -312,6 +352,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets or queries Get Option At Index.
+
 ---
 
 ### Function `ClearOptions`
@@ -325,6 +369,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category="ComboBox") EASTRIMWORLD_API void ClearOptions();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Executes the Clear Options operation.
 
 ---
 
@@ -340,6 +388,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Clear Selection operation.
+
 ---
 
 ### Function `RefreshOptions`
@@ -354,7 +406,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > Refreshes the list of options.  If you added new ones, and want to update the list even if it's
 > currently being displayed use this.
@@ -377,6 +429,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Set Selected Option operation.
+
 ---
 
 ### Function `SetSelectedIndex`
@@ -395,6 +451,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Set Selected Index operation.
+
 ---
 
 ### Function `GetSelectedOption`
@@ -408,6 +468,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category="ComboBox") EASTRIMWORLD_API FString GetSelectedOption() const;`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Gets or queries Get Selected Option.
 
 ---
 
@@ -423,6 +487,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets or queries Get Selected Index.
+
 ---
 
 ### Function `GetOptionCount`
@@ -437,7 +505,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > Returns the number of options
 
@@ -454,5 +522,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category="ComboBox", Meta = (ReturnDisplayName = "bOpen")) EASTRIMWORLD_API bool IsOpen() const;`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Gets or queries Is Open.
 
 ---

@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FText PassGameName;` |
 
-**Source comments:**
+**Notes:**
 
 > 通关条件名称
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TSoftObjectPtr<UTexture2D> Icon;` |
 
-**Source comments:**
+**Notes:**
 
 > 图标
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FText Describe;` |
 
-**Source comments:**
+**Notes:**
 
 > 通关条件描述
 
@@ -59,12 +59,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<ECondType,[FCompareCondition](ConditionStruct__FCompareCondition.md)> |
+| C++ type | TMap<[ECondType](ConditionStruct__ECondType.md),[FCompareCondition](ConditionStruct__FCompareCondition.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<ECondType,FCompareCondition> OpenConditions;` |
 
-**Source comments:**
+**Notes:**
 
 > 开启条件
 
@@ -74,12 +74,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<ECondType,[FCompareCondition](ConditionStruct__FCompareCondition.md)> |
+| C++ type | TMap<[ECondType](ConditionStruct__ECondType.md),[FCompareCondition](ConditionStruct__FCompareCondition.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<ECondType,FCompareCondition> PassConditions;` |
 
-**Source comments:**
+**Notes:**
 
 > 通关条件
 

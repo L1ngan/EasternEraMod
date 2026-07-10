@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<ERoomScoreType,[FRoomScoreDataArray](ERW_ConfigTypes__FRoomScoreDataArray.md)> |
+| C++ 类型 | TMap<[ERoomScoreType](ERW_Enumerations__ERoomScoreType.md),[FRoomScoreDataArray](ERW_ConfigTypes__FRoomScoreDataArray.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<ERoomScoreType,FRoomScoreDataArray> RoomScoreTypeData;` |
 
-**源码注释:**
+**说明:**
 
 > 房间各类型评分分数段信息
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FRoomTemperatureScoreData> RoomTemperatureScoreData;` |
 
-**源码注释:**
+**说明:**
 
 > 房间温度区间分数
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FRoomSizeTemperatureRate> RoomSizeTemperatureRates;` |
 
-**源码注释:**
+**说明:**
 
 > 房间大小对应的温度系数(结算房间温度时乘以这个)
 

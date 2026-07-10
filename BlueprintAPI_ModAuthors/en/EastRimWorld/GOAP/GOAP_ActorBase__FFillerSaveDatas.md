@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TArray<FFillerSaveData> FillerSaveData;` |
 
-**Source comments:**
+**Notes:**
 
 > 填充模型存档数据
 

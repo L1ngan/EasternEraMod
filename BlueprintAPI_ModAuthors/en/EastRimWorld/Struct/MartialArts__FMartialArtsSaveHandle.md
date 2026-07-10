@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly) FName Name;` |
 
-**Source comments:**
+**Notes:**
 
 > 武学名称
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly) int32 Level = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 武学等级
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly) FActiveGameplayEffectHandle SpecHandle;` |
 
-**Source comments:**
+**Notes:**
 
 > GE句柄
 

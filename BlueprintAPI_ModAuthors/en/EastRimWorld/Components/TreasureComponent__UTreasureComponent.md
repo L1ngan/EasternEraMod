@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Treasure pavilion component managing the shop's item listing/delisting, stall slots, exchange statistics, disciple purchases and automatic replenishment, with save/load support.
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FUpdateTreasure UpdateTreasure;` |
 
+**Notes:**
+
+> Delegate broadcast when the treasure pavilion is updated.
+
 ---
 
 ### Property `TreasureTime`
@@ -28,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, BlueprintReadOnly) float TreasureTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 剩余自动补货时间
 
@@ -43,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TArray<FTreasureItemSubData> TreasureItems;` |
 
-**Source comments:**
+**Notes:**
 
 > 珍宝阁商店现在存在的商品
 
@@ -58,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TArray<FTreasureStatisticsInfo> TreasureCount;` |
 
-**Source comments:**
+**Notes:**
 
 > 珍宝阁当期兑换过的统计
 
@@ -73,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FName , FTreasureStatisticsTotalInfo> TotalTreasureCount;` |
 
-**Source comments:**
+**Notes:**
 
 > 珍宝阁总共兑换过的统计
 
@@ -88,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<int32 , FStallInfo> Stalls;` |
 
-**Source comments:**
+**Notes:**
 
 > 货架
 
@@ -103,6 +109,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TArray<FLogData> Log;` |
 
+**Notes:**
+
+> List of treasure pavilion log entries.
+
 ---
 
 ### Property `TreasureResource`
@@ -114,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<int32 , FSaveItemArr> TreasureResource;` |
 
-**Source comments:**
+**Notes:**
 
 > 珍宝阁商店现在存在的商品(数据同上,加载或修改时初始化),key是货柜编号
 
@@ -134,7 +144,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取当期兑换信息
 
@@ -152,7 +162,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有兑换信息
 
@@ -170,7 +180,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取见闻
 
@@ -192,7 +202,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取指定货栈数据
 
@@ -214,7 +224,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 弟子购买物品
 
@@ -236,7 +246,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取有商品的子类
 
@@ -260,7 +270,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取可随机的道具
 
@@ -286,7 +296,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 上架商品
 
@@ -309,7 +319,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 下架商品
 
@@ -327,7 +337,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取货架
 
@@ -350,7 +360,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置（新增）货架解锁的栏位数量
 
@@ -372,7 +382,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取指定货架的商品
 
@@ -396,7 +406,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置商品是否自动补货
 
@@ -419,7 +429,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 按当期兑换量排序
 
@@ -442,7 +452,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 按总兑换量排序
 
@@ -465,7 +475,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 按剩余库存排序
 
@@ -488,7 +498,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 按宗门信仰排序
 
@@ -510,7 +520,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取货架的解锁槽位数量
 

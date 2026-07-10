@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FClosureAreaRange , FClosureAreaData> PlannedAreas;` |
 
-**Source comments:**
+**Notes:**
 
 > 已规划的区域(修建中)
 > TMap<闭合区域范围 , 闭合区域数据>
@@ -35,7 +35,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FClosureAreaRange , FClosureAreaData> RoomAreas;` |
 
-**Source comments:**
+**Notes:**
 
 > 已形成房间的区域
 > TMap<闭合区域范围 , 闭合区域数据>
@@ -51,7 +51,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FClosureAreaRange,FCombinationBuildAreaData> CombinationBuildAreas;` |
 
-**Source comments:**
+**Notes:**
 
 > 组合建筑的区域
 
@@ -65,5 +65,9 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly ,SaveGame) TMap<FClosureAreaRange,FHeatSourceAreaData> HeatSourceRange;` |
+
+**Notes:**
+
+> Heat source influence ranges on this layer (closure area range to heat source area data)
 
 ---

@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EAssemblePartType` |
+| C++ type | [EAssemblePartType](ERW_Enumerations__EAssemblePartType.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) EAssemblePartType AssemblePartType { EAssemblePartType::None };` |
 
-**Source comments:**
+**Notes:**
 
 > 组装部位类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) int32 Index { INDEX_NONE };` |
 
-**Source comments:**
+**Notes:**
 
 > 模型在ISM中的索引
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) FTransform RelativeTransform;` |
 
-**Source comments:**
+**Notes:**
 
 > 模型的相对Transform
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) FTransform Transform;` |
 
-**Source comments:**
+**Notes:**
 
 > 模型的绝对Transform
 

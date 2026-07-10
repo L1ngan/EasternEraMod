@@ -14,10 +14,14 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EEastRimWorldSummonsType` |
+| C++ type | [EEastRimWorldSummonsType](CharacterStruct__EEastRimWorldSummonsType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="SummonsData" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SummonsData") EEastRimWorldSummonsType EastRimWorldSummonsType = EEastRimWorldSummonsType::None;` |
+
+**Notes:**
+
+> Summons control type (control-only, auto, or both auto and controllable)
 
 ---
 
@@ -30,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") FFormatText FormatDesc;` |
 
-**Source comments:**
+**Notes:**
 
 > 召唤物描述
 
@@ -45,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ride", meta = (EditConditionHides, EditCondition = "EastRimWorldSummonsType == EEastRimWorldSummonsType::OnlyControl || EastRimWorldSummonsType == EEastRimWorldSummonsType::AutoOrControl")) FName ParentSocket;` |
 
-**Source comments:**
+**Notes:**
 
 > 骑乘的插槽
 
@@ -60,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ride", meta = (AllowedClasses = "AnimSequence",EditConditionHides, EditCondition = "EastRimWorldSummonsType == EEastRimWorldSummonsType::OnlyControl || EastRimWorldSummonsType == EEastRimWorldSummonsType::AutoOrControl")) FSoftObjectPath RideAnim;` |
 
-**Source comments:**
+**Notes:**
 
 > 骑乘的动画
 
@@ -75,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Mesh",meta = (AllowedClasses = "SkeletalMesh")) FSoftObjectPath SummonsMesh;` |
 
-**Source comments:**
+**Notes:**
 
 > 召唤物模型
 
@@ -90,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Animation",meta = (AllowedClasses = "BlendSpace1D")) FSoftObjectPath SummonsBlendSpace;` |
 
-**Source comments:**
+**Notes:**
 
 > 召唤物行走混合空间1d
 
@@ -105,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ActorSizeSetting") bool bOverrideBlueprint = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否覆盖蓝图设置
 
@@ -120,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ActorSizeSetting",meta=(EditCondition = "bOverrideBlueprint",EditConditionHides)) FVector2D CapsuleSize = FVector2D(40,90);` |
 
-**Source comments:**
+**Notes:**
 
 > 胶囊体 x 为半径 y 为 高度
 
@@ -135,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ActorSizeSetting",meta=(EditCondition = "bOverrideBlueprint",EditConditionHides)) FVector MeshScale = FVector::One();` |
 
-**Source comments:**
+**Notes:**
 
 > 模型大小
 
@@ -150,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ActorSizeSetting",meta=(EditCondition = "bOverrideBlueprint",EditConditionHides)) FVector MeshLocationOffset = FVector::Zero();` |
 
-**Source comments:**
+**Notes:**
 
 > 模型偏移
 
@@ -160,12 +164,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ERobotType` |
+| C++ type | [ERobotType](../ERW_Enumerations__ERobotType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="MechanismRole" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite, Category="MechanismRole") ERobotType RobotType = ERobotType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 机关角色类型
 
@@ -180,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite, Category="MechanismRole") float RobotTotalEnergy = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 机关角色总能量
 
@@ -195,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite, Category="MechanismRole") float RobotExpendEnergyEveryTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 机关角色单位时间消耗的能量
 
@@ -210,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite, Category="MechanismRole") float RobotRecoveryEnergyWhenStanby = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 待机时单位时间恢复的能量
 
@@ -225,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite, Category="MechanismRole") float RobotRecoveryEnergyWhenInBuilding = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 处于单位时间恢复的能量
 
@@ -240,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere, Category="MechanismRole") int32 RepairNeedLevel = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 维修需要的手工技能
 
@@ -250,12 +254,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ESummonsBattleType` |
+| C++ type | [ESummonsBattleType](CommonEnum__ESummonsBattleType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="SummonsData" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SummonsData") ESummonsBattleType SummonsBattleType = ESummonsBattleType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 召唤物战斗类型
 
@@ -270,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SummonsData") int32 SummonLevel = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 召唤物等级
 
@@ -285,7 +289,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PuppetModification") bool bIsUpgradedPuppet = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 傀儡装备改造相关字段
 > 傀儡类型（基础款/升级款）
@@ -301,7 +305,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PuppetModification", meta = (AllowedClasses = "Texture2D")) FSoftObjectPath PuppetSilhouetteTexture;` |
 
-**Source comments:**
+**Notes:**
 
 > 傀儡剪影图
 
@@ -311,12 +315,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TArray<EEquipmentType>` |
+| C++ type | TArray<[EEquipmentType](CommonEnum__EEquipmentType.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="PuppetModification" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PuppetModification") TArray<EEquipmentType> AvailableEquipmentTypes;` |
 
-**Source comments:**
+**Notes:**
 
 > 可改装的装备类型列表（使用现有装备系统）
 
@@ -326,12 +330,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TArray<EArmorType>` |
+| C++ type | TArray<[EArmorType](CommonEnum__EArmorType.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="PuppetModification" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PuppetModification") TArray<EArmorType> AvailableArmorTypes;` |
 
-**Source comments:**
+**Notes:**
 
 > 可改装的防具类型列表
 

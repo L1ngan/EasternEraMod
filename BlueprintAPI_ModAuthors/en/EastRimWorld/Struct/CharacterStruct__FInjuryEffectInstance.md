@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryEffectInstance") FName ID;` |
 
-**Source comments:**
+**Notes:**
 
 > ID（伤势配置的ID,和InjuryConfig里的ID相同）
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryEffectInstance") FGuid InjuryID;` |
 
-**Source comments:**
+**Notes:**
 
 > 伤势ID（唯一值）
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryEffectInstance") FName OrganID;` |
 
-**Source comments:**
+**Notes:**
 
 > 部位ID
 
@@ -59,12 +59,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBodyOrganType` |
+| C++ type | [EBodyOrganType](../ERW_CommonTypes__EBodyOrganType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="FInjuryEffectInstance" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryEffectInstance") EBodyOrganType OrganType = EBodyOrganType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 部位类型
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryEffectInstance") float RestHurtValue = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前剩余损伤程度（减小到0就治愈了）
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryEffectInstance") float TreatValue = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前治疗值(如果>0则正在治疗)
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryEffectInstance") float TreatRemainTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 剩余治疗时间
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryEffectInstance") FInjuryEffectConfig InjuryConfig;` |
 
-**Source comments:**
+**Notes:**
 
 > 伤势配置
 

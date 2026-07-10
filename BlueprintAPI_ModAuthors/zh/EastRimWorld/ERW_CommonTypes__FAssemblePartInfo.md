@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EAssemblePartType` |
+| C++ 类型 | [EAssemblePartType](ERW_Enumerations__EAssemblePartType.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) EAssemblePartType AssemblePartType { EAssemblePartType::None };` |
 
-**源码注释:**
+**说明:**
 
 > 组装部位类型
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) int32 Index { INDEX_NONE };` |
 
-**源码注释:**
+**说明:**
 
 > 模型在ISM中的索引
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) FTransform RelativeTransform;` |
 
-**源码注释:**
+**说明:**
 
 > 模型的相对Transform
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) FTransform Transform;` |
 
-**源码注释:**
+**说明:**
 
 > 模型的绝对Transform
 

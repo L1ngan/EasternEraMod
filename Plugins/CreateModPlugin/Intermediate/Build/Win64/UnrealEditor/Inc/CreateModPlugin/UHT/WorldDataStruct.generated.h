@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FModWorldPlaceInfo ************************************************
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h_32_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h_32_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModWorldPlaceInfo_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;
@@ -27,7 +27,7 @@ struct FModWorldPlaceInfo;
 // ********** End ScriptStruct FModWorldPlaceInfo **************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h
+#define CURRENT_FILE_ID FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h
 
 // ********** Begin Enum EModWorldPlaceType ********************************************************
 #define FOREACH_ENUM_EMODWORLDPLACETYPE(op) \

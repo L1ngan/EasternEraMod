@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "OrganAttackedShareConfig") FName SharedOrganID;` |
 
-**源码注释:**
+**说明:**
 
 > 分摊伤害的部位ID
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "OrganAttackedShareConfig") float MinSharePercent = 0.5f;` |
 
-**源码注释:**
+**说明:**
 
 > 最小分摊伤害百分比
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "OrganAttackedShareConfig") float MaxSharePercent = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 最大分摊伤害百分比
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "OrganAttackedShareConfig") int ShareWeight = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 分摊权重
 

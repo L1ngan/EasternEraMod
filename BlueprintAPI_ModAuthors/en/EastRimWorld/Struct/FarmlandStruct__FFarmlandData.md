@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Farmland Data data structure.
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FGridPosition GridPosition;` |
 
+**Notes:**
+
+> Grid Position field.
+
 ---
 
 ### Property `bPlanted`
@@ -28,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) bool bPlanted;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否创建了种植goap
 
@@ -43,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) bool bAlreadyPlanted;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否完成了种植
 
@@ -58,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 LandEdgeType;` |
 
-**Source comments:**
+**Notes:**
 
 > 农田边缘淡化参数
 
@@ -73,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 LandCornerType;` |
 
-**Source comments:**
+**Notes:**
 
 > 农田内角淡化参数
 

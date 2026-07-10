@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) TMap<FName , FBatchActionData> ResourceActions;` |
 
-**源码注释:**
+**说明:**
 
 > TMap<资源ID , 资源Action数据>
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FBatchActionData ConstructActions;` |
 
-**源码注释:**
+**说明:**
 
 > 建造Action
 

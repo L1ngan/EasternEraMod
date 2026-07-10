@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) float CurFuelValue = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前的燃料储量
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) bool bHaveFuel = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否有燃料
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) bool bNeedCreateAction = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否需要创建添加燃料得GOAP，第一次创建，只有当移除GOAP得时候才再次为true
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) bool bNeedAbortPlan = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否需要打断一次当前建筑需要燃料才能执行的GOAP，第一次允许，后续只有当添加燃料的时候才为true
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) bool bAutoAddFuel = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 燃料低于20%时是否自动为其添加燃料
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 UpdateFuelTimerID { INDEX_NONE };` |
 
-**Source comments:**
+**Notes:**
 
 > 燃料消耗更新定时器
 

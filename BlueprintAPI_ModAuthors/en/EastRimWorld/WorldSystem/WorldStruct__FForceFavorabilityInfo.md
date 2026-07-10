@@ -19,6 +19,10 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid Guid1;` |
 
+**Notes:**
+
+> Guid 1 field.
+
 ---
 
 ### Property `Guid2`
@@ -30,16 +34,24 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid Guid2;` |
 
+**Notes:**
+
+> Guid 2 field.
+
 ---
 
 ### Property `ForceFavorabilityType`
 
 | Field | Details |
 |------|------|
-| C++ type | `EForceFavorabilityType` |
+| C++ type | [EForceFavorabilityType](WorldStruct__EForceFavorabilityType.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditDefaultsOnly) EForceFavorabilityType ForceFavorabilityType = EForceFavorabilityType::Neutrality;` |
+
+**Notes:**
+
+> Force Favorability Type field.
 
 ---
 
@@ -52,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditDefaultsOnly) float Favorability = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前好感度
 
@@ -67,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditDefaultsOnly) float OldFavorability = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 变化之前的好感度
 

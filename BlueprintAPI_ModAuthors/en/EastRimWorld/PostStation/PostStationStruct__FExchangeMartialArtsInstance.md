@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Runtime instance data of a sparring match: participants, sign-ins, substitutes, time limits and result.
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid Guid;` |
 
+**Notes:**
+
+> Unique GUID of this sparring instance.
+
 ---
 
 ### Property `ConfigID`
@@ -28,16 +34,24 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName ConfigID;` |
 
+**Notes:**
+
+> ID of the sparring config row used (FExchangeMartialArtsConfig).
+
 ---
 
 ### Property `State`
 
 | Field | Details |
 |------|------|
-| C++ type | `EExchangeMartialArtsState` |
+| C++ type | [EExchangeMartialArtsState](PostStationStruct__EExchangeMartialArtsState.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EExchangeMartialArtsState State;` |
+
+**Notes:**
+
+> Current state of the sparring (waiting or ongoing).
 
 ---
 
@@ -50,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FGuid> PlayerTeamGuids;` |
 
-**Source comments:**
+**Notes:**
 
 > 队伍1角色GUID
 
@@ -65,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FGuid> NPCTeamGuids;` |
 
-**Source comments:**
+**Notes:**
 
 > 队伍2角色GUID
 
@@ -80,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FGuid> PlayerTeamSignInGuids;` |
 
-**Source comments:**
+**Notes:**
 
 > 队伍1角色签到GUID
 
@@ -95,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FGuid> NPCTeamSignInGuids;` |
 
-**Source comments:**
+**Notes:**
 
 > 队伍2角色签到GUID
 
@@ -108,11 +122,11 @@
 | C++ type | TMap<FGuid,[AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)*> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FGuid,AEastRimWorldCharacter*> PlayerTeamCharacters;` |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient) TMap<FGuid,AEastRimWorldCharacter*> PlayerTeamCharacters;` |
 
-**Source comments:**
+**Notes:**
 
-> 玩家参加的角色
+> 玩家参加的角色（运行时缓存；读档时按 PlayerTeamGuids 重建，标 Transient 避免序列化悬空指针致崩）
 
 ---
 
@@ -123,11 +137,11 @@
 | C++ type | TMap<FGuid,[AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)*> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FGuid,AEastRimWorldCharacter*> NPCTeamCharacters;` |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient) TMap<FGuid,AEastRimWorldCharacter*> NPCTeamCharacters;` |
 
-**Source comments:**
+**Notes:**
 
-> NPC角色(不包含开始之后生成的)
+> NPC角色(不包含开始之后生成的)（运行时缓存；读档时按 NPCTeamGuids 重建，标 Transient）
 
 ---
 
@@ -140,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FGuid> PlayerTeamSubstitutes;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家角色创建的替身GUID
 
@@ -155,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FGuid> NPCTeamSubstitutes;` |
 
-**Source comments:**
+**Notes:**
 
 > NPC创建的替身GUID
 
@@ -170,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FGuid> NPCGenerationGuids;` |
 
-**Source comments:**
+**Notes:**
 
 > NPC开场生成信息的GUID
 
@@ -185,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FGuid> NPCGenerationCharacterGuids;` |
 
-**Source comments:**
+**Notes:**
 
 > NPC开场生成的角色GUID
 
@@ -200,6 +214,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 NPCGenerationCharacterDeathCount;` |
 
+**Notes:**
+
+> Death count of NPC characters generated at the start.
+
 ---
 
 ### Property `TimeLimit`
@@ -211,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float TimeLimit;` |
 
-**Source comments:**
+**Notes:**
 
 > 切磋限时
 
@@ -226,8 +244,23 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float StartTimeLimit;` |
 
-**Source comments:**
+**Notes:**
 
 > 切磋创建到开始限时
+
+---
+
+### Property `Result`
+
+| Field | Details |
+|------|------|
+| C++ type | [EExchangeMartialArtsResult](PostStationStruct__EExchangeMartialArtsResult.md) |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EExchangeMartialArtsResult Result = EExchangeMartialArtsResult::None;` |
+
+**Notes:**
+
+> 结束结果(End 前由胜/负/取消路径写入, 随 OnExchangeMartialArtsEnd 广播带出, 供订阅方区分)
 
 ---

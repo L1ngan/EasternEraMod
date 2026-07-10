@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ESceneTextType` |
+| C++ 类型 | [ESceneTextType](SceneTextStruct__ESceneTextType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) ESceneTextType SceneTextType = ESceneTextType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 显示字体的类型
 
@@ -29,12 +29,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ETextAnimationType` |
+| C++ 类型 | [ETextAnimationType](SceneTextStruct__ETextAnimationType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) ETextAnimationType TextAnimationType = ETextAnimationType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 动画类型
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float SpawnAngleRange = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 生成角度区间
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FVector2D RandomSpawnOffset = FVector2D::ZeroVector;` |
 
-**源码注释:**
+**说明:**
 
 > 生成位置偏移
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float DirectionalSpawnOffset = 0.0f;` |
 
-**源码注释:**
+**说明:**
 
 > 生成方向偏移
 
@@ -89,12 +89,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EPopSizeType` |
+| C++ 类型 | [EPopSizeType](SceneTextStruct__EPopSizeType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EPopSizeType PopSizeType = EPopSizeType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 弹出大小
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bComeToStop = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否停止
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float DecelerationRate = 0.0f;` |
 
-**源码注释:**
+**说明:**
 
 > 减速效率
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float LifeTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 持续时间
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float Speed = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 速度
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bShowNumber = true;` |
 
-**源码注释:**
+**说明:**
 
 > 是否显示数字
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) UTexture2D * OptionalIcon = nullptr;` |
 
-**源码注释:**
+**说明:**
 
 > 操作图标
 
@@ -199,7 +199,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float IconScale = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 图标大小
 
@@ -214,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText OptionalMessage;` |
 
-**源码注释:**
+**说明:**
 
 > 操作信息
 
@@ -229,7 +229,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float OptionalMessageSize = 10.f;` |
 
-**源码注释:**
+**说明:**
 
 > 操作信息字体大小
 
@@ -244,7 +244,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FTeamTextInfo PlayerTextInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家阵营文字
 
@@ -259,7 +259,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FTeamTextInfo EnemyTextInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 玩家阵营文字
 

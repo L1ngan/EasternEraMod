@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EConditionValueType` |
+| C++ type | [EConditionValueType](ERW_Enumerations__EConditionValueType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) EConditionValueType ValueType { EConditionValueType::Int };` |
 
-**Source comments:**
+**Notes:**
 
 > 条件检测值类型
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EConditionQuery` |
+| C++ type | [EConditionQuery](ERW_Enumerations__EConditionQuery.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) EConditionQuery Query { EConditionQuery::IsEqualTo };` |
 
-**Source comments:**
+**Notes:**
 
 > 条件判断规则
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) FConditionValue IdeaValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 想法条件值
 

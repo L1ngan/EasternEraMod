@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FText Name;` |
 
-**源码注释:**
+**说明:**
 
 > 配方名称
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FName ActionID;` |
 
-**源码注释:**
+**说明:**
 
 > 对应GOAP Action的ID
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FName StartActionID;` |
 
-**源码注释:**
+**说明:**
 
 > 如果建筑物是自动制造 开始action
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FName GoalID;` |
 
-**源码注释:**
+**说明:**
 
 > 对应GOAP目标的ID
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TSoftObjectPtr<UTexture2D> FormulaIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 配方在UI上显示的图标
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UI") FFormatText FormatDescription;` |
 
-**源码注释:**
+**说明:**
 
 > 格式化后的描述
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<FGameplayAttribute, int32> RequiredAttributes;` |
 
-**源码注释:**
+**说明:**
 
 > 需要的属性值
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") float ConsumingTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 耗时（界面显示使用，不参与实际功能）
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<FName, int32> NecessityConsumingResource;` |
 
-**源码注释:**
+**说明:**
 
 > 必须消耗的资源
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") int32 SelectableResourceNumber = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 总共需要的可选资源数量
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FGameplayTag SelectableResourceTag;` |
 
-**源码注释:**
+**说明:**
 
 > 可选的资源标签
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") int32 SelectableTypeNumber = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 最多可选择的种类数量
 
@@ -194,12 +194,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EModGroundInventoryType` |
+| C++ 类型 | [EModGroundInventoryType](BaseDataStruct__EModGroundInventoryType.md) |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") EModGroundInventoryType OutputResourceType = EModGroundInventoryType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 产出的资源类型
 
@@ -214,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FName OutputItemID;` |
 
-**源码注释:**
+**说明:**
 
 > 产出的ID
 
@@ -229,7 +229,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") int32 OutputItemNumber = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 产出的数量
 
@@ -244,7 +244,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<FGameplayAttribute, float> AddToMakerAttributes;` |
 
-**源码注释:**
+**说明:**
 
 > 制造完成后给制造者添加的属性 获得的经验
 
@@ -259,7 +259,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") bool bNeedPeople = true;` |
 
-**源码注释:**
+**说明:**
 
 > 是否需要人提供工作量
 
@@ -274,7 +274,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") float RequiredWorkload = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 需要的工作量
 
@@ -289,7 +289,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FGameplayTag GameplayTag;` |
 
-**源码注释:**
+**说明:**
 
 > 产出物品所属的分组，用于检查库存
 
@@ -304,7 +304,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FName BuildingID;` |
 
-**源码注释:**
+**说明:**
 
 > 关联的建筑物ID
 
@@ -314,12 +314,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EModCommonButtonType` |
+| C++ 类型 | [EModCommonButtonType](EquipmentDataStruct__EModCommonButtonType.md) |
 | 反射说明符 | BlueprintReadWrite, Category="Base" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") EModCommonButtonType CommonButtonType = EModCommonButtonType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 关联的建筑物上个按钮类型
 
@@ -334,7 +334,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FGameplayTagContainer GameplayTags;` |
 
-**源码注释:**
+**说明:**
 
 > 解锁需要的物品大类
 
@@ -349,7 +349,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool CanUnlockByItem = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否可以通过获取物品解锁配方
 
@@ -364,7 +364,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FGameplayTag> UnlockItemTags;` |
 
-**源码注释:**
+**说明:**
 
 > 解锁必须要获取的物品的TAG（满足任意一，就可以解锁）
 
@@ -379,7 +379,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText UnlockItemDesc;` |
 
-**源码注释:**
+**说明:**
 
 > 解锁必须要获取的物品描述内容
 
@@ -394,7 +394,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UI") FText FormatUnlockItemDesc;` |
 
-**源码注释:**
+**说明:**
 
 > 格式化的解锁必须要获取的物品描述内容
 
@@ -409,7 +409,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bIsUnLock = false;` |
 
-**源码注释:**
+**说明:**
 
 > 配方是否可以使用
 
@@ -424,7 +424,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FString Comment;` |
 
-**源码注释:**
+**说明:**
 
 > Comment
 

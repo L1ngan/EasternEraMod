@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Sound Operate Config data structure.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGameplayTagContainer SoundGroupTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 影响的音效组 填分组标签
 
@@ -27,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ESoundOperateType` |
+| C++ type | [ESoundOperateType](PlaySoundSystem__ESoundOperateType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ESoundOperateType SoundOperateType = ESoundOperateType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 音效操作类型
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (EditCondition = "SoundOperateType == ESoundOperateType::Gradient || SoundOperateType == ESoundOperateType::ResetPlay", EditConditionHides)) float VolumePercentage = 0.2;` |
 
-**Source comments:**
+**Notes:**
 
 > 音量百分比
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (EditCondition = "SoundOperateType == ESoundOperateType::Gradient", EditConditionHides)) float GradientTime = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 渐变时间
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (EditCondition = "SoundOperateType == ESoundOperateType::NewPlay", EditConditionHides)) TArray<FName> PlaySoundID;` |
 
-**Source comments:**
+**Notes:**
 
 > 播放的新的音效 读取GameSoundInfo表
 

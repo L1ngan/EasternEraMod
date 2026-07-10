@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Collect Save Data List data structure.
 
 ## Blueprint-exposed variables
 
@@ -16,5 +18,9 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FCollectSaveData> CollectSaveData;` |
+
+**Notes:**
+
+> Collect Save Data field.
 
 ---

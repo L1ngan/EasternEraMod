@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EGrowStageType` |
+| C++ 类型 | [EGrowStageType](ItemStruct__EGrowStageType.md) |
 | 反射说明符 | BlueprintReadWrite, Category="Stage" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") EGrowStageType CurGrowStage = EGrowStageType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 当前阶段
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") FText StageName;` |
 
-**源码注释:**
+**说明:**
 
 > 阶段名称
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") FText StageDescription;` |
 
-**源码注释:**
+**说明:**
 
 > 阶段描述
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") float GrowStageTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 阶段持续时间 -1时 不会随时间结束此阶段 也不会发生变化
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") float MinScale = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 此阶段的最小缩放(如果是种植物的第一阶段,MinScale不能被其他阶段缩放范围包含)
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") float MaxScale = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 此阶段的最大缩放
 
@@ -104,12 +104,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EGrowStageType` |
+| C++ 类型 | [EGrowStageType](ItemStruct__EGrowStageType.md) |
 | 反射说明符 | BlueprintReadWrite, Category="Stage" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") EGrowStageType AutoNextGrowStage = EGrowStageType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 此阶段过后的下一个阶段
 
@@ -119,12 +119,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName,EGrowStageType>` |
+| C++ 类型 | TMap<FName,[EGrowStageType](ItemStruct__EGrowStageType.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Stage" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") TMap<FName,EGrowStageType> AfterActionStage;` |
 
-**源码注释:**
+**说明:**
 
 > 此阶段行为之后的阶段
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") float CuttingFractureHeightPercentage = 0.2;` |
 
-**源码注释:**
+**说明:**
 
 > 砍伐的断裂高度百分比
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") TSoftObjectPtr<UStaticMesh> StageStaticMesh;` |
 
-**源码注释:**
+**说明:**
 
 > 当前阶段的模型
 
@@ -164,12 +164,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<ECommonButtonType>` |
+| C++ 类型 | TArray<[ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Stage" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Stage") TArray<ECommonButtonType> CommonButtons;` |
 
-**源码注释:**
+**说明:**
 
 > 此阶段可以操作的按钮
 

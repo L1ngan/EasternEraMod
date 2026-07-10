@@ -20,6 +20,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnGameplayTagAddedRemoved OnTagAdded;` |
 
+**Notes:**
+
+> Delegate broadcast when a listened GameplayTag is added.
+
 ---
 
 ### Property `OnTagRemoved`
@@ -30,6 +34,10 @@
 | Reflection specifiers | BlueprintAssignable |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnGameplayTagAddedRemoved OnTagRemoved;` |
+
+**Notes:**
+
+> Delegate broadcast when a listened GameplayTag is removed.
 
 ---
 
@@ -52,7 +60,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > Listens for FGameplayTags added and removed.
 
@@ -70,7 +78,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > You must call this function manually when you want the AsyncTask to end.
 > For UMG Widgets, you would call it in the Widget's Destruct event.

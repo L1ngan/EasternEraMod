@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 SubClassIndex = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 堂口Id(直属于势力=0)，分堂从1开始
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText SubClassName;` |
 
-**源码注释:**
+**说明:**
 
 > 堂口名称
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> SubClassFeatureIDs;` |
 
-**源码注释:**
+**说明:**
 
 > 堂口已经配置的特性
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<bool,FCustomApparelsSkin>SubClassForceSexApparels;` |
 
-**源码注释:**
+**说明:**
 
 > 当前堂口服饰（门派换装保存的）(分性别)
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bUseSubClassForceApparel = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否使用堂口统一服饰
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<FGameplayTag , bool> ItemUseStates;` |
 
-**源码注释:**
+**说明:**
 
 > 物品使用状态
 > TMap<总标签 , 状态>
@@ -110,7 +110,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<FName , bool> ActionStates;` |
 
-**源码注释:**
+**说明:**
 
 > 行为控制
 
@@ -125,7 +125,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<int32 , bool> TreasureStalls;` |
 
-**源码注释:**
+**说明:**
 
 > 允许使用的珍宝阁货柜
 

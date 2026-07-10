@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Spawn time of day (hours plus minutes)
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawn Time", meta=(ClampMin="0", ClampMax="23")) int hours = 0;` |
 
+**Notes:**
+
+> Hour value, range 0-23
+
 ---
 
 ### Property `minutes`
@@ -27,5 +33,9 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Spawn Time" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawn Time", meta=(ClampMin="0", ClampMax="59")) int minutes = 0;` |
+
+**Notes:**
+
+> Minute value, range 0-59
 
 ---

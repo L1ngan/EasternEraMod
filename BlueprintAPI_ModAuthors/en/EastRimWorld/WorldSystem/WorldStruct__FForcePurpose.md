@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FName ForcePurposeID;` |
 
-**Source comments:**
+**Notes:**
 
 > 门派宗旨ID
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int32 UnlockLevel = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 门派宗旨解锁等级
 
@@ -49,6 +49,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftObjectPtr<UTexture2D> ForcePurposeIcon;` |
 
+**Notes:**
+
+> Force Purpose Icon field.
+
 ---
 
 ### Property `CostCoin`
@@ -60,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 CostCoin = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 启用消耗的金钱
 
@@ -75,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<FName , int32> CostItem;` |
 
-**Source comments:**
+**Notes:**
 
 > 启用消耗的道具
 
@@ -90,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<FName> PurposeBuffID;` |
 
-**Source comments:**
+**Notes:**
 
 > 门派宗旨BUFFID
 
@@ -105,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FText PurposeName;` |
 
-**Source comments:**
+**Notes:**
 
 > 门派宗旨名称
 
@@ -120,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FText PurposeDesc;` |
 
-**Source comments:**
+**Notes:**
 
 > 门派宗旨描述
 

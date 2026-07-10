@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FName,FItemSimpleData> RewardResources;` |
 
-**Source comments:**
+**Notes:**
 
 > 获得的资源
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<int32,FPostwarCharacterDispose> PostwarCharacterDispose;` |
 
-**Source comments:**
+**Notes:**
 
 > 处置的角色 阵营ID
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid PlaceGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 占领的地点
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 Reputation = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 声望
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FGuid,float> FavorabilityChange;` |
 
-**Source comments:**
+**Notes:**
 
 > 势力好感度变化 key 势力Guid value 变化的值
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 JusticeValue = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 正义值
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bNPCDisposal = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否已经处理NPC的战斗结算
 
@@ -119,12 +119,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EPlaceDisposalType` |
+| C++ type | [EPlaceDisposalType](../WorldStruct__EPlaceDisposalType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EPlaceDisposalType PlaceDisposalType = EPlaceDisposalType::OccupyPlace;` |
 
-**Source comments:**
+**Notes:**
 
 > 城镇处理
 

@@ -19,7 +19,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() AActor* RoofActor { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > 屋顶部位的Actor
 

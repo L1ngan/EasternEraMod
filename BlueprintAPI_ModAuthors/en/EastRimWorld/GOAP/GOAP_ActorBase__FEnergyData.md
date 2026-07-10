@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) float CurEnergyStorageValue = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前的能源储量
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) TArray<FGuid> ConnectBuildings;` |
 
-**Source comments:**
+**Notes:**
 
 > 连接的建筑物
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) TArray<FGuid> TemporaryConnectBuildings;` |
 
-**Source comments:**
+**Notes:**
 
 > 即将连接的建筑物（放置后未建造完成）
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) int32 CurPipelineGroup = -1;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前建筑物管道分组
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) int32 UpcomingChangePipelineGroup = INDEX_NONE;` |
 
-**Source comments:**
+**Notes:**
 
 > 即将变更管道分组
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) int32 EnableWhenClosedPipelineGroup = INDEX_NONE;` |
 
-**Source comments:**
+**Notes:**
 
 > 当建筑物是控制建筑物时 关闭状态启用的管道
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) int32 EnableWhenOnPipelineGroup = INDEX_NONE;` |
 
-**Source comments:**
+**Notes:**
 
 > 当建筑物是控制建筑物时 开启状态启用的管道
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) int32 UpcomingChangeEnableWhenClosedPipelineGroup = INDEX_NONE;` |
 
-**Source comments:**
+**Notes:**
 
 > 当建筑物是控制建筑物时 关闭状态启用即将变更的管道
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) int32 UpcomingChangeEnableWhenOnPipelineGroup = INDEX_NONE;` |
 
-**Source comments:**
+**Notes:**
 
 > 当建筑物是控制建筑物时 开启状态启用即将变更的管道
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid EnergyGridGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 所属的能量网Guid
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) bool bIsChangingPipelineGroup = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否正在更改管道
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 UpdateEnergyGenerateTimerID = INDEX_NONE;` |
 
-**Source comments:**
+**Notes:**
 
 > 生产能源计算定时器
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 UpdateEnergyExpendTimerID = INDEX_NONE;` |
 
-**Source comments:**
+**Notes:**
 
 > 消耗能源计算定时器
 
@@ -214,7 +214,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) int32 CurrentLowerLimitTime = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前下限时间
 
@@ -229,7 +229,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) int32 CurrentUpperLimitTime = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前上限时间
 
@@ -244,7 +244,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) int32 CurrentLowerLimitTemperature = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前下限温度
 
@@ -259,7 +259,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) int32 CurrentUpperLimitTemperature = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前上限温度
 
@@ -274,7 +274,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) float CurrentLowerLimitEnergy = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前下限能量
 
@@ -289,7 +289,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) float CurrentUpperLimitEnergy = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前上限能量
 
@@ -304,7 +304,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) TArray<float> GenerateTwentyFourHourEnergyArray;` |
 
-**Source comments:**
+**Notes:**
 
 > 计算的24小时产能数组
 
@@ -319,7 +319,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) float GenerateTwentyFourHourEnergy { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 计算的24小时产能总和
 
@@ -334,7 +334,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) TArray<float> ExpendTwentyFourHourEnergyArray;` |
 
-**Source comments:**
+**Notes:**
 
 > 计算的24小时耗能数组
 
@@ -349,7 +349,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, EditAnywhere,BlueprintReadOnly) float ExpendTwentyFourHourEnergy { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 计算的24小时耗能总和
 
@@ -359,12 +359,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EOverlockingType` |
+| C++ type | [EOverlockingType](../ERW_Enumerations__EOverlockingType.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,EditAnywhere,BlueprintReadOnly) EOverlockingType PracticeBuildingOverlockingState = EOverlockingType::Normal;` |
 
-**Source comments:**
+**Notes:**
 
 > 修炼建筑状态
 
@@ -379,7 +379,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 OverlockingDurationID = INDEX_NONE;` |
 
-**Source comments:**
+**Notes:**
 
 > 超频持续时间定时器
 
@@ -394,7 +394,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 CurOverlockingTime = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前超频状态持续时间
 
@@ -409,7 +409,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 OverlockingCoolingTimerID = INDEX_NONE;` |
 
-**Source comments:**
+**Notes:**
 
 > 超频冷却时间定时器
 

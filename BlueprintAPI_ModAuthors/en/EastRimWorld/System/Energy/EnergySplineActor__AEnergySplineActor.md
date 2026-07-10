@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Energy Spline Actor actor type.
 
 ## Blueprint-exposed functions
 
@@ -19,6 +21,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent) void InitSplineActor();`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Executes the Init Spline Actor operation.
 
 ---
 
@@ -39,7 +45,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 更新联系的位置
 

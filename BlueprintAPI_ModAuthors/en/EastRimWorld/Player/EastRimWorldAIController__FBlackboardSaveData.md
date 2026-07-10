@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) bool IsDataValid { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 存档数据是否有效
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FVectorData MoveGoal;` |
 
-**Source comments:**
+**Notes:**
 
 > 移动目标位置
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FName GoalID;` |
 
-**Source comments:**
+**Notes:**
 
 > GOAP目标ID
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FName ActionID;` |
 
-**Source comments:**
+**Notes:**
 
 > GOAP行为ID
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FName ItemID;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品ID
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 ItemNum { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 物品数量
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FTargetActorInfo TargetActorInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 目标Actor的信息
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid ItemGuid = FGuid();` |
 
-**Source comments:**
+**Notes:**
 
 > InventoryItemInstance的Guid
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 BranchingIndex = -1;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗中的路径分支
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 SlotIndex = -1;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应的slotIndex
 
@@ -164,12 +164,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECharacterBehaviorState` |
+| C++ type | [ECharacterBehaviorState](../Struct/CommonEnum__ECharacterBehaviorState.md) |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) ECharacterBehaviorState CharacterBehaviorState = ECharacterBehaviorState::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色当前状态
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FSoftObjectPath BehaviorTree;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色当前是用的行为树
 

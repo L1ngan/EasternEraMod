@@ -19,7 +19,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FTeamObservedAsyncDelegate OnTeamChanged;` |
 
-**源码注释:**
+**说明:**
 
 > Called when the team is set or changed
 
@@ -43,7 +43,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > Watches for team changes on the specified team agent
 > - It will will fire once immediately to give the current team assignment

@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Collect Save Data data structure.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = "Common") FName InventoryID;` |
 
-**Source comments:**
+**Notes:**
 
 > 采集物id
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float CurHealth = 0.0f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前健康值
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid Guid;` |
 
-**Source comments:**
+**Notes:**
 
 > Guid
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid SubstituteGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 替身Actor的Guid
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame,Category = "Common") FTransform ItemTransform;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品在世界中的位置
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame, Category = "Common") bool bOperationMark = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否被操作标记
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame, Category = "Common") bool bSelectState = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是选中状态
 
@@ -117,12 +119,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<ECommonButtonType,bool>` |
+| C++ type | TMap<[ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md),bool> |
 | Reflection specifiers | BlueprintReadOnly, Category="Common" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame, Category = "Common") TMap<ECommonButtonType,bool> ButtonOperationState;` |
 
-**Source comments:**
+**Notes:**
 
 > 相关按钮的状态 是否选中
 
@@ -132,12 +134,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EInventoryItemStateType` |
+| C++ type | [EInventoryItemStateType](ItemStruct__EInventoryItemStateType.md) |
 | Reflection specifiers | BlueprintReadOnly, Category="Common" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame, Category = "Common") EInventoryItemStateType InventoryItemStateType = EInventoryItemStateType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品状态
 
@@ -152,7 +154,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) bool bSuspendGrow = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否暂停生长
 
@@ -162,12 +164,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EGrowStageType` |
+| C++ type | [EGrowStageType](ItemStruct__EGrowStageType.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) EGrowStageType CurGrowStage = EGrowStageType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前的阶段
 
@@ -182,6 +184,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float CurGrowTime = {0.f};` |
 
+**Notes:**
+
+> Cur Grow Time field.
+
 ---
 
 ### Property `CurHarvestTime`
@@ -193,7 +199,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float CurHarvestTime = {0.f};` |
 
-**Source comments:**
+**Notes:**
 
 > 总收成时间 如果会结果
 
@@ -208,7 +214,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float CurStageGrowTime = {0.f};` |
 
-**Source comments:**
+**Notes:**
 
 > 阶段生长时间
 
@@ -223,7 +229,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int FellDurability { -1 };` |
 
-**Source comments:**
+**Notes:**
 
 > 砍伐耐久度
 
@@ -238,7 +244,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int HarvestDurability { -1 };` |
 
-**Source comments:**
+**Notes:**
 
 > 收割耐久度
 
@@ -253,7 +259,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int MiningDurability { -1 };` |
 
-**Source comments:**
+**Notes:**
 
 > 开采耐久度
 
@@ -267,5 +273,9 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int ExplorationTime { -1 };` |
+
+**Notes:**
+
+> Exploration Time field.
 
 ---

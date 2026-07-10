@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText AddAttributeLog;` |
 
-**Source comments:**
+**Notes:**
 
 > 增加属性日志富文本 "{0}属性+{1}"
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,meta=(MultiLine)) FString NewLineChar;` |
 
-**Source comments:**
+**Notes:**
 
 > 换行
 

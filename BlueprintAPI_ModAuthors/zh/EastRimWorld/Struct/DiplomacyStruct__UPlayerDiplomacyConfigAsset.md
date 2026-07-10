@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> Player Diplomacy Config Asset UObject 类型。
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<int32,int32> DiplomacyNumLevelLimit;` |
 
-**源码注释:**
+**说明:**
 
 > 门派等级可以结交门派的数量限制
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float DiplomacyCostMoneyCoefficient;` |
 
-**源码注释:**
+**说明:**
 
 > 结交所需金钱 = 对方门派声望 * 此系数
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float DiplomacySuccessAddFavor;` |
 
-**源码注释:**
+**说明:**
 
 > 结交成功增加好感度
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FText DiplomacySuccessTipText;` |
 
-**源码注释:**
+**说明:**
 
 > 结交成功提示文本
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float BrokenColdDown;` |
 
-**源码注释:**
+**说明:**
 
 > 断交操作冷却
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FText BrokenColdDownTipText;` |
 
-**源码注释:**
+**说明:**
 
 > 断交操作冷却提示文本
 
@@ -107,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float BrokenReduceFavor;` |
 
-**源码注释:**
+**说明:**
 
 > 断交减少的好感度(填正数)
 
@@ -122,9 +124,39 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float RequireTaskColdDown;` |
 
-**源码注释:**
+**说明:**
 
 > 请求任务冷却
+
+---
+
+### 属性 `RequireTaskColdDownTipText`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FText` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FText RequireTaskColdDownTipText;` |
+
+**说明:**
+
+> 请求任务操作冷却提示文本
+
+---
+
+### 属性 `RequireTaskDialogueGroupID`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FName` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FName RequireTaskDialogueGroupID;` |
+
+**说明:**
+
+> 请求任务对话组ID
 
 ---
 
@@ -137,8 +169,68 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float RequireHelpColdDown;` |
 
-**源码注释:**
+**说明:**
 
 > 请求援助冷却
+
+---
+
+### 属性 `RequireHelpColdDownTipText`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FText` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FText RequireHelpColdDownTipText;` |
+
+**说明:**
+
+> 请求任务操作冷却提示文本
+
+---
+
+### 属性 `RequireHelpDialogueGroupID`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FName` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FName RequireHelpDialogueGroupID;` |
+
+**说明:**
+
+> 请求援助对话组ID
+
+---
+
+### 属性 `GivePresentsDialogueGroupID`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FName` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FName GivePresentsDialogueGroupID;` |
+
+**说明:**
+
+> 上供对话组ID
+
+---
+
+### 属性 `TauntDialogueGroupID`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FName` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FName TauntDialogueGroupID;` |
+
+**说明:**
+
+> 嘲讽对话组ID
 
 ---

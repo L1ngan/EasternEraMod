@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) FName TreasureID;` |
 
-**Source comments:**
+**Notes:**
 
 > 商品ID
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) int32 Num = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 数量
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) int32 StallIndex = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 货柜
 

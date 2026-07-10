@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float ResidueItemShelfLife;` |
 
-**源码注释:**
+**说明:**
 
 > 剩余物品的保质期
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<int> ItemOwnEffects;` |
 
-**源码注释:**
+**说明:**
 
 > 此时物品自身生效的效果
 
@@ -44,12 +44,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EItemUseState` |
+| C++ 类型 | [EItemUseState](../Struct/ItemStruct__EItemUseState.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EItemUseState ItemUseState = EItemUseState::None;` |
 
-**源码注释:**
+**说明:**
 
 > 物品使用状态（穿戴中、搬运中等）
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int32 UsedNum = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 物品所处的环境
 > UPROPERTY(blueprintReadWrite,EditAnywhere)
@@ -82,7 +82,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float StorageSpaceEfficiency = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 环境效率
 
@@ -100,13 +100,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `NewItemUseState` | `EItemUseState` |
+| `NewItemUseState` | [EItemUseState](../Struct/ItemStruct__EItemUseState.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SetUseInventoryItemState(EItemUseState NewItemUseState);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置物品的使用状态
 
@@ -124,7 +124,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取物品信息
 
@@ -141,5 +141,9 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void ActivateItemToGenerateRobot();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 激活该物品以生成机器人
 
 ---

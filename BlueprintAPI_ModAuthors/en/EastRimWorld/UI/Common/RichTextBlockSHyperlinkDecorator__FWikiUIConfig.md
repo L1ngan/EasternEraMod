@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Appearance) FText TitleText;` |
 
-**Source comments:**
+**Notes:**
 
 > 标题
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Appearance) FText ClassifyText;` |
 
-**Source comments:**
+**Notes:**
 
 > 分类
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Appearance) TArray<FText> ContentText;` |
 
-**Source comments:**
+**Notes:**
 
 > 内容
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Appearance) TSoftObjectPtr<UObject> InfoIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 内容图标
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Appearance) FVector2D IconSize = FVector2D::ZeroVector;` |
 
-**Source comments:**
+**Notes:**
 
 > 内容图标
 

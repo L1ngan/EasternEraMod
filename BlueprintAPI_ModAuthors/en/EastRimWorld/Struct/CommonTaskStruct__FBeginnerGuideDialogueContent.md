@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 Index { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 说话角色索引
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FText Text;` |
 
-**Source comments:**
+**Notes:**
 
 > 显示文本
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FName MaleVoiceID;` |
 
-**Source comments:**
+**Notes:**
 
 > 语音id 读取 GameSoundInfo 配置表
 
@@ -63,5 +63,9 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FName FemaleVoiceID;` |
+
+**Notes:**
+
+> Female Voice ID field.
 
 ---

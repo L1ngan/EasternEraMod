@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) TArray<FFacilityBelongData> FacilityBelongData;` |
 
-**源码注释:**
+**说明:**
 
 > 设施归属数据
 

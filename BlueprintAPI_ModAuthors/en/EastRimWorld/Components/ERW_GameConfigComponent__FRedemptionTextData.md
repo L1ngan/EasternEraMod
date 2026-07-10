@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Redemption text table row: redemption texts mapped to a justice value range
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FVector2D JusticeValueRange = FVector2D::ZeroVector;` |
 
+**Notes:**
+
+> Applicable justice value range (X = min, Y = max)
+
 ---
 
 ### Property `RedemptionTexts`
@@ -27,5 +33,9 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FText> RedemptionTexts;` |
+
+**Notes:**
+
+> Redemption texts for this justice value range
 
 ---

@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> ForceCharacterData;` |
 
-**源码注释:**
+**说明:**
 
 > 势力中主城初始的角色 读取 CharacterPresetConfig
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<FName,FNameIDArray> ExpatriateCharacters;` |
 
-**源码注释:**
+**说明:**
 
 > 初始外派角色<地点ID,外派角色ID数组>
 
@@ -49,9 +49,9 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> ForceCharacterDataPool;` |
 
-**源码注释:**
+**说明:**
 
-> 势力中的抽取的角色池 读取 CharacterPresetConfig
+> 势力中的抽取的角色池 读取 CharacterPresetConfig(2026.6.12 废弃......)
 
 ---
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<int,FWorldNPCForceTroops> WorldNPCForceTroops;` |
 
-**源码注释:**
+**说明:**
 
 > ncp部队的信息
 
@@ -74,12 +74,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<EArmorType,[FNPCForceArmorPool](WorldStruct__FNPCForceArmorPool.md)> |
+| C++ 类型 | TMap<[EArmorType](../Struct/CommonEnum__EArmorType.md),[FNPCForceArmorPool](WorldStruct__FNPCForceArmorPool.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Cultivate" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Cultivate") TMap<EArmorType,FNPCForceArmorPool> ForceArmorDataPools;` |
 
-**源码注释:**
+**说明:**
 
 > 培养角色的防具池
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Cultivate") TMap<FName,float> ForceWeaponDataPool;` |
 
-**源码注释:**
+**说明:**
 
 > 培养角色的武器池<DT_EquipmentQualityRange表,成长积分以及权重>
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Cultivate") TMap<FName,float> ForceInternalStrengthDataPool;` |
 
-**源码注释:**
+**说明:**
 
 > 培养角色的内功武学池<ID,成长积分以及权重>
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Cultivate") TMap<FName,float> ForceMovesDataPool;` |
 
-**源码注释:**
+**说明:**
 
 > 培养角色的招式武学池<ID,成长积分以及权重>
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Cultivate") TMap<FName,float> ForcePassiveDataPool;` |
 
-**源码注释:**
+**说明:**
 
 > 培养角色的被动武学池<ID,成长积分以及权重>
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Cultivate") TMap<FGameplayAttribute,float> AttributeGrowScore;` |
 
-**源码注释:**
+**说明:**
 
 > 属性成长消耗的成长积分
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Cultivate") TMap<int32,FCultivateAttributeWeight> RealmGrowAttributeWeight;` |
 
-**源码注释:**
+**说明:**
 
 > 境界等级对应的属性成长权重
 
@@ -179,14 +179,29 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<ENPCCultivateCharacterType,[FNPCCultivateCharacterTypeData](WorldStruct__FNPCCultivateCharacterTypeData.md)> |
+| C++ 类型 | TMap<[ENPCCultivateCharacterType](WorldStruct__ENPCCultivateCharacterType.md),[FNPCCultivateCharacterTypeData](WorldStruct__FNPCCultivateCharacterTypeData.md)> |
 | 反射说明符 | BlueprintReadWrite, Category="Cultivate" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Cultivate") TMap<ENPCCultivateCharacterType,FNPCCultivateCharacterTypeData> CultivateCharacterTypes;` |
 
-**源码注释:**
+**说明:**
 
 > 培养角色的方式
+
+---
+
+### 属性 `RecruitRandomDiscipleConfigID`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FName` |
+| 反射说明符 | BlueprintReadWrite, Category="Cultivate" |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Cultivate") FName RecruitRandomDiscipleConfigID;` |
+
+**说明:**
+
+> 招募培养时随机生成弟子的配置ID（DT_RandomDiscipleConfig 表行；未配置或行无效则该势力无法招募）
 
 ---
 
@@ -199,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Cultivate") float CultivateAddMartialArtExp = 500.f;` |
 
-**源码注释:**
+**说明:**
 
 > 培养角色增加的武学经验
 
@@ -214,7 +229,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Cultivate") float StopCultivateGrowScore = 100.f;` |
 
-**源码注释:**
+**说明:**
 
 > 成长积分低于该值时停止培养角色
 
@@ -229,7 +244,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Cultivate") int32 MaxCultivateTimes = 10;` |
 
-**源码注释:**
+**说明:**
 
 > 单次最大培养角色次数
 
@@ -244,7 +259,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 LevelUpPlaceInterval = 3;` |
 
-**源码注释:**
+**说明:**
 
 > 定期升级城镇的间隔(天)
 
@@ -254,12 +269,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EWorldPlaceBuildType,int32>` |
+| C++ 类型 | TMap<[EWorldPlaceBuildType](WorldStruct__EWorldPlaceBuildType.md),int32> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<EWorldPlaceBuildType,int32> BuildTypeTendency;` |
 
-**源码注释:**
+**说明:**
 
 > 建造城镇设施的类型倾向(<类型,建造设施优先级加值>)
 
@@ -274,7 +289,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float AttackProportion = 0.9f;` |
 
-**源码注释:**
+**说明:**
 
 > 进攻其他城镇时的参战比例
 
@@ -289,7 +304,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<FName,int32> DogfaceSelectWeight;` |
 
-**源码注释:**
+**说明:**
 
 > 选择出战小兵的权重
 
@@ -304,7 +319,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<FName,int32> StrategicAbilitySelectWeight;` |
 
-**源码注释:**
+**说明:**
 
 > 选择战略技能的权重
 
@@ -319,8 +334,40 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<FName,int32> TowerDefenseSelectWeight;` |
 
-**源码注释:**
+**说明:**
 
 > 选择防御塔的权重
+
+---
+
+### 属性 `ForceApparelSets`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TMap<bool, [FForceApparelSetArray](WorldStruct__FForceApparelSetArray.md)> |
+| 反射说明符 | BlueprintReadWrite, Category="Appearance" |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Appearance") TMap<bool, FForceApparelSetArray> ForceApparelSets;` |
+
+**说明:**
+
+> 门派外观套装池（整套选取，保证风格统一）<性别(true=男/false=女), 套装数组>
+> 为空时降级使用 ForceArmorDataPools 按品质随机（小势力兜底）
+
+---
+
+### 属性 `ForceAvatarConfigPool`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TMap<bool, [FNameIDArray](../Struct/CommonStruct__FNameIDArray.md)> |
+| 反射说明符 | BlueprintReadWrite, Category="Appearance" |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Appearance") TMap<bool, FNameIDArray> ForceAvatarConfigPool;` |
+
+**说明:**
+
+> 门派立绘配置 ID 池（按性别）<性别(true=男/false=女), 立绘配置ID数组>
+> 元素为 DT_CharacterAvatarConfig 的行 ID，一个 ID 已含全部用途立绘；为空则保持模板行默认立绘
 
 ---

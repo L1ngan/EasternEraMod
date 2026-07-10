@@ -27,7 +27,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取Mod子系统
 
@@ -50,7 +50,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查Mod是否已加载
 
@@ -73,7 +73,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取Mod信息
 
@@ -97,7 +97,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 日志输出
 
@@ -121,13 +121,13 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
-> 注册控制台命令（供Lua调用）
+> 注册控制台命令（旧接口：无回调只打日志，保留兼容；Lua 侧请改用 RegisterModConsoleCommand）
 
 ---
 
-### 函数 `LoadAndApplyModInformationAssetByPath`
+### 函数 `LoadAndApplyModConfigFromJson`
 
 | 项目 | 内容 |
 |------|------|
@@ -137,15 +137,16 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `AssetPath` | `const FString&` |
+| `WorldContextObject` | `const UObject*` |
+| `ModId` | `const FName&` |
 | `bNewGameLoad` | `bool` |
 
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Mod System") static bool LoadAndApplyModInformationAssetByPath(const FString& AssetPath,bool bNewGameLoad);`
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Mod System") static bool LoadAndApplyModConfigFromJson(const UObject* WorldContextObject, const FName& ModId, bool bNewGameLoad);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
-> 通过路径加载并应用UModInformationAsset配置
+> 从 Mod 目录 JSON 配置加载并应用（ModInfo.json 中 DataTableConfigs / DataAssetConfigs）
 
 ---

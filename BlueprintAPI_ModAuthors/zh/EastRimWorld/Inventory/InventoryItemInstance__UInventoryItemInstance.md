@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 物品实例基类，管理物品的数据、世界表现（模型/替身/UI）与GOAP交互
 
 ## 蓝图暴露变量
 
@@ -17,6 +19,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FGuid ItemGuid;` |
 
+**说明:**
+
+> 物品实例的唯一Guid
+
 ---
 
 ### 属性 `ItemTransform`
@@ -28,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FTransform ItemTransform;` |
 
-**源码注释:**
+**说明:**
 
 > 物品在世界中的位置
 
@@ -43,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int32 InstanceIndex = -1;` |
 
-**源码注释:**
+**说明:**
 
 > 在持有者上的索引 例如ISM组件上的实例索引-1时无效 通常为不可靠 只有在PCGActor上可靠
 
@@ -58,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<FWarehouseSmallGrid> SmallGrids;` |
 
-**源码注释:**
+**说明:**
 
 > 此物品占用的小格子信息
 
@@ -68,12 +74,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EGroundSoilType` |
+| C++ 类型 | [EGroundSoilType](../ERW_Enumerations__EGroundSoilType.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) EGroundSoilType GroundSoilType = EGroundSoilType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 物品所在的地面类型
 
@@ -88,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float GroundRichPercent = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 物品所在的地面肥沃度
 
@@ -103,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSoftObjectPtr<UStaticMesh> CurStaticMesh;` |
 
-**源码注释:**
+**说明:**
 
 > 当前显示的模型
 
@@ -118,7 +124,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) bool bOperationMark = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否被操作标记
 
@@ -133,7 +139,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) bool bSelectState = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否是选中状态
 
@@ -148,7 +154,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) bool bHoveringState = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否是悬浮状态
 
@@ -158,12 +164,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<ECommonButtonType,bool>` |
+| C++ 类型 | TMap<[ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md),bool> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) TMap<ECommonButtonType,bool> ButtonOperationState;` |
 
-**源码注释:**
+**说明:**
 
 > 相关按钮的状态 是否选中
 
@@ -178,7 +184,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<UInventoryManagerComponent> InventoryManagerComponent = nullptr;` |
 
-**源码注释:**
+**说明:**
 
 > 他是谁在管理(目前仅指管理器) ,不可为空
 
@@ -193,7 +199,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AInventoryEntityActor> SubstituteActor = nullptr;` |
 
-**源码注释:**
+**说明:**
 
 > 此实例的替身actor
 
@@ -208,7 +214,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AInventoryItemWidgetActor> InventoryItemWidgetActor = nullptr;` |
 
-**源码注释:**
+**说明:**
 
 > 此实例的ui显示actor
 
@@ -223,6 +229,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnItemDestory OnItemDestory;` |
 
+**说明:**
+
+> 物品销毁时广播的委托
+
 ---
 
 ### 属性 `CurDurability`
@@ -234,7 +244,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) float CurDurability = -1;` |
 
-**源码注释:**
+**说明:**
 
 > 当前耐久度
 
@@ -249,7 +259,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) float CopyedTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 复制时间（已经进行复制的时间）
 
@@ -264,7 +274,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) int CopyNum= 0;` |
 
-**源码注释:**
+**说明:**
 
 > 已经复制的次数
 
@@ -279,7 +289,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) int CurAirDryingDegree = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 当前风干度
 
@@ -294,6 +304,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AWorldPlace> WorldPlace;` |
 
+**说明:**
+
+> 所属的世界地点引用
+
 ---
 
 ### 属性 `InventoryItemInfo`
@@ -305,7 +319,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly,Category= "ItemaInfo") FInstancedStruct InventoryItemInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 道具的信息
 
@@ -315,12 +329,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EInventoryItemStateType` |
+| C++ 类型 | [EInventoryItemStateType](../Struct/ItemStruct__EInventoryItemStateType.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) EInventoryItemStateType InventoryItemStateType = EInventoryItemStateType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 物品状态
 
@@ -340,7 +354,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查物品数量是否足够
 
@@ -358,7 +372,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除预留物品列表
 
@@ -376,7 +390,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 销毁
 
@@ -394,7 +408,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 当所属的InventoryManagerComponent销毁/EndPlay时调用。
 > 注意：不要在这里再去回调管理器的Add/Remove接口（管理器可能已不可用）。
@@ -420,7 +434,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > ~End IEastRimWorldCommonInterface
 > 设置新拥有者 管理器与拥有者时深度绑定 在管理器或持有者变动时理应一起变动
@@ -443,7 +457,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置替身actor
 
@@ -461,7 +475,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建替身
 
@@ -479,7 +493,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 释放替身
 
@@ -497,7 +511,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 释放数量actor
 
@@ -515,7 +529,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取可以操作此物品的实体 如果是ISM组件的实例则创建替身操作
 
@@ -539,7 +553,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 存放到仓库中
 
@@ -565,6 +579,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 将物品存放到交易区的指定小格中，可选择是否显示模型与UI
+
 ---
 
 ### 函数 `CheckSameType`
@@ -583,7 +601,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查是否是相同的物品
 
@@ -605,7 +623,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查是否是相同的物品
 
@@ -628,7 +646,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 增加物品的数量 返回当前的数量
 
@@ -650,7 +668,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 物品是否已经堆叠到上限
 
@@ -668,7 +686,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取物品的数量
 
@@ -686,7 +704,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新静态网格体的样式
 
@@ -708,7 +726,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 基于actor 创建静态网格体组件
 
@@ -731,7 +749,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建显示的ui
 
@@ -753,7 +771,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置新的位置旋转
 
@@ -775,7 +793,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置新的ui显示
 
@@ -793,7 +811,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 广播更新物品信息
 
@@ -811,7 +829,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取物品的基础信息
 
@@ -833,7 +851,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取搬运物品的数量
 
@@ -851,7 +869,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新物品所在的温度
 
@@ -869,7 +887,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 更新温度
 
@@ -887,7 +905,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取物品所在位置的温度
 
@@ -911,7 +929,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过action ID食用物品
 
@@ -922,14 +940,14 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable, BlueprintPure |
-| 返回类型 | `EStorageSpace` |
+| 返回类型 | [EStorageSpace](../ERW_Enumerations__EStorageSpace.md) |
 | 参数 | （无） |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintPure) virtual EStorageSpace GetStorageSpace(){return EStorageSpace::OutDoor;}`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取当前的环境
 
@@ -947,7 +965,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取当前的环境效率
 
@@ -965,7 +983,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 抄录书籍
 
@@ -983,7 +1001,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 物品改变或者销毁时处理action
 

@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Sound Change Event Config data structure.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,meta = (RowType = "/Script/EastRimWorld.SoundOperateConfig")) TArray<FDataTableRowHandle> SoundOperate;` |
 
-**Source comments:**
+**Notes:**
 
 > 事件关联的操作
 

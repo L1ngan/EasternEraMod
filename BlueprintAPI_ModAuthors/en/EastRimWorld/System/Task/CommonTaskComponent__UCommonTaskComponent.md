@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Common Task Component UObject type.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite, SaveGame,Category = "Task") TArray<FCommonTaskInstance> CurrentTask;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前任务
 
@@ -32,6 +34,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FUpdateTaskDelegate OnUpdateTaskDelegate;` |
 
+**Notes:**
+
+> On Update Task Delegate event or callback.
+
 ---
 
 ### Property `OnAddTaskDelegate`
@@ -43,7 +49,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FAddTaskDelegate OnAddTaskDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 新增任务
 
@@ -58,7 +64,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FRemoveTaskDelegate OnRemoveTaskDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 移除任务
 
@@ -73,7 +79,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FAddTrackTaskDelegate OnAddTrackTaskDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 添加追踪任务
 
@@ -88,7 +94,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FRemoveTrackTaskDelegate OnRemoveTrackTaskDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 移除追踪任务
 
@@ -103,7 +109,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FTaskComponentLoadSucceedDelegate OnTaskComponentLoadSucceedDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 加载成功
 
@@ -118,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame,meta=(AllowPrivateAccess = true)) TArray<FGuid> TrackTasks;` |
 
-**Source comments:**
+**Notes:**
 
 > 追踪任务
 
@@ -142,6 +148,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Gets or queries Check Can Accept Task By ID.
+
 ---
 
 ### Function `CheckCanAcceptTask`
@@ -159,6 +169,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure) bool CheckCanAcceptTask(const FCommonTaskInfo& TaskInfo);`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Gets or queries Check Can Accept Task.
 
 ---
 
@@ -178,7 +192,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除任务
 
@@ -200,6 +214,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Gets or queries Find Task By Guid.
+
 ---
 
 ### Function `FindTaskByID`
@@ -217,6 +235,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure) FCommonTaskInstance FindTaskByID(const FName& TaskID);`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Gets or queries Find Task By ID.
 
 ---
 
@@ -236,7 +258,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 调用委托
 
@@ -258,7 +280,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新任务进度
 
@@ -280,7 +302,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 完成一个任务
 
@@ -298,7 +320,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 调用委托
 
@@ -320,7 +342,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查是否含有此ID的任务
 
@@ -338,7 +360,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有任务
 
@@ -360,7 +382,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查前置任务
 
@@ -382,7 +404,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查阻断任务
 
@@ -404,7 +426,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查是否完成过某个任务
 
@@ -426,7 +448,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取任务完成次数
 
@@ -449,7 +471,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 提交任务物品
 
@@ -471,7 +493,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查任务是否提交了物品
 
@@ -494,7 +516,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 提交任务
 
@@ -517,7 +539,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 给奖励
 
@@ -539,7 +561,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 添加跟踪任务
 
@@ -561,7 +583,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除跟踪任务
 
@@ -583,7 +605,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 触发功能
 
@@ -605,7 +627,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 重置未完成任务进度
 
@@ -627,6 +649,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Remove Complete Task Record operation.
+
 ---
 
 ### Function `AddNPCTaskRecord`
@@ -646,6 +672,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Add NPC Task Record operation.
+
 ---
 
 ### Function `GetNPCTaskRecord`
@@ -663,5 +693,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<FName> GetNPCTaskRecord(const FName& CharacterID);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Gets or queries Get NPC Task Record.
 
 ---

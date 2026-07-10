@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FGuid SGUID = FGuid();` |
 
-**Source comments:**
+**Notes:**
 
 > ~ Save
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int32 Batch { INDEX_NONE };` |
 
-**Source comments:**
+**Notes:**
 
 > Action所在批次
 
@@ -49,9 +49,69 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool IsPullDown { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是拆除建筑
+
+---
+
+### Property `IsPriori`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool IsPriori { false };` |
+
+**Notes:**
+
+> 是否加入优先执行
+
+---
+
+### Property `TransBuildingType`
+
+| Field | Details |
+|------|------|
+| C++ type | [ETransBuildingType](../ERW_Enumerations__ETransBuildingType.md) |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) ETransBuildingType TransBuildingType { ETransBuildingType::None };` |
+
+**Notes:**
+
+> 移动建筑类型
+
+---
+
+### Property `WorkType`
+
+| Field | Details |
+|------|------|
+| C++ type | [EConstructionWorkType](ERW_ConstructionComponent__EConstructionWorkType.md) |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) EConstructionWorkType WorkType { EConstructionWorkType::Construction };` |
+
+**Notes:**
+
+> Current construction work type (construction or building repair)
+
+---
+
+### Property `RebuiltID`
+
+| Field | Details |
+|------|------|
+| C++ type | `FName` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) FName RebuiltID;` |
+
+**Notes:**
+
+> 重建后的建筑ID
 
 ---
 
@@ -64,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FName , int32> NeedResources;` |
 
-**Source comments:**
+**Notes:**
 
 > 建造所需资源
 > TMap<资源ID , 数量>
@@ -80,7 +140,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FName , int32> CurrentResources;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前拥有资源
 > TMap<资源ID , 数量>
@@ -96,7 +156,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int32 MaxWorkload { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 完成建造需要工作量
 
@@ -111,7 +171,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int32 CurrentWorkload { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 当前接收工作量
 
@@ -126,7 +186,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FName , FGOAP_Action> Actions;` |
 
-**Source comments:**
+**Notes:**
 
 > 建造资源对应的GOAPAction
 > TMap<资源ID , GOAPAction>
@@ -142,9 +202,39 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FGOAP_Action ConstructAction;` |
 
-**Source comments:**
+**Notes:**
 
 > 建造Action
+
+---
+
+### Property `GetBuildingAction`
+
+| Field | Details |
+|------|------|
+| C++ type | [FGOAP_Action](../GOAP/GOAP_Data__FGOAP_Action.md) |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FGOAP_Action GetBuildingAction;` |
+
+**Notes:**
+
+> 获得建筑Action
+
+---
+
+### Property `TransferAction`
+
+| Field | Details |
+|------|------|
+| C++ type | [FGOAP_Action](../GOAP/GOAP_Data__FGOAP_Action.md) |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FGOAP_Action TransferAction;` |
+
+**Notes:**
+
+> 迁移Action
 
 ---
 
@@ -157,7 +247,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) FUObjectData OwnerData;` |
 
-**Source comments:**
+**Notes:**
 
 > Owner的数据
 
@@ -172,7 +262,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnAddResourceChange OnAddResourceChange;` |
 
-**Source comments:**
+**Notes:**
 
 > 通知建造资源变化（id+最新的数量）
 
@@ -187,7 +277,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnWorkloadChange OnWorkloadChange;` |
 
-**Source comments:**
+**Notes:**
 
 > 通知工作量发生改变
 
@@ -208,12 +298,14 @@
 | `Resources` | `const TMap<FName , int32>&` |
 | `Workload` | `int32` |
 | `BuildObject` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `LayerNum` | `int32` |
+| `ExtraConsume` | `float` |
 
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void InitResources(const TMap<FName , int32>& Resources , int32 Workload , AGOAP_ActorBase* BuildObject);`
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void InitResources(const TMap<FName , int32>& Resources , int32 Workload , AGOAP_ActorBase* BuildObject , int32 LayerNum , float ExtraConsume);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化所需资源
 
@@ -236,9 +328,89 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建建造GOAP
+
+---
+
+### Function `CreateGetBuildingAction`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `false` | `bool FromLoading =` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CreateGetBuildingAction(bool FromLoading = false);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 创建获得建筑Action
+
+---
+
+### Function `RemoveGetBuildingAction`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void RemoveGetBuildingAction();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 移除获得建筑Action
+
+---
+
+### Function `CreateTransferAction`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `false` | `bool FromLoading =` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CreateTransferAction(bool FromLoading = false);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 创建移动建筑Action
+
+---
+
+### Function `RemoveTransferAction`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void RemoveTransferAction();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 移除移动建筑Action
 
 ---
 
@@ -258,7 +430,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获得搬运物品数量
 
@@ -280,9 +452,27 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 有人提交建造资源时
+
+---
+
+### Function `HasEnoughPlayerResourcesForRemaining`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintPure, Category="Construction" |
+| Return type | `bool` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintPure, Category = "Construction") bool HasEnoughPlayerResourcesForRemaining() const;`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 玩家背包是否满足剩余建材缺口
 
 ---
 
@@ -303,7 +493,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 接收工作量
 
@@ -325,7 +515,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 重置工作量
 
@@ -348,7 +538,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 拆除工作
 
@@ -366,8 +556,44 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除建造GOAP
+
+---
+
+### Function `AddToPrioriBatchActions`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void AddToPrioriBatchActions();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 将所有建造相关的Action加入优先Action中
+
+---
+
+### Function `RemoveFromPrioriBatchActions`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void RemoveFromPrioriBatchActions();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 将所有建造相关的Action从优先Action中移除
 
 ---

@@ -20,7 +20,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY(EditDefaultsOnly) TSubclassOf<UGameplayEffect> GameplayEffect = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > Gameplay effect to grant.
 
@@ -35,7 +35,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY(EditDefaultsOnly) float EffectLevel = 1.0f;` |
 
-**Source comments:**
+**Notes:**
 
 > Level of gameplay effect to grant.
 

@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> East Rim World Tab List Widget Base UObject 类型。
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable, Category = "Tab List") FOnTabContentCreated OnTabContentCreated;` |
 
-**源码注释:**
+**说明:**
 
 > Broadcasts when a new tab is created.
 
@@ -42,6 +44,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 获取或查询 Get Preregistered Tab Info。
+
 ---
 
 ### 函数 `SetTabHiddenState`
@@ -61,7 +67,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > Toggles whether or not a specified tab is hidden, can only be called before the switcher is associated
 
@@ -83,6 +89,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 执行 Register Dynamic Tab 操作。
+
 ---
 
 ### 函数 `IsFirstTabActive`
@@ -97,6 +107,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取或查询 Is First Tab Active。
+
 ---
 
 ### 函数 `IsLastTabActive`
@@ -110,6 +124,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Tab List") bool IsLastTabActive() const;`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取或查询 Is Last Tab Active。
 
 ---
 
@@ -129,6 +147,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 获取或查询 Is Tab Visible。
+
 ---
 
 ### 函数 `GetVisibleTabCount`
@@ -142,5 +164,9 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Tab List") int32 GetVisibleTabCount();`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 获取或查询 Get Visible Tab Count。
 
 ---

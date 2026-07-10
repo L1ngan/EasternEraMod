@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="MartialArts") FGameplayTag AbilityClassifyTag;` |
 
-**源码注释:**
+**说明:**
 
 > 技能分类标签(什么技能标签会触发这些效果)
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="MartialArts") TMap<FGameplayTag, FEastRimWorldGameplayEffectContainer> EffectContainerMap;` |
 
-**源码注释:**
+**说明:**
 
 > 技能效果
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="MartialArts") TMap<FGameplayTag,FAbilityProjectileStruct> AnimationSpawnProjectiles;` |
 
-**源码注释:**
+**说明:**
 
 > 触发的投射物
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="MartialArts") TArray<FGameplayTag> AttributesTag;` |
 
-**源码注释:**
+**说明:**
 
 > Tag属性分类标签(例如是什么伤害类型)
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="MartialArts") FGameplayTag ClassifyTag;` |
 
-**源码注释:**
+**说明:**
 
 > 分类标签
 

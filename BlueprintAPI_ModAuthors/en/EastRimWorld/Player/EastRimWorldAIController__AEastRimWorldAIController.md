@@ -20,20 +20,9 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnActionChange OnActionChangeEvent;` |
 
-**Source comments:**
+**Notes:**
 
 > [自定义事件]当AI的行为发生改变
-
----
-
-### Property `OnWeaponChanged`
-
-| Field | Details |
-|------|------|
-| C++ type | `FOnWeaponChanged` |
-| Reflection specifiers | BlueprintAssignable |
-| Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnWeaponChanged OnWeaponChanged;` |
 
 ---
 
@@ -46,27 +35,9 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnEquipmentChanged OnEquipmentChanged;` |
 
----
+**Notes:**
 
-### Property `InventoryManagerComponent`
-
-| Field | Details |
-|------|------|
-| C++ type | TObjectPtr<[UInventoryManagerComponent](../Inventory/InventoryManagerComponent__UInventoryManagerComponent.md)> |
-| Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="Inventory" |
-| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
-| Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Inventory", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UInventoryManagerComponent> InventoryManagerComponent;` |
-
----
-
-### Property `AIPerceptionComponent`
-
-| Field | Details |
-|------|------|
-| C++ type | `TObjectPtr<UAIPerceptionComponent>` |
-| Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="AIPerception" |
-| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
-| Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AIPerception", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UAIPerceptionComponent> AIPerceptionComponent;` |
+> OnWeaponChanged 已下沉到 AERW_BaseAIController
 
 ---
 
@@ -79,7 +50,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) UGOAP_PlanComponent* PlanComponent { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > GOAP寻找计划组件
 
@@ -94,7 +65,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) UGOAP_MemoryComponent* GOAP_MemoryComponent { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > GOAP记忆组件
 
@@ -109,6 +80,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) UGOAP_ActionComponent* GoapActionComponent{ nullptr };` |
 
+**Notes:**
+
+> GOAP action component
+
 ---
 
 ### Property `GameplayAbilities`
@@ -120,7 +95,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TMap<FName , UEastRimWorldGameplayAbility*> GameplayAbilities;` |
 
-**Source comments:**
+**Notes:**
 
 > GOAP目标对应的能力
 > TMap<GOAP目标 , 能力>
@@ -136,7 +111,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TMap<FName , FActiveGameplayEffectHandle> AttributeGEs;` |
 
-**Source comments:**
+**Notes:**
 
 > GOAP属性值对应的GE
 > TMap<GOAP属性 , 对应的GE>
@@ -152,7 +127,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) TMap<FName , int32> AttributeTimers;` |
 
-**Source comments:**
+**Notes:**
 
 > GOAP属性值对应的Timer
 > TMap<GOAP属性 , TimerID>
@@ -168,7 +143,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<FName , FUObjectData> OwnFacilities;` |
 
-**Source comments:**
+**Notes:**
 
 > GOAP目标ID对应的专属设备数据
 > TMap<GOAP目标ID , 设备数据>
@@ -184,7 +159,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TSubclassOf<UNavigationQueryFilter> FilterClass;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色使用的寻路类
 
@@ -199,16 +174,9 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TObjectPtr<UERW_GameInstanceBase> GameInstance;` |
 
----
+**Notes:**
 
-### Property `GameModeBase`
-
-| Field | Details |
-|------|------|
-| C++ type | [AERW_GameModeBase](../Framework/ERW_GameModeBase__AERW_GameModeBase.md) * |
-| Reflection specifiers | BlueprintReadOnly |
-| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) AERW_GameModeBase * GameModeBase = nullptr;` |
+> Cached reference to the game instance (UERW_GameInstanceBase)
 
 ---
 
@@ -221,6 +189,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AWorldPlace> WorldPlace;` |
 
+**Notes:**
+
+> Reference to the world place (AWorldPlace) this AI currently belongs to
+
 ---
 
 ### Property `ControlledCharacter`
@@ -232,7 +204,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TObjectPtr<AEastRimWorldCharacter> ControlledCharacter;` |
 
-**Source comments:**
+**Notes:**
 
 > 控制的角色
 
@@ -247,7 +219,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) FGuid SGUID;` |
 
-**Source comments:**
+**Notes:**
 
 > ~ Save
 
@@ -262,7 +234,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) int32 OutputWorkloadTimerID { -1 };` |
 
-**Source comments:**
+**Notes:**
 
 > 输出工作量计时器ID
 
@@ -277,7 +249,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool RecoverGA { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是读档回来需要恢复GA
 
@@ -292,7 +264,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) FGOAP_Action CacheAction;` |
 
-**Source comments:**
+**Notes:**
 
 > 缓存Action
 
@@ -307,100 +279,9 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FName InControlledGoalId = TEXT("InControlled");` |
 
-**Source comments:**
+**Notes:**
 
 > 被控制的Goal的ID
-
----
-
-### Property `AbilityReleaseTarget`
-
-| Field | Details |
-|------|------|
-| C++ type | `AActor *` |
-| Reflection specifiers | BlueprintReadOnly |
-| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) AActor * AbilityReleaseTarget = nullptr;` |
-
-**Source comments:**
-
-> 当前技能的释放目标
-
----
-
-### Property `CurSelectAbilitySpec`
-
-| Field | Details |
-|------|------|
-| C++ type | `FGameplayAbilitySpec` |
-| Reflection specifiers | BlueprintReadOnly |
-| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FGameplayAbilitySpec CurSelectAbilitySpec;` |
-
-**Source comments:**
-
-> 当前选择释放的技能
-
----
-
-### Property `PreRequisiteAbilitySpec`
-
-| Field | Details |
-|------|------|
-| C++ type | `FGameplayAbilitySpec` |
-| Reflection specifiers | BlueprintReadOnly |
-| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FGameplayAbilitySpec PreRequisiteAbilitySpec;` |
-
-**Source comments:**
-
-> 当前选择的前置技能 额外移动等
-
----
-
-### Property `Scoffer`
-
-| Field | Details |
-|------|------|
-| C++ type | `TWeakObjectPtr<AActor>` |
-| Reflection specifiers | BlueprintReadWrite |
-| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TWeakObjectPtr<AActor> Scoffer;` |
-
-**Source comments:**
-
-> 嘲讽者
-
----
-
-### Property `SelfPerceiveHostileActors`
-
-| Field | Details |
-|------|------|
-| C++ type | `TArray<TObjectPtr<AActor>>` |
-| Reflection specifiers | BlueprintReadOnly |
-| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
-| Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) TArray<TObjectPtr<AActor>> SelfPerceiveHostileActors;` |
-
-**Source comments:**
-
-> Update Team Attitude for the AI
-> 自身感知到的敌对actor
-
----
-
-### Property `Attackers`
-
-| Field | Details |
-|------|------|
-| C++ type | `TArray<AActor*>` |
-| Reflection specifiers | BlueprintReadOnly |
-| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
-| Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) TArray<AActor*> Attackers;` |
-
-**Source comments:**
-
-> 攻击者 在脱离战斗后清理
 
 ---
 
@@ -413,8 +294,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AActor> HuntingTargetActor;` |
 
-**Source comments:**
+**Notes:**
 
+> Update Team Attitude for the AI
+> SelfPerceiveHostileActors / Attackers 已下沉到 AERW_BaseAIController
 > 狩猎的目标
 
 ---
@@ -428,7 +311,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) TArray<TObjectPtr<AActor>> BuildingActors;` |
 
-**Source comments:**
+**Notes:**
 
 > 感知到的建筑物
 
@@ -443,7 +326,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere,Category = "Equipment"); TMap<EArmorType,FCharacterApparel> Equipments;` |
 
-**Source comments:**
+**Notes:**
 
 > 携带的装备（实际是装备在身上的部位对应的装备信息）
 
@@ -456,71 +339,12 @@
 | C++ type | `` |
 | Reflection specifiers | BlueprintReadOnly, Category="Equipment" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere, Category = "Equipment"); TArray<FCharacterWeapon> Weapons;` |
-
-**Source comments:**
-
-> 携带的武器
-
----
-
-### Property `?`
-
-| Field | Details |
-|------|------|
-| C++ type | `` |
-| Reflection specifiers | BlueprintReadOnly, Category="Equipment" |
-| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere, Category = "Equipment"); FCharacterTool OwnTool;` |
 
-**Source comments:**
+**Notes:**
 
+> Weapons / UseCharacterWeapon / UseCharacterWeaponInstance / NextChangeCharacterWeapon 已下沉到 AERW_BaseAIController
 > 携带的工具
-
----
-
-### Property `?`
-
-| Field | Details |
-|------|------|
-| C++ type | `` |
-| Reflection specifiers | BlueprintReadOnly, Category="Equipment" |
-| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere, Category = "Equipment"); FCharacterWeapon UseCharacterWeapon;` |
-
-**Source comments:**
-
-> 当前使用的武器
-
----
-
-### Property `?`
-
-| Field | Details |
-|------|------|
-| C++ type | `` |
-| Reflection specifiers | BlueprintReadOnly, Category="Equipment" |
-| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere, Category = "Equipment"); UInventoryItemInstance* UseCharacterWeaponInstance;` |
-
-**Source comments:**
-
-> 当前使用的武器实例
-
----
-
-### Property `?`
-
-| Field | Details |
-|------|------|
-| C++ type | `` |
-| Reflection specifiers | BlueprintReadOnly, Category="Equipment" |
-| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere, Category = "Equipment"); FCharacterWeapon NextChangeCharacterWeapon;` |
-
-**Source comments:**
-
-> 将要切换的武器
 
 ---
 
@@ -533,6 +357,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUpdateCharacterBehaviorState OnUpdateCharacterBehaviorState;` |
 
+**Notes:**
+
+> Delegate broadcast when the character behavior state is updated
+
 ---
 
 ### Property `?`
@@ -544,7 +372,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere, Category = "Equipment"); TMap<FActiveGameplayEffectHandle,FCharacterEquipment> EquipmentEffectHandles;` |
 
-**Source comments:**
+**Notes:**
 
 > 装备的effect handle
 
@@ -559,9 +387,54 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool bClothingDisplay = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 衣服是否显示
+
+---
+
+### Property `CharacterSectCombatCommandState`
+
+| Field | Details |
+|------|------|
+| C++ type | [ECharacterSectCombatCommandState](../Struct/CommonEnum__ECharacterSectCombatCommandState.md) |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) ECharacterSectCombatCommandState CharacterSectCombatCommandState = ECharacterSectCombatCommandState::FollowPlayer;` |
+
+**Notes:**
+
+> 门派战模式
+
+---
+
+### Property `OnCharacterSectCombatCommandStateChanged`
+
+| Field | Details |
+|------|------|
+| C++ type | `FOnCharacterSectCombatCommandStateChanged` |
+| Reflection specifiers | BlueprintAssignable |
+| Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnCharacterSectCombatCommandStateChanged OnCharacterSectCombatCommandStateChanged;` |
+
+**Notes:**
+
+> 门派战模式变化广播
+
+---
+
+### Property `bInSquad`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | BlueprintReadOnly, Category="Squad" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "Squad") bool bInSquad = false;` |
+
+**Notes:**
+
+> 是否已加入编组（由编组系统维护）
 
 ---
 
@@ -574,7 +447,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Summons", Meta = (AllowPrivateAccess = "true")) TObjectPtr<AEastRimWorldAIController> SummonsAI;` |
 
-**Source comments:**
+**Notes:**
 
 > 控制的召唤物
 
@@ -599,7 +472,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获得属性消耗比率
 
@@ -622,7 +495,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查是否需要移除属性GOAP目标
 
@@ -644,7 +517,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 获得工作日程分值
 
@@ -666,7 +539,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算所有GOAP目标的分值
 
@@ -684,7 +557,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters. Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 获得胶囊体半径
 
@@ -702,7 +575,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取控制的角色actor
 
@@ -720,19 +593,9 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
----
+**Notes:**
 
-### Function `GetGameModeBase`
-
-| Field | Details |
-|------|------|
-| Reflection specifiers | BlueprintCallable |
-| Return type | [AERW_GameModeBase](../Framework/ERW_GameModeBase__AERW_GameModeBase.md) * |
-| Parameters | (none) |
-
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) AERW_GameModeBase * GetGameModeBase();`
-
-**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+> Returns the player controller base (AERW_PlayerControllerBase) instance
 
 ---
 
@@ -753,8 +616,9 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
+> GetGameModeBase 已下沉到 AERW_BaseAIController
 > 开始输出工作量
 
 ---
@@ -771,7 +635,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 寻找计划
 
@@ -789,7 +653,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 执行计划
 
@@ -806,6 +670,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent , Category = "GOAP",DisplayName= "ExecutePlans") void K2_ExecutePlans();`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Blueprint event for executing GOAP plans (Blueprint implementation entry of ExecutePlans)
 
 ---
 
@@ -825,7 +693,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 中断计划
 
@@ -843,7 +711,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 外部调用执行计划完成 例如输出工作量完成后调用
 
@@ -861,6 +729,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Blueprint event called when GOAP plan execution completes (e.g. after workload output finishes)
+
 ---
 
 ### Function `K2_AbortPlansComplete`
@@ -874,6 +746,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent , Category = "GOAP",DisplayName="AbortPlanComplete") void K2_AbortPlansComplete();`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Blueprint event called when aborting GOAP plans has completed
 
 ---
 
@@ -893,7 +769,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > GA内部调用完成
 
@@ -911,9 +787,31 @@
 |--------|------|
 | `bAbortPlan` | `bool` |
 
-**Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent, Category = "GOAP",DisplayName= "CompleteAction") void K2_CompleteAction(bool bAbortPlan);`
+**Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent, Category = "GOAP", DisplayName = "CompleteAction") void K2_CompleteAction(bool bAbortPlan);`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Blueprint event called when the current action completes (invoked from within the GA; bAbortPlan indicates whether the plan is aborted)
+
+---
+
+### Function `K2_HideControlBehaviorUI`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintImplementableEvent, Category="ControlBehavior" |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent, Category = "ControlBehavior", DisplayName = "HideControlBehaviorUI") void K2_HideControlBehaviorUI();`
+
+**Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> 行为结束时隐藏相关 UI（在 AI 控制器蓝图中实现）
 
 ---
 
@@ -933,7 +831,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 立即添加目标，并中断当前行为
 
@@ -955,7 +853,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除并中断当前行为
 
@@ -977,7 +875,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 添加目标组
 
@@ -999,7 +897,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除目标组
 
@@ -1017,7 +915,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查角色是否发动了行为GA(用来看角色是否在执行行为的路上)
 
@@ -1035,7 +933,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获得当前计划的物品使用时间
 
@@ -1053,7 +951,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > Action开始执行前
 
@@ -1075,7 +973,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 记录当前正在执行的GA
 
@@ -1097,7 +995,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除当前正在执行的GA
 
@@ -1119,7 +1017,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获得能力存档数据
 
@@ -1141,7 +1039,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 获得能力存档数据
 
@@ -1159,7 +1057,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 将拿着的物品生成到世界中
 
@@ -1177,7 +1075,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 将所有物品（身上，背包）生成在世界中
 
@@ -1199,7 +1097,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters. Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 获得搬运物品数量
 
@@ -1215,13 +1113,13 @@
 
 | Name | Type |
 |--------|------|
-| `EatItems` | TMap<EGameConfigType , [FIDs](../ERW_CommonTypes__FIDs.md)>& |
+| `EatItems` | TMap<[EGameConfigType](../Components/ERW_GameConfigComponent__EGameConfigType.md) , [FIDs](../ERW_CommonTypes__FIDs.md)>& |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void GetEatItems(TMap<EGameConfigType , FIDs>& EatItems) const;`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获得能吃的对象ID
 
@@ -1243,7 +1141,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 开始读书
 
@@ -1266,7 +1164,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 手动结束读书
 
@@ -1289,7 +1187,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 手动结束吃东西
 
@@ -1311,7 +1209,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 开始抄录
 
@@ -1329,27 +1227,9 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 检查当前工作日程对应的GOAP目标
-
----
-
-### Function `GetGenericTeamId`
-
-| Field | Details |
-|------|------|
-| Reflection specifiers | BlueprintCallable |
-| Return type | `FGenericTeamId` |
-| Parameters | (none) |
-
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) virtual FGenericTeamId GetGenericTeamId() const override;`
-
-**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
-
-**Source comments:**
-
-> ~IEastRimWorldTeamAgentInterface interface
 
 ---
 
@@ -1369,27 +1249,9 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
----
+**Notes:**
 
-### Function `IsInAttackTargetList`
-
-| Field | Details |
-|------|------|
-| Reflection specifiers | BlueprintPure |
-| Return type | `bool` |
-| Parameters | see table below |
-
-| Name | Type |
-|--------|------|
-| `InActor` | `AActor*` |
-
-**Original declaration (excerpt):** `UFUNCTION(BlueprintPure) bool IsInAttackTargetList(AActor* InActor);`
-
-**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
-
-**Source comments:**
-
-> 检查是否在攻击列表
+> Sets the AI's generic team ID (IEastRimWorldTeamAgentInterface implementation)
 
 ---
 
@@ -1405,7 +1267,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否自身可以战斗
 
@@ -1429,7 +1291,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取AI感知配置
 
@@ -1447,7 +1309,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取角色当前执行的动作能力
 
@@ -1465,7 +1327,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取动物当前执行的动作能力
 
@@ -1488,7 +1350,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新感知到的actor
 
@@ -1506,7 +1368,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取狩猎目标
 
@@ -1524,7 +1386,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 遗忘所有的actor
 
@@ -1546,7 +1408,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除死亡的感知对象
 
@@ -1568,6 +1430,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Removes a knocked-down actor from the perceived actor list
+
 ---
 
 ### Function `BeAttackedLossDurability`
@@ -1581,13 +1447,13 @@
 | Name | Type |
 |--------|------|
 | `ArmorGuid` | `FGuid` |
-| `ArmorType` | `EArmorType` |
+| `ArmorType` | [EArmorType](../Struct/CommonEnum__EArmorType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void BeAttackedLossDurability(FGuid ArmorGuid , EArmorType ArmorType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 被攻击掉防具耐久
 
@@ -1610,7 +1476,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 将身上的物品丢弃到世界上(包括脱下装备)
 
@@ -1633,7 +1499,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 具有位置信息的丢弃装备
 
@@ -1655,7 +1521,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据一个物品实例装备一个装备
 
@@ -1677,7 +1543,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 读档穿戴装备
 
@@ -1699,7 +1565,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通知GOAP去拿起装备，并穿上装备
 
@@ -1721,7 +1587,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除获取装备行为
 
@@ -1743,7 +1609,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通知GOAP去拿起书去读
 
@@ -1765,7 +1631,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通知GOAP去拿起东西吃
 
@@ -1787,7 +1653,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除指定物品的预留数量
 
@@ -1810,7 +1676,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 读书消耗耐久度
 
@@ -1832,7 +1698,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通知GOAP去拿起书去抄录
 
@@ -1855,7 +1721,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 抄录消耗耐久度
 
@@ -1871,14 +1737,14 @@
 
 | Name | Type |
 |--------|------|
-| `EquipmentType` | `EEquipmentType` |
-| `ArmorType` | `EArmorType` |
+| `EquipmentType` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
+| `ArmorType` | [EArmorType](../Struct/CommonEnum__EArmorType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool IsHaveEquipedItemtByType(EEquipmentType EquipmentType, EArmorType ArmorType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否有装备
 
@@ -1894,14 +1760,14 @@
 
 | Name | Type |
 |--------|------|
-| `EquipmentType` | `EEquipmentType` |
-| `ArmorType` | `EArmorType` |
+| `EquipmentType` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
+| `ArmorType` | [EArmorType](../Struct/CommonEnum__EArmorType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) UCanUseInventoryItemInstance* FindEquipmentByType(EEquipmentType EquipmentType, EArmorType ArmorType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据装备类型查找身上装备中的装备
 
@@ -1923,7 +1789,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获得一个装备（实际是根据配置装备一个物品）
 
@@ -1945,7 +1811,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过武器ID获得一个装备
 
@@ -1967,7 +1833,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过防具ID获得一个装备
 
@@ -1989,7 +1855,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过装备存档数据生成实例并装备
 
@@ -2012,7 +1878,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除一个装备
 
@@ -2028,38 +1894,16 @@
 
 | Name | Type |
 |--------|------|
-| `EquipmentType` | `EEquipmentType` |
-| `(unnamed / type only)` | `EArmorType ArmorType = EArmorType::None` |
+| `EquipmentType` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
+| `(unnamed / type only)` | [EArmorType](../Struct/CommonEnum__EArmorType.md) ArmorType = [EArmorType](../Struct/CommonEnum__EArmorType.md)::None |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void ChangeDefaultEquipment(EEquipmentType EquipmentType,EArmorType ArmorType = EArmorType::None);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > /切换成默认的装备
-
----
-
-### Function `ChangeCharacterWeapon`
-
-| Field | Details |
-|------|------|
-| Reflection specifiers | BlueprintCallable |
-| Return type | `bool` |
-| Parameters | see table below |
-
-| Name | Type |
-|--------|------|
-| `CharacterWeapon` | const [FCharacterWeapon](../Struct/ItemStruct__FCharacterWeapon.md) & |
-
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool ChangeCharacterWeapon(const FCharacterWeapon & CharacterWeapon);`
-
-**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
-
-**Source comments:**
-
-> 切换角色武器
 
 ---
 
@@ -2074,14 +1918,15 @@
 | Name | Type |
 |--------|------|
 | `Id` | `FName` |
-| `Type` | `EArmorType` |
+| `Type` | [EArmorType](../Struct/CommonEnum__EArmorType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent) void ChangeApparelById(FName Id,EArmorType Type);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
+> CheckAbilityCanRelease / ChangeCharacterWeapon / OnChangeNextWeapon / ChangeWeaponComplete / CheckCanChangeWeapon 已下沉到 AERW_BaseAIController
 > 切换外观
 
 ---
@@ -2102,7 +1947,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置控制的召唤物
 
@@ -2124,7 +1969,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置当前角色的被控制状态
 
@@ -2142,7 +1987,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 当前是否是被控制状态
 
@@ -2160,7 +2005,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 是否正在控制召唤物
 
@@ -2182,7 +2027,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 发动GA
 
@@ -2200,7 +2045,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 停止当前蒙太奇动画
 
@@ -2222,7 +2067,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 激活装备属性
 
@@ -2244,7 +2089,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除装备属性
 
@@ -2266,9 +2111,32 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 广播AI行为发生改变
+
+---
+
+### Function `TryTriggerConsumableUse`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `ActionID` | `const FName&` |
+| `bActionStart` | `bool` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void TryTriggerConsumableUse(const FName& ActionID,bool bActionStart);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 尝试触发耗材使用（仅人类角色 ActionID=GOAP_Action_Data表行名 bActionStart true=行为开始 false=行为结束 需检测的行为ID配置在UConsumableConfigAsset）
 
 ---
 
@@ -2284,7 +2152,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 初始化GOAP信息
 
@@ -2306,7 +2174,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取当前所有动态添加的goal(不在TeamInfo配置中的goal)
 
@@ -2329,7 +2197,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 检查并加入指定物品GOAP目标
 
@@ -2353,7 +2221,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 加入指定物品GOAP Action
 
@@ -2371,27 +2239,9 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 当拿起指定物品时
-
----
-
-### Function `HoldWeaponAndSwitchCombatStance`
-
-| Field | Details |
-|------|------|
-| Reflection specifiers | BlueprintCallable |
-| Return type | `void` |
-| Parameters | (none) |
-
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void HoldWeaponAndSwitchCombatStance();`
-
-**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
-
-**Source comments:**
-
-> 手持一把武器并切换到战斗姿态
 
 ---
 
@@ -2407,7 +2257,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 将携带的物品放下（丢在当前位置）
 
@@ -2425,7 +2275,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 吃东西结束时
 
@@ -2443,7 +2293,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 清理行为相关的数据 （拿着的模型 ，行为树 物品ID ，物品数量)
 
@@ -2461,7 +2311,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取当前世界的初始化goal
 
@@ -2483,7 +2333,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 出生后延迟行动
 
@@ -2501,7 +2351,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 暂停
 
@@ -2519,7 +2369,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 暂停
 
@@ -2541,7 +2391,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置嘲讽者
 
@@ -2563,7 +2413,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置衣服的显示
 
@@ -2586,8 +2436,76 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 进食/休息/娱乐打断, bContainHappy是否包含娱乐
+
+---
+
+### Function `SetCharacterSectCombatCommandState`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `NewState` | [ECharacterSectCombatCommandState](../Struct/CommonEnum__ECharacterSectCombatCommandState.md) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetCharacterSectCombatCommandState(ECharacterSectCombatCommandState NewState);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Sets the character's sect combat command state and broadcasts the state change
+
+---
+
+### Function `SetWorldSectBattleFlagPatrolArea`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="WorldSectBattle|AI" |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `PatrolCenter` | `const FVector&` |
+| `PatrolRadius` | `float` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "WorldSectBattle|AI") void SetWorldSectBattleFlagPatrolArea(const FVector& PatrolCenter, float PatrolRadius);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 门派战旗子刷出的野怪使用：设置它所属旗子的巡逻中心和半径。
+
+---
+
+### Function `GetWorldSectBattleFlagPatrolArea`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure, Category="WorldSectBattle|AI" |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `OutPatrolCenter` | `FVector&` |
+| `OutPatrolRadius` | `float&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "WorldSectBattle|AI") bool GetWorldSectBattleFlagPatrolArea(FVector& OutPatrolCenter, float& OutPatrolRadius) const;`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 门派战旗子刷出的野怪使用：获取它所属旗子的巡逻中心和半径。
 
 ---

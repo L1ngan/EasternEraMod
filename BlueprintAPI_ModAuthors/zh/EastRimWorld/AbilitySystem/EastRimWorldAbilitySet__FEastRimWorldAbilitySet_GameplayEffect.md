@@ -20,7 +20,7 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY(EditDefaultsOnly) TSubclassOf<UGameplayEffect> GameplayEffect = nullptr;` |
 
-**源码注释:**
+**说明:**
 
 > Gameplay effect to grant.
 
@@ -35,7 +35,7 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY(EditDefaultsOnly) float EffectLevel = 1.0f;` |
 
-**源码注释:**
+**说明:**
 
 > Level of gameplay effect to grant.
 

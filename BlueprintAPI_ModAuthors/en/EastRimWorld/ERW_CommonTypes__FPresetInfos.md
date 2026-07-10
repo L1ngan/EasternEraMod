@@ -19,4 +19,8 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FPresetData> Infos;` |
 
+**Notes:**
+
+> Array of preset building data.
+
 ---

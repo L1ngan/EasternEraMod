@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FGuid Guid;` |
 
-**源码注释:**
+**说明:**
 
 > 组件的Guid
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) TMap<FName , FGOAP_Users> Users;` |
 
-**源码注释:**
+**说明:**
 
 > GOAP的用户
 > TMap<GOAP Action的ID , 用户的数组>
@@ -50,7 +50,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) TMap<FName , bool> ActionForbiddenStates;` |
 
-**源码注释:**
+**说明:**
 
 > GOAP Action的禁用状态
 > TMap<GOAP Action的ID , 是否禁用>
@@ -66,7 +66,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) TMap<FGuid , FUserReserveData> ReservedUsers;` |
 
-**源码注释:**
+**说明:**
 
 > 用户预留物品数据
 > TMap<角色的Guid , 预留的物品数据>
@@ -82,7 +82,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) TMap<FName , int32> ReservedList;` |
 
-**源码注释:**
+**说明:**
 
 > 预留物品列表
 > TMap<物品ID , 数量>

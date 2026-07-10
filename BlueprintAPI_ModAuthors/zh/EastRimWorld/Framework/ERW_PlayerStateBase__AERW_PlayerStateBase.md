@@ -19,4 +19,8 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "GAS") TObjectPtr<UEastRimWorldAbilitySystemComponent> AbilitySystemComponent;` |
 
+**说明:**
+
+> GAS技能系统组件（UEastRimWorldAbilitySystemComponent），由PlayerState持有。
+
 ---

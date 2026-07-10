@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<FGenerationData,int32> GenerationData;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成对应数据的权重
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 GenerationNumber = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 一次生成时取多少个配置生成
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 TeamID = 255;` |
 
-**Source comments:**
+**Notes:**
 
 > 团队ID
 

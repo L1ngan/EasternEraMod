@@ -19,7 +19,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() TArray<FGameplayTagStack> Stacks;` |
 
-**Source comments:**
+**Notes:**
 
 > Replicated list of gameplay tag stacks
 

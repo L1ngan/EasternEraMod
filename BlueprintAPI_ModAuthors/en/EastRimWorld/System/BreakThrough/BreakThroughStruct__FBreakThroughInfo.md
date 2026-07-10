@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid BreakThroughGuid = FGuid();` |
 
-**Source comments:**
+**Notes:**
 
 > 突破唯一标识
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid CharacterGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色Guid
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 RealmLevel = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 突破的境界等级
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid RoomGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 选择的房间Guid
 
@@ -74,12 +74,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EFiveElementType` |
+| C++ type | [EFiveElementType](../../Struct/CommonEnum__EFiveElementType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EFiveElementType TrainingRoomType = EFiveElementType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 突破开始时记录的练功房类型（用于检查房间是否变化）
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 TrainingRoomLevel = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 突破开始时记录的练功房等级（用于检查房间是否变化）
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float BreakThroughProgress = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 突破已增加的进度（突破点数）
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> PendingSkillIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 待发放的技能奖励ID
 
@@ -134,12 +134,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBreakThroughState` |
+| C++ type | [EBreakThroughState](BreakThroughStruct__EBreakThroughState.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EBreakThroughState State = EBreakThroughState::NotStarted;` |
 
-**Source comments:**
+**Notes:**
 
 > 突破状态
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float ElementValue = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 五行属性
 
@@ -168,5 +168,9 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 BreakthroughNumber = 0;` |
+
+**Notes:**
+
+> Breakthrough Number field.
 
 ---

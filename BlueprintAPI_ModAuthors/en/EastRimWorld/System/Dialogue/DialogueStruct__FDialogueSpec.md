@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadWrite) FGuid DialogueGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 对话的唯一GUID
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadWrite) TArray<FName> CompleteDialogue;` |
 
-**Source comments:**
+**Notes:**
 
 > 完成的对话ID
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadWrite) FName DialogueGroupID;` |
 
-**Source comments:**
+**Notes:**
 
 > 所属的对话分组表ID
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadWrite) FDialogueGroupItem DialogueGroupItem;` |
 
-**Source comments:**
+**Notes:**
 
 > 实际触发的对话组
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadWrite) FGuid DialogueInitiator;` |
 
-**Source comments:**
+**Notes:**
 
 > 对话发起者
 
@@ -94,8 +94,38 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadWrite) FGuid DialogueTarget;` |
 
-**Source comments:**
+**Notes:**
 
 > 对话目标
+
+---
+
+### Property `DialogueInitiatorType`
+
+| Field | Details |
+|------|------|
+| C++ type | [EDialogueActorType](DialogueStruct__EDialogueActorType.md) |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadWrite) EDialogueActorType DialogueInitiatorType = EDialogueActorType::None;` |
+
+**Notes:**
+
+> 对话发起者类型
+
+---
+
+### Property `DialogueTargetType`
+
+| Field | Details |
+|------|------|
+| C++ type | [EDialogueActorType](DialogueStruct__EDialogueActorType.md) |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadWrite) EDialogueActorType DialogueTargetType = EDialogueActorType::None;` |
+
+**Notes:**
+
+> 对话目标类型
 
 ---

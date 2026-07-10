@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FName , FItemInfoActions> Data;` |
 
-**Source comments:**
+**Notes:**
 
 > TMap<GOAP目标 , 物品信息对应的GOAP Action数据>
 

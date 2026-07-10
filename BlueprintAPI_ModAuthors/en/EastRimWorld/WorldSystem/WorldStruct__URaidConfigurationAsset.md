@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float WealthPointsMax = 4200.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 财富点数最大值
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float OneFarmlandPoints = 13.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 单位田地对应的财富价值
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float UnitsPointsMax = 4000.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 单位点数最大值
 
@@ -59,12 +59,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EDifficultyOption,float>` |
+| C++ type | TMap<[EDifficultyOption](../Struct/CommonEnum__EDifficultyOption.md),float> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<EDifficultyOption,float> DifficultyCoefficientMap;` |
 
-**Source comments:**
+**Notes:**
 
 > 难度系数配置
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float AdaptiveCoefficientMax = 1.5f;` |
 
-**Source comments:**
+**Notes:**
 
 > 适应性系数最大值（标记作废！！！稍后删除）
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float AdaptiveCoefficientMini = 0.3f;` |
 
-**Source comments:**
+**Notes:**
 
 > 适应性系数最小值（标记作废！！！稍后删除）
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 MaxDrawCount = 2;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大抽取次数，默认2
 
@@ -119,12 +119,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<ETeamUnitType,float>` |
+| C++ type | TMap<[ETeamUnitType](WorldStruct__ETeamUnitType.md),float> |
 | Reflection specifiers | BlueprintReadWrite, Category="CombatScore" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="CombatScore") TMap<ETeamUnitType,float> UnitCoefficientMap;` |
 
-**Source comments:**
+**Notes:**
 
 > 单位点数折算系数
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="CombatScore") TMap<int32,float> RealmLevelUnitsPointMap;` |
 
-**Source comments:**
+**Notes:**
 
 > 弟子境界等级对应的单位点数
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="CombatScore") TMap<FName,float> BuildingCombatScoreMap;` |
 
-**Source comments:**
+**Notes:**
 
 > 需要统计战力的机关弩等战斗建筑的战力值
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LifeCoefficient") float LifeCoefficientBase = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 生存系数基数
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LifeCoefficient") float LifeCoefficientPerDay = 0.1f;` |
 
-**Source comments:**
+**Notes:**
 
 > 生存天数影响系数
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LifeCoefficient") float ChaDeathCoefficient = -0.3f;` |
 
-**Source comments:**
+**Notes:**
 
 > 每个弟子死亡影响系数
 
@@ -214,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LifeCoefficient") float LifeCoefficientMini = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 生存系数最小值
 
@@ -229,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LifeCoefficient") float LifeCoefficientMax = 3.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 生存系数最大值
 

@@ -19,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool TakeEffect = false;` |
 
+**Notes:**
+
+> Take Effect field.
+
 ---
 
 ### Property `SourceForceGuid`
@@ -30,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid SourceForceGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 攻击来源
 
@@ -45,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid TargetForceGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 攻击目标
 
@@ -60,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid AttackWorldPlaceGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 攻击的城市
 
@@ -75,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float TimeRemaining;` |
 
-**Source comments:**
+**Notes:**
 
 > 攻击剩余时间
 
@@ -90,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float StartTime;` |
 
-**Source comments:**
+**Notes:**
 
 > 开始时间
 
@@ -105,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bPopupWarning = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否已经弹出过警告
 

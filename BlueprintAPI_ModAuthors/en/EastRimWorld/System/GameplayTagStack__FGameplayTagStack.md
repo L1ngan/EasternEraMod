@@ -19,6 +19,10 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() FGameplayTag Tag;` |
 
+**Notes:**
+
+> Tag field.
+
 ---
 
 ### Property `StackCount`
@@ -29,5 +33,9 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() int32 StackCount = 0;` |
+
+**Notes:**
+
+> Stack Count field.
 
 ---

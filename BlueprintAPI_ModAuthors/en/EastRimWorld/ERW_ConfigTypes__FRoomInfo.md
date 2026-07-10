@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Runtime room info, including room config ID, GUID, level, contained building counts, owners and per-category scores (area/aesthetics/temperature/cleanliness/lighting/five elements).
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FName RoomID;` |
 
-**Source comments:**
+**Notes:**
 
 > 房间配置id(标识当前是什么房间)
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FGuid RoomGUID = FGuid();` |
 
-**Source comments:**
+**Notes:**
 
 > 房间GUID
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 RoomLevel = -1;` |
 
-**Source comments:**
+**Notes:**
 
 > 房间等级
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FName PlayerAssignRoomID;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家指定的房间ID
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) bool IsPlayerAssignRoomType = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是玩家指定的房间类型
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) bool IsEnoughCurrentRoomType = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否满足当前房间类型
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<FName,int32> BuildIdNum;` |
 
-**Source comments:**
+**Notes:**
 
 > 房间内各建筑id数量
 
@@ -122,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<FName,int32> BuildTabNum;` |
 
-**Source comments:**
+**Notes:**
 
 > 房间内各建筑分类的数量
 
@@ -137,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FGuid> CoreFacilityGuids;` |
 
-**Source comments:**
+**Notes:**
 
 > 核心设施Guid
 
@@ -152,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FName> RoomOwnerBuffIds;` |
 
-**Source comments:**
+**Notes:**
 
 > 房间拥有者的buff
 
@@ -167,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FGuid> RoomOwnerGuids;` |
 
-**Source comments:**
+**Notes:**
 
 > 房间拥有者的controller的guid
 
@@ -182,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float AreaScore = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 面积分数
 
@@ -197,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float AestheticScore = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 美观度分数
 
@@ -212,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float TemperatureScore = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 温度分数
 
@@ -227,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float CleanScore = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 清洁分数
 
@@ -242,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float LightScore = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 光照分数
 
@@ -257,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float FiveScore = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 五行分数
 
@@ -267,12 +269,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EFiveElementType,float>` |
+| C++ type | TMap<[EFiveElementType](Struct/CommonEnum__EFiveElementType.md),float> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<EFiveElementType,float> FiveElementScore;` |
 
-**Source comments:**
+**Notes:**
 
 > 五行属性
 
@@ -287,7 +289,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FGuid> TemperatureBuildingGuids;` |
 
-**Source comments:**
+**Notes:**
 
 > 温度建筑
 

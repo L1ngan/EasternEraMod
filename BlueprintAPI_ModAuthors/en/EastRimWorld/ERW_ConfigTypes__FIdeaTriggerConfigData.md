@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FName BuffID;` |
 
-**Source comments:**
+**Notes:**
 
 > BUFF配置表ID
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<ECommonConditionType , [FConditions](ERW_CommonTypes__FConditions.md)> |
+| C++ type | TMap<[ECommonConditionType](ERW_Enumerations__ECommonConditionType.md) , [FConditions](ERW_CommonTypes__FConditions.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<ECommonConditionType , FConditions> Conditions;` |
 
-**Source comments:**
+**Notes:**
 
 > 触发条件
 > TMap<条件类型 , 条件>

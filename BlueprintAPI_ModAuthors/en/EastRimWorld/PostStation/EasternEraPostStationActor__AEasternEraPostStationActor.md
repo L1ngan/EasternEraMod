@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> GOAP-based post station actor that manages NPC generation lines, martial arts sparring, trade areas and character recruitment.
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<UStaticMeshComponent> MeshComponent;` |
 
+**Notes:**
+
+> Main static mesh component of the post station (holds NPC sockets).
+
 ---
 
 ### Property `GenerateCharacterComponent`
@@ -27,6 +33,10 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly) TObjectPtr<UEventGenerateCharacterComponent> GenerateCharacterComponent;` |
+
+**Notes:**
+
+> Event character generation component used to spawn post station NPCs.
 
 ---
 
@@ -39,6 +49,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly) TObjectPtr<UERW_EnvironComponent> EnvironComponent;` |
 
+**Notes:**
+
+> Environment component of the post station (UERW_EnvironComponent).
+
 ---
 
 ### Property `SaledGoodsAreaMeshComponent`
@@ -49,6 +63,10 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) TObjectPtr<UStaticMeshComponent> SaledGoodsAreaMeshComponent;` |
+
+**Notes:**
+
+> Static mesh component of the sold goods area.
 
 ---
 
@@ -61,6 +79,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere,SaveGame) FGOAP_Action ExchangeMartialArtsAction;` |
 
+**Notes:**
+
+> GOAP action for martial arts sparring (saved to slot).
+
 ---
 
 ### Property `ExchangeMartialArtsInstances`
@@ -71,6 +93,10 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere,SaveGame) TMap<FGuid,FExchangeMartialArtsInstance> ExchangeMartialArtsInstances;` |
+
+**Notes:**
+
+> All active sparring instances keyed by GUID (saved).
 
 ---
 
@@ -83,6 +109,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere,SaveGame) TMap<FGuid,FTransform> ExchangeMartialArtsCharacterTrans;` |
 
+**Notes:**
+
+> Transforms of characters participating in sparring, keyed by character GUID (saved).
+
 ---
 
 ### Property `OnExchangeMartialArtsEnd`
@@ -93,6 +123,10 @@
 | Reflection specifiers | BlueprintAssignable |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnExchangeMartialArtsEnd OnExchangeMartialArtsEnd;` |
+
+**Notes:**
+
+> Delegate broadcast when a sparring match ends, carrying the instance (including the result).
 
 ---
 
@@ -105,7 +139,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) TArray<AEastRimWorldCharacter_Human*> NeedDestroyNPC;` |
 
-**Source comments:**
+**Notes:**
 
 > ------------补丁 处理火云邪神------------
 
@@ -119,6 +153,10 @@
 | Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere,meta=(AllowPrivateAccess=true)) bool IsPause = false;` |
+
+**Notes:**
+
+> Whether post station NPC generation is paused.
 
 ---
 
@@ -140,6 +178,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Updates a task condition (ITaskInterface implementation).
+
 ---
 
 ### Function `InitPostStation`
@@ -154,7 +196,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 仅新游戏：WorldPlace::InitFirstTimeEnter -> SpawnWorldPlacePostStationActor。读档由存档恢复 Actor，不会调用本函数。
 
@@ -176,6 +218,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Performs a random NPC generation on the given generate line.
+
 ---
 
 ### Function `OnNPCArriveOriginPoint`
@@ -193,6 +239,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void OnNPCArriveOriginPoint(AEastRimWorldCharacter * NewMonster);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Handles an NPC arriving at its assigned station socket (origin point).
 
 ---
 
@@ -212,9 +262,27 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取驿站NPC插槽所在位置
+
+---
+
+### Function `IsExchangeMartialArtsOngoing`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintPure |
+| Return type | `bool` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintPure) bool IsExchangeMartialArtsOngoing() const { return ExchangeMartialArtsInstances.Num() > 0; }`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 是否有切磋在进行(Waiting/Ongoing 任一)。供事件对决(强袭宿敌)互斥查询
 
 ---
 
@@ -236,7 +304,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建切磋
 
@@ -259,9 +327,31 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 切磋签到
+
+---
+
+### Function `RecruitCharacter`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `InCharacter` | [AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)* |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void RecruitCharacter(AEastRimWorldCharacter* InCharacter);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 招募角色
 
 ---
 
@@ -281,6 +371,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Resets the location of the sold goods area mesh component.
+
 ---
 
 ### Function `ClearPostStation`
@@ -294,6 +388,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void ClearPostStation();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Clears the post station's generated content and state.
 
 ---
 
@@ -312,5 +410,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void PauseGenerate(bool InIsPause);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Sets whether post station NPC generation is paused.
 
 ---

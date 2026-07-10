@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 GroupIndex = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 分组索引（1-32, 33-64等）
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 StartRank = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 该分组包含的门派ID范围
 
@@ -49,6 +49,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 EndRank = 32;` |
 
+**说明:**
+
+> End Rank 字段。
+
 ---
 
 ### 属性 `SectInfos`
@@ -60,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FTournamentSectInfo> SectInfos;` |
 
-**源码注释:**
+**说明:**
 
 > 该分组中的门派ID列表
 

@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 Weight{1};` |
 
-**Source comments:**
+**Notes:**
 
 > 权重
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 Num {0};` |
 
-**Source comments:**
+**Notes:**
 
 > 数量
 
@@ -44,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EModGroundInventoryType` |
+| C++ type | [EModGroundInventoryType](BaseDataStruct__EModGroundInventoryType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EModGroundInventoryType ItemType = EModGroundInventoryType::NormalItem;` |
 
-**Source comments:**
+**Notes:**
 
 > 类型
 

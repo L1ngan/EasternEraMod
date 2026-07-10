@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, EditAnywhere) const TObjectPtr<UInputAction> AssociatedInputAction;` |
 
-**源码注释:**
+**说明:**
 
 > The Enhanced Input Action that is associated with this Common Input action.
 

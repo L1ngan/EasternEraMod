@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EConditionValueType` |
+| C++ 类型 | [EConditionValueType](ERW_Enumerations__EConditionValueType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) EConditionValueType ValueType { EConditionValueType::Int };` |
 
-**源码注释:**
+**说明:**
 
 > 条件检测值类型
 
@@ -29,12 +29,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EConditionQuery` |
+| C++ 类型 | [EConditionQuery](ERW_Enumerations__EConditionQuery.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) EConditionQuery Query { EConditionQuery::IsEqualTo };` |
 
-**源码注释:**
+**说明:**
 
 > 条件判断规则
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere , BlueprintReadWrite) FConditionValue IdeaValue;` |
 
-**源码注释:**
+**说明:**
 
 > 想法条件值
 

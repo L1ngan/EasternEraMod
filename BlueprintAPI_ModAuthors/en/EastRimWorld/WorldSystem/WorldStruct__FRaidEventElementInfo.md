@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FThreatPoolInfo ThreatPool;` |
 
-**Source comments:**
+**Notes:**
 
 > 袭击信息
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float EventTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 事件时间（倒计时时间） 或 袭击执行的剩余时间
 

@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) UStaticMeshComponent* StaticMeshComponent { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > 静态模型组件
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EEnvironType` |
+| C++ type | [EEnvironType](../ERW_Enumerations__EEnvironType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) EEnvironType EnvironType { EEnvironType::None };` |
 
-**Source comments:**
+**Notes:**
 
 > 环境类型
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) bool IsWide { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是宽的门或窗
 

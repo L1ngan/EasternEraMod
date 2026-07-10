@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Health attribute set: overall health, per-body-part health, damage types, survival attributes (nutrition/tiredness/happiness/mood) and death resolution logic
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Health;` |
 
+**Notes:**
+
+> Current health value
+
 ---
 
 ### Property `CurMaxHealth`
@@ -27,6 +33,10 @@
 | Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Health" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurMaxHealth;` |
+
+**Notes:**
+
+> Current max health; changes when body parts are injured
 
 ---
 
@@ -39,6 +49,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MaxHealth;` |
 
+**Notes:**
+
+> Max health computed from body parts
+
 ---
 
 ### Property `MoveSpeed`
@@ -49,6 +63,10 @@
 | Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Health" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MoveSpeed;` |
+
+**Notes:**
+
+> Move speed
 
 ---
 
@@ -61,6 +79,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RunSpeed;` |
 
+**Notes:**
+
+> Run speed
+
 ---
 
 ### Property `SanitationInfluence`
@@ -72,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SanitationInfluence;` |
 
-**Source comments:**
+**Notes:**
 
 > 卫生影响
 
@@ -87,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData FreeWeight;` |
 
-**Source comments:**
+**Notes:**
 
 > 携带能力
 
@@ -102,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ToxicResistance;` |
 
-**Source comments:**
+**Notes:**
 
 > 毒抗
 
@@ -117,7 +139,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MinPreferenceTemperature;` |
 
-**Source comments:**
+**Notes:**
 
 > 适宜的温度
 
@@ -132,7 +154,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MaxPreferenceTemperature;` |
 
-**Source comments:**
+**Notes:**
 
 > 适宜的温度
 
@@ -147,7 +169,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Immunity;` |
 
-**Source comments:**
+**Notes:**
 
 > 免疫力
 
@@ -162,7 +184,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BreakdownThresholdChangeValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 崩溃阈值变化值
 
@@ -177,7 +199,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PainThreshold;` |
 
-**Source comments:**
+**Notes:**
 
 > 疼痛阈值
 
@@ -192,7 +214,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ForagingAmount;` |
 
-**Source comments:**
+**Notes:**
 
 > 觅食量
 
@@ -207,7 +229,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData FeedingSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 进食速度
 
@@ -222,7 +244,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ReproductiveCapacity;` |
 
-**Source comments:**
+**Notes:**
 
 > 繁育能力
 
@@ -237,7 +259,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CrawlSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 爬行速度
 
@@ -252,7 +274,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NutritionValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 营养值
 
@@ -267,7 +289,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MaxNutritionValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 营养值上限
 
@@ -282,7 +304,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NutritionValueReduceSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 营养值减小速度
 
@@ -297,7 +319,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NutritionValueReduceSpeedPercent;` |
 
-**Source comments:**
+**Notes:**
 
 > 营养值减小速度百分比
 
@@ -312,7 +334,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NutritionValueIncreaseSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 营养值增加速度
 
@@ -327,7 +349,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NutritionValueIncreaseSpeedPercent;` |
 
-**Source comments:**
+**Notes:**
 
 > 营养值增加速度百分比
 
@@ -342,7 +364,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TiredValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 疲劳值
 
@@ -357,7 +379,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MaxTiredValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 疲劳值上限
 
@@ -372,7 +394,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TiredValueReduceSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 疲劳值减小速度
 
@@ -387,7 +409,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TiredValueReduceSpeedPercent;` |
 
-**Source comments:**
+**Notes:**
 
 > 疲劳值减小速度百分比
 
@@ -402,7 +424,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TiredValueIncreaseSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 疲劳值增加速度
 
@@ -417,7 +439,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TiredValueIncreaseSpeedPercent;` |
 
-**Source comments:**
+**Notes:**
 
 > 疲劳值增加速度百分比
 
@@ -432,7 +454,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HappyValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 娱乐值
 
@@ -447,7 +469,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MaxHappyValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 娱乐上限
 
@@ -462,7 +484,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HappyValueReduceSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 娱乐值减小速度
 
@@ -477,7 +499,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HappyValueReduceSpeedPercent;` |
 
-**Source comments:**
+**Notes:**
 
 > 娱乐值减小速度百分比
 
@@ -492,7 +514,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HappyValueIncreaseSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 娱乐值增加速度
 
@@ -507,7 +529,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HappyValueIncreaseSpeedPercent;` |
 
-**Source comments:**
+**Notes:**
 
 > 娱乐值增加速度百分比
 
@@ -522,7 +544,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MoodValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 心情值
 
@@ -537,7 +559,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Inspiration;` |
 
-**Source comments:**
+**Notes:**
 
 > 感悟值
 
@@ -552,7 +574,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalMaxGrowthValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物最大成长值
 
@@ -567,7 +589,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalCurGrowthValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物当前成长值
 
@@ -582,7 +604,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalAddGrowthValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物增长速度
 
@@ -597,7 +619,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MaxInspiration;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大感悟值
 
@@ -612,7 +634,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MoodTargetValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 心情目标值
 
@@ -627,6 +649,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category="EastRimWorld|Health", Meta=(AllowPrivateAccess=true)) FGameplayAttributeData Healing;` |
 
+**Notes:**
+
+> Healing meta attribute used to resolve health recovery
+
 ---
 
 ### Property `BaseHeal`
@@ -637,6 +663,10 @@
 | Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Health" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category="EastRimWorld|Health", Meta=(HideFromModifiers,AllowPrivateAccess=true)) FGameplayAttributeData BaseHeal;` |
+
+**Notes:**
+
+> Base heal meta attribute (hidden from modifiers)
 
 ---
 
@@ -649,7 +679,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category="EastRimWorld|Health", Meta=(AllowPrivateAccess=true)) FGameplayAttributeData Damage;` |
 
-**Source comments:**
+**Notes:**
 
 > 给予的普通伤害
 
@@ -664,7 +694,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData OperationalStatus;` |
 
-**Source comments:**
+**Notes:**
 
 > 操作相关状况
 
@@ -679,7 +709,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData VisualStatus;` |
 
-**Source comments:**
+**Notes:**
 
 > 视觉相关状况
 
@@ -694,7 +724,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HearingStatus;` |
 
-**Source comments:**
+**Notes:**
 
 > 视觉相关状况
 
@@ -709,7 +739,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData EatingStatus;` |
 
-**Source comments:**
+**Notes:**
 
 > 进食相关状况
 
@@ -724,7 +754,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LanguageStatus;` |
 
-**Source comments:**
+**Notes:**
 
 > 语言相关状况
 
@@ -739,7 +769,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BreathingStatus;` |
 
-**Source comments:**
+**Notes:**
 
 > 呼吸相关状况
 
@@ -754,7 +784,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MovingStatus;` |
 
-**Source comments:**
+**Notes:**
 
 > 移动相关状况
 
@@ -769,7 +799,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ReproductiveStatus;` |
 
-**Source comments:**
+**Notes:**
 
 > 生育相关状况
 
@@ -784,7 +814,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BloodFiltrationStatus;` |
 
-**Source comments:**
+**Notes:**
 
 > 血液过滤相关状况
 
@@ -799,7 +829,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DigestiveStatus;` |
 
-**Source comments:**
+**Notes:**
 
 > 消耗相关状况
 
@@ -814,7 +844,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PierceDamage;` |
 
-**Source comments:**
+**Notes:**
 
 > 穿刺伤害 不可直接配置
 
@@ -829,7 +859,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SlashDamage;` |
 
-**Source comments:**
+**Notes:**
 
 > 切割伤害 不可直接配置
 
@@ -844,7 +874,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BluntDamage;` |
 
-**Source comments:**
+**Notes:**
 
 > 钝器伤害 不可直接配置
 
@@ -859,7 +889,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PoisonDamage;` |
 
-**Source comments:**
+**Notes:**
 
 > 毒气伤害 不可直接配置
 
@@ -874,7 +904,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TrueQiDamage;` |
 
-**Source comments:**
+**Notes:**
 
 > 真气伤害 不可直接配置
 
@@ -889,7 +919,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (HideFromModifiers,AllowPrivateAccess = true)) FGameplayAttributeData PierceCriticalDamage;` |
 
-**Source comments:**
+**Notes:**
 
 > 穿刺暴击伤害 不可直接配置
 
@@ -904,7 +934,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (HideFromModifiers,AllowPrivateAccess = true)) FGameplayAttributeData SlashCriticalDamage;` |
 
-**Source comments:**
+**Notes:**
 
 > 切割暴击伤害 不可直接配置
 
@@ -919,9 +949,84 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (HideFromModifiers,AllowPrivateAccess = true)) FGameplayAttributeData BluntCriticalDamage;` |
 
-**Source comments:**
+**Notes:**
 
 > 钝器暴击伤害 不可直接配置
+
+---
+
+### Property `PoisonCriticalDamage`
+
+| Field | Details |
+|------|------|
+| C++ type | `FGameplayAttributeData` |
+| Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Health" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (HideFromModifiers,AllowPrivateAccess = true)) FGameplayAttributeData PoisonCriticalDamage;` |
+
+**Notes:**
+
+> 毒素暴击伤害 不可直接配置
+
+---
+
+### Property `TrueQiCriticalDamage`
+
+| Field | Details |
+|------|------|
+| C++ type | `FGameplayAttributeData` |
+| Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Health" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (HideFromModifiers,AllowPrivateAccess = true)) FGameplayAttributeData TrueQiCriticalDamage;` |
+
+**Notes:**
+
+> 真气暴击伤害 不可直接配置
+
+---
+
+### Property `RemoteDamage`
+
+| Field | Details |
+|------|------|
+| C++ type | `FGameplayAttributeData` |
+| Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Health" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RemoteDamage;` |
+
+**Notes:**
+
+> 远程伤害 不可直接配置
+
+---
+
+### Property `RemoteCriticalDamage`
+
+| Field | Details |
+|------|------|
+| C++ type | `FGameplayAttributeData` |
+| Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Health" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (HideFromModifiers,AllowPrivateAccess = true)) FGameplayAttributeData RemoteCriticalDamage;` |
+
+**Notes:**
+
+> 远程暴击伤害 不可直接配置
+
+---
+
+### Property `TrueDamage`
+
+| Field | Details |
+|------|------|
+| C++ type | `FGameplayAttributeData` |
+| Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Health" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TrueDamage;` |
+
+**Notes:**
+
+> 真实伤害 不可直接配置（无视抗性/不吃增幅，独立输出不借用穿刺；真实伤害不可暴击）
 
 ---
 
@@ -934,7 +1039,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PerceptionTemperature;` |
 
-**Source comments:**
+**Notes:**
 
 > 体感温度
 
@@ -949,7 +1054,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DamageShield;` |
 
-**Source comments:**
+**Notes:**
 
 > 罡气护盾
 
@@ -964,7 +1069,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DamageShieldMaxLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 罡气护盾 最大血量
 
@@ -979,7 +1084,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DamageShieldRecoverSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 罡气护盾 恢复速度
 
@@ -994,7 +1099,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DamageShieldRecoverSpeedPercent;` |
 
-**Source comments:**
+**Notes:**
 
 > 罡气护盾 恢复速度百分比
 
@@ -1009,7 +1114,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Head;` |
 
-**Source comments:**
+**Notes:**
 
 > 头
 
@@ -1024,7 +1129,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurHeadMaxLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 头当前最大血量
 
@@ -1039,7 +1144,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HeadMaxLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 头 最大血量
 
@@ -1054,7 +1159,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LeftEye;` |
 
-**Source comments:**
+**Notes:**
 
 > 左眼睛
 
@@ -1069,7 +1174,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurLeftEyeMaxLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 左眼睛
 
@@ -1084,7 +1189,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LeftEyeMaxLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 左眼睛 最大血量
 
@@ -1099,7 +1204,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RightEye;` |
 
-**Source comments:**
+**Notes:**
 
 > 右眼睛
 
@@ -1114,6 +1219,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurRightEyeMaxLife;` |
 
+**Notes:**
+
+> Current max life of the right eye body part
+
 ---
 
 ### Property `RightEyeMaxLife`
@@ -1125,7 +1234,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RightEyeMaxLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 右眼睛 最大血量
 
@@ -1140,7 +1249,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LeftEar;` |
 
-**Source comments:**
+**Notes:**
 
 > 左耳朵
 
@@ -1155,6 +1264,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurLeftEarMaxLife;` |
 
+**Notes:**
+
+> Current max life of the left ear body part
+
 ---
 
 ### Property `LeftEarMaxLife`
@@ -1166,7 +1279,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LeftEarMaxLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 左耳朵 最大血量
 
@@ -1181,7 +1294,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RightEar;` |
 
-**Source comments:**
+**Notes:**
 
 > 右耳朵
 
@@ -1196,6 +1309,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurRightEarMaxLife;` |
 
+**Notes:**
+
+> Current max life of the right ear body part
+
 ---
 
 ### Property `RightEarMaxLife`
@@ -1207,7 +1324,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RightEarMaxLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 右耳朵 最大血量
 
@@ -1222,7 +1339,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Nose;` |
 
-**Source comments:**
+**Notes:**
 
 > 鼻子
 
@@ -1237,6 +1354,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurNoseMaxLife;` |
 
+**Notes:**
+
+> Current max life of the nose body part
+
 ---
 
 ### Property `NoseMaxLife`
@@ -1248,7 +1369,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NoseMaxLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 鼻子 最大血量
 
@@ -1263,7 +1384,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Mouth;` |
 
-**Source comments:**
+**Notes:**
 
 > 口
 
@@ -1278,6 +1399,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurMouthMaxLife;` |
 
+**Notes:**
+
+> Current max life of the mouth body part
+
 ---
 
 ### Property `MouthMaxLife`
@@ -1289,7 +1414,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MouthMaxLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 口 最大血量
 
@@ -1304,7 +1429,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Body;` |
 
-**Source comments:**
+**Notes:**
 
 > 躯干
 
@@ -1319,7 +1444,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurBodyMaxLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前躯干血上限
 
@@ -1334,7 +1459,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BodyMaxLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 躯干 最大血量
 
@@ -1349,7 +1474,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Viscera;` |
 
-**Source comments:**
+**Notes:**
 
 > 内脏
 
@@ -1364,6 +1489,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurVisceraMaxLife;` |
 
+**Notes:**
+
+> Current max life of the viscera body part
+
 ---
 
 ### Property `VisceraMaxLife`
@@ -1375,7 +1504,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData VisceraMaxLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 内脏 最大血量
 
@@ -1390,7 +1519,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Dantian;` |
 
-**Source comments:**
+**Notes:**
 
 > 丹田
 
@@ -1405,6 +1534,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurDantianMaxLife;` |
 
+**Notes:**
+
+> Current max life of the Dantian body part
+
 ---
 
 ### Property `DantianMaxLife`
@@ -1416,7 +1549,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DantianMaxLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 丹田 最大血量
 
@@ -1431,7 +1564,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData XiaYin;` |
 
-**Source comments:**
+**Notes:**
 
 > 下阴
 
@@ -1446,6 +1579,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurXiaYinMaxLife;` |
 
+**Notes:**
+
+> Current max life of the groin (XiaYin) body part
+
 ---
 
 ### Property `XiaYinMaxLife`
@@ -1457,7 +1594,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData XiaYinMaxLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 下阴 最大血量
 
@@ -1472,7 +1609,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LeftArm;` |
 
-**Source comments:**
+**Notes:**
 
 > 左臂
 
@@ -1487,6 +1624,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurLeftArmMaxLife;` |
 
+**Notes:**
+
+> Current max life of the left arm body part
+
 ---
 
 ### Property `LeftArmMaxLife`
@@ -1498,7 +1639,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LeftArmMaxLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 左臂 最大血量
 
@@ -1513,7 +1654,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RightArm;` |
 
-**Source comments:**
+**Notes:**
 
 > 右臂
 
@@ -1528,6 +1669,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurRightArmMaxLife;` |
 
+**Notes:**
+
+> Current max life of the right arm body part
+
 ---
 
 ### Property `RightArmMaxLife`
@@ -1539,7 +1684,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RightArmMaxLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 右臂 最大血量
 
@@ -1554,7 +1699,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LeftLeg;` |
 
-**Source comments:**
+**Notes:**
 
 > 左腿
 
@@ -1569,6 +1714,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurLeftLegMaxLife;` |
 
+**Notes:**
+
+> Current max life of the left leg body part
+
 ---
 
 ### Property `LeftLegMaxLife`
@@ -1580,7 +1729,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LeftLegMaxLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 左腿 最大血量
 
@@ -1595,7 +1744,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RightLeg;` |
 
-**Source comments:**
+**Notes:**
 
 > 右腿
 
@@ -1610,6 +1759,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurRightLegMaxLife;` |
 
+**Notes:**
+
+> Current max life of the right leg body part
+
 ---
 
 ### Property `RightLegMaxLife`
@@ -1621,7 +1774,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RightLegMaxLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 右腿 最大血量
 
@@ -1636,7 +1789,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LeftFoot;` |
 
-**Source comments:**
+**Notes:**
 
 > 左脚
 
@@ -1651,6 +1804,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurLeftFootMaxLife;` |
 
+**Notes:**
+
+> Current max life of the left foot body part
+
 ---
 
 ### Property `LeftFootMaxLife`
@@ -1662,7 +1819,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LeftFootMaxLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 左脚 最大血量
 
@@ -1677,7 +1834,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RightFoot;` |
 
-**Source comments:**
+**Notes:**
 
 > 右脚
 
@@ -1692,6 +1849,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurRightFootMaxLife;` |
 
+**Notes:**
+
+> Current max life of the right foot body part
+
 ---
 
 ### Property `RightFootMaxLife`
@@ -1703,7 +1864,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RightFootMaxLife;` |
 
-**Source comments:**
+**Notes:**
 
 > 右脚 最大血量
 
@@ -1718,7 +1879,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RobotEnergyMaxValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 机关人最大能源
 
@@ -1733,7 +1894,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RobotEnergyCurValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 机关人当前能源
 
@@ -1748,7 +1909,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RobotEnergyIntervalStanbyRecoveryValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 机关人单位时间待机恢复的能源
 
@@ -1763,7 +1924,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RobotEnergyIntervalStanbyRecoverySpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 机关人单位时间待机恢复的能源速度
 
@@ -1778,7 +1939,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RobotEnergyIntervalInBuildingRecoveryValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 机关人单位时间在维修建筑恢复的能源
 
@@ -1793,7 +1954,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RobotEnergyIntervalInBuildingRecoverySpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 机关人单位时间在维修建筑恢复的能源速度
 
@@ -1808,7 +1969,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RobotEnergyIntervalExpendValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 机关人单位时间消耗的能源
 
@@ -1823,7 +1984,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RobotEnergyIntervalExpendSpeed;` |
 
-**Source comments:**
+**Notes:**
 
 > 机关人单位时间消耗的能源速度
 
@@ -1838,7 +1999,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BaseHealingRate;` |
 
-**Source comments:**
+**Notes:**
 
 > 基础愈合速度
 
@@ -1853,7 +2014,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BleedEffectValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 流血效果数值(部位每个小时失去的健康值)
 
@@ -1868,7 +2029,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData WeaknessEffectValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 虚弱效果数值（角色攻击类属性降低）
 
@@ -1883,7 +2044,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SpoilEffectValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 腐坏效果数值（部位每天降低健康值）
 
@@ -1898,7 +2059,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ChangeATKAttribute;` |
 
-**Source comments:**
+**Notes:**
 
 > 改变攻击力属性
 
@@ -1913,7 +2074,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ChangeMAEffect;` |
 
-**Source comments:**
+**Notes:**
 
 > 改变武学值
 
@@ -1928,7 +2089,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CanTreatCount;` |
 
-**Source comments:**
+**Notes:**
 
 > 一次可以医治的伤势数量
 
@@ -1943,7 +2104,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AntDrugResistance;` |
 
-**Source comments:**
+**Notes:**
 
 > 抗耐药性
 
@@ -1958,7 +2119,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData InjuryOrgan;` |
 
-**Source comments:**
+**Notes:**
 
 > 伤势部位
 
@@ -1973,7 +2134,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DamagePercentage;` |
 
-**Source comments:**
+**Notes:**
 
 > 伤势百分比（目前用于伤害部位时的伤害百分比）
 
@@ -1988,7 +2149,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxHeadPercentage;` |
 
-**Source comments:**
+**Notes:**
 
 > 损失头部血量百分比
 
@@ -2003,7 +2164,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxLeftEyePercentage;` |
 
-**Source comments:**
+**Notes:**
 
 > 损失左眼睛血量百分比
 
@@ -2018,7 +2179,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxRightEyePercentage;` |
 
-**Source comments:**
+**Notes:**
 
 > 损失右眼睛血量百分比
 
@@ -2033,7 +2194,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxLeftEarPercentage;` |
 
-**Source comments:**
+**Notes:**
 
 > 损失左耳朵血量百分比
 
@@ -2048,7 +2209,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxRightEarPercentage;` |
 
-**Source comments:**
+**Notes:**
 
 > 损失右耳朵血量百分比
 
@@ -2063,7 +2224,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxNosePercentage;` |
 
-**Source comments:**
+**Notes:**
 
 > 损失鼻子血量百分比
 
@@ -2078,7 +2239,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxMouthPercentage;` |
 
-**Source comments:**
+**Notes:**
 
 > 损失口血量百分比
 
@@ -2093,7 +2254,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxBodyPercentage;` |
 
-**Source comments:**
+**Notes:**
 
 > 损失躯干血量百分比
 
@@ -2108,7 +2269,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxVisceraPercentage;` |
 
-**Source comments:**
+**Notes:**
 
 > 损失内脏血量百分比
 
@@ -2123,7 +2284,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxDantianPercentage;` |
 
-**Source comments:**
+**Notes:**
 
 > 损失丹田血量百分比
 
@@ -2138,7 +2299,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxXiaYinPercentage;` |
 
-**Source comments:**
+**Notes:**
 
 > 损失下阴血量百分比
 
@@ -2153,7 +2314,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxLeftArmPercentage;` |
 
-**Source comments:**
+**Notes:**
 
 > 损失左臂血量百分比
 
@@ -2168,7 +2329,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxRightArmPercentage;` |
 
-**Source comments:**
+**Notes:**
 
 > 损失右臂血量百分比
 
@@ -2183,7 +2344,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxLeftLegPercentage;` |
 
-**Source comments:**
+**Notes:**
 
 > 损失左腿血量百分比
 
@@ -2198,7 +2359,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxRightLegPercentage;` |
 
-**Source comments:**
+**Notes:**
 
 > 损失右腿血量百分比
 
@@ -2213,7 +2374,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RotValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 腐烂值
 
@@ -2228,7 +2389,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MaxRotValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大腐烂值
 
@@ -2243,7 +2404,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Species;` |
 
-**Source comments:**
+**Notes:**
 
 > 物种
 
@@ -2258,7 +2419,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData KnockDownValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 晕倒值
 
@@ -2272,6 +2433,10 @@
 | Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Health" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MaxKnockDownValue;` |
+
+**Notes:**
+
+> Maximum knock-down value
 
 ---
 
@@ -2293,7 +2458,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算被当前攻击技能攻击的命中器官(根据器官权重计算)
 
@@ -2316,7 +2481,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算伤害分摊的器官和分摊比例(根据分摊权重计算)
 
@@ -2334,13 +2499,13 @@
 |--------|------|
 | `OrganConfig` | const [FCharacterOrganConfig](../../Struct/CharacterStruct__FCharacterOrganConfig.md) & |
 | `DamageType` | `EDamageType` |
-| `HurtLevel` | `EHurtLevel` |
+| `HurtLevel` | [EHurtLevel](../../Struct/CharacterStruct__EHurtLevel.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FName CalInjuryFrom(const FCharacterOrganConfig & OrganConfig, EDamageType DamageType, EHurtLevel HurtLevel) const;`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算伤势来源
 
@@ -2351,7 +2516,7 @@
 | Field | Details |
 |------|------|
 | Reflection specifiers | BlueprintCallable |
-| Return type | `EHurtLevel` |
+| Return type | [EHurtLevel](../../Struct/CharacterStruct__EHurtLevel.md) |
 | Parameters | see table below |
 
 | Name | Type |
@@ -2363,7 +2528,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算伤害程度
 

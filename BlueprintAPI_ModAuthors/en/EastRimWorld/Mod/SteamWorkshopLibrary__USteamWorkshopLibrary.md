@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Blueprint function library for Steam Workshop (create/upload/subscribe/download/query/vote on items)
 
 ## Blueprint-exposed functions
 
@@ -24,7 +26,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建新的 Workshop 项目 
 > @param ConsumerAppId 游戏的 Steam App ID，可以使用 GetSteamAppId() 获取当前游戏的 App ID
@@ -52,7 +54,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新 Workshop 项目 - 设置标题
 > @param UpdateHandle 更新句柄（从 CreateWorkshopItem 回调或 StartItemUpdate 获取）
@@ -78,7 +80,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新 Workshop 项目 - 设置描述
 > @param UpdateHandle 更新句柄（从 CreateWorkshopItem 回调或 StartItemUpdate 获取）
@@ -104,7 +106,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新 Workshop 项目 - 设置内容文件夹
 > @param UpdateHandle 更新句柄（从 CreateWorkshopItem 回调或 StartItemUpdate 获取）
@@ -130,7 +132,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新 Workshop 项目 - 设置预览图
 > @param UpdateHandle 更新句柄（从 CreateWorkshopItem 回调或 StartItemUpdate 获取）
@@ -156,7 +158,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新 Workshop 项目 - 设置预览图
 > @param UpdateHandle 更新句柄（从 CreateWorkshopItem 回调或 StartItemUpdate 获取）
@@ -182,7 +184,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新 Workshop 项目 - 设置标签
 > @param UpdateHandle 更新句柄（从 CreateWorkshopItem 回调或 StartItemUpdate 获取）
@@ -208,7 +210,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新 Workshop 项目 - 设置可见性
 > @param UpdateHandle 更新句柄（从 CreateWorkshopItem 回调或 StartItemUpdate 获取）
@@ -234,7 +236,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 提交 Workshop 项目更新
 > @param UpdateHandle 更新句柄（从 CreateWorkshopItem 回调或 StartItemUpdate 获取）
@@ -264,7 +266,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取 Workshop 项目更新上传进度
 > @param PublishedFileId Workshop 项目 ID
@@ -300,7 +302,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 上传 Mod 到 Workshop（创建新项目或更新现有项目）
 > @param ConsumerAppId 游戏的 Steam App ID，可以使用 GetSteamAppId() 获取当前游戏的 App ID，或传入 0 使用当前游戏 App ID
@@ -335,7 +337,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 下载 Workshop 项目
 > @param PublishedFileId Workshop 项目 ID
@@ -363,7 +365,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 订阅 Workshop 项目
 > @param PublishedFileId Workshop 项目 ID
@@ -389,7 +391,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 取消订阅 Workshop 项目
 > @param PublishedFileId Workshop 项目 ID
@@ -408,7 +410,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取订阅的 Workshop 项目列表
 
@@ -426,7 +428,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取订阅的 Workshop 项目数量
 
@@ -451,7 +453,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取 Workshop 项目安装信息
 > @param PublishedFileId Workshop 项目 ID
@@ -478,7 +480,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取 Workshop 项目下载路径（仅返回路径）
 > @param PublishedFileId Workshop 项目 ID
@@ -502,7 +504,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取指定 AppID 的 Workshop 下载文件夹路径
 > @param AppId Steam App ID
@@ -526,7 +528,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查 Workshop 项目是否已安装
 > @param PublishedFileId Workshop 项目 ID
@@ -552,7 +554,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取 Workshop 项目下载进度
 > @param PublishedFileId Workshop 项目 ID
@@ -567,7 +569,7 @@
 | Field | Details |
 |------|------|
 | Reflection specifiers | BlueprintCallable, BlueprintPure, Category="Steam Workshop" |
-| Return type | `EWorkshopItemState` |
+| Return type | [EWorkshopItemState](SteamWorkshopLibrary__EWorkshopItemState.md) |
 | Parameters | see table below |
 
 | Name | Type |
@@ -578,7 +580,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取 Workshop 项目状态
 > @param PublishedFileId Workshop 项目 ID
@@ -596,7 +598,7 @@
 
 | Name | Type |
 |--------|------|
-| `QueryType` | `ESteamQueryType` |
+| `QueryType` | [ESteamQueryType](SteamWorkshopLibrary__ESteamQueryType.md) |
 | `1` | `int32 Page =` |
 | `(unnamed / type only)` | `FString matchTag=""` |
 | `(unnamed / type only)` | `FString FileName=""` |
@@ -605,7 +607,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询 Workshop 项目
 > @param QueryType 查询类型（最受欢迎、最新、评分最高等）
@@ -625,7 +627,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询用户订阅的 Workshop 项目
 
@@ -643,7 +645,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询用户创建的 Workshop 项目
 
@@ -665,7 +667,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询单个 Workshop 项目的详细信息
 > @param PublishedFileId Workshop 项目 ID
@@ -691,7 +693,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 删除 Workshop 项目
 > @param PublishedFileId Workshop 项目 ID（必须是当前用户创建的项目）
@@ -714,7 +716,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 打开 Workshop 项目页面
 > @param PublishedFileId Workshop 项目 ID
@@ -737,7 +739,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 打开 Workshop 主页
 > @param AppId Steam App ID（传入 0 使用当前游戏的 App ID）
@@ -761,7 +763,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 对Workshop项目进行评价
 > @param PublishedFileId Workshop 项目 ID
@@ -785,7 +787,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取自己对Workshop项目进行评价
 > @param PublishedFileId Workshop 项目 ID
@@ -809,7 +811,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 开始追踪 Workshop 项目游戏时间
 > @param PublishedFileIds Workshop 项目 ID 数组
@@ -832,7 +834,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 停止追踪 Workshop 项目游戏时间
 > @param PublishedFileIds Workshop 项目 ID 数组
@@ -851,7 +853,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 停止追踪所有 Workshop 项目游戏时间
 
@@ -869,7 +871,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查 Steam UGC 是否可用
 
@@ -887,7 +889,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取当前应用的 App ID
 
@@ -911,7 +913,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过 EasyFileDialog 打开文件对话框，选择 Workshop 预览图；通过校验后才返回路径。
 > 限制：文件最大 1MB；仅 JPG/PNG；宽与高均不小于 512。
@@ -933,5 +935,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Steam Workshop") static bool CheckCanChoseThisDir(const FString& ContentFolder);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Checks whether the specified content folder can be chosen as the Workshop upload directory
 
 ---

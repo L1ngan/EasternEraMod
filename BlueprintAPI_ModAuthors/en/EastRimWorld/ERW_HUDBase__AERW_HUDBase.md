@@ -22,6 +22,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Adds the mouse drag-selection box widget (Blueprint implementable event)
+
 ---
 
 ### Function `UpdateMouseSelectBox`
@@ -41,7 +45,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 更新鼠标选中框
 

@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="LearnData") int Level = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 等级
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="LearnData") float TotalExperience = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 总经验
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="LearnData") float CurExperience = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="LearnData") FName MartialArtsBookID;` |
 
-**Source comments:**
+**Notes:**
 
 > 武学数据的ID
 
@@ -74,13 +74,28 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EMartialArtsAttributeClassification` |
+| C++ type | [EMartialArtsAttributeClassification](CommonEnum__EMartialArtsAttributeClassification.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="LearnData" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "LearnData") EMartialArtsAttributeClassification AttributeClassification = EMartialArtsAttributeClassification::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 武学属性分类
+
+---
+
+### Property `SkillEntryIdsByLevel`
+
+| Field | Details |
+|------|------|
+| C++ type | `TMap<int32, FName>` |
+| Reflection specifiers | BlueprintReadWrite, Category="LearnData" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "LearnData") TMap<int32, FName> SkillEntryIdsByLevel;` |
+
+**Notes:**
+
+> 每级对应的技能词条 RowName（DT SkillEntryConfig）。该级无 LevelSkillEntry 配置、池为空、标签不满足或抽取失败时，不包含该等级键。
 
 ---

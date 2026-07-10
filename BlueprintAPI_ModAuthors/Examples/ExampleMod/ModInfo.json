@@ -1,0 +1,24 @@
+{
+	"ModId": "ExampleMod",
+	"ModName": "示例Mod Example Mod",
+	"Version": "1.0.0",
+	"Author": "EastRimWorld",
+	"Description": "官方示例：演示事件订阅、定时器、控制台命令、配置表JSON覆盖等常用修改方式。Official sample: event subscription, timers, console commands, DataTable JSON overrides.",
+	"Icon": "",
+	"MainLuaFile": "Main.lua",
+	"NewGameLoad": false,
+	"MinGameVersion": "0.0.1",
+	"IncludeGameplayTags": false,
+	"AdditionalAssets": [],
+	"Dependencies": [],
+	"GameplayTagsIniFile": "",
+	"DataTableConfigs": [
+		{
+			"ConfigType": "CommonBuff",
+			"JsonFile": "Config/DT_CommonBuff_Example.json",
+			"StructName": "/Script/EastRimWorld.CommonBuff",
+			"bOverrideData": false
+		}
+	],
+	"DataAssetConfigs": []
+}

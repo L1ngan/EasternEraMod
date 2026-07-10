@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Base projectile class of the game, supporting team affiliation, target search/homing, applying GameplayEffects on hit, periodic DOT damage and cache-pool recycling.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TArray<TObjectPtr<AActor>> OverlappedActors;` |
 
-**Source comments:**
+**Notes:**
 
 > 重叠到的actor
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TObjectPtr<AActor> TargetActor;` |
 
-**Source comments:**
+**Notes:**
 
 > 攻击目标
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,meta=(ExposeOnSpawn = true)) FProjectileStruct ProjectileStruct;` |
 
-**Source comments:**
+**Notes:**
 
 > 发射器的配置
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) FVector ActivationVFXScale = FVector::One();` |
 
-**Source comments:**
+**Notes:**
 
 > 粒子的缩放
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) FVector TrailVFXScale = FVector::One();` |
 
-**Source comments:**
+**Notes:**
 
 > 粒子的缩放
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) FVector ImpactVFXScale = FVector::One();` |
 
-**Source comments:**
+**Notes:**
 
 > 粒子的缩放
 
@@ -107,6 +109,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FGenericTeamId MyTeamID;` |
 
+**Notes:**
+
+> Generic team ID the projectile belongs to.
+
 ---
 
 ### Property `CalculateCount`
@@ -118,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int CalculateCount;` |
 
-**Source comments:**
+**Notes:**
 
 > 投射物的伤害次数 -1为无限次数
 
@@ -133,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,meta=(ExposeOnSpawn = true)) TMap<ETargetClassType,FAllGameplayEffectSpecHandles> ProjectileSpecHandles;` |
 
-**Source comments:**
+**Notes:**
 
 > 投射物的效果
 
@@ -148,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,meta=(ExposeOnSpawn = true)) FVector Direction = FVector::Zero();` |
 
-**Source comments:**
+**Notes:**
 
 > 方向
 
@@ -163,9 +169,24 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) bool InitializationComplete = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否初始化完成
+
+---
+
+### Property `SkillEntrySpawnContext`
+
+| Field | Details |
+|------|------|
+| C++ type | [FEastRimWorldProjectileSkillEntrySpawnContext](../../MartialArts/EastRimWorldProjectileSkillEntryContext__FEastRimWorldProjectileSkillEntrySpawnContext.md) |
+| Reflection specifiers | BlueprintReadOnly, Category="SkillEntry" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "SkillEntry") FEastRimWorldProjectileSkillEntrySpawnContext SkillEntrySpawnContext;` |
+
+**Notes:**
+
+> 技能词条：投射物生成上下文（InitProjectile 时从 Pending 队列写入）
 
 ---
 
@@ -191,7 +212,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化投射物
 
@@ -209,7 +230,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加载投射物需要的信息
 
@@ -233,7 +254,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置投射物的速度
 
@@ -255,7 +276,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置追踪目标
 
@@ -273,7 +294,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 搜寻目标
 
@@ -297,7 +318,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 施加效果给目标
 
@@ -315,7 +336,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置碰撞显示
 
@@ -333,7 +354,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置碰撞关闭
 
@@ -351,7 +372,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 播放音效
 
@@ -369,7 +390,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 生成粒子特效和音效
 
@@ -392,7 +413,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 碰撞时生成特效和音效
 
@@ -414,7 +435,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 碰撞时生成其他投射物
 
@@ -432,7 +453,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 投射物发射
 
@@ -456,7 +477,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算发射的方向
 
@@ -474,7 +495,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 投射物结束
 
@@ -492,6 +513,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Performs processing before the projectile is recycled.
+
 ---
 
 ### Function `ClearProjectile`
@@ -506,7 +531,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 清理
 
@@ -524,7 +549,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > dot伤害应用效果
 
@@ -542,7 +567,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 清理特效
 

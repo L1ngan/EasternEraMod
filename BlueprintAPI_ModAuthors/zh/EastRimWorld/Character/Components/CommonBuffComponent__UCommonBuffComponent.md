@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 通用Buff组件：管理角色Buff的添加/移除/激活/挂起及对应GameplayEffect的施加与清理。
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TArray<FCommonBuff> BuffArray;` |
 
-**源码注释:**
+**说明:**
 
 > 拥有的buff
 
@@ -32,6 +34,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FRemoveBuffDelegate OnRemoveBuffDelegate;` |
 
+**说明:**
+
+> 移除Buff时触发的事件，参数为被移除的Buff。
+
 ---
 
 ### 属性 `OnAddBuffDelegate`
@@ -43,6 +49,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FAddBuffDelegate OnAddBuffDelegate;` |
 
+**说明:**
+
+> 添加Buff时触发的事件，参数为被添加的Buff。
+
 ---
 
 ### 属性 `OnUpdateBuffDelegate`
@@ -53,6 +63,10 @@
 | 反射说明符 | BlueprintAssignable |
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FUpdateBuffDelegate OnUpdateBuffDelegate;` |
+
+**说明:**
+
+> Buff列表更新时触发的事件。
 
 ---
 
@@ -76,7 +90,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 添加buff
 > 
@@ -104,7 +118,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID添加buff
 
@@ -128,7 +142,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 添加id数组的buff
 
@@ -151,9 +165,32 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除buff
+
+---
+
+### 函数 `GetBuffByID`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `BuffID` | `const FName &` |
+| `OutBuff` | [FCommonBuff](../../Struct/CommonStruct__FCommonBuff.md) & |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool GetBuffByID(const FName & BuffID, FCommonBuff & OutBuff);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 通过ID获取一个buff信息(找到返回true并填充OutBuff)
 
 ---
 
@@ -169,6 +206,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 广播Buff更新事件（OnUpdateBuffDelegate）。
+
 ---
 
 ### 函数 `GetAllBuff`
@@ -183,7 +224,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有buff 包含未激活的buff
 
@@ -201,7 +242,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有激活的buff
 

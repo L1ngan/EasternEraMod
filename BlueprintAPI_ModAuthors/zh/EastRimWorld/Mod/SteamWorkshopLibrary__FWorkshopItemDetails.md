@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") int64 PublishedFileId = 0;` |
 
-**源码注释:**
+**说明:**
 
 > Workshop 项目 ID
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") int32 Result = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 查询结果代码
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") int32 FileType = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 文件类型：0=Community, 1=Microtransaction, 2=Collection, 3=Art, 4=Video, 5=Screenshot, 6=Game, 7=Software, 8=Concept, 9=WebGuide, 10=IntegratedGuide, 11=Merch, 12=ControllerBinding, 13=SteamworksAccessInvite, 14=SteamVideo, 15=GameManagedItem
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") FString Title;` |
 
-**源码注释:**
+**说明:**
 
 > 项目标题
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") FString Description;` |
 
-**源码注释:**
+**说明:**
 
 > 项目描述
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") int64 CreatorSteamId = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 创建者 Steam ID
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") int32 TimeCreated = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 创建时间戳（Unix 时间戳）
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") int32 TimeUpdated = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 更新时间戳（Unix 时间戳）
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") int32 TimeAddedToUserList = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 添加到用户列表的时间戳（Unix 时间戳）
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") int32 Visibility = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 可见性：0=公开，1=仅好友，2=私有
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") bool bBanned = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否被禁止
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") bool bAcceptedForUse = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否被接受使用
 
@@ -199,7 +199,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") int64 FileHandle = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 文件句柄
 
@@ -214,7 +214,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") int64 PreviewFileHandle = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 预览文件句柄
 
@@ -229,7 +229,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") FString FileName;` |
 
-**源码注释:**
+**说明:**
 
 > 文件名
 
@@ -244,7 +244,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") int64 FileSize = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 文件大小（字节）
 
@@ -259,7 +259,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") int64 PreviewFileSize = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 预览文件大小（字节）
 
@@ -274,7 +274,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") FString PreviewImageURL;` |
 
-**源码注释:**
+**说明:**
 
 > 预览图 URL
 
@@ -289,7 +289,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") int32 VotesUp = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 点赞数
 
@@ -304,7 +304,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") int32 VotesDown = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 点踩数
 
@@ -319,7 +319,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") float Score = 0.0f;` |
 
-**源码注释:**
+**说明:**
 
 > 评分（浮点数）
 
@@ -334,7 +334,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") int32 NumChildren = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 子项数量
 
@@ -349,7 +349,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") int32 Subscriptions = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 订阅数
 
@@ -364,7 +364,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") int32 Favorites = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 收藏数
 
@@ -379,7 +379,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") bool bIsSubscribed = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否已订阅
 
@@ -394,7 +394,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") bool bIsInstalled = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否已安装
 
@@ -409,7 +409,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") bool bNeedsUpdate = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否需要更新
 
@@ -424,7 +424,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Steam Workshop") TArray<FString> Tags;` |
 
-**源码注释:**
+**说明:**
 
 > 标签数组
 

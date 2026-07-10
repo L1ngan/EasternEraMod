@@ -20,7 +20,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=PhysicalProperties) FGameplayTagContainer Tags;` |
 
-**源码注释:**
+**说明:**
 
 > A container of gameplay tags that game code can use to reason about this physical material
 

@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EAwardType` |
+| C++ type | [EAwardType](CommonTaskStruct__EAwardType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EAwardType AwardType = EAwardType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 奖励的类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName AwardID;` |
 
-**Source comments:**
+**Notes:**
 
 > 奖励的ID
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int Number = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 奖励奖励的数量
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGameplayTag GameplayTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 奖励tag
 

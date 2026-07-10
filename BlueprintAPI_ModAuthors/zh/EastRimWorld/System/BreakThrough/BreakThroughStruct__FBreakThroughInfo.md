@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid BreakThroughGuid = FGuid();` |
 
-**源码注释:**
+**说明:**
 
 > 突破唯一标识
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid CharacterGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 角色Guid
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 RealmLevel = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 突破的境界等级
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid RoomGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 选择的房间Guid
 
@@ -74,12 +74,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EFiveElementType` |
+| C++ 类型 | [EFiveElementType](../../Struct/CommonEnum__EFiveElementType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EFiveElementType TrainingRoomType = EFiveElementType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 突破开始时记录的练功房类型（用于检查房间是否变化）
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 TrainingRoomLevel = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 突破开始时记录的练功房等级（用于检查房间是否变化）
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float BreakThroughProgress = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 突破已增加的进度（突破点数）
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> PendingSkillIDs;` |
 
-**源码注释:**
+**说明:**
 
 > 待发放的技能奖励ID
 
@@ -134,12 +134,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EBreakThroughState` |
+| C++ 类型 | [EBreakThroughState](BreakThroughStruct__EBreakThroughState.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EBreakThroughState State = EBreakThroughState::NotStarted;` |
 
-**源码注释:**
+**说明:**
 
 > 突破状态
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float ElementValue = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 五行属性
 
@@ -168,5 +168,9 @@
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 BreakthroughNumber = 0;` |
+
+**说明:**
+
+> Breakthrough Number 字段。
 
 ---

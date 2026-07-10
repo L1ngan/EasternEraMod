@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> PlayerController 基类，负责背包资源管理、物品生成、队伍角色查询与主界面 UI 等
 
 ## 蓝图暴露变量
 
@@ -17,6 +19,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Inventory", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UInventoryManagerComponent> InventoryManagerComponent;` |
 
+**说明:**
+
+> 背包管理组件
+
 ---
 
 ### 属性 `OnInventoryItemInstanceDestroy`
@@ -28,7 +34,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnInventoryItemInstance OnInventoryItemInstanceDestroy;` |
 
-**源码注释:**
+**说明:**
 
 > ~End of IInventoryInterface interface
 > 物品删除
@@ -44,7 +50,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnInventoryItemInstance OnInventoryItemInstanceAddition;` |
 
-**源码注释:**
+**说明:**
 
 > 物品添加
 
@@ -59,7 +65,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnInventoryItemInstance OnInventoryItemInstanceUpdate;` |
 
-**源码注释:**
+**说明:**
 
 > 更新物品信息
 
@@ -74,7 +80,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnPopupInfoUIChange OnPopupInfoUIChange;` |
 
-**源码注释:**
+**说明:**
 
 > 更新通用信息界面
 
@@ -89,7 +95,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnCreateRobotDelegate OnCreateRobotDelegate;` |
 
-**源码注释:**
+**说明:**
 
 > 创建机关人
 
@@ -104,7 +110,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnDestoryRobotDelegate OnDestoryRobotDelegate;` |
 
-**源码注释:**
+**说明:**
 
 > 销毁机关人
 
@@ -119,7 +125,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnItemUseStateChange OnItemUseStateChangeEvent;` |
 
-**源码注释:**
+**说明:**
 
 > [自定义事件]当物品的使用状态改变
 
@@ -134,9 +140,24 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnUnLockItem OnUnLockItemEvent;` |
 
-**源码注释:**
+**说明:**
 
 > 解锁了物品(建筑菜单红点)
+
+---
+
+### 属性 `IsLeftShiftPressed`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `bool` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) bool IsLeftShiftPressed { false };` |
+
+**说明:**
+
+> 左Shift键是否按下
 
 ---
 
@@ -149,6 +170,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) int32 SelectedCharacterTabIndex = 0;` |
 
+**说明:**
+
+> 当前选中的角色页签索引
+
 ---
 
 ### 属性 `OnStartSettleAccountsDelegate`
@@ -160,7 +185,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnBattlefieldDelegate OnStartSettleAccountsDelegate;` |
 
-**源码注释:**
+**说明:**
 
 > 结算开始委托
 
@@ -175,7 +200,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnBattlefieldDelegate OnAttackerMoveToWorldPlaceDelegate;` |
 
-**源码注释:**
+**说明:**
 
 > 攻击方已经到达战场
 
@@ -190,7 +215,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnCharactersStartWanderDelegate OnCharactersStartWanderDelegate;` |
 
-**源码注释:**
+**说明:**
 
 > 角色开始游荡
 
@@ -210,6 +235,10 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 进入世界后初始化控制器的蓝图实现事件
+
 ---
 
 ### 函数 `K2_InitPlayerControllerOnWorldPlace`
@@ -224,6 +253,10 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 进入世界地点后初始化控制器的蓝图实现事件
+
 ---
 
 ### 函数 `RemoveUnlockItemTip`
@@ -237,13 +270,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `UnlockItemId` | `FName` |
-| `UnlockItemType` | `ETechUnlockItemType` |
+| `UnlockItemType` | [ETechUnlockItemType](../Struct/TechnologyStruct__ETechUnlockItemType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RemoveUnlockItemTip(FName UnlockItemId, ETechUnlockItemType UnlockItemType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除解锁物品提示
 
@@ -260,13 +293,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `UnlockItemId` | `FName` |
-| `UnlockItemType` | `ETechUnlockItemType` |
+| `UnlockItemType` | [ETechUnlockItemType](../Struct/TechnologyStruct__ETechUnlockItemType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool FindUnlockItemTip(FName UnlockItemId, ETechUnlockItemType UnlockItemType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查找解锁物品提示
 
@@ -288,7 +321,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 显示通知消息
 
@@ -304,7 +337,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `GroundInventoryType` | `EGroundInventoryType` |
+| `GroundInventoryType` | [EGroundInventoryType](../Struct/CommonEnum__EGroundInventoryType.md) |
 | `InGameplayTag` | `FGameplayTag` |
 | `InResourceID` | `FName` |
 
@@ -312,7 +345,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取拥有的资源数量
 
@@ -334,6 +367,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取当前拥有的所有资源及其数量列表
+
 ---
 
 ### 函数 `GetAllOwendResourcesTagMapInfo`
@@ -352,7 +389,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取拥有的所有资源按照TMap<FGameplayTag,FInventoryGeneralData>的方式
 
@@ -374,7 +411,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取是否拥有这些资源
 
@@ -392,7 +429,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 是否拥有实物
 
@@ -415,7 +452,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > /获取当前可用于消耗的物资(排除正在使用和预留的物品)
 
@@ -437,7 +474,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查可消耗物资是否足够
 
@@ -460,7 +497,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > /消耗物资(例如城镇升级),返回失败不产生消耗(排除正在使用和预留的物品)
 > //// @param bEnoughConsume 是否物品足够才消耗,设为false即使不够也会把能消耗的都消耗掉
@@ -481,14 +518,14 @@
 | `InResourceNumber` | `int` |
 | `InSpawnTransform` | `FTransform` |
 | `CurLevel` | `ULevel *` |
-| `InventoryType` | `EGroundInventoryType` |
+| `InventoryType` | [EGroundInventoryType](../Struct/CommonEnum__EGroundInventoryType.md) |
 | `（匿名/仅类型）` | `float InRadius = 500.f` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void GenerateAllTypeItemToWorldByID(FName InResourceID, int InResourceNumber, FTransform InSpawnTransform,ULevel * CurLevel, EGroundInventoryType InventoryType,float InRadius = 500.f);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据ID生成物品
 
@@ -514,7 +551,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据数据生成物品
 
@@ -540,7 +577,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据实例生成物品
 
@@ -566,7 +603,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 判断位置是否合适，不合适随机周边一个位置，并判断周围是否有相同的物品
 
@@ -592,7 +629,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 在半径内查找地面 SingleItem 中与 ItemID 相同的堆叠并尽量合并（用于 NormalItem）；返回剩余未能合并的数量。
 
@@ -612,11 +649,15 @@
 | `InResourceNumber` | `int` |
 | `InSpawnTransform` | `FTransform` |
 | `CurLevel` | `ULevel *` |
-| `InventoryType` | `EGroundInventoryType` |
+| `InventoryType` | [EGroundInventoryType](../Struct/CommonEnum__EGroundInventoryType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) AInventoryItemSet * GenerateIDItemToWorld(FName InResourceID,int InResourceNumber,FTransform InSpawnTransform,ULevel * CurLevel , EGroundInventoryType InventoryType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 按资源 ID 在世界中生成物品集，返回生成的 AInventoryItemSet
 
 ---
 
@@ -640,7 +681,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > void GenerateEquipmentData(const FEquipmentQualityRange & EquipmentQualityRang,FString CharacterName = "");
 > 根据配置生成一个物品到世界中
@@ -666,7 +707,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据装备信息生成一个物品丢到世界中
 
@@ -691,7 +732,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 调试绘制AI视野
 
@@ -715,7 +756,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据实例生成一个物品丢到世界中
 
@@ -740,7 +781,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据存档信息生成物品到世界中
 
@@ -763,7 +804,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 是否拥有包含这些标签的资源
 
@@ -785,7 +826,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有玩家队伍角色
 
@@ -807,7 +848,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过GUID获取玩家队伍中一个角色信息
 
@@ -830,7 +871,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过Guid查询角色（可以不限制玩家）
 
@@ -852,7 +893,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有玩家队伍机关人角色
 
@@ -874,7 +915,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有玩家队伍战斗机关人角色
 
@@ -896,7 +937,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有玩家队伍动物
 
@@ -918,7 +959,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取所有角色(包括人物 动物 召唤物)
 
@@ -940,6 +981,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 获取所有角色（人物/动物/召唤物）的第二版查询接口，与 GetAllCharacter 功能相同
+
 ---
 
 ### 函数 `GetGOAPAction`
@@ -960,7 +1005,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > /////////////临时做法 后续更改获取这个配置的方式*******///////////////////////////
 
@@ -982,6 +1027,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 按 GUID 查找背包中的物品实例
+
 ---
 
 ### 函数 `CreateMainUI`
@@ -1000,7 +1049,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 创建主界面UI
 
@@ -1022,7 +1071,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 设置所有ui隐藏
 
@@ -1039,6 +1088,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintPure) bool GetInputEnabled();`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 返回玩家输入当前是否启用
 
 ---
 
@@ -1057,6 +1110,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent) void SetPlayMoviesMask(bool bShow);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 设置播放影片遮罩的显示或隐藏（蓝图实现）
 
 ---
 
@@ -1077,7 +1134,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 生成建筑物故障投射物
 
@@ -1100,6 +1157,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 显示带标题与内容的消息框（蓝图实现）
+
 ---
 
 ### 函数 `TestPrintCurrentCameraName`
@@ -1114,7 +1175,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 测试：在日志中输出 PlayerCameraManager、GetViewTarget、GetViewTargetPawn 名称
 
@@ -1137,7 +1198,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 征召目标变化：用于统一管理唯一显示的视野扇形（仅在被征召者上显示）
 
@@ -1155,7 +1216,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 批量征召开始：进入批量模式（期间不显示任何扇形）
 
@@ -1173,7 +1234,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 批量征召结束：根据人数决定显示（==1 显示；否则隐藏）
 
@@ -1191,8 +1252,31 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 选中状态变化后通知：立即按“征召+选中+唯一”规则重算显示
+
+---
+
+### 函数 `WM_TargetDump`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `（匿名/仅类型）` | `); (BlueprintCallable` |
+| `InPlace` | Category="WM") void WM_SetSelectedPlace(class [AWorldPlace](../WorldSystem/WorldPlace__AWorldPlace.md)* |
+
+**原始声明（单行节选）:** `UFUNCTION(Exec) void WM_TargetDump(); UFUNCTION(BlueprintCallable, Category="WM") void WM_SetSelectedPlace(class AWorldPlace* InPlace);`
+
+**用法说明:** 详见蓝图编辑器中该节点的引脚与分类。
+
+**说明:**
+
+> WM Target Dump 字段。
 
 ---

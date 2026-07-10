@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<int32 , FName> Schedules;` |
 
-**Source comments:**
+**Notes:**
 
 > TMap<时间点(小时) , 工作日程配置行名>
 
@@ -31,12 +31,13 @@
 |------|------|
 | C++ type | TMap<FGuid , [AEastRimWorldCharacter](../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md)*> |
 | Reflection specifiers | BlueprintReadOnly |
-| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<FGuid , AEastRimWorldCharacter*> Agents;` |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , Transient) TMap<FGuid , AEastRimWorldCharacter*> Agents;` |
 
-**Source comments:**
+**Notes:**
 
-> 执行此计划的角色
-> TMap<角色的Guid , 角色>
+> 执行此计划的角色（运行时缓存；标 Transient 不入盘，避免序列化裸角色指针悬空致崩）
+> 读档身份由各角色 FCharacterSaveData::CurrentWorkScheduleName 持有，角色重建后回注
+> （见 AEastRimWorldCharacter::ReinjectToWorkScheduleAfterLoad）
 
 ---

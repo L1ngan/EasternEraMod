@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Data of a single spawn point (box transform, instance index, activation state, and spawn entry list)
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() FTransform boxTransform;` |
 
+**Notes:**
+
+> Transform of the spawn box at this point
+
 ---
 
 ### Property `instanceIndex`
@@ -27,6 +33,10 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() int instanceIndex = 0;` |
+
+**Notes:**
+
+> Instanced mesh instance index corresponding to this point
 
 ---
 
@@ -39,6 +49,10 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() bool bIsSpawnPoint = false;` |
 
+**Notes:**
+
+> Whether this point is selected as a spawn point
+
 ---
 
 ### Property `bIsActivate`
@@ -49,6 +63,10 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() bool bIsActivate = false;` |
+
+**Notes:**
+
+> Whether this point is currently activated
 
 ---
 
@@ -61,6 +79,10 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() TArray<FGWOActorSpawnStruct> spawnDataArr;` |
 
+**Notes:**
+
+> Array of actor spawn entries assigned to this point
+
 ---
 
 ### Property `spawnPointCount`
@@ -71,5 +93,9 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() int spawnPointCount = 0;` |
+
+**Notes:**
+
+> Spawn point count for this point
 
 ---

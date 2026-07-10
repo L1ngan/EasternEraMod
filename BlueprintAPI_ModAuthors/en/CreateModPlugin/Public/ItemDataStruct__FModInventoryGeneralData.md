@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(Units = s),Category="Base") float ItemUseTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 使用物品增加的时间 秒 目前 食用时生效
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") float MaxItemDurability = -1;` |
 
-**Source comments:**
+**Notes:**
 
 > 耐久度 为-1时没有耐久
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") float ItemWeight = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品的重量（单位KG，支持小数点）
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FName RotToItemID;` |
 
-**Source comments:**
+**Notes:**
 
 > 保质期过后（腐烂）的产物
 
@@ -74,12 +74,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EModStorageSpace,float>` |
+| C++ type | TMap<[EModStorageSpace](ItemDataStruct__EModStorageSpace.md),float> |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<EModStorageSpace,float> StorageSpaceDecayRate;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品在各种存储空间下的保质期衰减率
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") float ItemShelfLife = -1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品的保质期（游戏时间，秒） -1为没有保质期
 
@@ -104,12 +104,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EModGroundSoilType,float>` |
+| C++ type | TMap<[EModGroundSoilType](ItemDataStruct__EModGroundSoilType.md),float> |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<EModGroundSoilType,float> RateOfDecay;` |
 
-**Source comments:**
+**Notes:**
 
 > 所处的地面影响保质期的衰减效率
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TArray<FModEfficiencyByTemperature> TemperatureThreshold;` |
 
-**Source comments:**
+**Notes:**
 
 > 温度影响的相关效率(物品的保质期，植物的生成效率）
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TArray<FName> RawMaterial;` |
 
-**Source comments:**
+**Notes:**
 
 > 此物品的原材料
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") float NeedHight = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 需要的高度 0 为没有高度限制
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TArray<FModStackModel> StackModels;` |
 
-**Source comments:**
+**Notes:**
 
 > 不同堆叠容量范围内的模型
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") int SmallGridCount = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 此物品放置在地格中时占用的小格子数量 目前只有 1 跟 4 既 四分之1格和 整格
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TSoftObjectPtr<UTexture2D> ItemIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品在UI上显示的图标
 
@@ -214,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") float ItemPrice = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品出售/购买时的基础价格
 
@@ -229,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") bool bCanBeDismantled = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 判断物品是否能拆解，拆解后给出的材料
 
@@ -244,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<FName,int32> DismantledMaterials;` |
 
-**Source comments:**
+**Notes:**
 
 > 拆解后给予的道具与道具数量
 
@@ -259,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") int32 RecoverValue { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 单个物品恢复值
 
@@ -274,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") int32 MaxStackSize = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 该物品在地面/建筑内可堆叠的最大数量
 
@@ -284,12 +284,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EModItemQuality` |
+| C++ type | [EModItemQuality](ItemDataStruct__EModItemQuality.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") EModItemQuality ItemQuality = EModItemQuality::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品品质，用于UI显示和筛选
 
@@ -304,7 +304,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FText ItemDescription;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品在UI上显示的文字描述
 
@@ -319,7 +319,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FText ItemName;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品名称
 
@@ -334,7 +334,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TSoftObjectPtr<UStaticMesh> ItemModel;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品的3D模型 例如拿着的模型
 
@@ -344,12 +344,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EModGroundInventoryType` |
+| C++ type | [EModGroundInventoryType](BaseDataStruct__EModGroundInventoryType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") EModGroundInventoryType GroundInventoryType = EModGroundInventoryType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品类型
 
@@ -364,7 +364,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FModFormatText FormatItemDescription;` |
 
-**Source comments:**
+**Notes:**
 
 > 格式化后的描述
 
@@ -379,7 +379,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment Base") FText ItemGrade;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品的品阶
 
@@ -394,7 +394,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TSoftClassPtr<AActor> ItemSubstituteClass;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品的替身类 在实际操作时会替换为此actor
 
@@ -409,7 +409,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base",Meta = (Categories = "Inventory")) FGameplayTag GameplayTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 此物品的标签
 
@@ -424,7 +424,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") FName BeforeObserveInformationWidget;` |
 
-**Source comments:**
+**Notes:**
 
 > 观察前点击物品实例后显示的界面ID 关联DT_CommonUIConfig表
 
@@ -439,7 +439,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FName InformationWidget;` |
 
-**Source comments:**
+**Notes:**
 
 > 点击物品实例后显示的界面ID 关联DT_CommonUIConfig表
 
@@ -454,7 +454,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FName TipInformationWidget;` |
 
-**Source comments:**
+**Notes:**
 
 > 悬浮后显示的tip界面ID 关联DT_CommonUIConfig表
 
@@ -464,12 +464,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EModCharacterBehaviorState,FName>` |
+| C++ type | TMap<[EModCharacterBehaviorState](BaseDataStruct__EModCharacterBehaviorState.md),FName> |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<EModCharacterBehaviorState,FName> SocketName;` |
 
-**Source comments:**
+**Notes:**
 
 > 在与此物品交换时此物品附加的插槽
 
@@ -484,7 +484,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TArray<FName> GOAPActions;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品拥有的GOAP Action的ID
 
@@ -494,12 +494,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EModCharacterBehaviorState,[FModGroupCorrespondingAnim](ItemDataStruct__FModGroupCorrespondingAnim.md)> |
+| C++ type | TMap<[EModCharacterBehaviorState](BaseDataStruct__EModCharacterBehaviorState.md),[FModGroupCorrespondingAnim](ItemDataStruct__FModGroupCorrespondingAnim.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<EModCharacterBehaviorState,FModGroupCorrespondingAnim> BehaviorAnimation;` |
 
-**Source comments:**
+**Notes:**
 
 > 在与此物品交换时行为对应的动画(目前在拾取物品时使用）
 
@@ -509,12 +509,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EModCharacterBehaviorState,[FModGroupCorrespondingAnim](ItemDataStruct__FModGroupCorrespondingAnim.md)> |
+| C++ type | TMap<[EModCharacterBehaviorState](BaseDataStruct__EModCharacterBehaviorState.md),[FModGroupCorrespondingAnim](ItemDataStruct__FModGroupCorrespondingAnim.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<EModCharacterBehaviorState,FModGroupCorrespondingAnim> BehaviorBlendAnimation;` |
 
-**Source comments:**
+**Notes:**
 
 > 此物品拾取以后下一个action对应的混合动作 例如拾取原木后抱着原木行走的上半身混合动作
 
@@ -524,12 +524,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EModCharacterBehaviorState,TSoftObjectPtr<UStaticMesh>>` |
+| C++ type | TMap<[EModCharacterBehaviorState](BaseDataStruct__EModCharacterBehaviorState.md),TSoftObjectPtr<UStaticMesh>> |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<EModCharacterBehaviorState,TSoftObjectPtr<UStaticMesh>> BehaviorItemMesh;` |
 
-**Source comments:**
+**Notes:**
 
 > 在行为中时使用的模型 如果不配置则使用默认
 
@@ -544,7 +544,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Sound") TMap<FGameplayTag,FName> ItemSound;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品相关的音效 key 为音效的播放tag value 音效的id  读取GameSoundInfo
 
@@ -559,7 +559,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<FGameplayTag, FEastRimWorldGameplayEffectContainer> EffectContainerMap;` |
 
-**Source comments:**
+**Notes:**
 
 > 使用此物品后会产生的效果 目前 食用时生效
 
@@ -574,7 +574,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Base") float GrowScore = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应的成长积分
 
@@ -589,7 +589,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") FName ForMulaId;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品关联的配方id
 

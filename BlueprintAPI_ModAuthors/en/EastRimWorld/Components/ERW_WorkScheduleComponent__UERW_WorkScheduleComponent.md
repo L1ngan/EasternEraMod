@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<FString , FWorkScheduleData> WorkSchedules;` |
 
-**Source comments:**
+**Notes:**
 
 > 工作日程
 > TMap<日程名称 , 工作日程数据>
@@ -35,7 +35,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) FText DefaultScheduleName;` |
 
-**Source comments:**
+**Notes:**
 
 > 工作日程默认名称
 
@@ -50,7 +50,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnWorkScheduleChanged OnWorkScheduleChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 当工作日程变化时
 
@@ -65,7 +65,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnWorkScheduleRemoved OnWorkScheduleRemoved;` |
 
-**Source comments:**
+**Notes:**
 
 > 当工作日程移除时
 
@@ -80,7 +80,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnRemoveDeadCharacter OnRemoveDeadCharacter;` |
 
-**Source comments:**
+**Notes:**
 
 > 移除死亡角色
 
@@ -104,7 +104,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加入工作日程
 
@@ -126,7 +126,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除工作日程
 
@@ -150,7 +150,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新工作日程
 
@@ -173,7 +173,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 改变工作日程名称
 
@@ -196,7 +196,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获得其他工作日程的角色
 
@@ -219,7 +219,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 转移角色到指定工作日程
 

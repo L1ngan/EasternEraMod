@@ -19,9 +19,24 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FName ObjectID;` |
 
-**Source comments:**
+**Notes:**
 
 > 物体的ID
+
+---
+
+### Property `OldObjectID`
+
+| Field | Details |
+|------|------|
+| C++ type | `FName` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) FName OldObjectID;` |
+
+**Notes:**
+
+> 重建前的物体ID
 
 ---
 
@@ -34,6 +49,10 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid SGUID = FGuid();` |
 
+**Notes:**
+
+> Globally unique ID used by the Savior save system
+
 ---
 
 ### Property `SaviorDestroyed`
@@ -45,18 +64,22 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) bool SaviorDestroyed = false;` |
 
+**Notes:**
+
+> Whether this build object is marked as destroyed in the Savior save data
+
 ---
 
 ### Property `BuildingData`
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EBuildingDataType , FInstancedStruct>` |
+| C++ type | TMap<[EBuildingDataType](../ERW_Enumerations__EBuildingDataType.md) , FInstancedStruct> |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<EBuildingDataType , FInstancedStruct> BuildingData;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑特有数据
 > TMap<建筑数据类型 , 数据结构>
@@ -72,9 +95,24 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FBuildObjectData ISMSaveData;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑在ISM组件中的存档数据
+
+---
+
+### Property `OldISMSaveData`
+
+| Field | Details |
+|------|------|
+| C++ type | [FBuildObjectData](../ERW_CommonTypes__FBuildObjectData.md) |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame) FBuildObjectData OldISMSaveData;` |
+
+**Notes:**
+
+> 重建前的建筑在ISM组件中的存档数据
 
 ---
 
@@ -87,7 +125,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) bool IsInMap { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否放置在地图中
 
@@ -102,7 +140,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) bool IsDestroyed { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否销毁
 
@@ -117,7 +155,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) bool bBuildComplete = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否建造完成
 
@@ -132,7 +170,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FSmartObjectSlotHandle SlotHandle;` |
 
-**Source comments:**
+**Notes:**
 
 > 选中的智能对象插槽
 
@@ -142,12 +180,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<ECommonButtonType,bool>` |
+| C++ type | TMap<[ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md),bool> |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<ECommonButtonType,bool> ButtonOperationState;` |
 
-**Source comments:**
+**Notes:**
 
 > 相关按钮的状态 是否选中
 
@@ -162,7 +200,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FGenericTeamId MyTeamID;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑物TeamID
 
@@ -172,12 +210,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBuildingRunState` |
+| C++ type | [EBuildingRunState](../ERW_Enumerations__EBuildingRunState.md) |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) EBuildingRunState BuildingRunState = EBuildingRunState::Stop;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑物状态
 
@@ -187,12 +225,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBuildingEnableState` |
+| C++ type | [EBuildingEnableState](../ERW_Enumerations__EBuildingEnableState.md) |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) EBuildingEnableState BuildingEnableState = EBuildingEnableState::Enable;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑物的启用状态
 
@@ -207,7 +245,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) float CurDurability = 0.0f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前耐久度
 
@@ -222,7 +260,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) bool bBuildingState = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑状态（开启或关闭）
 
@@ -237,7 +275,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid AttackSummonsGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 附加到建筑物上的召唤物ID
 
@@ -252,7 +290,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TArray<FGoalAndAction> AboutBuildingAction;` |
 
-**Source comments:**
+**Notes:**
 
 > 涉及建筑运行相关的Action
 
@@ -267,7 +305,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FGuid , bool> SuspendItemGuids;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑占据的采集物的Guid
 > TMap<采集物的Guid , 占位符>

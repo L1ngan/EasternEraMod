@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EArmorType,FName>` |
+| C++ type | TMap<[EArmorType](../Struct/CommonEnum__EArmorType.md),FName> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<EArmorType,FName>ApparelsData;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色服装数据
 

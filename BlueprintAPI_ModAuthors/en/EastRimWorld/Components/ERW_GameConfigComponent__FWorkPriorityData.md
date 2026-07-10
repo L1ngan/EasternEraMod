@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float PriorityScore { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 优先级分值
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FSlateColor Color;` |
 
-**Source comments:**
+**Notes:**
 
 > 优先级对应的文本颜色
 

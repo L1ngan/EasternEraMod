@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<int32,FGuid> OccupierGuids;` |
 
-**Source comments:**
+**Notes:**
 
 > 交通工具在使用的移动信息Guids
 

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "UObject/StrongObjectPtr.h"
 #include "Widgets/SCompoundWidget.h"
 #include "ModInfoEditorData.h"
 #include "Dom/JsonObject.h"
@@ -31,9 +32,8 @@ private:
 	TSharedPtr<class SEditableTextBox> ModFolderPathTextBox;
 	TSharedPtr<class SEditableTextBox> MainLuaFileTextBox;
 
-	// 数据
-	UPROPERTY()
-	TObjectPtr<UModInfoData> ModInfoData;
+	// 数据（Slate 类不参与反射，UPROPERTY 不生效；用 TStrongObjectPtr 防止编辑器 GC 回收后悬空）
+	TStrongObjectPtr<UModInfoData> ModInfoData;
 	
 	// 保存原始的 bIncludeGameplayTags 值，用于检测变化
 	bool bOriginalIncludeGameplayTags = false;

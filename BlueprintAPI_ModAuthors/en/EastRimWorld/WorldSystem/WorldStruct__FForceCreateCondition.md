@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<FName> ConditionIds;` |
 
-**Source comments:**
+**Notes:**
 
 > 创建势力的ID
 

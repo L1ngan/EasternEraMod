@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) TMap<FIntPoint , bool> Points;` |
 
-**源码注释:**
+**说明:**
 
 > 墙经过的所有点
 > TMap<点 , 占位符>
@@ -35,7 +35,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<FGridPosition , bool> GridPoses;` |
 
-**源码注释:**
+**说明:**
 
 > 闭合区域包含的格子
 > TMap<格子坐标 , 占位符>
@@ -46,12 +46,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<EEnvironType , [FRoomElementGuids](ERW_MapDataMgr__FRoomElementGuids.md)> |
+| C++ 类型 | TMap<[EEnvironType](../ERW_Enumerations__EEnvironType.md) , [FRoomElementGuids](ERW_MapDataMgr__FRoomElementGuids.md)> |
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) TMap<EEnvironType , FRoomElementGuids> RoomElementGuids;` |
 
-**源码注释:**
+**说明:**
 
 > 房间要素的Guid
 > TMap<环境类型 , 房间要素的Guid>
@@ -67,7 +67,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) int32 FoundationNum { 0 };` |
 
-**源码注释:**
+**说明:**
 
 > 建造完成的地基数量
 
@@ -82,7 +82,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 WallNum { 0 };` |
 
-**源码注释:**
+**说明:**
 
 > 建造完成的墙面数量
 
@@ -97,7 +97,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 DoorNum { 0 };` |
 
-**源码注释:**
+**说明:**
 
 > 建造完成的门数量
 
@@ -112,7 +112,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 RoofNum { 0 };` |
 
-**源码注释:**
+**说明:**
 
 > 建造完成的屋顶数量
 
@@ -127,7 +127,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) bool IsRoom { false };` |
 
-**源码注释:**
+**说明:**
 
 > 是否形成房间
 
@@ -142,7 +142,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) FRoomInfo RoomInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 房间信息
 

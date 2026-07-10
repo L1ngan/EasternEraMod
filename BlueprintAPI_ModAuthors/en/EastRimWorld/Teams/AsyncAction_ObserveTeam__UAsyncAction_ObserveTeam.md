@@ -19,7 +19,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FTeamObservedAsyncDelegate OnTeamChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > Called when the team is set or changed
 
@@ -43,7 +43,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > Watches for team changes on the specified team agent
 > - It will will fire once immediately to give the current team assignment

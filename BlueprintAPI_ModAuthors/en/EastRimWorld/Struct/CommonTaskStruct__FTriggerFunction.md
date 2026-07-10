@@ -19,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName OriginTaskID;` |
 
+**Notes:**
+
+> Origin Task ID field.
+
 ---
 
 ### Property `OriginTaskGUID`
@@ -30,18 +34,22 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid OriginTaskGUID;` |
 
+**Notes:**
+
+> Origin Task GUID field.
+
 ---
 
 ### Property `TriggerFunctionType`
 
 | Field | Details |
 |------|------|
-| C++ type | `ETriggerFunctionType` |
+| C++ type | [ETriggerFunctionType](CommonTaskStruct__ETriggerFunctionType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ETriggerFunctionType TriggerFunctionType = ETriggerFunctionType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 触发额外功能的类型
 
@@ -51,12 +59,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ETriggerTimingType` |
+| C++ type | [ETriggerTimingType](CommonTaskStruct__ETriggerTimingType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ETriggerTimingType TriggerTimingType = ETriggerTimingType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 触发的时机
 
@@ -71,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float DelayTime;` |
 
-**Source comments:**
+**Notes:**
 
 > 延迟触发时间 配置-1则代表立即
 
@@ -86,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FIntPoint TriggerPeriod;` |
 
-**Source comments:**
+**Notes:**
 
 > 触发时段范围值(0-23)可以配置跨天(例(22~4))
 
@@ -101,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> NameParams;` |
 
-**Source comments:**
+**Notes:**
 
 > FName类型参数列表 （看TriggerFunctionType的注释）
 
@@ -115,5 +123,9 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<int32> IntParams;` |
+
+**Notes:**
+
+> Int Params field.
 
 ---

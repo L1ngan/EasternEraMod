@@ -19,9 +19,9 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 BasicConsumption = 0;` |
 
-**Source comments:**
+**Notes:**
 
-> 基础消耗
+> 基础消耗(选择该交通工具的一次性固定消耗)
 
 ---
 
@@ -29,13 +29,13 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `int32` |
+| C++ type | `float` |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 StageConsumption = 0;` |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float StageConsumption = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
-> 每1000米消耗
+> 每小时消耗(乘以往返小时数;支持小数,最终产出向上取整)
 
 ---

@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) ALandscape* Landscape { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > 地形
 
@@ -34,6 +34,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) AERW_PlayerPawn* PlayerPawn { nullptr };` |
 
+**Notes:**
+
+> Reference to the player pawn
+
 ---
 
 ### Property `AreaCurves`
@@ -45,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TArray<AERW_AreaCurve*> AreaCurves;` |
 
-**Source comments:**
+**Notes:**
 
 > 区域曲线
 
@@ -60,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) float GridLength { 100.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 格子边长(单位厘米)
 
@@ -75,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) float FoundationModelHeight { 10.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 地基模型高度(一半在地上一半在地下)
 
@@ -90,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) FIntPoint LandscapeGridSize;` |
 
-**Source comments:**
+**Notes:**
 
 > 地形格子尺寸
 
@@ -105,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) FVector LandscapeOrigin { FVector::ZeroVector };` |
 
-**Source comments:**
+**Notes:**
 
 > 地形原点
 
@@ -120,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) int32 HighestFloor { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 当前拥有的最高楼层
 
@@ -135,7 +139,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) int32 CurrentFloor { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 当前所在楼层
 
@@ -150,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) float MaxHeightDifference { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 建造允许的最大高低差
 
@@ -165,7 +169,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnbuilded OnBuildingComplateEvent;` |
 
-**Source comments:**
+**Notes:**
 
 > [自定义事件]建筑完成事件
 
@@ -180,7 +184,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnbuilded OnBuildingRemoveEvent;` |
 
-**Source comments:**
+**Notes:**
 
 > [自定义事件]建筑拆除事件
 
@@ -190,12 +194,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ERoomUnitShowState` |
+| C++ type | [ERoomUnitShowState](../ERW_Enumerations__ERoomUnitShowState.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) ERoomUnitShowState RoomUnitShowState { ERoomUnitShowState::Hidden };` |
 
-**Source comments:**
+**Notes:**
 
 > 房间单元显示状态
 
@@ -210,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) AGOAP_ActorBase* SelectedFoundation { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > 选中的地基
 
@@ -225,6 +229,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TSubclassOf<class AActor> BuildObjectClass;` |
 
+**Notes:**
+
+> Actor class used for build objects
+
 ---
 
 ### Property `UsedNumbers`
@@ -236,7 +244,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<FName, FBuildingNum> UsedNumbers;` |
 
-**Source comments:**
+**Notes:**
 
 > 每种设备已使用编号
 
@@ -251,7 +259,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<FName, int32> MaxNumbers;` |
 
-**Source comments:**
+**Notes:**
 
 > 每种类型Actor的最大编号
 
@@ -266,9 +274,39 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) float AgentStepHeight { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 角色垂直跨越高度
+
+---
+
+### Property `ReceiveGoodsAreaBuildGuid`
+
+| Field | Details |
+|------|------|
+| C++ type | `FGuid` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) FGuid ReceiveGoodsAreaBuildGuid = FGuid();` |
+
+**Notes:**
+
+> 玩家自建收货区建筑GUID
+
+---
+
+### Property `TradeAreaBuildGuid`
+
+| Field | Details |
+|------|------|
+| C++ type | `FGuid` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) FGuid TradeAreaBuildGuid = FGuid();` |
+
+**Notes:**
+
+> 玩家自建码货建筑GUID
 
 ---
 
@@ -280,6 +318,10 @@
 | Reflection specifiers | BlueprintAssignable |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnMapDataMgrLoadSlotSucceed OnMapDataMgrLoadSlotSucceed;` |
+
+**Notes:**
+
+> Event delegate broadcast after the map data manager successfully loads a save slot
 
 ---
 
@@ -297,6 +339,54 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Returns the array of map building data
+
+---
+
+### Function `GetMapBuildingNum`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintPure, Category="Build" |
+| Return type | `int32` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `BuildID` | `const FName&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintPure, Category = "Build") int32 GetMapBuildingNum(const FName& BuildID) const;`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 获取指定配置ID建筑当前在地图上的数量
+
+---
+
+### Function `IsBuildingReachLimit`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintPure, Category="Build" |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `BuildID` | `const FName&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintPure, Category = "Build") bool IsBuildingReachLimit(const FName& BuildID) const;`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 检查指定配置ID的建筑是否已经达到数量上限
+
 ---
 
 ### Function `GetMapFabricateData`
@@ -304,12 +394,16 @@
 | Field | Details |
 |------|------|
 | Reflection specifiers | BlueprintCallable |
-| Return type | TMap<EFabricateType, [FGuidArr](../Struct/CommonStruct__FGuidArr.md)>& |
+| Return type | TMap<[EFabricateType](../Struct/CommonEnum__EFabricateType.md), [FGuidArr](../Struct/CommonStruct__FGuidArr.md)>& |
 | Parameters | (none) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TMap<EFabricateType, FGuidArr>& GetMapFabricateData();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns the map fabricate data (fabricate type to building GUID arrays)
 
 ---
 
@@ -323,12 +417,16 @@
 
 | Name | Type |
 |--------|------|
-| `FabricateType` | `EFabricateType` |
+| `FabricateType` | [EFabricateType](../Struct/CommonEnum__EFabricateType.md) |
 | `BuildingGuid` | `FGuid` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void AddFabricate(EFabricateType FabricateType , FGuid BuildingGuid);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Adds a building GUID to the map fabricate data under the given fabricate type
 
 ---
 
@@ -349,6 +447,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Returns a random location picked from the given room grid positions
+
 ---
 
 ### Function `FindObject`
@@ -367,7 +469,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 找到Guid对应的Actor
 
@@ -385,7 +487,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 存档前清理数据
 
@@ -409,7 +511,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加入建造资源
 
@@ -431,7 +533,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除建造资源
 
@@ -449,7 +551,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查建造资源缺少情况
 
@@ -472,7 +574,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化地形相关信息
 
@@ -494,7 +596,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查位置是否是有效的线性位置
 
@@ -516,7 +618,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置区域曲线显示或隐藏
 
@@ -539,7 +641,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获得指定格子数据
 
@@ -561,7 +663,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获得格子顶部高度
 
@@ -579,14 +681,14 @@
 |--------|------|
 | `Layer` | `int32` |
 | `GridPos` | const [FGridPosition](../ERW_CommonTypes__FGridPosition.md)& |
-| `EnvironType` | `EEnvironType` |
-| `DistributionType` | `EGridDistributionType` |
+| `EnvironType` | [EEnvironType](../ERW_Enumerations__EEnvironType.md) |
+| `DistributionType` | [EGridDistributionType](../ERW_Enumerations__EGridDistributionType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure) AGOAP_ActorBase* FindActor(int32 Layer , const FGridPosition& GridPos , EEnvironType EnvironType , EGridDistributionType DistributionType) const;`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获得格子中的Actor
 
@@ -604,13 +706,13 @@
 |--------|------|
 | `Layer` | `int32` |
 | `GridPos` | const [FGridPosition](../ERW_CommonTypes__FGridPosition.md)& |
-| `EnvironType` | `EEnvironType` |
+| `EnvironType` | [EEnvironType](../ERW_Enumerations__EEnvironType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure) bool IsEnvironTypeExist(int32 Layer , const FGridPosition& GridPos , EEnvironType EnvironType) const;`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查格子是否存在某种环境类型
 
@@ -632,6 +734,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Checks whether the given grid position already contains another object
+
 ---
 
 ### Function `CollectSurroundingFillerBuildings`
@@ -644,7 +750,7 @@
 
 | Name | Type |
 |--------|------|
-| `EnvironType` | `EEnvironType` |
+| `EnvironType` | [EEnvironType](../ERW_Enumerations__EEnvironType.md) |
 | `GridPoses` | const TArray<[FGridPosition](../ERW_CommonTypes__FGridPosition.md)>& |
 | `RemovedObjects` | `const TArray<UObject*>&` |
 | `BuildObjects` | TArray<[AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)*>& |
@@ -653,7 +759,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 收集周围有填充模型的建筑
 
@@ -681,7 +787,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获得阶梯的格子信息
 
@@ -704,7 +810,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查并更新周围墙的接缝柱
 
@@ -727,7 +833,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算建筑所占格子的高低差
 
@@ -750,7 +856,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获得相邻的组装建筑
 
@@ -773,7 +879,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查并获得组装建筑需要放柱子的接缝点
 
@@ -796,7 +902,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查并更新组装建筑柱子
 
@@ -821,7 +927,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加入地图环境数据
 
@@ -838,12 +944,13 @@
 | Name | Type |
 |--------|------|
 | `Actor` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
+| `false` | `bool OnlyRemoveEnvironData =` |
 
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void RemoveEnvironData(AGOAP_ActorBase* Actor);`
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void RemoveEnvironData(AGOAP_ActorBase* Actor , bool OnlyRemoveEnvironData = false);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 从地图环境数据中移除
 
@@ -866,7 +973,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查并处理上方建筑
 
@@ -889,7 +996,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加入额外信息
 
@@ -911,7 +1018,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除无效的额外信息
 
@@ -934,7 +1041,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询建筑数据数组
 
@@ -958,7 +1065,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 将建筑加入到地图建筑数据中
 
@@ -980,7 +1087,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过建筑GUID查找建筑配置ID
 
@@ -1003,7 +1110,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 将建筑从地图建筑数据中移除
 
@@ -1019,13 +1126,13 @@
 
 | Name | Type |
 |--------|------|
-| `BType` | `EBuildingType` |
+| `BType` | [EBuildingType](../ERW_Enumerations__EBuildingType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<FGuid> GetBuildingsByBuildingType(EBuildingType BType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取指定类型的建筑
 
@@ -1047,7 +1154,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取指定建筑状态的建筑
 
@@ -1069,7 +1176,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 读档时收集不在任何区域内的墙
 
@@ -1093,7 +1200,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新闭合区域信息
 
@@ -1110,13 +1217,13 @@
 | Name | Type |
 |--------|------|
 | `Wall` | [AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)* |
-| `DisplayType` | `EWallDisplayType` |
+| `DisplayType` | [EWallDisplayType](../ERW_Enumerations__EWallDisplayType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void RecordWallDisplayType(AGOAP_ActorBase* Wall , EWallDisplayType DisplayType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 记录墙的显示类型
 
@@ -1138,7 +1245,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除墙的显示类型
 
@@ -1163,7 +1270,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查并移除房间要素
 
@@ -1179,13 +1286,13 @@
 
 | Name | Type |
 |--------|------|
-| `State` | `ERoomUnitShowState` |
+| `State` | [ERoomUnitShowState](../ERW_Enumerations__ERoomUnitShowState.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetRoomUnitShowState(ERoomUnitShowState State);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置房间单元显示状态
 
@@ -1203,7 +1310,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新房间单元显示状态
 
@@ -1227,7 +1334,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新房间单元显示
 
@@ -1250,7 +1357,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 根据格子位置和高度获取所在层
 
@@ -1272,6 +1379,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Returns the layer index for the given world position
+
 ---
 
 ### Function `CheckPositionInRoom`
@@ -1290,7 +1401,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查坐标是否在房间内
 
@@ -1313,6 +1424,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Checks whether the given grid position and height are inside a room
+
 ---
 
 ### Function `GetRoomAreaDataByWorldLocation`
@@ -1332,7 +1447,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过世界坐标获取房间数据
 
@@ -1343,7 +1458,7 @@
 | Field | Details |
 |------|------|
 | Reflection specifiers | BlueprintPure |
-| Return type | `EStorageSpace` |
+| Return type | [EStorageSpace](../ERW_Enumerations__EStorageSpace.md) |
 | Parameters | see table below |
 
 | Name | Type |
@@ -1354,7 +1469,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 通过世界坐标获取空间类型
 
@@ -1378,7 +1493,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取房间内所有修建完成的建筑物
 
@@ -1400,7 +1515,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新处于房间内时施加给角色的buff(大门重叠事件时调用)
 
@@ -1424,7 +1539,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查房间所需的设施
 
@@ -1449,6 +1564,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Checks whether the building ID counts and category counts satisfy the given facility-need list and required count
+
 ---
 
 ### Function `CheckFiveElementNeed`
@@ -1461,14 +1580,14 @@
 
 | Name | Type |
 |--------|------|
-| `InFiveElement` | `const TMap<EFiveElementType,float> &` |
+| `InFiveElement` | const TMap<[EFiveElementType](../Struct/CommonEnum__EFiveElementType.md),float> & |
 | `InRoomConfig` | const [FRoomConfigData](../ERW_ConfigTypes__FRoomConfigData.md)& |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool CheckFiveElementNeed(const TMap<EFiveElementType,float> & InFiveElement,const FRoomConfigData& InRoomConfig);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 是否满足五行需求
 
@@ -1491,7 +1610,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置房间类型是否为玩家指定
 
@@ -1513,7 +1632,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 玩家指定房间类型
 
@@ -1536,7 +1655,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取形成房间类型缺少的建筑数量 TMap<配置中FacilityNeed序号,缺少数量>& OutRoomLack
 
@@ -1558,7 +1677,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取房间温度
 
@@ -1580,6 +1699,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Returns the temperature contributed by buildings inside the room
+
 ---
 
 ### Function `GetRoomLight`
@@ -1598,7 +1721,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取房间亮度
 
@@ -1621,7 +1744,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有能覆盖此组件范围的组合范围
 
@@ -1644,7 +1767,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有由此组件构成的组合范围
 
@@ -1667,7 +1790,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取指定格子温度(不包含环境温度)
 
@@ -1689,6 +1812,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Returns the temperature at the given world position (excluding ambient temperature)
+
 ---
 
 ### Function `GetAllPlayerRoomS`
@@ -1703,7 +1830,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取玩家所有房间数据
 
@@ -1719,14 +1846,14 @@
 
 | Name | Type |
 |--------|------|
-| `InRoomType` | `ERoomType` |
+| `InRoomType` | [ERoomType](../ERW_Enumerations__ERoomType.md) |
 | `OutRooms` | TArray<[FClosureAreaData](ERW_MapDataMgr__FClosureAreaData.md)>& |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void GetAllRoomsByType(ERoomType InRoomType, TArray<FClosureAreaData>& OutRooms);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有指定类型的房间
 
@@ -1742,14 +1869,14 @@
 
 | Name | Type |
 |--------|------|
-| `InRoomType` | `ERoomType` |
+| `InRoomType` | [ERoomType](../ERW_Enumerations__ERoomType.md) |
 | `OutBuildings` | TArray<[AGOAP_ActorBase](../GOAP/GOAP_ActorBase__AGOAP_ActorBase.md)*>& |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void GetEmptyCoreFacilityBuildingsByRoomType(ERoomType InRoomType, TArray<AGOAP_ActorBase*>& OutBuildings);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据房间类型获取所有核心设施需求为空的核心设施建筑
 
@@ -1771,7 +1898,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取特定类型Actor的下一个可用编号
 
@@ -1794,7 +1921,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 回收编号（当Actor被销毁时调用）
 

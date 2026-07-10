@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName ModId;` |
 
-**Source comments:**
+**Notes:**
 
 > Mod唯一标识符
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText ModName;` |
 
-**Source comments:**
+**Notes:**
 
 > Mod名称
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FString Version;` |
 
-**Source comments:**
+**Notes:**
 
 > Mod版本号
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FString Author;` |
 
-**Source comments:**
+**Notes:**
 
 > Mod作者
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText Description;` |
 
-**Source comments:**
+**Notes:**
 
 > Mod描述
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FString Icon;` |
 
-**Source comments:**
+**Notes:**
 
 > Mod图标
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FModDependency> Dependencies;` |
 
-**Source comments:**
+**Notes:**
 
 > 依赖的Mod列表
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FString MinGameVersion;` |
 
-**Source comments:**
+**Notes:**
 
 > 支持的游戏最小版本（可选）
 
@@ -139,24 +139,9 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FString MainLuaFile = TEXT("Main.lua");` |
 
-**Source comments:**
+**Notes:**
 
 > 主Lua入口文件路径（相对于Mod根目录）
-
----
-
-### Property `ModInformationAssetPath`
-
-| Field | Details |
-|------|------|
-| C++ type | `FString` |
-| Reflection specifiers | BlueprintReadWrite |
-| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FString ModInformationAssetPath;` |
-
-**Source comments:**
-
-> ModInformationAsset路径（可选，如果未指定则尝试自动发现）
 
 ---
 
@@ -169,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bNewGameLoad = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否在新游戏时加载
 
@@ -184,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FString ModToolVersion;` |
 
-**Source comments:**
+**Notes:**
 
 > Mod工具版本号（用于检查Mod是否与当前游戏版本兼容）
 
@@ -199,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bIncludeGameplayTags = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否包含 GameplayTag 配置
 
@@ -214,8 +199,38 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FString PublishedFileId;` |
 
-**Source comments:**
+**Notes:**
 
 > Steam 发布的文件 ID（上传到 Steam 后自动填充）
+
+---
+
+### Property `DataTableConfigs`
+
+| Field | Details |
+|------|------|
+| C++ type | TArray<[FModDataTableJsonConfig](ModInfo__FModDataTableJsonConfig.md)> |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FModDataTableJsonConfig> DataTableConfigs;` |
+
+**Notes:**
+
+> 打包导出的配置表 JSON 列表（存在时运行时优先从此加载，不依赖 Cook 资产）
+
+---
+
+### Property `DataAssetConfigs`
+
+| Field | Details |
+|------|------|
+| C++ type | TArray<[FModDataAssetJsonConfig](ModInfo__FModDataAssetJsonConfig.md)> |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FModDataAssetJsonConfig> DataAssetConfigs;` |
+
+**Notes:**
+
+> 打包导出的数据资产 JSON 列表
 
 ---

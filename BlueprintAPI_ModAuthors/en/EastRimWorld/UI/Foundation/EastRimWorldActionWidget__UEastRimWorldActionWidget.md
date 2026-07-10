@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, EditAnywhere) const TObjectPtr<UInputAction> AssociatedInputAction;` |
 
-**Source comments:**
+**Notes:**
 
 > The Enhanced Input Action that is associated with this Common Input action.
 

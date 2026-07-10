@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EFiveElementType` |
+| C++ type | [EFiveElementType](../../Struct/CommonEnum__EFiveElementType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EFiveElementType ElementType = EFiveElementType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 五行类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<int32, FTrainingRoomLevelConfig> LevelConfigs;` |
 
-**Source comments:**
+**Notes:**
 
 > 各等级配置
 

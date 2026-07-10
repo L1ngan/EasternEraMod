@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="StackModel") float MinCapacity = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 最小容量百分比
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="StackModel") float MaxCapacity = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 最大容量百分比
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="StackModel") TSoftObjectPtr<UStaticMesh> StackModel;` |
 
-**源码注释:**
+**说明:**
 
 > 在容量范围内显示的模型
 

@@ -30,4 +30,8 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> Notice Rich Inline S Hyperlink 字段。
+
 ---

@@ -19,4 +19,8 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FExtraEnvironInfo> Infos;` |
 
+**Notes:**
+
+> Array of the building's extra occupancy info entries.
+
 ---

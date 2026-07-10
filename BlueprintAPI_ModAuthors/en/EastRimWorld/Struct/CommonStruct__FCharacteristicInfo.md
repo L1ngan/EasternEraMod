@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Characteristic") FText CharacteristicName;` |
 
-**Source comments:**
+**Notes:**
 
 > 特性名称
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Characteristic") TSoftObjectPtr<UTexture2D> Icon;` |
 
-**Source comments:**
+**Notes:**
 
 > 特性图标
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Characteristic") FLinearColor TextColor = FLinearColor::Black;` |
 
-**Source comments:**
+**Notes:**
 
 > 特性文字颜色
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Characteristic") FText Describe;` |
 
-**Source comments:**
+**Notes:**
 
 > 特性描述
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Characteristic") FFormatText FormatDescription;` |
 
-**Source comments:**
+**Notes:**
 
 > 格式化后的描述
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Characteristic") TArray<FName> BuffID;` |
 
-**Source comments:**
+**Notes:**
 
 > 效果ID 关联DT_CommonBuff
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Characteristic") bool IsShowBuffText = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否在展示时显示buff相关内容·
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite, EditAnywhere, Category = "Characteristic") int Priority;` |
 
-**Source comments:**
+**Notes:**
 
 > 特性的优先级
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite, EditAnywhere, Category = "Characteristic") EItemQuality Quality = EItemQuality::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 品质
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite, EditAnywhere,Category= "Characteristic") TArray<FName> ConflictCharacteristicID;` |
 
-**Source comments:**
+**Notes:**
 
 > 冲突的特性 ID
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere, Category = "Characteristic") int Weight;` |
 
-**Source comments:**
+**Notes:**
 
 > 权重 用于随机时的权重
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Characteristic") TArray<FName> CharacteristicAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 特性中包含的能力
 
@@ -194,12 +194,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ETalentType` |
+| C++ type | [ETalentType](CommonStruct__ETalentType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ETalentType TalentType = ETalentType::PropertyTalent;` |
 
-**Source comments:**
+**Notes:**
 
 > 天赋的类型(仅天赋表时需要，特性不需要读这个字段)
 

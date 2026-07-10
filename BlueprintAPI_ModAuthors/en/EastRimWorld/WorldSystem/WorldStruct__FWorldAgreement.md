@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> World Agreement data structure.
 
 ## Blueprint-exposed variables
 
@@ -12,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EAgreementType` |
+| C++ type | [EAgreementType](WorldStruct__EAgreementType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EAgreementType AgreementType = EAgreementType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 协议类型
 
@@ -27,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TArray<EAgreementDutyType>` |
+| C++ type | TArray<[EAgreementDutyType](WorldStruct__EAgreementDutyType.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<EAgreementDutyType> SourceDuty;` |
 
-**Source comments:**
+**Notes:**
 
 > 发起者责任
 
@@ -42,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TArray<EAgreementDutyType>` |
+| C++ type | TArray<[EAgreementDutyType](WorldStruct__EAgreementDutyType.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<EAgreementDutyType> ReceiverDuty;` |
 
-**Source comments:**
+**Notes:**
 
 > 接受者责任
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float TimeLimit = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 期限
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> ReceiverAward;` |
 
-**Source comments:**
+**Notes:**
 
 > 接受者完成协议奖励
 
@@ -87,12 +89,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TArray<EPunishmentType>` |
+| C++ type | TArray<[EPunishmentType](WorldStruct__EPunishmentType.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<EPunishmentType> ReceiverPunishment;` |
 
-**Source comments:**
+**Notes:**
 
 > 接受者违约处罚
 
@@ -102,12 +104,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TArray<EPunishmentType>` |
+| C++ type | TArray<[EPunishmentType](WorldStruct__EPunishmentType.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<EPunishmentType> SourcePunishment;` |
 
-**Source comments:**
+**Notes:**
 
 > 发起者违约处罚
 
@@ -117,12 +119,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TArray<EAgreementDutyType>` |
+| C++ type | TArray<[EAgreementDutyType](WorldStruct__EAgreementDutyType.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<EAgreementDutyType> ClashDuty;` |
 
-**Source comments:**
+**Notes:**
 
 > 此协议冲突的责任
 
@@ -137,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float CoolingTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 冷却时间(从开始签订开始计时)
 
@@ -152,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid SourceForceGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 发起者势力Guid
 
@@ -167,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid ReceiverForceGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 接受者势力Guid
 
@@ -182,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid OtherGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 第三方Guid 根据协议类型不同而不同
 

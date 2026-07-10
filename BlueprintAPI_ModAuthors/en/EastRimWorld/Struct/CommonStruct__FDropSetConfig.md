@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 MinAwardNum = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品类型掉落最小数量 既选取DropSet最少多少个
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 MaxAwardNum = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品类型掉落最大数量 既选取DropSet最多多少个
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FName,FDropItemInfo> DropSet;` |
 
-**Source comments:**
+**Notes:**
 
 > 掉落合集 key 道具ID Value 权重
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TMap<FName,FDropItemInfo> MustDrop;` |
 
-**Source comments:**
+**Notes:**
 
 > 必定额外掉落 key 道具ID value 数量
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bRemoveDuplicate = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否在随机多次时，随机到后不在参与随机（去重）
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TSoftObjectPtr<UTexture2D> AwardImage;` |
 
-**Source comments:**
+**Notes:**
 
 > 奖励图标
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly) FText Describe;` |
 
-**Source comments:**
+**Notes:**
 
 > 奖励描述
 

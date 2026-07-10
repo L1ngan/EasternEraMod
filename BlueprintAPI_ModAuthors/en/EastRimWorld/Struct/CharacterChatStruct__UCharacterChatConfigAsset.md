@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float ChatInterval;` |
 
-**Source comments:**
+**Notes:**
 
 > 聊天间隔
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float ChatDuration;` |
 
-**Source comments:**
+**Notes:**
 
 > 一次持续时间
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float FindChatPartnerInterval;` |
 
-**Source comments:**
+**Notes:**
 
 > 查找聊天对象的间隔
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float FindChatPartnerRadius;` |
 
-**Source comments:**
+**Notes:**
 
 > 查找半径
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) bool ShowFindChatPartnerRadiusDebug;` |
 
-**Source comments:**
+**Notes:**
 
 > 显示查找Debug
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float ChatDistance;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色聊天时保持的距离
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float UpdateChattingInterval;` |
 
-**Source comments:**
+**Notes:**
 
 > 聊天中更新间隔
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TSoftObjectPtr<UCurveFloat> ChatWidgetVisibleScaleCurve;` |
 
-**Source comments:**
+**Notes:**
 
 > 聊天表情框显示距离缩放曲线
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FName ChatActionID;` |
 
-**Source comments:**
+**Notes:**
 
 > 社交行为id
 
@@ -149,12 +149,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EChatType,[FChatTypeData](CharacterChatStruct__FChatTypeData.md)> |
+| C++ type | TMap<[EChatType](CharacterChatStruct__EChatType.md),[FChatTypeData](CharacterChatStruct__FChatTypeData.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<EChatType,FChatTypeData> ChatType;` |
 
-**Source comments:**
+**Notes:**
 
 > 社交类型
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float ChatReplyProbability;` |
 
-**Source comments:**
+**Notes:**
 
 > 闲聊回复概率(0~1)
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 MinGoodOpinion=-999;` |
 
-**Source comments:**
+**Notes:**
 
 > 好感度下限
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 MaxGoodOpinion=999;` |
 
-**Source comments:**
+**Notes:**
 
 > 好感度上限
 
@@ -214,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<FName,FName> CeremonyBuildingAction;` |
 
-**Source comments:**
+**Notes:**
 
 > 仪式建筑主要人员的goap行为
 
@@ -229,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<FName,FName> SpectateCeremonyBuildingAction;` |
 
-**Source comments:**
+**Notes:**
 
 > 仪式建筑旁观者的goap行为(不能与CeremonyBuildingAction重复)
 
@@ -244,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float CeremonyWaitTime;` |
 
-**Source comments:**
+**Notes:**
 
 > 仪式最长等待时间(单位秒)
 
@@ -259,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 CeremonySpectateMaxNum;` |
 
-**Source comments:**
+**Notes:**
 
 > 参与仪式的旁观者最大数量
 
@@ -274,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Ceremony") TMap<FName,FName> BuildingRelationshipIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑为哪种关系举办仪式(建筑id,关系表id)
 

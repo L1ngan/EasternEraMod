@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FString , FAttributeSetSaveData> Data;` |
 
-**Source comments:**
+**Notes:**
 
 > TMap<属性名 , 属性存档数据>
 

@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<FGameplayTag , bool> States;` |
 
-**Source comments:**
+**Notes:**
 
 > TMap<物品标签 , 是否可用>
 

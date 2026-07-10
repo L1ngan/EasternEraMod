@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment Attribute",meta=(RowType = "/Script/EastRimWorld.CharacterAttributeInfo")) FDataTableRowHandle AttributeInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 属性信息
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment Attribute") float AttributeValue = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 属性值
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment Attribute") EItemQuality ItemQuality = EItemQuality::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 词条品质
 

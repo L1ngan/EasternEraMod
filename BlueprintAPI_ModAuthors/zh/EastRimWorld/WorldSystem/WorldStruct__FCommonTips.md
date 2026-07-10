@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> Common Tips 数据结构。
 
 ## 蓝图暴露变量
 
@@ -12,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ETipsType` |
+| C++ 类型 | [ETipsType](WorldStruct__ETipsType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ETipsType TipsType = ETipsType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 提示的类型
 
@@ -27,12 +29,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ETipsSeverity` |
+| C++ 类型 | [ETipsSeverity](WorldStruct__ETipsSeverity.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ETipsSeverity TipsSeverity = ETipsSeverity::Normal;` |
 
-**源码注释:**
+**说明:**
 
 > 提示的分级
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bNeedSave = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否需要存档
 
@@ -57,12 +59,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EInitiatesPromptTargetType` |
+| C++ 类型 | [EInitiatesPromptTargetType](WorldStruct__EInitiatesPromptTargetType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EInitiatesPromptTargetType InitiatesPromptTargetType = EInitiatesPromptTargetType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 发起提示的对象
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid InstigatorGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 发起者的GUID
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText TipsLabel;` |
 
-**源码注释:**
+**说明:**
 
 > 提示条显示文字
 
@@ -107,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bIsOverride = false;` |
 
-**源码注释:**
+**说明:**
 
 > 覆盖显示，同类型只显示一条
 
@@ -122,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText AnswerTitle;` |
 
-**源码注释:**
+**说明:**
 
 > 提示主Tip的标题，鼠标移上去显示Tip的标题
 
@@ -137,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText AnswerText;` |
 
-**源码注释:**
+**说明:**
 
 > 提示主Tip的内容
 
@@ -152,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float Time;` |
 
-**源码注释:**
+**说明:**
 
 > 提示的显示时间，0为不自动消失(bRightClickRemove为true时,才有效)
 
@@ -167,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bIsShowTimebar = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否显示倒计时进度条
 
@@ -182,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FSoftClassPath TipItemWidget;` |
 
-**源码注释:**
+**说明:**
 
 > 显示一行的Widget
 
@@ -197,7 +199,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FSoftClassPath TipInfoWidget;` |
 
-**源码注释:**
+**说明:**
 
 > 鼠标悬浮时显示的Widget
 
@@ -212,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bLiftClickForward = false;` |
 
-**源码注释:**
+**说明:**
 
 > 左键点击"前往"
 
@@ -222,12 +224,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ETipInteractionType` |
+| C++ 类型 | [ETipInteractionType](WorldStruct__ETipInteractionType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ETipInteractionType InteractionType = ETipInteractionType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 左键点击交互操作
 
@@ -242,7 +244,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FSoftClassPath OpenWidget;` |
 
-**源码注释:**
+**说明:**
 
 > 左键点击打开窗口
 
@@ -257,7 +259,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TArray<FGuid> InteractionTargetGuids;` |
 
-**源码注释:**
+**说明:**
 
 > 交互对象数组(用于储存多个跳转对象)
 
@@ -272,7 +274,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bRightClickRemove = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否能右键点击后删除该提示
 
@@ -287,7 +289,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TArray<FGuid> GuidArray;` |
 
-**源码注释:**
+**说明:**
 
 > 提示现在存在的相关对象GUID
 
@@ -302,7 +304,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TArray<FName> ValueId;` |
 
-**源码注释:**
+**说明:**
 
 > 提示的对象ID（对于没有Guid的信息值）
 
@@ -317,7 +319,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TArray<FText> Value;` |
 
-**源码注释:**
+**说明:**
 
 > 提示的替换文本值（用于动态替换文本模块中的{0}..{9}）
 
@@ -332,7 +334,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> CommonModuleIds;` |
 
-**源码注释:**
+**说明:**
 
 > 要添加的公共模块id
 
@@ -347,7 +349,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bNeedReplace = true;` |
 
-**源码注释:**
+**说明:**
 
 > 是否需要直接代码替换文本（方便UI主动更新提示文本）
 
@@ -362,7 +364,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FName TipsSound;` |
 
-**源码注释:**
+**说明:**
 
 > 音效 读取GameSoundInfo配置
 

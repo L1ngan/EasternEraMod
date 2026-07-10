@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EFacilityBelongState` |
+| C++ type | [EFacilityBelongState](../ERW_Enumerations__EFacilityBelongState.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) EFacilityBelongState BelongState { EFacilityBelongState::Share };` |
 
-**Source comments:**
+**Notes:**
 
 > 设置归属状态
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) FUObjectData OwnerData;` |
 
-**Source comments:**
+**Notes:**
 
 > 拥有者的数据(用AIController的Guid)
 

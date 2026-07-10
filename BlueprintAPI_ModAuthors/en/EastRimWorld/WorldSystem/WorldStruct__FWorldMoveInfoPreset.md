@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EWorldMapMoveType` |
+| C++ type | [EWorldMapMoveType](WorldStruct__EWorldMapMoveType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EWorldMapMoveType WorldMapMoveType = EWorldMapMoveType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 移动类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float StayTotalTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 停留的时间
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float MoveSpeed = 100.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 基础移动速度
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bBackPlace = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否返回
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bEnterPlace = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否进入地点
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bFixedEnterPosition = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否固定位置进入
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,meta=(EditConditionHides,EditCondition="bFixedEnterPosition")) FVector EnterPlacePosition = FVector::ZeroVector;` |
 
-**Source comments:**
+**Notes:**
 
 > 进入地点的坐标
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,meta = (AllowedClasses = "/Script/Engine.StaticMesh")) FSoftObjectPath MoveActorStaticMesh;` |
 
-**Source comments:**
+**Notes:**
 
 > 模型
 
@@ -134,12 +134,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<ETransportationType,FSoftClassPath>` |
+| C++ type | TMap<[ETransportationType](../ERW_Enumerations__ETransportationType.md),FSoftClassPath> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere, meta = (AllowedClasses = "/Script/EastRimWorld.WorldMapMoveActor")) TMap<ETransportationType,FSoftClassPath> TransportationMoveActorClass;` |
 
-**Source comments:**
+**Notes:**
 
 > 不同的交通工具在地图中显示的actor
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FSoftClassPath WorldMapMoveActorWidget;` |
 
-**Source comments:**
+**Notes:**
 
 > Actor使用的Tip
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName WidgetID;` |
 
-**Source comments:**
+**Notes:**
 
 > 点击展开的UI  ID
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FSoftClassPath WorldMapMovePath;` |
 
-**Source comments:**
+**Notes:**
 
 > 移动路径样条线蓝图
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FLinearColor PlayerTeamPathColor = FLinearColor::White;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家队伍样条线颜色
 
@@ -214,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FLinearColor OtherTeamPathColor = FLinearColor::White;` |
 
-**Source comments:**
+**Notes:**
 
 > 其他队伍样条线颜色
 
@@ -229,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FVector MoveActorScale = FVector::OneVector;` |
 
-**Source comments:**
+**Notes:**
 
 > 世界中移动的actor缩放
 
@@ -244,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float MaxCostTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 耗时的最大时间
 

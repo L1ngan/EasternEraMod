@@ -26,6 +26,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Gets or queries Get Instance.
+
 ---
 
 ### Function `RecalculatePlaceEffects`
@@ -44,7 +48,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 进入地点时调用（AWorldPlace::EnterWorldPlace），将当前拥有效果全部应用到缓存并施加 Buff
 
@@ -66,7 +70,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 退出地点时调用（AWorldPlace::ExitWorldPlace），清空该地点的效果数值缓存
 
@@ -89,7 +93,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 应用单个效果：将该效果的贡献加入缓存；在给地点增加效果时调用。若效果已在列表中则只更新缓存。
 
@@ -112,7 +116,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除单个效果：从缓存减去该效果贡献，并从拥有效果列表中移除
 
@@ -129,13 +133,13 @@
 | Name | Type |
 |--------|------|
 | `WorldPlace` | [AWorldPlace](WorldPlace__AWorldPlace.md)* |
-| `EffectType` | `EWorldPlaceSpecialEffectType` |
+| `EffectType` | [EWorldPlaceSpecialEffectType](WorldStruct__EWorldPlaceSpecialEffectType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "WorldPlaceSpecialEffect") float GetEffectValue(AWorldPlace* WorldPlace, EWorldPlaceSpecialEffectType EffectType) const;`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取指定地点、指定效果类型的当前汇总数值
 
@@ -158,7 +162,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取该地点「添加阵营全局 Buff」类型效果配置的 Buff ID 列表（用于实际施加 Buff）
 

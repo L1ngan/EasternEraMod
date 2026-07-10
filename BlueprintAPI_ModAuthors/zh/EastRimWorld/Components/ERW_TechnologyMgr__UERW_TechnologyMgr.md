@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 科技管理组件,管理全部科技项目的研究状态、解锁物品、科技购买与存档恢复
 
 ## 蓝图暴露变量
 
@@ -17,6 +19,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite,SaveGame) TArray<FTechnologyItemStruct> MyAllTechnologysArray;` |
 
+**说明:**
+
+> 我的全部科技项目列表
+
 ---
 
 ### 属性 `OnTechDevItemStateFinish`
@@ -28,7 +34,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnTechDevItemChange OnTechDevItemStateFinish;` |
 
-**源码注释:**
+**说明:**
 
 > [自定义事件]项科技状态：->完成（删除研究中）
 
@@ -43,7 +49,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnTechDevItemChange OnTechDevItemStateDeveloping;` |
 
-**源码注释:**
+**说明:**
 
 > [自定义事件]项科技状态：>研究中（新增研究中）
 
@@ -58,6 +64,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnTechDevItemChange OnTechDevItemStateDevelopingToUI;` |
 
+**说明:**
+
+> [事件]科技项进入研究中状态时发送给UI的广播
+
 ---
 
 ### 属性 `OnTechDevItemStateUnlock`
@@ -69,7 +79,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnTechDevItemChange OnTechDevItemStateUnlock;` |
 
-**源码注释:**
+**说明:**
 
 > [自定义事件]项科技状态：>可研究（解锁状态）
 
@@ -84,7 +94,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnUnlockId OnUnlockItemEvent;` |
 
-**源码注释:**
+**说明:**
 
 > [自定义事件]解锁物品
 
@@ -99,7 +109,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnStopProduceTpoint OnStopProduceTpointEvent;` |
 
-**源码注释:**
+**说明:**
 
 > [自定义事件]停止产出某种科技点（已废弃）//todo:需要解绑蓝图
 
@@ -114,7 +124,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnTechCellClick OnTechListClickEvent;` |
 
-**源码注释:**
+**说明:**
 
 > [自定义事件]科技列表某个科技被点击了
 
@@ -132,7 +142,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TpType` | `ETechPointType` |
+| `TpType` | [ETechPointType](../Struct/TechnologyStruct__ETechPointType.md) |
 | `Value` | `int32` |
 | `BuildingTransform` | `FTransform` |
 | `0` | `float BuildingRadius =` |
@@ -140,6 +150,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void AddWorkloadFromBuilding(ETechPointType TpType, int32 Value, FTransform BuildingTransform, float BuildingRadius = 0){};`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 当工作量增加需要转换为科技点数时调用(从建筑增加);已废弃,空实现,待解绑蓝图
 
 ---
 
@@ -153,14 +167,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TpType` | `ETechPointType` |
+| `TpType` | [ETechPointType](../Struct/TechnologyStruct__ETechPointType.md) |
 | `Value` | `int32` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void AddWorkload(ETechPointType TpType,int32 Value){};`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > / 增加工作量（已废弃）//todo:需要解绑蓝图
 
@@ -176,13 +190,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `Type` | `ETechPointType` |
+| `Type` | [ETechPointType](../Struct/TechnologyStruct__ETechPointType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) float GetCurTechPointSchedule(ETechPointType Type){return 0.f;};`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > / 获取当前科技点数进度（已废弃）//todo:需要解绑蓝图
 
@@ -200,7 +214,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > / 获取第一个可以研究的科技
 
@@ -224,7 +238,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > / 查询是否满足搜索条件
 
@@ -247,7 +261,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > / 查询是否包含搜索词
 
@@ -269,7 +283,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 该科技是否有下一个科技
 
@@ -287,7 +301,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > / 返回所有科技的研究状态
 
@@ -309,7 +323,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 左边列表点击了某哦个科技
 
@@ -331,7 +345,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查科技是否解锁
 
@@ -353,7 +367,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 是否显示科技购买按钮
 
@@ -375,7 +389,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查是否可以购买科技
 
@@ -397,7 +411,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > / 购买科技
 
@@ -415,7 +429,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 判断科技是否全部解锁
 

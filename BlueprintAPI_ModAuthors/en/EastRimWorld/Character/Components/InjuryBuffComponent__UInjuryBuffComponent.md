@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Injury buff component managing add/activate/treatment/scarring of body-part injuries and the application/removal of their gameplay effects.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FRemoveInjuryBuffDelegate OnRemoveInjuryDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 伤势恢复的事件（治愈了）（包括疤痕移除）
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FAddInjuryBuffDelegate OnAddInjuryDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 增加伤势的事件
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FUpdateInjuryBuffDelegate OnUpdateInjuryDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 更新伤势的事件
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FStartTreatDelegate OnStartTreatDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 开始治疗事件
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FFinishTreatDelegate OnFinishTreatDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 结束治疗事件
 
@@ -92,6 +94,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FName,int32> CurTreatNeedMedicines;` |
 
+**Notes:**
+
+> Medicines currently required for treatment (TMap<medicine ID, count>).
+
 ---
 
 ### Property `TreatGoapActions`
@@ -103,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) TMap<FName,FGOAP_Action> TreatGoapActions;` |
 
-**Source comments:**
+**Notes:**
 
 > 治疗行为(伤势id,Action)
 
@@ -118,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FName CurrentTreatInjuryId;` |
 
-**Source comments:**
+**Notes:**
 
 > 在治疗时检查
 
@@ -133,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) TArray<FInjuryEffectInstance> CurInjuryEffectArr;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前激活的伤势列表
 
@@ -153,13 +159,13 @@
 |--------|------|
 | `AddInjuryConfig` | const [FInjuryEffectConfig](../../Struct/CharacterStruct__FInjuryEffectConfig.md) & |
 | `OrganID` | `FName` |
-| `OrganType` | `EBodyOrganType` |
+| `OrganType` | [EBodyOrganType](../../ERW_CommonTypes__EBodyOrganType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool AddInjury(const FInjuryEffectConfig & AddInjuryConfig,FName OrganID,EBodyOrganType OrganType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > / 添加buff
 > / @param AddInjuryConfig 需要添加的buff
@@ -179,11 +185,15 @@
 | Name | Type |
 |--------|------|
 | `InjuryID` | `FName` |
-| `OrganType` | `EBodyOrganType` |
+| `OrganType` | [EBodyOrganType](../../ERW_CommonTypes__EBodyOrganType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool AddInjuryByOrganType(FName InjuryID, EBodyOrganType OrganType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Adds the injury with the given ID to the specified body organ type, returning whether it succeeded.
 
 ---
 
@@ -203,6 +213,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Activates the specified injury effect instance.
+
 ---
 
 ### Function `InjuryCanAdd`
@@ -216,11 +230,15 @@
 | Name | Type |
 |--------|------|
 | `AddInjuryConfig` | const [FInjuryEffectConfig](../../Struct/CharacterStruct__FInjuryEffectConfig.md) & |
-| `OrganType` | `EBodyOrganType` |
+| `OrganType` | [EBodyOrganType](../../ERW_CommonTypes__EBodyOrganType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool InjuryCanAdd(const FInjuryEffectConfig & AddInjuryConfig ,EBodyOrganType OrganType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Checks whether the given injury config can be added to the specified body organ type.
 
 ---
 
@@ -236,7 +254,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > //检查buff是否能激活
 > UFUNCTION()
@@ -260,7 +278,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 返回恢复或恶化时间(秒)
 
@@ -282,7 +300,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 返回恢复或恶化百分比
 
@@ -304,7 +322,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取治疗速度
 
@@ -326,7 +344,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据伤势实例ID获取伤势效果实例
 
@@ -342,13 +360,13 @@
 
 | Name | Type |
 |--------|------|
-| `OrganType` | `const EBodyOrganType` |
+| `OrganType` | const [EBodyOrganType](../../ERW_CommonTypes__EBodyOrganType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<FInjuryEffectInstance> GetInjuryEffectInstanceByOrganType(const EBodyOrganType OrganType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询部位对应的伤势效果实例
 
@@ -370,7 +388,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询部位对应的伤势效果实例
 
@@ -392,7 +410,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询所有伤势（查询疤痕，还是普通的伤势）
 
@@ -414,7 +432,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 治疗伤势
 
@@ -436,7 +454,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除疤痕
 
@@ -459,7 +477,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 使用药品消除疤痕
 
@@ -475,14 +493,14 @@
 
 | Name | Type |
 |--------|------|
-| `OrganType` | `const EBodyOrganType` |
+| `OrganType` | const [EBodyOrganType](../../ERW_CommonTypes__EBodyOrganType.md) |
 | `Attributes` | `TMap<FGameplayAttribute,float> &` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CalculateDamagePercentage(const EBodyOrganType OrganType,TMap<FGameplayAttribute,float> & Attributes);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据命中部位计算扣除的部位百分比
 
@@ -500,7 +518,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查还没有有未治疗的伤势
 
@@ -521,5 +539,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<FInjuryEffectInstance> GetCurInjurysByBuff(FString BufName);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns the current injury effect instances associated with the given buff name.
 
 ---

@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> Game Sound Info 数据结构。
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "Base") FGameplayTag SoundTag;` |
 
-**源码注释:**
+**说明:**
 
 > 音乐标签
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Base") FGameplayTag SoundGroupTag;` |
 
-**源码注释:**
+**说明:**
 
 > 音乐分组标签  用于控制数量和音量
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "Base") TMap<int32,TSoftObjectPtr<USoundBase>> SoundBase;` |
 
-**源码注释:**
+**说明:**
 
 > 音频 key 游戏加速值 下标 （ 0 1 2 3 ）value 对应速度的音效
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "Base") float Volume = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 音量
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "Base") float PitchMultiplier = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 音调（即播放速率）
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Base") bool bLoop = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否循环
 
@@ -107,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "Base") bool bUISound = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否UI音效
 
@@ -122,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category = "Base") bool bAffectedByAcceleration = true;` |
 
-**源码注释:**
+**说明:**
 
 > 是否受到加速影响
 
@@ -137,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Fade") bool bFadeIn = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否淡入
 
@@ -152,6 +154,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,meta=(EditConditionHides,EditCondition = "bFadeIn == true")) EAudioFaderCurve FadeInCurve = EAudioFaderCurve::Linear;` |
 
+**说明:**
+
+> Fade In Curve 字段。
+
 ---
 
 ### 属性 `FadeInDuration`
@@ -162,6 +168,10 @@
 | 反射说明符 | BlueprintReadWrite, Category="Fade" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Fade",meta=(EditConditionHides,EditCondition = "bFadeIn == true")) float FadeInDuration = 2.0;` |
+
+**说明:**
+
+> Fade In Duration 字段。
 
 ---
 
@@ -174,6 +184,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Fade",meta=(EditConditionHides,EditCondition = "bFadeIn == true")) float FadeInVolumeLevel = 1.0f;` |
 
+**说明:**
+
+> Fade In Volume Level 字段。
+
 ---
 
 ### 属性 `FadeInStartTime`
@@ -184,6 +198,10 @@
 | 反射说明符 | BlueprintReadWrite, Category="Fade" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Fade",meta=(EditConditionHides,EditCondition = "bFadeIn == true")) float FadeInStartTime = 0.0f;` |
+
+**说明:**
+
+> Fade In Start Time 字段。
 
 ---
 
@@ -196,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Fade") bool bFadeOut = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否淡出
 
@@ -211,6 +229,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Fade",meta=(EditConditionHides,EditCondition = "bFadeOut == true")) EAudioFaderCurve FadeOutCurve = EAudioFaderCurve::Linear;` |
 
+**说明:**
+
+> Fade Out Curve 字段。
+
 ---
 
 ### 属性 `FadeOutDuration`
@@ -221,6 +243,10 @@
 | 反射说明符 | BlueprintReadWrite, Category="Fade" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Fade",meta=(EditConditionHides,EditCondition = "bFadeOut == true")) float FadeOutDuration = 2.0;` |
+
+**说明:**
+
+> Fade Out Duration 字段。
 
 ---
 
@@ -233,6 +259,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Fade",meta=(EditConditionHides,EditCondition = "bFadeOut == true")) float FadeOutVolumeLevel = 0.0f;` |
 
+**说明:**
+
+> Fade Out Volume Level 字段。
+
 ---
 
 ### 属性 `bEnableAttenuate`
@@ -244,7 +274,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Attenuate") bool bEnableAttenuate = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否启用衰减
 
@@ -259,7 +289,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Attenuate",meta=(EditConditionHides,EditCondition = "bEnableAttenuate == true")) float FalloffDistance = 1000.f;` |
 
-**源码注释:**
+**说明:**
 
 > 衰减距离
 
@@ -274,7 +304,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Attenuate",meta=(EditConditionHides,EditCondition = "bEnableAttenuate == true")) TEnumAsByte<EAttenuationShape::Type> AttenuationShape = EAttenuationShape::Sphere;` |
 
-**源码注释:**
+**说明:**
 
 > 衰减形状
 
@@ -289,7 +319,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category = "Attenuate",meta=(EditConditionHides,EditCondition = "bEnableAttenuate == true")) FVector AttenuationShapeExtents = FVector(600.f);` |
 
-**源码注释:**
+**说明:**
 
 > 不衰减的范围
 

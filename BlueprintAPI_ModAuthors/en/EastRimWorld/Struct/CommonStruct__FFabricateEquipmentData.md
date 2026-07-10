@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TArray<FEquipmentRandomPool> EquipmentRandomPools;` |
 
-**Source comments:**
+**Notes:**
 
 > 包含的装备随机池
 

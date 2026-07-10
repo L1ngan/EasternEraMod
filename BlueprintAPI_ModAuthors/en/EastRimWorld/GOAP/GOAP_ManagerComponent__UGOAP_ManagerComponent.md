@@ -19,10 +19,26 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) TMap<FName , FActionData> NormalActions;` |
 
-**Source comments:**
+**Notes:**
 
 > 普通Action
 > TMap<GOAP目标配置表ID , ActionData>
+
+---
+
+### Property `TransBuildingOwnerData`
+
+| Field | Details |
+|------|------|
+| C++ type | TMap<[FUObjectData](../ERW_CommonTypes__FUObjectData.md) , [FUObjectData](../ERW_CommonTypes__FUObjectData.md)> |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) TMap<FUObjectData , FUObjectData> TransBuildingOwnerData;` |
+
+**Notes:**
+
+> 移动建筑Action的OwnerData关联数据
+> TMap<获得建筑Action的OwnerData , 移动建筑Action的OwnerData>
 
 ---
 
@@ -35,7 +51,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TMap<FName , FItemActions> ItemActions;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品相关的Action
 > TMap<物品相关GOAP目标 , 物品对应的Action>
@@ -51,10 +67,26 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TMap<FName , FBatchData> BatchActions;` |
 
-**Source comments:**
+**Notes:**
 
 > 批量处理的Action
 > TMap<GOAP目标配置表ID , 批量处理的数据>
+
+---
+
+### Property `PrioriBatchActions`
+
+| Field | Details |
+|------|------|
+| C++ type | TMap<FName , [FPrioriActionData](GOAP_ManagerComponent__FPrioriActionData.md)> |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FName , FPrioriActionData> PrioriBatchActions;` |
+
+**Notes:**
+
+> 优先考虑的批量Action
+> TMap<GOAP目标配置表ID , 优先批量处理的数据>
 
 ---
 
@@ -67,7 +99,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FUObjectData , FPreActionData> PreActionData;` |
 
-**Source comments:**
+**Notes:**
 
 > 前置Action
 > TMap<当前物体的数据 , 前置Action数据>
@@ -83,7 +115,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<int32 , FPreActionData> ConstructPreActionData;` |
 
-**Source comments:**
+**Notes:**
 
 > 建造Action相关的前置Action
 > TMap<建造批次 , 前置Action数据>
@@ -94,12 +126,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<[FUObjectData](../ERW_CommonTypes__FUObjectData.md) , FOccupyObject> |
+| C++ type | TMap<[FUObjectData](../ERW_CommonTypes__FUObjectData.md) , [FOccupyObject](GOAP_ManagerComponent__FOccupyObject.md)> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FUObjectData , FOccupyObject> SuspendGrowItems;` |
 
-**Source comments:**
+**Notes:**
 
 > 暂停生长的采集物
 > TMap<采集物的数据 , 占据采集物的建筑数据>
@@ -115,7 +147,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) TMap<FUObjectData , FGOAP_Actions> PracticeActions;` |
 
-**Source comments:**
+**Notes:**
 
 > 修炼相关的Action
 
@@ -130,7 +162,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) TArray<FName> RemovedAfterCompleteGoals;` |
 
-**Source comments:**
+**Notes:**
 
 > 完成后可以被移除的GOAP目标
 
@@ -145,6 +177,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AWorldPlace> WorldPlace;` |
 
+**Notes:**
+
+> Reference to the world place this component belongs to
+
 ---
 
 ### Property `OnActionAdded`
@@ -156,7 +192,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable,BlueprintReadWrite) FOnActionAdded OnActionAdded;` |
 
-**Source comments:**
+**Notes:**
 
 > 当Action添加后广播
 
@@ -181,7 +217,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 读档后恢复大数量用户的Action
 
@@ -205,7 +241,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加入指定物品Action
 
@@ -229,7 +265,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除指定物品Action
 
@@ -251,9 +287,77 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除指定物品所有相关的Action
+
+---
+
+### Function `AddTransBuildingOwnerData`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `FromOwnerData` | const [FUObjectData](../ERW_CommonTypes__FUObjectData.md)& |
+| `ToOwnerData` | const [FUObjectData](../ERW_CommonTypes__FUObjectData.md)& |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void AddTransBuildingOwnerData(const FUObjectData& FromOwnerData , const FUObjectData& ToOwnerData);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 加入移动建筑OwnerData
+
+---
+
+### Function `RemoveTransBuildingOwnerData`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `FromOwnerData` | const [FUObjectData](../ERW_CommonTypes__FUObjectData.md)& |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void RemoveTransBuildingOwnerData(const FUObjectData& FromOwnerData);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 移除移动建筑OwnerData
+
+---
+
+### Function `GetTransBuildingOwnerData`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `FromOwnerData` | const [FUObjectData](../ERW_CommonTypes__FUObjectData.md)& |
+| `ToOwnerData` | [FUObjectData](../ERW_CommonTypes__FUObjectData.md)& |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void GetTransBuildingOwnerData(const FUObjectData& FromOwnerData , FUObjectData& ToOwnerData);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 获得移动建筑OwnerData
 
 ---
 
@@ -273,7 +377,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 添加Action
 
@@ -295,7 +399,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除Action
 
@@ -317,7 +421,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获得批次
 
@@ -339,7 +443,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加入新节点到R树中
 
@@ -361,7 +465,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 从R树中删除节点
 
@@ -383,7 +487,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除暂停生长的采集物
 
@@ -406,7 +510,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新Action是否活跃
 
@@ -428,7 +532,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除已完成的Action
 
@@ -457,7 +561,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查条件是否满足
 
@@ -479,6 +583,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Returns whether the given GOAP goal is a practice-type goal
+
 ---
 
 ### Function `CheckSpecifiedItemAction`
@@ -497,7 +605,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查指定物品Action是否存在
 
@@ -514,14 +622,14 @@
 | Name | Type |
 |--------|------|
 | `Agent` | [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
-| `EquipmentType` | `EEquipmentType` |
-| `ArmorType` | `EArmorType` |
+| `EquipmentType` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
+| `ArmorType` | [EArmorType](../Struct/CommonEnum__EArmorType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool CheckHaveCharacterGetEquipment(AEastRimWorldAIController* Agent , EEquipmentType EquipmentType , EArmorType ArmorType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否正在获取某个部位的装备
 
@@ -538,14 +646,14 @@
 | Name | Type |
 |--------|------|
 | `Agent` | [AEastRimWorldAIController](../Player/EastRimWorldAIController__AEastRimWorldAIController.md)* |
-| `EquipmentType` | `EEquipmentType` |
-| `ArmorType` | `EArmorType` |
+| `EquipmentType` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
+| `ArmorType` | [EArmorType](../Struct/CommonEnum__EArmorType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) UInventoryItemInstance* GetIsGettingEquipment(AEastRimWorldAIController* Agent , EEquipmentType EquipmentType , EArmorType ArmorType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取正在获取的某个装备
 

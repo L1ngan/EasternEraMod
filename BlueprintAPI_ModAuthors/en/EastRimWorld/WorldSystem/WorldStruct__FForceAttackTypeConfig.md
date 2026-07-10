@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EForceAttackType` |
+| C++ type | [EForceAttackType](WorldStruct__EForceAttackType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EForceAttackType ForceAttackType = EForceAttackType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 攻击类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float SectFavorabilityChange = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 好感度变化 增加为正值 减少为负值
 

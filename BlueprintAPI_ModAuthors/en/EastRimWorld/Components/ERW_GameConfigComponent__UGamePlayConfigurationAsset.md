@@ -19,9 +19,55 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int DefaultWorkPriority = 3;` |
 
-**Source comments:**
+**Notes:**
 
 > 默认工作优先级
+
+---
+
+### Property `IgnoreAreaGoalIds`
+
+| Field | Details |
+|------|------|
+| C++ type | `TSet<FName>` |
+| Reflection specifiers | BlueprintReadOnly, Category="Area" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Area") TSet<FName> IgnoreAreaGoalIds;` |
+
+**Notes:**
+
+> 区域控制：凌驾区域约束的 GoalID 白名单（建造/急救/医疗/玩家手点/危机等全图可达）
+
+---
+
+### Property `HungerCrossFoodGoalIds`
+
+| Field | Details |
+|------|------|
+| C++ type | `TSet<FName>` |
+| Reflection specifiers | BlueprintReadOnly, Category="Area" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Area") TSet<FName> HungerCrossFoodGoalIds;` |
+
+**Notes:**
+
+> 区域控制：越区取食只放松这些"取食类"GoalID（饿够阈值后可越区取食；其他 Goal 仍受区约束）
+> 需填取食相关 Goal，不填则越区取食不生效
+
+---
+
+### Property `HungerCrossThresholdSeconds`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | BlueprintReadOnly, Category="Area" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Area") float HungerCrossThresholdSeconds = 160.f;` |
+
+**Notes:**
+
+> 区域控制：饥饿越区累计阈值（现实秒，默认 160 = 4 游戏小时，1 游戏天=960 秒）；饥饿值=0 累计达此值才越区取食
 
 ---
 
@@ -34,7 +80,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TMap<int32 , FWorkPriorityData> WorkCostPriorityRate;` |
 
-**Source comments:**
+**Notes:**
 
 > 优先级对应的成本增幅 key 为优先级
 
@@ -49,7 +95,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) TMap<FIntPoint , FName> DefaultWorkSchedule;` |
 
-**Source comments:**
+**Notes:**
 
 > 默认工作日程
 > TMap<时间段 , 工作日程配置行名>
@@ -65,7 +111,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float DistanceCostRate { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 每一米距离增加消耗系数
 
@@ -80,7 +126,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float LowSkillLevel { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 低技能判定等级下限(低于该值会被判定为低技能等级)
 
@@ -95,7 +141,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float AgentIdleRange { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 角色闲逛范围
 
@@ -110,7 +156,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) FIntPoint BuildGridExtendSize;` |
 
-**Source comments:**
+**Notes:**
 
 > 建造网格XY轴扩展尺寸
 
@@ -125,7 +171,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int GlobalMaxInventory = 9999;` |
 
-**Source comments:**
+**Notes:**
 
 > 全局最大库存
 
@@ -140,7 +186,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int CharacterMaxInventory = 999;` |
 
-**Source comments:**
+**Notes:**
 
 > 单个角色最大库存
 
@@ -155,7 +201,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSubclassOf<AAbilityProjectileEmitterBase> AbilityProjectileEmitter;` |
 
-**Source comments:**
+**Notes:**
 
 > 投射物发射器
 
@@ -170,7 +216,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) UCurveTable* PropCostTable;` |
 
-**Source comments:**
+**Notes:**
 
 > 属性对应消耗曲线表
 
@@ -185,7 +231,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSubclassOf<AEastRimWorldProjectileBase> AbilityProjectileBase;` |
 
-**Source comments:**
+**Notes:**
 
 > 投射物
 
@@ -200,7 +246,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSubclassOf<ASceneTextActor> SceneTextActor;` |
 
-**Source comments:**
+**Notes:**
 
 > 世界场景中生成的数字Actor
 
@@ -215,7 +261,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FGenericTeamId PlayerTeamId = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家的队伍ID
 
@@ -230,7 +276,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int YearToSeasonValue = 4;` |
 
-**Source comments:**
+**Notes:**
 
 > 游戏时间一年等于几个季节
 
@@ -245,7 +291,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int SeasonToDaysValue = 10;` |
 
-**Source comments:**
+**Notes:**
 
 > 游戏时间一个季节等于多少天
 
@@ -260,7 +306,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int DayToHoursValue = 24;` |
 
-**Source comments:**
+**Notes:**
 
 > 游戏时间一天等于多少小时
 
@@ -275,7 +321,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int HourToSecondsValue = 40;` |
 
-**Source comments:**
+**Notes:**
 
 > 游戏时间一小时等于现实多少秒
 
@@ -290,7 +336,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float NewGameStartTime = 240;` |
 
-**Source comments:**
+**Notes:**
 
 > 新游戏初始时间s
 
@@ -305,7 +351,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<float> DawnTimeForSeason = { 600.0,600.0,600.0,600.0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 游戏中每个季节的黎明时间(单位百分之一小时，600就是6：00)
 
@@ -320,7 +366,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<float> DuskTimeForSeason = { 1800.0,1800.0,1800.0,1800.0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 游戏中每个季节的黄昏时间(单位百分之一小时，1800就是18：00)
 
@@ -335,7 +381,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) UCurveFloat* DistCostCurve;` |
 
-**Source comments:**
+**Notes:**
 
 > 距离对应消耗曲线表
 
@@ -350,9 +396,84 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float WorkloadTimeInterval { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 输出工作量时间间隔(秒)
+
+---
+
+### Property `bAutoCreateRepairWorkForDamagedBuildings`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | BlueprintReadOnly, Category="Building|Repair" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere, Category = "Building|Repair", meta = (DisplayName = "自动创建建筑维修工作", ToolTip = "开启后，已建成且可维修的建筑在损失耐久达到阈值时，会自动生成维修工作。关闭后不会自动发布维修工作。")) bool bAutoCreateRepairWorkForDamagedBuildings = true;` |
+
+**Notes:**
+
+> Toggle for auto-creating repair work: when enabled, finished repairable buildings automatically get repair work once lost durability reaches the threshold
+
+---
+
+### Property `BuildingAutoRepairMissingRateThreshold`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | BlueprintReadOnly, Category="Building|Repair" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere, Category = "Building|Repair", meta = (ClampMin = 0.f, ClampMax = 1.f, DisplayName = "维修触发缺损比例", ToolTip = "建筑损失耐久比例达到该值时自动发布维修工作。0.2 表示损失 20% 耐久后触发，也就是当前耐久低于等于 80%。")) float BuildingAutoRepairMissingRateThreshold = 0.2f;` |
+
+**Notes:**
+
+> Repair trigger missing-durability ratio: a repair work is auto-created when the building's lost durability ratio reaches this value; 0.2 means triggered after losing 20% durability
+
+---
+
+### Property `BuildingRepairResourceRate`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | BlueprintReadOnly, Category="Building|Repair" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere, Category = "Building|Repair", meta = (ClampMin = 0.f, DisplayName = "维修材料倍率", ToolTip = "维修材料消耗倍率。材料基于建筑建造材料、损失耐久比例和该倍率计算：floor(建造材料数量 * 损失耐久比例 * 维修材料倍率)。向下取整后为 0 的材料不会消耗。")) float BuildingRepairResourceRate = 0.5f;` |
+
+**Notes:**
+
+> Repair resource rate: resource cost = floor(build resource count x lost durability ratio x this rate); resources floored to 0 are not consumed
+
+---
+
+### Property `BuildingRepairWorkloadRate`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | BlueprintReadOnly, Category="Building|Repair" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere, Category = "Building|Repair", meta = (ClampMin = 0.f, DisplayName = "维修工作量倍率", ToolTip = "维修工作量倍率。工作量基于建筑建造工作量、损失耐久比例和该倍率计算：ceil(建造工作量 * 损失耐久比例 * 维修工作量倍率)。最终不会低于最小维修工作量。")) float BuildingRepairWorkloadRate = 0.5f;` |
+
+**Notes:**
+
+> Repair workload rate: workload = ceil(build workload x lost durability ratio x this rate), never below the minimum repair workload
+
+---
+
+### Property `MinBuildingRepairWorkload`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | BlueprintReadOnly, Category="Building|Repair" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere, Category = "Building|Repair", meta = (ClampMin = 0, DisplayName = "最小维修工作量", ToolTip = "单次维修工作的最低工作量。即使按损失耐久比例计算出的工作量更低，也会使用该值作为下限。")) int32 MinBuildingRepairWorkload = 10;` |
+
+**Notes:**
+
+> Minimum workload of a single repair work; used as the floor when the computed workload is lower
 
 ---
 
@@ -365,7 +486,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float RoofLayerHeight;` |
 
-**Source comments:**
+**Notes:**
 
 > 屋顶单层高度
 
@@ -380,7 +501,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float RoofRidgeCornerHeight;` |
 
-**Source comments:**
+**Notes:**
 
 > 屋顶脊角高度
 
@@ -395,7 +516,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float RoofPyramidalRoofHeight;` |
 
-**Source comments:**
+**Notes:**
 
 > 屋顶攒尖高度
 
@@ -410,7 +531,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float RoofWallHeight;` |
 
-**Source comments:**
+**Notes:**
 
 > 屋顶墙高度
 
@@ -425,7 +546,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float BuildHeightDifference;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑放置允许的最大高低差
 
@@ -440,7 +561,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float BatchActionDistance { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 批量处理的Action的判断范围(单位厘米)
 
@@ -455,7 +576,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere, Category="Goap") TArray<FName> CommonGOAPGoals;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色初始通用GOAP目标
 
@@ -470,7 +591,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere, Category="Goap") TArray<FName> WorkAbilityGOAPGoals;` |
 
-**Source comments:**
+**Notes:**
 
 > 需要根据能力初始化优先级的GOAP目标
 
@@ -485,7 +606,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere, Category="Goap") TArray<FName> AnimalCommonGoals;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物初始通用GOAP目标
 
@@ -500,7 +621,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere, Category="Goap") TArray<FName> SummonCommonGoals;` |
 
-**Source comments:**
+**Notes:**
 
 > 召唤物初始通用GOAP目标
 
@@ -510,12 +631,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EGoapGoalType , [FRobotTypeAction](../ERW_CommonTypes__FRobotTypeAction.md)> |
+| C++ type | TMap<[EGoapGoalType](ERW_GameConfigComponent__EGoapGoalType.md) , [FRobotTypeAction](../ERW_CommonTypes__FRobotTypeAction.md)> |
 | Reflection specifiers | BlueprintReadOnly, Category="Goap" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere, Category="Goap") TMap<EGoapGoalType , FRobotTypeAction> RobotActionGoal;` |
 
-**Source comments:**
+**Notes:**
 
 > 根据机关人类型和行为获取对应的goal
 
@@ -530,7 +651,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere, Category="Goap") float ActionReduceCostValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 提升优先级对应减少Action的cost的值(正数)
 
@@ -545,7 +666,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere, Category="Goap") TArray<FName> CanImprovePriorityActions;` |
 
-**Source comments:**
+**Notes:**
 
 > 可以提升优先级的行为(GoalID)
 
@@ -560,7 +681,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities") TSoftClassPtr<UGameplayEffect> SleepFloorGameplayEffect;` |
 
-**Source comments:**
+**Notes:**
 
 > 人在地上睡觉GE
 
@@ -575,7 +696,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities") TSoftClassPtr<UGameplayEffect> SleepNoRespondingGameplayEffect;` |
 
-**Source comments:**
+**Notes:**
 
 > 人晕倒睡觉GE
 
@@ -590,7 +711,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities") float StopNoRespondingValue { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 晕倒结束疲劳百分比
 
@@ -605,7 +726,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float SelectRadius = 1500;` |
 
-**Source comments:**
+**Notes:**
 
 > 快捷选择的范围
 
@@ -615,12 +736,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EFabricateType , [FNameArr](ERW_GameConfigComponent__FNameArr.md)> |
+| C++ type | TMap<[EFabricateType](../Struct/CommonEnum__EFabricateType.md) , [FNameArr](ERW_GameConfigComponent__FNameArr.md)> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) TMap<EFabricateType , FNameArr> FabricateType;` |
 
-**Source comments:**
+**Notes:**
 
 > 设备种类
 
@@ -635,7 +756,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) TArray<TSubclassOf<UObject>> ProhibitAroundSelect;` |
 
-**Source comments:**
+**Notes:**
 
 > 禁止快捷选择的类型
 
@@ -650,7 +771,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float VisionRange = 5000;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品数量显示的距离
 
@@ -665,7 +786,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) FVector ItemVisionRelativeLocation;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品数量显示UI的相对位置
 
@@ -680,7 +801,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSoftClassPtr<AInventoryItemWidgetActor> ItemWidgetActor;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品显示的数量actor
 
@@ -695,7 +816,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float CharacterStateVisionRange = 9000;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色状态和伤害数字显示的距离
 
@@ -710,7 +831,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float MoodCheckTimeInterval { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 角色心情检测时间间隔(秒)
 
@@ -725,7 +846,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float MoodRiseValue { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 角色心情上升百分比
 
@@ -740,7 +861,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float MoodDescendValue { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 角色心情下降百分比
 
@@ -755,7 +876,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSoftClassPtr<AInventoryItemSet> ItemActorClass;` |
 
-**Source comments:**
+**Notes:**
 
 > 通用物品Actor
 
@@ -770,7 +891,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FGameplayAttribute> SaveAttributes;` |
 
-**Source comments:**
+**Notes:**
 
 > 保存的属性
 
@@ -785,7 +906,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float DanTianExperienceMaxValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 丹田经验值上限
 
@@ -800,7 +921,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<EItemQuality,FText> ItemQualityName;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品品质名称
 
@@ -815,7 +936,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<EItemQuality,TSoftObjectPtr<UTexture2D>> ItemQualityBGTexture;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品tip品质背景图片
 
@@ -830,7 +951,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<EItemQuality,TSoftObjectPtr<UTexture2D>> ItemQualityFrameTexture;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品icon品质框图片
 
@@ -840,12 +961,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<ECanManageTagType , [FGameplayTagArr](ERW_GameConfigComponent__FGameplayTagArr.md)> |
+| C++ type | TMap<[ECanManageTagType](ERW_GameConfigComponent__ECanManageTagType.md) , [FGameplayTagArr](ERW_GameConfigComponent__FGameplayTagArr.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<ECanManageTagType , FGameplayTagArr> CanManageItemTags;` |
 
-**Source comments:**
+**Notes:**
 
 > 可以管理的物品Tag
 
@@ -860,7 +981,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FManageGoalName> CanManageActionGoals;` |
 
-**Source comments:**
+**Notes:**
 
 > 可以管理的行为goal
 
@@ -875,7 +996,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<int32> CanManageStallIndex;` |
 
-**Source comments:**
+**Notes:**
 
 > 可以管理的货柜ID
 
@@ -885,12 +1006,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<ECharacterAttributeCategoryType,FText>` |
+| C++ type | TMap<[ECharacterAttributeCategoryType](../Struct/ItemStruct__ECharacterAttributeCategoryType.md),FText> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<ECharacterAttributeCategoryType,FText> ChaAttributeCateDict;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色属性分类名称设置
 
@@ -900,12 +1021,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EMartialArtsAttributeClassification,FText>` |
+| C++ type | TMap<[EMartialArtsAttributeClassification](../Struct/CommonEnum__EMartialArtsAttributeClassification.md),FText> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<EMartialArtsAttributeClassification,FText> MartialArtsAttributeCateDict;` |
 
-**Source comments:**
+**Notes:**
 
 > 武学属性分类名称设置
 
@@ -920,7 +1041,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TSoftClassPtr<AEastRimWorldCharacter> CharacterClass;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色类型
 
@@ -935,7 +1056,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FGameplayTagContainer CharacterUnderRoofTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色在屋檐下或者室内添加的tag
 
@@ -945,12 +1066,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EStorageSpace,[FNameIDArray](../Struct/CommonStruct__FNameIDArray.md)> |
+| C++ type | TMap<[EStorageSpace](../ERW_Enumerations__EStorageSpace.md),[FNameIDArray](../Struct/CommonStruct__FNameIDArray.md)> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TMap<EStorageSpace,FNameIDArray> CharacterWorldSpaceDurationBuffs;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色所处空间环境变更时添加的持续性buff
 
@@ -960,12 +1081,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TArray<EEnvironType>` |
+| C++ type | TArray<[EEnvironType](../ERW_Enumerations__EEnvironType.md)> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<EEnvironType> UnderRoofEnvironTypes;` |
 
-**Source comments:**
+**Notes:**
 
 > 是屋檐下或者室内的环境类型
 
@@ -980,7 +1101,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float CharacterUpdateInfoInterval;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色信息更新间隔
 
@@ -995,7 +1116,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere , Category = "Treasure") int32 CharacterExchangeOwndCoin;` |
 
-**Source comments:**
+**Notes:**
 
 > 弟子兑换行为时需要有的货币
 
@@ -1010,7 +1131,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere , Category = "Treasure") float CharacterExchangeInterval;` |
 
-**Source comments:**
+**Notes:**
 
 > 弟子兑换行为检测间隔（秒）
 
@@ -1025,7 +1146,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere , Category = "Treasure") float CharacterExchangeProbability;` |
 
-**Source comments:**
+**Notes:**
 
 > 弟子兑换行为的概率
 
@@ -1040,7 +1161,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere , Category = "Treasure") FName CharacterExchangeGoal;` |
 
-**Source comments:**
+**Notes:**
 
 > 弟子兑换行为的Goal
 
@@ -1055,7 +1176,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere , Category = "Treasure") TMap<int32 , FProductTypeInfo> ProductTypeInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 珍宝阁商品分类信息
 
@@ -1070,7 +1191,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere , Category = "Treasure") TMap<int32 , FText> ProductSubType;` |
 
-**Source comments:**
+**Notes:**
 
 > 珍宝阁商品子分类名称
 
@@ -1085,7 +1206,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere , Category = "Treasure") float PayrollInterval;` |
 
-**Source comments:**
+**Notes:**
 
 > 弟子例银发放时间间隔
 
@@ -1100,7 +1221,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere , Category = "Treasure") float AutomaticReplenishmentTime;` |
 
-**Source comments:**
+**Notes:**
 
 > 自动补货时间
 
@@ -1115,7 +1236,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere , Category = "Treasure") float ForceReputationTransformation;` |
 
-**Source comments:**
+**Notes:**
 
 > 例银与声望转化比
 
@@ -1130,7 +1251,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere , Category = "Treasure") float ForceReputationTransformationFormulaA;` |
 
-**Source comments:**
+**Notes:**
 
 > 珍宝阁获得声望计算公式参数A
 
@@ -1145,7 +1266,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere , Category = "Treasure") float ForceReputationTransformationFormulaB;` |
 
-**Source comments:**
+**Notes:**
 
 > 珍宝阁获得声望计算公式参数B
 
@@ -1160,7 +1281,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere , Category = "Treasure") float ForceReputationTransformationFormulaC;` |
 
-**Source comments:**
+**Notes:**
 
 > 珍宝阁获得声望计算公式参数C
 
@@ -1175,7 +1296,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere , Category = "Treasure") int32 CharacterBackpacksInitSlots;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色初始背包格子数
 
@@ -1190,7 +1311,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere , Category = "Treasure") TMap<int32 , FTreasureAddMoodRule> TreasureAddMoodRule;` |
 
-**Source comments:**
+**Notes:**
 
 > 弟子兑换行为触发的心情增减规则
 
@@ -1205,7 +1326,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere , Category = "Treasure") TMap<int32 , FText> InitStalls;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始化货架
 
@@ -1220,7 +1341,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere , Category = "Treasure") int32 StallTotalSlot;` |
 
-**Source comments:**
+**Notes:**
 
 > 每个货架总栏位
 
@@ -1235,7 +1356,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere , Category = "Treasure") int32 StallInitSlot;` |
 
-**Source comments:**
+**Notes:**
 
 > 每个货架初始解锁栏位
 
@@ -1250,7 +1371,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float MouseTraceIgnoreDistance{0.f};` |
 
-**Source comments:**
+**Notes:**
 
 > 鼠标射线检测的忽略距离
 
@@ -1265,7 +1386,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float MateTotalSchedule;` |
 
-**Source comments:**
+**Notes:**
 
 > 繁育总进度
 
@@ -1280,7 +1401,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float MateAddSchedule;` |
 
-**Source comments:**
+**Notes:**
 
 > 每次动画增加的繁育进度
 
@@ -1295,7 +1416,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float AnimalOutputTotalSchedule;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物产出总进度
 
@@ -1310,7 +1431,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float AnimalOutputAddSchedule;` |
 
-**Source comments:**
+**Notes:**
 
 > 每次动画增加的动物产出进度
 
@@ -1325,7 +1446,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float PregnantTotalSchedule;` |
 
-**Source comments:**
+**Notes:**
 
 > 生产总进度
 
@@ -1340,7 +1461,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float PregnantAddSchedule;` |
 
-**Source comments:**
+**Notes:**
 
 > 每次动画增加的生产进度
 
@@ -1355,7 +1476,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int32 MaxRobotNum;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大机关人数量
 
@@ -1365,14 +1486,29 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EMartialArtsMajorCategories,[FFMartialArtsCateInfo](../Struct/MartialArts__FFMartialArtsCateInfo.md)> |
+| C++ type | TMap<[EMartialArtsMajorCategories](../Struct/MartialArts__EMartialArtsMajorCategories.md),[FFMartialArtsCateInfo](../Struct/MartialArts__FFMartialArtsCateInfo.md)> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TMap<EMartialArtsMajorCategories,FFMartialArtsCateInfo> MartialArtsAttributeTypeDict;` |
 
-**Source comments:**
+**Notes:**
 
 > 武学属性类型属性
+
+---
+
+### Property `MartialArtsBookTypeDict`
+
+| Field | Details |
+|------|------|
+| C++ type | TMap<[EMartialArtsBookType](../Struct/MartialArts__EMartialArtsBookType.md),[FFMartialArtsCateInfo](../Struct/MartialArts__FFMartialArtsCateInfo.md)> |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<EMartialArtsBookType,FFMartialArtsCateInfo> MartialArtsBookTypeDict;` |
+
+**Notes:**
+
+> 武学书籍顶层类型 名称+图标（图鉴左侧顶层标签用）
 
 ---
 
@@ -1385,7 +1521,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TMap<EWeaponType,FText> WeaponTypeNameDict;` |
 
-**Source comments:**
+**Notes:**
 
 > 武器名称配置表
 
@@ -1400,7 +1536,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TMap<EWeaponType,TSoftObjectPtr<UTexture2D>> WeaponTypeTexture;` |
 
-**Source comments:**
+**Notes:**
 
 > 武器类型图标
 
@@ -1410,12 +1546,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EArmorType,FText>` |
+| C++ type | TMap<[EArmorType](../Struct/CommonEnum__EArmorType.md),FText> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TMap<EArmorType,FText> ArmorTypeNameDict;` |
 
-**Source comments:**
+**Notes:**
 
 > 防具名称配置表
 
@@ -1430,7 +1566,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float OneTreatTime = 300.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 单次治愈伤势持续时间(伤势治疗间隔)
 
@@ -1440,12 +1576,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<ESummonsBattleType,FText>` |
+| C++ type | TMap<[ESummonsBattleType](../Struct/CommonEnum__ESummonsBattleType.md),FText> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TMap<ESummonsBattleType,FText> SummonsBattleTypeNameDict;` |
 
-**Source comments:**
+**Notes:**
 
 > 傀儡战斗类型名称
 
@@ -1460,7 +1596,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) FName HungerInjuryId = "Hunger";` |
 
-**Source comments:**
+**Notes:**
 
 > 饥饿伤势ID
 
@@ -1475,7 +1611,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float AnimalEatSchedule;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物进食所需总进度（仅用于食槽进食）
 
@@ -1490,7 +1626,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float AnimalEatEverTime;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物进食每执行一遍动画所加的进度（仅用于食槽进食）
 
@@ -1505,7 +1641,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float AnimalRandomDie;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物成长值达到最大后，后续每次增长随机死亡的概率(0-1)
 
@@ -1520,7 +1656,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float BaseAddition = 4.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 治疗质量的基础效果
 
@@ -1535,7 +1671,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float QtAdd1Percent = 0.08f;` |
 
-**Source comments:**
+**Notes:**
 
 > 每1%质量加成增加的治疗效果
 
@@ -1550,7 +1686,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float TreatDurability = 200.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 治疗耐久度
 
@@ -1565,7 +1701,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float RecuperateTriggerValue = 0.5f;` |
 
-**Source comments:**
+**Notes:**
 
 > 疗养触发百分比(生命值百分比低于这个触发疗养)
 
@@ -1580,7 +1716,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float RecuperateEndValue = 0.55f;` |
 
-**Source comments:**
+**Notes:**
 
 > 疗养终止百分比(生命值百分比高于这个终止疗养)
 
@@ -1595,7 +1731,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float NutritionTriggerValue = 0.1f;` |
 
-**Source comments:**
+**Notes:**
 
 > 饥饿触发吃饭百分比
 
@@ -1610,7 +1746,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float LightHurtLevel = 0.18f;` |
 
-**Source comments:**
+**Notes:**
 
 > 伤害程度公式：轻度(界定值)
 
@@ -1625,9 +1761,24 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float MediumHurtLevel = 0.36f;` |
 
-**Source comments:**
+**Notes:**
 
 > 伤害程度公式：中度(界定值)
+
+---
+
+### Property `EnemyDieNearbyRadius`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float EnemyDieNearbyRadius = 800.f;` |
+
+**Notes:**
+
+> 范围内敌人死亡被动触发：广播半径(默认800,UE单位)
 
 ---
 
@@ -1640,7 +1791,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) FLinearColor EntranceArrowLightColor;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑入口箭头高亮显示颜色
 
@@ -1655,7 +1806,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) FLinearColor EntranceArrowNormalColor;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑入口箭头普通颜色
 
@@ -1670,7 +1821,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) FLinearColor EntranceArrowDisableColor;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑入口箭头不可用颜色
 
@@ -1680,12 +1831,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EGoapGoalType,FName>` |
+| C++ type | TMap<[EGoapGoalType](ERW_GameConfigComponent__EGoapGoalType.md),FName> |
 | Reflection specifiers | BlueprintReadOnly, Category="Goap" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere, Category="Goap") TMap<EGoapGoalType,FName> GoapGoalIds;` |
 
-**Source comments:**
+**Notes:**
 
 > Goap Goal的id映射
 
@@ -1700,7 +1851,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere, Category="Goap") TMap<FName,FIDs> GoapGoalCantAbortOtherGoal;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色执行GOAP需要打断其他角色当前行为时，他的goal不能打断其他角色的哪些goal
 
@@ -1715,7 +1866,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float HurtTopValue { 1.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 受伤健康值提示设置
 
@@ -1730,6 +1881,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float HurtBottomValue { 0.5f };` |
 
+**Notes:**
+
+> Lower bound of the health ratio for the hurt prompt
+
 ---
 
 ### Property `DyingTopValue`
@@ -1740,6 +1895,10 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float DyingTopValue { 0.5f };` |
+
+**Notes:**
+
+> Upper bound of the health ratio for the dying prompt
 
 ---
 
@@ -1752,6 +1911,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float DyingBottomValue { 0.f };` |
 
+**Notes:**
+
+> Lower bound of the health ratio for the dying prompt
+
 ---
 
 ### Property `LanguageMapping`
@@ -1763,7 +1926,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) TMap<FString,FText> LanguageMapping;` |
 
-**Source comments:**
+**Notes:**
 
 > 国际化语言映射
 
@@ -1778,7 +1941,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) TArray<FGameplayAttribute> InitOrderGameplayAttribute;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色属性初始化顺序
 
@@ -1793,9 +1956,24 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere ,Category="PathTracer") FPathTracerSetting BuildEffectRangeLineSetting;` |
 
-**Source comments:**
+**Notes:**
 
 > 组合建筑核心影响范围样条线设置
+
+---
+
+### Property `ActiveAreaEffectRangeLineSetting`
+
+| Field | Details |
+|------|------|
+| C++ type | [FPathTracerSetting](../ERW_CommonTypes__FPathTracerSetting.md) |
+| Reflection specifiers | BlueprintReadOnly, Category="PathTracer" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere ,Category="PathTracer") FPathTracerSetting ActiveAreaEffectRangeLineSetting;` |
+
+**Notes:**
+
+> 活动范围样条线设置
 
 ---
 
@@ -1808,7 +1986,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float ReadBookCostDurability = 10.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 阅读需要消耗的耐久度
 
@@ -1823,7 +2001,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , EditAnywhere) float WriteCopyCostDurability = 25.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 抄录需要扣除的耐久度
 
@@ -1838,7 +2016,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, EditAnywhere) TMap<FGameplayAttribute,float> PowerfulHumanCondition;` |
 
-**Source comments:**
+**Notes:**
 
 > 强力角色的属性要求
 
@@ -1853,9 +2031,24 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, EditAnywhere) TMap<FGameplayAttribute,float> AttributeFightingScoreRate;` |
 
-**Source comments:**
+**Notes:**
 
 > 属性战力评估系数
+
+---
+
+### Property `UIDisplayTempAttributes`
+
+| Field | Details |
+|------|------|
+| C++ type | `TArray<FGameplayAttribute>` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, EditAnywhere) TArray<FGameplayAttribute> UIDisplayTempAttributes;` |
+
+**Notes:**
+
+> UI需要显示的临时存档属性(存到FCharacterSaveData::UIDisplayAttributes,仅用于UI显示,不用于复原角色数据)
 
 ---
 
@@ -1868,7 +2061,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, EditAnywhere) class UAkSwitchValue * ManAkSwitchValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 男音效切换
 
@@ -1883,7 +2076,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, EditAnywhere) class UAkSwitchValue * WomanAkSwitchValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 女音效切换
 
@@ -1893,12 +2086,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EForceJobType,FText>` |
+| C++ type | TMap<[EForceJobType](../WorldSystem/WorldStruct__EForceJobType.md),FText> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, EditAnywhere) TMap<EForceJobType,FText> ForceJobTypeName;` |
 
-**Source comments:**
+**Notes:**
 
 > 门派职位名称
 
@@ -1908,12 +2101,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EArmorType,[FNameIDArray](../Struct/CommonStruct__FNameIDArray.md)> |
+| C++ type | TMap<[EArmorType](../Struct/CommonEnum__EArmorType.md),[FNameIDArray](../Struct/CommonStruct__FNameIDArray.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<EArmorType,FNameIDArray> ForceApparels;` |
 
-**Source comments:**
+**Notes:**
 
 > 可选门派服饰
 
@@ -1928,7 +2121,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TSoftClassPtr<UCommonActivatableWidget> DialogueWidget;` |
 
-**Source comments:**
+**Notes:**
 
 > 对话UI
 
@@ -1943,6 +2136,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FResourceTypeTextForTag> ResourceTypeTag;` |
 
+**Notes:**
+
+> List of resource type text-and-tag configurations
+
 ---
 
 ### Property `ResourceWorthTag`
@@ -1954,7 +2151,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FResourceTypeTextForTag> ResourceWorthTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家财富点数统计的资源类型标签
 
@@ -1964,12 +2161,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TArray<EEnvironType>` |
+| C++ type | TArray<[EEnvironType](../ERW_Enumerations__EEnvironType.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<EEnvironType> EnvironTypes;` |
 
-**Source comments:**
+**Notes:**
 
 > 财富点数统计的建筑类型
 
@@ -1984,7 +2181,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,Category="Task") TSoftClassPtr<UEastRimWorldActivatableWidget> TransportToTaskPlaceUI;` |
 
-**Source comments:**
+**Notes:**
 
 > 传送弟子到任务地点界面
 
@@ -1999,7 +2196,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int ChangeCostStoragePriority = -10;` |
 
-**Source comments:**
+**Notes:**
 
 > 储存优先级的变化
 

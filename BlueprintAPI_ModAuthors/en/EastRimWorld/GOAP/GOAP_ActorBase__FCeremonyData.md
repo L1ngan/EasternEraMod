@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECeremonyStateType` |
+| C++ type | [ECeremonyStateType](../ERW_Enumerations__ECeremonyStateType.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) ECeremonyStateType CeremonyState = ECeremonyStateType::Normal;` |
 
-**Source comments:**
+**Notes:**
 
 > 仪式状态
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FGuid> CeremonyMember;` |
 
-**Source comments:**
+**Notes:**
 
 > 参与仪式人员
 
@@ -49,6 +49,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FGuid> SpectatorCeremonyMember;` |
 
+**Notes:**
+
+> List of GUIDs of ceremony spectators
+
 ---
 
 ### Property `ArrivedCeremonyMember`
@@ -60,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FGuid> ArrivedCeremonyMember;` |
 
-**Source comments:**
+**Notes:**
 
 > 已签到人员
 
@@ -75,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FGuid> CompleteCeremonyMember;` |
 
-**Source comments:**
+**Notes:**
 
 > 已签退人员
 
@@ -90,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) int32 CeremonyMemberNumCount { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 还差多少个参加人员没到&&有多少个完成了仪式
 
@@ -105,6 +109,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) int32 MainCeremonyNumCount { 0 };` |
 
+**Notes:**
+
+> Count of main ceremony participants
+
 ---
 
 ### Property `CeremonyRelationShipID`
@@ -116,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) FName CeremonyRelationShipID;` |
 
-**Source comments:**
+**Notes:**
 
 > 仪式相关的关系ID
 
@@ -131,7 +139,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float CeremonyStartTime { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 当前仪式的开始时间
 
@@ -146,6 +154,10 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 CeremonyStartTimerID { INDEX_NONE };` |
 
+**Notes:**
+
+> Timer ID for the ceremony start
+
 ---
 
 ### Property `CeremonyWaitTimerID`
@@ -156,5 +168,9 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 CeremonyWaitTimerID { INDEX_NONE };` |
+
+**Notes:**
+
+> Timer ID for the ceremony waiting phase
 
 ---

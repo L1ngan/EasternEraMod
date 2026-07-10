@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Project-extended gameplay effect context: hit location/direction, target, instigator GUID and team, ability ID and effect tip text, etc.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() int32 CartridgeID = -1;` |
 
-**Source comments:**
+**Notes:**
 
 > ID to allow the identification of multiple bullets that were part of the same cartridge
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() FVector HitLocation = FVector::ZeroVector;` |
 
-**Source comments:**
+**Notes:**
 
 > 碰撞点
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() FVector Direction = FVector::ZeroVector;` |
 
-**Source comments:**
+**Notes:**
 
 > 方向
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() TWeakObjectPtr<AActor> Target;` |
 
-**Source comments:**
+**Notes:**
 
 > 目标
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() FGuid InstigatorGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 发起者GUID
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() int32 InstigatorTeamID = 255;` |
 
-**Source comments:**
+**Notes:**
 
 > 发起者team
 
@@ -102,12 +104,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBattlefieldRolesType` |
+| C++ type | [EBattlefieldRolesType](../Struct/CommonEnum__EBattlefieldRolesType.md) |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() EBattlefieldRolesType BattlefieldRolesType = EBattlefieldRolesType::Hero;` |
 
-**Source comments:**
+**Notes:**
 
 > 发起者的类型
 
@@ -122,7 +124,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() float Parameter = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 额外的参数 1.控制时长
 
@@ -137,7 +139,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() TWeakObjectPtr<const UObject> AbilitySourceObject;` |
 
-**Source comments:**
+**Notes:**
 
 > Ability Source object (should implement IEastRimWorldAbilitySourceInterface). NOT replicated currently
 
@@ -151,5 +153,9 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() FText GameplayEffectTipText;` |
+
+**Notes:**
+
+> Gameplay effect tip text, accessed via SetGameplayEffectTipText/GetGameplayEffectTipText
 
 ---

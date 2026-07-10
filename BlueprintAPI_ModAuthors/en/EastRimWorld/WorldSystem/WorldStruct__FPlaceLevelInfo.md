@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 PlaceLevel = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 地点等级
 
@@ -34,9 +34,9 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int NeedProsperity = 100;` |
 
-**Source comments:**
+**Notes:**
 
-> 需要的繁荣度
+> 升到本级所需繁荣度
 
 ---
 
@@ -44,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EWorldPlaceType` |
+| C++ type | [EWorldPlaceType](../Struct/CommonEnum__EWorldPlaceType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EWorldPlaceType WorldPlaceType = EWorldPlaceType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 地点的类型
 
@@ -64,9 +64,9 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<FName, int32> NeedResource;` |
 
-**Source comments:**
+**Notes:**
 
-> 升到下一级所需的物品
+> 升到本级所需物品
 
 ---
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float ProsperityGrowthEfficiency = 0.5f;` |
 
-**Source comments:**
+**Notes:**
 
 > 繁荣度此等级增加的效率(逐级累加)
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float PopulationGrowthEfficiency = 0.5f;` |
 
-**Source comments:**
+**Notes:**
 
 > 人口此等级增加的效率(逐级累加)
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 AddCoinIncrease = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 提供的钱币增长值
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float LevelUpAddReputation = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 升级增加声望
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float OccupyAddReputation = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 占领增加声望
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float LoseDecreaseReputation = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 丢失减少声望(配负值)
 
@@ -169,9 +169,9 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float NeedGrowScore =0.f;` |
 
-**Source comments:**
+**Notes:**
 
-> NPC势力需要的成长积分
+> 升到本级NPC所需成长积分
 
 ---
 
@@ -184,9 +184,9 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 NeedCoin = 0;` |
 
-**Source comments:**
+**Notes:**
 
-> 需要的钱
+> 升到本级所需铜币
 
 ---
 
@@ -199,8 +199,38 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 LevelCanBuildNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑设施可建造数量
+
+---
+
+### Property `CopperCoin`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 CopperCoin = 0;` |
+
+**Notes:**
+
+> 铜币
+
+---
+
+### Property `TrainingPoint`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 TrainingPoint = 0;` |
+
+**Notes:**
+
+> 历练点
 
 ---

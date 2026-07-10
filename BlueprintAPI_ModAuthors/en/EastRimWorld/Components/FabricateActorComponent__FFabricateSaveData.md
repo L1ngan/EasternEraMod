@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid Guid;` |
 
-**Source comments:**
+**Notes:**
 
 > 制造组件的Guid
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TArray<FFabricateTaskData> FabricateTaskQueue;` |
 
-**Source comments:**
+**Notes:**
 
 > 制造队列数据
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid CurFabricateTaskGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前制造任务的Guid
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FName , FGOAP_Action> ResourceActions;` |
 
-**Source comments:**
+**Notes:**
 
 > 制造资源对应的GOAPAction
 > TMap<资源ID , GOAPAction>
@@ -80,7 +80,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FGameplayTag , FGOAP_Action> SelectableResourceAction;` |
 
-**Source comments:**
+**Notes:**
 
 > 可选资源对应的GOAPAction
 > TMap<Tag , GOAPAction>
@@ -96,7 +96,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FGOAP_Action FabricateAction;` |
 
-**Source comments:**
+**Notes:**
 
 > 制造GOAPAction
 
@@ -111,7 +111,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) bool WaitingGenerateItem { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否在等待生成制造物品
 

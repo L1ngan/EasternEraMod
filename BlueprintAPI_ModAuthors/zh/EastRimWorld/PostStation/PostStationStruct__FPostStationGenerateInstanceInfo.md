@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 驿站单个已生成NPC的实例信息（生成Guid、占用插槽、存续时间与角色状态）
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid ComponentGenerateGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 生成组件中的Guid
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName OccupySocket;` |
 
-**源码注释:**
+**说明:**
 
 > 占用的插槽
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float AlreadyExistTime;` |
 
-**源码注释:**
+**说明:**
 
 > 已经存续的时间
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bIsAlreadyGenerate;` |
 
-**源码注释:**
+**说明:**
 
 > 是否已经生成
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid CharacterGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 生成的角色Guid
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName CharacterID;` |
 
-**源码注释:**
+**说明:**
 
 > 生成的角色配置ID
 
@@ -102,9 +104,13 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EPostStationNPCState` |
+| C++ 类型 | [EPostStationNPCState](PostStationStruct__EPostStationNPCState.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EPostStationNPCState NPCState;` |
+
+**说明:**
+
+> 该NPC当前状态（空闲/切磋中）
 
 ---

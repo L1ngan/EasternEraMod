@@ -20,7 +20,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() TArray<FGameplayAbilitySpecHandle> AbilitySpecHandles;` |
 
-**Source comments:**
+**Notes:**
 
 > Handles to the granted abilities.
 
@@ -35,7 +35,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() TArray<FActiveGameplayEffectHandle> GameplayEffectHandles;` |
 
-**Source comments:**
+**Notes:**
 
 > Handles to the granted gameplay effects.
 
@@ -50,7 +50,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() TArray<TObjectPtr<UAttributeSet>> GrantedAttributeSets;` |
 
-**Source comments:**
+**Notes:**
 
 > Pointers to the granted attribute sets
 

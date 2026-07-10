@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 项目自定义技能系统组件：技能激活分组、GE/Buff构建与施加、冷却操作、运行时技能配置注入等
 
 ## 蓝图暴露函数
 
@@ -25,7 +27,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 返回所属
 
@@ -48,7 +50,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 构建生成升级ge 并施加给自身
 
@@ -70,6 +72,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 生成递给投射物的GE Spec实例，按目标类型将配置的GE类构建为Spec句柄映射
+
 ---
 
 ### 函数 `MakeCounterattackDamageGameplayEffectSpec`
@@ -90,32 +96,33 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 构建反伤GE
 
 ---
 
-### 函数 `SetDamageExecutionMultiplierOnSpec`
+### 函数 `MergeMartialArtsSkillEntryDamageExecutionToSpec`
 
 | 项目 | 内容 |
 |------|------|
-| 反射说明符 | BlueprintCallable, Category="GameplayEffect|Damage" |
-| 返回类型 | `FGameplayEffectSpecHandle` |
+| 反射说明符 | BlueprintCallable, Category="SkillEntry|MartialArts" |
+| 返回类型 | `void` |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
 |--------|------|
-| `SpecHandle` | `FGameplayEffectSpecHandle` |
-| `Multiplier` | `float` |
+| `GameMode` | [AERW_GameModeBase](../Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
+| `LearnData` | const [FMartialArtsLearnData](../Struct/MartialArts__FMartialArtsLearnData.md)& |
+| `SpecHandle` | `UPARAM(ref) FGameplayEffectSpecHandle&` |
 
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "GameplayEffect|Damage") static FGameplayEffectSpecHandle SetDamageExecutionMultiplierOnSpec(FGameplayEffectSpecHandle SpecHandle, float Multiplier);`
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "SkillEntry|MartialArts") static void MergeMartialArtsSkillEntryDamageExecutionToSpec( AERW_GameModeBase* GameMode, const FMartialArtsLearnData& LearnData, UPARAM(ref) FGameplayEffectSpecHandle& SpecHandle);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
-> 为即将施加的伤害 GE Spec 设置单次 Execution 乘数（不影响属性捕获；仅 UEastRimWorldDamageExecution 读取）。小于 0 按 0 处理。
+> 将武学已解锁等级上的技能词条 ChangeDamageExecutionParam 合并进即将施加的伤害/治疗 GE Spec（需在 Apply 前调用）。
 
 ---
 
@@ -135,6 +142,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 蓝图调用：执行（施加）给定的GameplayEffect Spec
+
 ---
 
 ### 函数 `GetCanActivateAbilityByUsageScenario`
@@ -152,6 +163,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) TArray<FGameplayAbilitySpec> GetCanActivateAbilityByUsageScenario(EAbilityUsageScenario AbilityUsageScenario);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 获取指定使用场景下当前可激活的技能Spec列表
 
 ---
 
@@ -172,7 +187,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 煽动者尝试通过标签激活技能
 
@@ -194,7 +209,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过Handle获得能力
 
@@ -219,7 +234,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过tag调用目标能力
 
@@ -242,7 +257,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 减少指定冷却标签的剩余时间
 
@@ -265,7 +280,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 减少多个标签的冷却
 
@@ -287,7 +302,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取指定冷却标签的剩余冷却时间
 
@@ -309,7 +324,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取指定技能标签的剩余冷却时间
 
@@ -327,9 +342,27 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新丹药增加的属性值
+
+---
+
+### 函数 `UpdateConsumablePermanentAttribute`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdateConsumablePermanentAttribute();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 更新耗材永久属性效果增加的属性值（按角色已获得的耗材永久效果记录重新构建GE施加给自身 仿丹药做法）
 
 ---
 
@@ -350,7 +383,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 取消指定技能
 

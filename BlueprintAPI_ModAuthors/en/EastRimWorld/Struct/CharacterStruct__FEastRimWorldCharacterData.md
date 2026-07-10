@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Base character config data table row: name, sex, attributes, initial GEs/GAs, equipment, animations, team info, drops, etc.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") FText CharacterName;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色名字
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") FText CharacterFirstName;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色姓氏
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") bool Sex;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色性别 true 男：false 女
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") int32 Age;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色年龄
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") int32 AnimGroup;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色分组，用于不同骨骼的角色用不同的动画
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Attributes") TMap<FName,float> Attributes;` |
 
-**Source comments:**
+**Notes:**
 
 > 属性 key 为角色属性表 id 不是属性名字
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Abilities", meta = (AllowedClasses = "/Script/Engine.GameplayEffect")) TArray<FSoftClassPath> InitGameplayEffect;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始的公共Ge 不区分场景
 
@@ -122,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Abilities", meta = (AllowedClasses = "/Script/EastRimWorld.EastRimWorldGameplayAbility")) TArray<FSoftClassPath> InitGameplayAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始的能力
 
@@ -137,7 +139,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Abilities",meta = (AllowedClasses = "/Script/EastRimWorld.EastRimWorldGameplayAbility")) TArray<FSoftClassPath> InitActivateGameplayAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始激活一次的能力 激活后移除
 
@@ -152,7 +154,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Attributes") TArray<FPlaceInitGameplayEffect> PlaceInitGameplayEffect;` |
 
-**Source comments:**
+**Notes:**
 
 > 在具体的地点中初始化的GE
 
@@ -167,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities") TArray<FName> InitGameplayAbilityByID;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始的能力通过配置表获取
 
@@ -182,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities") FGameplayTagContainer InitGameplayTags;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始获得的标签
 
@@ -197,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") TArray<FItemSimpleData> InitResource;` |
 
-**Source comments:**
+**Notes:**
 
 > 新游戏初始携带的物资
 
@@ -207,12 +209,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ESpeciesType` |
+| C++ type | [ESpeciesType](CommonEnum__ESpeciesType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") ESpeciesType Species;` |
 
-**Source comments:**
+**Notes:**
 
 > 物种，用于获取身体器官
 
@@ -227,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CharacterRuntime") FGuid CharacterGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色的GUID
 
@@ -242,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FName InformationWidget;` |
 
-**Source comments:**
+**Notes:**
 
 > 点击后显示的界面ID 关联DT_CommonUIConfig表
 
@@ -257,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FName DeathInformationWidget;` |
 
-**Source comments:**
+**Notes:**
 
 > 死亡后显示的界面ID，关联DT_CommonUIConfig表
 
@@ -272,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FName KnockDownInformationWidget;` |
 
-**Source comments:**
+**Notes:**
 
 > 击倒后显示的界面ID，关联DT_CommonUIConfig表
 
@@ -287,7 +289,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base", meta = (AllowedClasses = "/Script/Engine.AnimMontage")) FSoftObjectPath DeathAnimMontage;` |
 
-**Source comments:**
+**Notes:**
 
 > 死亡动画，死亡时释放GA，GA从死亡动画数组里面取动画
 
@@ -302,6 +304,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TArray<FName> DeathMontageSection;` |
 
+**Notes:**
+
+> List of section names available in the death anim montage
+
 ---
 
 ### Property `PickedUpAnimMontage`
@@ -313,7 +319,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base", meta = (AllowedClasses = "/Script/Engine.AnimMontage")) FSoftObjectPath PickedUpAnimMontage;` |
 
-**Source comments:**
+**Notes:**
 
 > 被抱起的动画
 
@@ -328,7 +334,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base", meta = (AllowedClasses = "/Script/Engine.AnimMontage")) FSoftObjectPath PutDownAnimMontage;` |
 
-**Source comments:**
+**Notes:**
 
 > 被放下的动画
 
@@ -343,7 +349,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base", meta = (AllowedClasses = "/Script/Engine.AnimMontage")) FSoftObjectPath PickUpHumanLoopAnimMontage;` |
 
-**Source comments:**
+**Notes:**
 
 > 抱起人类的动画
 
@@ -358,7 +364,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base", meta = (AllowedClasses = "/Script/Engine.Texture2D")) FSoftObjectPath Avatar;` |
 
-**Source comments:**
+**Notes:**
 
 > 头像
 
@@ -373,7 +379,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base", meta = (AllowedClasses = "/Script/Engine.Texture2D")) FSoftObjectPath Half_Avatar;` |
 
-**Source comments:**
+**Notes:**
 
 > 半身立绘
 
@@ -388,7 +394,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base", meta = (AllowedClasses = "/Script/Engine.Texture2D")) FSoftObjectPath Half_TourAvatar;` |
 
-**Source comments:**
+**Notes:**
 
 > 比武半身立绘
 
@@ -403,7 +409,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base", meta = (AllowedClasses = "/Script/Engine.Texture2D")) FSoftObjectPath SmallTourAvatar;` |
 
-**Source comments:**
+**Notes:**
 
 > 比武五人对战立绘
 
@@ -418,7 +424,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base", meta = (AllowedClasses = "/Script/Engine.Texture2D")) FSoftObjectPath Half_UIAvatar;` |
 
-**Source comments:**
+**Notes:**
 
 > UI显示半身立绘
 
@@ -428,12 +434,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EHitType,FSoftObjectPath>` |
+| C++ type | TMap<[EHitType](CharacterStruct__EHitType.md),FSoftObjectPath> |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category= "Base", meta = (AllowedClasses = "/Script/Engine.AnimMontage")) TMap<EHitType,FSoftObjectPath> HitAnimMontage;` |
 
-**Source comments:**
+**Notes:**
 
 > 受击动画
 
@@ -448,7 +454,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category= "Base") TMap<int32,FCharacterTeamInfo> CharacterTeamInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 此角色的阵营信息
 
@@ -463,7 +469,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") FName InitWeapon;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始的武器
 
@@ -473,12 +479,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EArmorType,FName>` |
+| C++ type | TMap<[EArmorType](CommonEnum__EArmorType.md),FName> |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") TMap<EArmorType,FName>InitArmor;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始的防具
 
@@ -488,12 +494,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EArmorType,FName>` |
+| C++ type | TMap<[EArmorType](CommonEnum__EArmorType.md),FName> |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") TMap<EArmorType,FName> DefaultArmor;` |
 
-**Source comments:**
+**Notes:**
 
 > 默认防具 在没有装备时生效
 
@@ -508,7 +514,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") FName DefaultWeapon;` |
 
-**Source comments:**
+**Notes:**
 
 > 默认武器 在没有装备武器时生效
 
@@ -523,7 +529,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") FSoftClassPath CharacterClass;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色类
 
@@ -533,12 +539,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECharacterType` |
+| C++ type | [ECharacterType](CommonEnum__ECharacterType.md) |
 | Reflection specifiers | BlueprintReadOnly, Category="Base" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame,EditAnywhere, Category = "Base") ECharacterType CharacterType = ECharacterType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色类型
 
@@ -553,7 +559,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") FOutputDatas Output;` |
 
-**Source comments:**
+**Notes:**
 
 > 死亡产出
 
@@ -568,7 +574,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base",meta = (AllowedClasses = "SmartObjectDefinition")) FSoftObjectPath InteractDefinition;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色交互定义
 
@@ -583,7 +589,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") float SightRadius = 1000;` |
 
-**Source comments:**
+**Notes:**
 
 > 视线范围
 
@@ -598,7 +604,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") float LoseSightRadius = 1100;` |
 
-**Source comments:**
+**Notes:**
 
 > 丢失视线范围
 
@@ -613,7 +619,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") float ReportTeamTeamRadius = 3000.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 团队感知的范围
 
@@ -628,7 +634,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") float BaseHealingRate;` |
 
-**Source comments:**
+**Notes:**
 
 > 基础的愈合速度
 
@@ -643,7 +649,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") float ButcherWorkLoad;` |
 
-**Source comments:**
+**Notes:**
 
 > 屠宰需要工作总量
 
@@ -658,7 +664,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") bool bCanBeTreat;` |
 
-**Source comments:**
+**Notes:**
 
 > 能否被治疗
 
@@ -673,7 +679,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") bool bCanBeKnockDown = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 能否被击倒
 
@@ -688,7 +694,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") bool bCanChooseNewGame = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 创建游戏时是否可以被选为队员
 
@@ -703,7 +709,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sound") FName IdleSound;` |
 
-**Source comments:**
+**Notes:**
 
 > 待机音效 读取GameSoundInfo 配置表
 
@@ -718,7 +724,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sound") FName ClickVoice;` |
 
-**Source comments:**
+**Notes:**
 
 > 点击语音
 
@@ -733,7 +739,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category= "Base", meta = (AllowedClasses = "/Script/Engine.AnimMontage")) TMap<FGameplayTag,FControlEffectAnimMontage> ControlEffectAnimMontage;` |
 
-**Source comments:**
+**Notes:**
 
 > 控制效果蒙太奇
 
@@ -748,7 +754,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") TArray<FName> HobbyIds;` |
 
-**Source comments:**
+**Notes:**
 
 > 爱好
 
@@ -763,7 +769,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") FName InitInternalStrength;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始的内功
 
@@ -778,7 +784,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") TArray<FName> InitMoves;` |
 
-**Source comments:**
+**Notes:**
 
 > 携带的招式 在解锁丹田后自动携带
 
@@ -793,7 +799,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base") TArray<FName> InitPassive;` |
 
-**Source comments:**
+**Notes:**
 
 > 携带的被动 在解锁丹田后自动携带
 
@@ -808,7 +814,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "DeathDrop") int32 MaxDropNum{1};` |
 
-**Source comments:**
+**Notes:**
 
 > 死亡后的掉落最大数量
 
@@ -823,7 +829,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "DeathDrop") TMap<FName,float> DropItemConfig;` |
 
-**Source comments:**
+**Notes:**
 
 > 死亡后的掉落配置 配置ID -- 掉落权重
 

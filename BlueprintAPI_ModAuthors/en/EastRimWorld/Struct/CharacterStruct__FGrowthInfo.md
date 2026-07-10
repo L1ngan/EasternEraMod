@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Animal growth info: growth value required for the stage and the animal ID it turns into (empty if unchanged)
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) float NeedGrowth = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 所需要的成长值
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) FName AnimalID = NAME_None;` |
 
-**Source comments:**
+**Notes:**
 
 > 会变成的另一个动物ID(不会变就不填)
 

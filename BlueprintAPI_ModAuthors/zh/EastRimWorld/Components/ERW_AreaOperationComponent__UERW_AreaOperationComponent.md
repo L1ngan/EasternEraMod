@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) UERW_HISMManager* HISMManager { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > HISM管理组件
 
@@ -34,18 +34,22 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) UERW_MapDataMgr* MapDataMgr { nullptr };` |
 
+**说明:**
+
+> 地图数据管理器（UERW_MapDataMgr）引用
+
 ---
 
 ### 属性 `GenerateMode`
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EGenerateMode` |
+| C++ 类型 | [EGenerateMode](../ERW_Enumerations__EGenerateMode.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) EGenerateMode GenerateMode;` |
 
-**源码注释:**
+**说明:**
 
 > 创建方式
 
@@ -55,12 +59,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EGridDistributionType` |
+| C++ 类型 | [EGridDistributionType](../ERW_Enumerations__EGridDistributionType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) EGridDistributionType DistributionType;` |
 
-**源码注释:**
+**说明:**
 
 > 物体在格子中分布类型
 
@@ -70,12 +74,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EGridPositionType` |
+| C++ 类型 | [EGridPositionType](../ERW_Enumerations__EGridPositionType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) EGridPositionType GridPositionType;` |
 
-**源码注释:**
+**说明:**
 
 > 格子位置类型
 
@@ -85,12 +89,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ELineGenerateOrientation` |
+| C++ 类型 | [ELineGenerateOrientation](../ERW_Enumerations__ELineGenerateOrientation.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) ELineGenerateOrientation LineGenerateOrientation;` |
 
-**源码注释:**
+**说明:**
 
 > 线型区域朝向
 
@@ -100,12 +104,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EEnvironType` |
+| C++ 类型 | [EEnvironType](../ERW_Enumerations__EEnvironType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) EEnvironType EnvironType;` |
 
-**源码注释:**
+**说明:**
 
 > 环境类型
 
@@ -115,14 +119,44 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ERotateOrientation` |
+| C++ 类型 | [ERotateOrientation](../ERW_Enumerations__ERotateOrientation.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) ERotateOrientation RotateOrientation;` |
 
-**源码注释:**
+**说明:**
 
 > 旋转朝向
+
+---
+
+### 属性 `IsTransBuilding`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `bool` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) bool IsTransBuilding { false };` |
+
+**说明:**
+
+> 是否是移动建筑
+
+---
+
+### 属性 `TransBuildingData`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | [FUObjectData](../ERW_CommonTypes__FUObjectData.md) |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FUObjectData TransBuildingData;` |
+
+**说明:**
+
+> 移动建筑的ObjectData
 
 ---
 
@@ -135,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FIntPoint RectActorSize = FIntPoint(1 , 1);` |
 
-**源码注释:**
+**说明:**
 
 > 矩形区域建筑的尺寸
 
@@ -145,12 +179,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EPlaceBuildingTipsType` |
+| C++ 类型 | [EPlaceBuildingTipsType](../ERW_Enumerations__EPlaceBuildingTipsType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) EPlaceBuildingTipsType PlaceBuildingTipsType { EPlaceBuildingTipsType::Normal };` |
 
-**源码注释:**
+**说明:**
 
 > 放置建筑提示类型
 
@@ -165,9 +199,99 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) float FoundationHeightIntercept;` |
 
-**源码注释:**
+**说明:**
 
 > 地基修建最大高度差(厘米)
+
+---
+
+### 属性 `StairID`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FName` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FName StairID;` |
+
+**说明:**
+
+> 放置地基(水池)后出现的楼梯ID
+
+---
+
+### 属性 `FoundationHeightStep`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) float FoundationHeightStep { 0.f };` |
+
+**说明:**
+
+> 地基(水池)单次变化高度
+
+---
+
+### 属性 `ManualHeightOffset`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) float ManualHeightOffset { 0.f };` |
+
+**说明:**
+
+> 地基(水池)手动调整高度偏移
+
+---
+
+### 属性 `MaxRaiseHeight`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) float MaxRaiseHeight { 0 };` |
+
+**说明:**
+
+> 地基(水池)最大抬升高度
+
+---
+
+### 属性 `RectGridMinHeight`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) float RectGridMinHeight { 0.f };` |
+
+**说明:**
+
+> 矩形区域格子最小高度
+
+---
+
+### 属性 `RectGridMaxHeight`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) float RectGridMaxHeight { 0.f };` |
+
+**说明:**
+
+> 矩形区域格子最大高度
 
 ---
 
@@ -180,7 +304,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) bool CanPlaceActor { true };` |
 
-**源码注释:**
+**说明:**
 
 > 是否能放下Actor
 
@@ -195,7 +319,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) AActor* FirstActor;` |
 
-**源码注释:**
+**说明:**
 
 > 生成的第一个Actor
 
@@ -210,7 +334,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FIntVector PresetSize;` |
 
-**源码注释:**
+**说明:**
 
 > 预设建筑的占格子尺寸
 
@@ -225,7 +349,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FGridPosition PresetStart;` |
 
-**源码注释:**
+**说明:**
 
 > 预设建筑占格子起始坐标
 
@@ -240,7 +364,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FGridPosition PresetEnd;` |
 
-**源码注释:**
+**说明:**
 
 > 预设建筑占格子终点坐标
 
@@ -255,7 +379,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TMap<FName , FPresetInfos> PresetData;` |
 
-**源码注释:**
+**说明:**
 
 > 预设建筑的数据
 > TMap<建筑表ID , 数据>
@@ -271,7 +395,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<FName , FPresetInfos> WallPillarData;` |
 
-**源码注释:**
+**说明:**
 
 > 预设墙接缝柱的数据
 > TMap<建筑表ID , 数据>
@@ -287,7 +411,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TMap<FGridPosition , AActor*> PresetFoundationGridPoses;` |
 
-**源码注释:**
+**说明:**
 
 > 预设建筑地基格子坐标
 > TMap<格子坐标 , 地基Actor>
@@ -303,7 +427,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FName BuildID;` |
 
-**源码注释:**
+**说明:**
 
 > 建造物体ID
 
@@ -318,9 +442,39 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) int32 MaxNum;` |
 
-**源码注释:**
+**说明:**
 
 > 创建Instance的最大数量
+
+---
+
+### 属性 `ExtraResourceRate`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) float ExtraResourceRate { 0.f };` |
+
+**说明:**
+
+> 填充模型额外消耗建造资源的比率
+
+---
+
+### 属性 `Resources`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TMap<FName , int32>` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TMap<FName , int32> Resources;` |
+
+**说明:**
+
+> 建造需要消耗的资源
 
 ---
 
@@ -333,7 +487,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FGridPosition StartGridPos;` |
 
-**源码注释:**
+**说明:**
 
 > 起始网格坐标
 
@@ -348,7 +502,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FGridPosition CurGridPos;` |
 
-**源码注释:**
+**说明:**
 
 > 当前网格坐标
 
@@ -363,7 +517,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FGridPosition RectMinGrid;` |
 
-**源码注释:**
+**说明:**
 
 > 矩形区域最小点格子坐标
 
@@ -378,7 +532,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FGridPosition RectMaxGrid;` |
 
-**源码注释:**
+**说明:**
 
 > 矩形区域最大点格子坐标
 
@@ -393,7 +547,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FGridPosition StartRectMin;` |
 
-**源码注释:**
+**说明:**
 
 > 矩形区域起始最小格子坐标
 
@@ -408,7 +562,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FGridPosition StartRectMax;` |
 
-**源码注释:**
+**说明:**
 
 > 矩形区域起始最大格子坐标
 
@@ -423,7 +577,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FGridPosition CurRectMin;` |
 
-**源码注释:**
+**说明:**
 
 > 矩形区域当前最小格子坐标
 
@@ -438,7 +592,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FGridPosition CurRectMax;` |
 
-**源码注释:**
+**说明:**
 
 > 矩形区域当前最大格子坐标
 
@@ -453,7 +607,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FVector StartWorldPos;` |
 
-**源码注释:**
+**说明:**
 
 > 起始世界位置
 
@@ -468,7 +622,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FVector CurWorldPos;` |
 
-**源码注释:**
+**说明:**
 
 > 当前世界位置
 
@@ -483,7 +637,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FIntPoint StartPoint;` |
 
-**源码注释:**
+**说明:**
 
 > 起始角点
 
@@ -498,7 +652,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FIntPoint CurPoint;` |
 
-**源码注释:**
+**说明:**
 
 > 当前角点
 
@@ -513,7 +667,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FIntPoint PrevPoint;` |
 
-**源码注释:**
+**说明:**
 
 > 上次操作角点
 
@@ -528,7 +682,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FIntPoint CurMin;` |
 
-**源码注释:**
+**说明:**
 
 > 当前操作区域最小点
 
@@ -543,7 +697,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FIntPoint CurMax;` |
 
-**源码注释:**
+**说明:**
 
 > 当前操作区域最大点
 
@@ -558,7 +712,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) float StartHeight;` |
 
-**源码注释:**
+**说明:**
 
 > 起始网格高度
 
@@ -573,7 +727,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) float AreaMaxHeight;` |
 
-**源码注释:**
+**说明:**
 
 > 划区域时的最大高度
 
@@ -588,7 +742,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TMap<FGridPosition , AActor*> VisibleActors;` |
 
-**源码注释:**
+**说明:**
 
 > 显示的Actor
 > TMap<建筑左上角格子坐标 , Actor>
@@ -604,7 +758,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TMap<AActor* , bool> HideActors;` |
 
-**源码注释:**
+**说明:**
 
 > 隐藏的Actor
 > TMap<Actor , 占位符>
@@ -620,7 +774,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TArray<FGridPosition> NewGridPoses;` |
 
-**源码注释:**
+**说明:**
 
 > 新加入的格子
 
@@ -635,7 +789,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TArray<FGridPosition> HideGridPoses;` |
 
-**源码注释:**
+**说明:**
 
 > 需要隐藏的格子
 
@@ -650,7 +804,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TMap<FGridPosition , FStairGridInfo> StairGridInfos;` |
 
-**源码注释:**
+**说明:**
 
 > 阶梯占格子信息
 > TMap<格子坐标 , 格子信息>
@@ -666,7 +820,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TMap<AActor* , bool> SurroundingActors;` |
 
-**源码注释:**
+**说明:**
 
 > 区域周边同类型的Actor
 > TMap<Actor , 占位符>
@@ -682,7 +836,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TMap<FGridPosition , FLineActorInfo> LineActorInfos;` |
 
-**源码注释:**
+**说明:**
 
 > 沿格子边线生成的Actor的信息
 > TMap<格子坐标 , Actor的信息>
@@ -698,7 +852,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TMap<FGridSeamPoint , bool> GridSeamPoints;` |
 
-**源码注释:**
+**说明:**
 
 > 格子接缝点
 > TMap<接缝点数据 , 占位符>
@@ -714,7 +868,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TArray<FGridSeamPoint> NewSeamPoints;` |
 
-**源码注释:**
+**说明:**
 
 > 新加入的接缝点
 
@@ -729,7 +883,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TMap<FGridSeamPoint , bool> RemovedSeamPoints;` |
 
-**源码注释:**
+**说明:**
 
 > 需要移除的接缝点
 > TMap<接缝点数据 , 占位符>
@@ -745,7 +899,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TMap<FGridSeamPoint , bool> UnchangedSeamPoints;` |
 
-**源码注释:**
+**说明:**
 
 > 未改变的接缝点
 > TMap<接缝点数据 , 占位符>
@@ -761,7 +915,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TArray<FGridSeamPoint> AllHideSeamPoints;` |
 
-**源码注释:**
+**说明:**
 
 > 所有隐藏接缝点
 
@@ -776,7 +930,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TArray<FGridSeamPoint> VisibleSeamPoints;` |
 
-**源码注释:**
+**说明:**
 
 > 本次操作需要重新显示的接缝点
 
@@ -791,7 +945,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TMap<FGridSeamPoint , bool> HideSeamPoints;` |
 
-**源码注释:**
+**说明:**
 
 > 本次操作需要隐藏的接缝点
 
@@ -806,7 +960,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) FVector SideWorldPos;` |
 
-**源码注释:**
+**说明:**
 
 > 网格边线中心的世界位置
 
@@ -816,12 +970,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<EEmbeddedWallType>` |
+| C++ 类型 | TArray<[EEmbeddedWallType](../ERW_Enumerations__EEmbeddedWallType.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TArray<EEmbeddedWallType> WallTypes;` |
 
-**源码注释:**
+**说明:**
 
 > 嵌入式墙类型
 
@@ -836,7 +990,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TMap<AActor* , bool> ReplacedWalls;` |
 
-**源码注释:**
+**说明:**
 
 > 已有的被替换墙体的Actor
 > TMap<墙 , 占位符>
@@ -852,7 +1006,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TArray<AActor*> RecoveredWalls;` |
 
-**源码注释:**
+**说明:**
 
 > 需要恢复显示的墙
 
@@ -867,7 +1021,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TMap<AActor* , bool> OverlappedWalls;` |
 
-**源码注释:**
+**说明:**
 
 > 围墙门格子覆盖的围墙
 > TMap<围墙Actor , 占位符>
@@ -883,7 +1037,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TMap<FGridSeamPoint , bool> OverlappedSeamPoints;` |
 
-**源码注释:**
+**说明:**
 
 > 围墙门格子覆盖的接缝点
 
@@ -893,12 +1047,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<ERoofPartType , [FRoofActors](ERW_AreaOperationComponent__FRoofActors.md)> |
+| C++ 类型 | TMap<[ERoofPartType](../ERW_Enumerations__ERoofPartType.md) , [FRoofActors](ERW_AreaOperationComponent__FRoofActors.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TMap<ERoofPartType , FRoofActors> RoofActors;` |
 
-**源码注释:**
+**说明:**
 
 > 每个屋顶部位类型显示和隐藏的Actor
 > TMap<屋顶部位类型 , 显示和隐藏的Actor>
@@ -914,7 +1068,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) TMap<AGOAP_ActorBase* , FVector> AdjacentAssembles;` |
 
-**源码注释:**
+**说明:**
 
 > 组装建筑周围相邻的组装建筑
 > TMap<组装建筑 , 相邻坐标>
@@ -930,7 +1084,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) float RoofHeight { 0.f };` |
 
-**源码注释:**
+**说明:**
 
 > 操作时屋顶的高度
 
@@ -945,7 +1099,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) float RoofLayerHeight;` |
 
-**源码注释:**
+**说明:**
 
 > 屋顶单层高度
 
@@ -960,7 +1114,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) float RoofRidgeCornerHeight;` |
 
-**源码注释:**
+**说明:**
 
 > 屋顶脊角高度
 
@@ -975,7 +1129,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) float RoofPyramidalRoofHeight;` |
 
-**源码注释:**
+**说明:**
 
 > 屋顶攒尖高度
 
@@ -990,13 +1144,49 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , VisibleAnywhere) float RoofWallHeight;` |
 
-**源码注释:**
+**说明:**
 
 > 屋顶墙高度
 
 ---
 
 ## 蓝图暴露函数
+
+### 函数 `RaiseFoundationHeight`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RaiseFoundationHeight();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 升高地基高度
+
+---
+
+### 函数 `LowerFoundationHeight`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void LowerFoundationHeight();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 降低地基高度
+
+---
 
 ### 函数 `Reset`
 
@@ -1010,7 +1200,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 重置信息
 
@@ -1032,7 +1222,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查格子是否存在显示的Actor
 
@@ -1050,7 +1240,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据格子计算屋顶高度
 
@@ -1072,7 +1262,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 调整格子角位置高度
 
@@ -1094,7 +1284,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得矩形区域范围点
 
@@ -1116,7 +1306,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得预设建筑区域范围点
 
@@ -1138,7 +1328,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查坐标点是否满足区域曲线范围
 
@@ -1161,7 +1351,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查是否能放置Actor
 
@@ -1179,7 +1369,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 收集边线上的位置
 
@@ -1197,7 +1387,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新墙接缝柱
 
@@ -1219,7 +1409,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 新增墙接缝柱
 
@@ -1241,7 +1431,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 移除墙接缝柱
 
@@ -1259,7 +1449,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 收集线型区域上的格子信息
 
@@ -1281,7 +1471,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 收集矩形区域上的格子信息
 
@@ -1299,9 +1489,31 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置矩形区域起始的最小最大格子坐标
+
+---
+
+### 函数 `CalcRectStartActorLocation`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintPure |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `Location` | `FVector&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintPure) void CalcRectStartActorLocation(FVector& Location);`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 计算矩形区域起始Actor的位置
 
 ---
 
@@ -1321,7 +1533,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新矩形区域当前的最小最大格子坐标
 
@@ -1343,7 +1555,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查格子坐标是否是新的矩形区域格子
 
@@ -1366,7 +1578,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 通过格子坐标计算矩形区域Actor的位置
 
@@ -1384,7 +1596,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 收集并更新围墙门覆盖的围墙
 
@@ -1402,7 +1614,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 收集屋顶各部位数据
 
@@ -1420,7 +1632,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新屋顶
 
@@ -1437,14 +1649,14 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Actor` | `AActor*` |
-| `PartType` | `ERoofPartType` |
+| `PartType` | [ERoofPartType](../ERW_Enumerations__ERoofPartType.md) |
 | `Transform` | `const FTransform&` |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent , BlueprintCallable) void UpdateRoofPartTransform(AActor* Actor , ERoofPartType PartType , const FTransform& Transform);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 更新屋顶部位的Transform
 
@@ -1466,9 +1678,45 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 收集起始位置周边同类型的Actor
+
+---
+
+### 函数 `CalcSoloBuildingResources`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void CalcSoloBuildingResources();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 计算单独放置的建筑的资源消耗
+
+---
+
+### 函数 `CalcVisibleActorResources`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void CalcVisibleActorResources();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 计算显示的建筑的资源消耗
 
 ---
 
@@ -1484,7 +1732,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新显示和隐藏的Actor
 
@@ -1502,7 +1750,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新建筑下方填充模型
 
@@ -1525,7 +1773,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 更新填充模型
 
@@ -1548,7 +1796,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 更新填充模型预览显示
 
@@ -1572,7 +1820,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 设置Actor是否显示
 
@@ -1595,7 +1843,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 更新Actor位置
 
@@ -1619,7 +1867,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入预设建筑Actor
 
@@ -1641,7 +1889,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入预设嵌入式墙体
 
@@ -1663,7 +1911,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入预设的门或窗
 
@@ -1681,7 +1929,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 替换预设嵌入式墙体模型
 
@@ -1699,7 +1947,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算预设建筑区域最大高度
 
@@ -1717,7 +1965,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新预设建筑的Transform
 
@@ -1740,7 +1988,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 更新单个物体的位置
 
@@ -1764,7 +2012,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 更新预设建筑的Transform
 
@@ -1786,7 +2034,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 更新预设建筑的颜色
 
@@ -1810,7 +2058,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 生成带当前关卡信息的Actor
 
@@ -1832,7 +2080,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 放下显示的Actor
 
@@ -1854,7 +2102,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 放下预设建筑
 
@@ -1878,7 +2126,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 将Actor加入到地图信息中
 
@@ -1896,7 +2144,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 更新周围建筑的填充模型
 
@@ -1918,7 +2166,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 放置屋顶到地图中
 
@@ -1934,13 +2182,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `DistributionInfo` | UPARAM(ref) TMap<[FGridPosition](../ERW_CommonTypes__FGridPosition.md) , EGridDistributionType>& |
+| `DistributionInfo` | UPARAM(ref) TMap<[FGridPosition](../ERW_CommonTypes__FGridPosition.md) , [EGridDistributionType](../ERW_Enumerations__EGridDistributionType.md)>& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SetDistributionInfos(UPARAM(ref) TMap<FGridPosition , EGridDistributionType>& DistributionInfo);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置物体占格子分布信息
 
@@ -1957,14 +2205,14 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Layer` | `int32` |
-| `Type` | `EEnvironType` |
-| `Walls` | `TMap<EEmbeddedWallType , AActor*>&` |
+| `Type` | [EEnvironType](../ERW_Enumerations__EEnvironType.md) |
+| `Walls` | TMap<[EEmbeddedWallType](../ERW_Enumerations__EEmbeddedWallType.md) , AActor*>& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintPure) void FindWalls(int32 Layer , EEnvironType Type , TMap<EEmbeddedWallType , AActor*>& Walls);`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得多个格子中的墙
 
@@ -1981,13 +2229,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Wall` | `AActor*` |
-| `TipsType` | `UPARAM(ref) EPlaceBuildingTipsType&` |
+| `TipsType` | UPARAM(ref) [EPlaceBuildingTipsType](../ERW_Enumerations__EPlaceBuildingTipsType.md)& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent , BlueprintPure) bool CanReplaceWall(AActor* Wall , UPARAM(ref) EPlaceBuildingTipsType& TipsType);`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 判断墙体Actor是否能被替换
 
@@ -2005,7 +2253,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 隐藏显示的Actor
 
@@ -2023,7 +2271,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 隐藏显示的屋顶
 
@@ -2041,7 +2289,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 销毁隐藏的Actor
 
@@ -2059,7 +2307,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 **BlueprintNativeEvent**：蓝图可重写；C++ 默认实现在 `xxx_Implementation`。
 
-**源码注释:**
+**说明:**
 
 > 销毁隐藏的屋顶
 
@@ -2081,7 +2329,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 销毁Actor
 
@@ -2099,7 +2347,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 **BlueprintNativeEvent**：蓝图可重写；C++ 默认实现在 `xxx_Implementation`。
 
-**源码注释:**
+**说明:**
 
 > 清除所有信息
 
@@ -2117,7 +2365,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除墙接缝柱
 
@@ -2141,7 +2389,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 生成建筑
 
@@ -2163,7 +2411,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 生成屋顶
 
@@ -2179,13 +2427,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `RoofPartNums` | `TMap<ERoofPartType , int32>&` |
+| `RoofPartNums` | TMap<[ERoofPartType](../ERW_Enumerations__ERoofPartType.md) , int32>& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void CalcRoofPartNum(TMap<ERoofPartType , int32>& RoofPartNums);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算屋顶各部位数量
 
@@ -2203,7 +2451,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 清空屋顶Actor
 
@@ -2221,7 +2469,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取显示actor数量
 

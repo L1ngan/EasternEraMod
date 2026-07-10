@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Eastern Era Dialog Descriptor UObject type.
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, EditAnywhere) TArray<UObject*> ObjectParams;` |
 
+**Notes:**
+
+> Object Params field.
+
 ---
 
 ### Property `StringParams`
@@ -27,6 +33,10 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, EditAnywhere) TArray<FString> StringParams;` |
+
+**Notes:**
+
+> String Params field.
 
 ---
 
@@ -50,5 +60,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) static UEasternEraDialogDescriptor* CreateConfirmationYesNoLabel(const FText& InHeader, const FText& InBody, const FText& YesLabel, const FText& NoLabel);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Executes the Create Confirmation Yes No Label operation.
 
 ---

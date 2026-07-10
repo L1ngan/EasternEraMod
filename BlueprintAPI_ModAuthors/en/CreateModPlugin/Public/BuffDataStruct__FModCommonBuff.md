@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CommonBuff") FText BuffName;` |
 
-**Source comments:**
+**Notes:**
 
 > BUFF名称
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CommonBuff") FGameplayTagContainer BuffClassifyTag;` |
 
-**Source comments:**
+**Notes:**
 
 > BUFF分类Tag
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CommonBuff") FGameplayTagContainer ActivateMastHaveTags;` |
 
-**Source comments:**
+**Notes:**
 
 > BUFF激活需要的标签
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CommonBuff") FGameplayTagContainer ActivateMastNotHaveTags;` |
 
-**Source comments:**
+**Notes:**
 
 > BUFF激活不能有的标签
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CommonBuff") TSoftObjectPtr<UTexture2D> BuffIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > BUFF图标
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CommonBuff") bool bShow = false;` |
 
-**Source comments:**
+**Notes:**
 
 > BUFF展示
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CommonBuff") FText Describe;` |
 
-**Source comments:**
+**Notes:**
 
 > BUFF描述
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="CommonBuff") FModFormatText FormatDescribe;` |
 
-**Source comments:**
+**Notes:**
 
 > 格式化的 BUFF描述
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite, EditAnywhere, Category = "CommonBuff") int Priority = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > BUFF的优先级 越大优先级越高
 
@@ -149,12 +149,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EModItemQuality` |
+| C++ type | [EModItemQuality](ItemDataStruct__EModItemQuality.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="CommonBuff" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite, EditAnywhere, Category = "CommonBuff") EModItemQuality Quality = EModItemQuality::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 品质
 
@@ -164,12 +164,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EModBuffType` |
+| C++ type | [EModBuffType](BuffDataStruct__EModBuffType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="CommonBuff" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite, EditAnywhere, Category = "CommonBuff") EModBuffType DurationType = EModBuffType::ForEver;` |
 
-**Source comments:**
+**Notes:**
 
 > buff持续时间类型
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite, EditAnywhere, Category = "CommonBuff") float Duration = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 持续时间 秒数
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CommonBuff") TArray<TSoftClassPtr<UGameplayEffect>> GameplayEffects;` |
 
-**Source comments:**
+**Notes:**
 
 > 效果Ge
 
@@ -214,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category= "CommonBuff") TMap<FGameplayAttribute,float> Attributes;` |
 
-**Source comments:**
+**Notes:**
 
 > 效果中包含的属性
 
@@ -229,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category= "CommonBuff") FGameplayTagContainer GameplayTagContainer;` |
 
-**Source comments:**
+**Notes:**
 
 > 为自身添加的tag
 
@@ -244,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite, EditAnywhere,Category= "CommonBuff") TArray<FName> ConflictBuffID;` |
 
-**Source comments:**
+**Notes:**
 
 > 冲突的buff ID
 
@@ -259,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= "CommonBuff") int NumberOfSuperpositions = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 相同的buff可叠加的次数 0 是无限制 1 默认
 
@@ -274,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite, EditAnywhere,Category= "CommonBuff") FGuid OriginGuid = FGuid();` |
 
-**Source comments:**
+**Notes:**
 
 > 来源
 
@@ -284,12 +284,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EModBuffOriginType` |
+| C++ type | [EModBuffOriginType](BuffDataStruct__EModBuffOriginType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="CommonBuff" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite, EditAnywhere,Category= "CommonBuff") EModBuffOriginType OriginType = EModBuffOriginType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 来源类型
 
@@ -304,7 +304,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CommonBuff") FGuid BuffGuid = FGuid();` |
 
-**Source comments:**
+**Notes:**
 
 > 每个buff独立的guid
 
@@ -319,7 +319,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CommonBuff") TArray<FText> GameplayEffectText;` |
 
-**Source comments:**
+**Notes:**
 
 > buff在施加GE时显示的提示 与GE 一一对应
 
@@ -334,7 +334,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame, BlueprintReadWrite, EditAnywhere, Category = "CommonBuff") bool bIsActivated = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前buff的激活状态
 
@@ -348,5 +348,9 @@
 | Reflection specifiers | BlueprintReadWrite, Category="CommonBuff" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(VisibleInstanceOnly, BlueprintReadWrite, Category = "CommonBuff") bool bSave = true;` |
+
+**Notes:**
+
+> Whether this buff is saved to the save game.
 
 ---

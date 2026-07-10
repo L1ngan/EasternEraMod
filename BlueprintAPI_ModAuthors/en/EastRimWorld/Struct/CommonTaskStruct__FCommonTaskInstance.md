@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Runtime") FName TaskID;` |
 
-**Source comments:**
+**Notes:**
 
 > 实际的taskID
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float DelayTime = 0.0f;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务的延迟时间
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float TaskTime = INDEX_NONE;` |
 
-**Source comments:**
+**Notes:**
 
 > 剩余超时时间 -1无限
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Runtime") bool bNewTask = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 新任务
 
@@ -74,12 +74,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECommonTaskExecuteState` |
+| C++ type | [ECommonTaskExecuteState](CommonTaskStruct__ECommonTaskExecuteState.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Runtime" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Runtime") ECommonTaskExecuteState ExecuteState = ECommonTaskExecuteState::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务的执行状态
 
@@ -89,12 +89,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECompleteState` |
+| C++ type | [ECompleteState](CommonTaskStruct__ECompleteState.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Runtime" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Runtime") ECompleteState TaskState = ECompleteState::Unfinished;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务完成状态
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Runtime") TArray<FCommonTaskCondition> Condition;` |
 
-**Source comments:**
+**Notes:**
 
 > 包含的条件
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Runtime") TMap<FName , FCommonTaskCondition> SubConditions;` |
 
-**Source comments:**
+**Notes:**
 
 > 次级条件
 > TMap<主条件ID , 条件数据>
@@ -140,7 +140,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Runtime") FName DialogueID;` |
 
-**Source comments:**
+**Notes:**
 
 > 对话配置表ID
 
@@ -155,7 +155,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Runtime") FGuid Guid;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务guid
 
@@ -170,7 +170,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Runtime") FGuid PublisherGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 发布者guid
 
@@ -185,7 +185,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Runtime") bool bRemoveAfterCompletion = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 完成任务需归档到玩家”已完成列表”，选false表示记录在已完成任务中
 
@@ -200,7 +200,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bAutoComplete = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 任务完成条件满足时是否自动完成该任务(用来区别需要手动点击完成的任务)
 
@@ -215,7 +215,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bShow = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否在任务列表中展示
 
@@ -229,5 +229,9 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> WorldPlaceIDs;` |
+
+**Notes:**
+
+> World Place I Ds field.
 
 ---

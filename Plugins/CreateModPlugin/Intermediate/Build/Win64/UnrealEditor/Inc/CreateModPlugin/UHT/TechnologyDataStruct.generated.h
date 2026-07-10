@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FModTechUnlockItemConigStruct *************************************
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_TechnologyDataStruct_h_79_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_TechnologyDataStruct_h_79_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModTechUnlockItemConigStruct_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;
@@ -27,7 +27,7 @@ struct FModTechUnlockItemConigStruct;
 // ********** End ScriptStruct FModTechUnlockItemConigStruct ***************************************
 
 // ********** Begin ScriptStruct FModTechnologyConfigStruct ****************************************
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_TechnologyDataStruct_h_109_GENERATED_BODY \
+#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_TechnologyDataStruct_h_109_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModTechnologyConfigStruct_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;
@@ -37,7 +37,7 @@ struct FModTechnologyConfigStruct;
 // ********** End ScriptStruct FModTechnologyConfigStruct ******************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_TechnologyDataStruct_h
+#define CURRENT_FILE_ID FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_TechnologyDataStruct_h
 
 // ********** Begin Enum EModTechUnlockItemType ****************************************************
 #define FOREACH_ENUM_EMODTECHUNLOCKITEMTYPE(op) \

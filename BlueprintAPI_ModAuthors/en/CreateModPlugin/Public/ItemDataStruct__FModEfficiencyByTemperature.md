@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Grow") float MinTemperature = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 最小温度(包含)
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Grow") float MaxTemperature = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大温度(包含)
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Grow") float Efficiency = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 效率
 

@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Cooldown") FGameplayTag TargetAbilityTag;` |
 
-**源码注释:**
+**说明:**
 
 > 目标GA的Tag
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Cooldown") float ReduceTime{0.f};` |
 
-**源码注释:**
+**说明:**
 
 > 装备时增加的属性
 

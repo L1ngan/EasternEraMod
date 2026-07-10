@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Post station generation config row: force ID, weight, generation config IDs, destroy conditions and lifetime.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName WorldForceID;` |
 
-**Source comments:**
+**Notes:**
 
 > 势力ID
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 BaseWeight;` |
 
-**Source comments:**
+**Notes:**
 
 > 基础权重（最终权重=BaseWeight+好感度*FavorabilityWeightRate）
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float FavorabilityWeightRate;` |
 
-**Source comments:**
+**Notes:**
 
 > 势力好感度权重系数
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> GenerateConfigIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成配置ID(DT_MonsterGenerationConfig表ID)
 
@@ -77,6 +79,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FCommonTaskCondition> DestroyCondition;` |
 
+**Notes:**
+
+> List of conditions that trigger destruction of this generation.
+
 ---
 
 ### Property `DestroyRemoveTaskRecord`
@@ -88,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> DestroyRemoveTaskRecord;` |
 
-**Source comments:**
+**Notes:**
 
 > NPC销毁清除任务记录
 
@@ -103,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 ExistTime;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成对象的存续时间(-1无限制)
 

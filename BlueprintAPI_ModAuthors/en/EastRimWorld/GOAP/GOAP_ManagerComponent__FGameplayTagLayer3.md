@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FString , FGameplayTagActions> Layer3Data;` |
 
-**Source comments:**
+**Notes:**
 
 > TMap<第三层的标签 , 标签对应的物品ID>
 

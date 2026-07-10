@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) TArray<FName> Actions;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应角色行为,只有这些行为能产出此项物品(对应GOAP_Action_Data表行名)
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) int32 Weight = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 权重
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite) TArray<FItemSimpleData> ItemSimpleDatas;` |
 
-**Source comments:**
+**Notes:**
 
 > 产出的物品
 

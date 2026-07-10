@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Blueprint function library for Steam achievements and stats (unlock/query achievements, read/write stats, store data to Steam)
 
 ## Blueprint-exposed functions
 
@@ -20,7 +22,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 请求当前用户的统计和成就数据
 > 注意：这是一个异步操作，需要在游戏启动时调用
@@ -41,7 +43,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查统计和成就数据是否已加载
 > @return 统计数据是否可用
@@ -64,7 +66,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 解锁成就
 > @param AchievementName 成就的API名称（在Steamworks后台配置的名称）
@@ -88,7 +90,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 锁定成就（清除成就）
 > @param AchievementName 成就的API名称
@@ -113,7 +115,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查成就是否已解锁
 > @param AchievementName 成就的API名称
@@ -139,7 +141,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取成就信息（包括解锁状态和显示信息）
 > @param AchievementName 成就的API名称
@@ -165,7 +167,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取成就解锁时间
 > @param AchievementName 成就的API名称
@@ -190,7 +192,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有成就信息
 > @param OutAchievements 输出：所有成就信息数组
@@ -215,7 +217,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置整数统计值
 > @param StatName 统计的API名称
@@ -241,7 +243,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取整数统计值
 > @param StatName 统计的API名称
@@ -267,7 +269,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置浮点数统计值
 > @param StatName 统计的API名称
@@ -293,7 +295,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取浮点数统计值
 > @param StatName 统计的API名称
@@ -319,7 +321,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 增加整数统计值
 > @param StatName 统计的API名称
@@ -346,7 +348,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新平均速率统计
 > @param StatName 统计的API名称
@@ -368,7 +370,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 存储统计和成就数据到Steam
 > 注意：在修改成就或统计后，必须调用此函数才能将更改保存到Steam服务器
@@ -392,7 +394,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 重置所有统计和成就
 > @param bResetAchievements 是否同时重置成就
@@ -412,7 +414,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查Steam UserStats是否可用
 > @return Steam UserStats接口是否可用
@@ -437,7 +439,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取成就的显示属性
 > @param AchievementName 成就的API名称

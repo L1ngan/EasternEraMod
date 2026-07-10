@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EAssemblePartType` |
+| C++ type | [EAssemblePartType](ERW_Enumerations__EAssemblePartType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) EAssemblePartType AssemblePartType = EAssemblePartType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 组装部位类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FTransform Transform;` |
 
-**Source comments:**
+**Notes:**
 
 > 相对坐标
 

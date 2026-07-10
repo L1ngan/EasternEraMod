@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBeginnerGuideTipsType` |
+| C++ type | [EBeginnerGuideTipsType](CommonTaskStruct__EBeginnerGuideTipsType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) EBeginnerGuideTipsType TipsType = EBeginnerGuideTipsType::PopupTips;` |
 
-**Source comments:**
+**Notes:**
 
 > Tips类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FText> Contents;` |
 
-**Source comments:**
+**Notes:**
 
 > Tips内容
 

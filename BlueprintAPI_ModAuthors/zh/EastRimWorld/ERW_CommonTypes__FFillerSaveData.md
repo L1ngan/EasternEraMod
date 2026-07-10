@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FGridPosition GridPos;` |
 
-**源码注释:**
+**说明:**
 
 > 格子坐标
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 LayerIndex { INDEX_NONE };` |
 
-**源码注释:**
+**说明:**
 
 > 所在层的索引
 
@@ -44,12 +44,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EPositionPartType` |
+| C++ 类型 | [EPositionPartType](ERW_Enumerations__EPositionPartType.md) |
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) EPositionPartType PartType { EPositionPartType::COUNT };` |
 
-**源码注释:**
+**说明:**
 
 > 九宫格部分类型
 
@@ -59,12 +59,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EAutoTileType` |
+| C++ 类型 | [EAutoTileType](ERW_Enumerations__EAutoTileType.md) |
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) EAutoTileType AutoTileType { EAutoTileType::Flat };` |
 
-**源码注释:**
+**说明:**
 
 > 九宫格类型
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) FTransform Transform;` |
 
-**源码注释:**
+**说明:**
 
 > 填充模型的Transform
 

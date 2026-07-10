@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FPracticeAddAttributeRange> RoomAddExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 房间增加经验
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FPracticeAddAttributeRange> FiveElementsAddExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 五行增加经验
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FPracticeAddAttributeRange> MoodAddExperience;` |
 
-**Source comments:**
+**Notes:**
 
 > 心情增加经验
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float AptitudeConversion = 0.1;` |
 
-**Source comments:**
+**Notes:**
 
 > 资质转化率 每点资质额外提升百分比经验加成
 
@@ -79,8 +79,38 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 ContinuouslyIncreaseIntervalTime = 40;` |
 
-**Source comments:**
+**Notes:**
 
 > 持续增加经验间隔时间
+
+---
+
+### Property `TrainingPointCD`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float TrainingPointCD = 240.f;` |
+
+**Notes:**
+
+> 同一角色修炼获取历练点CD
+
+---
+
+### Property `RetracePointCD`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float RetracePointCD = 240.f;` |
+
+**Notes:**
+
+> 同一角色修炼获取回溯点CD
 
 ---

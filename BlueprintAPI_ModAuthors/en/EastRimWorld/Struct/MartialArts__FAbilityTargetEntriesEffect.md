@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="MartialArts") FGameplayTag AbilityClassifyTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 技能分类标签(什么技能标签会触发这些效果)
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="MartialArts") TMap<FGameplayTag, FEastRimWorldGameplayEffectContainer> EffectContainerMap;` |
 
-**Source comments:**
+**Notes:**
 
 > 技能效果
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="MartialArts") TMap<FGameplayTag,FAbilityProjectileStruct> AnimationSpawnProjectiles;` |
 
-**Source comments:**
+**Notes:**
 
 > 触发的投射物
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="MartialArts") TArray<FGameplayTag> AttributesTag;` |
 
-**Source comments:**
+**Notes:**
 
 > Tag属性分类标签(例如是什么伤害类型)
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="MartialArts") FGameplayTag ClassifyTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 分类标签
 

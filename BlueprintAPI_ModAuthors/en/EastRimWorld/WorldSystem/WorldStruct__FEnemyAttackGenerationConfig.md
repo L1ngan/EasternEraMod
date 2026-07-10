@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 EnemyForcesNum = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 参与袭击的敌国数量(包含必须参加的势力的总数)
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> MustEnemyForceIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 必须参与袭击的敌对门派ID列表
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 EnemyCharacterMiniNum = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 参与袭击的角色数目最小值
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 EnemyCharacterMaxNum = 5;` |
 
-**Source comments:**
+**Notes:**
 
 > 参与袭击的角色数目最大值
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float EnemyReputationMin =0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 参与随机的门派声望限制
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float EnemyReputationMax =99999.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 参与随机的门派声望限制
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FTransform> GenerationPosition;` |
 
-**Source comments:**
+**Notes:**
 
 > 地点生成位置数组（也是撤退的点位置）
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<int32> TeamIDs = {2, 3, 4, 5};` |
 
-**Source comments:**
+**Notes:**
 
 > 生成的队伍ID(相同ID的队伍会在同一阵营)
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowedClasses = "/Script/AIModule.BehaviorTree")) FSoftObjectPath BehaviorTree;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应的行为树 不配置则使用默认阵营行为树
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FName> AddGoals;` |
 
-**Source comments:**
+**Notes:**
 
 > 新增的Goals
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FName> RemoveGoals;` |
 
-**Source comments:**
+**Notes:**
 
 > 移除的Goals
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FName FirstAttackExecGoal = TEXT("InAssault");` |
 
-**Source comments:**
+**Notes:**
 
 > 生成后，立即执行的Goal(默认攻击)
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float GenerationInterval = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色之间生成间隔
 
@@ -214,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) bool bTimeOutRetreat = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否允许时间到了撤退
 
@@ -229,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,meta=(EditCondition = "bTimeOutRetreat")) float AttackDuration = 300.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 攻击持续事件，超过这个时间后，就自动撤退（秒）
 
@@ -244,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,meta=(EditCondition = "bTimeOutRetreat")) float RetreatDuration = 20.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 撤退持续时间，超过这个时间后，强制删除角色（秒）
 
@@ -259,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowedClasses = "/Script/AIModule.BehaviorTree")) FSoftObjectPath RetreatBehaviorTree;` |
 
-**Source comments:**
+**Notes:**
 
 > 撤退行为树 不配置则使用默认阵营行为树
 
@@ -274,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FName RetreatExecGoal = TEXT("ForceRetreat");` |
 
-**Source comments:**
+**Notes:**
 
 > 撤退执行的Goal
 
@@ -284,12 +284,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ETipsType` |
+| C++ type | [ETipsType](WorldStruct__ETipsType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ETipsType GenerationTips = ETipsType::ForceAssault;` |
 
-**Source comments:**
+**Notes:**
 
 > 提示 生成提示
 
@@ -299,12 +299,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ETipsType` |
+| C++ type | [ETipsType](WorldStruct__ETipsType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ETipsType RetreatTips = ETipsType::ForceAssaultRetreat;` |
 
-**Source comments:**
+**Notes:**
 
 > 提示 撤退提示
 

@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Animal config data (extends character data): body type, diet, growth stages, taming, output, mating and cultivation settings
 
 ## Blueprint-exposed variables
 
@@ -12,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EAnimalBodyType` |
+| C++ type | [EAnimalBodyType](../ERW_Enumerations__EAnimalBodyType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="AnimalBase" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") EAnimalBodyType AnimalBodyType = EAnimalBodyType::Normal;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物体型（体型大小）
 
@@ -27,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EAnimalFoodType` |
+| C++ type | [EAnimalFoodType](CharacterStruct__EAnimalFoodType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="AnimalBase" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") EAnimalFoodType AnimalFoodType = EAnimalFoodType::Unknown;` |
 
-**Source comments:**
+**Notes:**
 
 > 饮食习惯（吃肉吃草）
 
@@ -42,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EAnimalAgeStage` |
+| C++ type | [EAnimalAgeStage](CharacterStruct__EAnimalAgeStage.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="AnimalBase" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") EAnimalAgeStage AnimalAgeStage = EAnimalAgeStage::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前阶段
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") float InitGrowth = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始成长值
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") float MaxGrowth = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大成长值
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") float MustDieGrowth = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 必须死亡的成长值
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") float AddGrowthValueEveryHour = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 每小时增加的成长值
 
@@ -122,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") FName AnimalVarietyID;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物的种类ID
 
@@ -132,12 +134,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EAnimalAgeStage , [FGrowthInfo](CharacterStruct__FGrowthInfo.md)> |
+| C++ type | TMap<[EAnimalAgeStage](CharacterStruct__EAnimalAgeStage.md) , [FGrowthInfo](CharacterStruct__FGrowthInfo.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="AnimalBase" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") TMap<EAnimalAgeStage , FGrowthInfo> AnimalGrowthInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 成长到各个阶段所需的成长值及其会变化的目标ID
 
@@ -147,12 +149,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EAnimalActionType` |
+| C++ type | [EAnimalActionType](CharacterStruct__EAnimalActionType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="AnimalBase" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") EAnimalActionType ActionType = EAnimalActionType::ActiveAttack;` |
 
-**Source comments:**
+**Notes:**
 
 > 习性(是否主动攻击人类，被攻击后是否反击，是否逃跑)
 
@@ -167,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimalBase") FName AfterTamingUI;` |
 
-**Source comments:**
+**Notes:**
 
 > 驯服后的UI
 
@@ -182,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Mesh",meta = (AllowedClasses = "SkeletalMesh")) FSoftObjectPath AnimalMesh;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物模型
 
@@ -197,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Capsule") FVector2D CapsuleSize = FVector2D(40,90);` |
 
-**Source comments:**
+**Notes:**
 
 > 胶囊体 x 为半径 y 为 高度
 
@@ -212,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Mesh") FVector MeshScale = FVector::One();` |
 
-**Source comments:**
+**Notes:**
 
 > 模型大小
 
@@ -227,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Mesh") FVector MeshLocationOffset = FVector::Zero();` |
 
-**Source comments:**
+**Notes:**
 
 > 模型偏移
 
@@ -242,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Animation",meta = (AllowedClasses = "BlendSpace1D")) FSoftObjectPath AnimalBlendSpace;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物行走混合空间1d
 
@@ -257,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities",meta = (AllowedClasses = "GameplayEffect")) FSoftClassPath SleepFloorGameplayEffect;` |
 
-**Source comments:**
+**Notes:**
 
 > 在地上睡觉GE
 
@@ -267,12 +269,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EGameConfigType , [FIDs](../ERW_CommonTypes__FIDs.md)> |
+| C++ type | TMap<[EGameConfigType](../Components/ERW_GameConfigComponent__EGameConfigType.md) , [FIDs](../ERW_CommonTypes__FIDs.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="Abilities" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities") TMap<EGameConfigType , FIDs> EatItems;` |
 
-**Source comments:**
+**Notes:**
 
 > 能吃的对象ID
 > TMap<配置表类型 , 对应的ID>
@@ -288,7 +290,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities") float NutritionTimer { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 进食时间(秒)
 
@@ -303,7 +305,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") FName BeforeObserveInformationWidget;` |
 
-**Source comments:**
+**Notes:**
 
 > 观察前点击物品实例后显示的界面ID 关联DT_CommonUIConfig表
 
@@ -318,7 +320,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") FText BeforeObserveDescription;` |
 
-**Source comments:**
+**Notes:**
 
 > 观察前详情描述
 
@@ -333,7 +335,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") FText BeforeObserveName;` |
 
-**Source comments:**
+**Notes:**
 
 > 观察前名称
 
@@ -348,7 +350,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Observe") FText Desc;` |
 
-**Source comments:**
+**Notes:**
 
 > 描述(观察完成后tip显示)
 
@@ -363,7 +365,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") int ObserveDurability{-1};` |
 
-**Source comments:**
+**Notes:**
 
 > 观察耐久度
 
@@ -373,12 +375,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<ETechUnlockItemType,[FIDs](../ERW_CommonTypes__FIDs.md)> |
+| C++ type | TMap<[ETechUnlockItemType](TechnologyStruct__ETechUnlockItemType.md),[FIDs](../ERW_CommonTypes__FIDs.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="Observe" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") TMap<ETechUnlockItemType,FIDs> ObserveUnlock;` |
 
-**Source comments:**
+**Notes:**
 
 > 观察解锁
 
@@ -393,7 +395,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") TArray<FObserveUnlockInfo> ObserveUnlockInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 观察解锁文本(界面信息显示)
 
@@ -408,7 +410,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe") FText ObserveRecordDescription;` |
 
-**Source comments:**
+**Notes:**
 
 > 观察记录描述(富文本)
 
@@ -423,7 +425,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Observe",meta = (AllowedClasses = "Texture2D")) FSoftObjectPath NewDiscoverTexture2D;` |
 
-**Source comments:**
+**Notes:**
 
 > 新发现图片
 
@@ -438,7 +440,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Taming") bool bCanTame = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否可以驯服
 
@@ -453,7 +455,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Taming", Meta = (EditCondition = "bCanTame")) float TameRate = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 基础驯服机率
 
@@ -468,7 +470,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Taming", Meta = (EditCondition = "bCanTame")) float TameCD = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 驯服动物失败后多久不能再次驯服：单位秒
 
@@ -483,7 +485,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Taming", Meta = (EditCondition = "bCanTame")) float TameSchedule = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 驯服的工作量
 
@@ -498,7 +500,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Taming", Meta = (EditCondition = "bCanTame")) int32 TameLevel = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 驯服需要的等级d
 
@@ -513,7 +515,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Taming", Meta = (EditCondition = "bCanTame")) bool bCanTraining = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否可以训练
 
@@ -528,7 +530,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Taming", meta = (EditConditionHides = "bCanTraining")) float TrainingCD = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 训练的CD
 
@@ -543,7 +545,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Taming") bool bHaveOutput = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否有产出
 
@@ -558,7 +560,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Taming", meta = (EditConditionHides = "bHaveOutput")) float OutPutPeriod = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 产出副产品周期
 
@@ -573,7 +575,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Taming", meta = (EditConditionHides = "bHaveOutput")) TMap<FName , float> NutritionInfluenceOutPeriod;` |
 
-**Source comments:**
+**Notes:**
 
 > 饥饿度影响产出副产品周期
 
@@ -588,7 +590,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Taming", meta = (EditConditionHides = "bHaveOutput")) TMap<FName , FAllTypeItemDrop>OutputProducts;` |
 
-**Source comments:**
+**Notes:**
 
 > 产出的副产品
 
@@ -603,7 +605,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Taming", meta = (EditConditionHides = "bCanTame")) TMap<float , float> MoodInfluenceOutPut;` |
 
-**Source comments:**
+**Notes:**
 
 > 心情影响产出
 
@@ -613,12 +615,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<int32 , EAnimalFunc>` |
+| C++ type | TMap<int32 , [EAnimalFunc](CharacterStruct__EAnimalFunc.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="Taming" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Taming", meta = (EditConditionHides = "bCanTame")) TMap<int32 , EAnimalFunc> GetFuncWhenReachLevel;` |
 
-**Source comments:**
+**Notes:**
 
 > 达到多少级可以获得的功能
 
@@ -633,7 +635,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Taming", meta = (EditConditionHides = "bCanTame")) TMap<int32 , FName> GetAbilityWhenReachLevel;` |
 
-**Source comments:**
+**Notes:**
 
 > 达到多少级可以获得的技能(关联技能表)
 
@@ -648,7 +650,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Mating") TArray<FName> CanMateAnimalID;` |
 
-**Source comments:**
+**Notes:**
 
 > 可以交配的动物ID
 
@@ -658,12 +660,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TArray<EERWSeason>` |
+| C++ type | TArray<[EERWSeason](../WorldSystem/WorldStruct__EERWSeason.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="Mating" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Mating") TArray<EERWSeason> CanMateSeason;` |
 
-**Source comments:**
+**Notes:**
 
 > 可以交配的季节
 
@@ -678,7 +680,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Mating") TArray<FName> CanBornAnimal;` |
 
-**Source comments:**
+**Notes:**
 
 > 可以生出的动物ID
 
@@ -693,7 +695,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Mating") float PregnantTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 怀孕时间（秒）
 
@@ -708,7 +710,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cultivation") FName CultivationConfigID = NAME_None;` |
 
-**Source comments:**
+**Notes:**
 
 > 修炼配置ID（关联FAnimalCultivationConfig配置表）
 
@@ -723,7 +725,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cultivation") float EveryTimeCultivationExp = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 每次修炼增加的经验
 
@@ -738,7 +740,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cultivation") float CultivationProb = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 修炼概率
 
@@ -753,7 +755,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cultivation") float CultivationDurationTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 修炼持续时长
 

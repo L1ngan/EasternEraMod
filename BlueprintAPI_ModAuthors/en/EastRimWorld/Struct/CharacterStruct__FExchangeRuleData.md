@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Martial-arts exchange (sparring) rule data: random flag, allow flag and per-subtype toggle map
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) bool bIsRandom = true;` |
 
+**Notes:**
+
+> Whether selection is random
+
 ---
 
 ### Property `bIsAllow`
@@ -28,6 +34,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) bool bIsAllow = true;` |
 
+**Notes:**
+
+> Whether this rule is allowed
+
 ---
 
 ### Property `SubTypeData`
@@ -38,5 +48,9 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<int32 , bool> SubTypeData;` |
+
+**Notes:**
+
+> Per-subtype toggle map (subtype index -> allowed or not)
 
 ---

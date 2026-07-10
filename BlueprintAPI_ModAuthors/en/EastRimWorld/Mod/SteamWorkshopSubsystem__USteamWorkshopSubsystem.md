@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Steam Workshop GameInstance subsystem that receives Steam callbacks and broadcasts upload/download/subscription/query/achievement-stats results via delegates
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopItemCreated OnWorkshopItemCreated;` |
 
-**Source comments:**
+**Notes:**
 
 > 委托
 
@@ -32,6 +34,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopItemUpdateSubmitted OnWorkshopItemUpdateSubmitted;` |
 
+**Notes:**
+
+> Broadcast with the result of submitting a Workshop item update (result code, whether the legal agreement must be accepted)
+
 ---
 
 ### Property `OnWorkshopItemInstalled`
@@ -42,6 +48,10 @@
 | Reflection specifiers | BlueprintAssignable, Category="Steam Workshop" |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopItemInstalled OnWorkshopItemInstalled;` |
+
+**Notes:**
+
+> Broadcast when a Workshop item has been installed
 
 ---
 
@@ -54,6 +64,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopQueryCompleted OnWorkshopQueryCompleted;` |
 
+**Notes:**
+
+> Broadcast when a Workshop query completes (result code, number of results returned, total matching results)
+
 ---
 
 ### Property `OnWorkshopItemSubscribed`
@@ -64,6 +78,10 @@
 | Reflection specifiers | BlueprintAssignable, Category="Steam Workshop" |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopItemSubscribed OnWorkshopItemSubscribed;` |
+
+**Notes:**
+
+> Broadcast with the result of subscribing to a Workshop item (result code, item ID)
 
 ---
 
@@ -76,6 +94,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopItemUnsubscribed OnWorkshopItemUnsubscribed;` |
 
+**Notes:**
+
+> Broadcast with the result of unsubscribing from a Workshop item (result code, item ID)
+
 ---
 
 ### Property `OnWorkshopItemDeleted`
@@ -86,6 +108,10 @@
 | Reflection specifiers | BlueprintAssignable, Category="Steam Workshop" |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopItemDeleted OnWorkshopItemDeleted;` |
+
+**Notes:**
+
+> Broadcast with the result of deleting a Workshop item (result code, item ID)
 
 ---
 
@@ -98,6 +124,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopPlaytimeTrackingStarted OnWorkshopPlaytimeTrackingStarted;` |
 
+**Notes:**
+
+> Broadcast with the result of starting Workshop item playtime tracking
+
 ---
 
 ### Property `OnWorkshopPlaytimeTrackingStopped`
@@ -108,6 +138,10 @@
 | Reflection specifiers | BlueprintAssignable, Category="Steam Workshop" |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopPlaytimeTrackingStopped OnWorkshopPlaytimeTrackingStopped;` |
+
+**Notes:**
+
+> Broadcast with the result of stopping Workshop item playtime tracking
 
 ---
 
@@ -120,6 +154,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopItemUpdateProgress OnWorkshopItemUpdateProgress;` |
 
+**Notes:**
+
+> Broadcast for Workshop item upload (update) progress (item ID, bytes processed/total, progress percent)
+
 ---
 
 ### Property `OnWorkshopItemDownloadProgress`
@@ -130,6 +168,10 @@
 | Reflection specifiers | BlueprintAssignable, Category="Steam Workshop" |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopItemDownloadProgress OnWorkshopItemDownloadProgress;` |
+
+**Notes:**
+
+> Broadcast for Workshop item download progress (item ID, bytes downloaded/total, progress percent)
 
 ---
 
@@ -142,6 +184,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnWorkshopItemDetailsQueryCompleted OnWorkshopItemDetailsQueryCompleted;` |
 
+**Notes:**
+
+> Broadcast when a Workshop item details query completes (result code, details array, query type)
+
 ---
 
 ### Property `OnUserStatsStored`
@@ -152,6 +198,10 @@
 | Reflection specifiers | BlueprintAssignable, Category="Steam Achievement" |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Steam Achievement") FOnUserStatsStored OnUserStatsStored;` |
+
+**Notes:**
+
+> Broadcast when Steam user stats have been stored
 
 ---
 
@@ -164,6 +214,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Steam Achievement") FOnUserAchievementStored OnUserAchievementStored;` |
 
+**Notes:**
+
+> Broadcast when a Steam achievement has been stored
+
 ---
 
 ### Property `OnUserStatsReceived`
@@ -174,6 +228,10 @@
 | Reflection specifiers | BlueprintAssignable, Category="Steam Achievement" |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Steam Achievement") FOnUserStatsReceived OnUserStatsReceived;` |
+
+**Notes:**
+
+> Broadcast when Steam user stats are received (triggered when RequestCurrentStats completes)
 
 ---
 
@@ -186,6 +244,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnSetUserItemVote OnSetUserItemVote;` |
 
+**Notes:**
+
+> Broadcast when setting the user's vote (up/down) on a Workshop item completes
+
 ---
 
 ### Property `OnGetUserItemVote`
@@ -196,6 +258,10 @@
 | Reflection specifiers | BlueprintAssignable, Category="Steam Workshop" |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable, Category = "Steam Workshop") FOnGetUserItemVote OnGetUserItemVote;` |
+
+**Notes:**
+
+> Broadcast when the user's vote on a Workshop item is retrieved (item ID, voted up, voted down)
 
 ---
 
@@ -217,7 +283,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 开始监听指定 Workshop 项目的下载进度
 > @param PublishedFileId Workshop 项目 ID
@@ -240,7 +306,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 停止监听指定 Workshop 项目的下载进度
 > @param PublishedFileId Workshop 项目 ID
@@ -259,7 +325,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 停止监听所有 Workshop 项目的下载进度
 
@@ -277,7 +343,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取下载列表长度
 
@@ -295,7 +361,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取是否有下载
 

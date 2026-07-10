@@ -20,9 +20,9 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "World|BuildingLight", meta = (ClampMin = "100.0")) float CameraActivateRadius = 8000.f;` |
 
-**Source comments:**
+**Notes:**
 
-> 相对玩家 Pawn 位置启用灯光候选的最大距离
+> 相对玩家 Pawn 位置启用灯光候选的最大距离（由 GameInstance 的半径设置项驱动）
 
 ---
 
@@ -35,7 +35,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "World|BuildingLight", meta = (ClampMin = "0.0")) float PawnLocationChangeTolerance = 10.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 与上次记录的 Pawn 位置距离小于等于此值（UU）则视为未移动，跳过本帧灯光更新
 
@@ -50,9 +50,9 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "World|BuildingLight") int32 MaxPooledLights = 20;` |
 
-**Source comments:**
+**Notes:**
 
-> 同时「正在使用」的灯光数量上限（新建时仅与此比较；空闲池数量不参与）
+> 同时「正在使用」的灯光数量上限（新建时仅与此比较；空闲池数量不参与；由 GameInstance 的数量设置项驱动）
 
 ---
 
@@ -65,7 +65,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "World|BuildingLight", meta = (ClampMin = "0.1")) float UpdateInterval = 0.5f;` |
 
-**Source comments:**
+**Notes:**
 
 > 开启更新后，按「未受时间膨胀影响」的秒数计时的刷新间隔
 
@@ -80,7 +80,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "World|BuildingLight", meta = (ClampMin = "0")) int32 BuildingLightMaterialCustomDataIndex = 3;` |
 
-**Source comments:**
+**Notes:**
 
 > 传给 UERW_HISMManager::SetBuildISMMaterialParameters 的 CustomData
 
@@ -94,6 +94,10 @@
 | Reflection specifiers | BlueprintReadOnly, Category="World|BuildingLight" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "World|BuildingLight") TObjectPtr<USceneComponent> SceneRoot;` |
+
+**Notes:**
+
+> Scene Root field.
 
 ---
 
@@ -110,6 +114,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "World|BuildingLight") static AWorldBuildingLightManager* GetWorldBuildingLightManager();`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Gets or queries Get World Building Light Manager.
 
 ---
 
@@ -129,7 +137,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > Instance 或 UWorldManagerSystem 弱引用（需已通过 FindOrCreateWorldManageActors 生成）
 
@@ -151,7 +159,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 注册灯具建筑：需 BuildData.BuildingType == Light，灯具数据使用 BuildData.LightParams
 
@@ -173,6 +181,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Unregister Building operation.
+
 ---
 
 ### Function `NotifyBuildingRuntimeStateChanged`
@@ -191,7 +203,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 建筑运行/启用状态等变化后调用：强制重算灯光与粒子（需 Normal 且 Enable 才可开灯/开粒子）
 
@@ -209,7 +221,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 开启定时更新（按 UpdateInterval）并绑定世界时间变化；需主动调用后才会刷新灯光
 
@@ -227,7 +239,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 停止更新：清除定时器、解绑时间委托、隐藏池内全部灯光
 
@@ -245,7 +257,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 切换/关闭子关卡前调用：停止更新、复位材质、清空注册列表；灯光池保留复用（应在 CurWorldPlace 仍有效时调用）
 
@@ -262,5 +274,27 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure, Category = "World|BuildingLight") bool IsBuildingLightUpdatesEnabled() const { return bBuildingLightUpdatesEnabled; }`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Gets or queries Is Building Light Updates Enabled.
+
+---
+
+### Function `ApplyBuildingLightSettingsFromGameInstance`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="World|BuildingLight" |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "World|BuildingLight") void ApplyBuildingLightSettingsFromGameInstance();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 从 GameInstance 读取半径/数量两个设置项的当前值写入 CameraActivateRadius 与 MaxPooledLights，并强制下次刷新重算；BeginPlay 自动调用，设置变更时由 UERW_GameInstanceBase::SetBuildingLightRadiusLevel / SetBuildingLightCountLevel 触发
 
 ---

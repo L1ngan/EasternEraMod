@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText TitleText;` |
 
-**Source comments:**
+**Notes:**
 
 > 标题文本
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText DescText;` |
 
-**Source comments:**
+**Notes:**
 
 > 描述文本
 
@@ -49,6 +49,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FGameplayTag> TypeTag;` |
 
+**Notes:**
+
+> Type Tag field.
+
 ---
 
 ### Property `TypeIcon`
@@ -60,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray < TSoftObjectPtr<UTexture2D>> TypeIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 分类图标
 
@@ -75,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float ItemTagCoefficient = 0.1f;` |
 
-**Source comments:**
+**Notes:**
 
 > 资产类型价格折算系数
 

@@ -19,6 +19,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Configs", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UERW_GameConfigComponent> GameConfigComponent;` |
 
+**Notes:**
+
+> Game config component providing access to the various data tables and config assets
+
 ---
 
 ### Property `RoleMng`
@@ -29,6 +33,10 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) TObjectPtr<ULGameRoleMng> RoleMng;` |
+
+**Notes:**
+
+> Global role manager (ULGameRoleMng)
 
 ---
 
@@ -41,6 +49,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) TObjectPtr<ULGameActorMng> AllActorMng;` |
 
+**Notes:**
+
+> Global actor manager (ULGameActorMng)
+
 ---
 
 ### Property `OnPlayerTeamCharacterDead`
@@ -52,7 +64,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnPlayerTeamCharacterDead OnPlayerTeamCharacterDead;` |
 
-**Source comments:**
+**Notes:**
 
 > 当玩家阵营角色死亡时
 
@@ -67,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TMap<FName , FGoalBaseInfo> GoalBaseInfos;` |
 
-**Source comments:**
+**Notes:**
 
 > GOAP目标的信息
 
@@ -82,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool BIsShowCharacTips = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否显示角色的经验值变化提示
 
@@ -97,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool BIsShowTemperatureRange = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否显示温度范围
 
@@ -112,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool BIsShowpowerRange = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否显示星能范围
 
@@ -127,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool BIsShowAttackRange = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否显示攻击范围
 
@@ -147,7 +159,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 生成SceneManager
 
@@ -165,7 +177,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 生成SceneManager
 
@@ -183,9 +195,31 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 获得SceneManager
+
+---
+
+### Function `PickRandomCustomizationProfile`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintImplementableEvent |
+| Return type | `FString` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `bMale` | `bool` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent) FString PickRandomCustomizationProfile(bool bMale);`
+
+**Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> 按性别随机抽取一个外观预设ID（蓝图实现：读 DT_PresetCustomizationProfiles_V10，筛 Gender==bMale 随机返回行名；C++ 无法访问该蓝图结构体表）
 
 ---
 
@@ -205,7 +239,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 属性变化是否需要提示
 
@@ -224,13 +258,13 @@
 | `GoalID` | `const FName&` |
 | `Score` | `float` |
 | `WorkSchedule` | `const FName&` |
-| `GoalCategory` | `EGOAPGoalCategory` |
+| `GoalCategory` | [EGOAPGoalCategory](../ERW_Enumerations__EGOAPGoalCategory.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void AddGoalBaseScore(const FName& GoalID , float Score , const FName& WorkSchedule , EGOAPGoalCategory GoalCategory) { GoalBaseInfos.Add(GoalID , FGoalBaseInfo(Score , WorkSchedule , GoalCategory)); }`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 记录GOAP目标基础分值
 
@@ -252,7 +286,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID（行命名）获取角色的具体动作能力
 
@@ -274,7 +308,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID（行命名）获取能力配置
 
@@ -296,7 +330,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过Tag获取buff图标
 
@@ -318,7 +352,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过标签（行命名）获取能力配置
 
@@ -340,7 +374,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID（行命名）获取投射物配置
 
@@ -358,9 +392,273 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取游戏的通用配置
+
+---
+
+### Function `GetApprenticeshipConfigAsset`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | [UApprenticeshipConfigAsset](../System/Apprenticeship/ApprenticeshipConfigAsset__UApprenticeshipConfigAsset.md) * |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) UApprenticeshipConfigAsset * GetApprenticeshipConfigAsset();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 获取弟子历练配置
+
+---
+
+### Function `GetEmergenceConfigAsset`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | class [UEmergenceConfigAsset](../System/Emergence/Data/EmergenceConfigAsset__UEmergenceConfigAsset.md) * |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) class UEmergenceConfigAsset * GetEmergenceConfigAsset();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 获取涌现系统调参配置
+
+---
+
+### Function `GetEmergenceEventTable`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `UDataTable *` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) UDataTable * GetEmergenceEventTable();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 获取涌现系统事件库表 DT_EmergentEvents(走 GameConfigComponent)
+
+---
+
+### Function `GetApprenticeshipEventTable`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `UDataTable *` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) UDataTable * GetApprenticeshipEventTable();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 获取弟子历练事件表(走 GameConfigComponent)
+
+---
+
+### Function `GetApprenticeshipRewardPoolTable`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `UDataTable *` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) UDataTable * GetApprenticeshipRewardPoolTable();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 获取弟子历练事件奖励池表 DT_RewardPool
+
+---
+
+### Function `GetApprenticeshipRewardTable`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `UDataTable *` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) UDataTable * GetApprenticeshipRewardTable();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 获取弟子历练单个奖励表 DT_ApprenticeshipReward
+
+---
+
+### Function `GetApprenticeshipRewardSetTable`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `UDataTable *` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) UDataTable * GetApprenticeshipRewardSetTable();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 获取弟子历练奖励集合表 DT_ApprenticeshipRewardSet
+
+---
+
+### Function `GetApprenticeshipConditionTable`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `UDataTable *` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) UDataTable * GetApprenticeshipConditionTable();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 获取弟子历练事件条件表 DT_ApprenticeshipCondition
+
+---
+
+### Function `GetConsumableConfigAsset`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | [UConsumableConfigAsset](../System/Consumable/ConsumableConfigAsset__UConsumableConfigAsset.md) * |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) UConsumableConfigAsset * GetConsumableConfigAsset();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 获取耗材配置资产
+
+---
+
+### Function `GetDominionConfigAsset`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | [UDominionConfigAsset](../System/Dominion/DominionConfigAsset__UDominionConfigAsset.md) * |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) UDominionConfigAsset * GetDominionConfigAsset();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 获取世界势力割据配置资产
+
+---
+
+### Function `GetSkillTestConfigAsset`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | class [USkillTestConfigAsset](../SkillTest/SkillTestConfigAsset__USkillTestConfigAsset.md) * |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) class USkillTestConfigAsset * GetSkillTestConfigAsset();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 获取技能/武学测试沙盒配置资产
+
+---
+
+### Function `GetConsumableDataByID`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | const [FConsumableData](../Struct/ConsumableStruct__FConsumableData.md) & |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `ID` | `const FName &` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) const FConsumableData & GetConsumableDataByID(const FName & ID) const;`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 通过ID获取耗材配置
+
+---
+
+### Function `GetConsumableEffectDataByID`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | const [FConsumableEffectData](../Struct/ConsumableStruct__FConsumableEffectData.md) & |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `ID` | `const FName &` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) const FConsumableEffectData & GetConsumableEffectDataByID(const FName & ID) const;`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 通过ID获取耗材效果配置
+
+---
+
+### Function `GetConsumableConditionByID`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | const [FConsumableCondition](../Struct/ConsumableStruct__FConsumableCondition.md) & |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `ID` | `const FName &` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) const FConsumableCondition & GetConsumableConditionByID(const FName & ID) const;`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 通过ID获取耗材条件配置
 
 ---
 
@@ -374,13 +672,13 @@
 
 | Name | Type |
 |--------|------|
-| `SceneTextType` | `const ESceneTextType` |
+| `SceneTextType` | const [ESceneTextType](../AbilitySystem/SceneText/SceneTextStruct__ESceneTextType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) const FSceneTextInfo & GetSceneTextInfo(const ESceneTextType SceneTextType) const;`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过类型获取场景文字配置
 
@@ -402,7 +700,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID（行命名）获取模块UI配置
 
@@ -424,7 +722,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过物理材质SurfaceType获取地格属性
 
@@ -446,7 +744,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过模型名字获取采集物或者物品
 
@@ -468,7 +766,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID获取采集物表
 
@@ -490,7 +788,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID获取对应的物品配置
 
@@ -508,7 +806,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有珍宝阁商品ID
 
@@ -530,7 +828,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID获取对应的商品配置
 
@@ -552,7 +850,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID获取对应的武器配置
 
@@ -574,7 +872,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID获取工具配置
 
@@ -596,7 +894,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID获取建筑配置
 
@@ -618,7 +916,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID获取装备词条属性
 
@@ -640,7 +938,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID获取装备属性
 
@@ -662,7 +960,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID（行命名）获取UI配置
 
@@ -684,7 +982,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID（行命名）获取按钮配置
 
@@ -701,13 +999,13 @@
 | Name | Type |
 |--------|------|
 | `InItemID` | `const FName &` |
-| `GroundInventoryType` | `EGroundInventoryType` |
+| `GroundInventoryType` | [EGroundInventoryType](../Struct/CommonEnum__EGroundInventoryType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FInstancedStruct GetInventoryGeneralDataByItemID(const FName & InItemID,EGroundInventoryType GroundInventoryType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过id 物品类型查询配置
 
@@ -729,7 +1027,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID（行命名）获取势力数据
 
@@ -751,7 +1049,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有势力数据
 
@@ -773,7 +1071,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID（行命名）获取势力通关条件数据
 
@@ -795,7 +1093,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过属性集来获取详细的属性信息
 
@@ -817,7 +1115,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过属性ID来获取详细的属性信息
 
@@ -839,7 +1137,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有属性信息
 
@@ -861,7 +1159,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过属性镜子来获取详细的属性信息
 
@@ -883,7 +1181,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID获取装备的品质区间配置
 
@@ -905,7 +1203,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过id获取制造的装备池子
 
@@ -927,7 +1225,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID获取装备生成信息
 
@@ -949,7 +1247,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID获取制造配方
 
@@ -971,7 +1269,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过标签获取标签的信息
 
@@ -993,7 +1291,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有物品分类分类信息
 
@@ -1015,7 +1313,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取goap动作信息
 
@@ -1037,7 +1335,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询符合目标的所有行动数据
 
@@ -1059,6 +1357,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Returns the base score of the given GOAP goal (implemented in Blueprint)
+
 ---
 
 ### Function `GetCommonButtonByType`
@@ -1071,13 +1373,13 @@
 
 | Name | Type |
 |--------|------|
-| `CommonButtonType` | `ECommonButtonType` |
+| `CommonButtonType` | [ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) const FCommonButton & GetCommonButtonByType(ECommonButtonType CommonButtonType) const;`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过按钮类型获取按钮配置
 
@@ -1094,13 +1396,13 @@
 | Name | Type |
 |--------|------|
 | `InCharacterID` | `FName` |
-| `InCharacterType` | `ECharacterType` |
+| `InCharacterType` | [ECharacterType](../Struct/CommonEnum__ECharacterType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FInstancedStruct GetCharacterInfoByID(FName InCharacterID,ECharacterType InCharacterType) const;`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过角色id和角色类型获取角色信息
 
@@ -1122,7 +1424,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通人类id获取人类信息
 
@@ -1140,7 +1442,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有人类id
 
@@ -1162,7 +1464,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通召唤物id获取召唤物信息
 
@@ -1184,7 +1486,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通动物id获取动物信息
 
@@ -1206,7 +1508,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID科技分类配置
 
@@ -1228,7 +1530,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID获取科技配置
 
@@ -1250,7 +1552,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID获取科技点转换配置
 
@@ -1266,14 +1568,14 @@
 
 | Name | Type |
 |--------|------|
-| `TechPointType` | `ETechPointType` |
+| `TechPointType` | [ETechPointType](../Struct/TechnologyStruct__ETechPointType.md) |
 | `Config` | [FTechPointConverConfigStruct](../Struct/TechnologyStruct__FTechPointConverConfigStruct.md)& |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure) bool GetTechPointConvertConfigByType(ETechPointType TechPointType , FTechPointConverConfigStruct& Config) const;`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 通过科技点类型获得科技点转换配置
 
@@ -1296,7 +1598,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 通过建筑ID获得科技点转换配置
 
@@ -1318,7 +1620,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID获取科技解锁物品配置
 
@@ -1334,13 +1636,13 @@
 
 | Name | Type |
 |--------|------|
-| `UnlockType` | `ETechUnlockItemType` |
+| `UnlockType` | [ETechUnlockItemType](../Struct/TechnologyStruct__ETechUnlockItemType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<FTechUnlockItemConigStruct> GetTechUnlockItemConigByType(ETechUnlockItemType UnlockType) const;`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询某种类型的解锁包
 
@@ -1358,7 +1660,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有科技分类配置
 
@@ -1376,7 +1678,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有科技解锁物品配置
 
@@ -1398,7 +1700,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取属性值的等级配置
 
@@ -1416,7 +1718,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取新游戏的配置
 
@@ -1434,7 +1736,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有背景故事
 
@@ -1456,7 +1758,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过id获取背景故事选项
 
@@ -1479,7 +1781,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过type获取背景故事选项
 
@@ -1496,13 +1798,13 @@
 | Name | Type |
 |--------|------|
 | `GameplayAttribute` | `FGameplayAttribute` |
-| `TargetSpecies` | `ESpeciesType` |
+| `TargetSpecies` | [ESpeciesType](../Struct/CommonEnum__ESpeciesType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) const FCharacterOrganConfig & GetCharacterOrganConfig(FGameplayAttribute GameplayAttribute , ESpeciesType TargetSpecies) const;`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取角色器官信息
 
@@ -1518,13 +1820,13 @@
 
 | Name | Type |
 |--------|------|
-| `TargetSpecies` | `ESpeciesType` |
+| `TargetSpecies` | [ESpeciesType](../Struct/CommonEnum__ESpeciesType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<FCharacterOrganConfig> GetAllCharacterOrganConfig(ESpeciesType TargetSpecies) const;`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有角色器官配置
 
@@ -1546,7 +1848,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 读取角色器官配置表
 
@@ -1562,13 +1864,13 @@
 
 | Name | Type |
 |--------|------|
-| `OType` | `EBodyOrganType` |
+| `OType` | [EBodyOrganType](../ERW_CommonTypes__EBodyOrganType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) const FCharacterOrganConfig& GetCharacterOrganConfigByOrganType(EBodyOrganType OType) const;`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过器官类型获取角色器官配置
 
@@ -1587,13 +1889,13 @@
 | `GameplayAttribute` | `FGameplayAttribute` |
 | `InCurrentValue` | `float` |
 | `InMaxValue` | `float` |
-| `Species` | `ESpeciesType` |
+| `Species` | [ESpeciesType](../Struct/CommonEnum__ESpeciesType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FOrganStatus GetCharacterOrganStatus(FGameplayAttribute GameplayAttribute,float InCurrentValue,float InMaxValue , ESpeciesType Species) const;`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取角色器官当前状态
 
@@ -1616,7 +1918,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取角色器官当前状态按ID
 
@@ -1634,7 +1936,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有角色器官UI配置
 
@@ -1652,7 +1954,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取角色主技能UI配置
 
@@ -1675,7 +1977,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过行名获取角色主技能UI配置
 
@@ -1697,7 +1999,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取角色属性等级升级配置
 
@@ -1719,7 +2021,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取动物的具体动作能力
 
@@ -1741,7 +2043,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID获取动物修炼配置
 
@@ -1763,7 +2065,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取武学书籍信息
 
@@ -1781,7 +2083,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有的境界信息
 
@@ -1803,7 +2105,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取境界等级信息
 
@@ -1825,7 +2127,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取武学词条信息
 
@@ -1847,9 +2149,53 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取技能词条配置（DT SkillEntryConfig）
+
+---
+
+### Function `GetSkillEntryPoolConfig`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `FSkillEntryPoolConfig &` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `PoolID` | `const FName &` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FSkillEntryPoolConfig & GetSkillEntryPoolConfig(const FName & PoolID) const;`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 获取技能词条池配置（DT SkillEntryPoolConfig）
+
+---
+
+### Function `GetSkillEntryCondition`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `FSkillEntryCondition &` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `ConditionID` | `const FName &` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FSkillEntryCondition & GetSkillEntryCondition(const FName & ConditionID) const;`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 获取技能词条条件配置（DT SkillEntryCondition）
 
 ---
 
@@ -1863,13 +2209,13 @@
 
 | Name | Type |
 |--------|------|
-| `Type` | `const ECharacterNameType&` |
+| `Type` | const [ECharacterNameType](../Struct/CharacterStruct__ECharacterNameType.md)& |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<FText> GetAllCharacterNameConfigByType(const ECharacterNameType& Type);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有角色名字
 
@@ -1887,7 +2233,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有角色姓氏
 
@@ -1909,7 +2255,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取特性信息
 
@@ -1931,7 +2277,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有特性信息
 
@@ -1953,6 +2299,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets all characteristic info grouped into a map by item quality
+
 ---
 
 ### Function `GetCommonBuff`
@@ -1971,7 +2321,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取buff信息
 
@@ -1994,7 +2344,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获得崩溃值配置数据
 
@@ -2018,7 +2368,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过当前心情值获得崩溃值配置数据
 
@@ -2040,7 +2390,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获得工作优先级UI配置所有行数据
 
@@ -2062,7 +2412,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获得所有建筑配置行数据
 
@@ -2085,7 +2435,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获得建筑配置数据
 
@@ -2108,7 +2458,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询所有建筑配置数据，有对应的GOAPAction
 
@@ -2125,13 +2475,13 @@
 | Name | Type |
 |--------|------|
 | `Datas` | TArray<[FBuildConfigData](../ERW_ConfigTypes__FBuildConfigData.md)>& |
-| `BType` | `EBuildingType` |
+| `BType` | [EBuildingType](../ERW_Enumerations__EBuildingType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void GetAllBuildConfigDataByBuildingType(TArray<FBuildConfigData>& Datas,EBuildingType BType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询所有建筑配置数据，有对应的建筑类型
 
@@ -2148,13 +2498,13 @@
 | Name | Type |
 |--------|------|
 | `Datas` | TArray<[FBuildConfigData](../ERW_ConfigTypes__FBuildConfigData.md)>& |
-| `EType` | `EEnvironType` |
+| `EType` | [EEnvironType](../ERW_Enumerations__EEnvironType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void GetAllBuildConfigDataByEnvironType(TArray<FBuildConfigData>& Datas,EEnvironType EType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询所有建筑配置数据，有对应的环境类型
 
@@ -2176,7 +2526,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 获取建筑物的二级分类
 
@@ -2194,7 +2544,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有武学分类配置
 
@@ -2216,7 +2566,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据数据名称，获取武学分类配置
 
@@ -2238,6 +2588,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Returns the world place info for the given place ID
+
 ---
 
 ### Function `GetWorldForceInfo`
@@ -2255,6 +2609,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) const FWorldForceInfo & GetWorldForceInfo(const FName & WorldForceID);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns the world force info for the given force ID
 
 ---
 
@@ -2274,6 +2632,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Returns the world area info for the given area ID
+
 ---
 
 ### Function `GetWorldForceConfigurationAsset`
@@ -2288,6 +2650,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Returns the world force configuration asset
+
 ---
 
 ### Function `GetPlayerDiplomacyConfigAsset`
@@ -2301,6 +2667,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) class UPlayerDiplomacyConfigAsset* GetPlayerDiplomacyConfigAsset();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns the player diplomacy configuration asset
 
 ---
 
@@ -2320,6 +2690,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Returns the world force aim info for the given force aim ID
+
 ---
 
 ### Function `GetWorldPlaceWeatherInfo`
@@ -2332,13 +2706,13 @@
 
 | Name | Type |
 |--------|------|
-| `Weather` | `EERWWeather` |
+| `Weather` | [EERWWeather](../WorldSystem/WorldStruct__EERWWeather.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) const FWorldPlaceWeatherInfo & GetWorldPlaceWeatherInfo(EERWWeather Weather);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取天气信息
 
@@ -2360,7 +2734,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过天气ID获取天气信息
 
@@ -2382,7 +2756,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取伤势配置
 
@@ -2400,7 +2774,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取世界的配置资产
 
@@ -2418,7 +2792,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取疤痕配置信息
 
@@ -2434,13 +2808,13 @@
 
 | Name | Type |
 |--------|------|
-| `WorldMapMoveType` | `EWorldMapMoveType` |
+| `WorldMapMoveType` | [EWorldMapMoveType](../WorldSystem/WorldStruct__EWorldMapMoveType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) const FWorldMoveInfoPreset & GetWorldMoveInfoPreset(EWorldMapMoveType WorldMapMoveType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取世界地图移动预设
 
@@ -2456,11 +2830,15 @@
 
 | Name | Type |
 |--------|------|
-| `FavorabilityType` | `const EForceFavorabilityType&` |
+| `FavorabilityType` | const [EForceFavorabilityType](../WorldSystem/WorldStruct__EForceFavorabilityType.md)& |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) const FForceFavorabilityConfig & GetForceFavorabilityConfig(const EForceFavorabilityType& FavorabilityType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns the force favorability config for the given favorability type
 
 ---
 
@@ -2476,7 +2854,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取世界事件的配置资产
 
@@ -2492,13 +2870,13 @@
 
 | Name | Type |
 |--------|------|
-| `TipsType` | `const ETipsType&` |
+| `TipsType` | const [ETipsType](../WorldSystem/WorldStruct__ETipsType.md)& |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FCommonTips GetTipsInfo(const ETipsType& TipsType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通用提示
 
@@ -2520,7 +2898,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取任务信息
 
@@ -2543,7 +2921,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获得新手引导对话
 
@@ -2566,7 +2944,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获得新手引导弹窗数据
 
@@ -2589,7 +2967,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获得新手引导Tips数据
 
@@ -2611,7 +2989,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取任务信息
 
@@ -2633,7 +3011,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取对话信息
 
@@ -2655,6 +3033,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Returns the dialogue info for the given dialogue ID
+
 ---
 
 ### Function `GetCommonDialogueOption`
@@ -2672,6 +3054,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) const FDialogueOption& GetCommonDialogueOption(const FName & OptionID);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns the dialogue option config for the given option ID
 
 ---
 
@@ -2692,6 +3078,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets all dialogue options for the given NPC ID
+
 ---
 
 ### Function `GetFarmlandConfigAsset`
@@ -2706,7 +3096,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取田地的配置
 
@@ -2722,13 +3112,13 @@
 
 | Name | Type |
 |--------|------|
-| `Type` | `const ECollectPlantType &` |
+| `Type` | const [ECollectPlantType](../Struct/ItemStruct__ECollectPlantType.md) & |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FPlantTypeTabInfo& GetPlantTypeTabInfo(const ECollectPlantType & Type);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取种植物分类数据
 
@@ -2750,7 +3140,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取势力等级信息
 
@@ -2772,7 +3162,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询解锁包id对应的势力等级信息
 
@@ -2790,7 +3180,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询所有势力等级信息
 
@@ -2808,7 +3198,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取配置的最大势力等级
 
@@ -2826,7 +3216,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有的门派宗旨
 
@@ -2848,7 +3238,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据ID获取门派宗旨配置
 
@@ -2865,13 +3255,13 @@
 | Name | Type |
 |--------|------|
 | `InPlaceLevel` | `const int32 &` |
-| `WorldPlaceType` | `EWorldPlaceType` |
+| `WorldPlaceType` | [EWorldPlaceType](../Struct/CommonEnum__EWorldPlaceType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) const FPlaceLevelInfo & GetPlaceLevelInfo(const int32 & InPlaceLevel,EWorldPlaceType WorldPlaceType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据等级和类型获取城市等级信息
 
@@ -2887,13 +3277,13 @@
 
 | Name | Type |
 |--------|------|
-| `WorldPlaceType` | `EWorldPlaceType` |
+| `WorldPlaceType` | [EWorldPlaceType](../Struct/CommonEnum__EWorldPlaceType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) const TArray<FPlaceLevelInfo> GetPlaceAllLevelInfo(EWorldPlaceType WorldPlaceType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据类型获取城市各等级信息
 
@@ -2909,14 +3299,14 @@
 
 | Name | Type |
 |--------|------|
-| `SType` | `EERWSeason` |
+| `SType` | [EERWSeason](../WorldSystem/WorldStruct__EERWSeason.md) |
 | `LevelName` | `FName` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<FSeasonWeathersInfo> GetWeathersInfoBySeason(EERWSeason SType,FName LevelName) const;`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 按季节返回天气配置信息
 
@@ -2932,13 +3322,13 @@
 
 | Name | Type |
 |--------|------|
-| `BehaviorState` | `const ECharacterBehaviorState &` |
+| `BehaviorState` | const [ECharacterBehaviorState](../Struct/CommonEnum__ECharacterBehaviorState.md) & |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) const FGOAP_ActionIcon & GetGOAPActionIcon(const ECharacterBehaviorState & BehaviorState) const;`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取行为对应配置信息（图标）
 
@@ -2961,7 +3351,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过阵营ID获取阵营信息
 
@@ -2983,7 +3373,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建游戏时，可以选择的初始资源包列表
 
@@ -3005,6 +3395,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Returns the sound change event config for the given event ID
+
 ---
 
 ### Function `GetAllStoryBackgroundStorys`
@@ -3023,7 +3417,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 返回全部新游戏剧本
 
@@ -3045,7 +3439,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取怪物生成配置
 
@@ -3067,7 +3461,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 敌对势力袭击配置
 
@@ -3089,7 +3483,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 返回所有成就配置
 
@@ -3111,7 +3505,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据id获取房间配置
 
@@ -3127,13 +3521,13 @@
 
 | Name | Type |
 |--------|------|
-| `RoomType` | `const ERoomType&` |
+| `RoomType` | const [ERoomType](../ERW_Enumerations__ERoomType.md)& |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) const FRoomConfigData& GetRoomConfigDataByType(const ERoomType& RoomType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据RoomType获取房间配置
 
@@ -3155,7 +3549,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有房间配置
 
@@ -3171,13 +3565,13 @@
 
 | Name | Type |
 |--------|------|
-| `SeasonID` | `const EERWSeason&` |
+| `SeasonID` | const [EERWSeason](../WorldSystem/WorldStruct__EERWSeason.md)& |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) const FSeasonMaterialInfo& GetSeasonMaterialInfo(const EERWSeason& SeasonID);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询季节参数变化配置
 
@@ -3194,6 +3588,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) URoomConfigAsset* GetRoomConfigAsset();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns the room configuration asset
 
 ---
 
@@ -3213,7 +3611,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过id获取组合建筑配置
 
@@ -3235,7 +3633,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有组合建筑配置
 
@@ -3253,7 +3651,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取聊天配置
 
@@ -3275,7 +3673,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID获取社交关系配置
 
@@ -3297,7 +3695,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过type获取社交关系配置
 > UFUNCTION(BlueprintCallable)
@@ -3322,7 +3720,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询爱好配置
 
@@ -3338,13 +3736,13 @@
 
 | Name | Type |
 |--------|------|
-| `BattleType` | `EBattleType` |
+| `BattleType` | [EBattleType](../Struct/CommonEnum__EBattleType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FBattleRuleset GetBattleRuleset(EBattleType BattleType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取战斗规则
 
@@ -3366,7 +3764,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过预设id 获取预设信息
 
@@ -3388,9 +3786,76 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过NCP配置ID 获取配置
+
+---
+
+### Function `GetRandomDiscipleConfig`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | [FRandomDiscipleConfig](../WorldSystem/WorldStruct__FRandomDiscipleConfig.md) |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `InConfigID` | `FName` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FRandomDiscipleConfig GetRandomDiscipleConfig(FName InConfigID) const;`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 通过配置ID 获取随机弟子生成配置（DT_RandomDiscipleConfig）
+
+---
+
+### Function `GetCharacterAvatarConfig`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | [FCharacterAvatarConfig](../Struct/CharacterStruct__FCharacterAvatarConfig.md) |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `InConfigID` | `FName` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FCharacterAvatarConfig GetCharacterAvatarConfig(FName InConfigID) const;`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 通过配置ID 获取角色立绘配置（DT_CharacterAvatarConfig）
+
+---
+
+### Function `GetCharacterAvatar`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `TSoftObjectPtr<UTexture2D>` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `CharacterData` | const [FCharacterSaveData](../WorldSystem/WorldCharacterData__FCharacterSaveData.md)& |
+| `AvatarType` | [EDiscipleAvatarType](../Struct/CharacterStruct__EDiscipleAvatarType.md) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TSoftObjectPtr<UTexture2D> GetCharacterAvatar(const FCharacterSaveData& CharacterData, EDiscipleAvatarType AvatarType) const;`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 解析角色某用途的立绘软引用：优先弟子 AvatarConfigID 查表，未配/查不到则回退模板（DT_HumanData）对应立绘字段
 
 ---
 
@@ -3410,7 +3875,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取战略技能信息
 
@@ -3432,7 +3897,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取全部战略技能信息
 
@@ -3448,14 +3913,14 @@
 
 | Name | Type |
 |--------|------|
-| `AutoUseCharacterType` | `EAutoUseCharacterType` |
-| `BattleType` | `EBattleType` |
+| `AutoUseCharacterType` | [EAutoUseCharacterType](../Struct/CommonEnum__EAutoUseCharacterType.md) |
+| `BattleType` | [EBattleType](../Struct/CommonEnum__EBattleType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FAutoUseCharacterRule GetAutoUseCharacterRule(EAutoUseCharacterType AutoUseCharacterType,EBattleType BattleType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取自动使用角色规则
 
@@ -3477,7 +3942,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取掉落集
 
@@ -3499,7 +3964,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取城镇建筑设施配置
 
@@ -3521,7 +3986,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取城镇效果配置
 
@@ -3543,7 +4008,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取地点特殊效果配置（全局效果）
 
@@ -3559,11 +4024,15 @@
 
 | Name | Type |
 |--------|------|
-| `JobType` | `EPlaceJobType` |
+| `JobType` | [EPlaceJobType](../Struct/CommonEnum__EPlaceJobType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FWorldPlaceJobConfig GetPlaceJobConfigByType(EPlaceJobType JobType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns the world place job config for the given job type
 
 ---
 
@@ -3578,6 +4047,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) UCommonLogConfigurationAsset* GetCommonLogConfigurationAsset();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns the common log configuration asset
 
 ---
 
@@ -3597,7 +4070,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取交通工具的信息
 
@@ -3613,13 +4086,13 @@
 
 | Name | Type |
 |--------|------|
-| `TransportationType` | `ETransportationType` |
+| `TransportationType` | [ETransportationType](../ERW_Enumerations__ETransportationType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FTransportationInfo GetTransportationInfoByType(ETransportationType TransportationType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过类型获取交通工具的信息
 
@@ -3641,7 +4114,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有交通工具信息
 
@@ -3659,7 +4132,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取傀儡台配置
 
@@ -3681,6 +4154,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Returns the place light influence info for the given light value
+
 ---
 
 ### Function `GetPlaceLightInfluenceInfoByID`
@@ -3699,6 +4176,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Returns the place light influence info for the given ID
+
 ---
 
 ### Function `GetTournamentRule`
@@ -3711,13 +4192,13 @@
 
 | Name | Type |
 |--------|------|
-| `TournamentType` | `ETournamentType` |
+| `TournamentType` | [ETournamentType](../System/Tournament/TournamentStruct__ETournamentType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FTournamentRule GetTournamentRule(ETournamentType TournamentType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 比武规则
 
@@ -3735,7 +4216,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取游戏的通用配置
 
@@ -3757,6 +4238,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Returns the off-field operation info for the given ID (tournament related)
+
 ---
 
 ### Function `GetPostStationConfigAsset`
@@ -3771,7 +4256,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 驿站
 
@@ -3793,7 +4278,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 驿站生成
 
@@ -3816,6 +4301,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets the post station generation configs matching the given list of IDs
+
 ---
 
 ### Function `GetAnnualRewardConfig`
@@ -3834,7 +4323,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取排名奖励
 
@@ -3852,7 +4341,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 突破配置
 
@@ -3868,13 +4357,13 @@
 
 | Name | Type |
 |--------|------|
-| `FiveElementType` | `EFiveElementType` |
+| `FiveElementType` | [EFiveElementType](../Struct/CommonEnum__EFiveElementType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FTrainingRoomConfig GetTrainingRoomConfigByType(EFiveElementType FiveElementType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 按五行类型获取训练房间配置信息
 
@@ -3890,7 +4379,7 @@
 
 | Name | Type |
 |--------|------|
-| `FiveElementType` | `EFiveElementType` |
+| `FiveElementType` | [EFiveElementType](../Struct/CommonEnum__EFiveElementType.md) |
 | `RoomLevel` | `int32` |
 | `CharacterPoints` | `int32` |
 | `OutLoopSections` | `TArray<FName> &` |
@@ -3900,7 +4389,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取指定类型和等级的技能池ID列表
 
@@ -3916,14 +4405,14 @@
 
 | Name | Type |
 |--------|------|
-| `FiveElementType` | `EFiveElementType` |
+| `FiveElementType` | [EFiveElementType](../Struct/CommonEnum__EFiveElementType.md) |
 | `RoomLevel` | `int32` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TMap<int32, FNameArr> GetTrainingRoomAllSkillIDs(EFiveElementType FiveElementType, int32 RoomLevel);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取指定类型和等级的技能池ID列表 不计算
 
@@ -3945,7 +4434,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取随机的技能配置
 
@@ -3967,7 +4456,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取突破技能配置
 
@@ -3989,7 +4478,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询势力分堂服饰限制
 
@@ -4007,7 +4496,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取修炼配置
 
@@ -4029,7 +4518,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 商品配置
 
@@ -4047,7 +4536,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取默认的阵营信息
 
@@ -4069,7 +4558,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据ID获取切磋配置
 
@@ -4087,7 +4576,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取袭击配置资产
 
@@ -4105,7 +4594,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取监狱配置资产
 
@@ -4127,7 +4616,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据ID获取威胁池信息
 
@@ -4149,7 +4638,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据当前点数获取威胁池信息数组
 
@@ -4171,7 +4660,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据ID获取袭击规则
 
@@ -4193,7 +4682,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据ID获取角色忠诚度配置
 
@@ -4215,7 +4704,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据重要度获取角色忠诚度配置
 

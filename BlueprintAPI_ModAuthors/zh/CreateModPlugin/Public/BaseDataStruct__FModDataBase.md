@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly) FName TemplateID;` |
 
-**源码注释:**
+**说明:**
 
 > 模板id，用于原表中没有的条目时获取此模板来增加新的数据
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly) FName ID;` |
 
-**源码注释:**
+**说明:**
 
 > 此条数据的id 必须与行命名相同
 

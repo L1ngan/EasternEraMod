@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 召唤物（机关人）角色类：支持附加对象、能量管理、傀儡台与存活倒计时
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame,BlueprintReadOnly) FGuid OwnerGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 拥有此召唤物的对象GUID
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame , VisibleAnywhere, BlueprintReadOnly, Category = "Summons", Meta = (AllowPrivateAccess = "true")) TObjectPtr<AActor> SelfAttachActor;` |
 
-**源码注释:**
+**说明:**
 
 > 召唤物的附加者
 
@@ -47,6 +49,25 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Human", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UEastRimWorldWorkComponent> WorkComponent;` |
 
+**说明:**
+
+> 工作组件
+
+---
+
+### 属性 `bIsBuildingAttachSummons`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `bool` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bIsBuildingAttachSummons = false;` |
+
+**说明:**
+
+> 是否是建筑物附加的召唤物
+
 ---
 
 ### 属性 `CurRobotName`
@@ -58,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) FText CurRobotName;` |
 
-**源码注释:**
+**说明:**
 
 > 当前机关人的名字
 
@@ -73,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) bool bAutoTreat = true;` |
 
-**源码注释:**
+**说明:**
 
 > 受伤时是否需要自动维修（治疗）
 
@@ -88,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) bool bIsFindingRepairBuildings = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否正在主动寻找充能
 
@@ -103,18 +124,22 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float ResidueLifeTime = -1.f;` |
 
+**说明:**
+
+> 召唤物剩余存活时间，-1表示不限时
+
 ---
 
 ### 属性 `ActiveType`
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ERobotActiveType` |
+| C++ 类型 | [ERobotActiveType](../Struct/CommonEnum__ERobotActiveType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) ERobotActiveType ActiveType = ERobotActiveType::Normal;` |
 
-**源码注释:**
+**说明:**
 
 > 机关人的状态
 
@@ -129,7 +154,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) FVector UsePuppetPlatformSlotLocation = FVector::ZeroVector;` |
 
-**源码注释:**
+**说明:**
 
 > 记录使用的傀儡台位置
 
@@ -144,7 +169,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) FUObjectData UsePuppetPlatform;` |
 
-**源码注释:**
+**说明:**
 
 > 记录使用的傀儡台
 
@@ -158,6 +183,10 @@
 | 反射说明符 | BlueprintAssignable |
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FSummonsRename OnSummonsRename;` |
+
+**说明:**
+
+> 召唤物改名时广播的委托（参数为新名字）
 
 ---
 
@@ -175,6 +204,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 返回是否可以移除待机行为
+
 ---
 
 ### 函数 `RemoveStandbyAction`
@@ -188,6 +221,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RemoveStandbyAction();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 移除待机行为
 
 ---
 
@@ -207,7 +244,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置机关人受伤是否自动维修
 
@@ -229,7 +266,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置生物休眠
 
@@ -253,7 +290,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置召唤物的控制器（骑乘者）
 
@@ -271,7 +308,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 更新召唤物的名字条
 
@@ -289,7 +326,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取召唤物的信息
 
@@ -312,7 +349,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置使用的傀儡台
 
@@ -330,7 +367,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 是否有傀儡台
 
@@ -351,5 +388,9 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SetSummonsName(FText NewName);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 设置召唤物的名字
 
 ---

@@ -20,7 +20,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FGuid, FTournamentBattleCharacterInfo> TournamentBattleCharacterInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 各门派战斗的存活角色信息（按门派Guid索引）
 
@@ -35,6 +35,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) int32 BattleSpeed = 1;` |
 
+**说明:**
+
+> Battle Speed 字段。
+
 ---
 
 ### 属性 `OnTournamentBattleStateChanged`
@@ -46,7 +50,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnTournamentBattleStateChanged OnTournamentBattleStateChanged;` |
 
-**源码注释:**
+**说明:**
 
 > 战斗状态变化委托
 
@@ -61,7 +65,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnCharacterSeriousInjury OnCharacterSeriousInjury;` |
 
-**源码注释:**
+**说明:**
 
 > 弟子重伤广播
 
@@ -76,7 +80,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnPlayLevelSequenceFinished OnPlayLevelSequenceFinished;` |
 
-**源码注释:**
+**说明:**
 
 > 关卡动画播放完成
 
@@ -96,6 +100,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 获取或查询 Get Tournament Battle Manager。
+
 ---
 
 ### 函数 `CreateBattle`
@@ -109,13 +117,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `TournamentBattleInfo` | const [FTournamentBattleInfo](TournamentStruct__FTournamentBattleInfo.md) & |
-| `TournamentType` | `ETournamentType` |
+| `TournamentType` | [ETournamentType](TournamentStruct__ETournamentType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void CreateBattle(const FTournamentBattleInfo & TournamentBattleInfo,ETournamentType TournamentType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 创建战斗信息
 
@@ -133,7 +141,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 开始战斗
 
@@ -155,7 +163,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 结束战斗并结算
 
@@ -173,7 +181,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查战斗是否结束
 
@@ -191,7 +199,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取当前战斗信息
 
@@ -213,7 +221,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取门派战斗角色
 
@@ -231,7 +239,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查是否可以开始战斗
 
@@ -249,7 +257,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 清理所有战斗信息
 
@@ -267,7 +275,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 跳过当前这场战斗
 
@@ -285,7 +293,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 清理定时器
 
@@ -303,7 +311,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 添加定时器
 
@@ -319,13 +327,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `TournamentType` | `ETournamentType` |
+| `TournamentType` | [ETournamentType](TournamentStruct__ETournamentType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void ContinueBattle(ETournamentType TournamentType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 继续之前的战斗
 
@@ -343,7 +351,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取当前战斗剩余时间
 
@@ -365,7 +373,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取当前战斗对应势力的所有弟子
 
@@ -387,7 +395,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 统计战斗数据
 

@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) float TriggerProbability = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 触发概率(0~1)
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) float TriggerDistance = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 触发距离
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) TArray<FText> ChatRichTexts;` |
 
-**Source comments:**
+**Notes:**
 
 > 富文本
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadWrite) TArray<FChatConditionWeight> GoodOpinionWeights;` |
 
-**Source comments:**
+**Notes:**
 
 > 好感度变化概率
 

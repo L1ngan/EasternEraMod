@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TArray<FTreasureItemSubData> TreasureItems;` |
 
-**Source comments:**
+**Notes:**
 
 > 商品信息
 
@@ -34,6 +34,10 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<int32 , FSaveItemArr> TreasureResource;` |
 
+**Notes:**
+
+> Saved map of item data per display cabinet, keyed by cabinet index.
+
 ---
 
 ### Property `SaveStalls`
@@ -44,6 +48,10 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<int32 , FStallInfo> SaveStalls;` |
+
+**Notes:**
+
+> Saved map of stall info, keyed by stall index.
 
 ---
 
@@ -56,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly,VisibleAnywhere) float AutomaticReplenishmentTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 自动补货冷却时间
 
@@ -71,6 +79,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly,VisibleAnywhere) TArray<FLogData> SaveLog;` |
 
+**Notes:**
+
+> Saved list of treasure pavilion log entries.
+
 ---
 
 ### Property `TreasureCount`
@@ -82,6 +94,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly,VisibleAnywhere) TArray<FTreasureStatisticsInfo> TreasureCount;` |
 
+**Notes:**
+
+> Saved list of current-period exchange statistics for items.
+
 ---
 
 ### Property `TotalTreasureCount`
@@ -92,5 +108,9 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly,VisibleAnywhere) TMap<FName , FTreasureStatisticsTotalInfo> TotalTreasureCount;` |
+
+**Notes:**
+
+> Saved map of total exchange statistics per item, keyed by item ID.
 
 ---

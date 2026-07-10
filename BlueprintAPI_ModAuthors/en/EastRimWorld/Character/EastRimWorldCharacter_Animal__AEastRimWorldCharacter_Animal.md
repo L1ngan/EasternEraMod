@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Animal character class supporting taming, breeding, cultivation, growth and output production
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Animal", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UCharacterBreedingComponent> BreedingComponent;` |
 
-**Source comments:**
+**Notes:**
 
 > 繁育组件
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|Animal", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UAnimalCultivationComponent> CultivationComponent;` |
 
-**Source comments:**
+**Notes:**
 
 > 修炼组件
 
@@ -47,6 +49,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) int32 CurrentTameCD = 0;` |
 
+**Notes:**
+
+> Current taming cooldown time
+
 ---
 
 ### Property `CurAnimalGrowthValue`
@@ -58,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) float CurAnimalGrowthValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物当前成长值
 
@@ -73,6 +79,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) UParticleSystemComponent* LoopingPSC;` |
 
+**Notes:**
+
+> Looping particle system component
+
 ---
 
 ### Property `CurAnimalOutputRemainingTime`
@@ -84,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) float CurAnimalOutputRemainingTime;` |
 
-**Source comments:**
+**Notes:**
 
 > 动物产出间隔剩余时间
 
@@ -99,6 +109,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame , BlueprintReadWrite) bool bHadBreeding;` |
 
+**Notes:**
+
+> Whether the animal has already bred
+
 ---
 
 ### Property `bPregnant`
@@ -109,6 +123,10 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame , BlueprintReadWrite) bool bPregnant;` |
+
+**Notes:**
+
+> Whether the animal is pregnant
 
 ---
 
@@ -121,6 +139,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame , BlueprintReadWrite) FText CurAnimalName;` |
 
+**Notes:**
+
+> The animal's current name
+
 ---
 
 ### Property `OnAnimalRename`
@@ -131,6 +153,10 @@
 | Reflection specifiers | BlueprintAssignable |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FAnimalRename OnAnimalRename;` |
+
+**Notes:**
+
+> Delegate broadcast when the animal is renamed (passes the new name)
 
 ---
 
@@ -148,7 +174,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取动物的信息
 
@@ -166,6 +192,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Starts the taming cooldown countdown
+
 ---
 
 ### Function `CalculationGrowBonus`
@@ -179,6 +209,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) float CalculationGrowBonus();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Calculates and returns the animal's growth bonus value
 
 ---
 
@@ -198,7 +232,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算驯服是否成功
 
@@ -216,7 +250,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 驯服成功
 
@@ -234,7 +268,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 驯服失败
 
@@ -256,7 +290,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建驯服行为
 
@@ -274,7 +308,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查动物是否需要进化
 
@@ -292,7 +326,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 取消驯服行为
 
@@ -310,6 +344,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Handles completion of animal training
+
 ---
 
 ### Function `CreateAnimalOutputAction`
@@ -324,6 +362,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Creates the animal output GOAP action
+
 ---
 
 ### Function `CancelAnimalOutputAction`
@@ -337,6 +379,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CancelAnimalOutputAction();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Cancels the animal output GOAP action
 
 ---
 
@@ -355,5 +401,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetAnimalName(FText NewName);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Sets the animal's name
 
 ---

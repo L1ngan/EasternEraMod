@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FDialogueGroupItem> GroupItem;` |
 
-**Source comments:**
+**Notes:**
 
 > 开始对话ID
 

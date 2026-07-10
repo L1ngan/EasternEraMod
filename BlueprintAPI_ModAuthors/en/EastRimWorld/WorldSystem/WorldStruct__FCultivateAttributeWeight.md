@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<FGameplayAttribute,int32> AttributeWeight;` |
 
-**Source comments:**
+**Notes:**
 
 > 境界等级对应的属性抽取权重
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<FGameplayAttribute,FCultivateAttributeValueWeight> AttributeValueWeight;` |
 
-**Source comments:**
+**Notes:**
 
 > 境界等级对应的属性加值抽取权重
 

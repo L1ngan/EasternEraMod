@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> World Area Actor 类型。
 
 ## 蓝图暴露变量
 
@@ -17,6 +19,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<USceneComponent> SceneComponent;` |
 
+**说明:**
+
+> Scene Component 字段。
+
 ---
 
 ### 属性 `WorldAreaInfo`
@@ -28,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, VisibleAnywhere) FWorldAreaInfo WorldAreaInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 区域信息
 
@@ -43,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame, VisibleAnywhere) TArray<FGuid> WorldPlaces;` |
 
-**源码注释:**
+**说明:**
 
 > 所在区域的地点
 
@@ -58,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame, VisibleAnywhere) bool bRevealFog = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否已经消除迷雾
 
@@ -73,20 +79,9 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, SaveGame) FName AreaID;` |
 
-**源码注释:**
+**说明:**
 
 > 区域ID
-
----
-
-### 属性 `VaFogAgentCharWorld`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | `TObjectPtr<UVaFogAgentComponent>` |
-| 反射说明符 | BlueprintReadOnly |
-| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
-| 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly) TObjectPtr<UVaFogAgentComponent> VaFogAgentCharWorld;` |
 
 ---
 
@@ -103,6 +98,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UnlockAreaFog();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> Unlock Area Fog 字段。
 
 ---
 
@@ -122,7 +121,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 增加区域探索度
 
@@ -140,7 +139,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 消除区域迷雾
 

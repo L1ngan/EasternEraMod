@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ECeremonyStateType` |
+| C++ 类型 | [ECeremonyStateType](../ERW_Enumerations__ECeremonyStateType.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) ECeremonyStateType CeremonyState = ECeremonyStateType::Normal;` |
 
-**源码注释:**
+**说明:**
 
 > 仪式状态
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FGuid> CeremonyMember;` |
 
-**源码注释:**
+**说明:**
 
 > 参与仪式人员
 
@@ -49,6 +49,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FGuid> SpectatorCeremonyMember;` |
 
+**说明:**
+
+> 旁观仪式人员的Guid列表
+
 ---
 
 ### 属性 `ArrivedCeremonyMember`
@@ -60,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FGuid> ArrivedCeremonyMember;` |
 
-**源码注释:**
+**说明:**
 
 > 已签到人员
 
@@ -75,7 +79,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FGuid> CompleteCeremonyMember;` |
 
-**源码注释:**
+**说明:**
 
 > 已签退人员
 
@@ -90,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) int32 CeremonyMemberNumCount { 0 };` |
 
-**源码注释:**
+**说明:**
 
 > 还差多少个参加人员没到&&有多少个完成了仪式
 
@@ -105,6 +109,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) int32 MainCeremonyNumCount { 0 };` |
 
+**说明:**
+
+> 主要仪式参与人员的计数
+
 ---
 
 ### 属性 `CeremonyRelationShipID`
@@ -116,7 +124,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) FName CeremonyRelationShipID;` |
 
-**源码注释:**
+**说明:**
 
 > 仪式相关的关系ID
 
@@ -131,7 +139,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float CeremonyStartTime { 0 };` |
 
-**源码注释:**
+**说明:**
 
 > 当前仪式的开始时间
 
@@ -146,6 +154,10 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 CeremonyStartTimerID { INDEX_NONE };` |
 
+**说明:**
+
+> 仪式开始定时器ID
+
 ---
 
 ### 属性 `CeremonyWaitTimerID`
@@ -156,5 +168,9 @@
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) int32 CeremonyWaitTimerID { INDEX_NONE };` |
+
+**说明:**
+
+> 仪式等待定时器ID
 
 ---

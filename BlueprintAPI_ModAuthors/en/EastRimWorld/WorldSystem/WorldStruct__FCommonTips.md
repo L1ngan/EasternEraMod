@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Common Tips data structure.
 
 ## Blueprint-exposed variables
 
@@ -12,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ETipsType` |
+| C++ type | [ETipsType](WorldStruct__ETipsType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ETipsType TipsType = ETipsType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 提示的类型
 
@@ -27,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ETipsSeverity` |
+| C++ type | [ETipsSeverity](WorldStruct__ETipsSeverity.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ETipsSeverity TipsSeverity = ETipsSeverity::Normal;` |
 
-**Source comments:**
+**Notes:**
 
 > 提示的分级
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bNeedSave = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否需要存档
 
@@ -57,12 +59,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EInitiatesPromptTargetType` |
+| C++ type | [EInitiatesPromptTargetType](WorldStruct__EInitiatesPromptTargetType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EInitiatesPromptTargetType InitiatesPromptTargetType = EInitiatesPromptTargetType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 发起提示的对象
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid InstigatorGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 发起者的GUID
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText TipsLabel;` |
 
-**Source comments:**
+**Notes:**
 
 > 提示条显示文字
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bIsOverride = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 覆盖显示，同类型只显示一条
 
@@ -122,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText AnswerTitle;` |
 
-**Source comments:**
+**Notes:**
 
 > 提示主Tip的标题，鼠标移上去显示Tip的标题
 
@@ -137,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText AnswerText;` |
 
-**Source comments:**
+**Notes:**
 
 > 提示主Tip的内容
 
@@ -152,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float Time;` |
 
-**Source comments:**
+**Notes:**
 
 > 提示的显示时间，0为不自动消失(bRightClickRemove为true时,才有效)
 
@@ -167,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bIsShowTimebar = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否显示倒计时进度条
 
@@ -182,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FSoftClassPath TipItemWidget;` |
 
-**Source comments:**
+**Notes:**
 
 > 显示一行的Widget
 
@@ -197,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FSoftClassPath TipInfoWidget;` |
 
-**Source comments:**
+**Notes:**
 
 > 鼠标悬浮时显示的Widget
 
@@ -212,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bLiftClickForward = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 左键点击"前往"
 
@@ -222,12 +224,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ETipInteractionType` |
+| C++ type | [ETipInteractionType](WorldStruct__ETipInteractionType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ETipInteractionType InteractionType = ETipInteractionType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 左键点击交互操作
 
@@ -242,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FSoftClassPath OpenWidget;` |
 
-**Source comments:**
+**Notes:**
 
 > 左键点击打开窗口
 
@@ -257,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TArray<FGuid> InteractionTargetGuids;` |
 
-**Source comments:**
+**Notes:**
 
 > 交互对象数组(用于储存多个跳转对象)
 
@@ -272,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bRightClickRemove = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否能右键点击后删除该提示
 
@@ -287,7 +289,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TArray<FGuid> GuidArray;` |
 
-**Source comments:**
+**Notes:**
 
 > 提示现在存在的相关对象GUID
 
@@ -302,7 +304,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TArray<FName> ValueId;` |
 
-**Source comments:**
+**Notes:**
 
 > 提示的对象ID（对于没有Guid的信息值）
 
@@ -317,7 +319,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TArray<FText> Value;` |
 
-**Source comments:**
+**Notes:**
 
 > 提示的替换文本值（用于动态替换文本模块中的{0}..{9}）
 
@@ -332,7 +334,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> CommonModuleIds;` |
 
-**Source comments:**
+**Notes:**
 
 > 要添加的公共模块id
 
@@ -347,7 +349,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bNeedReplace = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否需要直接代码替换文本（方便UI主动更新提示文本）
 
@@ -362,7 +364,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FName TipsSound;` |
 
-**Source comments:**
+**Notes:**
 
 > 音效 读取GameSoundInfo配置
 

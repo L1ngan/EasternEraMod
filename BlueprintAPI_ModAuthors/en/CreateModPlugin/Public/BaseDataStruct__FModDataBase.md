@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly) FName TemplateID;` |
 
-**Source comments:**
+**Notes:**
 
 > 模板id，用于原表中没有的条目时获取此模板来增加新的数据
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly) FName ID;` |
 
-**Source comments:**
+**Notes:**
 
 > 此条数据的id 必须与行命名相同
 

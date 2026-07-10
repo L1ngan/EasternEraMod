@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FBeginnerGuideDialogueContent> DialogueData;` |
 
-**Source comments:**
+**Notes:**
 
 > 对话数据
 

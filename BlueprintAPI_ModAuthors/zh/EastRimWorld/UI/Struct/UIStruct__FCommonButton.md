@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> Common Button 数据结构。
 
 ## 蓝图暴露变量
 
@@ -12,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ECommonButtonType` |
+| C++ 类型 | [ECommonButtonType](UIStruct__ECommonButtonType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ECommonButtonType CommonButtonType = ECommonButtonType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 按钮类型
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText ButtonText;` |
 
-**源码注释:**
+**说明:**
 
 > 按钮内容
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FVector2D ButtonSize;` |
 
-**源码注释:**
+**说明:**
 
 > 按钮大小
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText TipsTitle;` |
 
-**源码注释:**
+**说明:**
 
 > 按钮提示标题
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText TipsContent;` |
 
-**源码注释:**
+**说明:**
 
 > 按钮提示标题
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FFormatText FormatTipsContent;` |
 
-**源码注释:**
+**说明:**
 
 > 格式化提示内容
 
@@ -102,12 +104,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ECommonBtnTipType` |
+| C++ 类型 | [ECommonBtnTipType](UIStruct__ECommonBtnTipType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ECommonBtnTipType TipsType;` |
 
-**源码注释:**
+**说明:**
 
 > 按钮提示类型
 
@@ -122,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TSoftClassPtr<UUserWidget> TipsClass;` |
 
-**源码注释:**
+**说明:**
 
 > 按钮提示框类型
 
@@ -137,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(InlineEditConditionToggle)) bool bTipsHaveOperator;` |
 
-**源码注释:**
+**说明:**
 
 > 按钮提示框是否有快捷键提示
 
@@ -152,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=( editcondition="bTipsHaveOperator" )) TSoftObjectPtr<UTexture2D> TipsOperatorIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 提示框快捷键Icon
 
@@ -167,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=( editcondition="bTipsHaveOperator" )) FText TipsOpratorText;` |
 
-**源码注释:**
+**说明:**
 
 > 提示框快捷键文本
 
@@ -182,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TSoftObjectPtr<UTexture2D> NormalIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 普通按钮状态
 
@@ -197,7 +199,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TSoftObjectPtr<UTexture2D> HoveredIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 普通按钮悬浮
 
@@ -212,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TSoftObjectPtr<UTexture2D> PressedIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 普通按钮按下
 
@@ -227,7 +229,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(InlineEditConditionToggle)) bool bCanSelect;` |
 
-**源码注释:**
+**说明:**
 
 > 按钮能否选中
 
@@ -242,7 +244,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=( editcondition="bCanSelect" )) TSoftObjectPtr<UTexture2D> SelectIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 普通按钮选中
 
@@ -257,7 +259,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=( editcondition="bCanSelect" )) TSoftObjectPtr<UTexture2D> RightTopSelectedIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 按钮选中右上角的图片
 
@@ -272,7 +274,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=( editcondition="bCanSelect" )) TSoftObjectPtr<UTexture2D> RightTopDeselectedIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 按钮未选中右上角的图片
 
@@ -287,7 +289,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TSoftObjectPtr<UTexture2D> DisabledIcon;` |
 
-**源码注释:**
+**说明:**
 
 > 不可点击
 
@@ -302,7 +304,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TSoftClassPtr<UCommonButtonStyle> ButtonStyle;` |
 
-**源码注释:**
+**说明:**
 
 > button样式
 
@@ -317,7 +319,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TSoftClassPtr<UEastRimWorldButtonBase> ButtonWidget;` |
 
-**源码注释:**
+**说明:**
 
 > 主要界面
 
@@ -327,12 +329,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TArray<ECommonButtonType>` |
+| C++ 类型 | TArray<[ECommonButtonType](UIStruct__ECommonButtonType.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<ECommonButtonType>ConflictButtonType;` |
 
-**源码注释:**
+**说明:**
 
 > 冲突的按钮
 
@@ -347,7 +349,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bOnMultipleSelectShow = false;` |
 
-**源码注释:**
+**说明:**
 
 > 多选时是否显示
 
@@ -362,7 +364,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName ActionID = NAME_None;` |
 
-**源码注释:**
+**说明:**
 
 > 按钮会执行的的ActionID 如果有
 

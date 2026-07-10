@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Instanced replacement data grouped by static mesh (ISM component and instance transform list)
 
 ## Blueprint-exposed variables
 
@@ -15,7 +17,11 @@
 | C++ type | `class UInstancedStaticMeshComponent*` |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
-| Original declaration (excerpt) | `UPROPERTY() class UInstancedStaticMeshComponent* instancedStaticComponent = nullptr;` |
+| Original declaration (excerpt) | `UPROPERTY(Transient) class UInstancedStaticMeshComponent* instancedStaticComponent = nullptr;` |
+
+**Notes:**
+
+> 运行时实例化网格组件缓存（标 Transient 防止序列化悬空指针致崩）
 
 ---
 
@@ -28,6 +34,10 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() class UStaticMesh* replaceableStaticMesh = nullptr;` |
 
+**Notes:**
+
+> Static mesh used for instanced replacement
+
 ---
 
 ### Property `instTransformArr`
@@ -38,5 +48,9 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() TArray<FTransform> instTransformArr;` |
+
+**Notes:**
+
+> Array of transforms of all instances of this mesh
 
 ---

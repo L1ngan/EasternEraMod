@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 大地图移动Actor：表示角色在世界地图上移动/停留的可选中实体
 
 ## 蓝图暴露变量
 
@@ -17,6 +19,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<USceneComponent> SceneComponent;` |
 
+**说明:**
+
+> 根场景组件
+
 ---
 
 ### 属性 `StaticMesh`
@@ -27,6 +33,10 @@
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly) TObjectPtr<UStaticMeshComponent> StaticMesh;` |
+
+**说明:**
+
+> 静态网格组件
 
 ---
 
@@ -39,6 +49,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly) FCharacterWorldMoveInfo CharacterWorldMoveInfo;` |
 
+**说明:**
+
+> 角色的大地图移动信息
+
 ---
 
 ### 属性 `OnMOveStateChangeDelegate`
@@ -50,6 +64,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnMOveStateChangeDelegate OnMOveStateChangeDelegate;` |
 
+**说明:**
+
+> 行走（移动）状态发生改变时广播的委托
+
 ---
 
 ### 属性 `bIsSelect`
@@ -60,6 +78,10 @@
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) bool bIsSelect = false;` |
+
+**说明:**
+
+> 是否处于选中状态
 
 ---
 
@@ -81,6 +103,10 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 蓝图事件：用移动信息初始化大地图Actor时调用
+
 ---
 
 ### 函数 `K2_DeinitializeWorldMapActor`
@@ -94,6 +120,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent,DisplayName="DeinitializeWorldMapActor") void K2_DeinitializeWorldMapActor();`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 蓝图事件：反初始化大地图Actor时调用
 
 ---
 
@@ -109,6 +139,10 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 蓝图事件：大地图Actor被销毁时调用
+
 ---
 
 ### 函数 `K2_OnMapActorBeginStay`
@@ -123,6 +157,10 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 蓝图事件：大地图Actor开始停留时调用
+
 ---
 
 ### 函数 `K2_OnMapActorEndStay`
@@ -136,6 +174,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent,DisplayName="OnMapActorEndStay") void K2_OnMapActorEndStay();`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 蓝图事件：大地图Actor结束停留时调用
 
 ---
 
@@ -155,7 +197,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 更新移动路径
 
@@ -176,5 +218,9 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SetMoveActorTipUI(UUserWidget * WidgetObject);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 设置移动Actor的提示UI控件
 
 ---

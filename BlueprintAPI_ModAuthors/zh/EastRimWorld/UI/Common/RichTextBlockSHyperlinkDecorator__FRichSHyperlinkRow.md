@@ -19,4 +19,8 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, Category = Appearance) FHyperlinkStyle Hyperlink;` |
 
+**说明:**
+
+> Hyperlink 字段。
+
 ---

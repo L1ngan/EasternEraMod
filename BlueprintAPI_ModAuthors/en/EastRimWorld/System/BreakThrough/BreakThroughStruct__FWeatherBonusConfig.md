@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EERWWeather` |
+| C++ type | [EERWWeather](../../WorldSystem/WorldStruct__EERWWeather.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EERWWeather WeatherType = EERWWeather::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 天气类型
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EFiveElementType` |
+| C++ type | [EFiveElementType](../../Struct/CommonEnum__EFiveElementType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EFiveElementType ElementType = EFiveElementType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 房间五行类型
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float BonusPercent = 0.0f;` |
 
-**Source comments:**
+**Notes:**
 
 > 加成百分比（最高25%）
 

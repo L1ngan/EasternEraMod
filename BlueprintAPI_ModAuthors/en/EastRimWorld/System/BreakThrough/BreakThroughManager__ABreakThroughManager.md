@@ -19,7 +19,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnBreakThroughStateChanged OnBreakThroughStateChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 委托：突破状态变化
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnBreakThroughProgressUpdated OnBreakThroughProgressUpdated;` |
 
-**Source comments:**
+**Notes:**
 
 > 委托：突破进度更新
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnBreakThroughCompleted OnBreakThroughCompleted;` |
 
-**Source comments:**
+**Notes:**
 
 > 委托：突破完成
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnBreakThroughInterrupted OnBreakThroughInterrupted;` |
 
-**Source comments:**
+**Notes:**
 
 > 委托：突破中断
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOpenSelectBreakThroughUI OpenSelectBreakThroughUI_Delegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 打开右侧择地突破的UI
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnCheckBreakThroughRoom OnCheckBreakThroughRoom;` |
 
-**Source comments:**
+**Notes:**
 
 > 检查突破房间信息委托
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FGuid SelectingLocationCharacterGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前正在选择地点的角色Guid
 
@@ -129,6 +129,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Gets or queries Get Break Through Manager.
+
 ---
 
 ### Function `StartSelectLocation`
@@ -147,7 +151,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 开始择地突破（进入选择地点模式）
 
@@ -169,7 +173,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查位置是否可以突破
 
@@ -191,7 +195,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取突破地点的房间信息
 
@@ -213,7 +217,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 确认突破地点并开始突破
 
@@ -231,7 +235,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 取消择地突破
 
@@ -253,7 +257,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 突破中取消
 
@@ -275,7 +279,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 突破完成
 
@@ -298,7 +302,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 确认突破结果
 
@@ -321,7 +325,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取角色的突破信息
 
@@ -343,7 +347,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查角色是否正在突破
 
@@ -362,13 +366,13 @@
 | `InCharacter` | [AEastRimWorldCharacter](../../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md) * |
 | `TrainingRoomLevel` | `int32` |
 | `ElementValue` | `float` |
-| `ElementType` | `const EFiveElementType` |
+| `ElementType` | const [EFiveElementType](../../Struct/CommonEnum__EFiveElementType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) float CalculateBreakThroughBonus(AEastRimWorldCharacter * InCharacter, int32 TrainingRoomLevel, float ElementValue,const EFiveElementType ElementType) const;`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算突破点数加成
 
@@ -386,14 +390,14 @@
 |--------|------|
 | `Location` | `const FVector&` |
 | `OutRoomInfo` | [FRoomInfo](../../ERW_ConfigTypes__FRoomInfo.md) & |
-| `OutElementType` | `EFiveElementType&` |
+| `OutElementType` | [EFiveElementType](../../Struct/CommonEnum__EFiveElementType.md)& |
 | `OutLevel` | `int32&` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool IsTrainingRoom(const FVector& Location,FRoomInfo & OutRoomInfo, EFiveElementType& OutElementType, int32& OutLevel) const;`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查房间是否为指定类型的练功房
 
@@ -415,7 +419,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 处理角色到达目标点
 
@@ -433,7 +437,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 处理角色到达目标点
 

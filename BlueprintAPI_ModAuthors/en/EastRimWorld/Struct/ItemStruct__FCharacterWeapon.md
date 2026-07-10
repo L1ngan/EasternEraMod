@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon") EWeaponType WeaponType = EWeaponType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 武器类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon") FName EquipWeaponAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 装备此武器的能力
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon") FName DemountWeaponAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 卸载此武器的能力
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, Category = "Weapon",BlueprintReadOnly) FName HandParentSocket = NAME_None;` |
 
-**Source comments:**
+**Notes:**
 
 > 手持武器的插槽
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, Category = "Weapon",BlueprintReadOnly) FName CarryParentSocket = NAME_None;` |
 
-**Source comments:**
+**Notes:**
 
 > 携带武器的插槽
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon") TSoftObjectPtr<UStaticMesh> WeaponStaticMesh;` |
 
-**Source comments:**
+**Notes:**
 
 > 武器的模型
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon") FText WeaponInjuryType;` |
 
-**Source comments:**
+**Notes:**
 
 > 伤害类型
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, Category = "Weapon",BlueprintReadOnly) bool bSecondaryWeapon = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否有第二个武器
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon",meta=(EditConditionHides,EditCondition = "bSecondaryWeapon")) FName SecondaryHandParentSocket = NAME_None;` |
 
-**Source comments:**
+**Notes:**
 
 > 第二手持武器的插槽
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon",meta=(EditConditionHides,EditCondition = "bSecondaryWeapon")) FName SecondaryCarryParentSocket = NAME_None;` |
 
-**Source comments:**
+**Notes:**
 
 > 第二携带武器的插槽
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon",meta=(EditConditionHides,EditCondition = "bSecondaryWeapon")) TSoftObjectPtr<UStaticMesh> SecondaryWeaponStaticMesh;` |
 
-**Source comments:**
+**Notes:**
 
 > 第二武器模型
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon") TSoftObjectPtr<UBlendSpace> BattleBlendSpace;` |
 
-**Source comments:**
+**Notes:**
 
 > 武器对应的混合空间
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon") float AttackLossDurability;` |
 
-**Source comments:**
+**Notes:**
 
 > 使用技能时减少的武器耐久
 

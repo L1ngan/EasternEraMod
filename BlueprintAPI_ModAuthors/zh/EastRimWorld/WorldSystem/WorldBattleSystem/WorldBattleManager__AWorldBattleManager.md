@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> World Battle Manager Actor 类型。
 
 ## 蓝图暴露变量
 
@@ -17,20 +19,9 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<int32,FWorldBattleCharacterInfo> WorldBattleCharacterInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 各阵营战斗的存活（没有重伤）角色信息
-
----
-
-### 属性 `CommonLogComponent`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | TObjectPtr<[UCommonLogComponent](../../Components/CommonLogComponent__UCommonLogComponent.md)> |
-| 反射说明符 | BlueprintReadWrite |
-| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TObjectPtr<UCommonLogComponent> CommonLogComponent;` |
 
 ---
 
@@ -43,7 +34,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnExtractStratagemDelegate OnExtractStratagemDelegate;` |
 
-**源码注释:**
+**说明:**
 
 > 抽取战略卡牌
 
@@ -58,7 +49,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnExtractCharacterCardDelegate OnExtractCharacterCardDelegate;` |
 
-**源码注释:**
+**说明:**
 
 > 抽取角色卡牌
 
@@ -73,6 +64,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnUpdateExtractStratagemTimeDelegate OnUpdateExtractStratagemTimeDelegate;` |
 
+**说明:**
+
+> On Update Extract Stratagem Time Delegate 事件或回调。
+
 ---
 
 ### 属性 `OnUpdateExtractCharacterTimeDelegate`
@@ -83,6 +78,10 @@
 | 反射说明符 | BlueprintAssignable |
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnUpdateExtractCharacterTimeDelegate OnUpdateExtractCharacterTimeDelegate;` |
+
+**说明:**
+
+> On Update Extract Character Time Delegate 事件或回调。
 
 ---
 
@@ -95,6 +94,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnBattleStateChange OnFOnBattleStateChangeDelegate;` |
 
+**说明:**
+
+> On F On Battle State Change Delegate 事件或回调。
+
 ---
 
 ### 属性 `OnCancelBattlefieldDelegate`
@@ -105,6 +108,10 @@
 | 反射说明符 | BlueprintAssignable |
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnBattleStateChange OnCancelBattlefieldDelegate;` |
+
+**说明:**
+
+> On Cancel Battlefield Delegate 事件或回调。
 
 ---
 
@@ -117,7 +124,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnGenerateDogfaceTimeDelegate OnGenerateDogfaceTimeDelegate;` |
 
-**源码注释:**
+**说明:**
 
 > 小兵的剩余生成时间
 
@@ -132,6 +139,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnUpdateStrategyPointChangeDelegate OnUpdateStrategyPointChangeDelegate;` |
 
+**说明:**
+
+> On Update Strategy Point Change Delegate 事件或回调。
+
 ---
 
 ### 属性 `OnUpdateResourcePointChangeDelegate`
@@ -142,6 +153,10 @@
 | 反射说明符 | BlueprintAssignable |
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnUpdateResourcePointChangeDelegate OnUpdateResourcePointChangeDelegate;` |
+
+**说明:**
+
+> On Update Resource Point Change Delegate 事件或回调。
 
 ---
 
@@ -154,6 +169,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnUpdateTeamKillNumberDelegate OnUpdateTeamKillNumberDelegate;` |
 
+**说明:**
+
+> On Update Team Kill Number Delegate 事件或回调。
+
 ---
 
 ### 属性 `OnTeamMultiKillDelegate`
@@ -165,20 +184,9 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnTeamMultiKillDelegate OnTeamMultiKillDelegate;` |
 
----
+**说明:**
 
-### 属性 `OnNotificationDelegate`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | `FOnNotificationDelegate` |
-| 反射说明符 | BlueprintAssignable |
-| 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnNotificationDelegate OnNotificationDelegate;` |
-
-**源码注释:**
-
-> 日志通知
+> On Team Multi Kill Delegate 事件或回调。
 
 ---
 
@@ -191,7 +199,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) int32 MeanTimeToRecovery = 3;` |
 
-**源码注释:**
+**说明:**
 
 > 资源量单位的恢复时间
 
@@ -206,7 +214,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) float CurTimeToRecovery = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 当前恢复时间
 
@@ -226,6 +234,10 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
+**说明:**
+
+> 获取或查询 Get World Battle Manager。
+
 ---
 
 ### 函数 `CreateBattlefield`
@@ -238,17 +250,48 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `BattleType` | `EBattleType` |
+| `BattleType` | [EBattleType](../../Struct/CommonEnum__EBattleType.md) |
 | `BattlePlaceGuid` | `const FGuid &` |
 | `RelevancyPlaceGuid` | `const FGuid &` |
+| `（匿名/仅类型）` | `FGuid FromPlaceGuid = FGuid()` |
 
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FBattlefieldInformation& CreateBattlefield(EBattleType BattleType,const FGuid & BattlePlaceGuid,const FGuid & RelevancyPlaceGuid);`
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FBattlefieldInformation& CreateBattlefield(EBattleType BattleType,const FGuid & BattlePlaceGuid,const FGuid & RelevancyPlaceGuid,FGuid FromPlaceGuid = FGuid());`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
-> 创建战场信息
+> 创建战场信息（FromPlaceGuid: 出征发起地点，默认无效时内部回退攻方 MainPlace，保旧蓝图/cpp 二进制兼容）
+
+---
+
+### 函数 `ResolvePlaceDisposal`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `WinnerForce` | [AWorldForce](../WorldForce__AWorldForce.md)* |
+| `TargetPlace` | [AWorldPlace](../WorldPlace__AWorldPlace.md)* |
+| `AttackerTeam` | const [FBattleTeamInfo](WorldBattleStruct__FBattleTeamInfo.md)& |
+| `Disposal` | [EPlaceDisposalType](../WorldStruct__EPlaceDisposalType.md) |
+| `true` | `bool bApplyAttackFavorability =` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void ResolvePlaceDisposal(AWorldForce* WinnerForce, AWorldPlace* TargetPlace, const FBattleTeamInfo& AttackerTeam, EPlaceDisposalType Disposal, bool bApplyAttackFavorability = true);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> [PR-11] 统一战利品三选一处置结算入口（占领/劫掠/摧毁 + 必然建筑损毁 + 物资/正邪值数值化）。
+> 文档 §7。AttackerTeam 仅作上下文（PR-7 离屏战无真实部队，传入用于校验/PR-8 战报）。
+> [迁移说明] 真正实现已整体迁至 AWorldBattleCoreManager::ResolvePlaceDisposal。
+> 本函数现仅为「BlueprintCallable 签名冻结兼容 + Core 缺失时的兜底转发壳」(内部转调 Core)。
+> 新代码请直接调 AWorldBattleCoreManager::ResolvePlaceDisposal，不要新增对本壳的依赖。
 
 ---
 
@@ -268,7 +311,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 取消战场不做结算
 
@@ -291,7 +334,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 查找战场信息
 
@@ -315,7 +358,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 加入战斗
 
@@ -338,7 +381,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查是否可以撤退
 
@@ -361,7 +404,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 战斗开始前撤退
 
@@ -383,8 +426,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
+> [PR-A] 战斗结算 BattleSettlement / EncounterSettlement / 筛选俘虏 FiltrateCaptureCharacter 已迁入 AWorldBattleCoreManager。
+> [PR-C] 旧 ForceFavorabilityChange 已删除（零调用的 PR-6 预留入口，详见 .cpp 收口注释）。
 > 移除战斗信息
 
 ---
@@ -406,7 +451,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 战斗投降
 
@@ -428,7 +473,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 进入战场
 
@@ -451,7 +496,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取角色当前的行进路线
 
@@ -469,7 +514,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取当前地点的战场信息
 
@@ -494,7 +539,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取行走的下一个路径点
 
@@ -519,7 +564,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取当前路径点的下一个路径点
 
@@ -536,13 +581,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `TeamID` | `int32` |
-| `BattlefieldRolesType` | `EBattlefieldRolesType` |
+| `BattlefieldRolesType` | [EBattlefieldRolesType](../../Struct/CommonEnum__EBattlefieldRolesType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintPure) TArray<AEastRimWorldCharacter*> GetWorldBattleCharacters(int32 TeamID,EBattlefieldRolesType BattlefieldRolesType);`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取战斗中的角色
 
@@ -564,7 +609,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取存活的水晶
 
@@ -588,7 +633,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 释放战略技能
 
@@ -612,7 +657,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 释放范围技能
 
@@ -635,7 +680,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 释放全局技能
 
@@ -658,7 +703,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查是否可以释放战略技能
 
@@ -681,7 +726,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 抽取战略卡牌
 
@@ -704,7 +749,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 抽取角色卡牌
 
@@ -727,7 +772,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过阵营guid抽取战略卡牌
 
@@ -750,7 +795,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过角色guid抽取角色卡牌
 
@@ -772,7 +817,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取阵营信息
 
@@ -794,7 +839,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 开启抽取战略计时
 
@@ -816,7 +861,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查是否可以抽取战略
 
@@ -838,7 +883,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 开启抽取角色计时
 
@@ -860,7 +905,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查是否可以抽取角色
 
@@ -878,7 +923,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 清理定时器
 
@@ -896,7 +941,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 添加定时器
 
@@ -914,7 +959,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取玩家阵营信息
 
@@ -936,7 +981,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 或者通过战场信息获取玩家阵营信息
 
@@ -958,7 +1003,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 释放角色卡牌
 
@@ -981,7 +1026,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查是否可以释放角色卡牌
 
@@ -1004,7 +1049,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 改变战略点数
 
@@ -1027,7 +1072,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 改变资源点数
 
@@ -1049,7 +1094,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取战略点上限
 
@@ -1071,7 +1116,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取资源点上限
 
@@ -1093,7 +1138,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 统计战斗数据
 
@@ -1116,7 +1161,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新自动使用战略技能时间
 
@@ -1139,7 +1184,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 自动使用战略技能
 
@@ -1162,7 +1207,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新自动使用角色技能时间
 
@@ -1180,7 +1225,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 返回驻地
 
@@ -1197,15 +1242,17 @@
 | 参数名 | 类型 |
 |--------|------|
 | `BattlefieldInformationGuid` | `const FGuid &` |
-| `PlaceDisposalType` | `EPlaceDisposalType` |
+| `PlaceDisposalType` | [EPlaceDisposalType](../WorldStruct__EPlaceDisposalType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool PlayerSelectDisposalPlace(const FGuid & BattlefieldInformationGuid,EPlaceDisposalType PlaceDisposalType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
-> 玩家胜利处置城市
+> [PR-A] 结算管线 StartSettleAccounts / EncounterSettleAccountsStart / EncounterSettleAccountsEnd
+> CheckHaveSettleAccounts / NextSettleAccounts 已迁入 AWorldBattleCoreManager。
+> 玩家胜利处置城市（[PR-A] 蓝图转发壳：实现迁 Core，本壳保 Target=BattleManager 兼容）
 
 ---
 
@@ -1220,15 +1267,15 @@
 | 参数名 | 类型 |
 |--------|------|
 | `BattlefieldInformationGuid` | `const FGuid &` |
-| `PostwarCharacterDispose` | `const TMap<FGuid,ECaptureCharacterDisposalType> &` |
+| `PostwarCharacterDispose` | const TMap<FGuid,[ECaptureCharacterDisposalType](../WorldStruct__ECaptureCharacterDisposalType.md)> & |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void PlayerDisposalCaptureCharacter(const FGuid & BattlefieldInformationGuid,const TMap<FGuid,ECaptureCharacterDisposalType> & PostwarCharacterDispose);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
-> 玩家胜利处置俘虏的角色
+> 玩家胜利处置俘虏的角色（[PR-A] 蓝图转发壳）
 
 ---
 
@@ -1249,9 +1296,9 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
-> 选择留守的人
+> 选择留守的人（[PR-A] 蓝图转发壳）
 
 ---
 
@@ -1271,9 +1318,9 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
-> 结算完成
+> 结算完成（[PR-A] 蓝图转发壳）
 
 ---
 
@@ -1288,15 +1335,20 @@
 | 参数名 | 类型 |
 |--------|------|
 | `BattlefieldGuid` | `const FGuid &` |
-| `（匿名/仅类型）` | `ETransportationType TransportationType = ETransportationType::Walking` |
+| `（匿名/仅类型）` | [ETransportationType](../../ERW_Enumerations__ETransportationType.md) TransportationType = [ETransportationType](../../ERW_Enumerations__ETransportationType.md)::Walking |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void AttackerStartMove(const FGuid & BattlefieldGuid,ETransportationType TransportationType = ETransportationType::Walking);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
-> 攻击方开始出发
+> ============================================================================
+> [废弃·移动逻辑已迁出] 大世界出征行军 / 抵达切换 已统一到 AWorldMapManage::UpdateWorldActorMoveState2D。
+> 以下移动相关接口均已不再被调用，保留代码不删(便于回溯/潜在复用)。
+> 例外：NpcMarchAttackerMovetoBattlePlace 不在此列——它现在是 NPC 围城"结算入口"，仍被 WorldMapManage 调用。
+> ============================================================================
+> 攻击方开始出发  [废弃] 出征行军改由 WorldForce::RequestAttack → WorldMapManage::CreateOneMove 创建，已无调用方
 
 ---
 
@@ -1316,9 +1368,9 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
-> 删除战斗移动提示
+> 删除战斗移动提示  [废弃] 旧战斗行军提示清理，移动迁出后已无 C++ 调用方
 
 ---
 
@@ -1333,13 +1385,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Character` | [AEastRimWorldCharacter](../../Character/EastRimWorldCharacter__AEastRimWorldCharacter.md) * |
-| `CharacterCureState` | `ECharacterCureState` |
+| `CharacterCureState` | [ECharacterCureState](WorldBattleStruct__ECharacterCureState.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void UpdateSeriousInjuryCharacterState(AEastRimWorldCharacter * Character,ECharacterCureState CharacterCureState);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新重伤人员的状态
 
@@ -1361,7 +1413,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取一个可以放置伤员的位置
 
@@ -1383,7 +1435,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取治疗信息
 

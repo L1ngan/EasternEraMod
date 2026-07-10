@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Use Item Save Data data structure.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = "Common") FName InventoryID;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品的id
 
@@ -27,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EGroundInventoryType` |
+| C++ type | [EGroundInventoryType](CommonEnum__EGroundInventoryType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Common" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Common") EGroundInventoryType GroundInventoryType = EGroundInventoryType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品的大分类
 
@@ -42,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EEquipmentType` |
+| C++ type | [EEquipmentType](CommonEnum__EEquipmentType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Common" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Common") EEquipmentType EquipmentType = EEquipmentType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 装备的类型
 
@@ -57,12 +59,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EArmorType` |
+| C++ type | [EArmorType](CommonEnum__EArmorType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Common" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Common") EArmorType ArmorType = EArmorType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 防具的类型
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame,Category = "Common") FTransform ItemTransform;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品在世界中的位置
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame, Category = "Common") bool bOperationMark = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否被操作标记
 
@@ -102,12 +104,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<ECommonButtonType,bool>` |
+| C++ type | TMap<[ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md),bool> |
 | Reflection specifiers | BlueprintReadOnly, Category="Common" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame, Category = "Common") TMap<ECommonButtonType,bool> ButtonOperationState;` |
 
-**Source comments:**
+**Notes:**
 
 > 相关按钮的状态 是否选中
 
@@ -117,12 +119,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EInventoryItemStateType` |
+| C++ type | [EInventoryItemStateType](ItemStruct__EInventoryItemStateType.md) |
 | Reflection specifiers | BlueprintReadOnly, Category="Common" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame, Category = "Common") EInventoryItemStateType InventoryItemStateType = EInventoryItemStateType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品状态
 
@@ -137,7 +139,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = "Common") FGuid ItemGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品的GUID
 
@@ -152,7 +154,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame, Category = "Common") TArray<FWarehouseSmallGrid> SmallGrids;` |
 
-**Source comments:**
+**Notes:**
 
 > 此物品占用的小格子信息
 
@@ -167,7 +169,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame, Category = "Common") int32 ItemCount = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品的数量
 
@@ -177,12 +179,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EGroundSoilType` |
+| C++ type | [EGroundSoilType](../ERW_Enumerations__EGroundSoilType.md) |
 | Reflection specifiers | BlueprintReadOnly, Category="Common" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame, Category = "Common") EGroundSoilType GroundSoilType = EGroundSoilType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品所在的地面类型
 
@@ -197,7 +199,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame, Category = "Common") float ResidueItemShelfLife = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 剩余保质期
 
@@ -212,7 +214,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame, Category = "Common") float CurDurability = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前耐久度
 
@@ -227,7 +229,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame, Category = "Common") float CurCopyNum = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前已抄录次数
 
@@ -242,7 +244,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame, Category = "Common") int32 CurAirDryingDegree = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前风干度
 
@@ -257,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment") TArray<FName> MainAttributes;` |
 
-**Source comments:**
+**Notes:**
 
 > 此装备的主属性(EquipmentAttribute表）
 
@@ -272,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment") TArray<FName> SubAttributes;` |
 
-**Source comments:**
+**Notes:**
 
 > 此装备的次属性(EquipmentAttribute表）
 
@@ -287,7 +289,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment") TArray<FName> EquipmentAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 此装备自带的技能
 
@@ -302,7 +304,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment") FString CharacterName;` |
 
-**Source comments:**
+**Notes:**
 
 > 打造的人名字
 
@@ -312,12 +314,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EItemUseState` |
+| C++ type | [EItemUseState](ItemStruct__EItemUseState.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Equipment" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite ,SaveGame , Category = "Equipment") EItemUseState ItemState = EItemUseState::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 装备的使用状态
 
@@ -331,5 +333,9 @@
 | Reflection specifiers | BlueprintReadOnly, Category="WorldForce" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame, Category = "WorldForce") float GrowScore = 0.f;` |
+
+**Notes:**
+
+> Grow Score field.
 
 ---

@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> AI controller for summons: driven by the owner's controller, handles the summon's behavior state and battle behavior checks
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Summons", Meta = (AllowPrivateAccess = "true")) TObjectPtr<AEastRimWorldAIController> SelfController;` |
 
-**Source comments:**
+**Notes:**
 
 > 召唤物的控制者
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool bUseOwnerCharacterBehavior = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 使用拥有者的行为
 
@@ -56,7 +58,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置召唤物的控制器（骑乘者）
 
@@ -74,6 +76,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Returns the summon's data (FEastRimWorldSummonsData)
+
 ---
 
 ### Function `CheckCanRunBattleBehavior`
@@ -88,6 +94,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Checks whether the summon can currently run battle behavior
+
 ---
 
 ### Function `GetOwnerCharacterLocation`
@@ -101,5 +111,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Summons") FVector GetOwnerCharacterLocation() const;`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns the current location of the owner character
 
 ---

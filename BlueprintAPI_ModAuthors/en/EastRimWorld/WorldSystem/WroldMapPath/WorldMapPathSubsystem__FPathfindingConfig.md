@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = "1", ClampMax = "10000")) int32 MaxSearchDepth;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大搜索深度
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = "1.0", ClampMax = "3600.0")) float CacheExpireTime;` |
 
-**Source comments:**
+**Notes:**
 
 > 缓存过期时间（秒）
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = "1", ClampMax = "16")) int32 MaxParallelTasks;` |
 
-**Source comments:**
+**Notes:**
 
 > 并行任务数量
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = "1", ClampMax = "100")) int32 MaxWaypointsPerNode;` |
 
-**Source comments:**
+**Notes:**
 
 > 空间索引参数
 
@@ -79,6 +79,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = "1", ClampMax = "16")) int32 MaxQuadTreeDepth;` |
 
+**Notes:**
+
+> Max Quad Tree Depth field.
+
 ---
 
 ### Property `bEnableCache`
@@ -90,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) bool bEnableCache;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否启用缓存
 
@@ -105,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite) bool bEnableSpatialIndex;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否启用空间索引
 

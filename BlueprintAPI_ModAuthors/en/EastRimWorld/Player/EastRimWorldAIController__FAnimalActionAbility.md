@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Animation") TMap<int32, TSoftObjectPtr<UAnimMontage>> BehaviorStartAnimMontage;` |
 
-**Source comments:**
+**Notes:**
 
 > 每种动物对应的动画数据
 > TMap<动物ID , 动画数据>
@@ -36,7 +36,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Animation") TMap<int32,FCharacterActionAbilityAnimSections> BehaviorAnimSections;` |
 
-**Source comments:**
+**Notes:**
 
 > 动画蒙太奇片段
 
@@ -51,7 +51,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite , Category = "Abilities") TSoftClassPtr<UEastRimWorldGameplayAbility> GameplayAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 此动作使用的能力
 

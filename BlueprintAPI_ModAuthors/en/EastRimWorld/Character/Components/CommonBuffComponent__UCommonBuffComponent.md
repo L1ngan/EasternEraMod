@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Common buff component managing add/remove/activate/suspend of character buffs and the application/cleanup of their gameplay effects.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TArray<FCommonBuff> BuffArray;` |
 
-**Source comments:**
+**Notes:**
 
 > 拥有的buff
 
@@ -32,6 +34,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FRemoveBuffDelegate OnRemoveBuffDelegate;` |
 
+**Notes:**
+
+> Event fired when a buff is removed; the parameter is the removed buff.
+
 ---
 
 ### Property `OnAddBuffDelegate`
@@ -43,6 +49,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FAddBuffDelegate OnAddBuffDelegate;` |
 
+**Notes:**
+
+> Event fired when a buff is added; the parameter is the added buff.
+
 ---
 
 ### Property `OnUpdateBuffDelegate`
@@ -53,6 +63,10 @@
 | Reflection specifiers | BlueprintAssignable |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FUpdateBuffDelegate OnUpdateBuffDelegate;` |
+
+**Notes:**
+
+> Event fired when the buff list is updated.
 
 ---
 
@@ -76,7 +90,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 添加buff
 > 
@@ -104,7 +118,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID添加buff
 
@@ -128,7 +142,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 添加id数组的buff
 
@@ -151,9 +165,32 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除buff
+
+---
+
+### Function `GetBuffByID`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `BuffID` | `const FName &` |
+| `OutBuff` | [FCommonBuff](../../Struct/CommonStruct__FCommonBuff.md) & |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool GetBuffByID(const FName & BuffID, FCommonBuff & OutBuff);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 通过ID获取一个buff信息(找到返回true并填充OutBuff)
 
 ---
 
@@ -169,6 +206,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Broadcasts the buff update event (OnUpdateBuffDelegate).
+
 ---
 
 ### Function `GetAllBuff`
@@ -183,7 +224,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有buff 包含未激活的buff
 
@@ -201,7 +242,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有激活的buff
 

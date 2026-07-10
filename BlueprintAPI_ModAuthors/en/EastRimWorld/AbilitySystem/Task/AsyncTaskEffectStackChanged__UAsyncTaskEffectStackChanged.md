@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Blueprint async task that listens for stack count changes of GameplayEffects with the given tags.
 
 ## Blueprint-exposed variables
 
@@ -16,6 +18,10 @@
 | Reflection specifiers | BlueprintAssignable |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnGameplayEffectStackChanged OnGameplayEffectStackChange;` |
+
+**Notes:**
+
+> Delegate broadcast when a GameplayEffect stack count changes (effect tag, effect handle, new stack count, previous stack count).
 
 ---
 
@@ -38,6 +44,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Creates an async task that listens for stack count changes of GameplayEffects with the specified tag.
+
 ---
 
 ### Function `ListenForGameplayEffectStackTArrayChange`
@@ -57,6 +67,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Creates an async task that listens for stack count changes of GameplayEffects matching an array of tags.
+
 ---
 
 ### Function `EndTask`
@@ -70,5 +84,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void EndTask();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Ends this async task and removes the listener; must be called manually (e.g. in a widget's Destruct event).
 
 ---

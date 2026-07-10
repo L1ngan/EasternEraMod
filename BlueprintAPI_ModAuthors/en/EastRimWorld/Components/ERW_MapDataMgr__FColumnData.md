@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TArray<FGridData> ColumnData;` |
 
-**Source comments:**
+**Notes:**
 
 > TArray<层数据>
 

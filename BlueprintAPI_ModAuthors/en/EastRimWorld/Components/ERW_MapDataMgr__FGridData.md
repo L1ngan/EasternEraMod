@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<int32 , FEnvironData> LayerData;` |
 
-**Source comments:**
+**Notes:**
 
 > 每层环境数据
 > TMap<层 , 环境数据>
@@ -35,7 +35,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) bool IsHeightSet { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 高度是否设置
 
@@ -50,7 +50,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) float FoundationHeight { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 地基(或水池, 阶梯)高度
 
@@ -65,7 +65,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) float MinHeight { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 格子最低高度
 
@@ -80,7 +80,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) float MaxHeight { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 格子最大高度
 
@@ -95,7 +95,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) float CenterHeight { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 格子中心高度
 
@@ -110,7 +110,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) float Slope { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 格子的斜率
 
@@ -120,12 +120,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EGroundSoilType` |
+| C++ type | [EGroundSoilType](../ERW_Enumerations__EGroundSoilType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,SaveGame) EGroundSoilType GroundSoilType = EGroundSoilType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 地形材质对应的土地类型 todo...废弃
 
@@ -140,7 +140,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float GroundRichPercent = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 土地肥沃度
 

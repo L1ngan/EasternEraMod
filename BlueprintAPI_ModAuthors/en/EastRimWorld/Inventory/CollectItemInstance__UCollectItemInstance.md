@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Collectible item instance with growth speed, grow/harvest times, stage and health state
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float GrowSpeed = {0.f};` |
 
-**Source comments:**
+**Notes:**
 
 > 生长速度   生长温度效率X土壤效率 = 生长速度
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float TotalGrowTime = {0.f};` |
 
-**Source comments:**
+**Notes:**
 
 > 总生长时间 只会在生长阶段计时
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float TotalHarvestTime = {0.f};` |
 
-**Source comments:**
+**Notes:**
 
 > 总收成时间 如果会结果
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float CurGrowTime = {0.f};` |
 
-**Source comments:**
+**Notes:**
 
 > 总生长时间 只会在生长阶段计时
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float CurHarvestTime = {0.f};` |
 
-**Source comments:**
+**Notes:**
 
 > 总收成时间 如果会结果
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float CurStageGrowTime = {0.f};` |
 
-**Source comments:**
+**Notes:**
 
 > 阶段生长时间
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) FGrowStage CurGrowStage;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前阶段的信息
 
@@ -122,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float CurHealth = 0.0f;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前健康值
 
@@ -137,7 +139,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float SoilEfficiency = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 土壤效率
 
@@ -152,7 +154,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere,BlueprintReadOnly) bool bSuspendGrow = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 暂停生长
 
@@ -167,7 +169,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int32 CurExplorationTime;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前被探索的次数
 
@@ -185,13 +187,13 @@
 
 | Name | Type |
 |--------|------|
-| `InStage` | `const EGrowStageType&` |
+| `InStage` | const [EGrowStageType](../Struct/ItemStruct__EGrowStageType.md)& |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintPure) bool IsHaveGrowStage(const EGrowStageType& InStage);`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 是否有果实成熟阶段
 
@@ -209,7 +211,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查是否可以生长
 
@@ -227,7 +229,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新采集物的生长阶段 (注意线程安全 此方法会在子线程中运行)
 
@@ -243,13 +245,13 @@
 
 | Name | Type |
 |--------|------|
-| `NewGrowStage` | `EGrowStageType` |
+| `NewGrowStage` | [EGrowStageType](../Struct/ItemStruct__EGrowStageType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool SetGrowStage(EGrowStageType NewGrowStage);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置新的阶段
 
@@ -267,7 +269,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取采集物信息
 
@@ -285,7 +287,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取生命值百分比
 
@@ -303,7 +305,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取当前生长百分比
 
@@ -321,7 +323,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取当前收成进度 如果会结果
 
@@ -339,7 +341,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取当前的土壤效率
 
@@ -357,7 +359,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取当前的天气效率
 
@@ -375,7 +377,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取当前的光照效率
 
@@ -393,7 +395,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取此类型的所有的产出
 
@@ -411,7 +413,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取此类型的当前阶段产出
 
@@ -427,13 +429,13 @@
 
 | Name | Type |
 |--------|------|
-| `NextGorGrowStage` | `EGrowStageType` |
+| `NextGorGrowStage` | [EGrowStageType](../Struct/ItemStruct__EGrowStageType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) virtual void CollectItemRegrow(EGrowStageType NextGorGrowStage);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 重生
 
@@ -455,7 +457,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 暂停生长
 
@@ -477,7 +479,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 探索一次产出
 

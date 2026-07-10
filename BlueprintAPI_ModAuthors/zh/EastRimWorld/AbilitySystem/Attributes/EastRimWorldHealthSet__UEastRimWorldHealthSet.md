@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 生命属性集：总血量、各身体部位血量、各类伤害、营养/疲劳/娱乐/心情等生存属性及死亡结算逻辑
 
 ## 蓝图暴露变量
 
@@ -17,6 +19,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Health;` |
 
+**说明:**
+
+> 当前的生命值
+
 ---
 
 ### 属性 `CurMaxHealth`
@@ -27,6 +33,10 @@
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Health" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurMaxHealth;` |
+
+**说明:**
+
+> 当前最大生命值，部位受伤后会改变
 
 ---
 
@@ -39,6 +49,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MaxHealth;` |
 
+**说明:**
+
+> 由各部位计算得到的最大生命值
+
 ---
 
 ### 属性 `MoveSpeed`
@@ -49,6 +63,10 @@
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Health" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MoveSpeed;` |
+
+**说明:**
+
+> 移动速度
 
 ---
 
@@ -61,6 +79,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RunSpeed;` |
 
+**说明:**
+
+> 奔跑速度
+
 ---
 
 ### 属性 `SanitationInfluence`
@@ -72,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SanitationInfluence;` |
 
-**源码注释:**
+**说明:**
 
 > 卫生影响
 
@@ -87,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData FreeWeight;` |
 
-**源码注释:**
+**说明:**
 
 > 携带能力
 
@@ -102,7 +124,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ToxicResistance;` |
 
-**源码注释:**
+**说明:**
 
 > 毒抗
 
@@ -117,7 +139,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MinPreferenceTemperature;` |
 
-**源码注释:**
+**说明:**
 
 > 适宜的温度
 
@@ -132,7 +154,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MaxPreferenceTemperature;` |
 
-**源码注释:**
+**说明:**
 
 > 适宜的温度
 
@@ -147,7 +169,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Immunity;` |
 
-**源码注释:**
+**说明:**
 
 > 免疫力
 
@@ -162,7 +184,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BreakdownThresholdChangeValue;` |
 
-**源码注释:**
+**说明:**
 
 > 崩溃阈值变化值
 
@@ -177,7 +199,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PainThreshold;` |
 
-**源码注释:**
+**说明:**
 
 > 疼痛阈值
 
@@ -192,7 +214,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ForagingAmount;` |
 
-**源码注释:**
+**说明:**
 
 > 觅食量
 
@@ -207,7 +229,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData FeedingSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 进食速度
 
@@ -222,7 +244,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ReproductiveCapacity;` |
 
-**源码注释:**
+**说明:**
 
 > 繁育能力
 
@@ -237,7 +259,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CrawlSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 爬行速度
 
@@ -252,7 +274,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NutritionValue;` |
 
-**源码注释:**
+**说明:**
 
 > 营养值
 
@@ -267,7 +289,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MaxNutritionValue;` |
 
-**源码注释:**
+**说明:**
 
 > 营养值上限
 
@@ -282,7 +304,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NutritionValueReduceSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 营养值减小速度
 
@@ -297,7 +319,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NutritionValueReduceSpeedPercent;` |
 
-**源码注释:**
+**说明:**
 
 > 营养值减小速度百分比
 
@@ -312,7 +334,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NutritionValueIncreaseSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 营养值增加速度
 
@@ -327,7 +349,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NutritionValueIncreaseSpeedPercent;` |
 
-**源码注释:**
+**说明:**
 
 > 营养值增加速度百分比
 
@@ -342,7 +364,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TiredValue;` |
 
-**源码注释:**
+**说明:**
 
 > 疲劳值
 
@@ -357,7 +379,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MaxTiredValue;` |
 
-**源码注释:**
+**说明:**
 
 > 疲劳值上限
 
@@ -372,7 +394,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TiredValueReduceSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 疲劳值减小速度
 
@@ -387,7 +409,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TiredValueReduceSpeedPercent;` |
 
-**源码注释:**
+**说明:**
 
 > 疲劳值减小速度百分比
 
@@ -402,7 +424,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TiredValueIncreaseSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 疲劳值增加速度
 
@@ -417,7 +439,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TiredValueIncreaseSpeedPercent;` |
 
-**源码注释:**
+**说明:**
 
 > 疲劳值增加速度百分比
 
@@ -432,7 +454,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HappyValue;` |
 
-**源码注释:**
+**说明:**
 
 > 娱乐值
 
@@ -447,7 +469,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MaxHappyValue;` |
 
-**源码注释:**
+**说明:**
 
 > 娱乐上限
 
@@ -462,7 +484,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HappyValueReduceSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 娱乐值减小速度
 
@@ -477,7 +499,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HappyValueReduceSpeedPercent;` |
 
-**源码注释:**
+**说明:**
 
 > 娱乐值减小速度百分比
 
@@ -492,7 +514,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HappyValueIncreaseSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 娱乐值增加速度
 
@@ -507,7 +529,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HappyValueIncreaseSpeedPercent;` |
 
-**源码注释:**
+**说明:**
 
 > 娱乐值增加速度百分比
 
@@ -522,7 +544,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MoodValue;` |
 
-**源码注释:**
+**说明:**
 
 > 心情值
 
@@ -537,7 +559,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Inspiration;` |
 
-**源码注释:**
+**说明:**
 
 > 感悟值
 
@@ -552,7 +574,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalMaxGrowthValue;` |
 
-**源码注释:**
+**说明:**
 
 > 动物最大成长值
 
@@ -567,7 +589,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalCurGrowthValue;` |
 
-**源码注释:**
+**说明:**
 
 > 动物当前成长值
 
@@ -582,7 +604,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AnimalAddGrowthValue;` |
 
-**源码注释:**
+**说明:**
 
 > 动物增长速度
 
@@ -597,7 +619,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MaxInspiration;` |
 
-**源码注释:**
+**说明:**
 
 > 最大感悟值
 
@@ -612,7 +634,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MoodTargetValue;` |
 
-**源码注释:**
+**说明:**
 
 > 心情目标值
 
@@ -627,6 +649,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category="EastRimWorld|Health", Meta=(AllowPrivateAccess=true)) FGameplayAttributeData Healing;` |
 
+**说明:**
+
+> 治疗量元属性，用于结算生命恢复
+
 ---
 
 ### 属性 `BaseHeal`
@@ -637,6 +663,10 @@
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Health" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category="EastRimWorld|Health", Meta=(HideFromModifiers,AllowPrivateAccess=true)) FGameplayAttributeData BaseHeal;` |
+
+**说明:**
+
+> 基础治疗量元属性（对Modifier隐藏）
 
 ---
 
@@ -649,7 +679,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category="EastRimWorld|Health", Meta=(AllowPrivateAccess=true)) FGameplayAttributeData Damage;` |
 
-**源码注释:**
+**说明:**
 
 > 给予的普通伤害
 
@@ -664,7 +694,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData OperationalStatus;` |
 
-**源码注释:**
+**说明:**
 
 > 操作相关状况
 
@@ -679,7 +709,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData VisualStatus;` |
 
-**源码注释:**
+**说明:**
 
 > 视觉相关状况
 
@@ -694,7 +724,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HearingStatus;` |
 
-**源码注释:**
+**说明:**
 
 > 视觉相关状况
 
@@ -709,7 +739,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData EatingStatus;` |
 
-**源码注释:**
+**说明:**
 
 > 进食相关状况
 
@@ -724,7 +754,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LanguageStatus;` |
 
-**源码注释:**
+**说明:**
 
 > 语言相关状况
 
@@ -739,7 +769,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BreathingStatus;` |
 
-**源码注释:**
+**说明:**
 
 > 呼吸相关状况
 
@@ -754,7 +784,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MovingStatus;` |
 
-**源码注释:**
+**说明:**
 
 > 移动相关状况
 
@@ -769,7 +799,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ReproductiveStatus;` |
 
-**源码注释:**
+**说明:**
 
 > 生育相关状况
 
@@ -784,7 +814,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BloodFiltrationStatus;` |
 
-**源码注释:**
+**说明:**
 
 > 血液过滤相关状况
 
@@ -799,7 +829,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DigestiveStatus;` |
 
-**源码注释:**
+**说明:**
 
 > 消耗相关状况
 
@@ -814,7 +844,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PierceDamage;` |
 
-**源码注释:**
+**说明:**
 
 > 穿刺伤害 不可直接配置
 
@@ -829,7 +859,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SlashDamage;` |
 
-**源码注释:**
+**说明:**
 
 > 切割伤害 不可直接配置
 
@@ -844,7 +874,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BluntDamage;` |
 
-**源码注释:**
+**说明:**
 
 > 钝器伤害 不可直接配置
 
@@ -859,7 +889,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PoisonDamage;` |
 
-**源码注释:**
+**说明:**
 
 > 毒气伤害 不可直接配置
 
@@ -874,7 +904,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TrueQiDamage;` |
 
-**源码注释:**
+**说明:**
 
 > 真气伤害 不可直接配置
 
@@ -889,7 +919,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (HideFromModifiers,AllowPrivateAccess = true)) FGameplayAttributeData PierceCriticalDamage;` |
 
-**源码注释:**
+**说明:**
 
 > 穿刺暴击伤害 不可直接配置
 
@@ -904,7 +934,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (HideFromModifiers,AllowPrivateAccess = true)) FGameplayAttributeData SlashCriticalDamage;` |
 
-**源码注释:**
+**说明:**
 
 > 切割暴击伤害 不可直接配置
 
@@ -919,9 +949,84 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (HideFromModifiers,AllowPrivateAccess = true)) FGameplayAttributeData BluntCriticalDamage;` |
 
-**源码注释:**
+**说明:**
 
 > 钝器暴击伤害 不可直接配置
+
+---
+
+### 属性 `PoisonCriticalDamage`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FGameplayAttributeData` |
+| 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Health" |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (HideFromModifiers,AllowPrivateAccess = true)) FGameplayAttributeData PoisonCriticalDamage;` |
+
+**说明:**
+
+> 毒素暴击伤害 不可直接配置
+
+---
+
+### 属性 `TrueQiCriticalDamage`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FGameplayAttributeData` |
+| 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Health" |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (HideFromModifiers,AllowPrivateAccess = true)) FGameplayAttributeData TrueQiCriticalDamage;` |
+
+**说明:**
+
+> 真气暴击伤害 不可直接配置
+
+---
+
+### 属性 `RemoteDamage`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FGameplayAttributeData` |
+| 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Health" |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RemoteDamage;` |
+
+**说明:**
+
+> 远程伤害 不可直接配置
+
+---
+
+### 属性 `RemoteCriticalDamage`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FGameplayAttributeData` |
+| 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Health" |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (HideFromModifiers,AllowPrivateAccess = true)) FGameplayAttributeData RemoteCriticalDamage;` |
+
+**说明:**
+
+> 远程暴击伤害 不可直接配置
+
+---
+
+### 属性 `TrueDamage`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FGameplayAttributeData` |
+| 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Health" |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TrueDamage;` |
+
+**说明:**
+
+> 真实伤害 不可直接配置（无视抗性/不吃增幅，独立输出不借用穿刺；真实伤害不可暴击）
 
 ---
 
@@ -934,7 +1039,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData PerceptionTemperature;` |
 
-**源码注释:**
+**说明:**
 
 > 体感温度
 
@@ -949,7 +1054,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DamageShield;` |
 
-**源码注释:**
+**说明:**
 
 > 罡气护盾
 
@@ -964,7 +1069,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DamageShieldMaxLife;` |
 
-**源码注释:**
+**说明:**
 
 > 罡气护盾 最大血量
 
@@ -979,7 +1084,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DamageShieldRecoverSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 罡气护盾 恢复速度
 
@@ -994,7 +1099,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DamageShieldRecoverSpeedPercent;` |
 
-**源码注释:**
+**说明:**
 
 > 罡气护盾 恢复速度百分比
 
@@ -1009,7 +1114,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Head;` |
 
-**源码注释:**
+**说明:**
 
 > 头
 
@@ -1024,7 +1129,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurHeadMaxLife;` |
 
-**源码注释:**
+**说明:**
 
 > 头当前最大血量
 
@@ -1039,7 +1144,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData HeadMaxLife;` |
 
-**源码注释:**
+**说明:**
 
 > 头 最大血量
 
@@ -1054,7 +1159,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LeftEye;` |
 
-**源码注释:**
+**说明:**
 
 > 左眼睛
 
@@ -1069,7 +1174,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurLeftEyeMaxLife;` |
 
-**源码注释:**
+**说明:**
 
 > 左眼睛
 
@@ -1084,7 +1189,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LeftEyeMaxLife;` |
 
-**源码注释:**
+**说明:**
 
 > 左眼睛 最大血量
 
@@ -1099,7 +1204,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RightEye;` |
 
-**源码注释:**
+**说明:**
 
 > 右眼睛
 
@@ -1114,6 +1219,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurRightEyeMaxLife;` |
 
+**说明:**
+
+> 右眼部位当前最大血量
+
 ---
 
 ### 属性 `RightEyeMaxLife`
@@ -1125,7 +1234,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RightEyeMaxLife;` |
 
-**源码注释:**
+**说明:**
 
 > 右眼睛 最大血量
 
@@ -1140,7 +1249,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LeftEar;` |
 
-**源码注释:**
+**说明:**
 
 > 左耳朵
 
@@ -1155,6 +1264,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurLeftEarMaxLife;` |
 
+**说明:**
+
+> 左耳部位当前最大血量
+
 ---
 
 ### 属性 `LeftEarMaxLife`
@@ -1166,7 +1279,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LeftEarMaxLife;` |
 
-**源码注释:**
+**说明:**
 
 > 左耳朵 最大血量
 
@@ -1181,7 +1294,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RightEar;` |
 
-**源码注释:**
+**说明:**
 
 > 右耳朵
 
@@ -1196,6 +1309,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurRightEarMaxLife;` |
 
+**说明:**
+
+> 右耳部位当前最大血量
+
 ---
 
 ### 属性 `RightEarMaxLife`
@@ -1207,7 +1324,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RightEarMaxLife;` |
 
-**源码注释:**
+**说明:**
 
 > 右耳朵 最大血量
 
@@ -1222,7 +1339,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Nose;` |
 
-**源码注释:**
+**说明:**
 
 > 鼻子
 
@@ -1237,6 +1354,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurNoseMaxLife;` |
 
+**说明:**
+
+> 鼻子部位当前最大血量
+
 ---
 
 ### 属性 `NoseMaxLife`
@@ -1248,7 +1369,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NoseMaxLife;` |
 
-**源码注释:**
+**说明:**
 
 > 鼻子 最大血量
 
@@ -1263,7 +1384,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Mouth;` |
 
-**源码注释:**
+**说明:**
 
 > 口
 
@@ -1278,6 +1399,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurMouthMaxLife;` |
 
+**说明:**
+
+> 口部当前最大血量
+
 ---
 
 ### 属性 `MouthMaxLife`
@@ -1289,7 +1414,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MouthMaxLife;` |
 
-**源码注释:**
+**说明:**
 
 > 口 最大血量
 
@@ -1304,7 +1429,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Body;` |
 
-**源码注释:**
+**说明:**
 
 > 躯干
 
@@ -1319,7 +1444,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurBodyMaxLife;` |
 
-**源码注释:**
+**说明:**
 
 > 当前躯干血上限
 
@@ -1334,7 +1459,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BodyMaxLife;` |
 
-**源码注释:**
+**说明:**
 
 > 躯干 最大血量
 
@@ -1349,7 +1474,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Viscera;` |
 
-**源码注释:**
+**说明:**
 
 > 内脏
 
@@ -1364,6 +1489,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurVisceraMaxLife;` |
 
+**说明:**
+
+> 内脏部位当前最大血量
+
 ---
 
 ### 属性 `VisceraMaxLife`
@@ -1375,7 +1504,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData VisceraMaxLife;` |
 
-**源码注释:**
+**说明:**
 
 > 内脏 最大血量
 
@@ -1390,7 +1519,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Dantian;` |
 
-**源码注释:**
+**说明:**
 
 > 丹田
 
@@ -1405,6 +1534,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurDantianMaxLife;` |
 
+**说明:**
+
+> 丹田部位当前最大血量
+
 ---
 
 ### 属性 `DantianMaxLife`
@@ -1416,7 +1549,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DantianMaxLife;` |
 
-**源码注释:**
+**说明:**
 
 > 丹田 最大血量
 
@@ -1431,7 +1564,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData XiaYin;` |
 
-**源码注释:**
+**说明:**
 
 > 下阴
 
@@ -1446,6 +1579,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurXiaYinMaxLife;` |
 
+**说明:**
+
+> 下阴部位当前最大血量
+
 ---
 
 ### 属性 `XiaYinMaxLife`
@@ -1457,7 +1594,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData XiaYinMaxLife;` |
 
-**源码注释:**
+**说明:**
 
 > 下阴 最大血量
 
@@ -1472,7 +1609,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LeftArm;` |
 
-**源码注释:**
+**说明:**
 
 > 左臂
 
@@ -1487,6 +1624,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurLeftArmMaxLife;` |
 
+**说明:**
+
+> 左臂部位当前最大血量
+
 ---
 
 ### 属性 `LeftArmMaxLife`
@@ -1498,7 +1639,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LeftArmMaxLife;` |
 
-**源码注释:**
+**说明:**
 
 > 左臂 最大血量
 
@@ -1513,7 +1654,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RightArm;` |
 
-**源码注释:**
+**说明:**
 
 > 右臂
 
@@ -1528,6 +1669,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurRightArmMaxLife;` |
 
+**说明:**
+
+> 右臂部位当前最大血量
+
 ---
 
 ### 属性 `RightArmMaxLife`
@@ -1539,7 +1684,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RightArmMaxLife;` |
 
-**源码注释:**
+**说明:**
 
 > 右臂 最大血量
 
@@ -1554,7 +1699,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LeftLeg;` |
 
-**源码注释:**
+**说明:**
 
 > 左腿
 
@@ -1569,6 +1714,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurLeftLegMaxLife;` |
 
+**说明:**
+
+> 左腿部位当前最大血量
+
 ---
 
 ### 属性 `LeftLegMaxLife`
@@ -1580,7 +1729,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LeftLegMaxLife;` |
 
-**源码注释:**
+**说明:**
 
 > 左腿 最大血量
 
@@ -1595,7 +1744,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RightLeg;` |
 
-**源码注释:**
+**说明:**
 
 > 右腿
 
@@ -1610,6 +1759,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurRightLegMaxLife;` |
 
+**说明:**
+
+> 右腿部位当前最大血量
+
 ---
 
 ### 属性 `RightLegMaxLife`
@@ -1621,7 +1774,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RightLegMaxLife;` |
 
-**源码注释:**
+**说明:**
 
 > 右腿 最大血量
 
@@ -1636,7 +1789,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LeftFoot;` |
 
-**源码注释:**
+**说明:**
 
 > 左脚
 
@@ -1651,6 +1804,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurLeftFootMaxLife;` |
 
+**说明:**
+
+> 左脚部位当前最大血量
+
 ---
 
 ### 属性 `LeftFootMaxLife`
@@ -1662,7 +1819,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LeftFootMaxLife;` |
 
-**源码注释:**
+**说明:**
 
 > 左脚 最大血量
 
@@ -1677,7 +1834,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RightFoot;` |
 
-**源码注释:**
+**说明:**
 
 > 右脚
 
@@ -1692,6 +1849,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CurRightFootMaxLife;` |
 
+**说明:**
+
+> 右脚部位当前最大血量
+
 ---
 
 ### 属性 `RightFootMaxLife`
@@ -1703,7 +1864,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RightFootMaxLife;` |
 
-**源码注释:**
+**说明:**
 
 > 右脚 最大血量
 
@@ -1718,7 +1879,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RobotEnergyMaxValue;` |
 
-**源码注释:**
+**说明:**
 
 > 机关人最大能源
 
@@ -1733,7 +1894,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RobotEnergyCurValue;` |
 
-**源码注释:**
+**说明:**
 
 > 机关人当前能源
 
@@ -1748,7 +1909,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RobotEnergyIntervalStanbyRecoveryValue;` |
 
-**源码注释:**
+**说明:**
 
 > 机关人单位时间待机恢复的能源
 
@@ -1763,7 +1924,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RobotEnergyIntervalStanbyRecoverySpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 机关人单位时间待机恢复的能源速度
 
@@ -1778,7 +1939,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RobotEnergyIntervalInBuildingRecoveryValue;` |
 
-**源码注释:**
+**说明:**
 
 > 机关人单位时间在维修建筑恢复的能源
 
@@ -1793,7 +1954,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RobotEnergyIntervalInBuildingRecoverySpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 机关人单位时间在维修建筑恢复的能源速度
 
@@ -1808,7 +1969,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RobotEnergyIntervalExpendValue;` |
 
-**源码注释:**
+**说明:**
 
 > 机关人单位时间消耗的能源
 
@@ -1823,7 +1984,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RobotEnergyIntervalExpendSpeed;` |
 
-**源码注释:**
+**说明:**
 
 > 机关人单位时间消耗的能源速度
 
@@ -1838,7 +1999,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BaseHealingRate;` |
 
-**源码注释:**
+**说明:**
 
 > 基础愈合速度
 
@@ -1853,7 +2014,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BleedEffectValue;` |
 
-**源码注释:**
+**说明:**
 
 > 流血效果数值(部位每个小时失去的健康值)
 
@@ -1868,7 +2029,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData WeaknessEffectValue;` |
 
-**源码注释:**
+**说明:**
 
 > 虚弱效果数值（角色攻击类属性降低）
 
@@ -1883,7 +2044,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData SpoilEffectValue;` |
 
-**源码注释:**
+**说明:**
 
 > 腐坏效果数值（部位每天降低健康值）
 
@@ -1898,7 +2059,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ChangeATKAttribute;` |
 
-**源码注释:**
+**说明:**
 
 > 改变攻击力属性
 
@@ -1913,7 +2074,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ChangeMAEffect;` |
 
-**源码注释:**
+**说明:**
 
 > 改变武学值
 
@@ -1928,7 +2089,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData CanTreatCount;` |
 
-**源码注释:**
+**说明:**
 
 > 一次可以医治的伤势数量
 
@@ -1943,7 +2104,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData AntDrugResistance;` |
 
-**源码注释:**
+**说明:**
 
 > 抗耐药性
 
@@ -1958,7 +2119,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData InjuryOrgan;` |
 
-**源码注释:**
+**说明:**
 
 > 伤势部位
 
@@ -1973,7 +2134,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData DamagePercentage;` |
 
-**源码注释:**
+**说明:**
 
 > 伤势百分比（目前用于伤害部位时的伤害百分比）
 
@@ -1988,7 +2149,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxHeadPercentage;` |
 
-**源码注释:**
+**说明:**
 
 > 损失头部血量百分比
 
@@ -2003,7 +2164,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxLeftEyePercentage;` |
 
-**源码注释:**
+**说明:**
 
 > 损失左眼睛血量百分比
 
@@ -2018,7 +2179,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxRightEyePercentage;` |
 
-**源码注释:**
+**说明:**
 
 > 损失右眼睛血量百分比
 
@@ -2033,7 +2194,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxLeftEarPercentage;` |
 
-**源码注释:**
+**说明:**
 
 > 损失左耳朵血量百分比
 
@@ -2048,7 +2209,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxRightEarPercentage;` |
 
-**源码注释:**
+**说明:**
 
 > 损失右耳朵血量百分比
 
@@ -2063,7 +2224,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxNosePercentage;` |
 
-**源码注释:**
+**说明:**
 
 > 损失鼻子血量百分比
 
@@ -2078,7 +2239,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxMouthPercentage;` |
 
-**源码注释:**
+**说明:**
 
 > 损失口血量百分比
 
@@ -2093,7 +2254,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxBodyPercentage;` |
 
-**源码注释:**
+**说明:**
 
 > 损失躯干血量百分比
 
@@ -2108,7 +2269,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxVisceraPercentage;` |
 
-**源码注释:**
+**说明:**
 
 > 损失内脏血量百分比
 
@@ -2123,7 +2284,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxDantianPercentage;` |
 
-**源码注释:**
+**说明:**
 
 > 损失丹田血量百分比
 
@@ -2138,7 +2299,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxXiaYinPercentage;` |
 
-**源码注释:**
+**说明:**
 
 > 损失下阴血量百分比
 
@@ -2153,7 +2314,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxLeftArmPercentage;` |
 
-**源码注释:**
+**说明:**
 
 > 损失左臂血量百分比
 
@@ -2168,7 +2329,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxRightArmPercentage;` |
 
-**源码注释:**
+**说明:**
 
 > 损失右臂血量百分比
 
@@ -2183,7 +2344,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxLeftLegPercentage;` |
 
-**源码注释:**
+**说明:**
 
 > 损失左腿血量百分比
 
@@ -2198,7 +2359,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData LossMaxRightLegPercentage;` |
 
-**源码注释:**
+**说明:**
 
 > 损失右腿血量百分比
 
@@ -2213,7 +2374,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData RotValue;` |
 
-**源码注释:**
+**说明:**
 
 > 腐烂值
 
@@ -2228,7 +2389,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MaxRotValue;` |
 
-**源码注释:**
+**说明:**
 
 > 最大腐烂值
 
@@ -2243,7 +2404,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Species;` |
 
-**源码注释:**
+**说明:**
 
 > 物种
 
@@ -2258,7 +2419,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData KnockDownValue;` |
 
-**源码注释:**
+**说明:**
 
 > 晕倒值
 
@@ -2272,6 +2433,10 @@
 | 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|Health" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData MaxKnockDownValue;` |
+
+**说明:**
+
+> 晕倒值上限
 
 ---
 
@@ -2293,7 +2458,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算被当前攻击技能攻击的命中器官(根据器官权重计算)
 
@@ -2316,7 +2481,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算伤害分摊的器官和分摊比例(根据分摊权重计算)
 
@@ -2334,13 +2499,13 @@
 |--------|------|
 | `OrganConfig` | const [FCharacterOrganConfig](../../Struct/CharacterStruct__FCharacterOrganConfig.md) & |
 | `DamageType` | `EDamageType` |
-| `HurtLevel` | `EHurtLevel` |
+| `HurtLevel` | [EHurtLevel](../../Struct/CharacterStruct__EHurtLevel.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) FName CalInjuryFrom(const FCharacterOrganConfig & OrganConfig, EDamageType DamageType, EHurtLevel HurtLevel) const;`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算伤势来源
 
@@ -2351,7 +2516,7 @@
 | 项目 | 内容 |
 |------|------|
 | 反射说明符 | BlueprintCallable |
-| 返回类型 | `EHurtLevel` |
+| 返回类型 | [EHurtLevel](../../Struct/CharacterStruct__EHurtLevel.md) |
 | 参数 | 见下表 |
 
 | 参数名 | 类型 |
@@ -2363,7 +2528,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算伤害程度
 

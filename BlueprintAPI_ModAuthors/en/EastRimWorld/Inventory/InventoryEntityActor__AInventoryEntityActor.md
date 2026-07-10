@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Substitute entity actor for an inventory item instance, providing collision, mesh display and select/hover/collect interactions
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) bool IsHarvest { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是收割
 
@@ -32,6 +34,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|InventoryEntity", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UBoxComponent> BoxComponent;` |
 
+**Notes:**
+
+> Box collision component
+
 ---
 
 ### Property `StaticMeshComponent`
@@ -42,6 +48,10 @@
 | Reflection specifiers | BlueprintReadOnly, AllowPrivateAccess, Category="EastRimWorld|InventoryEntity" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|InventoryEntity", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UStaticMeshComponent> StaticMeshComponent;` |
+
+**Notes:**
+
+> Static mesh component
 
 ---
 
@@ -54,6 +64,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "EastRimWorld|InventoryEntity", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UInventoryItemInstance> InventoryItemInstance;` |
 
+**Notes:**
+
+> Inventory item instance represented by this entity
+
 ---
 
 ### Property `bSelectState`
@@ -65,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool bSelectState;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是选中状态
 
@@ -80,7 +94,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool bHoveringState = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是悬浮状态
 
@@ -95,6 +109,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly) TObjectPtr<AERW_PlayerControllerBase> PlayerControllerBase;` |
 
+**Notes:**
+
+> Cached reference to the player controller
+
 ---
 
 ### Property `bAllowCPUAccess`
@@ -106,6 +124,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , SaveGame) bool bAllowCPUAccess = false;` |
 
+**Notes:**
+
+> Whether the mesh data allows CPU access
+
 ---
 
 ### Property `CustomDepthStencilValue`
@@ -116,6 +138,10 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) int32 CustomDepthStencilValue { 0 };` |
+
+**Notes:**
+
+> Custom depth stencil value
 
 ---
 
@@ -133,7 +159,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 当存档时
 
@@ -151,7 +177,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 当读档时
 
@@ -168,6 +194,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void EntityActorDestroy();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Destroys this entity actor
 
 ---
 
@@ -187,7 +217,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化数据
 
@@ -205,7 +235,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 初始化actor
 
@@ -227,7 +257,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 播放操作动画
 
@@ -244,14 +274,14 @@
 | Name | Type |
 |--------|------|
 | `CollectActor` | `AActor *` |
-| `NextGorGrowStage` | `EGrowStageType` |
+| `NextGorGrowStage` | [EGrowStageType](../Struct/ItemStruct__EGrowStageType.md) |
 | `bDestroyCollect` | `bool` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent,BlueprintCallable,DisplayName= "PlayDeathEntityAnimation") void K2_PlayDeathEntityAnimation(AActor * CollectActor,EGrowStageType NextGorGrowStage,bool bDestroyCollect);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 播放销毁的动画
 
@@ -273,6 +303,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Updates the entity actor's scale (Blueprint-implemented)
+
 ---
 
 ### Function `K2_UpdateEntityStage`
@@ -285,11 +319,15 @@
 
 | Name | Type |
 |--------|------|
-| `InGrowStage` | `EGrowStageType` |
+| `InGrowStage` | [EGrowStageType](../Struct/ItemStruct__EGrowStageType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent,BlueprintCallable,DisplayName= "UpdateEntityStage") void K2_UpdateEntityStage(EGrowStageType InGrowStage);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Updates the entity's growth stage appearance (Blueprint-implemented)
 
 ---
 
@@ -309,6 +347,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Sets the entity actor's selected state (Blueprint-implemented)
+
 ---
 
 ### Function `K2_SetHoveringEntityActorState`
@@ -327,6 +369,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Sets the entity actor's hovering state (Blueprint-implemented)
+
 ---
 
 ### Function `InitSmartObject`
@@ -341,7 +387,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化智能对象
 
@@ -364,7 +410,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 采集动作完成一次
 
@@ -388,7 +434,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 采集完成
 
@@ -404,14 +450,14 @@
 
 | Name | Type |
 |--------|------|
-| `CommonButtonType` | `ECommonButtonType` |
+| `CommonButtonType` | [ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md) |
 | `ActionID` | `FName&` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void GetGOAPActionID(ECommonButtonType CommonButtonType,FName& ActionID);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取GOAP Action ID
 
@@ -434,7 +480,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加入GOAP Action
 
@@ -458,7 +504,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除GOAP Action
 
@@ -480,7 +526,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置操作状态
 
@@ -503,7 +549,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ActionID移除GOAP Action
 

@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Spawn blocking zone actor with a box component; GWO spawners exclude points inside this zone when building the spawn point matrix
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Component") class UBoxComponent* BoxComponent;` |
 
-**Source comments:**
+**Notes:**
 
 > ************************************************************************
 > Component

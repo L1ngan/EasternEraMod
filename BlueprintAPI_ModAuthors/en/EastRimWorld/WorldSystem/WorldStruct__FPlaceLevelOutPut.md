@@ -19,4 +19,8 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category= "Base") TMap<FName,FItemSimpleData> LevelOutPut;` |
 
+**Notes:**
+
+> Level Out Put field.
+
 ---

@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> World Place Info data structure.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category= "Base") FGuid PlaceGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 地点guid
 
@@ -32,6 +34,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category= "Base") FName BattlePlaceID;` |
 
+**Notes:**
+
+> Battle Place ID field.
+
 ---
 
 ### Property `BattlePlaceGuid`
@@ -43,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleInstanceOnly,Category= "Base") FGuid BattlePlaceGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 战场地点
 
@@ -58,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= "Base") FText PlaceName;` |
 
-**Source comments:**
+**Notes:**
 
 > 地点名字
 
@@ -73,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= "Base") FText PlaceDesc;` |
 
-**Source comments:**
+**Notes:**
 
 > 地点描述
 
@@ -88,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= "Base") int32 PlaceLevel = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 地点等级
 
@@ -103,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= "Base") TMap<int32,TSoftObjectPtr<UStaticMesh>> PlaceMesh;` |
 
-**Source comments:**
+**Notes:**
 
 > 地点等级对应的模型
 
@@ -118,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category= "Base") bool bShowInMap = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否显示在地图上 (例如：战斗地图可能不会显示在地图上)
 
@@ -133,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= "Prosperity") float Prosperity = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 地点繁荣度
 
@@ -148,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= "Prosperity") float MaxProsperity = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 地点最大繁荣度
 
@@ -163,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= "Prosperity") float ProsperityIncreaseBase = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 地点每日繁荣度增长基础
 
@@ -173,12 +179,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EWorldPlaceType` |
+| C++ type | [EWorldPlaceType](../Struct/CommonEnum__EWorldPlaceType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= "Base") EWorldPlaceType WorldPlaceType = EWorldPlaceType::Station;` |
 
-**Source comments:**
+**Notes:**
 
 > 地点类型
 
@@ -193,7 +199,22 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite,EditAnywhere,Category= "Base") TSoftObjectPtr<UTexture2D> PlaceIcon;` |
 
-**Source comments:**
+**Notes:**
+
+> 地点图标
+
+---
+
+### Property `PlaceChoseIcon`
+
+| Field | Details |
+|------|------|
+| C++ type | `TSoftObjectPtr<UTexture2D>` |
+| Reflection specifiers | BlueprintReadWrite, Category="Base" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame, BlueprintReadWrite, EditAnywhere, Category = "Base") TSoftObjectPtr<UTexture2D> PlaceChoseIcon;` |
+
+**Notes:**
 
 > 地点图标
 
@@ -208,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowedClasses = "/Script/Engine.Texture2D")) TSoftObjectPtr<UTexture2D> PlaceThumbnail;` |
 
-**Source comments:**
+**Notes:**
 
 > 地点缩略图
 
@@ -223,7 +244,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category= "Exploration") float ExplorationDegree = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 需要的地区探索度
 
@@ -238,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= "Temperature") int BaseTemperature = 16;` |
 
-**Source comments:**
+**Notes:**
 
 > 基础温度
 
@@ -253,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= "Base") FTransform WorldMapPosition = FTransform::Identity;` |
 
-**Source comments:**
+**Notes:**
 
 > 处于世界地图的位置
 
@@ -268,7 +289,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= "Base") bool bInitialUnlock;` |
 
-**Source comments:**
+**Notes:**
 
 > 该地区是否初始解锁迷雾
 
@@ -283,7 +304,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= "Base") int32 FogRadius;` |
 
-**Source comments:**
+**Notes:**
 
 > 该地区解锁迷雾的半径
 
@@ -298,7 +319,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category= "Fog",meta=(EditConditionHides, EditCondition = "bShowInMap")) bool bHideInFog = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否会隐藏于迷雾中
 
@@ -308,12 +329,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EWorldPlaceStateType` |
+| C++ type | [EWorldPlaceStateType](WorldStruct__EWorldPlaceStateType.md) |
 | Reflection specifiers | BlueprintReadOnly, Category="Base" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category= "Base") EWorldPlaceStateType WorldPlaceState = EWorldPlaceStateType::Unowned;` |
 
-**Source comments:**
+**Notes:**
 
 > 地点当前状态
 
@@ -328,7 +349,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category= "Base") FName BeforeExploreUI;` |
 
-**Source comments:**
+**Notes:**
 
 > 探索前的UI  ID
 
@@ -343,7 +364,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category= "Base") FName ExploreCompleteUI;` |
 
-**Source comments:**
+**Notes:**
 
 > 探索完的UI  ID
 
@@ -358,7 +379,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category= "Base") FName AfterOccupationUI;` |
 
-**Source comments:**
+**Notes:**
 
 > 占领后的UI  ID
 
@@ -373,7 +394,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite,EditAnywhere,Category= "Base") TSoftClassPtr<class AWorldPlace> WorldPlaceClass;` |
 
-**Source comments:**
+**Notes:**
 
 > 拥有当前地点蓝图
 
@@ -388,7 +409,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category= "Exploration") bool bNeedExplore = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否需要探索
 
@@ -403,7 +424,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category= "Exploration",meta=(EditCondition = "bNeedExplore",EditConditionHides)) float AddAreaExplore = 10.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 增加区域探索
 
@@ -418,7 +439,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly,EditAnywhere,Category= "Sound") TSoftObjectPtr<class UPlaySoundSystemSetUp> PlaySoundSystemSetUp;` |
 
-**Source comments:**
+**Notes:**
 
 > 此地点的音乐配置
 
@@ -433,7 +454,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category= "LevelSequence") bool bPlayLevelSequence = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否播放关卡序列
 
@@ -448,7 +469,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,meta=(EditConditionHides, EditCondition = "bPlayLevelSequence"),Category= "LevelSequence") bool bEnterEveryTimePlayLevelSequence = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否每次进入时都会播放
 
@@ -463,7 +484,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly,EditAnywhere,meta=(EditConditionHides, EditCondition = "bPlayLevelSequence"),Category= "LevelSequence") TSoftObjectPtr<ULevelSequence> LevelSequence;` |
 
-**Source comments:**
+**Notes:**
 
 > 此地点进入时播放的关卡序列
 
@@ -478,7 +499,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category= "BinkMedia") bool bPlayLevelVideos = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否播放视频 视频总是会在关卡序列之前
 
@@ -493,7 +514,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,meta=(EditConditionHides, EditCondition = "bPlayLevelVideos"),Category= "BinkMedia") bool bEnterEveryTimePlayVideos = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否每次进入时都会播放
 
@@ -508,7 +529,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadOnly,EditAnywhere,meta=(EditConditionHides, EditCondition = "bPlayLevelVideos"),Category= "BinkMedia") TSoftObjectPtr<class UBinkMediaPlayer> BinkMediaPlayer;` |
 
-**Source comments:**
+**Notes:**
 
 > 视频设置
 
@@ -523,7 +544,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,meta=(EditConditionHides, EditCondition = "bPlayLevelVideos"),Category= "BinkMedia") FString BinkMediaPlayerUrl;` |
 
-**Source comments:**
+**Notes:**
 
 > 视频资源路径
 
@@ -538,7 +559,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,meta=(EditConditionHides, EditCondition = "bPlayLevelVideos"),Category= "BinkMedia") TSoftObjectPtr<class UBinkMediaTexture> BinkMediaTexture;` |
 
-**Source comments:**
+**Notes:**
 
 > 视频资源路径
 
@@ -553,7 +574,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,meta=(EditConditionHides, EditCondition = "bPlayLevelVideos"),Category= "BinkMedia") TSoftObjectPtr<UDataTable> BinkMediaSubtitlesDataTable;` |
 
-**Source comments:**
+**Notes:**
 
 > 视频字幕配置
 
@@ -568,7 +589,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= "EnterPlace") bool bCanEnterPlace = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否可以进入到此区域
 
@@ -583,7 +604,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite,EditAnywhere,meta=(EditConditionHides, EditCondition = "bCanEnterPlace"),Category= "EnterPlace") TSoftObjectPtr<UWorld> PlaceMap;` |
 
-**Source comments:**
+**Notes:**
 
 > 地点地图
 
@@ -598,7 +619,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,meta=(EditConditionHides, EditCondition = "bCanEnterPlace"),Category= "EnterPlace") bool bSavePlace = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 此地点是否需要保存
 
@@ -613,7 +634,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite,EditAnywhere,meta=(EditConditionHides, EditCondition = "bCanEnterPlace"),Category= "EnterPlace") TSoftClassPtr<APawn> PossessPlayerPawn;` |
 
-**Source comments:**
+**Notes:**
 
 > 拥有当前地点时的pawn
 
@@ -628,7 +649,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite,EditAnywhere,meta=(EditConditionHides, EditCondition = "bCanEnterPlace"),Category= "EnterPlace") TSoftClassPtr<APawn> OtherPlayerPawn;` |
 
-**Source comments:**
+**Notes:**
 
 > 其他情况时使用的Pawn
 
@@ -643,7 +664,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite,EditAnywhere,meta=(EditConditionHides, EditCondition = "bCanEnterPlace"),Category= "EnterPlace") TSoftClassPtr<class UCommonActivatableWidget> MainWidgetUI;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前地点的界面UI
 
@@ -658,7 +679,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,meta=(EditConditionHides, EditCondition = "bCanEnterPlace"),Category= "EnterPlace") FTransform SpawnTransform = FTransform::Identity;` |
 
-**Source comments:**
+**Notes:**
 
 > 进入此地点时的生成位置
 
@@ -673,7 +694,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category= "Monster") TArray<FName> MonsterGeneration;` |
 
-**Source comments:**
+**Notes:**
 
 > 此地点包含的所有生成怪物设置 读取MonsterGenerationConfig 配置表
 
@@ -688,9 +709,24 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category= "Monster") TArray<FName> MonsterNest;` |
 
-**Source comments:**
+**Notes:**
 
 > 此地点包含的所有巢穴信息 读取 MonsterNestInfoConfig 配置表
+
+---
+
+### Property `ApprenticeshipEventIDs`
+
+| Field | Details |
+|------|------|
+| C++ type | `TArray<FName>` |
+| Reflection specifiers | BlueprintReadWrite, Category="Apprenticeship" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= "Apprenticeship") TArray<FName> ApprenticeshipEventIDs;` |
+
+**Notes:**
+
+> 此地点包含的历练事件 ID 列表(读 DT_ApprenticeshipEvents;弟子在此城历练时从中加权抽样)
 
 ---
 
@@ -703,7 +739,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite,EditAnywhere,Category= "Base") int32 Population = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始人口
 
@@ -718,7 +754,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite,EditAnywhere,Category= "Base") int32 MaxPopulation = 999999.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大人口
 
@@ -733,7 +769,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite,EditAnywhere,Category= "Base") int32 InitCoin = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始钱币
 
@@ -748,7 +784,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite,EditAnywhere,Category= "Base") int32 CoinIncreaseBase = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 钱币增长基础值
 
@@ -763,7 +799,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float FirstVictoryAddReputation = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 第一次胜利增加的声望
 
@@ -778,9 +814,24 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite,EditAnywhere,Category= "Base") int32 PopulationIncreaseBase = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 每日人口增长基础值
+
+---
+
+### Property `InitOrder`
+
+| Field | Details |
+|------|------|
+| C++ type | `float` |
+| Reflection specifiers | BlueprintReadWrite, Category="Order" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite,EditAnywhere,Category= "Order") float InitOrder = 70.f;` |
+
+**Notes:**
+
+> [新增-策划文档"五、治安/初始"]据点初始治安(0-100)
 
 ---
 
@@ -793,7 +844,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite,EditAnywhere,Category= "Base") int32 StationedCharacterNumBase = 999;` |
 
-**Source comments:**
+**Notes:**
 
 > 城镇可驻扎角色数量基础值
 
@@ -808,7 +859,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<int32,FPlaceLevelDistinguishInfo> PlaceLevelDistinguishInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 城镇不同等级的产出、新增可建造建筑设施等
 
@@ -823,7 +874,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> WorldPlaceEffects;` |
 
-**Source comments:**
+**Notes:**
 
 > 城主效果(对应DT_WorldPlaceEffectConfig)
 
@@ -838,7 +889,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "SpecialEffect") TArray<FName> GlobalSpecialEffectIds;` |
 
-**Source comments:**
+**Notes:**
 
 > 地点全局特殊效果 ID 列表（对应 FWorldPlaceSpecialEffectConfig 数据表）
 
@@ -853,7 +904,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame,BlueprintReadWrite,EditAnywhere,Category= "Base") int32 PlaceOutPutInterval =3;` |
 
-**Source comments:**
+**Notes:**
 
 > 产出间隔(天)
 
@@ -868,7 +919,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= "Base") FVector MeshLocationOffset = FVector::Zero();` |
 
-**Source comments:**
+**Notes:**
 
 > 地点的模型便宜
 
@@ -883,7 +934,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category= "PostStation") FTransform PostStationTransform;` |
 
-**Source comments:**
+**Notes:**
 
 > 驿站位置
 
@@ -898,8 +949,23 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category= "PostStation") TSoftObjectPtr<UStaticMesh> PostStationMesh;` |
 
-**Source comments:**
+**Notes:**
 
 > 驿站模型
+
+---
+
+### Property `NPCAttackConditions`
+
+| Field | Details |
+|------|------|
+| C++ type | TArray<[FCommonTaskCondition](../Struct/CommonTaskStruct__FCommonTaskCondition.md)> |
+| Reflection specifiers | BlueprintReadWrite, Category="NPCAttack" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= "NPCAttack") TArray<FCommonTaskCondition> NPCAttackConditions;` |
+
+**Notes:**
+
+> NPC进攻此地点的条件
 
 ---

@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FIntPoint , bool> Points;` |
 
-**Source comments:**
+**Notes:**
 
 > 墙经过的所有点
 > TMap<点 , 占位符>
@@ -35,7 +35,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<FGridPosition , bool> GridPoses;` |
 
-**Source comments:**
+**Notes:**
 
 > 闭合区域包含的格子
 > TMap<格子坐标 , 占位符>
@@ -46,12 +46,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EEnvironType , [FRoomElementGuids](ERW_MapDataMgr__FRoomElementGuids.md)> |
+| C++ type | TMap<[EEnvironType](../ERW_Enumerations__EEnvironType.md) , [FRoomElementGuids](ERW_MapDataMgr__FRoomElementGuids.md)> |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<EEnvironType , FRoomElementGuids> RoomElementGuids;` |
 
-**Source comments:**
+**Notes:**
 
 > 房间要素的Guid
 > TMap<环境类型 , 房间要素的Guid>
@@ -67,7 +67,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) int32 FoundationNum { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 建造完成的地基数量
 
@@ -82,7 +82,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 WallNum { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 建造完成的墙面数量
 
@@ -97,7 +97,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 DoorNum { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 建造完成的门数量
 
@@ -112,7 +112,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 RoofNum { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 建造完成的屋顶数量
 
@@ -127,7 +127,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) bool IsRoom { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否形成房间
 
@@ -142,7 +142,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) FRoomInfo RoomInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 房间信息
 

@@ -439,7 +439,7 @@ UModInfoData::~UModInfoData() {}
 // ********** End Class UModInfoData ***************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPluginEditor_Public_ModInfoEditorData_h__Script_CreateModPluginEditor_Statics
+struct Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPluginEditor_Public_ModInfoEditorData_h__Script_CreateModPluginEditor_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
 		{ FModDependencyData::StaticStruct, Z_Construct_UScriptStruct_FModDependencyData_Statics::NewStructOps, TEXT("ModDependencyData"), &Z_Registration_Info_UScriptStruct_FModDependencyData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModDependencyData), 2834030679U) },
@@ -448,9 +448,9 @@ struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_Cr
 		{ Z_Construct_UClass_UModInfoData, UModInfoData::StaticClass, TEXT("UModInfoData"), &Z_Registration_Info_UClass_UModInfoData, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UModInfoData), 1546052400U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPluginEditor_Public_ModInfoEditorData_h__Script_CreateModPluginEditor_1867794730(TEXT("/Script/CreateModPluginEditor"),
-	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPluginEditor_Public_ModInfoEditorData_h__Script_CreateModPluginEditor_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPluginEditor_Public_ModInfoEditorData_h__Script_CreateModPluginEditor_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPluginEditor_Public_ModInfoEditorData_h__Script_CreateModPluginEditor_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPluginEditor_Public_ModInfoEditorData_h__Script_CreateModPluginEditor_Statics::ScriptStructInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPluginEditor_Public_ModInfoEditorData_h__Script_CreateModPluginEditor_1867794730(TEXT("/Script/CreateModPluginEditor"),
+	Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPluginEditor_Public_ModInfoEditorData_h__Script_CreateModPluginEditor_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPluginEditor_Public_ModInfoEditorData_h__Script_CreateModPluginEditor_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPluginEditor_Public_ModInfoEditorData_h__Script_CreateModPluginEditor_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPluginEditor_Public_ModInfoEditorData_h__Script_CreateModPluginEditor_Statics::ScriptStructInfo),
 	nullptr, 0);
 // ********** End Registration *********************************************************************
 

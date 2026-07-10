@@ -14,10 +14,14 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EToolType` |
+| C++ type | [EToolType](ItemStruct__EToolType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Tool" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tool") EToolType ToolType = EToolType::None;` |
+
+**Notes:**
+
+> Tool Type field.
 
 ---
 
@@ -30,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon") float CollectLossDurability = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 采集掉耐久
 

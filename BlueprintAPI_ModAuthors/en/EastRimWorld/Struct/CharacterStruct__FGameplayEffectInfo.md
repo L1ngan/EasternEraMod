@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Runtime GameplayEffect info: effect class, stack count and duration
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() TSubclassOf<UGameplayEffect> Effect;` |
 
+**Notes:**
+
+> GameplayEffect class
+
 ---
 
 ### Property `StackCount`
@@ -28,6 +34,10 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() int32 StackCount = 1;` |
 
+**Notes:**
+
+> Stack count
+
 ---
 
 ### Property `Duration`
@@ -38,5 +48,9 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() float Duration = 0.f;` |
+
+**Notes:**
+
+> Duration in seconds
 
 ---

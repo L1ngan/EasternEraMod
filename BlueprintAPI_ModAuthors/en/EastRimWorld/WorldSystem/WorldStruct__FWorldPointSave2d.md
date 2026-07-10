@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName pointName;` |
 
-**Source comments:**
+**Notes:**
 
 > 名称 路点为objectname 城市为配置表id
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FVector2D Pos;` |
 
-**Source comments:**
+**Notes:**
 
 > 坐标
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float Range = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 覆盖范围
 
@@ -59,12 +59,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EWorldPointType` |
+| C++ type | [EWorldPointType](WorldStruct__EWorldPointType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EWorldPointType CityType = EWorldPointType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 关键点类型//城市or路点
 
@@ -79,8 +79,23 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> NearPoints;` |
 
-**Source comments:**
+**Notes:**
 
 > 附近路点
+
+---
+
+### Property `NearCitys`
+
+| Field | Details |
+|------|------|
+| C++ type | `TArray<FName>` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> NearCitys;` |
+
+**Notes:**
+
+> 附近城市//只限城市类型有数据
 
 ---

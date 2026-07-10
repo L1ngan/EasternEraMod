@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Common Side Push Base UObject type.
 
 ## Blueprint-exposed variables
 
@@ -16,6 +18,10 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FCommonButton CommonButtonInfo;` |
+
+**Notes:**
+
+> Common Button Info field.
 
 ---
 
@@ -37,7 +43,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). **BlueprintNativeEvent**: overridable in Blueprint; C++ default body is in `xxx_Implementation`.
 
-**Source comments:**
+**Notes:**
 
 > 初始化侧边按钮
 
@@ -55,7 +61,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "PreHandleNativeOnClicked".
 
-**Source comments:**
+**Notes:**
 
 > 点击前置处理，返回true表示已在脚本中处理并跳过原有点击逻辑
 
@@ -73,7 +79,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "OpenSelectFabricateWidget".
 
-**Source comments:**
+**Notes:**
 
 > 打开制造界面
 
@@ -91,9 +97,45 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 打开设置拥有者界面
+
+---
+
+### Function `OpenRebuildBuildingWidget`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintImplementableEvent |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable , BlueprintImplementableEvent) void OpenRebuildBuildingWidget();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> 打开重建建筑界面
+
+---
+
+### Function `TransBuilding`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintImplementableEvent |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable , BlueprintImplementableEvent) void TransBuilding();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> 移动建筑
 
 ---
 
@@ -107,13 +149,13 @@
 
 | Name | Type |
 |--------|------|
-| `ButtonType` | `EEnergyControlType` |
+| `ButtonType` | [EEnergyControlType](../../ERW_Enumerations__EEnergyControlType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable , BlueprintImplementableEvent) void OpenAutomatedControlWidget(EEnergyControlType ButtonType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 打开自动化控件相关界面
 
@@ -131,7 +173,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 打开分配管道界面
 
@@ -149,7 +191,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 打开设置设备开启时控制的管道
 
@@ -167,7 +209,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 打开设置设备关闭时控制的管道
 
@@ -185,7 +227,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 打开游历界面
 
@@ -203,7 +245,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 打开探索界面
 
@@ -221,7 +263,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 打开放弃城镇
 
@@ -239,6 +281,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
+**Notes:**
+
+> Executes the Open Word Place Management Widget operation.
+
 ---
 
 ### Function `SureGetOutOfTheJam`
@@ -252,6 +298,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable , BlueprintImplementableEvent) void SureGetOutOfTheJam();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
+
+**Notes:**
+
+> Sure Get Out Of The Jam field.
 
 ---
 
@@ -267,7 +317,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 打开攻击地点
 
@@ -285,7 +335,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Node display title may be "FellAndHarvest".
 
-**Source comments:**
+**Notes:**
 
 > 砍伐和收割
 
@@ -303,7 +353,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Node display title may be "BackPopupLastWidetPage".
 
-**Source comments:**
+**Notes:**
 
 > 返回上个弹出窗叠加页
 
@@ -321,7 +371,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Node display title may be "CancelAllSelectObjectOrder".
 
-**Source comments:**
+**Notes:**
 
 > 取消所有选中对象的执行命令
 
@@ -339,7 +389,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 当在操作多个对象时重新添加多选按钮以更新按钮状态
 
@@ -357,7 +407,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "OpenSelectTechnologyWidget".
 
-**Source comments:**
+**Notes:**
 
 > 打开科技界面
 
@@ -375,7 +425,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "OpenBookListWidget".
 
-**Source comments:**
+**Notes:**
 
 > 打开书籍界面
 
@@ -393,7 +443,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "CheckCanWriteCopy".
 
-**Source comments:**
+**Notes:**
 
 > 检查书籍是否可以被抄录
 
@@ -411,9 +461,63 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "OpenFoodListWidget".
 
-**Source comments:**
+**Notes:**
 
 > 打开食物界面
+
+---
+
+### Function `K2_OpenComprehendListWidget`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintImplementableEvent |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent, meta = (DisplayName = "OpenComprehendListWidget")) void K2_OpenComprehendListWidget();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "OpenComprehendListWidget".
+
+**Notes:**
+
+> 打开角色参悟界面
+
+---
+
+### Function `K2_OpenAssignActiveAreaWidget`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintImplementableEvent |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent, meta = (DisplayName = "OpenAssignActiveAreaWidget")) void K2_OpenAssignActiveAreaWidget();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "OpenAssignActiveAreaWidget".
+
+**Notes:**
+
+> 打开分配活动区域界面
+
+---
+
+### Function `K2_OpenChangeDiscipleAreaWidget`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintImplementableEvent |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent, meta = (DisplayName = "OpenChangeDiscipleAreaWidget")) void K2_OpenChangeDiscipleAreaWidget();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "OpenChangeDiscipleAreaWidget".
+
+**Notes:**
+
+> 打开变更弟子活动区域界面
 
 ---
 
@@ -429,7 +533,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Node display title may be "ProhibitUsage".
 
-**Source comments:**
+**Notes:**
 
 > 禁止使用
 
@@ -447,7 +551,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通用操作(设置所有SelectInventorySubstituteSystem中选中的对象的按钮状态)
 
@@ -469,6 +573,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "SetShowSelectImage".
 
+**Notes:**
+
+> Set Show Select Image field.
+
 ---
 
 ### Function `ImmediatelyExecute`
@@ -483,7 +591,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 降低Action消耗
 
@@ -501,7 +609,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 设置机器人的保护对象
 
@@ -523,7 +631,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 传入检测框集合，根据bool设置全选或全取消
 
@@ -541,7 +649,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 触发按钮状态并清除当前选择对象
 
@@ -559,6 +667,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Observe Operate field.
+
 ---
 
 ### Function `CheckOperateResult`
@@ -573,7 +685,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查操作结果，并刷新
 
@@ -591,7 +703,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "OpenSwitchRoomTypeWidget".
 
-**Source comments:**
+**Notes:**
 
 > 打开切换房间类型界面
 
@@ -609,6 +721,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "OpenApplyCeremonyWidget".
 
+**Notes:**
+
+> Open Apply Ceremony Widget field.
+
 ---
 
 ### Function `K2_OpenAddPuppetWidget`
@@ -622,6 +738,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent, meta = (DisplayName = "OpenAddPuppetWidget")) void K2_OpenAddPuppetWidget();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "OpenAddPuppetWidget".
+
+**Notes:**
+
+> Open Add Puppet Widget field.
 
 ---
 
@@ -637,7 +757,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 选择前往驯服的弟子
 
@@ -655,6 +775,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Kill Someone field.
+
 ---
 
 ### Function `OpenSelectRecruitCharacter`
@@ -669,7 +793,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 选择前往招募的弟子
 
@@ -687,7 +811,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "OpenTreasureListWidget".
 
-**Source comments:**
+**Notes:**
 
 > 打开珍宝阁/百宝楼界面
 
@@ -705,7 +829,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "OpenBackPackWidget".
 
-**Source comments:**
+**Notes:**
 
 > 打开背包
 
@@ -723,7 +847,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "CopyObjectSetting".
 
-**Source comments:**
+**Notes:**
 
 > 复制建筑设置
 
@@ -741,7 +865,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "PasteObjectSetting".
 
-**Source comments:**
+**Notes:**
 
 > 粘贴建筑设置
 
@@ -759,7 +883,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "QuickBuild".
 
-**Source comments:**
+**Notes:**
 
 > 快速建造设置
 
@@ -777,7 +901,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 摧毁资源
 
@@ -795,8 +919,26 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "ConfirmDeleteResources".
 
-**Source comments:**
+**Notes:**
 
 > 确认是否删除
+
+---
+
+### Function `K2_OpenTradeArea`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintImplementableEvent |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, meta = (DisplayName = "OpenTradeArea")) void K2_OpenTradeArea();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins). Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "OpenTradeArea".
+
+**Notes:**
+
+> 打开待交易区UI
 
 ---

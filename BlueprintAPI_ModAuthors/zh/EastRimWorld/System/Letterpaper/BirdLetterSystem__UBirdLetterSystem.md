@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> Bird Letter System UObject 类型。
 
 ## 蓝图暴露变量
 
@@ -17,6 +19,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnUpdateLetterData FOnUpdateLetterData;` |
 
+**说明:**
+
+> On Update Letter Data 字段。
+
 ---
 
 ### 属性 `CharacterLetterMap`
@@ -28,6 +34,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TMap<FGuid, FCharacterLetterData> CharacterLetterMap;` |
 
+**说明:**
+
+> Character Letter Map 字段。
+
 ---
 
 ### 属性 `AvtiveTime`
@@ -38,6 +48,10 @@
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) int32 AvtiveTime = -10000;` |
+
+**说明:**
+
+> Avtive Time 字段。
 
 ---
 
@@ -53,7 +67,7 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `LetterType` | `ELetterDialogueType` |
+| `LetterType` | [ELetterDialogueType](BirdLetterSystem__ELetterDialogueType.md) |
 | `Character` | [AEastRimWorldCharacter_Human](../../Character/EastRimWorldCharacter_Human__AEastRimWorldCharacter_Human.md)* |
 | `AddTime` | `int32` |
 | `Mandatory` | `bool` |
@@ -61,6 +75,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Dialogue Events") bool AddNewLetter(ELetterDialogueType LetterType, AEastRimWorldCharacter_Human* Character,int32 AddTime,bool Mandatory);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 执行 Add New Letter 操作。
 
 ---
 
@@ -75,6 +93,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Dialogue Events") void InitCharacterLetterMap();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 执行 Init Character Letter Map 操作。
 
 ---
 
@@ -96,7 +118,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 掌门回话对话
 
@@ -118,7 +140,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 结束对话
 
@@ -141,7 +163,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 角色希望获得装备
 
@@ -164,7 +186,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 角色Debuff状态
 
@@ -186,7 +208,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除对话
 
@@ -208,7 +230,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 判断是否可以主动发起信笺
 

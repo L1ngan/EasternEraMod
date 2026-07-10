@@ -19,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FText MajorCatName;` |
 
+**Notes:**
+
+> Major Cat Name field.
+
 ---
 
 ### Property `MajorCatIcon`
@@ -29,5 +33,9 @@
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TSoftObjectPtr<UTexture2D> MajorCatIcon;` |
+
+**Notes:**
+
+> Major Cat Icon field.
 
 ---

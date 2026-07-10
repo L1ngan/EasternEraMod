@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> N Play Sound UObject type.
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="AnimNotify", meta=(ExposeOnSpawn = true)) FName SoundID;` |
 
+**Notes:**
+
+> Sound ID field.
+
 ---
 
 ### Property `SoundTag`
@@ -27,5 +33,9 @@
 | Reflection specifiers | BlueprintReadWrite, Category="AnimNotify" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="AnimNotify", meta=(ExposeOnSpawn = true)) FGameplayTag SoundTag;` |
+
+**Notes:**
+
+> Sound Tag field.
 
 ---

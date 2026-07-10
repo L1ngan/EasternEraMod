@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EGOAP_ConditionType` |
+| C++ type | [EGOAP_ConditionType](GOAP_Enumerations__EGOAP_ConditionType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) EGOAP_ConditionType ConditionType { EGOAP_ConditionType::None };` |
 
-**Source comments:**
+**Notes:**
 
 > 前置条件类型
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) FName ID;` |
 
-**Source comments:**
+**Notes:**
 
 > 前置条件类型对应的具体事物的ID
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) FGuid Guid;` |
 
-**Source comments:**
+**Notes:**
 
 > 前置条件类型对应的具体事物的ID
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) FGameplayAttribute Attribute;` |
 
-**Source comments:**
+**Notes:**
 
 > 前置条件类型对应的属性
 
@@ -74,12 +74,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EGOAP_ConditionTargetType` |
+| C++ type | [EGOAP_ConditionTargetType](GOAP_Enumerations__EGOAP_ConditionTargetType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) EGOAP_ConditionTargetType TargetType { EGOAP_ConditionTargetType::Agent };` |
 
-**Source comments:**
+**Notes:**
 
 > 前置条件检测对象
 
@@ -89,12 +89,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EGOAP_ConditionValueType` |
+| C++ type | [EGOAP_ConditionValueType](GOAP_Enumerations__EGOAP_ConditionValueType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) EGOAP_ConditionValueType ValueType { EGOAP_ConditionValueType::Bool };` |
 
-**Source comments:**
+**Notes:**
 
 > 前置条件检测值类型
 
@@ -104,12 +104,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EConditionQuery` |
+| C++ type | [EConditionQuery](../ERW_Enumerations__EConditionQuery.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) EConditionQuery Query { EConditionQuery::IsEqualTo };` |
 
-**Source comments:**
+**Notes:**
 
 > 前置条件判断规则
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) FGOAP_Value GOAPValue;` |
 
-**Source comments:**
+**Notes:**
 
 > GOAP值
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere , BlueprintReadWrite , SaveGame) TMap<FName , FPathGoalData> PathGoals;` |
 
-**Source comments:**
+**Notes:**
 
 > 条件不满足时的达成路径GOAP目标
 > TMap<GOAP目标ID , 目标对应具体事物的ID>

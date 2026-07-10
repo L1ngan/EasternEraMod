@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,meta=(ExposeOnSpawn = true)) FProjectileStruct ProjectileStruct;` |
 
-**Source comments:**
+**Notes:**
 
 > 发射器的配置
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,meta=(ExposeOnSpawn = true)) TMap<ETargetClassType,FAllGameplayEffectSpecHandles> ProjectileSpecHandles;` |
 
-**Source comments:**
+**Notes:**
 
 > 投射物的效果
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AActor> MainAttackTarget;` |
 
-**Source comments:**
+**Notes:**
 
 > 主要的攻击目标
 
@@ -73,7 +73,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取多个目标
 
@@ -91,6 +91,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Ends the emitter's current work and triggers the Blueprint end event.
+
 ---
 
 ### Function `K2_AbilityProjectileEmitterEnd`
@@ -104,6 +108,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent,meta=(DisplayName="AbilityProjectileEmitterEnd")) void K2_AbilityProjectileEmitterEnd();`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "AbilityProjectileEmitterEnd".
+
+**Notes:**
+
+> Blueprint implementable event called when the projectile emitter ends.
 
 ---
 
@@ -126,7 +134,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化发射器
 
@@ -144,6 +152,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Starts launching and triggers the Blueprint launch-start event.
+
 ---
 
 ### Function `K2_EmitterStartLaunch`
@@ -157,5 +169,9 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent,meta=(DisplayName="EmitterStartLaunch")) void K2_EmitterStartLaunch();`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "EmitterStartLaunch".
+
+**Notes:**
+
+> Blueprint implementable event called when the emitter starts launching.
 
 ---

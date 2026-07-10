@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> Use Item Save Data 数据结构。
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = "Common") FName InventoryID;` |
 
-**源码注释:**
+**说明:**
 
 > 物品的id
 
@@ -27,12 +29,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EGroundInventoryType` |
+| C++ 类型 | [EGroundInventoryType](CommonEnum__EGroundInventoryType.md) |
 | 反射说明符 | BlueprintReadWrite, Category="Common" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Common") EGroundInventoryType GroundInventoryType = EGroundInventoryType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 物品的大分类
 
@@ -42,12 +44,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EEquipmentType` |
+| C++ 类型 | [EEquipmentType](CommonEnum__EEquipmentType.md) |
 | 反射说明符 | BlueprintReadWrite, Category="Common" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Common") EEquipmentType EquipmentType = EEquipmentType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 装备的类型
 
@@ -57,12 +59,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EArmorType` |
+| C++ 类型 | [EArmorType](CommonEnum__EArmorType.md) |
 | 反射说明符 | BlueprintReadWrite, Category="Common" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Common") EArmorType ArmorType = EArmorType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 防具的类型
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame,Category = "Common") FTransform ItemTransform;` |
 
-**源码注释:**
+**说明:**
 
 > 物品在世界中的位置
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame, Category = "Common") bool bOperationMark = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否被操作标记
 
@@ -102,12 +104,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<ECommonButtonType,bool>` |
+| C++ 类型 | TMap<[ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md),bool> |
 | 反射说明符 | BlueprintReadOnly, Category="Common" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame, Category = "Common") TMap<ECommonButtonType,bool> ButtonOperationState;` |
 
-**源码注释:**
+**说明:**
 
 > 相关按钮的状态 是否选中
 
@@ -117,12 +119,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EInventoryItemStateType` |
+| C++ 类型 | [EInventoryItemStateType](ItemStruct__EInventoryItemStateType.md) |
 | 反射说明符 | BlueprintReadOnly, Category="Common" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame, Category = "Common") EInventoryItemStateType InventoryItemStateType = EInventoryItemStateType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 物品状态
 
@@ -137,7 +139,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = "Common") FGuid ItemGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 物品的GUID
 
@@ -152,7 +154,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame, Category = "Common") TArray<FWarehouseSmallGrid> SmallGrids;` |
 
-**源码注释:**
+**说明:**
 
 > 此物品占用的小格子信息
 
@@ -167,7 +169,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame, Category = "Common") int32 ItemCount = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 物品的数量
 
@@ -177,12 +179,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EGroundSoilType` |
+| C++ 类型 | [EGroundSoilType](../ERW_Enumerations__EGroundSoilType.md) |
 | 反射说明符 | BlueprintReadOnly, Category="Common" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame, Category = "Common") EGroundSoilType GroundSoilType = EGroundSoilType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 物品所在的地面类型
 
@@ -197,7 +199,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame, Category = "Common") float ResidueItemShelfLife = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 剩余保质期
 
@@ -212,7 +214,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame, Category = "Common") float CurDurability = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 当前耐久度
 
@@ -227,7 +229,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame, Category = "Common") float CurCopyNum = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 当前已抄录次数
 
@@ -242,7 +244,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame, Category = "Common") int32 CurAirDryingDegree = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 当前风干度
 
@@ -257,7 +259,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment") TArray<FName> MainAttributes;` |
 
-**源码注释:**
+**说明:**
 
 > 此装备的主属性(EquipmentAttribute表）
 
@@ -272,7 +274,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment") TArray<FName> SubAttributes;` |
 
-**源码注释:**
+**说明:**
 
 > 此装备的次属性(EquipmentAttribute表）
 
@@ -287,7 +289,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment") TArray<FName> EquipmentAbility;` |
 
-**源码注释:**
+**说明:**
 
 > 此装备自带的技能
 
@@ -302,7 +304,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment") FString CharacterName;` |
 
-**源码注释:**
+**说明:**
 
 > 打造的人名字
 
@@ -312,12 +314,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EItemUseState` |
+| C++ 类型 | [EItemUseState](ItemStruct__EItemUseState.md) |
 | 反射说明符 | BlueprintReadWrite, Category="Equipment" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite ,SaveGame , Category = "Equipment") EItemUseState ItemState = EItemUseState::None;` |
 
-**源码注释:**
+**说明:**
 
 > 装备的使用状态
 
@@ -331,5 +333,9 @@
 | 反射说明符 | BlueprintReadOnly, Category="WorldForce" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame, Category = "WorldForce") float GrowScore = 0.f;` |
+
+**说明:**
+
+> Grow Score 字段。
 
 ---

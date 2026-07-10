@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Full snapshot data of a frozen (backgrounded) actor, used to destroy it when far away and rebuild it when near
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() UClass* actorClass = nullptr;` |
 
+**Notes:**
+
+> Class of the frozen actor, used for respawning
+
 ---
 
 ### Property `transform`
@@ -27,6 +33,10 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() FTransform transform = FTransform::Identity;` |
+
+**Notes:**
+
+> Actor transform (location/rotation/scale) saved when frozen
 
 ---
 
@@ -39,6 +49,10 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() int sectorIndex = -1;` |
 
+**Notes:**
+
+> Index of the sector the actor belongs to (-1 means invalid)
+
 ---
 
 ### Property `actorIndex`
@@ -49,6 +63,10 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() int actorIndex = -1;` |
+
+**Notes:**
+
+> Index of the actor in its spawn list (-1 means invalid)
 
 ---
 
@@ -83,6 +101,10 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() float spawnDistanceSquare = 0.f;` |
 
+**Notes:**
+
+> Cached squared spawn distance
+
 ---
 
 ### Property `destroyDistanceSquare`
@@ -93,6 +115,10 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() float destroyDistanceSquare = 0.f;` |
+
+**Notes:**
+
+> Cached squared destroy distance
 
 ---
 
@@ -105,16 +131,24 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() float noSpawnDistanceSquare = 0.f;` |
 
+**Notes:**
+
+> Cached squared no-spawn distance
+
 ---
 
 ### Property `distanceCheck`
 
 | Field | Details |
 |------|------|
-| C++ type | `EGWOAxes` |
+| C++ type | [EGWOAxes](GWOTypes__EGWOAxes.md) |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() EGWOAxes distanceCheck = EGWOAxes::XYZ;` |
+
+**Notes:**
+
+> Axes used for distance measurement (XYZ or XY)
 
 ---
 
@@ -127,6 +161,10 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() int uniqID = -1;` |
 
+**Notes:**
+
+> Unique ID of the frozen actor (-1 means unassigned)
+
 ---
 
 ### Property `lifeTimeInBackground`
@@ -137,6 +175,10 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() float lifeTimeInBackground = 0.f;` |
+
+**Notes:**
+
+> Frozen lifetime of the actor in the background; its data is destroyed after this time
 
 ---
 
@@ -149,6 +191,10 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() double timeInsertInBackground = 0.f;` |
 
+**Notes:**
+
+> Timestamp recorded when the actor was inserted into the background
+
 ---
 
 ### Property `sectorID`
@@ -159,6 +205,10 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() int sectorID = -1;` |
+
+**Notes:**
+
+> ID of the sector the actor belongs to (-1 means invalid)
 
 ---
 
@@ -171,6 +221,10 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() bool bReplaceStaticMesh = false;` |
 
+**Notes:**
+
+> Whether to replace this actor with a static mesh instance
+
 ---
 
 ### Property `replaceParameters`
@@ -181,6 +235,10 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() FGWOActorReplaceParameters replaceParameters;` |
+
+**Notes:**
+
+> Parameters used when replacing with a static mesh (mesh and offsets)
 
 ---
 
@@ -193,6 +251,10 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() uint8 ActorType = 0;` |
 
+**Notes:**
+
+> Actor type: 1 human, 2 summon, 3 animal
+
 ---
 
 ### Property `TeamID`
@@ -203,6 +265,10 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() uint8 TeamID = 0;` |
+
+**Notes:**
+
+> Team ID of the actor
 
 ---
 
@@ -215,6 +281,10 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() FName ActorInfoID;` |
 
+**Notes:**
+
+> Actor info config ID
+
 ---
 
 ### Property `BoxLocation`
@@ -225,6 +295,10 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() FVector BoxLocation = FVector::ZeroVector;` |
+
+**Notes:**
+
+> Location of the spawn box the actor belongs to
 
 ---
 
@@ -237,6 +311,10 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() int32 IdleRange = 1000.f;` |
 
+**Notes:**
+
+> Idle wandering range of the actor (in centimeters)
+
 ---
 
 ### Property `ConfigID`
@@ -248,6 +326,10 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() FName ConfigID;` |
 
+**Notes:**
+
+> Config table ID of the actor
+
 ---
 
 ### Property `CharacterSaveData`
@@ -258,5 +340,9 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() FCharacterSaveData CharacterSaveData;` |
+
+**Notes:**
+
+> Character save data captured when frozen, restored on rebuild
 
 ---

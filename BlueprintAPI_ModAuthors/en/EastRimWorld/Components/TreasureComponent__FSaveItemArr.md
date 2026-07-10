@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) TArray<FUseItemSaveData> TreasureSaveItems;` |
 
-**Source comments:**
+**Notes:**
 
 > 商品信息
 

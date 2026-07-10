@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 技能对象缓存池世界子系统，缓存并复用投射物、投射物发射器和场景文字Actor，避免频繁生成销毁
 
 ## 蓝图暴露函数
 
@@ -25,6 +27,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 从缓存池获取一个空闲的投射物发射器，可指定发射器类并设置其Owner
+
 ---
 
 ### 函数 `RecycleAbilityProjectileEmitter`
@@ -42,6 +48,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool RecycleAbilityProjectileEmitter(AAbilityProjectileEmitterBase * AbilityProjectileEmitter);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 将使用完毕的投射物发射器回收进缓存池，返回是否回收成功
 
 ---
 
@@ -62,6 +72,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 从缓存池获取一个空闲的技能投射物，可指定投射物类并设置其Owner
+
 ---
 
 ### 函数 `RecycleAbilityProjectile`
@@ -79,6 +93,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "AbilityCachePoolSystem") bool RecycleAbilityProjectile(AEastRimWorldProjectileBase* AbilityProjectile);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 将使用完毕的技能投射物回收进缓存池，返回是否回收成功
 
 ---
 
@@ -98,6 +116,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 从缓存池获取一个空闲的场景文字Actor，可指定Actor类
+
 ---
 
 ### 函数 `RecycleSceneTextActor`
@@ -116,6 +138,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 将使用完毕的场景文字Actor回收进缓存池，返回是否回收成功
+
 ---
 
 ### 函数 `RecycleAllUseActor`
@@ -130,7 +156,7 @@
 
 **用法说明:** 详见蓝图编辑器中该节点的引脚与分类。
 
-**源码注释:**
+**说明:**
 
 > 回收所有使用中的Actor
 

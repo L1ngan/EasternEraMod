@@ -20,9 +20,69 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnMartialArtExpChanged OnMartialArtExpChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 武学经验变化
+
+---
+
+### Property `OnMartialArtsSkillEntryWashed`
+
+| Field | Details |
+|------|------|
+| C++ type | `FOnMartialArtsSkillEntryWashed` |
+| Reflection specifiers | BlueprintAssignable |
+| Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnMartialArtsSkillEntryWashed OnMartialArtsSkillEntryWashed;` |
+
+**Notes:**
+
+> 技能词条洗炼结束（成功或失败；失败时未改数据，NewSkillEntryId 为 None）
+
+---
+
+### Property `OnComprehendBegan`
+
+| Field | Details |
+|------|------|
+| C++ type | `FOnComprehendBegan` |
+| Reflection specifiers | BlueprintAssignable |
+| Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnComprehendBegan OnComprehendBegan;` |
+
+**Notes:**
+
+> 参悟开始（UI 读取 ComprehendSession 展示前后对比）
+
+---
+
+### Property `OnComprehendSlotRetraceChanged`
+
+| Field | Details |
+|------|------|
+| C++ type | `FOnComprehendSlotRetraceChanged` |
+| Reflection specifiers | BlueprintAssignable |
+| Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnComprehendSlotRetraceChanged OnComprehendSlotRetraceChanged;` |
+
+**Notes:**
+
+> 某词条槽位回溯标记切换（bRetraced=true 标记回溯/false 取消标记）
+
+---
+
+### Property `OnComprehendFinished`
+
+| Field | Details |
+|------|------|
+| C++ type | `FOnComprehendFinished` |
+| Reflection specifiers | BlueprintAssignable |
+| Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnComprehendFinished OnComprehendFinished;` |
+
+**Notes:**
+
+> 参悟结束（bConfirmed 区分确认/取消）
 
 ---
 
@@ -35,7 +95,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnDanTianExperienceValueChanged OnDanTianExperienceValueChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 丹田经验变动
 
@@ -50,7 +110,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnMartialArtsChanged OnInternalStrengthChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 内功变动
 
@@ -65,7 +125,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnMartialSlotsChanged OnMartialSlotsChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 武学插槽变动
 
@@ -80,7 +140,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnMartialArtsChanged OnMovesChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 招式变动
 
@@ -95,7 +155,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnMartialArtsChanged OnPassiveChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 被动变动
 
@@ -110,7 +170,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnRealmLevelChanged OnRealmLevelChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 境界等级变化
 
@@ -125,7 +185,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnRealmLevelChanged OnReachableRealmLevelChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 可突破的境界发生变化
 
@@ -140,9 +200,24 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FName,FMartialArtsLearnData> MartialArtsLearnData;` |
 
-**Source comments:**
+**Notes:**
 
 > 已经学习的武学
+
+---
+
+### Property `ComprehendSession`
+
+| Field | Details |
+|------|------|
+| C++ type | [FMartialArtsComprehendSession](../../Struct/MartialArts__FMartialArtsComprehendSession.md) |
+| Reflection specifiers | BlueprintReadOnly, Category="MartialArts|参悟" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Transient, Category="MartialArts|参悟") FMartialArtsComprehendSession ComprehendSession;` |
+
+**Notes:**
+
+> 当前参悟会话（瞬态，不存档；确认/取消后清空）
 
 ---
 
@@ -155,7 +230,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<int,FName> CarryingMoves;` |
 
-**Source comments:**
+**Notes:**
 
 > 携带的招式 从0 开始
 
@@ -170,7 +245,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<int,FName> CarryingPassive;` |
 
-**Source comments:**
+**Notes:**
 
 > 携带的被动 从0 开始
 
@@ -185,7 +260,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FName CarryingInternalStrength;` |
 
-**Source comments:**
+**Notes:**
 
 > 携带的内功
 
@@ -200,7 +275,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int MovesSlotCount = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 招式槽位数量
 
@@ -215,7 +290,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int PassiveSlotCount = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 被动槽位数量
 
@@ -230,7 +305,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int RealmLevel = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前的境界等级
 
@@ -245,7 +320,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int CurMartialArtsScore = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前的武学积分
 
@@ -260,7 +335,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int TotalScore = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前计算过后的总分值
 
@@ -275,7 +350,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FName,FMartialArtsBookData> MartialArtsBookDataInfos;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前正在阅读的所有武学详细信息
 
@@ -290,7 +365,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FName,float> BooksReadTime;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前阅读的书籍时间
 
@@ -305,7 +380,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FName,int32> BooksReadCount;` |
 
-**Source comments:**
+**Notes:**
 
 > 书籍阅读完次数
 
@@ -320,7 +395,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FName CurReadMartialArts;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前阅读的武学书籍
 
@@ -335,7 +410,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TArray<FBreakThroughHarvest> BreakThroughHarvest;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前角色突破获得的被动技能
 
@@ -350,7 +425,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TArray<FMartialArtsEntries> MartialArtsEntries;` |
 
-**Source comments:**
+**Notes:**
 
 > 激活的武学词条信息
 
@@ -365,7 +440,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FName,FActiveGameplayEffectHandle> MartialArtsLevelHandle;` |
 
-**Source comments:**
+**Notes:**
 
 > 武学等级的升级GE
 
@@ -380,7 +455,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TArray<FName> CachedReduceCooldownEntriesID;` |
 
-**Source comments:**
+**Notes:**
 
 > 缓存有减少冷却配置的武学词条（性能优化）
 
@@ -390,12 +465,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EMartialArtsMajorCategories` |
+| C++ type | [EMartialArtsMajorCategories](../../Struct/MartialArts__EMartialArtsMajorCategories.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) EMartialArtsMajorCategories curMartialArtsMajorCategory = EMartialArtsMajorCategories::Passive;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前修炼倾向
 
@@ -410,7 +485,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int32 RealmLevelHistoricHigh = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 历史最高境界
 
@@ -425,7 +500,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int32 ReachableRealmLevel = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前可以突破到的境界
 
@@ -440,7 +515,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int32 BreakthroughNumber = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前境界突破次数
 
@@ -464,7 +539,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > Returns the GrowUp component if one exists on the specified actor.
 
@@ -487,6 +562,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Adds martial arts experience to the specified gameplay attribute.
+
 ---
 
 ### Function `ChangeInternalStrength`
@@ -494,7 +573,7 @@
 | Field | Details |
 |------|------|
 | Reflection specifiers | BlueprintCallable, Category="MartialArts" |
-| Return type | `EMartialArtsErrorType` |
+| Return type | [EMartialArtsErrorType](../../Struct/MartialArts__EMartialArtsErrorType.md) |
 | Parameters | see table below |
 
 | Name | Type |
@@ -505,7 +584,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 切换内功
 
@@ -523,7 +602,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算内功等级和境界等级
 
@@ -546,7 +625,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新等级GE
 
@@ -568,7 +647,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除等级GE
 
@@ -592,7 +671,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 应用内功等级和境界等级属性
 
@@ -608,13 +687,13 @@
 
 | Name | Type |
 |--------|------|
-| `MAMCate` | `EMartialArtsMajorCategories` |
+| `MAMCate` | [EMartialArtsMajorCategories](../../Struct/MartialArts__EMartialArtsMajorCategories.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,Category="MartialArts") void SetMartialArtsMajorCategories(EMartialArtsMajorCategories MAMCate) {curMartialArtsMajorCategory = MAMCate; }`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置修炼倾向
 
@@ -625,16 +704,42 @@
 | Field | Details |
 |------|------|
 | Reflection specifiers | BlueprintCallable, Category="MartialArts" |
-| Return type | `EMartialArtsMajorCategories` |
+| Return type | [EMartialArtsMajorCategories](../../Struct/MartialArts__EMartialArtsMajorCategories.md) |
 | Parameters | (none) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,Category="MartialArts") EMartialArtsMajorCategories GetMartialArtsMajorCategories() const { return curMartialArtsMajorCategory; }`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取修炼倾向
+
+---
+
+### Function `GrantMartialArtsAtLevel`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="MartialArts" |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `MartialArtsID` | `FName` |
+| `Level` | `int32` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,Category= "MartialArts") bool GrantMartialArtsAtLevel(FName MartialArtsID, int32 Level);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> [测试沙盒]直接给当前角色装配指定武学并设到指定等级(内功/招式/被动通用)。
+> 复用 ChangeInternalStrength/ChangeMoves/ChangePassive 入槽 + 把 TotalExperience 设到目标等级阈值后走
+> CalculateInternalStrengthAndRealmLevel / CalculateMartialArtsLevel 生效，行为与正常成长一致。
+> 招式/被动会按需临时解锁槽位(MovesSlotCount/PassiveSlotCount)以便测试。
 
 ---
 
@@ -643,7 +748,7 @@
 | Field | Details |
 |------|------|
 | Reflection specifiers | BlueprintCallable, Category="MartialArts" |
-| Return type | `EMartialArtsErrorType` |
+| Return type | [EMartialArtsErrorType](../../Struct/MartialArts__EMartialArtsErrorType.md) |
 | Parameters | see table below |
 
 | Name | Type |
@@ -655,7 +760,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 切换招式
 
@@ -666,7 +771,7 @@
 | Field | Details |
 |------|------|
 | Reflection specifiers | BlueprintCallable, Category="MartialArts" |
-| Return type | `EMartialArtsErrorType` |
+| Return type | [EMartialArtsErrorType](../../Struct/MartialArts__EMartialArtsErrorType.md) |
 | Parameters | see table below |
 
 | Name | Type |
@@ -678,7 +783,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 切换被动
 
@@ -700,7 +805,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 更新境界相关数据
 
@@ -722,7 +827,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置新的境界
 
@@ -740,7 +845,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查招式 被动 槽位是否符合限制
 
@@ -762,7 +867,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查已学武学是否到达最大等级
 
@@ -778,11 +883,15 @@
 
 | Name | Type |
 |--------|------|
-| `AttributeClassification` | `EMartialArtsAttributeClassification` |
+| `AttributeClassification` | [EMartialArtsAttributeClassification](../../Struct/CommonEnum__EMartialArtsAttributeClassification.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) static FGameplayAttribute GetMartialArtsExperienceByType(EMartialArtsAttributeClassification AttributeClassification);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns the experience gameplay attribute for the given martial arts attribute classification (static).
 
 ---
 
@@ -796,13 +905,13 @@
 
 | Name | Type |
 |--------|------|
-| `AttributeClassification` | `EMartialArtsAttributeClassification` |
+| `AttributeClassification` | [EMartialArtsAttributeClassification](../../Struct/CommonEnum__EMartialArtsAttributeClassification.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FGameplayAttribute GetMartialArtsExperienceBonusByType(EMartialArtsAttributeClassification AttributeClassification);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据类型获取经验加成
 
@@ -824,9 +933,189 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算武学等级
+
+---
+
+### Function `WashSkillEntryAtLevel`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="MartialArts" |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `MartialArtsLearnDataMapKey` | `FName` |
+| `Level` | `int32` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "MartialArts") bool WashSkillEntryAtLevel(FName MartialArtsLearnDataMapKey, int32 Level);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 洗炼指定等级技能词条：仅随机成功时覆盖；MartialArtsLearnDataMapKey 为 MartialArtsLearnData 的 TMap 键
+
+---
+
+### Function `BeginComprehendMartialArts`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="MartialArts|参悟" |
+| Return type | [EComprehendResult](../../Struct/MartialArts__EComprehendResult.md) |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `MartialArtsLearnDataMapKey` | `FName` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "MartialArts|参悟") EComprehendResult BeginComprehendMartialArts(FName MartialArtsLearnDataMapKey);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 开始参悟：扣历练点数，快照并重洗该武学全部已生效词条槽（不落地，进入会话）。MartialArtsLearnDataMapKey 为 MartialArtsLearnData 的 TMap 键
+
+---
+
+### Function `SetComprehendSlotRetrace`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="MartialArts|参悟" |
+| Return type | [EComprehendResult](../../Struct/MartialArts__EComprehendResult.md) |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `Level` | `int32` |
+| `bRetrace` | `bool` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "MartialArts|参悟") EComprehendResult SetComprehendSlotRetrace(int32 Level, bool bRetrace);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 切换指定等级槽位的回溯标记：bRetrace=true 标记该槽确定时用旧词条（不立即扣点，仅校验累计不超当前回溯点）/false 取消标记。回溯点在 Confirm 时统一结算
+
+---
+
+### Function `ConfirmComprehendMartialArts`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="MartialArts|参悟" |
+| Return type | [EComprehendResult](../../Struct/MartialArts__EComprehendResult.md) |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "MartialArts|参悟") EComprehendResult ConfirmComprehendMartialArts();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 确认参悟：逐槽回溯用旧、否则用新，写回 SkillEntryIdsByLevel 并让效果重新生效，清空会话
+
+---
+
+### Function `CancelComprehendMartialArts`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="MartialArts|参悟" |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "MartialArts|参悟") void CancelComprehendMartialArts();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 取消参悟：丢弃会话（已消耗点数不退）
+
+---
+
+### Function `IsComprehendSessionActive`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintPure, Category="MartialArts|参悟" |
+| Return type | `bool` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintPure, Category = "MartialArts|参悟") bool IsComprehendSessionActive() const { return ComprehendSession.bActive; }`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 是否有进行中的参悟会话
+
+---
+
+### Function `GetComprehendSession`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintPure, Category="MartialArts|参悟" |
+| Return type | [FMartialArtsComprehendSession](../../Struct/MartialArts__FMartialArtsComprehendSession.md) |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintPure, Category = "MartialArts|参悟") FMartialArtsComprehendSession GetComprehendSession() const { return ComprehendSession; }`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 获取当前参悟会话（供 UI 展示前后词条对比）
+
+---
+
+### Function `GetComprehendCost`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintPure, Category="MartialArts|参悟" |
+| Return type | `int32` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `MartialArtsLearnDataMapKey` | `FName` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintPure, Category = "MartialArts|参悟") int32 GetComprehendCost(FName MartialArtsLearnDataMapKey) const;`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 读取该武学参悟消耗的历练点数（供 UI 显示/按钮置灰）
+
+---
+
+### Function `GetPendingRetraceCost`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintPure, Category="MartialArts|参悟" |
+| Return type | `int32` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintPure, Category = "MartialArts|参悟") int32 GetPendingRetraceCost() const;`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 当前已标记回溯的槽位合计需消耗的回溯点数（供 UI 显示与确定按钮置灰；确定时一次性扣除）
 
 ---
 
@@ -847,7 +1136,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据分数获取需要达到的武学等级
 
@@ -870,7 +1159,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 添加武学属性
 
@@ -893,7 +1182,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取武学中所有相关联的投射物
 
@@ -916,7 +1205,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取武学中所有相关联的效果
 
@@ -938,7 +1227,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置当前阅读的武学
 
@@ -960,7 +1249,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询书籍阅读的百分比
 
@@ -983,7 +1272,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 增加当前阅读的武学时间
 
@@ -1006,7 +1295,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 增加当前阅读的书籍时间
 
@@ -1028,7 +1317,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取阅读数量
 
@@ -1051,7 +1340,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 应用武学的等级属性
 
@@ -1074,7 +1363,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除武学的等级属性
 
@@ -1096,7 +1385,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 应用境界的等级属性
 
@@ -1118,7 +1407,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除境界的等级属性
 
@@ -1140,7 +1429,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 判断武学是否已经装备了
 
@@ -1162,7 +1451,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 添加丹田经验值(用于UI测试增加丹田经验)
 
@@ -1180,7 +1469,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 开启丹田后计算属性 只会调用一次
 
@@ -1198,7 +1487,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取当前资质
 
@@ -1216,7 +1505,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 持续增加内功经验
 
@@ -1234,7 +1523,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 开始持续增加定时器
 
@@ -1252,7 +1541,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 开始持续增加定时器
 

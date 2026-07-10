@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> World Force Configuration Asset UObject type.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<FName,float> FirstBuildReputation;` |
 
-**Source comments:**
+**Notes:**
 
 > 首次建造指定的建筑可获得声望
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float RecruitReputation = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家招募强力角色获得声望
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float MaxForceJusticeValue = 10000.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 势力正邪值上限
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float MinForceJusticeValue = -10000.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 势力正邪值下限
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float BuryCorpseJusticeChange = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 埋葬尸体正邪变化
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float RotCorpseJusticeChange = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 尸体腐烂正邪变化
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float NPCvsNPCVictoryRatio = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > NPC攻击NPC时胜负计算公式的系数
 
@@ -122,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float MinFavorability = -1200.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 好感度下限
 
@@ -137,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float MaxFavorability = 1200.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 好感度上限
 
@@ -152,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FForceInitFavorability> ForceInitFavorability;` |
 
-**Source comments:**
+**Notes:**
 
 > 势力间初始好感度
 

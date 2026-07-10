@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EAbilityUseState` |
+| C++ type | [EAbilityUseState](ERW_Enumerations__EAbilityUseState.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) EAbilityUseState AbilityUseState = EAbilityUseState::Inactive;` |
 
-**Source comments:**
+**Notes:**
 
 > 能力当前状态
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) FGuid ItemGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应物品的Guid
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) float CurActionTime { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 当前Action执行时间
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) float TotalActionTime { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > Action执行总时间
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) float CurWorkload { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 当前工作量
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) float TotalWorkload { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 总工作量
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) float TimeOfDuration { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 剩余持续时间
 
@@ -123,5 +123,9 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , SaveGame) bool FinishLoop = false;` |
+
+**Notes:**
+
+> Flag indicating whether the looping execution has finished.
 
 ---

@@ -19,6 +19,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TArray<FVector> Path;` |
 
+**说明:**
+
+> Path 字段。
+
 ---
 
 ### 属性 `PathLength`
@@ -30,16 +34,24 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, meta = (ClampMin = "0.0")) float PathLength;` |
 
+**说明:**
+
+> Path Length 字段。
+
 ---
 
 ### 属性 `Error`
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EPathfindingError` |
+| C++ 类型 | [EPathfindingError](WorldMapPathSubsystem__EPathfindingError.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) EPathfindingError Error;` |
+
+**说明:**
+
+> Error 字段。
 
 ---
 
@@ -52,6 +64,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, meta = (ClampMin = "0.0")) float SearchTime;` |
 
+**说明:**
+
+> Search Time 字段。
+
 ---
 
 ### 属性 `NodesExplored`
@@ -62,5 +78,9 @@
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, meta = (ClampMin = "0")) int32 NodesExplored;` |
+
+**说明:**
+
+> Nodes Explored 字段。
 
 ---

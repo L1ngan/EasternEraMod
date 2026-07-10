@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> GenerationCondition;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成条件 commonCondition 配置表
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float ActivateCountDown = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 激活倒计时
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 GenerationDelay = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成怪物的延迟
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FGenerationSetData> GenerationSetData;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成设置
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 GenerationTimes = -1;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成的次数 -1 为无限次
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bActivateCheckCondition = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否在激活时重新检查条件
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 GenerationInterval = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成的间隔
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 GenerationMaxNumber = -1;` |
 
-**Source comments:**
+**Notes:**
 
 > 此生成配置 生成的单位最多同时存在多少个 -1 为无限制
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere,meta=(EditConditionHides,EditCondition = "false"), Category="Not Config") TArray<FCommonTaskCondition> Condition;` |
 
-**Source comments:**
+**Notes:**
 
 > 包含的条件
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,meta=(EditConditionHides,EditCondition = "false"),Category="Not Config") int32 AlreadyGenerationTimes = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 已经生成的次数
 
@@ -164,12 +164,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ETipsType` |
+| C++ type | [ETipsType](WorldStruct__ETipsType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ETipsType ActivateTips = ETipsType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 提示 激活提示
 
@@ -179,12 +179,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ETipsType` |
+| C++ type | [ETipsType](WorldStruct__ETipsType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ETipsType GenerationTips = ETipsType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 提示 生成提示
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGenerationRuleData GenerationRule;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成规则
 
@@ -209,12 +209,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EGenerationActorType` |
+| C++ type | [EGenerationActorType](WorldStruct__EGenerationActorType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EGenerationActorType GenerationActorType = EGenerationActorType::SpawnMonster;` |
 
-**Source comments:**
+**Notes:**
 
 > 生成actor的类型
 
@@ -229,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere,meta=(EditConditionHides,EditCondition = "false"),Category="Not Config") FGuid ForceGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 此配置所属的势力
 

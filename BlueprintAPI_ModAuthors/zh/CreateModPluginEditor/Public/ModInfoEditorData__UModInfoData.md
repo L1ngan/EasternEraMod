@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Basic") FString ModId;` |
 
-**源码注释:**
+**说明:**
 
 > Mod 唯一标识符
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Basic") FString ModName;` |
 
-**源码注释:**
+**说明:**
 
 > Mod 显示名称
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Basic") FString Version;` |
 
-**源码注释:**
+**说明:**
 
 > Mod 版本号
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Basic") FString Author;` |
 
-**源码注释:**
+**说明:**
 
 > Mod 作者
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Basic", meta = (MultiLine = true)) FString Description;` |
 
-**源码注释:**
+**说明:**
 
 > Mod 描述
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Basic") FString Icon;` |
 
-**源码注释:**
+**说明:**
 
 > Mod 图标路径
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Files", meta = (FilePath, RelativeToGameDir)) FString MainLuaFile = TEXT("Main.lua");` |
 
-**源码注释:**
+**说明:**
 
 > 主 Lua 文件
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Files", meta = (AllowedClasses = "/Script/CreateModPlugin.ModInformationAsset")) FSoftObjectPath ModInformationAssetPath;` |
 
-**源码注释:**
+**说明:**
 
 > Mod 信息资产路径
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dependencies") TArray<FModDependencyData> Dependencies;` |
 
-**源码注释:**
+**说明:**
 
 > 依赖列表
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Settings") bool bNewGameLoad = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否在新游戏时加载
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Settings") FString MinGameVersion;` |
 
-**源码注释:**
+**说明:**
 
 > 支持的游戏最小版本号
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Settings") bool bIncludeGameplayTags = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否包含 GameplayTag配置 使用引擎GameplayTag管理器添加或删除
 
@@ -199,7 +199,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Settings", meta = (EditCondition = "bIncludeGameplayTags", EditConditionHides)) FString GameplayTagsIniFile;` |
 
-**源码注释:**
+**说明:**
 
 > 当 bIncludeGameplayTags 为真时，GameplayTag 的 ini 路径（相对 Mod 根目录，或选中的路径；保存时会规范为 {ModId}GameplayTags.ini）
 
@@ -214,7 +214,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Settings") FString ModFolderPath;` |
 
-**源码注释:**
+**说明:**
 
 > Mod 文件夹路径（用于保存 JSON 文件）
 
@@ -229,7 +229,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, Category = "Settings") FString PublishedFileId;` |
 
-**源码注释:**
+**说明:**
 
 > Steam 发布的文件 ID（由上传流程写入 ModInfo.json，不在本插件编辑器中编辑）
 
@@ -244,7 +244,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Packaging", meta = (ToolTip = "Additional assets to include in pak file. Paths should be relative to Content directory.")) TArray<FString> AdditionalAssets;` |
 
-**源码注释:**
+**说明:**
 
 > 额外打包的资产列表（相对于项目Content目录的路径）
 

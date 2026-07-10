@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Treasure pavilion mood rule: grants buff moods when the required disciple count and goods type count are satisfied, otherwise applies debuff moods.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 SatisfyDiscipleNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 需要满足的弟子人数
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) int32 SatisfyGoodsTypeNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 需要满足的商品种类数量
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FName>UnsatisfiedBuff;` |
 
-**Source comments:**
+**Notes:**
 
 > Debuff心情
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FName>SatisfiedBuff;` |
 
-**Source comments:**
+**Notes:**
 
 > Buff心情
 

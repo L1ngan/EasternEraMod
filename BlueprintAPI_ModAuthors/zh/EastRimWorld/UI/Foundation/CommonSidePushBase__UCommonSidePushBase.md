@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> Common Side Push Base UObject 类型。
 
 ## 蓝图暴露变量
 
@@ -16,6 +18,10 @@
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FCommonButton CommonButtonInfo;` |
+
+**说明:**
+
+> Common Button Info 字段。
 
 ---
 
@@ -37,7 +43,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 **BlueprintNativeEvent**：蓝图可重写；C++ 默认实现在 `xxx_Implementation`。
 
-**源码注释:**
+**说明:**
 
 > 初始化侧边按钮
 
@@ -55,7 +61,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「PreHandleNativeOnClicked」。
 
-**源码注释:**
+**说明:**
 
 > 点击前置处理，返回true表示已在脚本中处理并跳过原有点击逻辑
 
@@ -73,7 +79,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「OpenSelectFabricateWidget」。
 
-**源码注释:**
+**说明:**
 
 > 打开制造界面
 
@@ -91,9 +97,45 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 打开设置拥有者界面
+
+---
+
+### 函数 `OpenRebuildBuildingWidget`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintImplementableEvent |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable , BlueprintImplementableEvent) void OpenRebuildBuildingWidget();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 打开重建建筑界面
+
+---
+
+### 函数 `TransBuilding`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintImplementableEvent |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable , BlueprintImplementableEvent) void TransBuilding();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 移动建筑
 
 ---
 
@@ -107,13 +149,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `ButtonType` | `EEnergyControlType` |
+| `ButtonType` | [EEnergyControlType](../../ERW_Enumerations__EEnergyControlType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable , BlueprintImplementableEvent) void OpenAutomatedControlWidget(EEnergyControlType ButtonType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 打开自动化控件相关界面
 
@@ -131,7 +173,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 打开分配管道界面
 
@@ -149,7 +191,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 打开设置设备开启时控制的管道
 
@@ -167,7 +209,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 打开设置设备关闭时控制的管道
 
@@ -185,7 +227,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 打开游历界面
 
@@ -203,7 +245,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 打开探索界面
 
@@ -221,7 +263,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 打开放弃城镇
 
@@ -239,6 +281,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 执行 Open Word Place Management Widget 操作。
+
 ---
 
 ### 函数 `SureGetOutOfTheJam`
@@ -252,6 +298,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable , BlueprintImplementableEvent) void SureGetOutOfTheJam();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> Sure Get Out Of The Jam 字段。
 
 ---
 
@@ -267,7 +317,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 打开攻击地点
 
@@ -285,7 +335,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 节点显示名可能为「FellAndHarvest」。
 
-**源码注释:**
+**说明:**
 
 > 砍伐和收割
 
@@ -303,7 +353,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 节点显示名可能为「BackPopupLastWidetPage」。
 
-**源码注释:**
+**说明:**
 
 > 返回上个弹出窗叠加页
 
@@ -321,7 +371,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 节点显示名可能为「CancelAllSelectObjectOrder」。
 
-**源码注释:**
+**说明:**
 
 > 取消所有选中对象的执行命令
 
@@ -339,7 +389,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 当在操作多个对象时重新添加多选按钮以更新按钮状态
 
@@ -357,7 +407,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「OpenSelectTechnologyWidget」。
 
-**源码注释:**
+**说明:**
 
 > 打开科技界面
 
@@ -375,7 +425,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「OpenBookListWidget」。
 
-**源码注释:**
+**说明:**
 
 > 打开书籍界面
 
@@ -393,7 +443,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「CheckCanWriteCopy」。
 
-**源码注释:**
+**说明:**
 
 > 检查书籍是否可以被抄录
 
@@ -411,9 +461,63 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「OpenFoodListWidget」。
 
-**源码注释:**
+**说明:**
 
 > 打开食物界面
+
+---
+
+### 函数 `K2_OpenComprehendListWidget`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintImplementableEvent |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent, meta = (DisplayName = "OpenComprehendListWidget")) void K2_OpenComprehendListWidget();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「OpenComprehendListWidget」。
+
+**说明:**
+
+> 打开角色参悟界面
+
+---
+
+### 函数 `K2_OpenAssignActiveAreaWidget`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintImplementableEvent |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent, meta = (DisplayName = "OpenAssignActiveAreaWidget")) void K2_OpenAssignActiveAreaWidget();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「OpenAssignActiveAreaWidget」。
+
+**说明:**
+
+> 打开分配活动区域界面
+
+---
+
+### 函数 `K2_OpenChangeDiscipleAreaWidget`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintImplementableEvent |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent, meta = (DisplayName = "OpenChangeDiscipleAreaWidget")) void K2_OpenChangeDiscipleAreaWidget();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「OpenChangeDiscipleAreaWidget」。
+
+**说明:**
+
+> 打开变更弟子活动区域界面
 
 ---
 
@@ -429,7 +533,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 节点显示名可能为「ProhibitUsage」。
 
-**源码注释:**
+**说明:**
 
 > 禁止使用
 
@@ -447,7 +551,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通用操作(设置所有SelectInventorySubstituteSystem中选中的对象的按钮状态)
 
@@ -469,6 +573,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「SetShowSelectImage」。
 
+**说明:**
+
+> Set Show Select Image 字段。
+
 ---
 
 ### 函数 `ImmediatelyExecute`
@@ -483,7 +591,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 降低Action消耗
 
@@ -501,7 +609,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 设置机器人的保护对象
 
@@ -523,7 +631,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 传入检测框集合，根据bool设置全选或全取消
 
@@ -541,7 +649,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 触发按钮状态并清除当前选择对象
 
@@ -559,6 +667,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> Observe Operate 字段。
+
 ---
 
 ### 函数 `CheckOperateResult`
@@ -573,7 +685,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查操作结果，并刷新
 
@@ -591,7 +703,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「OpenSwitchRoomTypeWidget」。
 
-**源码注释:**
+**说明:**
 
 > 打开切换房间类型界面
 
@@ -609,6 +721,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「OpenApplyCeremonyWidget」。
 
+**说明:**
+
+> Open Apply Ceremony Widget 字段。
+
 ---
 
 ### 函数 `K2_OpenAddPuppetWidget`
@@ -622,6 +738,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent, meta = (DisplayName = "OpenAddPuppetWidget")) void K2_OpenAddPuppetWidget();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「OpenAddPuppetWidget」。
+
+**说明:**
+
+> Open Add Puppet Widget 字段。
 
 ---
 
@@ -637,7 +757,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 选择前往驯服的弟子
 
@@ -655,6 +775,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> Kill Someone 字段。
+
 ---
 
 ### 函数 `OpenSelectRecruitCharacter`
@@ -669,7 +793,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 选择前往招募的弟子
 
@@ -687,7 +811,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「OpenTreasureListWidget」。
 
-**源码注释:**
+**说明:**
 
 > 打开珍宝阁/百宝楼界面
 
@@ -705,7 +829,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「OpenBackPackWidget」。
 
-**源码注释:**
+**说明:**
 
 > 打开背包
 
@@ -723,7 +847,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「CopyObjectSetting」。
 
-**源码注释:**
+**说明:**
 
 > 复制建筑设置
 
@@ -741,7 +865,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「PasteObjectSetting」。
 
-**源码注释:**
+**说明:**
 
 > 粘贴建筑设置
 
@@ -759,7 +883,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「QuickBuild」。
 
-**源码注释:**
+**说明:**
 
 > 快速建造设置
 
@@ -777,7 +901,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 摧毁资源
 
@@ -795,8 +919,26 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「ConfirmDeleteResources」。
 
-**源码注释:**
+**说明:**
 
 > 确认是否删除
+
+---
+
+### 函数 `K2_OpenTradeArea`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintImplementableEvent |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, meta = (DisplayName = "OpenTradeArea")) void K2_OpenTradeArea();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。 节点显示名可能为「OpenTradeArea」。
+
+**说明:**
+
+> 打开待交易区UI
 
 ---

@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="StackModel") float MinCapacity = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 最小容量百分比
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="StackModel") float MaxCapacity = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大容量百分比
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="StackModel") TSoftObjectPtr<UStaticMesh> StackModel;` |
 
-**Source comments:**
+**Notes:**
 
 > 在容量范围内显示的模型
 

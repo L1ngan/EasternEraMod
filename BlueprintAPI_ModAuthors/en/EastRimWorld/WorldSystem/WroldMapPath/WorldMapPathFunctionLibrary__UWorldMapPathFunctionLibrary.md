@@ -27,7 +27,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取路径查找子系统
 
@@ -53,7 +53,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 简单的路径查找（使用优化的A*算法）
 
@@ -72,14 +72,14 @@
 | `WorldContextObject` | `UObject*` |
 | `StartPosition` | `const FVector&` |
 | `EndPosition` | `const FVector&` |
-| `(unnamed / type only)` | `EFindPathType Algorithm = EFindPathType::AStar` |
+| `(unnamed / type only)` | [EFindPathType](WorldMapPathSubsystem__EFindPathType.md) Algorithm = [EFindPathType](WorldMapPathSubsystem__EFindPathType.md)::AStar |
 | `2` | `int32 SmoothingLevel =` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Pathfinding") static FPathfindingResult FindPathAdvanced(UObject* WorldContextObject, const FVector& StartPosition, const FVector& EndPosition, EFindPathType Algorithm = EFindPathType::AStar, int32 SmoothingLevel = 2);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 高级路径查找（可选择算法）
 
@@ -102,7 +102,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查找最近的路径点
 
@@ -126,7 +126,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取随机路径点
 
@@ -145,13 +145,13 @@
 | `WorldContextObject` | `UObject*` |
 | `StartPositions` | `const TArray<FVector>&` |
 | `EndPositions` | `const TArray<FVector>&` |
-| `(unnamed / type only)` | `EFindPathType Algorithm = EFindPathType::AStar` |
+| `(unnamed / type only)` | [EFindPathType](WorldMapPathSubsystem__EFindPathType.md) Algorithm = [EFindPathType](WorldMapPathSubsystem__EFindPathType.md)::AStar |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Pathfinding") static TArray<FPathfindingResult> FindMultiplePaths(UObject* WorldContextObject, const TArray<FVector>& StartPositions, const TArray<FVector>& EndPositions, EFindPathType Algorithm = EFindPathType::AStar);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 批量路径查找
 
@@ -173,7 +173,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取路径查找性能统计
 
@@ -195,7 +195,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 重置性能统计
 
@@ -217,7 +217,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 清理路径缓存
 
@@ -239,7 +239,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查路径是否有效
 
@@ -261,7 +261,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 计算路径总长度
 
@@ -284,7 +284,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 平滑路径
 
@@ -300,13 +300,13 @@
 
 | Name | Type |
 |--------|------|
-| `Error` | `EPathfindingError` |
+| `Error` | [EPathfindingError](WorldMapPathSubsystem__EPathfindingError.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintPure, Category = "Pathfinding") static FString GetPathfindingErrorString(EPathfindingError Error);`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 路径查找错误转换为字符串
 
@@ -328,7 +328,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查路径查找子系统是否可用
 
@@ -350,7 +350,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取路径查找配置
 
@@ -373,7 +373,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置路径查找配置
 

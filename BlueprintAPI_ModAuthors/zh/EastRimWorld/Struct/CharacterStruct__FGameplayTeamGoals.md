@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EWorldPlaceType` |
+| C++ 类型 | [EWorldPlaceType](CommonEnum__EWorldPlaceType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "GOAP") EWorldPlaceType WorldPlaceType = EWorldPlaceType::Station;` |
 
-**源码注释:**
+**说明:**
 
 > 关卡类型
 
@@ -29,12 +29,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EBattleType` |
+| C++ 类型 | [EBattleType](CommonEnum__EBattleType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "GOAP") EBattleType BattleType = EBattleType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 战斗类型
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "GOAP") TArray<FName> GOAPGoals;` |
 
-**源码注释:**
+**说明:**
 
 > 初始GOAP目标
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "GOAP") TArray<FName> InnerSectGOAPGoals;` |
 
-**源码注释:**
+**说明:**
 
 > 内门初始GOAP目标
 
@@ -74,12 +74,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | TMap<ERobotType , [FGoals](CharacterStruct__FGoals.md)> |
+| C++ 类型 | TMap<[ERobotType](../ERW_Enumerations__ERobotType.md) , [FGoals](CharacterStruct__FGoals.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "GOAP") TMap<ERobotType , FGoals> SummonInitGoal;` |
 
-**源码注释:**
+**说明:**
 
 > 召唤物根据类型初始GOAP目标
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "GOAP") TArray<FName> AnimalInitGoal;` |
 
-**源码注释:**
+**说明:**
 
 > 动物初始GOAP目标
 

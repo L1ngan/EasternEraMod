@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FPracticeAddAttributeRange> RoomAddExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 房间增加经验
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FPracticeAddAttributeRange> FiveElementsAddExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 五行增加经验
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FPracticeAddAttributeRange> MoodAddExperience;` |
 
-**源码注释:**
+**说明:**
 
 > 心情增加经验
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float AptitudeConversion = 0.1;` |
 
-**源码注释:**
+**说明:**
 
 > 资质转化率 每点资质额外提升百分比经验加成
 
@@ -79,8 +79,38 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 ContinuouslyIncreaseIntervalTime = 40;` |
 
-**源码注释:**
+**说明:**
 
 > 持续增加经验间隔时间
+
+---
+
+### 属性 `TrainingPointCD`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float TrainingPointCD = 240.f;` |
+
+**说明:**
+
+> 同一角色修炼获取历练点CD
+
+---
+
+### 属性 `RetracePointCD`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `float` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float RetracePointCD = 240.f;` |
+
+**说明:**
+
+> 同一角色修炼获取回溯点CD
 
 ---

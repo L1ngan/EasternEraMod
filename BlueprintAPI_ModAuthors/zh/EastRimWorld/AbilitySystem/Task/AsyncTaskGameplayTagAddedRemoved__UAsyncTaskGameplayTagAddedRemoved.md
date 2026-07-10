@@ -20,6 +20,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnGameplayTagAddedRemoved OnTagAdded;` |
 
+**说明:**
+
+> 被监听的GameplayTag被添加时广播的委托
+
 ---
 
 ### 属性 `OnTagRemoved`
@@ -30,6 +34,10 @@
 | 反射说明符 | BlueprintAssignable |
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnGameplayTagAddedRemoved OnTagRemoved;` |
+
+**说明:**
+
+> 被监听的GameplayTag被移除时广播的委托
 
 ---
 
@@ -52,7 +60,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > Listens for FGameplayTags added and removed.
 
@@ -70,7 +78,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > You must call this function manually when you want the AsyncTask to end.
 > For UMG Widgets, you would call it in the Widget's Destruct event.

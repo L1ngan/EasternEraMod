@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EERWWeather` |
+| C++ 类型 | [EERWWeather](WorldStruct__EERWWeather.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) EERWWeather Weather = EERWWeather::None;` |
 
-**源码注释:**
+**说明:**
 
 > 天气
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int TemperatureMaxChange = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 温度最大变化
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int TemperatureMinChange = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 温度最小变化
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> WeatherDuringBuff;` |
 
-**源码注释:**
+**说明:**
 
 > 天气过程中获得的buff (固定改为永久时长)
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> WeatherEndBuff;` |
 
-**源码注释:**
+**说明:**
 
 > 天气结束后获得的buff（固定改为固定时长)
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText WeatherName;` |
 
-**源码注释:**
+**说明:**
 
 > 天气名称
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int MiniTime = 30;` |
 
-**源码注释:**
+**说明:**
 
 > 持续时间（秒）最小值（现实时间）
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int MaxTime = 100;` |
 
-**源码注释:**
+**说明:**
 
 > 持续时间（秒）最大值（现实时间）
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bShowTip = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否显示天气提示
 
@@ -149,12 +149,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ETipsType` |
+| C++ 类型 | [ETipsType](WorldStruct__ETipsType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) ETipsType TipType= ETipsType::WeatherChange;` |
 
-**源码注释:**
+**说明:**
 
 > 提示类型
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText WeatherDesc;` |
 
-**源码注释:**
+**说明:**
 
 > 天气描述信息
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftObjectPtr<UPrimaryDataAsset> WeatherData;` |
 
-**源码注释:**
+**说明:**
 
 > 天气对应的数据文件的软引用
 
@@ -199,6 +199,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftObjectPtr<UTexture2D> WeatherIcon;` |
 
+**说明:**
+
+> Weather Icon 字段。
+
 ---
 
 ### 属性 `WeatherStartChangeEvent`
@@ -210,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName WeatherStartChangeEvent;` |
 
-**源码注释:**
+**说明:**
 
 > 天气开始时对音效的操作 读取SoundChangeEventConfig 配置表
 
@@ -225,7 +229,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FName WeatherEndChangeEvent;` |
 
-**源码注释:**
+**说明:**
 
 > 天气结束时对音效的操作 读取SoundChangeEventConfig 配置表
 
@@ -240,7 +244,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bEffectPlant = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否影响植物生长效果
 
@@ -255,7 +259,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,meta=(EditCondition = "bEffectPlant")) float PlantEfficiency = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 天气对植物的生长效果（随机天气效果时不会生效，仅对指定天气时有效）
 
@@ -270,7 +274,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bEffectAnimalPregnant = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否影响动物怀孕
 
@@ -285,7 +289,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,meta=(EditCondition = "bEffectAnimalPregnant")) float PregnantEfficiency = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 天气对动物怀孕时间的影响（随机天气效果时不会生效，仅对指定天气时有效）
 

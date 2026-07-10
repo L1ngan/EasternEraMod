@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 采集物物品实例，包含生长速度、生长/收获时间、阶段与健康值等状态
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float GrowSpeed = {0.f};` |
 
-**源码注释:**
+**说明:**
 
 > 生长速度   生长温度效率X土壤效率 = 生长速度
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float TotalGrowTime = {0.f};` |
 
-**源码注释:**
+**说明:**
 
 > 总生长时间 只会在生长阶段计时
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float TotalHarvestTime = {0.f};` |
 
-**源码注释:**
+**说明:**
 
 > 总收成时间 如果会结果
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float CurGrowTime = {0.f};` |
 
-**源码注释:**
+**说明:**
 
 > 总生长时间 只会在生长阶段计时
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float CurHarvestTime = {0.f};` |
 
-**源码注释:**
+**说明:**
 
 > 总收成时间 如果会结果
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float CurStageGrowTime = {0.f};` |
 
-**源码注释:**
+**说明:**
 
 > 阶段生长时间
 
@@ -107,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) FGrowStage CurGrowStage;` |
 
-**源码注释:**
+**说明:**
 
 > 当前阶段的信息
 
@@ -122,7 +124,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float CurHealth = 0.0f;` |
 
-**源码注释:**
+**说明:**
 
 > 当前健康值
 
@@ -137,7 +139,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) float SoilEfficiency = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 土壤效率
 
@@ -152,7 +154,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadOnly) bool bSuspendGrow = false;` |
 
-**源码注释:**
+**说明:**
 
 > 暂停生长
 
@@ -167,7 +169,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) int32 CurExplorationTime;` |
 
-**源码注释:**
+**说明:**
 
 > 当前被探索的次数
 
@@ -185,13 +187,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `InStage` | `const EGrowStageType&` |
+| `InStage` | const [EGrowStageType](../Struct/ItemStruct__EGrowStageType.md)& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintPure) bool IsHaveGrowStage(const EGrowStageType& InStage);`
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 是否有果实成熟阶段
 
@@ -209,7 +211,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查是否可以生长
 
@@ -227,7 +229,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新采集物的生长阶段 (注意线程安全 此方法会在子线程中运行)
 
@@ -243,13 +245,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `NewGrowStage` | `EGrowStageType` |
+| `NewGrowStage` | [EGrowStageType](../Struct/ItemStruct__EGrowStageType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool SetGrowStage(EGrowStageType NewGrowStage);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置新的阶段
 
@@ -267,7 +269,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取采集物信息
 
@@ -285,7 +287,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取生命值百分比
 
@@ -303,7 +305,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取当前生长百分比
 
@@ -321,7 +323,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取当前收成进度 如果会结果
 
@@ -339,7 +341,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取当前的土壤效率
 
@@ -357,7 +359,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取当前的天气效率
 
@@ -375,7 +377,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取当前的光照效率
 
@@ -393,7 +395,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取此类型的所有的产出
 
@@ -411,7 +413,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取此类型的当前阶段产出
 
@@ -427,13 +429,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `NextGorGrowStage` | `EGrowStageType` |
+| `NextGorGrowStage` | [EGrowStageType](../Struct/ItemStruct__EGrowStageType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) virtual void CollectItemRegrow(EGrowStageType NextGorGrowStage);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 重生
 
@@ -455,7 +457,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 暂停生长
 
@@ -477,7 +479,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 探索一次产出
 

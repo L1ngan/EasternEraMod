@@ -17,11 +17,11 @@
 | C++ 类型 | `UObject*` |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) UObject* Object { nullptr };` |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere , Transient) UObject* Object { nullptr };` |
 
-**源码注释:**
+**说明:**
 
-> Object
+> Object（运行时缓存指针；身份靠下方 Guid，标记 Transient 避免被序列化导致悬空指针崩溃）
 
 ---
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) FGuid Guid;` |
 
-**源码注释:**
+**说明:**
 
 > Object对应的Guid
 
@@ -44,12 +44,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EActorType` |
+| C++ 类型 | [EActorType](ERW_Enumerations__EActorType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere , SaveGame) EActorType OwnerType { EActorType::None };` |
 
-**源码注释:**
+**说明:**
 
 > Owner的类型
 

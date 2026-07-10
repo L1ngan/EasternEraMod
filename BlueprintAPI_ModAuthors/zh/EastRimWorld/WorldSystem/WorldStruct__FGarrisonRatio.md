@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 MinNumberOfPeople = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 最小人数 包含
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 MaxNumberOfPeople = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 最大人数 包含
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,meta=(ClampMin = 0.0,ClampMax = 1.f,UIMin = 0.f, UIMax = 1.f)) float Ratio = 0.1;` |
 
-**源码注释:**
+**说明:**
 
 > 比例
 

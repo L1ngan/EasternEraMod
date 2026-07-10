@@ -25,9 +25,39 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "FightInteract") TObjectPtr<USphereComponent> InteractionSphere;` |
 
-**Source comments:**
+**Notes:**
 
 > === 交互范围 ===
+
+---
+
+### Property `StaticMeshComponent`
+
+| Field | Details |
+|------|------|
+| C++ type | `TObjectPtr<UStaticMeshComponent>` |
+| Reflection specifiers | BlueprintReadOnly, Category="FightInteract" |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "FightInteract") TObjectPtr<UStaticMeshComponent> StaticMeshComponent;` |
+
+**Notes:**
+
+> Static mesh component for the interactable's appearance.
+
+---
+
+### Property `RandomStaticMeshes`
+
+| Field | Details |
+|------|------|
+| C++ type | `TArray<TObjectPtr<UStaticMesh>>` |
+| Reflection specifiers | BlueprintReadWrite, Category="FightInteract|Mesh" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightInteract|Mesh") TArray<TObjectPtr<UStaticMesh>> RandomStaticMeshes;` |
+
+**Notes:**
+
+> Candidate list of static meshes for random appearance.
 
 ---
 
@@ -40,6 +70,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightInteract") float InteractionRadius = 150.f;` |
 
+**Notes:**
+
+> Radius of the interaction collision sphere; defaults to 150.
+
 ---
 
 ### Property `InteractionPromptWidget`
@@ -50,6 +84,10 @@
 | Reflection specifiers | BlueprintReadOnly, Category="FightInteract" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "FightInteract") TObjectPtr<UWidgetComponent> InteractionPromptWidget;` |
+
+**Notes:**
+
+> Widget component displaying the interaction prompt UI.
 
 ---
 
@@ -62,6 +100,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightInteract") TSubclassOf<UUserWidget> PromptWidgetClass;` |
 
+**Notes:**
+
+> UserWidget class used for the interaction prompt.
+
 ---
 
 ### Property `PromptText`
@@ -73,9 +115,9 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightInteract") FText PromptText;` |
 
-**Source comments:**
+**Notes:**
 
-> === 提示文字（覆盖接口默认值）===
+> === 提示文字（覆盖接口默认值）。C++ 不会主动写入提示 UI，UI 蓝图可按需读取。===
 
 ---
 
@@ -88,7 +130,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightInteract") class UAnimMontage* PawnInteractMontage;` |
 
-**Source comments:**
+**Notes:**
 
 > === 可选：FightPawn 前摇蒙太奇（覆盖接口默认值=nullptr）===
 
@@ -102,5 +144,29 @@
 | Reflection specifiers | BlueprintReadWrite, Category="FightInteract" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FightInteract") bool bEndInteractionImmediately = true;` |
+
+**Notes:**
+
+> Whether the interaction ends immediately; defaults to true.
+
+---
+
+## Blueprint-exposed functions
+
+### Function `RandomSetStaticMesh`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="FightInteract|Mesh" |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "FightInteract|Mesh") void RandomSetStaticMesh();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Sets the static mesh to one randomly chosen from the RandomStaticMeshes list.
 
 ---

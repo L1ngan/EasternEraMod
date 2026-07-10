@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid BattleGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗唯一标识
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 GroupIndex = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 分组索引
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 Round = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 回合数
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FGuid> ParticipatingSectIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 参赛门派Guid列表
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FGuid WinnerSectGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 获胜门派ID
 
@@ -89,12 +89,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ETournamentBattleState` |
+| C++ type | [ETournamentBattleState](TournamentStruct__ETournamentBattleState.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ETournamentBattleState TournamentBattleState = ETournamentBattleState::NotStarted;` |
 
-**Source comments:**
+**Notes:**
 
 > 单场战斗的状态
 

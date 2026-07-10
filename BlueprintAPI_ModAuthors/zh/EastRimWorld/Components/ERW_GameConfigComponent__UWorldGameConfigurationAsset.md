@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftClassPtr<AERW_PlayerPawn> WorldMapPossessPlayerPawn;` |
 
-**源码注释:**
+**说明:**
 
 > 世界地图使用的pawn
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FTransform WorldMapOffset = FTransform::Identity;` |
 
-**源码注释:**
+**说明:**
 
 > 世界地图的位置偏移
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftClassPtr<UEastRimWorldActivatableWidget> MainWidgetUI;` |
 
-**源码注释:**
+**说明:**
 
 > 世界地图界面UI
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftClassPtr<AWorldMapMoveActor> WorldMapMoveActorClass;` |
 
-**源码注释:**
+**说明:**
 
 > 世界中移动的actor
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float AfterNewlyBornAttackMultiplyingPower = 1.f;` |
 
-**源码注释:**
+**说明:**
 
 > 新生后攻击期望值倍率
 
@@ -89,12 +89,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<EWorldPlaceType,FText>` |
+| C++ 类型 | TMap<[EWorldPlaceType](../Struct/CommonEnum__EWorldPlaceType.md),FText> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<EWorldPlaceType,FText> WorldPlaceTypeName;` |
 
-**源码注释:**
+**说明:**
 
 > 世界地点类型名称
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftClassPtr<UEastRimWorldActivatableWidget> ForceCharacterEditorWidgetUI;` |
 
-**源码注释:**
+**说明:**
 
 > 门派换装-界面UI
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TSoftClassPtr<AERW_PlayerPawn> ForceCharacterEditorPawn;` |
 
-**源码注释:**
+**说明:**
 
 > 门派换装-Pawn
 
@@ -139,8 +139,53 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FTransform ForceCharacterEditorPawnOffset = FTransform::Identity;` |
 
-**源码注释:**
+**说明:**
 
 > 门派换装-Pawn生成位置
+
+---
+
+### 属性 `ForceSkillTestWidgetUI`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TSoftClassPtr<[UEastRimWorldActivatableWidget](../UI/EastRimWorldActivatableWidget__UEastRimWorldActivatableWidget.md)> |
+| 反射说明符 | BlueprintReadWrite, Category="SkillTest|技能测试" |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="SkillTest|技能测试") TSoftClassPtr<UEastRimWorldActivatableWidget> ForceSkillTestWidgetUI;` |
+
+**说明:**
+
+> 技能/武学测试沙盒-界面UI
+
+---
+
+### 属性 `ForceSkillTestPawn`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TSoftClassPtr<[AERW_PlayerPawn](../Framework/ERW_PlayerPawn__AERW_PlayerPawn.md)> |
+| 反射说明符 | BlueprintReadWrite, Category="SkillTest|技能测试" |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="SkillTest|技能测试") TSoftClassPtr<AERW_PlayerPawn> ForceSkillTestPawn;` |
+
+**说明:**
+
+> 技能/武学测试沙盒-观察Pawn
+
+---
+
+### 属性 `ForceSkillTestPawnOffset`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FTransform` |
+| 反射说明符 | BlueprintReadOnly, Category="SkillTest|技能测试" |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere,Category="SkillTest|技能测试") FTransform ForceSkillTestPawnOffset = FTransform::Identity;` |
+
+**说明:**
+
+> 技能/武学测试沙盒-观察Pawn生成位置
 
 ---

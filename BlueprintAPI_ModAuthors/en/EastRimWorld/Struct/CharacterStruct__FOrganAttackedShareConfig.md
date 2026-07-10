@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "OrganAttackedShareConfig") FName SharedOrganID;` |
 
-**Source comments:**
+**Notes:**
 
 > 分摊伤害的部位ID
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "OrganAttackedShareConfig") float MinSharePercent = 0.5f;` |
 
-**Source comments:**
+**Notes:**
 
 > 最小分摊伤害百分比
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "OrganAttackedShareConfig") float MaxSharePercent = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 最大分摊伤害百分比
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "OrganAttackedShareConfig") int ShareWeight = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 分摊权重
 

@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> Event Generate Character Component UObject 类型。
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) bool bInitComponent = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否初始化完成
 
@@ -30,9 +32,9 @@
 | C++ 类型 | TArray<[FMonsterGenerationInfo](../WorldSystem/WorldStruct__FMonsterGenerationInfo.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) TArray<FMonsterGenerationInfo> MonsterGenerationInfoQueue;` |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame,VisibleAnywhere) TArray<FMonsterGenerationInfo> MonsterGenerationInfoQueue;` |
 
-**源码注释:**
+**说明:**
 
 > 队列中的信息
 
@@ -45,9 +47,9 @@
 | C++ 类型 | TMap<FGuid,[FGenerationInstanceInfo](../WorldSystem/WorldStruct__FGenerationInstanceInfo.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) TMap<FGuid,FGenerationInstanceInfo> GenerationInstanceInfos;` |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame,VisibleAnywhere) TMap<FGuid,FGenerationInstanceInfo> GenerationInstanceInfos;` |
 
-**源码注释:**
+**说明:**
 
 > 已经生成的信息
 
@@ -60,9 +62,9 @@
 | C++ 类型 | TArray<[FMonsterGenerationInfo](../WorldSystem/WorldStruct__FMonsterGenerationInfo.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FMonsterGenerationInfo> MonsterDissatisfyGenerationInfo;` |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame,VisibleAnywhere) TArray<FMonsterGenerationInfo> MonsterDissatisfyGenerationInfo;` |
 
-**源码注释:**
+**说明:**
 
 > 不满足条件的信息
 
@@ -75,9 +77,9 @@
 | C++ 类型 | TArray<[FEnemyForceAttackGenerationInfo](../WorldSystem/WorldStruct__FEnemyForceAttackGenerationInfo.md)> |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) TArray<FEnemyForceAttackGenerationInfo> EnemyForceAttackGenerationInfoQueue;` |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame,VisibleAnywhere) TArray<FEnemyForceAttackGenerationInfo> EnemyForceAttackGenerationInfoQueue;` |
 
-**源码注释:**
+**说明:**
 
 > 敌对势力袭击生成队列
 
@@ -90,9 +92,9 @@
 | C++ 类型 | `TArray<FName>` |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) TArray<FName> NotGenerationID;` |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame,VisibleAnywhere) TArray<FName> NotGenerationID;` |
 
-**源码注释:**
+**说明:**
 
 > 不再生成的配置
 
@@ -107,7 +109,7 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnGenerateCharacterDelegate OnGenerateCharacterDelegate;` |
 
-**源码注释:**
+**说明:**
 
 > 生成角色
 
@@ -122,6 +124,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnUpdateGenerateTimeDelegate OnUpdateGenerateTimeDelegate;` |
 
+**说明:**
+
+> On Update Generate Time Delegate 事件或回调。
+
 ---
 
 ### 属性 `OnGenerateAllFinish`
@@ -133,18 +139,22 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnGenerateAllFinish OnGenerateAllFinish;` |
 
+**说明:**
+
+> On Generate All Finish 事件或回调。
+
 ---
 
 ### 属性 `GenerateCharacterSourceType`
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EGenerateCharacterSourceType` |
+| C++ 类型 | [EGenerateCharacterSourceType](../WorldSystem/WorldStruct__EGenerateCharacterSourceType.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) EGenerateCharacterSourceType GenerateCharacterSourceType = EGenerateCharacterSourceType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 此组件生成的对象
 
@@ -168,7 +178,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过GUID获取对应的生成怪物信息实例信息
 
@@ -190,7 +200,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过GUID获取对应的生成队列中的信息
 
@@ -212,7 +222,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除生成记录的单位
 
@@ -234,6 +244,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 执行 Remove Generation Actor By Guid 操作。
+
 ---
 
 ### 函数 `ExcludeCharacter`
@@ -253,7 +267,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 生成中排除角色
 
@@ -275,7 +289,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 归类怪物
 
@@ -297,7 +311,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过GUID获取所有生成的角色
 
@@ -319,7 +333,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID 创建生成信息
 
@@ -342,7 +356,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过ID 创建生成信息附加延迟时间
 

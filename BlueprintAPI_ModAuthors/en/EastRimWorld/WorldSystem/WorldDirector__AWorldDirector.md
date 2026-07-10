@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> World Director actor type.
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) TObjectPtr<UCommonTaskComponent> CommonTaskComponent;` |
 
-**Source comments:**
+**Notes:**
 
 > 通用任务组件
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame) float GameTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 游戏时长
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,SaveGame) int32 GameDay = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 游戏天数
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) int32 GameYear = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 游戏年份
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) int32 GameMonth = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 游戏月份
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) int32 GameDate = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 日期
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) int32 GameHour = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 小时
 
@@ -122,7 +124,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TArray<FForceFavorabilityInfo> AllForceFavorability;` |
 
-**Source comments:**
+**Notes:**
 
 > 所有势力的好感度
 
@@ -137,7 +139,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) FGuid PlayerForceGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家势力Guid
 
@@ -152,7 +154,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) bool bPlayerForceCreated = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家是否创建门派
 
@@ -167,7 +169,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float PlayerForceCreatedTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家创建门派的时间（创建时的游戏时长）
 
@@ -182,7 +184,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<int32,FApplyTeamBuffData> TeamBuffData;` |
 
-**Source comments:**
+**Notes:**
 
 > 团队buff
 
@@ -197,7 +199,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<FWorldAgreement,bool> WorldAgreements;` |
 
-**Source comments:**
+**Notes:**
 
 > 势力间签署的协议<协议数据,是否签署成功>
 
@@ -212,7 +214,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int32 GameDaySeconds = 24*40;` |
 
-**Source comments:**
+**Notes:**
 
 > 游戏一天的秒数
 
@@ -227,7 +229,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float WeatheringTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 天气已经持续的时间
 
@@ -242,7 +244,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float WeatherMaxTime = 10.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 天气最大时间
 
@@ -257,7 +259,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) bool bIsWeatherLock = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 天气锁定
 
@@ -272,7 +274,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float PlayerWealthPoints = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家财富点(临时缓存)
 
@@ -287,7 +289,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float LastCalculateTime_PlayerWealthPoints = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 最近一次计算玩家财富点数的时间
 
@@ -302,7 +304,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float CalculateInterval_PlayerWealthPoints = 2.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家财富点数计算间隔
 
@@ -317,7 +319,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float PlayerUnitsPoints = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家单位点数(临时缓存)
 
@@ -332,7 +334,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float LastCalculateTime_PlayerUnitsPoints = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 最近一次计算玩家单位点数的时间
 
@@ -347,7 +349,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float CalculateInterval_PlayerUnitsPoints = 2.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家单位点数计算间隔
 
@@ -362,7 +364,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TObjectPtr<AWorldPlace> CurWorldPlace;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前所在的位置
 
@@ -372,12 +374,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EERWSeason` |
+| C++ type | [EERWSeason](WorldStruct__EERWSeason.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame) EERWSeason CurrentSeason = EERWSeason::Spring;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前季节
 
@@ -392,7 +394,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame) int CurrentHour = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前小时
 
@@ -402,12 +404,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EERWWeather` |
+| C++ type | [EERWWeather](WorldStruct__EERWWeather.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere,SaveGame) EERWWeather CurrentWeather = EERWWeather::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前天气类型
 
@@ -422,7 +424,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FWorldPlaceWeatherInfo CurrentWorldPlaceWeatherInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前天气信息
 
@@ -437,7 +439,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FWorldPlaceWeatherInfo CurrentActualWeatherInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前实际天气变化包含过渡天气
 
@@ -452,7 +454,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUpdateWorldPlaceTemperature OnUpdateWorldPlaceTemperature;` |
 
-**Source comments:**
+**Notes:**
 
 > 更新当前地点的实际温度
 
@@ -467,7 +469,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUpdateTemperatureChange OnUpdateTemperatureChange;` |
 
-**Source comments:**
+**Notes:**
 
 > 更新当前气象相关的变化温度
 
@@ -482,7 +484,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUpdateTimeChange OnUpdateTimeChange;` |
 
-**Source comments:**
+**Notes:**
 
 > 更新时间广播
 
@@ -497,7 +499,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnWeatherChange OnWeatherChange;` |
 
-**Source comments:**
+**Notes:**
 
 > 配置生成最终的天气变化
 
@@ -512,7 +514,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable,BlueprintCallable) FOnUDWWeatherChange OnUDWWeatherChange;` |
 
-**Source comments:**
+**Notes:**
 
 > 配置生成最终的天气变化
 
@@ -522,12 +524,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EERWWeather,float>` |
+| C++ type | TMap<[EERWWeather](WorldStruct__EERWWeather.md),float> |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<EERWWeather,float> WeatherPlantEfficiency;` |
 
-**Source comments:**
+**Notes:**
 
 > 天气对植物的影响效率
 
@@ -542,7 +544,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) float WeatherPregnantEfficiency = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 天气对孕育效率的影响
 
@@ -557,7 +559,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) TArray<TObjectPtr<AWorldLightActor>> WorldLightActors;` |
 
-**Source comments:**
+**Notes:**
 
 > 世界中的光照Actor
 
@@ -572,7 +574,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnGameDayChanged OnGameDayChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 游戏天数改变
 
@@ -587,7 +589,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnGameSeasonChanged OnGameSeasonChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 游戏季节改变
 
@@ -602,7 +604,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnGameYearChanged OnGameYearChanged;` |
 
-**Source comments:**
+**Notes:**
 
 > 游戏年份改变
 
@@ -617,7 +619,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnInitCurWorldPlaced OnInitCurWorldPlaced;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始化
 
@@ -632,7 +634,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUnlockWorldPlace OnUnlockWorldPlace;` |
 
-**Source comments:**
+**Notes:**
 
 > 解锁新的地点
 
@@ -647,7 +649,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool bWorldSuspend = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 世界是否暂停
 
@@ -662,6 +664,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUpdateTipsDelegate OnUpdateTipsDelegate;` |
 
+**Notes:**
+
+> On Update Tips Delegate event or callback.
+
 ---
 
 ### Property `PlayerWorldForce`
@@ -673,7 +679,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TObjectPtr<class AWorldForce> PlayerWorldForce;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家势力
 
@@ -688,7 +694,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FGenericTeamId PlayerTeam;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家队id
 
@@ -703,6 +709,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnCreatePopWidget OnCreatePopWidget;` |
 
+**Notes:**
+
+> On Create Pop Widget event or callback.
+
 ---
 
 ### Property `OnFinishCreateForce`
@@ -714,7 +724,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnCreatePopWidget OnFinishCreateForce;` |
 
-**Source comments:**
+**Notes:**
 
 > 创建势力完成事件
 
@@ -729,6 +739,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnCreatePopWidget OnForceMasterDeath;` |
 
+**Notes:**
+
+> On Force Master Death event or callback.
+
 ---
 
 ### Property `OnCreateWindowWidget`
@@ -739,6 +753,10 @@
 | Reflection specifiers | BlueprintAssignable |
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnCreateWindowWidget OnCreateWindowWidget;` |
+
+**Notes:**
+
+> On Create Window Widget event or callback.
 
 ---
 
@@ -751,6 +769,10 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnChangeSceneWidgetVisibility OnChangeSceneWidgetVisibility;` |
 
+**Notes:**
+
+> On Change Scene Widget Visibility event or callback.
+
 ---
 
 ### Property `OnChangePlayerTotalReputation`
@@ -762,7 +784,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnChangePlayerTotalReputation OnChangePlayerTotalReputation;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家总声望值改变
 
@@ -777,7 +799,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool bAllInitializationComplete = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 所有的初始化完成
 
@@ -792,7 +814,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnAllInitializationCompleteDelegate OnAllInitializationCompleteDelegate;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前世界所有初始化完成
 
@@ -807,7 +829,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnRecoverFinished OnRecoverFinished;` |
 
-**Source comments:**
+**Notes:**
 
 > WorldPlace恢复完成
 
@@ -822,7 +844,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool bNeedSeasonChange = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否需要切换季节函数
 
@@ -837,7 +859,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) float TotaledSeasonChangeTime = 5.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 过渡总时间
 
@@ -852,7 +874,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) float SeasonChangeStartValue = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 初始值
 
@@ -867,7 +889,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) float SeasonChangeEndValue = 1.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 结束值
 
@@ -882,7 +904,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) FName SeasonParmName = FName(TEXT("Autumn"));` |
 
-**Source comments:**
+**Notes:**
 
 > 参数名称
 
@@ -897,7 +919,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) TObjectPtr<AActor> CurPlaceDynamicSkyActor;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前地点天空actor
 
@@ -912,7 +934,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) TObjectPtr<AActor> CurPlaceDynamicWeatherActor;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前地点天气actor
 
@@ -927,7 +949,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FGuid,TObjectPtr<class AWorldForce>> WorldForces;` |
 
-**Source comments:**
+**Notes:**
 
 > /世界势力 Start****************************/
 
@@ -942,6 +964,10 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FGuid,TObjectPtr<class AWorldArea>> WorldAreas;` |
 
+**Notes:**
+
+> World Areas field.
+
 ---
 
 ### Property `WorldPlaces`
@@ -952,6 +978,25 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FGuid,TObjectPtr<class AWorldPlace>> WorldPlaces;` |
+
+**Notes:**
+
+> World Places field.
+
+---
+
+### Property `PlaceAttackRegistry`
+
+| Field | Details |
+|------|------|
+| C++ type | TMap<FGuid, [FGuidArr](../Struct/CommonStruct__FGuidArr.md)> |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FGuid, FGuidArr> PlaceAttackRegistry;` |
+
+**Notes:**
+
+> ——进攻登记表:哪些势力正在攻打哪些城市(进行中的持续战;瞬时结算不登记)。运行期,不入档。key=被攻据点Guid,value=攻方势力Guid数组——
 
 ---
 
@@ -969,6 +1014,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Gets or queries Get World Director.
+
 ---
 
 ### Function `CreateAllWorldForce`
@@ -982,6 +1031,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CreateAllWorldForce();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Executes the Create All World Force operation.
 
 ---
 
@@ -997,6 +1050,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Create All World Area operation.
+
 ---
 
 ### Function `GetPlayerTeamID`
@@ -1011,7 +1068,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取玩家队伍ID
 
@@ -1033,7 +1090,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取地点内所有的角色
 
@@ -1051,7 +1108,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取当前所在地点
 
@@ -1073,6 +1130,10 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Gets or queries Get World Place By Level Name.
+
 ---
 
 ### Function `GetWorldPlaceByID`
@@ -1091,7 +1152,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 通过ID获取世界地点
 
@@ -1114,9 +1175,27 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建世界地点
+
+---
+
+### Function `GetWorldPlaceCanAutoSaveGame`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure |
+| Return type | `bool` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintPure) bool GetWorldPlaceCanAutoSaveGame();`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 检查当前地点是否自动存档
 
 ---
 
@@ -1136,7 +1215,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移动到此区域
 
@@ -1158,7 +1237,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移动到此区域
 
@@ -1180,7 +1259,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移动到此区域
 
@@ -1198,7 +1277,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 生成当前地点需要生成的角色
 
@@ -1220,7 +1299,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过GUID获取当前世界地点的角色
 
@@ -1242,7 +1321,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 重生在当前的世界地点中
 
@@ -1264,7 +1343,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 销毁在当前的世界地点中
 
@@ -1280,14 +1359,14 @@
 
 | Name | Type |
 |--------|------|
-| `Season` | `EERWSeason` |
+| `Season` | [EERWSeason](WorldStruct__EERWSeason.md) |
 | `Time` | `int` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FWorldPlaceTemperatureInfo GetPlaceTemperatureInfoByTime(EERWSeason Season,int Time);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询具体季节时间的温度变化
 
@@ -1303,12 +1382,16 @@
 
 | Name | Type |
 |--------|------|
-| `Season` | `EERWSeason` |
+| `Season` | [EERWSeason](WorldStruct__EERWSeason.md) |
 | `Time` | `int` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FWorldPlaceLightInfo GetPlaceLightInfoByTime(EERWSeason Season,int Time);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Gets or queries Get Place Light Info By Time.
 
 ---
 
@@ -1324,7 +1407,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取当前时间的温度变化值
 
@@ -1346,7 +1429,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取当前的温度变化
 
@@ -1368,7 +1451,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 切换光照
 
@@ -1390,7 +1473,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置日期为当天的时段
 
@@ -1408,7 +1491,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置初始日期数据
 
@@ -1426,6 +1509,10 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "OnDayChange".
 
+**Notes:**
+
+> On Day Change field.
+
 ---
 
 ### Function `GetCharacterWorldMoveInfo`
@@ -1441,7 +1528,7 @@
 | `CharacterGuid` | `const TArray<FGuid> &` |
 | `InStartPlaceGuid` | `const FGuid &` |
 | `InTargetPlaceGuid` | `const FGuid &` |
-| `WorldMapMoveType` | `EWorldMapMoveType` |
+| `WorldMapMoveType` | [EWorldMapMoveType](WorldStruct__EWorldMapMoveType.md) |
 | `Resource` | const TMap<FName,[FItemSimpleData](../Struct/CommonStruct__FItemSimpleData.md)>& |
 | `(unnamed / type only)` | `FVector EnterPlacePosition = FVector::ZeroVector` |
 
@@ -1449,7 +1536,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取移动预设信息
 
@@ -1466,13 +1553,13 @@
 | Name | Type |
 |--------|------|
 | `CharacterWorldMoveInfo` | UPARAM(ref) [FCharacterWorldMoveInfo](WorldStruct__FCharacterWorldMoveInfo.md) & |
-| `(unnamed / type only)` | `ETransportationType TransportationType = ETransportationType::Walking` |
+| `(unnamed / type only)` | [ETransportationType](../ERW_Enumerations__ETransportationType.md) TransportationType = [ETransportationType](../ERW_Enumerations__ETransportationType.md)::Walking |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool CharacterMoveToPlaceByGuid(UPARAM(ref) FCharacterWorldMoveInfo & CharacterWorldMoveInfo , ETransportationType TransportationType = ETransportationType::Walking);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 角色移动到这个地点
 
@@ -1490,13 +1577,13 @@
 |--------|------|
 | `CharacterGuid` | `const TArray<FGuid> &` |
 | `InStartPlaceGuid` | `const FGuid &` |
-| `WorldMapMoveType` | `EWorldMapMoveType` |
+| `WorldMapMoveType` | [EWorldMapMoveType](WorldStruct__EWorldMapMoveType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void CharacterWanderOnWorldMap(const TArray<FGuid> & CharacterGuid,const FGuid & InStartPlaceGuid,EWorldMapMoveType WorldMapMoveType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 角色游荡于世界地图
 
@@ -1516,17 +1603,45 @@
 | `InStartPlaceGuid` | `const FGuid&` |
 | `StartPosition` | `const FVector &` |
 | `InTargetPlaceGuid` | `const FGuid &` |
-| `WorldMapMoveType` | `EWorldMapMoveType` |
+| `WorldMapMoveType` | [EWorldMapMoveType](WorldStruct__EWorldMapMoveType.md) |
 | `InBattlefieldGuid` | `const FGuid &` |
-| `(unnamed / type only)` | `ETransportationType TransportationType = ETransportationType::Walking` |
+| `(unnamed / type only)` | [ETransportationType](../ERW_Enumerations__ETransportationType.md) TransportationType = [ETransportationType](../ERW_Enumerations__ETransportationType.md)::Walking |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FCharacterWorldMoveInfo CharacterMoveToBattlefield(const TArray<FGuid> & CharacterGuid,const FGuid& InStartPlaceGuid,const FVector & StartPosition,const FGuid & InTargetPlaceGuid,EWorldMapMoveType WorldMapMoveType,const FGuid & InBattlefieldGuid,ETransportationType TransportationType = ETransportationType::Walking);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 角色移动到战场
+
+---
+
+### Function `CharacterMoveToBattlefield2D`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | [FCharacterWorldMoveInfo2D](WorldStruct__FCharacterWorldMoveInfo2D.md) |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `CharacterGuid` | `const TArray<FGuid>&` |
+| `ForceSGUID` | `const FGuid&` |
+| `InStartPlaceGuid` | `const FGuid&` |
+| `InTargetPlaceGuid` | `const FGuid&` |
+| `WorldMapMoveType` | [EWorldMapMoveType](WorldStruct__EWorldMapMoveType.md) |
+| `InBattlefieldGuid` | `const FGuid&` |
+| `(unnamed / type only)` | [ETransportationType](../ERW_Enumerations__ETransportationType.md) TransportationType = [ETransportationType](../ERW_Enumerations__ETransportationType.md)::Walking |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FCharacterWorldMoveInfo2D CharacterMoveToBattlefield2D(const TArray<FGuid>& CharacterGuid, const FGuid& ForceSGUID,const FGuid& InStartPlaceGuid, const FGuid& InTargetPlaceGuid, EWorldMapMoveType WorldMapMoveType, const FGuid& InBattlefieldGuid, ETransportationType TransportationType = ETransportationType::Walking);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 角色移动到战场 2D
 
 ---
 
@@ -1542,7 +1657,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 生成当前地点的Pawn
 
@@ -1560,7 +1675,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 生成世界地图Pawn
 
@@ -1583,6 +1698,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Broadcast Update Tips operation.
+
 ---
 
 ### Function `InitGlobalTeamBuff`
@@ -1597,7 +1716,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化全局阵营buff
 
@@ -1615,7 +1734,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 清除全局阵营buff
 
@@ -1637,6 +1756,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Broad Cast Set Scene Widget Visibility field.
+
 ---
 
 ### Function `GetWorldPlaceType`
@@ -1644,14 +1767,14 @@
 | Field | Details |
 |------|------|
 | Reflection specifiers | BlueprintCallable |
-| Return type | `EWorldPlaceType` |
+| Return type | [EWorldPlaceType](../Struct/CommonEnum__EWorldPlaceType.md) |
 | Parameters | (none) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) EWorldPlaceType GetWorldPlaceType();`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取当前地点模式
 
@@ -1669,7 +1792,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取玩家的主要建造基地
 
@@ -1691,7 +1814,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 注册世界光照actor
 
@@ -1713,7 +1836,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 注销世界光照actor
 
@@ -1729,13 +1852,13 @@
 
 | Name | Type |
 |--------|------|
-| `LightType` | `EWorldLightType` |
+| `LightType` | [EWorldLightType](WorldLightActor__EWorldLightType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure) TArray<AWorldLightActor*> GetWorldLightActorsByType(EWorldLightType LightType) const;`
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 根据类型获取世界灯光Actor
 
@@ -1757,7 +1880,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置所有灯光的开关状态
 
@@ -1773,14 +1896,14 @@
 
 | Name | Type |
 |--------|------|
-| `LightType` | `EWorldLightType` |
+| `LightType` | [EWorldLightType](WorldLightActor__EWorldLightType.md) |
 | `bEnable` | `bool` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetWorldLightsEnabledByType(EWorldLightType LightType, bool bEnable);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 根据类型设置灯光的开关状态
 
@@ -1803,7 +1926,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 获取当前地点的天空组件和天气组件
 
@@ -1820,6 +1943,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent,meta = (DisplayName = "InitCurWorldPlaceDynamicSkyAndWeather")) void K2_InitCurWorldPlaceDynamicSkyAndWeather();`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code. Node display title may be "InitCurWorldPlaceDynamicSkyAndWeather".
+
+**Notes:**
+
+> Init Cur World Place Dynamic Sky And Weather field.
 
 ---
 
@@ -1839,9 +1966,27 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 回收物资
+
+---
+
+### Function `InitWorldPlaceDistance`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void InitWorldPlaceDistance();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 初始化地点到各地点的距离
 
 ---
 
@@ -1861,7 +2006,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查找对应的势力
 
@@ -1883,6 +2028,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets or queries Find World Force By Team ID.
+
 ---
 
 ### Function `FindWorldForceByID`
@@ -1901,6 +2050,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets or queries Find World Force By ID.
+
 ---
 
 ### Function `GetForceFavorabilityType`
@@ -1908,7 +2061,7 @@
 | Field | Details |
 |------|------|
 | Reflection specifiers | BlueprintCallable |
-| Return type | `EForceFavorabilityType` |
+| Return type | [EForceFavorabilityType](WorldStruct__EForceFavorabilityType.md) |
 | Parameters | see table below |
 
 | Name | Type |
@@ -1920,7 +2073,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取两个势力的关系
 
@@ -1943,7 +2096,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取两个势力的关系
 
@@ -1967,7 +2120,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 改变势力之间的好感度
 
@@ -1990,7 +2143,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 攻打城市好感度变化
 
@@ -2008,7 +2161,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取玩家势力
 
@@ -2030,7 +2183,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 玩家势力改名
 
@@ -2048,7 +2201,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查玩家势力是否创建
 
@@ -2066,7 +2219,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 获取玩家势力等级
 
@@ -2083,14 +2236,14 @@
 | Name | Type |
 |--------|------|
 | `NewForceName` | `FText` |
-| `NewForceType` | `EForceType` |
+| `NewForceType` | [EForceType](WorldStruct__EForceType.md) |
 | `Leader` | `FGuid` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool CreatePlayerWorldForce(FText NewForceName, EForceType NewForceType, FGuid Leader);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 创建玩家势力(势力已经在地图上了，只是没有激活)
 
@@ -2113,6 +2266,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets or queries Find Character Save Datas.
+
 ---
 
 ### Function `SortCharacterSaveDatasByCombatScore`
@@ -2130,6 +2287,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SortCharacterSaveDatasByCombatScore(UPARAM(ref) TArray<FCharacterSaveData>& InCharacterDatas);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Sort Character Save Datas By Combat Score field.
 
 ---
 
@@ -2150,7 +2311,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 从CharacterSaveData中获取角色穿戴的外观装备
 
@@ -2173,6 +2334,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Add Team Buff By ID operation.
+
 ---
 
 ### Function `GetTeamBuffInfoByTeamId`
@@ -2191,7 +2356,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过teamId查询团队buff信息
 
@@ -2209,7 +2374,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取玩家势力的buff信息
 
@@ -2232,6 +2397,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Add Team Buff By Info operation.
+
 ---
 
 ### Function `RemoveTeamBuffByGuid`
@@ -2250,6 +2419,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void RemoveTeamBuffByGuid(int32 TeamId,const FGuid & BuffGuid);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Executes the Remove Team Buff By Guid operation.
 
 ---
 
@@ -2270,6 +2443,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Executes the Remove Team Buff By Origin Guid operation.
+
 ---
 
 ### Function `CheckCanSignWorldAgreement`
@@ -2288,7 +2465,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 检查能否签署传入的协议
 
@@ -2311,7 +2488,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 势力签署协议
 
@@ -2333,7 +2510,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取势力名字
 
@@ -2355,9 +2532,122 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查找对应的区域
+
+---
+
+### Function `FindWorldAreaByID`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | [AWorldArea](WorldArea__AWorldArea.md) * |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `ID` | `FName` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) AWorldArea * FindWorldAreaByID(FName ID);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Gets or queries Find World Area By ID.
+
+---
+
+### Function `RegisterPlaceAttack`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `AttackerForceGuid` | `const FGuid&` |
+| `TargetPlaceGuid` | `const FGuid&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void RegisterPlaceAttack(const FGuid& AttackerForceGuid, const FGuid& TargetPlaceGuid);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 登记一次进攻(发起持续战时调; 重复攻方不叠加)
+
+---
+
+### Function `UnregisterPlaceAttack`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `AttackerForceGuid` | `const FGuid&` |
+| `TargetPlaceGuid` | `const FGuid&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void UnregisterPlaceAttack(const FGuid& AttackerForceGuid, const FGuid& TargetPlaceGuid);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 注销某攻方对某据点的进攻(战斗结算/瞬时结算结束时按攻方注销)
+
+---
+
+### Function `IsPlaceUnderAttack`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `TargetPlaceGuid` | `const FGuid&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure) bool IsPlaceUnderAttack(const FGuid& TargetPlaceGuid) const;`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 某据点当前是否正被攻打
+
+---
+
+### Function `GetPlaceAttackers`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `TargetPlaceGuid` | `const FGuid&` |
+| `OutAttackers` | `TArray<FGuid>&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void GetPlaceAttackers(const FGuid& TargetPlaceGuid, TArray<FGuid>& OutAttackers) const;`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 取正在攻打某据点的势力列表
 
 ---
 
@@ -2377,7 +2667,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查找对应的地点
 
@@ -2399,6 +2689,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Gets or queries Find World Place By ID.
+
 ---
 
 ### Function `FindWorldPlaceByIDs`
@@ -2418,9 +2712,31 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID数组查找地点
+
+---
+
+### Function `GetPlayerDeployableCities`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="World|Battle" |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `OutCities` | TArray<[FDeployableCityOption](WorldDirector__FDeployableCityOption.md)>& |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "World|Battle") void GetPlayerDeployableCities(TArray<FDeployableCityOption>& OutCities);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 获取玩家可作为出兵起点的城(玩家拥有 ∩ 在 PointMap 内)，喂出征界面「出发地点」下拉
 
 ---
 
@@ -2440,6 +2756,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> On Hour Change Event event or callback.
+
 ---
 
 ### Function `OnSeasonChangeEvent`
@@ -2452,11 +2772,15 @@
 
 | Name | Type |
 |--------|------|
-| `SeasonId` | `EERWSeason` |
+| `SeasonId` | [EERWSeason](WorldStruct__EERWSeason.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void OnSeasonChangeEvent(EERWSeason SeasonId);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> On Season Change Event event or callback.
 
 ---
 
@@ -2477,7 +2801,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 季节切换过渡参数设置
 
@@ -2493,13 +2817,13 @@
 
 | Name | Type |
 |--------|------|
-| `WeatherId` | `EERWWeather` |
+| `WeatherId` | [EERWWeather](WorldStruct__EERWWeather.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void OnWeatherChangeEvent(EERWWeather WeatherId);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 天气切换（不包括过渡天气状态，相同天气不会触发）
 
@@ -2515,13 +2839,13 @@
 
 | Name | Type |
 |--------|------|
-| `WeatherId` | `EERWWeather` |
+| `WeatherId` | [EERWWeather](WorldStruct__EERWWeather.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void OnAllWeatherChangeEvent(EERWWeather WeatherId);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 天气切换(包含过渡天气)
 
@@ -2543,7 +2867,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > C++设置游戏时间来设置UDS的时间
 
@@ -2559,13 +2883,13 @@
 
 | Name | Type |
 |--------|------|
-| `WeatherId` | `EERWWeather` |
+| `WeatherId` | [EERWWeather](WorldStruct__EERWWeather.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent) void SetGameWeatherToUDW(EERWWeather WeatherId);`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > C++设置游戏天气来设置UDW的天气
 
@@ -2587,7 +2911,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > /任务 Start****************************/
 
@@ -2609,6 +2933,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Trigger Task field.
+
 ---
 
 ### Function `TriggerTaskByInstance`
@@ -2626,6 +2954,10 @@
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FGuid TriggerTaskByInstance(const FCommonTaskInstance& TaskInstance);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Trigger Task By Instance field.
 
 ---
 
@@ -2645,6 +2977,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Complete Task By ID field.
+
 ---
 
 ### Function `GetGoapActionBuildings`
@@ -2663,7 +2999,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查询GoapAction对应的建筑物数组
 
@@ -2686,7 +3022,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查建筑类型是否有对应的GOAP功能
 
@@ -2704,7 +3040,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否需要床位
 
@@ -2722,7 +3058,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查玩家是否缺少衣服
 
@@ -2745,7 +3081,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 通过ID改变天气
 
@@ -2763,7 +3099,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 随机改变天气
 
@@ -2785,6 +3121,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Bind Or Unbind Camera Move Event field.
+
 ---
 
 ### Function `CheckAllBuildNeedMaterial`
@@ -2799,7 +3139,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查所有在建建筑是否有足够的材料
 
@@ -2817,7 +3157,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否有建设完成的研究建筑物
 
@@ -2833,13 +3173,13 @@
 
 | Name | Type |
 |--------|------|
-| `BuildType` | `EBuildingType` |
+| `BuildType` | [EBuildingType](../ERW_Enumerations__EBuildingType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool CheckHaveBuildingByType(EBuildingType BuildType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查是否有传入类型建筑物
 
@@ -2862,7 +3202,7 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
-**Source comments:**
+**Notes:**
 
 > 计算角色战力
 
@@ -2885,6 +3225,33 @@
 
 **Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
 
+**Notes:**
+
+> Calcu Character Fighting Score field.
+
+---
+
+### Function `CalcuUIDisplayAttributesByData`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintPure |
+| Return type | `TMap<FString,float>` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `InGameMode` | [AERW_GameModeBase](../Framework/ERW_GameModeBase__AERW_GameModeBase.md)* |
+| `InCharacterData` | const [FCharacterSaveData](WorldCharacterData__FCharacterSaveData.md)& |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintPure) static TMap<FString,float> CalcuUIDisplayAttributesByData(AERW_GameModeBase* InGameMode,const FCharacterSaveData& InCharacterData);`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 根据存档数据中的角色ID查表基础属性+装备词条属性+势力培养属性,计算UI需要显示的临时属性(配置见UGamePlayConfigurationAsset::UIDisplayTempAttributes),npc培养时调用刷新UIDisplayAttributes
+
 ---
 
 ### Function `GetFocreJobName`
@@ -2897,13 +3264,13 @@
 
 | Name | Type |
 |--------|------|
-| `JobType` | `const EForceJobType` |
+| `JobType` | const [EForceJobType](WorldStruct__EForceJobType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) FText GetFocreJobName(const EForceJobType JobType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取职位名称
 
@@ -2926,7 +3293,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 按弟子数量排序
 
@@ -2949,7 +3316,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 按战力排序
 
@@ -2972,7 +3339,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 按好感度排序
 
@@ -2995,7 +3362,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 按worldplacetype度排序
 
@@ -3018,7 +3385,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 按势力声望度排序
 
@@ -3041,7 +3408,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 按势力战力排序
 
@@ -3064,7 +3431,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 按领地数量排序
 
@@ -3087,9 +3454,54 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 按势力弟子数量排序
+
+---
+
+### Function `SortByFavorWithPlayer`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | TArray<[AWorldForce](WorldForce__AWorldForce.md)*> |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `WorldPlaceArray` | const TArray<[AWorldForce](WorldForce__AWorldForce.md)*> & |
+| `bIsAsc` | `bool` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<AWorldForce*> SortByFavorWithPlayer(const TArray<AWorldForce*> & WorldPlaceArray , bool bIsAsc);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 按势力对玩家好感排序
+
+---
+
+### Function `AddItemBySimpleData`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `InItem` | const [FItemSimpleData](../Struct/CommonStruct__FItemSimpleData.md)& |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void AddItemBySimpleData(const FItemSimpleData& InItem);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 添加物品到玩家自建或驿站物品存放区
 
 ---
 
@@ -3109,9 +3521,9 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
-> 添加物品到驿站物品存放区
+> 添加物品到玩家自建或驿站物品存放区
 
 ---
 
@@ -3131,9 +3543,9 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
-> 添加物品到驿站物品存放区
+> 添加物品到玩家自建或驿站物品存放区
 
 ---
 
@@ -3153,7 +3565,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取敌对势力
 
@@ -3177,7 +3589,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 插槽敌对势力和好感度
 
@@ -3195,7 +3607,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 计算玩家的财富点数
 
@@ -3213,7 +3625,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取玩家单位点数
 

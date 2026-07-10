@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 社交属性集：谈判、议价、社交、拘捕、魅力、驯服与训练能力
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Social", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData NegotiationAbility;` |
 
-**源码注释:**
+**说明:**
 
 > 谈判能力
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Social", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData BargainAbility;` |
 
-**源码注释:**
+**说明:**
 
 > 议价能力
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Social", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Sociability;` |
 
-**源码注释:**
+**说明:**
 
 > 社交能力
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Social", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData ArrestingAbility;` |
 
-**源码注释:**
+**说明:**
 
 > 拘捕能力
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Social", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData Charm;` |
 
-**源码注释:**
+**说明:**
 
 > 魅力
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Social", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TamingAbility;` |
 
-**源码注释:**
+**说明:**
 
 > 驯服能力
 
@@ -107,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Social", Meta = (AllowPrivateAccess = true)) FGameplayAttributeData TrainingAbility;` |
 
-**源码注释:**
+**说明:**
 
 > 训练能力
 

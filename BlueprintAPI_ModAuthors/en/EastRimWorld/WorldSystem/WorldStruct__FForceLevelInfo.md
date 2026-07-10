@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 ForceLevel = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 势力等级
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText ForceLevelName;` |
 
-**Source comments:**
+**Notes:**
 
 > 声望级别名称
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> LevelUpConditionIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 升级条件ID(关联DT_CommonTaskCondition表)(从低一级升级到本级需要的条件)
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> UnlockContentIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 解锁内容(关联DT_TechUnlockItemConig表)
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float LevelReputation = 100.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 升级所需最低声望值
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 NumberOfSubclasses = 2;` |
 
-**Source comments:**
+**Notes:**
 
 > 分堂数量
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 ForceMaxCharacterNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 宗门人数上限
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<int32> NumberOfSubclassesMembers;` |
 
-**Source comments:**
+**Notes:**
 
 > 分堂成员数量（包含：分堂堂主+弟子）
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 NumberOfSubclassesFeature = 2;` |
 
-**Source comments:**
+**Notes:**
 
 > 可配置的分堂特性数量
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> SubclassesFeatureIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 可选择的分堂特性
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 PurposeNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 可激活的宗旨数量
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 NumberOfStations = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 驻地数量
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 NumberOfTowns = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 城镇数量
 
@@ -214,7 +214,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 NumberOfResourcePoints = 2;` |
 
-**Source comments:**
+**Notes:**
 
 > 资源点数量
 
@@ -229,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float TradeMarkup = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 贸易加成
 
@@ -244,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float SpeedOfTrade = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 贸易速度
 
@@ -259,6 +259,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName>FeudalOfficialUnlockBuilding;` |
 
+**Notes:**
+
+> Feudal Official Unlock Building field.
+
 ---
 
 ### Property `ChamberOfCommerceUnlockBuilding`
@@ -270,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName>ChamberOfCommerceUnlockBuilding;` |
 
-**Source comments:**
+**Notes:**
 
 > 商会解锁的建筑物
 
@@ -285,7 +289,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 MasterSalary = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 宗主工资
 
@@ -300,7 +304,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 SubMasterSalary = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 堂主工资
 
@@ -315,7 +319,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 CoreCharacterSalary = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 内门工资
 
@@ -330,7 +334,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 MarginalCharacterSalary = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 外门工资
 
@@ -345,7 +349,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName>FactionUnlockBuilding;` |
 
-**Source comments:**
+**Notes:**
 
 > 帮派解锁的建筑物
 
@@ -360,7 +364,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName>SectUnlockBuilding;` |
 
-**Source comments:**
+**Notes:**
 
 > 门派解锁的建筑物
 
@@ -375,7 +379,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float HomotropyFavorability = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 同倾向好感度增加
 
@@ -390,7 +394,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float DifferentTendenciesFavorability = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 不同倾向好感度增加
 
@@ -400,12 +404,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TArray<EForceOperationType>` |
+| C++ type | TArray<[EForceOperationType](WorldStruct__EForceOperationType.md)> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<EForceOperationType> CanForceOperation;` |
 
-**Source comments:**
+**Notes:**
 
 > 允许的势力操作
 
@@ -420,7 +424,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float MaxGrowScore = 999999.f;` |
 
-**Source comments:**
+**Notes:**
 
 > NPC势力成长积分上限
 
@@ -435,7 +439,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float AddGrowScore = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > NPC势力成长积分定期加值
 
@@ -450,7 +454,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<int32> NPCConstructionTimes;` |
 
-**Source comments:**
+**Notes:**
 
 > 每周期自动建造升级设施的次数随机数组
 
@@ -465,7 +469,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> UnlockDogfaceIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 小兵
 
@@ -480,7 +484,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> UnlockStrategicAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 战略技能
 
@@ -495,7 +499,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> UnlockTowerDefense;` |
 
-**Source comments:**
+**Notes:**
 
 > 防御塔
 
@@ -510,7 +514,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FBattleBuffGroup> BattleBuffGroup;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗中生效的Buff
 
@@ -525,7 +529,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 AddMainPlaceStationedNum = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 增加主城驻扎上限
 
@@ -540,7 +544,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) float RecruitRate = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 招募成功率影响
 

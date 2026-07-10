@@ -18,6 +18,7 @@
 /ignore:4099
 /ALTERNATENAME:__imp___std_init_once_begin_initialize=__imp_InitOnceBeginInitialize
 /ALTERNATENAME:__imp___std_init_once_complete=__imp_InitOnceComplete
+/DELAYLOAD:"Lua.dll"
 /DELAYLOAD:"d3d12.dll"
 /DELAYLOAD:"DBGHELP.DLL"
 /LIBPATH:"E:/VS2026/Community/VC/Tools/MSVC/14.38.33130/lib/x64"
@@ -40,13 +41,13 @@
 "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CreateModPluginEditor/Module.CreateModPluginEditor.cpp.obj"
 "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CreateModPluginEditor/CreateModPluginEditor.cpp.obj"
 "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CreateModPluginEditor/CreateModWindow.cpp.obj"
-"H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CreateModPluginEditor/ModConfigExporter.cpp.obj"
 "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CreateModPluginEditor/ModInfoDataCustomization.cpp.obj"
 "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CreateModPluginEditor/ModInfoEditorCommands.cpp.obj"
 "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CreateModPluginEditor/ModInfoEditorData.cpp.obj"
 "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CreateModPluginEditor/ModInfoEditorWindow.cpp.obj"
 "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CreateModPluginEditor/PackageModWindow.cpp.obj"
 "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CreateModPluginEditor/Default.rc2.res"
+"H:/Project/Plugins/UnLua/Source/ThirdParty/Lua/lua-5.4.3/lib-c/Win64/Debug/Lua.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/Slate/UnrealEditor-Slate.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/SlateCore/UnrealEditor-SlateCore.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/EditorWidgets/UnrealEditor-EditorWidgets.lib"
@@ -61,6 +62,7 @@
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/DesktopPlatform/UnrealEditor-DesktopPlatform.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/InputCore/UnrealEditor-InputCore.lib"
 "../Plugins/Editor/EditorScriptingUtilities/Intermediate/Build/Win64/x64/UnrealEditor/Development/EditorScriptingUtilities/UnrealEditor-EditorScriptingUtilities.lib"
+"H:/Project/Plugins/UnLua/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/UnLua/UnrealEditor-UnLua-Win64-DebugGame.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/Core/UnrealEditor-Core.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/CoreUObject/UnrealEditor-CoreUObject.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/Engine/UnrealEditor-Engine.lib"

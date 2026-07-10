@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> East Rim World Scene Text Widget UObject 类型。
 
 ## 蓝图暴露变量
 
@@ -17,6 +19,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable,BlueprintCallable) FTextAnimationComplete TextAnimationComplete;` |
 
+**说明:**
+
+> Text Animation Complete 字段。
+
 ---
 
 ### 属性 `TextAnimations`
@@ -28,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TMap<FString,UWidgetAnimation*> TextAnimations;` |
 
-**源码注释:**
+**说明:**
 
 > 界面中包含的所有动画
 
@@ -54,6 +60,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 **BlueprintNativeEvent**：蓝图可重写；C++ 默认实现在 `xxx_Implementation`。
 
+**说明:**
+
+> 执行 Init Scene Text Widget 操作。
+
 ---
 
 ### 函数 `InitAllWidgetAnimations`
@@ -67,5 +77,9 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void InitAllWidgetAnimations();`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 执行 Init All Widget Animations 操作。
 
 ---

@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int32 SubClassIndex = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 堂口Id(直属于势力=0)，分堂从1开始
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) FText SubClassName;` |
 
-**Source comments:**
+**Notes:**
 
 > 堂口名称
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> SubClassFeatureIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 堂口已经配置的特性
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<bool,FCustomApparelsSkin>SubClassForceSexApparels;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前堂口服饰（门派换装保存的）(分性别)
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bUseSubClassForceApparel = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否使用堂口统一服饰
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<FGameplayTag , bool> ItemUseStates;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品使用状态
 > TMap<总标签 , 状态>
@@ -110,7 +110,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<FName , bool> ActionStates;` |
 
-**Source comments:**
+**Notes:**
 
 > 行为控制
 
@@ -125,7 +125,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TMap<int32 , bool> TreasureStalls;` |
 
-**Source comments:**
+**Notes:**
 
 > 允许使用的珍宝阁货柜
 

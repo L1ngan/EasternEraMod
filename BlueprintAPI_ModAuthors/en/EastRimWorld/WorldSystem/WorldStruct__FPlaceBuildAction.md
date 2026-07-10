@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Place Build Action data structure.
 
 ## Blueprint-exposed variables
 
@@ -12,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EPlaceBuildActionType` |
+| C++ type | [EPlaceBuildActionType](WorldStruct__EPlaceBuildActionType.md) |
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) EPlaceBuildActionType ActionType = EPlaceBuildActionType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 操作类型
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FName TargetBuildID;` |
 
-**Source comments:**
+**Notes:**
 
 > 目标建筑id
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int32 Priority = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 目标等级
 > UPROPERTY(BlueprintReadOnly,EditAnywhere)
@@ -64,5 +66,9 @@
 | Reflection specifiers | BlueprintReadOnly |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditAnywhere) AWorldPlace* TargetPlace = nullptr;` |
+
+**Notes:**
+
+> Target Place field.
 
 ---

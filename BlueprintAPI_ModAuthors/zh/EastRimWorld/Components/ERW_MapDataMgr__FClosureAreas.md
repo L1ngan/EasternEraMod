@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) TMap<FClosureAreaRange , FClosureAreaData> PlannedAreas;` |
 
-**源码注释:**
+**说明:**
 
 > 已规划的区域(修建中)
 > TMap<闭合区域范围 , 闭合区域数据>
@@ -35,7 +35,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) TMap<FClosureAreaRange , FClosureAreaData> RoomAreas;` |
 
-**源码注释:**
+**说明:**
 
 > 已形成房间的区域
 > TMap<闭合区域范围 , 闭合区域数据>
@@ -51,7 +51,7 @@
 | 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame) TMap<FClosureAreaRange,FCombinationBuildAreaData> CombinationBuildAreas;` |
 
-**源码注释:**
+**说明:**
 
 > 组合建筑的区域
 
@@ -65,5 +65,9 @@
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly ,SaveGame) TMap<FClosureAreaRange,FHeatSourceAreaData> HeatSourceRange;` |
+
+**说明:**
+
+> 该层热源影响范围映射(闭合区域范围→热源区域数据)
 
 ---

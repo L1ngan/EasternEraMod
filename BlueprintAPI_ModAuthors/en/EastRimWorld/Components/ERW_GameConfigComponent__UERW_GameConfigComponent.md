@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Game config component that centrally manages and provides access to data tables and data assets by type, with runtime copies for mod modification
 
 ## Blueprint-exposed functions
 
@@ -18,11 +20,15 @@
 
 | Name | Type |
 |--------|------|
-| `GameConfigType` | `const EGameConfigType &` |
+| `GameConfigType` | const [EGameConfigType](ERW_GameConfigComponent__EGameConfigType.md) & |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) UDataTable * GetGameConfigByType(const EGameConfigType & GameConfigType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns the data table for the given game config type
 
 ---
 
@@ -36,10 +42,14 @@
 
 | Name | Type |
 |--------|------|
-| `GameDataAssetType` | `const EGameDataAssetType &` |
+| `GameDataAssetType` | const [EGameDataAssetType](ERW_GameConfigComponent__EGameDataAssetType.md) & |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) UDataAsset * GetGameDataAssetByType(const EGameDataAssetType & GameDataAssetType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Returns the data asset for the given game data asset type
 
 ---

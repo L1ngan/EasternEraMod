@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) AGOAP_ActorBase* Wall { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > 原有墙体Actor
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) int32 Index { INDEX_NONE };` |
 
-**Source comments:**
+**Notes:**
 
 > 嵌入式墙体模型在ISM中的索引
 
@@ -44,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EISMType , FTransform>` |
+| C++ type | TMap<[EISMType](../ERW_Enumerations__EISMType.md) , FTransform> |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) TMap<EISMType , FTransform> Transforms;` |
 
-**Source comments:**
+**Notes:**
 
 > 嵌入式墙体模型的Transform
 > TMap<ISM类型 , Transform>
@@ -60,12 +60,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EISMType` |
+| C++ type | [EISMType](../ERW_Enumerations__EISMType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) EISMType VisibleISMType { EISMType::Normal };` |
 
-**Source comments:**
+**Notes:**
 
 > 当前显示的ISM类型
 
@@ -80,7 +80,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) bool Visible { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否显示
 

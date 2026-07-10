@@ -28,7 +28,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > Returns the team this object belongs to, or INDEX_NONE if it is not part of a team
 

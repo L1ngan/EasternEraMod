@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FName ItemID;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品ID
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 Num { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 预留数量
 

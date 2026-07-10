@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "Base") FGenericTeamId TeamId;` |
 
-**Source comments:**
+**Notes:**
 
 > 阵营ID
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, category="Base",meta = (AllowedClasses = "Texture2D")) FSoftObjectPath Icon;` |
 
-**Source comments:**
+**Notes:**
 
 > 图标
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "Base") TArray<FGenericTeamId> FriendlyTeamIds;` |
 
-**Source comments:**
+**Notes:**
 
 > 友好阵营 标记为队友 无论对方是否是同阵营 且见面不会主动攻击
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "Base") TArray<FGenericTeamId> HostilityTeamIds;` |
 
-**Source comments:**
+**Notes:**
 
 > 敌对阵营 标记为敌人 见面双方会主动攻击
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "Base") TArray<FGenericTeamId> NeutralityTeamIds;` |
 
-**Source comments:**
+**Notes:**
 
 > 中立阵营 标记为中立 不同阵营 见面不会互相攻击
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "GOAP") TArray<FGameplayTeamGoals> GameplayTeamGoals;` |
 
-**Source comments:**
+**Notes:**
 
 > 不同模式中的goal配置
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "Attacker") bool bMarkAttackerToHostility = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 此个体受到伤害后是否会标记攻击者为敌对(脱离战斗后失效)
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "Attacker",meta = (EditConditionHides = " bMarkAttackerToHostility == true ")) bool bNotifyAttackerToFriendly = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 此阵营个体被攻击是否会通知周围同阵营的其他单位且标记攻击者为敌方(脱离战斗后失效)
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "Attacker",meta = (EditConditionHides = " bMarkAttackerToHostility == true ")) bool bMarkAttackerTeamToHostility = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 此阵营个体被攻击是否标记攻击者阵营为敌方阵营(永久)
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "Base") bool bOnDamageReportTeam = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 受到攻击是否通知阵营其他单位
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "Base") bool bOnSightReportTeam = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 看到敌人是否通知阵营其他单位
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite,category = "Base") FSoftClassPath NavigationQueryFilter;` |
 
-**Source comments:**
+**Notes:**
 
 > AI导航查询过滤
 

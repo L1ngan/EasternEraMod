@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Base class for additional ability costs: CheckCost verifies affordability, ApplyCost applies the cost; can be configured to only apply on hit
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Costs) bool bOnlyApplyCostOnHit = false;` |
 
-**Source comments:**
+**Notes:**
 
 > If true, this cost should only be applied if this ability hits successfully
 

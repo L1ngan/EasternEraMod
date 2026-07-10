@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FIntPoint Min;` |
 
-**Source comments:**
+**Notes:**
 
 > 闭合区域的最小点
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FIntPoint Max;` |
 
-**Source comments:**
+**Notes:**
 
 > 闭合区域的最大点
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 Area { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 闭合区域的面积
 

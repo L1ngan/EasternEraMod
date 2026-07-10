@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FHungryEffectConfig") FText HungryEffectName;` |
 
-**Source comments:**
+**Notes:**
 
 > 饥饿阶段名称
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EHungryDegree` |
+| C++ type | [EHungryDegree](CommonEnum__EHungryDegree.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="FHungryEffectConfig" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FHungryEffectConfig") EHungryDegree HungryDegree = EHungryDegree::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 饥饿阶段程度
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FHungryEffectConfig") float HungryMiniTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 饥饿阶段最少时间
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FHungryEffectConfig") float HungryMaxTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 饥饿阶段最大时间
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FHungryEffectConfig") TArray<FName> ActiveMoodIds;` |
 
-**Source comments:**
+**Notes:**
 
 > 激活心情
 
@@ -89,12 +89,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<FName,EBodyOrganType>` |
+| C++ type | TMap<FName,[EBodyOrganType](../ERW_CommonTypes__EBodyOrganType.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="FHungryEffectConfig" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FHungryEffectConfig") TMap<FName,EBodyOrganType> ActiveInjuryIds;` |
 
-**Source comments:**
+**Notes:**
 
 > 激活伤势
 

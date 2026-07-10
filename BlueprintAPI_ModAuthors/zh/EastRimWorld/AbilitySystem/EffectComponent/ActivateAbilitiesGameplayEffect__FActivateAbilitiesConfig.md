@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> GE授予技能的配置项：技能ID、授予等级、输入ID、移除策略与控制效果数据
 
 ## 蓝图暴露变量
 
@@ -17,6 +19,10 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY(EditDefaultsOnly, Category = "Ability Definition") FName AbilityID;` |
 
+**说明:**
+
+> 要授予的技能ID
+
 ---
 
 ### 属性 `LevelScalableFloat`
@@ -28,7 +34,7 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY(EditDefaultsOnly, Category = "Ability Definition", DisplayName = "Level", meta=(UIMin=0.0)) FScalableFloat LevelScalableFloat = FScalableFloat{ 1.0f };` |
 
-**源码注释:**
+**说明:**
 
 > What level to grant this ability at
 
@@ -43,7 +49,7 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY(EditDefaultsOnly, Category = "Ability Definition") int32 InputID = INDEX_NONE;` |
 
-**源码注释:**
+**说明:**
 
 > Input ID to bind this ability to
 
@@ -53,12 +59,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EActivateAbilitiesRemovePolicy` |
+| C++ 类型 | [EActivateAbilitiesRemovePolicy](ActivateAbilitiesGameplayEffect__EActivateAbilitiesRemovePolicy.md) |
 | 反射说明符 | Category="Ability Definition" |
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY(EditDefaultsOnly, Category = "Ability Definition") EActivateAbilitiesRemovePolicy RemovalPolicy = EActivateAbilitiesRemovePolicy::RemoveAbilityOnEnd;` |
 
-**源码注释:**
+**说明:**
 
 > What will remove this ability later
 
@@ -72,5 +78,9 @@
 | 反射说明符 | Category="Ability Definition" |
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY(EditDefaultsOnly, Category = "Ability Definition") FControlEffectData ControlEffectData;` |
+
+**说明:**
+
+> 授予技能时附带的控制效果数据
 
 ---

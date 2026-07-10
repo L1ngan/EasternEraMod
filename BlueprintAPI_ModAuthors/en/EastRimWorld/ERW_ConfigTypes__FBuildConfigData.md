@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") FString Name;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑物名称(不显示)
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EEnvironType` |
+| C++ type | [EEnvironType](ERW_Enumerations__EEnvironType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") EEnvironType EnvironType = EEnvironType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 环境类型
 
@@ -44,12 +44,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EEnvironType , [FExtraInfos](ERW_ConfigTypes__FExtraInfos.md)> |
+| C++ type | TMap<[EEnvironType](ERW_Enumerations__EEnvironType.md) , [FExtraInfos](ERW_ConfigTypes__FExtraInfos.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , Category = "Base") TMap<EEnvironType , FExtraInfos> ExtraEnvironInfos;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑额外的占位信息
 > TMap<环境类型 , 占位信息集合>
@@ -60,12 +60,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBuildingType` |
+| C++ type | [EBuildingType](ERW_Enumerations__EBuildingType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") EBuildingType BuildingType = EBuildingType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑类型（主要用于区分功能型建筑）
 
@@ -75,12 +75,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EFabricateType` |
+| C++ type | [EFabricateType](Struct/CommonEnum__EFabricateType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") EFabricateType FabricateType = EFabricateType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 设备类型
 
@@ -95,7 +95,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") FIntVector Size = FIntVector::ZeroValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 占格子尺寸(Z为占高度尺寸)
 
@@ -105,12 +105,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EAnimalBodyType` |
+| C++ type | [EAnimalBodyType](ERW_Enumerations__EAnimalBodyType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") EAnimalBodyType SuitBodyType = EAnimalBodyType::Normal;` |
 
-**Source comments:**
+**Notes:**
 
 > 适应动物的体型
 
@@ -125,7 +125,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") bool bHaveTips = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否会具有上方提示信息
 
@@ -140,7 +140,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") bool bNeedFuel = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是需要消耗燃料的建筑
 
@@ -155,7 +155,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") float BuildHeightDifference { 5.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑放置允许的最大高低差
 
@@ -170,7 +170,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base" , Meta = (EditCondition = "bNeedFuel")) float TotalFuel = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑总燃料
 
@@ -185,7 +185,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base" , Meta = (EditCondition = "bNeedFuel")) float OneTimeExpendFuel = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑每次消耗的燃料
 
@@ -200,7 +200,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base" , Meta = (EditCondition = "bNeedFuel")) float ExpendFuelInterval = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑消耗燃料的时间间隔
 
@@ -215,7 +215,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base" , Meta = (EditCondition = "bNeedFuel")) TArray<FGameplayTag> SelectableFuelTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑的燃料ID
 
@@ -230,9 +230,24 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") int32 OwnerNum { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 拥有者数量
+
+---
+
+### Property `BuildNum`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | BlueprintReadWrite, Category="Base" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") int32 BuildNum { 0 };` |
+
+**Notes:**
+
+> 可建造数量
 
 ---
 
@@ -245,7 +260,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") int32 ZIndex { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 物体所处高度
 
@@ -255,12 +270,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EGenerateMode` |
+| C++ type | [EGenerateMode](ERW_Enumerations__EGenerateMode.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") EGenerateMode GenerateMode = EGenerateMode::Solo;` |
 
-**Source comments:**
+**Notes:**
 
 > 创建方式(单个, 线型, 矩形)
 
@@ -275,7 +290,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "GOAP") TArray<FName> GOAPActions;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑拥有的GOAP Action
 
@@ -290,7 +305,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Preset") FIntVector PresetSize = FIntVector::ZeroValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 预设建筑的占格子尺寸
 
@@ -305,7 +320,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Preset") TMap<FName , FPresetInfos> PresetData;` |
 
-**Source comments:**
+**Notes:**
 
 > 预设建筑的数据
 > TMap<建筑表ID , 数据>
@@ -321,7 +336,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Preset") TMap<FName , FPresetInfos> WallPillarData;` |
 
-**Source comments:**
+**Notes:**
 
 > 预设墙接缝柱的数据
 > TMap<建筑表ID , 数据>
@@ -337,7 +352,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Mesh") TArray<TSoftObjectPtr<UStaticMesh>> StaticMeshes;` |
 
-**Source comments:**
+**Notes:**
 
 > 普通建筑模型(有多个则随机选择)
 
@@ -352,7 +367,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Mesh") TSoftObjectPtr<UStaticMesh> StairFlatMesh;` |
 
-**Source comments:**
+**Notes:**
 
 > 阶梯平台模型
 
@@ -362,12 +377,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EAssemblePartType , TSoftObjectPtr<UStaticMesh>>` |
+| C++ type | TMap<[EAssemblePartType](ERW_Enumerations__EAssemblePartType.md) , TSoftObjectPtr<UStaticMesh>> |
 | Reflection specifiers | BlueprintReadWrite, Category="Mesh" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Mesh") TMap<EAssemblePartType , TSoftObjectPtr<UStaticMesh>> AssembleStaticMeshes;` |
 
-**Source comments:**
+**Notes:**
 
 > 组装部位对应的模型
 
@@ -382,7 +397,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Mesh") TArray<FAssemblePartTransform> AssemblePartTransforms;` |
 
-**Source comments:**
+**Notes:**
 
 > 组装部位的Transform
 
@@ -397,7 +412,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Mesh") TSoftObjectPtr<UStaticMesh> ShackPillarMesh;` |
 
-**Source comments:**
+**Notes:**
 
 > 窝棚柱子模型
 
@@ -412,7 +427,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Mesh") bool CastShadow { true };` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑模型是否投影
 
@@ -427,7 +442,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Mesh") FVector DoorCollisionOffset = FVector::ZeroVector;` |
 
-**Source comments:**
+**Notes:**
 
 > 门包围盒偏移
 
@@ -442,7 +457,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Mesh") FVector DoorCollisionExtent = FVector::ZeroVector;` |
 
-**Source comments:**
+**Notes:**
 
 > 门包围盒大小
 
@@ -457,7 +472,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Mesh") FMeshMaterialParameter MeshMaterialParameter;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑模型材质参数
 
@@ -472,7 +487,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") TArray<FRelativeGridPoses> EntranceGridPoses;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑入口的格子坐标(相对格子坐标)
 
@@ -482,12 +497,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EEnvironType , [FRelativeGridPoses](ERW_ConfigTypes__FRelativeGridPoses.md)> |
+| C++ type | TMap<[EEnvironType](ERW_Enumerations__EEnvironType.md) , [FRelativeGridPoses](ERW_ConfigTypes__FRelativeGridPoses.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") TMap<EEnvironType , FRelativeGridPoses> SupportingGrids;` |
 
-**Source comments:**
+**Notes:**
 
 > 配套物体的格子坐标(相对格子坐标)
 
@@ -502,7 +517,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Effect") TSoftClassPtr<UGameplayEffect> FacilityEffect;` |
 
-**Source comments:**
+**Notes:**
 
 > 设施效果
 
@@ -517,7 +532,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere , Category = "Effect") FParticleEffectData ParticleEffectData;` |
 
-**Source comments:**
+**Notes:**
 
 > 粒子效果数据
 
@@ -532,7 +547,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Wall") TSoftObjectPtr<UStaticMesh> PillarForWall;` |
 
-**Source comments:**
+**Notes:**
 
 > 墙体接缝柱(墙专用)
 
@@ -542,12 +557,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EEmbeddedWallType , TSoftObjectPtr<UStaticMesh>>` |
+| C++ type | TMap<[EEmbeddedWallType](ERW_Enumerations__EEmbeddedWallType.md) , TSoftObjectPtr<UStaticMesh>> |
 | Reflection specifiers | BlueprintReadWrite, Category="Wall" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Wall") TMap<EEmbeddedWallType , TSoftObjectPtr<UStaticMesh>> WallWithHole;` |
 
-**Source comments:**
+**Notes:**
 
 > 带洞的墙模型(墙专用)
 
@@ -562,7 +577,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Mesh") TArray<FAutoTileMeshConfigData> AutoTileMeshes;` |
 
-**Source comments:**
+**Notes:**
 
 > 九宫格模型
 
@@ -572,12 +587,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<ERoofPartType , TSoftObjectPtr<UStaticMesh>>` |
+| C++ type | TMap<[ERoofPartType](ERW_Enumerations__ERoofPartType.md) , TSoftObjectPtr<UStaticMesh>> |
 | Reflection specifiers | BlueprintReadWrite, Category="Mesh" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Mesh") TMap<ERoofPartType , TSoftObjectPtr<UStaticMesh>> RoofMeshes;` |
 
-**Source comments:**
+**Notes:**
 
 > 屋顶每个部位对应的模型
 
@@ -592,7 +607,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") int32 Durability { -1 };` |
 
-**Source comments:**
+**Notes:**
 
 > 耐久度
 
@@ -607,9 +622,24 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") TMap<FName , int32> BuildResource;` |
 
-**Source comments:**
+**Notes:**
 
 > 建造资源(item--数量)
+
+---
+
+### Property `RebuiltIDs`
+
+| Field | Details |
+|------|------|
+| C++ type | `TArray<FName>` |
+| Reflection specifiers | BlueprintReadWrite, Category="Base" |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") TArray<FName> RebuiltIDs;` |
+
+**Notes:**
+
+> 重建的ID
 
 ---
 
@@ -622,7 +652,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") int32 Workload { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 建造工作量
 
@@ -637,7 +667,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") int32 DestoryWorkload {0};` |
 
-**Source comments:**
+**Notes:**
 
 > 拆除工作量
 
@@ -652,7 +682,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") float DestoryReturnPrecent {0.f};` |
 
-**Source comments:**
+**Notes:**
 
 > 拆除返还建造资源的百分比(0~1)
 
@@ -667,7 +697,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") int32 SkillLevel { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 需求建造技能等级
 
@@ -682,7 +712,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") float ThermalConductivity { 0.f };` |
 
-**Source comments:**
+**Notes:**
 
 > 热传导效率
 
@@ -697,7 +727,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") int32 Solidness { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 坚固度(0没有)
 
@@ -712,7 +742,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") int32 Aesthetic { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 美观度
 
@@ -722,12 +752,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EFiveElementType,float>` |
+| C++ type | TMap<[EFiveElementType](Struct/CommonEnum__EFiveElementType.md),float> |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") TMap<EFiveElementType,float> FiveElementScore;` |
 
-**Source comments:**
+**Notes:**
 
 > 五行属性
 
@@ -742,7 +772,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") int32 Defense { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 防御
 
@@ -757,7 +787,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base",meta=(ClampMin = 0.f,ClampMax = 1.f)) float MaterialCoefficient { 0 };` |
 
-**Source comments:**
+**Notes:**
 
 > 材质系数 计算公式为（攻击 - 防御 ） * （1 - 材质系数）当系数为1时 无法被攻击
 
@@ -772,7 +802,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") bool bRepairable = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 损坏后是否可以被修复
 
@@ -787,7 +817,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Parameter") TMap<int32 , FString> Parameter;` |
 
-**Source comments:**
+**Notes:**
 
 > 额外变量(值: 说明文本) 仓库：第一个参数 初始高度 第二个参数 每层的间隔高度 第三个参数 总共层数
 
@@ -802,7 +832,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Parameter") TArray<FName> NameParameter;` |
 
-**Source comments:**
+**Notes:**
 
 > 读取其他配置表的行命名参数 建筑物为炮台时 读取召唤物表
 
@@ -817,7 +847,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Parameter") FTransform AttachTransform = FTransform::Identity;` |
 
-**Source comments:**
+**Notes:**
 
 > 附加到的位置偏移 建筑为炮台时 为炮塔的位置
 
@@ -832,7 +862,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "SmartObject") TSoftObjectPtr<USmartObjectDefinition> InterActionDefine;` |
 
-**Source comments:**
+**Notes:**
 
 > 设备交互定义
 
@@ -847,7 +877,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "UI") FName OpenBuildingWidgetID;` |
 
-**Source comments:**
+**Notes:**
 
 > 打开的建筑物主界面ID
 
@@ -862,7 +892,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Collision") FName ConstructCollisionProfileName;` |
 
-**Source comments:**
+**Notes:**
 
 > 建造中的碰撞预设(透明状态)
 > 可选项有Building_NoCollision_NoNavigation, Building_Base_Complete, Building_Base_Construct, Building_Navigation_Collision, Building_Navigation_NoCollision
@@ -878,7 +908,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Collision") FName CompleteCollisionProfileName;` |
 
-**Source comments:**
+**Notes:**
 
 > 建造完成后使用的碰撞预设
 
@@ -893,7 +923,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite ,EditAnywhere,Category = "Collision") bool UseMeshScale { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 地基不勾选此项, 地基动态的根据高度创建碰撞, 与地基相同需要根据高度创建时不勾选此项
 
@@ -908,7 +938,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Collision") TSoftObjectPtr<UStaticMesh> CollisionMesh;` |
 
-**Source comments:**
+**Notes:**
 
 > 使用的碰撞模型
 
@@ -923,7 +953,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Collision") bool UseDefaultMesh { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是使用的基础正方形模型, 既预设模型而不是建筑物本身模型
 
@@ -938,7 +968,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Light") TArray<FBuildLightSourceData> LightParams;` |
 
-**Source comments:**
+**Notes:**
 
 > 灯具相关配置参数
 
@@ -953,7 +983,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") TArray<FGameplayTag> UnlockItemTags;` |
 
-**Source comments:**
+**Notes:**
 
 > 解锁必须要获取的物品的TAG（满足任意一，就可以解锁）
 
@@ -968,7 +998,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") FText UnlockItemDesc;` |
 
-**Source comments:**
+**Notes:**
 
 > 解锁必须要获取的物品描述内容
 
@@ -983,7 +1013,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") bool bIsFightRobotUse = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是战斗机关人使用的(傀儡)
 
@@ -998,7 +1028,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") bool bIsAnimalUse = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是动物使用的
 
@@ -1013,7 +1043,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") FGameplayTag FoodTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 食槽可以添加的物品Tag
 
@@ -1028,7 +1058,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "SmartObject") bool bUseSkeletalMesh = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否使用骨骼网格体
 
@@ -1043,7 +1073,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SmartObject",meta=(EditConditionHides,EditCondition = "bUseSkeletalMesh")) TSoftObjectPtr<USkeletalMesh> SkeletalMesh;` |
 
-**Source comments:**
+**Notes:**
 
 > 骨骼网格体
 
@@ -1058,7 +1088,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,EditDefaultsOnly, Category = "SmartObject",meta=(EditConditionHides,EditCondition = "bUseSkeletalMesh")) TSubclassOf<UAnimInstance> AnimInstance;` |
 
-**Source comments:**
+**Notes:**
 
 > 设施交互动画
 
@@ -1073,7 +1103,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Sound") TMap<FGameplayTag,FName> BuildingSound;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑物的音效 key为音效的tag value 为对应的音效 读取GameSoundInfo配置
 
@@ -1088,7 +1118,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Sound") class UAkAudioEvent* BuildingPutDownSound = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑放置音效
 
@@ -1103,7 +1133,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Sound") class UAkAudioEvent* BuildingCompleteSound = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑完成音效
 
@@ -1118,7 +1148,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Warehouse") FGameplayTagContainer CanNotPlaceItemTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 仓库禁止放置物品分类标签
 
@@ -1133,7 +1163,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Warehouse") bool bWarehouseShowItemMesh = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 仓库是否显示存放物模型
 
@@ -1148,7 +1178,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Warehouse") bool bWarehouseShowItemUI = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 仓库是否显示存放物UI
 
@@ -1163,7 +1193,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Warehouse", meta=(InlineEditConditionToggle)) bool bUseWarehouseTemperature = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否使用仓库温度（WarehouseTemperature）影响存放物的温度
 
@@ -1178,7 +1208,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Warehouse", meta=(Editcondition="bUseWarehouseTemperature" )) int32 WarehouseTemperature = 15;` |
 
-**Source comments:**
+**Notes:**
 
 > 仓库的温度(修改存放物的温度为这个值)
 
@@ -1193,7 +1223,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Warehouse") TArray<FGridPosition> AvailableGridOffset;` |
 
-**Source comments:**
+**Notes:**
 
 > 可用的格子（以建筑物占格最小格子为起点）
 
@@ -1203,12 +1233,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EEnergyType` |
+| C++ type | [EEnergyType](ERW_Enumerations__EEnergyType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Energy" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Energy") EEnergyType EnergyType = EEnergyType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 能源类型
 
@@ -1223,7 +1253,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Energy") TSoftObjectPtr<UTexture2D> EnergyBuildingDetailImage;` |
 
-**Source comments:**
+**Notes:**
 
 > 能源建筑详情图片
 
@@ -1233,12 +1263,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TArray<EEnergyControlType>` |
+| C++ type | TArray<[EEnergyControlType](ERW_Enumerations__EEnergyControlType.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="Energy" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Energy") TArray<EEnergyControlType> EnergyBeControlledControlType;` |
 
-**Source comments:**
+**Notes:**
 
 > 自动化控件控制的方式
 
@@ -1253,7 +1283,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Energy") float RolePerceptionlength = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色感知控制方式的范围长
 
@@ -1268,7 +1298,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Energy") float RolePerceptionwidth = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 角色感知控制方式的范围宽
 
@@ -1283,7 +1313,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Energy" , meta=(EditConditionHides,Editcondition="EnergyType == EEnergyType::GenerateEnergy")) UCurveFloat* EfficiencyCurve = nullptr;` |
 
-**Source comments:**
+**Notes:**
 
 > 供能建筑效率曲线
 
@@ -1293,12 +1323,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EGenerateBuildingFaultProbability,float>` |
+| C++ type | TMap<[EGenerateBuildingFaultProbability](ERW_Enumerations__EGenerateBuildingFaultProbability.md),float> |
 | Reflection specifiers | BlueprintReadWrite, Category="Energy" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Energy" , meta=(EditConditionHides,Editcondition="EnergyType == EEnergyType::GenerateEnergy")) TMap<EGenerateBuildingFaultProbability,float> GenerateBuildingWhenRunVariableProbabilityOfFailure;` |
 
-**Source comments:**
+**Notes:**
 
 > 供能建筑运行时不同情况变化的的故障概率
 
@@ -1308,12 +1338,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EGenerateBuildingFaultType,int32>` |
+| C++ type | TMap<[EGenerateBuildingFaultType](ERW_Enumerations__EGenerateBuildingFaultType.md),int32> |
 | Reflection specifiers | BlueprintReadWrite, Category="Energy" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Energy") TMap<EGenerateBuildingFaultType,int32> GenerateBuildingFaultInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 供能建筑故障类型及其权重
 
@@ -1328,7 +1358,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Energy",meta=(EditConditionHides, Editcondition="EnergyType == EEnergyType::ConsumeEnergy")) int32 MaxConsumeEnergyValue = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 能源消耗单位时间最大消耗的能源
 
@@ -1343,7 +1373,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int32 CurConsumeEnergyValue = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 能源消耗单位时间当前消耗的能源
 
@@ -1358,7 +1388,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Energy",meta=(EditConditionHides,Editcondition="EnergyType == EEnergyType::GenerateEnergy")) int32 MaxGenerateEnergyValue = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 运行时单位时间最大产出的能源
 
@@ -1373,7 +1403,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) int32 CurGenerateEnergyValue = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 运行时单位时间当前产出最大能源
 
@@ -1388,7 +1418,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Energy",meta=(EditConditionHides,Editcondition = "EnergyType == EEnergyType::EnergyStorage")) int32 MaxEnergyStorageValue = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 可以存储的最大能源
 
@@ -1403,7 +1433,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Energy") bool bIsPracticeBuilding = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是修炼建筑
 
@@ -1413,12 +1443,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | TMap<EOverlockingType , [FPracticeBuildingOverlockingData](ERW_ConfigTypes__FPracticeBuildingOverlockingData.md)> |
+| C++ type | TMap<[EOverlockingType](ERW_Enumerations__EOverlockingType.md) , [FPracticeBuildingOverlockingData](ERW_ConfigTypes__FPracticeBuildingOverlockingData.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="Energy" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Energy",meta=(EditConditionHides,Editcondition = "bIsPracticeBuilding == true")) TMap<EOverlockingType , FPracticeBuildingOverlockingData> PracticeBuildingOverlockingData;` |
 
-**Source comments:**
+**Notes:**
 
 > 修炼建筑的超频类型及其信息
 
@@ -1433,7 +1463,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Energy",meta=(EditConditionHides, Editcondition="EnergyType != EEnergyType::None")) int32 SpecialEffectHeight = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 连线特效高度
 
@@ -1448,7 +1478,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "BuildCombination") bool IsCombinationCore = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否组合中的核心建筑
 
@@ -1463,7 +1493,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") TArray<FName> PlayerTeamBuffIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 玩家方的群BUff
 
@@ -1478,6 +1508,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "HeatSource") bool IsHeatSource = false;` |
 
+**Notes:**
+
+> Whether this building is a heat source.
+
 ---
 
 ### Property `HeatSourceTemperatureEffect`
@@ -1489,7 +1523,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "HeatSource", meta=( editcondition="IsHeatSource" )) int32 HeatSourceTemperatureEffect = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 热源影响默认值
 
@@ -1504,7 +1538,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "HeatSource", meta=( editcondition="IsHeatSource" )) FIntPoint HeatSourceTemperatureEffectRange;` |
 
-**Source comments:**
+**Notes:**
 
 > 热源影响范围限制
 
@@ -1519,7 +1553,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "LightSource") bool IsLightSource = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否光源
 
@@ -1534,7 +1568,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "LightSource", meta=( editcondition="IsLightSource" )) int32 LightSourceTemperatureEffect = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 光源影响值
 
@@ -1549,7 +1583,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "EffectSize") bool HaveEffectSize=false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否有影响范围
 
@@ -1564,7 +1598,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "EffectSize",meta=( editcondition="HaveEffectSize")) bool bCreateCollisionBox = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否创建碰撞框
 
@@ -1579,7 +1613,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "EffectSize", meta=( editcondition="HaveEffectSize" )) FIntVector BuildingEffectSize = FIntVector::ZeroValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 影响范围(基于建筑尺寸的加值)(X行，Y列，Z高)
 
@@ -1594,7 +1628,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "EffectSize", meta=( editcondition="HaveEffectSize" )) FIntVector BuildingEffectSizeOffset = FIntVector::ZeroValue;` |
 
-**Source comments:**
+**Notes:**
 
 > 影响范围偏移
 
@@ -1609,7 +1643,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "EffectSize", meta=( editcondition="HaveEffectSize" )) FGameplayTagContainer BuildingEffectTags;` |
 
-**Source comments:**
+**Notes:**
 
 > 在影响范围内为角色添加的tag
 
@@ -1624,7 +1658,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "EffectSize", meta=( editcondition="HaveEffectSize" )) TArray<FName> BuildingEffectBuffIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 在影响范围内为角色添加的buff
 
@@ -1639,7 +1673,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "EffectSize", meta=( editcondition="HaveEffectSize" )) TArray<FName> LeaveEffectRangeBuffIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 离开影响范围为角色添加的buff
 
@@ -1649,12 +1683,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<EGenerateBuildingFaultType,FAbilityProjectileStruct>` |
+| C++ type | TMap<[EGenerateBuildingFaultType](ERW_Enumerations__EGenerateBuildingFaultType.md),FAbilityProjectileStruct> |
 | Reflection specifiers | BlueprintReadWrite, Category="Energy" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Energy") TMap<EGenerateBuildingFaultType,FAbilityProjectileStruct> FaultGenerateProjectile;` |
 
-**Source comments:**
+**Notes:**
 
 > 供能建筑故障后产生的投射物
 
@@ -1669,7 +1703,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Vehicle",meta=(EditCondition = "BuildingType == EBuildingType::Transportation",EditConditionHides)) FName VehicleID;` |
 
-**Source comments:**
+**Notes:**
 
 > 交通工具配置id TransportationInfo 表
 
@@ -1684,7 +1718,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Fabricate",meta=(EditCondition = "BuildingType == EBuildingType::Fabricate",EditConditionHides)) bool bAutoFabricateBuild = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 制造建筑物 是否是自动制造
 
@@ -1699,7 +1733,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Fabricate") int32 AutoFabricateOutputWorkload = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 自动化建筑自动输出的工作量
 
@@ -1714,7 +1748,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") float ItemPrice = 0.1f;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑价值(实际财富点数)
 
@@ -1729,7 +1763,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, EditAnywhere,Category = "Battle") float CustomMeshBoundsRadius = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 自定义Mesh边界半径，不再通过Mesh获取(战斗使用)
 
@@ -1739,12 +1773,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TArray<ECommonButtonType>` |
+| C++ type | TArray<[ECommonButtonType](UI/Struct/UIStruct__ECommonButtonType.md)> |
 | Reflection specifiers | BlueprintReadWrite, Category="Button" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Button") TArray<ECommonButtonType> SelectButtonType;` |
 
-**Source comments:**
+**Notes:**
 
 > 默认选中状态的按钮
 

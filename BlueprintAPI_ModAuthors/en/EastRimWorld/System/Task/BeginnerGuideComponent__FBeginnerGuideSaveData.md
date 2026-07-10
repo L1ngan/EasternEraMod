@@ -19,7 +19,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid Guid;` |
 
-**Source comments:**
+**Notes:**
 
 > 组件的Guid
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) bool IsCompleteGuide = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否已经完成了新手引导
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TArray<FCommonTaskInstance> NoviceTaskInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 新手任务
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FCommonTaskInstance CurNoviceTaskInfo;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前的新手引导任务
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) int32 CountNoviceTaskNumber = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 新手引导任务数量
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) FGuid SelectActorGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 物品替身actor的Guid
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FName , bool> CoverTipsState;` |
 
-**Source comments:**
+**Notes:**
 
 > 遮罩Tips显示状态
 > TMap<条件ID , 是否显示过>
@@ -120,12 +120,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `TMap<FName , EBeginnerGuideUnlockType>` |
+| C++ type | TMap<FName , [EBeginnerGuideUnlockType](../../Struct/CommonTaskStruct__EBeginnerGuideUnlockType.md)> |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame) TMap<FName , EBeginnerGuideUnlockType> UnlockIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 已解锁的ID
 > TMap<ID , 解锁类型>

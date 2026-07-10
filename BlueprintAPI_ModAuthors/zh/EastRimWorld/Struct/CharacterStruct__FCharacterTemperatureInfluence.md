@@ -14,12 +14,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ECharacterTemperatureStateType` |
+| C++ 类型 | [ECharacterTemperatureStateType](CharacterStruct__ECharacterTemperatureStateType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite) ECharacterTemperatureStateType CharacterTemperatureStateType = ECharacterTemperatureStateType::Normal;` |
 
-**源码注释:**
+**说明:**
 
 > 温度区间分类
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float MinTimeOfDuration = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 最小持续时间
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) float MaxTimeOfDuration = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 最大持续时间
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FName> TemperatureBuff;` |
 
-**源码注释:**
+**说明:**
 
 > 触发的buff
 
@@ -74,12 +74,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `TMap<FName,EBodyOrganType>` |
+| C++ 类型 | TMap<FName,[EBodyOrganType](../ERW_CommonTypes__EBodyOrganType.md)> |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) TMap<FName,EBodyOrganType> TemperatureExamined;` |
 
-**源码注释:**
+**说明:**
 
 > 触发的伤势 伤势ID， 伤势类型
 

@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Cooldown") FGameplayTag TargetAbilityTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 目标GA的Tag
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Cooldown") float ReduceTime{0.f};` |
 
-**Source comments:**
+**Notes:**
 
 > 装备时增加的属性
 

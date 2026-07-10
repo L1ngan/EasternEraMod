@@ -14,12 +14,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EBattleTeamType` |
+| C++ type | [EBattleTeamType](WorldBattleStruct__EBattleTeamType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) EBattleTeamType BattleTeamType = EBattleTeamType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 战场角色（例如攻击方)
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FGuid> Characters;` |
 
-**Source comments:**
+**Notes:**
 
 > 参与的弟子
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> DogfaceIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 选择的小兵
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> GunTurretIDs;` |
 
-**Source comments:**
+**Notes:**
 
 > 选择的箭塔
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) TArray<FName> StrategicAbility;` |
 
-**Source comments:**
+**Notes:**
 
 > 选择的战略技能
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 ResourcePoint = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 携带的资源点数
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) int32 RecoverResourcePoint = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 单位时间资源恢复量
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) float CombatScore = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 战斗力
 

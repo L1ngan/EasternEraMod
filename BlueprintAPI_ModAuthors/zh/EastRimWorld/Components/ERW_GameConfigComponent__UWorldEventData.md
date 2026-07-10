@@ -4,7 +4,9 @@
 
 ---
 
-*（该类型在头文件中 UCLASS/USTRUCT 上方无功能说明类注释；请结合成员列表与源码理解其职责。）*
+## 功能说明（来自头文件注释）
+
+> 世界事件数据配置资产,包含世界事件各配置表、事件分组、固化槽设置与开关
 
 ## 蓝图暴露变量
 
@@ -17,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) UDataTable* WorldEventDetailTable = nullptr;` |
 
-**源码注释:**
+**说明:**
 
 > 世界事件详细信息配置表
 
@@ -32,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) UDataTable* WorldEventInfoTable = nullptr;` |
 
-**源码注释:**
+**说明:**
 
 > 世界事件信息配置表
 
@@ -47,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) UDataTable* WorldEventSpawnConfig = nullptr;` |
 
-**源码注释:**
+**说明:**
 
 > 世界事件生成配置表
 
@@ -62,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) UDataTable* UnlockedPauseSlotInfo = nullptr;` |
 
-**源码注释:**
+**说明:**
 
 > 解锁固化槽的信息
 
@@ -77,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TMap<int,int> WorldEventGroup;` |
 
-**源码注释:**
+**说明:**
 
 > 世界事件分组 0 为无限制
 
@@ -92,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) bool bOpenWorldEvent = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否开启世界事件
 
@@ -107,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int MaxPauseSlotNumber = 3;` |
 
-**源码注释:**
+**说明:**
 
 > 最大的固化槽数量
 

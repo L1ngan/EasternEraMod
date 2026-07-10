@@ -4,3 +4,7 @@
 #include "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/CreateModPlugin/UHT/TechnologyDataStruct.gen.cpp"
 #include "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/CreateModPlugin/UHT/WorldDataStruct.gen.cpp"
 #include "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CreateModPlugin/PerModuleInline.gen.cpp"
+#include "H:/Project/Plugins/CreateModPlugin/Source/CreateModPlugin/CreateModPlugin.cpp"
+#include "H:/Project/Plugins/CreateModPlugin/Source/CreateModPlugin/Private/BaseDataStruct.cpp"
+#include "H:/Project/Plugins/CreateModPlugin/Source/CreateModPlugin/Private/ModConfigExporter.cpp"
+#include "H:/Project/Plugins/CreateModPlugin/Source/CreateModPlugin/Public/TechnologyDataStruct.cpp"

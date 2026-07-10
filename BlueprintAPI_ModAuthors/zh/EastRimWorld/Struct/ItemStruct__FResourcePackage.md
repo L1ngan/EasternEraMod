@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="ResourcePackage") FName ResourceName;` |
 
-**源码注释:**
+**说明:**
 
 > 资源名称
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="ResourcePackage") int32 ResourcePrice = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 资源价格
 
@@ -44,12 +44,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EResourceCategories` |
+| C++ 类型 | [EResourceCategories](ItemStruct__EResourceCategories.md) |
 | 反射说明符 | BlueprintReadWrite, Category="ResourcePackage" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="ResourcePackage") EResourceCategories EResourceCategories = EResourceCategories::None;` |
 
-**源码注释:**
+**说明:**
 
 > 资源UI显示分类
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="ResourcePackage") FName ResourceId;` |
 
-**源码注释:**
+**说明:**
 
 > 资源ID
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="ResourcePackage") int32 ResourceNum = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 资源数量
 
@@ -89,12 +89,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EGroundInventoryType` |
+| C++ 类型 | [EGroundInventoryType](CommonEnum__EGroundInventoryType.md) |
 | 反射说明符 | BlueprintReadWrite, Category="ResourcePackage" |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="ResourcePackage") EGroundInventoryType ItemType = EGroundInventoryType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 资源分类
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="ResourcePackage") bool ResourceEnable = true;` |
 
-**源码注释:**
+**说明:**
 
 > 是否启用
 

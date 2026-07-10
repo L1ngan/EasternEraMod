@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Entries") TArray<TSubclassOf<UGameplayEffect>> EffectiveAfterEquippingGameplayEffects;` |
 
-**源码注释:**
+**说明:**
 
 > 装备时立即生效的GE
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Entries") TArray<FName> EffectiveAfterEquippingGameplayAttributes;` |
 
-**源码注释:**
+**说明:**
 
 > 装备时增加的属性
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Entries") TArray<FAbilityTargetEntriesEffect> AbilityTargetEntriesEffects;` |
 
-**源码注释:**
+**说明:**
 
 > 释放技能时触发的额外效果
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Entries") FGameplayTagContainer SelfGameplayTags;` |
 
-**源码注释:**
+**说明:**
 
 > 装备时给予自己的标签
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Entries") TArray<FName> GiveAbility;` |
 
-**源码注释:**
+**说明:**
 
 > 获得的技能 关联GameAbilityStruct
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Entries") TArray<FReduceCoolDownConfig> ReduceCooldown;` |
 
-**源码注释:**
+**说明:**
 
 > 减少冷却时间的配置
 

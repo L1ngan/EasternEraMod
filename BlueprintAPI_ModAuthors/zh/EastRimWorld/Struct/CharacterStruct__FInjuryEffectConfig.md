@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InjuryTypeEffectConfig") FText InjuryName;` |
 
-**源码注释:**
+**说明:**
 
 > 伤势类型
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InjuryTypeEffectConfig") TArray<TSoftClassPtr<UGameplayEffect>> InjuryGameplayEffect;` |
 
-**源码注释:**
+**说明:**
 
 > 效果对应GE (降低部位健康值,降低整体健康值 武学效果降低)
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category= "InjuryTypeEffectConfig") TMap<FGameplayAttribute,float> Attributes;` |
 
-**源码注释:**
+**说明:**
 
 > 效果中包含的属性
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite,Category= "InjuryTypeEffectConfig") FGameplayTagContainer GameplayTagContainer;` |
 
-**源码注释:**
+**说明:**
 
 > 为自身添加的tag
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InjuryTypeEffectConfig") FGuid BuffGuid;` |
 
-**源码注释:**
+**说明:**
 
 > 每个buff独立的guid
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InjuryTypeEffectConfig") float InjuryHealingRate = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 愈合速度（总愈合速度等于伤势愈合速度+人物的基础愈合速度）
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InjuryTypeEffectConfig") float TotalHurtValue = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 初始伤势程度(减到0为治愈)
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InjuryTypeEffectConfig") FName BadInjuryID = NAME_None;` |
 
-**源码注释:**
+**说明:**
 
 > 恶化到的ID（InjuryTypeEffectConfig的ID）
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InjuryTypeEffectConfig") bool bMedicineOnly = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否只能使用药品治疗
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InjuryTypeEffectConfig") TMap<FName,FInjuryMedicine> TreatMedicines;` |
 
-**源码注释:**
+**说明:**
 
 > 治疗必需要的药品(药品ID,数量)[没有足够药品就不能治疗]
 
@@ -169,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InjuryTypeEffectConfig") float TreatAddition = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 治疗加成(可以看成使用药物的加成)
 
@@ -184,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InjuryTypeEffectConfig") FName TreatActionId;` |
 
-**源码注释:**
+**说明:**
 
 > 伤势对应的治疗Action
 
@@ -199,7 +199,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryEffectInstance") TArray<FName> TreatRemoveBuffID;` |
 
-**源码注释:**
+**说明:**
 
 > 治疗后去除的buff
 
@@ -214,7 +214,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InjuryTypeEffectConfig") float ScarPercent = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 形成疤痕概率
 
@@ -229,7 +229,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InjuryTypeEffectConfig") bool IsScar = false;` |
 
-**源码注释:**
+**说明:**
 
 > 是否是疤痕(疤痕不会自愈，也不会恶化)
 
@@ -244,7 +244,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InjuryTypeEffectConfig") FText InjuryDesc;` |
 
-**源码注释:**
+**说明:**
 
 > 伤势描述
 
@@ -259,7 +259,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InjuryTypeEffectConfig") FFormatText FormatInjuryDesc;` |
 
-**源码注释:**
+**说明:**
 
 > 伤势描述 格式化后的描述
 
@@ -274,7 +274,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FInjuryEffectInstance") TArray<FName> AddBuffID;` |
 
-**源码注释:**
+**说明:**
 
 > 增加的buff 伤势治愈或恶化后去除
 
@@ -289,7 +289,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InjuryTypeEffectConfig") FGameplayTagContainer AddMastHaveTags;` |
 
-**源码注释:**
+**说明:**
 
 > 伤势添加需要的标签
 
@@ -304,7 +304,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InjuryTypeEffectConfig") FGameplayTagContainer AddMastNotHaveTags;` |
 
-**源码注释:**
+**说明:**
 
 > 伤势添加不能有的标签
 
@@ -319,7 +319,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame,BlueprintReadWrite, EditAnywhere,Category= "InjuryTypeEffectConfig") TArray<FName> ConflictInjuryID;` |
 
-**源码注释:**
+**说明:**
 
 > 冲突的伤势 ID
 
@@ -334,7 +334,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame,BlueprintReadWrite, EditAnywhere, Category = "InjuryTypeEffectConfig") int Priority = 0;` |
 
-**源码注释:**
+**说明:**
 
 > BUFF的优先级 越大优先级越高
 
@@ -349,7 +349,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= "InjuryTypeEffectConfig") int NumberOfSuperpositions = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 相同的buff可叠加的次数 0 是无限制 1 默认
 

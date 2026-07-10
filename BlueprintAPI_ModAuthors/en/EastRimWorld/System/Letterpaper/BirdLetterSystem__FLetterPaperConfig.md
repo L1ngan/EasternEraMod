@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FName DialogueId;` |
 
-**Source comments:**
+**Notes:**
 
 > id
 
@@ -29,12 +29,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ELetterDialogueType` |
+| C++ type | [ELetterDialogueType](BirdLetterSystem__ELetterDialogueType.md) |
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) ELetterDialogueType DialogueType = ELetterDialogueType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 类型
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText DialogueTitle;` |
 
-**Source comments:**
+**Notes:**
 
 > 信笺标题
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "LetterBase") TArray<UDialogue*> Dialogue;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应对话
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "LetterBase") int32 Probability = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 概率
 

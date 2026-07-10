@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Map building data per config ID: the build config ID plus GUID arrays of unfinished and finished buildings
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame , BlueprintReadWrite) FName BuildConfigId;` |
 
-**Source comments:**
+**Notes:**
 
 > 建筑配置ID
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame , BlueprintReadWrite) TArray<FGuid> BuildingIds;` |
 
-**Source comments:**
+**Notes:**
 
 > 未完成的建筑id数组
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
 | Original declaration (excerpt) | `UPROPERTY(SaveGame , BlueprintReadWrite) TArray<FGuid> BuildIds;` |
 
-**Source comments:**
+**Notes:**
 
 > 已完成的建筑id数组
 

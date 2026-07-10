@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> ParameterArray;` |
 
-**源码注释:**
+**说明:**
 
 > 参数列表 随机一个或多个
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> UnlockConditionArray;` |
 
-**源码注释:**
+**说明:**
 
 > 解锁条件id
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int SpawnMaxNumber = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 一次生成的最大数量
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) int SpawnMinNumber = 1;` |
 
-**源码注释:**
+**说明:**
 
 > 一次生成的最小数量
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TArray<FName> ConflictEventID;` |
 
-**源码注释:**
+**说明:**
 
 > 冲突的事件id 与同时存在的数量相关联
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float RefreshTime = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 刷新时间
 
@@ -109,6 +109,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FGuid SpawnGuid = FGuid();` |
 
+**说明:**
+
+> Spawn Guid 字段。
+
 ---
 
 ### 属性 `LimitOfTimes`
@@ -120,7 +124,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int LimitOfTimes = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 事件生成器的限定次数 0 是无限制
 

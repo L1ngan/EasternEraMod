@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = "1", ClampMax = "10000")) int32 MaxSearchDepth;` |
 
-**源码注释:**
+**说明:**
 
 > 最大搜索深度
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = "1.0", ClampMax = "3600.0")) float CacheExpireTime;` |
 
-**源码注释:**
+**说明:**
 
 > 缓存过期时间（秒）
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = "1", ClampMax = "16")) int32 MaxParallelTasks;` |
 
-**源码注释:**
+**说明:**
 
 > 并行任务数量
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = "1", ClampMax = "100")) int32 MaxWaypointsPerNode;` |
 
-**源码注释:**
+**说明:**
 
 > 空间索引参数
 
@@ -79,6 +79,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = "1", ClampMax = "16")) int32 MaxQuadTreeDepth;` |
 
+**说明:**
+
+> Max Quad Tree Depth 字段。
+
 ---
 
 ### 属性 `bEnableCache`
@@ -90,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) bool bEnableCache;` |
 
-**源码注释:**
+**说明:**
 
 > 是否启用缓存
 
@@ -105,7 +109,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) bool bEnableSpatialIndex;` |
 
-**源码注释:**
+**说明:**
 
 > 是否启用空间索引
 

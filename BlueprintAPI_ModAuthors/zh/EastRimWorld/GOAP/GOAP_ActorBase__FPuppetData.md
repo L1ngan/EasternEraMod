@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(SaveGame, EditAnywhere, BlueprintReadWrite) TArray<FName> AddedPuppetIDs;` |
 
-**源码注释:**
+**说明:**
 
 > 建筑物中已添加的傀儡ID列表（相同的傀儡只能添加一次）
 
@@ -34,6 +34,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly , SaveGame) FGameplayTag CurrentRefit;` |
 
+**说明:**
+
+> 当前生效的改装标签
+
 ---
 
 ### 属性 `RefitMap`
@@ -44,6 +48,10 @@
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly , SaveGame) TMap<FGameplayTag,FName> RefitMap;` |
+
+**说明:**
+
+> 改装标签到对应配置ID的映射表
 
 ---
 
@@ -56,6 +64,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly , SaveGame) FUseItemSaveData RefitItemSaveData;` |
 
+**说明:**
+
+> 改装所用物品的存档数据
+
 ---
 
 ### 属性 `RefitCarrayReourceActionID`
@@ -66,5 +78,9 @@
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly , SaveGame) FName RefitCarrayReourceActionID;` |
+
+**说明:**
+
+> 改装搬运资源的Action ID
 
 ---

@@ -903,7 +903,7 @@ UScriptStruct* Z_Construct_UScriptStruct_FModWorldPlaceInfo()
 // ********** End ScriptStruct FModWorldPlaceInfo **************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h__Script_CreateModPlugin_Statics
+struct Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h__Script_CreateModPlugin_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EModWorldPlaceType_StaticEnum, TEXT("EModWorldPlaceType"), &Z_Registration_Info_UEnum_EModWorldPlaceType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2708434759U) },
@@ -912,10 +912,10 @@ struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_Cr
 		{ FModWorldPlaceInfo::StaticStruct, Z_Construct_UScriptStruct_FModWorldPlaceInfo_Statics::NewStructOps, TEXT("ModWorldPlaceInfo"), &Z_Registration_Info_UScriptStruct_FModWorldPlaceInfo, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModWorldPlaceInfo), 1752054016U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h__Script_CreateModPlugin_1403925191(TEXT("/Script/CreateModPlugin"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h__Script_CreateModPlugin_1403925191(TEXT("/Script/CreateModPlugin"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h__Script_CreateModPlugin_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h__Script_CreateModPlugin_Statics::ScriptStructInfo),
-	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h__Script_CreateModPlugin_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h__Script_CreateModPlugin_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h__Script_CreateModPlugin_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h__Script_CreateModPlugin_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h__Script_CreateModPlugin_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h__Script_CreateModPlugin_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

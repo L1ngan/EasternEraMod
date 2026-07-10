@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText ThreatPoolName;` |
 
-**源码注释:**
+**说明:**
 
 > 威胁名称
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FText ThreatPoolDesc;` |
 
-**源码注释:**
+**说明:**
 
 > 威胁描述
 
@@ -44,12 +44,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `EThreatType` |
+| C++ 类型 | [EThreatType](WorldStruct__EThreatType.md) |
 | 反射说明符 | BlueprintReadOnly |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) EThreatType ThreatPoolType = EThreatType::None;` |
 
-**源码注释:**
+**说明:**
 
 > 威胁类型
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<FName> ConditionIDs;` |
 
-**源码注释:**
+**说明:**
 
 > 威胁条件 DT_CommonTaskCondition 配置表
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) int32 RaidPoints = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 袭击点数(必须为整数，随机有用)
 
@@ -94,7 +94,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) float CooldownTime = 9600.f;` |
 
-**源码注释:**
+**说明:**
 
 > 冷却时间(秒)
 
@@ -109,7 +109,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<FName> MonsterGenerationIDs;` |
 
-**源码注释:**
+**说明:**
 
 > （废弃）
 
@@ -124,7 +124,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TMap<FName,FNameIDArray> GenerationIDsMap;` |
 
-**源码注释:**
+**说明:**
 
 > 创建生成的配置ID<地图名称,生成配置ID数组>创建怪物IDs(调用 DT_MonsterGenerationConfig ) /敌对势力袭击IDs （调用 DT_EnemyAttackGenerationConfig）
 
@@ -139,7 +139,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) TArray<FName> BuffIDs;` |
 
-**源码注释:**
+**说明:**
 
 > 触发Buff(调用 DT_CommonBuff )
 
@@ -154,7 +154,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) bool SetModEnabled = true;` |
 
-**源码注释:**
+**说明:**
 
 > 是否启用此威胁
 

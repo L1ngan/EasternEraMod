@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, Category = Ability, meta = (Categories = "Gameplay.Action")) FGameplayTag AbilityTag;` |
 
-**源码注释:**
+**说明:**
 
 > The tag that this container relationship is about. Single tag, but abilities can have multiple of these
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, Category = Ability) FGameplayTagContainer AbilityTagsToBlock;` |
 
-**源码注释:**
+**说明:**
 
 > The other ability tags that will be blocked by any ability using this tag
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, Category = Ability) FGameplayTagContainer AbilityTagsToCancel;` |
 
-**源码注释:**
+**说明:**
 
 > The other ability tags that will be canceled by any ability using this tag
 
@@ -64,7 +64,7 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, Category = Ability) FGameplayTagContainer ActivationRequiredTags;` |
 
-**源码注释:**
+**说明:**
 
 > If an ability has the tag, this is implicitly added to the activation required tags of the ability
 
@@ -79,7 +79,7 @@
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, Category = Ability) FGameplayTagContainer ActivationBlockedTags;` |
 
-**源码注释:**
+**说明:**
 
 > If an ability has the tag, this is implicitly added to the activation blocked tags of the ability
 

@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Configuration data mapping a room temperature range to a score.
 
 ## Blueprint-exposed variables
 
@@ -17,6 +19,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float MinTemperature = 0.f;` |
 
+**Notes:**
+
+> Lower bound of the temperature range.
+
 ---
 
 ### Property `MaxTemperature`
@@ -28,6 +34,10 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float MaxTemperature = 0.f;` |
 
+**Notes:**
+
+> Upper bound of the temperature range.
+
 ---
 
 ### Property `Score`
@@ -38,5 +48,9 @@
 | Reflection specifiers | BlueprintReadWrite |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) float Score = 0.f;` |
+
+**Notes:**
+
+> Score awarded for this temperature range.
 
 ---

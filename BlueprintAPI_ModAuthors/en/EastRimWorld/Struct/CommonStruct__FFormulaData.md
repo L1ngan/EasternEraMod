@@ -19,7 +19,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FText Name;` |
 
-**Source comments:**
+**Notes:**
 
 > 配方名称
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FName ActionID;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应GOAP Action的ID
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FName StartActionID;` |
 
-**Source comments:**
+**Notes:**
 
 > 如果建筑物是自动制造 开始action
 
@@ -64,7 +64,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FName GoalID;` |
 
-**Source comments:**
+**Notes:**
 
 > 对应GOAP目标的ID 如果是自动制造 只用于搬运资源动态创建action，否则创建制造action和搬运action都使用
 
@@ -79,7 +79,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TSoftObjectPtr<UTexture2D> FormulaIcon;` |
 
-**Source comments:**
+**Notes:**
 
 > 配方在UI上显示的图标
 
@@ -94,7 +94,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UI") FText Description;` |
 
-**Source comments:**
+**Notes:**
 
 > 在UI上显示的文字描述
 
@@ -109,7 +109,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UI") FFormatText FormatDescription;` |
 
-**Source comments:**
+**Notes:**
 
 > 格式化后的描述
 
@@ -124,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<FGameplayAttribute,int> RequiredAttributes;` |
 
-**Source comments:**
+**Notes:**
 
 > 需要的属性值
 
@@ -139,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") float ConsumingTime = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 耗时（界面显示使用，不参与实际功能）
 
@@ -154,7 +154,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<FName,int> NecessityConsumingResource;` |
 
-**Source comments:**
+**Notes:**
 
 > 必须消耗的资源
 
@@ -169,7 +169,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") int SelectableResourceNumber = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 总共需要的可选资源数量
 
@@ -184,7 +184,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FGameplayTag SelectableResourceTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 可选的资源标签
 
@@ -199,7 +199,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") int SelectableTypeNumber = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 最多可选择的种类数量
 
@@ -209,12 +209,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `EGroundInventoryType` |
+| C++ type | [EGroundInventoryType](CommonEnum__EGroundInventoryType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") EGroundInventoryType OutputResourceType = EGroundInventoryType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 产出的资源类型
 
@@ -229,7 +229,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FName OutputItemID;` |
 
-**Source comments:**
+**Notes:**
 
 > 产出的ID 根据产出的类型不同查询不同的表 （NormalItem：道具表，装备：DT_FabricateEquipmentData）
 
@@ -244,7 +244,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") int OutputItemNumber = 1;` |
 
-**Source comments:**
+**Notes:**
 
 > 产出的数量
 
@@ -259,7 +259,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") TMap<FGameplayAttribute,float> AddToMakerAttributes;` |
 
-**Source comments:**
+**Notes:**
 
 > 制造完成后给制造者添加的属性 获得的经验
 
@@ -274,7 +274,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") bool bNeedPeople = true;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否需要人提供工作量
 
@@ -289,7 +289,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") float RequiredWorkload = 0.f;` |
 
-**Source comments:**
+**Notes:**
 
 > 需要的工作量 （在制造装备时会用于品质值相乘得出最终品质）
 
@@ -304,7 +304,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FGameplayTag GameplayTag;` |
 
-**Source comments:**
+**Notes:**
 
 > 产出物品所属的分组，用于检查库存
 
@@ -319,7 +319,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FName BuildingID;` |
 
-**Source comments:**
+**Notes:**
 
 > 关联的建筑物ID 在什么建筑物上可以使用这个配方
 
@@ -329,12 +329,12 @@
 
 | Field | Details |
 |------|------|
-| C++ type | `ECommonButtonType` |
+| C++ type | [ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md) |
 | Reflection specifiers | BlueprintReadWrite, Category="Base" |
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") ECommonButtonType CommonButtonType = ECommonButtonType::None;` |
 
-**Source comments:**
+**Notes:**
 
 > 关联的建筑物上个按钮类型 建筑物点击不同的按钮
 
@@ -349,7 +349,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base") FGameplayTagContainer GameplayTags;` |
 
-**Source comments:**
+**Notes:**
 
 > 解锁需要的物品大类
 
@@ -364,7 +364,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) bool CanUnlockByItem = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否可以通过获取物品解锁配方
 
@@ -379,7 +379,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TArray<FGameplayTag> UnlockItemTags;` |
 
-**Source comments:**
+**Notes:**
 
 > 解锁必须要获取的物品的TAG（满足任意一，就可以解锁）
 
@@ -394,7 +394,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) FText UnlockItemDesc;` |
 
-**Source comments:**
+**Notes:**
 
 > 解锁必须要获取的物品描述内容
 
@@ -409,7 +409,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UI") FFormatText FormatUnlockItemDesc;` |
 
-**Source comments:**
+**Notes:**
 
 > 格式化的解锁必须要获取的物品描述内容
 
@@ -424,7 +424,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite , EditAnywhere) bool bIsUnLock = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 配方是否可以使用
 

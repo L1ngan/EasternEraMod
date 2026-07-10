@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "WorkAttributeLevelConfig") FGameplayAttribute Attribute;` |
 
-**源码注释:**
+**说明:**
 
 > 属性值
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "WorkAttributeLevelConfig") float BaseValue = 0.f;` |
 
-**源码注释:**
+**说明:**
 
 > 属性等级关联的基础值
 
@@ -49,7 +49,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "WorkAttributeLevelConfig") TMap<int,float> AdditionPercentage;` |
 
-**源码注释:**
+**说明:**
 
 > 属性等级关联的百分比
 

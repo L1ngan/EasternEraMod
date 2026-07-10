@@ -19,7 +19,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite) FText Name;` |
 
-**源码注释:**
+**说明:**
 
 > 关系名称
 
@@ -34,7 +34,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite) int32 MinGoodOpinion = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 好感度
 
@@ -49,6 +49,10 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite) int32 MaxGoodOpinion = 0;` |
 
+**说明:**
+
+> 该关系对应的好感度上限
+
 ---
 
 ### 属性 `OnlyOppositeSex`
@@ -60,7 +64,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite) bool OnlyOppositeSex = false;` |
 
-**源码注释:**
+**说明:**
 
 > 仅异性?
 
@@ -75,7 +79,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite) FText MaleDesc;` |
 
-**源码注释:**
+**说明:**
 
 > 关系中对男性的描述(例如丈夫)
 
@@ -90,7 +94,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite) FText FemaleDesc;` |
 
-**源码注释:**
+**说明:**
 
 > 关系中对女性的描述(例如妻子)
 
@@ -100,12 +104,12 @@
 
 | 项目 | 内容 |
 |------|------|
-| C++ 类型 | `ERelationshipLevelUpType` |
+| C++ 类型 | [ERelationshipLevelUpType](CharacterChatStruct__ERelationshipLevelUpType.md) |
 | 反射说明符 | BlueprintReadWrite |
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite) ERelationshipLevelUpType LevelUpType = ERelationshipLevelUpType::Auto;` |
 
-**源码注释:**
+**说明:**
 
 > 达成此关系的方式
 
@@ -120,7 +124,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite) TArray<FName> LevelUpBuilding;` |
 
-**源码注释:**
+**说明:**
 
 > 非自动升级时所需仪式建筑ID
 
@@ -135,7 +139,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite) int32 ApplyTimes = 0;` |
 
-**源码注释:**
+**说明:**
 
 > 申请次数
 
@@ -150,7 +154,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite) TArray<FName> ChatBuffs;` |
 
-**源码注释:**
+**说明:**
 
 > 对话buff
 
@@ -165,7 +169,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite) TArray<FName> DeathBuffs;` |
 
-**源码注释:**
+**说明:**
 
 > 关系人死亡触发buff
 
@@ -180,7 +184,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite) TArray<FName> ConflictRelationID;` |
 
-**源码注释:**
+**说明:**
 
 > 冲突关系(当与其他人存在以下关系时不能发展为此关系)
 
@@ -195,7 +199,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(EditAnywhere,BlueprintReadWrite) int32 UIOrder = 0;` |
 
-**源码注释:**
+**说明:**
 
 > UI显示上的排序
 

@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Tracks the active handles of a gameplay effect class applied to each ASC, supporting removal per ASC or from all
 
 ## Blueprint-exposed variables
 
@@ -16,5 +18,9 @@
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY() TMap<TObjectPtr<UEastRimWorldAbilitySystemComponent>, FActiveGameplayEffectHandle> Handles;` |
+
+**Notes:**
+
+> Map from ASC to the active gameplay effect handle
 
 ---

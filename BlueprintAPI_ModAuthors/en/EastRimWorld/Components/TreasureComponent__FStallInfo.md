@@ -19,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) FText StallDesc;` |
 
-**Source comments:**
+**Notes:**
 
 > 货架描述
 
@@ -34,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) int32 StallSlots = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前已解锁栏位数量
 
@@ -49,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere) int32 TotalStallSlots = 0;` |
 
-**Source comments:**
+**Notes:**
 
 > 栏位数量上限
 

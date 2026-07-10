@@ -20,7 +20,7 @@
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
 | Original declaration (excerpt) | `UPROPERTY(EditDefaultsOnly, Category = "GameplayTags") FGameplayTagBlueprintPropertyMap GameplayTagPropertyMap;` |
 
-**Source comments:**
+**Notes:**
 
 > Gameplay tags that can be mapped to blueprint variables. The variables will automatically update as the tags are added or removed.
 > These should be used instead of manually querying for the gameplay tags.
@@ -35,6 +35,10 @@
 | Reflection specifiers | BlueprintReadOnly, Category="Character State Data" |
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, Category = "Character State Data") float GroundDistance = -1.0f;` |
+
+**Notes:**
+
+> Distance from the character to the ground; -1 means invalid / not measured.
 
 ---
 
@@ -56,7 +60,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 更新战斗的武器
 
@@ -78,7 +82,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 设置召唤物的待机行走混合空间
 
@@ -94,13 +98,13 @@
 
 | Name | Type |
 |--------|------|
-| `CharacterBehaviorState` | `ECharacterBehaviorState` |
+| `CharacterBehaviorState` | [ECharacterBehaviorState](../Struct/CommonEnum__ECharacterBehaviorState.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintImplementableEvent) void UpdateCharacterBehaviorState(ECharacterBehaviorState CharacterBehaviorState);`
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 设置角色的行为状态
 
@@ -123,7 +127,7 @@
 
 **Usage:** Implement in **Blueprint subclasses**; C++ typically dispatches via `FunctionName_Implementation` or generated code.
 
-**Source comments:**
+**Notes:**
 
 > 设置角色的骑乘的动画
 

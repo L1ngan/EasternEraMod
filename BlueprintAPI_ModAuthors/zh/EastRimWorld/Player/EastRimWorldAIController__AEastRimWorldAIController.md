@@ -20,20 +20,9 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnActionChange OnActionChangeEvent;` |
 
-**源码注释:**
+**说明:**
 
 > [自定义事件]当AI的行为发生改变
-
----
-
-### 属性 `OnWeaponChanged`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | `FOnWeaponChanged` |
-| 反射说明符 | BlueprintAssignable |
-| 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnWeaponChanged OnWeaponChanged;` |
 
 ---
 
@@ -46,27 +35,9 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnEquipmentChanged OnEquipmentChanged;` |
 
----
+**说明:**
 
-### 属性 `InventoryManagerComponent`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | TObjectPtr<[UInventoryManagerComponent](../Inventory/InventoryManagerComponent__UInventoryManagerComponent.md)> |
-| 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="Inventory" |
-| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
-| 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Inventory", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UInventoryManagerComponent> InventoryManagerComponent;` |
-
----
-
-### 属性 `AIPerceptionComponent`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | `TObjectPtr<UAIPerceptionComponent>` |
-| 反射说明符 | BlueprintReadOnly, AllowPrivateAccess, Category="AIPerception" |
-| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
-| 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AIPerception", Meta = (AllowPrivateAccess = "true")) TObjectPtr<UAIPerceptionComponent> AIPerceptionComponent;` |
+> OnWeaponChanged 已下沉到 AERW_BaseAIController
 
 ---
 
@@ -79,7 +50,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) UGOAP_PlanComponent* PlanComponent { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > GOAP寻找计划组件
 
@@ -94,7 +65,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) UGOAP_MemoryComponent* GOAP_MemoryComponent { nullptr };` |
 
-**源码注释:**
+**说明:**
 
 > GOAP记忆组件
 
@@ -109,6 +80,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) UGOAP_ActionComponent* GoapActionComponent{ nullptr };` |
 
+**说明:**
+
+> GOAP 行为（Action）组件
+
 ---
 
 ### 属性 `GameplayAbilities`
@@ -120,7 +95,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TMap<FName , UEastRimWorldGameplayAbility*> GameplayAbilities;` |
 
-**源码注释:**
+**说明:**
 
 > GOAP目标对应的能力
 > TMap<GOAP目标 , 能力>
@@ -136,7 +111,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TMap<FName , FActiveGameplayEffectHandle> AttributeGEs;` |
 
-**源码注释:**
+**说明:**
 
 > GOAP属性值对应的GE
 > TMap<GOAP属性 , 对应的GE>
@@ -152,7 +127,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) TMap<FName , int32> AttributeTimers;` |
 
-**源码注释:**
+**说明:**
 
 > GOAP属性值对应的Timer
 > TMap<GOAP属性 , TimerID>
@@ -168,7 +143,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) TMap<FName , FUObjectData> OwnFacilities;` |
 
-**源码注释:**
+**说明:**
 
 > GOAP目标ID对应的专属设备数据
 > TMap<GOAP目标ID , 设备数据>
@@ -184,7 +159,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere) TSubclassOf<UNavigationQueryFilter> FilterClass;` |
 
-**源码注释:**
+**说明:**
 
 > 角色使用的寻路类
 
@@ -199,16 +174,9 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<UERW_GameInstanceBase> GameInstance;` |
 
----
+**说明:**
 
-### 属性 `GameModeBase`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | [AERW_GameModeBase](../Framework/ERW_GameModeBase__AERW_GameModeBase.md) * |
-| 反射说明符 | BlueprintReadOnly |
-| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) AERW_GameModeBase * GameModeBase = nullptr;` |
+> 缓存的游戏实例（UERW_GameInstanceBase）引用
 
 ---
 
@@ -221,6 +189,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AWorldPlace> WorldPlace;` |
 
+**说明:**
+
+> 当前所属的世界地点（AWorldPlace）引用
+
 ---
 
 ### 属性 `ControlledCharacter`
@@ -232,7 +204,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) TObjectPtr<AEastRimWorldCharacter> ControlledCharacter;` |
 
-**源码注释:**
+**说明:**
 
 > 控制的角色
 
@@ -247,7 +219,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) FGuid SGUID;` |
 
-**源码注释:**
+**说明:**
 
 > ~ Save
 
@@ -262,7 +234,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , SaveGame) int32 OutputWorkloadTimerID { -1 };` |
 
-**源码注释:**
+**说明:**
 
 > 输出工作量计时器ID
 
@@ -277,7 +249,7 @@
 | 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite) bool RecoverGA { false };` |
 
-**源码注释:**
+**说明:**
 
 > 是否是读档回来需要恢复GA
 
@@ -292,7 +264,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) FGOAP_Action CacheAction;` |
 
-**源码注释:**
+**说明:**
 
 > 缓存Action
 
@@ -307,100 +279,9 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FName InControlledGoalId = TEXT("InControlled");` |
 
-**源码注释:**
+**说明:**
 
 > 被控制的Goal的ID
-
----
-
-### 属性 `AbilityReleaseTarget`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | `AActor *` |
-| 反射说明符 | BlueprintReadOnly |
-| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) AActor * AbilityReleaseTarget = nullptr;` |
-
-**源码注释:**
-
-> 当前技能的释放目标
-
----
-
-### 属性 `CurSelectAbilitySpec`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | `FGameplayAbilitySpec` |
-| 反射说明符 | BlueprintReadOnly |
-| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FGameplayAbilitySpec CurSelectAbilitySpec;` |
-
-**源码注释:**
-
-> 当前选择释放的技能
-
----
-
-### 属性 `PreRequisiteAbilitySpec`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | `FGameplayAbilitySpec` |
-| 反射说明符 | BlueprintReadOnly |
-| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,EditAnywhere) FGameplayAbilitySpec PreRequisiteAbilitySpec;` |
-
-**源码注释:**
-
-> 当前选择的前置技能 额外移动等
-
----
-
-### 属性 `Scoffer`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | `TWeakObjectPtr<AActor>` |
-| 反射说明符 | BlueprintReadWrite |
-| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite,EditAnywhere) TWeakObjectPtr<AActor> Scoffer;` |
-
-**源码注释:**
-
-> 嘲讽者
-
----
-
-### 属性 `SelfPerceiveHostileActors`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | `TArray<TObjectPtr<AActor>>` |
-| 反射说明符 | BlueprintReadOnly |
-| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
-| 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) TArray<TObjectPtr<AActor>> SelfPerceiveHostileActors;` |
-
-**源码注释:**
-
-> Update Team Attitude for the AI
-> 自身感知到的敌对actor
-
----
-
-### 属性 `Attackers`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | `TArray<AActor*>` |
-| 反射说明符 | BlueprintReadOnly |
-| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
-| 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) TArray<AActor*> Attackers;` |
-
-**源码注释:**
-
-> 攻击者 在脱离战斗后清理
 
 ---
 
@@ -413,8 +294,10 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TObjectPtr<AActor> HuntingTargetActor;` |
 
-**源码注释:**
+**说明:**
 
+> Update Team Attitude for the AI
+> SelfPerceiveHostileActors / Attackers 已下沉到 AERW_BaseAIController
 > 狩猎的目标
 
 ---
@@ -428,7 +311,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly) TArray<TObjectPtr<AActor>> BuildingActors;` |
 
-**源码注释:**
+**说明:**
 
 > 感知到的建筑物
 
@@ -443,7 +326,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere,Category = "Equipment"); TMap<EArmorType,FCharacterApparel> Equipments;` |
 
-**源码注释:**
+**说明:**
 
 > 携带的装备（实际是装备在身上的部位对应的装备信息）
 
@@ -456,71 +339,12 @@
 | C++ 类型 | `` |
 | 反射说明符 | BlueprintReadOnly, Category="Equipment" |
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere, Category = "Equipment"); TArray<FCharacterWeapon> Weapons;` |
-
-**源码注释:**
-
-> 携带的武器
-
----
-
-### 属性 `?`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | `` |
-| 反射说明符 | BlueprintReadOnly, Category="Equipment" |
-| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere, Category = "Equipment"); FCharacterTool OwnTool;` |
 
-**源码注释:**
+**说明:**
 
+> Weapons / UseCharacterWeapon / UseCharacterWeaponInstance / NextChangeCharacterWeapon 已下沉到 AERW_BaseAIController
 > 携带的工具
-
----
-
-### 属性 `?`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | `` |
-| 反射说明符 | BlueprintReadOnly, Category="Equipment" |
-| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere, Category = "Equipment"); FCharacterWeapon UseCharacterWeapon;` |
-
-**源码注释:**
-
-> 当前使用的武器
-
----
-
-### 属性 `?`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | `` |
-| 反射说明符 | BlueprintReadOnly, Category="Equipment" |
-| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere, Category = "Equipment"); UInventoryItemInstance* UseCharacterWeaponInstance;` |
-
-**源码注释:**
-
-> 当前使用的武器实例
-
----
-
-### 属性 `?`
-
-| 项目 | 内容 |
-|------|------|
-| C++ 类型 | `` |
-| 反射说明符 | BlueprintReadOnly, Category="Equipment" |
-| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere, Category = "Equipment"); FCharacterWeapon NextChangeCharacterWeapon;` |
-
-**源码注释:**
-
-> 将要切换的武器
 
 ---
 
@@ -533,6 +357,10 @@
 | 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnUpdateCharacterBehaviorState OnUpdateCharacterBehaviorState;` |
 
+**说明:**
+
+> 更新角色行为状态时广播的委托
+
 ---
 
 ### 属性 `?`
@@ -544,7 +372,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,VisibleAnywhere, Category = "Equipment"); TMap<FActiveGameplayEffectHandle,FCharacterEquipment> EquipmentEffectHandles;` |
 
-**源码注释:**
+**说明:**
 
 > 装备的effect handle
 
@@ -559,9 +387,54 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) bool bClothingDisplay = true;` |
 
-**源码注释:**
+**说明:**
 
 > 衣服是否显示
+
+---
+
+### 属性 `CharacterSectCombatCommandState`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | [ECharacterSectCombatCommandState](../Struct/CommonEnum__ECharacterSectCombatCommandState.md) |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) ECharacterSectCombatCommandState CharacterSectCombatCommandState = ECharacterSectCombatCommandState::FollowPlayer;` |
+
+**说明:**
+
+> 门派战模式
+
+---
+
+### 属性 `OnCharacterSectCombatCommandStateChanged`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FOnCharacterSectCombatCommandStateChanged` |
+| 反射说明符 | BlueprintAssignable |
+| 蓝图侧含义 | **多播委托**：可在蓝图中 **Bind / Add** 绑定事件。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintAssignable) FOnCharacterSectCombatCommandStateChanged OnCharacterSectCombatCommandStateChanged;` |
+
+**说明:**
+
+> 门派战模式变化广播
+
+---
+
+### 属性 `bInSquad`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `bool` |
+| 反射说明符 | BlueprintReadOnly, Category="Squad" |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, Category = "Squad") bool bInSquad = false;` |
+
+**说明:**
+
+> 是否已加入编组（由编组系统维护）
 
 ---
 
@@ -574,7 +447,7 @@
 | 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
 | 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Summons", Meta = (AllowPrivateAccess = "true")) TObjectPtr<AEastRimWorldAIController> SummonsAI;` |
 
-**源码注释:**
+**说明:**
 
 > 控制的召唤物
 
@@ -599,7 +472,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得属性消耗比率
 
@@ -622,7 +495,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查是否需要移除属性GOAP目标
 
@@ -644,7 +517,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 获得工作日程分值
 
@@ -666,7 +539,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 计算所有GOAP目标的分值
 
@@ -684,7 +557,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 获得胶囊体半径
 
@@ -702,7 +575,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取控制的角色actor
 
@@ -720,19 +593,9 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
----
+**说明:**
 
-### 函数 `GetGameModeBase`
-
-| 项目 | 内容 |
-|------|------|
-| 反射说明符 | BlueprintCallable |
-| 返回类型 | [AERW_GameModeBase](../Framework/ERW_GameModeBase__AERW_GameModeBase.md) * |
-| 参数 | （无） |
-
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) AERW_GameModeBase * GetGameModeBase();`
-
-**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+> 获取玩家控制器基类（AERW_PlayerControllerBase）实例
 
 ---
 
@@ -753,8 +616,9 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
+> GetGameModeBase 已下沉到 AERW_BaseAIController
 > 开始输出工作量
 
 ---
@@ -771,7 +635,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 **BlueprintNativeEvent**：蓝图可重写；C++ 默认实现在 `xxx_Implementation`。
 
-**源码注释:**
+**说明:**
 
 > 寻找计划
 
@@ -789,7 +653,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 执行计划
 
@@ -806,6 +670,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent , Category = "GOAP",DisplayName= "ExecutePlans") void K2_ExecutePlans();`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 蓝图事件：执行 GOAP 计划（ExecutePlans 的蓝图实现入口）
 
 ---
 
@@ -825,7 +693,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 中断计划
 
@@ -843,7 +711,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 外部调用执行计划完成 例如输出工作量完成后调用
 
@@ -861,6 +729,10 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
+**说明:**
+
+> 蓝图事件：执行 GOAP 计划完成时调用（如输出工作量完成后）
+
 ---
 
 ### 函数 `K2_AbortPlansComplete`
@@ -874,6 +746,10 @@
 **原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent , Category = "GOAP",DisplayName="AbortPlanComplete") void K2_AbortPlansComplete();`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 蓝图事件：中断 GOAP 计划完成时调用
 
 ---
 
@@ -893,7 +769,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > GA内部调用完成
 
@@ -911,9 +787,31 @@
 |--------|------|
 | `bAbortPlan` | `bool` |
 
-**原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent, Category = "GOAP",DisplayName= "CompleteAction") void K2_CompleteAction(bool bAbortPlan);`
+**原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent, Category = "GOAP", DisplayName = "CompleteAction") void K2_CompleteAction(bool bAbortPlan);`
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 蓝图事件：完成当前动作时调用（GA 内部调用完成，bAbortPlan 指示是否中断计划）
+
+---
+
+### 函数 `K2_HideControlBehaviorUI`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintImplementableEvent, Category="ControlBehavior" |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintImplementableEvent, Category = "ControlBehavior", DisplayName = "HideControlBehaviorUI") void K2_HideControlBehaviorUI();`
+
+**用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
+
+**说明:**
+
+> 行为结束时隐藏相关 UI（在 AI 控制器蓝图中实现）
 
 ---
 
@@ -933,7 +831,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 立即添加目标，并中断当前行为
 
@@ -955,7 +853,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除并中断当前行为
 
@@ -977,7 +875,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 添加目标组
 
@@ -999,7 +897,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除目标组
 
@@ -1017,7 +915,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 检查角色是否发动了行为GA(用来看角色是否在执行行为的路上)
 
@@ -1035,7 +933,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获得当前计划的物品使用时间
 
@@ -1053,7 +951,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > Action开始执行前
 
@@ -1075,7 +973,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 **BlueprintNativeEvent**：蓝图可重写；C++ 默认实现在 `xxx_Implementation`。
 
-**源码注释:**
+**说明:**
 
 > 记录当前正在执行的GA
 
@@ -1097,7 +995,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除当前正在执行的GA
 
@@ -1119,7 +1017,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获得能力存档数据
 
@@ -1141,7 +1039,7 @@
 
 **用法说明:** 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 获得能力存档数据
 
@@ -1159,7 +1057,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 将拿着的物品生成到世界中
 
@@ -1177,7 +1075,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 将所有物品（身上，背包）生成在世界中
 
@@ -1199,7 +1097,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 获得搬运物品数量
 
@@ -1215,13 +1113,13 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EatItems` | TMap<EGameConfigType , [FIDs](../ERW_CommonTypes__FIDs.md)>& |
+| `EatItems` | TMap<[EGameConfigType](../Components/ERW_GameConfigComponent__EGameConfigType.md) , [FIDs](../ERW_CommonTypes__FIDs.md)>& |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void GetEatItems(TMap<EGameConfigType , FIDs>& EatItems) const;`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获得能吃的对象ID
 
@@ -1243,7 +1141,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 开始读书
 
@@ -1266,7 +1164,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 手动结束读书
 
@@ -1289,7 +1187,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 手动结束吃东西
 
@@ -1311,7 +1209,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 开始抄录
 
@@ -1329,27 +1227,9 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 检查当前工作日程对应的GOAP目标
-
----
-
-### 函数 `GetGenericTeamId`
-
-| 项目 | 内容 |
-|------|------|
-| 反射说明符 | BlueprintCallable |
-| 返回类型 | `FGenericTeamId` |
-| 参数 | （无） |
-
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) virtual FGenericTeamId GetGenericTeamId() const override;`
-
-**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
-
-**源码注释:**
-
-> ~IEastRimWorldTeamAgentInterface interface
 
 ---
 
@@ -1369,27 +1249,9 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
----
+**说明:**
 
-### 函数 `IsInAttackTargetList`
-
-| 项目 | 内容 |
-|------|------|
-| 反射说明符 | BlueprintPure |
-| 返回类型 | `bool` |
-| 参数 | 见下表 |
-
-| 参数名 | 类型 |
-|--------|------|
-| `InActor` | `AActor*` |
-
-**原始声明（单行节选）:** `UFUNCTION(BlueprintPure) bool IsInAttackTargetList(AActor* InActor);`
-
-**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
-
-**源码注释:**
-
-> 检查是否在攻击列表
+> 设置 AI 的通用团队 ID（IEastRimWorldTeamAgentInterface 接口实现）
 
 ---
 
@@ -1405,7 +1267,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查是否自身可以战斗
 
@@ -1429,7 +1291,7 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 获取AI感知配置
 
@@ -1447,7 +1309,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取角色当前执行的动作能力
 
@@ -1465,7 +1327,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取动物当前执行的动作能力
 
@@ -1488,7 +1350,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 更新感知到的actor
 
@@ -1506,7 +1368,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取狩猎目标
 
@@ -1524,7 +1386,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 遗忘所有的actor
 
@@ -1546,7 +1408,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除死亡的感知对象
 
@@ -1568,6 +1430,10 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
+**说明:**
+
+> 移除被击倒的感知对象
+
 ---
 
 ### 函数 `BeAttackedLossDurability`
@@ -1581,13 +1447,13 @@
 | 参数名 | 类型 |
 |--------|------|
 | `ArmorGuid` | `FGuid` |
-| `ArmorType` | `EArmorType` |
+| `ArmorType` | [EArmorType](../Struct/CommonEnum__EArmorType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void BeAttackedLossDurability(FGuid ArmorGuid , EArmorType ArmorType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 被攻击掉防具耐久
 
@@ -1610,7 +1476,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 将身上的物品丢弃到世界上(包括脱下装备)
 
@@ -1633,7 +1499,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 具有位置信息的丢弃装备
 
@@ -1655,7 +1521,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据一个物品实例装备一个装备
 
@@ -1677,7 +1543,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 读档穿戴装备
 
@@ -1699,7 +1565,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通知GOAP去拿起装备，并穿上装备
 
@@ -1721,7 +1587,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除获取装备行为
 
@@ -1743,7 +1609,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通知GOAP去拿起书去读
 
@@ -1765,7 +1631,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通知GOAP去拿起东西吃
 
@@ -1787,7 +1653,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除指定物品的预留数量
 
@@ -1810,7 +1676,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 读书消耗耐久度
 
@@ -1832,7 +1698,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通知GOAP去拿起书去抄录
 
@@ -1855,7 +1721,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 抄录消耗耐久度
 
@@ -1871,14 +1737,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EquipmentType` | `EEquipmentType` |
-| `ArmorType` | `EArmorType` |
+| `EquipmentType` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
+| `ArmorType` | [EArmorType](../Struct/CommonEnum__EArmorType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool IsHaveEquipedItemtByType(EEquipmentType EquipmentType, EArmorType ArmorType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 检查是否有装备
 
@@ -1894,14 +1760,14 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EquipmentType` | `EEquipmentType` |
-| `ArmorType` | `EArmorType` |
+| `EquipmentType` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
+| `ArmorType` | [EArmorType](../Struct/CommonEnum__EArmorType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) UCanUseInventoryItemInstance* FindEquipmentByType(EEquipmentType EquipmentType, EArmorType ArmorType);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 根据装备类型查找身上装备中的装备
 
@@ -1923,7 +1789,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获得一个装备（实际是根据配置装备一个物品）
 
@@ -1945,7 +1811,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过武器ID获得一个装备
 
@@ -1967,7 +1833,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过防具ID获得一个装备
 
@@ -1989,7 +1855,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 通过装备存档数据生成实例并装备
 
@@ -2012,7 +1878,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除一个装备
 
@@ -2028,38 +1894,16 @@
 
 | 参数名 | 类型 |
 |--------|------|
-| `EquipmentType` | `EEquipmentType` |
-| `（匿名/仅类型）` | `EArmorType ArmorType = EArmorType::None` |
+| `EquipmentType` | [EEquipmentType](../Struct/CommonEnum__EEquipmentType.md) |
+| `（匿名/仅类型）` | [EArmorType](../Struct/CommonEnum__EArmorType.md) ArmorType = [EArmorType](../Struct/CommonEnum__EArmorType.md)::None |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void ChangeDefaultEquipment(EEquipmentType EquipmentType,EArmorType ArmorType = EArmorType::None);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > /切换成默认的装备
-
----
-
-### 函数 `ChangeCharacterWeapon`
-
-| 项目 | 内容 |
-|------|------|
-| 反射说明符 | BlueprintCallable |
-| 返回类型 | `bool` |
-| 参数 | 见下表 |
-
-| 参数名 | 类型 |
-|--------|------|
-| `CharacterWeapon` | const [FCharacterWeapon](../Struct/ItemStruct__FCharacterWeapon.md) & |
-
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) bool ChangeCharacterWeapon(const FCharacterWeapon & CharacterWeapon);`
-
-**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
-
-**源码注释:**
-
-> 切换角色武器
 
 ---
 
@@ -2074,14 +1918,15 @@
 | 参数名 | 类型 |
 |--------|------|
 | `Id` | `FName` |
-| `Type` | `EArmorType` |
+| `Type` | [EArmorType](../Struct/CommonEnum__EArmorType.md) |
 
 **原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintImplementableEvent) void ChangeApparelById(FName Id,EArmorType Type);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
+> CheckAbilityCanRelease / ChangeCharacterWeapon / OnChangeNextWeapon / ChangeWeaponComplete / CheckCanChangeWeapon 已下沉到 AERW_BaseAIController
 > 切换外观
 
 ---
@@ -2102,7 +1947,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置控制的召唤物
 
@@ -2124,7 +1969,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置当前角色的被控制状态
 
@@ -2142,7 +1987,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 当前是否是被控制状态
 
@@ -2160,7 +2005,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 是否正在控制召唤物
 
@@ -2182,7 +2027,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 发动GA
 
@@ -2200,7 +2045,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 停止当前蒙太奇动画
 
@@ -2222,7 +2067,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 激活装备属性
 
@@ -2244,7 +2089,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 移除装备属性
 
@@ -2266,9 +2111,32 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 广播AI行为发生改变
+
+---
+
+### 函数 `TryTriggerConsumableUse`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `ActionID` | `const FName&` |
+| `bActionStart` | `bool` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void TryTriggerConsumableUse(const FName& ActionID,bool bActionStart);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 尝试触发耗材使用（仅人类角色 ActionID=GOAP_Action_Data表行名 bActionStart true=行为开始 false=行为结束 需检测的行为ID配置在UConsumableConfigAsset）
 
 ---
 
@@ -2284,7 +2152,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 **BlueprintNativeEvent**：蓝图可重写；C++ 默认实现在 `xxx_Implementation`。
 
-**源码注释:**
+**说明:**
 
 > 初始化GOAP信息
 
@@ -2306,7 +2174,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取当前所有动态添加的goal(不在TeamInfo配置中的goal)
 
@@ -2329,7 +2197,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 检查并加入指定物品GOAP目标
 
@@ -2353,7 +2221,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 加入指定物品GOAP Action
 
@@ -2371,27 +2239,9 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 当拿起指定物品时
-
----
-
-### 函数 `HoldWeaponAndSwitchCombatStance`
-
-| 项目 | 内容 |
-|------|------|
-| 反射说明符 | BlueprintCallable |
-| 返回类型 | `void` |
-| 参数 | （无） |
-
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void HoldWeaponAndSwitchCombatStance();`
-
-**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
-
-**源码注释:**
-
-> 手持一把武器并切换到战斗姿态
 
 ---
 
@@ -2407,7 +2257,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 将携带的物品放下（丢在当前位置）
 
@@ -2425,7 +2275,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。 事件可在**蓝图子类中实现**；C++ 侧通常通过 `FunctionName_Implementation` 或 Generated 代码调度。
 
-**源码注释:**
+**说明:**
 
 > 吃东西结束时
 
@@ -2443,7 +2293,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 清理行为相关的数据 （拿着的模型 ，行为树 物品ID ，物品数量)
 
@@ -2461,7 +2311,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 获取当前世界的初始化goal
 
@@ -2483,7 +2333,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 出生后延迟行动
 
@@ -2501,7 +2351,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 暂停
 
@@ -2519,7 +2369,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 暂停
 
@@ -2541,7 +2391,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置嘲讽者
 
@@ -2563,7 +2413,7 @@
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
-**源码注释:**
+**说明:**
 
 > 设置衣服的显示
 
@@ -2586,8 +2436,76 @@
 
 **用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
 
-**源码注释:**
+**说明:**
 
 > 进食/休息/娱乐打断, bContainHappy是否包含娱乐
+
+---
+
+### 函数 `SetCharacterSectCombatCommandState`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `NewState` | [ECharacterSectCombatCommandState](../Struct/CommonEnum__ECharacterSectCombatCommandState.md) |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SetCharacterSectCombatCommandState(ECharacterSectCombatCommandState NewState);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 设置角色的门派战指挥模式状态，并广播状态变化
+
+---
+
+### 函数 `SetWorldSectBattleFlagPatrolArea`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="WorldSectBattle|AI" |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `PatrolCenter` | `const FVector&` |
+| `PatrolRadius` | `float` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "WorldSectBattle|AI") void SetWorldSectBattleFlagPatrolArea(const FVector& PatrolCenter, float PatrolRadius);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 门派战旗子刷出的野怪使用：设置它所属旗子的巡逻中心和半径。
+
+---
+
+### 函数 `GetWorldSectBattleFlagPatrolArea`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintPure, Category="WorldSectBattle|AI" |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `OutPatrolCenter` | `FVector&` |
+| `OutPatrolRadius` | `float&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "WorldSectBattle|AI") bool GetWorldSectBattleFlagPatrolArea(FVector& OutPatrolCenter, float& OutPatrolRadius) const;`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 门派战旗子刷出的野怪使用：获取它所属旗子的巡逻中心和半径。
 
 ---

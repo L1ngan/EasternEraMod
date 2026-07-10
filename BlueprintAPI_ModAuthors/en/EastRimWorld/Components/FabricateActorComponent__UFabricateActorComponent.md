@@ -4,7 +4,9 @@
 
 ---
 
-*(No type-level description comment above `UCLASS`/`USTRUCT` in the header; infer responsibility from members and source.)*
+## Functional description (from header comments)
+
+> Fabricate component managing a building's fabricate task queue, resource GOAP actions and fabricated item generation
 
 ## Blueprint-exposed variables
 
@@ -17,7 +19,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TArray<FFabricateTaskData> FabricateTaskQueue;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前任务的制造队列
 
@@ -32,7 +34,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FGuid CurFabricateTaskGuid;` |
 
-**Source comments:**
+**Notes:**
 
 > 当前制造任务信息
 
@@ -47,7 +49,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FName CorrelationID;` |
 
-**Source comments:**
+**Notes:**
 
 > 此组件相关联的数据ID 例如建筑物ID
 
@@ -62,7 +64,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnFabricateTaskQueueChange OnAddFabricateTaskQueue;` |
 
-**Source comments:**
+**Notes:**
 
 > 添加制造队列委托
 
@@ -77,7 +79,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnFabricateTaskQueueChange OnRemoveFabricateTaskQueue;` |
 
-**Source comments:**
+**Notes:**
 
 > 移除制造队列委托
 
@@ -92,7 +94,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnFabricateTaskQueueChange OnUpdateFabricateTask;` |
 
-**Source comments:**
+**Notes:**
 
 > 制造任务更新
 
@@ -107,7 +109,7 @@
 | Blueprint semantics | **Multicast delegate**: bind in Blueprint with **Bind / Add**. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintAssignable) FOnUpdateAllFabricateTask OnUpdateAllFabricateTask;` |
 
-**Source comments:**
+**Notes:**
 
 > 刷新整个任务
 
@@ -122,7 +124,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) ABuildingActorBase * Owner { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > Owner
 
@@ -137,7 +139,7 @@
 | Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite) UGOAP_ManagerComponent* GOAPManagerComponent { nullptr };` |
 
-**Source comments:**
+**Notes:**
 
 > GOAP管理组件
 
@@ -152,7 +154,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FName , FGOAP_Action> ResourceActions;` |
 
-**Source comments:**
+**Notes:**
 
 > 制造资源对应的GOAPAction
 > TMap<资源ID , GOAPAction>
@@ -168,7 +170,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TMap<FGameplayTag , FGOAP_Action> SelectableResourceAction;` |
 
-**Source comments:**
+**Notes:**
 
 > 可选资源对应的GOAPAction
 > TMap<Tag , GOAPAction>
@@ -184,7 +186,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FGOAP_Action FabricateAction;` |
 
-**Source comments:**
+**Notes:**
 
 > 制造GOAPAction
 
@@ -199,7 +201,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool WaitingGenerateItem { false };` |
 
-**Source comments:**
+**Notes:**
 
 > 是否在等待生成制造物品
 
@@ -214,7 +216,7 @@
 | Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
 | Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool bAutoFabricate = false;` |
 
-**Source comments:**
+**Notes:**
 
 > 是否是自动制造
 
@@ -239,7 +241,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 初始化制造组件
 
@@ -257,14 +259,14 @@
 |--------|------|
 | `InFormulaData` | const [FFormulaData](../Struct/CommonStruct__FFormulaData.md)& |
 | `InSelectableConsumingResourceTag` | `const TArray<FGameplayTag> &` |
-| `InFabricateRule` | `EFabricateRule` |
+| `InFabricateRule` | [EFabricateRule](../Struct/CommonStruct__EFabricateRule.md) |
 | `InTargetNumber` | `int` |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) bool AddFabricateToQueue(const FFormulaData& InFormulaData, const TArray<FGameplayTag> & InSelectableConsumingResourceTag,EFabricateRule InFabricateRule, int InTargetNumber);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 添加制造任务
 
@@ -286,7 +288,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除一个制造任务
 
@@ -304,7 +306,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除所有的订单
 
@@ -327,7 +329,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置制造任务的优先级
 
@@ -345,7 +347,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取当前执行的任务
 
@@ -368,7 +370,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 增加任务的工作量
 
@@ -390,7 +392,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 检查当前制造任务是否完成
 
@@ -412,7 +414,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 尝试生成制造物品
 
@@ -428,13 +430,13 @@
 
 | Name | Type |
 |--------|------|
-| `NewFabricateState` | `EFabricateState` |
+| `NewFabricateState` | [EFabricateState](../Struct/CommonStruct__EFabricateState.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetCurFabricateTaskState(EFabricateState NewFabricateState);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置当前任务的状态
 
@@ -450,13 +452,13 @@
 
 | Name | Type |
 |--------|------|
-| `ButtonType` | `ECommonButtonType` |
+| `ButtonType` | [ECommonButtonType](../UI/Struct/UIStruct__ECommonButtonType.md) |
 
 **Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) TArray<FFormulaData> GetAllFabricates(ECommonButtonType ButtonType);`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取所有相关联已经解锁的配方
 
@@ -479,7 +481,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 生成配方物品
 
@@ -497,7 +499,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 人物进入开始制造
 
@@ -515,7 +517,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 人物中断制造
 
@@ -533,7 +535,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 人物制造完成
 
@@ -556,7 +558,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 添加资源
 
@@ -578,7 +580,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 设置任务新的信息
 
@@ -600,7 +602,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 提高制造任务的顺序
 
@@ -622,7 +624,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 降低制造任务的顺序
 
@@ -644,7 +646,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 查找制造队列中的任务
 
@@ -666,6 +668,10 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
+**Notes:**
+
+> Updates the state of the fabricate task
+
 ---
 
 ### Function `AddFabricateGOAPAction`
@@ -684,7 +690,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加入制造GOAP Action
 
@@ -702,7 +708,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 移除制造GOAP Action
 
@@ -724,7 +730,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 停止制造并移除action
 
@@ -742,7 +748,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 获取已经添加进来的物资
 
@@ -765,7 +771,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 加入自动制造GOAP Action
 
@@ -783,7 +789,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 自动制造开启完成
 
@@ -801,7 +807,7 @@
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
-**Source comments:**
+**Notes:**
 
 > 自动制造工作完成
 
