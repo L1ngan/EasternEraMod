@@ -1,0 +1,34 @@
+{
+	"StructName": "/Script/CreateModPlugin.ModAnimalActionAbility",
+	"Rows":
+	{
+		"Idle":
+		{
+			"behaviorStartAnimMontage":
+			{
+				"10000": "/Game/Mods/Giganotosaurus_RD/Animation/MTG_Giganotosaurus_Idle.MTG_Giganotosaurus_Idle"
+			},
+			"behaviorAnimSections":
+			{
+				"10000":
+				{
+					"behaviorStartSections": [
+						"Start"
+					],
+					"behaviorLoopSections": [
+						"Loop1",
+						"Loop2",
+						"Loop3"
+					],
+					"behaviorEndSections": [],
+					"bDistinguishSex": false,
+					"womanBehaviorStartSections": [],
+					"womanBehaviorLoopSections": [],
+					"womanBehaviorEndSections": []
+				}
+			},
+			"templateId": "Idle",
+			"iD": "Idle"
+		}
+	}
+}

@@ -1,0 +1,126 @@
+{
+	"StructName": "/Game/CharacterEditor/Base/Structures/FCustomizationProfile_V10.FCustomizationProfile_V10",
+	"Rows":
+	{
+		"WuKong_GreatSage":
+		{
+			"meta Data":
+			{
+				"name": "WuKong_GreatSage",
+				"anatomy": "WuKong_GreatSage",
+				"iD": "407033234BAB56099ABB02A3AC0DE07B",
+				"showInEditor": false,
+				"race": "Human",
+				"gender": "Male",
+				"generation": "Adult"
+			},
+			"basebody":
+			{
+				"head":
+				{
+					"index": 0
+				},
+				"skin":
+				{
+					"material Index": 0,
+					"texture Sets": [],
+					"scalar Parameters":
+					{
+					},
+					"hDR Vector Parameters":
+					{
+						"baseColorMul":
+						{
+							"h": 0,
+							"s": 0.33333298563957214,
+							"v": 1.2000000476837158,
+							"a": 0,
+							"intensity": 1
+						}
+					}
+				},
+				"eyes":
+				{
+					"material Index": 0,
+					"scalar Parameters":
+					{
+					},
+					"hDR Vector Parameters":
+					{
+					}
+				},
+				"morph Targets":
+				{
+					"eye_01": 0,
+					"eye_02": 0,
+					"nose_01": 0,
+					"mouth_01": 0,
+					"jaw_01": 0,
+					"ear_01": 0
+				},
+				"morph Target Groups":
+				{
+				},
+				"anim Instance Alphas":
+				{
+					"age": 0.60999999999999999,
+					"size": 0.84999999999999998
+				}
+			},
+			"hairstyle":
+			{
+				"data Assets": [],
+				"global Scalar Parameters":
+				{
+				},
+				"global HDR Vector Parameters":
+				{
+				}
+			},
+			"groom":
+			{
+				"data Assets": [],
+				"global Scalar Parameters":
+				{
+				},
+				"global HDR Vector Parameters":
+				{
+				}
+			},
+			"apparel":
+			{
+				"data Assets": [],
+				"global Scalar Parameters":
+				{
+				},
+				"global HDR Vector Parameters":
+				{
+				}
+			},
+			"equipment":
+			{
+				"data Assets": [],
+				"global Scalar Parameters":
+				{
+				},
+				"global HDR Vector Parameters":
+				{
+				}
+			},
+			"attachments":
+			{
+				"data Assets": [],
+				"global Scalar Parameters":
+				{
+				},
+				"global HDR Vector Parameters":
+				{
+				}
+			},
+			"avatar": "/Game/Mods/ParagonSunWukong/UI/Avatar_WuKongGreatSage.Avatar_WuKongGreatSage",
+			"characterEquipmentIds":
+			{
+			}
+		}
+	}
+}

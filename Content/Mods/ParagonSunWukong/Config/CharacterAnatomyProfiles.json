@@ -1,0 +1,130 @@
+{
+	"StructName": "/Game/CharacterEditor/Base/Structures/FAnatomyProfile_V10.FAnatomyProfile_V10",
+	"Rows":
+	{
+		"WuKong_GreatSage":
+		{
+			"body":
+			{
+				"mesh": "/Script/Engine.SkeletalMesh'/Game/Mods/ParagonSunWukong/Art/Meshes/Actor/Human_Group/ParagonSunWukong/Characters/Heroes/GreatSage/Model/Wukong_GreatSage01.Wukong_GreatSage01'",
+				"anim Instance Class": "/Script/Engine.AnimBlueprintGeneratedClass'/Game/Blueprints/Character/Animation/BPA_CharacterAnimation_Template.BPA_CharacterAnimation_Template_C'",
+				"skin Material Sets": [],
+				"skin Texture Sets":
+				{
+				},
+				"eyes Material Sets": [],
+				"face Variants":
+				{
+					"group Name": "None",
+					"iDs": []
+				}
+			},
+			"heads": [],
+			"default Customization Profile":
+			{
+				"meta Data":
+				{
+					"name": "",
+					"anatomy": "WuKong_GreatSage",
+					"iD": "00000000000000000000000000000000",
+					"showInEditor": false,
+					"race": "Human",
+					"gender": "Male",
+					"generation": "Adult"
+				},
+				"basebody":
+				{
+					"head":
+					{
+						"index": 0
+					},
+					"skin":
+					{
+						"material Index": 0,
+						"texture Sets": [],
+						"scalar Parameters":
+						{
+						},
+						"hDR Vector Parameters":
+						{
+						}
+					},
+					"eyes":
+					{
+						"material Index": 0,
+						"scalar Parameters":
+						{
+						},
+						"hDR Vector Parameters":
+						{
+						}
+					},
+					"morph Targets":
+					{
+					},
+					"morph Target Groups":
+					{
+					},
+					"anim Instance Alphas":
+					{
+					}
+				},
+				"hairstyle":
+				{
+					"data Assets": [],
+					"global Scalar Parameters":
+					{
+					},
+					"global HDR Vector Parameters":
+					{
+					}
+				},
+				"groom":
+				{
+					"data Assets": [],
+					"global Scalar Parameters":
+					{
+					},
+					"global HDR Vector Parameters":
+					{
+					}
+				},
+				"apparel":
+				{
+					"data Assets": [],
+					"global Scalar Parameters":
+					{
+					},
+					"global HDR Vector Parameters":
+					{
+					}
+				},
+				"equipment":
+				{
+					"data Assets": [],
+					"global Scalar Parameters":
+					{
+					},
+					"global HDR Vector Parameters":
+					{
+					}
+				},
+				"attachments":
+				{
+					"data Assets": [],
+					"global Scalar Parameters":
+					{
+					},
+					"global HDR Vector Parameters":
+					{
+					}
+				},
+				"avatar": "None",
+				"characterEquipmentIds":
+				{
+				}
+			},
+			"showApparel": false
+		}
+	}
+}

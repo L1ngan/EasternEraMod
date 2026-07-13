@@ -1,0 +1,83 @@
+{
+	"StructName": "/Script/CreateModPlugin.ModCommonUIConfig",
+	"Rows":
+	{
+		"Mod_DianHuaTing":
+		{
+			"titleType": "BuildingName",
+			"titleText": "",
+			"labelIcon": "None",
+			"uIBigImg": "None",
+			"commonModuleIds": [
+				"Durability",
+				"BuildAttribute",
+				"TaskList"
+			],
+			"commonFuncButtonIds": [
+				"Mod_GetOrder",
+				"Destory_Right"
+			],
+			"bottomCommonModuleIds": [
+				"BuildingDetail"
+			],
+			"tabInfos": [],
+			"bottomFuncButtonIsd": [
+				"DestoryBuilding",
+				"ReplicateBuild"
+			],
+			"templateId": "Mod_Template",
+			"iD": "MOD_DianHuaTing"
+		},
+		"Mod_Dianxingyi":
+		{
+			"titleType": "BuildingName",
+			"titleText": "",
+			"labelIcon": "None",
+			"uIBigImg": "None",
+			"commonModuleIds": [
+				"Durability",
+				"BuildAttribute"
+			],
+			"commonFuncButtonIds": [
+				"Destory_Right",
+				"AllotmentOwner"
+			],
+			"bottomCommonModuleIds": [
+				"BuildingDetail"
+			],
+			"tabInfos": [],
+			"bottomFuncButtonIsd": [
+				"DestoryBuilding",
+				"ReplicateBuild"
+			],
+			"templateId": "Mod_Template",
+			"iD": "Mod_Dianxingyi"
+		},
+		"Mod_Diannaotai":
+		{
+			"titleType": "BuildingName",
+			"titleText": "",
+			"labelIcon": "None",
+			"uIBigImg": "None",
+			"commonModuleIds": [
+				"Durability",
+				"BuildAttribute",
+				"TaskList"
+			],
+			"commonFuncButtonIds": [
+				"Mod_GetGold",
+				"Destory_Right"
+			],
+			"bottomCommonModuleIds": [
+				"BuildingDetail"
+			],
+			"tabInfos": [],
+			"bottomFuncButtonIsd": [
+				"DestoryBuilding",
+				"ReplicateBuild"
+			],
+			"templateId": "Mod_Template",
+			"iD": "Mod_Diannaotai"
+		}
+	}
+}

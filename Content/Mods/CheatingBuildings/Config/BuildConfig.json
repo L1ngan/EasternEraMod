@@ -1,0 +1,325 @@
+{
+	"StructName": "/Script/CreateModPlugin.ModBuildData",
+	"Rows":
+	{
+		"MOD_DianHuaTing":
+		{
+			"size":
+			{
+				"x": 1,
+				"y": 1,
+				"z": 4
+			},
+			"buildResource":
+			{
+				"10101": 10,
+				"10107": 5
+			},
+			"workload": 1000,
+			"destoryWorkload": 200,
+			"destoryReturnPrecent": 0.5,
+			"skillLevel": 0,
+			"ownerNum": 0,
+			"entranceGridPoses": [
+				{
+					"gridPoses": [
+						{
+							"row": -1,
+							"column": 0
+						}
+					]
+				}
+			],
+			"durability": 1500,
+			"aesthetic": 10,
+			"fiveElementScore":
+			{
+				"wood": 7,
+				"metal": 4
+			},
+			"defense": 0,
+			"materialCoefficient": 0.5,
+			"playerTeamBuffIds": [],
+			"autoTileMeshes": [],
+			"staticMeshes": [
+				"/Game/Mods/CheatingBuildings/Meshes/DianHuaTing/DianHuaTing.DianHuaTing"
+			],
+			"roofMeshes":
+			{
+			},
+			"pillarForWall": "None",
+			"wallWithHole":
+			{
+			},
+			"parameter":
+			{
+			},
+			"interActionDefine": "/Game/Mods/CheatingBuildings/FacilityDefine/DA_SO_Dianhuating.DA_SO_Dianhuating",
+			"bUseSkeletalMesh": true,
+			"skeletalMesh": "/Game/Mods/CheatingBuildings/Meshes/DianHuaTing/DianHuaTing_Start.DianHuaTing_Start",
+			"animInstance": "/Script/Engine.AnimBlueprintGeneratedClass'/Game/Blueprints/Objects/BPA_Building_Template.BPA_Building_Template_C'",
+			"lightParams": [],
+			"bWarehouseShowItemMesh": false,
+			"canNotPlaceItemTag":
+			{
+				"gameplayTags": []
+			},
+			"bUseWarehouseTemperature": false,
+			"warehouseTemperature": 15,
+			"isHeatSource": false,
+			"heatSourceTemperatureEffect": 0,
+			"isLightSource": false,
+			"lightSourceTemperatureEffect": 0,
+			"haveEffectSize": false,
+			"buildingEffectSize":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"buildingEffectSizeOffset":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"buildingEffectTags":
+			{
+				"gameplayTags": []
+			},
+			"buildingEffectBuffIds": [],
+			"leaveEffectRangeBuffIds": [],
+			"bNeedFuel": false,
+			"totalFuel": 0,
+			"oneTimeExpendFuel": 0,
+			"expendFuelInterval": 0,
+			"selectableFuelTag": [],
+			"energyType": "None",
+			"rolePerceptionlength": 0,
+			"rolePerceptionwidth": 0,
+			"generateBuildingFaultInfo":
+			{
+			},
+			"maxConsumeEnergyValue": 0,
+			"specialEffectHeight": 0,
+			"openBuildingWidgetId": "MOD_DianHuaTing",
+			"itemPrice": 0.10000000149011612,
+			"templateId": "ResearchTable",
+			"iD": "MOD_DianHuaTing"
+		},
+		"MOD_DianXingYi":
+		{
+			"size":
+			{
+				"x": 1,
+				"y": 1,
+				"z": 2
+			},
+			"buildResource":
+			{
+				"10101": 10,
+				"10107": 5
+			},
+			"workload": 1000,
+			"destoryWorkload": 200,
+			"destoryReturnPrecent": 0.5,
+			"skillLevel": 0,
+			"ownerNum": 0,
+			"entranceGridPoses": [
+				{
+					"gridPoses": [
+						{
+							"row": 1,
+							"column": 0
+						}
+					]
+				}
+			],
+			"durability": 1500,
+			"aesthetic": 5,
+			"fiveElementScore":
+			{
+				"metal": 5,
+				"wood": 6
+			},
+			"defense": 0,
+			"materialCoefficient": 0.5,
+			"playerTeamBuffIds": [],
+			"autoTileMeshes": [],
+			"staticMeshes": [
+				"/Game/Mods/CheatingBuildings/Meshes/DianXingYi/DianXingYi.DianXingYi"
+			],
+			"roofMeshes":
+			{
+			},
+			"pillarForWall": "None",
+			"wallWithHole":
+			{
+			},
+			"parameter":
+			{
+			},
+			"interActionDefine": "/Game/Mods/CheatingBuildings/FacilityDefine/DA_SO_DianXingYi.DA_SO_DianXingYi",
+			"bUseSkeletalMesh": true,
+			"skeletalMesh": "/Game/Mods/CheatingBuildings/Meshes/DianXingYi/SK_DianXingYi.SK_DianXingYi",
+			"animInstance": "/Script/Engine.AnimBlueprintGeneratedClass'/Game/Blueprints/Objects/BPA_Building_Template.BPA_Building_Template_C'",
+			"lightParams": [],
+			"bWarehouseShowItemMesh": false,
+			"canNotPlaceItemTag":
+			{
+				"gameplayTags": []
+			},
+			"bUseWarehouseTemperature": false,
+			"warehouseTemperature": 15,
+			"isHeatSource": false,
+			"heatSourceTemperatureEffect": 0,
+			"isLightSource": false,
+			"lightSourceTemperatureEffect": 0,
+			"haveEffectSize": false,
+			"buildingEffectSize":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"buildingEffectSizeOffset":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"buildingEffectTags":
+			{
+				"gameplayTags": []
+			},
+			"buildingEffectBuffIds": [],
+			"leaveEffectRangeBuffIds": [],
+			"bNeedFuel": false,
+			"totalFuel": 0,
+			"oneTimeExpendFuel": 0,
+			"expendFuelInterval": 0,
+			"selectableFuelTag": [],
+			"energyType": "None",
+			"rolePerceptionlength": 0,
+			"rolePerceptionwidth": 0,
+			"generateBuildingFaultInfo":
+			{
+			},
+			"maxConsumeEnergyValue": 0,
+			"specialEffectHeight": 50,
+			"openBuildingWidgetId": "Mod_Dianxingyi",
+			"itemPrice": 0.10000000149011612,
+			"templateId": "Swing",
+			"iD": "MOD_DianXingYi"
+		},
+		"MOD_Computer":
+		{
+			"size":
+			{
+				"x": 1,
+				"y": 2,
+				"z": 1
+			},
+			"buildResource":
+			{
+				"10101": 10,
+				"10107": 10
+			},
+			"workload": 1000,
+			"destoryWorkload": 200,
+			"destoryReturnPrecent": 0.5,
+			"skillLevel": 0,
+			"ownerNum": 0,
+			"entranceGridPoses": [
+				{
+					"gridPoses": [
+						{
+							"row": 1,
+							"column": 0
+						},
+						{
+							"row": 1,
+							"column": 1
+						}
+					]
+				}
+			],
+			"durability": 2000,
+			"aesthetic": 15,
+			"fiveElementScore":
+			{
+				"metal": 10,
+				"wood": 6
+			},
+			"defense": 0,
+			"materialCoefficient": 0.30000001192092896,
+			"playerTeamBuffIds": [],
+			"autoTileMeshes": [],
+			"staticMeshes": [
+				"/Game/Mods/CheatingBuildings/Meshes/DianNaocaozuotai/DianNaocaozuotai.DianNaocaozuotai"
+			],
+			"roofMeshes":
+			{
+			},
+			"pillarForWall": "None",
+			"wallWithHole":
+			{
+			},
+			"parameter":
+			{
+			},
+			"interActionDefine": "/Game/Mods/CheatingBuildings/FacilityDefine/DA_SO_Diannaocaozuotai.DA_SO_Diannaocaozuotai",
+			"bUseSkeletalMesh": true,
+			"skeletalMesh": "/Game/Mods/CheatingBuildings/Meshes/DianNaocaozuotai/DianNaoTai_Start.DianNaoTai_Start",
+			"animInstance": "/Script/Engine.AnimBlueprintGeneratedClass'/Game/Blueprints/Objects/BPA_Building_Template.BPA_Building_Template_C'",
+			"lightParams": [],
+			"bWarehouseShowItemMesh": false,
+			"canNotPlaceItemTag":
+			{
+				"gameplayTags": []
+			},
+			"bUseWarehouseTemperature": false,
+			"warehouseTemperature": 15,
+			"isHeatSource": false,
+			"heatSourceTemperatureEffect": 0,
+			"isLightSource": false,
+			"lightSourceTemperatureEffect": 0,
+			"haveEffectSize": false,
+			"buildingEffectSize":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"buildingEffectSizeOffset":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"buildingEffectTags":
+			{
+				"gameplayTags": []
+			},
+			"buildingEffectBuffIds": [],
+			"leaveEffectRangeBuffIds": [],
+			"bNeedFuel": false,
+			"totalFuel": 0,
+			"oneTimeExpendFuel": 0,
+			"expendFuelInterval": 0,
+			"selectableFuelTag": [],
+			"energyType": "None",
+			"rolePerceptionlength": 0,
+			"rolePerceptionwidth": 0,
+			"generateBuildingFaultInfo":
+			{
+			},
+			"maxConsumeEnergyValue": 0,
+			"specialEffectHeight": 50,
+			"openBuildingWidgetId": "Mod_Diannaotai",
+			"itemPrice": 500,
+			"templateId": "WorkBench",
+			"iD": "MOD_Computer"
+		}
+	}
+}

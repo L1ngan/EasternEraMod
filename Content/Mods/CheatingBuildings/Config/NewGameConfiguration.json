@@ -1,0 +1,36 @@
+{
+	"AssetClass": "/Script/CreateModPlugin.ModNewGameConfigAsset",
+	"protagonistPresetDataId": "None",
+	"protagonistFemaleAvatar": [],
+	"half_ProtagonistFemaleAvatar": [],
+	"half_TourFemaleAvatar": [],
+	"small_TourFemaleAvatar": [],
+	"half_ProtagonistFemaleCenterAvatar": [],
+	"protagonistMaleAvatar": [],
+	"half_ProtagonistMaleAvatar": [],
+	"half_TourMaleAvatar": [],
+	"small_TourMaleAvatar": [],
+	"half_ProtagonistMaleCenterAvatar": [],
+	"protagonistSkillPoint": 0,
+	"protagonistFirePoint": 0,
+	"perSkillMaxFirePoint": 0,
+	"protagonistCharacteristicNum": 0,
+	"initNewGameTeamMemberNum": 0,
+	"unLockBuildingId": [
+		"MOD_DianHuaTing",
+		"MOD_DianXingYi",
+		"MOD_Computer"
+	],
+	"unlockFormulaId": [
+		"MOD_Formula_Jinding",
+		"MOD_Formula_TeleOrder"
+	],
+	"unlockPlantId": [],
+	"unlockGameFunction": [],
+	"initNewGameResourceCoinNum": 0,
+	"initNewGameStoryCoinNum": 0,
+	"protagonistCharacteristicRand":
+	{
+	},
+	"nativeClass": "/Script/CoreUObject.Class'/Script/CreateModPlugin.ModNewGameConfigAsset'"
+}

@@ -1,0 +1,276 @@
+{
+	"StructName": "/Script/GASFramework.GameAbilityStruct",
+	"Rows":
+	{
+		"Dinosaur_MeleeAttack":
+		{
+			"uniqueGameplayTag":
+			{
+				"gameplayTags": [
+					{
+						"tagName": "Ability.UniqueSkill.Dinosaur_MeleeAttack"
+					}
+				]
+			},
+			"gameplayAbility": "/Game/Mods/Giganotosaurus_RD/GA_Giganotosaurus_MeleeAttack.GA_Giganotosaurus_MeleeAttack_C",
+			"useDistance": 500,
+			"abilityAllTags":
+			{
+				"abilityTags":
+				{
+					"gameplayTags": [
+						{
+							"tagName": "Ability.Skill.GeneralAbility"
+						}
+					]
+				},
+				"cancelAbilitiesWithTag":
+				{
+					"gameplayTags": []
+				},
+				"blockAbilitiesWithTag":
+				{
+					"gameplayTags": []
+				},
+				"activationOwnedTags":
+				{
+					"gameplayTags": []
+				},
+				"activationRequiredTags":
+				{
+					"gameplayTags": []
+				},
+				"activationBlockedTags":
+				{
+					"gameplayTags": []
+				},
+				"sourceRequiredTags":
+				{
+					"gameplayTags": []
+				},
+				"sourceBlockedTags":
+				{
+					"gameplayTags": []
+				},
+				"targetRequiredTags":
+				{
+					"gameplayTags": []
+				},
+				"targetBlockedTags":
+				{
+					"gameplayTags": []
+				},
+				"activationAbilityTags":
+				{
+					"gameplayTags": []
+				}
+			},
+			"abilityType": "GeneralAbility",
+			"abilityAttackType": "NormalAttack",
+			"bTriggerToTarget": true,
+			"triggerProbability": 1,
+			"timeOfDuration": 0,
+			"triggerAbilityEffectType": "Normal",
+			"reduceCDTags":
+			{
+				"gameplayTags": []
+			},
+			"reduceTime": 1,
+			"applyEffects": [],
+			"intervalTime": 1,
+			"counterattackDamageEffect": "None",
+			"damageType": "None",
+			"percentageDamage": 0.10000000149011612,
+			"bCanResistanceControl": false,
+			"skillName": "",
+			"icon": "None",
+			"skillDescribe": "",
+			"formatSkillDesc":
+			{
+				"textMain": "",
+				"textParams":
+				{
+				}
+			},
+			"quality": "None",
+			"abilityUsageScenario": "BattleGeneralAbility",
+			"needWeaponTypes": [],
+			"bLockTargetDirection": false,
+			"bEndAbilityReplayOtherAbilityAnimation": false,
+			"injuredProbability": 1,
+			"abilityTips": "",
+			"bHaveCoolDown": false,
+			"cooldownDuration":
+			{
+				"value": 0,
+				"curve":
+				{
+					"curveTable": "None",
+					"rowName": "None"
+				},
+				"registryType": "None"
+			},
+			"cooldownTags":
+			{
+				"gameplayTags": []
+			},
+			"bHaveMontage": true,
+			"montage": "/Game/Mods/Giganotosaurus_RD/MTG_Giganotosaurus.MTG_Giganotosaurus",
+			"eventTags":
+			{
+				"gameplayTags": [
+					{
+						"tagName": "Ability.Projectile.MeleeAttack"
+					},
+					{
+						"tagName": "Ability.Projectile.MeleeAttack01"
+					},
+					{
+						"tagName": "Ability.Projectile.MeleeAttack04"
+					},
+					{
+						"tagName": "Ability.Projectile.MeleeAttack05"
+					},
+					{
+						"tagName": "Ability.Projectile.MeleeAttack03"
+					},
+					{
+						"tagName": "Ability.Projectile.MeleeAttack02"
+					}
+				]
+			},
+			"maxRate": 5,
+			"defaultRate": 1,
+			"startSections": [
+				"Attack_1",
+				"Attack_2",
+				"Attack_3",
+				"Attack_4"
+			],
+			"effectContainerMap":
+			{
+			},
+			"activateGetSelfGEs": [],
+			"activateGetAllFriendlyGEs": [],
+			"activateGetTargetGEs": [],
+			"bTriggerProjectile": false,
+			"projectileStructs": [],
+			"bAnimationTriggerProjectile": true,
+			"animationSpawnProjectiles":
+			{
+				"(TagName=\"Ability.Projectile.MeleeAttack01\")":
+				{
+					"projectileName": "Common_ForTargetNoVfx_ForBoss",
+					"targetTypeMap":
+					{
+						"otherThanFriends":
+						{
+							"projectileGEs": [
+								"/Script/Engine.BlueprintGeneratedClass'/Game/Mods/Giganotosaurus_RD/GE/Damage_03DunJi_Per_0100.Damage_03DunJi_Per_0100_C'"
+							],
+							"controlEffect": [],
+							"buildingDamage": 0
+						}
+					}
+				},
+				"(TagName=\"Ability.Projectile.MeleeAttack02\")":
+				{
+					"projectileName": "Common_CircleBigNoVfx",
+					"targetTypeMap":
+					{
+						"otherThanFriends":
+						{
+							"projectileGEs": [
+								"/Script/Engine.BlueprintGeneratedClass'/Game/Mods/Giganotosaurus_RD/GE/Damage_03DunJi_Per_0070.Damage_03DunJi_Per_0070_C'"
+							],
+							"controlEffect": [
+								{
+									"tag":
+									{
+										"tagName": "Status.ControlEffect.HardControl.Dizziness"
+									},
+									"attributeValue": 1,
+									"attribute":
+									{
+										"attributeName": "",
+										"attribute": "",
+										"attributeOwner": "None"
+									},
+									"resistanceAttribute":
+									{
+										"attributeName": "",
+										"attribute": "",
+										"attributeOwner": "None"
+									},
+									"timeOfDuration": 1
+								}
+							],
+							"buildingDamage": 0
+						}
+					}
+				},
+				"(TagName=\"Ability.Projectile.MeleeAttack03\")":
+				{
+					"projectileName": "Common_ForTargetNoVfx_ForBoss",
+					"targetTypeMap":
+					{
+						"otherThanFriends":
+						{
+							"projectileGEs": [
+								"/Script/Engine.BlueprintGeneratedClass'/Game/Mods/Giganotosaurus_RD/GE/Damage_03DunJi_Per_0100.Damage_03DunJi_Per_0100_C'"
+							],
+							"controlEffect": [
+								{
+									"tag":
+									{
+										"tagName": "Status.ControlEffect.HardControl.BeatBack"
+									},
+									"attributeValue": 100,
+									"attribute":
+									{
+										"attributeName": "KnockBack",
+										"attribute": "/Script/EastRimWorld.EastRimWorldCombatSet:KnockBack",
+										"attributeOwner": "/Script/CoreUObject.Class'/Script/EastRimWorld.EastRimWorldCombatSet'"
+									},
+									"resistanceAttribute":
+									{
+										"attributeName": "KnockBackResistance",
+										"attribute": "/Script/EastRimWorld.EastRimWorldCombatSet:KnockBackResistance",
+										"attributeOwner": "/Script/CoreUObject.Class'/Script/EastRimWorld.EastRimWorldCombatSet'"
+									},
+									"timeOfDuration": -1
+								}
+							],
+							"buildingDamage": 0
+						}
+					}
+				},
+				"(TagName=\"Ability.Projectile.MeleeAttack04\")":
+				{
+					"projectileName": "Common_ForTargetNoVfx_ForBoss",
+					"targetTypeMap":
+					{
+						"otherThanFriends":
+						{
+							"projectileGEs": [
+								"/Script/Engine.BlueprintGeneratedClass'/Game/Mods/Giganotosaurus_RD/GE/Damage_03DunJi_Per_0070.Damage_03DunJi_Per_0070_C'"
+							],
+							"controlEffect": [],
+							"buildingDamage": 0
+						}
+					}
+				}
+			},
+			"bTriggerSummon": false,
+			"summonMap":
+			{
+			},
+			"bShowInSummonSkill": false,
+			"addOrgansAttackedWeightMap":
+			{
+			},
+			"iD": "Dinosaur_MeleeAttack",
+			"comment": ""
+		}
+	}
+}
