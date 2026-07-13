@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FModGridPosition **************************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h_15_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h_15_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModGridPosition_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -26,7 +26,7 @@ struct FModGridPosition;
 // ********** End ScriptStruct FModGridPosition ****************************************************
 
 // ********** Begin ScriptStruct FModRelativeGridPoses *********************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h_79_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h_79_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModRelativeGridPoses_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -35,7 +35,7 @@ struct FModRelativeGridPoses;
 // ********** End ScriptStruct FModRelativeGridPoses ***********************************************
 
 // ********** Begin ScriptStruct FModAutoTileMeshConfigData ****************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h_130_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h_130_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModAutoTileMeshConfigData_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -44,7 +44,7 @@ struct FModAutoTileMeshConfigData;
 // ********** End ScriptStruct FModAutoTileMeshConfigData ******************************************
 
 // ********** Begin ScriptStruct FModBuildLightSourceData ******************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h_191_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h_191_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModBuildLightSourceData_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -53,7 +53,7 @@ struct FModBuildLightSourceData;
 // ********** End ScriptStruct FModBuildLightSourceData ********************************************
 
 // ********** Begin ScriptStruct FModBuildData *****************************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h_276_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h_276_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModBuildData_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;
@@ -63,7 +63,7 @@ struct FModBuildData;
 // ********** End ScriptStruct FModBuildData *******************************************************
 
 // ********** Begin ScriptStruct FModBuildUIData ***************************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h_438_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h_438_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModBuildUIData_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;
@@ -73,7 +73,7 @@ struct FModBuildUIData;
 // ********** End ScriptStruct FModBuildUIData *****************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h
 
 // ********** Begin Enum EModFiveElementType *******************************************************
 #define FOREACH_ENUM_EMODFIVEELEMENTTYPE(op) \

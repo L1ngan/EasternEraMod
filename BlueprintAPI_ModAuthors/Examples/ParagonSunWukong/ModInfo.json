@@ -1,0 +1,39 @@
+{
+  "ModId": "WK_100",
+  "ModName": "齐天大圣",
+  "Version": "1.0.0",
+  "Author": "悟Kung",
+  "Description": "以齐天大圣角色 Mod 演示内容资源、角色数据和 Lua 事件接口。",
+  "Icon": "HalfUIAvatar_WuKongGreatSage.png",
+  "MainLuaFile": "Main.lua",
+  "ModInformationAssetPath": "/Game/Mods/ParagonSunWukong/DA_ModDataAsset.DA_ModDataAsset",
+  "NewGameLoad": true,
+  "MinGameVersion": "0.1",
+  "ModToolVersion": "",
+  "IncludeGameplayTags": false,
+  "GameplayTagsIniFile": "",
+  "AdditionalAssets": [],
+  "Dependencies": [],
+  "PublishedFileId": "",
+  "DataTableConfigs": [
+    {
+      "ConfigType": "CharacterAnatomyProfiles",
+      "JsonFile": "Config/CharacterAnatomyProfiles.json",
+      "StructName": "/Game/CharacterEditor/Base/Structures/FAnatomyProfile_V10.FAnatomyProfile_V10",
+      "bOverrideData": false
+    },
+    {
+      "ConfigType": "CharacterAppearancePreset",
+      "JsonFile": "Config/CharacterAppearancePreset.json",
+      "StructName": "/Game/CharacterEditor/Base/Structures/FCustomizationProfile_V10.FCustomizationProfile_V10",
+      "bOverrideData": false
+    },
+    {
+      "ConfigType": "CharacterConfig",
+      "JsonFile": "Config/CharacterConfig.json",
+      "StructName": "/Script/CreateModPlugin.ModHumanData",
+      "bOverrideData": false
+    }
+  ],
+  "DataAssetConfigs": []
+}

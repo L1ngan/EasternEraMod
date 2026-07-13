@@ -13,15 +13,16 @@ One page per type: structs list every field (C++ type / notes / raw declaration)
 
 ## 🧩 示例与指南 / Examples & guides
 
-**[Examples/ExampleMod/](BlueprintAPI_ModAuthors/Examples/ExampleMod/README.md)** — 官方全要素示例 Mod（可直接复制作为新 Mod 起点；游戏会从 `Content/Mods/ExampleMod` 发现并加载它）：
-**Official full-feature sample mod** (copy it as a starting point; the game discovers and loads it from `Content/Mods/ExampleMod`):
+为减少日志输出，发行版打包会屏蔽普通日志；需要在发行版中保留的信息请至少使用警告等级。警告使用 `Warning`，报错使用 `Error`。
+Release builds suppress ordinary logs to reduce output. Use at least warning level for messages that must remain visible: `Warning` for warnings and `Error` for errors.
 
-| 文件 File | 演示内容 Demonstrates |
+| 示例 Example | 演示内容 Demonstrates |
 |---|---|
-| [ModInfo.json](BlueprintAPI_ModAuthors/Examples/ExampleMod/ModInfo.json) | 元数据字段全示范：ModId/版本/依赖/`DataTableConfigs` 配置表覆盖声明 · All metadata fields incl. `DataTableConfigs` override declaration |
-| [Main.lua](BlueprintAPI_ModAuthors/Examples/ExampleMod/Main.lua) | 事件订阅（OnDayChanged / OnEnterPlaceComplete / OnCharacterDeath 等 12 事件）、循环定时器与 NextTick、控制台命令（含参数表）、日志、卸载自动清理 · Event subscription (12 game events), repeating timers & next-tick, console commands with args, logging, auto-cleanup on unload |
-| [Config/DT_CommonBuff_Example.json](BlueprintAPI_ModAuthors/Examples/ExampleMod/Config/DT_CommonBuff_Example.json) | 配置表 JSON 覆盖格式：StructName + Rows，新增/修改行、部分字段合并 · DataTable JSON override format: StructName + Rows, add/modify rows, partial-field merge |
-| [README.md](BlueprintAPI_ModAuthors/Examples/ExampleMod/README.md) | 示例导览 · Sample walkthrough |
+| [ParagonSunWukong](BlueprintAPI_ModAuthors/Examples/ParagonSunWukong/README.md) | 用人体结构、外观预设、角色数据和 Cook 资源添加完整角色；另附事件扩展参考 · Adds a complete character with anatomy, appearance, character data, and cooked assets, plus an extended event reference |
+| [ChangeNumberOfCharacters](BlueprintAPI_ModAuthors/Examples/ChangeNumberOfCharacters/README.md) | 修改角色、机器人和据点驻扎上限，监听关卡与世界初始化委托 · Changes character, robot, and stationed-character limits and listens to level/world initialization delegates |
+| [ChangeAttribute](BlueprintAPI_ModAuthors/Examples/ChangeAttribute/README.md) | 按倍率修改动物与召唤物 DataTable 属性 · Scales animal and summon DataTable attributes |
+| [CheatingBuildings](BlueprintAPI_ModAuthors/Examples/CheatingBuildings/README.md) | 用建筑、物品、配方、新游戏配置和 Cook 资源组成完整生产玩法 · Builds a production workflow from buildings, items, formulas, new-game config, and cooked assets |
+| [Giganotosaurus_RD](BlueprintAPI_ModAuthors/Examples/Giganotosaurus_RD/README.md) | 配置自定义动物、动画组、战斗能力、Gameplay Tags 和关卡资源 · Configures a custom animal, animation group, combat ability, Gameplay Tags, and level assets |
 
 **开发指南 / Development guides**（字段全表、生命周期、Lua API 参考、事件表、JSON 合并语义、沙箱负面清单、`Mod.Status` 调试、打包发布）:
 

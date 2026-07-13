@@ -25,6 +25,10 @@
 		{
 			"Name": "BinkMedia",
 			"Enabled": true
+		},
+		{
+			"Name": "UnrealMCPServer",
+			"Enabled": false
 		}
 	]
 }

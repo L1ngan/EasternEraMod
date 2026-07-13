@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class UModToolVersion **********************************************************
 CREATEMODPLUGIN_API UClass* Z_Construct_UClass_UModToolVersion_NoRegister();
 
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h_14_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUModToolVersion(); \
 	friend struct Z_Construct_UClass_UModToolVersion_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(UModToolVersion)
 
 
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h_14_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h_14_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UModToolVersion(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -42,12 +42,12 @@ public: \
 	NO_API virtual ~UModToolVersion();
 
 
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h_11_PROLOG
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h_14_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h_11_PROLOG
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h_14_INCLASS_NO_PURE_DECLS \
-	FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h_14_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h_14_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -57,6 +57,6 @@ class UModToolVersion;
 // ********** End Class UModToolVersion ************************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_ModToolVersion_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -1,6 +1,6 @@
 # EastRimWorld Mod 开发指南（中文）
 
-> 配套示例：[ExampleMod/](ExampleMod/)（可直接复制作为新 Mod 起点）
+> 配套示例：[ParagonSunWukong/](ParagonSunWukong/)（基于 `Content/Mods/ParagonSunWukong` 的真实角色 Mod）
 > 类型参考：项目根目录 `BlueprintAPI_ModAuthors/zh/INDEX.md`（全部枚举/结构体/蓝图 API，中英双语）
 
 ---

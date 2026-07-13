@@ -1,6 +1,6 @@
 # EastRimWorld Mod Development Guide (English)
 
-> Companion sample: [ExampleMod/](ExampleMod/) (copy it as the starting point for a new mod)
+> Companion sample: [ParagonSunWukong/](ParagonSunWukong/) (based on the real `Content/Mods/ParagonSunWukong` character mod)
 > Type reference: `BlueprintAPI_ModAuthors/en/INDEX.md` at the project root (all enums / structs / Blueprint API, bilingual)
 
 ---

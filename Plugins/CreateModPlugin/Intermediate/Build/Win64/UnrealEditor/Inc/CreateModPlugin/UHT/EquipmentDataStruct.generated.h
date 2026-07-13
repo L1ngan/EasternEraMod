@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FModCharacterEquipment ********************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_EquipmentDataStruct_h_29_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_EquipmentDataStruct_h_29_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModCharacterEquipment_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModInventoryGeneralData Super;
@@ -27,7 +27,7 @@ struct FModCharacterEquipment;
 // ********** End ScriptStruct FModCharacterEquipment **********************************************
 
 // ********** Begin ScriptStruct FModCharacterTool *************************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_EquipmentDataStruct_h_51_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_EquipmentDataStruct_h_51_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModCharacterTool_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModCharacterEquipment Super;
@@ -37,7 +37,7 @@ struct FModCharacterTool;
 // ********** End ScriptStruct FModCharacterTool ***************************************************
 
 // ********** Begin ScriptStruct FModCharacterWeapon ***********************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_EquipmentDataStruct_h_65_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_EquipmentDataStruct_h_65_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModCharacterWeapon_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModCharacterEquipment Super;
@@ -47,7 +47,7 @@ struct FModCharacterWeapon;
 // ********** End ScriptStruct FModCharacterWeapon *************************************************
 
 // ********** Begin ScriptStruct FModCharacterApparel **********************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_EquipmentDataStruct_h_116_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_EquipmentDataStruct_h_116_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModCharacterApparel_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModCharacterEquipment Super;
@@ -57,7 +57,7 @@ struct FModCharacterApparel;
 // ********** End ScriptStruct FModCharacterApparel ************************************************
 
 // ********** Begin ScriptStruct FModFormulaData ***************************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_EquipmentDataStruct_h_274_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_EquipmentDataStruct_h_274_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModFormulaData_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;
@@ -67,7 +67,7 @@ struct FModFormulaData;
 // ********** End ScriptStruct FModFormulaData *****************************************************
 
 // ********** Begin ScriptStruct FModFabricateEquipmentData ****************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_EquipmentDataStruct_h_395_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_EquipmentDataStruct_h_395_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModFabricateEquipmentData_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;
@@ -77,7 +77,7 @@ struct FModFabricateEquipmentData;
 // ********** End ScriptStruct FModFabricateEquipmentData ******************************************
 
 // ********** Begin ScriptStruct FModEquipmentQualityRange *****************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_EquipmentDataStruct_h_412_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_EquipmentDataStruct_h_412_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModEquipmentQualityRange_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;
@@ -87,7 +87,7 @@ struct FModEquipmentQualityRange;
 // ********** End ScriptStruct FModEquipmentQualityRange *******************************************
 
 // ********** Begin ScriptStruct FModGenerateEquipmentData *****************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_EquipmentDataStruct_h_449_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_EquipmentDataStruct_h_449_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModGenerateEquipmentData_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;
@@ -97,7 +97,7 @@ struct FModGenerateEquipmentData;
 // ********** End ScriptStruct FModGenerateEquipmentData *******************************************
 
 // ********** Begin ScriptStruct FModEquipmentAttribute ********************************************
-#define FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_EquipmentDataStruct_h_486_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_EquipmentDataStruct_h_486_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModEquipmentAttribute_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;
@@ -107,7 +107,7 @@ struct FModEquipmentAttribute;
 // ********** End ScriptStruct FModEquipmentAttribute **********************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ModProject_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_EquipmentDataStruct_h
+#define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_EquipmentDataStruct_h
 
 // ********** Begin Enum EModEquipmentType *********************************************************
 #define FOREACH_ENUM_EMODEQUIPMENTTYPE(op) \
