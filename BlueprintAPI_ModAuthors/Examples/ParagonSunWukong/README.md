@@ -19,7 +19,7 @@
 ## 数据引用链
 
 1. `CharacterConfig` 定义角色主体，并通过 `customizationId` 引用外观预设。
-2. `CharacterAppearancePreset` 定义外观，并通过 `anatomy` 引用人体结构。
+2. `CharacterAppearancePreset` 定义外观，并通过 `meta Data.anatomy` 引用人体结构。
 3. `CharacterAnatomyProfiles` 指向骨骼网格、动画实例和身体结构资源。
 4. 三张表使用同一行名 `WuKong_GreatSage`，形成稳定的角色、外观和人体结构引用链。
 5. `/Game/Mods/ParagonSunWukong/...` 下的软资源路径在 Mod 资源挂载后解析。
@@ -52,7 +52,7 @@
 
 ## 使用限制
 
-- 三个配置行名及 `customizationId`、`anatomy` 必须保持一致，否则角色数据无法找到对应外观或人体结构。
+- 三个配置行名及 `CharacterConfig.customizationId`、`CharacterAppearancePreset.meta Data.anatomy` 必须保持一致，否则角色数据无法找到对应外观或人体结构。
 - 仅复制 JSON 不足以运行本 Mod；模型、骨骼、动画、头像、装备和特效等 Cook 资源必须一并挂载。
 - JSON 不支持注释，字段解释应保留在 [字段说明](FIELD_REFERENCE_CN.md) 中。
 - Lua 沙箱中 `io`、`os`、`require`、`loadfile`、`dofile` 和 `debug` 不可用。
