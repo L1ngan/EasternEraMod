@@ -22,6 +22,9 @@ struct CREATEMODPLUGIN_API FModAssetJsonEntry
 struct CREATEMODPLUGIN_API FModConfigExportResult
 {
 	bool bExportedAny = false;
+	/** 对应配置列表已可靠检查；结果为空时可清除 ModInfo 中的旧条目 */
+	bool bCanClearDataTableConfigs = false;
+	bool bCanClearDataAssetConfigs = false;
 	TArray<FModConfigJsonEntry> DataTableConfigs;
 	TArray<FModAssetJsonEntry> DataAssetConfigs;
 	FString ModFolderPathAbs;

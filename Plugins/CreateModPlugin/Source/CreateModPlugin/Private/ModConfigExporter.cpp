@@ -134,13 +134,9 @@ static TSharedPtr<FJsonObject> CreateDefaultModInfoJsonObject(const FString& Mod
 }
 } // namespace ModConfigExporterPrivate
 
-static bool ModInfoJsonArrayIsEmpty(const TSharedPtr<FJsonObject>& JsonObject, const FString& FieldName)
+static bool ModInfoJsonFieldMissing(const TSharedPtr<FJsonObject>& JsonObject, const FString& FieldName)
 {
-	const TArray<TSharedPtr<FJsonValue>>* ArrayField = nullptr;
-	return !JsonObject.IsValid()
-		|| !JsonObject->TryGetArrayField(FieldName, ArrayField)
-		|| !ArrayField
-		|| ArrayField->Num() == 0;
+	return !JsonObject.IsValid() || !JsonObject->HasField(FieldName);
 }
 
 void FModConfigExporter::RestoreConfigMetadataFromDiskIfMissing(const FString& ModFolderPath, const TSharedPtr<FJsonObject>& JsonObject)
@@ -163,8 +159,8 @@ void FModConfigExporter::RestoreConfigMetadataFromDiskIfMissing(const FString& M
 		return;
 	}
 
-	const bool bNeedDataTables = ModInfoJsonArrayIsEmpty(JsonObject, TEXT("DataTableConfigs"));
-	const bool bNeedDataAssets = ModInfoJsonArrayIsEmpty(JsonObject, TEXT("DataAssetConfigs"));
+	const bool bNeedDataTables = ModInfoJsonFieldMissing(JsonObject, TEXT("DataTableConfigs"));
+	const bool bNeedDataAssets = ModInfoJsonFieldMissing(JsonObject, TEXT("DataAssetConfigs"));
 	if (!bNeedDataTables && !bNeedDataAssets)
 	{
 		return;
@@ -278,6 +274,9 @@ bool FModConfigExporter::ExportFromModInformationAsset(UModInformationAsset* Mod
 		return false;
 	}
 
+	OutResult.bCanClearDataTableConfigs = true;
+	OutResult.bCanClearDataAssetConfigs = true;
+
 	FString NormalizedModFolder = ModFolderPath;
 	FPaths::NormalizeDirectoryName(NormalizedModFolder);
 	if (FPaths::IsRelative(NormalizedModFolder))
@@ -305,6 +304,7 @@ bool FModConfigExporter::ExportFromModInformationAsset(UModInformationAsset* Mod
 		UDataTable* DataTable = Cast<UDataTable>(ModConfig.DataTable.LoadSynchronous());
 		if (!DataTable)
 		{
+			OutResult.bCanClearDataTableConfigs = false;
 			UE_LOG(LogTemp, Warning, TEXT("ModConfigExporter: Failed to load DataTable for %d"), (int32)ModConfig.ModConfigType);
 			continue;
 		}
@@ -312,6 +312,7 @@ bool FModConfigExporter::ExportFromModInformationAsset(UModInformationAsset* Mod
 		const FString ConfigTypeName = ModConfigExporterPrivate::GetEnumValueName(ModConfigEnum, static_cast<int64>(ModConfig.ModConfigType));
 		if (ConfigTypeName.IsEmpty())
 		{
+			OutResult.bCanClearDataTableConfigs = false;
 			continue;
 		}
 
@@ -350,6 +351,7 @@ bool FModConfigExporter::ExportFromModInformationAsset(UModInformationAsset* Mod
 		UDataAsset* DataAsset = ModAsset.DataAsset.LoadSynchronous();
 		if (!DataAsset)
 		{
+			OutResult.bCanClearDataAssetConfigs = false;
 			UE_LOG(LogTemp, Warning, TEXT("ModConfigExporter: Failed to load DataAsset for %d"), (int32)ModAsset.ModDataAssetType);
 			continue;
 		}
@@ -357,6 +359,7 @@ bool FModConfigExporter::ExportFromModInformationAsset(UModInformationAsset* Mod
 		const FString AssetTypeName = ModConfigExporterPrivate::GetEnumValueName(ModAssetEnum, static_cast<int64>(ModAsset.ModDataAssetType));
 		if (AssetTypeName.IsEmpty())
 		{
+			OutResult.bCanClearDataAssetConfigs = false;
 			continue;
 		}
 
@@ -508,8 +511,8 @@ void FModConfigExporter::ApplyExportMetadataToModInfoJson(const TSharedPtr<FJson
 		return;
 	}
 
-	// 导出结果为空时不覆盖已有条目，避免 PreSave/失败导出把 ModInfo 里的 JSON 配置清掉
-	if (ExportResult.DataTableConfigs.Num() > 0)
+	// 仅在配置列表已可靠检查时用空数组清除旧条目，失败导出仍保留已有元数据
+	if (ExportResult.DataTableConfigs.Num() > 0 || ExportResult.bCanClearDataTableConfigs)
 	{
 		TArray<TSharedPtr<FJsonValue>> DataTableArray;
 		for (const FModConfigJsonEntry& Entry : ExportResult.DataTableConfigs)
@@ -524,7 +527,7 @@ void FModConfigExporter::ApplyExportMetadataToModInfoJson(const TSharedPtr<FJson
 		JsonObject->SetArrayField(TEXT("DataTableConfigs"), DataTableArray);
 	}
 
-	if (ExportResult.DataAssetConfigs.Num() > 0)
+	if (ExportResult.DataAssetConfigs.Num() > 0 || ExportResult.bCanClearDataAssetConfigs)
 	{
 		TArray<TSharedPtr<FJsonValue>> DataAssetArray;
 		for (const FModAssetJsonEntry& Entry : ExportResult.DataAssetConfigs)
