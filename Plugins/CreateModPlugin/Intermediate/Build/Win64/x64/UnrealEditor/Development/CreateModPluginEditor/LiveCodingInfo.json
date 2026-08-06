@@ -2,6 +2,8 @@
 	"RemapUnityFiles": 
 	{
 		"Module.CreateModPluginEditor.cpp.obj": [
+			"CreateModPluginEditor.init.gen.cpp.obj",
+			"ModInfoEditorData.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
 			"CreateModPluginEditor.cpp.obj",
 			"CreateModWindow.cpp.obj",
@@ -9,9 +11,7 @@
 			"ModInfoEditorCommands.cpp.obj",
 			"ModInfoEditorData.cpp.obj",
 			"ModInfoEditorWindow.cpp.obj",
-			"PackageModWindow.cpp.obj",
-			"CreateModPluginEditor.init.gen.cpp.obj",
-			"ModInfoEditorData.gen.cpp.obj"
+			"PackageModWindow.cpp.obj"
 		]
 	}
 }

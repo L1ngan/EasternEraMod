@@ -7,4 +7,5 @@
 #include "G:/EasternEraMod/Plugins/CreateModPlugin/Source/CreateModPlugin/CreateModPlugin.cpp"
 #include "G:/EasternEraMod/Plugins/CreateModPlugin/Source/CreateModPlugin/Private/BaseDataStruct.cpp"
 #include "G:/EasternEraMod/Plugins/CreateModPlugin/Source/CreateModPlugin/Private/ModConfigExporter.cpp"
+#include "G:/EasternEraMod/Plugins/CreateModPlugin/Source/CreateModPlugin/Private/Tests/ModConfigExporterTests.cpp"
 #include "G:/EasternEraMod/Plugins/CreateModPlugin/Source/CreateModPlugin/Public/TechnologyDataStruct.cpp"
