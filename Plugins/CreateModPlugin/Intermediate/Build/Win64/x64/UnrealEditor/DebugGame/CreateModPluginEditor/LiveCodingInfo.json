@@ -11,7 +11,8 @@
 			"ModInfoEditorCommands.cpp.obj",
 			"ModInfoEditorData.cpp.obj",
 			"ModInfoEditorWindow.cpp.obj",
-			"PackageModWindow.cpp.obj"
+			"PackageModWindow.cpp.obj",
+			"UsmapExporter.cpp.obj"
 		]
 	}
 }

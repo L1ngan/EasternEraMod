@@ -10,13 +10,13 @@
                         "text": "'FEditorStyle::Get': FEditorStyle::Get() is deprecated, use FAppStyle::Get() instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///G:/ModProject/Plugins/CreateModPlugin/Source/CreateModPluginEditor/Private/ModInfoEditorWindow.cpp"
+                        "uri": "file:///H:/Project/Plugins/CreateModPlugin/Source/CreateModPluginEditor/Private/ModInfoEditorWindow.cpp"
                     },
                     "locations": [
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "file:///G:/ModProject/Plugins/CreateModPlugin/Source/CreateModPluginEditor/Private/ModInfoEditorWindow.cpp"
+                                    "uri": "file:///H:/Project/Plugins/CreateModPlugin/Source/CreateModPluginEditor/Private/ModInfoEditorWindow.cpp"
                                 },
                                 "region": {
                                     "startLine": 91,

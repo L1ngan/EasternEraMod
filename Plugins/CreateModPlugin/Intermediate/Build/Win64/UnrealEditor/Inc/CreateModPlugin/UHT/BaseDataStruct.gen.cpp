@@ -63,12 +63,24 @@ struct Z_Construct_UEnum_CreateModPlugin_EModConfigType_Statics
 		{ "AnimalConfig.Name", "EModConfigType::AnimalConfig" },
 		{ "AnimalConfig.ToolTip", "\xe5\x8a\xa8\xe7\x89\xa9\xe9\x85\x8d\xe7\xbd\xae" },
 		{ "BlueprintType", "true" },
+		{ "BreakThroughCharacteristicInfo.Comment", "//\xe7\xaa\x81\xe7\xa0\xb4\xe5\xa4\xa9\xe8\xb5\x8b\xe7\x89\xb9\xe6\x80\xa7\n" },
+		{ "BreakThroughCharacteristicInfo.Name", "EModConfigType::BreakThroughCharacteristicInfo" },
+		{ "BreakThroughCharacteristicInfo.ToolTip", "\xe7\xaa\x81\xe7\xa0\xb4\xe5\xa4\xa9\xe8\xb5\x8b\xe7\x89\xb9\xe6\x80\xa7" },
+		{ "BreakThroughSkill.Comment", "//\xe7\xaa\x81\xe7\xa0\xb4\xe6\x8a\x80\xe8\x83\xbd\xe6\xb1\xa0\n" },
+		{ "BreakThroughSkill.Name", "EModConfigType::BreakThroughSkill" },
+		{ "BreakThroughSkill.ToolTip", "\xe7\xaa\x81\xe7\xa0\xb4\xe6\x8a\x80\xe8\x83\xbd\xe6\xb1\xa0" },
 		{ "BuildConfig.Comment", "//\xe5\xbb\xba\xe7\xad\x91\xe7\x89\xa9\xe6\x95\xb0\xe6\x8d\xae\n" },
 		{ "BuildConfig.Name", "EModConfigType::BuildConfig" },
 		{ "BuildConfig.ToolTip", "\xe5\xbb\xba\xe7\xad\x91\xe7\x89\xa9\xe6\x95\xb0\xe6\x8d\xae" },
 		{ "BuildingUI.Comment", "//\xe5\xbb\xba\xe7\xad\x91\xe7\x89\xa9\xe6\x98\xbe\xe7\xa4\xbaUI\n" },
 		{ "BuildingUI.Name", "EModConfigType::BuildingUI" },
 		{ "BuildingUI.ToolTip", "\xe5\xbb\xba\xe7\xad\x91\xe7\x89\xa9\xe6\x98\xbe\xe7\xa4\xbaUI" },
+		{ "BuildListCategorizeConfig.Comment", "//\xe5\xbb\xba\xe7\xad\x91\xe5\x88\x86\xe7\xb1\xbb\n" },
+		{ "BuildListCategorizeConfig.Name", "EModConfigType::BuildListCategorizeConfig" },
+		{ "BuildListCategorizeConfig.ToolTip", "\xe5\xbb\xba\xe7\xad\x91\xe5\x88\x86\xe7\xb1\xbb" },
+		{ "BuildTabConfig.Comment", "//\xe5\xbb\xba\xe7\xad\x91Tab\n" },
+		{ "BuildTabConfig.Name", "EModConfigType::BuildTabConfig" },
+		{ "BuildTabConfig.ToolTip", "\xe5\xbb\xba\xe7\xad\x91Tab" },
 		{ "CharacterAnatomyProfiles.Name", "EModConfigType::CharacterAnatomyProfiles" },
 		{ "CharacterAppearancePreset.Comment", "//\xe8\xa7\x92\xe8\x89\xb2\xe5\xa4\x96\xe8\xa7\x82\xe9\xa2\x84\xe5\x88\xb6\n" },
 		{ "CharacterAppearancePreset.Name", "EModConfigType::CharacterAppearancePreset" },
@@ -85,6 +97,18 @@ struct Z_Construct_UEnum_CreateModPlugin_EModConfigType_Statics
 		{ "CommonUI.Comment", "//\xe9\x80\x9a\xe7\x94\xa8UI\n" },
 		{ "CommonUI.Name", "EModConfigType::CommonUI" },
 		{ "CommonUI.ToolTip", "\xe9\x80\x9a\xe7\x94\xa8UI" },
+		{ "ConditionInfo.Comment", "//\xe4\xbb\xbb\xe5\x8a\xa1\xe6\x9d\xa1\xe4\xbb\xb6\n" },
+		{ "ConditionInfo.Name", "EModConfigType::ConditionInfo" },
+		{ "ConditionInfo.ToolTip", "\xe4\xbb\xbb\xe5\x8a\xa1\xe6\x9d\xa1\xe4\xbb\xb6" },
+		{ "DialogueGroup.Comment", "//\xe5\xaf\xb9\xe8\xaf\x9d\xe7\xbb\x84\n" },
+		{ "DialogueGroup.Name", "EModConfigType::DialogueGroup" },
+		{ "DialogueGroup.ToolTip", "\xe5\xaf\xb9\xe8\xaf\x9d\xe7\xbb\x84" },
+		{ "DialogueInfoConfig.Comment", "//\xe5\xaf\xb9\xe8\xaf\x9d\xe4\xbf\xa1\xe6\x81\xaf\n" },
+		{ "DialogueInfoConfig.Name", "EModConfigType::DialogueInfoConfig" },
+		{ "DialogueInfoConfig.ToolTip", "\xe5\xaf\xb9\xe8\xaf\x9d\xe4\xbf\xa1\xe6\x81\xaf" },
+		{ "DialogueOptionConfig.Comment", "//\xe5\xaf\xb9\xe8\xaf\x9d\xe9\x80\x89\xe9\xa1\xb9\n" },
+		{ "DialogueOptionConfig.Name", "EModConfigType::DialogueOptionConfig" },
+		{ "DialogueOptionConfig.ToolTip", "\xe5\xaf\xb9\xe8\xaf\x9d\xe9\x80\x89\xe9\xa1\xb9" },
 		{ "DropSetConfig.Comment", "//\xe6\x8e\x89\xe8\x90\xbd\xe9\x9b\x86\n" },
 		{ "DropSetConfig.Name", "EModConfigType::DropSetConfig" },
 		{ "DropSetConfig.ToolTip", "\xe6\x8e\x89\xe8\x90\xbd\xe9\x9b\x86" },
@@ -113,6 +137,15 @@ struct Z_Construct_UEnum_CreateModPlugin_EModConfigType_Statics
 		{ "GenerateEquipmentData.Name", "EModConfigType::GenerateEquipmentData" },
 		{ "GenerateEquipmentData.ToolTip", "\xe8\xa3\x85\xe5\xa4\x87\xe7\x94\x9f\xe6\x88\x90\xe8\xa1\xa8" },
 		{ "InventoryItem.Name", "EModConfigType::InventoryItem" },
+		{ "MartialArtsBook.Comment", "//\xe6\xad\xa6\xe5\xad\xa6\xe4\xb9\xa6\xe7\xb1\x8d\n" },
+		{ "MartialArtsBook.Name", "EModConfigType::MartialArtsBook" },
+		{ "MartialArtsBook.ToolTip", "\xe6\xad\xa6\xe5\xad\xa6\xe4\xb9\xa6\xe7\xb1\x8d" },
+		{ "MartialArtsBookCategory.Comment", "//\xe6\xad\xa6\xe5\xad\xa6\xe4\xb9\xa6\xe7\xb1\x8d\xe7\xa7\x8d\xe7\xb1\xbb\n" },
+		{ "MartialArtsBookCategory.Name", "EModConfigType::MartialArtsBookCategory" },
+		{ "MartialArtsBookCategory.ToolTip", "\xe6\xad\xa6\xe5\xad\xa6\xe4\xb9\xa6\xe7\xb1\x8d\xe7\xa7\x8d\xe7\xb1\xbb" },
+		{ "MartialArtsEntries.Comment", "//\xe6\xad\xa6\xe5\xad\xa6\xe8\xaf\x8d\xe6\x9d\xa1\n" },
+		{ "MartialArtsEntries.Name", "EModConfigType::MartialArtsEntries" },
+		{ "MartialArtsEntries.ToolTip", "\xe6\xad\xa6\xe5\xad\xa6\xe8\xaf\x8d\xe6\x9d\xa1" },
 		{ "ModuleRelativePath", "Public/BaseDataStruct.h" },
 		{ "ModuleUI.Comment", "//UI\xe6\xa8\xa1\xe5\x9d\x97\n" },
 		{ "ModuleUI.Name", "EModConfigType::ModuleUI" },
@@ -124,6 +157,18 @@ struct Z_Construct_UEnum_CreateModPlugin_EModConfigType_Statics
 		{ "Projectile.Comment", "//\xe6\x8a\x95\xe5\xb0\x84\xe7\x89\xa9\n" },
 		{ "Projectile.Name", "EModConfigType::Projectile" },
 		{ "Projectile.ToolTip", "\xe6\x8a\x95\xe5\xb0\x84\xe7\x89\xa9" },
+		{ "RealmData.Comment", "//\xe5\xa2\x83\xe7\x95\x8c\xe4\xbf\xa1\xe6\x81\xaf\n" },
+		{ "RealmData.Name", "EModConfigType::RealmData" },
+		{ "RealmData.ToolTip", "\xe5\xa2\x83\xe7\x95\x8c\xe4\xbf\xa1\xe6\x81\xaf" },
+		{ "SkillEntryCondition.Comment", "//\xe6\x8a\x80\xe8\x83\xbd\xe8\xaf\x8d\xe6\x9d\xa1\xe6\x9d\xa1\xe4\xbb\xb6\xe9\x85\x8d\xe7\xbd\xae\n" },
+		{ "SkillEntryCondition.Name", "EModConfigType::SkillEntryCondition" },
+		{ "SkillEntryCondition.ToolTip", "\xe6\x8a\x80\xe8\x83\xbd\xe8\xaf\x8d\xe6\x9d\xa1\xe6\x9d\xa1\xe4\xbb\xb6\xe9\x85\x8d\xe7\xbd\xae" },
+		{ "SkillEntryConfig.Comment", "//\xe6\x8a\x80\xe8\x83\xbd\xe8\xaf\x8d\xe6\x9d\xa1\xe9\x85\x8d\xe7\xbd\xae\n" },
+		{ "SkillEntryConfig.Name", "EModConfigType::SkillEntryConfig" },
+		{ "SkillEntryConfig.ToolTip", "\xe6\x8a\x80\xe8\x83\xbd\xe8\xaf\x8d\xe6\x9d\xa1\xe9\x85\x8d\xe7\xbd\xae" },
+		{ "SkillEntryPoolConfig.Comment", "//\xe6\x8a\x80\xe8\x83\xbd\xe8\xaf\x8d\xe6\x9d\xa1\xe6\xb1\xa0\xe9\x85\x8d\xe7\xbd\xae\n" },
+		{ "SkillEntryPoolConfig.Name", "EModConfigType::SkillEntryPoolConfig" },
+		{ "SkillEntryPoolConfig.ToolTip", "\xe6\x8a\x80\xe8\x83\xbd\xe8\xaf\x8d\xe6\x9d\xa1\xe6\xb1\xa0\xe9\x85\x8d\xe7\xbd\xae" },
 		{ "TechnologyConfig.Comment", "//\xe7\xa7\x91\xe6\x8a\x80\xef\xbc\x9a\xe7\xa7\x91\xe6\x8a\x80\xe9\xa1\xb9\xe8\xaf\xa6\xe7\xbb\x86\xe9\x85\x8d\xe7\xbd\xae\n" },
 		{ "TechnologyConfig.Name", "EModConfigType::TechnologyConfig" },
 		{ "TechnologyConfig.ToolTip", "\xe7\xa7\x91\xe6\x8a\x80\xef\xbc\x9a\xe7\xa7\x91\xe6\x8a\x80\xe9\xa1\xb9\xe8\xaf\xa6\xe7\xbb\x86\xe9\x85\x8d\xe7\xbd\xae" },
@@ -145,6 +190,9 @@ struct Z_Construct_UEnum_CreateModPlugin_EModConfigType_Statics
 		{ "WorldPlaceConfig.Comment", "//\xe5\x9c\xb0\xe5\x9b\xbe\xe9\x85\x8d\xe7\xbd\xae\n" },
 		{ "WorldPlaceConfig.Name", "EModConfigType::WorldPlaceConfig" },
 		{ "WorldPlaceConfig.ToolTip", "\xe5\x9c\xb0\xe5\x9b\xbe\xe9\x85\x8d\xe7\xbd\xae" },
+		{ "WorldTaskInfo.Comment", "//\xe4\xb8\x96\xe7\x95\x8c\xe4\xbb\xbb\xe5\x8a\xa1\n" },
+		{ "WorldTaskInfo.Name", "EModConfigType::WorldTaskInfo" },
+		{ "WorldTaskInfo.ToolTip", "\xe4\xb8\x96\xe7\x95\x8c\xe4\xbb\xbb\xe5\x8a\xa1" },
 	};
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
@@ -173,10 +221,26 @@ struct Z_Construct_UEnum_CreateModPlugin_EModConfigType_Statics
 		{ "EModConfigType::Projectile", (int64)EModConfigType::Projectile },
 		{ "EModConfigType::ModuleUI", (int64)EModConfigType::ModuleUI },
 		{ "EModConfigType::CommonUI", (int64)EModConfigType::CommonUI },
+		{ "EModConfigType::DialogueGroup", (int64)EModConfigType::DialogueGroup },
+		{ "EModConfigType::DialogueInfoConfig", (int64)EModConfigType::DialogueInfoConfig },
+		{ "EModConfigType::DialogueOptionConfig", (int64)EModConfigType::DialogueOptionConfig },
+		{ "EModConfigType::WorldTaskInfo", (int64)EModConfigType::WorldTaskInfo },
+		{ "EModConfigType::ConditionInfo", (int64)EModConfigType::ConditionInfo },
 		{ "EModConfigType::AnimalActionAbility", (int64)EModConfigType::AnimalActionAbility },
 		{ "EModConfigType::EnemyAttackGenerationConfig", (int64)EModConfigType::EnemyAttackGenerationConfig },
 		{ "EModConfigType::MonsterGenerationConfig", (int64)EModConfigType::MonsterGenerationConfig },
 		{ "EModConfigType::ThreatPoolInfo", (int64)EModConfigType::ThreatPoolInfo },
+		{ "EModConfigType::MartialArtsBook", (int64)EModConfigType::MartialArtsBook },
+		{ "EModConfigType::MartialArtsBookCategory", (int64)EModConfigType::MartialArtsBookCategory },
+		{ "EModConfigType::RealmData", (int64)EModConfigType::RealmData },
+		{ "EModConfigType::MartialArtsEntries", (int64)EModConfigType::MartialArtsEntries },
+		{ "EModConfigType::BreakThroughSkill", (int64)EModConfigType::BreakThroughSkill },
+		{ "EModConfigType::BreakThroughCharacteristicInfo", (int64)EModConfigType::BreakThroughCharacteristicInfo },
+		{ "EModConfigType::SkillEntryConfig", (int64)EModConfigType::SkillEntryConfig },
+		{ "EModConfigType::SkillEntryPoolConfig", (int64)EModConfigType::SkillEntryPoolConfig },
+		{ "EModConfigType::SkillEntryCondition", (int64)EModConfigType::SkillEntryCondition },
+		{ "EModConfigType::BuildTabConfig", (int64)EModConfigType::BuildTabConfig },
+		{ "EModConfigType::BuildListCategorizeConfig", (int64)EModConfigType::BuildListCategorizeConfig },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
 };
@@ -337,7 +401,7 @@ struct Z_Construct_UScriptStruct_FModConfig_Statics
 	static const UECodeGen_Private::FStructParams StructParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FModConfig_Statics::NewProp_ModConfigType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FModConfig_Statics::NewProp_ModConfigType = { "ModConfigType", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModConfig, ModConfigType), Z_Construct_UEnum_CreateModPlugin_EModConfigType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ModConfigType_MetaData), NewProp_ModConfigType_MetaData) }; // 191486423
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FModConfig_Statics::NewProp_ModConfigType = { "ModConfigType", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModConfig, ModConfigType), Z_Construct_UEnum_CreateModPlugin_EModConfigType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ModConfigType_MetaData), NewProp_ModConfigType_MetaData) }; // 3085131635
 const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FModConfig_Statics::NewProp_DataTable = { "DataTable", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModConfig, DataTable), Z_Construct_UClass_UDataTable_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DataTable_MetaData), NewProp_DataTable_MetaData) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FModConfig_Statics::NewProp_StructName = { "StructName", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModConfig, StructName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StructName_MetaData), NewProp_StructName_MetaData) };
 void Z_Construct_UScriptStruct_FModConfig_Statics::NewProp_bOverrideData_SetBit(void* Obj)
@@ -553,8 +617,8 @@ struct Z_Construct_UClass_UModInformationAsset_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UModInformationAsset_Statics::NewProp_DataTables_Inner = { "DataTables", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FModConfig, METADATA_PARAMS(0, nullptr) }; // 1507380708
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UModInformationAsset_Statics::NewProp_DataTables = { "DataTables", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UModInformationAsset, DataTables), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DataTables_MetaData), NewProp_DataTables_MetaData) }; // 1507380708
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UModInformationAsset_Statics::NewProp_DataTables_Inner = { "DataTables", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FModConfig, METADATA_PARAMS(0, nullptr) }; // 2437047248
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UModInformationAsset_Statics::NewProp_DataTables = { "DataTables", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UModInformationAsset, DataTables), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DataTables_MetaData), NewProp_DataTables_MetaData) }; // 2437047248
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UModInformationAsset_Statics::NewProp_DataAssets_Inner = { "DataAssets", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FModAsset, METADATA_PARAMS(0, nullptr) }; // 3119472607
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UModInformationAsset_Statics::NewProp_DataAssets = { "DataAssets", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UModInformationAsset, DataAssets), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DataAssets_MetaData), NewProp_DataAssets_MetaData) }; // 3119472607
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UModInformationAsset_Statics::PropPointers[] = {
@@ -1920,7 +1984,7 @@ UEnum* Z_Construct_UEnum_CreateModPlugin_EModTipsType()
 struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h__Script_CreateModPlugin_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ EModConfigType_StaticEnum, TEXT("EModConfigType"), &Z_Registration_Info_UEnum_EModConfigType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 191486423U) },
+		{ EModConfigType_StaticEnum, TEXT("EModConfigType"), &Z_Registration_Info_UEnum_EModConfigType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3085131635U) },
 		{ EModDataAssetType_StaticEnum, TEXT("EModDataAssetType"), &Z_Registration_Info_UEnum_EModDataAssetType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2803957064U) },
 		{ EModCharacterBehaviorState_StaticEnum, TEXT("EModCharacterBehaviorState"), &Z_Registration_Info_UEnum_EModCharacterBehaviorState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2884534965U) },
 		{ EModGroundInventoryType_StaticEnum, TEXT("EModGroundInventoryType"), &Z_Registration_Info_UEnum_EModGroundInventoryType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1596875282U) },
@@ -1928,7 +1992,7 @@ struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_Cr
 		{ EModTipsType_StaticEnum, TEXT("EModTipsType"), &Z_Registration_Info_UEnum_EModTipsType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2254412518U) },
 	};
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FModConfig::StaticStruct, Z_Construct_UScriptStruct_FModConfig_Statics::NewStructOps, TEXT("ModConfig"), &Z_Registration_Info_UScriptStruct_FModConfig, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModConfig), 1507380708U) },
+		{ FModConfig::StaticStruct, Z_Construct_UScriptStruct_FModConfig_Statics::NewStructOps, TEXT("ModConfig"), &Z_Registration_Info_UScriptStruct_FModConfig, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModConfig), 2437047248U) },
 		{ FModAsset::StaticStruct, Z_Construct_UScriptStruct_FModAsset_Statics::NewStructOps, TEXT("ModAsset"), &Z_Registration_Info_UScriptStruct_FModAsset, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModAsset), 3119472607U) },
 		{ FModDataBase::StaticStruct, Z_Construct_UScriptStruct_FModDataBase_Statics::NewStructOps, TEXT("ModDataBase"), &Z_Registration_Info_UScriptStruct_FModDataBase, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModDataBase), 1478976665U) },
 		{ FModGameplayEffectContainer::StaticStruct, Z_Construct_UScriptStruct_FModGameplayEffectContainer_Statics::NewStructOps, TEXT("ModGameplayEffectContainer"), &Z_Registration_Info_UScriptStruct_FModGameplayEffectContainer, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModGameplayEffectContainer), 3944816412U) },
@@ -1937,10 +2001,10 @@ struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_Cr
 		{ FModDropSetConfig::StaticStruct, Z_Construct_UScriptStruct_FModDropSetConfig_Statics::NewStructOps, TEXT("ModDropSetConfig"), &Z_Registration_Info_UScriptStruct_FModDropSetConfig, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModDropSetConfig), 1679017575U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UModInformationAsset, UModInformationAsset::StaticClass, TEXT("UModInformationAsset"), &Z_Registration_Info_UClass_UModInformationAsset, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UModInformationAsset), 1103650847U) },
+		{ Z_Construct_UClass_UModInformationAsset, UModInformationAsset::StaticClass, TEXT("UModInformationAsset"), &Z_Registration_Info_UClass_UModInformationAsset, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UModInformationAsset), 1949611849U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h__Script_CreateModPlugin_3756054099(TEXT("/Script/CreateModPlugin"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h__Script_CreateModPlugin_2615031210(TEXT("/Script/CreateModPlugin"),
 	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h__Script_CreateModPlugin_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h__Script_CreateModPlugin_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h__Script_CreateModPlugin_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h__Script_CreateModPlugin_Statics::ScriptStructInfo),
 	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h__Script_CreateModPlugin_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h__Script_CreateModPlugin_Statics::EnumInfo));

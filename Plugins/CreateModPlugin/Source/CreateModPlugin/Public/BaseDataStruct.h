@@ -58,6 +58,16 @@ enum class EModConfigType : uint8
 	ModuleUI,
 	//通用UI
 	CommonUI,
+	//对话组
+	DialogueGroup,
+	//对话信息
+	DialogueInfoConfig,
+	//对话选项
+	DialogueOptionConfig,
+	//世界任务
+	WorldTaskInfo,
+	//任务条件
+	ConditionInfo,
 	// 动物行为能力
 	AnimalActionAbility,
 	//敌对势力袭击配置
@@ -66,6 +76,28 @@ enum class EModConfigType : uint8
 	MonsterGenerationConfig,
 	//威胁池信息
 	ThreatPoolInfo,
+	//武学书籍
+	MartialArtsBook,
+	//武学书籍种类
+	MartialArtsBookCategory,
+	//境界信息
+	RealmData,
+	//武学词条
+	MartialArtsEntries,
+	//突破技能池
+	BreakThroughSkill,
+	//突破天赋特性
+	BreakThroughCharacteristicInfo,
+	//技能词条配置
+	SkillEntryConfig,
+	//技能词条池配置
+	SkillEntryPoolConfig,
+	//技能词条条件配置
+	SkillEntryCondition,
+	//建筑Tab
+	BuildTabConfig,
+	//建筑分类
+	BuildListCategorizeConfig,
 };
 
 //Mod资产类型

@@ -451,4 +451,37 @@ struct CREATEMODPLUGIN_API FModBuildUIData:public FModDataBase
 	FText Desc;
 };
 
+//mod建筑Tab
+USTRUCT(BlueprintType)
+struct CREATEMODPLUGIN_API FModBuildTabStruct : public FModDataBase
+{
+	GENERATED_BODY()
+
+	//Tab名称
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText TabName;
+	//排序
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 Sort = 0;
+	//建筑分类
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FName Category;
+};
+
+//mod建筑分类
+USTRUCT(BlueprintType)
+struct CREATEMODPLUGIN_API FModBuildListCategorizeStruct : public FModDataBase
+{
+	GENERATED_BODY()
+
+	//显示名称
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText DisplayName;
+	//排序
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 Sort = 0;
+	//图标
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<UTexture2D*> Icon;
+};
 

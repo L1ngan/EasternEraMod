@@ -21,5 +21,6 @@ public:
 	TSharedPtr<FUICommandInfo> OpenModInfoEditor;
 	TSharedPtr<FUICommandInfo> CreateMod;
 	TSharedPtr<FUICommandInfo> PackageMod;
+	TSharedPtr<FUICommandInfo> ExportUsmap;
 };
 

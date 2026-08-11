@@ -29,6 +29,9 @@ private:
 	// 打开 Package Mod 窗口
 	void OpenPackageModWindow();
 
+	// 导出 usmap 映射文件
+	void ExportUsmap();
+
 	// 生成 Mod 工具菜单
 	TSharedRef<SWidget> GenerateModToolsMenu();
 };

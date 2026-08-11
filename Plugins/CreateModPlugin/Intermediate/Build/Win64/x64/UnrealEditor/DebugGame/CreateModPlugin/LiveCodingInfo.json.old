@@ -22,6 +22,8 @@
 			"PerModuleInline.gen.cpp.obj",
 			"CreateModPlugin.cpp.obj",
 			"BaseDataStruct.cpp.obj",
+			"ModConfigExporter.cpp.obj",
+			"ModConfigExporterTests.cpp.obj",
 			"TechnologyDataStruct.cpp.obj"
 		]
 	}

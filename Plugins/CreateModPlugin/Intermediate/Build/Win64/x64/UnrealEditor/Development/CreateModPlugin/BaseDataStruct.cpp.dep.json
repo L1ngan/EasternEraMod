@@ -1,14 +1,14 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "g:\\modproject\\plugins\\createmodplugin\\source\\createmodplugin\\private\\basedatastruct.cpp",
+        "Source": "g:\\easterneramod\\plugins\\createmodplugin\\source\\createmodplugin\\private\\basedatastruct.cpp",
         "ProvidedModule": "",
-        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "PCH": "g:\\easterneramod\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
         "Includes": [
-            "g:\\modproject\\plugins\\createmodplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\createmodplugin\\definitions.createmodplugin.h",
-            "g:\\modproject\\plugins\\createmodplugin\\source\\createmodplugin\\public\\basedatastruct.h",
-            "g:\\modproject\\plugins\\gasframework\\source\\gasframework\\public\\eastrimworldtargettype.h",
-            "g:\\modproject\\plugins\\gasframework\\source\\gasframework\\public\\eastrimworldabilitytypes.h",
+            "g:\\easterneramod\\plugins\\createmodplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\createmodplugin\\definitions.createmodplugin.h",
+            "g:\\easterneramod\\plugins\\createmodplugin\\source\\createmodplugin\\public\\basedatastruct.h",
+            "g:\\easterneramod\\plugins\\gasframework\\source\\gasframework\\public\\eastrimworldtargettype.h",
+            "g:\\easterneramod\\plugins\\gasframework\\source\\gasframework\\public\\eastrimworldabilitytypes.h",
             "e:\\ue5.6\\ue_5.6\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\gameplayeffecttypes.h",
             "e:\\ue5.6\\ue_5.6\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\activegameplayeffecthandle.h",
             "e:\\ue5.6\\ue_5.6\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\activegameplayeffecthandle.generated.h",
@@ -32,14 +32,14 @@
             "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\structutils\\instancedstruct.h",
             "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\structutils\\structutils.h",
             "e:\\ue5.6\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\coreuobject\\uht\\instancedstruct.generated.h",
-            "g:\\modproject\\plugins\\gasframework\\intermediate\\build\\win64\\unrealeditor\\inc\\gasframework\\uht\\eastrimworldabilitytypes.generated.h",
-            "g:\\modproject\\plugins\\gasframework\\intermediate\\build\\win64\\unrealeditor\\inc\\gasframework\\uht\\eastrimworldtargettype.generated.h",
-            "g:\\modproject\\plugins\\createmodplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\createmodplugin\\uht\\basedatastruct.generated.h",
+            "g:\\easterneramod\\plugins\\gasframework\\intermediate\\build\\win64\\unrealeditor\\inc\\gasframework\\uht\\eastrimworldabilitytypes.generated.h",
+            "g:\\easterneramod\\plugins\\gasframework\\intermediate\\build\\win64\\unrealeditor\\inc\\gasframework\\uht\\eastrimworldtargettype.generated.h",
+            "g:\\easterneramod\\plugins\\createmodplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\createmodplugin\\uht\\basedatastruct.generated.h",
             "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\uobject\\objectsavecontext.h",
             "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\uobject\\cookenums.h",
             "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\uobject\\objectsaveoverride.h",
             "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\cooker\\cookdependency.h",
-            "g:\\modproject\\plugins\\createmodplugin\\source\\createmodplugin\\public\\modconfigexporter.h"
+            "g:\\easterneramod\\plugins\\createmodplugin\\source\\createmodplugin\\public\\modconfigexporter.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

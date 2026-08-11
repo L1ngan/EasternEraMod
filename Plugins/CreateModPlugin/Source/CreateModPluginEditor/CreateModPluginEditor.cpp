@@ -2,6 +2,7 @@
 #include "ModInfoEditorWindow.h"
 #include "CreateModWindow.h"
 #include "PackageModWindow.h"
+#include "UsmapExporter.h"
 #include "ModInfoEditorCommands.h"
 #include "ModInfoDataCustomization.h"
 #include "ToolMenus.h"
@@ -41,6 +42,11 @@ void FCreateModPluginEditorModule::StartupModule()
 	PluginCommands->MapAction(
 		Commands.PackageMod,
 		FExecuteAction::CreateRaw(this, &FCreateModPluginEditorModule::OpenPackageModWindow),
+		FCanExecuteAction()
+	);
+	PluginCommands->MapAction(
+		Commands.ExportUsmap,
+		FExecuteAction::CreateRaw(this, &FCreateModPluginEditorModule::ExportUsmap),
 		FCanExecuteAction()
 	);
 
@@ -108,6 +114,7 @@ void FCreateModPluginEditorModule::RegisterMenus()
 	FToolMenuSection& MenuSection = Menu->FindOrAddSection("Modding");
 	MenuSection.AddMenuEntryWithCommandList(Commands.OpenModInfoEditor, PluginCommands);
 	MenuSection.AddMenuEntryWithCommandList(Commands.CreateMod, PluginCommands);
+	MenuSection.AddMenuEntryWithCommandList(Commands.ExportUsmap, PluginCommands);
 }
 
 TSharedRef<SWidget> FCreateModPluginEditorModule::GenerateModToolsMenu()
@@ -119,6 +126,7 @@ TSharedRef<SWidget> FCreateModPluginEditorModule::GenerateModToolsMenu()
 	MenuBuilder.AddMenuEntry(Commands.OpenModInfoEditor, NAME_None, LOCTEXT("ModInfoEditor", "Mod Info Editor"));
 	MenuBuilder.AddMenuEntry(Commands.CreateMod, NAME_None, LOCTEXT("CreateNewMod", "Create New Mod"));
 	MenuBuilder.AddMenuEntry(Commands.PackageMod, NAME_None, LOCTEXT("PackageMod", "Package Mod"));
+	MenuBuilder.AddMenuEntry(Commands.ExportUsmap, NAME_None, LOCTEXT("ExportUsmap", "Export Usmap"));
 	MenuBuilder.EndSection();
 
 	return MenuBuilder.MakeWidget();
@@ -266,6 +274,18 @@ void FCreateModPluginEditorModule::OpenPackageModWindow()
 
 	PackageModWindowInstance = Window;
 	FSlateApplication::Get().AddWindow(Window);
+}
+
+void FCreateModPluginEditorModule::ExportUsmap()
+{
+	FString ResultMessage;
+	const bool bSuccess = FUsmapExporter::Export(FString(), ResultMessage);
+
+	FNotificationInfo Info(FText::FromString(ResultMessage));
+	Info.ExpireDuration = bSuccess ? 5.0f : 8.0f;
+	Info.bFireAndForget = true;
+	Info.bUseSuccessFailIcons = true;
+	FSlateNotificationManager::Get().AddNotification(Info);
 }
 
 #undef LOCTEXT_NAMESPACE

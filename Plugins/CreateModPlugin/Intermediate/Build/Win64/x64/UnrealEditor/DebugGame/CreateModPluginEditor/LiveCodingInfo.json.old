@@ -7,7 +7,6 @@
 			"PerModuleInline.gen.cpp.obj",
 			"CreateModPluginEditor.cpp.obj",
 			"CreateModWindow.cpp.obj",
-			"ModConfigExporter.cpp.obj",
 			"ModInfoDataCustomization.cpp.obj",
 			"ModInfoEditorCommands.cpp.obj",
 			"ModInfoEditorData.cpp.obj",

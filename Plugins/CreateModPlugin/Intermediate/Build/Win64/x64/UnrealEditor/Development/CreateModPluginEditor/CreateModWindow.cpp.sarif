@@ -10,13 +10,13 @@
                         "text": "'IAssetRegistry::GetAssetByObjectPath': Asset path FNames have been deprecated, use Soft Object Path instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///G:/ModProject/Plugins/CreateModPlugin/Source/CreateModPluginEditor/Private/CreateModWindow.cpp"
+                        "uri": "file:///H:/Project/Plugins/CreateModPlugin/Source/CreateModPluginEditor/Private/CreateModWindow.cpp"
                     },
                     "locations": [
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "file:///G:/ModProject/Plugins/CreateModPlugin/Source/CreateModPluginEditor/Private/CreateModWindow.cpp"
+                                    "uri": "file:///H:/Project/Plugins/CreateModPlugin/Source/CreateModPluginEditor/Private/CreateModWindow.cpp"
                                 },
                                 "region": {
                                     "startLine": 343,

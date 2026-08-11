@@ -39,6 +39,9 @@
 /NOEXP
 "G:/EasternEraMod/Intermediate/Build/Win64/x64/EastRimWorldEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
 "G:/EasternEraMod/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPluginEditor/Module.CreateModPluginEditor.cpp.obj"
+"G:/EasternEraMod/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPluginEditor/CreateModPluginEditor.cpp.obj"
+"G:/EasternEraMod/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPluginEditor/ModInfoEditorCommands.cpp.obj"
+"G:/EasternEraMod/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPluginEditor/UsmapExporter.cpp.obj"
 "G:/EasternEraMod/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPluginEditor/Default.rc2.res"
 "G:/EasternEraMod/Plugins/UnLua/Source/ThirdParty/Lua/lua-5.4.3/lib-c/Win64/Release/Lua.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/Slate/UnrealEditor-Slate.lib"

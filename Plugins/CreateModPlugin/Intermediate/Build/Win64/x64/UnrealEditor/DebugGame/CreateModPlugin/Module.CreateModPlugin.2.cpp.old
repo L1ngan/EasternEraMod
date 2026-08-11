@@ -2,5 +2,5 @@
 #include "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/CreateModPlugin/UHT/CommonUIStruct.gen.cpp"
 #include "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/CreateModPlugin/UHT/CreateModPlugin.init.gen.cpp"
 #include "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/CreateModPlugin/UHT/EquipmentDataStruct.gen.cpp"
+#include "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/CreateModPlugin/UHT/GenerationMonster.gen.cpp"
 #include "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/CreateModPlugin/UHT/ItemDataStruct.gen.cpp"
-#include "H:/Project/Plugins/CreateModPlugin/Intermediate/Build/Win64/UnrealEditor/Inc/CreateModPlugin/UHT/ModNewGameStruct.gen.cpp"

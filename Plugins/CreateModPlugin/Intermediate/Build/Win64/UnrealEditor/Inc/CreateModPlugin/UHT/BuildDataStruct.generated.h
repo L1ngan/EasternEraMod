@@ -72,6 +72,26 @@ struct FModBuildData;
 struct FModBuildUIData;
 // ********** End ScriptStruct FModBuildUIData *****************************************************
 
+// ********** Begin ScriptStruct FModBuildTabStruct ************************************************
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h_458_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FModBuildTabStruct_Statics; \
+	static class UScriptStruct* StaticStruct(); \
+	typedef FModDataBase Super;
+
+
+struct FModBuildTabStruct;
+// ********** End ScriptStruct FModBuildTabStruct **************************************************
+
+// ********** Begin ScriptStruct FModBuildListCategorizeStruct *************************************
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h_475_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FModBuildListCategorizeStruct_Statics; \
+	static class UScriptStruct* StaticStruct(); \
+	typedef FModDataBase Super;
+
+
+struct FModBuildListCategorizeStruct;
+// ********** End ScriptStruct FModBuildListCategorizeStruct ***************************************
+
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h
 

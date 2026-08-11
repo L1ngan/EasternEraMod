@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "g:\\modproject\\plugins\\createmodplugin\\source\\createmodplugineditor\\private\\packagemodwindow.cpp",
+        "Source": "h:\\project\\plugins\\createmodplugin\\source\\createmodplugineditor\\private\\packagemodwindow.cpp",
         "ProvidedModule": "",
-        "PCH": "g:\\modproject\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "PCH": "h:\\project\\intermediate\\build\\win64\\x64\\eastrimworldeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
         "Includes": [
-            "g:\\modproject\\plugins\\createmodplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\createmodplugineditor\\definitions.createmodplugineditor.h",
-            "g:\\modproject\\plugins\\createmodplugin\\source\\createmodplugineditor\\public\\packagemodwindow.h",
+            "h:\\project\\plugins\\createmodplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\createmodplugineditor\\definitions.createmodplugineditor.h",
+            "h:\\project\\plugins\\createmodplugin\\source\\createmodplugineditor\\public\\packagemodwindow.h",
             "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\slate\\public\\slatebasics.h",
             "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\core\\public\\misc\\monolithicheaderboilerplate.h",
             "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\core\\public\\core.h",
@@ -167,14 +167,9 @@
             "e:\\ue5.6\\ue_5.6\\engine\\source\\runtime\\slate\\public\\widgets\\notifications\\snotificationlist.h",
             "e:\\ue5.6\\ue_5.6\\engine\\source\\developer\\desktopplatform\\public\\desktopplatformmodule.h",
             "e:\\ue5.6\\ue_5.6\\engine\\source\\developer\\desktopplatform\\public\\idesktopplatform.h",
-            "g:\\modproject\\plugins\\createmodplugin\\source\\createmodplugin\\public\\modtoolversion.h",
-            "g:\\modproject\\plugins\\createmodplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\createmodplugin\\uht\\modtoolversion.generated.h",
-            "g:\\modproject\\plugins\\createmodplugin\\source\\createmodplugin\\public\\modconfigexporter.h",
-            "g:\\modproject\\plugins\\unlua\\source\\unlua\\public\\lua.hpp",
-            "g:\\modproject\\plugins\\unlua\\source\\thirdparty\\lua\\lua-5.4.3\\src\\lua.h",
-            "g:\\modproject\\plugins\\unlua\\source\\thirdparty\\lua\\lua-5.4.3\\src\\luaconf.h",
-            "g:\\modproject\\plugins\\unlua\\source\\thirdparty\\lua\\lua-5.4.3\\src\\lualib.h",
-            "g:\\modproject\\plugins\\unlua\\source\\thirdparty\\lua\\lua-5.4.3\\src\\lauxlib.h"
+            "h:\\project\\plugins\\createmodplugin\\source\\createmodplugin\\public\\modtoolversion.h",
+            "h:\\project\\plugins\\createmodplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\createmodplugin\\uht\\modtoolversion.generated.h",
+            "h:\\project\\plugins\\createmodplugin\\source\\createmodplugin\\public\\modconfigexporter.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

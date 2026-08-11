@@ -10,19 +10,25 @@
 		"Module.CreateModPlugin.2.cpp.obj": [
 			"CommonUIStruct.gen.cpp.obj",
 			"CreateModPlugin.init.gen.cpp.obj",
+			"DialogueDataStruct.gen.cpp.obj",
 			"EquipmentDataStruct.gen.cpp.obj",
 			"GenerationMonster.gen.cpp.obj",
 			"ItemDataStruct.gen.cpp.obj"
 		],
 		"Module.CreateModPlugin.3.cpp.obj": [
+			"MartialArtsDataStruct.gen.cpp.obj",
 			"ModNewGameStruct.gen.cpp.obj",
 			"ModToolVersion.gen.cpp.obj",
+			"TaskDataStruct.gen.cpp.obj"
+		],
+		"Module.CreateModPlugin.4.cpp.obj": [
 			"TechnologyDataStruct.gen.cpp.obj",
 			"WorldDataStruct.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
 			"CreateModPlugin.cpp.obj",
 			"BaseDataStruct.cpp.obj",
 			"ModConfigExporter.cpp.obj",
+			"ModConfigExporterTests.cpp.obj",
 			"TechnologyDataStruct.cpp.obj"
 		]
 	}

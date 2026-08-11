@@ -9,3 +9,4 @@
 #include "H:/Project/Plugins/CreateModPlugin/Source/CreateModPluginEditor/Private/ModInfoEditorData.cpp"
 #include "H:/Project/Plugins/CreateModPlugin/Source/CreateModPluginEditor/Private/ModInfoEditorWindow.cpp"
 #include "H:/Project/Plugins/CreateModPlugin/Source/CreateModPluginEditor/Private/PackageModWindow.cpp"
+#include "H:/Project/Plugins/CreateModPlugin/Source/CreateModPluginEditor/Private/UsmapExporter.cpp"

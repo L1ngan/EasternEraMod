@@ -17,6 +17,7 @@
             "h:\\project\\plugins\\createmodplugin\\source\\createmodplugineditor\\public\\modinfoeditorwindow.h",
             "h:\\project\\plugins\\createmodplugin\\source\\createmodplugineditor\\public\\createmodwindow.h",
             "h:\\project\\plugins\\createmodplugin\\source\\createmodplugineditor\\public\\packagemodwindow.h",
+            "h:\\project\\plugins\\createmodplugin\\source\\createmodplugineditor\\public\\usmapexporter.h",
             "h:\\project\\plugins\\createmodplugin\\source\\createmodplugineditor\\public\\modinfoeditorcommands.h",
             "e:\\ue5.6\\ue_5.6\\engine\\source\\editor\\editorstyle\\public\\editorstyleset.h",
             "h:\\project\\plugins\\createmodplugin\\source\\createmodplugineditor\\public\\modinfodatacustomization.h",
@@ -273,7 +274,8 @@
             "h:\\project\\plugins\\unlua\\source\\thirdparty\\lua\\lua-5.4.3\\src\\lua.h",
             "h:\\project\\plugins\\unlua\\source\\thirdparty\\lua\\lua-5.4.3\\src\\luaconf.h",
             "h:\\project\\plugins\\unlua\\source\\thirdparty\\lua\\lua-5.4.3\\src\\lualib.h",
-            "h:\\project\\plugins\\unlua\\source\\thirdparty\\lua\\lua-5.4.3\\src\\lauxlib.h"
+            "h:\\project\\plugins\\unlua\\source\\thirdparty\\lua\\lua-5.4.3\\src\\lauxlib.h",
+            "h:\\project\\plugins\\createmodplugin\\source\\createmodplugineditor\\private\\usmapexporter.cpp"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
