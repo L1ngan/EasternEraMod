@@ -98,6 +98,10 @@ enum class EModConfigType : uint8
 	BuildTabConfig,
 	//建筑分类
 	BuildListCategorizeConfig,
+	//势力等级信息（势力声望级别配置）
+	ForceLevelInfo,
+	//势力分堂服饰限制
+	SubClassApparelLimit,
 };
 
 //Mod资产类型
@@ -106,6 +110,8 @@ enum class EModDataAssetType : uint8
 {
 	None = 0,
 	NewGameConfiguration = 1,
+	//角色外观配置资产
+	CharacterAppearanceConfiguration = 2,
 };
 
 //Mod数据表
