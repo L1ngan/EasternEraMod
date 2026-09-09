@@ -6,6 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "WorldDataStruct.h"
+#include "GameplayTagContainer.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
@@ -16,13 +17,18 @@ BINKMEDIAPLAYER_API UClass* Z_Construct_UClass_UBinkMediaPlayer_NoRegister();
 COMMONUI_API UClass* Z_Construct_UClass_UCommonActivatableWidget_NoRegister();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FTransform();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
+CREATEMODPLUGIN_API UEnum* Z_Construct_UEnum_CreateModPlugin_EModForceOperationType();
 CREATEMODPLUGIN_API UEnum* Z_Construct_UEnum_CreateModPlugin_EModWorldPlaceType();
+CREATEMODPLUGIN_API UScriptStruct* Z_Construct_UScriptStruct_FModBattleBuffGroup();
 CREATEMODPLUGIN_API UScriptStruct* Z_Construct_UScriptStruct_FModDataBase();
+CREATEMODPLUGIN_API UScriptStruct* Z_Construct_UScriptStruct_FModForceLevelInfo();
+CREATEMODPLUGIN_API UScriptStruct* Z_Construct_UScriptStruct_FModSubClassApparelConfig();
 CREATEMODPLUGIN_API UScriptStruct* Z_Construct_UScriptStruct_FModWorldPlaceInfo();
 ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMesh_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UWorld_NoRegister();
+GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTagContainer();
 LEVELSEQUENCE_API UClass* Z_Construct_UClass_ULevelSequence_NoRegister();
 UPackage* Z_Construct_UPackage__Script_CreateModPlugin();
 // ********** End Cross Module References **********************************************************
@@ -902,17 +908,846 @@ UScriptStruct* Z_Construct_UScriptStruct_FModWorldPlaceInfo()
 }
 // ********** End ScriptStruct FModWorldPlaceInfo **************************************************
 
+// ********** Begin Enum EModForceOperationType ****************************************************
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_EModForceOperationType;
+static UEnum* EModForceOperationType_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_EModForceOperationType.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_EModForceOperationType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_CreateModPlugin_EModForceOperationType, (UObject*)Z_Construct_UPackage__Script_CreateModPlugin(), TEXT("EModForceOperationType"));
+	}
+	return Z_Registration_Info_UEnum_EModForceOperationType.OuterSingleton;
+}
+template<> CREATEMODPLUGIN_API UEnum* StaticEnum<EModForceOperationType>()
+{
+	return EModForceOperationType_StaticEnum();
+}
+struct Z_Construct_UEnum_CreateModPlugin_EModForceOperationType_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "Alliance.Comment", "//\xe5\x90\x8c\xe7\x9b\x9f\n" },
+		{ "Alliance.Name", "EModForceOperationType::Alliance" },
+		{ "Alliance.ToolTip", "\xe5\x90\x8c\xe7\x9b\x9f" },
+		{ "AttackTogether.Comment", "//\xe5\x85\xb1\xe5\x90\x8c\xe6\x94\xbb\xe6\x89\x93\n" },
+		{ "AttackTogether.Name", "EModForceOperationType::AttackTogether" },
+		{ "AttackTogether.ToolTip", "\xe5\x85\xb1\xe5\x90\x8c\xe6\x94\xbb\xe6\x89\x93" },
+		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\x8a\xbf\xe5\x8a\x9b\xe5\x8f\xaf\xe6\x89\xa7\xe8\xa1\x8c\xe7\x9a\x84\xe6\x93\x8d\xe4\xbd\x9c\xe7\xb1\xbb\xe5\x9e\x8b\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+		{ "None.Name", "EModForceOperationType::None" },
+		{ "SubmitToSelf.Comment", "//\xe5\xb8\xae\xe6\xb4\xbe\n" },
+		{ "SubmitToSelf.Name", "EModForceOperationType::SubmitToSelf" },
+		{ "SubmitToSelf.ToolTip", "\xe5\xb8\xae\xe6\xb4\xbe" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x8a\xbf\xe5\x8a\x9b\xe5\x8f\xaf\xe6\x89\xa7\xe8\xa1\x8c\xe7\x9a\x84\xe6\x93\x8d\xe4\xbd\x9c\xe7\xb1\xbb\xe5\x9e\x8b" },
+#endif
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "EModForceOperationType::None", (int64)EModForceOperationType::None },
+		{ "EModForceOperationType::AttackTogether", (int64)EModForceOperationType::AttackTogether },
+		{ "EModForceOperationType::Alliance", (int64)EModForceOperationType::Alliance },
+		{ "EModForceOperationType::SubmitToSelf", (int64)EModForceOperationType::SubmitToSelf },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+};
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_CreateModPlugin_EModForceOperationType_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_CreateModPlugin,
+	nullptr,
+	"EModForceOperationType",
+	"EModForceOperationType",
+	Z_Construct_UEnum_CreateModPlugin_EModForceOperationType_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_CreateModPlugin_EModForceOperationType_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::EnumClass,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_CreateModPlugin_EModForceOperationType_Statics::Enum_MetaDataParams), Z_Construct_UEnum_CreateModPlugin_EModForceOperationType_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_CreateModPlugin_EModForceOperationType()
+{
+	if (!Z_Registration_Info_UEnum_EModForceOperationType.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EModForceOperationType.InnerSingleton, Z_Construct_UEnum_CreateModPlugin_EModForceOperationType_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_EModForceOperationType.InnerSingleton;
+}
+// ********** End Enum EModForceOperationType ******************************************************
+
+// ********** Begin ScriptStruct FModBattleBuffGroup ***********************************************
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FModBattleBuffGroup;
+class UScriptStruct* FModBattleBuffGroup::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_FModBattleBuffGroup.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_FModBattleBuffGroup.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FModBattleBuffGroup, (UObject*)Z_Construct_UPackage__Script_CreateModPlugin(), TEXT("ModBattleBuffGroup"));
+	}
+	return Z_Registration_Info_UScriptStruct_FModBattleBuffGroup.OuterSingleton;
+}
+struct Z_Construct_UScriptStruct_FModBattleBuffGroup_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//mod\xe6\x88\x98\xe6\x96\x97""buff\xe9\x9b\x86\xe5\x90\x88\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "mod\xe6\x88\x98\xe6\x96\x97""buff\xe9\x9b\x86\xe5\x90\x88" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ApplyTargetTag_MetaData[] = {
+		{ "Category", "ModBattleBuffGroup" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe6\x96\xbd\xe5\x8a\xa0\xe7\x9b\xae\xe6\xa0\x87\xe7\xbb\x84\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe6\x96\xbd\xe5\x8a\xa0\xe7\x9b\xae\xe6\xa0\x87\xe7\xbb\x84" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Buffs_MetaData[] = {
+		{ "Category", "ModBattleBuffGroup" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//BuffID\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "BuffID" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_ApplyTargetTag;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_Buffs_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_Buffs;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FModBattleBuffGroup>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FModBattleBuffGroup_Statics::NewProp_ApplyTargetTag = { "ApplyTargetTag", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModBattleBuffGroup, ApplyTargetTag), Z_Construct_UScriptStruct_FGameplayTagContainer, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ApplyTargetTag_MetaData), NewProp_ApplyTargetTag_MetaData) }; // 2104890724
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FModBattleBuffGroup_Statics::NewProp_Buffs_Inner = { "Buffs", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModBattleBuffGroup_Statics::NewProp_Buffs = { "Buffs", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModBattleBuffGroup, Buffs), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Buffs_MetaData), NewProp_Buffs_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FModBattleBuffGroup_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModBattleBuffGroup_Statics::NewProp_ApplyTargetTag,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModBattleBuffGroup_Statics::NewProp_Buffs_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModBattleBuffGroup_Statics::NewProp_Buffs,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FModBattleBuffGroup_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FModBattleBuffGroup_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_CreateModPlugin,
+	nullptr,
+	&NewStructOps,
+	"ModBattleBuffGroup",
+	Z_Construct_UScriptStruct_FModBattleBuffGroup_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FModBattleBuffGroup_Statics::PropPointers),
+	sizeof(FModBattleBuffGroup),
+	alignof(FModBattleBuffGroup),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FModBattleBuffGroup_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FModBattleBuffGroup_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FModBattleBuffGroup()
+{
+	if (!Z_Registration_Info_UScriptStruct_FModBattleBuffGroup.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_FModBattleBuffGroup.InnerSingleton, Z_Construct_UScriptStruct_FModBattleBuffGroup_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_FModBattleBuffGroup.InnerSingleton;
+}
+// ********** End ScriptStruct FModBattleBuffGroup *************************************************
+
+// ********** Begin ScriptStruct FModForceLevelInfo ************************************************
+static_assert(std::is_polymorphic<FModForceLevelInfo>() == std::is_polymorphic<FModDataBase>(), "USTRUCT FModForceLevelInfo cannot be polymorphic unless super FModDataBase is polymorphic");
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FModForceLevelInfo;
+class UScriptStruct* FModForceLevelInfo::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_FModForceLevelInfo.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_FModForceLevelInfo.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FModForceLevelInfo, (UObject*)Z_Construct_UPackage__Script_CreateModPlugin(), TEXT("ModForceLevelInfo"));
+	}
+	return Z_Registration_Info_UScriptStruct_FModForceLevelInfo.OuterSingleton;
+}
+struct Z_Construct_UScriptStruct_FModForceLevelInfo_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//mod\xe5\x8a\xbf\xe5\x8a\x9b\xe7\xad\x89\xe7\xba\xa7\xe4\xbf\xa1\xe6\x81\xaf\xef\xbc\x88\xe5\x8a\xbf\xe5\x8a\x9b\xe5\xa3\xb0\xe6\x9c\x9b\xe7\xba\xa7\xe5\x88\xab\xe9\x85\x8d\xe7\xbd\xae\xef\xbc\x89\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "mod\xe5\x8a\xbf\xe5\x8a\x9b\xe7\xad\x89\xe7\xba\xa7\xe4\xbf\xa1\xe6\x81\xaf\xef\xbc\x88\xe5\x8a\xbf\xe5\x8a\x9b\xe5\xa3\xb0\xe6\x9c\x9b\xe7\xba\xa7\xe5\x88\xab\xe9\x85\x8d\xe7\xbd\xae\xef\xbc\x89" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ForceLevel_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\x8a\xbf\xe5\x8a\x9b\xe7\xad\x89\xe7\xba\xa7\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x8a\xbf\xe5\x8a\x9b\xe7\xad\x89\xe7\xba\xa7" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ForceLevelName_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\xa3\xb0\xe6\x9c\x9b\xe7\xba\xa7\xe5\x88\xab\xe5\x90\x8d\xe7\xa7\xb0\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\xa3\xb0\xe6\x9c\x9b\xe7\xba\xa7\xe5\x88\xab\xe5\x90\x8d\xe7\xa7\xb0" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LevelUpConditionIDs_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\x8d\x87\xe7\xba\xa7\xe6\x9d\xa1\xe4\xbb\xb6ID(\xe5\x85\xb3\xe8\x81\x94""CommonTaskCondition\xe8\xa1\xa8)(\xe4\xbb\x8e\xe4\xbd\x8e\xe4\xb8\x80\xe7\xba\xa7\xe5\x8d\x87\xe7\xba\xa7\xe5\x88\xb0\xe6\x9c\xac\xe7\xba\xa7\xe9\x9c\x80\xe8\xa6\x81\xe7\x9a\x84\xe6\x9d\xa1\xe4\xbb\xb6)\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x8d\x87\xe7\xba\xa7\xe6\x9d\xa1\xe4\xbb\xb6ID(\xe5\x85\xb3\xe8\x81\x94""CommonTaskCondition\xe8\xa1\xa8)(\xe4\xbb\x8e\xe4\xbd\x8e\xe4\xb8\x80\xe7\xba\xa7\xe5\x8d\x87\xe7\xba\xa7\xe5\x88\xb0\xe6\x9c\xac\xe7\xba\xa7\xe9\x9c\x80\xe8\xa6\x81\xe7\x9a\x84\xe6\x9d\xa1\xe4\xbb\xb6)" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_UnlockContentIDs_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe8\xa7\xa3\xe9\x94\x81\xe5\x86\x85\xe5\xae\xb9(\xe5\x85\xb3\xe8\x81\x94TechUnlockItemConig\xe8\xa1\xa8)\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe8\xa7\xa3\xe9\x94\x81\xe5\x86\x85\xe5\xae\xb9(\xe5\x85\xb3\xe8\x81\x94TechUnlockItemConig\xe8\xa1\xa8)" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LevelReputation_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\x8d\x87\xe7\xba\xa7\xe6\x89\x80\xe9\x9c\x80\xe6\x9c\x80\xe4\xbd\x8e\xe5\xa3\xb0\xe6\x9c\x9b\xe5\x80\xbc\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x8d\x87\xe7\xba\xa7\xe6\x89\x80\xe9\x9c\x80\xe6\x9c\x80\xe4\xbd\x8e\xe5\xa3\xb0\xe6\x9c\x9b\xe5\x80\xbc" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_NumberOfSubclasses_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\x88\x86\xe5\xa0\x82\xe6\x95\xb0\xe9\x87\x8f\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x88\x86\xe5\xa0\x82\xe6\x95\xb0\xe9\x87\x8f" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ForceMaxCharacterNum_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\xae\x97\xe9\x97\xa8\xe4\xba\xba\xe6\x95\xb0\xe4\xb8\x8a\xe9\x99\x90\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\xae\x97\xe9\x97\xa8\xe4\xba\xba\xe6\x95\xb0\xe4\xb8\x8a\xe9\x99\x90" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MaxBattleDiscipleNum_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\x87\xba\xe5\xbe\x81\xe5\x8f\xaf\xe6\x90\xba\xe5\xb8\xa6\xe5\xbc\x9f\xe5\xad\x90\xe4\xb8\x8a\xe9\x99\x90(\xe4\xb8\x8d\xe5\x90\xab\xe6\x8c\x87\xe6\x8c\xa5\xe5\xae\x98)\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x87\xba\xe5\xbe\x81\xe5\x8f\xaf\xe6\x90\xba\xe5\xb8\xa6\xe5\xbc\x9f\xe5\xad\x90\xe4\xb8\x8a\xe9\x99\x90(\xe4\xb8\x8d\xe5\x90\xab\xe6\x8c\x87\xe6\x8c\xa5\xe5\xae\x98)" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_NumberOfSubclassesMembers_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\x88\x86\xe5\xa0\x82\xe6\x88\x90\xe5\x91\x98\xe6\x95\xb0\xe9\x87\x8f\xef\xbc\x88\xe5\x8c\x85\xe5\x90\xab\xef\xbc\x9a\xe5\x88\x86\xe5\xa0\x82\xe5\xa0\x82\xe4\xb8\xbb+\xe5\xbc\x9f\xe5\xad\x90\xef\xbc\x89\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x88\x86\xe5\xa0\x82\xe6\x88\x90\xe5\x91\x98\xe6\x95\xb0\xe9\x87\x8f\xef\xbc\x88\xe5\x8c\x85\xe5\x90\xab\xef\xbc\x9a\xe5\x88\x86\xe5\xa0\x82\xe5\xa0\x82\xe4\xb8\xbb+\xe5\xbc\x9f\xe5\xad\x90\xef\xbc\x89" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_NumberOfSubclassesFeature_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\x8f\xaf\xe9\x85\x8d\xe7\xbd\xae\xe7\x9a\x84\xe5\x88\x86\xe5\xa0\x82\xe7\x89\xb9\xe6\x80\xa7\xe6\x95\xb0\xe9\x87\x8f\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x8f\xaf\xe9\x85\x8d\xe7\xbd\xae\xe7\x9a\x84\xe5\x88\x86\xe5\xa0\x82\xe7\x89\xb9\xe6\x80\xa7\xe6\x95\xb0\xe9\x87\x8f" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SubclassesFeatureIDs_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\x8f\xaf\xe9\x80\x89\xe6\x8b\xa9\xe7\x9a\x84\xe5\x88\x86\xe5\xa0\x82\xe7\x89\xb9\xe6\x80\xa7\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x8f\xaf\xe9\x80\x89\xe6\x8b\xa9\xe7\x9a\x84\xe5\x88\x86\xe5\xa0\x82\xe7\x89\xb9\xe6\x80\xa7" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PurposeNum_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\x8f\xaf\xe6\xbf\x80\xe6\xb4\xbb\xe7\x9a\x84\xe5\xae\x97\xe6\x97\xa8\xe6\x95\xb0\xe9\x87\x8f\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x8f\xaf\xe6\xbf\x80\xe6\xb4\xbb\xe7\x9a\x84\xe5\xae\x97\xe6\x97\xa8\xe6\x95\xb0\xe9\x87\x8f" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_NumberOfStations_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe9\xa9\xbb\xe5\x9c\xb0\xe6\x95\xb0\xe9\x87\x8f\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe9\xa9\xbb\xe5\x9c\xb0\xe6\x95\xb0\xe9\x87\x8f" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_NumberOfTowns_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\x9f\x8e\xe9\x95\x87\xe6\x95\xb0\xe9\x87\x8f\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x9f\x8e\xe9\x95\x87\xe6\x95\xb0\xe9\x87\x8f" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_NumberOfResourcePoints_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe8\xb5\x84\xe6\xba\x90\xe7\x82\xb9\xe6\x95\xb0\xe9\x87\x8f\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe8\xb5\x84\xe6\xba\x90\xe7\x82\xb9\xe6\x95\xb0\xe9\x87\x8f" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TradeMarkup_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe8\xb4\xb8\xe6\x98\x93\xe5\x8a\xa0\xe6\x88\x90\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe8\xb4\xb8\xe6\x98\x93\xe5\x8a\xa0\xe6\x88\x90" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SpeedOfTrade_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe8\xb4\xb8\xe6\x98\x93\xe9\x80\x9f\xe5\xba\xa6\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe8\xb4\xb8\xe6\x98\x93\xe9\x80\x9f\xe5\xba\xa6" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_FeudalOfficialUnlockBuilding_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\xb0\x81\xe5\xae\x98\xe8\xa7\xa3\xe9\x94\x81\xe7\x9a\x84\xe5\xbb\xba\xe7\xad\x91\xe7\x89\xa9\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\xb0\x81\xe5\xae\x98\xe8\xa7\xa3\xe9\x94\x81\xe7\x9a\x84\xe5\xbb\xba\xe7\xad\x91\xe7\x89\xa9" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ChamberOfCommerceUnlockBuilding_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\x95\x86\xe4\xbc\x9a\xe8\xa7\xa3\xe9\x94\x81\xe7\x9a\x84\xe5\xbb\xba\xe7\xad\x91\xe7\x89\xa9\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x95\x86\xe4\xbc\x9a\xe8\xa7\xa3\xe9\x94\x81\xe7\x9a\x84\xe5\xbb\xba\xe7\xad\x91\xe7\x89\xa9" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MasterSalary_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\xae\x97\xe4\xb8\xbb\xe5\xb7\xa5\xe8\xb5\x84\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\xae\x97\xe4\xb8\xbb\xe5\xb7\xa5\xe8\xb5\x84" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SubMasterSalary_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\xa0\x82\xe4\xb8\xbb\xe5\xb7\xa5\xe8\xb5\x84\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\xa0\x82\xe4\xb8\xbb\xe5\xb7\xa5\xe8\xb5\x84" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CoreCharacterSalary_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\x86\x85\xe9\x97\xa8\xe5\xb7\xa5\xe8\xb5\x84\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x86\x85\xe9\x97\xa8\xe5\xb7\xa5\xe8\xb5\x84" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MarginalCharacterSalary_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\xa4\x96\xe9\x97\xa8\xe5\xb7\xa5\xe8\xb5\x84\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\xa4\x96\xe9\x97\xa8\xe5\xb7\xa5\xe8\xb5\x84" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_FactionUnlockBuilding_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\xb8\xae\xe6\xb4\xbe\xe8\xa7\xa3\xe9\x94\x81\xe7\x9a\x84\xe5\xbb\xba\xe7\xad\x91\xe7\x89\xa9\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\xb8\xae\xe6\xb4\xbe\xe8\xa7\xa3\xe9\x94\x81\xe7\x9a\x84\xe5\xbb\xba\xe7\xad\x91\xe7\x89\xa9" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SectUnlockBuilding_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe9\x97\xa8\xe6\xb4\xbe\xe8\xa7\xa3\xe9\x94\x81\xe7\x9a\x84\xe5\xbb\xba\xe7\xad\x91\xe7\x89\xa9\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe9\x97\xa8\xe6\xb4\xbe\xe8\xa7\xa3\xe9\x94\x81\xe7\x9a\x84\xe5\xbb\xba\xe7\xad\x91\xe7\x89\xa9" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HomotropyFavorability_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\x90\x8c\xe5\x80\xbe\xe5\x90\x91\xe5\xa5\xbd\xe6\x84\x9f\xe5\xba\xa6\xe5\xa2\x9e\xe5\x8a\xa0\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x90\x8c\xe5\x80\xbe\xe5\x90\x91\xe5\xa5\xbd\xe6\x84\x9f\xe5\xba\xa6\xe5\xa2\x9e\xe5\x8a\xa0" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DifferentTendenciesFavorability_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe4\xb8\x8d\xe5\x90\x8c\xe5\x80\xbe\xe5\x90\x91\xe5\xa5\xbd\xe6\x84\x9f\xe5\xba\xa6\xe5\xa2\x9e\xe5\x8a\xa0\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe4\xb8\x8d\xe5\x90\x8c\xe5\x80\xbe\xe5\x90\x91\xe5\xa5\xbd\xe6\x84\x9f\xe5\xba\xa6\xe5\xa2\x9e\xe5\x8a\xa0" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CanForceOperation_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\x85\x81\xe8\xae\xb8\xe7\x9a\x84\xe5\x8a\xbf\xe5\x8a\x9b\xe6\x93\x8d\xe4\xbd\x9c\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x85\x81\xe8\xae\xb8\xe7\x9a\x84\xe5\x8a\xbf\xe5\x8a\x9b\xe6\x93\x8d\xe4\xbd\x9c" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MaxGrowScore_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//NPC\xe5\x8a\xbf\xe5\x8a\x9b\xe6\x88\x90\xe9\x95\xbf\xe7\xa7\xaf\xe5\x88\x86\xe4\xb8\x8a\xe9\x99\x90\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "NPC\xe5\x8a\xbf\xe5\x8a\x9b\xe6\x88\x90\xe9\x95\xbf\xe7\xa7\xaf\xe5\x88\x86\xe4\xb8\x8a\xe9\x99\x90" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AddGrowScore_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//NPC\xe5\x8a\xbf\xe5\x8a\x9b\xe6\x88\x90\xe9\x95\xbf\xe7\xa7\xaf\xe5\x88\x86\xe5\xae\x9a\xe6\x9c\x9f\xe5\x8a\xa0\xe5\x80\xbc\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "NPC\xe5\x8a\xbf\xe5\x8a\x9b\xe6\x88\x90\xe9\x95\xbf\xe7\xa7\xaf\xe5\x88\x86\xe5\xae\x9a\xe6\x9c\x9f\xe5\x8a\xa0\xe5\x80\xbc" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_NPCConstructionTimes_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe6\xaf\x8f\xe5\x91\xa8\xe6\x9c\x9f\xe8\x87\xaa\xe5\x8a\xa8\xe5\xbb\xba\xe9\x80\xa0\xe5\x8d\x87\xe7\xba\xa7\xe8\xae\xbe\xe6\x96\xbd\xe7\x9a\x84\xe6\xac\xa1\xe6\x95\xb0\xe9\x9a\x8f\xe6\x9c\xba\xe6\x95\xb0\xe7\xbb\x84\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe6\xaf\x8f\xe5\x91\xa8\xe6\x9c\x9f\xe8\x87\xaa\xe5\x8a\xa8\xe5\xbb\xba\xe9\x80\xa0\xe5\x8d\x87\xe7\xba\xa7\xe8\xae\xbe\xe6\x96\xbd\xe7\x9a\x84\xe6\xac\xa1\xe6\x95\xb0\xe9\x9a\x8f\xe6\x9c\xba\xe6\x95\xb0\xe7\xbb\x84" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_UnlockDogfaceIDs_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\xb0\x8f\xe5\x85\xb5\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\xb0\x8f\xe5\x85\xb5" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_UnlockStrategicAbility_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe6\x88\x98\xe7\x95\xa5\xe6\x8a\x80\xe8\x83\xbd\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe6\x88\x98\xe7\x95\xa5\xe6\x8a\x80\xe8\x83\xbd" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_UnlockTowerDefense_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe9\x98\xb2\xe5\xbe\xa1\xe5\xa1\x94\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe9\x98\xb2\xe5\xbe\xa1\xe5\xa1\x94" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BattleBuffGroup_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe6\x88\x98\xe6\x96\x97\xe4\xb8\xad\xe7\x94\x9f\xe6\x95\x88\xe7\x9a\x84""Buff\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe6\x88\x98\xe6\x96\x97\xe4\xb8\xad\xe7\x94\x9f\xe6\x95\x88\xe7\x9a\x84""Buff" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AddMainPlaceStationedNum_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe5\xa2\x9e\xe5\x8a\xa0\xe4\xb8\xbb\xe5\x9f\x8e\xe9\xa9\xbb\xe6\x89\x8e\xe4\xb8\x8a\xe9\x99\x90\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\xa2\x9e\xe5\x8a\xa0\xe4\xb8\xbb\xe5\x9f\x8e\xe9\xa9\xbb\xe6\x89\x8e\xe4\xb8\x8a\xe9\x99\x90" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RecruitRate_MetaData[] = {
+		{ "Category", "ModForceLevelInfo" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe6\x8b\x9b\xe5\x8b\x9f\xe6\x88\x90\xe5\x8a\x9f\xe7\x8e\x87\xe5\xbd\xb1\xe5\x93\x8d\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe6\x8b\x9b\xe5\x8b\x9f\xe6\x88\x90\xe5\x8a\x9f\xe7\x8e\x87\xe5\xbd\xb1\xe5\x93\x8d" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FIntPropertyParams NewProp_ForceLevel;
+	static const UECodeGen_Private::FTextPropertyParams NewProp_ForceLevelName;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_LevelUpConditionIDs_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_LevelUpConditionIDs;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_UnlockContentIDs_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_UnlockContentIDs;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_LevelReputation;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_NumberOfSubclasses;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_ForceMaxCharacterNum;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_MaxBattleDiscipleNum;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_NumberOfSubclassesMembers_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_NumberOfSubclassesMembers;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_NumberOfSubclassesFeature;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_SubclassesFeatureIDs_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_SubclassesFeatureIDs;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_PurposeNum;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_NumberOfStations;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_NumberOfTowns;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_NumberOfResourcePoints;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_TradeMarkup;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_SpeedOfTrade;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_FeudalOfficialUnlockBuilding_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_FeudalOfficialUnlockBuilding;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_ChamberOfCommerceUnlockBuilding_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_ChamberOfCommerceUnlockBuilding;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_MasterSalary;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_SubMasterSalary;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_CoreCharacterSalary;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_MarginalCharacterSalary;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_FactionUnlockBuilding_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_FactionUnlockBuilding;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_SectUnlockBuilding_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_SectUnlockBuilding;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_HomotropyFavorability;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_DifferentTendenciesFavorability;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_CanForceOperation_Inner_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_CanForceOperation_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_CanForceOperation;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_MaxGrowScore;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_AddGrowScore;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_NPCConstructionTimes_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_NPCConstructionTimes;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_UnlockDogfaceIDs_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_UnlockDogfaceIDs;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_UnlockStrategicAbility_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_UnlockStrategicAbility;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_UnlockTowerDefense_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_UnlockTowerDefense;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_BattleBuffGroup_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_BattleBuffGroup;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_AddMainPlaceStationedNum;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_RecruitRate;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FModForceLevelInfo>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_ForceLevel = { "ForceLevel", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, ForceLevel), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ForceLevel_MetaData), NewProp_ForceLevel_MetaData) };
+const UECodeGen_Private::FTextPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_ForceLevelName = { "ForceLevelName", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, ForceLevelName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ForceLevelName_MetaData), NewProp_ForceLevelName_MetaData) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_LevelUpConditionIDs_Inner = { "LevelUpConditionIDs", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_LevelUpConditionIDs = { "LevelUpConditionIDs", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, LevelUpConditionIDs), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LevelUpConditionIDs_MetaData), NewProp_LevelUpConditionIDs_MetaData) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_UnlockContentIDs_Inner = { "UnlockContentIDs", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_UnlockContentIDs = { "UnlockContentIDs", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, UnlockContentIDs), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UnlockContentIDs_MetaData), NewProp_UnlockContentIDs_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_LevelReputation = { "LevelReputation", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, LevelReputation), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LevelReputation_MetaData), NewProp_LevelReputation_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_NumberOfSubclasses = { "NumberOfSubclasses", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, NumberOfSubclasses), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NumberOfSubclasses_MetaData), NewProp_NumberOfSubclasses_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_ForceMaxCharacterNum = { "ForceMaxCharacterNum", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, ForceMaxCharacterNum), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ForceMaxCharacterNum_MetaData), NewProp_ForceMaxCharacterNum_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_MaxBattleDiscipleNum = { "MaxBattleDiscipleNum", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, MaxBattleDiscipleNum), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MaxBattleDiscipleNum_MetaData), NewProp_MaxBattleDiscipleNum_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_NumberOfSubclassesMembers_Inner = { "NumberOfSubclassesMembers", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_NumberOfSubclassesMembers = { "NumberOfSubclassesMembers", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, NumberOfSubclassesMembers), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NumberOfSubclassesMembers_MetaData), NewProp_NumberOfSubclassesMembers_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_NumberOfSubclassesFeature = { "NumberOfSubclassesFeature", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, NumberOfSubclassesFeature), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NumberOfSubclassesFeature_MetaData), NewProp_NumberOfSubclassesFeature_MetaData) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_SubclassesFeatureIDs_Inner = { "SubclassesFeatureIDs", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_SubclassesFeatureIDs = { "SubclassesFeatureIDs", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, SubclassesFeatureIDs), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SubclassesFeatureIDs_MetaData), NewProp_SubclassesFeatureIDs_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_PurposeNum = { "PurposeNum", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, PurposeNum), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PurposeNum_MetaData), NewProp_PurposeNum_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_NumberOfStations = { "NumberOfStations", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, NumberOfStations), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NumberOfStations_MetaData), NewProp_NumberOfStations_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_NumberOfTowns = { "NumberOfTowns", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, NumberOfTowns), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NumberOfTowns_MetaData), NewProp_NumberOfTowns_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_NumberOfResourcePoints = { "NumberOfResourcePoints", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, NumberOfResourcePoints), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NumberOfResourcePoints_MetaData), NewProp_NumberOfResourcePoints_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_TradeMarkup = { "TradeMarkup", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, TradeMarkup), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TradeMarkup_MetaData), NewProp_TradeMarkup_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_SpeedOfTrade = { "SpeedOfTrade", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, SpeedOfTrade), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SpeedOfTrade_MetaData), NewProp_SpeedOfTrade_MetaData) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_FeudalOfficialUnlockBuilding_Inner = { "FeudalOfficialUnlockBuilding", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_FeudalOfficialUnlockBuilding = { "FeudalOfficialUnlockBuilding", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, FeudalOfficialUnlockBuilding), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FeudalOfficialUnlockBuilding_MetaData), NewProp_FeudalOfficialUnlockBuilding_MetaData) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_ChamberOfCommerceUnlockBuilding_Inner = { "ChamberOfCommerceUnlockBuilding", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_ChamberOfCommerceUnlockBuilding = { "ChamberOfCommerceUnlockBuilding", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, ChamberOfCommerceUnlockBuilding), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ChamberOfCommerceUnlockBuilding_MetaData), NewProp_ChamberOfCommerceUnlockBuilding_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_MasterSalary = { "MasterSalary", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, MasterSalary), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MasterSalary_MetaData), NewProp_MasterSalary_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_SubMasterSalary = { "SubMasterSalary", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, SubMasterSalary), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SubMasterSalary_MetaData), NewProp_SubMasterSalary_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_CoreCharacterSalary = { "CoreCharacterSalary", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, CoreCharacterSalary), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CoreCharacterSalary_MetaData), NewProp_CoreCharacterSalary_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_MarginalCharacterSalary = { "MarginalCharacterSalary", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, MarginalCharacterSalary), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MarginalCharacterSalary_MetaData), NewProp_MarginalCharacterSalary_MetaData) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_FactionUnlockBuilding_Inner = { "FactionUnlockBuilding", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_FactionUnlockBuilding = { "FactionUnlockBuilding", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, FactionUnlockBuilding), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FactionUnlockBuilding_MetaData), NewProp_FactionUnlockBuilding_MetaData) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_SectUnlockBuilding_Inner = { "SectUnlockBuilding", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_SectUnlockBuilding = { "SectUnlockBuilding", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, SectUnlockBuilding), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SectUnlockBuilding_MetaData), NewProp_SectUnlockBuilding_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_HomotropyFavorability = { "HomotropyFavorability", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, HomotropyFavorability), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HomotropyFavorability_MetaData), NewProp_HomotropyFavorability_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_DifferentTendenciesFavorability = { "DifferentTendenciesFavorability", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, DifferentTendenciesFavorability), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DifferentTendenciesFavorability_MetaData), NewProp_DifferentTendenciesFavorability_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_CanForceOperation_Inner_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_CanForceOperation_Inner = { "CanForceOperation", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_CreateModPlugin_EModForceOperationType, METADATA_PARAMS(0, nullptr) }; // 3296472
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_CanForceOperation = { "CanForceOperation", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, CanForceOperation), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CanForceOperation_MetaData), NewProp_CanForceOperation_MetaData) }; // 3296472
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_MaxGrowScore = { "MaxGrowScore", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, MaxGrowScore), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MaxGrowScore_MetaData), NewProp_MaxGrowScore_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_AddGrowScore = { "AddGrowScore", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, AddGrowScore), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AddGrowScore_MetaData), NewProp_AddGrowScore_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_NPCConstructionTimes_Inner = { "NPCConstructionTimes", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_NPCConstructionTimes = { "NPCConstructionTimes", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, NPCConstructionTimes), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NPCConstructionTimes_MetaData), NewProp_NPCConstructionTimes_MetaData) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_UnlockDogfaceIDs_Inner = { "UnlockDogfaceIDs", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_UnlockDogfaceIDs = { "UnlockDogfaceIDs", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, UnlockDogfaceIDs), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UnlockDogfaceIDs_MetaData), NewProp_UnlockDogfaceIDs_MetaData) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_UnlockStrategicAbility_Inner = { "UnlockStrategicAbility", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_UnlockStrategicAbility = { "UnlockStrategicAbility", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, UnlockStrategicAbility), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UnlockStrategicAbility_MetaData), NewProp_UnlockStrategicAbility_MetaData) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_UnlockTowerDefense_Inner = { "UnlockTowerDefense", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_UnlockTowerDefense = { "UnlockTowerDefense", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, UnlockTowerDefense), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UnlockTowerDefense_MetaData), NewProp_UnlockTowerDefense_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_BattleBuffGroup_Inner = { "BattleBuffGroup", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FModBattleBuffGroup, METADATA_PARAMS(0, nullptr) }; // 3373408239
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_BattleBuffGroup = { "BattleBuffGroup", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, BattleBuffGroup), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BattleBuffGroup_MetaData), NewProp_BattleBuffGroup_MetaData) }; // 3373408239
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_AddMainPlaceStationedNum = { "AddMainPlaceStationedNum", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, AddMainPlaceStationedNum), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AddMainPlaceStationedNum_MetaData), NewProp_AddMainPlaceStationedNum_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_RecruitRate = { "RecruitRate", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModForceLevelInfo, RecruitRate), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RecruitRate_MetaData), NewProp_RecruitRate_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_ForceLevel,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_ForceLevelName,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_LevelUpConditionIDs_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_LevelUpConditionIDs,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_UnlockContentIDs_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_UnlockContentIDs,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_LevelReputation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_NumberOfSubclasses,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_ForceMaxCharacterNum,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_MaxBattleDiscipleNum,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_NumberOfSubclassesMembers_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_NumberOfSubclassesMembers,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_NumberOfSubclassesFeature,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_SubclassesFeatureIDs_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_SubclassesFeatureIDs,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_PurposeNum,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_NumberOfStations,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_NumberOfTowns,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_NumberOfResourcePoints,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_TradeMarkup,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_SpeedOfTrade,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_FeudalOfficialUnlockBuilding_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_FeudalOfficialUnlockBuilding,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_ChamberOfCommerceUnlockBuilding_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_ChamberOfCommerceUnlockBuilding,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_MasterSalary,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_SubMasterSalary,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_CoreCharacterSalary,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_MarginalCharacterSalary,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_FactionUnlockBuilding_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_FactionUnlockBuilding,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_SectUnlockBuilding_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_SectUnlockBuilding,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_HomotropyFavorability,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_DifferentTendenciesFavorability,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_CanForceOperation_Inner_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_CanForceOperation_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_CanForceOperation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_MaxGrowScore,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_AddGrowScore,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_NPCConstructionTimes_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_NPCConstructionTimes,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_UnlockDogfaceIDs_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_UnlockDogfaceIDs,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_UnlockStrategicAbility_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_UnlockStrategicAbility,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_UnlockTowerDefense_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_UnlockTowerDefense,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_BattleBuffGroup_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_BattleBuffGroup,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_AddMainPlaceStationedNum,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewProp_RecruitRate,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_CreateModPlugin,
+	Z_Construct_UScriptStruct_FModDataBase,
+	&NewStructOps,
+	"ModForceLevelInfo",
+	Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::PropPointers),
+	sizeof(FModForceLevelInfo),
+	alignof(FModForceLevelInfo),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FModForceLevelInfo()
+{
+	if (!Z_Registration_Info_UScriptStruct_FModForceLevelInfo.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_FModForceLevelInfo.InnerSingleton, Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_FModForceLevelInfo.InnerSingleton;
+}
+// ********** End ScriptStruct FModForceLevelInfo **************************************************
+
+// ********** Begin ScriptStruct FModSubClassApparelConfig *****************************************
+static_assert(std::is_polymorphic<FModSubClassApparelConfig>() == std::is_polymorphic<FModDataBase>(), "USTRUCT FModSubClassApparelConfig cannot be polymorphic unless super FModDataBase is polymorphic");
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FModSubClassApparelConfig;
+class UScriptStruct* FModSubClassApparelConfig::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_FModSubClassApparelConfig.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_FModSubClassApparelConfig.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FModSubClassApparelConfig, (UObject*)Z_Construct_UPackage__Script_CreateModPlugin(), TEXT("ModSubClassApparelConfig"));
+	}
+	return Z_Registration_Info_UScriptStruct_FModSubClassApparelConfig.OuterSingleton;
+}
+struct Z_Construct_UScriptStruct_FModSubClassApparelConfig_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//mod\xe5\x8a\xbf\xe5\x8a\x9b\xe6\x9c\x8d\xe9\xa5\xb0\xe9\x99\x90\xe5\x88\xb6\xef\xbc\x88\xe6\xad\xa4\xe8\xa1\xa8\xe4\xb8\xad\xe6\xb2\xa1\xe6\x9c\x89\xe7\x9a\x84\xe6\x95\xb0\xe6\x8d\xae\xef\xbc\x8c\xe5\xb0\xb1\xe6\x98\xaf\xe6\x97\xa0\xe9\x99\x90\xe5\x88\xb6\xef\xbc\x89\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "mod\xe5\x8a\xbf\xe5\x8a\x9b\xe6\x9c\x8d\xe9\xa5\xb0\xe9\x99\x90\xe5\x88\xb6\xef\xbc\x88\xe6\xad\xa4\xe8\xa1\xa8\xe4\xb8\xad\xe6\xb2\xa1\xe6\x9c\x89\xe7\x9a\x84\xe6\x95\xb0\xe6\x8d\xae\xef\xbc\x8c\xe5\xb0\xb1\xe6\x98\xaf\xe6\x97\xa0\xe9\x99\x90\xe5\x88\xb6\xef\xbc\x89" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ApparelId_MetaData[] = {
+		{ "Category", "ModSubClassApparelConfig" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe6\x9c\x8d\xe9\xa5\xb0ID\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe6\x9c\x8d\xe9\xa5\xb0ID" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SubClassIndexArr_MetaData[] = {
+		{ "Category", "ModSubClassApparelConfig" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe6\xad\xa4\xe6\x9c\x8d\xe9\xa5\xb0\xe5\x8f\xaf\xe4\xbb\xa5\xe7\x94\xa8\xe4\xba\x8e\xe7\x9a\x84\xe5\xa0\x82\xe5\x8f\xa3\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WorldDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe6\xad\xa4\xe6\x9c\x8d\xe9\xa5\xb0\xe5\x8f\xaf\xe4\xbb\xa5\xe7\x94\xa8\xe4\xba\x8e\xe7\x9a\x84\xe5\xa0\x82\xe5\x8f\xa3" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FNamePropertyParams NewProp_ApparelId;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_SubClassIndexArr_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_SubClassIndexArr;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FModSubClassApparelConfig>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FModSubClassApparelConfig_Statics::NewProp_ApparelId = { "ApparelId", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModSubClassApparelConfig, ApparelId), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ApparelId_MetaData), NewProp_ApparelId_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModSubClassApparelConfig_Statics::NewProp_SubClassIndexArr_Inner = { "SubClassIndexArr", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModSubClassApparelConfig_Statics::NewProp_SubClassIndexArr = { "SubClassIndexArr", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModSubClassApparelConfig, SubClassIndexArr), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SubClassIndexArr_MetaData), NewProp_SubClassIndexArr_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FModSubClassApparelConfig_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModSubClassApparelConfig_Statics::NewProp_ApparelId,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModSubClassApparelConfig_Statics::NewProp_SubClassIndexArr_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModSubClassApparelConfig_Statics::NewProp_SubClassIndexArr,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FModSubClassApparelConfig_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FModSubClassApparelConfig_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_CreateModPlugin,
+	Z_Construct_UScriptStruct_FModDataBase,
+	&NewStructOps,
+	"ModSubClassApparelConfig",
+	Z_Construct_UScriptStruct_FModSubClassApparelConfig_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FModSubClassApparelConfig_Statics::PropPointers),
+	sizeof(FModSubClassApparelConfig),
+	alignof(FModSubClassApparelConfig),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FModSubClassApparelConfig_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FModSubClassApparelConfig_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FModSubClassApparelConfig()
+{
+	if (!Z_Registration_Info_UScriptStruct_FModSubClassApparelConfig.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_FModSubClassApparelConfig.InnerSingleton, Z_Construct_UScriptStruct_FModSubClassApparelConfig_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_FModSubClassApparelConfig.InnerSingleton;
+}
+// ********** End ScriptStruct FModSubClassApparelConfig *******************************************
+
 // ********** Begin Registration *******************************************************************
 struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h__Script_CreateModPlugin_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EModWorldPlaceType_StaticEnum, TEXT("EModWorldPlaceType"), &Z_Registration_Info_UEnum_EModWorldPlaceType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2708434759U) },
+		{ EModForceOperationType_StaticEnum, TEXT("EModForceOperationType"), &Z_Registration_Info_UEnum_EModForceOperationType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3296472U) },
 	};
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
 		{ FModWorldPlaceInfo::StaticStruct, Z_Construct_UScriptStruct_FModWorldPlaceInfo_Statics::NewStructOps, TEXT("ModWorldPlaceInfo"), &Z_Registration_Info_UScriptStruct_FModWorldPlaceInfo, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModWorldPlaceInfo), 1752054016U) },
+		{ FModBattleBuffGroup::StaticStruct, Z_Construct_UScriptStruct_FModBattleBuffGroup_Statics::NewStructOps, TEXT("ModBattleBuffGroup"), &Z_Registration_Info_UScriptStruct_FModBattleBuffGroup, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModBattleBuffGroup), 3373408239U) },
+		{ FModForceLevelInfo::StaticStruct, Z_Construct_UScriptStruct_FModForceLevelInfo_Statics::NewStructOps, TEXT("ModForceLevelInfo"), &Z_Registration_Info_UScriptStruct_FModForceLevelInfo, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModForceLevelInfo), 123364734U) },
+		{ FModSubClassApparelConfig::StaticStruct, Z_Construct_UScriptStruct_FModSubClassApparelConfig_Statics::NewStructOps, TEXT("ModSubClassApparelConfig"), &Z_Registration_Info_UScriptStruct_FModSubClassApparelConfig, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModSubClassApparelConfig), 1398603536U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h__Script_CreateModPlugin_1403925191(TEXT("/Script/CreateModPlugin"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h__Script_CreateModPlugin_729917646(TEXT("/Script/CreateModPlugin"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h__Script_CreateModPlugin_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h__Script_CreateModPlugin_Statics::ScriptStructInfo),
 	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h__Script_CreateModPlugin_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_WorldDataStruct_h__Script_CreateModPlugin_Statics::EnumInfo));

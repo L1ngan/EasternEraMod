@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FModConfig ********************************************************
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_115_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_121_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModConfig_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -26,7 +26,7 @@ struct FModConfig;
 // ********** End ScriptStruct FModConfig **********************************************************
 
 // ********** Begin ScriptStruct FModAsset *********************************************************
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_134_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_140_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModAsset_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -37,7 +37,7 @@ struct FModAsset;
 // ********** Begin Class UModInformationAsset *****************************************************
 CREATEMODPLUGIN_API UClass* Z_Construct_UClass_UModInformationAsset_NoRegister();
 
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_148_INCLASS_NO_PURE_DECLS \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_154_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUModInformationAsset(); \
 	friend struct Z_Construct_UClass_UModInformationAsset_Statics; \
@@ -48,7 +48,7 @@ public: \
 	DECLARE_SERIALIZER(UModInformationAsset)
 
 
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_148_ENHANCED_CONSTRUCTORS \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_154_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UModInformationAsset(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -60,12 +60,12 @@ public: \
 	NO_API virtual ~UModInformationAsset();
 
 
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_145_PROLOG
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_148_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_151_PROLOG
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_154_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_148_INCLASS_NO_PURE_DECLS \
-	FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_148_ENHANCED_CONSTRUCTORS \
+	FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_154_INCLASS_NO_PURE_DECLS \
+	FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_154_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -75,7 +75,7 @@ class UModInformationAsset;
 // ********** End Class UModInformationAsset *******************************************************
 
 // ********** Begin ScriptStruct FModDataBase ******************************************************
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_166_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_172_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModDataBase_Statics; \
 	static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -85,7 +85,7 @@ struct FModDataBase;
 // ********** End ScriptStruct FModDataBase ********************************************************
 
 // ********** Begin ScriptStruct FModGameplayEffectContainer ***************************************
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_367_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_373_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModGameplayEffectContainer_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -94,7 +94,7 @@ struct FModGameplayEffectContainer;
 // ********** End ScriptStruct FModGameplayEffectContainer *****************************************
 
 // ********** Begin ScriptStruct FModFormatText ****************************************************
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_386_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_392_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModFormatText_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -103,7 +103,7 @@ struct FModFormatText;
 // ********** End ScriptStruct FModFormatText ******************************************************
 
 // ********** Begin ScriptStruct FModDropItemInfo **************************************************
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_419_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_425_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModDropItemInfo_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct();
 
@@ -112,7 +112,7 @@ struct FModDropItemInfo;
 // ********** End ScriptStruct FModDropItemInfo ****************************************************
 
 // ********** Begin ScriptStruct FModDropSetConfig *************************************************
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_437_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h_443_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModDropSetConfig_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;
@@ -170,7 +170,9 @@ struct FModDropSetConfig;
 	op(EModConfigType::SkillEntryPoolConfig) \
 	op(EModConfigType::SkillEntryCondition) \
 	op(EModConfigType::BuildTabConfig) \
-	op(EModConfigType::BuildListCategorizeConfig) 
+	op(EModConfigType::BuildListCategorizeConfig) \
+	op(EModConfigType::ForceLevelInfo) \
+	op(EModConfigType::SubClassApparelLimit) 
 
 enum class EModConfigType : uint8;
 template<> struct TIsUEnumClass<EModConfigType> { enum { Value = true }; };
@@ -180,7 +182,8 @@ template<> CREATEMODPLUGIN_API UEnum* StaticEnum<EModConfigType>();
 // ********** Begin Enum EModDataAssetType *********************************************************
 #define FOREACH_ENUM_EMODDATAASSETTYPE(op) \
 	op(EModDataAssetType::None) \
-	op(EModDataAssetType::NewGameConfiguration) 
+	op(EModDataAssetType::NewGameConfiguration) \
+	op(EModDataAssetType::CharacterAppearanceConfiguration) 
 
 enum class EModDataAssetType : uint8;
 template<> struct TIsUEnumClass<EModDataAssetType> { enum { Value = true }; };
