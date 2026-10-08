@@ -102,6 +102,8 @@ enum class EModConfigType : uint8
 	ForceLevelInfo,
 	//势力分堂服饰限制
 	SubClassApparelLimit,
+	//科技分类UI配置
+	TechCategoryUIConfig,
 };
 
 //Mod资产类型

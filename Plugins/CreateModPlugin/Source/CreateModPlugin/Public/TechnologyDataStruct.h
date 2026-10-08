@@ -72,6 +72,33 @@ enum class EModTechPointType : uint8
 	//高级科技点数
 	AdvTechPoint,
 };
+
+// 科技分类UI配置表结构
+USTRUCT(BlueprintType)
+struct FModTechCategoryUIConfigStruct: public FModDataBase
+{
+	GENERATED_BODY()
+	// 科技分类
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base")
+	EModTechCategory Category = EModTechCategory::Food;
+
+	// 分类显示的名字
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base")
+	FText CategoryName;
+
+	// 分类在UI上显示的图标
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base")
+	TSoftObjectPtr<UTexture2D> CategoryIcon;
+
+	// 分类在UI上占用格子
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base")
+	int32 CategoryUIHeight { 0 };
+
+	// 分类在UI上背景
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Base")
+	TSoftObjectPtr<UTexture2D> CategoryBG;
+};
+
 // 科技解锁物品配置表结构
 USTRUCT(BlueprintType)
 struct FModTechUnlockItemConigStruct: public FModDataBase
