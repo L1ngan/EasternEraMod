@@ -1,2 +1,0 @@
----@class FRigElementParentConstraint
-local FRigElementParentConstraint = {}

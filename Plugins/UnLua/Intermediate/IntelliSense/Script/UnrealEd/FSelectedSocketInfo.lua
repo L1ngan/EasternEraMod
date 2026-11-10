@@ -1,2 +1,0 @@
----@class FSelectedSocketInfo
-local FSelectedSocketInfo = {}

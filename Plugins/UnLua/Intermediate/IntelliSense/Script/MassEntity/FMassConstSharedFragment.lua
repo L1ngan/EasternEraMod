@@ -1,2 +1,0 @@
----@class FMassConstSharedFragment
-local FMassConstSharedFragment = {}

@@ -1,2 +1,0 @@
----@class FAdvancedCopyParams
-local FAdvancedCopyParams = {}

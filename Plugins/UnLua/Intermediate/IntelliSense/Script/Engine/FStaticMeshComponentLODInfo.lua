@@ -1,2 +1,0 @@
----@class FStaticMeshComponentLODInfo
-local FStaticMeshComponentLODInfo = {}

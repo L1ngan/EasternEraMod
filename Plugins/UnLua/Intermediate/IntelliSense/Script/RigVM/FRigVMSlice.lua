@@ -1,2 +1,0 @@
----@class FRigVMSlice
-local FRigVMSlice = {}

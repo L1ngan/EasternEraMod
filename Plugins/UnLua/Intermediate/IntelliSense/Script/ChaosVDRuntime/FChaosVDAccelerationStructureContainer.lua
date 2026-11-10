@@ -1,2 +1,0 @@
----@class FChaosVDAccelerationStructureContainer
-local FChaosVDAccelerationStructureContainer = {}

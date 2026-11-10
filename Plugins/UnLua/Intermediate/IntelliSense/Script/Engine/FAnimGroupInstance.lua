@@ -1,2 +1,0 @@
----@class FAnimGroupInstance
-local FAnimGroupInstance = {}

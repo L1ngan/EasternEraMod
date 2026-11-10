@@ -1,2 +1,0 @@
----@class FAssetFilterData
-local FAssetFilterData = {}

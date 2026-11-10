@@ -1,2 +1,0 @@
----@class FNiagaraStatelessExpression
-local FNiagaraStatelessExpression = {}

@@ -1,3 +1,0 @@
----@class UAnimationEditorsAssetFamilyExtension_AnimBlueprintAsset : UAnimationEditorsAssetFamilyExtension
-local UAnimationEditorsAssetFamilyExtension_AnimBlueprintAsset = {}
-

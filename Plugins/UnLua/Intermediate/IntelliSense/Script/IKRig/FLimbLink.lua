@@ -1,2 +1,0 @@
----@class FLimbLink
-local FLimbLink = {}

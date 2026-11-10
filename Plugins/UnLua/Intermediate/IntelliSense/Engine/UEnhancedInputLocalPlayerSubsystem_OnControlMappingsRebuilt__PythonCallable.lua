@@ -1,3 +1,0 @@
----@class UEnhancedInputLocalPlayerSubsystem_OnControlMappingsRebuilt__PythonCallable : UPythonCallableForDelegate
-local UEnhancedInputLocalPlayerSubsystem_OnControlMappingsRebuilt__PythonCallable = {}
-

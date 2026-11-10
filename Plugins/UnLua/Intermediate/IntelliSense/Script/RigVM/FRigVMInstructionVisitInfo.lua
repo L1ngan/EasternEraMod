@@ -1,2 +1,0 @@
----@class FRigVMInstructionVisitInfo
-local FRigVMInstructionVisitInfo = {}

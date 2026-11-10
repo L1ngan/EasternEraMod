@@ -1,2 +1,0 @@
----@class FActorFolderProps
-local FActorFolderProps = {}

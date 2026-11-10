@@ -1,2 +1,0 @@
----@class FParticleEmitterReplayFrame
-local FParticleEmitterReplayFrame = {}

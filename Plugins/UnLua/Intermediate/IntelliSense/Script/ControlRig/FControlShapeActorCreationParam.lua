@@ -1,2 +1,0 @@
----@class FControlShapeActorCreationParam
-local FControlShapeActorCreationParam = {}

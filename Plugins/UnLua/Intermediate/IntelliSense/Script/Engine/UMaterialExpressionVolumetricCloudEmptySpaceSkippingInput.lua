@@ -1,3 +1,0 @@
----@class UMaterialExpressionVolumetricCloudEmptySpaceSkippingInput : UMaterialExpressionExternalCodeBase
-local UMaterialExpressionVolumetricCloudEmptySpaceSkippingInput = {}
-

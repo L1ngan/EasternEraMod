@@ -1,3 +1,0 @@
----@class UGameplayTagsK2Node_MultiCompareGameplayTagAssetInterfaceSingleTags : UGameplayTagsK2Node_MultiCompareBase
-local UGameplayTagsK2Node_MultiCompareGameplayTagAssetInterfaceSingleTags = {}
-

@@ -1,2 +1,0 @@
----@class FPointerToUberGraphFrame
-local FPointerToUberGraphFrame = {}

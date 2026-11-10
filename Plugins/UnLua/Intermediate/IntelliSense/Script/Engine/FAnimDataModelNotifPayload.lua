@@ -1,2 +1,0 @@
----@class FAnimDataModelNotifPayload
-local FAnimDataModelNotifPayload = {}

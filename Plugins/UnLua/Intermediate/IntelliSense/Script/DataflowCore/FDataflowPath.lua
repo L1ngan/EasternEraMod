@@ -1,2 +1,0 @@
----@class FDataflowPath
-local FDataflowPath = {}

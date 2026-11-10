@@ -1,2 +1,0 @@
----@class FPropertyData
-local FPropertyData = {}

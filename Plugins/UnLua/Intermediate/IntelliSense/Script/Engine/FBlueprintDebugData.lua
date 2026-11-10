@@ -1,2 +1,0 @@
----@class FBlueprintDebugData
-local FBlueprintDebugData = {}

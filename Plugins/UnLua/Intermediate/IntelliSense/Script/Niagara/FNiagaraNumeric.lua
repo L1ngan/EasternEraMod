@@ -1,2 +1,0 @@
----@class FNiagaraNumeric
-local FNiagaraNumeric = {}

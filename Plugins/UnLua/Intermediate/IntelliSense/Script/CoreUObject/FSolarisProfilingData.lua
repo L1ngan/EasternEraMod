@@ -1,2 +1,0 @@
----@class FSolarisProfilingData
-local FSolarisProfilingData = {}

@@ -1,2 +1,0 @@
----@class FSpriteAssetInitParameters
-local FSpriteAssetInitParameters = {}

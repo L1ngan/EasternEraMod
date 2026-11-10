@@ -1,2 +1,0 @@
----@class FSmartNameContainer
-local FSmartNameContainer = {}

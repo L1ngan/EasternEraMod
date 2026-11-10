@@ -1,2 +1,0 @@
----@class FGoalBone
-local FGoalBone = {}

@@ -1,2 +1,0 @@
----@class FChaosVDStopRecordingCommandMessage
-local FChaosVDStopRecordingCommandMessage = {}

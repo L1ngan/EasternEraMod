@@ -1,2 +1,0 @@
----@class FTestStructNonTrivialDestructor
-local FTestStructNonTrivialDestructor = {}

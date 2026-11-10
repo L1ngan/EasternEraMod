@@ -1,2 +1,0 @@
----@class FMovieSceneSubSequenceTreeEntry
-local FMovieSceneSubSequenceTreeEntry = {}

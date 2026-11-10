@@ -1,2 +1,0 @@
----@class FAnimNodeExposedValueHandler
-local FAnimNodeExposedValueHandler = {}

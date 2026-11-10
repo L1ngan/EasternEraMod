@@ -1,2 +1,0 @@
----@class FIKChainLink
-local FIKChainLink = {}

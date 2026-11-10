@@ -1,2 +1,0 @@
----@class FMaterialLayersFunctionsRuntimeGraphCache
-local FMaterialLayersFunctionsRuntimeGraphCache = {}

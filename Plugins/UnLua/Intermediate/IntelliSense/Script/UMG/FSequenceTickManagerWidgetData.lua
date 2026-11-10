@@ -1,2 +1,0 @@
----@class FSequenceTickManagerWidgetData
-local FSequenceTickManagerWidgetData = {}

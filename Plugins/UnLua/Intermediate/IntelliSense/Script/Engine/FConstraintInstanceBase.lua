@@ -1,2 +1,0 @@
----@class FConstraintInstanceBase
-local FConstraintInstanceBase = {}

@@ -1,2 +1,0 @@
----@class FCaptureLostEvent
-local FCaptureLostEvent = {}

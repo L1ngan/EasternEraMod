@@ -1,2 +1,0 @@
----@class FNiagaraActionSourceData
-local FNiagaraActionSourceData = {}

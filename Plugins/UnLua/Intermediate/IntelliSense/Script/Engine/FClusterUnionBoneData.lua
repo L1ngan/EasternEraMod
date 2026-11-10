@@ -1,2 +1,0 @@
----@class FClusterUnionBoneData
-local FClusterUnionBoneData = {}

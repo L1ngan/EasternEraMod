@@ -1,2 +1,0 @@
----@class FRigVMDebugInfo
-local FRigVMDebugInfo = {}

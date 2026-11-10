@@ -1,4 +1,0 @@
----@class FNiagaraDistributionFloat : FNiagaraDistributionBase
----@field public Values TArray<number>
----@field public ValuesTimeRange FVector2f
-local FNiagaraDistributionFloat = {}

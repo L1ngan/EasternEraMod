@@ -1,2 +1,0 @@
----@class FCachedSubjectFrame
-local FCachedSubjectFrame = {}

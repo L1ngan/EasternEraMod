@@ -1,2 +1,0 @@
----@class FCapturedPixels
-local FCapturedPixels = {}

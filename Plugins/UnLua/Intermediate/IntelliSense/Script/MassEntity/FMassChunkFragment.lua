@@ -1,2 +1,0 @@
----@class FMassChunkFragment
-local FMassChunkFragment = {}

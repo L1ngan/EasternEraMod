@@ -1,2 +1,0 @@
----@class FSwarmPingMessage
-local FSwarmPingMessage = {}

@@ -1,2 +1,0 @@
----@class FISMClientInstanceManagerData
-local FISMClientInstanceManagerData = {}

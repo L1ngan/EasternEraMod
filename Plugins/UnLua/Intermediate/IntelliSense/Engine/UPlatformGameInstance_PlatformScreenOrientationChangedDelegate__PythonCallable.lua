@@ -1,3 +1,0 @@
----@class UPlatformGameInstance_PlatformScreenOrientationChangedDelegate__PythonCallable : UPythonCallableForDelegate
-local UPlatformGameInstance_PlatformScreenOrientationChangedDelegate__PythonCallable = {}
-

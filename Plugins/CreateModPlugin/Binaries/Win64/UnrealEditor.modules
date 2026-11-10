@@ -1,8 +1,0 @@
-{
-	"BuildId": "43139311",
-	"Modules": 
-	{
-		"CreateModPlugin": "UnrealEditor-CreateModPlugin.dll",
-		"CreateModPluginEditor": "UnrealEditor-CreateModPluginEditor.dll"
-	}
-}

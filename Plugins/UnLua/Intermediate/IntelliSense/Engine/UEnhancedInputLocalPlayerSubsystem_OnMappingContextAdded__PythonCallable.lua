@@ -1,3 +1,0 @@
----@class UEnhancedInputLocalPlayerSubsystem_OnMappingContextAdded__PythonCallable : UPythonCallableForDelegate
-local UEnhancedInputLocalPlayerSubsystem_OnMappingContextAdded__PythonCallable = {}
-

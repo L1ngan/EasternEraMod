@@ -1,2 +1,0 @@
----@class FProcessorAuxDataBase
-local FProcessorAuxDataBase = {}

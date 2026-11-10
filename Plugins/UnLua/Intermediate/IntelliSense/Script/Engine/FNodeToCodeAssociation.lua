@@ -1,2 +1,0 @@
----@class FNodeToCodeAssociation
-local FNodeToCodeAssociation = {}

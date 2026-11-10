@@ -1,2 +1,0 @@
----@class FCopySelectedInfo
-local FCopySelectedInfo = {}

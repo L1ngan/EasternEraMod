@@ -1,3 +1,0 @@
----@class UGeometryCollectionComponent_NotifyGeometryCollectionPhysicsLoadingStateChange__PythonCallable : UPythonCallableForDelegate
-local UGeometryCollectionComponent_NotifyGeometryCollectionPhysicsLoadingStateChange__PythonCallable = {}
-

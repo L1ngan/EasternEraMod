@@ -1,3 +1,0 @@
----@class UAnimationEditorsAssetFamilyExtension_SkeletalMeshAsset : UAnimationEditorsAssetFamilyExtension
-local UAnimationEditorsAssetFamilyExtension_SkeletalMeshAsset = {}
-

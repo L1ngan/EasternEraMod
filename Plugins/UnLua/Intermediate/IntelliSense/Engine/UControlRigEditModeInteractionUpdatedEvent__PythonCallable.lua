@@ -1,3 +1,0 @@
----@class UControlRigEditModeInteractionUpdatedEvent__PythonCallable : UPythonCallableForDelegate
-local UControlRigEditModeInteractionUpdatedEvent__PythonCallable = {}
-

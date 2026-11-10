@@ -1,2 +1,0 @@
----@class FChaosVDFullSessionInfoRequestMessage
-local FChaosVDFullSessionInfoRequestMessage = {}

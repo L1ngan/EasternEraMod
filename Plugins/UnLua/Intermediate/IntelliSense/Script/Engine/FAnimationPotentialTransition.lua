@@ -1,2 +1,0 @@
----@class FAnimationPotentialTransition
-local FAnimationPotentialTransition = {}

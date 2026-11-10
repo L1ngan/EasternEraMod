@@ -1,2 +1,0 @@
----@class FSwarmTaskRequestReservationMessage
-local FSwarmTaskRequestReservationMessage = {}

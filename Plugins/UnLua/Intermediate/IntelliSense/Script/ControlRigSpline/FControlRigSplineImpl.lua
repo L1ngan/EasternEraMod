@@ -1,2 +1,0 @@
----@class FControlRigSplineImpl
-local FControlRigSplineImpl = {}

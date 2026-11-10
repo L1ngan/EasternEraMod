@@ -1,4 +1,0 @@
----@class UTypedElementQueryObserverCallbackAdapterProcessorWith3Subqueries : UTypedElementQueryObserverCallbackAdapterProcessorBase
----@field private NativeSubqueries FMassEntityQuery
-local UTypedElementQueryObserverCallbackAdapterProcessorWith3Subqueries = {}
-

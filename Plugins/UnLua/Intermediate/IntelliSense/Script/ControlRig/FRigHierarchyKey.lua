@@ -1,2 +1,0 @@
----@class FRigHierarchyKey
-local FRigHierarchyKey = {}

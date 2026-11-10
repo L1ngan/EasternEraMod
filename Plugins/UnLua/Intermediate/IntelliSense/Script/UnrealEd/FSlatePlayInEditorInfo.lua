@@ -1,2 +1,0 @@
----@class FSlatePlayInEditorInfo
-local FSlatePlayInEditorInfo = {}
