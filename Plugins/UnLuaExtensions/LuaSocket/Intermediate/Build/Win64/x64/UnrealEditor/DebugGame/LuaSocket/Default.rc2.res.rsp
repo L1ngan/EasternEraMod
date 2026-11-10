@@ -2,7 +2,7 @@
 /D_WIN64
 /l 0x409
 /I "."
-/I "E:/VS2026/Community/VC/Tools/MSVC/14.50.35717/INCLUDE"
+/I "E:/VS2026/Community/VC/Tools/MSVC/14.38.33130/INCLUDE"
 /I "C:/Program Files (x86)/Windows Kits/10/include/10.0.22621.0/ucrt"
 /I "C:/Program Files (x86)/Windows Kits/10/include/10.0.22621.0/shared"
 /I "C:/Program Files (x86)/Windows Kits/10/include/10.0.22621.0/um"
@@ -85,6 +85,7 @@
 /DORIGINAL_FILE_NAME="UnrealEditor-LuaSocket-Win64-DebugGame.dll"
 /DBUILD_ICON_FILE_NAME="\"..\\Build\\Windows\\Resources\\Default.ico\""
 /DPROJECT_COPYRIGHT_STRING="Fill out your copyright notice in the Description page of Project Settings."
+/DPROJECT_PRODUCT_NAME=EasternEra
 /DPROJECT_PRODUCT_IDENTIFIER=EasternEra
-/fo "G:/ModProject/Plugins/UnLuaExtensions/LuaSocket/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaSocket/Default.rc2.res"
+/fo "G:/EasternEraMod/Plugins/UnLuaExtensions/LuaSocket/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaSocket/Default.rc2.res"
 "../Build/Windows/Resources/Default.rc2"

@@ -11,8 +11,8 @@ One page per type: structs list every field (C++ type / notes / raw declaration)
 
 ## 🧩 示例与指南 / Examples & guides
 
-为减少日志输出，发行版打包会屏蔽普通日志；需要在发行版中保留的信息请至少使用警告等级。警告使用 `Warning`，报错使用 `Error`。
-Release builds suppress ordinary logs to reduce output. Use at least warning level for messages that must remain visible: `Warning` for warnings and `Error` for errors.
+发行版的 `log.txt` 只记录 `Error`。要保留 `Log` 和 `Warning`：在 ModInfo.json 里设置 `LogLevel`，日志会写进 `ModLogs/<ModId>.log`；或用启动参数 `-ModConsole` 打开控制台查看。详见开发指南第 7 节。
+In release builds `log.txt` only records `Error`. To keep `Log` and `Warning`, set `LogLevel` in ModInfo.json (entries go to `ModLogs/<ModId>.log`), or enable the console with the `-ModConsole` launch option. See section 7 of the development guide.
 
 | 示例 Example | 演示内容 Demonstrates |
 |---|---|

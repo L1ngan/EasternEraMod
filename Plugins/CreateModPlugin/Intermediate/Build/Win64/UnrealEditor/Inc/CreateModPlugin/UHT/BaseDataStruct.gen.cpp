@@ -175,6 +175,9 @@ struct Z_Construct_UEnum_CreateModPlugin_EModConfigType_Statics
 		{ "SubClassApparelLimit.Comment", "//\xe5\x8a\xbf\xe5\x8a\x9b\xe5\x88\x86\xe5\xa0\x82\xe6\x9c\x8d\xe9\xa5\xb0\xe9\x99\x90\xe5\x88\xb6\n" },
 		{ "SubClassApparelLimit.Name", "EModConfigType::SubClassApparelLimit" },
 		{ "SubClassApparelLimit.ToolTip", "\xe5\x8a\xbf\xe5\x8a\x9b\xe5\x88\x86\xe5\xa0\x82\xe6\x9c\x8d\xe9\xa5\xb0\xe9\x99\x90\xe5\x88\xb6" },
+		{ "TechCategoryUIConfig.Comment", "//\xe7\xa7\x91\xe6\x8a\x80\xe5\x88\x86\xe7\xb1\xbbUI\xe9\x85\x8d\xe7\xbd\xae\n" },
+		{ "TechCategoryUIConfig.Name", "EModConfigType::TechCategoryUIConfig" },
+		{ "TechCategoryUIConfig.ToolTip", "\xe7\xa7\x91\xe6\x8a\x80\xe5\x88\x86\xe7\xb1\xbbUI\xe9\x85\x8d\xe7\xbd\xae" },
 		{ "TechnologyConfig.Comment", "//\xe7\xa7\x91\xe6\x8a\x80\xef\xbc\x9a\xe7\xa7\x91\xe6\x8a\x80\xe9\xa1\xb9\xe8\xaf\xa6\xe7\xbb\x86\xe9\x85\x8d\xe7\xbd\xae\n" },
 		{ "TechnologyConfig.Name", "EModConfigType::TechnologyConfig" },
 		{ "TechnologyConfig.ToolTip", "\xe7\xa7\x91\xe6\x8a\x80\xef\xbc\x9a\xe7\xa7\x91\xe6\x8a\x80\xe9\xa1\xb9\xe8\xaf\xa6\xe7\xbb\x86\xe9\x85\x8d\xe7\xbd\xae" },
@@ -249,6 +252,7 @@ struct Z_Construct_UEnum_CreateModPlugin_EModConfigType_Statics
 		{ "EModConfigType::BuildListCategorizeConfig", (int64)EModConfigType::BuildListCategorizeConfig },
 		{ "EModConfigType::ForceLevelInfo", (int64)EModConfigType::ForceLevelInfo },
 		{ "EModConfigType::SubClassApparelLimit", (int64)EModConfigType::SubClassApparelLimit },
+		{ "EModConfigType::TechCategoryUIConfig", (int64)EModConfigType::TechCategoryUIConfig },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
 };
@@ -413,7 +417,7 @@ struct Z_Construct_UScriptStruct_FModConfig_Statics
 	static const UECodeGen_Private::FStructParams StructParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FModConfig_Statics::NewProp_ModConfigType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FModConfig_Statics::NewProp_ModConfigType = { "ModConfigType", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModConfig, ModConfigType), Z_Construct_UEnum_CreateModPlugin_EModConfigType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ModConfigType_MetaData), NewProp_ModConfigType_MetaData) }; // 4253586481
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FModConfig_Statics::NewProp_ModConfigType = { "ModConfigType", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModConfig, ModConfigType), Z_Construct_UEnum_CreateModPlugin_EModConfigType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ModConfigType_MetaData), NewProp_ModConfigType_MetaData) }; // 3389824331
 const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FModConfig_Statics::NewProp_DataTable = { "DataTable", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModConfig, DataTable), Z_Construct_UClass_UDataTable_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DataTable_MetaData), NewProp_DataTable_MetaData) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FModConfig_Statics::NewProp_StructName = { "StructName", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModConfig, StructName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StructName_MetaData), NewProp_StructName_MetaData) };
 void Z_Construct_UScriptStruct_FModConfig_Statics::NewProp_bOverrideData_SetBit(void* Obj)
@@ -629,8 +633,8 @@ struct Z_Construct_UClass_UModInformationAsset_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UModInformationAsset_Statics::NewProp_DataTables_Inner = { "DataTables", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FModConfig, METADATA_PARAMS(0, nullptr) }; // 651078689
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UModInformationAsset_Statics::NewProp_DataTables = { "DataTables", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UModInformationAsset, DataTables), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DataTables_MetaData), NewProp_DataTables_MetaData) }; // 651078689
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UModInformationAsset_Statics::NewProp_DataTables_Inner = { "DataTables", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FModConfig, METADATA_PARAMS(0, nullptr) }; // 3972378766
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UModInformationAsset_Statics::NewProp_DataTables = { "DataTables", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UModInformationAsset, DataTables), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DataTables_MetaData), NewProp_DataTables_MetaData) }; // 3972378766
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UModInformationAsset_Statics::NewProp_DataAssets_Inner = { "DataAssets", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FModAsset, METADATA_PARAMS(0, nullptr) }; // 2164694408
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UModInformationAsset_Statics::NewProp_DataAssets = { "DataAssets", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UModInformationAsset, DataAssets), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DataAssets_MetaData), NewProp_DataAssets_MetaData) }; // 2164694408
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UModInformationAsset_Statics::PropPointers[] = {
@@ -1996,7 +2000,7 @@ UEnum* Z_Construct_UEnum_CreateModPlugin_EModTipsType()
 struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h__Script_CreateModPlugin_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ EModConfigType_StaticEnum, TEXT("EModConfigType"), &Z_Registration_Info_UEnum_EModConfigType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4253586481U) },
+		{ EModConfigType_StaticEnum, TEXT("EModConfigType"), &Z_Registration_Info_UEnum_EModConfigType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3389824331U) },
 		{ EModDataAssetType_StaticEnum, TEXT("EModDataAssetType"), &Z_Registration_Info_UEnum_EModDataAssetType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3463680284U) },
 		{ EModCharacterBehaviorState_StaticEnum, TEXT("EModCharacterBehaviorState"), &Z_Registration_Info_UEnum_EModCharacterBehaviorState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2884534965U) },
 		{ EModGroundInventoryType_StaticEnum, TEXT("EModGroundInventoryType"), &Z_Registration_Info_UEnum_EModGroundInventoryType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1596875282U) },
@@ -2004,7 +2008,7 @@ struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_Cr
 		{ EModTipsType_StaticEnum, TEXT("EModTipsType"), &Z_Registration_Info_UEnum_EModTipsType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2254412518U) },
 	};
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FModConfig::StaticStruct, Z_Construct_UScriptStruct_FModConfig_Statics::NewStructOps, TEXT("ModConfig"), &Z_Registration_Info_UScriptStruct_FModConfig, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModConfig), 651078689U) },
+		{ FModConfig::StaticStruct, Z_Construct_UScriptStruct_FModConfig_Statics::NewStructOps, TEXT("ModConfig"), &Z_Registration_Info_UScriptStruct_FModConfig, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModConfig), 3972378766U) },
 		{ FModAsset::StaticStruct, Z_Construct_UScriptStruct_FModAsset_Statics::NewStructOps, TEXT("ModAsset"), &Z_Registration_Info_UScriptStruct_FModAsset, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModAsset), 2164694408U) },
 		{ FModDataBase::StaticStruct, Z_Construct_UScriptStruct_FModDataBase_Statics::NewStructOps, TEXT("ModDataBase"), &Z_Registration_Info_UScriptStruct_FModDataBase, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModDataBase), 1478976665U) },
 		{ FModGameplayEffectContainer::StaticStruct, Z_Construct_UScriptStruct_FModGameplayEffectContainer_Statics::NewStructOps, TEXT("ModGameplayEffectContainer"), &Z_Registration_Info_UScriptStruct_FModGameplayEffectContainer, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModGameplayEffectContainer), 3944816412U) },
@@ -2013,10 +2017,10 @@ struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_Cr
 		{ FModDropSetConfig::StaticStruct, Z_Construct_UScriptStruct_FModDropSetConfig_Statics::NewStructOps, TEXT("ModDropSetConfig"), &Z_Registration_Info_UScriptStruct_FModDropSetConfig, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModDropSetConfig), 1679017575U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UModInformationAsset, UModInformationAsset::StaticClass, TEXT("UModInformationAsset"), &Z_Registration_Info_UClass_UModInformationAsset, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UModInformationAsset), 354284980U) },
+		{ Z_Construct_UClass_UModInformationAsset, UModInformationAsset::StaticClass, TEXT("UModInformationAsset"), &Z_Registration_Info_UClass_UModInformationAsset, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UModInformationAsset), 2977126309U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h__Script_CreateModPlugin_2181773484(TEXT("/Script/CreateModPlugin"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h__Script_CreateModPlugin_2431087892(TEXT("/Script/CreateModPlugin"),
 	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h__Script_CreateModPlugin_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h__Script_CreateModPlugin_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h__Script_CreateModPlugin_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h__Script_CreateModPlugin_Statics::ScriptStructInfo),
 	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h__Script_CreateModPlugin_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BaseDataStruct_h__Script_CreateModPlugin_Statics::EnumInfo));

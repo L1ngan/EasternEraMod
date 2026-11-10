@@ -20,7 +20,7 @@
 /ALTERNATENAME:__imp___std_init_once_complete=__imp_InitOnceComplete
 /DELAYLOAD:"d3d12.dll"
 /DELAYLOAD:"DBGHELP.DLL"
-/LIBPATH:"E:/VS2026/Community/VC/Tools/MSVC/14.50.35717/lib/x64"
+/LIBPATH:"E:/VS2026/Community/VC/Tools/MSVC/14.38.33130/lib/x64"
 /LIBPATH:"C:/Program Files (x86)/Windows Kits/10/lib/10.0.22621.0/ucrt/x64"
 /LIBPATH:"C:/Program Files (x86)/Windows Kits/10/lib/10.0.22621.0/um/x64"
 /NODEFAULTLIB:"LIBCMT"
@@ -36,15 +36,9 @@
 /FUNCTIONPADMIN:6
 /NOIMPLIB
 /NOEXP
-"G:/ModProject/Intermediate/Build/Win64/x64/EastRimWorldEditor/DebugGame/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.h.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CommonUser/Module.CommonUser.cpp.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CommonUser/AsyncAction_CommonUserInitialize.cpp.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CommonUser/CommonSessionSubsystem.cpp.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CommonUser/CommonUserBasicPresence.cpp.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CommonUser/CommonUserModule.cpp.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CommonUser/CommonUserSubsystem.cpp.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CommonUser/CommonUserTypes.cpp.obj"
-"G:/ModProject/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CommonUser/Default.rc2.res"
+"G:/EasternEraMod/Intermediate/Build/Win64/x64/EastRimWorldEditor/DebugGame/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.h.obj"
+"G:/EasternEraMod/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CommonUser/Module.CommonUser.cpp.obj"
+"G:/EasternEraMod/Plugins/CommonUser/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/CommonUser/Default.rc2.res"
 "../Plugins/Online/OnlineSubsystemUtils/Intermediate/Build/Win64/x64/UnrealEditor/Development/OnlineSubsystemUtils/UnrealEditor-OnlineSubsystemUtils.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/CoreOnline/UnrealEditor-CoreOnline.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/CoreUObject/UnrealEditor-CoreUObject.lib"
@@ -83,6 +77,6 @@
 "imm32.lib"
 "uiautomationcore.lib"
 "DXGI.lib"
-/OUT:"G:/ModProject/Plugins/CommonUser/Binaries/Win64/UnrealEditor-CommonUser-Win64-DebugGame.dll"
-/PDB:"G:/ModProject/Plugins/CommonUser/Binaries/Win64/UnrealEditor-CommonUser-Win64-DebugGame.pdb"
+/OUT:"G:/EasternEraMod/Plugins/CommonUser/Binaries/Win64/UnrealEditor-CommonUser-Win64-DebugGame.dll"
+/PDB:"G:/EasternEraMod/Plugins/CommonUser/Binaries/Win64/UnrealEditor-CommonUser-Win64-DebugGame.pdb"
 /ignore:4078

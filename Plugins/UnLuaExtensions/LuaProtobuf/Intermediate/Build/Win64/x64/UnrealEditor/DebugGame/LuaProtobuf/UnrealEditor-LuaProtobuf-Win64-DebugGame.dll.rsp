@@ -21,7 +21,7 @@
 /DELAYLOAD:"Lua.dll"
 /DELAYLOAD:"d3d12.dll"
 /DELAYLOAD:"DBGHELP.DLL"
-/LIBPATH:"E:/VS2026/Community/VC/Tools/MSVC/14.50.35717/lib/x64"
+/LIBPATH:"E:/VS2026/Community/VC/Tools/MSVC/14.38.33130/lib/x64"
 /LIBPATH:"C:/Program Files (x86)/Windows Kits/10/lib/10.0.22621.0/ucrt/x64"
 /LIBPATH:"C:/Program Files (x86)/Windows Kits/10/lib/10.0.22621.0/um/x64"
 /NODEFAULTLIB:"LIBCMT"
@@ -37,12 +37,12 @@
 /FUNCTIONPADMIN:6
 /NOIMPLIB
 /NOEXP
-"G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaProtobuf/LuaProtobufModule.cpp.obj"
-"G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaProtobuf/pb.cpp.obj"
-"G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaProtobuf/PerModuleInline.gen.cpp.obj"
-"G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaProtobuf/Default.rc2.res"
-"G:/ModProject/Plugins/UnLua/Source/ThirdParty/Lua/lua-5.4.3/lib-c/Win64/Debug/Lua.lib"
-"G:/ModProject/Plugins/UnLua/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/UnLua/UnrealEditor-UnLua-Win64-DebugGame.lib"
+"G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaProtobuf/LuaProtobufModule.cpp.obj"
+"G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaProtobuf/pb.cpp.obj"
+"G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaProtobuf/PerModuleInline.gen.cpp.obj"
+"G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/LuaProtobuf/Default.rc2.res"
+"G:/EasternEraMod/Plugins/UnLua/Source/ThirdParty/Lua/lua-5.4.3/lib-c/Win64/Debug/Lua.lib"
+"G:/EasternEraMod/Plugins/UnLua/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/UnLua/UnrealEditor-UnLua-Win64-DebugGame.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/Core/UnrealEditor-Core.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/CoreUObject/UnrealEditor-CoreUObject.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/Engine/UnrealEditor-Engine.lib"
@@ -72,6 +72,6 @@
 "synchronization.lib"
 "dwmapi.lib"
 "imm32.lib"
-/OUT:"G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Binaries/Win64/UnrealEditor-LuaProtobuf-Win64-DebugGame.dll"
-/PDB:"G:/ModProject/Plugins/UnLuaExtensions/LuaProtobuf/Binaries/Win64/UnrealEditor-LuaProtobuf-Win64-DebugGame.pdb"
+/OUT:"G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Binaries/Win64/UnrealEditor-LuaProtobuf-Win64-DebugGame.dll"
+/PDB:"G:/EasternEraMod/Plugins/UnLuaExtensions/LuaProtobuf/Binaries/Win64/UnrealEditor-LuaProtobuf-Win64-DebugGame.pdb"
 /ignore:4078

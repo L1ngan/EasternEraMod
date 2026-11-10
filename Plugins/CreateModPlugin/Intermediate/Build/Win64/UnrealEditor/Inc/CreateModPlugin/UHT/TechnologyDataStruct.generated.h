@@ -16,8 +16,18 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
+// ********** Begin ScriptStruct FModTechCategoryUIConfigStruct ************************************
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_TechnologyDataStruct_h_80_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics; \
+	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
+	typedef FModDataBase Super;
+
+
+struct FModTechCategoryUIConfigStruct;
+// ********** End ScriptStruct FModTechCategoryUIConfigStruct **************************************
+
 // ********** Begin ScriptStruct FModTechUnlockItemConigStruct *************************************
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_TechnologyDataStruct_h_79_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_TechnologyDataStruct_h_106_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModTechUnlockItemConigStruct_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;
@@ -27,7 +37,7 @@ struct FModTechUnlockItemConigStruct;
 // ********** End ScriptStruct FModTechUnlockItemConigStruct ***************************************
 
 // ********** Begin ScriptStruct FModTechnologyConfigStruct ****************************************
-#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_TechnologyDataStruct_h_109_GENERATED_BODY \
+#define FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_TechnologyDataStruct_h_136_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FModTechnologyConfigStruct_Statics; \
 	CREATEMODPLUGIN_API static class UScriptStruct* StaticStruct(); \
 	typedef FModDataBase Super;

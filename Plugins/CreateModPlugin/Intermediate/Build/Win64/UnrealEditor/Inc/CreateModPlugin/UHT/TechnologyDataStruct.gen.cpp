@@ -19,6 +19,7 @@ CREATEMODPLUGIN_API UEnum* Z_Construct_UEnum_CreateModPlugin_EModTechPointType()
 CREATEMODPLUGIN_API UEnum* Z_Construct_UEnum_CreateModPlugin_EModTechUnlockItemType();
 CREATEMODPLUGIN_API UScriptStruct* Z_Construct_UScriptStruct_FModDataBase();
 CREATEMODPLUGIN_API UScriptStruct* Z_Construct_UScriptStruct_FModFormatText();
+CREATEMODPLUGIN_API UScriptStruct* Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct();
 CREATEMODPLUGIN_API UScriptStruct* Z_Construct_UScriptStruct_FModTechnologyConfigStruct();
 CREATEMODPLUGIN_API UScriptStruct* Z_Construct_UScriptStruct_FModTechUnlockItemConigStruct();
 ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
@@ -332,6 +333,132 @@ UEnum* Z_Construct_UEnum_CreateModPlugin_EModTechPointType()
 	return Z_Registration_Info_UEnum_EModTechPointType.InnerSingleton;
 }
 // ********** End Enum EModTechPointType ***********************************************************
+
+// ********** Begin ScriptStruct FModTechCategoryUIConfigStruct ************************************
+static_assert(std::is_polymorphic<FModTechCategoryUIConfigStruct>() == std::is_polymorphic<FModDataBase>(), "USTRUCT FModTechCategoryUIConfigStruct cannot be polymorphic unless super FModDataBase is polymorphic");
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FModTechCategoryUIConfigStruct;
+class UScriptStruct* FModTechCategoryUIConfigStruct::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_FModTechCategoryUIConfigStruct.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_FModTechCategoryUIConfigStruct.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct, (UObject*)Z_Construct_UPackage__Script_CreateModPlugin(), TEXT("ModTechCategoryUIConfigStruct"));
+	}
+	return Z_Registration_Info_UScriptStruct_FModTechCategoryUIConfigStruct.OuterSingleton;
+}
+struct Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xe7\xa7\x91\xe6\x8a\x80\xe5\x88\x86\xe7\xb1\xbbUI\xe9\x85\x8d\xe7\xbd\xae\xe8\xa1\xa8\xe7\xbb\x93\xe6\x9e\x84\n" },
+#endif
+		{ "ModuleRelativePath", "Public/TechnologyDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe7\xa7\x91\xe6\x8a\x80\xe5\x88\x86\xe7\xb1\xbbUI\xe9\x85\x8d\xe7\xbd\xae\xe8\xa1\xa8\xe7\xbb\x93\xe6\x9e\x84" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Category_MetaData[] = {
+		{ "Category", "Base" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xe7\xa7\x91\xe6\x8a\x80\xe5\x88\x86\xe7\xb1\xbb\n" },
+#endif
+		{ "ModuleRelativePath", "Public/TechnologyDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe7\xa7\x91\xe6\x8a\x80\xe5\x88\x86\xe7\xb1\xbb" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CategoryName_MetaData[] = {
+		{ "Category", "Base" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xe5\x88\x86\xe7\xb1\xbb\xe6\x98\xbe\xe7\xa4\xba\xe7\x9a\x84\xe5\x90\x8d\xe5\xad\x97\n" },
+#endif
+		{ "ModuleRelativePath", "Public/TechnologyDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x88\x86\xe7\xb1\xbb\xe6\x98\xbe\xe7\xa4\xba\xe7\x9a\x84\xe5\x90\x8d\xe5\xad\x97" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CategoryIcon_MetaData[] = {
+		{ "Category", "Base" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xe5\x88\x86\xe7\xb1\xbb\xe5\x9c\xa8UI\xe4\xb8\x8a\xe6\x98\xbe\xe7\xa4\xba\xe7\x9a\x84\xe5\x9b\xbe\xe6\xa0\x87\n" },
+#endif
+		{ "ModuleRelativePath", "Public/TechnologyDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x88\x86\xe7\xb1\xbb\xe5\x9c\xa8UI\xe4\xb8\x8a\xe6\x98\xbe\xe7\xa4\xba\xe7\x9a\x84\xe5\x9b\xbe\xe6\xa0\x87" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CategoryUIHeight_MetaData[] = {
+		{ "Category", "Base" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xe5\x88\x86\xe7\xb1\xbb\xe5\x9c\xa8UI\xe4\xb8\x8a\xe5\x8d\xa0\xe7\x94\xa8\xe6\xa0\xbc\xe5\xad\x90\n" },
+#endif
+		{ "ModuleRelativePath", "Public/TechnologyDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x88\x86\xe7\xb1\xbb\xe5\x9c\xa8UI\xe4\xb8\x8a\xe5\x8d\xa0\xe7\x94\xa8\xe6\xa0\xbc\xe5\xad\x90" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CategoryBG_MetaData[] = {
+		{ "Category", "Base" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xe5\x88\x86\xe7\xb1\xbb\xe5\x9c\xa8UI\xe4\xb8\x8a\xe8\x83\x8c\xe6\x99\xaf\n" },
+#endif
+		{ "ModuleRelativePath", "Public/TechnologyDataStruct.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x88\x86\xe7\xb1\xbb\xe5\x9c\xa8UI\xe4\xb8\x8a\xe8\x83\x8c\xe6\x99\xaf" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FBytePropertyParams NewProp_Category_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_Category;
+	static const UECodeGen_Private::FTextPropertyParams NewProp_CategoryName;
+	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_CategoryIcon;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_CategoryUIHeight;
+	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_CategoryBG;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FModTechCategoryUIConfigStruct>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics::NewProp_Category_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics::NewProp_Category = { "Category", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModTechCategoryUIConfigStruct, Category), Z_Construct_UEnum_CreateModPlugin_EModTechCategory, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Category_MetaData), NewProp_Category_MetaData) }; // 2158225582
+const UECodeGen_Private::FTextPropertyParams Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics::NewProp_CategoryName = { "CategoryName", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModTechCategoryUIConfigStruct, CategoryName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CategoryName_MetaData), NewProp_CategoryName_MetaData) };
+const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics::NewProp_CategoryIcon = { "CategoryIcon", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModTechCategoryUIConfigStruct, CategoryIcon), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CategoryIcon_MetaData), NewProp_CategoryIcon_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics::NewProp_CategoryUIHeight = { "CategoryUIHeight", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModTechCategoryUIConfigStruct, CategoryUIHeight), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CategoryUIHeight_MetaData), NewProp_CategoryUIHeight_MetaData) };
+const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics::NewProp_CategoryBG = { "CategoryBG", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModTechCategoryUIConfigStruct, CategoryBG), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CategoryBG_MetaData), NewProp_CategoryBG_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics::NewProp_Category_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics::NewProp_Category,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics::NewProp_CategoryName,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics::NewProp_CategoryIcon,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics::NewProp_CategoryUIHeight,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics::NewProp_CategoryBG,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_CreateModPlugin,
+	Z_Construct_UScriptStruct_FModDataBase,
+	&NewStructOps,
+	"ModTechCategoryUIConfigStruct",
+	Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics::PropPointers),
+	sizeof(FModTechCategoryUIConfigStruct),
+	alignof(FModTechCategoryUIConfigStruct),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_FModTechCategoryUIConfigStruct.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_FModTechCategoryUIConfigStruct.InnerSingleton, Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_FModTechCategoryUIConfigStruct.InnerSingleton;
+}
+// ********** End ScriptStruct FModTechCategoryUIConfigStruct **************************************
 
 // ********** Begin ScriptStruct FModTechUnlockItemConigStruct *************************************
 static_assert(std::is_polymorphic<FModTechUnlockItemConigStruct>() == std::is_polymorphic<FModDataBase>(), "USTRUCT FModTechUnlockItemConigStruct cannot be polymorphic unless super FModDataBase is polymorphic");
@@ -760,11 +887,12 @@ struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_Cr
 		{ EModTechPointType_StaticEnum, TEXT("EModTechPointType"), &Z_Registration_Info_UEnum_EModTechPointType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1067038117U) },
 	};
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
+		{ FModTechCategoryUIConfigStruct::StaticStruct, Z_Construct_UScriptStruct_FModTechCategoryUIConfigStruct_Statics::NewStructOps, TEXT("ModTechCategoryUIConfigStruct"), &Z_Registration_Info_UScriptStruct_FModTechCategoryUIConfigStruct, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModTechCategoryUIConfigStruct), 3034342460U) },
 		{ FModTechUnlockItemConigStruct::StaticStruct, Z_Construct_UScriptStruct_FModTechUnlockItemConigStruct_Statics::NewStructOps, TEXT("ModTechUnlockItemConigStruct"), &Z_Registration_Info_UScriptStruct_FModTechUnlockItemConigStruct, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModTechUnlockItemConigStruct), 4212895362U) },
 		{ FModTechnologyConfigStruct::StaticStruct, Z_Construct_UScriptStruct_FModTechnologyConfigStruct_Statics::NewStructOps, TEXT("ModTechnologyConfigStruct"), &Z_Registration_Info_UScriptStruct_FModTechnologyConfigStruct, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModTechnologyConfigStruct), 4234222890U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_TechnologyDataStruct_h__Script_CreateModPlugin_1109269081(TEXT("/Script/CreateModPlugin"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_TechnologyDataStruct_h__Script_CreateModPlugin_41035561(TEXT("/Script/CreateModPlugin"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_TechnologyDataStruct_h__Script_CreateModPlugin_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_TechnologyDataStruct_h__Script_CreateModPlugin_Statics::ScriptStructInfo),
 	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_TechnologyDataStruct_h__Script_CreateModPlugin_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_TechnologyDataStruct_h__Script_CreateModPlugin_Statics::EnumInfo));

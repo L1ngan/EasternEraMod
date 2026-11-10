@@ -12,6 +12,8 @@
 #include "HAL/PlatformFilemanager.h"
 #include "Misc/FileHelper.h"
 #include "Misc/Paths.h"
+#include "Misc/PackageName.h"
+#include "HAL/FileManager.h"
 #include "Framework/Notifications/NotificationManager.h"
 #include "Widgets/Notifications/SNotificationList.h"
 #include "DesktopPlatformModule.h"
@@ -597,6 +599,23 @@ void SPackageModWindow::ExecuteCookForAllMods()
 		ModCookDirs.AddUnique(ModContentDir);
 	}
 
+	// 引擎对 -CookDir 只收集 .uasset，不收 .umap；Mod 目录里没被其他资产引用的关卡不会被 Cook，打 pak 时就会缺。
+	// 所以在游戏线程上先递归找出各 Mod 目录下的 .umap，转成长包名后逐个以 -Map 显式传给 Cook。
+	TArray<FString> ModMapPackageNames;
+	for (const FString& ModCookDir : ModCookDirs)
+	{
+		TArray<FString> MapFiles;
+		IFileManager::Get().FindFilesRecursive(MapFiles, *ModCookDir, TEXT("*.umap"), true, false);
+		for (const FString& MapFile : MapFiles)
+		{
+			FString MapPackageName;
+			if (FPackageName::TryConvertFilenameToLongPackageName(MapFile, MapPackageName))
+			{
+				ModMapPackageNames.AddUnique(MapPackageName);
+			}
+		}
+	}
+
 	// 创建可更新的进度通知
 	FNotificationInfo Info(LOCTEXT("CookingAllAssets", "Cooking selected mod assets..."));
 	Info.ExpireDuration = 0.0f;
@@ -613,7 +632,7 @@ void SPackageModWindow::ExecuteCookForAllMods()
 	TWeakPtr<SPackageModWindow> WeakThisPtr = StaticCastSharedRef<SPackageModWindow>(AsShared());
 	
 	// 在后台线程中执行Cook
-	AsyncTask(ENamedThreads::AnyBackgroundThreadNormalTask, [WeakThisPtr, ProjectPath, ProjectName, ModCookDirs]()
+	AsyncTask(ENamedThreads::AnyBackgroundThreadNormalTask, [WeakThisPtr, ProjectPath, ProjectName, ModCookDirs, ModMapPackageNames]()
 	{
 		// 创建Cook日志文件路径（用于诊断）
 		FString CookLogPath = FPaths::Combine(FPaths::ProjectSavedDir(), TEXT("Logs"), FString::Printf(TEXT("Cook_%s.log"), *FDateTime::Now().ToString(TEXT("%Y%m%d_%H%M%S"))));
@@ -623,12 +642,17 @@ void SPackageModWindow::ExecuteCookForAllMods()
 		// Cook命令参数：范围烘焙所选 Mod 的内容目录
 		// -CookDir 的真实语义是"要烘焙的内容目录"（可多次传入），显式指定后 cooker 不再回退到全项目烘焙；
 		// Mod 资产引用的本体依赖会被一并烘焙，但打 pak 时只收 Mod 目录的产物，结果不受影响。
+		// -CookDir 只收 .uasset，Mod 目录下的关卡（.umap）另外逐个用 -Map=<长包名> 传入，否则没被引用的关卡不会被 Cook。
 		// -TargetPlatform=Windows 指定目标平台；-stdout/-Unattended/-NoLogTimes 输出与非交互控制；
 		// -abslog 指定诊断日志绝对路径。Cook 输出路径可能是 Saved/Cooked/Windows/... 或 WindowsNoEditor/...
 		FString CookDirArgs;
 		for (const FString& ModCookDir : ModCookDirs)
 		{
 			CookDirArgs += FString::Printf(TEXT(" -CookDir=\"%s\""), *ModCookDir);
+		}
+		for (const FString& MapPackageName : ModMapPackageNames)
+		{
+			CookDirArgs += FString::Printf(TEXT(" -Map=%s"), *MapPackageName);
 		}
 		FString CookCommandLine = FString::Printf(
 			TEXT("-run=Cook -TargetPlatform=Windows%s -Unversioned -Compressed -stdout -Unattended -NoLogTimes -abslog=\"%s\""),

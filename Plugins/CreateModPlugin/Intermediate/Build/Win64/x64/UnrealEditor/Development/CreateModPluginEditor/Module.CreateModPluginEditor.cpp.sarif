@@ -53,31 +53,6 @@
                             }
                         }
                     ]
-                },
-                {
-                    "ruleId": "C4996",
-                    "message": {
-                        "text": "'SListView<TSharedPtr<ObjectType,ESPMode::ThreadSafe>>::FArguments::ItemHeight': The ItemHeight is only used for Tile. See ShouldArrangeAsTiles - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.\n        with\n        [\n            ObjectType=FString\n        ]"
-                    },
-                    "analysisTarget": {
-                        "uri": "file:///G:/EasternEraMod/Plugins/CreateModPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/CreateModPluginEditor/Module.CreateModPluginEditor.cpp"
-                    },
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "file:///G:/EasternEraMod/Plugins/CreateModPlugin/Source/CreateModPluginEditor/Private/PackageModWindow.cpp"
-                                },
-                                "region": {
-                                    "startLine": 166,
-                                    "startColumn": 6,
-                                    "snippet": {
-                                        "text": "\t\t\t\t\t.ItemHeight(20.0f)"
-                                    }
-                                }
-                            }
-                        }
-                    ]
                 }
             ],
             "tool": {

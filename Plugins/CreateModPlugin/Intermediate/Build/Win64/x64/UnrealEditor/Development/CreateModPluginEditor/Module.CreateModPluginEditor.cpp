@@ -8,5 +8,4 @@
 #include "G:/EasternEraMod/Plugins/CreateModPlugin/Source/CreateModPluginEditor/Private/ModInfoEditorCommands.cpp"
 #include "G:/EasternEraMod/Plugins/CreateModPlugin/Source/CreateModPluginEditor/Private/ModInfoEditorData.cpp"
 #include "G:/EasternEraMod/Plugins/CreateModPlugin/Source/CreateModPluginEditor/Private/ModInfoEditorWindow.cpp"
-#include "G:/EasternEraMod/Plugins/CreateModPlugin/Source/CreateModPluginEditor/Private/PackageModWindow.cpp"
 #include "G:/EasternEraMod/Plugins/CreateModPlugin/Source/CreateModPluginEditor/Private/UsmapExporter.cpp"

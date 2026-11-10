@@ -480,8 +480,8 @@ struct CREATEMODPLUGIN_API FModBuildListCategorizeStruct : public FModDataBase
 	//排序
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 Sort = 0;
-	//图标
+	//图标(依次为 普通 / 悬停 / 按下);游戏表里是软引用, 这里保持一致, 否则合并时类型不兼容会被跳过
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TArray<UTexture2D*> Icon;
+	TArray<TSoftObjectPtr<UTexture2D>> Icon;
 };
 

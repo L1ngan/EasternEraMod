@@ -2080,17 +2080,17 @@ struct Z_Construct_UScriptStruct_FModBuildListCategorizeStruct_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Icon_MetaData[] = {
 		{ "Category", "ModBuildListCategorizeStruct" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "//\xe5\x9b\xbe\xe6\xa0\x87\n" },
+		{ "Comment", "//\xe5\x9b\xbe\xe6\xa0\x87(\xe4\xbe\x9d\xe6\xac\xa1\xe4\xb8\xba \xe6\x99\xae\xe9\x80\x9a / \xe6\x82\xac\xe5\x81\x9c / \xe6\x8c\x89\xe4\xb8\x8b);\xe6\xb8\xb8\xe6\x88\x8f\xe8\xa1\xa8\xe9\x87\x8c\xe6\x98\xaf\xe8\xbd\xaf\xe5\xbc\x95\xe7\x94\xa8, \xe8\xbf\x99\xe9\x87\x8c\xe4\xbf\x9d\xe6\x8c\x81\xe4\xb8\x80\xe8\x87\xb4, \xe5\x90\xa6\xe5\x88\x99\xe5\x90\x88\xe5\xb9\xb6\xe6\x97\xb6\xe7\xb1\xbb\xe5\x9e\x8b\xe4\xb8\x8d\xe5\x85\xbc\xe5\xae\xb9\xe4\xbc\x9a\xe8\xa2\xab\xe8\xb7\xb3\xe8\xbf\x87\n" },
 #endif
 		{ "ModuleRelativePath", "Public/BuildDataStruct.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "\xe5\x9b\xbe\xe6\xa0\x87" },
+		{ "ToolTip", "\xe5\x9b\xbe\xe6\xa0\x87(\xe4\xbe\x9d\xe6\xac\xa1\xe4\xb8\xba \xe6\x99\xae\xe9\x80\x9a / \xe6\x82\xac\xe5\x81\x9c / \xe6\x8c\x89\xe4\xb8\x8b);\xe6\xb8\xb8\xe6\x88\x8f\xe8\xa1\xa8\xe9\x87\x8c\xe6\x98\xaf\xe8\xbd\xaf\xe5\xbc\x95\xe7\x94\xa8, \xe8\xbf\x99\xe9\x87\x8c\xe4\xbf\x9d\xe6\x8c\x81\xe4\xb8\x80\xe8\x87\xb4, \xe5\x90\xa6\xe5\x88\x99\xe5\x90\x88\xe5\xb9\xb6\xe6\x97\xb6\xe7\xb1\xbb\xe5\x9e\x8b\xe4\xb8\x8d\xe5\x85\xbc\xe5\xae\xb9\xe4\xbc\x9a\xe8\xa2\xab\xe8\xb7\xb3\xe8\xbf\x87" },
 #endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FTextPropertyParams NewProp_DisplayName;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Sort;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_Icon_Inner;
+	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_Icon_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_Icon;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static void* NewStructOps()
@@ -2101,8 +2101,8 @@ struct Z_Construct_UScriptStruct_FModBuildListCategorizeStruct_Statics
 };
 const UECodeGen_Private::FTextPropertyParams Z_Construct_UScriptStruct_FModBuildListCategorizeStruct_Statics::NewProp_DisplayName = { "DisplayName", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModBuildListCategorizeStruct, DisplayName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DisplayName_MetaData), NewProp_DisplayName_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FModBuildListCategorizeStruct_Statics::NewProp_Sort = { "Sort", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModBuildListCategorizeStruct, Sort), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Sort_MetaData), NewProp_Sort_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FModBuildListCategorizeStruct_Statics::NewProp_Icon_Inner = { "Icon", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModBuildListCategorizeStruct_Statics::NewProp_Icon = { "Icon", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModBuildListCategorizeStruct, Icon), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Icon_MetaData), NewProp_Icon_MetaData) };
+const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FModBuildListCategorizeStruct_Statics::NewProp_Icon_Inner = { "Icon", nullptr, (EPropertyFlags)0x0004000000000000, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FModBuildListCategorizeStruct_Statics::NewProp_Icon = { "Icon", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FModBuildListCategorizeStruct, Icon), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Icon_MetaData), NewProp_Icon_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FModBuildListCategorizeStruct_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModBuildListCategorizeStruct_Statics::NewProp_DisplayName,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FModBuildListCategorizeStruct_Statics::NewProp_Sort,
@@ -2152,10 +2152,10 @@ struct Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_Cr
 		{ FModBuildData::StaticStruct, Z_Construct_UScriptStruct_FModBuildData_Statics::NewStructOps, TEXT("ModBuildData"), &Z_Registration_Info_UScriptStruct_FModBuildData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModBuildData), 3222946982U) },
 		{ FModBuildUIData::StaticStruct, Z_Construct_UScriptStruct_FModBuildUIData_Statics::NewStructOps, TEXT("ModBuildUIData"), &Z_Registration_Info_UScriptStruct_FModBuildUIData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModBuildUIData), 3233701449U) },
 		{ FModBuildTabStruct::StaticStruct, Z_Construct_UScriptStruct_FModBuildTabStruct_Statics::NewStructOps, TEXT("ModBuildTabStruct"), &Z_Registration_Info_UScriptStruct_FModBuildTabStruct, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModBuildTabStruct), 4062650917U) },
-		{ FModBuildListCategorizeStruct::StaticStruct, Z_Construct_UScriptStruct_FModBuildListCategorizeStruct_Statics::NewStructOps, TEXT("ModBuildListCategorizeStruct"), &Z_Registration_Info_UScriptStruct_FModBuildListCategorizeStruct, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModBuildListCategorizeStruct), 808960885U) },
+		{ FModBuildListCategorizeStruct::StaticStruct, Z_Construct_UScriptStruct_FModBuildListCategorizeStruct_Statics::NewStructOps, TEXT("ModBuildListCategorizeStruct"), &Z_Registration_Info_UScriptStruct_FModBuildListCategorizeStruct, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FModBuildListCategorizeStruct), 2788740732U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h__Script_CreateModPlugin_85027502(TEXT("/Script/CreateModPlugin"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h__Script_CreateModPlugin_2159158049(TEXT("/Script/CreateModPlugin"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h__Script_CreateModPlugin_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h__Script_CreateModPlugin_Statics::ScriptStructInfo),
 	Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h__Script_CreateModPlugin_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EasternEraMod_Plugins_CreateModPlugin_Source_CreateModPlugin_Public_BuildDataStruct_h__Script_CreateModPlugin_Statics::EnumInfo));

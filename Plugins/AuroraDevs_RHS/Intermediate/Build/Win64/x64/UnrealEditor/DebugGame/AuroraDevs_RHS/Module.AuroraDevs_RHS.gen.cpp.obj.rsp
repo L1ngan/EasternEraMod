@@ -1,12 +1,12 @@
-"H:/Project/Plugins/AuroraDevs_RHS/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/AuroraDevs_RHS/Module.AuroraDevs_RHS.gen.cpp"
-@"H:/Project/Plugins/AuroraDevs_RHS/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/AuroraDevs_RHS/AuroraDevs_RHS.Shared.rsp"
-/FI"H:/Project/Intermediate/Build/Win64/x64/EastRimWorldEditor/DebugGame/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.h"
-/FI"H:/Project/Plugins/AuroraDevs_RHS/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/AuroraDevs_RHS/Definitions.AuroraDevs_RHS.h"
-/Yu"H:/Project/Intermediate/Build/Win64/x64/EastRimWorldEditor/DebugGame/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.h"
-/Fp"H:/Project/Intermediate/Build/Win64/x64/EastRimWorldEditor/DebugGame/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.h.pch"
-/Fo"H:/Project/Plugins/AuroraDevs_RHS/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/AuroraDevs_RHS/Module.AuroraDevs_RHS.gen.cpp.obj"
-/experimental:log "H:/Project/Plugins/AuroraDevs_RHS/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/AuroraDevs_RHS/Module.AuroraDevs_RHS.gen.cpp.sarif"
-/sourceDependencies "H:/Project/Plugins/AuroraDevs_RHS/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/AuroraDevs_RHS/Module.AuroraDevs_RHS.gen.cpp.dep.json"
+"G:/EasternEraMod/Plugins/AuroraDevs_RHS/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/AuroraDevs_RHS/Module.AuroraDevs_RHS.gen.cpp"
+@"G:/EasternEraMod/Plugins/AuroraDevs_RHS/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/AuroraDevs_RHS/AuroraDevs_RHS.Shared.rsp"
+/FI"G:/EasternEraMod/Intermediate/Build/Win64/x64/EastRimWorldEditor/DebugGame/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.h"
+/FI"G:/EasternEraMod/Plugins/AuroraDevs_RHS/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/AuroraDevs_RHS/Definitions.AuroraDevs_RHS.h"
+/Yu"G:/EasternEraMod/Intermediate/Build/Win64/x64/EastRimWorldEditor/DebugGame/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.h"
+/Fp"G:/EasternEraMod/Intermediate/Build/Win64/x64/EastRimWorldEditor/DebugGame/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.h.pch"
+/Fo"G:/EasternEraMod/Plugins/AuroraDevs_RHS/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/AuroraDevs_RHS/Module.AuroraDevs_RHS.gen.cpp.obj"
+/experimental:log "G:/EasternEraMod/Plugins/AuroraDevs_RHS/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/AuroraDevs_RHS/Module.AuroraDevs_RHS.gen.cpp.sarif"
+/sourceDependencies "G:/EasternEraMod/Plugins/AuroraDevs_RHS/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/AuroraDevs_RHS/Module.AuroraDevs_RHS.gen.cpp.dep.json"
 /d2ssa-cfg-question-
 /Zc:inline
 /nologo

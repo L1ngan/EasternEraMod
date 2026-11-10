@@ -3,6 +3,8 @@
 #include "CoreMinimal.h"
 #include "Widgets/SCompoundWidget.h"
 #include "Widgets/DeclarativeSyntaxSupport.h"
+// 成员 ModListView 用到 SListView 模板，这里直接包含；否则单独编译本文件（不进 unity）时会被当成普通类前置声明而报错
+#include "Widgets/Views/SListView.h"
 
 class SPackageModWindow : public SCompoundWidget
 {
