@@ -318,7 +318,7 @@ end
 - Returns false when: the widget class is empty; the map is in use (the sect apparel UI is open, or the previous session has not finished closing); you are not in a normal place (a place switch is in progress, or the player is controlling another pawn, e.g. city visits or sparring); a Guid was passed but it is not a human disciple of the player's force who is currently present.
 - While it is open:
   - the mod widget is on the Menu layer; the main HUD is removed, so its hotkeys do not work; the game is paused once the loading screen closes;
-  - the view switches to the preview character's own camera, and the preview character keeps animating while the game is paused. To use your own camera, call `SetViewTargetWithBlend(Camera, 0)`: the blend time must be 0 (blending runs on game time and stalls while paused), and move the camera every frame from a real-time timer. Do not enable the plugin's studio camera `CameraStudio` in the map; its interpolation stalls while the game is paused;
+  - once the map loads, the preview character takes over player control and keeps animating while the game is paused; the view stays on a level camera in the map (outside the studio it may not face the stage). To use your own camera, call `SetViewTargetWithBlend(Camera, 0)`: the blend time must be 0 (blending runs on game time and stalls while paused), and move the camera every frame from a real-time timer. Do not enable the plugin's studio camera `CameraStudio` in the map; its interpolation stalls while the game is paused;
   - open sub-pages with `PushModWidgetToLayer(nil, "Menu" or "Modal", Class)` — this does not close the map; close your sub-pages yourself before closing the main widget;
   - game-time timers practically stop while the game is paused; use `RegisterModRealTimeTimer` (see [4.3](#43-timers)).
 - Closing: press Esc or call `DeactivateWidget()`. Once the widget leaves the layer stack, the map closes automatically and the place HUD returns. Game speed is back at 1 afterwards (every loading screen resets it to 1, same as the original apparel UI).
@@ -326,13 +326,18 @@ end
 
 **Studio (when a target disciple is passed)**
 
-> Added in November 2026, in testing.
+> Added in November 2026; requires a game version that includes this API.
 
 - With a valid Guid, the preview character in the map takes on the target disciple's current look (body, face, hair, apparel, colors) and acts as a display-only stand-in. The disciple stays where they are and is never moved.
 - After a successful call on **the target disciple** to `SetCharacterApparel`, `ClearCharacterApparel`, `RemoveCharacterPersonalApparel`, `ResetCharacterApparels` or `SetCharacterCustomizationId` from [4.9](#49-character-appearance-and-personal-apparel), the stand-in refreshes on the next frame. Changes go straight into the disciple's save data, so nothing needs to be written back when the map closes.
 - To support "cancel", record the personal apparel and current preset with `GetCharacterPersonalApparels` and `GetCharacterCustomizationIds` when entering, and write them back on cancel.
-- Camera controls: use the studio camera functions in the table above (orbit, distance, height, reset). They move the spring arm of the stand-in's own camera and take effect immediately while the game is paused. How buttons, dragging or the mouse wheel map onto them is up to the mod; for an automatic turntable, call `SetCharacterEditorCameraOrbit` every frame from a real-time timer.
-- Do not rotate the stand-in for a turntable: its own camera rotates with it, so nothing appears to change on screen.
+- The stand-in appears already standing on the stage, with no entrance animation, and then plays its idle animation while the game is paused.
+- View: a level camera in the map, placed at the default front shot of the stand-in (the framing designed by the plugin) when the studio opens.
+- Camera controls: use the studio camera functions in the table above (orbit, distance, height, reset). They change the shot parameters and immediately move that level camera into place, even while the game is paused. How buttons, dragging or the mouse wheel map onto them is up to the mod.
+- There are two ways to build a turntable:
+  - Orbit the camera: call `SetCharacterEditorCameraOrbit` every frame from a real-time timer. The lights stay fixed relative to the stand-in, so the lit side changes as the camera moves.
+  - Rotate the stand-in: the camera and lights stay still, like a real turntable. Get the stand-in with `GetCharacterEditorPreviewCharacter()` and call `K2_SetActorRotation(UE.FRotator(0, yaw, 0), false)` every frame from a real-time timer. The camera functions still work while the stand-in is turned: shots are always computed from the stand-in's facing when the studio opened, so the camera does not jump to the stand-in's current front. `ResetCharacterEditorCamera` does not reset the stand-in's facing; to restore it, record `K2_GetActorRotation()` when the studio opens and write it back.
+- Lighting matches the sect apparel editor: opening the studio disables every enabled post-process volume in the scene (the map's own volume darkens the image and adds a heavy vignette), and closing the map restores them. If you add your own post-process volume, add it after the studio opens.
 - These camera functions only work in the studio; once you switch to your own camera (`SetViewTargetWithBlend`) they no longer affect the view.
 - If the target disciple leaves while the map is loading, or the preview character cannot be found, the map opens in plain override mode (`GetCharacterEditorPreviewCharacter()` returns nil).
 
@@ -363,8 +368,8 @@ You can also edit a disciple without the map: point the camera at the disciple i
 | `RemoveCharacterPersonalApparel(Character, Slot)` | Drops one slot from the personal apparel so it follows the sect apparel again (only for disciples of the player's sect); returns bool |
 | `GetCharacterPersonalApparels(Character)` | The personal apparel as a "slot → apparel ID" map; a None value means the slot is left empty |
 | `SetCharacterCustomizationId(Character, ProfileId)` | Switches the customization preset (body, face, hair); apparel already set is kept; returns bool |
-| `GetCharacterCustomizationIds(Character)` | → `ids, currentId`: every preset ID with the character's gender that `SetCharacterCustomizationId` accepts (rows added through JSON included, in table order), plus the character's current preset. Added November 2026, in testing |
-| `GetCustomizationPresetInfo(nil, ProfileId)` | → `ok, name, avatar`: the preset's name and thumbnail (`Texture2D`, may be nil, loaded synchronously). Added November 2026, in testing |
+| `GetCharacterCustomizationIds(Character)` | → `ids, currentId`: every preset ID with the character's gender that `SetCharacterCustomizationId` accepts (rows added through JSON included, in table order), plus the character's current preset. Added November 2026. |
+| `GetCustomizationPresetInfo(nil, ProfileId)` | → `ok, name, avatar`: the preset's name and thumbnail (`Texture2D`, may be nil, loaded synchronously). Added November 2026. |
 
 ```lua
 local ok = UE.UModLuaLibrary.SetCharacterApparel(Character, UE.EArmorType.Armor, "MyMod_Robe")
@@ -375,6 +380,7 @@ local ids, currentId = UE.UModLuaLibrary.GetCharacterCustomizationIds(Character)
 - `Slot` accepts only `UE.EArmorType.Helmet`, `Armor`, `Pants` and `Shoes`.
 - `ApparelId` must be a row of the equipment table (`EquipmentConfig`) whose slot matches `Slot`.
 - `ProfileId` must be a row of the customization preset table (`CharacterAppearancePreset`) with the same gender as the character's current preset. The sect leader and characters that use the protagonist's appearance are rejected. New bodies, faces and hairstyles can be added as rows of `CharacterAppearancePreset` and `CharacterAnatomyProfiles` through JSON (see the ParagonSunWukong example).
+- In game versions before November 2026, the gender check in `SetCharacterCustomizationId` read the wrong field of the preset table, so it returned false even for presets of the same gender. Versions that include `GetCharacterCustomizationIds` have the fix.
 - Changes are stored in the character's save data and survive save/load and leaving and returning to a place. Customization presets are not affected by sect apparel.
 
 **Personal apparel** (disciples of the player's sect who hold a post, the sect leader included):

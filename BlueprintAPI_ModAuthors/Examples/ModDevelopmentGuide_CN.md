@@ -316,7 +316,7 @@ end
 - 返回 false 的情况：界面类为空；换装地图正被占用（宗门时装界面开着，或上一次还没关完）；不在普通地点里（正在切换地点，或玩家正操控别的角色，如城市访问、比武）；传了 Guid 但不是玩家势力当前在场的人类弟子。
 - 打开期间：
   - Mod 界面在 Menu 层；主界面撤下，主界面上的快捷键不生效；加载画面关闭后游戏暂停；
-  - 视角会切到换装地图里预览角色自带的相机，预览角色在暂停中照常播动作。想用自己的相机就 `SetViewTargetWithBlend(相机, 0)`：混合时间要传 0（混合按游戏时间走，暂停中会停住），相机位置用实时计时器逐帧摆。地图里插件自带的摄影棚相机 `CameraStudio` 在暂停中插值会停住，不要启用它；
+  - 地图加载后预览角色会接管玩家操控，在暂停中照常播动作；视角停在换装地图里的一台关卡相机上（没进摄影棚时它不一定对着站位）。想用自己的相机就 `SetViewTargetWithBlend(相机, 0)`：混合时间要传 0（混合按游戏时间走，暂停中会停住），相机位置用实时计时器逐帧摆。地图里插件自带的摄影棚相机 `CameraStudio` 在暂停中插值会停住，不要启用它；
   - 在界面里开子页面用 `PushModWidgetToLayer(nil, "Menu" 或 "Modal", 类)`，不会关掉换装地图；子页面要在关闭主界面之前自己关掉；
   - 游戏暂停时按游戏时间走的定时器基本停走，请用 `RegisterModRealTimeTimer`（见 [4.3](#43-定时器)）。
 - 关闭：按 Esc 或调 `DeactivateWidget()`，界面离开层栈后换装地图自动关闭，回到地点主界面，游戏速度回到 1 档（每过一次加载画面都会回到 1 档，原时装界面也一样）。
@@ -324,13 +324,18 @@ end
 
 **摄影棚（传了目标弟子时）**
 
-> 2026 年 11 月新增，测试中。
+> 2026 年 11 月新增，需要包含该接口的游戏版本。
 
 - 传了有效 Guid 时，换装地图里的预览角色会换成目标弟子当前的样子（体型、脸、发型、服饰、颜色），作为“替身”只用来显示。弟子本人始终留在原地，不会被移动。
 - 对**目标弟子本人**调 [4.9](#49-角色外观与个人时装) 的 `SetCharacterApparel`、`ClearCharacterApparel`、`RemoveCharacterPersonalApparel`、`ResetCharacterApparels`、`SetCharacterCustomizationId`，成功后替身在下一帧自动刷新。改动直接写进弟子的存档数据，关图时不需要“写回”。
 - 想做“取消”：进棚时用 `GetCharacterPersonalApparels`、`GetCharacterCustomizationIds` 记下原来的个人时装和当前预设，取消时写回。
-- 镜头操作：用上表的摄影棚相机接口（环绕、距离、高度、复位）。它们改的是替身自带相机的弹簧臂，在暂停中立即生效。界面按钮、拖拽、滚轮怎么映射到这些接口由 Mod 决定；自动转台就用实时计时器逐帧调 `SetCharacterEditorCameraOrbit`。
-- 不要靠转替身做转台：替身自带的相机跟着替身一起转，画面上看不出变化。
+- 替身进棚直接站在台上，不播入场动作，之后在暂停中照常播待机动作。
+- 视角：换装地图里的一台关卡相机，进棚时摆到替身正面的默认机位（插件设计的取景）。
+- 镜头操作：用上表的摄影棚相机接口（环绕、距离、高度、复位）。它们改的是机位参数，改完立即把这台关卡相机摆过去，在暂停中立即生效。界面按钮、拖拽、滚轮怎么映射到这些接口由 Mod 决定。
+- 转台有两种做法：
+  - 转镜头：用实时计时器逐帧调 `SetCharacterEditorCameraOrbit`。灯光跟着替身，看到的受光面会变。
+  - 转替身：相机和灯光都不动，像真的转台。用 `GetCharacterEditorPreviewCharacter()` 取得替身，用实时计时器逐帧调 `K2_SetActorRotation(UE.FRotator(0, yaw, 0), false)`。转替身期间照样可以调镜头接口：机位始终按进棚时替身的朝向算，不会跳到替身当前的正面。`ResetCharacterEditorCamera` 不复位替身朝向，需要复位时，进棚时用 `K2_GetActorRotation()` 记下原朝向，再写回去。
+- 灯光与宗门时装界面一致：进棚时关掉场景里所有开着的后期体积（换装地图自带的那个会把画面压暗、四角压黑），关图时恢复。要加自己的后期体积，请在进棚之后再加。
 - 这几个相机接口只在摄影棚里可用；换成自己的相机（`SetViewTargetWithBlend`）后它们不再影响画面。
 - 目标弟子在加载期间离场，或预览角色异常时，按普通覆盖模式打开（`GetCharacterEditorPreviewCharacter()` 为 nil）。
 
@@ -361,8 +366,8 @@ end
 | `RemoveCharacterPersonalApparel(Character, Slot)` | 去掉个人时装里某个槽，让它重新跟随宗门服饰（只对本门派弟子有效）；返回 bool |
 | `GetCharacterPersonalApparels(Character)` | 取个人时装：“槽 → 服饰 ID”的表，值为 None 表示该槽留空 |
 | `SetCharacterCustomizationId(Character, ProfileId)` | 换捏脸预设（体型、脸型、发型），已设的服饰保留；返回 bool |
-| `GetCharacterCustomizationIds(Character)` | → `ids, currentId`：与角色同性别、能传给 `SetCharacterCustomizationId` 的全部预设 ID（含 JSON 加的行，按表内顺序），以及角色当前的预设。2026-11 新增，测试中 |
-| `GetCustomizationPresetInfo(nil, ProfileId)` | → `ok, name, avatar`：预设的名称和缩略图（`Texture2D`，可能为空，同步加载）。2026-11 新增，测试中 |
+| `GetCharacterCustomizationIds(Character)` | → `ids, currentId`：与角色同性别、能传给 `SetCharacterCustomizationId` 的全部预设 ID（含 JSON 加的行，按表内顺序），以及角色当前的预设。2026-11 新增 |
+| `GetCustomizationPresetInfo(nil, ProfileId)` | → `ok, name, avatar`：预设的名称和缩略图（`Texture2D`，可能为空，同步加载）。2026-11 新增 |
 
 ```lua
 local ok = UE.UModLuaLibrary.SetCharacterApparel(Character, UE.EArmorType.Armor, "MyMod_Robe")
@@ -373,6 +378,7 @@ local ids, currentId = UE.UModLuaLibrary.GetCharacterCustomizationIds(Character)
 - `Slot` 只收 `UE.EArmorType.Helmet`、`Armor`、`Pants`、`Shoes`。
 - `ApparelId` 必须是装备配置表（`EquipmentConfig`）里的行，而且这件装备的槽位与 `Slot` 一致。
 - `ProfileId` 必须是捏脸预设表（`CharacterAppearancePreset`）里的行，且性别与角色当前预设相同；掌门和使用主角外观的角色不接受。新的体型、脸型、发型可以用 JSON 往 `CharacterAppearancePreset`、`CharacterAnatomyProfiles` 加行（参考示例 ParagonSunWukong）。
+- 2026-11 前的游戏版本里，`SetCharacterCustomizationId` 的性别校验读错了预设表的字段，同性别的预设也会返回 false；包含 `GetCharacterCustomizationIds` 的版本已修复。
 - 改动写进角色的存档数据，存读档、离开地点再回来都会保留。捏脸预设不受宗门服饰影响。
 
 **个人时装**（本门派有职位的弟子，包括掌门）：
