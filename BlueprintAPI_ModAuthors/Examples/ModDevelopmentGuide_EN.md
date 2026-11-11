@@ -306,17 +306,50 @@ end
 | `OpenCharacterEditorMapEx(WidgetClass, TargetCharacterGuid)` | Loads the character editor map and shows the mod widget instead of the sect apparel UI; returns whether loading started |
 | `GetCharacterEditorTargetGuid()` | The target disciple Guid passed this time |
 | `GetCharacterEditorTargetCharacter()` | The target disciple; nil when not present |
+| `GetCharacterEditorPreviewCharacter()` | The preview character (stand-in) in the studio; nil when not in studio mode |
+| `RefreshCharacterEditorPreview()` | Copies the target disciple's look onto the stand-in again on the next frame; returns false when not in studio mode |
+| `SetCharacterEditorCameraOrbit(Yaw, Pitch)` | Orbits the studio camera around the stand-in to a yaw and pitch relative to the default shot (degrees; positive Pitch raises the camera to look down; total pitch is limited to ±89°); returns bool |
+| `SetCharacterEditorCameraDistance(Distance)` | Camera distance to the stand-in (cm; negative values count as 0); returns bool |
+| `SetCharacterEditorCameraHeight(Height)` | Camera height offset from the default shot (cm); returns bool |
+| `ResetCharacterEditorCamera()` | Returns the camera to the default shot from when the map opened; returns bool |
+| `GetCharacterEditorCameraDefaultDistance()` | The default distance, for scaling the zoom; 0 when unavailable |
 
 - The widget class must derive from `CommonActivatableWidget`; set up mouse and Esc as in [4.7](#47-ui-widgets-and-buttons). The original `OpenCharacterEditorMap()` is unchanged, and the sect apparel button still opens the original UI.
 - Returns false when: the widget class is empty; the map is in use (the sect apparel UI is open, or the previous session has not finished closing); you are not in a normal place (a place switch is in progress, or the player is controlling another pawn, e.g. city visits or sparring); a Guid was passed but it is not a human disciple of the player's force who is currently present.
 - While it is open:
   - the mod widget is on the Menu layer; the main HUD is removed, so its hotkeys do not work; the game is paused once the loading screen closes;
-  - the preview character is not possessed and the camera is not switched; set the camera yourself with `SetViewTargetWithBlend`;
+  - the view switches to the preview character's own camera, and the preview character keeps animating while the game is paused. To use your own camera, call `SetViewTargetWithBlend(Camera, 0)`: the blend time must be 0 (blending runs on game time and stalls while paused), and move the camera every frame from a real-time timer. Do not enable the plugin's studio camera `CameraStudio` in the map; its interpolation stalls while the game is paused;
   - open sub-pages with `PushModWidgetToLayer(nil, "Menu" or "Modal", Class)` — this does not close the map; close your sub-pages yourself before closing the main widget;
   - game-time timers practically stop while the game is paused; use `RegisterModRealTimeTimer` (see [4.3](#43-timers)).
 - Closing: press Esc or call `DeactivateWidget()`. Once the widget leaves the layer stack, the map closes automatically and the place HUD returns. Game speed is back at 1 afterwards (every loading screen resets it to 1, same as the original apparel UI).
 - The target disciple is only checked when opening; if it later leaves or dies, `GetCharacterEditorTargetCharacter()` returns nil, so check before use.
-- The preview character in the map is not the target disciple. To edit a disciple directly you can skip the map: point the camera at the disciple in the current scene, push your UI as in 4.7, and write the result back with [4.9](#49-character-appearance-and-personal-apparel).
+
+**Studio (when a target disciple is passed)**
+
+> Added in November 2026, in testing.
+
+- With a valid Guid, the preview character in the map takes on the target disciple's current look (body, face, hair, apparel, colors) and acts as a display-only stand-in. The disciple stays where they are and is never moved.
+- After a successful call on **the target disciple** to `SetCharacterApparel`, `ClearCharacterApparel`, `RemoveCharacterPersonalApparel`, `ResetCharacterApparels` or `SetCharacterCustomizationId` from [4.9](#49-character-appearance-and-personal-apparel), the stand-in refreshes on the next frame. Changes go straight into the disciple's save data, so nothing needs to be written back when the map closes.
+- To support "cancel", record the personal apparel and current preset with `GetCharacterPersonalApparels` and `GetCharacterCustomizationIds` when entering, and write them back on cancel.
+- Camera controls: use the studio camera functions in the table above (orbit, distance, height, reset). They move the spring arm of the stand-in's own camera and take effect immediately while the game is paused. How buttons, dragging or the mouse wheel map onto them is up to the mod; for an automatic turntable, call `SetCharacterEditorCameraOrbit` every frame from a real-time timer.
+- Do not rotate the stand-in for a turntable: its own camera rotates with it, so nothing appears to change on screen.
+- These camera functions only work in the studio; once you switch to your own camera (`SetViewTargetWithBlend`) they no longer affect the view.
+- If the target disciple leaves while the map is loading, or the preview character cannot be found, the map opens in plain override mode (`GetCharacterEditorPreviewCharacter()` returns nil).
+
+```lua
+local mgr = UE.AWorldMapManage.GetWorldMapManage()
+if mgr:OpenCharacterEditorMapEx(cls, TargetGuid) then  -- TargetGuid: the target disciple's Guid
+    -- after the widget is activated: automatic turntable, looking slightly down and a bit closer
+    local yaw = 0
+    UE.UModLuaLibrary.RegisterModRealTimeTimer(0.02, true, function()
+        yaw = yaw + 0.5
+        mgr:SetCharacterEditorCameraOrbit(yaw, 10)
+    end)
+    mgr:SetCharacterEditorCameraDistance(mgr:GetCharacterEditorCameraDefaultDistance() * 0.8)
+end
+```
+
+You can also edit a disciple without the map: point the camera at the disciple in the current scene, push your UI as in 4.7, and write the result back with 4.9.
 
 ### 4.9 Character appearance and personal apparel
 
@@ -330,9 +363,12 @@ end
 | `RemoveCharacterPersonalApparel(Character, Slot)` | Drops one slot from the personal apparel so it follows the sect apparel again (only for disciples of the player's sect); returns bool |
 | `GetCharacterPersonalApparels(Character)` | The personal apparel as a "slot → apparel ID" map; a None value means the slot is left empty |
 | `SetCharacterCustomizationId(Character, ProfileId)` | Switches the customization preset (body, face, hair); apparel already set is kept; returns bool |
+| `GetCharacterCustomizationIds(Character)` | → `ids, currentId`: every preset ID with the character's gender that `SetCharacterCustomizationId` accepts (rows added through JSON included, in table order), plus the character's current preset. Added November 2026, in testing |
+| `GetCustomizationPresetInfo(nil, ProfileId)` | → `ok, name, avatar`: the preset's name and thumbnail (`Texture2D`, may be nil, loaded synchronously). Added November 2026, in testing |
 
 ```lua
 local ok = UE.UModLuaLibrary.SetCharacterApparel(Character, UE.EArmorType.Armor, "MyMod_Robe")
+local ids, currentId = UE.UModLuaLibrary.GetCharacterCustomizationIds(Character)
 ```
 
 - `Character` must be a fully initialized human disciple (`AEastRimWorldCharacter_Human`).
@@ -433,6 +469,9 @@ Add to ModInfo.json:
 - `ModLog` entries at or above that level go to `%LOCALAPPDATA%\EasternEra\Saved\SaveGames\ModLogs\<ModId>.log` (in the editor: the project's `Saved/SaveGames/ModLogs/`).
 - The first time the mod logs after each game start, the previous log is renamed to `<ModId>_backup.log` and kept.
 - Existing output is unchanged: `Error` still goes to `log.txt`, and with the console enabled everything still shows in the console.
+- The file is UTF-8 with a BOM and can be opened in Notepad or similar while the game is running.
+- Pass the first argument of `ModLog` as a plain string (e.g. `self.ModInfo.Metadata.ModId`), not `UE.FName(...)`; entries with an empty ModId are not written to the file.
+- Release builds of the game before 2026-11-11 have a bug: the log file is never created (the editor is fine). The fix ships in a later game update; until then, use `-ModConsole` to see the logs (see [7.1](#71-using-the-console-in-release-builds)).
 
 ## 8. Packaging & publishing
 

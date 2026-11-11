@@ -304,17 +304,50 @@ end
 | `OpenCharacterEditorMapEx(WidgetClass, TargetCharacterGuid)` | 加载换装地图，用 Mod 界面代替宗门时装界面；返回是否开始加载 |
 | `GetCharacterEditorTargetGuid()` | 本次传入的目标弟子 Guid |
 | `GetCharacterEditorTargetCharacter()` | 本次的目标弟子；不在场时为 nil |
+| `GetCharacterEditorPreviewCharacter()` | 摄影棚里的预览角色（替身）；没进摄影棚时为 nil |
+| `RefreshCharacterEditorPreview()` | 让替身下一帧重新拷一次目标弟子的外观；没进摄影棚时返回 false |
+| `SetCharacterEditorCameraOrbit(Yaw, Pitch)` | 摄影棚相机绕替身转到相对默认机位的水平角、俯仰角（度；Pitch 为正时镜头升高往下看，总俯仰限制在 ±89 度）；返回 bool |
+| `SetCharacterEditorCameraDistance(Distance)` | 相机到替身的距离（厘米，小于 0 按 0）；返回 bool |
+| `SetCharacterEditorCameraHeight(Height)` | 相机相对默认机位的高度偏移（厘米）；返回 bool |
+| `ResetCharacterEditorCamera()` | 相机回到打开时的默认机位；返回 bool |
+| `GetCharacterEditorCameraDefaultDistance()` | 默认距离，用来按比例缩放；不可用时为 0 |
 
 - 界面类必须继承 `CommonActivatableWidget`，鼠标和 Esc 的设置同 [4.7](#47-界面与按钮)。原来的 `OpenCharacterEditorMap()` 不变，宗门时装按钮照旧打开原界面。
 - 返回 false 的情况：界面类为空；换装地图正被占用（宗门时装界面开着，或上一次还没关完）；不在普通地点里（正在切换地点，或玩家正操控别的角色，如城市访问、比武）；传了 Guid 但不是玩家势力当前在场的人类弟子。
 - 打开期间：
   - Mod 界面在 Menu 层；主界面撤下，主界面上的快捷键不生效；加载画面关闭后游戏暂停；
-  - 不会自动占有换装预览角色，也不切镜头，镜头请自己 `SetViewTargetWithBlend`；
+  - 视角会切到换装地图里预览角色自带的相机，预览角色在暂停中照常播动作。想用自己的相机就 `SetViewTargetWithBlend(相机, 0)`：混合时间要传 0（混合按游戏时间走，暂停中会停住），相机位置用实时计时器逐帧摆。地图里插件自带的摄影棚相机 `CameraStudio` 在暂停中插值会停住，不要启用它；
   - 在界面里开子页面用 `PushModWidgetToLayer(nil, "Menu" 或 "Modal", 类)`，不会关掉换装地图；子页面要在关闭主界面之前自己关掉；
   - 游戏暂停时按游戏时间走的定时器基本停走，请用 `RegisterModRealTimeTimer`（见 [4.3](#43-定时器)）。
 - 关闭：按 Esc 或调 `DeactivateWidget()`，界面离开层栈后换装地图自动关闭，回到地点主界面，游戏速度回到 1 档（每过一次加载画面都会回到 1 档，原时装界面也一样）。
 - 目标弟子只在打开时检查，之后离场或死亡时 `GetCharacterEditorTargetCharacter()` 返回 nil，用之前要判空。
-- 换装场景里的预览角色不是目标弟子本人。要直接编辑弟子，也可以不进换装地图：在原场景把镜头对准弟子，界面按 4.7 推进层栈，改完用 [4.9](#49-角色外观与个人时装) 的接口写回。
+
+**摄影棚（传了目标弟子时）**
+
+> 2026 年 11 月新增，测试中。
+
+- 传了有效 Guid 时，换装地图里的预览角色会换成目标弟子当前的样子（体型、脸、发型、服饰、颜色），作为“替身”只用来显示。弟子本人始终留在原地，不会被移动。
+- 对**目标弟子本人**调 [4.9](#49-角色外观与个人时装) 的 `SetCharacterApparel`、`ClearCharacterApparel`、`RemoveCharacterPersonalApparel`、`ResetCharacterApparels`、`SetCharacterCustomizationId`，成功后替身在下一帧自动刷新。改动直接写进弟子的存档数据，关图时不需要“写回”。
+- 想做“取消”：进棚时用 `GetCharacterPersonalApparels`、`GetCharacterCustomizationIds` 记下原来的个人时装和当前预设，取消时写回。
+- 镜头操作：用上表的摄影棚相机接口（环绕、距离、高度、复位）。它们改的是替身自带相机的弹簧臂，在暂停中立即生效。界面按钮、拖拽、滚轮怎么映射到这些接口由 Mod 决定；自动转台就用实时计时器逐帧调 `SetCharacterEditorCameraOrbit`。
+- 不要靠转替身做转台：替身自带的相机跟着替身一起转，画面上看不出变化。
+- 这几个相机接口只在摄影棚里可用；换成自己的相机（`SetViewTargetWithBlend`）后它们不再影响画面。
+- 目标弟子在加载期间离场，或预览角色异常时，按普通覆盖模式打开（`GetCharacterEditorPreviewCharacter()` 为 nil）。
+
+```lua
+local mgr = UE.AWorldMapManage.GetWorldMapManage()
+if mgr:OpenCharacterEditorMapEx(cls, TargetGuid) then  -- TargetGuid：目标弟子的 Guid
+    -- 界面激活后：自动转台，同时稍微俯视、拉近一点
+    local yaw = 0
+    UE.UModLuaLibrary.RegisterModRealTimeTimer(0.02, true, function()
+        yaw = yaw + 0.5
+        mgr:SetCharacterEditorCameraOrbit(yaw, 10)
+    end)
+    mgr:SetCharacterEditorCameraDistance(mgr:GetCharacterEditorCameraDefaultDistance() * 0.8)
+end
+```
+
+不进换装地图也可以编辑弟子：在原场景把镜头对准弟子，界面按 4.7 推进层栈，改完用 4.9 的接口写回。
 
 ### 4.9 角色外观与个人时装
 
@@ -328,9 +361,12 @@ end
 | `RemoveCharacterPersonalApparel(Character, Slot)` | 去掉个人时装里某个槽，让它重新跟随宗门服饰（只对本门派弟子有效）；返回 bool |
 | `GetCharacterPersonalApparels(Character)` | 取个人时装：“槽 → 服饰 ID”的表，值为 None 表示该槽留空 |
 | `SetCharacterCustomizationId(Character, ProfileId)` | 换捏脸预设（体型、脸型、发型），已设的服饰保留；返回 bool |
+| `GetCharacterCustomizationIds(Character)` | → `ids, currentId`：与角色同性别、能传给 `SetCharacterCustomizationId` 的全部预设 ID（含 JSON 加的行，按表内顺序），以及角色当前的预设。2026-11 新增，测试中 |
+| `GetCustomizationPresetInfo(nil, ProfileId)` | → `ok, name, avatar`：预设的名称和缩略图（`Texture2D`，可能为空，同步加载）。2026-11 新增，测试中 |
 
 ```lua
 local ok = UE.UModLuaLibrary.SetCharacterApparel(Character, UE.EArmorType.Armor, "MyMod_Robe")
+local ids, currentId = UE.UModLuaLibrary.GetCharacterCustomizationIds(Character)
 ```
 
 - `Character` 是初始化完成的人类弟子（`AEastRimWorldCharacter_Human`）。
@@ -431,6 +467,9 @@ JSON 文件格式：
 - 达到等级的 `ModLog` 写进 `%LOCALAPPDATA%\EasternEra\Saved\SaveGames\ModLogs\<ModId>.log`（在编辑器里是工程的 `Saved/SaveGames/ModLogs/`）。
 - 游戏每次启动后第一次写这个 Mod 的日志时，把上一次的日志改名为 `<ModId>_backup.log` 保留一份。
 - 原有输出不变：`Error` 照旧写进 `log.txt`；开了控制台照旧全部显示在控制台里。
+- 文件是带 BOM 的 UTF-8，游戏运行中也能用记事本等程序打开查看。
+- `ModLog` 的第一个参数直接传字符串（例如 `self.ModInfo.Metadata.ModId`），不要用 `UE.FName(...)`；ModId 为空的日志不写文件。
+- 2026-11-11 之前的发行版游戏有一个问题：日志文件不会生成（编辑器里正常）。修复随之后的游戏更新提供；在那之前请用 `-ModConsole` 看日志（见 [7.1](#71-在发行版中使用控制台)）。
 
 ## 8. 打包与发布
 
