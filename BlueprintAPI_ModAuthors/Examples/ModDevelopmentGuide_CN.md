@@ -31,7 +31,7 @@ MyMod/
 | `Icon` | string | 图标文件（相对 Mod 根目录，可省略扩展名） |
 | `MainLuaFile` | string | Lua 入口，默认 `Main.lua` |
 | `LogLevel` | string | 写进本 Mod 日志文件的最低等级：`Log` / `Warning` / `Error` / `None`，默认 `Warning`（见 [7.2](#72-mod-日志文件)） |
-| `NewGameLoad` | bool | true=仅在新游戏时加载 |
+| `NewGameLoad` | bool | true=点“新游戏”时提前加载，让配置在新游戏设置界面就生效；进入游戏世界时（新游戏、读档都一样）照常加载（见 [3](#3-生命周期)） |
 | `MinGameVersion` | string | 要求的最低游戏版本 |
 | `ModToolVersion` | string | 打包工具版本（打包时自动写入，用于兼容检查） |
 | `Dependencies` | array | 依赖列表 `[{"ModId":"其它Mod","MinVersion":"1.0","Required":true}]`，按依赖顺序自动加载 |
@@ -55,6 +55,18 @@ MyMod/
 → 运行期：事件/定时器/命令回调
 → 卸载：Mod:OnModUnloaded() → 引擎自动清理该 Mod 的全部定时器/命令/事件监听 → 卸载 .pak
 ```
+
+**什么时候加载、卸载**（2026 年 11 月起的游戏版本）：
+
+- **进入游戏世界**（开新游戏、读档，包括在游戏里读档）：加载 Mod 管理页里启用的全部 Mod。
+- **`NewGameLoad=true` 的 Mod**：点“新游戏”时提前加载一次，让它的配置在新游戏设置界面就生效；进入游戏世界时照常加载。
+- **离开当前游戏世界前**（开新游戏、读档、在游戏里读档、回主菜单）：先调用 `Mod:OnModUnloaded()`，清掉该 Mod 的定时器、命令、事件监听、按钮绑定、推入的界面；进入新世界后再执行一次 Main.lua 和 `Mod:OnModLoaded()`。
+  - 原因：配置表和界面都属于当前世界，新世界里会重新创建，Mod 的改动要重新应用。
+  - .pak 一直挂着。
+- **切换地点**（进城、去战场等）**不会**重新执行 Main.lua。
+- **回主菜单时**全部卸载。
+
+所以：在 `OnModLoaded` 里做初始化（改配置表、登记事件），在 `OnModUnloaded` 里只做清理；不要假设 Main.lua 在一次游戏进程里只执行一次。不要在 Lua 里调 `ModSubsystem` 的 `DiscoverMods`、`LoadMod`、`UnloadMod`，Mod 的加载由游戏管理。
 
 **存档兼容**：每个存档会记录当时启用的 Mod 及版本；读档时若发现 Mod 缺失/未启用/版本不符，会通过 UI 提示玩家。
 
@@ -365,7 +377,7 @@ end
 | `ResetCharacterApparels(Character)` | 清掉 Mod 设的服饰：本门派弟子回到宗门服饰规则，其他角色回到按装备显示；返回 bool |
 | `RemoveCharacterPersonalApparel(Character, Slot)` | 去掉个人时装里某个槽，让它重新跟随宗门服饰（只对本门派弟子有效）；返回 bool |
 | `GetCharacterPersonalApparels(Character)` | 取个人时装：“槽 → 服饰 ID”的表，值为 None 表示该槽留空 |
-| `SetCharacterCustomizationId(Character, ProfileId)` | 换捏脸预设（体型、脸型、发型），已设的服饰保留；返回 bool |
+| `SetCharacterCustomizationId(Character, ProfileId)` | 换捏脸预设（体型、脸型、发型），已设的服饰保留；返回 bool。2026-11 起换的预设存进 Mod 数据区（见 [4.10](#410-捏脸体型脸型发型颜色)），不改角色原有预设，写它的 Mod 停用后回到原预设；换预设会清掉这个角色在 4.10 里的捏脸改动 |
 | `GetCharacterCustomizationIds(Character)` | → `ids, currentId`：与角色同性别、能传给 `SetCharacterCustomizationId` 的全部预设 ID（含 JSON 加的行，按表内顺序），以及角色当前的预设。2026-11 新增 |
 | `GetCustomizationPresetInfo(nil, ProfileId)` | → `ok, name, avatar`：预设的名称和缩略图（`Texture2D`，可能为空，同步加载）。2026-11 新增 |
 
@@ -379,16 +391,106 @@ local ids, currentId = UE.UModLuaLibrary.GetCharacterCustomizationIds(Character)
 - `ApparelId` 必须是装备配置表（`EquipmentConfig`）里的行，而且这件装备的槽位与 `Slot` 一致。
 - `ProfileId` 必须是捏脸预设表（`CharacterAppearancePreset`）里的行，且性别与角色当前预设相同；掌门和使用主角外观的角色不接受。新的体型、脸型、发型可以用 JSON 往 `CharacterAppearancePreset`、`CharacterAnatomyProfiles` 加行（参考示例 ParagonSunWukong）。
 - 2026-11 前的游戏版本里，`SetCharacterCustomizationId` 的性别校验读错了预设表的字段，同性别的预设也会返回 false；包含 `GetCharacterCustomizationIds` 的版本已修复。
-- 改动写进角色的存档数据，存读档、离开地点再回来都会保留。捏脸预设不受宗门服饰影响。
+- 服饰改动写进角色的存档数据，换的预设存进 Mod 数据区，存读档、离开地点再回来都会保留。捏脸预设不受宗门服饰影响。
 
 **个人时装**（本门派有职位的弟子，包括掌门）：
 
 - `SetCharacterApparel`、`ClearCharacterApparel` 写的是个人时装。弟子显示的服饰按“身上装备 → 分堂统一服饰 → 个人时装”逐槽叠加：个人设过的槽用个人的，其余槽跟随宗门服饰；分堂没开统一服饰时，其余槽跟随身上装备。
 - 开关或保存分堂统一服饰、弟子调职时，个人设过的槽不变，其余槽照常变化。
 - 写入个人时装的 Mod 被停用后，个人时装暂不生效，弟子在下一次宗门服饰重设（开关统一服饰、调职等）时回到宗门规则；Mod 重新启用后，下一次重设会再叠回去。
-- `ModInfo.json` 设了 `NewGameLoad=true` 的 Mod 读档时不加载，它写的个人时装读档后不生效；做个人时装的 Mod 不要设这个字段。
+- `ModInfo.json` 的 `NewGameLoad=true` 只是让 Mod 在新游戏设置阶段提前加载，读档时照常加载，对个人时装没有影响。之前的文档写成“读档时不加载”，是错的。
 - 不属于本门派的角色（访客等）不受宗门服饰管理，这几个函数直接改外观：第一次从按装备显示切到自定义时，其他槽先用当前穿着的服饰补齐，不会突然变空。
 - 宗门时装界面不提示谁在用个人时装。
+
+### 4.10 捏脸：体型、脸型、发型、颜色
+
+> 2026 年 11 月新增，需要包含该接口的游戏版本。
+
+| API（`UE.UModLuaLibrary`） | 说明 |
+|---|---|
+| `GetCharacterShapeParams(Character)` | → 可调的体型、脸型滑条数组，每项有 `ID`、`DisplayName`、`Category`、`Value`（当前值）、`MinValue`、`MaxValue`、`DefaultValue` |
+| `SetCharacterShapeParam(Character, ParamId, Value)` | 调一个滑条，数值按滑条范围钳制；返回 bool |
+| `GetCharacterColorParams(Character)` | → 可调颜色数组，每项有 `ID`、`DisplayName`、`Color`（`FLinearColor`）、`bHasValue`（角色档案里有没有这个颜色，没有时 `Color` 为白色） |
+| `SetCharacterColorParam(Character, ParamId, Color)` | 改一个颜色；返回 bool |
+| `GetHairstyleSlots(WorldContext)` | → 发型槽数组，每项有 `ID`、`DisplayName`、`bAllowEmpty`；目前是 `Head`（头发）和 `Beard`（胡子，可留空）。`WorldContext` 传 `self.ModInfo` 即可 |
+| `GetCharacterHairstyles(Character, SlotId)` | → `options, currentId`：这个槽按角色当前体型可选的发型（每项 `HairstyleId`、`DisplayName`、`Icon`），以及角色当前的发型 ID |
+| `SetCharacterHairstyle(Character, SlotId, HairstyleId)` | 换发型，`HairstyleId` 取自 `GetCharacterHairstyles`；传空字符串摘掉这个槽的发型（只对允许留空的槽）；返回 bool |
+| `ResetCharacterCustomization(Character)` | 撤销 Mod 对这个角色捏脸的全部改动（体型、脸型、发型、颜色和换的预设），回到游戏原有外观；返回 bool |
+
+```lua
+local params = UE.UModLuaLibrary.GetCharacterShapeParams(Character)
+for i = 1, params:Num() do
+    local p = params[i]
+    self:Log(string.format("%s %.3f [%.3f, %.3f]", tostring(p.ID), p.Value, p.MinValue, p.MaxValue))
+end
+UE.UModLuaLibrary.SetCharacterShapeParam(Character, "Body_Size", 0.8)
+UE.UModLuaLibrary.SetCharacterColorParam(Character, "SkinTint", UE.FLinearColor(0.8, 0.6, 0.5, 1))
+local options, currentId = UE.UModLuaLibrary.GetCharacterHairstyles(Character, "Head")
+UE.UModLuaLibrary.SetCharacterHairstyle(Character, "Head", options[1].HairstyleId)
+```
+
+- 可调的滑条和颜色照官方宗门时装界面配置，范围也与官方界面一致（见下表）。身高 `Body_Size` 改的是动画混合参数；年龄 `Body_Age` 同时改动画混合、形变、皮肤三处，与官方界面一样。表里没有的参数不接受。
+- 掌门和世界里有登记的角色都能改；替身等使用掌门外观的角色跟着掌门走，改掌门即可；比武、切磋、测试生成的临时角色不接受。
+- 写入接口（Set、Reset）只能在 Mod 的 Lua 里调用：游戏要记下是哪个 Mod 改的。
+- 改动立即作用在角色身上，换装地图的摄影棚替身下一帧跟上；随游戏存档保存，读档、离开地点再回来、进宗门战都保留。
+- **Mod 数据单独存，不改游戏原有数据**：Mod 的改动按角色存在存档里单独的一块。写它的 Mod 停用或删除后，角色按游戏原有外观显示，Mod 的改动原样保留，重新启用后读档恢复。没装你的 Mod 的玩家读这个存档也完全正常。
+- 复制出来的临时分身（宗门擂台、劫狱等）显示角色原有外观。
+- 拖滑条时可以每帧调用；"取消"由 Mod 自己做：进界面时用 Get 系列记下原值，取消时写回，或者直接 `ResetCharacterCustomization`。
+- 写入接口返回 false 时，角色外观会恢复成调用之前的样子。
+
+滑条 `ParamId`：
+
+| ID | 名称 | 范围 | 说明 |
+|---|---|---|---|
+| `Body_Size` | 身高 | 0.470 ~ 1.0 | 动画混合参数 `size` |
+| `Body_Age` | 年龄 | 0 ~ 0.346 | 同时改动画混合 `Age`、形变 `body_age`、皮肤 `Age` |
+| `Eyes_MorphTarget_Size` | 眼睛大小 | -1 ~ 1 | 形变 `Eye_01` |
+| `Eyes_MorphTarget_Depth` | 眼睛凹陷 | -1 ~ 1 | 形变 `Eye_02` |
+| `Ear_MorphTarget_Morph01` | 耳朵长度 | -1 ~ 1 | 形变 `Ear_01` |
+| `Jaw_MorphTarget_Height` | 下巴高度 | -1 ~ 1 | 形变 `Jaw_01` |
+| `Mouth_MorphTarget_Depth` | 嘴部凹陷 | -1 ~ 1 | 形变 `Mouth_01` |
+| `Nose_MorphTarget_Height` | 鼻子高度 | -1 ~ 1 | 形变 `Nose_01` |
+| `Face_CheekBone` | 颧骨 | -1 ~ 1 | 形变 `Sculpt_CheekBone`（新游戏捏人界面里的） |
+| `Face_LipLower` | 下唇 | -1 ~ 1 | 形变 `Sculpt_LipLower`（同上） |
+| `Face_NoseBridge` | 鼻梁 | -1 ~ 1 | 形变 `Sculpt_NoseBridge`（同上） |
+| `EyeRoughness` | 眼影光泽 | 0 ~ 1 | 皮肤材质参数 `Eye Roughness` |
+| `LipsRoughness` | 唇彩光泽 | 1.5 ~ 0.35 | 皮肤材质参数 `Lips Roughness`（官方滑条从大到小） |
+
+颜色 `ParamId`：`SkinTint`（肤色）、`LipsTint`（唇色）、`TattooTint`（纹身颜色）、`Eyes_IrisHueColor`（瞳色）、`HDR_ColorPicker_Hair_Root`（发色，材质参数 `TipColor`）。
+
+### 4.11 立绘
+
+> 2026 年 11 月新增，需要包含该接口的游戏版本。
+
+| API（`UE.UModLuaLibrary`） | 说明 |
+|---|---|
+| `GetCharacterAvatarConfigId(Character)` | → 当前生效的立绘行：Mod 指定的优先，其次角色自己的立绘配置；都没有时为 None |
+| `SetCharacterAvatarConfigId(Character, AvatarConfigId)` | 给角色指定立绘表（`CharacterAvatarConfig`）里的一行；返回 bool |
+| `ResetCharacterAvatar(Character)` | 撤销 Mod 指定的立绘；返回 bool |
+
+- 新立绘用 JSON 往立绘表加行：`ConfigType` 填 `CharacterAvatarConfig`，`StructName` 填 `/Script/EastRimWorld.CharacterAvatarConfig`。每行五张图都是软引用，填完整资源路径：`Avatar`（头像）、`HalfAvatar`（半身立绘）、`HalfUIAvatar`（界面半身立绘）、`HalfTourAvatar`（比武半身立绘）、`SmallTourAvatar`（比武小图）。
+- 掌门和世界里有登记的角色都能指定，规则同 4.10。指定的立绘存在 Mod 数据区，不改角色原有的立绘配置；写它的 Mod 停用后显示原立绘，墓地里的头像也按这个规则。
+- 已经打开的界面要关掉重开才刷新立绘。
+
+### 4.12 Mod 自己的数据（跨存档）
+
+> 2026 年 11 月新增，需要包含该接口的游戏版本。
+
+| API（`UE.UModLuaLibrary`） | 说明 |
+|---|---|
+| `SetModData(Key, Value)` | 存一条数据，当场写盘；返回 bool |
+| `GetModData(Key)` | → `ok, value`；没有这一条时 `ok` 为 false |
+| `RemoveModData(Key)` | 删一条，当场写盘；返回 bool |
+| `GetModDataKeys()` | → 全部键 |
+
+```lua
+UE.UModLuaLibrary.SetModData("outfits", '{"list":["白衣","青衫"]}')
+local ok, text = UE.UModLuaLibrary.GetModData("outfits")
+```
+
+- 每个 Mod 一个文件，放在 `Saved/SaveGames/ModData/` 下，跨存档使用：换存档、重启游戏都还在；只能读写自己的数据。
+- 键和值都是字符串，值的格式自己定（可以放 JSON 文本）。键不分大小写，1~128 个字符；单个值不超过 1M 个字符，一个 Mod 合计不超过 16M 个字符、65536 条，超出时返回 false 并写日志。
+- 只能在 Mod 的 Lua 里调用。要跟着某个存档走的数据，用 4.10、4.11 的接口或游戏自己的存档数据，不要放这里。
 
 ## 5. 配置表 JSON 覆盖机制
 
@@ -425,7 +527,7 @@ JSON 文件格式：
 
 ## 6. 沙箱限制（负面清单）
 
-- `io` / `os` / `require` / `loadfile` / `dofile` / `debug` **不可用**；
+- `io` / `os` / `require` / `loadfile` / `dofile` / `debug` **不可用**；要持久化自己的数据用 [4.12](#412-mod-自己的数据跨存档) 的 `SetModData`；
 - 只加载 `MainLuaFile` 指定的一个 Lua 文件，外部逻辑需内联；
 - **不提供按键绑定 API**；界面操作用按钮（[4.7](#47-界面与按钮)），Esc 关闭用 CommonUI 的返回处理（类默认值勾 `Is Back Handler`）；
 - 游戏进行中不支持用 `OpenLevel` 切到 Mod 自己的关卡：整张切图会销毁当前世界，Mod 的界面和定时器也会消失；

@@ -1368,6 +1368,34 @@
 - `struct` **`FMovesBookSkillEntryGameplayEffectState`** — [MartialArtsSkillEntryGiveAbilitys__FMovesBookSkillEntryGameplayEffectState](EastRimWorld/MartialArts/MartialArtsSkillEntryGiveAbilitys__FMovesBookSkillEntryGameplayEffectState.md)
   - **功能说明：** 招式书籍技能词条 GiveGameEffects 已应用记录（卸载/刷新时移除）。
 
+## `EastRimWorld/Mod/ModCharacterLayerLibrary.h`
+
+- `class` **`UModCharacterLayerLibrary`** — [ModCharacterLayerLibrary__UModCharacterLayerLibrary](EastRimWorld/Mod/ModCharacterLayerLibrary__UModCharacterLayerLibrary.md)
+  - **功能说明：** MOD 角色数据层。 MOD 写的捏脸、换的预设、指定的立绘都按角色 Guid 存在 MOD 数据区（ASaveGameDataActor::ModCharacterRecords 与 BP_SaveGameData 的蓝图变量 ModAppearanceProfiles），游戏原有字段一律不写；生成外观、取立绘时在这里叠加。 写它的 Mod 没加载时 MOD 数据不生效，角色按原数据显示，MOD 数据原样保留。
+
+## `EastRimWorld/Mod/ModCharacterLayerTypes.h`
+
+- `enum` **`EModCustomizationColorTarget`** — [ModCharacterLayerTypes__EModCustomizationColorTarget](EastRimWorld/Mod/ModCharacterLayerTypes__EModCustomizationColorTarget.md)
+  - **功能说明：** 颜色参数属于插件组件里的哪一部分
+- `enum` **`EModCustomizationTargetType`** — [ModCharacterLayerTypes__EModCustomizationTargetType](EastRimWorld/Mod/ModCharacterLayerTypes__EModCustomizationTargetType.md)
+  - **功能说明：** 捏脸滑条最终改的是插件组件里的哪一类参数
+- `struct` **`FModCharacterRecord`** — [ModCharacterLayerTypes__FModCharacterRecord](EastRimWorld/Mod/ModCharacterLayerTypes__FModCharacterRecord.md)
+  - **功能说明：** MOD 数据区里一个角色的记录（按角色 Guid 存在 ASaveGameDataActor::ModCharacterRecords）。 只记 MOD 写的东西，游戏原有字段（CustomizationId、AvatarConfigID、主角捏脸档案）一律不写； 捏脸档案本体是插件的蓝图结构体，放在 BP_SaveGameData 的蓝图变量 ModAppearanceProfiles 里，这里只放元数据。
+- `struct` **`FModColorParamInfo`** — [ModCharacterLayerTypes__FModColorParamInfo](EastRimWorld/Mod/ModCharacterLayerTypes__FModColorParamInfo.md)
+  - **功能说明：** GetCharacterColorParams 的返回项
+- `struct` **`FModCustomizationColorConfig`** — [ModCharacterLayerTypes__FModCustomizationColorConfig](EastRimWorld/Mod/ModCharacterLayerTypes__FModCustomizationColorConfig.md)
+  - **功能说明：** 开放给 Mod 的颜色参数（照官方宗门时装界面的取色器配置）
+- `struct` **`FModCustomizationParamConfig`** — [ModCharacterLayerTypes__FModCustomizationParamConfig](EastRimWorld/Mod/ModCharacterLayerTypes__FModCustomizationParamConfig.md)
+  - **功能说明：** 开放给 Mod 的捏脸滑条（照官方宗门时装界面的滑条配置）
+- `struct` **`FModCustomizationParamTarget`** — [ModCharacterLayerTypes__FModCustomizationParamTarget](EastRimWorld/Mod/ModCharacterLayerTypes__FModCustomizationParamTarget.md)
+  - **功能说明：** 一个捏脸滑条改动的一个插件参数
+- `struct` **`FModHairstyleOption`** — [ModCharacterLayerTypes__FModHairstyleOption](EastRimWorld/Mod/ModCharacterLayerTypes__FModHairstyleOption.md)
+  - **功能说明：** GetCharacterHairstyles 的返回项
+- `struct` **`FModHairstyleSlotConfig`** — [ModCharacterLayerTypes__FModHairstyleSlotConfig](EastRimWorld/Mod/ModCharacterLayerTypes__FModHairstyleSlotConfig.md)
+  - **功能说明：** 开放给 Mod 的发型槽（头发、胡子各一个），按发型数据资产的类区分
+- `struct` **`FModShapeParamInfo`** — [ModCharacterLayerTypes__FModShapeParamInfo](EastRimWorld/Mod/ModCharacterLayerTypes__FModShapeParamInfo.md)
+  - **功能说明：** GetCharacterShapeParams 的返回项
+
 ## `EastRimWorld/Mod/ModEventBus.h`
 
 - `class` **`UModEventBus`** — [ModEventBus__UModEventBus](EastRimWorld/Mod/ModEventBus__UModEventBus.md)

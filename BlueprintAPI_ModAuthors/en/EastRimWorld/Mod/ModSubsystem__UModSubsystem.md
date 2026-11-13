@@ -193,6 +193,8 @@
 **Notes:**
 
 > 启用/禁用Mod
+>
+> Note: this writes a separate enabled list in the global save (in memory only). Which mods the game actually loads is decided by the mod manager settings, so calling this does not change what gets loaded. Mods should not call it.
 
 ---
 
@@ -382,6 +384,8 @@
 **Notes:**
 
 > 按依赖顺序加载所有启用的Mod 是否是加载新游戏mod
+>
+> Note: this loads mods from that separate enabled list (see SetModEnabled) and really loads them; the list is not the mod manager settings, and the game's own loading flow does not call this function. Mods should not call it.
 
 ---
 

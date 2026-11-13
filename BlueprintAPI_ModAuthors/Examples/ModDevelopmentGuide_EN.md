@@ -31,7 +31,7 @@ MyMod/
 | `Icon` | string | Icon file relative to the mod root (extension may be omitted) |
 | `MainLuaFile` | string | Lua entry, defaults to `Main.lua` |
 | `LogLevel` | string | Lowest level written to this mod's log file: `Log` / `Warning` / `Error` / `None`; defaults to `Warning` (see [7.2](#72-per-mod-log-file)) |
-| `NewGameLoad` | bool | true = only loaded when starting a new game |
+| `NewGameLoad` | bool | true = also loaded early when the player clicks "New Game", so its configs already apply in the new-game setup screens; it is loaded as usual when entering the game world (new game or loaded save alike). See [3](#3-lifecycle) |
 | `MinGameVersion` | string | Minimum required game version |
 | `ModToolVersion` | string | Packaging tool version (written automatically; used for compatibility checks) |
 | `Dependencies` | array | `[{"ModId":"OtherMod","MinVersion":"1.0","Required":true}]` — loaded in dependency order |
@@ -56,6 +56,18 @@ Discovery (scans Content/Mods + the Workshop directory)
 → unload: Mod:OnModUnloaded() → the engine auto-cleans every timer/command/event
   listener owned by this mod → unmount .pak
 ```
+
+**When mods are loaded and unloaded** (game versions from November 2026):
+
+- **Entering the game world** (new game, loading a save, including loading a save in-game): every mod enabled in the mod manager is loaded.
+- **Mods with `NewGameLoad=true`** are also loaded early when the player clicks "New Game", so their configs already apply in the new-game setup screens; they are loaded as usual when entering the game world.
+- **Before leaving the current game world** (new game, loading a save, loading a save in-game, returning to the main menu): `Mod:OnModUnloaded()` is called first, and the mod's timers, commands, event listeners, button bindings and pushed widgets are cleaned up. In the new world, Main.lua and `Mod:OnModLoaded()` run again.
+  - Why: config tables and UI belong to the current world and are recreated in the new one, so the mod's changes must be applied again.
+  - The .pak stays mounted.
+- **Changing places** (entering a city, a battlefield, etc.) does **not** run Main.lua again.
+- **Returning to the main menu** unloads every mod.
+
+So: initialize in `OnModLoaded` (change config tables, register events), only clean up in `OnModUnloaded`, and do not assume Main.lua runs only once per game session. Do not call `DiscoverMods`, `LoadMod` or `UnloadMod` of `ModSubsystem` from Lua; the game manages mod loading.
 
 **Save compatibility:** each save records the enabled mods and their versions. On load, missing / disabled / version-mismatched mods are reported to the player through the UI.
 
@@ -367,7 +379,7 @@ You can also edit a disciple without the map: point the camera at the disciple i
 | `ResetCharacterApparels(Character)` | Removes apparel set by mods: disciples of the player's sect go back to the sect apparel rules, other characters go back to showing their equipped gear; returns bool |
 | `RemoveCharacterPersonalApparel(Character, Slot)` | Drops one slot from the personal apparel so it follows the sect apparel again (only for disciples of the player's sect); returns bool |
 | `GetCharacterPersonalApparels(Character)` | The personal apparel as a "slot → apparel ID" map; a None value means the slot is left empty |
-| `SetCharacterCustomizationId(Character, ProfileId)` | Switches the customization preset (body, face, hair); apparel already set is kept; returns bool |
+| `SetCharacterCustomizationId(Character, ProfileId)` | Switches the customization preset (body, face, hair); apparel already set is kept; returns bool. Since November 2026 the chosen preset is stored in the mod data area (see [4.10](#410-customization-body-face-hair-colors)) instead of changing the character's own preset, so the character goes back to its own preset when the mod that wrote it is disabled. Switching the preset also clears this character's customization edits from 4.10 |
 | `GetCharacterCustomizationIds(Character)` | → `ids, currentId`: every preset ID with the character's gender that `SetCharacterCustomizationId` accepts (rows added through JSON included, in table order), plus the character's current preset. Added November 2026. |
 | `GetCustomizationPresetInfo(nil, ProfileId)` | → `ok, name, avatar`: the preset's name and thumbnail (`Texture2D`, may be nil, loaded synchronously). Added November 2026. |
 
@@ -381,16 +393,106 @@ local ids, currentId = UE.UModLuaLibrary.GetCharacterCustomizationIds(Character)
 - `ApparelId` must be a row of the equipment table (`EquipmentConfig`) whose slot matches `Slot`.
 - `ProfileId` must be a row of the customization preset table (`CharacterAppearancePreset`) with the same gender as the character's current preset. The sect leader and characters that use the protagonist's appearance are rejected. New bodies, faces and hairstyles can be added as rows of `CharacterAppearancePreset` and `CharacterAnatomyProfiles` through JSON (see the ParagonSunWukong example).
 - In game versions before November 2026, the gender check in `SetCharacterCustomizationId` read the wrong field of the preset table, so it returned false even for presets of the same gender. Versions that include `GetCharacterCustomizationIds` have the fix.
-- Changes are stored in the character's save data and survive save/load and leaving and returning to a place. Customization presets are not affected by sect apparel.
+- Apparel changes are stored in the character's save data and the chosen preset in the mod data area; both survive save/load and leaving and returning to a place. Customization presets are not affected by sect apparel.
 
 **Personal apparel** (disciples of the player's sect who hold a post, the sect leader included):
 
 - `SetCharacterApparel` and `ClearCharacterApparel` write the disciple's personal apparel. What the disciple shows is layered slot by slot as "equipped gear → branch uniform → personal apparel": slots set personally use the personal apparel, the other slots follow the sect apparel, or the equipped gear when the branch uniform is off.
 - Toggling or saving a branch uniform, and transferring the disciple to another post, keep the personally set slots and update the rest as usual.
 - If the mod that wrote the personal apparel is disabled, the personal apparel stops applying and the disciple returns to the sect apparel rules at the next sect apparel refresh (toggling a uniform, a transfer, and so on). Once the mod is enabled again, the next refresh layers it back on.
-- Mods with `NewGameLoad=true` in ModInfo.json are not loaded when a save is loaded, so personal apparel they wrote does not apply after loading; do not set that field in personal apparel mods.
+- `NewGameLoad=true` in ModInfo.json only makes a mod load early during new-game setup; it is still loaded when a save is loaded, so it has no effect on personal apparel. Earlier versions of this guide said such mods are not loaded when loading a save; that was wrong.
 - Characters outside the player's sect (visitors and so on) are not managed by sect apparel; these functions change their look directly, and the first switch from "show equipped gear" to custom apparel fills the other slots with what the character currently wears.
 - The sect apparel UI does not show which disciples use personal apparel.
+
+### 4.10 Customization: body, face, hair, colors
+
+> Added in November 2026; requires a game version that includes this API.
+
+| API (`UE.UModLuaLibrary`) | Notes |
+|---|---|
+| `GetCharacterShapeParams(Character)` | → array of the adjustable body and face sliders; each item has `ID`, `DisplayName`, `Category`, `Value` (current value), `MinValue`, `MaxValue`, `DefaultValue` |
+| `SetCharacterShapeParam(Character, ParamId, Value)` | Sets one slider; the value is clamped to the slider range; returns bool |
+| `GetCharacterColorParams(Character)` | → array of the adjustable colors; each item has `ID`, `DisplayName`, `Color` (`FLinearColor`), `bHasValue` (whether the character's profile has this color; `Color` is white when it does not) |
+| `SetCharacterColorParam(Character, ParamId, Color)` | Sets one color; returns bool |
+| `GetHairstyleSlots(WorldContext)` | → array of hairstyle slots with `ID`, `DisplayName`, `bAllowEmpty`; currently `Head` (hair) and `Beard` (may be empty). Pass `self.ModInfo` as `WorldContext` |
+| `GetCharacterHairstyles(Character, SlotId)` | → `options, currentId`: hairstyles of this slot that fit the character's current anatomy (each with `HairstyleId`, `DisplayName`, `Icon`), plus the character's current hairstyle ID |
+| `SetCharacterHairstyle(Character, SlotId, HairstyleId)` | Switches the hairstyle; `HairstyleId` comes from `GetCharacterHairstyles`; pass an empty string to remove the hairstyle of a slot that may be empty; returns bool |
+| `ResetCharacterCustomization(Character)` | Undoes every customization change a mod made to this character (body, face, hair, colors and the chosen preset) and returns to the game's own look; returns bool |
+
+```lua
+local params = UE.UModLuaLibrary.GetCharacterShapeParams(Character)
+for i = 1, params:Num() do
+    local p = params[i]
+    self:Log(string.format("%s %.3f [%.3f, %.3f]", tostring(p.ID), p.Value, p.MinValue, p.MaxValue))
+end
+UE.UModLuaLibrary.SetCharacterShapeParam(Character, "Body_Size", 0.8)
+UE.UModLuaLibrary.SetCharacterColorParam(Character, "SkinTint", UE.FLinearColor(0.8, 0.6, 0.5, 1))
+local options, currentId = UE.UModLuaLibrary.GetCharacterHairstyles(Character, "Head")
+UE.UModLuaLibrary.SetCharacterHairstyle(Character, "Head", options[1].HairstyleId)
+```
+
+- The sliders and colors follow the official sect apparel UI, with the same ranges (see the table below). `Body_Size` (height) drives an animation blend parameter; `Body_Age` changes an animation blend parameter, a morph target and a skin parameter together, exactly like the official UI. Parameters that are not in the table are rejected.
+- The sect leader and every character registered in the world can be edited. Stand-ins and other characters that use the sect leader's appearance follow the sect leader, so edit the sect leader instead. Temporary characters created for arenas, sparring or tests are rejected.
+- The write functions (Set and Reset) can only be called from a mod's Lua, because the game records which mod made the change.
+- Changes apply to the character immediately, and the stand-in in the character editor map follows on the next frame. They are saved with the game and survive save/load, leaving and returning to a place, and sect battles.
+- **Mod data is stored separately and never changes the game's own data**: a mod's changes are kept per character in a separate part of the save. When the mod that wrote them is disabled or removed, the character shows the game's own look and the mod's changes are kept unchanged; they come back after the mod is enabled again and the save is loaded. Players without your mod can load the save normally.
+- Temporary copies of a character (arena fighters, prison break copies and so on) show the character's own look.
+- You may call the setters every frame while a slider is dragged. "Cancel" is up to the mod: record the original values with the Get functions when your UI opens and write them back on cancel, or call `ResetCharacterCustomization`.
+- If a setter returns false, the character's look is restored to what it was before the call.
+
+Slider `ParamId`s:
+
+| ID | Name | Range | Notes |
+|---|---|---|---|
+| `Body_Size` | Height | 0.470 to 1.0 | animation blend parameter `size` |
+| `Body_Age` | Age | 0 to 0.346 | animation blend `Age`, morph target `body_age` and skin parameter `Age` together |
+| `Eyes_MorphTarget_Size` | Eye size | -1 to 1 | morph target `Eye_01` |
+| `Eyes_MorphTarget_Depth` | Eye depth | -1 to 1 | morph target `Eye_02` |
+| `Ear_MorphTarget_Morph01` | Ear length | -1 to 1 | morph target `Ear_01` |
+| `Jaw_MorphTarget_Height` | Jaw height | -1 to 1 | morph target `Jaw_01` |
+| `Mouth_MorphTarget_Depth` | Mouth depth | -1 to 1 | morph target `Mouth_01` |
+| `Nose_MorphTarget_Height` | Nose height | -1 to 1 | morph target `Nose_01` |
+| `Face_CheekBone` | Cheekbone | -1 to 1 | morph target `Sculpt_CheekBone` (from the new game character editor) |
+| `Face_LipLower` | Lower lip | -1 to 1 | morph target `Sculpt_LipLower` (same) |
+| `Face_NoseBridge` | Nose bridge | -1 to 1 | morph target `Sculpt_NoseBridge` (same) |
+| `EyeRoughness` | Eye shadow roughness | 0 to 1 | skin material parameter `Eye Roughness` |
+| `LipsRoughness` | Lip gloss | 1.5 to 0.35 | skin material parameter `Lips Roughness` (the official slider runs from high to low) |
+
+Color `ParamId`s: `SkinTint` (skin), `LipsTint` (lips), `TattooTint` (tattoo), `Eyes_IrisHueColor` (iris), `HDR_ColorPicker_Hair_Root` (hair, material parameter `TipColor`).
+
+### 4.11 Portraits
+
+> Added in November 2026; requires a game version that includes this API.
+
+| API (`UE.UModLuaLibrary`) | Notes |
+|---|---|
+| `GetCharacterAvatarConfigId(Character)` | → the portrait row in effect: the one a mod set first, otherwise the character's own portrait config; None when neither exists |
+| `SetCharacterAvatarConfigId(Character, AvatarConfigId)` | Assigns a row of the portrait table (`CharacterAvatarConfig`) to the character; returns bool |
+| `ResetCharacterAvatar(Character)` | Removes the portrait a mod assigned; returns bool |
+
+- Add new portraits as rows of the portrait table through JSON: `ConfigType` is `CharacterAvatarConfig` and `StructName` is `/Script/EastRimWorld.CharacterAvatarConfig`. The five images of a row are soft references, so write full asset paths: `Avatar` (head icon), `HalfAvatar` (half-body portrait), `HalfUIAvatar` (half-body portrait for UI), `HalfTourAvatar` (tournament half-body portrait), `SmallTourAvatar` (tournament small image).
+- The sect leader and every character registered in the world can be assigned a portrait, with the same rules as 4.10. The assigned portrait is stored in the mod data area and does not change the character's own portrait config; when the mod that wrote it is disabled the character shows its own portrait again, including in the graveyard.
+- UIs that are already open show the new portrait after they are closed and reopened.
+
+### 4.12 A mod's own data (shared across saves)
+
+> Added in November 2026; requires a game version that includes this API.
+
+| API (`UE.UModLuaLibrary`) | Notes |
+|---|---|
+| `SetModData(Key, Value)` | Stores one entry and writes it to disk right away; returns bool |
+| `GetModData(Key)` | → `ok, value`; `ok` is false when the entry does not exist |
+| `RemoveModData(Key)` | Removes one entry and writes the file right away; returns bool |
+| `GetModDataKeys()` | → all keys |
+
+```lua
+UE.UModLuaLibrary.SetModData("outfits", '{"list":["white","teal"]}')
+local ok, text = UE.UModLuaLibrary.GetModData("outfits")
+```
+
+- Each mod has one file under `Saved/SaveGames/ModData/`. The data is shared across saves: it stays when the player switches saves or restarts the game. A mod can only read and write its own data.
+- Keys and values are strings; the value format is up to you (JSON text is fine). Keys are case-insensitive and 1 to 128 characters long. A value may hold up to 1M characters, and one mod up to 16M characters and 65,536 entries in total; beyond that the call returns false and writes to the mod log.
+- These functions can only be called from a mod's Lua. Data that should follow a particular save belongs in the 4.10 and 4.11 APIs or in the game's own save data, not here.
 
 ## 5. DataTable JSON override mechanics
 
@@ -427,7 +529,7 @@ JSON file format:
 
 ## 6. Sandbox restrictions (what mods cannot do)
 
-- `io` / `os` / `require` / `loadfile` / `dofile` / `debug` are **unavailable**;
+- `io` / `os` / `require` / `loadfile` / `dofile` / `debug` are **unavailable**; use `SetModData` from [4.12](#412-a-mods-own-data-shared-across-saves) to persist your own data;
 - only the single Lua file named by `MainLuaFile` is loaded — inline everything;
 - **no key-binding API is provided**; use buttons for UI actions ([4.7](#47-ui-widgets-and-buttons)) and CommonUI back handling for Esc (check `Is Back Handler` in the class defaults);
 - switching to a mod's own level with `OpenLevel` during play is not supported: it destroys the current world, together with the mod's widgets and timers;

@@ -104,6 +104,8 @@ enum class EModConfigType : uint8
 	SubClassApparelLimit,
 	//科技分类UI配置
 	TechCategoryUIConfig,
+	//角色立绘配置（Mod 用 JSON 往立绘表加行，再用 SetCharacterAvatarConfigId 指定给角色）
+	CharacterAvatarConfig,
 };
 
 //Mod资产类型
