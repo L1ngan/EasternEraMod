@@ -1,0 +1,29 @@
+{
+  "ModId": "QingXinJue",
+  "ModName": "清心诀",
+  "Version": "1.0.0",
+  "Author": "你的名字",
+  "Description": "新增一门绿色中正内功《清心诀》",
+  "DataTableConfigs": [
+    {
+      "ConfigType": "MartialArtsEntries",
+      "JsonFile": "Config/MartialArtsEntries.json",
+      "StructName": "/Script/EastRimWorld.MartialArtsEntries",
+      "bOverrideData": false
+    },
+    {
+      "ConfigType": "MartialArtsBook",
+      "JsonFile": "Config/MartialArtsBook.json",
+      "StructName": "/Script/EastRimWorld.MartialArtsBookData",
+      "bOverrideData": false
+    },
+    {
+      "ConfigType": "MartialArtsBookCategory",
+      "JsonFile": "Config/MartialArtsBookCategory.json",
+      "StructName": "/Script/EastRimWorld.MartialArtsBookCategoryData",
+      "bOverrideData": false
+    }
+  ],
+  "MainLuaFile": "Main.lua",
+  "LogLevel": "Log"
+}

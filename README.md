@@ -21,8 +21,13 @@ In release builds `log.txt` only records `Error`. To keep `Log` and `Warning`, s
 | [ChangeAttribute](BlueprintAPI_ModAuthors/Examples/ChangeAttribute/README.md) | 按倍率修改动物与召唤物 DataTable 属性 · Scales animal and summon DataTable attributes |
 | [CheatingBuildings](BlueprintAPI_ModAuthors/Examples/CheatingBuildings/README.md) | 用建筑、物品、配方、新游戏配置和 Cook 资源组成完整生产玩法 · Builds a production workflow from buildings, items, formulas, new-game config, and cooked assets |
 | [Giganotosaurus_RD](BlueprintAPI_ModAuthors/Examples/Giganotosaurus_RD/README.md) | 配置自定义动物、动画组、战斗能力、Gameplay Tags 和关卡资源 · Configures a custom animal, animation group, combat ability, Gameplay Tags, and level assets |
+| [QingXinJue](BlueprintAPI_ModAuthors/Examples/QingXinJue/README.md) | 纯 JSON 新增一门内功武学（书、分层词条、图鉴分类），附测试命令 · Adds an internal martial art with JSON only (book, per-layer entries, codex category), with a test command |
 
 **开发指南 / Development guides**（字段全表、生命周期、Lua API 参考、事件表、JSON 合并语义、沙箱负面清单、`Mod.Status` 调试、打包发布）:
 
 - 中文：[Examples/ModDevelopmentGuide_CN.md](BlueprintAPI_ModAuthors/Examples/ModDevelopmentGuide_CN.md)
 - English: [Examples/ModDevelopmentGuide_EN.md](BlueprintAPI_ModAuthors/Examples/ModDevelopmentGuide_EN.md)
+
+**专题指南 / Topic guides**:
+
+- 自制内功武学（中文）：[Examples/InternalMartialArtsGuide_CN.md](BlueprintAPI_ModAuthors/Examples/InternalMartialArtsGuide_CN.md)，附录 [官方内功每层词条与效果](BlueprintAPI_ModAuthors/Examples/InternalMartialArtsGuide_Appendix_CN.md)

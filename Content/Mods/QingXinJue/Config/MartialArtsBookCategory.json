@@ -1,0 +1,8 @@
+{
+  "StructName": "/Script/EastRimWorld.MartialArtsBookCategoryData",
+  "Rows": {
+    "Category_JiangHuNeiGong": {
+      "MartialArtsBooks": ["QingXinJue_Internal"]
+    }
+  }
+}

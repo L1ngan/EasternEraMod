@@ -1,0 +1,13 @@
+{
+  "StructName": "/Script/EastRimWorld.MartialArtsEntries",
+  "Rows": {
+    "QingXinJue_L1": {
+      "ID": "QingXinJue_L1",
+      "Comment": "清心诀第1层：罡气上限+850、悟性+3、修炼经验+8%",
+      "EffectiveAfterEquippingGameplayEffects": [
+        "/Game/Blueprints/AbilitySystem/GameplayEffect/Book/GE_Power_JiChu_01.GE_Power_JiChu_01_C",
+        "/Game/Blueprints/AbilitySystem/GameplayEffect/Book/GE_Book_GuiXi_L1.GE_Book_GuiXi_L1_C"
+      ]
+    }
+  }
+}

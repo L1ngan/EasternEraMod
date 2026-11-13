@@ -1,0 +1,75 @@
+{
+  "StructName": "/Script/EastRimWorld.MartialArtsBookData",
+  "Rows": {
+    "QingXinJue_Internal": {
+      "ID": "QingXinJue_Internal",
+      "Comment": "绿色-内功-中正-清心诀",
+
+      "ItemName": "清心诀",
+      "ItemDescription": "道家入门心法，清心寡欲，以静制动。",
+      "FormatItemDescription": { "TextMain": "道家入门心法，清心寡欲，以静制动。" },
+      "RouteAcquiringDescribe": "武学图鉴残卷兑换",
+
+      "GroundInventoryType": "Book",
+      "BookClassificationType": "MartialArts",
+      "MajorCategories": "InternalPower",
+      "AttributeClassification": "Neutral",
+      "UsageType": "Passive",
+      "ItemQuality": "Green",
+
+      "LevelConfig": {
+        "DataTable": "/Game/Configs/MartialArts/DT_MartialArtsLevelConfig.DT_MartialArtsLevelConfig",
+        "RowName": "InternalGreenMaxLv15"
+      },
+      "LevelGameplayEffect": "/Game/Blueprints/AbilitySystem/GameplayEffect/Book/BookBaseAttribute/GE_BookBase_Green.GE_BookBase_Green_C",
+
+      "MartialArtsLevels": {
+        "1":  { "Level": 1,  "MartialArtsEntries": ["QingXinJue_L1"],   "LevelName": "第1层",
+                "EntriesDescribe": "罡气上限+850、悟性+3、修炼经验+8%。",
+                "FormatEntriesDescribe": { "TextMain": "罡气上限+850、悟性+3、修炼经验+8%。" } },
+        "5":  { "Level": 5,  "MartialArtsEntries": ["Power_GuiXi_05"],  "LevelName": "第5层",
+                "EntriesDescribe": "罡气上限+300、资质+3、罡气恢复加快。",
+                "FormatEntriesDescribe": { "TextMain": "罡气上限+300、资质+3、罡气恢复加快。" } },
+        "10": { "Level": 10, "MartialArtsEntries": ["Power_JiChu_10"],  "LevelName": "第10层",
+                "EntriesDescribe": "资质+15。",
+                "FormatEntriesDescribe": { "TextMain": "资质+15。" } },
+        "15": { "Level": 15, "MartialArtsEntries": ["Power_GuiXi_15"],  "LevelName": "第15层",
+                "EntriesDescribe": "罡气上限+225、修炼经验+7%。",
+                "FormatEntriesDescribe": { "TextMain": "罡气上限+225、修炼经验+7%。" } }
+      },
+
+      "CoolDownTime": -1,
+      "SkillEntryTag": "内功·中正",
+      "FormatSkillEntryTag": { "TextMain": "内功·中正" },
+      "MartialArtsIcon": "/Game/Art/UI/Charactor/WuXue/Ver2/C_JiChu_Internal.C_JiChu_Internal",
+
+      "RealmLevel": 1,
+      "ReadingTime": 60,
+      "bCanReadRepeatedly": false,
+      "CopyTime": 300,
+      "MaxCopyNum": 1,
+      "ComprehendCost": 15,
+      "ExchangeFragmentCost": { "Blue": 500 },
+
+      "MaxStackSize": 1,
+      "SmallGridCount": 1,
+      "ItemPrice": 300,
+      "GrowScore": 300,
+      "ItemWeight": 0.5,
+      "MaxItemDurability": 30,
+      "ItemShelfLife": 384000,
+      "ItemIcon": "/Game/Art/UI/GameMain/ResourceIcon/T_Ziyuan_icon_lvsemiji.T_Ziyuan_icon_lvsemiji",
+      "ItemModel": "/Game/Art/Meshes/Buiding/BaiJian/ShuJi/Item_Book_Internal01.Item_Book_Internal01",
+      "StackModels": [
+        { "MinCapacity": 1, "MaxCapacity": 1, "StackModel": "/Game/Art/Meshes/Buiding/BaiJian/ShuJi/Item_Book_Internal01.Item_Book_Internal01" }
+      ],
+      "GameplayTag": { "TagName": "Inventory.Item.MartialBook.Lv" },
+      "InformationWidget": "BookInfo",
+      "TipInformationWidget": "BookTip",
+      "GOAPActions": ["GetItem", "TransItem"],
+      "SocketName": { "GetItem": "peng", "TransItem": "peng", "Transport": "peng" },
+      "StorageSpaceDecayRate": { "OutDoor": 1.0, "UnderRoof": 0.75, "InDoor": 0.5 },
+      "TemperatureThreshold": [ { "MinTemperature": -999, "MaxTemperature": 999, "Efficiency": 1 } ]
+    }
+  }
+}
