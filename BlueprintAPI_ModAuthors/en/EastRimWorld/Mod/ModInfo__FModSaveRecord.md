@@ -25,6 +25,17 @@
 
 ---
 
+### Property `ModName`
+
+| Field | Details |
+|------|------|
+| C++ type | `FString` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) FString ModName;` |
+
+---
+
 ### Property `Version`
 
 | Field | Details |

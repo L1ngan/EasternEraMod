@@ -67,7 +67,7 @@
 
 **说明:**
 
-> 读档发现 Mod 兼容问题时广播（缺失/未启用/版本不符），UI 绑定后向玩家弹确认提示
+> 读档发现 Mod 缺失或未启用时广播，UI 绑定后向玩家弹确认提示
 
 ---
 
@@ -193,8 +193,8 @@
 **说明:**
 
 > 启用/禁用Mod
->
-> 注意：它写的是全局存档里的另一份启用列表（只改内存），游戏实际加载哪些 Mod 看的是 Mod 管理页的启用设置，调它不影响实际加载。Mod 不要调用。
+> 注意：写的是全局存档（CurrencySaveSlot）里的 EnabledModIds，只改内存、要另外 SaveCurrencyObject 才落盘；
+> 游戏实际加载哪些 Mod 看的是 Mod 管理页写的 GameSetting 存档的 SteamUgcEnable，不是这份，所以调它不影响实际加载
 
 ---
 
@@ -384,8 +384,8 @@
 **说明:**
 
 > 按依赖顺序加载所有启用的Mod 是否是加载新游戏mod
->
-> 注意：按全局存档里的另一份启用列表（见 SetModEnabled）加载，调了会真的加载；这份列表与 Mod 管理页的启用设置不是同一份，游戏自己的加载流程不调用本函数。Mod 不要调用。
+> 注意：按全局存档（CurrencySaveSlot）里的 EnabledModIds 加载，调了会真的加载；这份列表与 Mod 管理页的启用设置
+> （GameSetting 存档的 SteamUgcEnable）不是同一份，游戏自己的加载流程不调用本函数
 
 ---
 
@@ -459,15 +459,41 @@
 | 参数名 | 类型 |
 |--------|------|
 | `SaveRecords` | const TArray<[FModSaveRecord](ModInfo__FModSaveRecord.md)>& |
+| `EnabledModIds` | `const TArray<FName>&` |
 | `OutIssues` | TArray<[FModCompatibilityIssue](ModInfo__FModCompatibilityIssue.md)>& |
 
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Mod System") bool CheckSaveModCompatibility(const TArray<FModSaveRecord>& SaveRecords, TArray<FModCompatibilityIssue>& OutIssues) const;`
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Mod System") bool CheckSaveModCompatibility(const TArray<FModSaveRecord>& SaveRecords, const TArray<FName>& EnabledModIds, TArray<FModCompatibilityIssue>& OutIssues) const;`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
 **说明:**
 
-> 对比存档 Mod 记录与当前 Mod 环境，输出缺失/未启用/版本不符清单；返回 true 表示完全兼容
+> 对比存档 Mod 记录与当前启用列表，输出缺失/未启用/版本不符清单；返回 true 表示完全兼容
+
+---
+
+### 函数 `CheckSaviorSlotModLoadIssues`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="Mod System" |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `SaviorSlot` | `USavior*` |
+| `EnabledModIds` | `const TArray<FName>&` |
+| `OutIssues` | TArray<[FModCompatibilityIssue](ModInfo__FModCompatibilityIssue.md)>& |
+| `OutWarningMessage` | `FText&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Mod System") bool CheckSaviorSlotModLoadIssues(USavior* SaviorSlot, const TArray<FName>& EnabledModIds, TArray<FModCompatibilityIssue>& OutIssues, FText& OutWarningMessage);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 读取指定存档槽的 Mod 清单，仅返回缺失或未启用问题；返回 true 时应在真正读档前提示玩家
 
 ---
 
@@ -486,5 +512,76 @@
 **说明:**
 
 > 最近一次读档兼容检查发现的问题（UI 可在绑定委托之外随时查询）
+
+---
+
+### 函数 `GetModSettingDefs`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="Mod System|Settings" |
+| 返回类型 | TArray<[FModSettingDef](ModInfo__FModSettingDef.md)> |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `ModId` | `const FName&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Mod System|Settings") TArray<FModSettingDef> GetModSettingDefs(const FName& ModId) const;`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 某 Mod 声明的设置项（没发现或没声明返回空），设置面板与控制台用
+
+---
+
+### 函数 `GetModSettingValue`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="Mod System|Settings" |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `ModId` | `const FName&` |
+| `Key` | `const FString&` |
+| `OutValue` | `FString&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Mod System|Settings") bool GetModSettingValue(const FName& ModId, const FString& Key, FString& OutValue);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 取设置当前值（文本形式；没改过返回默认值）；没有这一项返回 false
+
+---
+
+### 函数 `SetModSettingValue`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="Mod System|Settings" |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `ModId` | `const FName&` |
+| `Key` | `const FString&` |
+| `Value` | `const FString&` |
+| `OutError` | `FString&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Mod System|Settings") bool SetModSettingValue(const FName& ModId, const FString& Key, const FString& Value, FString& OutError);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 改设置：按类型校验并规整（数值越界截到范围内，enum 必须是选项之一），值变了才写盘并同步广播 OnModSettingChanged；失败原因写进 OutError
 
 ---

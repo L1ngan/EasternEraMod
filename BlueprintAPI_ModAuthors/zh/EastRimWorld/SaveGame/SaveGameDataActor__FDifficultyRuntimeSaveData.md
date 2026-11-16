@@ -204,3 +204,19 @@
 > 敌人强度行名（GE DataTable 行）
 
 ---
+
+### 属性 `SkillLevelRow`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FName` |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , SaveGame) FName SkillLevelRow;` |
+
+**说明:**
+
+> 初始技能等级选项行名。2026-10-12 前的旧档缺失此字段，消费者沿用历史衰减行，不重算已有角色技能。
+> 兼容移除条件：不再支持缺失 SkillLevelRow 的旧档。
+
+---

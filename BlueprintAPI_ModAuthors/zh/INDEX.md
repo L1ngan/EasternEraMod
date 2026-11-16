@@ -2,8 +2,8 @@
 
 以下为 **每个 UCLASS / USTRUCT** 的独立文档入口（仅含蓝图暴露的成员）。
 
-**类型数量：** 1307
-**头文件数量：** 279
+**类型数量：** 1327
+**头文件数量：** 285
 
 **功能说明：** 每条索引下的 **功能说明** 摘自该类型在头文件中 **`UCLASS` / `USTRUCT` 声明紧上方** 的 `//` 或块注释（概括该类/结构体**做什么、负责哪块逻辑**；自动压成一行并截断）。若工程未写类型级注释，则显示占位提示；更完整的说明仍以对应 `.h` 与单页 `.md` 为准。
 
@@ -1315,6 +1315,8 @@
 - `class` **`UInventoryManagerComponent`** — [InventoryManagerComponent__UInventoryManagerComponent](EastRimWorld/Inventory/InventoryManagerComponent__UInventoryManagerComponent.md)
   - **功能说明：** 库存管理组件，管理物品实例的增删、堆叠、存档以及仓库/交易区格位
 
+- `struct` **`FItemHomeRule`** — [InventoryManagerComponent__FItemHomeRule](EastRimWorld/Inventory/InventoryManagerComponent__FItemHomeRule.md)
+  - **功能说明：** 物品归属规则(Mod 设置, 只对普通仓库生效):本仓库是该物品的归属仓库。 规则本体随仓库组件入档;按物品 ID 反查归属仓库的索引是运行态, 由 UWarehouseManagerSubsystem 维护。
 ## `EastRimWorld/Inventory/SelectInventorySubstituteSystem.h`
 
 - `class` **`ASelectInventorySubstituteSystem`** — [SelectInventorySubstituteSystem__ASelectInventorySubstituteSystem](EastRimWorld/Inventory/SelectInventorySubstituteSystem__ASelectInventorySubstituteSystem.md)
@@ -1367,6 +1369,18 @@
   - **功能说明：** 已生效的 GiveAbilitys 词条授予记录（卸载招式时移除）。
 - `struct` **`FMovesBookSkillEntryGameplayEffectState`** — [MartialArtsSkillEntryGiveAbilitys__FMovesBookSkillEntryGameplayEffectState](EastRimWorld/MartialArts/MartialArtsSkillEntryGiveAbilitys__FMovesBookSkillEntryGameplayEffectState.md)
   - **功能说明：** 招式书籍技能词条 GiveGameEffects 已应用记录（卸载/刷新时移除）。
+
+## `EastRimWorld/Mod/ModAILibrary.h`
+
+- `class` **`UModAILibrary`** — [ModAILibrary__UModAILibrary](EastRimWorld/Mod/ModAILibrary__UModAILibrary.md)
+  - **功能说明：** Mod 的 AI 接口：本门弟子的工作优先级、重置卡住的计划。 Lua：UE.UModAILibrary.SetCharacterWorkPriority(...)、UE.UModAILibrary.ResetCharacterPlan(...) 失败时返回 false，原因写进调用方 Mod 的日志（Mod.Status 与 -ModConsole 可见）。 被困事件 OnCharacterTrapped 见 ModEventBus.h，Mod 可以在回调里调 ResetCharacterPlan。
+
+## `EastRimWorld/Mod/ModBuildLibrary.h`
+
+- `enum` **`EBuildUnavailableReason`** — [ModBuildLibrary__EBuildUnavailableReason](EastRimWorld/Mod/ModBuildLibrary__EBuildUnavailableReason.md)
+  - **功能说明：** 建筑或子类不可用的原因(只追加, 不重排)
+- `class` **`UModBuildLibrary`** — [ModBuildLibrary__UModBuildLibrary](EastRimWorld/Mod/ModBuildLibrary__UModBuildLibrary.md)
+  - **功能说明：** 建造界面 Mod 接口。Lua:UE.UModBuildLibrary.函数名(WorldContext, ...) 分类数据:一级大类 BuildListCategorizeConfig → 二级子类 BuildTabConfig(Category = 一级 ID) → 建筑菜单行 BuildingUI(Category = 二级 ID, 行 ID = 建筑 ID); 列表顺序按建筑配置 BuildConfig 的行序。运行期注册只改内存里的表, 不进存档, 读档/新开局后要重新注册。 "已解锁"与建造菜单一致:存档解锁列表里有, 且二楼没开放时不含通往上层的楼梯(新手引导期间菜单只显示引导解锁的建筑, 这里不区分)。
 
 ## `EastRimWorld/Mod/ModCharacterLayerLibrary.h`
 
@@ -1424,10 +1438,24 @@
 - `class` **`UModRuntimeInfo`** — [ModInfo__UModRuntimeInfo](EastRimWorld/Mod/ModInfo__UModRuntimeInfo.md)
   - **功能说明：** Mod运行时信息 用于在运行时管理Mod的状态
 
+- `enum` **`EModSettingType`** — [ModInfo__EModSettingType](EastRimWorld/Mod/ModInfo__EModSettingType.md)
+  - **功能说明：** Mod 设置项的值类型（ModInfo.json 的 Settings[].Type：bool / int / float / enum / string）
+- `struct` **`FModSettingDef`** — [ModInfo__FModSettingDef](EastRimWorld/Mod/ModInfo__FModSettingDef.md)
+  - **功能说明：** Mod 在 ModInfo.json 里声明的一个设置项；值的文本形式：bool 为 true/false，int 为整数，float 为小数，enum 为 Options 之一
 ## `EastRimWorld/Mod/ModLuaLibrary.h`
 
 - `class` **`UModLuaLibrary`** — [ModLuaLibrary__UModLuaLibrary](EastRimWorld/Mod/ModLuaLibrary__UModLuaLibrary.md)
   - **功能说明：** Mod Lua函数库 提供从Lua调用C++功能的接口
+
+## `EastRimWorld/Mod/ModStorageEventSubsystem.h`
+
+- `enum` **`EModContainerChangeReason`** — [ModStorageEventSubsystem__EModContainerChangeReason](EastRimWorld/Mod/ModStorageEventSubsystem__EModContainerChangeReason.md)
+  - **功能说明：** 容器物品增减的原因（Mod 事件 OnContainerItemAdded/Removed 的 Reason 参数）
+
+## `EastRimWorld/Mod/ModStorageLibrary.h`
+
+- `class` **`UModStorageLibrary`** — [ModStorageLibrary__UModStorageLibrary](EastRimWorld/Mod/ModStorageLibrary__UModStorageLibrary.md)
+  - **功能说明：** Mod 的仓储接口：容器之间安全转移物品；物品归属仓库（影响搬运目的地）。 Lua：UE.UModStorageLibrary.GetAcceptableItemCount(Container, ItemId)、UE.UModStorageLibrary.TransferItems(From, To, ItemId, Count) 归属：UE.UModStorageLibrary.SetItemHomeBuilding(Warehouse, ItemId, bExclusive)、ClearItemHomeBuilding(Warehouse, ItemId)、GetItemHomeBuildings(WorldContext, ItemId)、GetBuildingHomeItems(Warehouse...
 
 ## `EastRimWorld/Mod/ModSubsystem.h`
 
@@ -1550,6 +1578,8 @@
 - `struct` **`FTeamBuffInfo`** — [SaveGameDataActor__FTeamBuffInfo](EastRimWorld/SaveGame/SaveGameDataActor__FTeamBuffInfo.md)
   - **功能说明：** 阵营Buff信息（阵营ID及其Buff列表），用于团队Buff存档
 
+- `struct` **`FModSaveDataBucket`** — [SaveGameDataActor__FModSaveDataBucket](EastRimWorld/SaveGame/SaveGameDataActor__FModSaveDataBucket.md)
+  - **功能说明：** Mod 按存档保存的一份键值数据（一个 Mod 一份）。值的格式由 Mod 自定；内层键用 FString：Savior 对 Map 值走 JSON 转换，FName 键会被改大小写
 ## `EastRimWorld/SaveGame/SaveGlobalGameData.h`
 
 - `class` **`USaveGlobalGameData`** — [SaveGlobalGameData__USaveGlobalGameData](EastRimWorld/SaveGame/SaveGlobalGameData__USaveGlobalGameData.md)

@@ -55,18 +55,18 @@
 
 ---
 
-### Property `ReservedEmptySmallGridSlots`
+### Property `ReservedNewPileItemNum`
 
 | Field | Details |
 |------|------|
 | C++ type | `int32` |
 | Reflection specifiers | (Blueprint visibility-related specifiers only) |
 | Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
-| Original declaration (excerpt) | `UPROPERTY() int32 ReservedEmptySmallGridSlots = 0;` |
+| Original declaration (excerpt) | `UPROPERTY() int32 ReservedNewPileItemNum = 0;` |
 
 **Notes:**
 
-> Number of empty small grid slots reserved
+> 本角色落在虚拟新堆(空格)上的预约数量; 核销/释放时按此回写仓库级 ReservedNewPileItemNum
 
 ---
 
@@ -81,6 +81,17 @@
 
 **Notes:**
 
-> 该 ItemID 的 SmallGridCount。事务回滚时要用同样的 SmallGridCount 重新写回全局预约表。
+> 该 ItemID 的 SmallGridCount / MaxStackSize, 事务回滚与派生格数计算要用
+
+---
+
+### Property `MaxStackSize`
+
+| Field | Details |
+|------|------|
+| C++ type | `int32` |
+| Reflection specifiers | (Blueprint visibility-related specifiers only) |
+| Blueprint semantics | Exposed to Blueprint; whether it is editable in defaults depends on Edit* specifiers. |
+| Original declaration (excerpt) | `UPROPERTY() int32 MaxStackSize = 1;` |
 
 ---

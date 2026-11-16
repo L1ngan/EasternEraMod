@@ -46,8 +46,8 @@
 |------|------|
 | C++ type | TObjectPtr<[UCommonLogComponent](../Components/CommonLogComponent__UCommonLogComponent.md)> |
 | Reflection specifiers | BlueprintReadOnly |
-| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere,SaveGame) TObjectPtr<UCommonLogComponent> LogComponent;` |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) TObjectPtr<UCommonLogComponent> LogComponent;` |
 
 **Notes:**
 
@@ -61,12 +61,27 @@
 |------|------|
 | C++ type | TObjectPtr<[UEmergenceLogComponent](../System/Emergence/Log/EmergenceLogComponent__UEmergenceLogComponent.md)> |
 | Reflection specifiers | BlueprintReadOnly |
-| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
-| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere,SaveGame) TObjectPtr<UEmergenceLogComponent> EmergenceLogComponent;` |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) TObjectPtr<UEmergenceLogComponent> EmergenceLogComponent;` |
 
 **Notes:**
 
 > 涌现系统专有日志组件(时间/来源事件反查/关联演员/玩家相关性)
+
+---
+
+### Property `ChronicleComponent`
+
+| Field | Details |
+|------|------|
+| C++ type | TObjectPtr<[UPermanentChronicleComponent](../System/Chronicle/PermanentChronicleComponent__UPermanentChronicleComponent.md)> |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) TObjectPtr<UPermanentChronicleComponent> ChronicleComponent;` |
+
+**Notes:**
+
+> 江湖永久大事记组件(不设淘汰上限,带关联门派列表用于筛选)
 
 ---
 
@@ -280,6 +295,36 @@
 
 ---
 
+### Property `HomeBgmPlayMode`
+
+| Field | Details |
+|------|------|
+| C++ type | [EHomeBgmPlayMode](../System/HomeBgm/HomeBgmTrackStruct__EHomeBgmPlayMode.md) |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) EHomeBgmPlayMode HomeBgmPlayMode = EHomeBgmPlayMode::FollowDefault;` |
+
+**Notes:**
+
+> 家园曲谱：当前存档播放模式（跟随默认 / 指定曲目）
+
+---
+
+### Property `SelectedHomeBgmTrackID`
+
+| Field | Details |
+|------|------|
+| C++ type | `FName` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) FName SelectedHomeBgmTrackID;` |
+
+**Notes:**
+
+> 家园曲谱：当前存档选定曲目 ID（跟随默认时为 None）
+
+---
+
 ### Property `EnabledModRecords`
 
 | Field | Details |
@@ -291,7 +336,53 @@
 
 **Notes:**
 
-> 本存档启用的 Mod 及版本（OnPrepareToSave 同步；读档时用于 Mod 兼容检查）
+> 本存档启用的 Mod 名称、ID 及版本（OnPrepareToSave 同步；读档时用于 Mod 兼容检查）
+
+---
+
+### Property `ModCharacterRecords`
+
+| Field | Details |
+|------|------|
+| C++ type | TMap<FGuid, [FModCharacterRecord](../Mod/ModCharacterLayerTypes__FModCharacterRecord.md)> |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<FGuid, FModCharacterRecord> ModCharacterRecords;` |
+
+**Notes:**
+
+> MOD 数据区：Mod 写的捏脸元数据、换的预设、指定的立绘，按角色 Guid 存（捏脸档案本体在蓝图变量 ModAppearanceProfiles）。
+> 游戏原有字段不受影响；写它的 Mod 没加载时不生效。由 UModCharacterLayerLibrary 读写，老档没有这项数据时行为不变
+
+---
+
+### Property `PlaythroughGuid`
+
+| Field | Details |
+|------|------|
+| C++ type | `FGuid` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) FGuid PlaythroughGuid;` |
+
+**Notes:**
+
+> Playthrough ID of this save line.
+
+---
+
+### Property `ModSaveData`
+
+| Field | Details |
+|------|------|
+| C++ type | TMap<FString, [FModSaveDataBucket](SaveGameDataActor__FModSaveDataBucket.md)> |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<FString, FModSaveDataBucket> ModSaveData;` |
+
+**Notes:**
+
+> Per-save mod data written into the save (ModId -> key/value).
 
 ---
 
@@ -487,6 +578,36 @@
 **Notes:**
 
 > 信笺数据
+
+---
+
+### Property `ForceLetters`
+
+| Field | Details |
+|------|------|
+| C++ type | TArray<[FForceLetter](../System/Letterpaper/ForceLetterTypes__FForceLetter.md)> |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, SaveGame) TArray<FForceLetter> ForceLetters;` |
+
+**Notes:**
+
+> 门派来信数据（与 UBirdLetterSystem::ForceLetters 的同步在 OnPrepareToSave/OnLoaded 中完成）
+
+---
+
+### Property `PendingOrphanDisciples`
+
+| Field | Details |
+|------|------|
+| C++ type | TMap<FGuid, [FPendingOrphanDiscipleRecord](../WorldSystem/OrphanDiscipleTypes__FPendingOrphanDiscipleRecord.md)> |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly, SaveGame) TMap<FGuid, FPendingOrphanDiscipleRecord> PendingOrphanDisciples;` |
+
+**Notes:**
+
+> C6.4 待玩家处理的遗孤/托孤记录(key=RecordGuid,对应门派来信 OrphanRecordGuid)
 
 ---
 
@@ -741,7 +862,7 @@
 
 **Notes:**
 
-> 参悟·历练点数（全局，参悟消耗，通过行为/任务获得）
+> 参悟·历练点（洗炼点）数（全局，参悟消耗，通过行为/任务获得）
 
 ---
 
@@ -787,6 +908,36 @@
 **Notes:**
 
 > 武学残卷（全局，纯数值道具，按品质分别计数：品质→数量）
+
+---
+
+### Property `ObtainedMartialMoveIDs`
+
+| Field | Details |
+|------|------|
+| C++ type | `TSet<FName>` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TSet<FName> ObtainedMartialMoveIDs;` |
+
+**Notes:**
+
+> 曾获得过的武学招式ID（永久记：实体书获得或读档追溯弟子学习后写入，招式失去也保留）。图鉴收集状态及兑换成本判定用。
+
+---
+
+### Property `FavoriteMartialBookIDs`
+
+| Field | Details |
+|------|------|
+| C++ type | `TSet<FName>` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. Field participates in **SaveGame** serialization. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly,SaveGame) TSet<FName> FavoriteMartialBookIDs;` |
+
+**Notes:**
+
+> 玩家手动收藏的武学秘籍书ID（图鉴"我的收藏"用）。秘籍(分类)收藏态由其招式派生，不单独存。
 
 ---
 
@@ -1023,6 +1174,29 @@
 **Notes:**
 
 > Initializes the save game data actor (writes initial data such as difficulty runtime coefficients on new game).
+
+---
+
+### Function `SetHomeBgmChoice`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `InMode` | [EHomeBgmPlayMode](../System/HomeBgm/HomeBgmTrackStruct__EHomeBgmPlayMode.md) |
+| `InTrackID` | `FName` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetHomeBgmChoice(EHomeBgmPlayMode InMode, FName InTrackID);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 设置家园曲谱播放选择（模式 + 曲目 ID；跟随默认时忽略 ID）
 
 ---
 
@@ -1802,6 +1976,95 @@
 **Notes:**
 
 > 获取指定品质的武学残卷数量
+
+---
+
+### Function `RecordMartialMoveObtained`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `MoveID` | `FName` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void RecordMartialMoveObtained(FName MoveID);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 记录"曾获得过"某个武学招式（幂等；供实体书获得或读档追溯学习记录时调用）
+
+---
+
+### Function `HasEverObtainedMartialMove`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `MoveID` | `FName` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintPure) bool HasEverObtainedMartialMove(FName MoveID) const;`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 是否曾获得过某个武学招式（图鉴收集状态判定）
+
+---
+
+### Function `SetFavoriteMartialBook`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable |
+| Return type | `void` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `BookID` | `FName` |
+| `bFavorite` | `bool` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable) void SetFavoriteMartialBook(FName BookID, bool bFavorite);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 设置某本武学秘籍书的收藏态（图鉴收藏：单本 / 分类批量都走它）
+
+---
+
+### Function `IsFavoriteMartialBook`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `BookID` | `FName` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable,BlueprintPure) bool IsFavoriteMartialBook(FName BookID) const;`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> 某本武学秘籍书是否已收藏
 
 ---
 

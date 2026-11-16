@@ -234,3 +234,48 @@
 > 打包导出的数据资产 JSON 列表
 
 ---
+
+### Property `LogLevel`
+
+| Field | Details |
+|------|------|
+| C++ type | `FString` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FString LogLevel = TEXT("Warning");` |
+
+**Notes:**
+
+> 写入该 Mod 日志文件（SaveGames/ModLogs/<ModId>.log）的最低等级："Log" / "Warning" / "Error" / "None"；ModInfo.json 可选字段，缺省 Warning
+
+---
+
+### Property `bLocalOverride`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | BlueprintReadWrite |
+| Blueprint semantics | Readable and writable in Blueprint (still subject to Edit* specifiers in the editor). |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bLocalOverride = false;` |
+
+**Notes:**
+
+> LocalOverride in ModInfo.json: the local copy under Content/Mods wins over a subscribed Workshop copy with the same ModId (also via -ModLocalOverride).
+
+---
+
+### Property `Settings`
+
+| Field | Details |
+|------|------|
+| C++ type | TArray<[FModSettingDef](ModInfo__FModSettingDef.md)> |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) TArray<FModSettingDef> Settings;` |
+
+**Notes:**
+
+> Settings declared in ModInfo.json.
+
+---

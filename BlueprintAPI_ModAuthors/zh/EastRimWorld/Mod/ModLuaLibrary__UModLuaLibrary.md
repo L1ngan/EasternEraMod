@@ -741,3 +741,256 @@
 > 取全部键。
 
 ---
+
+### 函数 `GetModSetting`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="Mod System|Settings" |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `Key` | `const FString&` |
+| `OutValue` | `FString&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Mod System|Settings") static bool GetModSetting(const FString& Key, FString& OutValue);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 读设置当前值的文本形式（bool 为 true/false，int/float 为数字，enum 为选项之一；没改过返回默认值）；没声明这一项返回 false
+
+---
+
+### 函数 `SetModSetting`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="Mod System|Settings" |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `Key` | `const FString&` |
+| `Value` | `const FString&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Mod System|Settings") static bool SetModSetting(const FString& Key, const FString& Value);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 改设置：按声明校验（数值越界截到范围内，enum 必须是选项之一），值变了才保存并广播 OnModSettingChanged
+
+---
+
+### 函数 `GetModSettings`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="Mod System|Settings" |
+| 返回类型 | `TMap<FString, FString>` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Mod System|Settings") static TMap<FString, FString> GetModSettings();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 本 Mod 全部设置的当前值（键 -> 文本形式的值）
+
+---
+
+### 函数 `SetSaveData`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="Mod System|SaveData" |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `Key` | `const FString&` |
+| `Value` | `const FString&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Mod System|SaveData") static bool SetSaveData(const FString& Key, const FString& Value);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 写一条：只改内存，下次存档时写进存档（OnGameSaving 回调里写的进这一次存档）；不存档就读档会回到存档时的值。键 1~128 字符，值不超过 64K 字符，每个 Mod 合计不超过 1M 字符、4096 条
+
+---
+
+### 函数 `GetSaveData`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="Mod System|SaveData" |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `Key` | `const FString&` |
+| `OutValue` | `FString&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Mod System|SaveData") static bool GetSaveData(const FString& Key, FString& OutValue);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 读一条；没有或数据未就绪时返回 false
+
+---
+
+### 函数 `RemoveSaveData`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="Mod System|SaveData" |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `Key` | `const FString&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Mod System|SaveData") static bool RemoveSaveData(const FString& Key);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 删一条
+
+---
+
+### 函数 `GetSaveDataKeys`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="Mod System|SaveData" |
+| 返回类型 | `TArray<FString>` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Mod System|SaveData") static TArray<FString> GetSaveDataKeys();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 取本 Mod 在当前存档里的全部键
+
+---
+
+### 函数 `IsSaveDataReady`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintPure, Category="Mod System|SaveData" |
+| 返回类型 | `bool` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Mod System|SaveData") static bool IsSaveDataReady();`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 按存档数据是否已就绪（新游戏初始化完、读档读入后）
+
+---
+
+### 函数 `GetPlaythroughId`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="Mod System|SaveData" |
+| 返回类型 | `FString` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Mod System|SaveData") static FString GetPlaythroughId();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 周目 ID（GUID 字符串）：新游戏生成，另存、自动存档沿用；老档首次读入按当时掌门 GUID 补。门派、掌门存档里的 SGUID 每周目都一样，区分周目请用它。未就绪返回空串
+
+---
+
+### 函数 `RequestGameplayTag`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="Mod System|GameplayTag" |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `TagName` | `const FString&` |
+| `OutTag` | `FGameplayTag&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, Category = "Mod System|GameplayTag") static bool RequestGameplayTag(const FString& TagName, FGameplayTag& OutTag);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 按名字取已注册的标签：找不到返回 false、OutTag 为空，不报错不断言；OutTag 是拷贝。Lua：local ok, Tag = UE.UModLuaLibrary.RequestGameplayTag("A.B")
+
+---
+
+### 函数 `IsValidGameplayTag`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintPure, Category="Mod System|GameplayTag" |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `Tag` | `const FGameplayTag&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Mod System|GameplayTag") static bool IsValidGameplayTag(const FGameplayTag& Tag);`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 是否为已注册的有效标签（手填 TagName 得到的未注册标签返回 false）
+
+---
+
+### 函数 `GetGameplayTagName`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintPure, Category="Mod System|GameplayTag" |
+| 返回类型 | `FString` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `Tag` | `const FGameplayTag&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Mod System|GameplayTag") static FString GetGameplayTagName(const FGameplayTag& Tag);`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 取标签名（空标签返回空串）
+
+---

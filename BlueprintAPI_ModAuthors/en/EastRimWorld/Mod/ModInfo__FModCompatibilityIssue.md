@@ -25,6 +25,21 @@
 
 ---
 
+### Property `ModName`
+
+| Field | Details |
+|------|------|
+| C++ type | `FString` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FString ModName;` |
+
+**Notes:**
+
+> 存档时的 Mod 名称（老存档为空时由 UI 回退显示 ModId）
+
+---
+
 ### Property `IssueType`
 
 | Field | Details |

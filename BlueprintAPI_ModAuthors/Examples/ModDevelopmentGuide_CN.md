@@ -40,6 +40,8 @@ MyMod/
 | `DataTableConfigs` | array | 配置表覆盖 `[{"ConfigType":"CommonBuff","JsonFile":"Config/xx.json","StructName":"/Script/EastRimWorld.CommonBuff","bOverrideData":false}]` |
 | `DataAssetConfigs` | array | 数据资产覆盖 `[{"AssetType":"NewGameConfiguration","JsonFile":"...","bOverrideData":false}]` |
 | `PublishedFileId` | string | Steam 创意工坊 ID（上传后自动填充） |
+| `LocalOverride` | bool | true=本地测试已上传过的 Mod：`Content/Mods` 下的这份与订阅的工坊版同 `ModId` 时以本地为准，工坊版不加载，`Mod.Status` 显示 `Source=Local(Override)` 和被挡掉的工坊目录；只对本地副本生效。也可以不改 JSON、用启动参数 `-ModLocalOverride`（2026-11 新增，见 [8](#8-打包与发布)） |
+| `Settings` | array | 设置项声明，玩家和 Mod 都能改，值跨存档保存（2026-11 新增，见 [4.14](#414-mod-设置)） |
 
 `ConfigType` 可用值见类型文档 `EModConfigType`；`AssetType` 见 `EModDataAssetType`。
 
@@ -113,8 +115,20 @@ UE.UModEventBus.UnregisterModEvent(id) -- 可选；卸载时自动清理
 | `OnBuildMenuModWidgetCreated` | 建造菜单生成了一个 Mod 控件（见 [4.6](#46-建造界面接口)） | Mod 控件 | RegisterId, Slot |
 | `OnBuildPlaceStarted` | 开始放置建筑（出现跟随鼠标的预览，迁移建筑也算） | — | BuildId |
 | `OnBuildPlaceEnded` | 放置结束（放下、取消或换了别的建筑） | — | BuildId |
+| `OnGameSaving` | 整个存档写盘前（**同步**，回调里写的按存档数据进这一次存档） | — | — |
+| `OnGameSaved` | 存档结束 | — | Success（true/false）, SlotID |
+| `OnBuildingPlaced` | 玩家放下建筑（工地生成，含预设、屋顶、自动柱） | 建筑 | ConfigId, BuildGuid, BatchId, IsTransfer |
+| `OnBuildingRemoved` | 建筑移除（拆除完工、失去支撑、被毁、取消施工、墙被替换） | —（已销毁） | ConfigId, BuildGuid, Reason（Demolished / Collapsed / Destroyed / Cancelled / Replaced / Removed）, BatchId |
+| `OnItemCrafted` | 生产建筑产出物品 | 建筑 | BuildGuid, FormulaId, ItemId, Count, Quality, CrafterGuid |
+| `OnDiscipleJoined` | 人类加入玩家门派 | — | CharacterGuid, Reason（Visitor / PostStation / Recruited / Orphan / Returned / Unspecified）, FromForceGuid |
+| `OnDiscipleLeft` | 正式弟子离开玩家门派 | — | CharacterGuid, Reason（Death / Expelled / 离开原因枚举名） |
+| `OnContainerItemAdded` / `OnContainerItemRemoved` | 仓库、特殊存储、交易区的物品增减（见 [4.15](#415-仓储)） | 容器所属建筑（已拆除为 nil） | ItemId, Count, Total, Reason, BuildGuid, ContainerType |
+| `OnCharacterTrapped` | 弟子判定被困（同一处连续卡住或整层下不去） | 角色 | CharacterGuid, Storey, IsPlayerDisciple |
+| `OnModSettingChanged` | Mod 设置值改了（**同步**） | — | ModId, Key, Value |
 
 建造相关的 7 个事件都在**下一帧**发出，回调里读到的是事件发生后的最新状态。
+
+2026-11 新增的事件（`OnGameSaving`、`OnModSettingChanged` 除外）也都在**下一帧**发出；读档、切换地点期间的建筑与仓储变化不发事件。`OnLoadGameComplete` 发出时场景里的角色和建筑还没生成，要操作它们请等之后第一个 `OnEnterPlaceComplete`。拆一片建筑时同一帧逐条发，同一次操作的 `BatchId` 相同。驻地以外（战场、秘境、城镇）的死亡不经过门派名册离开流程，不发 `OnDiscipleLeft`，请同时监听 `OnCharacterDeath`。
 
 ### 4.3 定时器
 
@@ -387,7 +401,7 @@ local ids, currentId = UE.UModLuaLibrary.GetCharacterCustomizationIds(Character)
 ```
 
 - `Character` 是初始化完成的人类弟子（`AEastRimWorldCharacter_Human`）。
-- `Slot` 只收 `UE.EArmorType.Helmet`、`Armor`、`Pants`、`Shoes`。
+- `Slot` 收 `UE.EArmorType.Helmet`、`Armor`、`Pants`、`Shoes`，2026-11 起另有 `Accessory`（饰品，如背饰，与帽子同时存在）和 `Hairpin`（发簪）（测试中）。装备面板暂不显示这两个槽，Mod 用本节接口穿戴；宗门战等临时分身显示角色原有外观。
 - `ApparelId` 必须是装备配置表（`EquipmentConfig`）里的行，而且这件装备的槽位与 `Slot` 一致。
 - `ProfileId` 必须是捏脸预设表（`CharacterAppearancePreset`）里的行，且性别与角色当前预设相同；掌门和使用主角外观的角色不接受。新的体型、脸型、发型可以用 JSON 往 `CharacterAppearancePreset`、`CharacterAnatomyProfiles` 加行（参考示例 ParagonSunWukong）。
 - 2026-11 前的游戏版本里，`SetCharacterCustomizationId` 的性别校验读错了预设表的字段，同性别的预设也会返回 false；包含 `GetCharacterCustomizationIds` 的版本已修复。
@@ -492,6 +506,131 @@ local ok, text = UE.UModLuaLibrary.GetModData("outfits")
 - 键和值都是字符串，值的格式自己定（可以放 JSON 文本）。键不分大小写，1~128 个字符；单个值不超过 1M 个字符，一个 Mod 合计不超过 16M 个字符、65536 条，超出时返回 false 并写日志。
 - 只能在 Mod 的 Lua 里调用。要跟着某个存档走的数据，用 4.10、4.11 的接口或游戏自己的存档数据，不要放这里。
 
+### 4.13 按存档保存的数据与周目 ID
+
+> 2026 年 11 月新增（测试中），需要包含该接口的游戏版本。
+
+| API（`UE.UModLuaLibrary`） | 说明 |
+|---|---|
+| `SetSaveData(Key, Value)` | 写一条，只改内存，下次存档时写进存档；返回 bool |
+| `GetSaveData(Key)` | → `ok, value` |
+| `RemoveSaveData(Key)` | 删一条；返回 bool |
+| `GetSaveDataKeys()` | → 本 Mod 在当前存档里的全部键 |
+| `IsSaveDataReady()` | 当前存档的数据是否已就绪 |
+| `GetPlaythroughId()` | 周目 ID（GUID 字符串）；未就绪返回空串 |
+
+- 数据跟着存档走，每个存档一份，只能读写自己的；Mod 停用后数据原样保留在存档里，重新启用后读档就回来。
+- 从 `OnNewGameStarted` / `OnLoadGameComplete` 起可用；在 `Main.lua` 顶层或 `OnModLoaded` 里调用时数据还没读入，Get 返回 false、Set 失败并写日志。
+- 写入后不存档就读档，会回到存档时的值。要在存档前补写，监听同步事件 `OnGameSaving`。
+- 键 1~128 个字符，单个值不超过 64K 个字符，一个 Mod 合计不超过 1M 个字符、4096 条。
+- 周目 ID：新游戏生成，另存、自动存档沿用；2026-11 之前的老存档第一次读入时按当时掌门算出一个固定值，下次存档写入。门派和掌门存档里的 SGUID 每个周目都一样，区分周目请用它。
+
+### 4.14 Mod 设置
+
+> 2026 年 11 月新增（测试中）。设置面板界面还在制作，界面出来之前玩家用控制台 `Mod.Settings`、`Mod.Set` 修改。
+
+在 `ModInfo.json` 里声明：
+
+```json
+"Settings": [
+  { "Key": "Enabled", "Type": "bool", "Default": true, "NameKey": "MyMod_Setting_Enabled" },
+  { "Key": "Speed", "Type": "int", "Default": 3, "Min": 1, "Max": 10, "Step": 1 },
+  { "Key": "Mode", "Type": "enum", "Default": "Normal", "Options": ["Easy", "Normal", "Hard"] }
+]
+```
+
+| 字段 | 说明 |
+|---|---|
+| `Key` | 1~64 个字符，不能以 `__` 开头 |
+| `Type` | `bool` / `int` / `float` / `enum` / `string` |
+| `Default` | 默认值；不写时 bool 为 false、数值为 0、enum 为第一项、string 为空 |
+| `Min` / `Max` / `Step` | 数值范围与面板步长；越界的值截到范围内 |
+| `Options` | enum 的可选值 |
+| `NameKey` / `DescKey` | 显示名、说明的字符表键（给设置面板用） |
+
+| API（`UE.UModLuaLibrary`） | 说明 |
+|---|---|
+| `GetModSetting(Key)` | → `ok, value`：当前值的文本形式（bool 为 `true`/`false`）；没改过返回默认值 |
+| `SetModSetting(Key, Value)` | 按声明校验并保存，值变了广播 `OnModSettingChanged`；返回 bool |
+| `GetModSettings()` | → 全部设置的当前值（键 → 文本） |
+
+- 值跨存档保存在本 Mod 的数据文件里（同 [4.12](#412-mod-自己的数据跨存档)），`SetModData` 不能写设置占用的键。
+- 控制台：`Mod.Settings [ModId]` 列出声明和当前值；`Mod.Set <ModId> <Key> <Value>` 修改。
+- 无效的声明（类型不对、enum 没有选项、Key 以 `__` 开头）跳过并写日志。
+
+### 4.15 仓储
+
+> 2026 年 11 月新增（测试中）。
+
+**安全转移**（`UE.UModStorageLibrary`）：
+
+| API | 说明 |
+|---|---|
+| `GetAcceptableItemCount(Container, ItemId)` | 仓库此刻还能收下多少（已扣掉弟子正往这里搬、预约了的空间；存储筛选不收、保持清空、禁止使用、迁移中时为 0） |
+| `TransferItems(From, To, ItemId, Count)` | 转移并返回实际转移的数量；目标收下后才从源里扣，收不下的留在源里 |
+
+- 第一版只支持 仓库→仓库、地面物品堆→仓库。
+- 只取未使用的物品：弟子已预留的、指派给弟子的装备和书、留给囚犯的饭不动；装备、书整件移。
+- 不要再用游戏内部的转移函数（如 `InventoryItemInstanceTransferToOtherManager`）往仓库搬：它们先扣源、后放入且不看放入结果，目标收不下时多出的物品会丢失。
+
+**物品归属建筑**（`UE.UModStorageLibrary`）：
+
+| API | 说明 |
+|---|---|
+| `SetItemHomeBuilding(Warehouse, ItemId, bExclusive)` | 把仓库设为该物品的归属仓库；返回 bool |
+| `ClearItemHomeBuilding(Warehouse, ItemId)` | 去掉这条规则；返回 bool |
+| `GetItemHomeBuildings(nil, ItemId)` | → 该物品的归属仓库列表（只含当前生效的规则） |
+| `GetBuildingHomeItems(Warehouse)` | → 这座仓库归属的物品 ID 列表 |
+
+- 独占（`bExclusive=true`）：其他仓库一律不收这种物品。偏好：有能收的归属仓库时其他仓库不收，归属仓库都满了回到原规则。
+- 规则随存档保存，建筑拆了自动失效；写规则的 Mod 停用时规则不生效但保留。
+- 已经放在别处的物品不会被主动搬去归属仓库；独占时若归属仓库保持清空或筛选拒收，这种物品就没有地方放。
+- 按仓库调整搬运先后请用 `SetStoragePriority`，不支持按物品的评分回调（搬运规划不回调 Lua）。
+
+**仓储事件**：`OnContainerItemAdded` / `OnContainerItemRemoved`（见 [4.2](#42-游戏事件订阅推荐的玩法接入方式)）。下一帧按（容器, 物品）的净变化合批发出；`Reason` 为 `Haul`（搬运入库）、`Pickup`（取货）、`Consume`（消耗）、`Spoil`（腐烂）、`Demolish`（拆除倒出）、`Mod`（`TransferItems`）、`Other` 或同一帧多种原因时的 `Mixed`；`Total` 为容器里该物品的当前总数。背包和地面物品堆不发。
+
+**仓储设置函数**（游戏原有、蓝图可调用）：
+
+| 函数 | 所在 | 说明 |
+|---|---|---|
+| `SetStoragePriority(Priority)` | 仓库建筑（`AGOAP_ActorBase`） | 存储优先级；请用它而不是直接改 `StoragePriority` 属性（后者不会刷新搬运） |
+| `AddNotPutInItemTag` / `SetNotPutInItemTag` / `RemoveNotPutInItemTag` | 仓库的 `InventoryManagerComponent` | 存储筛选（不放入的物品标签） |
+| `SetCanUseGridNum` / `GetCanUseGridNum` | 同上 | 可用格子数 |
+| `AllSelectStorageTag` / `CancelAllSelectStorageTag` | 仓库建筑（`ABuildingActorBase`） | 全选 / 全不选筛选 |
+| `SetCommonButtonState(KeepClear / ProhibitionUse, bState)` | 建筑公共按钮 | 保持清空、禁止使用 |
+| `IsWarehouseFull`、`GetWarehouseState`、`CanPlaceItemInWarehouseByItemData`、`GetRegisteredWarehouses` | `UWarehouseManagerSubsystem` | 只读查询 |
+
+`TryReserveWarehouseFromTransportPlans` 等预约函数是内部接口，不要调用。
+
+### 4.16 AI：工作优先级与卡住的计划
+
+> 2026 年 11 月新增（测试中）。
+
+| API（`UE.UModAILibrary`） | 说明 |
+|---|---|
+| `SetCharacterWorkPriority(Character, GoalId, Priority, bCreateIfMissing)` | 设置本门弟子某项工作的优先级；返回 bool，失败原因写日志 |
+| `GetCharacterWorkPriority(Character, GoalId)` | → `ok, priority` |
+| `IsCustomWorkPriorityEnabled()` | 存档是否开了“自定义工作优先级” |
+| `ResetCharacterPlan(Character, bForgetUnreachable)` | 中止弟子当前的计划（释放预约和占用，搬运中的东西放在脚下），之后按正常规则重新找活；返回 bool |
+
+- 优先级口径与工作优先级界面一致：0 = 不做这项工作，其余取值是游戏配置的档位（失败日志会列出可用值）；只接受工作类目标，且弟子拥有这项工作。只有开了自定义工作优先级时优先级才参与派活评分。
+- 原有的 `UpdateGoalPriority` 不变（目标不在表里时什么都不做）；请改用 `SetCharacterWorkPriority`。
+- `ResetCharacterPlan` 只对本门弟子；读档恢复中、世界未初始化完、当前动作已在收尾时返回 false，稍后再试。`bForgetUnreachable=true` 同时清掉被困状态和“暂时到不了”的记录。不会瞬移，窄走廊里可能又选回原来的目标。
+- 监听 `OnCharacterTrapped` 可以在弟子被判定被困时自动处理。
+
+### 4.17 GameplayTag 安全
+
+> 2026 年 11 月新增（测试中）。
+
+| API（`UE.UModLuaLibrary`） | 说明 |
+|---|---|
+| `RequestGameplayTag(Name)` | → `ok, tag`：按名字取已注册的标签，找不到返回 false，不报错；`tag` 是拷贝 |
+| `IsValidGameplayTag(Tag)` | 是否为已注册的有效标签（手填 `TagName` 的未注册标签返回 false） |
+| `GetGameplayTagName(Tag)` | 标签名 |
+
+- Lua 里请只保存标签名字符串，用时再 `RequestGameplayTag`；不要跨回调保存 `FGameplayTag` 结构体或它所在数组、Map 的引用，宿主对象释放或数组扩容后再用会崩溃。
+- 遇到崩溃请把调用栈发给我们。
+
 ## 5. 配置表 JSON 覆盖机制
 
 JSON 文件格式：
@@ -539,6 +678,7 @@ JSON 文件格式：
 - 日志前缀 `[你的ModId]`；JSON 配置解析失败的日志会带**行列号**与**出错行内容**；
 - 每个 Mod 可以单独写日志文件，等级由 ModInfo.json 的 `LogLevel` 决定，见 [7.2](#72-mod-日志文件)；
 - 打包窗口打包前会自动校验：ModInfo.json 格式、ModId、Lua 语法、JSON 存在性、StructName 可解析、图标/Tags ini 存在性。
+- 2026-11 新增内置命令：`Mod.Settings [ModId]`、`Mod.Set <ModId> <Key> <Value>`（见 [4.14](#414-mod-设置)）、`Mod.ExportUsmap`（见 [7.3](#73-导出-usmap-映射文件)）；`Mod.Status` 增加 `Source`（Local / Local(Override) / Workshop）和被覆盖的工坊目录。
 
 ### 7.1 在发行版中使用控制台
 
@@ -579,9 +719,22 @@ JSON 文件格式：
 - `ModLog` 的第一个参数直接传字符串（例如 `self.ModInfo.Metadata.ModId`），不要用 `UE.FName(...)`；ModId 为空的日志不写文件。
 - 2026-11-11 之前的发行版游戏有一个问题：日志文件不会生成（编辑器里正常）。修复随之后的游戏更新提供；在那之前请用 `-ModConsole` 看日志（见 [7.1](#71-在发行版中使用控制台)）。
 
+### 7.3 导出 usmap 映射文件
+
+> 2026 年 11 月新增（测试中）。
+
+发行版资产按无版本属性序列化，FModel 等工具要映射文件才能读出属性。游戏每次更新后，在游戏里导出一份即可：
+
+1. 用 `-ModConsole` 启动游戏，进入一个存档（让蓝图类型都加载）；
+2. 在控制台输入 `Mod.ExportUsmap`；
+3. 文件写到 `%LOCALAPPDATA%\EasternEra\Saved\ModTools\EasternEra_<时间>.usmap`，控制台显示路径和条目数。
+
+格式为 usmap 版本 3（LargeEnums，不压缩、不带引擎版本信息），与 SDK 编辑器里 **Tools → Modding → Export Usmap** 导出的文件格式相同，FModel、UAssetGUI 都能读。游戏内导出只含导出时已加载的类型；在 SDK 编辑器里导出的只含 SDK 工程里有的类型，两者可以配合使用。
+
 ## 8. 打包与发布
 
 1. 编辑器菜单 **Tools → Modding**：创建 Mod / 编辑 ModInfo / 打包 Mod；
 2. 打包会 Cook 资产、生成 .pak、导出配置 JSON 并回写 ModInfo.json；Mod 目录（`Content/Mods/<ModId>/`）下的关卡（`.umap`）会自动加入 Cook，没被其他资产引用的关卡也会打进 pak（2026 年 11 月起的 SDK）；
 3. 上传创意工坊：使用游戏内/编辑器的 Workshop 上传功能（标题/描述/预览图/可见性/更新说明）；
+   - 本地测试已上传过的 Mod：在 `Content/Mods` 下的副本的 ModInfo.json 里加 `"LocalOverride": true`（或启动参数 `-ModLocalOverride`），同 ModId 时以本地副本为准、订阅的工坊版不加载；用 `Mod.Status` 确认 `Source=Local(Override)`。2026-11 新增（测试中）。
 4. 自定义 GameplayTags：`IncludeGameplayTags=true` + `{ModId}GameplayTags.ini`，游戏启动时自动注册（游戏内新订阅的 Mod 下载完成后也会即时注册）。

@@ -3,8 +3,8 @@
 
 ## 📚 类型参考 / Type reference
 
-- **中文 Chinese:** [zh/INDEX.md](BlueprintAPI_ModAuthors/zh/INDEX.md)（1307 个类型 / 279 个头文件）
-- **English:** [en/INDEX.md](BlueprintAPI_ModAuthors/en/INDEX.md) (1307 types / 279 headers)
+- **中文 Chinese:** [zh/INDEX.md](BlueprintAPI_ModAuthors/zh/INDEX.md)（1327 个类型 / 285 个头文件）
+- **English:** [en/INDEX.md](BlueprintAPI_ModAuthors/en/INDEX.md) (1327 types / 285 headers)
 
 每个类型一页：结构体含全部字段（C++ 类型/说明/原始声明），枚举含全部枚举值（值/显示名/说明），类含蓝图暴露成员。
 One page per type: structs list every field (C++ type / notes / raw declaration); enums list every enumerator (value / display name / description); classes list Blueprint-exposed members.

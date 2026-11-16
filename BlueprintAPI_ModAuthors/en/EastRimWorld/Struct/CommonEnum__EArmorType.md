@@ -19,4 +19,6 @@
 | `Pants` |  | 裤子 |
 | `Shoes` |  | 鞋 |
 | `Eyes` |  | 眼 |
+| `Accessory` |  | Accessory (back items etc.), worn together with a hat. Added 2026-11 for mod personal apparel. |
+| `Hairpin` |  | Hairpin. Added 2026-11 for mod personal apparel. |
 | `Max` |  | 标记末位 |

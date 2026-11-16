@@ -16,8 +16,8 @@
 |------|------|
 | C++ 类型 | `FGenericTeamId` |
 | 反射说明符 | BlueprintReadWrite |
-| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
-| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite) FGenericTeamId TeamId;` |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame) FGenericTeamId TeamId;` |
 
 **说明:**
 
@@ -31,8 +31,8 @@
 |------|------|
 | C++ 类型 | TArray<[FCommonBuff](../Struct/CommonStruct__FCommonBuff.md)> |
 | 反射说明符 | （仅蓝图可见相关标记） |
-| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
-| 原始声明（单行节选） | `UPROPERTY() TArray<FCommonBuff> TeamBuff;` |
+| 蓝图侧含义 | 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(SaveGame) TArray<FCommonBuff> TeamBuff;` |
 
 **说明:**
 

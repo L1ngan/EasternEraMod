@@ -25,6 +25,21 @@
 
 ---
 
+### 属性 `ModName`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FString` |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FString ModName;` |
+
+**说明:**
+
+> 存档时的 Mod 名称（老存档为空时由 UI 回退显示 ModId）
+
+---
+
 ### 属性 `IssueType`
 
 | 项目 | 内容 |

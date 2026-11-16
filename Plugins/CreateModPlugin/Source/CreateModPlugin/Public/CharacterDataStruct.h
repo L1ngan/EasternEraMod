@@ -38,6 +38,10 @@ enum class EModArmorType : uint8
 	Shoes,
 	//眼
 	Eyes,
+	//饰品（与游戏 EArmorType::Accessory 同序号）
+	Accessory,
+	//发簪（与游戏 EArmorType::Hairpin 同序号）
+	Hairpin,
 	//标记末位
 	Max UMETA(Hidden),
 };

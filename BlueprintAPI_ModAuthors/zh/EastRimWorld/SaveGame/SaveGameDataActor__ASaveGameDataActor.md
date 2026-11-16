@@ -46,8 +46,8 @@
 |------|------|
 | C++ 类型 | TObjectPtr<[UCommonLogComponent](../Components/CommonLogComponent__UCommonLogComponent.md)> |
 | 反射说明符 | BlueprintReadOnly |
-| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere,SaveGame) TObjectPtr<UCommonLogComponent> LogComponent;` |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) TObjectPtr<UCommonLogComponent> LogComponent;` |
 
 **说明:**
 
@@ -61,12 +61,27 @@
 |------|------|
 | C++ 类型 | TObjectPtr<[UEmergenceLogComponent](../System/Emergence/Log/EmergenceLogComponent__UEmergenceLogComponent.md)> |
 | 反射说明符 | BlueprintReadOnly |
-| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
-| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere,SaveGame) TObjectPtr<UEmergenceLogComponent> EmergenceLogComponent;` |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) TObjectPtr<UEmergenceLogComponent> EmergenceLogComponent;` |
 
 **说明:**
 
 > 涌现系统专有日志组件(时间/来源事件反查/关联演员/玩家相关性)
+
+---
+
+### 属性 `ChronicleComponent`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TObjectPtr<[UPermanentChronicleComponent](../System/Chronicle/PermanentChronicleComponent__UPermanentChronicleComponent.md)> |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly , VisibleAnywhere) TObjectPtr<UPermanentChronicleComponent> ChronicleComponent;` |
+
+**说明:**
+
+> 江湖永久大事记组件(不设淘汰上限,带关联门派列表用于筛选)
 
 ---
 
@@ -280,6 +295,36 @@
 
 ---
 
+### 属性 `HomeBgmPlayMode`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | [EHomeBgmPlayMode](../System/HomeBgm/HomeBgmTrackStruct__EHomeBgmPlayMode.md) |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) EHomeBgmPlayMode HomeBgmPlayMode = EHomeBgmPlayMode::FollowDefault;` |
+
+**说明:**
+
+> 家园曲谱：当前存档播放模式（跟随默认 / 指定曲目）
+
+---
+
+### 属性 `SelectedHomeBgmTrackID`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FName` |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) FName SelectedHomeBgmTrackID;` |
+
+**说明:**
+
+> 家园曲谱：当前存档选定曲目 ID（跟随默认时为 None）
+
+---
+
 ### 属性 `EnabledModRecords`
 
 | 项目 | 内容 |
@@ -291,7 +336,53 @@
 
 **说明:**
 
-> 本存档启用的 Mod 及版本（OnPrepareToSave 同步；读档时用于 Mod 兼容检查）
+> 本存档启用的 Mod 名称、ID 及版本（OnPrepareToSave 同步；读档时用于 Mod 兼容检查）
+
+---
+
+### 属性 `ModCharacterRecords`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TMap<FGuid, [FModCharacterRecord](../Mod/ModCharacterLayerTypes__FModCharacterRecord.md)> |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<FGuid, FModCharacterRecord> ModCharacterRecords;` |
+
+**说明:**
+
+> MOD 数据区：Mod 写的捏脸元数据、换的预设、指定的立绘，按角色 Guid 存（捏脸档案本体在蓝图变量 ModAppearanceProfiles）。
+> 游戏原有字段不受影响；写它的 Mod 没加载时不生效。由 UModCharacterLayerLibrary 读写，老档没有这项数据时行为不变
+
+---
+
+### 属性 `PlaythroughGuid`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FGuid` |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) FGuid PlaythroughGuid;` |
+
+**说明:**
+
+> 周目 ID：新游戏生成；老档没有时按当时玩家门派掌门 GUID 算确定值（EnsurePlaythroughGuid），下次存档写入；另存、自动存档沿用。Mod 经 UModLuaLibrary::GetPlaythroughId 读
+
+---
+
+### 属性 `ModSaveData`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TMap<FString, [FModSaveDataBucket](SaveGameDataActor__FModSaveDataBucket.md)> |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TMap<FString, FModSaveDataBucket> ModSaveData;` |
+
+**说明:**
+
+> MOD 按存档保存的数据：ModId -> 键值。只在 OnPrepareToSave（游戏线程、序列化开始前）从运行时副本拷入，后台序列化期间不被改；写它的 Mod 停用后原样保留随档存
 
 ---
 
@@ -487,6 +578,36 @@
 **说明:**
 
 > 信笺数据
+
+---
+
+### 属性 `ForceLetters`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TArray<[FForceLetter](../System/Letterpaper/ForceLetterTypes__FForceLetter.md)> |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, SaveGame) TArray<FForceLetter> ForceLetters;` |
+
+**说明:**
+
+> 门派来信数据（与 UBirdLetterSystem::ForceLetters 的同步在 OnPrepareToSave/OnLoaded 中完成）
+
+---
+
+### 属性 `PendingOrphanDisciples`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TMap<FGuid, [FPendingOrphanDiscipleRecord](../WorldSystem/OrphanDiscipleTypes__FPendingOrphanDiscipleRecord.md)> |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly, SaveGame) TMap<FGuid, FPendingOrphanDiscipleRecord> PendingOrphanDisciples;` |
+
+**说明:**
+
+> C6.4 待玩家处理的遗孤/托孤记录(key=RecordGuid,对应门派来信 OrphanRecordGuid)
 
 ---
 
@@ -741,7 +862,7 @@
 
 **说明:**
 
-> 参悟·历练点数（全局，参悟消耗，通过行为/任务获得）
+> 参悟·历练点（洗炼点）数（全局，参悟消耗，通过行为/任务获得）
 
 ---
 
@@ -787,6 +908,36 @@
 **说明:**
 
 > 武学残卷（全局，纯数值道具，按品质分别计数：品质→数量）
+
+---
+
+### 属性 `ObtainedMartialMoveIDs`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TSet<FName>` |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TSet<FName> ObtainedMartialMoveIDs;` |
+
+**说明:**
+
+> 曾获得过的武学招式ID（永久记：实体书获得或读档追溯弟子学习后写入，招式失去也保留）。图鉴收集状态及兑换成本判定用。
+
+---
+
+### 属性 `FavoriteMartialBookIDs`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `TSet<FName>` |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly,SaveGame) TSet<FName> FavoriteMartialBookIDs;` |
+
+**说明:**
+
+> 玩家手动收藏的武学秘籍书ID（图鉴"我的收藏"用）。秘籍(分类)收藏态由其招式派生，不单独存。
 
 ---
 
@@ -1023,6 +1174,29 @@
 **说明:**
 
 > 初始化存档数据Actor（新游戏时写入难度运行时系数等初始数据）
+
+---
+
+### 函数 `SetHomeBgmChoice`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `InMode` | [EHomeBgmPlayMode](../System/HomeBgm/HomeBgmTrackStruct__EHomeBgmPlayMode.md) |
+| `InTrackID` | `FName` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SetHomeBgmChoice(EHomeBgmPlayMode InMode, FName InTrackID);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 设置家园曲谱播放选择（模式 + 曲目 ID；跟随默认时忽略 ID）
 
 ---
 
@@ -1802,6 +1976,95 @@
 **说明:**
 
 > 获取指定品质的武学残卷数量
+
+---
+
+### 函数 `RecordMartialMoveObtained`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `MoveID` | `FName` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void RecordMartialMoveObtained(FName MoveID);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 记录"曾获得过"某个武学招式（幂等；供实体书获得或读档追溯学习记录时调用）
+
+---
+
+### 函数 `HasEverObtainedMartialMove`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintPure |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `MoveID` | `FName` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintPure) bool HasEverObtainedMartialMove(FName MoveID) const;`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 是否曾获得过某个武学招式（图鉴收集状态判定）
+
+---
+
+### 函数 `SetFavoriteMartialBook`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `BookID` | `FName` |
+| `bFavorite` | `bool` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void SetFavoriteMartialBook(FName BookID, bool bFavorite);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 设置某本武学秘籍书的收藏态（图鉴收藏：单本 / 分类批量都走它）
+
+---
+
+### 函数 `IsFavoriteMartialBook`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, BlueprintPure |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `BookID` | `FName` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable,BlueprintPure) bool IsFavoriteMartialBook(FName BookID) const;`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+**说明:**
+
+> 某本武学秘籍书是否已收藏
 
 ---
 

@@ -145,6 +145,22 @@
 
 ---
 
+### 属性 `ItemHomeRules`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TArray<[FItemHomeRule](InventoryManagerComponent__FItemHomeRule.md)> |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 参与 **SaveGame** 序列化的字段。 |
+| 原始声明（单行节选） | `UPROPERTY(VisibleAnywhere,BlueprintReadOnly,SaveGame) TArray<FItemHomeRule> ItemHomeRules;` |
+
+**说明:**
+
+> 物品归属规则(Mod 设置, 同一物品至多一条):与 StoragePriority 同随本组件的 Savior 记录存读, 老档没有该字段时为空;
+> 只经 UWarehouseManagerSubsystem::SetItemHomeRule/ClearItemHomeRule 修改, 以便同步按物品反查的索引
+
+---
+
 ### 属性 `TradeAreaEndGridPos`
 
 | 项目 | 内容 |
@@ -276,6 +292,24 @@
 **说明:**
 
 > 添加实例
+
+---
+
+### 函数 `OnTradeAreaBuildingTrans`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void OnTradeAreaBuildingTrans();`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 当交易建筑物迁移
 
 ---
 
@@ -672,14 +706,63 @@
 | `OtherManagerComponent` | [UInventoryManagerComponent](InventoryManagerComponent__UInventoryManagerComponent.md) * |
 | `ItemID` | `const FName` |
 | `InItemCount` | `int32` |
+| `false` | `bool bSkipSpecifiedItems =` |
 
-**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) UInventoryItemInstance * InventoryItemInstanceTransferToOtherManager(UInventoryManagerComponent * OtherManagerComponent,const FName ItemID,int32 InItemCount);`
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) UInventoryItemInstance * InventoryItemInstanceTransferToOtherManager(UInventoryManagerComponent * OtherManagerComponent,const FName ItemID,int32 InItemCount,bool bSkipSpecifiedItems = false);`
 
 **用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
 
 **说明:**
 
-> 转移对应数量的物品放入到另一个管理组件中 返回实际转移的实例 如果没有则为空
+> 转移对应数量的物品放入到另一个管理组件中 返回实际转移的实例 如果没有则为空; bSkipSpecifiedItems=true 时跳过已指派给角色的装备/书籍(GOAP普通取货用, 拆除倾倒等整体转移不传)
+
+---
+
+### 函数 `InventoryItemInstanceTransferToOtherManagerByInstance`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | [UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md) * |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `OtherManagerComponent` | [UInventoryManagerComponent](InventoryManagerComponent__UInventoryManagerComponent.md) * |
+| `InItemInstance` | [UInventoryItemInstance](InventoryItemInstance__UInventoryItemInstance.md) * |
+| `InItemCount` | `int32` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) UInventoryItemInstance * InventoryItemInstanceTransferToOtherManagerByInstance(UInventoryManagerComponent * OtherManagerComponent,UInventoryItemInstance * InItemInstance,int32 InItemCount);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 按指定实例转移对应数量到另一个管理组件 返回目标组件里的实例;不会把同ID的其他实例挑走或合并进来,装备等带独立身份的物品用这个
+
+---
+
+### 函数 `PutDownInventoryItemsToTarget`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable |
+| 返回类型 | `void` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `TargetObject` | `UObject *` |
+| `ItemID` | `const FName` |
+| `InItemCount` | `int32` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable) void PutDownInventoryItemsToTarget(UObject * TargetObject,const FName ItemID,int32 InItemCount);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 把本组件里对应数量的物品放入目标(仓库/建筑等实现了InventoryInterface的对象) 可堆叠物品按ID取出合成一堆放入;装备/傀儡装备/书籍逐件放入不合并,目标放不下时余下的留在本组件
 
 ---
 

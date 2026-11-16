@@ -51,22 +51,22 @@
 
 **说明:**
 
-> 预约占用的堆叠容量
+> 本角色对已存在实堆余量的预约数量
 
 ---
 
-### 属性 `ReservedEmptySmallGridSlots`
+### 属性 `ReservedNewPileItemNum`
 
 | 项目 | 内容 |
 |------|------|
 | C++ 类型 | `int32` |
 | 反射说明符 | （仅蓝图可见相关标记） |
 | 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
-| 原始声明（单行节选） | `UPROPERTY() int32 ReservedEmptySmallGridSlots = 0;` |
+| 原始声明（单行节选） | `UPROPERTY() int32 ReservedNewPileItemNum = 0;` |
 
 **说明:**
 
-> 预约占用的空余小格数量
+> 本角色落在虚拟新堆(空格)上的预约数量; 核销/释放时按此回写仓库级 ReservedNewPileItemNum
 
 ---
 
@@ -81,6 +81,17 @@
 
 **说明:**
 
-> 该 ItemID 的 SmallGridCount。事务回滚时要用同样的 SmallGridCount 重新写回全局预约表。
+> 该 ItemID 的 SmallGridCount / MaxStackSize, 事务回滚与派生格数计算要用
+
+---
+
+### 属性 `MaxStackSize`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `int32` |
+| 反射说明符 | （仅蓝图可见相关标记） |
+| 蓝图侧含义 | 变量暴露给蓝图侧；具体能否在编辑器默认值中修改取决于 Edit 说明符。 |
+| 原始声明（单行节选） | `UPROPERTY() int32 MaxStackSize = 1;` |
 
 ---

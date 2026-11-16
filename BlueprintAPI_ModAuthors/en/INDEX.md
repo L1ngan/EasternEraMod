@@ -2,8 +2,8 @@
 
 One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
 
-**Types:** 1307
-**Headers:** 279
+**Types:** 1327
+**Headers:** 285
 
 **Description:** Each entry summarizes comments **immediately above** the type’s **`UCLASS` / `USTRUCT`** (`//` or block; what it does and which area it covers; flattened to one line and truncated). If there is no comment, a placeholder is shown; authoritative detail is still in the `.h` and per-type `.md`.
 
@@ -1315,6 +1315,8 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
 - `class` **`UInventoryManagerComponent`** — [InventoryManagerComponent__UInventoryManagerComponent](EastRimWorld/Inventory/InventoryManagerComponent__UInventoryManagerComponent.md)
   - **Description:** Inventory manager component handling item instance add/remove, stacking, saving, and warehouse/trade area grid slots
 
+- `struct` **`FItemHomeRule`** — [InventoryManagerComponent__FItemHomeRule](EastRimWorld/Inventory/InventoryManagerComponent__FItemHomeRule.md)
+  - **Description:** Item home rule set by a mod on a warehouse.
 ## `EastRimWorld/Inventory/SelectInventorySubstituteSystem.h`
 
 - `class` **`ASelectInventorySubstituteSystem`** — [SelectInventorySubstituteSystem__ASelectInventorySubstituteSystem](EastRimWorld/Inventory/SelectInventorySubstituteSystem__ASelectInventorySubstituteSystem.md)
@@ -1367,6 +1369,18 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
   - **Description:** 已生效的 GiveAbilitys 词条授予记录（卸载招式时移除）。
 - `struct` **`FMovesBookSkillEntryGameplayEffectState`** — [MartialArtsSkillEntryGiveAbilitys__FMovesBookSkillEntryGameplayEffectState](EastRimWorld/MartialArts/MartialArtsSkillEntryGiveAbilitys__FMovesBookSkillEntryGameplayEffectState.md)
   - **Description:** 招式书籍技能词条 GiveGameEffects 已应用记录（卸载/刷新时移除）。
+
+## `EastRimWorld/Mod/ModAILibrary.h`
+
+- `class` **`UModAILibrary`** — [ModAILibrary__UModAILibrary](EastRimWorld/Mod/ModAILibrary__UModAILibrary.md)
+  - **Description:** Mod AI API: work priorities of player-sect disciples and resetting stuck plans. Failures return false and log the reason to the calling mod's log.
+
+## `EastRimWorld/Mod/ModBuildLibrary.h`
+
+- `enum` **`EBuildUnavailableReason`** — [ModBuildLibrary__EBuildUnavailableReason](EastRimWorld/Mod/ModBuildLibrary__EBuildUnavailableReason.md)
+  - **Description:** 建筑或子类不可用的原因(只追加, 不重排)
+- `class` **`UModBuildLibrary`** — [ModBuildLibrary__UModBuildLibrary](EastRimWorld/Mod/ModBuildLibrary__UModBuildLibrary.md)
+  - **Description:** 建造界面 Mod 接口。Lua:UE.UModBuildLibrary.函数名(WorldContext, ...) 分类数据:一级大类 BuildListCategorizeConfig → 二级子类 BuildTabConfig(Category = 一级 ID) → 建筑菜单行 BuildingUI(Category = 二级 ID, 行 ID = 建筑 ID); 列表顺序按建筑配置 BuildConfig 的行序。运行期注册只改内存里的表, 不进存档, 读档/新开局后要重新注册。 "已解锁"与建造菜单一致:存档解锁列表里有, 且二楼没开放时不含通往上层的楼梯(新手引导期间菜单只显示引导解锁的建筑, 这里不区分)。
 
 ## `EastRimWorld/Mod/ModCharacterLayerLibrary.h`
 
@@ -1424,10 +1438,24 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
 - `class` **`UModRuntimeInfo`** — [ModInfo__UModRuntimeInfo](EastRimWorld/Mod/ModInfo__UModRuntimeInfo.md)
   - **Description:** Mod运行时信息 用于在运行时管理Mod的状态
 
+- `enum` **`EModSettingType`** — [ModInfo__EModSettingType](EastRimWorld/Mod/ModInfo__EModSettingType.md)
+  - **Description:** Value type of a mod setting.
+- `struct` **`FModSettingDef`** — [ModInfo__FModSettingDef](EastRimWorld/Mod/ModInfo__FModSettingDef.md)
+  - **Description:** One setting declared in ModInfo.json Settings.
 ## `EastRimWorld/Mod/ModLuaLibrary.h`
 
 - `class` **`UModLuaLibrary`** — [ModLuaLibrary__UModLuaLibrary](EastRimWorld/Mod/ModLuaLibrary__UModLuaLibrary.md)
   - **Description:** Mod Lua函数库 提供从Lua调用C++功能的接口
+
+## `EastRimWorld/Mod/ModStorageEventSubsystem.h`
+
+- `enum` **`EModContainerChangeReason`** — [ModStorageEventSubsystem__EModContainerChangeReason](EastRimWorld/Mod/ModStorageEventSubsystem__EModContainerChangeReason.md)
+  - **Description:** Reason of a container item change (Reason of OnContainerItemAdded / OnContainerItemRemoved).
+
+## `EastRimWorld/Mod/ModStorageLibrary.h`
+
+- `class` **`UModStorageLibrary`** — [ModStorageLibrary__UModStorageLibrary](EastRimWorld/Mod/ModStorageLibrary__UModStorageLibrary.md)
+  - **Description:** Mod storage API: safe item transfer between containers and item home buildings.
 
 ## `EastRimWorld/Mod/ModSubsystem.h`
 
@@ -1550,6 +1578,8 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
 - `struct` **`FTeamBuffInfo`** — [SaveGameDataActor__FTeamBuffInfo](EastRimWorld/SaveGame/SaveGameDataActor__FTeamBuffInfo.md)
   - **Description:** Team buff info (team ID and its buff list) used for team buff save data.
 
+- `struct` **`FModSaveDataBucket`** — [SaveGameDataActor__FModSaveDataBucket](EastRimWorld/SaveGame/SaveGameDataActor__FModSaveDataBucket.md)
+  - **Description:** One mod's per-save key/value data.
 ## `EastRimWorld/SaveGame/SaveGlobalGameData.h`
 
 - `class` **`USaveGlobalGameData`** — [SaveGlobalGameData__USaveGlobalGameData](EastRimWorld/SaveGame/SaveGlobalGameData__USaveGlobalGameData.md)

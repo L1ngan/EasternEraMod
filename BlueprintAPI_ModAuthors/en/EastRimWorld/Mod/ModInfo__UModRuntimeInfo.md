@@ -160,3 +160,33 @@
 > 挂载时注册进 /Game/ 的内容路径（卸载时用于 UnRegisterMountPoint 撤销）
 
 ---
+
+### Property `bLocalMod`
+
+| Field | Details |
+|------|------|
+| C++ type | `bool` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) bool bLocalMod = false;` |
+
+**Notes:**
+
+> Whether this mod was found under Content/Mods (otherwise in the Workshop folder).
+
+---
+
+### Property `OverriddenWorkshopPath`
+
+| Field | Details |
+|------|------|
+| C++ type | `FString` |
+| Reflection specifiers | BlueprintReadOnly |
+| Blueprint semantics | **Read-only** in Blueprint; cannot assign directly. |
+| Original declaration (excerpt) | `UPROPERTY(BlueprintReadOnly) FString OverriddenWorkshopPath;` |
+
+**Notes:**
+
+> Workshop folder of the same ModId skipped because this local copy wins; empty when none.
+
+---

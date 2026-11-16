@@ -234,3 +234,49 @@
 > 打包导出的数据资产 JSON 列表
 
 ---
+
+### 属性 `LogLevel`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FString` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) FString LogLevel = TEXT("Warning");` |
+
+**说明:**
+
+> 写入该 Mod 日志文件（SaveGames/ModLogs/<ModId>.log）的最低等级："Log" / "Warning" / "Error" / "None"；ModInfo.json 可选字段，缺省 Warning
+
+---
+
+### 属性 `bLocalOverride`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `bool` |
+| 反射说明符 | BlueprintReadWrite |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite, EditAnywhere) bool bLocalOverride = false;` |
+
+**说明:**
+
+> 本地覆盖（ModInfo.json 可选字段 LocalOverride）：作者在 Content/Mods 下测试已上传过的 Mod 时置 true，同 ModId 以本地副本为准、订阅的工坊版不加载，
+> Mod.Status 和日志标明被覆盖的工坊版。只对 Content/Mods 下的本地副本生效，工坊下载的副本里带这个字段也忽略；启动参数 -ModLocalOverride 对所有本地 Mod 等同置 true
+
+---
+
+### 属性 `Settings`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | TArray<[FModSettingDef](ModInfo__FModSettingDef.md)> |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) TArray<FModSettingDef> Settings;` |
+
+**说明:**
+
+> 设置项声明（ModInfo.json 可选字段 Settings）；值跨存档存在该 Mod 的数据文件里，Lua 用 GetModSetting/SetModSetting 读写
+
+---

@@ -366,3 +366,17 @@
 > 获取是否有下载
 
 ---
+
+### 函数 `GetAllItemsTotalMatchingResults`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintPure, Category="Steam Workshop" |
+| 返回类型 | `int32` |
+| 参数 | （无） |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintPure, Category = "Steam Workshop") int32 GetAllItemsTotalMatchingResults() const { return AllItemsTotalMatchingResults; }`
+
+**用法说明:** 在蓝图中为**纯函数**（无执行流引脚），常用于 Getter。
+
+---

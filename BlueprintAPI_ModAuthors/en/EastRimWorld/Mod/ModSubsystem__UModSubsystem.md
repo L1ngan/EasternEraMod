@@ -67,7 +67,7 @@
 
 **Notes:**
 
-> 读档发现 Mod 兼容问题时广播（缺失/未启用/版本不符），UI 绑定后向玩家弹确认提示
+> 读档发现 Mod 缺失或未启用时广播，UI 绑定后向玩家弹确认提示
 
 ---
 
@@ -193,8 +193,8 @@
 **Notes:**
 
 > 启用/禁用Mod
->
-> Note: this writes a separate enabled list in the global save (in memory only). Which mods the game actually loads is decided by the mod manager settings, so calling this does not change what gets loaded. Mods should not call it.
+> 注意：写的是全局存档（CurrencySaveSlot）里的 EnabledModIds，只改内存、要另外 SaveCurrencyObject 才落盘；
+> 游戏实际加载哪些 Mod 看的是 Mod 管理页写的 GameSetting 存档的 SteamUgcEnable，不是这份，所以调它不影响实际加载
 
 ---
 
@@ -384,8 +384,8 @@
 **Notes:**
 
 > 按依赖顺序加载所有启用的Mod 是否是加载新游戏mod
->
-> Note: this loads mods from that separate enabled list (see SetModEnabled) and really loads them; the list is not the mod manager settings, and the game's own loading flow does not call this function. Mods should not call it.
+> 注意：按全局存档（CurrencySaveSlot）里的 EnabledModIds 加载，调了会真的加载；这份列表与 Mod 管理页的启用设置
+> （GameSetting 存档的 SteamUgcEnable）不是同一份，游戏自己的加载流程不调用本函数
 
 ---
 
@@ -459,15 +459,41 @@
 | Name | Type |
 |--------|------|
 | `SaveRecords` | const TArray<[FModSaveRecord](ModInfo__FModSaveRecord.md)>& |
+| `EnabledModIds` | `const TArray<FName>&` |
 | `OutIssues` | TArray<[FModCompatibilityIssue](ModInfo__FModCompatibilityIssue.md)>& |
 
-**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Mod System") bool CheckSaveModCompatibility(const TArray<FModSaveRecord>& SaveRecords, TArray<FModCompatibilityIssue>& OutIssues) const;`
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Mod System") bool CheckSaveModCompatibility(const TArray<FModSaveRecord>& SaveRecords, const TArray<FName>& EnabledModIds, TArray<FModCompatibilityIssue>& OutIssues) const;`
 
 **Usage:** Appears as a **callable** Blueprint function node (with exec pins).
 
 **Notes:**
 
-> 对比存档 Mod 记录与当前 Mod 环境，输出缺失/未启用/版本不符清单；返回 true 表示完全兼容
+> 对比存档 Mod 记录与当前启用列表，输出缺失/未启用/版本不符清单；返回 true 表示完全兼容
+
+---
+
+### Function `CheckSaviorSlotModLoadIssues`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="Mod System" |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `SaviorSlot` | `USavior*` |
+| `EnabledModIds` | `const TArray<FName>&` |
+| `OutIssues` | TArray<[FModCompatibilityIssue](ModInfo__FModCompatibilityIssue.md)>& |
+| `OutWarningMessage` | `FText&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Mod System") bool CheckSaviorSlotModLoadIssues(USavior* SaviorSlot, const TArray<FName>& EnabledModIds, TArray<FModCompatibilityIssue>& OutIssues, FText& OutWarningMessage);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> 读取指定存档槽的 Mod 清单，仅返回缺失或未启用问题；返回 true 时应在真正读档前提示玩家
 
 ---
 
@@ -486,5 +512,76 @@
 **Notes:**
 
 > 最近一次读档兼容检查发现的问题（UI 可在绑定委托之外随时查询）
+
+---
+
+### Function `GetModSettingDefs`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="Mod System|Settings" |
+| Return type | TArray<[FModSettingDef](ModInfo__FModSettingDef.md)> |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `ModId` | `const FName&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Mod System|Settings") TArray<FModSettingDef> GetModSettingDefs(const FName& ModId) const;`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Settings declared by a mod in ModInfo.json (for the settings panel and console).
+
+---
+
+### Function `GetModSettingValue`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="Mod System|Settings" |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `ModId` | `const FName&` |
+| `Key` | `const FString&` |
+| `OutValue` | `FString&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Mod System|Settings") bool GetModSettingValue(const FName& ModId, const FString& Key, FString& OutValue);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Current value (as text) of a mod setting; false when not declared.
+
+---
+
+### Function `SetModSettingValue`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="Mod System|Settings" |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `ModId` | `const FName&` |
+| `Key` | `const FString&` |
+| `Value` | `const FString&` |
+| `OutError` | `FString&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Mod System|Settings") bool SetModSettingValue(const FName& ModId, const FString& Key, const FString& Value, FString& OutError);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Change a mod setting with validation; writes and broadcasts OnModSettingChanged only when the value changes. The failure reason is returned in OutError.
 
 ---

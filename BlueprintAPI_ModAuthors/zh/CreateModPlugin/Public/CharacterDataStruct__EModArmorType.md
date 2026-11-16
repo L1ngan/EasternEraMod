@@ -19,4 +19,6 @@
 | `Pants` |  | 裤子 |
 | `Shoes` |  | 鞋 |
 | `Eyes` |  | 眼 |
+| `Accessory` |  | 饰品（与游戏 EArmorType::Accessory 同序号） |
+| `Hairpin` |  | 发簪（与游戏 EArmorType::Hairpin 同序号） |
 | `Max` |  | 标记末位 |

@@ -40,6 +40,8 @@ MyMod/
 | `DataTableConfigs` | array | DataTable overrides `[{"ConfigType":"CommonBuff","JsonFile":"Config/xx.json","StructName":"/Script/EastRimWorld.CommonBuff","bOverrideData":false}]` |
 | `DataAssetConfigs` | array | DataAsset overrides `[{"AssetType":"NewGameConfiguration","JsonFile":"...","bOverrideData":false}]` |
 | `PublishedFileId` | string | Steam Workshop id (filled automatically after upload) |
+| `LocalOverride` | bool | true = test an uploaded mod locally: when the copy under `Content/Mods` has the same `ModId` as a subscribed Workshop item, the local copy wins and the Workshop copy is not loaded; `Mod.Status` shows `Source=Local(Override)` and the skipped Workshop folder. Only applies to local copies. The launch option `-ModLocalOverride` does the same without editing the JSON (new in 2026-11, see [8](#8-packaging--publishing)) |
+| `Settings` | array | Declared settings that players and the mod can change; values persist across saves (new in 2026-11, see [4.14](#414-mod-settings)) |
 
 Valid `ConfigType` values: see the `EModConfigType` type page; `AssetType`: see `EModDataAssetType`.
 
@@ -114,8 +116,20 @@ UE.UModEventBus.UnregisterModEvent(id) -- optional; auto-cleaned on unload
 | `OnBuildMenuModWidgetCreated` | The build menu created one of your widgets (see [4.6](#46-build-menu-api)) | your widget | RegisterId, Slot |
 | `OnBuildPlaceStarted` | Building placement started (a cursor-following preview appeared; moving an existing building counts too) | — | BuildId |
 | `OnBuildPlaceEnded` | Placement ended (placed, cancelled, or switched to another building) | — | BuildId |
+| `OnGameSaving` | Before the whole save is written (**synchronous**: save data written in the callback goes into this save) | — | — |
+| `OnGameSaved` | Saving finished | — | Success (true/false), SlotID |
+| `OnBuildingPlaced` | The player places a building (a construction site appears; includes presets, roofs, auto pillars) | building | ConfigId, BuildGuid, BatchId, IsTransfer |
+| `OnBuildingRemoved` | A building is removed (demolished, lost support, destroyed, construction cancelled, wall replaced) | — (already destroyed) | ConfigId, BuildGuid, Reason (Demolished / Collapsed / Destroyed / Cancelled / Replaced / Removed), BatchId |
+| `OnItemCrafted` | A production building outputs items | building | BuildGuid, FormulaId, ItemId, Count, Quality, CrafterGuid |
+| `OnDiscipleJoined` | A human joins the player sect | — | CharacterGuid, Reason (Visitor / PostStation / Recruited / Orphan / Returned / Unspecified), FromForceGuid |
+| `OnDiscipleLeft` | A formal disciple leaves the player sect | — | CharacterGuid, Reason (Death / Expelled / leave reason enum name) |
+| `OnContainerItemAdded` / `OnContainerItemRemoved` | Items added to or removed from a warehouse, special storage or trade area (see [4.15](#415-storage)) | the container building (nil if demolished) | ItemId, Count, Total, Reason, BuildGuid, ContainerType |
+| `OnCharacterTrapped` | A disciple is judged trapped (stuck at one spot repeatedly, or a whole floor cannot reach the ground) | character | CharacterGuid, Storey, IsPlayerDisciple |
+| `OnModSettingChanged` | A mod setting value changed (**synchronous**) | — | ModId, Key, Value |
 
 The 7 build events are all broadcast **on the next tick**; callbacks read the latest state.
+
+The events added in 2026-11 (except `OnGameSaving` and `OnModSettingChanged`) are also sent on the **next frame**; building and storage changes during loading or place changes send no events. When `OnLoadGameComplete` fires, characters and buildings are not spawned yet; wait for the following `OnEnterPlaceComplete` to work with them. Demolishing an area sends one event per building in the same frame with the same `BatchId`. Deaths outside the home base (battles, secret realms, cities) do not go through the sect roster leave flow and send no `OnDiscipleLeft`; listen to `OnCharacterDeath` as well.
 
 ### 4.3 Timers
 
@@ -389,7 +403,7 @@ local ids, currentId = UE.UModLuaLibrary.GetCharacterCustomizationIds(Character)
 ```
 
 - `Character` must be a fully initialized human disciple (`AEastRimWorldCharacter_Human`).
-- `Slot` accepts only `UE.EArmorType.Helmet`, `Armor`, `Pants` and `Shoes`.
+- `Slot` accepts `UE.EArmorType.Helmet`, `Armor`, `Pants`, `Shoes`, and since 2026-11 also `Accessory` (accessories such as back items, worn together with a hat) and `Hairpin` (in testing). The equipment panel does not show these two slots yet; mods dress them with the functions in this section. Temporary copies such as sect battle doubles show the character's original appearance.
 - `ApparelId` must be a row of the equipment table (`EquipmentConfig`) whose slot matches `Slot`.
 - `ProfileId` must be a row of the customization preset table (`CharacterAppearancePreset`) with the same gender as the character's current preset. The sect leader and characters that use the protagonist's appearance are rejected. New bodies, faces and hairstyles can be added as rows of `CharacterAppearancePreset` and `CharacterAnatomyProfiles` through JSON (see the ParagonSunWukong example).
 - In game versions before November 2026, the gender check in `SetCharacterCustomizationId` read the wrong field of the preset table, so it returned false even for presets of the same gender. Versions that include `GetCharacterCustomizationIds` have the fix.
@@ -494,6 +508,131 @@ local ok, text = UE.UModLuaLibrary.GetModData("outfits")
 - Keys and values are strings; the value format is up to you (JSON text is fine). Keys are case-insensitive and 1 to 128 characters long. A value may hold up to 1M characters, and one mod up to 16M characters and 65,536 entries in total; beyond that the call returns false and writes to the mod log.
 - These functions can only be called from a mod's Lua. Data that should follow a particular save belongs in the 4.10 and 4.11 APIs or in the game's own save data, not here.
 
+### 4.13 Per-save data and playthrough ID
+
+> New in 2026-11 (in testing); requires a game version that includes it.
+
+| API (`UE.UModLuaLibrary`) | Description |
+|---|---|
+| `SetSaveData(Key, Value)` | Write one entry in memory; it goes into the save the next time the game saves. Returns bool |
+| `GetSaveData(Key)` | → `ok, value` |
+| `RemoveSaveData(Key)` | Remove one entry. Returns bool |
+| `GetSaveDataKeys()` | → all keys of this mod in the current save |
+| `IsSaveDataReady()` | Whether the current save's data is ready |
+| `GetPlaythroughId()` | Playthrough ID (GUID string); empty when not ready |
+
+- The data travels with the save (one copy per save), and a mod can only read and write its own. When the mod is disabled the data stays in the save and comes back when it is re-enabled.
+- Available from `OnNewGameStarted` / `OnLoadGameComplete`. At the top level of `Main.lua` or in `OnModLoaded` the data has not been read yet: Get returns false and Set fails with a log entry.
+- If you load without saving after a write, the value goes back to what was saved. To write right before saving, listen to the synchronous `OnGameSaving` event.
+- Keys are 1-128 characters, a value is at most 64K characters, and one mod has at most 1M characters and 4096 entries in total.
+- Playthrough ID: generated for a new game and kept by save-as and autosaves. Saves from before 2026-11 get a fixed value derived from the current sect leader the first time they are loaded, written on the next save. Sect and leader SGUIDs are the same in every playthrough; use this ID to tell playthroughs apart.
+
+### 4.14 Mod settings
+
+> New in 2026-11 (in testing). The settings panel UI is still being made; until then players change settings with the console commands `Mod.Settings` and `Mod.Set`.
+
+Declare them in `ModInfo.json`:
+
+```json
+"Settings": [
+  { "Key": "Enabled", "Type": "bool", "Default": true, "NameKey": "MyMod_Setting_Enabled" },
+  { "Key": "Speed", "Type": "int", "Default": 3, "Min": 1, "Max": 10, "Step": 1 },
+  { "Key": "Mode", "Type": "enum", "Default": "Normal", "Options": ["Easy", "Normal", "Hard"] }
+]
+```
+
+| Field | Description |
+|---|---|
+| `Key` | 1-64 characters, must not start with `__` |
+| `Type` | `bool` / `int` / `float` / `enum` / `string` |
+| `Default` | Default value; when omitted: false for bool, 0 for numbers, the first option for enum, empty for string |
+| `Min` / `Max` / `Step` | Numeric range and panel step; out-of-range values are clamped |
+| `Options` | Allowed values for enum |
+| `NameKey` / `DescKey` | String table keys for the display name and description (used by the settings panel) |
+
+| API (`UE.UModLuaLibrary`) | Description |
+|---|---|
+| `GetModSetting(Key)` | → `ok, value`: the current value as text (`true`/`false` for bool); the default when never changed |
+| `SetModSetting(Key, Value)` | Validate against the declaration and save; broadcasts `OnModSettingChanged` when the value changes. Returns bool |
+| `GetModSettings()` | → current values of all settings (key → text) |
+
+- Values are kept across saves in this mod's data file (same as [4.12](#412-a-mods-own-data-shared-across-saves)); `SetModData` cannot write the keys used by settings.
+- Console: `Mod.Settings [ModId]` lists declarations and values; `Mod.Set <ModId> <Key> <Value>` changes one.
+- Invalid declarations (wrong type, enum without options, Key starting with `__`) are skipped with a log entry.
+
+### 4.15 Storage
+
+> New in 2026-11 (in testing).
+
+**Safe transfer** (`UE.UModStorageLibrary`):
+
+| API | Description |
+|---|---|
+| `GetAcceptableItemCount(Container, ItemId)` | How many the warehouse can take right now (space reserved by disciples hauling there counts as taken; 0 when the storage filter rejects the item, or the warehouse is keep-clear, prohibited or being relocated) |
+| `TransferItems(From, To, ItemId, Count)` | Move items and return the number actually moved; the source is reduced only after the target has taken them, anything that does not fit stays in the source |
+
+- The first version supports warehouse → warehouse and ground item pile → warehouse.
+- Only unused items are moved: amounts reserved by disciples, equipment and books assigned to a disciple, and food left for prisoners are kept; equipment and books move as whole items.
+- Do not use the game's internal transfer functions (such as `InventoryItemInstanceTransferToOtherManager`) to move items into warehouses: they reduce the source first and ignore whether the target took the items, so overflow is lost.
+
+**Item home building** (`UE.UModStorageLibrary`):
+
+| API | Description |
+|---|---|
+| `SetItemHomeBuilding(Warehouse, ItemId, bExclusive)` | Make the warehouse a home for the item. Returns bool |
+| `ClearItemHomeBuilding(Warehouse, ItemId)` | Remove that rule. Returns bool |
+| `GetItemHomeBuildings(nil, ItemId)` | → home warehouses of the item (active rules only) |
+| `GetBuildingHomeItems(Warehouse)` | → item IDs this warehouse is home for |
+
+- Exclusive (`bExclusive=true`): no other warehouse takes the item. Preferred: other warehouses do not take it while a home warehouse can; when all home warehouses are full the normal rules apply.
+- Rules are saved with the game and disappear with the building; while the mod that wrote a rule is disabled the rule is ignored but kept.
+- Items already stored elsewhere are not moved to the home warehouse. With an exclusive rule, if the home warehouse is keep-clear or its filter rejects the item, the item has nowhere to go.
+- To order warehouses use `SetStoragePriority`; per-item scoring callbacks are not supported (haul planning never calls Lua).
+
+**Storage events**: `OnContainerItemAdded` / `OnContainerItemRemoved` (see [4.2](#42-game-event-subscription-the-recommended-gameplay-hook)). Sent on the next frame as the net change per (container, item). `Reason` is `Haul`, `Pickup`, `Consume`, `Spoil`, `Demolish` (dropped when demolishing), `Mod` (`TransferItems`), `Other`, or `Mixed` when one frame has several reasons; `Total` is the current count of the item in that container. Backpacks and ground item piles send no events.
+
+**Storage setters** (existing, Blueprint-callable):
+
+| Function | On | Description |
+|---|---|---|
+| `SetStoragePriority(Priority)` | warehouse building (`AGOAP_ActorBase`) | Storage priority; use this instead of writing the `StoragePriority` property (that does not refresh hauling) |
+| `AddNotPutInItemTag` / `SetNotPutInItemTag` / `RemoveNotPutInItemTag` | the warehouse's `InventoryManagerComponent` | Storage filter (item tags not to store) |
+| `SetCanUseGridNum` / `GetCanUseGridNum` | same | Usable grid count |
+| `AllSelectStorageTag` / `CancelAllSelectStorageTag` | warehouse building (`ABuildingActorBase`) | Select all / none in the filter |
+| `SetCommonButtonState(KeepClear / ProhibitionUse, bState)` | building common buttons | Keep clear, prohibit use |
+| `IsWarehouseFull`, `GetWarehouseState`, `CanPlaceItemInWarehouseByItemData`, `GetRegisteredWarehouses` | `UWarehouseManagerSubsystem` | Read-only queries |
+
+Reservation functions such as `TryReserveWarehouseFromTransportPlans` are internal; do not call them.
+
+### 4.16 AI: work priority and stuck plans
+
+> New in 2026-11 (in testing).
+
+| API (`UE.UModAILibrary`) | Description |
+|---|---|
+| `SetCharacterWorkPriority(Character, GoalId, Priority, bCreateIfMissing)` | Set a disciple's priority for one work goal. Returns bool; the reason for a failure is logged |
+| `GetCharacterWorkPriority(Character, GoalId)` | → `ok, priority` |
+| `IsCustomWorkPriorityEnabled()` | Whether the save uses custom work priorities |
+| `ResetCharacterPlan(Character, bForgetUnreachable)` | Abort the disciple's current plan (reservations and claims are released, carried items are put down), then the disciple looks for work as usual. Returns bool |
+
+- Priorities follow the work priority panel: 0 = do not do this work, other values are the game's configured levels (the failure log lists the valid values). Only work goals the disciple has are accepted. Priorities only affect work assignment when custom work priorities are enabled.
+- The existing `UpdateGoalPriority` is unchanged (it does nothing when the goal is not in the table); use `SetCharacterWorkPriority` instead.
+- `ResetCharacterPlan` only works on disciples of the player sect. It returns false while a saved plan is being restored, before the world finishes initializing, or while the current action is already ending; try again later. `bForgetUnreachable=true` also clears the trapped state and the "temporarily unreachable" records. It does not teleport; in a narrow corridor the disciple may pick the same target again.
+- Listen to `OnCharacterTrapped` to react when a disciple is judged trapped.
+
+### 4.17 GameplayTag safety
+
+> New in 2026-11 (in testing).
+
+| API (`UE.UModLuaLibrary`) | Description |
+|---|---|
+| `RequestGameplayTag(Name)` | → `ok, tag`: get a registered tag by name; false when not found, no error; `tag` is a copy |
+| `IsValidGameplayTag(Tag)` | Whether the tag is registered (a hand-filled `TagName` that is not registered returns false) |
+| `GetGameplayTagName(Tag)` | The tag name |
+
+- In Lua keep only tag name strings and call `RequestGameplayTag` when you need the tag. Do not keep references to `FGameplayTag` structs, or to the arrays and maps holding them, across callbacks: using them after the owner is freed or the array grows crashes the game.
+- If you hit a crash, please send us the call stack.
+
 ## 5. DataTable JSON override mechanics
 
 JSON file format:
@@ -541,6 +680,7 @@ JSON file format:
 - log lines are prefixed with `[YourModId]`; JSON parse failures log the **line/column** and the offending row content;
 - each mod can write its own log file, with the level set by `LogLevel` in ModInfo.json — see [7.2](#72-per-mod-log-file);
 - the packaging window validates before packing: ModInfo.json shape, ModId, Lua syntax, JSON existence, StructName resolution, icon / tags ini presence.
+- New built-in commands in 2026-11: `Mod.Settings [ModId]`, `Mod.Set <ModId> <Key> <Value>` (see [4.14](#414-mod-settings)) and `Mod.ExportUsmap` (see [7.3](#73-exporting-a-usmap-mappings-file)); `Mod.Status` now shows `Source` (Local / Local(Override) / Workshop) and the overridden Workshop folder.
 
 ### 7.1 Using the console in release builds
 
@@ -581,9 +721,22 @@ Add to ModInfo.json:
 - Pass the first argument of `ModLog` as a plain string (e.g. `self.ModInfo.Metadata.ModId`), not `UE.FName(...)`; entries with an empty ModId are not written to the file.
 - Release builds of the game before 2026-11-11 have a bug: the log file is never created (the editor is fine). The fix ships in a later game update; until then, use `-ModConsole` to see the logs (see [7.1](#71-using-the-console-in-release-builds)).
 
+### 7.3 Exporting a usmap mappings file
+
+> New in 2026-11 (in testing).
+
+Release builds store assets with unversioned properties, so tools like FModel need a mappings file to read them. After each game update, export one in the game:
+
+1. Start the game with `-ModConsole` and load a save (so Blueprint types are loaded);
+2. Type `Mod.ExportUsmap` in the console;
+3. The file is written to `%LOCALAPPDATA%\EasternEra\Saved\ModTools\EasternEra_<time>.usmap`; the console shows the path and entry counts.
+
+The format is usmap version 3 (LargeEnums, uncompressed, no engine version info), the same as **Tools → Modding → Export Usmap** in the SDK editor; FModel and UAssetGUI can read it. The in-game export only contains types loaded at export time; the SDK editor export only contains types present in the SDK project, so the two complement each other.
+
 ## 8. Packaging & publishing
 
 1. Editor menu **Tools → Modding**: create mod / edit ModInfo / package mod;
 2. packaging cooks assets, produces the .pak, exports config JSON and rewrites ModInfo.json; levels (`.umap`) under the mod folder (`Content/Mods/<ModId>/`) are added to the cook automatically, so they reach the pak even when no other asset references them (SDK from November 2026);
 3. upload to Steam Workshop with the in-game/editor Workshop tools (title / description / preview / visibility / change notes);
+   - Testing an uploaded mod locally: add `"LocalOverride": true` to the ModInfo.json of the copy under `Content/Mods` (or use the launch option `-ModLocalOverride`); with the same ModId the local copy wins and the subscribed Workshop copy is not loaded. Check `Source=Local(Override)` with `Mod.Status`. New in 2026-11 (in testing).
 4. custom GameplayTags: `IncludeGameplayTags=true` + `{ModId}GameplayTags.ini` — registered at game startup, and immediately after an in-game Workshop download completes.

@@ -160,3 +160,33 @@
 > 挂载时注册进 /Game/ 的内容路径（卸载时用于 UnRegisterMountPoint 撤销）
 
 ---
+
+### 属性 `bLocalMod`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `bool` |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) bool bLocalMod = false;` |
+
+**说明:**
+
+> 是否是 Content/Mods 下的本地副本（否则来自工坊订阅目录）
+
+---
+
+### 属性 `OverriddenWorkshopPath`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FString` |
+| 反射说明符 | BlueprintReadOnly |
+| 蓝图侧含义 | 蓝图 **只读**，不可直接赋值。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadOnly) FString OverriddenWorkshopPath;` |
+
+**说明:**
+
+> 本地副本生效时被它挡掉的同 ModId 工坊副本目录（没有同名工坊副本时为空），Mod.Status 与 Mod 页显示用
+
+---

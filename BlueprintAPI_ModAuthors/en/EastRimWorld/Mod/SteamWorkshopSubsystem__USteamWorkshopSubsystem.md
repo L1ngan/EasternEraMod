@@ -366,3 +366,17 @@
 > 获取是否有下载
 
 ---
+
+### Function `GetAllItemsTotalMatchingResults`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintPure, Category="Steam Workshop" |
+| Return type | `int32` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintPure, Category = "Steam Workshop") int32 GetAllItemsTotalMatchingResults() const { return AllItemsTotalMatchingResults; }`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+---

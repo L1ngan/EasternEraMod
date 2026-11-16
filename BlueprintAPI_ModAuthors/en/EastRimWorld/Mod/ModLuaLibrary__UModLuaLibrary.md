@@ -741,3 +741,256 @@
 > 取全部键。
 
 ---
+
+### Function `GetModSetting`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="Mod System|Settings" |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `Key` | `const FString&` |
+| `OutValue` | `FString&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Mod System|Settings") static bool GetModSetting(const FString& Key, FString& OutValue);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Current value (as text) of a setting declared in the calling mod's ModInfo.json Settings; the default when never changed.
+
+---
+
+### Function `SetModSetting`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="Mod System|Settings" |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `Key` | `const FString&` |
+| `Value` | `const FString&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Mod System|Settings") static bool SetModSetting(const FString& Key, const FString& Value);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Change a declared setting: validated against the declaration (numbers clamped, enum must be an option); saved and OnModSettingChanged broadcast when the value changes.
+
+---
+
+### Function `GetModSettings`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="Mod System|Settings" |
+| Return type | `TMap<FString, FString>` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Mod System|Settings") static TMap<FString, FString> GetModSettings();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Current values of all settings of the calling mod (key -> text).
+
+---
+
+### Function `SetSaveData`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="Mod System|SaveData" |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `Key` | `const FString&` |
+| `Value` | `const FString&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Mod System|SaveData") static bool SetSaveData(const FString& Key, const FString& Value);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Write one per-save entry for the calling mod (in memory; saved with the next save). Keys 1-128 characters, values up to 64K characters, at most 1M characters / 4096 entries per mod.
+
+---
+
+### Function `GetSaveData`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="Mod System|SaveData" |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `Key` | `const FString&` |
+| `OutValue` | `FString&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Mod System|SaveData") static bool GetSaveData(const FString& Key, FString& OutValue);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Read one per-save entry of the calling mod; false when missing or not ready.
+
+---
+
+### Function `RemoveSaveData`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="Mod System|SaveData" |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `Key` | `const FString&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Mod System|SaveData") static bool RemoveSaveData(const FString& Key);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Remove one per-save entry of the calling mod.
+
+---
+
+### Function `GetSaveDataKeys`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="Mod System|SaveData" |
+| Return type | `TArray<FString>` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Mod System|SaveData") static TArray<FString> GetSaveDataKeys();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> All per-save keys of the calling mod in the current save.
+
+---
+
+### Function `IsSaveDataReady`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure, Category="Mod System|SaveData" |
+| Return type | `bool` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Mod System|SaveData") static bool IsSaveDataReady();`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Whether per-save data is ready (after a new game is initialized or a save is read).
+
+---
+
+### Function `GetPlaythroughId`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="Mod System|SaveData" |
+| Return type | `FString` |
+| Parameters | (none) |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Mod System|SaveData") static FString GetPlaythroughId();`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Playthrough ID (GUID string): created for a new game, kept by save-as and autosaves; old saves get a fixed value when first loaded. Empty when not ready.
+
+---
+
+### Function `RequestGameplayTag`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, Category="Mod System|GameplayTag" |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `TagName` | `const FString&` |
+| `OutTag` | `FGameplayTag&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, Category = "Mod System|GameplayTag") static bool RequestGameplayTag(const FString& TagName, FGameplayTag& OutTag);`
+
+**Usage:** Appears as a **callable** Blueprint function node (with exec pins).
+
+**Notes:**
+
+> Get a registered GameplayTag by name. Returns false with an empty tag when not found (no error, no assert). The tag is a copy; keep tag names as strings in Lua.
+
+---
+
+### Function `IsValidGameplayTag`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure, Category="Mod System|GameplayTag" |
+| Return type | `bool` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `Tag` | `const FGameplayTag&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Mod System|GameplayTag") static bool IsValidGameplayTag(const FGameplayTag& Tag);`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> Whether the tag is registered (a hand-filled TagName that is not registered returns false).
+
+---
+
+### Function `GetGameplayTagName`
+
+| Field | Details |
+|------|------|
+| Reflection specifiers | BlueprintCallable, BlueprintPure, Category="Mod System|GameplayTag" |
+| Return type | `FString` |
+| Parameters | see table below |
+
+| Name | Type |
+|--------|------|
+| `Tag` | `const FGameplayTag&` |
+
+**Original declaration (excerpt):** `UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Mod System|GameplayTag") static FString GetGameplayTagName(const FGameplayTag& Tag);`
+
+**Usage:** Appears as a **pure** Blueprint node (no exec pins); commonly used for getters.
+
+**Notes:**
+
+> The tag name; empty for an empty tag.
+
+---
