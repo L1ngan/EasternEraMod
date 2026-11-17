@@ -1,0 +1,8 @@
+{
+  "StructName": "/Script/EastRimWorld.EquipmentQualityRange",
+  "Rows": {
+    "QSJ_Q_Green":  { "ID": "QSJ_Q_Green",  "MinQualityValue": 0,    "MaxQualityValue": 9049,   "SubAttributesNumber": 1, "AbilityNumber": 0, "Quality": "Green",  "GenerateEquipmentID": ["QSJ_Gen_Green"] },
+    "QSJ_Q_Purple": { "ID": "QSJ_Q_Purple", "MinQualityValue": 9050, "MaxQualityValue": 9349,   "SubAttributesNumber": 2, "AbilityNumber": 0, "Quality": "Purple", "GenerateEquipmentID": ["QSJ_Gen_Purple"] },
+    "QSJ_Q_Orange": { "ID": "QSJ_Q_Orange", "MinQualityValue": 9350, "MaxQualityValue": 999999, "SubAttributesNumber": 3, "AbilityNumber": 0, "Quality": "Orange", "GenerateEquipmentID": ["QSJ_Gen_Orange"] }
+  }
+}

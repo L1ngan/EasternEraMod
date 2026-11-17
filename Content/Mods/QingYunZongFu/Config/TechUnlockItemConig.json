@@ -1,0 +1,13 @@
+{
+  "StructName": "/Script/EastRimWorld.TechUnlockItemConigStruct",
+  "Rows": {
+    "QYZ_Unlock": {
+      "ID": "QYZ_Unlock",
+      "DisplayName": "青云宗门服",
+      "FormatItemDesc": { "TextMain": "宗门时装：青云道袍、青云道裤、青云云履" },
+      "Icon": "/Game/CharacterEditor/CharacterParts/Thumbnails/New/Equipment_Icon_Nianlian/Man/Armor/clothes_man_01.clothes_man_01",
+      "UnlockType": "ForceApparel",
+      "UnlockItemsIds": ["QYZ_Armor", "QYZ_Pants", "QYZ_Shoes"]
+    }
+  }
+}

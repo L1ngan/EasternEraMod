@@ -1,0 +1,26 @@
+{
+  "StructName": "/Script/CreateModPlugin.ModCharacterApparel",
+  "Rows": {
+    "QYZ_Armor": {
+      "TemplateID": "DaMo_Armor_03",
+      "ID": "QYZ_Armor",
+      "ItemName": "青云道袍",
+      "ItemDescription": "青云宗内门弟子的道袍。",
+      "FormatItemDescription": { "TextMain": "青云宗内门弟子的道袍。" }
+    },
+    "QYZ_Pants": {
+      "TemplateID": "DaMo_Pants_03",
+      "ID": "QYZ_Pants",
+      "ItemName": "青云道裤",
+      "ItemDescription": "青云宗内门弟子的道裤。",
+      "FormatItemDescription": { "TextMain": "青云宗内门弟子的道裤。" }
+    },
+    "QYZ_Shoes": {
+      "TemplateID": "DaMo_Shoes_03",
+      "ID": "QYZ_Shoes",
+      "ItemName": "青云云履",
+      "ItemDescription": "青云宗内门弟子的云履。",
+      "FormatItemDescription": { "TextMain": "青云宗内门弟子的云履。" }
+    }
+  }
+}

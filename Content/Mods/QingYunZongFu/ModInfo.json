@@ -1,0 +1,15 @@
+{
+  "ModId": "QingYunZongFu",
+  "ModName": "青云宗门服",
+  "Version": "1.0.0",
+  "Author": "EasternEra 示例",
+  "Description": "宗门时装界面新增一套《青云宗门服》（上衣、裤、鞋），势力 1 级解锁，仅内门与掌门可选。",
+  "MainLuaFile": "Main.lua",
+  "LogLevel": "Log",
+  "DataTableConfigs": [
+    { "ConfigType": "EquipmentConfig",      "JsonFile": "Config/EquipmentConfig.json",      "StructName": "/Script/CreateModPlugin.ModCharacterApparel",      "bOverrideData": true },
+    { "ConfigType": "SubClassApparelLimit", "JsonFile": "Config/SubClassApparelLimit.json", "StructName": "/Script/EastRimWorld.SubClassApparelConfig",      "bOverrideData": false },
+    { "ConfigType": "TechUnlockItemConig",  "JsonFile": "Config/TechUnlockItemConig.json",  "StructName": "/Script/EastRimWorld.TechUnlockItemConigStruct",  "bOverrideData": false },
+    { "ConfigType": "ForceLevelInfo",       "JsonFile": "Config/ForceLevelInfo.json",       "StructName": "/Script/EastRimWorld.ForceLevelInfo",             "bOverrideData": false }
+  ]
+}

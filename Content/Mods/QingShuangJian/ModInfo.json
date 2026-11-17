@@ -1,0 +1,17 @@
+{
+  "ModId": "QingShuangJian",
+  "ModName": "青霜剑",
+  "Version": "1.0.0",
+  "Author": "EasternEra 示例",
+  "Description": "新增一把可在铁匠铺打造的剑《青霜剑》，绿、紫、橙三档品质，附带测试命令。",
+  "MainLuaFile": "Main.lua",
+  "LogLevel": "Log",
+  "DataTableConfigs": [
+    { "ConfigType": "EquipmentAttributes",    "JsonFile": "Config/EquipmentAttributes.json",    "StructName": "/Script/EastRimWorld.EquipmentAttribute",           "bOverrideData": false },
+    { "ConfigType": "WeaponConfig",           "JsonFile": "Config/WeaponConfig.json",           "StructName": "/Script/CreateModPlugin.ModCharacterWeapon",         "bOverrideData": true },
+    { "ConfigType": "GenerateEquipmentData",  "JsonFile": "Config/GenerateEquipmentData.json",  "StructName": "/Script/EastRimWorld.GenerateEquipmentData",        "bOverrideData": false },
+    { "ConfigType": "EquipmentQualityRange",  "JsonFile": "Config/EquipmentQualityRange.json",  "StructName": "/Script/EastRimWorld.EquipmentQualityRange",        "bOverrideData": false },
+    { "ConfigType": "FabricateEquipmentData", "JsonFile": "Config/FabricateEquipmentData.json", "StructName": "/Script/EastRimWorld.FabricateEquipmentData",       "bOverrideData": false },
+    { "ConfigType": "FormulaData",            "JsonFile": "Config/FormulaData.json",            "StructName": "/Script/CreateModPlugin.ModFormulaData",             "bOverrideData": true }
+  ]
+}

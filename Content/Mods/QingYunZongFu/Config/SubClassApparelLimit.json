@@ -1,0 +1,8 @@
+{
+  "StructName": "/Script/EastRimWorld.SubClassApparelConfig",
+  "Rows": {
+    "QYZ_Armor_Limit": { "ID": "QYZ_Armor_Limit", "ApparelId": "QYZ_Armor", "SubClassIndexArr": [0, 2] },
+    "QYZ_Pants_Limit": { "ID": "QYZ_Pants_Limit", "ApparelId": "QYZ_Pants", "SubClassIndexArr": [0, 2] },
+    "QYZ_Shoes_Limit": { "ID": "QYZ_Shoes_Limit", "ApparelId": "QYZ_Shoes", "SubClassIndexArr": [0, 2] }
+  }
+}

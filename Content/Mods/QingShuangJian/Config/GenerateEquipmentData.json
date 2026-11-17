@@ -1,0 +1,53 @@
+{
+  "StructName": "/Script/EastRimWorld.GenerateEquipmentData",
+  "Rows": {
+    "QSJ_Gen_Green": {
+      "ID": "QSJ_Gen_Green",
+      "EquipmentType": "Weapon",
+      "EquipmentName": "青霜剑",
+      "EquipmentID": "QSJ_Sword_Green",
+      "SubAttributes": [
+        "SubAtt_Weapon_Lv02_Green_CharacterAttackAccuracy",
+        "SubAtt_Weapon_Lv02_Green_Dodge",
+        "SubAtt_Weapon_Lv02_Green_Comprehension",
+        "SubAtt_Weapon_Lv02_Green_SlashIncrease",
+        "SubAtt_Weapon_Lv02_Green_SlashFixedAttack",
+        "SubAtt_Weapon_Lv02_Green_SlashCriticalDamage",
+        "SubAtt_Weapon_Lv02_Green_TrueQiIncrease",
+        "SubAtt_Weapon_Lv02_Green_ShieldRecoverSpeed"
+      ]
+    },
+    "QSJ_Gen_Purple": {
+      "ID": "QSJ_Gen_Purple",
+      "EquipmentType": "Weapon",
+      "EquipmentName": "青霜剑",
+      "EquipmentID": "QSJ_Sword_Purple",
+      "SubAttributes": [
+        "SubAtt_Weapon_Lv02_Purple_CharacterAttackAccuracy",
+        "SubAtt_Weapon_Lv02_Purple_Dodge",
+        "SubAtt_Weapon_Lv02_Purple_Comprehension",
+        "SubAtt_Weapon_Lv02_Purple_SlashIncrease",
+        "SubAtt_Weapon_Lv02_Purple_SlashFixedAttack",
+        "SubAtt_Weapon_Lv02_Purple_SlashCriticalDamage",
+        "SubAtt_Weapon_Lv02_Purple_TrueQiIncrease",
+        "SubAtt_Weapon_Lv02_Purple_ShieldRecoverSpeed"
+      ]
+    },
+    "QSJ_Gen_Orange": {
+      "ID": "QSJ_Gen_Orange",
+      "EquipmentType": "Weapon",
+      "EquipmentName": "青霜剑",
+      "EquipmentID": "QSJ_Sword_Orange",
+      "SubAttributes": [
+        "SubAtt_Weapon_Lv02_Orange_CharacterAttackAccuracy",
+        "SubAtt_Weapon_Lv02_Orange_Dodge",
+        "SubAtt_Weapon_Lv02_Orange_Comprehension",
+        "SubAtt_Weapon_Lv02_Orange_SlashIncrease",
+        "SubAtt_Weapon_Lv02_Orange_SlashFixedAttack",
+        "SubAtt_Weapon_Lv02_Orange_SlashCriticalDamage",
+        "SubAtt_Weapon_Lv02_Orange_TrueQiIncrease",
+        "SubAtt_Weapon_Lv02_Orange_ShieldRecoverSpeed"
+      ]
+    }
+  }
+}

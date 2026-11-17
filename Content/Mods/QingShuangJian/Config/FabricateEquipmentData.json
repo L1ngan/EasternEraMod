@@ -1,0 +1,14 @@
+{
+  "StructName": "/Script/EastRimWorld.FabricateEquipmentData",
+  "Rows": {
+    "QSJ_Fab": {
+      "ID": "QSJ_Fab",
+      "EquipmentRandomPools": [
+        {
+          "RequiredResources": { "10506": 60 },
+          "EquipmentQualityRange": ["QSJ_Q_Green", "QSJ_Q_Purple", "QSJ_Q_Orange"]
+        }
+      ]
+    }
+  }
+}

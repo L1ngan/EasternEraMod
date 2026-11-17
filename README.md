@@ -22,6 +22,8 @@ In release builds `log.txt` only records `Error`. To keep `Log` and `Warning`, s
 | [CheatingBuildings](BlueprintAPI_ModAuthors/Examples/CheatingBuildings/README.md) | 用建筑、物品、配方、新游戏配置和 Cook 资源组成完整生产玩法 · Builds a production workflow from buildings, items, formulas, new-game config, and cooked assets |
 | [Giganotosaurus_RD](BlueprintAPI_ModAuthors/Examples/Giganotosaurus_RD/README.md) | 配置自定义动物、动画组、战斗能力、Gameplay Tags 和关卡资源 · Configures a custom animal, animation group, combat ability, Gameplay Tags, and level assets |
 | [QingXinJue](BlueprintAPI_ModAuthors/Examples/QingXinJue/README.md) | 纯 JSON 新增一门内功武学（书、分层词条、图鉴分类），附测试命令 · Adds an internal martial art with JSON only (book, per-layer entries, codex category), with a test command |
+| [QingShuangJian](BlueprintAPI_ModAuthors/Examples/QingShuangJian/README.md) | 纯 JSON 新增一把可在打铁台打造的剑（三档品质、随机副属性、配方），附测试命令 · Adds a craftable sword with JSON only (three quality tiers, random sub-attributes, recipe), with test commands |
+| [QingYunZongFu](BlueprintAPI_ModAuthors/Examples/QingYunZongFu/README.md) | 宗门时装界面新增一套服饰（JSON + 几行 Lua），按势力等级解锁、按分堂限制 · Adds a sect uniform set to the sect apparel screen (JSON plus a few lines of Lua), unlocked by force level and limited by sub-class |
 
 **开发指南 / Development guides**（字段全表、生命周期、Lua API 参考、事件表、JSON 合并语义、沙箱负面清单、`Mod.Status` 调试、打包发布）:
 
@@ -31,3 +33,5 @@ In release builds `log.txt` only records `Error`. To keep `Log` and `Warning`, s
 **专题指南 / Topic guides**:
 
 - 自制内功武学（中文）：[Examples/InternalMartialArtsGuide_CN.md](BlueprintAPI_ModAuthors/Examples/InternalMartialArtsGuide_CN.md)，附录 [官方内功每层词条与效果](BlueprintAPI_ModAuthors/Examples/InternalMartialArtsGuide_Appendix_CN.md)
+- 装备：武器、防具、工具（中文）：[Examples/EquipmentModGuide_CN.md](BlueprintAPI_ModAuthors/Examples/EquipmentModGuide_CN.md)
+- 宗门时装（中文）：[Examples/SectApparelModGuide_CN.md](BlueprintAPI_ModAuthors/Examples/SectApparelModGuide_CN.md)

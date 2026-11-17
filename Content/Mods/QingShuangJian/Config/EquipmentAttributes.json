@@ -1,0 +1,19 @@
+{
+  "StructName": "/Script/EastRimWorld.EquipmentAttribute",
+  "Rows": {
+    "QSJ_MinAtk_Green":   { "ID": "QSJ_MinAtk_Green",   "AttributeInfo": { "DataTable": "/Game/Configs/CharacterAttribute/DT_CharacterAttributeInfo.DT_CharacterAttributeInfo", "RowName": "MinAttack" },               "AttributeValue": 78,   "ItemQuality": "Green" },
+    "QSJ_MaxAtk_Green":   { "ID": "QSJ_MaxAtk_Green",   "AttributeInfo": { "DataTable": "/Game/Configs/CharacterAttribute/DT_CharacterAttributeInfo.DT_CharacterAttributeInfo", "RowName": "MaxAttack" },               "AttributeValue": 92,   "ItemQuality": "Green" },
+    "QSJ_Acc_Green":      { "ID": "QSJ_Acc_Green",      "AttributeInfo": { "DataTable": "/Game/Configs/CharacterAttribute/DT_CharacterAttributeInfo.DT_CharacterAttributeInfo", "RowName": "CharacterAttackAccuracy" }, "AttributeValue": 20,   "ItemQuality": "Green" },
+
+    "QSJ_MinAtk_Purple":  { "ID": "QSJ_MinAtk_Purple",  "AttributeInfo": { "DataTable": "/Game/Configs/CharacterAttribute/DT_CharacterAttributeInfo.DT_CharacterAttributeInfo", "RowName": "MinAttack" },               "AttributeValue": 128,  "ItemQuality": "Purple" },
+    "QSJ_MaxAtk_Purple":  { "ID": "QSJ_MaxAtk_Purple",  "AttributeInfo": { "DataTable": "/Game/Configs/CharacterAttribute/DT_CharacterAttributeInfo.DT_CharacterAttributeInfo", "RowName": "MaxAttack" },               "AttributeValue": 146,  "ItemQuality": "Purple" },
+    "QSJ_Acc_Purple":     { "ID": "QSJ_Acc_Purple",     "AttributeInfo": { "DataTable": "/Game/Configs/CharacterAttribute/DT_CharacterAttributeInfo.DT_CharacterAttributeInfo", "RowName": "CharacterAttackAccuracy" }, "AttributeValue": 45,   "ItemQuality": "Purple" },
+    "QSJ_Comp_Purple":    { "ID": "QSJ_Comp_Purple",    "AttributeInfo": { "DataTable": "/Game/Configs/CharacterAttribute/DT_CharacterAttributeInfo.DT_CharacterAttributeInfo", "RowName": "Comprehension" },           "AttributeValue": 3,    "ItemQuality": "Purple" },
+
+    "QSJ_MinAtk_Orange":  { "ID": "QSJ_MinAtk_Orange",  "AttributeInfo": { "DataTable": "/Game/Configs/CharacterAttribute/DT_CharacterAttributeInfo.DT_CharacterAttributeInfo", "RowName": "MinAttack" },               "AttributeValue": 172,  "ItemQuality": "Orange" },
+    "QSJ_MaxAtk_Orange":  { "ID": "QSJ_MaxAtk_Orange",  "AttributeInfo": { "DataTable": "/Game/Configs/CharacterAttribute/DT_CharacterAttributeInfo.DT_CharacterAttributeInfo", "RowName": "MaxAttack" },               "AttributeValue": 196,  "ItemQuality": "Orange" },
+    "QSJ_Acc_Orange":     { "ID": "QSJ_Acc_Orange",     "AttributeInfo": { "DataTable": "/Game/Configs/CharacterAttribute/DT_CharacterAttributeInfo.DT_CharacterAttributeInfo", "RowName": "CharacterAttackAccuracy" }, "AttributeValue": 70,   "ItemQuality": "Orange" },
+    "QSJ_Comp_Orange":    { "ID": "QSJ_Comp_Orange",    "AttributeInfo": { "DataTable": "/Game/Configs/CharacterAttribute/DT_CharacterAttributeInfo.DT_CharacterAttributeInfo", "RowName": "Comprehension" },           "AttributeValue": 5,    "ItemQuality": "Orange" },
+    "QSJ_SlashCrit_Orange": { "ID": "QSJ_SlashCrit_Orange", "AttributeInfo": { "DataTable": "/Game/Configs/CharacterAttribute/DT_CharacterAttributeInfo.DT_CharacterAttributeInfo", "RowName": "SlashCriticalDamage" }, "AttributeValue": 0.15, "ItemQuality": "Orange" }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "StructName": "/Script/CreateModPlugin.ModFormulaData",
+  "Rows": {
+    "QSJ_Formula": {
+      "TemplateID": "Formula_Smithy_1002",
+      "ID": "QSJ_Formula",
+      "Name": "青霜剑",
+      "FormulaIcon": "/Game/Art/UI/GameMain/WeaponIcon/W_Jian_01.W_Jian_01",
+      "FormatDescription": { "TextMain": "打造一把青霜剑。打造者手艺越好，越容易出紫、橙品质。" },
+      "NecessityConsumingResource": { "10506": 60, "10101": 80 },
+      "OutputItemID": "QSJ_Fab",
+      "CanUnlockByItem": true
+    }
+  }
+}

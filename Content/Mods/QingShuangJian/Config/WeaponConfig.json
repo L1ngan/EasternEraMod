@@ -1,0 +1,44 @@
+{
+  "StructName": "/Script/CreateModPlugin.ModCharacterWeapon",
+  "Rows": {
+    "QSJ_Sword_Green": {
+      "TemplateID": "Sword_Lv02_Green",
+      "ID": "QSJ_Sword_Green",
+      "ItemName": "青霜剑",
+      "ItemDescription": "剑身泛青，寒气逼人。",
+      "FormatItemDescription": { "TextMain": "剑身泛青，寒气逼人。" },
+      "ItemQuality": "Green",
+      "MainAttributes": ["QSJ_MinAtk_Green", "QSJ_MaxAtk_Green", "QSJ_Acc_Green"],
+      "WeaponStaticMesh": "/Game/Art/Meshes/Weapon/wuqi/W_Jian_01/W_Jian_01.W_Jian_01",
+      "ItemIcon": "/Game/Art/UI/GameMain/WeaponIcon/W_Jian_01.W_Jian_01",
+      "ItemPrice": 180,
+      "ForMulaId": "QSJ_Formula"
+    },
+    "QSJ_Sword_Purple": {
+      "TemplateID": "Sword_Lv02_Purple",
+      "ID": "QSJ_Sword_Purple",
+      "ItemName": "青霜剑",
+      "ItemDescription": "剑身泛青，寒气逼人。持此剑者心境澄明。",
+      "FormatItemDescription": { "TextMain": "剑身泛青，寒气逼人。持此剑者心境澄明。" },
+      "ItemQuality": "Purple",
+      "MainAttributes": ["QSJ_MinAtk_Purple", "QSJ_MaxAtk_Purple", "QSJ_Acc_Purple", "QSJ_Comp_Purple"],
+      "WeaponStaticMesh": "/Game/Art/Meshes/Weapon/wuqi/W_Jian_01/W_Jian_01.W_Jian_01",
+      "ItemIcon": "/Game/Art/UI/GameMain/WeaponIcon/W_Jian_01.W_Jian_01",
+      "ItemPrice": 360,
+      "ForMulaId": "QSJ_Formula"
+    },
+    "QSJ_Sword_Orange": {
+      "TemplateID": "Sword_Lv02_Orange",
+      "ID": "QSJ_Sword_Orange",
+      "ItemName": "青霜剑",
+      "ItemDescription": "剑身泛青，寒气逼人。传说铸成之夜，满山落霜。",
+      "FormatItemDescription": { "TextMain": "剑身泛青，寒气逼人。传说铸成之夜，满山落霜。" },
+      "ItemQuality": "Orange",
+      "MainAttributes": ["QSJ_MinAtk_Orange", "QSJ_MaxAtk_Orange", "QSJ_Acc_Orange", "QSJ_Comp_Orange", "QSJ_SlashCrit_Orange"],
+      "WeaponStaticMesh": "/Game/Art/Meshes/Weapon/wuqi/W_Jian_01/W_Jian_01.W_Jian_01",
+      "ItemIcon": "/Game/Art/UI/GameMain/WeaponIcon/W_Jian_01.W_Jian_01",
+      "ItemPrice": 720,
+      "ForMulaId": "QSJ_Formula"
+    }
+  }
+}

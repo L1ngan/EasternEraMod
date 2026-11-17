@@ -1,0 +1,8 @@
+{
+  "StructName": "/Script/EastRimWorld.ForceLevelInfo",
+  "Rows": {
+    "Force_Level_1": {
+      "UnlockContentIDs": ["QYZ_Unlock"]
+    }
+  }
+}
