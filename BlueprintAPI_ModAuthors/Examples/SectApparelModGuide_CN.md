@@ -277,9 +277,14 @@ UE.UModEventBus.RegisterModEvent("OnNewGameStarted", function() UnlockAll() end)
 
 ## 6. 新模型（SDK）
 
+> **只是想用官方原样的衣服？** 想把游戏里已有的官方衣服（包括没进宗门时装清单的 NPC、门派、普通防具外观）原样加进宗门时装，不必导出官方模型再导回来：服饰行的 `ApparelFemaleDataAsset` / `ApparelMaleDataAsset` 直接填官方外观资产的路径（如 `/Game/CharacterEditor/CharacterParts/DataAssets/WuDang/CDA_WuDang_Armor_01W.CDA_WuDang_Armor_01W`），Mod 里不带模型、贴图和外观资产。SDK 里没有官方资产，表格的下拉框选不到，就在服饰行 JSON 里直接写这个字段（软引用只存路径，不要求资产在 SDK 里）。要改贴图、改款式时才需要自带模型，按下面做。
+
 ### 6.1 要做的资源
 
 1. **骨骼网格**：绑定游戏的人物骨架 `SK_Mannequin`（`/Game/Art/Animations/Characters/Mannequins/Meshes/SK_Mannequin`），男、女体型不同，**男女各做一份**。
+   - 游戏用主姿势跟随（Leader Pose）把衣服挂到身体上，按骨骼名对应。**网格的绑定姿势必须和它的顶点一致，骨骼朝向必须是 UE 的约定**：Blender 骨骼沿 Y 轴、UE 沿 X 轴，导出导入时轴向转换没对上，每根骨会被转 90°，进游戏后衣服整体错位、扭曲（袖子、下摆最明显）。从官方模型改出来的衣服，绑定姿势应当和原官方模型逐骨一致。
+   - 自查：导入后在骨骼网格编辑器里打开“显示骨骼轴向”，和 `SK_Mannequin` 对比，每根骨的轴向应当重合；进游戏前先在宗门时装里穿上看一眼。
+   - 1 级 LOD 能正常显示，但宗门服饰会穿在所有弟子身上，建议做 LOD；没有 Chaos Cloth 资产只是没有布料摆动，不影响显示。
 2. **外观资产**（每件衣服男、女各一个）：新建数据资产，类选对应槽位的外观类：
 
    | 槽位 | 外观类 |
