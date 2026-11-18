@@ -78,7 +78,8 @@ struct LQUICKFRAME_API FDataBase : public FTableRowBase
 public:
 	FORCEINLINE bool operator == (const FName& Other) const{return Other == ID;}
 	FORCEINLINE bool operator == (const FDataBase& Other){return Other.ID == ID;}
-	bool IsValidData() const
+
+	virtual bool IsValidData() const
 	{
 		return !ID.IsNone();
 	}

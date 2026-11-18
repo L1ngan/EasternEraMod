@@ -73,7 +73,7 @@ struct FGameAbilityStruct: public FDataBase
 	//技能类型枚举
 	UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="MustFill")
 	EEastRimWorldAbilityType AbilityType = EEastRimWorldAbilityType::GeneralAbility;
-	//是否是普通攻击
+	//技能的攻击类型
 	UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="MustFill",meta =  (EditConditionHides,EditCondition = " AbilityType == EEastRimWorldAbilityType::GeneralAbility"))
 	EAbilityAttackType AbilityAttackType = EAbilityAttackType::NormalAttack;
 	//是否更改目标为触发者
@@ -149,6 +149,13 @@ struct FGameAbilityStruct: public FDataBase
 	//技能提示
 	UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="Common")
 	FText AbilityTips;
+	/*****************************************************技能攻击参数（由 MMC 读取）**********************************************************/
+	//技能攻击力百分比 (1.0 = 100%)。仅供配套的 UGameplayModMagnitudeCalculation 子类读取使用。
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="SkillAttack", meta=(ClampMin="0.0"))
+	float SkillAttackPercent = 1.0f;
+	//技能攻击类型（伤害类型）。仅供配套的 UGameplayModMagnitudeCalculation 子类读取使用。
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="SkillAttack")
+	EDamageType SkillAttackType = EDamageType::None;
 	/*****************************************************冷却**********************************************************/
 	//是否有冷却
 	UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="CoolDown")
@@ -181,14 +188,46 @@ struct FGameAbilityStruct: public FDataBase
 	//动画中触发的技能效果
 	UPROPERTY(BlueprintReadWrite,EditAnywhere,Category="Montage",meta =  (EditConditionHides,EditCondition = " bHaveMontage == true "))
 	TMap<FGameplayTag, FEastRimWorldGameplayEffectContainer> EffectContainerMap;
+	/*****************************************************轻功/位移（AbilityAttackType == LightSkill）**********************************************************/
+	//轻功移动距离（cm）——通过计算确定位移，不再依赖动画根运动。AI 释放距离仍复用上方 UseDistance。
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LightSkill", meta=(EditConditionHides, EditCondition="AbilityAttackType == EAbilityAttackType::LightSkill"))
+	float LightSkillMoveDistance = 600.f;
+	//轻功移动速度（cm/s）——位移时长 = 距离 / 速度
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LightSkill", meta=(EditConditionHides, EditCondition="AbilityAttackType == EAbilityAttackType::LightSkill"))
+	float LightSkillMoveSpeed = 1800.f;
+	//是否检测落点碰撞：开启则用角色自身碰撞（胶囊组件的碰撞响应）沿位移路径扫描，遇到会阻挡角色的物体（如墙体）就停在其前；能否穿过某类对象（如其它角色）完全取决于角色胶囊自身的碰撞设置。关闭则无视阻挡直接位移到目标距离。
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LightSkill", meta=(EditConditionHides, EditCondition="AbilityAttackType == EAbilityAttackType::LightSkill"))
+	bool bLightSkillCheckCollision = true;
+	//三段动画切片名（共用上方 Montage：起手/位移循环/收招）。循环段需设为自循环，且建议为原地动画（关闭根运动）。
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LightSkill", meta=(EditConditionHides, EditCondition="AbilityAttackType == EAbilityAttackType::LightSkill"))
+	FName LightSkillStartSection = TEXT("Start");
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LightSkill", meta=(EditConditionHides, EditCondition="AbilityAttackType == EAbilityAttackType::LightSkill"))
+	FName LightSkillLoopSection = TEXT("Loop");
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LightSkill", meta=(EditConditionHides, EditCondition="AbilityAttackType == EAbilityAttackType::LightSkill"))
+	FName LightSkillEndSection = TEXT("End");
+	//可瞬移到目标前方
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LightSkill", meta=(EditConditionHides, EditCondition="AbilityAttackType == EAbilityAttackType::LightSkill"))
+	bool bLightSkillCanTeleportToFront = false;
+	//可瞬移到目标后方
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LightSkill", meta=(EditConditionHides, EditCondition="AbilityAttackType == EAbilityAttackType::LightSkill"))
+	bool bLightSkillCanTeleportToBack = false;
+	//瞬移落点相对目标朝向的偏移（cm）
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LightSkill", meta=(EditConditionHides, EditCondition="AbilityAttackType == EAbilityAttackType::LightSkill && (bLightSkillCanTeleportToFront || bLightSkillCanTeleportToBack)"))
+	float LightSkillTeleportOffset = 50.f;
+	//起点生成物（ProjectileName 为空则不生成）
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LightSkill", meta=(EditConditionHides, EditCondition="AbilityAttackType == EAbilityAttackType::LightSkill"))
+	FAbilityProjectileStruct LightSkillBeginSpawnProjectile;
+	//终点生成物（ProjectileName 为空则不生成）
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LightSkill", meta=(EditConditionHides, EditCondition="AbilityAttackType == EAbilityAttackType::LightSkill"))
+	FAbilityProjectileStruct LightSkillEndSpawnProjectile;
+	//施法期间对自身施加的 GE（释放过程中添加 TagAndGE 的 GE 部分），轻功结束时自动移除；施法 Tag 复用 AbilityAllTags.ActivationOwnedTags。
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="LightSkill", meta=(EditConditionHides, EditCondition="AbilityAttackType == EAbilityAttackType::LightSkill"))
+	TArray<TSubclassOf<UGameplayEffect>> LightSkillCastingGEs;
 	/*****************************************************GamePlayEffect**********************************************************/
 	//激活后马上给予自己的GEs;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="GamePlayEffect")
 	TArray<TSubclassOf<UGameplayEffect>> ActivateGetSelfGEs;
-	//激活后给予自己友方包括自己的 （弃用直接用投射物实现）
-	UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="GamePlayEffect")
-	TArray<TSubclassOf<UGameplayEffect>> ActivateGetAllFriendlyGEs;
-	//激活后给予目标的GEs（弃用直接用投射物实现）
+	//激活后给予主目标的GEs
 	UPROPERTY(BlueprintReadWrite, EditAnywhere,Category="GamePlayEffect")
 	TArray<TSubclassOf<UGameplayEffect>> ActivateGetTargetGEs;
 	/*****************************************************投射物**********************************************************/

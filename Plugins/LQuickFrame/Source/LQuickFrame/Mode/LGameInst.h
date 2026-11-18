@@ -19,18 +19,17 @@ class LQUICKFRAME_API ULGameInst : public UCommonGameInstance
 	TMap<int,float> GamePlaySpeed{
 		{0,0.0001},
 		{1,1.f},
-		{2,2.f},
-		{3,3.0f}};
+		{2,1.5f},
+		{3,2.6f}};
+	UPROPERTY()
+	bool bOpenLoading = false;
+	
+public:
 	//当前游戏速度
 	UPROPERTY()
 	int CurGamePlaySpeedIndex = 1;
 	UPROPERTY()
 	int BackGamePlaySpeedIndex = 1;
-
-	UPROPERTY()
-	bool bOpenLoading = false;
-	
-public:
 	ULGameInst(const FObjectInitializer& ObjectInitializer);
 	virtual void Shutdown() override;
 	virtual void Init() override;
@@ -101,7 +100,7 @@ public:
 	void RemoveAllPoolByLevel(FName LevelName);
 	
 	UFUNCTION(BlueprintCallable)
-	virtual bool SetGamePlaySpeed(int InSpeedIndex);
+	virtual bool SetGamePlaySpeed(int InSpeedIndex,bool bForced = false);
 	//获取游戏速度下标
 	UFUNCTION(BlueprintCallable)
 	int GetGamePlaySpeedIndex();
@@ -115,7 +114,12 @@ public:
 	ULevel * GetCurLevel();
 	UFUNCTION(BlueprintCallable)
 	void SetOpenLoadingState(bool bNewLoadingState);
+	//只读查询现有加载状态，延后依赖主界面的交互。
+	bool IsLoadingScreenOpen() const { return bOpenLoading; }
 	//检查是否低于游戏版本
 	UFUNCTION(BlueprintCallable)
 	bool CheckLowerThanVersion(FString InVersion);
+	//检查是否小于等于游戏版本（InVersion <= GameVersion）
+	UFUNCTION(BlueprintCallable)
+	bool CheckLessThanOrEqualVersion(FString InVersion);
 };

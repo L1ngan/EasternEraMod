@@ -42,6 +42,7 @@ public:
 	//取消角色注册
 	UFUNCTION(BlueprintCallable, Category = "GameActorMng")
 	void UnRegisterByGuid(FGuid & ActorGuid);
+	bool UnRegisterByGuidIfOwner(const FGuid& ActorGuid, const AActor* ExpectedActor);
 	
 	//通过类型查找所有目标(可实现IsFilterAll来筛选)
 	UFUNCTION(BlueprintPure, Category = "GameActorMng", meta = (DeterminesOutputType = "Class", AdvancedDisplay = "FilterParam"))

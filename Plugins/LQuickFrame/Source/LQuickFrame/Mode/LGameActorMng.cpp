@@ -16,6 +16,7 @@ void ULGameActorMng::OnClearData()
 	TypeSearchMap.Reset();
 	NameSearchMap.Reset();
 	ClassSearchMap.Reset();
+	GuidSearchMap.Reset();
 }
 
 void ULGameActorMng::RegistByType(ALActor* Actor, int32 ActType)
@@ -59,6 +60,17 @@ void ULGameActorMng::UnRegisterByGuid(FGuid& ActorGuid)
 {
 	GuidSearchMap.Remove(ActorGuid);
 }
+
+bool ULGameActorMng::UnRegisterByGuidIfOwner(const FGuid& ActorGuid, const AActor* ExpectedActor)
+{
+	AActor** RegisteredActor = GuidSearchMap.Find(ActorGuid);
+	if (!RegisteredActor || (ExpectedActor && *RegisteredActor != ExpectedActor))
+	{
+		return false;
+	}
+	GuidSearchMap.Remove(ActorGuid);
+	return true;
+}
 TArray<ALActor*> ULGameActorMng::FindAllByType(int32 ActType, TSubclassOf<ALActor> Class, const FString& FilterParam)
 {
 	return SearchAll(TypeSearchMap.FindOrAdd(ActType), Class, FilterParam);
@@ -93,18 +105,28 @@ ALActor* ULGameActorMng::FindNearByClass(TSubclassOf<ALActor> ActClass, FVector 
 
 ACharacter* ULGameActorMng::FindCharacterByGuid(const FGuid& CharacterGuid)
 {
-	if (GuidSearchMap.Contains(CharacterGuid))
+	if (auto Character = GuidSearchMap.Find(CharacterGuid))
 	{
-		return Cast<ACharacter>(*GuidSearchMap.Find(CharacterGuid));
+		if (!IsValid(*Character))
+		{
+			GuidSearchMap.Remove(CharacterGuid);
+			return nullptr;
+		}
+		return Cast<ACharacter>(*Character);
 	}
 	return nullptr;
 }
 
 AActor* ULGameActorMng::FindActorByGuid(const FGuid& Guid, TSubclassOf<ALActor> Class)
 {
-	if (GuidSearchMap.Contains(Guid))
+	if (auto Actor = GuidSearchMap.Find(Guid))
 	{
-		return *GuidSearchMap.Find(Guid);
+		if (!IsValid(*Actor))
+		{
+			GuidSearchMap.Remove(Guid);
+			return nullptr;
+		}
+		return *Actor;
 	}
 	return nullptr;
 }

@@ -32,7 +32,7 @@ enum class EDamageType : uint8
 	None,
 	//穿刺伤害
 	PierceDamage,
-	//切割伤害
+	//切割伤害 挥砍
 	SlashDamage,
 	//钝器伤害
 	BluntDamage,
@@ -40,6 +40,10 @@ enum class EDamageType : uint8
 	PoisonDamage,
 	//真气伤害
 	TrueQiDamage,
+	//远程伤害
+	RemoteDamage,
+	//真实伤害
+	TrueDamage,
 };
 
 
@@ -159,6 +163,12 @@ struct GASFRAMEWORK_API FProjectileHitEventData
 	//伤害类型
 	UPROPERTY(BlueprintReadWrite,EditAnywhere)
 	EDamageType DamageType = EDamageType::None;
+	//是否被技能击杀（OnEnemyDieNearby 等事件使用）
+	UPROPERTY(BlueprintReadWrite,EditAnywhere)
+	bool bKilledBySkill = false;
+	//上下文标签（如命中受控目标时携带的控制类型）
+	UPROPERTY(BlueprintReadWrite,EditAnywhere)
+	FGameplayTag ContextTag;
 	void Empty()
 	{
 		Value = 0.f;
@@ -235,6 +245,8 @@ enum class EAbilityAttackType : uint8
 	NormalAttack = 0,
 	SkillAttack = 1,
 	None = 2,
+	//轻功/位移类技能（位移由计算决定，非动画根运动）
+	LightSkill = 3,
 };
 
 //触发技能的效果类型

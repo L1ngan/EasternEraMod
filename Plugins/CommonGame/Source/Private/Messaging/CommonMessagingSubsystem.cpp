@@ -44,3 +44,8 @@ void UCommonMessagingSubsystem::ShowError(UCommonGameDialogDescriptor* DialogDes
 {
 	
 }
+
+void UCommonMessagingSubsystem::ShowSetName(UCommonGameDialogDescriptor* DialogDescriptor, FCommonMessagingResultDelegate ResultCallback)
+{
+
+}

@@ -119,6 +119,42 @@ enum class ETargetClassType : uint8
 	OtherThanFriends,
 };
 
+//检测范围内目标施加效果的几何形状
+UENUM(BlueprintType)
+enum class EAreaEffectShape : uint8
+{
+	//球形(只用 AreaEffectRadius)
+	Sphere,
+	//胶囊(用 AreaEffectRadius + AreaEffectHalfHeight,沿Z轴)
+	Capsule,
+	//盒形(用 AreaEffectBoxHalfExtent)
+	Box,
+};
+
+//检测范围内的属性筛选方向
+UENUM(BlueprintType)
+enum class ESpawnAreaFilterMode : uint8
+{
+	//值最小
+	Min,
+	//值最大
+	Max,
+};
+
+//检测范围内的属性筛选项
+USTRUCT(BlueprintType)
+struct GASFRAMEWORK_API FSpawnAreaFilter
+{
+	GENERATED_USTRUCT_BODY()
+	//被筛选的属性(读取ASC上当前值)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FGameplayAttribute Attribute;
+	//取最小还是最大
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	ESpawnAreaFilterMode Mode = ESpawnAreaFilterMode::Min;
+	FSpawnAreaFilter(){}
+};
+
 
 //生成召唤物的信息
 USTRUCT(BlueprintType)
@@ -472,6 +508,30 @@ public:
 	//投射物伤害次数，消耗殆尽就会被摧毁，-1为穿透
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Damage")
 	int32 ConsumeCount = -1;
+	//是否启用检测范围内目标施加效果
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Damage")
+	bool bEnableAreaEffect = false;
+	//检测的范围半径(单位:cm,>0时生效)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Damage",meta = (ClampMin = 0, UIMin = 0, EditConditionHides,EditCondition = "bEnableAreaEffect"))
+	float AreaEffectRadius = 200.f;
+	//检测的范围形状
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Damage",meta = (EditConditionHides, EditCondition = "bEnableAreaEffect"))
+	EAreaEffectShape AreaEffectShape = EAreaEffectShape::Sphere;
+	//胶囊专用半高(球形时忽略)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Damage",meta = (ClampMin = 0, UIMin = 0, EditConditionHides,EditCondition = "bEnableAreaEffect && AreaEffectShape == EAreaEffectShape::Capsule"))
+	float AreaEffectHalfHeight = 100.f;
+	//盒形半尺寸(球/胶囊时忽略)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Damage",meta = (EditConditionHides,EditCondition = "bEnableAreaEffect && AreaEffectShape == EAreaEffectShape::Box"))
+	FVector AreaEffectBoxHalfExtent = FVector(200.f, 200.f, 200.f);
+	//检测的目标分类(空=不过滤)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Damage",meta = (EditConditionHides, EditCondition = "bEnableAreaEffect"))
+	ETargetClassType AreaEffectTargetClass = ETargetClassType::None;
+	//按属性筛选范围内候选(单条;Attribute 未配置=不过滤)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Damage",meta = (EditConditionHides, EditCondition = "bEnableAreaEffect"))
+	FSpawnAreaFilter AreaEffectFilter;
+	//属性筛选命中的前/末 N 个
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Damage",meta = (ClampMin = 1, UIMin = 1, EditConditionHides, EditCondition = "bEnableAreaEffect"))
+	int32 AreaEffectFilterCount = 1;
 	// 生成方式类型
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, DisplayName = "Spawn Type",Category = "Projectile")
 	FSpawnTypeSet SpawnTypeSet;

@@ -12,11 +12,11 @@ ARHS_ProjectileBase::ARHS_ProjectileBase()
     ProjectileMovementComponent->SetUpdatedComponent(RootComponent);
     ProjectileMovementComponent->bRotationFollowsVelocity = true;
 	
-    bReplicates = true;
-    AActor::SetReplicateMovement(true);
-    ProjectileMovementComponent->SetIsReplicated(true);
+    bReplicates = false;
+    AActor::SetReplicateMovement(false);
+    ProjectileMovementComponent->SetIsReplicated(false);
     ProjectileMovementComponent->ProjectileGravityScale = 0.f;
-    ProjectileMovementComponent->bInterpMovement = ProjectileMovementComponent->bInterpRotation = true;
+    ProjectileMovementComponent->bInterpMovement = ProjectileMovementComponent->bInterpRotation = false;
 }
 
 void ARHS_ProjectileBase::OnConstruction(const FTransform& Transform)

@@ -115,6 +115,7 @@ public:
 	// Get the layer widget for the given layer tag.
 	UCommonActivatableWidgetContainerBase* GetLayerWidget(FGameplayTag LayerName);
 
+	void ClearLayerWidgets();
 protected:
 	/** Register a layer that widgets can be pushed onto. */
 	UFUNCTION(BlueprintCallable, Category="Layer")

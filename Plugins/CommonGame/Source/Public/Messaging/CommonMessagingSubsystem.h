@@ -25,7 +25,7 @@ enum class ECommonMessagingResult : uint8
 	Unknown UMETA(Hidden)
 };
 
-DECLARE_DELEGATE_OneParam(FCommonMessagingResultDelegate, ECommonMessagingResult /* Result */);
+DECLARE_DELEGATE_TwoParams(FCommonMessagingResultDelegate, ECommonMessagingResult, TArray<FText>);
 
 /**
  * 
@@ -44,6 +44,7 @@ public:
 
 	virtual void ShowConfirmation(UCommonGameDialogDescriptor* DialogDescriptor, FCommonMessagingResultDelegate ResultCallback = FCommonMessagingResultDelegate());
 	virtual void ShowError(UCommonGameDialogDescriptor* DialogDescriptor, FCommonMessagingResultDelegate ResultCallback = FCommonMessagingResultDelegate());
+	virtual void ShowSetName(UCommonGameDialogDescriptor* DialogDescriptor, FCommonMessagingResultDelegate ResultCallback = FCommonMessagingResultDelegate());
 
 private:
 

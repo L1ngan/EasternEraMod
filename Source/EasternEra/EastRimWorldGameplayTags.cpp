@@ -45,17 +45,40 @@ namespace EastRimWorldGameplayTags
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_Death, "GameplayEvent.Death", "Event that fires on death. This event only fires on the server.");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_Reset, "GameplayEvent.Reset", "Event that fires once a player reset is executed.");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_RequestReset, "GameplayEvent.RequestReset", "Event to request a player's pawn to be instantly replaced with a new one at a valid spawn location.");
-	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnHit, "GameplayEvent.OnHit", "受到攻击，无论是否受到伤害");
-	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnDamage, "GameplayEvent.OnDamage", "受到伤害，会携带伤害数据");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnHit, "GameplayEvent.OnHit", "自己受到攻击，无论是否受到伤害");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_InjureOneself, "GameplayEvent.InjureOneself", "自己受到攻击，会携带伤害数据");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnDamage, "GameplayEvent.OnDamage", "通知攻击方敌人受到伤害，会携带伤害数据");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_CriticalStrike, "GameplayEvent.CriticalStrike", "打出暴击");
-	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnHitHard, "GameplayEvent.OnHitHard", "受到暴击伤害");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnHitHard, "GameplayEvent.OnHitHard", "自身受到暴击伤害");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_AttackWasDodged, "GameplayEvent.AttackWasDodged", "攻击被闪避");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnDodge, "GameplayEvent.OnDodge", "闪避攻击");
+
+	// === 被动触发条件扩展事件 ===
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnEnemyDieNearby, "GameplayEvent.OnEnemyDieNearby", "范围内敌人死亡(默认800范围,payload带死者/击杀者/是否技能击杀)");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnHitControlledTarget, "GameplayEvent.OnHitControlledTarget", "命中处于控制状态的目标");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnNearDeath, "GameplayEvent.OnNearDeath", "自身濒死(致死那一下触发,可做最后一搏)");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnCauseDamage, "GameplayEvent.OnCauseDamage", "造成指定类型伤害(父标签)");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnCauseDamage_Pierce, "GameplayEvent.OnCauseDamage.Pierce", "造成穿刺伤害");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnCauseDamage_Slash, "GameplayEvent.OnCauseDamage.Slash", "造成挥砍伤害");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnCauseDamage_Blunt, "GameplayEvent.OnCauseDamage.Blunt", "造成钝击伤害");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnCauseDamage_Remote, "GameplayEvent.OnCauseDamage.Remote", "造成远程伤害");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnCauseDamage_Poison, "GameplayEvent.OnCauseDamage.Poison", "造成毒素伤害");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnCauseDamage_TrueQi, "GameplayEvent.OnCauseDamage.TrueQi", "造成真气伤害");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnCauseDamage_TrueDamage, "GameplayEvent.OnCauseDamage.TrueDamage", "造成真实伤害");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnReceiveDamage, "GameplayEvent.OnReceiveDamage", "受到指定类型伤害(父标签)");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnReceiveDamage_Pierce, "GameplayEvent.OnReceiveDamage.Pierce", "受到穿刺伤害");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnReceiveDamage_Slash, "GameplayEvent.OnReceiveDamage.Slash", "受到挥砍伤害");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnReceiveDamage_Blunt, "GameplayEvent.OnReceiveDamage.Blunt", "受到钝击伤害");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnReceiveDamage_Remote, "GameplayEvent.OnReceiveDamage.Remote", "受到远程伤害");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnReceiveDamage_Poison, "GameplayEvent.OnReceiveDamage.Poison", "受到毒素伤害");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnReceiveDamage_TrueQi, "GameplayEvent.OnReceiveDamage.TrueQi", "受到真气伤害");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(GameplayEvent_OnReceiveDamage_TrueDamage, "GameplayEvent.OnReceiveDamage.TrueDamage", "受到真实伤害");
 	
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_Damage, "SetByCaller.Damage", "SetByCaller tag used by damage gameplay effects.");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_Heal, "SetByCaller.Heal", "SetByCaller tag used by healing gameplay effects.");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_CoolDown, "SetByCaller.CoolDown", "技能cd父标签");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_CoolDown_ChangeWeapon, "SetByCaller.CoolDown.ChangeWeapon", "武器切换的冷却");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_CoolDownTotal, "SetByCaller.CoolDownTotal", "冷却GE记录的本次完整冷却时长(按比例减冷却时使用),不放在SetByCaller.CoolDown下以免被按父标签查冷却误匹配");
 	
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_Equipment_MinAttack, "SetByCaller.Equipment.MinAttack", "SetByCaller tag used by minimum attack gameplay effects.");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_Equipment_MaxAttack, "SetByCaller.Equipment.MaxAttack", "SetByCaller tag used by maximum attack gameplay effects.");
@@ -258,6 +281,34 @@ namespace EastRimWorldGameplayTags
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_InjuryOrgan, "SetByCaller.InjuryOrgan", "伤害部位");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_DamagePercentage, "SetByCaller.DamagePercentage", "部位伤害百分比");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_DamageType, "SetByCaller.DamageType", "伤害类型");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_MMC_SkillAttackPercent, "SetByCaller.MMC.SkillAttackPercent", "技能攻击力百分比(仅供GameplayModMagnitudeCalculation读取)");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_MMC_SkillAttackType, "SetByCaller.MMC.SkillAttackType", "技能攻击类型(仅供GameplayModMagnitudeCalculation读取，值为EDamageType枚举uint8)");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_DamageTypeChange, "SetByCaller.SkillEntry.DamageTypeChange", "技能词条覆盖伤害类型(EDamageType枚举值)");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_HitRateChangeValue, "SetByCaller.SkillEntry.HitRateChangeValue", "技能词条：命中率加成");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_PierceDamageChangeValue, "SetByCaller.SkillEntry.PierceDamageChangeValue", "技能词条：穿刺固定伤害加成");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_PierceDamageChangePercent, "SetByCaller.SkillEntry.PierceDamageChangePercent", "技能词条：穿刺伤害百分比加成");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_SlashDamageChangeValue, "SetByCaller.SkillEntry.SlashDamageChangeValue", "技能词条：劈砍固定伤害加成");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_SlashDamageChangePercent, "SetByCaller.SkillEntry.SlashDamageChangePercent", "技能词条：劈砍伤害百分比加成");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_RemoteDamageChangeValue, "SetByCaller.SkillEntry.RemoteDamageChangeValue", "技能词条：远程固定伤害加成");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_RemoteDamageChangePercent, "SetByCaller.SkillEntry.RemoteDamageChangePercent", "技能词条：远程伤害百分比加成");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_BluntDamageChangeValue, "SetByCaller.SkillEntry.BluntDamageChangeValue", "技能词条：钝击固定伤害加成");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_BluntDamageChangePercent, "SetByCaller.SkillEntry.BluntDamageChangePercent", "技能词条：钝击伤害百分比加成");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_PersonDamageChangeValue, "SetByCaller.SkillEntry.PersonDamageChangeValue", "技能词条：真气固定伤害加成");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_PersonDamageChangePercent, "SetByCaller.SkillEntry.PersonDamageChangePercent", "技能词条：真气伤害百分比加成");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_PoisonDamageChangeValue, "SetByCaller.SkillEntry.PoisonDamageChangeValue", "技能词条：毒素固定伤害加成");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_PoisonDamageChangePercent, "SetByCaller.SkillEntry.PoisonDamageChangePercent", "技能词条：毒素伤害百分比加成");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_SkillBaseDamageChangeValue, "SetByCaller.SkillEntry.SkillBaseDamageChangeValue", "技能词条：技能基础攻击固定加成");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_SkillBaseDamageChangePercent, "SetByCaller.SkillEntry.SkillBaseDamageChangePercent", "技能词条：技能基础攻击百分比加成");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_FinalDamageToShieldBonusChangePercent, "SetByCaller.SkillEntry.FinalDamageToShieldBonusChangePercent", "技能词条：罡气伤害百分比加成");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_FinalDamageToBodyBonusChangePercent, "SetByCaller.SkillEntry.FinalDamageToBodyBonusChangePercent", "技能词条：部位最终伤害百分比加成");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_CritRateChangeValue, "SetByCaller.SkillEntry.CritRateChangeValue", "技能词条：暴击率加成");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_CritIncreaseChangeValue, "SetByCaller.SkillEntry.CritIncreaseChangeValue", "技能词条：暴击伤害加成");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_IgnoreDefenceChangeValue, "SetByCaller.SkillEntry.IgnoreDefenceChangeValue", "技能词条：无视防御固定值");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_IgnoreDefenceChangePercent, "SetByCaller.SkillEntry.IgnoreDefenceChangePercent", "技能词条：无视防御百分比");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_DamageBonusByDistanceChangePercent, "SetByCaller.SkillEntry.DamageBonusByDistanceChangePercent", "技能词条：每100距离伤害加成百分比(Σ)");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_DamageBonusByDistanceMaxPercent, "SetByCaller.SkillEntry.DamageBonusByDistanceMaxPercent", "技能词条：距离伤害加成百分比上限(Σ)");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_HealingShieldChangeValue, "SetByCaller.SkillEntry.HealingShieldChangeValue", "技能词条：罡气治疗固定加成");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_SkillEntry_HealingShieldChangePercent, "SetByCaller.SkillEntry.HealingShieldChangePercent", "技能词条：罡气治疗百分比加成");
 	
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_LossMaxHeadPercentage, "SetByCaller.LossMaxHeadPercentage", "部位最大头部损失百分比");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SetByCaller_LossMaxLeftEyePercentage, "SetByCaller.LossMaxLeftEyePercentage", "部位最大左眼损失百分比");
@@ -290,12 +341,14 @@ namespace EastRimWorldGameplayTags
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Status_Death_DeadTag, "Status.Death.DeadTag", "死亡Tag，目前用于GA的触发");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Status_Death_SeriousInjury, "Status.Death.SeriousInjury", "重伤类型");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Status_Combat_Armored, "Status.Combat.Armored", "霸体状态");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Status_Combat_NotPlayHitAnimation, "Status.Combat.NotPlayHitAnimation", "不播放受击动画");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Status_InBattle, "Status.InBattle", "战斗中");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Status_Invincibility, "Status.Invincibility", "无敌状态");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Status_NotBodyPart, "Status.NotBodyPart", "无身体部位只计算基础血量");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Status_CantPractice, "Status.CantPractice", "不能修炼状态");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Status_NotCauseHatred, "Status.NotCauseHatred", "不会产生仇恨");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Status_Invincibility_NotAttack, "Status.Invincibility.NotAttack", "无敌状态且不会选为目标");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Status_ImmuneDeath, "Status.ImmuneDeath", "免疫死亡：拥有此标签时血量/部位归零也不会死亡");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Status_Max_Body, "Status.Max.Body", "部位血量达到最大");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Status_Max_Head, "Status.Max.Head", "部位血量达到最大");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Status_Max_LeftEye, "Status.Max.LeftEye", "部位血量达到最大");
@@ -321,6 +374,7 @@ namespace EastRimWorldGameplayTags
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Status_ReleasingSkill, "Status.ReleasingSkill", "正在释放技能");
 	
 	//UE_DEFINE_GAMEPLAY_TAG_COMMENT(Status_ControlEffect_HardAndStraight, "Status.ControlEffect.HardAndStraight", "僵直");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Status_ControlEffect, "Status.ControlEffect", "受控状态父标签(命中受控目标判定用)");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Status_ControlEffect_HardControl_BeatBack, "Status.ControlEffect.HardControl.BeatBack", "击退");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Status_ControlEffect_HardControl_KnockAway, "Status.ControlEffect.HardControl.KnockAway", "击倒");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Status_ControlEffect_HardControl_StrikeToFly, "Status.ControlEffect.HardControl.StrikeToFly", "击飞");
@@ -355,6 +409,7 @@ namespace EastRimWorldGameplayTags
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Sound_Building_LoopPlay, "Sound.Building.LoopPlay", "建筑物循环播放");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Sound_Item, "Sound.Item", "物品的音乐父标签");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Sound_Item_Destroy, "Sound.Item.Destroy", "物品的销毁标签");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Buff_Type_Policy_PeaceProtection, "Buff.Type.Policy.PeaceProtection", "免战令政策");
 	
 	// When extending EastRimWorld, you can create your own movement modes ,but you need to update GetCustomMovementModeTagMap()
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(Movement_Mode_Custom, "Movement.Mode.Custom", "This is invalid and should be replaced with custom tags.  See EastRimWorldGameplayTags::CustomMovementModeTagMap.");
@@ -364,6 +419,7 @@ namespace EastRimWorldGameplayTags
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SmartObject_AnimalTrough_Normal, "SmartObject.AnimalTrough.Normal", "动物食槽_中型");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SmartObject_AnimalTrough_Big, "SmartObject.AnimalTrough.Big", "动物食槽_大型");
 	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SmartObject_Facility, "SmartObject.Facility", "设备交互");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(SmartObject_Build, "SmartObject.Build", "建造类");
 	// Unreal Movement Modes
 	const TMap<uint8, FGameplayTag> MovementModeTagMap =
 	{

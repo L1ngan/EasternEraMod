@@ -142,13 +142,36 @@ protected:
 	
 	UFUNCTION(BlueprintImplementableEvent, Category = Ability, DisplayName = "OnCancelAbility")
 	void K2_OnCancelAbility();
-	
+
+	// 动作蒙太奇连续模式下，转发循环段内的 GameplayEvent；仅调用过 InitializeActionMontage 的动作蓝图会触发。
+	UFUNCTION(BlueprintImplementableEvent, Category = "Action|Montage")
+	void OnContinuousLoopEvent(FGameplayTag EventTag, FGameplayEventData EventData);
+
 	UFUNCTION(BlueprintCallable,BlueprintImplementableEvent, Category = Ability, DisplayName = "OnActionBegin")
 	void K2_OnActionBegin();
 	UFUNCTION(BlueprintCallable,BlueprintImplementableEvent, Category = Ability, DisplayName = "OnActionLoop")
 	void K2_OnActionLoop();
 	UFUNCTION(BlueprintCallable,BlueprintImplementableEvent, Category = Ability, DisplayName = "OnActionEnd")
 	void K2_OnActionEnd();
+
+	// 动作蒙太奇 Start→Loop→Loop 连续播放：识别连续段、管理首次循环初始化、循环事件转发与结束阶段防重入，供需要消除 Start/Loop 切换空档的动作蓝图（如 GA_StartLoopActionAbility）调用；不调用则对其他动作无影响。
+	UFUNCTION(BlueprintCallable, Category = "Action|Montage", meta = (AutoCreateRefTerm = "EventTags"))
+	void InitializeActionMontage(UAnimMontage* Montage, FName StartSection, FName LoopSection, const FGameplayTagContainer& EventTags);
+
+	UFUNCTION(BlueprintCallable, Category = "Action|Montage")
+	void BindActionMontageSectionChanged();
+
+	UFUNCTION(BlueprintPure, Category = "Action|Montage")
+	bool ShouldPlayActionLoopMontage() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Action|Montage")
+	void HandleActionStartCompleted();
+
+	UFUNCTION(BlueprintCallable, Category = "Action|Montage")
+	void HandleActionMontageInterrupted();
+
+	UFUNCTION(BlueprintCallable, Category = "Action|Montage")
+	void BeginActionMontageEnd();
 
 	/** Make gameplay effect container spec to be applied later, using the passed in container */
 	UFUNCTION(BlueprintCallable, Category = Ability, meta=(AutoCreateRefTerm = "EventData"))
@@ -225,9 +248,22 @@ public:
 	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category="AbilityStruct")
 	FGameAbilityStruct GameAbilityStruct;
 
+	/** 武学技能词条 ChangeAbilityParam：冷却实数增量之和，参与 (表基础秒数 + 本值) * MartialArtsSkillEntryCooldownPercentMultiplier。 */
+	UPROPERTY(Transient, BlueprintReadOnly, Category = "AbilityStruct|SkillEntry")
+	float MartialArtsSkillEntryCooldownValueDelta = 0.f;
+	/** 武学技能词条：各 CD 百分比增量累乘 Π(1+小数百分比)。 */
+	UPROPERTY(Transient, BlueprintReadOnly, Category = "AbilityStruct|SkillEntry")
+	float MartialArtsSkillEntryCooldownPercentMultiplier = 1.f;
+
 	// 是否被打断
 	UPROPERTY(BlueprintReadWrite)
 	bool IsAbort { false };
+	// 读档时按存档的"结束"状态恢复：结束段的结算在存档前已经做过，恢复后不能再结算一次（控制器恢复技能状态时置位）
+	UPROPERTY(BlueprintReadWrite)
+	bool bRestoredInEndState { false };
+	// 动作技能结束段是否跳过结算：被中止或被外部打断（IsAbort），或读档以结束状态恢复
+	UFUNCTION(BlueprintPure, Category = "Action")
+	bool ShouldSkipActionSettlement() const { return IsAbort || bRestoredInEndState; }
 	//激活者
 	UPROPERTY(BlueprintReadWrite)
 	TObjectPtr<AActor> Activator;

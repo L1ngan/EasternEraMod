@@ -80,6 +80,11 @@ public:
 	ATTRIBUTE_ACCESSORS(UEastRimWorldHealthSet, PierceCriticalDamage);
 	ATTRIBUTE_ACCESSORS(UEastRimWorldHealthSet, SlashCriticalDamage);
 	ATTRIBUTE_ACCESSORS(UEastRimWorldHealthSet, BluntCriticalDamage);
+	ATTRIBUTE_ACCESSORS(UEastRimWorldHealthSet, PoisonCriticalDamage);
+	ATTRIBUTE_ACCESSORS(UEastRimWorldHealthSet, TrueQiCriticalDamage);
+	ATTRIBUTE_ACCESSORS(UEastRimWorldHealthSet, RemoteDamage);
+	ATTRIBUTE_ACCESSORS(UEastRimWorldHealthSet, RemoteCriticalDamage);
+	ATTRIBUTE_ACCESSORS(UEastRimWorldHealthSet, TrueDamage);
 	ATTRIBUTE_ACCESSORS(UEastRimWorldHealthSet, PerceptionTemperature);
 	ATTRIBUTE_ACCESSORS(UEastRimWorldHealthSet, Inspiration);
 	ATTRIBUTE_ACCESSORS(UEastRimWorldHealthSet, MaxInspiration);
@@ -185,6 +190,8 @@ public:
 	ATTRIBUTE_ACCESSORS(UEastRimWorldHealthSet, RotValue);//腐烂值，死亡后开始持续增加
 	ATTRIBUTE_ACCESSORS(UEastRimWorldHealthSet, MaxRotValue);//腐烂值，死亡后开始持续增加
 	ATTRIBUTE_ACCESSORS(UEastRimWorldHealthSet, Species);//物种
+	ATTRIBUTE_ACCESSORS(UEastRimWorldHealthSet, KnockDownValue);//晕倒值
+	ATTRIBUTE_ACCESSORS(UEastRimWorldHealthSet, MaxKnockDownValue);
 
 private:
 	
@@ -375,6 +382,21 @@ private:
 	// 钝器暴击伤害 不可直接配置
 	UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (HideFromModifiers,AllowPrivateAccess = true))
 	FGameplayAttributeData BluntCriticalDamage;
+	// 毒素暴击伤害 不可直接配置
+	UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (HideFromModifiers,AllowPrivateAccess = true))
+	FGameplayAttributeData PoisonCriticalDamage;
+	// 真气暴击伤害 不可直接配置
+	UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (HideFromModifiers,AllowPrivateAccess = true))
+	FGameplayAttributeData TrueQiCriticalDamage;
+	// 远程伤害 不可直接配置
+	UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true))
+	FGameplayAttributeData RemoteDamage;
+	// 远程暴击伤害 不可直接配置
+	UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (HideFromModifiers,AllowPrivateAccess = true))
+	FGameplayAttributeData RemoteCriticalDamage;
+	// 真实伤害 不可直接配置（无视抗性/不吃增幅，独立输出不借用穿刺；真实伤害不可暴击）
+	UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true))
+	FGameplayAttributeData TrueDamage;
 	//体感温度
 	UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true))
 	FGameplayAttributeData PerceptionTemperature;
@@ -649,4 +671,9 @@ private:
 	//物种
 	UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true))
 	FGameplayAttributeData Species;
+	//晕倒值
+	UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true))
+	FGameplayAttributeData KnockDownValue;
+	UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Health", Meta = (AllowPrivateAccess = true))
+	FGameplayAttributeData MaxKnockDownValue;
 };

@@ -41,6 +41,7 @@ public:
 	static UCommonGameDialogDescriptor* CreateConfirmationYesNo(const FText& Header, const FText& Body);
 	static UCommonGameDialogDescriptor* CreateConfirmationYesNoLabel(const FText& Header, const FText& Body, const FText& YesLabel, const FText& NoLabel);
 	static UCommonGameDialogDescriptor* CreateConfirmationYesNoCancel(const FText& Header, const FText& Body);
+	static UCommonGameDialogDescriptor* CreateSetName(const FText& Header, const FText& Body, const FText& YesLabel, const FText& NoLabel, const TArray<FText>& OtherText);
 
 public:
 	/** The header of the message to display */
@@ -54,6 +55,9 @@ public:
 	/** The confirm button's input action to use. */
 	UPROPERTY(BlueprintReadWrite)
 	TArray<FConfirmationDialogAction> ButtonActions;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FText> OtherTextArr;
 };
 
 

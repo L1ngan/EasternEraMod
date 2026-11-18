@@ -1,6 +1,7 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "GASFramework.h"
+#include "SkillEntryStruct.h"
 
 #define LOCTEXT_NAMESPACE "FGASFrameworkModule"
 

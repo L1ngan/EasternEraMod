@@ -14,7 +14,16 @@ class UCommonGameDialogDescriptor;
 class ULocalPlayer;
 struct FFrame;
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCommonMessagingResultMCDelegate, ECommonMessagingResult, Result);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FCommonMessagingResultMCDelegate, ECommonMessagingResult, Result, const TArray<FText>&, OtherTextArr);
+
+
+UENUM()
+enum class EWidghtType : uint8
+{
+	None = 0 UMETA(DisplayName = "无"),
+	NormalWidght = 1 UMETA(DisplayName = "普通控件"),
+	SetName = 2 UMETA(DisplayName = "名字设置控件"),
+};
 
 /**
  * Allows easily triggering an async confirmation dialog in blueprints that you can then wait on the result.
@@ -32,6 +41,10 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintCosmetic, meta = (BlueprintInternalUseOnly = "true", WorldContext = "InWorldContextObject"))
 	static UAsyncAction_ShowConfirmation* ShowConfirmationYesNoLabel(
 		UObject* InWorldContextObject, FText Title, FText Message, FText YesLabel, FText NoLabel
+	);
+	UFUNCTION(BlueprintCallable, BlueprintCosmetic, meta = (BlueprintInternalUseOnly = "true", WorldContext = "InWorldContextObject"))
+	static UAsyncAction_ShowConfirmation* ShowSetName(
+		UObject* InWorldContextObject, FText Title, FText Message, FText YesLabel, FText NoLabel, const TArray<FText>& OtherTextArr
 	);
 
 	UFUNCTION(BlueprintCallable, BlueprintCosmetic, meta = (BlueprintInternalUseOnly = "true", WorldContext = "InWorldContextObject"))
@@ -57,7 +70,7 @@ public:
 	FCommonMessagingResultMCDelegate OnResult;
 
 private:
-	void HandleConfirmationResult(ECommonMessagingResult ConfirmationResult);
+	void HandleConfirmationResult(ECommonMessagingResult ConfirmationResult, TArray<FText> OtherText);
 
 	UPROPERTY(Transient)
 	TObjectPtr<UObject> WorldContextObject;
@@ -67,4 +80,7 @@ private:
 
 	UPROPERTY(Transient)
 	TObjectPtr<UCommonGameDialogDescriptor> Descriptor;
+	
+	UPROPERTY(Transient)
+	EWidghtType WidghtType = EWidghtType::NormalWidght;
 };

@@ -118,6 +118,27 @@ UCommonGameDialogDescriptor* UCommonGameDialogDescriptor::CreateConfirmationYesN
 	return Descriptor;
 }
 
+UCommonGameDialogDescriptor* UCommonGameDialogDescriptor::CreateSetName(const FText& Header, const FText& Body, const FText& YesLabel, const FText& NoLabel, const TArray<FText>& OtherTextArr)
+{
+	UCommonGameDialogDescriptor* Descriptor = NewObject<UCommonGameDialogDescriptor>();
+	Descriptor->Header = Header;
+	Descriptor->Body = Body;
+	Descriptor->OtherTextArr = OtherTextArr;
+
+	FConfirmationDialogAction ConfirmAction;
+	ConfirmAction.Result = ECommonMessagingResult::Confirmed;
+	ConfirmAction.OptionalDisplayText = YesLabel;
+
+	FConfirmationDialogAction DeclineAction;
+	DeclineAction.Result = ECommonMessagingResult::Declined;
+	DeclineAction.OptionalDisplayText = NoLabel;
+
+	Descriptor->ButtonActions.Add(ConfirmAction);
+	Descriptor->ButtonActions.Add(DeclineAction);
+
+	return Descriptor;
+}
+
 
 UCommonGameDialogDescriptor* UCommonGameDialogDescriptor::CreateConfirmationYesNoCancel(const FText& Header, const FText& Body)
 {

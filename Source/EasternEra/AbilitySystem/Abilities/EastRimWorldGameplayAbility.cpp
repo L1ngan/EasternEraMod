@@ -252,6 +252,31 @@ void UEastRimWorldGameplayAbility::RemoveWorkWarpTarget()
 	K2_RemoveWorkWarpTarget();
 }
 
+void UEastRimWorldGameplayAbility::InitializeActionMontage(UAnimMontage* Montage, FName StartSection, FName LoopSection, const FGameplayTagContainer& EventTags)
+{
+}
+
+void UEastRimWorldGameplayAbility::BindActionMontageSectionChanged()
+{
+}
+
+bool UEastRimWorldGameplayAbility::ShouldPlayActionLoopMontage() const
+{
+	return false;
+}
+
+void UEastRimWorldGameplayAbility::HandleActionStartCompleted()
+{
+}
+
+void UEastRimWorldGameplayAbility::HandleActionMontageInterrupted()
+{
+}
+
+void UEastRimWorldGameplayAbility::BeginActionMontageEnd()
+{
+}
+
 float UEastRimWorldGameplayAbility::GetBeatBackTime()
 {
 	return 0.f;

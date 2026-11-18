@@ -130,3 +130,15 @@ UCommonActivatableWidgetContainerBase* UPrimaryGameLayout::GetLayerWidget(FGamep
 {
 	return Layers.FindRef(LayerName);
 }
+
+void UPrimaryGameLayout::ClearLayerWidgets()
+{
+	for (const auto& LayerKVP : Layers)
+	{
+		if (auto CurActiveWidget=LayerKVP.Value->GetActiveWidget())
+		{
+			CurActiveWidget->DeactivateWidget();
+		}
+		LayerKVP.Value->ClearWidgets();
+	}
+}

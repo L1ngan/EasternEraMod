@@ -76,6 +76,9 @@ public:
 	ATTRIBUTE_ACCESSORS(UEastRimWorldCombatSet, BluntFixedAttack);
 	ATTRIBUTE_ACCESSORS(UEastRimWorldCombatSet, PoisonFixedAttack);
 	ATTRIBUTE_ACCESSORS(UEastRimWorldCombatSet, TrueQiFixedAttack);
+	ATTRIBUTE_ACCESSORS(UEastRimWorldCombatSet, RemoteIncrease);
+	ATTRIBUTE_ACCESSORS(UEastRimWorldCombatSet, RemoteResistance);
+	ATTRIBUTE_ACCESSORS(UEastRimWorldCombatSet, RemoteFixedAttack);
 	ATTRIBUTE_ACCESSORS(UEastRimWorldCombatSet, CriticalIncreasedInjury);
 	
 	ATTRIBUTE_ACCESSORS(UEastRimWorldCombatSet, FinalDamageIncrease);
@@ -84,6 +87,7 @@ public:
 	ATTRIBUTE_ACCESSORS(UEastRimWorldCombatSet, DefenseSupplement);
 	ATTRIBUTE_ACCESSORS(UEastRimWorldCombatSet, BaseCritical);
 	ATTRIBUTE_ACCESSORS(UEastRimWorldCombatSet, BaseCriticalResistance);
+	ATTRIBUTE_ACCESSORS(UEastRimWorldCombatSet, IgnoreDefense);
 	
 	mutable FOnHitAction OnHitAction;
 protected:
@@ -264,4 +268,16 @@ private:
 	//基础暴击抵抗
 	UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true))
 	FGameplayAttributeData BaseCriticalResistance;
+	//无视防御
+	UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true))
+	FGameplayAttributeData IgnoreDefense;
+	// 远程增幅（独立，不再复用挥砍）
+	UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true))
+	FGameplayAttributeData RemoteIncrease;
+	// 远程抗性
+	UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true))
+	FGameplayAttributeData RemoteResistance;
+	// 远程增加的固定攻击力
+	UPROPERTY(BlueprintReadOnly, Category = "EastRimWorld|Combat", Meta = (AllowPrivateAccess = true))
+	FGameplayAttributeData RemoteFixedAttack;
 };

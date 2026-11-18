@@ -17,7 +17,7 @@ class LQUICKFRAME_API ULGameRoleMng : public ULActorComp
 	TMap<FGuid, APawn*> PawnMap;
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 public:
-	UPROPERTY(BlueprintAssignable)
+	UPROPERTY(BlueprintAssignable,BlueprintCallable)
 	FOnRegistedRoleChange OnRegistedRoleChange;
 	//注册AI
 	UFUNCTION(BlueprintCallable, Category = "GameRoleMng")

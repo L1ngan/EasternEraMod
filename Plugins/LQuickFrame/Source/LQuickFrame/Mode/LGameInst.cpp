@@ -203,7 +203,7 @@ void ULGameInst::RemoveAllPoolByLevel(FName LevelName)
 	PoolActor.Remove(MapName);
 }
 
-bool ULGameInst::SetGamePlaySpeed(int InSpeedIndex)
+bool ULGameInst::SetGamePlaySpeed(int InSpeedIndex,bool bForced)
 {
 	if (bOpenLoading)
 	{
@@ -253,12 +253,30 @@ void ULGameInst::PauseGamePlay(bool bPauseGame)
 {
 	if (bPauseGame)
 	{
-		BackGamePlaySpeedIndex = CurGamePlaySpeedIndex;
+		if (bOpenLoading)
+		{
+			return;
+		}
+		if (CurGamePlaySpeedIndex != 0)
+		{
+			BackGamePlaySpeedIndex = CurGamePlaySpeedIndex;
+		}
+		else
+		{
+			BackGamePlaySpeedIndex = 1;
+		}
 		SetGamePlaySpeed(0);
 	}
 	else
 	{
-		CurGamePlaySpeedIndex = BackGamePlaySpeedIndex;
+		if (BackGamePlaySpeedIndex != 0)
+		{
+			CurGamePlaySpeedIndex = BackGamePlaySpeedIndex;
+		} 
+		else
+		{
+			CurGamePlaySpeedIndex = 1;
+		}
 		SetGamePlaySpeed(CurGamePlaySpeedIndex);
 	}
 }
@@ -272,8 +290,6 @@ ULevel* ULGameInst::GetCurLevel()
 		{
 			if (StreamingLevel && StreamingLevel->GetWorldAssetPackageName().Contains(LevelPackageName))
 			{
-				UE_LOG(LogTemp, Warning, TEXT("Found StreamingLevel: %s"), *StreamingLevel->GetName());
-            
 				// 获取实际加载的 ULevel 实例
 				return StreamingLevel->GetLoadedLevel();
 			}
@@ -293,14 +309,18 @@ bool ULGameInst::CheckLowerThanVersion(FString InVersion)
 	InVersion.ParseIntoArray(InVersionParts, TEXT("."), true);
 	if (InVersionParts.Num() < 2)
 	{
+		// 版本号格式不正确，返回 false（视为不满足要求）
 		return false;
 	}
 	TArray<FString> GameVersionParts;
 	GameVersion.ParseIntoArray(GameVersionParts, TEXT("."), true);
 	if (GameVersionParts.Num() < 2)
 	{
+		// 游戏版本号格式不正确，返回 false（视为不满足要求）
 		return false;
 	}
+	
+	// 比较主版本号
 	int32 InMajorVersion = FCString::Atoi(*InVersionParts[0]);
 	int32 GameMajorVersion = FCString::Atoi(*GameVersionParts[0]);
 	if (InMajorVersion < GameMajorVersion)
@@ -311,10 +331,85 @@ bool ULGameInst::CheckLowerThanVersion(FString InVersion)
 	{
 		return false;
 	}
+	
+	// 主版本号相同，比较次版本号
 	int32 InMinorVersion = FCString::Atoi(*InVersionParts[1]);
 	int32 GameMinorVersion = FCString::Atoi(*GameVersionParts[1]);
+	if (InMinorVersion < GameMinorVersion)
+	{
+		return true;
+	}
+	else if (InMinorVersion > GameMinorVersion)
+	{
+		return false;
+	}
 	
-	return InMinorVersion < GameMinorVersion;
+	// 主版本号和次版本号都相同，比较补丁版本号（如果存在）
+	// 例如：1.0.0 vs 1.0.1
+	if (InVersionParts.Num() >= 3 && GameVersionParts.Num() >= 3)
+	{
+		int32 InPatchVersion = FCString::Atoi(*InVersionParts[2]);
+		int32 GamePatchVersion = FCString::Atoi(*GameVersionParts[2]);
+		return InPatchVersion < GamePatchVersion;
+	}
+	
+	// 如果版本号格式不一致（一个有补丁版本，一个没有），认为版本相同，返回 false
+	// 例如：1.0 vs 1.0.0 视为相同
+	return false;
+}
+
+bool ULGameInst::CheckLessThanOrEqualVersion(FString InVersion)
+{
+	TArray<FString> InVersionParts;
+	InVersion.ParseIntoArray(InVersionParts, TEXT("."), true);
+	if (InVersionParts.Num() < 2)
+	{
+		// 版本号格式不正确，返回 false（视为不满足要求）
+		return false;
+	}
+	TArray<FString> GameVersionParts;
+	GameVersion.ParseIntoArray(GameVersionParts, TEXT("."), true);
+	if (GameVersionParts.Num() < 2)
+	{
+		// 游戏版本号格式不正确，返回 false（视为不满足要求）
+		return false;
+	}
+	
+	// 比较主版本号
+	int32 InMajorVersion = FCString::Atoi(*InVersionParts[0]);
+	int32 GameMajorVersion = FCString::Atoi(*GameVersionParts[0]);
+	if (InMajorVersion < GameMajorVersion)
+	{
+		return true; // InVersion < GameVersion
+	}
+	else if (InMajorVersion > GameMajorVersion)
+	{
+		return false; // InVersion > GameVersion
+	}
+	
+	// 主版本号相同，比较次版本号
+	int32 InMinorVersion = FCString::Atoi(*InVersionParts[1]);
+	int32 GameMinorVersion = FCString::Atoi(*GameVersionParts[1]);
+	if (InMinorVersion < GameMinorVersion)
+	{
+		return true; // InVersion < GameVersion
+	}
+	else if (InMinorVersion > GameMinorVersion)
+	{
+		return false; // InVersion > GameVersion
+	}
+	
+	// 主版本号和次版本号都相同，比较补丁版本号（如果存在）
+	if (InVersionParts.Num() >= 3 && GameVersionParts.Num() >= 3)
+	{
+		int32 InPatchVersion = FCString::Atoi(*InVersionParts[2]);
+		int32 GamePatchVersion = FCString::Atoi(*GameVersionParts[2]);
+		return InPatchVersion <= GamePatchVersion; // 小于等于
+	}
+	
+	// 如果版本号格式不一致（一个有补丁版本，一个没有），认为版本相同，返回 true
+	// 例如：1.0 vs 1.0.0 视为相同，所以 1.0 <= 1.0.0 返回 true
+	return true;
 }
 
 void ULGameInst::OnClear()
