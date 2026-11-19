@@ -109,7 +109,7 @@ Content/Mods/QingYunZongFu/
 ```
 
 - 继承下来的：槽位 `ArmorType`、男女外观资产、图标、物品标签 `Inventory.Item.Armor.LV1.ShiZhuang`（时装）、白色品质。
-- **槽位只能继承模板的**（SDK 结构写不进 `ArmorType`），做上衣就选一件上衣做模板。
+- 槽位 `ArmorType`：2026-11 之后的游戏版本里写了就以你写的为准（如 `"ArmorType": "EModArmorType::Socks"`，也可以写序号），不写沿用模板；更早的版本里 SDK 结构写不进 `ArmorType`，只能继承模板，所以做上衣仍建议选一件上衣做模板。
 - 想换外观就写 `ApparelMaleDataAsset` / `ApparelFemaleDataAsset`，路径从第 5 节或官方防具表里抄。图标同理写 `ItemIcon`。
 - 只写一个性别的外观资产时，另一个性别的列表里不会出现这件。
 - **模板最好选本身没有属性的时装**（第 5 节列的都没有）。宗门统一服饰不看属性，但这一行同时也是一件真实的防具，万一通过掉落等途径拿到实物，穿上就有模板的属性。
@@ -246,7 +246,7 @@ UE.UModEventBus.RegisterModEvent("OnNewGameStarted", function() UnlockAll() end)
 | 字段 | 说明 |
 |---|---|
 | `ID` | 必填，等于行名，带 ModId 前缀。和官方同名就是改官方那件。 |
-| `ArmorType` | 槽位。宗门时装只认 `Armor` / `Pants` / `Shoes`。用模板时只能继承。 |
+| `ArmorType` | 槽位。宗门时装界面目前只有 `Armor` / `Pants` / `Shoes` 三页。2026-11 之后的游戏版本写了就生效（不写沿用模板），更早的版本只能继承模板。外观资产的类必须与槽位对应，见第 6.4 节。 |
 | `ApparelMaleDataAsset` / `ApparelFemaleDataAsset` | 男 / 女外观资产路径。为空的那个性别看不到这件。 |
 | `ItemName` / `ItemDescription` / `FormatItemDescription.TextMain` | 名字和描述，锁定时的提示里也显示。 |
 | `RouteAcquiringDescribe` | 获取途径描述，锁定提示里显示。SDK 结构写不进去，只能继承模板（官方时装多为空）；要写就改用游戏结构名 `/Script/EastRimWorld.CharacterApparel` 写全字段。 |
@@ -326,11 +326,21 @@ UE.UModEventBus.RegisterModEvent("OnNewGameStarted", function() UnlockAll() end)
 
 **这三个字段要 2026-11-17 之后更新的游戏版本才生效，更早的游戏版本里填了也不起作用。**
 
+### 6.4 多层服饰（内衣、袜、外裤叠穿）
+
+> 2026-11 新增，测试中。规则、槽与外观资产类的对应表见开发指南 4.9「多层服饰」。
+
+- 层就是外观资产的类：内裤用 `BP_CDA_Apparel_Underwear`、抹胸用 `BP_CDA_Apparel_UpperUnderWear`、丝袜用 `BP_CDA_Apparel_Socks`、披风用 `BP_CDA_Apparel_Back`，外衣外裤照旧。服饰行的 `ArmorType` 写对应的槽（`Underwear` / `UpperUnderwear` / `Socks` / `Back`），`TemplateID` 填同部位的官方行即可（模板只提供数值）。槽位和模板不同时，男女外观资产不继承模板，只用你写的；只写女款时男弟子在这一层什么都不显示。
+- 外观资产的类必须和槽对应，否则换装时脱不下来。启动参数加 `-ModConsole` 后执行 `Mod.CheckApparel <ModId>` 自检。
+- 外层盖不盖内层看**外层**外观资产的 `HiddenCDA_Classes`：你自己的裙子不写 `BP_CDA_Apparel_Socks_C` 就能透出丝袜；官方裤子写了 Socks、Underwear，搭官方裤子时这两层不显示。官方上衣都写了 `BP_CDA_Apparel_Accessory_C`，所以披风请用 `Back` 而不是 `Accessory`。
+- 模型上外层要比内层整体外扩一点，避免共面闪烁；同一层只能穿一件。
+- 宗门时装界面的分层选择会晚于接口提供，在那之前用个人时装接口按层试穿（第 7 节）。
+
 ---
 
 ## 7. 个人时装（顺带）
 
-只想给某一个弟子穿，不走宗门时装界面，用 Lua 的个人时装接口 `SetCharacterApparel(角色, 槽位, 服饰 ID)`（开发指南 4.9）。服饰 ID 同样是防具表的行，第 3.3 节做的服饰行可以直接用；个人时装还支持背饰 `Accessory`、发簪 `Hairpin` 两个宗门界面没有的槽。
+只想给某一个弟子穿，不走宗门时装界面，用 Lua 的个人时装接口 `SetCharacterApparel(角色, 槽位, 服饰 ID)`（开发指南 4.9）。服饰 ID 同样是防具表的行，第 3.3 节做的服饰行可以直接用；个人时装还支持宗门界面没有的槽：饰品 `Accessory`、发簪 `Hairpin`，以及 2026-11 新增的 `Underwear`、`UpperUnderwear`、`Socks`、`Back`（第 6.4 节）。
 
 ---
 

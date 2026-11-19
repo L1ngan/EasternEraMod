@@ -7,6 +7,7 @@
 #include "GameplayTagContainer.h"
 #include "Animation/BlendSpace.h"
 #include "ItemDataStruct.h"
+#include "CharacterDataStruct.h"
 #include "EquipmentDataStruct.generated.h"
 
 
@@ -115,9 +116,9 @@ struct FModCharacterApparel : public FModCharacterEquipment
 {
 	GENERATED_BODY()
 
-	//防具类型
+	//防具类型（槽位）。合并进游戏表时按枚举名对应游戏的 EArmorType；不填（None）时沿用 TemplateID 模板行的槽位
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Apparel")
-	uint8 ArmorType = 0;
+	EModArmorType ArmorType = EModArmorType::None;
 
 	//男外观数据资产引用
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Apparel")

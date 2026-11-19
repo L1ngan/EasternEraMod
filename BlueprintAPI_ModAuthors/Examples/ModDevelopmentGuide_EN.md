@@ -393,6 +393,7 @@ You can also edit a disciple without the map: point the camera at the disciple i
 | `ResetCharacterApparels(Character)` | Removes apparel set by mods: disciples of the player's sect go back to the sect apparel rules, other characters go back to showing their equipped gear; returns bool |
 | `RemoveCharacterPersonalApparel(Character, Slot)` | Drops one slot from the personal apparel so it follows the sect apparel again (only for disciples of the player's sect); returns bool |
 | `GetCharacterPersonalApparels(Character)` | The personal apparel as a "slot → apparel ID" map; a None value means the slot is left empty |
+| `GetCharacterApparel(Character)` | What the character currently shows, as a "slot → apparel ID" map (the layered result when sect uniform or personal apparel is in use, otherwise the equipped gear; empty slots are left out). Works for visitors too. Added 2026-11 (in testing) |
 | `SetCharacterCustomizationId(Character, ProfileId)` | Switches the customization preset (body, face, hair); apparel already set is kept; returns bool. Since November 2026 the chosen preset is stored in the mod data area (see [4.10](#410-customization-body-face-hair-colors)) instead of changing the character's own preset, so the character goes back to its own preset when the mod that wrote it is disabled. Switching the preset also clears this character's customization edits from 4.10 |
 | `GetCharacterCustomizationIds(Character)` | → `ids, currentId`: every preset ID with the character's gender that `SetCharacterCustomizationId` accepts (rows added through JSON included, in table order), plus the character's current preset. Added November 2026. |
 | `GetCustomizationPresetInfo(nil, ProfileId)` | → `ok, name, avatar`: the preset's name and thumbnail (`Texture2D`, may be nil, loaded synchronously). Added November 2026. |
@@ -403,8 +404,8 @@ local ids, currentId = UE.UModLuaLibrary.GetCharacterCustomizationIds(Character)
 ```
 
 - `Character` must be a fully initialized human disciple (`AEastRimWorldCharacter_Human`).
-- `Slot` accepts `UE.EArmorType.Helmet`, `Armor`, `Pants`, `Shoes`, and since 2026-11 also `Accessory` (accessories such as back items, worn together with a hat) and `Hairpin` (in testing). The equipment panel does not show these two slots yet; mods dress them with the functions in this section. Temporary copies such as sect battle doubles show the character's original appearance.
-- `ApparelId` must be a row of the equipment table (`EquipmentConfig`) whose slot matches `Slot`.
+- `Slot` accepts `UE.EArmorType.Helmet`, `Armor`, `Pants`, `Shoes`; since 2026-11 also `Accessory`, `Hairpin`, `Underwear` (lower underwear), `UpperUnderwear`, `Socks` (socks, stockings, leg wraps) and `Back` (capes, shoulder pieces, back items) (in testing). The equipment panel does not show the new slots yet; mods dress them with the functions in this section. Different slots show at the same time, so underwear, stockings and trousers can be layered; see "Layered apparel" below.
+- `ApparelId` must be a row of the equipment table (`EquipmentConfig`) whose slot matches `Slot`, and the appearance asset (CDA) for the character's gender must be of the appearance class of that slot (table below); otherwise the call returns false and writes to the mod log.
 - `ProfileId` must be a row of the customization preset table (`CharacterAppearancePreset`) with the same gender as the character's current preset. The sect leader and characters that use the protagonist's appearance are rejected. New bodies, faces and hairstyles can be added as rows of `CharacterAppearancePreset` and `CharacterAnatomyProfiles` through JSON (see the ParagonSunWukong example).
 - In game versions before November 2026, the gender check in `SetCharacterCustomizationId` read the wrong field of the preset table, so it returned false even for presets of the same gender. Versions that include `GetCharacterCustomizationIds` have the fix.
 - Apparel changes are stored in the character's save data and the chosen preset in the mod data area; both survive save/load and leaving and returning to a place. Customization presets are not affected by sect apparel.
@@ -417,6 +418,31 @@ local ids, currentId = UE.UModLuaLibrary.GetCharacterCustomizationIds(Character)
 - `NewGameLoad=true` in ModInfo.json only makes a mod load early during new-game setup; it is still loaded when a save is loaded, so it has no effect on personal apparel. Earlier versions of this guide said such mods are not loaded when loading a save; that was wrong.
 - Characters outside the player's sect (visitors and so on) are not managed by sect apparel; these functions change their look directly, and the first switch from "show equipped gear" to custom apparel fills the other slots with what the character currently wears.
 - The sect apparel UI does not show which disciples use personal apparel.
+
+**Layered apparel** (added 2026-11, in testing):
+
+The character customizer layers apparel by the **class** of the appearance asset: every garment is its own mesh following the body pose, one garment per class, and different classes show together; the classes listed in a garment's `HiddenCDA_Classes` are hidden while it is worn. Each slot maps to one class:
+
+| Slot `EArmorType` | Appearance class | Hidden by official clothes? |
+|---|---|---|
+| `Helmet` | `BP_CDA_Apparel_Hat` | — |
+| `Hairpin` | `BP_CDA_Apparel_Glasses` | not by hats |
+| `Armor` | `BP_CDA_Apparel_UpperBody` | — |
+| `UpperUnderwear` | `BP_CDA_Apparel_UpperUnderWear` | by official tops |
+| `Accessory` | `BP_CDA_Apparel_Accessory` | **by every official top**; use it for bracers and the like |
+| `Back` | `BP_CDA_Apparel_Back` (new class, 2026-11) | no; use it for capes and back items |
+| `Pants` | `BP_CDA_Apparel_LowerBody` | — |
+| `Underwear` | `BP_CDA_Apparel_Underwear` | by official trousers |
+| `Socks` | `BP_CDA_Apparel_Socks` | by official trousers |
+| `Shoes` | `BP_CDA_Apparel_Feet` | — |
+
+- Whether an outer layer hides an inner one is decided by the outer asset's `HiddenCDA_Classes`: leave `BP_CDA_Apparel_Socks_C` out of your skirt and the stockings show through.
+- Clearing either underwear slot brings the default underwear back.
+- Layers are separate meshes; avoid z-fighting in the model by making outer layers slightly larger. There is no render-order switch.
+- One garment per layer (two pairs of stockings cannot be stacked).
+- If an asset's class does not match its slot, the garment cannot be taken off again. With `-ModConsole`, run `Mod.CheckApparel [ModId]` to check the apparel rows of your mod's JSON: rows whose class does not match, rows missing a male/female asset, assets that fail to load.
+- Since 2026-11 the `ArmorType` written in a mod apparel row takes effect (it used to be dropped and inherited from `TemplateID`); leave it out to keep the template's slot. When the slot differs from the template's, the male/female appearance assets are not inherited from the template: only the ones you write are used (female-only items show nothing on male characters in that layer).
+- Layer selection in the sect apparel UI comes later; until then dress layers with the functions in this section.
 
 ### 4.10 Customization: body, face, hair, colors
 
@@ -431,7 +457,7 @@ local ids, currentId = UE.UModLuaLibrary.GetCharacterCustomizationIds(Character)
 | `GetHairstyleSlots(WorldContext)` | → array of hairstyle slots with `ID`, `DisplayName`, `bAllowEmpty`; currently `Head` (hair) and `Beard` (may be empty). Pass `self.ModInfo` as `WorldContext` |
 | `GetCharacterHairstyles(Character, SlotId)` | → `options, currentId`: hairstyles of this slot that fit the character's current anatomy (each with `HairstyleId`, `DisplayName`, `Icon`), plus the character's current hairstyle ID |
 | `SetCharacterHairstyle(Character, SlotId, HairstyleId)` | Switches the hairstyle; `HairstyleId` comes from `GetCharacterHairstyles`; pass an empty string to remove the hairstyle of a slot that may be empty; returns bool |
-| `ResetCharacterCustomization(Character)` | Undoes every customization change a mod made to this character (body, face, hair, colors and the chosen preset) and returns to the game's own look; returns bool |
+| `ResetCharacterCustomization(Character)` | Undoes every customization change a mod made to this character (body, face, hair, colors, the switched body type, body parts and the chosen preset) and returns to the game's own look; returns bool |
 
 ```lua
 local params = UE.UModLuaLibrary.GetCharacterShapeParams(Character)
@@ -469,10 +495,34 @@ Slider `ParamId`s:
 | `Face_CheekBone` | Cheekbone | -1 to 1 | morph target `Sculpt_CheekBone` (from the new game character editor) |
 | `Face_LipLower` | Lower lip | -1 to 1 | morph target `Sculpt_LipLower` (same) |
 | `Face_NoseBridge` | Nose bridge | -1 to 1 | morph target `Sculpt_NoseBridge` (same) |
+| `Face_BrowHeight`, `Face_BrowRidge`, `Face_EyeDistance`, `Face_EyeCant`, `Face_EyeLid`, `Face_CheekFull`, `Face_ChinDepth`, `Face_ChinLength`, `Face_JawAngle`, `Face_JawWidth`, `Face_LipUpper`, `Face_MouthWidth`, `Face_NoseTipHeight`, `Face_NoseTipDepth`, `Face_NoseWidth` | the other 15 face sliders of the new-game character creator | -1 to 1 | morph targets `Sculpt_<name>` (added 2026-11, in testing) |
 | `EyeRoughness` | Eye shadow roughness | 0 to 1 | skin material parameter `Eye Roughness` |
 | `LipsRoughness` | Lip gloss | 1.5 to 0.35 | skin material parameter `Lips Roughness` (the official slider runs from high to low) |
 
 Color `ParamId`s: `SkinTint` (skin), `LipsTint` (lips), `TattooTint` (tattoo), `Eyes_IrisHueColor` (iris), `HDR_ColorPicker_Hair_Root` (hair, material parameter `TipColor`).
+
+`Category` values are `Body`, `Ear`, `Eyes`, `Jaw`, `Mouth`, `Nose`, `Face`, `Skin`. The display names of `Jaw_MorphTarget_Height` and `Nose_MorphTarget_Height` are just "height" and need the category next to them; `EyeRoughness`, `LipsRoughness`, `LipsTint` and `TattooTint` have no proper names in the official UI either. Match on `ID`.
+
+#### Body types and body parts (ears, tails, ...)
+
+> Added 2026-11, in testing.
+
+| API (`UE.UModLuaLibrary`) | Notes |
+|---|---|
+| `GetCharacterBodyTypeId(Character)` | → the character's body type (a `CharacterAnatomyProfiles` row name such as `ERWFemaleAdult`) |
+| `GetCharacterBodyTypes(Character)` | → switchable body types (`ID`, `DisplayName`, `Icon`, `bCurrent`): rows of the `CharacterBodyTypes` table with the character's gender and race |
+| `SetCharacterBodyType(Character, BodyTypeId)` | Switches only the body type; slider values, hair, colors and apparel stay; returns bool |
+| `GetCharacterBodyPartSlots(Character)` | → body part slots for the current body type (`ID`, `DisplayName`, `bAllowEmpty`) |
+| `GetCharacterBodyPartOptions(Character, SlotId)` | → parts of a slot (`PartId`, `DisplayName`, `Icon`), filtered by the asset's body types |
+| `GetCharacterBodyPart(Character, SlotId)` | → `worn, partId`; false when nothing is worn; `partId` is None when the worn asset is not in the table |
+| `SetCharacterBodyPart(Character, SlotId, PartId)` | Changes the part; an empty string removes it (only for slots that allow empty); returns bool |
+
+- The customizer's own "set anatomy" replaces the whole profile with that body's default (all face edits gone); this API only changes the body type in the profile. The head is matched by mesh in the target body type (the first head otherwise). Same gender and race only. Works for the sect master too.
+- Add the body type itself to `CharacterAnatomyProfiles` as before (registered as human, using the game's humanoid skeleton), then register it in `CharacterBodyTypes` (`/Script/EastRimWorld.ModBodyTypeConfig`): row name = body type ID, `BaseAnatomy` = the official body type to match when listing hairstyles and parts (official hairstyles never list your body type), `DisplayName`, `Icon`. The official human body types are already registered. If the body type row disappears (the mod that added it is disabled), the character shows its original look.
+- A body part slot is an appearance class: create a subclass of `BP_CDA_Apparel` in your own pak (e.g. `BP_CDA_Apparel_YaoEar`); each ear or tail is an asset of that class skinned to the game skeleton, with `Anatomies` listing the body types (empty = any). Equipment never touches these classes, so ears do not replace hats and tails do not replace trousers. The class must not be one used by any equipment slot.
+- Slot table `CharacterBodyPartSlots` (`/Script/EastRimWorld.ModBodyPartSlotConfig`): `DisplayName`, `CDAClass` (full class path ending in `_C`), `bAllowEmpty`, `BodyTypeIds` (empty = all). Part table `CharacterBodyParts` (`/Script/EastRimWorld.ModBodyPartConfig`): `SlotId`, `CDA`, `DisplayName`, `Icon`.
+- Parts follow the body pose; bones the body skeleton does not have (tail bones) stay in the bind pose.
+- Body types and parts are stored in the mod data area like other customization edits: saved with the game, hidden while the mod is disabled, restored when it is enabled again, undone by `ResetCharacterCustomization`. Write functions must be called from a mod's Lua.
 
 ### 4.11 Portraits
 

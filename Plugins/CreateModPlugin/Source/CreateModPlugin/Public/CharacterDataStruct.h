@@ -42,6 +42,14 @@ enum class EModArmorType : uint8
 	Accessory,
 	//发簪（与游戏 EArmorType::Hairpin 同序号）
 	Hairpin,
+	//下身内衣（与游戏 EArmorType::Underwear 同序号；外观资产用 BP_CDA_Apparel_Underwear）
+	Underwear,
+	//上身内衣（与游戏 EArmorType::UpperUnderwear 同序号；外观资产用 BP_CDA_Apparel_UpperUnderWear）
+	UpperUnderwear,
+	//袜（与游戏 EArmorType::Socks 同序号；外观资产用 BP_CDA_Apparel_Socks）
+	Socks,
+	//披挂（与游戏 EArmorType::Back 同序号；外观资产用 BP_CDA_Apparel_Back）
+	Back,
 	//标记末位
 	Max UMETA(Hidden),
 };

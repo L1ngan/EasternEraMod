@@ -77,7 +77,7 @@
 1. **`bOverrideData` 设 `true`**。这样你写的数组（如 `MainAttributes`）会整个替换模板的数组；设成 `false` 会把你的数组**追加**到模板数组后面，主属性就变成"官方的 + 你的"两份。
 2. **`ID` 必须写，且等于行名**。不写会继承模板的 ID，等于又改了一遍官方那一行。
 3. **布尔字段（`b` 开头、`true`/`false` 的）不管写没写都会生效**，没写就是 SDK 结构的默认值。比如拳套的 `bSecondaryWeapon`（双手各一只）官方是 `true`，用拳套做模板时必须显式写 `"bSecondaryWeapon": true`，否则会变成单手。
-4. **有几个字段 SDK 结构写不进去，只能继承模板**：武器的 `WeaponType`、防具的 `ArmorType`（SDK 里是数字，游戏里是枚举，类型对不上被跳过）、`ItemGradeLevel`、`RouteAcquiringDescribe`、`ToolType`。所以**做什么类型的武器就选什么类型的模板**（做刀选刀、做枪选枪），防具同理选同一槽位的模板。
+4. **有几个字段 SDK 结构写不进去，只能继承模板**：武器的 `WeaponType`、`ItemGradeLevel`、`RouteAcquiringDescribe`、`ToolType`；防具的 `ArmorType` 在 2026-11 之后的游戏版本里已能写（写了以你写的为准），更早的版本也只能继承。所以**做什么类型的武器就选什么类型的模板**（做刀选刀、做枪选枪），防具同理选同一槽位的模板。
 5. **写成默认值的字段不生效**：比如想把耐久改成 `-1`（无耐久），而 `-1` 恰好是默认值，就改不掉模板的值。遇到这种情况换一个本来就符合的模板，或改用游戏结构名写全字段。
 6. 空数组 `[]` 清不掉模板的数组（空数组被当成"没写"）。
 
@@ -461,7 +461,7 @@ UE.UModEventBus.RegisterModEvent("OnItemCrafted", function(EventName, Payload, P
 ### 7.1 防具
 
 - 表 `EquipmentConfig`，SDK 结构 `/Script/CreateModPlugin.ModCharacterApparel`。
-- 槽位 `ArmorType` 只能从模板继承，**选同一槽位的官方行做模板**（第 10.2 节）。
+- 槽位 `ArmorType`：2026-11 之后的游戏版本写了就生效，更早的版本只能从模板继承；为兼容旧版本，仍建议**选同一槽位的官方行做模板**（第 10.2 节）。
 - 外观由 `ApparelMaleDataAsset` / `ApparelFemaleDataAsset`（男 / 女外观资产）决定；只填一个性别时，另一个性别穿上看不到外观。借用官方外观时直接从官方行复制这两个路径，或者干脆继承模板的。
 - 生成表 `EquipmentType` 写 `Armor`。
 - 被攻击时扣耐久 `BeAttakedLossDurability`。
@@ -540,7 +540,7 @@ UE.UModEventBus.RegisterModEvent("OnItemCrafted", function(EventName, Payload, P
 
 | 字段 | 说明 |
 |---|---|
-| `ArmorType` | `Helmet` 帽子 / `Armor` 上衣 / `Pants` 裤 / `Shoes` 鞋 / `Accessory` 背饰 / `Hairpin` 发簪（后两个 2026-11 新增，装备面板暂不显示）。用模板时只能继承。 |
+| `ArmorType` | `Helmet` 帽子 / `Armor` 上衣 / `Pants` 裤 / `Shoes` 鞋 / `Accessory` 饰品 / `Hairpin` 发簪 / `Underwear` 下身内衣 / `UpperUnderwear` 上身内衣 / `Socks` 袜 / `Back` 披挂（后六个 2026-11 新增，装备面板暂不显示）。2026-11 之后的版本写了就生效，更早的版本只能继承模板；槽位和模板不同时，男女外观资产不继承模板，只用你写的。外观资产的类须与槽对应（开发指南 4.9「多层服饰」）。 |
 | `ApparelMaleDataAsset` / `ApparelFemaleDataAsset` | 男 / 女外观资产路径。 |
 | `MaterialVariantsIndex` | 外观资产里的材质变体序号，`-1` 不用。官方外观资产目前都没有材质变体，填了也没效果。 |
 | `MaterialColor` | 外观颜色参数。弟子身上贴外观时不读这个字段，**不要依赖它换色**。 |

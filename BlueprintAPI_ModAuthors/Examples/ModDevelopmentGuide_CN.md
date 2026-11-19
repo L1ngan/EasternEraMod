@@ -391,6 +391,7 @@ end
 | `ResetCharacterApparels(Character)` | 清掉 Mod 设的服饰：本门派弟子回到宗门服饰规则，其他角色回到按装备显示；返回 bool |
 | `RemoveCharacterPersonalApparel(Character, Slot)` | 去掉个人时装里某个槽，让它重新跟随宗门服饰（只对本门派弟子有效）；返回 bool |
 | `GetCharacterPersonalApparels(Character)` | 取个人时装：“槽 → 服饰 ID”的表，值为 None 表示该槽留空 |
+| `GetCharacterApparel(Character)` | 取角色身上当前显示的服饰：“槽 → 服饰 ID”的表（用宗门统一服饰、个人时装时是叠加后的结果，否则是穿着的装备；留空的槽不返回）。访客等非本门角色也能读。2026-11 新增（测试中） |
 | `SetCharacterCustomizationId(Character, ProfileId)` | 换捏脸预设（体型、脸型、发型），已设的服饰保留；返回 bool。2026-11 起换的预设存进 Mod 数据区（见 [4.10](#410-捏脸体型脸型发型颜色)），不改角色原有预设，写它的 Mod 停用后回到原预设；换预设会清掉这个角色在 4.10 里的捏脸改动 |
 | `GetCharacterCustomizationIds(Character)` | → `ids, currentId`：与角色同性别、能传给 `SetCharacterCustomizationId` 的全部预设 ID（含 JSON 加的行，按表内顺序），以及角色当前的预设。2026-11 新增 |
 | `GetCustomizationPresetInfo(nil, ProfileId)` | → `ok, name, avatar`：预设的名称和缩略图（`Texture2D`，可能为空，同步加载）。2026-11 新增 |
@@ -401,8 +402,8 @@ local ids, currentId = UE.UModLuaLibrary.GetCharacterCustomizationIds(Character)
 ```
 
 - `Character` 是初始化完成的人类弟子（`AEastRimWorldCharacter_Human`）。
-- `Slot` 收 `UE.EArmorType.Helmet`、`Armor`、`Pants`、`Shoes`，2026-11 起另有 `Accessory`（饰品，如背饰，与帽子同时存在）和 `Hairpin`（发簪）（测试中）。装备面板暂不显示这两个槽，Mod 用本节接口穿戴；宗门战等临时分身显示角色原有外观。
-- `ApparelId` 必须是装备配置表（`EquipmentConfig`）里的行，而且这件装备的槽位与 `Slot` 一致。
+- `Slot` 收 `UE.EArmorType.Helmet`、`Armor`、`Pants`、`Shoes`；2026-11 起另有 `Accessory`（饰品）、`Hairpin`（发簪）、`Underwear`（下身内衣）、`UpperUnderwear`（上身内衣）、`Socks`（袜、丝袜、绑腿）、`Back`（披挂：披风、护肩、背饰）（测试中）。装备面板暂不显示新槽，Mod 用本节接口穿戴。不同槽同时显示，内衣、袜、外裤可以叠穿，见下面「多层服饰」。
+- `ApparelId` 必须是装备配置表（`EquipmentConfig`）里的行，这件装备的槽位与 `Slot` 一致，而且角色这一性别的外观资产（CDA）是这个槽对应的外观资产类（见下表）；不符时返回 false 并写 Mod 日志。
 - `ProfileId` 必须是捏脸预设表（`CharacterAppearancePreset`）里的行，且性别与角色当前预设相同；掌门和使用主角外观的角色不接受。新的体型、脸型、发型可以用 JSON 往 `CharacterAppearancePreset`、`CharacterAnatomyProfiles` 加行（参考示例 ParagonSunWukong）。
 - 2026-11 前的游戏版本里，`SetCharacterCustomizationId` 的性别校验读错了预设表的字段，同性别的预设也会返回 false；包含 `GetCharacterCustomizationIds` 的版本已修复。
 - 服饰改动写进角色的存档数据，换的预设存进 Mod 数据区，存读档、离开地点再回来都会保留。捏脸预设不受宗门服饰影响。
@@ -415,6 +416,31 @@ local ids, currentId = UE.UModLuaLibrary.GetCharacterCustomizationIds(Character)
 - `ModInfo.json` 的 `NewGameLoad=true` 只是让 Mod 在新游戏设置阶段提前加载，读档时照常加载，对个人时装没有影响。之前的文档写成“读档时不加载”，是错的。
 - 不属于本门派的角色（访客等）不受宗门服饰管理，这几个函数直接改外观：第一次从按装备显示切到自定义时，其他槽先用当前穿着的服饰补齐，不会突然变空。
 - 宗门时装界面不提示谁在用个人时装。
+
+**多层服饰**（2026-11 新增，测试中）：
+
+游戏用的捏人插件按外观资产的**类**分层：每件衣服各挂一个跟随身体姿势的网格，同一个类同时只穿一件，不同的类同时显示；外观资产的 `HiddenCDA_Classes` 写了哪些类，穿上它时这些类就不显示（被盖住）。每个槽对应一个类：
+
+| 槽 `EArmorType` | 外观资产类 | 官方衣服会不会盖住它 |
+|---|---|---|
+| `Helmet` | `BP_CDA_Apparel_Hat` | — |
+| `Hairpin` | `BP_CDA_Apparel_Glasses` | 帽子不会盖住 |
+| `Armor` | `BP_CDA_Apparel_UpperBody` | — |
+| `UpperUnderwear` | `BP_CDA_Apparel_UpperUnderWear` | 官方上衣会盖住 |
+| `Accessory` | `BP_CDA_Apparel_Accessory` | **官方上衣都会盖住**，只适合护腕这类本该被袖子挡住的东西 |
+| `Back` | `BP_CDA_Apparel_Back`（2026-11 新增类） | 不会，披风、背饰请用它 |
+| `Pants` | `BP_CDA_Apparel_LowerBody` | — |
+| `Underwear` | `BP_CDA_Apparel_Underwear` | 官方裤子会盖住 |
+| `Socks` | `BP_CDA_Apparel_Socks` | 官方裤子会盖住 |
+| `Shoes` | `BP_CDA_Apparel_Feet` | — |
+
+- 外层盖不盖内层由**外层**外观资产的 `HiddenCDA_Classes` 决定：你自己的裙子不写 `BP_CDA_Apparel_Socks_C`，丝袜就会透出来；想让长裤盖住丝袜就写上。
+- 两个内衣槽清空后，游戏换回默认内衣，不会光身。
+- 各层是独立网格，避免共面闪烁要靠模型：外层整体比内层外扩一点，不要贴在同一个面上。游戏不提供改渲染顺序的开关。
+- 同一层只能穿一件（例如两件丝袜不能叠穿）。
+- 外观资产的类和槽对不上时，换装时这件衣服脱不下来。启动参数加 `-ModConsole` 后，控制台执行 `Mod.CheckApparel [ModId]` 可以逐行列出类不符、缺男/女款、资产加载失败的服饰行。
+- 2026-11 起 Mod 服饰行里写的 `ArmorType` 生效（以前合并时被丢掉、只能继承 `TemplateID` 模板的槽）；不写沿用模板。槽位和模板不同时，男女外观资产不继承模板，只用你写的（只写女款，男角色在这一层就不显示）。
+- 宗门服饰界面的分层选择会晚于接口提供；在那之前用本节接口按层给弟子穿戴。
 
 ### 4.10 捏脸：体型、脸型、发型、颜色
 
@@ -429,7 +455,7 @@ local ids, currentId = UE.UModLuaLibrary.GetCharacterCustomizationIds(Character)
 | `GetHairstyleSlots(WorldContext)` | → 发型槽数组，每项有 `ID`、`DisplayName`、`bAllowEmpty`；目前是 `Head`（头发）和 `Beard`（胡子，可留空）。`WorldContext` 传 `self.ModInfo` 即可 |
 | `GetCharacterHairstyles(Character, SlotId)` | → `options, currentId`：这个槽按角色当前体型可选的发型（每项 `HairstyleId`、`DisplayName`、`Icon`），以及角色当前的发型 ID |
 | `SetCharacterHairstyle(Character, SlotId, HairstyleId)` | 换发型，`HairstyleId` 取自 `GetCharacterHairstyles`；传空字符串摘掉这个槽的发型（只对允许留空的槽）；返回 bool |
-| `ResetCharacterCustomization(Character)` | 撤销 Mod 对这个角色捏脸的全部改动（体型、脸型、发型、颜色和换的预设），回到游戏原有外观；返回 bool |
+| `ResetCharacterCustomization(Character)` | 撤销 Mod 对这个角色捏脸的全部改动（体型、脸型、发型、颜色、换的体型档案、部位和换的预设），回到游戏原有外观；返回 bool |
 
 ```lua
 local params = UE.UModLuaLibrary.GetCharacterShapeParams(Character)
@@ -467,10 +493,49 @@ UE.UModLuaLibrary.SetCharacterHairstyle(Character, "Head", options[1].HairstyleI
 | `Face_CheekBone` | 颧骨 | -1 ~ 1 | 形变 `Sculpt_CheekBone`（新游戏捏人界面里的） |
 | `Face_LipLower` | 下唇 | -1 ~ 1 | 形变 `Sculpt_LipLower`（同上） |
 | `Face_NoseBridge` | 鼻梁 | -1 ~ 1 | 形变 `Sculpt_NoseBridge`（同上） |
+| `Face_BrowHeight` / `Face_BrowRidge` | 眉高 / 眉骨 | -1 ~ 1 | 形变 `Sculpt_BrowHeight` / `Sculpt_BrowRidge`（2026-11 新增，测试中，下同） |
+| `Face_EyeDistance` / `Face_EyeCant` / `Face_EyeLid` | 眼距 / 眼角 / 眼皮 | -1 ~ 1 | 形变 `Sculpt_EyeDistance` / `Sculpt_EyeCant` / `Sculpt_EyeLid` |
+| `Face_CheekFull` | 脸颊饱满 | -1 ~ 1 | 形变 `Sculpt_CheekFull` |
+| `Face_ChinDepth` / `Face_ChinLength` | 下巴前后 / 长短 | -1 ~ 1 | 形变 `Sculpt_ChinDepth` / `Sculpt_ChinLength` |
+| `Face_JawAngle` / `Face_JawWidth` | 颌角 / 腮宽 | -1 ~ 1 | 形变 `Sculpt_JawAngle` / `Sculpt_JawWidth` |
+| `Face_LipUpper` / `Face_MouthWidth` | 上唇 / 嘴宽 | -1 ~ 1 | 形变 `Sculpt_LipUpper` / `Sculpt_MouthWidth` |
+| `Face_NoseTipHeight` / `Face_NoseTipDepth` / `Face_NoseWidth` | 鼻尖 / 鼻翘 / 鼻翼 | -1 ~ 1 | 形变 `Sculpt_NoseTipHeight` / `Sculpt_NoseTipDepth` / `Sculpt_NoseWidth` |
 | `EyeRoughness` | 眼影光泽 | 0 ~ 1 | 皮肤材质参数 `Eye Roughness` |
 | `LipsRoughness` | 唇彩光泽 | 1.5 ~ 0.35 | 皮肤材质参数 `Lips Roughness`（官方滑条从大到小） |
 
 颜色 `ParamId`：`SkinTint`（肤色）、`LipsTint`（唇色）、`TattooTint`（纹身颜色）、`Eyes_IrisHueColor`（瞳色）、`HDR_ColorPicker_Hair_Root`（发色，材质参数 `TipColor`）。
+
+返回的 `Category` 为 `Body`、`Ear`、`Eyes`、`Jaw`、`Mouth`、`Nose`、`Face`、`Skin`。`Jaw_MorphTarget_Height`、`Nose_MorphTarget_Height` 的显示名都只是“高度”，要和 `Category` 一起显示；`EyeRoughness`、`LipsRoughness`、`LipsTint`、`TattooTint` 在官方界面里也没有正式名字，显示名是英文占位或空。判断请用 `ID`。
+
+#### 体型档案与部位（耳朵、尾巴等）
+
+> 2026-11 新增，测试中。
+
+| API（`UE.UModLuaLibrary`） | 说明 |
+|---|---|
+| `GetCharacterBodyTypeId(Character)` | → 角色当前的体型档案 ID（`CharacterAnatomyProfiles` 的行名，如 `ERWFemaleAdult`） |
+| `GetCharacterBodyTypes(Character)` | → 可切换的体型数组（每项 `ID`、`DisplayName`、`Icon`、`bCurrent`）：体型表 `CharacterBodyTypes` 里与角色同性别、同种族的行 |
+| `SetCharacterBodyType(Character, BodyTypeId)` | 只换体型档案，滑条数值、发型、颜色、服饰照旧；返回 bool |
+| `GetCharacterBodyPartSlots(Character)` | → 当前体型适用的部位槽（每项 `ID`、`DisplayName`、`bAllowEmpty`） |
+| `GetCharacterBodyPartOptions(Character, SlotId)` | → 这个槽可选的款式（每项 `PartId`、`DisplayName`、`Icon`），按外观资产的适用体型筛过 |
+| `GetCharacterBodyPart(Character, SlotId)` | → `worn, partId`：没戴返回 false；戴着的不是表里的款式时 `partId` 为 None |
+| `SetCharacterBodyPart(Character, SlotId, PartId)` | 换款式；`PartId` 传空字符串摘掉（只对允许留空的槽）；返回 bool |
+
+```lua
+local L = UE.UModLuaLibrary
+L.SetCharacterBodyType(Character, "MyMod_YaoF")
+for _, slot in ipairs({"Ear", "Tail"}) do
+    local options = L.GetCharacterBodyPartOptions(Character, slot)
+    if options:Num() > 0 then L.SetCharacterBodyPart(Character, slot, options[1].PartId) end
+end
+```
+
+- **体型**：插件自带的“换体型”会把整份档案换成那个体型的默认档案（捏脸全没了），这里只改档案里的体型。头在目标体型里找同一个，找不到用第一个；脸型数值保留，生不生效看那个头网格有没有同名形变。只能换成同性别、同种族的体型（衣服按角色性别取男女款）。掌门也能换。
+- 体型档案本身照旧用 JSON 往 `CharacterAnatomyProfiles` 加行（按人族登记、用游戏的人形骨架）；要能被换上，还要在体型表 `CharacterBodyTypes`（`StructName` 填 `/Script/EastRimWorld.ModBodyTypeConfig`）登记一行：行名=体型档案 ID，`BaseAnatomy`=参照的官方体型（选发型、选部位时按它匹配，官方发型的适用体型里不会写你的体型），`DisplayName`、`Icon`。官方人体体型（`ERWFemaleAdult`、`ERWMaleAdult`、`NPCFemale01~06`、`NPCMale01~12`）已登记。体型档案行不在了（加它的 Mod 停用）时，角色按原样显示。
+- **部位**：一个部位槽对应一个外观资产类。在自己的 pak 里建 `BP_CDA_Apparel` 的子类（如 `BP_CDA_Apparel_YaoEar`），每款耳朵、尾巴是这个类的一个外观资产（`SkeletalMesh` 蒙皮到游戏的人形骨架，`Anatomies` 写适用体型，空表示不限）。游戏换装只动装备槽对应的那几个类，**不碰部位类**，所以戴耳朵不顶帽子、长尾巴不用脱裤子；官方衣服也不盖住部位类。部位类不能是装备槽在用的类（上面多层服饰表里那些），否则 `SetCharacterBodyPart` 拒绝。
+- 部位槽表 `CharacterBodyPartSlots`（`/Script/EastRimWorld.ModBodyPartSlotConfig`）：行名=槽 ID，`DisplayName`、`CDAClass`（类的完整路径，带 `_C`）、`bAllowEmpty`、`BodyTypeIds`（哪些体型显示这个槽，空表示所有体型）。款式表 `CharacterBodyParts`（`/Script/EastRimWorld.ModBodyPartConfig`）：行名=款式 ID，`SlotId`、`CDA`、`DisplayName`、`Icon`。
+- 部位网格跟随身体骨架的姿势，身体骨架里没有的骨头（比如尾巴骨）停在绑定姿势、不会摆动。
+- 体型、部位和捏脸一样存进 Mod 数据区：随存档保存，写它的 Mod 停用后角色按原样显示，重新启用恢复，`ResetCharacterCustomization` 一并撤销。写入接口只能在 Mod 的 Lua 里调用。
 
 ### 4.11 立绘
 

@@ -106,6 +106,12 @@ enum class EModConfigType : uint8
 	TechCategoryUIConfig,
 	//角色立绘配置（Mod 用 JSON 往立绘表加行，再用 SetCharacterAvatarConfigId 指定给角色）
 	CharacterAvatarConfig,
+	//可切换的体型（StructName 填 /Script/EastRimWorld.ModBodyTypeConfig；行名=体型档案 ID，再用 SetCharacterBodyType 换）
+	CharacterBodyTypes,
+	//部位槽（StructName 填 /Script/EastRimWorld.ModBodyPartSlotConfig；一个槽对应一个外观资产类）
+	CharacterBodyPartSlots,
+	//部位款式（StructName 填 /Script/EastRimWorld.ModBodyPartConfig；再用 SetCharacterBodyPart 换）
+	CharacterBodyParts,
 };
 
 //Mod资产类型
