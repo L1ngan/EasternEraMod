@@ -444,6 +444,8 @@ The character customizer layers apparel by the **class** of the appearance asset
 - Since 2026-11 the `ArmorType` written in a mod apparel row takes effect (it used to be dropped and inherited from `TemplateID`); leave it out to keep the template's slot. When the slot differs from the template's, the male/female appearance assets are not inherited from the template: only the ones you write are used (female-only items show nothing on male characters in that layer).
 - Layer selection in the sect apparel UI comes later; until then dress layers with the functions in this section.
 
+**Garment dyeing** (added 2026-11-20): the "Dye & Trim" page of the character creator and the sect apparel UI only works on registered meshes. To make a mod garment dyeable, add rows to the dye table with JSON: `ConfigType` = `CreatorGarmentDye`, `StructName` = `/Script/EastRimWorld.CreatorGarmentDyeRow`, one row per mesh, listing which material slots can be dyed and which dye zone each mask channel is. Fields and the material and mask requirements are described in section 6.5 of the Sect Apparel Mod Guide (`SectApparelModGuide_CN.md`, Chinese).
+
 ### 4.10 Customization: body, face, hair, colors
 
 > Added in November 2026; requires a game version that includes this API.

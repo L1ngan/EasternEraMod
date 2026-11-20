@@ -542,7 +542,7 @@ UE.UModEventBus.RegisterModEvent("OnItemCrafted", function(EventName, Payload, P
 |---|---|
 | `ArmorType` | `Helmet` 帽子 / `Armor` 上衣 / `Pants` 裤 / `Shoes` 鞋 / `Accessory` 饰品 / `Hairpin` 发簪 / `Underwear` 下身内衣 / `UpperUnderwear` 上身内衣 / `Socks` 袜 / `Back` 披挂（后六个 2026-11 新增，装备面板暂不显示）。2026-11 之后的版本写了就生效，更早的版本只能继承模板；槽位和模板不同时，男女外观资产不继承模板，只用你写的。外观资产的类须与槽对应（开发指南 4.9「多层服饰」）。 |
 | `ApparelMaleDataAsset` / `ApparelFemaleDataAsset` | 男 / 女外观资产路径。 |
-| `MaterialVariantsIndex` | 外观资产里的材质变体序号，`-1` 不用。官方外观资产目前都没有材质变体，填了也没效果。 |
+| `MaterialVariantsIndex` | 外观资产里的材质变体序号，`-1` = 网格自带材质。官方外观资产都没有材质变体，填了没效果；自己的外观资产在 `MaterialVariants` 里配了变体时按这个变体显示。要让玩家自己调色，见《宗门时装 Mod 制作指南》第 6.5 节的染色登记。 |
 | `MaterialColor` | 外观颜色参数。弟子身上贴外观时不读这个字段，**不要依赖它换色**。 |
 | `BeAttakedLossDurability` | 被攻击时扣多少耐久。 |
 

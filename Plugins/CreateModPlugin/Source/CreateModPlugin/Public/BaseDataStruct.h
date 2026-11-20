@@ -112,6 +112,8 @@ enum class EModConfigType : uint8
 	CharacterBodyPartSlots,
 	//部位款式（StructName 填 /Script/EastRimWorld.ModBodyPartConfig；再用 SetCharacterBodyPart 换）
 	CharacterBodyParts,
+	//服饰染色登记（StructName 填 /Script/EastRimWorld.CreatorGarmentDyeRow；行名=衣件 ID，按网格登记可染色的材质槽，登记后捏人和宗门时装的「染色」能给这件衣服换色）
+	CreatorGarmentDye,
 };
 
 //Mod资产类型

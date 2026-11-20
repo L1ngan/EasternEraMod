@@ -442,6 +442,8 @@ local ids, currentId = UE.UModLuaLibrary.GetCharacterCustomizationIds(Character)
 - 2026-11 起 Mod 服饰行里写的 `ArmorType` 生效（以前合并时被丢掉、只能继承 `TemplateID` 模板的槽）；不写沿用模板。槽位和模板不同时，男女外观资产不继承模板，只用你写的（只写女款，男角色在这一层就不显示）。
 - 宗门服饰界面的分层选择会晚于接口提供；在那之前用本节接口按层给弟子穿戴。
 
+**服饰染色**（2026-11-20 新增）：捏人和宗门时装的「染色·裁剪」页只认登记过的网格。Mod 的衣服要能染色，用 JSON 往染色表加行：`ConfigType` 填 `CreatorGarmentDye`，`StructName` 填 `/Script/EastRimWorld.CreatorGarmentDyeRow`，每个网格一行，写明哪些材质槽可染、遮罩三个通道各是哪个可染区。字段说明、材质和遮罩要求见《宗门时装 Mod 制作指南》第 6.5 节。
+
 ### 4.10 捏脸：体型、脸型、发型、颜色
 
 > 2026 年 11 月新增，需要包含该接口的游戏版本。

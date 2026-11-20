@@ -13,7 +13,8 @@
 - **纯 JSON + 几行 Lua 能做的**：借用官方已有的服饰外观，起新名字加进宗门时装。官方有两百多件时装外观，宗门时装界面原本只列出其中 41 件，没列出的（武当、达摩、唐门系列等）都可以这样加进来。
 - **新模型**要在 SDK 里做骨骼网格和外观资产再打 pak，见第 6 节（需要 2026-11-17 之后的 SDK）。
 - **不想手写 JSON**：四张表都能在 SDK 编辑器里建数据表填写，见第 10 节；宗门时装清单仍要 `Main.lua`。
-- **做不到的**：宗门时装界面只有上衣、裤子、鞋三页；官方外观资产都没有材质变体，"同一件衣服换个颜色"做不了。
+- **换颜色**：自带模型的衣服登记到染色表后，玩家能在捏人、宗门时装的「染色·裁剪」里自己调色，见第 6.5 节（需要 2026-11-20 之后的游戏版本）。
+- **做不到的**：宗门时装界面只有上衣、裤子、鞋三页；`MaterialColor` 字段不生效，不能靠它换色。
 
 ---
 
@@ -251,7 +252,7 @@ UE.UModEventBus.RegisterModEvent("OnNewGameStarted", function() UnlockAll() end)
 | `ItemName` / `ItemDescription` / `FormatItemDescription.TextMain` | 名字和描述，锁定时的提示里也显示。 |
 | `RouteAcquiringDescribe` | 获取途径描述，锁定提示里显示。SDK 结构写不进去，只能继承模板（官方时装多为空）；要写就改用游戏结构名 `/Script/EastRimWorld.CharacterApparel` 写全字段。 |
 | `ItemIcon` | 图标。 |
-| `MaterialVariantsIndex` | 外观资产的材质变体序号。官方外观资产都没有材质变体，**填了没效果**。 |
+| `MaterialVariantsIndex` | 外观资产的材质变体序号，`-1` = 网格自带材质。官方外观资产都没有材质变体，填了没效果；自己的外观资产在 `MaterialVariants` 里配了变体时，弟子身上按这个变体显示，但宗门时装界面的预览仍显示原色。要让玩家自己选色，用第 6.5 节的染色登记。 |
 | `MaterialColor` | 颜色参数。弟子身上贴外观时不读这个字段，**不要用它换色**。 |
 | `MainAttributes` 等属性字段 | 宗门统一服饰不看属性。 |
 
@@ -336,6 +337,92 @@ UE.UModEventBus.RegisterModEvent("OnNewGameStarted", function() UnlockAll() end)
 - 模型上外层要比内层整体外扩一点，避免共面闪烁；同一层只能穿一件。
 - 宗门时装界面的分层选择会晚于接口提供，在那之前用个人时装接口按层试穿（第 7 节）。
 
+### 6.5 让衣服能染色（「染色·裁剪」）
+
+> 2026-11 新增，**需要 2026-11-20 之后的游戏版本**。更早的版本不认这个配置类型（日志报 `Unknown ConfigType 'CreatorGarmentDye'`），衣服照常能穿，只是不能染色。
+
+捏人和宗门时装的「染色·裁剪」页只认**登记过的网格**，没登记的衣服显示"此衣件暂不支持染色"。官方衣服登记在游戏的染色表里；Mod 的衣服用 `ModInfo.json` 往这张表加行。加完以后：
+
+- 捏人（新游戏主角、个人外观）和宗门时装界面都能给这件衣服换色；
+- 宗门时装里给统一服饰染的色，保存后该分堂弟子在游戏里也是这个颜色。
+
+**1. ModInfo.json 的 `DataTableConfigs` 加一项**
+
+```json
+{ "ConfigType": "CreatorGarmentDye", "JsonFile": "Config/CreatorGarmentDye.json", "StructName": "/Script/EastRimWorld.CreatorGarmentDyeRow", "bOverrideData": false }
+```
+
+**2. `Config/CreatorGarmentDye.json`**：每个网格一行，男女网格不同就各写一行。
+
+```json
+{
+	"StructName": "/Script/EastRimWorld.CreatorGarmentDyeRow",
+	"Rows": {
+		"QYZ_Armor_W": {
+			"SkeletalMesh": "/Game/Mods/QingYunZongFu/SK_QYZ_Armor_W.SK_QYZ_Armor_W",
+			"EquipSlotId": "Top",
+			"DisplayName": "青云宗门服",
+			"MaterialSlots": [
+				{
+					"MaterialSlotName": "Cloth_Main",
+					"bDyeable": true,
+					"Parent": "BuLiao",
+					"Mask": "/Game/Mods/QingYunZongFu/T_QYZ_Armor_W_DyeMask.T_QYZ_Armor_W_DyeMask",
+					"SlotIdR": "Body", "DisplayNameKeyR": "CE_Dye_Body", "RefLumR": 0.35,
+					"SlotIdG": "Trim", "DisplayNameKeyG": "CE_Dye_Trim", "RefLumG": 0.3
+				},
+				{
+					"MaterialSlotName": "Belt",
+					"bDyeable": true,
+					"Parent": "Build",
+					"SlotIdR": "Tie", "DisplayNameKeyR": "CE_Dye_Tie", "RefLumR": 0.25
+				}
+			]
+		}
+	}
+}
+```
+
+| 字段 | 说明 |
+|---|---|
+| 行名 | 衣件 ID。只能用字母、数字、`_`、`-`，不超过 128 个字符，带上 Mod 前缀。存档里记的就是它，**发布后不要改名**，改了玩家已染的颜色就对不上了。 |
+| `SkeletalMesh` | 衣服网格的完整路径。**一个网格只登记一行**；男女用不同网格就各一行。 |
+| `EquipSlotId` | 部位：`Top` 上衣、`Bottom` 裤裙、`Feet` 鞋、`Head` 帽子，按衣服实际部位填。 |
+| `DisplayName` | 名字。界面优先显示服饰行的 `ItemName`，这里一般用不到。 |
+| `MaterialSlots` | 网格上要登记的材质槽，每槽一项；没列出的槽保持原样。 |
+| `MaterialSlotName` | 网格的**材质槽名**（骨骼网格编辑器里材质槽的名字，不是材质资产名）。 |
+| `bDyeable` | 填 `true`。 |
+| `Parent` | 这个槽材质的**母材质族**：`BuLiao`（`M_BuLiao`，棉布）、`Build`（`M_Build`，麻）、`Cloth`（`M_Cloth_Char`，丝），必须和材质实例真正的父材质一致，见下面「材质要求」。 |
+| `Mask` | 染色遮罩贴图，见下面「遮罩」。**不填遮罩、只填 R 区时，整个槽是一个可染区**。 |
+| `SlotIdR` / `G` / `B` | 遮罩红、绿、蓝三个通道各是一个可染区的 ID，不用的通道不填。同一件衣服里 ID 相同的区共用一个颜色（两个槽的 R 区都叫 `Body`，玩家选一次色两处一起变）。 |
+| `DisplayNameKeyR` / `G` / `B` | 可染区在染色页显示的名字，用游戏已有的键：`CE_Dye_Body` 衣身、`CE_Dye_Trim` 缘边、`CE_Dye_Tie` 系带、`CE_Dye_Accent` 点缀、`CE_Dye_Lining` 内衬、`CE_Dye_Ru` 上襦、`CE_Dye_Qun` 下裙、`CE_Dye_Pao` 袍身、`CE_Dye_Ku` 裤身、`CE_Dye_KuBian` 裤边、`CE_Dye_Yuan` 领缘腰封、`CE_Dye_Tao` 绦带袖箍。 |
+| `RefLumR` / `G` / `B` | 这个区底色的平均亮度（0~1，官方衣服多在 0.18~0.43）。染色按它换算明暗；染出来整体偏亮或偏暗就调这个数。不填是 0.5。 |
+| `DefaultR` / `G` / `B` | 这个区的默认颜色（"重置"回到的颜色），不填是白色。 |
+| `bSectLockedR` / `G` / `B` | 填 `true` 时这个区是"门派制式色"，玩家不能改。一般不填。 |
+| `DyeMaterial` | 不填。 |
+
+**3. 材质要求**（不满足的槽在染色页能选色，但颜色不会变）
+
+- 槽上必须是**材质实例**，不能直接用材质。
+- 材质实例的父材质（隔几层也行）必须是 `Parent` 写的那个官方母材质。`M_BuLiao`、`M_Build` 在 SDK 的 `Content/Art/Meshes/Actor/F_Materials/` 下，用它们新建材质实例、换上自己的贴图即可；`M_Cloth_Char` 目前 SDK 里没有。
+  - 原因：染色时游戏把这个槽换成同一族的染色母材质，按**参数名**把你材质实例里的贴图和数值抄过去；父材质不是这几个，参数名对不上，染完贴图会丢。
+  - 材质实例里**不要改静态开关**，染色时静态开关回到母材质的默认值。
+- 混合模式保持母材质的不透明。半透明（纱）的槽染不了，不要登记。
+- 丝袜不参与染色。
+
+**4. 遮罩**
+
+- 和这个槽的底色贴图**用同一套 UV**。红、绿、蓝三个通道各画一个可染区：白 = 染，黑 = 不染，不用的通道全黑。只有一个区时可以不做遮罩（见上表 `Mask`）。
+- 导入后压缩设置选 **Masks**，**关掉 sRGB**（和官方遮罩一致）。
+- 可染区的底色贴图要保留明暗和纹理，颜色会被替换；底色画成偏中性的浅色，染出来更接近选的颜色。
+
+**5. 自检**：进宗门时装界面穿上这件衣服，点「染色·裁剪」→ 选这件 → 能看到你写的区名 → 选色后衣服变色 → 保存后看该分堂弟子。
+
+- 列表里没有这件、或显示"此衣件暂不支持染色"：查 `SkeletalMesh` 路径，日志里搜 `ApplyModConfigFromJson`。
+- 能选色但不变色：按「材质要求」查，日志里搜 `染色母材质`、`原材质不是材质实例`、`混合模式不同`。
+
+停用 Mod 后这件衣服本身就没了，存档里记的染色不起作用，也不会报错。
+
 ---
 
 ## 7. 个人时装（顺带）
@@ -349,7 +436,7 @@ UE.UModEventBus.RegisterModEvent("OnNewGameStarted", function() UnlockAll() end)
 1. 宗门时装界面只有上衣、裤子、鞋三页，帽子等槽位进不了宗门时装（可以用个人时装）。
 2. 宗门时装清单只能用 Lua 加；`Main.lua` 出错时清单里就没有这几件（界面上看不到），但已经设成统一服饰的照样显示。
 3. **别在用着 Mod 服饰的存档里停用 Mod**：已设成统一服饰的分堂，对应槽的外观会变空（宗门统一服饰没有像个人时装那样的保护）。要停用，先在宗门时装界面把这些分堂换回官方服饰再存档。
-4. 官方外观资产没有材质变体，`MaterialColor` 也不生效，不能只换颜色。
+4. `MaterialColor` 不生效，不能靠它换颜色；要让玩家自己调色按第 6.5 节登记染色。官方外观资产没有材质变体。
 5. 宗门时装只改外观，不改属性。
 6. 分堂限制表里同一件服饰只写一行。
 7. 文字直接写中文只有一种语言；要多语言需要在 SDK 里做字符串表。
@@ -364,7 +451,8 @@ UE.UModEventBus.RegisterModEvent("OnNewGameStarted", function() UnlockAll() end)
 - [ ] `Main.lua` 把每件服饰按正确槽位加进了清单
 - [ ] 已配解锁：势力等级 / 科技（合并模式）或 Lua 直接解锁
 - [ ] （可选）分堂限制每件一行
-- [ ] 进游戏：对应分堂的列表里能看到 → 已解锁可选 → 保存后弟子外观正确 → 其他分堂按限制看不到
+- [ ] （可选）要能染色：`ModInfo.json` 加了 `CreatorGarmentDye`，男女网格各登记一行，可染槽是 `M_BuLiao` / `M_Build` 的材质实例（第 6.5 节）
+- [ ] 进游戏：对应分堂的列表里能看到 → 已解锁可选 → 保存后弟子外观正确 → 其他分堂按限制看不到 →（登记了染色的）「染色·裁剪」里能选色、保存后弟子身上颜色一致
 
 ---
 
