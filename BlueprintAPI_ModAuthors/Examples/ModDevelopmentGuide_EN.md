@@ -522,9 +522,71 @@ Color `ParamId`s: `SkinTint` (skin), `LipsTint` (lips), `TattooTint` (tattoo), `
 - The customizer's own "set anatomy" replaces the whole profile with that body's default (all face edits gone); this API only changes the body type in the profile. The head is matched by mesh in the target body type (the first head otherwise). Same gender and race only. Works for the sect master too.
 - Add the body type itself to `CharacterAnatomyProfiles` as before (registered as human, using the game's humanoid skeleton), then register it in `CharacterBodyTypes` (`/Script/EastRimWorld.ModBodyTypeConfig`): row name = body type ID, `BaseAnatomy` = the official body type to match when listing hairstyles and parts (official hairstyles never list your body type), `DisplayName`, `Icon`. The official human body types are already registered. If the body type row disappears (the mod that added it is disabled), the character shows its original look.
 - A body part slot is an appearance class: create a subclass of `BP_CDA_Apparel` in your own pak (e.g. `BP_CDA_Apparel_YaoEar`); each ear or tail is an asset of that class skinned to the game skeleton, with `Anatomies` listing the body types (empty = any). Equipment never touches these classes, so ears do not replace hats and tails do not replace trousers. The class must not be one used by any equipment slot.
-- Slot table `CharacterBodyPartSlots` (`/Script/EastRimWorld.ModBodyPartSlotConfig`): `DisplayName`, `CDAClass` (full class path ending in `_C`), `bAllowEmpty`, `BodyTypeIds` (empty = all). Part table `CharacterBodyParts` (`/Script/EastRimWorld.ModBodyPartConfig`): `SlotId`, `CDA`, `DisplayName`, `Icon`.
+- Slot table `CharacterBodyPartSlots` (`/Script/EastRimWorld.ModBodyPartSlotConfig`): `DisplayName`, `CDAClass` (full class path ending in `_C`), `bAllowEmpty`, `BodyTypeIds` (empty = all, official human body types included), `HiddenWhenApparel` (apparel slots that hide this part, see the next section; added 2026-11). Part table `CharacterBodyParts` (`/Script/EastRimWorld.ModBodyPartConfig`): `SlotId`, `CDA`, `DisplayName`, `Icon`.
 - Parts follow the body pose; bones the body skeleton does not have (tail bones) stay in the bind pose.
 - Body types and parts are stored in the mod data area like other customization edits: saved with the game, hidden while the mod is disabled, restored when it is enabled again, undone by `ResetCharacterCustomization`. Write functions must be called from a mod's Lua.
+
+#### Body part colors, hiding under apparel, bone names, gender, head ID
+
+> Added 2026-11, in testing.
+
+| API (`UE.UModLuaLibrary`) | Notes |
+|---|---|
+| `SetCharacterBodyPartColor(Character, SlotId, ParamName, Color)` | Sets a color parameter on the part the slot holds: `ParamName` is a vector parameter of the part's material, applied to every material slot of the part; false when the slot holds nothing |
+| `GetCharacterBodyPartColor(Character, SlotId, ParamName)` | → `ok, color`; `ok` is false when the slot holds nothing or the parameter was never set (the material's own default cannot be read) |
+| `GetCharacterBoneNames(Character)` | → every bone name of the character's body mesh (for skinning and attaching parts) |
+| `GetCharacterGender(Character)` | → `0` male, `1` female, `-1` for an invalid or not yet initialized character. Read only |
+| `GetCharacterHeadId(Character)` | → the character's head ID (the head mesh asset name, e.g. `Woman_MX_head01+`), the key of the face point mapping below; None when it cannot be read |
+
+```lua
+local L = UE.UModLuaLibrary
+L.SetCharacterBodyPart(Character, "Nail_Hand", "MyMod_Nail_Almond")
+L.SetCharacterBodyPartColor(Character, "Nail_Hand", "NailColor", UE.FLinearColor(0.60, 0.05, 0.04, 1))
+local ok, color = L.GetCharacterBodyPartColor(Character, "Nail_Hand", "NailColor")
+if L.GetCharacterGender(Character) == 1 then
+    -- list the female-only styles
+end
+```
+
+- **Part colors** are kept in the customizer's per-item apparel profile and re-applied whenever it rebuilds the look. Like other customization edits they go to the mod data area, are saved with the game, are undone by `ResetCharacterCustomization`, and have no effect while the mod is disabled.
+- Changing the part (another part in the same slot) carries the colors over; they work if the new part's material has parameters of the same names. Removing the part and wearing it again does not keep them.
+- Body part slots only. Recolor official clothes through the garment dye registration `CreatorGarmentDye` (Sect Apparel Mod Guide 6.5); skin and hair through `SetCharacterColorParam`.
+- No per-material-slot targeting and no scalar parameters: the customizer applies parameters to the whole item. Use different parameter names in different materials to color them separately; for a scalar (gloss, say), read one channel of a color parameter in the material.
+- Material requirements: the part uses material instances, and the color is a Vector Parameter named exactly `ParamName`.
+- **Hiding under apparel**: list apparel slots in `HiddenWhenApparel` of the slot table (JSON: `["Shoes"]`). While any of them shows an item with a mesh, the part is hidden — toenails would list `Shoes`.
+  - Judged from what the character actually wears: sect uniforms and personal fashion layered on top count; a "barefoot" shoes entry without a mesh does not.
+  - Re-judged automatically (within 0.2 s) after dressing, undressing, job changes and uniform changes, so you do not need to track the dressing order yourself. Only the part's own meshes are hidden.
+  - Parts are recognized by mesh asset: give each part its own mesh asset, not one shared with another part or with apparel.
+  - Notes on which slots to list:
+    - Official tops cover the `Accessory` slot (see 4.9); a covered accessory still counts as worn.
+    - Clearing `Underwear` or `UpperUnderwear` brings back the default underwear (which has a mesh; males have no default upper underwear), so a part listing these slots will usually stay hidden.
+    - `Eyes` shows no apparel and never triggers. There is no wearable glove slot either; `EArmorType.Bracer` is obsolete, do not use it.
+- **Bone names** come from the game's humanoid skeleton; skin and attach parts with these names. Do not hard-code the count.
+- **Gender** is the same value apparel uses to pick male or female assets. It cannot be changed: clothes, body types, heads and hairstyles are all split by gender, so changing it would mean rebuilding the character.
+
+#### Face point mapping data
+
+> Added 2026-11. Data file: `BlueprintAPI_ModAuthors/Examples/FacePointMapping.json` (the folder of this guide).
+
+The official "drag a point on the face" editor in the new-game character creator has no morphs of its own: it solves each drag into face slider values with coefficients measured per head, and the result lives in those slider values. `FacePointMapping.json` holds the same data; together with `SetCharacterShapeParam` you can build a point editor close to the official one.
+
+- Keys of `Heads` are head IDs (the return value of `GetCharacterHeadId`): 11 heads with 18 points each. Use each head's own `Sliders` list: 10 heads have 23 sliders, `woman_head_AG04` has 18 (it lacks the 5 older eye, jaw, mouth and nose morphs); do not index by a fixed position. `ParamId` is the slider ID of `GetCharacterShapeParams`; every slider used is open to mods.
+- A head ID that `GetCharacterHeadId` returns but `Heads` does not contain has no face point data: that head does not support point editing.
+- Positions and offsets are in cm, head mesh component space, reference pose. `AxisLateral` is the character's left (H, left/right or width), `AxisUp` is up (V), `AxisForward` is where the face points (D, front/back).
+- Point position = `RefPosition` + for each column `(slider value − Default) × offset`, with `DeltaPerUnitPos` when the value is ≥ `Default` and `DeltaPerUnitNeg` otherwise.
+- World position of a point = current world transform of the head bone (`HeadBone`, i.e. `head`) × inverse of `HeadBoneRef` × point position. `HeadBoneRef` is that bone's reference-pose transform in component space (`Rotation` is a quaternion X, Y, Z, W); read the bone's current world transform by name from the character's skeletal mesh.
+- Columns with `Solve` true are the sliders the official editor changes when the point is dragged; `Solve` false columns are only used to compute the point's current position (sliders of other regions also move it).
+- `Axes` lists the directions the point can be dragged on this head. Keep slider values within `max(Min, SafeMin)` ~ `min(Max, SafeMax)`.
+- Slider `Side`: 1 = affects the character's left side only, -1 = right only, 0 = both; slider `Mirror` is the slider of the other side. Point `Side`: 1 = point on the character's left, -1 = right, 0 = middle; point `Mirror` is the point on the other side.
+- What the current data holds: every slider affects both sides (`Side` 0, no mirror slider) and every point has `SideIndependent` false, so there is no one-side editing; each column has the same coefficients in both directions; `SafeMin` / `SafeMax` equal the full slider range. The fields are kept for finer data later.
+- The official solver works in screen space: each column is projected to the screen, the drag target is projected onto the axes this view allows, then all `Solve` columns are solved together with bounded damped least squares. Damping = 0.02 × the mean squared screen offset of the `Solve` columns; the regularization pulls sliders toward their values when the mouse was pressed. A simpler approach: move only the `Solve` slider with the largest offset along the drag direction, in proportion.
+
+#### Ground truth of the new-game character creator (reference)
+
+- `GetCharacterShapeParams` currently returns 28 sliders in configuration order; more may be added later, so match on `ID`, not on position: `Body_Age`, `Body_Size`, `Ear_MorphTarget_Morph01`, `EyeRoughness`, `Eyes_MorphTarget_Depth`, `Eyes_MorphTarget_Size`, `Jaw_MorphTarget_Height`, `LipsRoughness`, `Mouth_MorphTarget_Depth`, `Nose_MorphTarget_Height`, `Face_CheekBone`, `Face_LipLower`, `Face_NoseBridge`, `Face_BrowHeight`, `Face_BrowRidge`, `Face_CheekFull`, `Face_ChinDepth`, `Face_ChinLength`, `Face_EyeCant`, `Face_EyeDistance`, `Face_EyeLid`, `Face_JawAngle`, `Face_JawWidth`, `Face_LipUpper`, `Face_MouthWidth`, `Face_NoseTipDepth`, `Face_NoseTipHeight`, `Face_NoseWidth`.
+- Their Chinese `DisplayName`s in that order: 年龄 (age), 身高 (height), 长度 (length), Eye Shadow Roughness (English placeholder), 凹陷 (depth), 大小 (size), 高度 (height), Lip Gloss (English placeholder), 凹陷, 高度, 颧骨 (cheekbone), 下唇 (lower lip), 鼻梁 (nose bridge), 眉高 (brow height), 眉骨 (brow ridge), 饱满 (fullness), 前后 (front/back), 长短 (length), 眼角 (eye corner), 眼距 (eye distance), 眼皮 (eyelid), 颌角 (jaw angle), 腮宽 (jaw width), 上唇 (upper lip), 嘴宽 (mouth width), 鼻翘 (nose tip tilt), 鼻尖 (nose tip), 鼻翼 (nose wings). The short ones (length, depth, size, height, fullness, front/back, long/short) do not say where they apply; show them by `ID` with the names of the 4.10 slider table instead (e.g. `Face_CheekFull` cheek fullness, `Face_ChinDepth` chin front/back, `Face_ChinLength` chin length, `Eyes_MorphTarget_Depth` eye depth).
+- Only three skin makeup layers of the new-game creator are live (only inside the creator; they are not saved yet), intensity 0~1 each: `Lips` (material parameters `Creator Makeup Lips Color` / `Creator Makeup Lips Intensity`, default intensity 0.6), `Eyeshadow` (`Creator Makeup Eyes Color` / `Creator Makeup Eyes Intensity`, 0.5) and `Blush` (`Creator Makeup Blush Color` / `Creator Makeup Blush Intensity`, 0.4). They are not the color picker's `LipsTint`, and mods cannot read or write them yet.
+- The huadian (forehead ornament) color is not `TattooTint`: huadian is a decal and its color lives on the decal's own material.
 
 ### 4.11 Portraits
 

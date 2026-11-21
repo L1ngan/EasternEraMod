@@ -535,9 +535,71 @@ end
 - **体型**：插件自带的“换体型”会把整份档案换成那个体型的默认档案（捏脸全没了），这里只改档案里的体型。头在目标体型里找同一个，找不到用第一个；脸型数值保留，生不生效看那个头网格有没有同名形变。只能换成同性别、同种族的体型（衣服按角色性别取男女款）。掌门也能换。
 - 体型档案本身照旧用 JSON 往 `CharacterAnatomyProfiles` 加行（按人族登记、用游戏的人形骨架）；要能被换上，还要在体型表 `CharacterBodyTypes`（`StructName` 填 `/Script/EastRimWorld.ModBodyTypeConfig`）登记一行：行名=体型档案 ID，`BaseAnatomy`=参照的官方体型（选发型、选部位时按它匹配，官方发型的适用体型里不会写你的体型），`DisplayName`、`Icon`。官方人体体型（`ERWFemaleAdult`、`ERWMaleAdult`、`NPCFemale01~06`、`NPCMale01~12`）已登记。体型档案行不在了（加它的 Mod 停用）时，角色按原样显示。
 - **部位**：一个部位槽对应一个外观资产类。在自己的 pak 里建 `BP_CDA_Apparel` 的子类（如 `BP_CDA_Apparel_YaoEar`），每款耳朵、尾巴是这个类的一个外观资产（`SkeletalMesh` 蒙皮到游戏的人形骨架，`Anatomies` 写适用体型，空表示不限）。游戏换装只动装备槽对应的那几个类，**不碰部位类**，所以戴耳朵不顶帽子、长尾巴不用脱裤子；官方衣服也不盖住部位类。部位类不能是装备槽在用的类（上面多层服饰表里那些），否则 `SetCharacterBodyPart` 拒绝。
-- 部位槽表 `CharacterBodyPartSlots`（`/Script/EastRimWorld.ModBodyPartSlotConfig`）：行名=槽 ID，`DisplayName`、`CDAClass`（类的完整路径，带 `_C`）、`bAllowEmpty`、`BodyTypeIds`（哪些体型显示这个槽，空表示所有体型）。款式表 `CharacterBodyParts`（`/Script/EastRimWorld.ModBodyPartConfig`）：行名=款式 ID，`SlotId`、`CDA`、`DisplayName`、`Icon`。
+- 部位槽表 `CharacterBodyPartSlots`（`/Script/EastRimWorld.ModBodyPartSlotConfig`）：行名=槽 ID，`DisplayName`、`CDAClass`（类的完整路径，带 `_C`）、`bAllowEmpty`、`BodyTypeIds`（哪些体型显示这个槽，空表示所有体型，包括官方人族体型）、`HiddenWhenApparel`（这些服饰槽穿着时隐藏本部位，见下一小节，2026-11 新增）。款式表 `CharacterBodyParts`（`/Script/EastRimWorld.ModBodyPartConfig`）：行名=款式 ID，`SlotId`、`CDA`、`DisplayName`、`Icon`。
 - 部位网格跟随身体骨架的姿势，身体骨架里没有的骨头（比如尾巴骨）停在绑定姿势、不会摆动。
 - 体型、部位和捏脸一样存进 Mod 数据区：随存档保存，写它的 Mod 停用后角色按原样显示，重新启用恢复，`ResetCharacterCustomization` 一并撤销。写入接口只能在 Mod 的 Lua 里调用。
+
+#### 部位颜色、按服饰隐藏、骨骼名、性别、头 ID
+
+> 2026-11 新增，测试中。
+
+| API（`UE.UModLuaLibrary`） | 说明 |
+|---|---|
+| `SetCharacterBodyPartColor(Character, SlotId, ParamName, Color)` | 给部位当前那件设颜色参数：`ParamName` 是部位材质里的向量参数名，作用于这件部位的全部材质槽；部位没戴时返回 false |
+| `GetCharacterBodyPartColor(Character, SlotId, ParamName)` | → `ok, color`：部位没戴、或这个参数没设过时 `ok` 为 false（材质自己的默认值读不到） |
+| `GetCharacterBoneNames(Character)` | → 角色身体网格的全部骨骼名（部位资产蒙皮、挂点用） |
+| `GetCharacterGender(Character)` | → `0` 男、`1` 女，角色无效或还没初始化完时 `-1`。只读 |
+| `GetCharacterHeadId(Character)` | → 角色当前的头 ID（头网格资产名，如 `Woman_MX_head01+`），查下面的点位映射数据用；取不到时返回 None |
+
+```lua
+local L = UE.UModLuaLibrary
+L.SetCharacterBodyPart(Character, "Nail_Hand", "MyMod_Nail_Almond")
+L.SetCharacterBodyPartColor(Character, "Nail_Hand", "NailColor", UE.FLinearColor(0.60, 0.05, 0.04, 1))
+local ok, color = L.GetCharacterBodyPartColor(Character, "Nail_Hand", "NailColor")
+if L.GetCharacterGender(Character) == 1 then
+    -- 只给女性角色列出的款式
+end
+```
+
+- **部位颜色**存在插件的单件服饰档案里，插件每次重建外观时自动套回；和捏脸一样进 Mod 数据区、随存档保存，`ResetCharacterCustomization` 一并撤销，写它的 Mod 停用后不起作用。
+- 换款式（同一个槽换成另一款）时，已设的颜色带到新款上，新款材质里有同名参数才生效；摘掉后再戴上不保留。
+- 只能给部位槽设。官方衣服换色用服饰染色登记 `CreatorGarmentDye`（见《宗门时装 Mod 制作指南》6.5），皮肤、头发用 `SetCharacterColorParam`。
+- 没有按材质槽区分、也没有标量参数：插件按整件套参数。要分开上色，就在不同材质里用不同的参数名；需要标量（如光泽）时，可以在材质里取颜色的某一个通道当标量用。
+- 材质要求：部位的材质用材质实例，颜色是向量参数（Vector Parameter），参数名与 `ParamName` 完全一致。
+- **按服饰隐藏**：在部位槽表的 `HiddenWhenApparel` 里写服饰槽（JSON 写法 `["Shoes"]`），这些槽穿着带模型的外观时，部位自动隐藏，比如脚趾甲填 `Shoes`。
+  - 按角色实际穿着判断：宗门统一服饰、个人时装叠加后的结果都算；表示"光脚"这类没有模型的鞋子条目不算。
+  - 穿脱、调职、换统一服饰后自动重判（0.2 秒内），不用自己盯换装时序。只隐藏部位自己的网格。
+  - 部位按网格资产认：部位要用自己的网格资产，不要和别的部位、服饰共用同一个网格。
+  - 填哪些槽的注意事项：
+    - 饰品槽 `Accessory` 会被官方上衣盖住（见 4.9），盖住时也算穿着。
+    - `Underwear`、`UpperUnderwear` 清空后游戏会补回默认内衣（带模型；男性上身没有默认内衣），填了这两个槽，部位多半会一直隐藏。
+    - `Eyes` 不显示外观，填了不会触发。游戏目前也没有可穿的护手槽，`EArmorType.Bracer` 是废弃值，不要用。
+- **骨骼名**来自游戏人形骨架，部位资产的蒙皮、挂点请用这些名字，数量以返回为准。
+- **性别**与换装选男款 / 女款同一个取值，不提供修改：衣服、体型、头、发型都按性别分，改性别等于重建角色。
+
+#### 脸型点位映射数据
+
+> 2026-11 新增。数据文件：`BlueprintAPI_ModAuthors/Examples/FacePointMapping.json`（和本指南同一目录）。
+
+官方新游戏捏人页的"拖点位"没有另一套形变：它按每颗头实测的系数，把点的位移解成一组脸型滑条值写进去，结果就存在滑条值里。`FacePointMapping.json` 是同一份数据，配合 `SetCharacterShapeParam` 可以做出接近官方的点位编辑。
+
+- `Heads` 的键是头 ID（`GetCharacterHeadId` 的返回值），共 11 颗头，每颗 18 个点。滑条按每颗头自己的 `Sliders` 列表：10 颗头是 23 条，`woman_head_AG04` 是 18 条（这颗头没有眼睛、下巴、嘴、鼻子那 5 个旧形变）；不要按固定下标取。`ParamId` 就是 `GetCharacterShapeParams` 的滑条 ID，用到的滑条都已开放。
+- `GetCharacterHeadId` 返回的 ID 不在 `Heads` 里，表示这颗头没有点位数据，不支持点位编辑。
+- 坐标和位移的单位是 cm，头网格组件空间、参考姿态。`AxisLateral` 是角色的左（H，左右 / 宽窄），`AxisUp` 是上（V），`AxisForward` 是脸朝向（D，前后）。
+- 点的位置 = `RefPosition` + 每一列 `(滑条值 − Default) × 位移`，滑条值 ≥ `Default` 时位移取 `DeltaPerUnitPos`，否则取 `DeltaPerUnitNeg`。
+- 点的世界位置 = 头骨（`HeadBone`，即 `head`）当前的世界变换 × `HeadBoneRef` 的逆 × 点的位置。`HeadBoneRef` 是这根骨头在参考姿态下的组件空间变换（`Rotation` 是四元数 X、Y、Z、W）；头骨的当前世界变换可以从角色的骨骼网格上按骨骼名取。
+- `Solve` 为 true 的列是拖这个点时官方会改的滑条；为 false 的列只用来算点的当前位置（别的部位的滑条也会带动这个点）。
+- `Axes` 是这颗头上这个点能拖的方向。改滑条时请限制在 `max(Min, SafeMin)` ~ `min(Max, SafeMax)` 之内。
+- 滑条的 `Side`：1 只影响角色左侧、-1 只影响右侧、0 两侧，`Mirror` 是对侧的滑条。点的 `Side`：1 点在角色左侧、-1 在右侧、0 在中线，`Mirror` 是对侧的点。
+- 当前数据的现状：所有滑条都是两侧一起改（`Side` 0、没有对侧滑条），所有点 `SideIndependent` 为 false，也就是没有单侧编辑；每列正反两个方向的系数相同；`SafeMin` / `SafeMax` 等于滑条全范围。字段先留着，以后数据会细化。
+- 官方求解在屏幕空间做：每列先投影到屏幕，拖动目标先投到这个视角允许拖的轴上，再对所有 `Solve` 列一起做带阻尼的有界最小二乘。阻尼 = 0.02 × 各 `Solve` 列屏幕位移平方的平均值，正则项把滑条拉向按下鼠标时的值。简单做法：只取沿拖动方向位移最大的那条 `Solve` 滑条，按比例调。
+
+#### 新游戏捏人页的真值（参考）
+
+- `GetCharacterShapeParams` 目前按配置顺序返回 28 条，以后可能增加，请按 `ID` 匹配，不要按下标：`Body_Age`、`Body_Size`、`Ear_MorphTarget_Morph01`、`EyeRoughness`、`Eyes_MorphTarget_Depth`、`Eyes_MorphTarget_Size`、`Jaw_MorphTarget_Height`、`LipsRoughness`、`Mouth_MorphTarget_Depth`、`Nose_MorphTarget_Height`、`Face_CheekBone`、`Face_LipLower`、`Face_NoseBridge`、`Face_BrowHeight`、`Face_BrowRidge`、`Face_CheekFull`、`Face_ChinDepth`、`Face_ChinLength`、`Face_EyeCant`、`Face_EyeDistance`、`Face_EyeLid`、`Face_JawAngle`、`Face_JawWidth`、`Face_LipUpper`、`Face_MouthWidth`、`Face_NoseTipDepth`、`Face_NoseTipHeight`、`Face_NoseWidth`。
+- 对应的中文 `DisplayName` 依次是：年龄、身高、长度、Eye Shadow Roughness（英文占位）、凹陷、大小、高度、Lip Gloss（英文占位）、凹陷、高度、颧骨、下唇、鼻梁、眉高、眉骨、饱满、前后、长短、眼角、眼距、眼皮、颌角、腮宽、上唇、嘴宽、鼻翘、鼻尖、鼻翼。"长度、凹陷、大小、高度、饱满、前后、长短"这几个短名单独看不出是哪里，建议按 `ID` 用 4.10 滑条表里的名字显示（如 `Face_CheekFull` 脸颊饱满、`Face_ChinDepth` 下巴前后、`Face_ChinLength` 下巴长短、`Eyes_MorphTarget_Depth` 眼睛凹陷）。
+- 新游戏捏人页的皮肤妆层只有三层生效（只在捏人页里生效，目前不进存档），浓度都是 0~1：`Lips` 唇妆（材质参数 `Creator Makeup Lips Color` / `Creator Makeup Lips Intensity`，默认浓度 0.6）、`Eyeshadow` 眼影（`Creator Makeup Eyes Color` / `Creator Makeup Eyes Intensity`，0.5）、`Blush` 腮红（`Creator Makeup Blush Color` / `Creator Makeup Blush Intensity`，0.4）。它们和取色器的 `LipsTint` 不是同一组参数，目前 Mod 接口还不能读写。
+- 花钿颜色和 `TattooTint` 不是同一个参数：花钿是贴花，颜色写在贴花自己的材质上。
 
 ### 4.11 立绘
 
