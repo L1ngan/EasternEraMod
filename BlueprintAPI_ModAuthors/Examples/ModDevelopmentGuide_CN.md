@@ -354,6 +354,7 @@ end
 
 - 传了有效 Guid 时，换装地图里的预览角色会换成目标弟子当前的样子（体型、脸、发型、服饰、颜色），作为“替身”只用来显示。弟子本人始终留在原地，不会被移动。
 - 对**目标弟子本人**调 [4.9](#49-角色外观与个人时装) 的 `SetCharacterApparel`、`ClearCharacterApparel`、`RemoveCharacterPersonalApparel`、`ResetCharacterApparels`、`SetCharacterCustomizationId`，成功后替身在下一帧自动刷新。改动直接写进弟子的存档数据，关图时不需要“写回”。
+- 替身也显示目标弟子的扩展外观（妆容、花钿 / 面靥、眉睫、虹膜，见 [4.10](#410-捏脸体型脸型发型颜色) 的"扩展外观"）。对目标弟子调扩展外观的写入接口后，替身跟着刷新；第一次进棚、贴图要加载时可能晚一两秒出现。
 - 想做“取消”：进棚时用 `GetCharacterPersonalApparels`、`GetCharacterCustomizationIds` 记下原来的个人时装和当前预设，取消时写回。
 - 替身进棚直接站在台上，不播入场动作，之后在暂停中照常播待机动作。
 - 视角：换装地图里的一台关卡相机，进棚时摆到替身正面的默认机位（插件设计的取景）。
@@ -457,7 +458,7 @@ local ids, currentId = UE.UModLuaLibrary.GetCharacterCustomizationIds(Character)
 | `GetHairstyleSlots(WorldContext)` | → 发型槽数组，每项有 `ID`、`DisplayName`、`bAllowEmpty`；目前是 `Head`（头发）和 `Beard`（胡子，可留空）。`WorldContext` 传 `self.ModInfo` 即可 |
 | `GetCharacterHairstyles(Character, SlotId)` | → `options, currentId`：这个槽按角色当前体型可选的发型（每项 `HairstyleId`、`DisplayName`、`Icon`），以及角色当前的发型 ID |
 | `SetCharacterHairstyle(Character, SlotId, HairstyleId)` | 换发型，`HairstyleId` 取自 `GetCharacterHairstyles`；传空字符串摘掉这个槽的发型（只对允许留空的槽）；返回 bool |
-| `ResetCharacterCustomization(Character)` | 撤销 Mod 对这个角色捏脸的全部改动（体型、脸型、发型、颜色、换的体型档案、部位和换的预设），回到游戏原有外观；返回 bool |
+| `ResetCharacterCustomization(Character)` | 撤销 Mod 对这个角色捏脸的全部改动（体型、脸型、发型、颜色、换的体型档案、部位和换的预设），回到游戏原有外观；扩展外观（见下文"扩展外观"）也一并删掉，不论是哪个 Mod 写的；返回 bool |
 
 ```lua
 local params = UE.UModLuaLibrary.GetCharacterShapeParams(Character)
@@ -473,11 +474,11 @@ UE.UModLuaLibrary.SetCharacterHairstyle(Character, "Head", options[1].HairstyleI
 
 - 可调的滑条和颜色照官方宗门时装界面配置，范围也与官方界面一致（见下表）。身高 `Body_Size` 改的是动画混合参数；年龄 `Body_Age` 同时改动画混合、形变、皮肤三处，与官方界面一样。表里没有的参数不接受。
 - 掌门和世界里有登记的角色都能改；替身等使用掌门外观的角色跟着掌门走，改掌门即可；比武、切磋、测试生成的临时角色不接受。
-- 写入接口（Set、Reset）只能在 Mod 的 Lua 里调用：游戏要记下是哪个 Mod 改的。
+- 写入接口（Set 系列）只能在 Mod 的 Lua 里调用：游戏要记下是哪个 Mod 改的。
 - 改动立即作用在角色身上，换装地图的摄影棚替身下一帧跟上；随游戏存档保存，读档、离开地点再回来、进宗门战都保留。
 - **Mod 数据单独存，不改游戏原有数据**：Mod 的改动按角色存在存档里单独的一块。写它的 Mod 停用或删除后，角色按游戏原有外观显示，Mod 的改动原样保留，重新启用后读档恢复。没装你的 Mod 的玩家读这个存档也完全正常。
 - 复制出来的临时分身（宗门擂台、劫狱等）显示角色原有外观。
-- 拖滑条时可以每帧调用；"取消"由 Mod 自己做：进界面时用 Get 系列记下原值，取消时写回，或者直接 `ResetCharacterCustomization`。
+- 拖滑条时可以每帧调用；"取消"由 Mod 自己做：进界面时用 Get 系列记下原值，取消时写回，或者直接 `ResetCharacterCustomization`（它会连扩展外观一起删，包括别的 Mod 写的妆容、花钿）。
 - 写入接口返回 false 时，角色外观会恢复成调用之前的样子。
 
 滑条 `ParamId`：
@@ -594,12 +595,189 @@ end
 - 当前数据的现状：所有滑条都是两侧一起改（`Side` 0、没有对侧滑条），所有点 `SideIndependent` 为 false，也就是没有单侧编辑；每列正反两个方向的系数相同；`SafeMin` / `SafeMax` 等于滑条全范围。字段先留着，以后数据会细化。
 - 官方求解在屏幕空间做：每列先投影到屏幕，拖动目标先投到这个视角允许拖的轴上，再对所有 `Solve` 列一起做带阻尼的有界最小二乘。阻尼 = 0.02 × 各 `Solve` 列屏幕位移平方的平均值，正则项把滑条拉向按下鼠标时的值。简单做法：只取沿拖动方向位移最大的那条 `Solve` 滑条，按比例调。
 
+#### 扩展外观：妆容、花钿 / 面靥、眉睫、虹膜
+
+> 2026-11 新增，测试中。完整示例见 [`Examples/ExtLookExample`](ExtLookExample/README.md)。
+
+每个角色可以有一份 Mod 写的"扩展外观覆盖"，包括皮肤妆层、花钿 / 面靥贴花、眉、睫和眼睛（虹膜）。它存在 Mod 数据区，随存档保存。
+
+生效优先级是 **Mod > 分堂统一妆容 > 角色自己**：
+- 分堂统一妆容是宗门时装里的官方功能，上线后生效；
+- "角色自己"指掌门在新游戏捏人页里捏的外观。
+
+| API（`UE.UModLuaLibrary`） | 说明 |
+|---|---|
+| `GetCharacterMakeupLayers(Character)` | → 这颗头能用的皮肤妆层 ID（`Lips`、`Eyeshadow`、`Blush`）；头不支持时为空 |
+| `GetCharacterMakeupLayer(Character, LayerId)` | → `ok, color, opacity, source`：最终生效的颜色（线性色）、浓度（0 = 没有这层）、来源；没有任何来源时 `ok` 为 false |
+| `SetCharacterMakeupLayer(Character, LayerId, Color, Opacity)` | 设颜色和浓度 0~1；浓度 0 = 去掉这层（能卸掉掌门自己或统一妆容带的妆）；返回 bool |
+| `ClearCharacterMakeupLayer(Character, LayerId)` | 撤掉 Mod 对这层的设置，回到优先级更低的来源；返回 bool |
+| `GetDecalSlots()` | → 贴花槽：`Huadian`（花钿）、`Mianye`（面靥） |
+| `GetDecalPatterns(WorldContext, SlotId)` | → 这个槽的图案（含 Mod 加的行），每项 `PatternId`、`SlotId`、`DefaultAnchorId`、`DefaultColor`（线性色）、`DefaultSizeCm`、`DefaultGold`、`DefaultOpacity`、`DefaultRotationDegrees`、`MaterialOverride`、`bPairedLR`、`bFromMod`。`WorldContext` 传角色或 `self.ModInfo`，不能传 nil |
+| `GetFaceAnchors()` | → 9 个锚点 ID：`Forehead`、`BrowCenter`、`TempleL`、`TempleR`、`DimpleL`、`DimpleR`、`LipCornerL`、`LipCornerR`、`Chin`（L / R 是角色自身的左右） |
+| `GetCharacterFaceAnchors(Character)` | → 这颗头上有位置的锚点 |
+| `GetDecalParamRanges(WorldContext)` | → `SizeMinCm` / `SizeMaxCm`（0.2 / 20，游戏能接受的极限）、`SuggestedSizeMinCm` / `SuggestedSizeMaxCm`（0.6 / 4，官方界面用的范围）、`OffsetRangeCm`（偏移上限，目前 2）。`WorldContext` 同上 |
+| `GetCharacterDecal(Character, SlotId)` | → `ok, state, source`（`FModDecalState`，字段见下）；Mod 设成去掉时 `ok` 为 true、`PatternId` 为 None |
+| `SetCharacterDecal(Character, SlotId, State)` | 设贴花；`State.PatternId` 为 None 表示去掉这个槽；返回 bool |
+| `ClearCharacterDecal(Character, SlotId)` | 撤掉 Mod 对这个槽的设置；返回 bool |
+| `GetBrowLashStyles(Character, Kind)` | → 这颗头有绑定的眉（`Kind` = `"Brow"`）/ 睫（`"Lash"`）款式 |
+| `GetCharacterBrowLash(Character, Kind)` | → `ok, state, source`（`FModBrowLashState`） |
+| `SetCharacterBrowLash(Character, Kind, State)` | 设眉 / 睫；`State.StyleId` 为 None 的含义见下；返回 bool |
+| `ClearCharacterBrowLash(Character, Kind)` | 撤掉 Mod 对眉 / 睫的设置；返回 bool |
+| `GetIrisPresets(Character)` | → 虹膜款式 ID；头不支持换眼睛时为空 |
+| `GetCharacterEyes(Character)` | → `ok, state, source`（`FModEyesState`） |
+| `SetCharacterEyes(Character, State)` | 设虹膜款式和瞳色；返回 bool |
+| `ClearCharacterEyes(Character)` | 撤掉 Mod 对眼睛的设置；返回 bool |
+| `ResetCharacterExtAppearance(Character)` | 删掉这个角色的全部 Mod 扩展外观，不论是哪个 Mod 写的、那个 Mod 是否启用（`ResetCharacterCustomization` 也会一并删掉）；返回 bool |
+
+`source`（`EModExtSource`，Lua 里是数字）：`0` 没有、`1` 角色自己、`2` 统一妆容、`3` Mod。
+
+| 结构 | 字段 |
+|---|---|
+| `FModDecalState` | `PatternId`；`AnchorId`（None = 图案默认锚点）；`bUseDefaultColor`（默认 true）；`Color`（线性色 0~1）；`Opacity`（0~1，默认 1）；`SizeCm`（≤0 = 图案默认大小）；`OffsetCm`（`FVector2D`，X 正向是角色自己的左、Y 正向朝上；成对图案的另一侧左右镜像）；`AngleDegrees`；`Gold`（0~1，<0 = 图案默认） |
+| `FModBrowLashState` | `StyleId`；`ColorMode`（`EModHairColorMode`：`0` 款式默认、`1` 黑素 / 红度、`2` 任意色）；`Color`；`Melanin`；`Redness`；`ShapeThickness` / `ShapeHeight` / `ShapeSpacing` / `ShapeTail`（眉形 -1~1，0 = 不改，只对眉有效） |
+| `FModEyesState` | `bIndependent`（false = 两眼都用左眼的设置）；`LeftPresetId`（None = 这颗头原来的眼睛）；`bLeftTint`；`LeftTint`；`RightPresetId`；`bRightTint`；`RightTint` |
+
+```lua
+local L = UE.UModLuaLibrary
+-- 唇色
+if L.GetCharacterMakeupLayers(Character):Contains("Lips") then
+    L.SetCharacterMakeupLayer(Character, "Lips", UE.FLinearColor(0.55, 0.05, 0.08, 1), 0.8)
+end
+-- 花钿：用图案默认锚点、默认颜色，浓度和角度要自己给
+local pats = L.GetDecalPatterns(Character, "Huadian")
+if pats:Num() > 0 then
+    local p = pats[1]
+    local s = UE.FModDecalState()
+    s.PatternId = p.PatternId
+    s.bUseDefaultColor = true
+    s.Opacity = p.DefaultOpacity
+    s.AngleDegrees = p.DefaultRotationDegrees
+    L.SetCharacterDecal(Character, "Huadian", s)
+end
+-- 读回：最终生效值和来源
+local ok, state, source = L.GetCharacterDecal(Character, "Huadian")
+```
+
+**能改谁、在哪里显示**
+- 能改的角色和捏脸接口一样，是掌门和世界里有登记的角色；用掌门外观的替身跟着掌门走。读接口也做同样的校验，对替身、临时角色调用会记一条错误。
+- 写入接口只能在 Mod 的 Lua 里调用；`ResetCharacterExtAppearance` 不限。改动随存档保存。一次改很多人时分批套用，贴图等资源要异步加载，通常几帧到一两秒内显示。
+- 不显示的地方：
+  - 宗门战等战斗里的战斗形态不套扩展外观；
+  - 复制出来的临时分身（普通弟子的替身、宗门擂台、劫狱等）显示角色原有外观。
+- 头的支持范围：
+  - 捏人头（掌门，以及用捏人模型的弟子）支持全部项；
+  - NPC 头大多只支持贴花；
+  - 头不支持的项写入时报错，并返回 false。写之前请用上面的列表接口查。
+- 写入失败的原因写进你的 Mod 日志。同一条报错 5 秒内只记一次，在循环里对一批角色调用时不会刷屏；但先自己筛一下角色更好，比如只对 `GetCharacterMakeupLayers` 非空的角色设妆容。
+
+**归属**
+- 一个角色的 Mod 扩展外观整份只记一个署名，就是最后写入的 Mod，和捏脸改动的署名各记各的。
+- 别的 Mod 再写这个角色，整份都归它；`Clear` 系列也算一次写入，会改署名。
+- 用同样的值再写一遍不算写入，不改署名，照样返回 true。
+- 归属的 Mod 停用或删除后，这个角色的 Mod 扩展外观全部不生效，存档里原样保留，重新启用后恢复。以下两种情况例外，原来那份会被替换或删掉，不再恢复：
+  - 停用期间别的 Mod 写了这个角色；
+  - 调用了 `ResetCharacterExtAppearance` 或 `ResetCharacterCustomization`。
+- 局中启用、停用 Mod 时，场上角色当场刷新。
+
+**数值**
+- 颜色是线性色，分量 0~1；浓度 0~1；超出的会被夹紧。非有限数（NaN、无穷大）直接拒绝。
+- 贴花：
+  - 大小 0.2~20 cm；
+  - 偏移各方向不超过 `OffsetRangeCm`；
+  - 角度规整到 [-180, 180)；
+  - 金箔 0~1，≥0.5 按金质感渲染。
+
+**贴花**
+- `AnchorId` 必须是 `GetCharacterFaceAnchors` 里有的锚点。不填时用图案的默认锚点，这个锚点同样要在这颗头上，否则拒绝。
+- 质感：`MaterialOverride` 为 None 表示行里没勾质感覆盖。这时官方有一部分图案的质感固定为玉或金，其余的按金箔量判断。固定质感的图案和勾了覆盖的图案，质感类型不随金箔量变，这类图案的金箔量建议留默认。
+- `bPairedLR` 为 true 的成对图案（面靥、斜红等）放在分左右的锚点上时，另一侧会自动镜像贴一份。
+- 浓度和角度不会自动取图案的默认值（`DefaultOpacity`、`DefaultRotationDegrees`），要自己传。
+- 金质感图案：颜色和图案默认色相差不到 0.01 时，当作没选色，显示统一的金色。读回时，没选色的金质感图案给的是图案表的默认色，不是画面上的金色。
+- 读回给的是实际生效值：用图案默认的大小、金箔、锚点也是具体值。把读回的状态原样写回算一次写入，会改署名，而且这几项变成显式值。画面不变，但以后图案表的默认值改了就不再跟着变。
+
+**眉睫**
+- 眉的 `StyleId` 为 None 表示去掉：掌门身上是完全没有眉，和捏人页选"无"一样；弟子身上回到皮肤上画的眉。
+- 睫毛的 `StyleId` 为 None 表示还原成这颗头原来的睫毛，不会没有睫毛。
+- 颜色方式：
+  - `0` 款式默认：和捏人页的"随发色"是同一个设置；弟子身上读不到发色，按款式默认的颜色显示。
+  - `1` 按 `Melanin` / `Redness`（0~1）。
+  - `2` 任意色（`Color`；眉睫材质没有染色通道时按黑素 / 红度近似）。
+- 睫毛只支持 `0` 款式默认，其他方式报错：随头的睫毛换款时不改色，捏人页也没有睫毛颜色。
+- 眉形：粗细、上下对所有眉款有效；眉距、眉尾只对左右分开的眉款有效，其他款设了不生效。
+- 只设睫毛时，皮肤上画的眉照旧保留。
+
+**眼睛**
+- 整段覆盖，没填的部分不继承下层：
+  - `LeftPresetId` / `RightPresetId` 为 None 时，是这颗头原来的眼睛，不是掌门在捏人页选的款式；
+  - 不勾 `bLeftTint` / `bRightTint` 就没有瞳色，也不沿用下层的瞳色。
+- 只想改一点时，先用 `GetCharacterEyes` 读出来，改了再写。
+- `LeftTint` / `RightTint` 是瞳色增益，乘在虹膜贴图上。
+- 虹膜大小、瞳孔大小不开放。
+
+**往图案表、锚点表加行**（`ConfigType` 见第 5 节）
+- 两张表都**只能加新行**。下面这些行合并时会被跳过，原因写进你的 Mod 日志：
+  - 和官方或别的 Mod 的行同名的；
+  - 图案行 ID 不合规的（只能用字母、数字、`_`、`-`，不超过 128 个字符），或者没有 `Pattern` 贴图的；
+  - 锚点行 `HeadMesh` 为空的，或者这颗头已经登记过的。
+- `StructName` 填错时，整张表跳过。
+- 同一局里重新启用你的 Mod 时，它自己上次加的行也会这样提示一遍，行照样在、功能不受影响。同一局里改了 JSON 再启用，行不会更新，要重新读档。
+- 图案行（SDK 里的 `FCreatorFacePatternRow`）：
+  - `Pattern` 必填：透明底、白色图案，颜色由游戏染；导入设置用默认压缩、sRGB 开、带 alpha。
+  - **贴图资产名不要用 `T_FaceDecal_<官方图案 ID>`**，否则会套上那个官方图案的质感和法线图。
+  - `NormalTexture` 可选，按法线贴图导入，不填按平的。
+  - `bOverrideMaterial` + `MaterialOverride` 可选，用来指定 朱砂 / 玉 / 金 质感；要确定质感就勾上。
+  - `DisplayNameKey`、`Thumbnail` 游戏不读，图案名请在你自己的界面里用你自己的文字显示。
+- Mod 加的图案**不会出现在官方捏人页和宗门时装页**，只能经上面的接口使用。Mod 停用后重新读档，引用它图案的贴花静默不显示，不报错。
+- 锚点行（`FCreatorFaceAnchorRow`）：
+  - 官方已给 11 颗捏人头登记锚点，Mod 只能给 NPC 头或你自己的头加行。
+  - `HeadMesh` 必填；`AttachBone` 是贴花跟随的骨骼（默认 `head`），建议填头网格骨架里有的骨骼，没有时贴花挂在头部组件上、不跟骨骼。
+  - `Anchors` 每项是 `Anchor`、`Location`、`Normal`，单位 cm，头网格参考姿态、组件空间。可以只登记部分锚点，没登记的锚点在这颗头上不可用；`Anchors` 为空的行等于没登记。
+- 没有行的头由游戏估算锚点：按眼球骨骼；没有眼球骨骼时按 head 骨的固定偏移；连 head 骨都没有就不支持贴花。估算的位置是近似的，要准就登记锚点行。
+
+图案行、锚点行的 JSON 写法：
+
+```json
+{
+  "StructName": "/Script/EastRimWorld.CreatorFacePatternRow",
+  "Rows": {
+    "MyMod_LotusGold": {
+      "Slot": "Huadian",
+      "Pattern": "/Game/Mods/MyMod/Decals/T_MyMod_Lotus.T_MyMod_Lotus",
+      "Anchor": "BrowCenter",
+      "DefaultColor": { "R": 200, "G": 30, "B": 40, "A": 255 },
+      "DefaultSizeCm": 1.2,
+      "RotationDegrees": 0,
+      "Gold": 0.8,
+      "DefaultOpacity": 1,
+      "bOverrideMaterial": true,
+      "MaterialOverride": "Gold"
+    }
+  }
+}
+```
+
+```json
+{
+  "StructName": "/Script/EastRimWorld.CreatorFaceAnchorRow",
+  "Rows": {
+    "MyMod_MyHead": {
+      "HeadMesh": "/Game/Mods/MyMod/Heads/SK_MyHead.SK_MyHead",
+      "AttachBone": "head",
+      "Anchors": [
+        { "Anchor": "Forehead", "Location": { "X": 0, "Y": 11.3, "Z": 173.0 }, "Normal": { "X": 0, "Y": 0.97, "Z": 0.25 } },
+        { "Anchor": "BrowCenter", "Location": { "X": 0, "Y": 12.0, "Z": 170.2 }, "Normal": { "X": 0, "Y": 1, "Z": 0.08 } }
+      ]
+    }
+  }
+}
+```
+
 #### 新游戏捏人页的真值（参考）
 
 - `GetCharacterShapeParams` 目前按配置顺序返回 28 条，以后可能增加，请按 `ID` 匹配，不要按下标：`Body_Age`、`Body_Size`、`Ear_MorphTarget_Morph01`、`EyeRoughness`、`Eyes_MorphTarget_Depth`、`Eyes_MorphTarget_Size`、`Jaw_MorphTarget_Height`、`LipsRoughness`、`Mouth_MorphTarget_Depth`、`Nose_MorphTarget_Height`、`Face_CheekBone`、`Face_LipLower`、`Face_NoseBridge`、`Face_BrowHeight`、`Face_BrowRidge`、`Face_CheekFull`、`Face_ChinDepth`、`Face_ChinLength`、`Face_EyeCant`、`Face_EyeDistance`、`Face_EyeLid`、`Face_JawAngle`、`Face_JawWidth`、`Face_LipUpper`、`Face_MouthWidth`、`Face_NoseTipDepth`、`Face_NoseTipHeight`、`Face_NoseWidth`。
 - 对应的中文 `DisplayName` 依次是：年龄、身高、长度、Eye Shadow Roughness（英文占位）、凹陷、大小、高度、Lip Gloss（英文占位）、凹陷、高度、颧骨、下唇、鼻梁、眉高、眉骨、饱满、前后、长短、眼角、眼距、眼皮、颌角、腮宽、上唇、嘴宽、鼻翘、鼻尖、鼻翼。"长度、凹陷、大小、高度、饱满、前后、长短"这几个短名单独看不出是哪里，建议按 `ID` 用 4.10 滑条表里的名字显示（如 `Face_CheekFull` 脸颊饱满、`Face_ChinDepth` 下巴前后、`Face_ChinLength` 下巴长短、`Eyes_MorphTarget_Depth` 眼睛凹陷）。
-- 新游戏捏人页的皮肤妆层只有三层生效（只在捏人页里生效，目前不进存档），浓度都是 0~1：`Lips` 唇妆（材质参数 `Creator Makeup Lips Color` / `Creator Makeup Lips Intensity`，默认浓度 0.6）、`Eyeshadow` 眼影（`Creator Makeup Eyes Color` / `Creator Makeup Eyes Intensity`，0.5）、`Blush` 腮红（`Creator Makeup Blush Color` / `Creator Makeup Blush Intensity`，0.4）。它们和取色器的 `LipsTint` 不是同一组参数，目前 Mod 接口还不能读写。
-- 花钿颜色和 `TattooTint` 不是同一个参数：花钿是贴花，颜色写在贴花自己的材质上。
+- 新游戏捏人页的皮肤妆层只有三层（2026-11 起掌门捏的妆随存档进游戏），浓度都是 0~1：`Lips` 唇妆（材质参数 `Creator Makeup Lips Color` / `Creator Makeup Lips Intensity`，默认浓度 0.6）、`Eyeshadow` 眼影（`Creator Makeup Eyes Color` / `Creator Makeup Eyes Intensity`，0.5）、`Blush` 腮红（`Creator Makeup Blush Color` / `Creator Makeup Blush Intensity`，0.4）。它们和取色器的 `LipsTint` 不是同一组参数；Mod 用上面"扩展外观"一节的妆层接口读写。
+- 花钿颜色和 `TattooTint` 不是同一个参数：花钿是贴花，颜色写在贴花自己的材质上（Mod 用 `SetCharacterDecal`）。
 
 ### 4.11 立绘
 
@@ -792,6 +970,16 @@ JSON 文件格式：
 - 一级大类的 `Icon` 是软引用数组，依次填 普通 / 悬停 / 按下 三张图的路径。旧版 SDK 里这个字段是硬引用，游戏合并时会因类型不符**静默跳过图标**（新大类没有图标），请用新版 SDK；用旧版导出的 JSON 里图标是路径字符串，新版游戏照样能读。
 - 一级大类、同一大类下的子类，`Sort` 都不能重复；`BuildingUI` 覆盖原生建筑时不要改 `Category`（原因见 4.6）。
 - JSON 改动在 Mod 加载时写入，菜单在进地点时读表，所以从下一次进地点起生效。
+
+捏人扩展的两张表（用法见 [4.10](#410-捏脸体型脸型发型颜色) 的"扩展外观"）：
+
+| ConfigType | StructName |
+|---|---|
+| `CreatorFacePatterns`（花钿 / 面靥图案） | `/Script/EastRimWorld.CreatorFacePatternRow` |
+| `CreatorFaceAnchors`（面部锚点） | `/Script/EastRimWorld.CreatorFaceAnchorRow` |
+
+- 这两张表**只能加新行**，不按上面"行名已存在 → 修改"处理；被跳过的行和原因写进 Mod 日志。
+- 游戏运行时不支持删表行：别对游戏的表调删行函数（`DataTableFunctionLibrary` 的删行在编辑器里会让游戏崩溃，发行版里没有这个函数）。
 
 ## 6. 沙箱限制（负面清单）
 

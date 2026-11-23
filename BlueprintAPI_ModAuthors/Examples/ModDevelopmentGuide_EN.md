@@ -356,6 +356,7 @@ end
 
 - With a valid Guid, the preview character in the map takes on the target disciple's current look (body, face, hair, apparel, colors) and acts as a display-only stand-in. The disciple stays where they are and is never moved.
 - After a successful call on **the target disciple** to `SetCharacterApparel`, `ClearCharacterApparel`, `RemoveCharacterPersonalApparel`, `ResetCharacterApparels` or `SetCharacterCustomizationId` from [4.9](#49-character-appearance-and-personal-apparel), the stand-in refreshes on the next frame. Changes go straight into the disciple's save data, so nothing needs to be written back when the map closes.
+- The stand-in also shows the target disciple's extended appearance (makeup, huadian / mianye, brows and lashes, irises; see "Extended appearance" in [4.10](#410-customization-body-face-hair-colors)). After an extended-appearance write function is called on the target disciple, the stand-in follows; on the first visit, while textures load, it may show up a second or two later.
 - To support "cancel", record the personal apparel and current preset with `GetCharacterPersonalApparels` and `GetCharacterCustomizationIds` when entering, and write them back on cancel.
 - The stand-in appears already standing on the stage, with no entrance animation, and then plays its idle animation while the game is paused.
 - View: a level camera in the map, placed at the default front shot of the stand-in (the framing designed by the plugin) when the studio opens.
@@ -459,7 +460,7 @@ The character customizer layers apparel by the **class** of the appearance asset
 | `GetHairstyleSlots(WorldContext)` | → array of hairstyle slots with `ID`, `DisplayName`, `bAllowEmpty`; currently `Head` (hair) and `Beard` (may be empty). Pass `self.ModInfo` as `WorldContext` |
 | `GetCharacterHairstyles(Character, SlotId)` | → `options, currentId`: hairstyles of this slot that fit the character's current anatomy (each with `HairstyleId`, `DisplayName`, `Icon`), plus the character's current hairstyle ID |
 | `SetCharacterHairstyle(Character, SlotId, HairstyleId)` | Switches the hairstyle; `HairstyleId` comes from `GetCharacterHairstyles`; pass an empty string to remove the hairstyle of a slot that may be empty; returns bool |
-| `ResetCharacterCustomization(Character)` | Undoes every customization change a mod made to this character (body, face, hair, colors, the switched body type, body parts and the chosen preset) and returns to the game's own look; returns bool |
+| `ResetCharacterCustomization(Character)` | Undoes every customization change a mod made to this character (body, face, hair, colors, the switched body type, body parts and the chosen preset) and returns to the game's own look; also deletes the extended appearance (see "Extended appearance" below), whichever mod wrote it; returns bool |
 
 ```lua
 local params = UE.UModLuaLibrary.GetCharacterShapeParams(Character)
@@ -475,11 +476,11 @@ UE.UModLuaLibrary.SetCharacterHairstyle(Character, "Head", options[1].HairstyleI
 
 - The sliders and colors follow the official sect apparel UI, with the same ranges (see the table below). `Body_Size` (height) drives an animation blend parameter; `Body_Age` changes an animation blend parameter, a morph target and a skin parameter together, exactly like the official UI. Parameters that are not in the table are rejected.
 - The sect leader and every character registered in the world can be edited. Stand-ins and other characters that use the sect leader's appearance follow the sect leader, so edit the sect leader instead. Temporary characters created for arenas, sparring or tests are rejected.
-- The write functions (Set and Reset) can only be called from a mod's Lua, because the game records which mod made the change.
+- The write functions (the Set functions) can only be called from a mod's Lua, because the game records which mod made the change.
 - Changes apply to the character immediately, and the stand-in in the character editor map follows on the next frame. They are saved with the game and survive save/load, leaving and returning to a place, and sect battles.
 - **Mod data is stored separately and never changes the game's own data**: a mod's changes are kept per character in a separate part of the save. When the mod that wrote them is disabled or removed, the character shows the game's own look and the mod's changes are kept unchanged; they come back after the mod is enabled again and the save is loaded. Players without your mod can load the save normally.
 - Temporary copies of a character (arena fighters, prison break copies and so on) show the character's own look.
-- You may call the setters every frame while a slider is dragged. "Cancel" is up to the mod: record the original values with the Get functions when your UI opens and write them back on cancel, or call `ResetCharacterCustomization`.
+- You may call the setters every frame while a slider is dragged. "Cancel" is up to the mod: record the original values with the Get functions when your UI opens and write them back on cancel, or call `ResetCharacterCustomization` (it also deletes the extended appearance, including makeup and decals written by other mods).
 - If a setter returns false, the character's look is restored to what it was before the call.
 
 Slider `ParamId`s:
@@ -581,12 +582,189 @@ The official "drag a point on the face" editor in the new-game character creator
 - What the current data holds: every slider affects both sides (`Side` 0, no mirror slider) and every point has `SideIndependent` false, so there is no one-side editing; each column has the same coefficients in both directions; `SafeMin` / `SafeMax` equal the full slider range. The fields are kept for finer data later.
 - The official solver works in screen space: each column is projected to the screen, the drag target is projected onto the axes this view allows, then all `Solve` columns are solved together with bounded damped least squares. Damping = 0.02 × the mean squared screen offset of the `Solve` columns; the regularization pulls sliders toward their values when the mouse was pressed. A simpler approach: move only the `Solve` slider with the largest offset along the drag direction, in proportion.
 
+#### Extended appearance: makeup, huadian / mianye decals, brows and lashes, irises
+
+> Added 2026-11, in testing. A complete example is in [`Examples/ExtLookExample`](ExtLookExample/README.md).
+
+Every character can carry one mod-written "extended appearance override": skin makeup layers, huadian / mianye (forehead / cheek) decals, brows, lashes and eyes (irises). It lives in the mod data area and is saved with the game.
+
+Priority is **mod > sect-branch uniform look > the character's own look**:
+- The uniform look is an official sect apparel feature; it applies once released.
+- "The character's own look" is what the player made for the sect leader in the new-game character creator.
+
+| API (`UE.UModLuaLibrary`) | Notes |
+|---|---|
+| `GetCharacterMakeupLayers(Character)` | → skin makeup layer IDs this head supports (`Lips`, `Eyeshadow`, `Blush`); empty when the head does not support makeup |
+| `GetCharacterMakeupLayer(Character, LayerId)` | → `ok, color, opacity, source`: the effective color (linear), opacity (0 = no such layer) and source; `ok` is false when no source sets this layer |
+| `SetCharacterMakeupLayer(Character, LayerId, Color, Opacity)` | Sets color and opacity 0~1; opacity 0 removes the layer (also removes makeup from the leader's own look or the uniform look); returns bool |
+| `ClearCharacterMakeupLayer(Character, LayerId)` | Drops the mod's setting for this layer so it falls back to the lower-priority source; returns bool |
+| `GetDecalSlots()` | → decal slots: `Huadian` (forehead ornament) and `Mianye` (cheek ornament) |
+| `GetDecalPatterns(WorldContext, SlotId)` | → patterns of the slot, including rows added by mods; each has `PatternId`, `SlotId`, `DefaultAnchorId`, `DefaultColor` (linear), `DefaultSizeCm`, `DefaultGold`, `DefaultOpacity`, `DefaultRotationDegrees`, `MaterialOverride`, `bPairedLR`, `bFromMod`. Pass a character or `self.ModInfo` as `WorldContext`, not nil |
+| `GetFaceAnchors()` | → the 9 anchor IDs: `Forehead`, `BrowCenter`, `TempleL`, `TempleR`, `DimpleL`, `DimpleR`, `LipCornerL`, `LipCornerR`, `Chin` (L / R = the character's own left / right) |
+| `GetCharacterFaceAnchors(Character)` | → anchors that have a position on this character's head |
+| `GetDecalParamRanges(WorldContext)` | → `SizeMinCm` / `SizeMaxCm` (0.2 / 20, what the game accepts), `SuggestedSizeMinCm` / `SuggestedSizeMaxCm` (0.6 / 4, the official UI's range), `OffsetRangeCm` (max offset, currently 2). Same `WorldContext` rule as above |
+| `GetCharacterDecal(Character, SlotId)` | → `ok, state, source` (`FModDecalState`, fields below); when a mod removed the slot, `ok` is true and `PatternId` is None |
+| `SetCharacterDecal(Character, SlotId, State)` | Sets the decal; `State.PatternId` = None removes the slot; returns bool |
+| `ClearCharacterDecal(Character, SlotId)` | Drops the mod's setting for the slot; returns bool |
+| `GetBrowLashStyles(Character, Kind)` | → brow (`Kind` = `"Brow"`) / lash (`"Lash"`) styles bound to this head |
+| `GetCharacterBrowLash(Character, Kind)` | → `ok, state, source` (`FModBrowLashState`) |
+| `SetCharacterBrowLash(Character, Kind, State)` | Sets brows / lashes; what `State.StyleId` = None means is below; returns bool |
+| `ClearCharacterBrowLash(Character, Kind)` | Drops the mod's setting for brows / lashes; returns bool |
+| `GetIrisPresets(Character)` | → iris style IDs; empty when the head does not support eye changes |
+| `GetCharacterEyes(Character)` | → `ok, state, source` (`FModEyesState`) |
+| `SetCharacterEyes(Character, State)` | Sets iris styles and iris tint; returns bool |
+| `ClearCharacterEyes(Character)` | Drops the mod's setting for the eyes; returns bool |
+| `ResetCharacterExtAppearance(Character)` | Deletes all of the character's mod extended appearance, whichever mod wrote it and whether or not that mod is enabled (`ResetCharacterCustomization` deletes it too); returns bool |
+
+`source` (`EModExtSource`, a number in Lua): `0` none, `1` the character's own look, `2` uniform look, `3` mod.
+
+| Struct | Fields |
+|---|---|
+| `FModDecalState` | `PatternId`; `AnchorId` (None = the pattern's default anchor); `bUseDefaultColor` (default true); `Color` (linear 0~1); `Opacity` (0~1, default 1); `SizeCm` (≤0 = the pattern's default size); `OffsetCm` (`FVector2D`, positive X toward the character's own left, positive Y up; the paired side is mirrored left/right); `AngleDegrees`; `Gold` (0~1, <0 = the pattern's default) |
+| `FModBrowLashState` | `StyleId`; `ColorMode` (`EModHairColorMode`: `0` style default, `1` melanin / redness, `2` any color); `Color`; `Melanin`; `Redness`; `ShapeThickness` / `ShapeHeight` / `ShapeSpacing` / `ShapeTail` (brow shape -1~1, 0 = unchanged, brows only) |
+| `FModEyesState` | `bIndependent` (false = both eyes use the left eye's settings); `LeftPresetId` (None = the head's original eye); `bLeftTint`; `LeftTint`; `RightPresetId`; `bRightTint`; `RightTint` |
+
+```lua
+local L = UE.UModLuaLibrary
+-- lip color
+if L.GetCharacterMakeupLayers(Character):Contains("Lips") then
+    L.SetCharacterMakeupLayer(Character, "Lips", UE.FLinearColor(0.55, 0.05, 0.08, 1), 0.8)
+end
+-- huadian: pattern's default anchor and color; pass opacity and angle yourself
+local pats = L.GetDecalPatterns(Character, "Huadian")
+if pats:Num() > 0 then
+    local p = pats[1]
+    local s = UE.FModDecalState()
+    s.PatternId = p.PatternId
+    s.bUseDefaultColor = true
+    s.Opacity = p.DefaultOpacity
+    s.AngleDegrees = p.DefaultRotationDegrees
+    L.SetCharacterDecal(Character, "Huadian", s)
+end
+-- read back: effective value and source
+local ok, state, source = L.GetCharacterDecal(Character, "Huadian")
+```
+
+**Who can be changed, and where it shows**
+- The same characters as the customization API: the sect leader and characters registered in the world. Stand-ins that use the leader's appearance follow the leader. Read functions run the same check and log an error for stand-ins and temporary characters.
+- Write functions can only be called from a mod's Lua; `ResetCharacterExtAppearance` can be called from anywhere. Changes are saved with the game. When many characters change at once they are applied in batches, and textures and other assets load asynchronously, so changes usually show within a few frames to a second or two.
+- Not shown:
+  - on combat forms in battles such as sect wars;
+  - on temporary copies (ordinary disciples' stand-ins, sect arena, prison breaks and the like), which show the character's own look.
+- Which heads support what:
+  - character-creator heads (the leader, and disciples using creator models) support everything;
+  - most NPC heads only support decals;
+  - writing an item the head does not support logs an error and returns false. Check with the list functions above first.
+- Failure reasons go to your mod log. The same error is logged at most once per 5 seconds, so calling over a batch of characters will not flood the log. Filtering the characters yourself is still better; for example, only set makeup when `GetCharacterMakeupLayers` is not empty.
+
+**Ownership**
+- A character's mod extended appearance has a single owner: the mod that wrote it last. This is tracked separately from the owner of customization edits.
+- When another mod writes to the same character, the whole override becomes that mod's. The `Clear` functions also count as writes and change the owner.
+- Writing the same values again is not a write: it does not change the owner and still returns true.
+- If the owning mod is disabled or removed, none of the character's mod extended appearance applies. It stays in the save and comes back when the mod is enabled again, except in these cases, where the old override is replaced or deleted for good:
+  - another mod wrote to the character while the owner was disabled;
+  - `ResetCharacterExtAppearance` or `ResetCharacterCustomization` was called.
+- Enabling or disabling a mod mid-game refreshes the characters on the map right away.
+
+**Values**
+- Colors are linear, components 0~1; opacity 0~1. Values out of range are clamped. Non-finite numbers (NaN, infinity) are rejected.
+- Decals:
+  - size 0.2~20 cm;
+  - offset at most `OffsetRangeCm` in each direction;
+  - angle wrapped to [-180, 180);
+  - gold 0~1, rendered as gold at ≥0.5.
+
+**Decals**
+- `AnchorId` must be one of `GetCharacterFaceAnchors`. Leave it empty to use the pattern's default anchor, which must also exist on the head, or the call is rejected.
+- Material look: `MaterialOverride` = None means the row does not override it. Some official patterns then have a fixed jade or gold look, and the rest are decided by the gold amount. For patterns with a fixed look and patterns with an override, the material type does not change with the gold amount; leave their gold at the default.
+- Paired patterns (`bPairedLR`, such as mianye and xiehong) placed on a left/right anchor are mirrored onto the other side automatically.
+- Opacity and angle are not taken from the pattern defaults (`DefaultOpacity`, `DefaultRotationDegrees`) automatically; pass them yourself.
+- Gold patterns: a color within 0.01 of the pattern's default counts as no color chosen and shows the uniform gold. When no color is chosen, the color read back is the pattern table's default color, not the gold shown on screen.
+- Read-backs return effective values: size, gold and anchor are concrete even when the pattern defaults are in use. Writing a read-back state back unchanged counts as a write, changes the owner, and turns those values into explicit ones. It looks the same, but later changes to the pattern table's defaults no longer apply.
+
+**Brows and lashes**
+- For brows, `StyleId` = None removes them. On the sect leader that means no brows at all, like picking "none" in the creator; on disciples the brows painted on the skin show again.
+- For lashes, `StyleId` = None restores the head's original lashes; the character is never left without lashes.
+- Color modes:
+  - `0` style default: the same setting as "follow hair color" in the creator; disciples have no hair color to follow, so they show the style's default color.
+  - `1` uses `Melanin` / `Redness` (0~1).
+  - `2` any color (`Color`; approximated with melanin / redness when the groom material has no tint channel).
+- Lashes only support `0` style default; other modes are rejected, because a head's own lashes keep their color when the style changes and the creator has no lash color either.
+- Brow shape: thickness and height work for every brow style; spacing and tail only work for brow styles with separate left and right halves and have no effect on the others.
+- Setting only lashes keeps the brows painted on the skin.
+
+**Eyes**
+- The eye settings replace the eyes as a whole, and anything left empty does not inherit from lower-priority sources:
+  - `LeftPresetId` / `RightPresetId` = None means the head's original eye, not the style the player chose for the leader in the creator;
+  - without `bLeftTint` / `bRightTint` there is no tint, and the lower-priority tint is not kept either.
+- To change only part of it, read it with `GetCharacterEyes`, edit, then write it back.
+- `LeftTint` / `RightTint` multiply the iris texture.
+- Iris size and pupil size are not exposed.
+
+**Adding pattern and anchor rows** (`ConfigType`s in section 5)
+- Both tables **only accept new rows**. These rows are skipped at merge time, with the reason written to your mod log:
+  - rows named like an official row or another mod's row;
+  - pattern rows with an invalid ID (letters, digits, `_` and `-` only, at most 128 characters) or no `Pattern` texture;
+  - anchor rows with an empty `HeadMesh`, or for a head that is already registered.
+- A wrong `StructName` skips the whole table.
+- When your mod is enabled again in the same session, its own earlier rows get the same message; they are still there and work. Editing the JSON and re-enabling in the same session does not update the rows; reload a save.
+- Pattern rows (`FCreatorFacePatternRow` in the SDK):
+  - `Pattern` is required: transparent background, white pattern; the game tints it. Import it with default compression, sRGB on, with alpha.
+  - **Do not name the texture asset `T_FaceDecal_<official pattern ID>`**, or it picks up that official pattern's material look and normal map.
+  - `NormalTexture` is optional; import it as a normal map. It is flat when empty.
+  - `bOverrideMaterial` + `MaterialOverride` are optional and choose the cinnabar / jade / gold look; set them when you need a specific look.
+  - The game does not read `DisplayNameKey` or `Thumbnail`; show pattern names in your own UI with your own text.
+- Mod patterns **do not appear in the official creator or the sect apparel UI**; they are only usable through the functions above. After the mod is disabled and a save is reloaded, decals that use its patterns quietly disappear, without errors.
+- Anchor rows (`FCreatorFaceAnchorRow`):
+  - The game already registers its 11 character-creator heads, so mods can only add rows for NPC heads or their own heads.
+  - `HeadMesh` is required. `AttachBone` is the bone the decal follows (default `head`); use a bone that exists in the head's skeleton, otherwise the decal is attached to the head component and does not follow a bone.
+  - Each `Anchors` item is `Anchor`, `Location`, `Normal`, in cm, in the head mesh's reference-pose component space. You may register only some anchors; the others are not available on that head. A row with an empty `Anchors` counts as not registered.
+- Heads without a row get estimated anchors: from the eyeball bones; without eyeball bones, from a fixed offset to the `head` bone; without a `head` bone, decals are not supported. Estimated positions are approximate; register an anchor row for precise placement.
+
+JSON for a pattern row and an anchor row:
+
+```json
+{
+  "StructName": "/Script/EastRimWorld.CreatorFacePatternRow",
+  "Rows": {
+    "MyMod_LotusGold": {
+      "Slot": "Huadian",
+      "Pattern": "/Game/Mods/MyMod/Decals/T_MyMod_Lotus.T_MyMod_Lotus",
+      "Anchor": "BrowCenter",
+      "DefaultColor": { "R": 200, "G": 30, "B": 40, "A": 255 },
+      "DefaultSizeCm": 1.2,
+      "RotationDegrees": 0,
+      "Gold": 0.8,
+      "DefaultOpacity": 1,
+      "bOverrideMaterial": true,
+      "MaterialOverride": "Gold"
+    }
+  }
+}
+```
+
+```json
+{
+  "StructName": "/Script/EastRimWorld.CreatorFaceAnchorRow",
+  "Rows": {
+    "MyMod_MyHead": {
+      "HeadMesh": "/Game/Mods/MyMod/Heads/SK_MyHead.SK_MyHead",
+      "AttachBone": "head",
+      "Anchors": [
+        { "Anchor": "Forehead", "Location": { "X": 0, "Y": 11.3, "Z": 173.0 }, "Normal": { "X": 0, "Y": 0.97, "Z": 0.25 } },
+        { "Anchor": "BrowCenter", "Location": { "X": 0, "Y": 12.0, "Z": 170.2 }, "Normal": { "X": 0, "Y": 1, "Z": 0.08 } }
+      ]
+    }
+  }
+}
+```
+
 #### Ground truth of the new-game character creator (reference)
 
 - `GetCharacterShapeParams` currently returns 28 sliders in configuration order; more may be added later, so match on `ID`, not on position: `Body_Age`, `Body_Size`, `Ear_MorphTarget_Morph01`, `EyeRoughness`, `Eyes_MorphTarget_Depth`, `Eyes_MorphTarget_Size`, `Jaw_MorphTarget_Height`, `LipsRoughness`, `Mouth_MorphTarget_Depth`, `Nose_MorphTarget_Height`, `Face_CheekBone`, `Face_LipLower`, `Face_NoseBridge`, `Face_BrowHeight`, `Face_BrowRidge`, `Face_CheekFull`, `Face_ChinDepth`, `Face_ChinLength`, `Face_EyeCant`, `Face_EyeDistance`, `Face_EyeLid`, `Face_JawAngle`, `Face_JawWidth`, `Face_LipUpper`, `Face_MouthWidth`, `Face_NoseTipDepth`, `Face_NoseTipHeight`, `Face_NoseWidth`.
 - Their Chinese `DisplayName`s in that order: 年龄 (age), 身高 (height), 长度 (length), Eye Shadow Roughness (English placeholder), 凹陷 (depth), 大小 (size), 高度 (height), Lip Gloss (English placeholder), 凹陷, 高度, 颧骨 (cheekbone), 下唇 (lower lip), 鼻梁 (nose bridge), 眉高 (brow height), 眉骨 (brow ridge), 饱满 (fullness), 前后 (front/back), 长短 (length), 眼角 (eye corner), 眼距 (eye distance), 眼皮 (eyelid), 颌角 (jaw angle), 腮宽 (jaw width), 上唇 (upper lip), 嘴宽 (mouth width), 鼻翘 (nose tip tilt), 鼻尖 (nose tip), 鼻翼 (nose wings). The short ones (length, depth, size, height, fullness, front/back, long/short) do not say where they apply; show them by `ID` with the names of the 4.10 slider table instead (e.g. `Face_CheekFull` cheek fullness, `Face_ChinDepth` chin front/back, `Face_ChinLength` chin length, `Eyes_MorphTarget_Depth` eye depth).
-- Only three skin makeup layers of the new-game creator are live (only inside the creator; they are not saved yet), intensity 0~1 each: `Lips` (material parameters `Creator Makeup Lips Color` / `Creator Makeup Lips Intensity`, default intensity 0.6), `Eyeshadow` (`Creator Makeup Eyes Color` / `Creator Makeup Eyes Intensity`, 0.5) and `Blush` (`Creator Makeup Blush Color` / `Creator Makeup Blush Intensity`, 0.4). They are not the color picker's `LipsTint`, and mods cannot read or write them yet.
-- The huadian (forehead ornament) color is not `TattooTint`: huadian is a decal and its color lives on the decal's own material.
+- The new-game creator has three skin makeup layers (since 2026-11 the makeup made for the sect leader is saved and shows in game), intensity 0~1 each: `Lips` (material parameters `Creator Makeup Lips Color` / `Creator Makeup Lips Intensity`, default intensity 0.6), `Eyeshadow` (`Creator Makeup Eyes Color` / `Creator Makeup Eyes Intensity`, 0.5) and `Blush` (`Creator Makeup Blush Color` / `Creator Makeup Blush Intensity`, 0.4). They are not the color picker's `LipsTint`; mods read and write them with the makeup functions of the "Extended appearance" section above.
+- The huadian (forehead ornament) color is not `TattooTint`: huadian is a decal and its color lives on the decal's own material (mods use `SetCharacterDecal`).
 
 ### 4.11 Portraits
 
@@ -779,6 +957,16 @@ JSON file format:
 - A category's `Icon` is an array of soft references: the paths of the normal / hovered / pressed images, in that order. In older SDKs this field was a hard reference, and the game **silently skipped the icons** when merging because the types differ (new categories had no icon) — use the updated SDK. JSON exported by the old SDK stores the icons as path strings, which the new game still reads.
 - `Sort` must be unique among categories, and among the sub-tabs of one category; do not change `Category` when overriding a vanilla building's `BuildingUI` row (see 4.6).
 - JSON changes are applied when the mod loads and the menu reads the tables when you enter a place, so they take effect from the next place you enter.
+
+The two character-creator tables (usage in the "Extended appearance" part of [4.10](#410-customization-body-face-hair-colors)):
+
+| ConfigType | StructName |
+|---|---|
+| `CreatorFacePatterns` (huadian / mianye patterns) | `/Script/EastRimWorld.CreatorFacePatternRow` |
+| `CreatorFaceAnchors` (face anchors) | `/Script/EastRimWorld.CreatorFaceAnchorRow` |
+
+- These two tables **only accept new rows**; "existing row name → modify" above does not apply. Skipped rows and the reasons are written to the mod log.
+- Removing table rows at runtime is not supported: do not call row-removal functions on the game's tables (`DataTableFunctionLibrary`'s row removal crashes the game in the editor and does not exist in release builds).
 
 ## 6. Sandbox restrictions (what mods cannot do)
 

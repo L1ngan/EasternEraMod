@@ -1,0 +1,16 @@
+{
+	"ModId": "ExtLookExample",
+	"ModName": "Ext Look Example",
+	"Version": "1.0.0",
+	"Author": "EasternEra",
+	"Description": "扩展外观接口示例：控制台 ExtLookExample apply 给在场的本门角色上妆、贴花钿、换睫毛和虹膜，ExtLookExample reset 删掉这些角色的全部 Mod 扩展外观",
+	"MainLuaFile": "Main.lua",
+	"LogLevel": "Log",
+	"NewGameLoad": false,
+	"MinGameVersion": "1.3.10",
+	"GameplayTagsIniFile": "",
+	"IncludeGameplayTags": false,
+	"AdditionalAssets": [],
+	"Dependencies": [],
+	"DataTableConfigs": []
+}

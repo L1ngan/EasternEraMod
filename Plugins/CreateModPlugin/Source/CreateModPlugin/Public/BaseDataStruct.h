@@ -114,6 +114,10 @@ enum class EModConfigType : uint8
 	CharacterBodyParts,
 	//服饰染色登记（StructName 填 /Script/EastRimWorld.CreatorGarmentDyeRow；行名=衣件 ID，按网格登记可染色的材质槽，登记后捏人和宗门时装的「染色」能给这件衣服换色）
 	CreatorGarmentDye,
+	//花钿 / 面靥图案（StructName 填 /Script/EastRimWorld.CreatorFacePatternRow；行名=图案 ID，只能加新行，不能和官方或别的 Mod 的行同名）
+	CreatorFacePatterns,
+	//面部锚点（StructName 填 /Script/EastRimWorld.CreatorFaceAnchorRow；按头网格登记 9 个锚点的位置，只能给还没登记的头网格加行，HeadMesh 不能为空）
+	CreatorFaceAnchors,
 };
 
 //Mod资产类型
