@@ -10,6 +10,22 @@
 
 ## 蓝图暴露变量
 
+### 属性 `VariantOf`
+
+| 项目 | 内容 |
+|------|------|
+| C++ 类型 | `FName` |
+| 反射说明符 | BlueprintReadWrite, Category="Base" |
+| 蓝图侧含义 | 蓝图可 **读取与写入**（仍受 Edit 系列说明符在编辑器中的限制）。 |
+| 原始声明（单行节选） | `UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base") FName VariantOf;` |
+
+**说明:**
+
+> 规格本体的建筑 ID:本行是该建筑的另一种规格, 解锁跟随本体、与本体算同一种建筑;为空则不是规格行。
+> 填了就必须同时把 TemplateID 填成同一个本体 ID, 且本体要先于本行装进表(否则本行被拒收);建筑配置表要用覆盖模式
+
+---
+
 ### 属性 `Size`
 
 | 项目 | 内容 |

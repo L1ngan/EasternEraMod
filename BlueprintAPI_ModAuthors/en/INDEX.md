@@ -1379,6 +1379,8 @@ One page per **UCLASS / USTRUCT** with Blueprint-exposed members only.
 
 - `enum` **`EBuildUnavailableReason`** — [ModBuildLibrary__EBuildUnavailableReason](EastRimWorld/Mod/ModBuildLibrary__EBuildUnavailableReason.md)
   - **Description:** 建筑或子类不可用的原因(只追加, 不重排)
+- `struct` **`FModBuildVariantInfo`** — [ModBuildLibrary__FModBuildVariantInfo](EastRimWorld/Mod/ModBuildLibrary__FModBuildVariantInfo.md)
+  - **Description:** 建筑的一种可选规格(同族建筑行, 见建筑配置的 VariantOf)
 - `class` **`UModBuildLibrary`** — [ModBuildLibrary__UModBuildLibrary](EastRimWorld/Mod/ModBuildLibrary__UModBuildLibrary.md)
   - **Description:** 建造界面 Mod 接口。Lua:UE.UModBuildLibrary.函数名(WorldContext, ...) 分类数据:一级大类 BuildListCategorizeConfig → 二级子类 BuildTabConfig(Category = 一级 ID) → 建筑菜单行 BuildingUI(Category = 二级 ID, 行 ID = 建筑 ID); 列表顺序按建筑配置 BuildConfig 的行序。运行期注册只改内存里的表, 不进存档, 读档/新开局后要重新注册。 "已解锁"与建造菜单一致:存档解锁列表里有, 且二楼没开放时不含通往上层的楼梯(新手引导期间菜单只显示引导解锁的建筑, 这里不区分)。
 

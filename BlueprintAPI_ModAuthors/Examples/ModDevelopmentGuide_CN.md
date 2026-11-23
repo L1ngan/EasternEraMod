@@ -280,6 +280,70 @@ end)
 - `UnregisterBuildMenuWidget(nil, regId)` 撤销登记并移除实例；`GetBuildMenuModWidget(nil, regId)` 取当前实例（菜单没创建时为 nil）。Mod 卸载时自动撤销。
 - 用法示例：自绘一排「三级分类」按钮，点击时用 `ShowBuildItems` 筛原生列表，或直接用 `BeginPlaceBuilding` 进入放置。
 
+**建筑规格（同一种建筑的不同尺寸 / 款式）**
+
+> 2026 年 11 月新增，需要包含该接口的游戏版本。一种建筑的另一种规格（尺寸、模型、造价不同）做成建筑配置表里的**一条独立行**，用 `VariantOf` 指回本体。放下的规格建筑就是这一行：占格、造价、工作量、存读档都按它自己的配置走。
+
+配表（两张表都要配；建筑配置表用覆盖模式 `bOverrideData=true`，原因见第 5 节）：
+
+| 表 | 字段 | 填什么 |
+|---|---|---|
+| `BuildConfig` | 行名、`ID` | 规格 ID，两者相同 |
+| | `TemplateID`、`VariantOf` | 都填本体 ID，两者必须相同。本体要先于规格行装进表：原版建筑，或更早装载的 Mod、同一 Mod 更早的表 |
+| | `Size`、`StaticMeshes`、`BuildResource`、`Workload` 等 | 规格自己的值；数组和 Map 写全量 |
+| | 全部布尔字段 | 显式写成和本体一致（合表时顶层布尔一律写入，漏写会用默认值盖掉本体的值） |
+| `BuildingUI` | `Category` | **本体所在的子类**（房间、组合、囚室按子类认设施） |
+| | `DisplayName`、`Icon` | 规格名、规格图标 |
+
+- 规格行**不要**写进任何解锁表。本体解锁了，规格就能建；原版建造列表、新建筑红点都不会单列规格行。
+- 合表时会拒收 `TemplateID` 与 `VariantOf` 不一致、或模板行当时还不在表里的规格行，原因写进日志。
+- 进游戏后，下面任一条不满足的规格行判为无效：不进同族，规格接口和 `CanBuild` 拒绝建造，日志里有原因：
+  - 行名等于 `ID`；
+  - 本体存在，且本体自己不是规格行；
+  - `EnvironType`、`BuildingType`、`BuildNum`、`BuildNumGroup` 与本体相同；
+  - 两行都有菜单行，子类相同且子类存在。
+- 规格算作本体：任务「拥有某建筑」、房间与组合的设施需求、数量上限、袭击战力、科技点转换、首次建造声望都把规格当本体算；明确要求某个规格的地方只认那个规格。制造设施建成时的编号和初始评分按各自的行；拆除一台后同一种制造设施按设施类型重排评分，本体和规格会一起参与。
+
+| 函数 | 说明 |
+|---|---|
+| `GetBuildVariants(nil, BuildId)` | → `TArray<FModBuildVariantInfo>`：本体在前，规格按建筑配置行序；`BuildId` 填本体或任一规格都行。没配规格返回 1 条（本体）；建筑不存在或是无效规格行返回空 |
+| `SetBuildVariant(nil, BuildId, VariantId)` | → `ok, Reason`：记住这个本体以后经 `BeginPlaceBuilding` / `SelectBuildItem` 放置时用哪个规格。只在内存、不进存档、**不动当前预览**；`VariantId` 填本体 = 恢复默认；失败返回 false、记忆不变：先查 ID 不存在 → `ConfigMissing`，不同族或无效规格 → `NotInVariantFamily`；过了再按 `CanBuild` 查要选的那一行，原因原样返回：缺菜单行或子类 → `NoMenuConfig`，本体没解锁 → `NotUnlocked`，二楼没开放时的上楼楼梯 → `UpperStoreyClosed` |
+| `GetBuildVariant(nil)` | → `ok, BuildId, VariantId`：正在放置时返回本体和正在放的那一行；没在放置返回 false |
+| `GetSelectedBuildVariant(nil, BuildId)` | 记住的规格（没记过返回本体自己），画选中态用 |
+
+`FModBuildVariantInfo` 的字段：
+
+- `VariantId`、`BuildId`（本体）、`DisplayName`、`Icon`、`Size`（旋转前）、`bIsDefault`；
+- `bAvailable`：通过配置与解锁检查，与 `CanBuild` 同口径；不含材料（放下时不扣料，施工时才搬）、落点和数量上限；
+- `UnavailableReason`：`bAvailable` 为 false 时的原因；
+- `Icon` 为空时不会自动用本体图标，可以拿第一条（本体）的 `Icon` 自己回退。
+
+```lua
+-- 规格按钮：列出规格；玩家选中后记住，并立刻换成该规格的预览
+local list = UE.UModBuildLibrary.GetBuildVariants(nil, "LuohanBed")
+for i = 1, list:Num() do
+    local v = list[i]
+    print(v.VariantId, v.DisplayName, v.Size.X, v.Size.Y, v.bAvailable)
+end
+local ok, reason = UE.UModBuildLibrary.SetBuildVariant(nil, "LuohanBed", "MyMod_LuohanLong")
+if ok then
+    -- 已记住;这一步可能因不在基地、鼠标没指在场景里而失败
+    local placing = UE.UModBuildLibrary.BeginPlaceBuilding(nil, "LuohanBed")  -- 放的是记住的规格
+    if not placing then
+        -- 没进放置:只更新选中态, 下次放置时用的就是记住的规格
+    end
+end
+```
+
+- 原版建造列表里点本体图标仍放本体，不读记忆；要让自己的图标点击用记住的规格，在点击回调里调 `BeginPlaceBuilding`。
+- 放置开始、放下、拆除事件里的建筑 ID 是规格行 ID（放置开始看 `Params.BuildId`，放下和拆除看 `Params.ConfigId`）；要按本体过滤，先用 `GetBuildVariants` 换算。放置开始事件下一帧才发，回调里用事件自带的 ID，不要再调 `GetBuildVariant` 查当前状态。
+- 不支持：
+  - 放下后再改规格；
+  - 把已经发布的规格改挂到别的本体（首次建造声望这类按族判的结果不回溯）；
+  - 墓地类建筑做规格。
+- 建议只给单个放置的设施（桌椅、床、设施、装饰）做规格。
+- 本体带配套格（`SupportingGrids`）、额外占位、重建链、仓库可用格、导航碰撞网格时，SDK 改不了这些字段，规格行只能沿用本体按小尺寸配的值，日志会提醒。
+
 ### 4.7 界面与按钮
 
 > 2026 年 11 月新增，需要包含该接口的游戏版本。
@@ -970,6 +1034,12 @@ JSON 文件格式：
 - 一级大类的 `Icon` 是软引用数组，依次填 普通 / 悬停 / 按下 三张图的路径。旧版 SDK 里这个字段是硬引用，游戏合并时会因类型不符**静默跳过图标**（新大类没有图标），请用新版 SDK；用旧版导出的 JSON 里图标是路径字符串，新版游戏照样能读。
 - 一级大类、同一大类下的子类，`Sort` 都不能重复；`BuildingUI` 覆盖原生建筑时不要改 `Category`（原因见 4.6）。
 - JSON 改动在 Mod 加载时写入，菜单在进地点时读表，所以从下一次进地点起生效。
+- 规格行（`VariantOf` 非空）的写法见 [4.6](#46-建造界面接口) 的「建筑规格」。
+- 覆盖模式下，等于 SDK 默认值的字段会被跳过、保留模板值，所以**改不回默认值**（例如 `Workload = 0`、空软引用、`None` 名字）；顶层布尔例外，一律写入。
+- 入口格 `EntranceGridPoses`、动物死亡产出这类「数组里套结构体」的字段，2026 年 11 月起能经 SDK 合进游戏表，以前会被整段跳过：
+  - 覆盖模式下写**非空**数组才整体替换；写 `[]` 等于默认值，会保留模板的入口；源数据里空的入口组会被跳过；只含行列都为 -1 的格的组，格子被丢掉后会留下一个空组，不要这样写；
+  - 合并模式只追加入口组；
+  - 已经建在存档里的建筑，入口不会跟着变。
 
 捏人扩展的两张表（用法见 [4.10](#410-捏脸体型脸型发型颜色) 的"扩展外观"）：
 

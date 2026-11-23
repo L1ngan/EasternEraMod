@@ -282,6 +282,70 @@ end)
 - `UnregisterBuildMenuWidget(nil, regId)` unregisters and removes the instance; `GetBuildMenuModWidget(nil, regId)` returns the current instance (nil when the menu does not exist). Everything is unregistered automatically when the mod unloads.
 - Typical use: draw your own row of "third-level" buttons that filter the vanilla list with `ShowBuildItems`, or start placement directly with `BeginPlaceBuilding`.
 
+**Building variants (different sizes / styles of one building)**
+
+> Added in November 2026; requires a game version that includes this API. Another variant of a building (different size, mesh or cost) is **a separate row** in the building config table that points back to the base building through `VariantOf`. A placed variant is that row: footprint, cost, workload and save/load all follow its own config.
+
+Config (both tables are needed; use override mode `bOverrideData=true` for the building config table, see section 5 for why):
+
+| Table | Field | What to fill in |
+|---|---|---|
+| `BuildConfig` | row name, `ID` | the variant ID, identical |
+| | `TemplateID`, `VariantOf` | both the base building ID, and they must be identical. The base row must already be in the table when the variant row is merged: a vanilla building, or a mod / an earlier table of the same mod that loads earlier |
+| | `Size`, `StaticMeshes`, `BuildResource`, `Workload`, etc. | the variant's own values; write arrays and maps in full |
+| | every bool field | set explicitly to the base row's values (top-level bools are always written when merging; a missing one overwrites the base value with the default) |
+| `BuildingUI` | `Category` | **the base building's sub-tab** (rooms, combinations and prison cells recognise facilities by sub-tab) |
+| | `DisplayName`, `Icon` | the variant's name and icon |
+
+- Do **not** put variant rows into any unlock table. Once the base building is unlocked the variants can be built; the vanilla build list and the new-building badge never list variant rows on their own.
+- When merging, a variant row whose `TemplateID` differs from `VariantOf`, or whose template row is not in the table yet, is rejected; the reason goes to the log.
+- In game, a variant row that fails any of the following is invalid: it does not join the family, the variant API and `CanBuild` refuse to build it, and the log says why.
+  - The row name equals `ID`.
+  - The base row exists and is not a variant row itself.
+  - `EnvironType`, `BuildingType`, `BuildNum` and `BuildNumGroup` equal the base row's.
+  - Both rows have menu rows, with the same sub-tab, and that sub-tab exists.
+- A variant counts as its base building for: "own building X" quests, room and combination facility requirements, build limits, raid strength, tech point conversion and the first-build reputation reward. Where a specific variant ID is required, only that variant counts. Crafting station numbering and the initial score on completion use each row's own ID; after one station is demolished, stations of the same crafting type are re-scored together, base and variants included.
+
+| Function | Notes |
+|---|---|
+| `GetBuildVariants(nil, BuildId)` | → `TArray<FModBuildVariantInfo>`: the base building first, then variants in building config row order; `BuildId` may be the base or any variant. Without variants it returns 1 entry (the base); for a missing building or an invalid variant row it returns an empty array |
+| `SetBuildVariant(nil, BuildId, VariantId)` | → `ok, Reason`: remembers which variant `BeginPlaceBuilding` / `SelectBuildItem` will place for this base building. In memory only, not saved, and **does not touch the current preview**; passing the base ID restores the default; on failure it returns false and keeps the remembered choice: first, missing ID → `ConfigMissing`, another family or an invalid variant → `NotInVariantFamily`; after that the chosen row goes through `CanBuild` and its reason is returned as is: no menu row or sub-tab → `NoMenuConfig`, base building not unlocked → `NotUnlocked`, stairs leading up while the upper storey is not open → `UpperStoreyClosed` |
+| `GetBuildVariant(nil)` | → `ok, BuildId, VariantId`: while placing, the base building and the row being placed; false when not placing |
+| `GetSelectedBuildVariant(nil, BuildId)` | the remembered variant (the base itself if none), for drawing the selected state |
+
+`FModBuildVariantInfo` fields:
+
+- `VariantId`, `BuildId` (the base), `DisplayName`, `Icon`, `Size` (before rotation), `bIsDefault`;
+- `bAvailable`: passes the config and unlock checks, same as `CanBuild`; it does not cover materials (nothing is deducted on placement, workers haul materials during construction), placement spot or build limit;
+- `UnavailableReason`: why `bAvailable` is false;
+- an empty `Icon` does not fall back to the base building's icon; use the first entry's (the base) `Icon` yourself.
+
+```lua
+-- Variant button: list the variants; when the player picks one, remember it and switch the preview right away
+local list = UE.UModBuildLibrary.GetBuildVariants(nil, "LuohanBed")
+for i = 1, list:Num() do
+    local v = list[i]
+    print(v.VariantId, v.DisplayName, v.Size.X, v.Size.Y, v.bAvailable)
+end
+local ok, reason = UE.UModBuildLibrary.SetBuildVariant(nil, "LuohanBed", "MyMod_LuohanLong")
+if ok then
+    -- remembered; this may still fail (not in the base, mouse not over the scene)
+    local placing = UE.UModBuildLibrary.BeginPlaceBuilding(nil, "LuohanBed")  -- places the remembered variant
+    if not placing then
+        -- placement did not start: just update the selected state; the next placement uses the remembered variant
+    end
+end
+```
+
+- Clicking the base building's icon in the vanilla build list still places the base and ignores the remembered choice. To make your own icon use the remembered variant, call `BeginPlaceBuilding` in your click callback.
+- The building ID in placement-start, placed and demolished events is the variant row ID (`Params.BuildId` for placement start, `Params.ConfigId` for placed and demolished); to filter by base building, map it with `GetBuildVariants` first. The placement-start event is sent one frame later, so use the ID in the event rather than calling `GetBuildVariant` for the current state.
+- Not supported:
+  - changing the variant of a building that is already placed;
+  - re-parenting a published variant to another base building (per-family results such as the first-build reputation reward are not recomputed);
+  - variants of graveyard buildings.
+- Variants are best suited to single-placement facilities (tables, chairs, beds, facilities, decorations).
+- If the base building has supporting grids (`SupportingGrids`), extra footprint info, a rebuild chain, warehouse grid offsets or a navigation collision mesh, the SDK cannot change those fields, so the variant row keeps the base building's small-size values; the log warns about it.
+
 ### 4.7 UI widgets and buttons
 
 > Added in November 2026; requires a game version that includes this API.
@@ -957,6 +1021,12 @@ JSON file format:
 - A category's `Icon` is an array of soft references: the paths of the normal / hovered / pressed images, in that order. In older SDKs this field was a hard reference, and the game **silently skipped the icons** when merging because the types differ (new categories had no icon) — use the updated SDK. JSON exported by the old SDK stores the icons as path strings, which the new game still reads.
 - `Sort` must be unique among categories, and among the sub-tabs of one category; do not change `Category` when overriding a vanilla building's `BuildingUI` row (see 4.6).
 - JSON changes are applied when the mod loads and the menu reads the tables when you enter a place, so they take effect from the next place you enter.
+- How to write variant rows (non-empty `VariantOf`): see "Building variants" in [4.6](#46-build-menu-api).
+- In override mode, a field equal to the SDK default is skipped and keeps the template's value, so you **cannot set a field back to its default** (e.g. `Workload = 0`, an empty soft reference, a `None` name); top-level bools are the exception and are always written.
+- Since November 2026, fields that are arrays of structs, such as the entrance grids `EntranceGridPoses` and animal death outputs, merge into the game tables through the SDK; they used to be skipped entirely.
+  - In override mode only a **non-empty** array replaces the whole field; `[]` equals the default and keeps the template's entrances; empty groups in the source are skipped; a group containing only cells with row and column -1 loses those cells and is left as an empty group, so do not write that.
+  - Merge mode only appends entrance groups.
+  - Buildings already placed in a save keep their entrances.
 
 The two character-creator tables (usage in the "Extended appearance" part of [4.10](#410-customization-body-face-hair-colors)):
 

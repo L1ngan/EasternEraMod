@@ -274,6 +274,10 @@ USTRUCT(BlueprintType)
 struct CREATEMODPLUGIN_API FModBuildData:public FModDataBase
 {
 	GENERATED_BODY()
+	// 规格本体的建筑 ID:本行是该建筑的另一种规格, 解锁跟随本体、与本体算同一种建筑;为空则不是规格行。
+	// 填了就必须同时把 TemplateID 填成同一个本体 ID, 且本体要先于本行装进表(否则本行被拒收);建筑配置表要用覆盖模式
+	UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base")
+	FName VariantOf;
 	// 占格子尺寸(Z为占高度尺寸)
 	UPROPERTY(BlueprintReadWrite , EditAnywhere,Category = "Base")
 	FIntVector Size = FIntVector::ZeroValue;

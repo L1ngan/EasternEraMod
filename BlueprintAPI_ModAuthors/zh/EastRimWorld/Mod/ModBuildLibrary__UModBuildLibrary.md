@@ -563,7 +563,8 @@
 
 **说明:**
 
-> 让玩家进入该建筑的放置预览(同点建造菜单里的建筑, 之后的放下、拖线、框选与原生一致)。要已解锁、在基地里操控玩家 Pawn, 且鼠标指在场景里
+> 让玩家进入该建筑的放置预览(同点建造菜单里的建筑, 之后的放下、拖线、框选与原生一致)。要已解锁、在基地里操控玩家 Pawn, 且鼠标指在场景里。
+> BuildId 是规格本体且用 SetBuildVariant 记了规格时, 放记住的规格(记住的规格已失效或改挂到别的本体时忘掉它、放本体)
 
 ---
 
@@ -632,6 +633,103 @@
 **说明:**
 
 > 当前预览位置能否放下;不能放时 OutTipsType 为原因(没在放置时返回 false, OutTipsType 为 Normal)
+
+---
+
+### 函数 `GetBuildVariants`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="Mod System|Build" |
+| 返回类型 | `TArray<FModBuildVariantInfo>`（[FModBuildVariantInfo](ModBuildLibrary__FModBuildVariantInfo.md)） |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `WorldContextObject` | `const UObject*` |
+| `BuildId` | `FName` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable , Category = "Mod System|Build") static TArray<FModBuildVariantInfo> GetBuildVariants(const UObject* WorldContextObject , FName BuildId);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 建筑的全部可选规格:BuildId 填本体或任一有效规格行都行;本体在前, 规格按建筑配置行序。没配规格返回 1 条(本体);建筑不存在或是无效规格行返回空数组
+
+---
+
+### 函数 `SetBuildVariant`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="Mod System|Build" |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `WorldContextObject` | `const UObject*` |
+| `BuildId` | `FName` |
+| `VariantId` | `FName` |
+| `OutReason` | [EBuildUnavailableReason](ModBuildLibrary__EBuildUnavailableReason.md)& |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable , Category = "Mod System|Build") static bool SetBuildVariant(const UObject* WorldContextObject , FName BuildId , FName VariantId , EBuildUnavailableReason& OutReason);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 记住「这个本体以后经 BeginPlaceBuilding / SelectBuildItem 放置时用哪个规格」:只在内存、不进存档、不动当前预览(要换预览再调 BeginPlaceBuilding)。
+> VariantId 填本体 = 恢复默认。失败返回 false 并给原因, 记忆不变
+
+---
+
+### 函数 `GetBuildVariant`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="Mod System|Build" |
+| 返回类型 | `bool` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `WorldContextObject` | `const UObject*` |
+| `OutBuildId` | `FName&` |
+| `OutVariantId` | `FName&` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable , Category = "Mod System|Build") static bool GetBuildVariant(const UObject* WorldContextObject , FName& OutBuildId , FName& OutVariantId);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 当前放置会话放的是哪一行:正在放置时返回 true, OutVariantId = 正在放的建筑 ID, OutBuildId = 它的本体(普通行、无效规格行为自己);没在放置返回 false、两者为 None。
+> 不说明落点能否放下(看 CanPlaceCurrentBuilding);混合多件的预设放置只反映放置组件锁存的那一个 ID
+
+---
+
+### 函数 `GetSelectedBuildVariant`
+
+| 项目 | 内容 |
+|------|------|
+| 反射说明符 | BlueprintCallable, Category="Mod System|Build" |
+| 返回类型 | `FName` |
+| 参数 | 见下表 |
+
+| 参数名 | 类型 |
+|--------|------|
+| `WorldContextObject` | `const UObject*` |
+| `BuildId` | `FName` |
+
+**原始声明（单行节选）:** `UFUNCTION(BlueprintCallable , Category = "Mod System|Build") static FName GetSelectedBuildVariant(const UObject* WorldContextObject , FName BuildId);`
+
+**用法说明:** 在蓝图中为**可调用函数节点**（含执行引脚）。
+
+**说明:**
+
+> 这个本体记住的规格(没记过、或记住的已失效时返回本体自己), 用于画规格菜单的选中态;BuildId 填规格行时按它的本体查
 
 ---
 

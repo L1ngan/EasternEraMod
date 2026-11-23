@@ -18,3 +18,4 @@
 | `NotUnlocked` |  | 还没解锁 |
 | `NoUnlockedBuildingInTab` |  | 子类下没有已解锁的建筑(子类按钮不会出现) |
 | `UpperStoreyClosed` |  | 通往上层的楼梯, 二楼还没开放(建造菜单不显示) |
+| `NotInVariantFamily` |  | 规格不属于该建筑, 或是配置无效的规格行(建筑配置 VariantOf 填了但不满足规格行要求) |
